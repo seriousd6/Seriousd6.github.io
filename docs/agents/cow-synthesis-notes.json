@@ -10141,6 +10141,60 @@
       "book": "romans",
       "chapter": "1",
       "note": "Fidelity self-grade A for all fourteen entries of romans 1, the LARGEST chapter attempted to date: 96,445 real usable source words (97,434 sized, less 989 of chrome at key 32) in 14 entries, nearly twice revelation 2. Every claim in every entry is traceable to a named block in data/commentary/cow/romans/1.json; no voice is attributed a position it does not hold; every disagreement listed is a real textual opposition, several of them verbatim contradictions between voices (see the disagreement notes). Word counts, all inside the 350-650 window: 647 / 625 / 644 / 649 / 650 / 649 / 650 / 649 / 649 / 650 / 649 / 649 / 650 / 646. Tiling covers verses 1-32 exactly with no gap or overlap (asserted in build). Residue declared where declarable (Jamieson at keys 3/9/15/21/27, Lightfoot at key 12 under the short label) and dropped silently where the VOICE_LABELS defect forbids declaration (Cyril of Jerusalem, keys 3/4/19/28; key 16 used, being on-theme). Validators green: validate-synthesis.py and validate-data.py both pass."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "6",
+      "verses": [
+        "16"
+      ],
+      "note": "JFB displacement, 28th instance, and the first SINGLE-BLOCK case on record. JFB has exactly one block in this chapter, at key 16, and it is displaced: it comments on Aaron's rod and the twelve rods laid up before the testimony (Numbers 17, with a nod to Heb 9:4), not on 'ye shall not tempt the Lord your God'. This matters for the model proposed at note 925 and corroborated at 931. Because there is only one block, NO STRIDE IS OBSERVABLE — yet the displacement is present anyway. That rules out any explanation in which the stride causes the corruption, and supports the reverse: the reading head is simply mis-positioned wherever a JFB block is emitted, and the apparent stride of 6 in deuteronomy 23, judges 21 and deuteronomy 9 is the spacing of JFB's own sparse coverage in those files, not a property of the bug. Prediction that follows and can be tested cheaply: in every chapter where JFB blocks appear at all, the gap between consecutive JFB keys should be constant within that chapter, and the donor text should advance monotonically across them. Block excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "6",
+      "verses": [
+        "17",
+        "25"
+      ],
+      "note": "Two smaller source observations. (1) Key 17: Clarke's block is a pure cross-reference with no comment of its own — 'Ye shall diligently keep, etc. - On this and the following verse see the note on Deu 6:3.' This is the fourth empty-block kind, recorded at note 914 and confirmed at 932, and it behaves as before: Clarke is NOT excluded from the 17-24 entry, because his key-20 block on the child's question is substantive. The handling rule (exclude the block, keep the voice if he has a real block elsewhere in the span) has now held across three chapters. (2) Key 25: StudyLight boilerplate tail, 24th instance, on Ellicott's block — the coinciding case again, key 25 being both Ellicott's final block and the chapter's last commented key. Three coinciding cases in the last two batches; the discriminating cases (joshua 7, deuteronomy 23) still favour the refined rule that the tail attaches to the end of Ellicott's final block rather than to the chapter's last key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "7",
+        "25"
+      ],
+      "note": "Three splits, of which the third is the most consequential in the chapter. (1) v1, how the three terms divide: Henry takes commandments as the moral law, statutes as ceremonial, judgments as the judicial; Ellicott presses the Hebrew singular and reads the commandment as the covenant duty itself, of which statutes are institutions and judgments the rules for observing them — sometimes only two aspects of one thing, as the Passover is a statute and the manner of eating it a judgment, permanent institution against variable rule. (2) v7, the verb rendered teach diligently: Gill, Clarke and Wesley all take it as to whet or sharpen by repeated friction, hence constant reiteration; Calvin argues from the conjugation that it may be transitive — parents causing the doctrine to penetrate the child's mind, as if pricking with a sword's point — and flags his own reading as novel. (3) v25, what 'it shall be our righteousness' promises: Gill reads it strictly and turns it against itself, since the terms are ones no sinful man can meet, so righteousness cannot be by the law at all; Wesley reads the Hebrew word as mercy, which he argues suits both scriptural usage and the preceding argument, so the verse promises continuance rather than verdict; Clarke takes a middle way, evidence that we are under the fear and love of God. Ellicott supplies philology that supports Wesley — Targums reading merit, the LXX reading alms, and the Jewish use of tsedakah for alms to this day."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "6",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott's finest observation in the Pentateuch corpus so far, kept in full at v13 at the cost of trimming elsewhere: every one of Christ's three answers to the tempter was drawn not merely from Deuteronomy but from ONE AND THE SAME PORTION of it — chapters 5 to 10, precisely the section that applies the principles of the Decalogue to Israel's life. He closes the same entry by completing the thought at v16: beside Satan on the pinnacle our Saviour refused to doubt the care of Jehovah and would not throw himself into the angels' arms to escape him, but endured as seeing him who is invisible, which is the standard Israel was called to at Massah and did not reach. Worth flagging for the topical registry: this pairing gives deuteronomy 6 a natural link to the temptation narratives that a reader would not find from the chapter heading."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "6",
+      "verses": [
+        "4",
+        "25"
+      ],
+      "note": "Overshoot control, continuing notes 866, 917, 930 and 935. Seven of seven entries again drafted over the 650 ceiling, worst v13 at 854 needing eleven trim passes. Two known patterns recurred and one refinement emerged. Recurrences: the CHAPTER-ARGUMENT HEADER of note 935 (Clarke's table of contents at key 1, Henry's numbered enumeration at key 1) and long APPENDED ESSAYS (Clarke's key-25 block carries two full appendices, one against the maxim that children should be left untaught until they can choose a creed, one on the nature of an oath across religions and the Quaker affirmation). Refinement: the oath appendix is a LIST OF FORMS — hand under the thigh, Ganges water, a surat of the Koran, a Hebrew Pentateuch, the cross, the New Testament, the raised hand — and the right handling was to keep the principle (the appeal to God is the whole essence, whatever the form) and reduce seven items to three. Rule to carry forward, generalising note 930: when a block's argument is carried by a PRINCIPLE plus a LIST OF INSTANCES, keep the principle entire and sample the instances; the argument survives intact and the word count halves. Where I applied this at draft time the entry came in near range (v1 at 732, v8 at 740); where I did not, it did not (v13 at 854)."
     }
   ]
 }

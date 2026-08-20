@@ -1,881 +1,635 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these are not the ten commandments repeated, but all others, moral, ceremonial, and judicial, a fresh declaration of the laws, given to teach the people that they might do them in the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these are the commandments... which the LORD your God commanded to teach you, that ye might do them",
-   "the teaching aimed at obedience",
-   "God's law given to be lived"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "Keil and Delitzsch"
   ],
+  "range": "1-3",
+  "pericope_label": "The commandment, the statutes and the judgments",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the fear meant is not slavish but filial, a reverential affection for God, as of children to their Father."
+    "summary": "Gill denies these are the ten commandments repeated from the preceding chapter, taking them for all the others afterwards declared, moral, ceremonial and judicial, and cites the Targum of Jonathan's paraphrase — this is a declaration of the commandments, statutes and judgments. Calvin reads the three verses as an appeal to gratitude: God deals so liberally with Israel that they would be perverse if such kindness did not allure them to love the law, and Moses sets the promised land before their eyes to prepare their minds for submission. He then draws a sting from the repetition itself — it shows how hard it is for men to be prepared to keep the law, since God does not stimulate their indolence in vain, and there is a silent reproof of their sloth in his insisting on what it should have been enough to say once."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the three terms simply: the commandments are the moral law, the statutes the ceremonial, the judgments the law by which the judges decided. He notes that Moses taught all that, and only that, which God commanded — as Christ's ministers are to teach his churches neither more nor less; that the whole end of teaching was doing, so that good instruction only aggravates our condemnation if we do not live up to it; and that the entail of religion in a family or country is the best entail."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reduces the third verse to a sequence: God is to be heard, there being no obligation without a law to found it on and no law in religion but from God; the commandment must be understood to be obeyed, and observed to be understood; and it must be performed, that its end may be reached. He adds that whoever fears God will endeavour to bring up his children in the same way, so that religion is kept in the family not in word only but in practice."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the keeping of his statutes all the days of life."
+    "summary": "Ellicott presses the Hebrew, which has the first noun singular — this is the commandment, the statutes, and the judgments. The commandment is the duty imposed by the covenant of the ten words, its application to daily life, comprising statutes, meaning religious institutions, and judgments, meaning actual rules of behaviour. His illustration is exact: the Passover is a statute, an institution, while the rules for keeping it are judgments — the thing permanent, the rules variable, since it was eaten at first standing and in haste and afterwards reclining. He also sets the verse in the shape of the book, this general application running to the end of the eleventh chapter and the particular precepts following. Keil takes up the stated purpose, that the law was communicated to awaken the fear of God, and corrects a point of grammar: the verb rendered prolonged is intransitive, to last long, not transitive, to make long."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How are the three terms to be distinguished?",
+    "positions": [
+     {
+      "position": "commandments are the moral law, statutes the ceremonial, judgments the law by which judges decided",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the singular commandment is the covenant duty itself, of which statutes are institutions and judgments the rules for observing them — sometimes only two aspects of one thing",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads the very repetitiousness of the exhortation as a silent reproof, since one word should have sufficed had men not been indolent"
+   }
+  ],
   "themes": [
-   "That thou mightest fear the LORD thy God, to keep all his statutes... all the days of thy life",
-   "a filial fear, not slavish dread",
-   "the root of obedience (Prov. 1:7)"
+   "what the three terms distinguish",
+   "the end of teaching is doing",
+   "why the point is repeated so often"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the charge to hear and observe to do the commandments given them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the fear of God would bring well-being and mighty increase in the land of milk and honey."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hear therefore, O Israel, and observe to do it; that it may be well with thee",
-   "hearing made good in doing",
-   "obedience the way of welfare and blessing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Calvin"
   ],
+  "range": "4",
+  "pericope_label": "Hear, O Israel: the Lord our God is one Lord",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the words of Moses stirring the people to attend to this great article, the unity of God, to prevent polytheism and idolatry; from this the Jews call the section the Shema, read twice daily."
+    "prevalence": "several",
+    "summary": "Gill explains the call for a hearing as Moses stirring the people to attend to a momentous article, the unity of God, against polytheism and idolatry, and notes the scribal peculiarity of the enlarged letters closing the first and last words. Calvin insists the oneness is no abstraction: the statement is not confined to God's sole essence, which is incomprehensible, but is to be understood of the power and glory manifested to this people, so that Moses adds thy God and by that brings all other deities to nought. His sharpest stroke follows — a god may keep his name and yet be stripped of his majesty as soon as he is mixed with a multitude, so God says by Ezekiel, go ye, serve every one his idols, testifying that he would rather be accounted nothing than not be worshipped undividedly. He adds that the orthodox Fathers used the verse against the Arians, since Christ is everywhere called God and must therefore be the same Jehovah who declares himself one."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry supplies the liturgical warmth: the Jews reckon these verses among the choicest portions of scripture and count themselves not merely obliged but happy to say them daily, having the saying among them, Blessed are we, who every morning and evening say, Hear, O Israel, the Lord our God is one Lord. He suggests more mildly than Clarke that some have found a plain intimation of the trinity of persons in the unity of the Godhead, the name of God standing here three times and yet declared one."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke is candid about the limits of certainty in translation — the Hebrew may be rendered several ways and almost all the varieties come to the same sense — and will not overclaim on the Trinity, allowing it may be taught here but no more clearly than in the first verse of Genesis. He notes this is one of the four passages written on the phylacteries and cites Maimonides that the words contain the property, the love and the doctrine of God. He describes with some heat the synagogue practice of repeating the last word for minutes together, which he supposes aimed at Christians, and answers that the plural form of the word rendered our God cannot be argued away."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil reports the rabbinic explanation of the two enlarged letters, which taken together spell a word meaning a witness: since a man may confess one God with his mouth while his heart is far from him, the letters are magnified so that whoever professes the divine unity should know his heart ought to be engaged and free of every other thought, God being himself a witness. He also marks the structural weight of the verse, where the burden of the law commences — not a new law added to the ten commandments but the unfolding of what lay in them as a germ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the verse intimate the Trinity in unity?",
+    "positions": [
+     {
+      "position": "it may, but no more clearly than the first verse of Genesis — though the plural form of the word for our God cannot be argued away",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "some have thought so, the name of God standing three times and yet declared one",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the Fathers rightly used it against the Arians, since Christ is everywhere called God and must be the same Jehovah",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Keil",
+    "note": "passes on the rabbinic reading that the two magnified letters spell 'witness', a warning that the mouth may confess the unity while the heart is elsewhere"
+   }
+  ],
   "themes": [
-   "Hear, O Israel: The LORD our God is one LORD",
-   "the foundation-stone of true religion",
-   "the first commandment, owned by Christ (Mark 12:29)"
+   "the enlarged letters and what they spell",
+   "how the Hebrew should be rendered",
+   "whether the verse teaches the Trinity"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this is the first and chief commandment, the sum of the first table; it includes knowledge of God, esteem, delight, faith, fear, worship, and obedience, which when right springs from it; God is to be loved for the perfections of his being."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might",
-   "the first and great commandment",
-   "love the root of all acceptable service (Matt. 22:37)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "John Calvin",
+   "Matthew Henry"
   ],
+  "range": "5-7",
+  "pericope_label": "Love with all the heart, and whet it upon thy children",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they were to take notice that God is one and to be loved in the strongest manner."
+    "summary": "Gill takes the love commanded as the first and chief in the law, the substance of the first table, including knowledge of God, esteem, delight, faith, fear and obedience springing from it. On teaching diligently he notes the word means to whet or sharpen, and takes it for repeated inculcation until children are sharp and ready in what they have learnt. Calvin reads heart as covering memory and the other faculties, and hears an estimate of worth — so great a treasure that there was good cause to hide it there, fixing the doctrine so deeply it should never escape. On the same verb he proposes something else: from the conjugation used he thinks the sense may be transitive, not that the doctrine is whetted by repetition but that parents should cause it to penetrate their children's minds, as if pricking them with a sword's point — a reading he offers with unusual diffidence, lest anyone be offended by its novelty. He also gives the sharpest account of the frontlets, taking them for a spiritual ornament set against chains of gold, which the Jews turned into a mark of holiness, each widening his phylacteries as he wished to be thought better than his neighbours."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry lists the means by which religion is kept up in hearts and houses — meditation, the education of children, pious discourse, frequent reading — and warns of what follows plenty: coming easily by the gift, men grow secure and unmindful of the Giver."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke treats the demand that the words be in the heart as self-evident: where else can love be? If it is not in the heart it does not exist; and if these commands are not esteemed and prized as a glorious privilege, there is no hope love will reign there. Wesley presses the same point as a question — is this an external commandment only? Can any then say the Sinai covenant was merely external?"
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: for the love of God to be right, his commandments must be laid to heart."
+    "summary": "Keil takes the three terms in order and finds a progression: the heart first as the seat of the emotions and of love, then the soul as the centre of personality, which makes the love pervade the whole self-consciousness, then the strength of body and soul. He adds that a literal fulfilment of the frontlet command is praiseworthy only as a means of actually keeping what is written. Ellicott turns to a Jewish commentator whose glosses are memorable — with all thy heart as with both natures, good and evil; with all thy soul as even though he take thy life from thee; with all thy might as with all thy money, since you sometimes find a man whose money is dearer to him than his body — though he grants the verbal connection will not hold. He adds that a parent should never hesitate to answer anything a child asks, and reflects that had such an education been carried on from the first, Israel's history would have been very different."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these words, which I command thee this day, shall be in thine heart",
-   "the seat of religion within",
-   "the law written in the heart (Jer. 31:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: care and pains are to be used to instruct children early; the word may be rendered 'thou shalt whet or sharpen them,' to impress them keenly; the words to be talked of at home and abroad, lying down and rising up."
+    "question": "What does the verb rendered 'teach diligently' actually mean?",
+    "positions": [
+     {
+      "position": "to whet or sharpen by repeated friction — a figure for constant reiteration of the doctrine",
+      "holders": [
+       "John Gill",
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "possibly transitive: that parents should cause the doctrine to penetrate their children’s minds, as if pricking them with a sword’s point",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "flags his own reading of the whetting as novel and offers it only as an opinion, lest readers be offended by it"
+   }
+  ],
   "themes": [
-   "thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest",
-   "religion filling the whole of life",
-   "the faith handed from age to age (Eph. 6:4)"
+   "the three measures of love",
+   "whether the whetting is of the doctrine or of the child",
+   "frontlets taken literally"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "John Calvin",
+   "Keil and Delitzsch"
   ],
+  "range": "8-12",
+  "pericope_label": "Signs on the hand, writing on the gate, and the danger of plenty",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: as a man ties anything to his hand for a token to remember it, so were these words to be kept in mind; the Jews understand it literally of phylacteries."
+    "summary": "Gill describes both practices the Jews built on the words: for the hand a scroll carrying this section, bound on the left hand; for the doorposts a parchment written and rolled, the name Shaddai written outside, the roll set in a cane or hollow wood and fastened at the right hand of entrance, touched and kissed as often as they go in and out. Calvin treats the warning against prosperity as foresight rather than suspicion: wealth mostly blinds men's minds, and God provides against this by anticipation, knowing it a common vice for abundance to beget arrogance — as the song afterwards puts it, Jeshurun waxed fat and kicked. He measures the ingratitude by the gift, since it was inestimable goodness to give them cities built by other hands, and draws the finest sentence in the passage: what ought to serve as vehicles to lift our minds on high are, by our own fault, turned into obstacles and clogs."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: treats the binding upon the hand."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt bind them for a sign upon thine hand, and they shall be as frontlets between thine eyes",
-   "the constant remembrance of God's law",
-   "the life governed by his word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was to put them in mind when they went out and came in; the Jews take it literally, writing the section on a scroll (mezuzah) and fixing it on the posts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt write them upon the posts of thy house, and on thy gates",
-   "God's word in the path of daily life",
-   "the home marked for God and his word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the land of Canaan, with its great cities. Calvin: since wealth and prosperity for the most part blind men's minds, so that they grow wanton and forget moderation, Moses warns them beforehand."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the LORD thy God shall have brought thee into the land... great and goodly cities, which thou buildedst not",
-   "prosperity a subtle snare",
-   "the heart guarded most when things are full"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: houses full of good furniture and the fruits of the earth, corn, wine, oil, perhaps gold and silver."
+    "summary": "Clarke hears in the binding a custom kept almost everywhere — the knot tied in the clothes or the cord on the finger, so that memory may be whetted and the eye affect the heart — and observes that God, knowing how slow of heart we are, orders us to use every help and through things sensible to rise to things spiritual. His rebuke of the practice then falls on both sides: the Jews used these things as superstitious people use amulets, but how much better are the many Christians who keep a Bible in the house merely to keep the devil out, or under their pillows to ward off spirits at night? How ingenious is the heart of man to find out every wrong way and miss the right. He ends on providence: in prosperity men forget heavenly things, which is why God in love makes comparative poverty and frequent affliction the general lot — though extreme poverty injures religion as much as excessive affluence, which is the wisdom of Agur's prayer for neither. Wesley reads the binding simply as using all means to keep the words in remembrance."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the wells, vineyards, and olive trees they had not made."
+    "summary": "Ellicott notes that from this precept the Jews derive the Tephillin, the portions of law bound on head or arm before prayer. Keil describes not forgetting positively — fearing God, serving him, swearing by his name. Fear stands first as the fundamental note of Israelite worship, not slavish but the holy awe of a sinner before a holy God, which includes love rather than excludes it; fearing is of the heart, serving of working, and swearing in his name the practical showing of that worship in conversation, meaning not chiefly the oath before a court but the asseverations of ordinary life, in which a man's religion involuntarily reveals itself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Were the binding and writing meant literally?",
+    "positions": [
+     {
+      "position": "they are figures for undeviating observance; a literal fulfilment is praiseworthy only as a means to actual obedience",
+      "holders": [
+       "Keil and Delitzsch",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "an allusion to the universal custom of memory aids, by which God has us rise through things sensible to things spiritual",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "turns his rebuke of Jewish amulet-use straight round onto Christians who keep a Bible in the house to keep the devil out"
+   }
+  ],
   "themes": [
-   "houses full of all good things, which thou filledst not... when thou shalt have eaten and be full",
-   "God's lavish goodness a test of the heart",
-   "every good gift a call to thankfulness (James 1:17)"
+   "memory aids and what they became",
+   "superstition on both sides of the argument",
+   "why abundance is dangerous"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: creature enjoyments are apt to get possession of the heart and its affections, so beware of forgetting God."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: in earthly prosperity men are apt to forget heavenly things, while the senses have all they wish."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "beware lest thou forget the LORD, which brought thee forth out of the land of Egypt",
-   "the great peril of plenty",
-   "a heart holding fast its Redeemer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "13-16",
+  "pericope_label": "Him only shalt thou serve: jealousy, and the tempting at Massah",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the fear is filial, a reverential affection for the God who brought them from bondage into liberty and plenty; they should fear and serve him."
+    "summary": "Gill defines the fear required — not the slavish fear of hell but a filial reverence owed to the God who brought them from bondage into liberty and from misery into plenty. Calvin analyses fear and service as one movement: fear contains subjection, God's majesty keeping men in their place, and worship follows as the proof of piety; but the fear enjoined is voluntary, so that men moved by it want nothing but to obey, and when he says God brings us under the yoke by a sense of his power he does not mean servile obedience is extorted, only that men cannot obey until fear has subdued them. He explains why the command was needed at all — superstition stood on every side, and the one God's authority had to be so established that the Jews might dare despise what all the Gentiles believed — and calls God jealous because he permits no rivalry detracting from his glory. On Massah he traces the tempting to unbelief as its fountain: neither relying on God's providence nor resting in his fatherly love, the people burst into impatience and came to think God was not with them unless he complied with their lusts, whence it appears true piety cannot be severed from faith."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: one of the passages Christ used to repel the temptations of Satan (Matt. 4:10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt fear the LORD thy God, and serve him, and shalt swear by his name",
-   "the whole duty toward God",
-   "Christ's answer to Satan, him only shalt thou serve (Matt. 4:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: to go after other gods is to serve and worship them, and depart from the true God; these are no gods, only nominal and fictitious, idols that are nothing in the world."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: warns against following other gods."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye shall not go after other gods, of the gods of the people which are round about you",
-   "the idols nothing in the world",
-   "the love of the one LORD admitting no rival"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: God was near them, his tabernacle between their camps; a God jealous of his honour in worship, who would resent any affront."
+    "summary": "Clarke works the textual ground anxiously. Our Lord quotes the verse as him only shalt thou serve, and Clarke infers the word for only stood anciently in the Hebrew, being in the Septuagint the quotation comes from and in the Coptic, Vulgate and Anglo-Saxon; he cites Kennicott that without it the verse would not have been conclusive for the purpose our Lord advanced it. Then he states the difficulty against himself: the word is in no Hebrew text nor any manuscript yet discovered. On swearing he notes the verb means properly to be full or satisfied, an oath appealing to God as witness. On jealousy he turns the word into a marriage — Jehovah has betrothed you as a bride to her husband, so be not unfaithful, lest the love that distinguished you turn to jealousy. Wesley adds the condition on swearing: when there is a call and just cause, not by idols."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the warning lest his anger be kindled."
+    "summary": "Ellicott renders the clause with the Hebrew's own emphasis — Jehovah thy God thou shalt fear, and him shalt thou serve, that is, him only, as the Septuagint has it and as our Lord cited it in the temptation — and makes an observation worth the whole note: every one of Christ's answers to the tempter was drawn not merely from Deuteronomy but from one and the same portion of it, the section from the fifth chapter to the tenth, precisely where the Decalogue's principles are applied to Israel's life. He sets swearing in patriarchal context, Laban appealing to the God of Nahor while Jacob swore by the fear of his father Isaac, notes that what the jealousy threatens is absolute extermination, and ends where the citations began: even beside Satan on the giddy pinnacle our Saviour refused to doubt the care of Jehovah, and would not throw himself into the angels' arms to escape him, but endured as seeing him who is invisible."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Did the Hebrew once read 'him only shalt thou serve'?",
+    "positions": [
+     {
+      "position": "it must have, since the Septuagint, Coptic, Vulgate and Anglo-Saxon all have it and our Lord quoted it so — yet it survives in no Hebrew text or manuscript now known",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the Hebrew emphasis already carries the sense of \"him only\" without needing the word",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "observes that all three of Christ's answers to the tempter come from Deuteronomy 5-10, the very section applying the Decalogue to Israel's life"
+   }
+  ],
   "themes": [
-   "For the LORD thy God is a jealous God among you",
-   "God's holy zeal claiming the whole heart",
-   "idolatry a spiritual adultery (Exod. 34:14)"
+   "whether \"only\" stood in the Hebrew text",
+   "the temptation answers all drawn from one section",
+   "what tempting God at Massah consisted in"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: to tempt God is to strive against him, murmur at his providences, or require a sign; this is another passage Christ used to repel Satan."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: they were not to provoke him by entertaining doubts of his presence or care."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye shall not tempt the LORD your God, as ye tempted him in Massah",
-   "the unbelief that demands fresh signs",
-   "Christ's answer to Satan (Matt. 4:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Matthew Henry",
+   "John Wesley",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin"
   ],
+  "range": "17-24",
+  "pericope_label": "When thy son asketh thee: the catechism of redemption",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: not only the ten commands but all others were to be kept."
+    "summary": "Gill takes the diligent keeping to extend past the ten commands to all others, and reads the child's question as an occasion to lead him back to the spring and origin of the statutes, and so to the goodness of God that laid them under obligation. Calvin presses why redemption is the ground on which the law is commended: its authority claims the more because it was not imposed before God had laid them under obligation, and it would have been too base to refuse God as Lawgiver knowing they had been purchased by him. He finds a twofold tie, God having devoted them to himself not once only but confirmed his dominion by their continued possession of the land. On the closing words he is careful in two directions — the phrase for our good shows God had regard not only to his own rights but to their advantage, so rejecting the law would make them doubly ungrateful; and while keeping it is in itself righteousness, no man is justified by it, which arises from no defect in its doctrine but must be imputed to our guilt."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: it requires a great deal of care and pains to keep up religion in the power of it in our hearts and lives, negligence being its undoing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ye shall diligently keep the commandments of the LORD your God",
-   "religion's power requiring care and pains",
-   "love proved in earnest, watchful obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: what is right and good appears from the declaration of God's will in his commandments, which are holy, just, and good; obeying them is doing right, that it may be well."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt do that which is right and good in the sight of the LORD: that it may be well with thee",
-   "God's will the standard of right",
-   "obedience the path of blessing (Rom. 7:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the LORD promised, and as it seems with an oath, to drive out their enemies and make way for their settlement in the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "To cast out all thine enemies from before thee, as the LORD hath spoken",
-   "the conquest God's own work",
-   "the inheritance secured by his faithfulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: 'in time to come,' or 'tomorrow,' meaning in later times, after they came into Canaan and the ordinances took effect."
+    "prevalence": "single",
+    "summary": "Henry says with Wesley that negligence will ruin us but we cannot be saved without diligence, and adds that it takes great care and pains to keep religion in its power. His two inducements are that such obedience is acceptable to God — right and good in his sight, and that is right and good indeed which is so in God's sight — and that it profits the obedient. On the child's question he draws the best pastoral lessons here: all divine institutions have a certain meaning, and something great is designed in them; it concerns us to know it, that we may perform a reasonable service and not offer the blind for sacrifice; and it is good for children to enquire early, since an inquisitive child in divine things shows he is concerned and takes the means of coming to know. Parents must instruct those under their charge even when they do not ask, and much more be ready to answer when the question is put. On the last verse he turns evangelical: could we perfectly fulfil the one command of loving God with all the heart, the law would justify us; since we cannot, sincere obedience is accepted through a Mediator."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke, with Ainsworth: marks the place of catechizing children in the faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when thy son asketh thee in time to come... What mean the testimonies",
-   "the faith handed on through children's questions",
-   "taught with its reasons, not by rote"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the answer leads the son into the spring and original of the commandments, and acquaints him with the goodness of God that laid them under obligation to obey."
+    "summary": "Clarke, borrowing from Ainsworth, calls what follows a brief catechism containing the grounds of religion, and adds that Hebrew has no verb for to mean, so it says simply what is, as the seven thin ears are seven years of famine."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: we were Pharaoh's bondmen, and the LORD brought us out with a mighty hand."
+    "summary": "Ellicott sharpens what was at stake: there was no longer any question whether Israel would cross the Jordan, but how far the conquest would be carried and in what time, and that depended on their faithfulness — Judges makes plain their disobedience delayed it. He distributes the three terms of the child's question, the Decalogue being primarily the Torah, the charge following coming under testimony, statutes and judgments describing the later chapters; and traces the whole answer to the message from Sinai, the keeping of that law in that land being the final cause of Israel's national existence. Keil notes that the instruction hinted at earlier is here explained, and renders the last verse to the effect that their righteousness would consist in observing the law."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "We were Pharaoh's bondmen in Egypt; and the LORD brought us out of Egypt with a mighty hand",
-   "the law grounded in redemption",
-   "obedience the grateful response of the redeemed (1 John 4:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the ten plagues, signs of the power of God, great and sore, very distressing to the Egyptians, came heavy upon Pharaoh and all his household."
+    "question": "In what sense would keeping the law be their righteousness?",
+    "positions": [
+     {
+      "position": "their righteousness would consist in observing it; they would be treated as righteous if diligent in it",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "keeping the law is in itself righteousness, yet no man is justified by it — the fault lying not in its doctrine but in our guilt",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the law would justify us could we perfectly fulfil the command to love God; since we cannot, sincere obedience is accepted through a Mediator",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD shewed signs and wonders, great and sore, upon Egypt... before our eyes",
-   "the wonders of the redemption rehearsed",
-   "the children knowing the greatness of their Redeemer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he brought them out of a state of bondage and misery, in order to bring them into the land sworn to their fathers."
+    "voice": "Ellicott",
+    "note": "reframes the stakes: not whether Israel would enter Canaan, but how completely and how soon — which their disobedience visibly delayed"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "he brought us out from thence, that he might bring us in... the land which he sware unto our fathers",
-   "redemption with a purpose",
-   "he who begins the work completes it (Phil. 1:6)"
+   "diligence, and what it secures",
+   "why a child should be encouraged to ask",
+   "redemption as the ground of the law"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: some statutes were designed to commemorate the deliverance, as the passover; all were to be obeyed in gratitude, commanded for their good always, that God might preserve them."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD commanded us to do all these statutes... for our good always, that he might preserve us alive",
-   "the law a gift of love",
-   "obedience the way of life (Deut. 10:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
   ],
+  "range": "25",
+  "pericope_label": "It shall be our righteousness",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: to have such a justifying righteousness a man must keep all the commandments of God, not one excepted, and that perfectly, without the least failure."
+    "prevalence": "single",
+    "summary": "Gill reads the promise strictly and turns it against itself. To have a justifying righteousness this way a man must keep all the commandments perfectly, not one excepted, without the least breach in thought, word or deed; and before the Lord, not as it appears to himself but as it appears to God, who sees the heart; and in the manner commanded, with all his heart and soul and strength. This is not possible for a sinful man, so righteousness cannot be by the law: only Christ kept them so, and his obedience is our righteousness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke steers between the strict and the merciful reading. The righteousness meant is evidence that we are under the fear and love of God; Moses does not say it could be wrought without God's mercy, nor that they should purchase heaven by it, but that God required conformity to his will in all things. He then leaves the verse for an argument he cares about more, against a maxim lately advanced that children should not be taught religion lest their minds be biased toward a creed, but left to themselves until capable of choosing. Clarke calls this flatly opposed to God's command and diagnoses it — those who teach it show how little they are affected by the religion they profess, for if they felt it good for anything they would wish their children to have it — but he will not let the orthodox off either, since parents who hold a better faith and equally neglect their children are highly criminal. His exhortation is the warmest writing in the chapter: repeat and re-repeat, line upon line and precept upon precept, showing religion in its amiableness and exciting attention by exciting interest, until the keenest edge is raised on the strongest desire. He closes by returning to the oath, whose whole spirit and essence is the appeal to God as witness, whatever the outward form, so that a raised hand in court is as formal an oath as any. Wesley takes the sentence another way: the Hebrew word for righteousness is very often put for mercy, and that sense agrees better both with scriptural usage — where mercy, and hardly ever righteousness, is said to be to us or with us — and with the argument just made. Read so, the verse promises not a verdict but a continuance."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott supplies the philology supporting the merciful reading. One Targum has it shall be merit to us, another merit laid up against the world to come, the Septuagint it shall be alms to us — a conjunction of ideas which explains why alms and righteousness stand as alternative readings in Matthew, and why the Jews call alms by the word for righteousness to this day."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is promised by 'it shall be our righteousness'?",
+    "positions": [
+     {
+      "position": "a justifying righteousness on terms no sinful man can meet — which proves righteousness cannot come by the law at all",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "mercy rather than a verdict; the Hebrew word is often put for mercy, which suits both the usage and the argument",
+      "holders": [
+       "John Wesley",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "evidence that we are under the fear and love of God — neither wrought without mercy nor purchasing heaven",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "breaks off from the verse to attack the maxim that children should be left unbiased until they can choose a creed, and turns the same charge on negligent orthodox parents"
+   }
+  ],
   "themes": [
-   "it shall be our righteousness, if we observe to do all these commandments",
-   "perfect obedience no fallen man can render",
-   "the law a schoolmaster to Christ (Gal. 3:24)"
+   "righteousness, merit, mercy or alms",
+   "whether children should be taught religion",
+   "the essence of an oath"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  }
 }
