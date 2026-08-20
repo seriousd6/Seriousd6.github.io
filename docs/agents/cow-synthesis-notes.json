@@ -13540,6 +13540,75 @@
       "book": "acts",
       "chapter": "17",
       "note": "Fidelity self-grade, acts 17, twelve entries, all in window: 1-2 602w, 3-5 626w, 6-9 644w, 10-11 593w, 12-15 641w, 16-17 622w, 18-19 612w, 20-22 626w, 23-24 625w, 25-27 592w, 28-30 641w, 31-34 617w. Every claim traced to a named block in data/commentary/cow/acts/17.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head goes unnamed — the build lint enforces both and passed clean on all twelve, at 6 to 10 named voices per entry. Jamieson excluded at keys 3/9/15/21/27/33 as stride-6 residue and declared in each of the six affected entries. Chrome stripped from Ellicott at key 34 before drafting. Henry's five section blocks and Clarke's end-of-chapter excursus at key 34 used only where they treat the verses of the entry in hand. Eleven distinct voices across all five schools; four of the twelve entries carry all five schools. Real usable after removing residue and chrome: 82,817 words against a gross of 84,311, of which about 15,456 is Henry's section-level material and 3,753 Clarke's chapter excursus, leaving roughly 63,600 verse-level. Entry count 12 set by max(34/4.5, 82817/7000) = 11.8, tiled 1-2, 3-5, 6-9, 10-11, 12-15, 16-17, 18-19, 20-22, 23-24, 25-27, 28-30, 31-34 to cover 1..34 exactly. This is the largest chapter yet handled in this loop, at 84,788 by the sizer against a previous maximum of 61,018."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "1",
+      "note": "ephesians 1: 23 contiguous keys, 63,892 usable source words — the second largest chapter this loop has taken, after james 1. Key 1 alone is 9,863 words, the largest single key yet seen. Bench: Gill and Clarke at all 23 keys, Barnes/Ellicott/Robertson at 22, Calvin and Wesley at 21, Cyril at 10, Henry at 4, JFB at 4, Chrysostom at 3. Tiled into 18 entries, matching the entry-count predictor, but only after a MID-COURSE RE-TILE: the original tiling gave key 2 its own entry, and key 2 turned out to hold nothing usable (Gill and Clarke stubs plus a block Barnes himself labels 'Continuation of Notes for Verse 1'). Merged 2 into entry 1 and split 6-7 to keep the count. LESSON: the size command and the per-key word counts do not distinguish usable exposition from cross-reference stubs and run-on introductions; on a chapter with a long editorial introduction, check the first three keys for real content BEFORE fixing the tiling."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB STRIDE 6 CONFIRMED A FIFTH TIME, and the phase repeats for the first time. All four JFB blocks in ephesians 1 sit at keys 4, 10, 16, 22 — stride 6, phase 4, which is exactly the phase of acts 3 (keys 4/10/16/22). Prior chapters: acts 24 keys 2/8/14/20/26, acts 3 keys 4/10/16/22, james 1 keys 1/7/13/19/25, 1john 3 keys 6/12/18/24. Five chapters, five stride-6 runs, and phases now seen at 1, 2, 4 (twice) and 6. Every block here is displaced and all four carry ROMANS 11 material in continuous forward order: key 4 = Rom 11:4-5 (the elect remnant, not naturally better but graciously chosen), key 10 = Rom 11:7 (what Israel seeks it found not, but the election found it), key 16 = Rom 11:15 (the receiving of them as life from the dead), key 22 = Rom 11:19 (the branches were broken off that I might be grafted in). Whole-chapter displacement, as in james 1 and 1john 3. All four declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "6",
+        "7",
+        "17",
+        "19",
+        "20"
+      ],
+      "note": "CYRIL BLOCKS ARE DUPLICATED ACROSS ADJACENT KEYS in this chapter — a defect not seen before. His key-6 and key-7 blocks are byte-identical (Catechetical Lecture 18.35, on the newly baptised); his key-19 and key-20 blocks are byte-identical (Lecture 14.29, on the session at the right hand); his key-3 and key-17 blocks are byte-identical (Lecture 13.29, on 2 Cor 4:4 and the blinding of unbelievers) AND displaced, having nothing to do with either verse. Used each distinct block once, at the first key where it is germane, and dropped the duplicates. Cyril is NOT declared in excluded_voices for any of them: synthesis_qa.VOICE_LABELS still lists the bare 'Cyril' while the corpus writes 'Cyril of Jerusalem:', so declaring him would produce a validator FAILURE (note 1209, still outstanding, and the same gap now affects 'Augustine of Hippo' — see note 1242)."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "15",
+        "17",
+        "22"
+      ],
+      "note": "CROSS-REFERENCE STUBS: Gill's blocks at keys 1, 2, 15, 17 and 22 contain no exposition at all, only chains of 'See Gill on' pointing elsewhere; Clarke's key-2 block is likewise a bare 'See the note on Rom 1:7'; Wesley's key-16 block is empty. StudyLight preserves the cross-reference apparatus as though it were commentary, so a key can carry hundreds of counted words and yield nothing usable. Where the stub was a voice's ONLY block in a span (Gill at 1-2 and at 15) I declared him in excluded_voices, which is the right use of that field: the block genuinely carries nothing. Where the voice had a real block elsewhere in the span (Clarke at 1-2, Wesley at 16-17, Gill at 16-17) no exclusion is needed."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "5",
+        "11",
+        "19"
+      ],
+      "note": "ephesians 1 runs the individual-versus-national election argument through four separate entries, and the loop should record it as a single sustained dispute rather than four local ones. Barnes argues it hardest at keys 4 and 5: no nation is mentioned as such; the pronoun includes Paul, who was no heathen; and the ocean/mountain analogy — he that would act on the ocean must act on the drops that make it up, for besides the collection of drops there is no ocean. He calls the national reading 'merely throwing dust in the eyes', since the difficulties are identical either way. Gill reaches the same conclusion by exclusion; Clarke holds the Gentile reading throughout and makes the allotment of Canaan 'the grand key by which this predestination business is unlocked'; Wesley narrows to those who should believe 'and those only', and at key 11 enters the one caution nobody else does — that the divine will is not arbitrary but flows from the rectitude of God's nature, since otherwise there would be no security that God would keep his word even with the elect. All positions recorded in the tags debates for entries 4, 5, 11 and 19."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "1",
+      "note": "LENGTH CONTROL regressed badly on this chapter: mean 3.9 trim passes across 18 entries, against 2.6 for 1john 3 and 1.4 for james 1. The merged entry 1-2 alone took nine passes plus a re-tile. The driver is bench depth combined with source size — eight usable voices in a 650-word entry leaves roughly 80 words per voice, and the three-voices-per-paragraph rule from note 1214 has no room to work. Two things that did help and are worth keeping: draft at 560 rather than 620 when the span carries seven or more voices, and give at least two voices a single clause rather than a sentence. Entry 3 also confirmed the note-1191 rule from the other direction — the two-way check caught Ellicott declared as excluded while being named in the prose, because his usable material for that entry came from the neighbouring key. Where displaced material is legitimately moved INTO an entry, the voice belongs in voices, not exclusions."
     }
   ]
 }

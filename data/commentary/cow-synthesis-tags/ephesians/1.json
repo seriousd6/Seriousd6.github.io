@@ -2,1046 +2,1706 @@
  "1": {
   "voices": [
    "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul opens by asserting his apostleship — 'an apostle of Jesus Christ by the will of God' — not self-appointed but commissioned by God's own will and authority; the letter addressed 'to the saints (the holy ones, set apart to God) which are at Ephesus' and 'to the faithful (believing, trustworthy) in Christ Jesus' — the believers there, marked by holiness and faith (Barnes, Robertson, Chrysostom)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Tertullian): the title 'saints' belongs to all true believers, set apart and sanctified in Christ; Paul writes not to officials but to the whole holy and faithful body."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul, an apostle of Jesus Christ by the will of God",
-   "to the saints which are at Ephesus, and to the faithful in Christ Jesus",
-   "the apostolic greeting",
-   "the saints and faithful in Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's customary greeting: 'grace (free favour) be to you, and peace (the peace that flows from grace)' — the twofold blessing that opens his epistles, grace the source and peace the fruit; coming jointly 'from God our Father, and from the Lord Jesus Christ' — Father and Son named together as the one fountain of blessing, an incidental witness to Christ's deity (Barnes, Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Grace be to you, and peace, from God our Father, and from the Lord Jesus Christ",
-   "the apostolic blessing of grace and peace",
-   "grace the source, peace the fruit",
-   "Father and Son the one fountain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "John Gill"
+  ],
+  "range": "1-2",
+  "pericope_label": "Paul an apostle, to the saints at Ephesus; grace and peace",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul bursts into a doxology that opens the great hymn of blessing (vv.3-14): 'blessed be (worthy of praise) the God and Father of our Lord Jesus Christ' — the source of all blessing is himself to be blessed; God 'hath blessed us with all spiritual blessings (every blessing of the Spirit, every gift of grace)' — the comprehensive bestowal of every spiritual good; 'in heavenly places (the heavenly realm, of a heavenly nature and destiny) in Christ' — flowing from and held in union with Christ (Barnes, Robertson)."
-   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Henry): the blessings are heavenly in nature and destiny, and held 'in Christ,' who is their source and channel; all the good the believer has flows from union with him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Blessed be the God and Father of our Lord Jesus Christ",
-   "who hath blessed us with all spiritual blessings in heavenly places in Christ",
-   "the doxology for all spiritual blessings",
-   "blessings heavenly and in Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God chose us 'in him (in Christ) before the foundation of the world' — an eternal purpose, not an afterthought or work of chance, formed before creation; the word 'chosen' (exelexato) denotes a definite selection with favour, referring (Barnes) to individuals, not merely nations, since a nation is but a collection of individuals and the same objection lies against electing nations as individuals; what God actually does he always meant to do. The design: 'that we should be holy and without blame before him' — holiness the fruit and goal of election, not its cause; the doctrine tends not to license sin but to produce holiness (Barnes, Robertson, JFB)."
+    "prevalence": "single",
+    "summary": "Chrysostom presses who the saints were, and finds them ordinary: men with wives and children and domestics, as the close of the letter shows when it charges wives, children and servants in turn. He asks his hearers to consider how great the abundance of virtue must have been in that age, when even secular men bore the name of saints and faithful, and how great by contrast is the indolence that possesses us now."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the eternal election is the foundation and first cause of our calling and all blessings; the very time (before the world was made) proves it free, for we could have deserved nothing — all were lost in Adam, so nothing worthy could be foreseen (Romans 9:11). 'In him' excludes all merit; holiness, purity, and every excellence are the fruit of election, not its cause; predestination, handled soberly, magnifies God's mercy and stops the mouth of human boasting."
+    "prevalence": "single",
+    "summary": "Calvin allows that all to whom the ministry of reconciliation is given are ambassadors of Christ, but says the word apostle carries more, and that the appeal to God's will meets the jeers of wicked men, since no man ought to take this honour to himself but every man ought to wait for the calling of God, which alone makes lawful ministers. Of the two names given the readers he says that no man is a believer who is not also a saint, and none a saint who is not a believer — though he notes that most Greek copies want the second word, which he was nevertheless unwilling to strike out, since it must at all events be understood."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the apostles to have been prime officers in the church, extraordinary ministers appointed for a time only; Paul held that office not by the will of man conferring it nor by his own intrusion, but by a will of God expressly intimated to him. On the benediction he takes grace to be the free and undeserved favour of God with the graces of the Spirit that proceed from it, and peace to be all other blessings, its product — so that there is no peace without grace, and neither but from the Father and from the Lord Jesus Christ. The saints addressed had these already, but the best need fresh supplies and should pray that such blessings may abound. He also supplies the occasion, that the letter was written while Paul was a prisoner at Rome, to give exalted views of God's love and of the dignity of Christ."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: God chose 'both Jews and Gentiles, whom he foreknew as believing in Christ' (1 Peter 1:2) — election conditioned on foreseen faith. Clarke: takes it of God's eternal purpose to bring the Gentiles (as a people) into gospel privileges, as he once chose Israel — a corporate election to privilege, the phrase echoing Israel's settlement in the promised land."
+    "prevalence": "several",
+    "summary": "Clarke reports that many learned men take the true direction to be to the Laodiceans, and sets out Paley's argument. Marcion, quoted by Tertullian, gave it that title, and though his judgment is little to be relied on, his testimony shows that some copies of his day read Laodicea; the external evidence, Clarke grants, preponderates for the received reading, so the objection comes from the contents — Paul spent years at Ephesus, yet where every other letter to a church he founded appeals to what passed while he was there, nothing here shows he ever was. He adds that the Ephesus Paul knew was not the ancient city, destroyed and rebuilt by Lysimachus, and describes what was left in his own day: a village of huts formed from the ruins, holding forty or fifty Turkish families and not one Christian. Wesley holds the letter directed not to the Ephesians only but to all the churches of Asia, and cites Tertullian against Marcion's title, asking what consequence titles are, since in writing to one church the apostle wrote to all."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes the two names correlative, since without God's grace men cannot believe, and without the energy of faith they cannot in effect be saints; he notes that Paul's formula for his commission stands midway between the abruptness of the Galatian opening and the bare simplicity of the Thessalonian letters, and that the words at Ephesus are omitted in the oldest manuscripts. He adds that this salutation is Paul's all but invariable one, found also in Peter and the Revelation. Robertson observes that in the two oldest manuscripts the words at Ephesus were inserted by later hands, and that Origen read the phrase as the saints that are, showing his copies lacked the place-name; he takes it for a copy of a general letter preserved at Ephesus. Barnes opens with the city, placing it in Ionia, its people distinguished for refinement of manners and equally for luxury, its celebrity resting on the temple of Diana — fired by a man who confessed under torture that his only motive was to immortalise his name, whereupon Ionia decreed that name to oblivion and the decree has only perpetuated it; and he presses the destination question further, since no individual is saluted by name in the whole letter, though to Rome, which Paul never visited, he sent a long list of greetings, and Timothy, left there with a charge, is neither named nor greeted."
    }
   ],
   "debates": [
    {
-    "question": "On what ground are believers 'chosen before the foundation of the world'?",
-    "sides": [
+    "question": "Was this letter addressed to the church at Ephesus?",
+    "positions": [
      {
-      "position": "Unconditional individual election founded on God's free will alone, not foreseen merit (all were lost in Adam)",
+      "position": "the external evidence favours it, but the contents do not: nothing in the letter shows the writer had ever been there, unlike every other letter to a church he founded",
       "holders": [
-       "Calvin",
-       "Gill",
-       "JFB",
-       "Barnes",
-       "Robertson"
+       "Adam Clarke",
+       "Albert Barnes"
       ]
      },
      {
-      "position": "Election conditioned on foreseen faith — God chose those he foreknew as believing",
+      "position": "it is one copy of a general letter, preserved at Ephesus — the oldest manuscripts lack the place-name, and Origen read the phrase without it",
       "holders": [
-       "Wesley"
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "A corporate election of the Gentiles into gospel privilege, as Israel was once chosen",
+      "position": "it was directed to all the churches of Asia, and titles are of little consequence, since in writing to one church the apostle wrote to all",
       "holders": [
-       "Clarke"
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "reads the address as evidence about the age rather than about the church, taking the fact that ordinary householders could be called saints as a measure of how far his own generation had fallen"
+   }
+  ],
   "themes": [
-   "he hath chosen us in him before the foundation of the world",
-   "that we should be holy and without blame before him in love",
-   "the eternal election of believers in Christ",
-   "holiness the fruit of election"
+   "apostleship by the will of God",
+   "whether the letter went to Ephesus",
+   "grace and peace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "3",
+  "pericope_label": "Blessed be the God and Father of our Lord Jesus Christ",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the double title to require a distinction: God is the God of Christ as Christ is man and Mediator, having chosen him for that office and prepared a human nature for him; but the same is his Father as Christ is God, and that not by creation as with angels and Adam, nor by adoption as with saints, but by natural generation, he being the only begotten and equal to him. Calvin asks what blessing means when it runs three ways in one clause, and finds four senses in Scripture: we bless God when we offer him praise; God blesses us when he crowns our undertakings, since our enjoyments depend on his pleasure; men bless each other by prayer; and the priest's blessing is not simply a prayer but a testimony and pledge of the divine blessing. He defends the piling up of cognate terms by quoting Bloomfield, that the ancients sought such accumulation as a beauty rather than avoiding it as a blemish, and explains the design: these lofty terms are meant to rouse the readers to gratitude, so that men who feel the divine goodness so fully will never embrace new doctrines which throw that grace into the shade — the guard being against false apostles who would make their calling seem doubtful."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the comfort out of the double title, that it bespeaks the mystical union between Christ and believers that the God and Father of our Lord should be their God and Father, in and through him. He also finds a difference between these and temporal blessings: some men are favoured with health and not riches, some with riches and not health, but those whom God blesses with any spiritual blessing he blesses with all."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke understands by the blessings the pure doctrines of the gospel and the gifts and graces of the Holy Ghost; and he takes the last phrase to mean in heavenly things rather than places, since the readers were not yet in heavenly places but had abundance of heavenly things to prepare them for such — recalling that the Jews used the Jerusalem which is from above for the days of the Messiah. Wesley makes the same division as Gill, that God is his God as man and Mediator, and his Father primarily with respect to the divine nature and secondarily to the human as united to it."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson begins with the word itself, a verbal adjective always applied in the New Testament to God, while the participle from the same root is applied to men — as Lightfoot puts it, the participle points to an isolated act while the verbal describes intrinsic character. A single article, he notes, binds the two titles together; and he observes that the exact phrase for the heavenly places occurs four times more in this letter and nowhere else in the New Testament, with a clearly local sense in three of them and probably here, since the believer is a citizen of heaven and a stranger on earth. Barnes takes the same ground more anxiously, noting that the sentence runs unbroken to the twelfth verse and that the length of Paul's periods is one cause of the obscurity of his style. What is praised is God's eternal purpose, and Barnes knows how that lands: most persons suppose the plans of God dark and forbidding, and no doctrine is so unpopular, so reproached, or so willingly disbelieved — not so felt Paul, who thought it laid the foundation for eternal praise. Ellicott hears the tone rather than the terms: the letter ascends at once into the heavenly places and catches from them its note of adoration, dwelling on an election based on God's will and designed for his glory."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the last phrase mean heavenly places or heavenly things?",
+    "positions": [
+     {
+      "position": "heavenly things, since the readers were not yet in heavenly places but had abundance of heavenly things to prepare them for such",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the sense is probably local, as it certainly is in three of the four other places where the phrase occurs in this letter",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "opens the exposition by defending the doctrine of eternal purpose against its unpopularity, insisting that what most men find dark and forbidding was to Paul the very ground of praise"
+   }
+  ],
+  "themes": [
+   "the God and the Father of Christ",
+   "the four senses of blessing",
+   "in heavenly places or heavenly things"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "4",
+  "pericope_label": "He hath chosen us in him before the foundation of the world",
+  "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril supplies the other half of the phrase, that the Son began not his being at Bethlehem but before all ages, since the prophet says his goings forth are from the days of eternity: the Father is the beginning of the Son, timeless and without beginning."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill rules out several readings: this cannot be a national choice as Israel of old was chosen, since those addressed were not a nation; nor a choice of them as a church; nor a choice to church privileges, since they are chosen to grace and glory, to be holy and blameless; nor a choice to office, since not all were apostles or pastors. Calvin takes the verse as the first cause of our calling and of every benefit we receive, and argues its freeness twice. The very date proves it, for what could we have deserved before the world was made? The sophism that we were chosen because God foresaw we would be worthy he calls childish, since we were all lost in Adam and there was nothing to foresee — Paul's own argument about Jacob and Esau, born before they had done any good or evil. That the choice is in Christ is the second proof, since the name of Christ excludes all merit and everything men have of their own. He insists on the order: holiness is the fruit of election and not its cause, since the cause is not later than the effect, so election gives no occasion to men who say they may live as they please if elected; and against the Catharists and Donatists he adds that this is the goal our whole course is directed toward, and which we shall not reach till we have finished it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads it the other way. The Jews considered themselves an elect people and wished to monopolise the divine love; the apostle shows that God had the Gentiles as much in contemplation, the blessings now dispensed to them being the proof. On the closing words he finds the metaphor in the immaculate sacrifices the law required, and takes holy to mean separated from earth and consecrated to God. Wesley says both Jews and Gentiles are meant, whom God foreknew as believing in Christ."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes argues from the pronoun, which shows individuals rather than communities, since of no community can it be said that it was chosen before the foundation of the world to be holy; and he presses those who soften the doctrine by applying it to nations: if there is injustice in choosing one man to favour there is no less in choosing a nation, which is a collection of men. Robertson derives the noun for foundation from a verb meaning to fling down, used of depositing seed and of laying a foundation, and notes that this exact phrase occurs in the Lord's own prayer of the Father's love toward the Son, and once in Peter, while elsewhere a different preposition is used. Ellicott makes more of that coincidence: the phrase is applied elsewhere only to the eternal communion of the Son with the Father and to the foreordaining of his sacrifice. He also traces the verb for choosing through its other uses — of the Lord's choice of the apostles, though once with the addition that one of them was a devil, which shows such election was not final — and concludes that the visible election to privilege is constantly urged on men, while the eternal counsel is dwelt on only where thought must ascend to the fountain-head. He hears co-operation implied in the purpose clause, since holiness is inseparably connected with election; blameless is properly without blemish, applied to Christ as a lamb and to us in proportion to our conformity to his image, while before him points to God's unerring judgment as against our own."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who are the chosen — individuals, or the Gentiles as a body?",
+    "positions": [
+     {
+      "position": "individuals, since of no community can it be said that it was chosen to be holy; and applying the doctrine to nations removes no difficulty, a nation being a collection of men",
+      "holders": [
+       "Albert Barnes",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the Gentiles, whom God had as much in contemplation as the Jews, the blessings now dispensed to them being the proof",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "both Jews and Gentiles, whom God foreknew as believing in Christ",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "distinguishes two kinds of election in Scripture — the visible election to privilege, constantly urged on men, and the election in God's eternal counsels, dwelt on only where thought must ascend to the fountain-head"
+   }
+  ],
+  "themes": [
+   "individuals or nations",
+   "whether the choice rests on foreseen worthiness",
+   "holy and without blemish"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "5",
+  "pericope_label": "Having predestinated us unto the adoption of children",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God, having chosen, 'predestinated (proorizo — determined beforehand, set bounds before) us unto the adoption of children (huiothesia, sonship) by Jesus Christ' — foreordaining that believers should be brought, through Christ's mediation, into the dignity and rights of sons of God, 'to himself'; 'according to the good pleasure (eudokia — sovereign purpose) of his will' — the evident object being to state why God chose the heirs of salvation: as seemed good to him, not from any control or merit of man (Barnes, Robertson)."
-   },
-   {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the cause is God's free good pleasure alone — he did not seek a cause outside himself, but predestinated us because such was his will; the phrase expressly sets aside all merit, free-will, and fancied preparations, that the whole glory of salvation be God's."
+    "prevalence": "several",
+    "summary": "Gill distinguishes a wider and a narrower use: taken largely, predestination includes election and reprobation and reaches to all the affairs of the world, to men's lives and to all mercies and afflictions, so that providence is no other than the execution of it; but here it is the same with election. Calvin distinguishes three causes and finds a fourth shortly after — the efficient in God, the material in Christ, the final in the praise of grace — and takes the phrase about good pleasure to mean that God sought no cause outside himself but predestinated us because such was his will. The word sets aside all merit, since in adopting us God does not inquire what we are; and he quotes Chandler on the verb that follows, which no profane author uses and which appears in the angel's salutation to Mary, so that its plain sense is not that God made us accepted but that he highly favoured us. The highest end is the praise of such abundant grace, and every man who hides that glory is endeavouring to overturn the everlasting purpose of God."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: God's free, fixed, unalterable purpose to confer the dignity of sonship and joint-heirship with Christ on all those who should believe in Christ, and those only."
+    "prevalence": "several",
+    "summary": "Clarke makes more of the boundary sense, thinking the word originally geographical: God had assigned Israel their portions in the promised land with their bearings and extent as exactly ascertained as by a map, and uses the same term now for the Gentiles' spiritual inheritance, so that what he typified in the one he has fulfilled in the other. This, he says, is the grand key by which the whole predestination business is unlocked, and he holds the Gentile reading throughout, taking the point to be that God had determined before the Jewish economy began that the Gentiles should in the fulness of time be admitted to the privileges of the Messiah's kingdom, which makes the exclusive salvation of the Jews chimerical. Wesley states his own view precisely: God foreordained that all who afterwards believed should enjoy the dignity of sons and joint-heirs with Christ, and confer this blessing on those who should believe, and those only."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes takes the verb to mean properly to set bounds before, and then to predetermine, and observes that even those who deny particular election admit that much; on the question of nations he presses the argument furthest — there is no mention of nations here as such, those referred to include Paul himself, who was no heathen, and any purpose concerning a nation must have had some reference to the men composing it. He that would act upon the ocean must act on the drops that make it up, for besides the collection of drops there is no ocean; he that would remove a mountain must act on its particles, for there is no abstract mountain. Perhaps there was never a greater illusion, he adds, than to suppose all difficulty removed by saying the doctrine refers to nations — that reasoning has been merely throwing dust in the eyes, since the difficulties are the same in either case. Robertson calls the verb a late and rare compound meaning to define or decide beforehand, and takes it with the earlier verb of choosing either as simultaneous with it or as its antecedent cause; on the noun rendered good pleasure he decides that it means purpose rather than benevolence. Ellicott says our version reproduces an ambiguity in the original, since the word may mean God's free will, to which this or that seems good, or his good will towards us; even the old Greek interpreters were divided, and either sense will suit, but the parallel a few verses later, where the counsel of his will is named, turns the balance to the first."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the phrase rendered good pleasure mean God's free purpose or his benevolence toward us?",
+    "positions": [
+     {
+      "position": "purpose — the parallel a few verses later, naming the counsel of his will, turns the balance",
+      "holders": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "purpose, and one that sought no cause outside itself, since the word is expressly chosen to set aside all merit",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "treats the verb as a surveying term and makes the allotment of Canaan the key to the whole doctrine, so that predestination is read as the mapping out of a Gentile inheritance rather than the choice of persons"
+   }
+  ],
   "themes": [
-   "Having predestinated us unto the adoption of children by Jesus Christ to himself",
-   "according to the good pleasure of his will",
-   "predestination to adoption",
-   "the good pleasure of God's will"
+   "what predestinate means",
+   "nations or individuals, again",
+   "good pleasure or good will"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "6": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "6",
+  "pericope_label": "To the praise of the glory of his grace, wherein he hath made us accepted",
   "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril turns the doxology into an address to the newly baptised, who having been counted worthy of the name of Faithful may now say with gladness what the apostle says — blessed be the God and Father of our Lord Jesus Christ, who has blessed us with every spiritual blessing in the heavenly places."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill enumerates where the grace shows itself — that God had no need of sons, having a well-beloved one already; that those adopted are so unworthy; that men and not angels are taken into his family; that some and not others of the same race; and that all this was before the world was. He adds that the end named is answered when the children of God ascribe their adoption to free grace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets the dispensations side by side: by the law God's justice and holiness were rendered most glorious, by the gospel his grace and mercy equally conspicuous. On the last clause he finds our rendering unclear and prefers with Whitby and Macknight a more literal one — with which he has graciously favoured us through the Beloved — and notes that several excellent manuscripts add the words his Son, which is the meaning whether the reading is received or not. Wesley says the same in a line, that the glory is of his free love without desert on our part."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ultimate end of election and predestination: 'to the praise of the glory of his grace' — that God's grace might be praised and glorified, the highest design of all; 'wherein he hath made us accepted (echaritosen — highly favoured, made acceptable, the word used of Mary in Luke 1:28) in the beloved (Christ, the Beloved Son)' — believers are graciously accepted by God in union with his beloved Son (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: it is 'in the beloved' — in Christ — that we find acceptance; God's favour reaches us only through and in his Son, the well-beloved in whom we are reconciled."
+    "summary": "Barnes takes the phrase for a Hebrew idiom meaning his glorious grace, and turns the doctrine round to face the charge usually brought against it, that it makes God partial or severe. Its real tendency in a mind properly affected is not to excite opposition but thankfulness. It is the only foundation of hope for man, since left to himself the whole race would reject the offers of mercy; every joy any man has is traceable to God's purpose to bestow it, and all these favours are conferred on those with no claim — the pardoned Christian had no claim on pardon, and he who is admitted to heaven could urge no claim for such an honour. Election is to life and pardon and holiness and heaven, so that God chooses men to be holy and not sinful, happy and not miserable; and the doctrine has added no pang of sorrow to any of the race, having made millions happy who would not otherwise have been, but not one miserable. Nor has anyone a right to complain: those chosen will not complain of the grace which made them what they are, and those not chosen have no claim to life and are unwilling to come. Ellicott presses the genitive harder, taking it for the acknowledgment by all God's creatures that his essential glory is best manifested in his grace — that he declares his almighty power most chiefly in showing mercy — and finds the pattern in the answer given to Moses, who asked to see God's glory and was told his goodness should pass before him; he quotes Chrysostom's first homily on this letter: God desires not our service, nor our praise, nor anything except our salvation. He also identifies the verb of the last clause as the one used of Mary in the angel's salutation and nowhere else in the New Testament, meaning to bestow grace upon. Robertson adds that the relative has been attracted into the case of its antecedent, which happens only here and in that same salutation, and that the phrase in the Beloved occurs nowhere else in the New Testament, though it is found in the Apostolic Fathers."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the last clause mean that God made us accepted?",
+    "positions": [
+     {
+      "position": "no — a more literal rendering is that he graciously favoured us through the Beloved, and several manuscripts add the words his Son",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the verb means to bestow grace upon, the same word used of Mary in the angel's salutation and nowhere else in the New Testament",
+      "holders": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "answers the charge of divine partiality by counting what election is to — life, pardon, holiness and heaven — and observing that the doctrine has made millions happy who would not otherwise have been, but not one miserable"
+   }
+  ],
   "themes": [
-   "To the praise of the glory of his grace",
-   "he hath made us accepted in the beloved",
-   "the praise of God's grace",
-   "acceptance in the Beloved"
+   "why the doctrine should produce praise",
+   "made accepted or highly favoured",
+   "in the Beloved"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "7",
+  "pericope_label": "In whom we have redemption through his blood, the forgiveness of sins",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill starts from what the word implies: redemption supposes captivity and is a deliverance out of it, God's elect being by nature in bondage to sin, Satan and the law, and ransomed from the hand of one stronger than they; Christ was fit for the office as their near kinsman and as being God as well as man, and obtained it by his obedience and death. Calvin reads the apposition the other way: redemption is styled forgiveness in order to intimate that we are redeemed because our sins are not imputed to us, from which it follows that the righteousness by which we are accepted comes by free grace. The close connection between redemption and the manner of obtaining it deserves notice, he adds, for so long as we remain exposed to God's judgment we are bound by miserable chains, and exemption from guilt is an invaluable freedom. On the riches of grace he hears the writer's sense of his own inadequacy, since he feels unable to celebrate the goodness of God properly and desires that the contemplation of it should occupy men's minds until they are lost in admiration — for were men deeply impressed with those riches, no place would be found for pretended satisfactions or for the trifles by which the world imagines it can redeem itself, as if the blood of Christ, unsupported by additional aid, had dried up and lost its force."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke measures the grace by its source, since as it is rich in benevolence so it was manifested in beneficence, the measure of redeeming grace being that of God's own eternal goodness; and he records that one great manuscript and the Coptic read his goodness here for his grace. Wesley fixes the time and the extent in a few words: from the moment we believe, and from the guilt and power of sin."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'In whom (in Christ) we have redemption (apolytrosis — deliverance by ransom, buying back) through his blood' — believers are redeemed, set free from sin's bondage and penalty, by the price of Christ's blood, his atoning death; this redemption consisting in 'the forgiveness (remission) of sins' — the cancelling of guilt; and 'according to the riches (the abundance, the wealth) of his grace' — not grudging or scanty but flowing from the boundless wealth of God's grace (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): forgiveness flows from the riches of grace; the redemption is wholly of God's abundant favour, the blood of Christ the ransom price by which guilt is remitted."
+    "summary": "Robertson makes the point briefly that Paul plainly treats the blood of Christ as the cost of redemption, the ransom money. Ellicott finds two expressions here rather than one, complementary rather than identical: they answer to the two under which the Lord described his own atonement, the giving of his life a ransom for many and the shedding of his blood for the forgiveness of sins. The first looks at the atonement from the side of God, whose mercy redeems man at an unspeakable price from a bondage he plunged himself into; the second from the side of man, as a full and sufficient sacrifice offered by one who is head and representative of the race — and together they represent the whole truth. He also notes that the word for sins used here means properly separate acts of transgression, where the parallel passage in Colossians has the more general word for sin in the abstract. Barnes turns the verse against the reading he has been resisting throughout the chapter, since of what nation could it be said that it had redemption through the blood of Jesus and the forgiveness of sins? On the forgiveness he enters a caution against taking the part for the whole: we are not to suppose this is all the benefit we receive from Christ's death, for it is the main thing and perhaps the most important, but we obtain also the hope of heaven, the influences of the Holy Spirit, grace in trial and peace in death. He notices too that the word riches used so recurs repeatedly in this letter, and that Paley calls it a cant phrase of Paul's, found nowhere else in the New Testament except once in James — from which Paley constructs an argument for the authorship, since a forger would not have thought of introducing it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are redemption and forgiveness two things here or one?",
+    "positions": [
+     {
+      "position": "two complementary aspects, answering to the ransom and the shed blood — the one viewed from God's side, the other from man's",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "one: forgiveness is named to intimate that the redemption consists in sins not being imputed",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "turns a stylistic observation into an argument for authorship, following Paley in treating the recurring phrase riches of grace as a mark no forger would have thought to imitate"
+   }
+  ],
   "themes": [
-   "In whom we have redemption through his blood, the forgiveness of sins",
-   "according to the riches of his grace",
-   "redemption and forgiveness through Christ's blood",
-   "the riches of grace"
+   "redemption as ransom from bondage",
+   "why forgiveness is named in apposition",
+   "the riches of his grace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The grace just mentioned is that 'wherein he hath abounded (made to overflow, lavished) toward us' — God's grace has been poured out abundantly upon believers, not given sparingly; bestowed 'in all wisdom and prudence (phronesis — intelligence, understanding)' — either the wisdom God displayed in the plan of redemption, or the wisdom and understanding he imparts to believers; God's grace is a wise and intelligent grace, linked to the revealing of the mystery of his will (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he hath abounded toward us in all wisdom and prudence",
-   "God's grace abounding in all wisdom and prudence",
-   "grace lavished abundantly",
-   "a wise and intelligent grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "8-9",
+  "pericope_label": "Wherein he hath abounded in all wisdom and prudence, having made known the mystery",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God, in his abounding grace, has 'made known unto us the mystery (mysterion — a secret once hidden, now revealed) of his will' — disclosing his hidden saving purpose, which human wisdom could never have discovered; the mystery being God's plan of redemption (especially the uniting of all things in Christ and the inclusion of the Gentiles), formerly hidden, now revealed in the gospel (Barnes, Robertson, Henry)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the revelation flows from God's 'good pleasure, which he purposed in himself' — his own sovereign, free counsel, not prompted from outside; the mystery springs from his own will alone."
+    "prevalence": "several",
+    "summary": "Gill lists the doctrines called mysteries — the trinity of persons in the Godhead, the union of two natures in Christ, the calling of the Gentiles and the conversion of the Jews, the resurrection of the dead — and says the gospel is the mystery of God's will in saving sinners by Christ, who chooses and redeems and calls whom he pleases. Calvin treats the preaching of the gospel as the formal cause of our salvation, and thinks the magnificent titles given it were meant to make the readers despise all contrary doctrine — the false apostles having insinuated themselves under pretence of views more elevated than Paul's, while the devil labours to disparage the gospel. He meets those alarmed at the novelty by asking what could be more just than that God's purposes should be known to him alone so long as he is pleased to conceal them, and that it should lie in his power to fix the time when they are communicated — and whether anyone will deny that God's knowledge is greater than man's."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the dependence plainly: these things must have been for ever hidden from us if God had not made them known by his written word, his preached gospel, and his Spirit of truth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes both gifts to have been given to the apostles — complete instruction in heavenly things, and with it the prudence to know when and where to preach so that it might be effectual — and borrows Sir William Temple's definitions, that wisdom makes men judge what are the best ends and the best means to attain them, while prudence is wisdom applied to practice. Every wise man is not a prudent man, he adds, and every prudent man is not a wise one. On the mystery he narrows it to one thing: that the Gentiles should ever be received into the church with all the privileges of the Jews, without circumcision, was a hidden thing never published before; and he adds that a mystery ceases to be a mystery as soon as it is revealed. Wesley divides the two gifts, taking the wisdom as manifested by God in the whole scheme and the prudence as wrought in us, that we may know and do his will."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott would have the verb rendered overflow rather than abound, the English having lost the emphasis, and takes the point to be that the richness of God's grace not only fills the soul with salvation but overflows into further gifts. Of the two named, wisdom is the higher, meaning as in the Old Testament the knowledge of the true end of life; it is paired here with prudence, which is wisdom in action, as elsewhere with intelligence, which is wisdom in judgment, and with knowledge, which is wisdom in perception. On the word mystery he counts its occurrences — used by Paul alone except in four passages of the Revelation, and by him twenty-one times, ten in this letter and its parallel — and grants the ordinary sense is a natural derivative, since reason can apprehend when revealed what it could not discover, though seldom comprehend it perfectly. Barnes reads both gifts of God instead: he has evinced great wisdom in so saving men as to secure the honour of his own law, with ample proof of mind and thought in a plan far-seeing and adapted to its end. He also clears the word mystery of a meaning it does not bear: literally it is something into which one must be initiated, and then anything concealed; we commonly use it of what is above comprehension, but this is never its sense in the New Testament, where it means a doctrine not before fully revealed, so that when the veil is removed there may be nothing incomprehensible in it. Robertson puts it in three words: once hidden, now revealed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are the wisdom and prudence God's own or gifts to men?",
+    "positions": [
+     {
+      "position": "both are God's, evinced in a plan far-seeing and adapted to its end",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "both were given to the apostles, the second being the practical knowledge of when and where to preach",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "divided: the wisdom manifested by God in the whole scheme, the prudence wrought in us",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "insists that mystery never means the incomprehensible in the New Testament, but only what was concealed until revealed — after which there may be nothing difficult in it at all"
+   }
+  ],
   "themes": [
-   "Having made known unto us the mystery of his will",
-   "according to his good pleasure which he hath purposed in himself",
-   "God making known the mystery of his will",
-   "the revealed saving purpose"
+   "wisdom and prudence, in God or in us",
+   "what mystery means in the New Testament",
+   "the content of the secret"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "10",
+  "pericope_label": "That in the dispensation of the fulness of times he might gather together in one all things",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the fulness of times to be the period appointed by God and fixed in the prophets, when a new economy began. Calvin reaches the sense of the verb against the older rendering, preferring the meaning that out of Christ all things were disordered and through him restored to order. Out of Christ, he asks, what can we perceive but mere ruins? Without Christ the whole world is a shapeless chaos and frightful confusion. He also faces the harder half of the question — why heavenly beings are included at all, since the angels were never separated from God and cannot be said to have been scattered. Some answer that they are gathered because men have been admitted to fellowship with them; but he offers more, that so far as angels are creatures they would, without the benefit derived from Christ, have been liable to change and their happiness would not have been eternal. Men had been lost and angels were not beyond the reach of danger, and Christ by uniting both to the Father has established actual harmony between heaven and earth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke borrows Macknight's definition, the plan which the master of a family or his steward has established for its management, and takes the word here for the gospel dispensation. On the things gathered he lays out the readings on offer: that heaven means the Jewish state and earth the Christian; or heaven the angelic hosts and earth believers of all nations; or heaven the saints who died before Christ's coming and are not made perfect till the resurrection; or that the Hebrew phrase simply means all creatures without distinction of nation. His own judgment is that the forming of one church out of both Jews and Gentiles is what the apostle intends. Wesley states it plainly as all angels and men, whether living or dead."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The mystery is to be accomplished 'in the dispensation (oikonomia — administration, ordering) of the fulness of times' — the era of the gospel, the appointed time when God's plan comes to its head in Christ; God's purpose to 'gather together in one (anakephalaiosasthai — sum up, head up, unite under one head) all things in Christ, both which are in heaven, and which are on earth' — to bring all things to unity and order under Christ as their head (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the things in heaven and on earth — the whole universe, angels and men, the divided creation — are to be reconciled and united under Christ; the cosmic reach of redemption, all summed up in him."
+    "summary": "Barnes explains the noun as meaning properly the management of household affairs, and then stewardship or arrangement, a scheme or plan. He derives the following verb from the practice of an orator, since it means to sum up or recapitulate as a speaker does at the close of his discourse; the design is to make one empire under one head, with common feelings and under the same laws, since the earth has separated itself from other worlds by rebellion. On what is gathered he observes that the word is neuter — not all persons or all the elect, but all things — and thinks that deliberate, since sin has produced disorder not in mind only but in matter; he notes too that nothing is said of hell, so the verse cannot teach universal salvation, one world having no part in the union. Ellicott dissents from the connection our version makes, holding that the words belong to the previous verse and mean that God purposed this for the administration of the fulness of the appointed seasons. He observes that the term is usually applied to God's servants as dispensers of his mysteries, but here to the disposal of all by God himself; and that the word for fulness is joined to time only here and in Galatians — there of a single point marking the completion of the preparation for the Lord's coming, here of a series of seasons. In the verb he hears the keynote of the whole letter, the unity of all things in Christ, giving it its full force — to gather again under one head things originally one but since separated, a unity broken by sin and restored in the incarnation. Robertson makes the same distinction as Ellicott about the seasons, that in Galatians the time before Christ is treated as a unit and here as a series of epochs, and calls the verb a literary word, a late compound meaning to head up all things in Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are the things in heaven that are gathered up?",
+    "positions": [
+     {
+      "position": "the angels — who though never scattered were, as creatures, liable to change until Christ secured them",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "one church formed out of Jews and Gentiles; the several other readings on offer do not satisfy",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "all things, not all persons: the word is neuter, and sin produced disorder in matter as well as mind — though nothing is said of hell, so no universal salvation follows",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "detaches the clause from our version's connection, reading it with the previous verse and hearing in the verb the keynote of the whole letter — the unity of all things in Christ"
+   }
+  ],
   "themes": [
-   "in the dispensation of the fulness of times he might gather together in one all things in Christ",
-   "both which are in heaven, and which are on earth",
-   "the gathering of all things in Christ",
-   "the cosmic consummation under Christ"
+   "the dispensation as a plan of management",
+   "summing up or restoring to order",
+   "what things in heaven means"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "11": {
   "voices": [
    "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "11",
+  "pericope_label": "In whom also we have obtained an inheritance, being predestinated",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'In whom (in Christ) also we have obtained an inheritance (eklerothemen — were made a heritage, or obtained a lot/portion)' — believers are given a share in the inheritance of God, made heirs in Christ; this inheritance 'being predestinated (foreordained) according to the purpose (prothesis — the settled design) of God' — the heirship flows from God's eternal plan (Barnes, Robertson, Chrysostom)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom is troubled by the word for heritage and says why. A lot is a matter of chance rather than of deliberate choice, closely allied to ignorance and accident, and often passing over the virtuous to bring the worthless into notice; so observe, he says, how the apostle corrects that point by adding foreordained according to a purpose. We have not merely been chosen, for it is God who chooses, nor merely allotted, for it is God who allots; the whole is of deliberate choice, and he saw us as it were chosen by lot before we were born. He guards the other side too, that the apostle speaks of inheritance by lot yet so as not to divest men of free will."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God 'worketh all things after the counsel of his own will' — a strong assertion of God's universal providence and sovereign freedom; he accomplishes all according to his own wise counsel, the inheritance secured by his unchangeable purpose."
+    "prevalence": "several",
+    "summary": "Gill hears an allusion to the land of Canaan divided by lot among the children of Israel, made to show that the inheritance comes not by works but by the sovereign disposal of God, and that every one shall have his share certainly. Calvin agrees that separate classes are now noticed after a general treatment of all the elect, and takes the words of Paul himself and the Jews, or more correctly of all who were the firstfruits of Christianity; and he thinks it confirmed the faith of the Ephesian converts to be associated with those who might be called the first-born in the church, as if the condition of all godly persons were the same as theirs. On the closing description he presses the clause hard, that God is described as sole agent doing everything according to his own will, so as to leave nothing to man: he looks at nothing outside himself, and his own will is the only actual cause of election — which refutes the madness of those who exclaim against his design whenever they cannot discover the reason of his works."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works the type harder: the promised land was assigned to Israel by limit and by lot, both appointed by God, and the salvation now sent to the Gentiles is as expressly their portion — so nothing in the Christian scheme was fortuitous, all being the result of infinite counsel. He reads the first person of believing Jews, adding that their privileges were forfeited by rebellion and unbelief, so that the believing part must be re-elected before they can possess what was promised to Abraham's spiritual seed. Wesley enters the one caution the others do not, that this will is not an arbitrary will but flows from the rectitude of God's nature, since otherwise what security would there be that it would be his will to keep his word even with the elect?"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson confirms that the verb is an old one meaning to assign by lot, and that this is its only occurrence in the New Testament. Barnes reports that most commentators take the word we of the Jews, in contradistinction from the ye of a later verse, but he prefers a different account — that the reference is to those first converted, without regard to nation, and probably to the apostle and his fellow-labourers, who first believed and afterwards saw the same favour conferred on their readers. On the last clause he takes it to affirm not merely that God accomplishes the designs of salvation but that he does everything, his agency being universal — every leaf and spire of grass, every sunbeam and flash of lightning declares it. But he is careful about the mode, which Paul does not state: the agency is exerted in accordance with the nature of each object and the laws impressed on it, so that it is not of the same kind on the rose-bud as on the diamond, nor on the nerve as on the rose-bud."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the will that works all things an arbitrary will?",
+    "positions": [
+     {
+      "position": "no — it flows from the rectitude of God's nature, since otherwise there would be no security that he would keep his word even with the elect",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "it looks at nothing outside itself and is the only actual cause of election; to complain of it because we cannot discover its reason is madness",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "universal but not undifferentiated: the agency is exerted according to the nature of each object and the laws impressed on it",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "treats the word heritage as a difficulty to be corrected rather than a comfort, since a lot implies chance, and shows how the following participle removes that implication without removing free will"
+   }
+  ],
   "themes": [
-   "In whom also we have obtained an inheritance, being predestinated according to the purpose",
-   "of him who worketh all things after the counsel of his own will",
-   "the inheritance obtained by predestination",
-   "God working all things after his own counsel"
+   "inheritance by lot",
+   "who the first person plural means",
+   "whether the divine will is arbitrary"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  },
  "12": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The design of the inheritance and predestination: 'that we should be to the praise of his glory' — that believers, made heirs, should result in the praise and glory of God (his glory the end of all, the refrain of vv.6, 12, 14); 'who first trusted (or first hoped — proelpikotas) in Christ' probably refers to the Jewish believers (Paul and others) who were the first to hope in the Messiah, before the Gentiles came in (v.13), though some take it of all believers as those who set their hope in Christ (Barnes, Robertson, Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "That we should be to the praise of his glory, who first trusted in Christ",
-   "the design that believers be to God's praise",
-   "the first to hope in Christ",
-   "the refrain of God's glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "12-13",
+  "pericope_label": "That we should be to the praise of his glory; in whom ye also were sealed",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The order of salvation for the Gentiles: they 'heard the word of truth (the gospel of your salvation),' and then 'trusted (believed)' in Christ — hearing the gospel preceding and producing faith; and upon believing they 'were sealed (esphragisthete — marked, secured, confirmed) with that holy Spirit of promise' — the Holy Spirit, promised to believers, given as a seal: a mark of ownership, a confirmation of genuineness, and a pledge of security (Barnes, Robertson)."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril collects the titles under which the same Spirit is named — of holiness, of adoption, of revelation, of promise and of grace."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the Spirit is the promised gift of the Father (Joel 2, Acts 2), the seal that marks believers as God's own and certifies their belonging to him."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the turn to the second person as addressed to the Gentile believers, who partake of the same grace as the believing Jews, the promise belonging to all whom God calls, whether afar off or nigh — though he notes that one great manuscript reads we here rather than ye. Calvin dwells on the end named rather than the persons, observing that the word for glory denotes what shines in the goodness of God, since there is nothing more peculiarly his own, or in which he desires more to be glorified. On the sealing he draws the comparison from what seals do among men: they give validity to charters and testaments, and were anciently the chief means by which a letter's writer could be known, distinguishing the true from the spurious. He then meets the objection that faith itself is said to be sealed, so that faith must come first, by distinguishing two operations of the Spirit answering to two parts of faith — its commencement is knowledge, its completion a firm conviction admitting no doubt, and both are his work."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke recalls that it was customary for a purchaser to mark with his seal the goods he had bought, that he might know them if mixed with others, and customary also to set a seal on what was dedicated to God; the Jews, he adds, speak of the seal of God, which they call truth, a notion he thinks the apostle may have in view. Wesley reads the earlier clause of Jews who believed before the Gentiles, and adds another branch of what he calls true gospel predestination — that he who believes is not only elected to salvation, if he endures to the end, but fore-appointed to walk in holiness."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott grants that our version's sense of the participle — believing before the Gentiles did — can be defended by analogy, but thinks the wider analogy supports another: who have hoped in the Christ before he came, that is, those taught by prophecy who waited for the consolation of Israel and in due time became at Pentecost the firstfruits of his salvation. He also thinks the word trusted was inserted into our version by mistake, carried over from the previous verse, and would refer the whole irregular sentence to the single verb of sealing; he marks the order carefully, since first the light of the gospel shines, next by faith men open their eyes to see it, and then they are sealed by a special gift of the Spirit. On the seal itself he observes that the sealing spoken of in Scripture is not of documents but of men, as in the sealing of God's servants in their foreheads, where it is an outward badge and pledge of safety; but where it is connected with the gift of the Spirit the word is deeper, having the character of a sacrament rather than a badge. Robertson calls the compound late and rare, found only here in the New Testament, and says the force of the prefix is unclear, though it probably refers to men who like Paul had been Jews and had now found the Messiah in Jesus, some, like Simeon and Anna, having looked for him before his coming. Barnes suspects a particular occasion behind the words, the incident at Ephesus where certain disciples of John said they had not heard whether there was any Holy Ghost, and on being baptised in the name of the Lord Jesus received him. If that is the reference, it makes a striking coincidence of the kind Paley collects, since the mention here is too slight for a forger to have built on, and too slight for anyone to have forged the history from it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the participle rendered who first trusted mean?",
+    "positions": [
+     {
+      "position": "who hoped in Christ before he came — those taught by prophecy who waited for the consolation of Israel",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "probably men who had been Jews and now found the Messiah in Jesus, some having looked for him beforehand, though the force of the prefix is unclear",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Jews who believed before the Gentiles did",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "connects the sealing with a specific recorded incident at Ephesus, and treats the very slightness of the allusion as evidence that neither letter nor history was forged from the other"
+   }
+  ],
   "themes": [
-   "after that ye heard the word of truth, the gospel of your salvation",
-   "after that ye believed, ye were sealed with that holy Spirit of promise",
-   "the Gentiles hearing, believing, and sealed",
-   "the sealing of the Spirit"
+   "who first trusted",
+   "the order of hearing, believing and sealing",
+   "what a seal is"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "14",
+  "pericope_label": "Which is the earnest of our inheritance, until the redemption of the purchased possession",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill distinguishes the terms in his own way: an earnest confirms an agreement, assures the right to the thing agreed on, is a part of it and less than it, and is never returned; so the Spirit certifies the right to the heavenly inheritance and gives a meetness for it, being the firstfruits of eternal happiness and of the same kind with it. Enjoyed now only in measure, he is less than the communion the saints will have hereafter, the best things being reserved till last — but once given into the heart he never removes. Calvin quotes Chandler, that the word properly denotes the first part of the price paid in a contract, a security for the remainder, which is not taken back but kept till the residue is paid — so differing from a pledge, which is given for security but restored when the contract is completed. He draws the metaphor from the bargains it comes from: when a pledge has been given and accepted the whole is confirmed and no room is left for a change of mind, so that when we have received the Spirit God's promises are confirmed and no dread is felt that they will be revoked; and the significance of a pledge lasts no longer than till both parties have fulfilled the bargain. On the last phrase he dissents from all the rest: the word means neither the kingdom of heaven nor a blessed immortality but the Church itself, and the clause is added for consolation, that they might not find it hard to cherish hope till Christ's coming or be displeased at not yet possessing the inheritance, since this is the common lot of the whole Church."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke adds that the man who can produce this earnest in the day of judgment shall have an abundant entrance into the holiest, and reads the redemption as the raising of the body, which cannot take place till the day of judgment; he reports Whitby's derivation of the verb from a sense meaning to save alive. Wesley calls the Spirit both a pledge and a foretaste."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sealing Spirit 'is the earnest (arrabon — a down-payment, first instalment, pledge guaranteeing the rest) of our inheritance' — the gift of the Spirit now is the first instalment and guarantee of the full inheritance to come; given 'until the redemption of the purchased possession' — until the full and final redemption (of the body, the complete deliverance) of those whom God has purchased as his own; 'unto the praise of his glory' (the third doxological refrain, Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Spirit secures believers as God's purchased possession until the final redemption; the earnest is the certain pledge that God will complete what he has begun, to the praise of his glory."
+    "summary": "Robertson makes the point briefly, that the gift of the Spirit is the pledge and first payment for the final inheritance, and observes that the addition of the words of promise is meant to show that Gentiles are included in what God promised; he agrees that the possession is God's own and that he has purchased us back to himself. Ellicott finds a correspondent double sense in the word inheritance, since it is a present possession which shall be developed into a more precious future; on the disputed noun he says it properly means the act of purchase or acquisition, as elsewhere in Paul, and takes our rendering to rest on a confusion common in English though rare in Greek, by which the result of an action stands for the action — purchases for things purchased — noting the same transition where Israel is called a people for acquisition. Barnes lists the word's renderings across the New Testament and takes it here for the complete deliverance from sin which Christ acquired for us, so that the Spirit renewing and comforting us is the pledge that the redemption is yet to be wholly ours."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the purchased possession?",
+    "positions": [
+     {
+      "position": "the Church itself — neither the kingdom of heaven nor a blessed immortality, the clause being added for the readers' consolation",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the complete deliverance from sin which Christ acquired for us",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "properly the act of acquisition; our version's sense rests on a confusion by which the result of an action stands for the action itself",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the body, whose raising cannot take place till the day of judgment",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "presses the difference between an earnest and a pledge — the one kept and counted toward the price, the other returned when the contract is fulfilled — and reads the Spirit as the former"
+   }
+  ],
   "themes": [
-   "Which is the earnest of our inheritance until the redemption of the purchased possession",
-   "unto the praise of his glory",
-   "the Spirit as the earnest of the inheritance",
-   "the pledge of full redemption"
+   "earnest and pledge distinguished",
+   "the redemption still to come",
+   "what the purchased possession is"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  },
  "15": {
   "voices": [
    "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "John Gill"
+  ],
+  "range": "15",
+  "pericope_label": "After I heard of your faith in the Lord Jesus and love unto all the saints",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul, having recounted the blessings of grace, now turns to prayer: 'wherefore I also, after I heard of your faith in the Lord Jesus, and love unto all the saints' — the report of their faith and love prompts his thanksgiving and prayer; the pairing of 'faith in the Lord Jesus' (toward Christ) and 'love unto all the saints' (toward the brethren) being the twin marks of a true Christian, faith Godward and love manward (Barnes, Henry, Chrysostom)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom is taken with the man praying. Never was anything equal to the yearnings of the apostle, he says, who made every prayer on behalf of whole cities and peoples; think how many he had in mind, whom it were a labour so much as to remember, and for all of whom he gave thanks as though he had received the greatest blessing. He observes too that the apostle everywhere knits together faith and love, a glorious pair, and names not the saints of that country only but all."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: where there is true faith in Christ, there follows love to all the saints; the two are inseparable, and their report gladdens the apostle and moves him to prayer."
+    "prevalence": "single",
+    "summary": "Calvin quotes Eadie to the same effect as Barnes and Ellicott, that it is wrong to argue with Olshausen and De Wette that the writer had no personal knowledge of those he addressed — an early surmise, noted already by Theodoret — since years had passed since his visit, and the word may signify that such news had been repeatedly brought to him. He also says that under the one word faith the whole excellence of Christian character is included, and explains why the saints are particularly named when love ought to embrace all men — because love properly regulated begins with them and extends afterwards to others, the nearer a man approaches God the stronger being his claim on us."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws a rule of prayer from the transition. We should pray for the persons for whom we give thanks: the apostle blesses God for what he had done and then prays that he would do more, since God has laid up spiritual blessings in the hands of his Son but appointed us to draw them out by prayer. He anticipates the objection that men who have received the earnest need take no further care, and answers that it is quite the contrary, for even the best of Christians need to be prayed for, and while we hear well of our friends we should think ourselves obliged to intercede that they may abound yet more. What the apostle asks is worth noticing as much as that he asks: not that they be freed from persecution, nor possess the riches of the world, but that their understandings be illuminated — for Satan gets possession by the senses and passions, and Christ by the understanding."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke widens the second word rather than the first, taking love to imply not only the affection so called but all its fruits, benevolence and kind offices of every description. Wesley takes the report to be of their perseverance and increase."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes grants it is one of the passages relied on by those who suppose the letter was not written to Ephesus, since Paul writes as though to strangers; but the inference is not conclusive, for he had been years absent, communication was difficult, and he may have heard nothing since he parted from the Ephesian elders at Miletus — so that news of their growth, reaching him at Rome, would relieve a real anxiety. Ellicott notes the close parallel in the letter to Colossae, addressed to a church the apostle had not seen, but calls it undecisive, since a similar expression is used to Philemon, his own convert; he finds the same connection in the grammar, distinguishing faith in the Lord Jesus from faith towards him, since a faith centred in Christ rests through him on the Father, and such faith overflows into love, first to God and then to all his children. Robertson adds that the words ye show are not in the Greek at all, and that the received text inserts the word love before the second article on the authority of several manuscripts, which the oldest lack and which is probably not genuine, though the article and the change of preposition justify the rendering."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the phrase after I heard show the writer had never met his readers?",
+    "positions": [
+     {
+      "position": "no — he had been years absent, communication was difficult, and he may have heard nothing since Miletus",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "no — the parallel in Colossians is undecisive, since a similar expression is used to Philemon, his own convert",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "no — the word may even signify that such news had been repeatedly brought to him; the surmise is an old one, already noted by Theodoret",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "reads the transition from thanksgiving to prayer as a rule for intercession, and observes that what is asked is not relief from persecution or worldly good but the illumination of the understanding"
+   }
+  ],
   "themes": [
-   "after I heard of your faith in the Lord Jesus, and love unto all the saints",
-   "Paul's hearing of their faith and love",
-   "faith Godward and love manward",
-   "the twin marks of a Christian"
+   "the report of their faith",
+   "the destination question again",
+   "what the apostle prays for"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's habit: he 'ceases not to give thanks for you' — his thanksgiving for them is unceasing, a continual gratitude to God for their faith and love; and he also remembers them in prayer, 'making mention of you in my prayers' — naming them before God, interceding for their further growth (as the prayer of vv.17-19 shows); gratitude and petition go together (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Cease not to give thanks for you, making mention of you in my prayers",
-   "Paul's ceaseless thanksgiving and prayer",
-   "gratitude and intercession joined",
-   "the apostle's praying heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "16-17",
+  "pericope_label": "That the God of our Lord Jesus Christ may give you the spirit of wisdom and revelation",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul addresses his prayer to 'the God of our Lord Jesus Christ, the Father of glory' — the glorious Father, the source of all glory, to whom Christ in his humanity refers as his God; his petition that God 'give unto you the spirit (the disposition, or the Holy Spirit working) of wisdom and revelation' — spiritual wisdom and the revealing of divine things — 'in the knowledge of him (God)' — the deep, experiential knowledge of God himself the goal of the gift (Barnes, Robertson)."
+    "summary": "Gill adds the reason thanks are owed at all — that their faith and love were gifts of grace bestowed on them, and not the produce of their own free will and power. Calvin explains why the prayer is added: it is to excite them to further progress, for though it was necessary that they should understand they had entered on the proper course, it was equally necessary that they should not become indifferent about proceeding, since nothing is more dangerous than to be satisfied with the measure of benefits already obtained. Whatever the height of our attainments, he says, let them always be accompanied by the desire of something higher. On the title he makes a careful distinction and guards it: the Son became man in such a manner that God was his God as well as ours, but this relates to his human nature, so his subjection takes nothing from his eternal godhead — and God's glory as a Father consists in subjecting his Son to our condition, that through him he might be our God. He also asks whether the readers did not possess wisdom and revelation already, and answers that they did, but needed increase, so that with a larger measure of the Spirit they might hold their present views more clearly, since the knowledge of the godly is never so pure but that some dimness hangs over their spiritual vision."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the wisdom and revelation aim at the true knowledge of God; the goal of the Spirit's gift is a fuller, deeper knowing of God himself, not mere information."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the continual thanksgiving as evidence of the writer's confidence, being so fully satisfied of the genuineness of their conversion; and he notes that while praying for the Christian cause generally the apostle was led by particular affection to mention them by name before God. He takes the second title to mean the author and giver of that glory which the readers expect at the end of their Christian race; it may be a Hebraism for glorious Father, but he thinks the former the better sense. Wesley resolves the question about the Spirit by identity: the same who is the Spirit of promise is also, in the progress of the faithful, the Spirit of wisdom and revelation, making them wise unto salvation — and he speaks here of a wisdom common to all real Christians."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott observes that almost all these letters open with the same union of thanksgiving and prayer, which he calls characteristic of the right harmony of Christian worship, though the proportion varies — in the letter to Galatia the omission of both is itself characteristic, and here, the thanksgiving having already been offered, all that follows is prayer. He calls the divine title unique, the usual formula being the God and Father of our Lord Jesus Christ, and thinks it substituted here because the word Father was wanted in the next clause; he notes that on the cross the Lord used the common human language of the Psalmist, but after the resurrection distinguished emphatically between his own relation to the Father and that in which we call God our Father. Barnes says the Ephesians had already made high attainments but might make higher, and that however far Christians advance in knowledge and love there remains an unfathomed depth to sound — how far, he asks, was Paul from supposing they had attained perfection. Robertson takes the second title rather of the God characterised by glory, the Shekinah, as the phrase is used elsewhere, and notes that the Revised Version does not take the word spirit here of the Holy Spirit, though he doubts whether it is possible to obtain this wisdom and revelation apart from him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the title Father of glory mean?",
+    "positions": [
+     {
+      "position": "the author and giver of the glory believers expect at the end of their race, rather than a Hebraism for glorious Father",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the God characterised by glory, the Shekinah, as the phrase is used elsewhere",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "a phrase unique in Scripture, probably substituted for the usual formula because the word Father was wanted in the next clause",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "makes the prayer for increase a warning against contentment, holding that nothing is more dangerous than satisfaction with the measure of grace already received"
+   }
+  ],
   "themes": [
-   "the Father of glory, may give unto you the spirit of wisdom and revelation",
-   "in the knowledge of him",
-   "the prayer for the spirit of wisdom",
-   "the deep knowledge of God"
+   "thanksgiving passing into prayer",
+   "the God of our Lord Jesus Christ",
+   "the Father of glory"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "18": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "18",
+  "pericope_label": "The eyes of your understanding being enlightened, that ye may know",
   "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril turns the petition into a benediction of his own, praying that God may give his hearers a spirit of wisdom and revelation in the knowledge of himself, and keep them ever in good works and words and thoughts."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the eye of the understanding is a rabbinical phrase often met with in Jewish writings, but that the eyes of the heart is equally a Jewish expression and is the reading of the Alexandrian and several other copies. He raises a different question about the clause, whether it belongs to the petition at all: he thinks the words are not part of what is prayed for but what the apostle takes for granted, and should be put in a parenthesis, since their understandings had already been enlightened to see the sinfulness of sin and the sufficiency of Christ — unless the prayer is for still greater illumination. Calvin keeps the ordinary rendering while granting that the Hebrews frequently use heart for the rational powers of the soul, though strictly, as the seat of the affections, it means the will. On the language of the following verses he hears a measure of our incapacity, since the comparison reminds us how unfit we are to receive so elevated a knowledge; and he adds that Paul is not in the habit of throwing out hyperboles without discrimination, but that when he treats a matter lying so far beyond this world he raises our minds to the admiration of heavenly power."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the eyes of your heart undoubtedly the true reading, and lists the manuscripts and versions that carry it — Greek, Syriac, Arabic, Coptic, Latin and several of the fathers. He presses the figure further than the others, since the eye is not light in itself and discerns nothing except by light shining, not only on the object viewed but into the eye — so no man ever became wise unto salvation without the influence of God's Spirit, any more than a man discerned an object without light, however perfect his eye. Wesley takes the two participles in order, that the eyes are first opened and then enlightened, and that with these alone we discern the things of God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul prays that 'the eyes of your understanding (kardias — heart) being enlightened' — that the inward eyes of the soul may be opened and illumined by the Spirit, to perceive spiritual things; that they may know 'what is the hope of his calling' (the glorious hope to which God's call summons them) and 'what the riches of the glory of his inheritance in the saints' (the surpassing wealth and glory of the inheritance God has in or for his saints; either the glory believers will inherit, or the glory God finds in possessing his people, Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the enlightened heart perceives the hope and the glory of the inheritance; spiritual knowledge is the gift of the Spirit, opening the eyes of the soul to see what flesh cannot."
+    "summary": "Ellicott agrees that the true reading is of your heart, thinking the easier word substituted to yield a simpler expression; the heart in Scripture signifies the inner man in his entirety, so the phrase conveys that for the knowledge of God the faculties of understanding, conscience and affection must all be called into energy by the gift of divine light. He observes that the succession of things to be known follows the order of conversion — calling, then acceptance to an inheritance, last the inward working of divine power — and that to each a looking onward is attached, to the calling hope, to the inheritance glory, to the power the exaltation of Christ. Barnes reaches for Philo's sentence, that what the eye is to the body the understanding is to the soul, and takes the hope of his calling to mean the full import of what Christians may expect in the world of glory; in the next phrase he finds a force found hardly anywhere but in this writer, whose mind is so full that his language is borne down under the weight of his thoughts, the riches meant being not such as a man may inherit here, always limited and never long enjoyed, but infinite and inexhaustible. Robertson calls it a beautiful figure, the heart regarded as having eyes that look out toward Christ, but admits the grammar is difficult and offers three constructions — a change of case from dative to accusative, a loose expansion of the earlier noun, or the rare accusative absolute."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the enlightening of the eyes part of the prayer?",
+    "positions": [
+     {
+      "position": "no — it is what the apostle takes for granted, and should be put in a parenthesis, unless the prayer is for still greater illumination",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the grammar is genuinely difficult, and admits three constructions; the clause hangs loosely on what precedes",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "presses the figure of sight to its limit, arguing that the eye needs light shining into it and not only on the object, so that no man can be wise unto salvation without the Spirit's own illumination"
+   }
+  ],
   "themes": [
-   "The eyes of your understanding being enlightened",
-   "what is the hope of his calling, and what the riches of the glory of his inheritance in the saints",
-   "the prayer for enlightened eyes",
-   "the hope and the inheritance"
+   "the eyes of the heart",
+   "petition or assumption",
+   "the three things to be known"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
  "19": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "19",
+  "pericope_label": "And what is the exceeding greatness of his power to us-ward who believe",
   "schools": [
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril, coming to the clause about the right hand, collects the testimonies to it — from the first Gospel, from Peter, from the letters to Rome and Colossae, and from Hebrews."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill fences the power about by exclusions: this is not the power put forth in creation, nor that which will raise the dead, nor the power of wrath in the damnation of sinners, but the power exerted in the implantation of faith, in its continuance, and in the finishing of that work. Its greatness appears from what the work is called — a creation, a resurrection, a regeneration — and from what is done in it, Satan dispossessed, the stony heart taken away, the enmity slain. Calvin marks the three nouns in a figure — one the root, the next the tree, the last the fruit, the stretching out of the divine arm which terminates in action — and meets the charge of excess directly: foolish men imagine the language absurdly hyperbolical, but godly persons engaged in daily struggles with inward corruption perceive that not a word is used beyond what is just, for God's power is wonderfully displayed when we are brought from death to life. We never form adequate conceptions of the treasure revealed in the gospel, or, if we do, cannot persuade ourselves that we have, because we perceive nothing in ourselves that corresponds to it; so the apostle's object was that they should not be cast down by their own unworthiness, but consider that their regeneration was no ordinary work but an astonishing exhibition of power."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke dissents outright from the others on what power is meant. Since the apostle is speaking of the glorious state of believers after death, he takes it to be that which will raise the body at the last day, the resurrection of Christ's human nature being the proof of the resurrection of mankind. He separates the three terms mechanically: might is the simple efficiency of the attribute in God, power is that efficiency in action, and energy is the quantum of force with which the power is applied — for passive power differs widely from power in action, and power in action will be in its results according to the momentum applied. Since all mankind are to be raised and changed in the twinkling of an eye, that momentum must be inconceivably great, and even these astonishingly strong words are used in condescension to human weakness. Wesley reads it of quickening our dead souls and preserving them in spiritual life."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The third thing Paul prays they may know: 'the exceeding greatness (the surpassing, immeasurable greatness) of his power to us-ward who believe' — the immense power of God exerted toward and in believers; 'according to the working (energeian — the energetic operation) of his mighty power (the strength of his might)' — Paul heaps up words for power to express its immensity, the same power that raised Christ (v.20) now working in believers (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the power that saves, keeps, and will raise believers is nothing less than the almighty power of God — the greatest assurance of their hope and salvation."
+    "summary": "Barnes agrees that conversion is chiefly in view, but will not narrow it to a single act: the power referred to is the whole series of acts towards Christians, in converting them, keeping them, raising them from the dead and exalting them, so that the religion they professed was in every stage a religion of power. He states the equivalence flatly: the same power is requisite to convert a sinner which is demanded in raising the dead, and neither will be accomplished but by omnipotence. Ellicott would render the second clause the working of the might of his strength, noting that the word for power is a general term for force which may be latent, unlike the word used here for working or energy; the apostle therefore adds that this power is not latent but works up to the full measure of the might of that strength which belongs to his nature — the whole phrase forming a climax in which words ever stronger are accumulated to approach a description of omnipotence. Robertson notes only that the noun for greatness occurs nowhere else in the New Testament, and that to enlightened eyes God's power is even more surpassing."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What power is being described?",
+    "positions": [
+     {
+      "position": "the power exerted in conversion and in the whole course of a Christian's keeping — the same power that raises the dead",
+      "holders": [
+       "Albert Barnes",
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "the power that will raise the body at the last day, since the subject is the state of believers after death",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "defends the apparent extravagance of the language as exactly measured, on the ground that men who fight daily with inward corruption know the words are not too strong"
+   }
+  ],
   "themes": [
-   "what is the exceeding greatness of his power to us-ward who believe",
-   "according to the working of his mighty power",
-   "the prayer to know God's power toward believers",
-   "almighty power the believer's assurance"
+   "which exercise of power is meant",
+   "the accumulated words for force",
+   "whether the language is excessive"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "20",
+  "pericope_label": "Which he wrought in Christ when he raised him and set him at his own right hand",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill counts the articles of faith the clause contains — that Christ died, that he is raised, that he was raised by the Father, and that it was by God's power — and adds what makes this resurrection peculiar: he was raised as a public person representing all his people, and raised for their justification after a very low estate. From that, he says, it follows that there is some proportion between the power put forth in raising Christ and the power exerted in conversion, and some likeness between the things themselves, since his rising is itself called a begetting. Calvin turns the same fact into a consolation for men who see nothing of it in themselves. With the greatest propriety, he says, are we enjoined to contemplate this power in Christ, for in us it is hitherto concealed: in what do we excel the children of the world, except that our condition appears worse than theirs? Sin does not reign but continues to dwell in us, death is still strong, our blessedness lies in hope and is unperceived by the world, and a thousand daily distresses render us more despised than others. Christ alone, then, is the mirror in which we may contemplate what the weakness of the cross hinders from being seen in ourselves — we lie under the power of death and he has the dominion of life; we labour under bondage and he governs heaven and earth. On the right hand he denies it is a place at all: it signifies the power the Father has bestowed on Christ, that he may administer the government of heaven and earth in his name; so it is idle to ask why Stephen saw him standing while Paul describes him sitting, since the expression refers to no bodily posture but denotes the highest royal power. The metaphor is borrowed from earthly princes, who confer the honour of sitting beside them on those clothed with the highest authority — and since the right hand of God fills heaven and earth, the kingdom of Christ is equally extensive, so it is vain to argue from this clause that Christ dwells in heaven alone."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke keeps the plainer sense, that the right hand is the place of friendship, honour and authority, and that Christ received these dignities as mediator, in which state he transacts all the affairs of his Church and rules the universe. Wesley adds that the exaltation is of his human nature, a recompence for his sufferings — a quiet and everlasting possession of all blessedness, majesty and glory."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The measure of God's power is the power he 'wrought in Christ when he raised him from the dead' — the resurrection of Christ is the supreme display of God's might, the pattern and pledge of his power toward believers; and God 'set him at his own right hand in the heavenly places' — exalting the risen Christ to the place of supreme honour, authority, and dominion at God's right hand (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the session at God's right hand marks Christ's universal sovereignty and his divine glory; the exalted Christ reigns over all, raised by the same power that will raise his people."
+    "summary": "Barnes makes the resurrection as physical as he can, since the point is a display of power: what was exerted then was as great as at creation — imparting life to a cold and mangled frame, opening again the arteries and veins, teaching the heart to beat and the lungs to heave. It is impossible to conceive a more direct exertion of power, or a more striking illustration of the nature of conversion. Ellicott explains why the argument runs through Christ: the reality of God's work on us is insured by the reality of that work on the true Son of Man, whose members we are — in his resurrection, ascension and headship of the Church. He observes a development in the letters, since the earlier ones lay their stress on the spiritual meaning of the resurrection while these later ones pass beyond that and dwell on Christ in heaven, exalted above all created things yet still the head of the Church on earth. Robertson prefers the perfect tense of the older manuscripts — which he has wrought — and notes that three words for force are heaped up in the effort to express what surpasses expression; he calls the right hand a metaphorical local expression, and reads the participle causatively, that God made him to sit."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does sitting at the right hand describe a place?",
+    "positions": [
+     {
+      "position": "no — it denotes the royal power bestowed on Christ, which is why it is idle to ask why Stephen saw him standing; and since God's right hand fills heaven and earth, it cannot confine Christ to heaven",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "it is a metaphorical local expression, and the participle is causative — God made him to sit",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the right hand is simply the place of friendship, honour and authority, given him as mediator",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "makes the exalted Christ a mirror for believers who can find no trace of this power in themselves, listing what their present condition looks like against what his is"
+   }
+  ],
   "themes": [
-   "which he wrought in Christ, when he raised him from the dead",
-   "set him at his own right hand in the heavenly places",
-   "God's power in raising and exalting Christ",
-   "the exalted Christ at God's right hand"
+   "the power shown in the resurrection",
+   "Christ as the mirror of what is hidden in us",
+   "what sitting at the right hand means"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.38
+   }
   }
  },
  "21": {
   "voices": [
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ is exalted 'far above all principality, and power, and might, and dominion' — above every rank of angelic and created authority, the heaped-up terms denoting all orders of beings and powers, however exalted; above 'every name that is named' — every title of dignity, authority, or honour that exists or can be conceived; and this 'not only in this world, but also in that which is to come' — his supremacy extending through both ages (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: Christ's exaltation is eternal and universal, reaching through the present age and the age to come; no name in either world is above his."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Far above all principality, and power, and might, and dominion, and every name that is named",
-   "not only in this world, but also in that which is to come",
-   "Christ exalted above all powers and every name",
-   "universal supremacy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "21-22",
+  "pericope_label": "Far above all principality and power; and hath put all things under his feet",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God 'hath put all things under his feet' (echoing Psalm 8:6) — all things, without exception, are made subject to the exalted Christ, the whole creation beneath his dominion; and 'gave him to be the head over all things to the church' — Christ, supreme over all the universe, is given as head to the church in particular, his universal lordship exercised for the benefit of his body (Barnes, Robertson)."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril observes on the same vocabulary that thrones and dominions, principalities and powers themselves have need of the Spirit's holiness."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: all Christ's authority over all things is directed to the good of the church; the church's head rules the universe on her behalf, that all things serve her salvation."
+    "prevalence": "several",
+    "summary": "Gill keeps the widest sense, of good angels and bad and of civil magistrates. Calvin says the names are all applied to angels, and that from their diversity we may conclude there are various orders — but to fix their number or ranks would be not merely foolish curiosity but rash, wicked and dangerous. He adds why the lofty titles were used rather than the plain word angels, namely to convey exalted views of Christ's glory, since an ancient superstition among Jews and Gentiles attributed much to angels in order to draw men's minds from God and the true Mediator; and he takes the mention of the age to come to mark that Christ's rank is not temporal but eternal. On the headship he presses the word's exclusiveness: Christ was made head on the condition of having the administration of all things, and since he alone is so called, all others must rank as members, so that he who holds the highest place among his fellows is still one of the same body. Yet men are not ashamed to say the Church would be headless if it had no other head on earth besides Christ, which he calls the basest sacrilege."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke lays out three readings — of angelic orders, of earthly governments from the most sovereign dominion to the lowest, and Schoettgen's, which matches each term to a rank of Jewish teachers whom Christ confounded by calling fishermen. Wesley makes a good distinction about the age to come: it is so styled not because it does not yet exist but because it is not yet visible — we know the king is above all though we cannot name all the officers of his court. On the headship he makes it double, of guidance and government and of life and influence, so that the members receive activity and growth from him as a natural body from its head."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes takes the compound rendered far above to mean greatly exalted, and draws a christological inference: Christ is not placed by office a little above the heavenly beings but infinitely exalted over them as of different rank — which he asks how it could be, were Christ a mere man or an angel. He reports that the rabbis reckon four orders of angels, or ten, and presume to name them, but calls that mere fancy, though Scripture hints at a difference of rank. On the subjection he works out what it means for the church: the elements are under Christ; earthly kings are under him, and thus far the wicked rulers of the earth have not been able to destroy the church he redeemed with his own blood; angels of every rank are under him, and fallen angels too — so the church is safe. Ellicott thinks the words meant to include every form of power, and notes that this writer mostly uses the group of angelic powers, drawn to it probably by the half-Gnostic speculation of later Judaism; but since his lists vary in fulness and order, we gain no encouragement for speculation about the ranks of the hosts of heaven, the names pointing to different aspects rather than orders. He also notes that this is the first place the celebrated phrase about the body is used, and marks the change: in the earlier letters the leading idea is the individuality of each member, so that head and foot are members like eye and hand, whereas here the body is a whole and Christ its Head. Robertson notes that the preposition is a late compound occurring in the New Testament only here and in Hebrews, and that these titles were used in Gnostic systems for a graduated angelic hierarchy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Do the four titles name distinct orders of beings?",
+    "positions": [
+     {
+      "position": "they name angels, and various orders may be inferred — but to fix their number or ranks would be rash, wicked and dangerous",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "they point to different aspects rather than different orders, since the lists vary in fulness and order between letters",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the rabbinic enumerations are mere fancy, though Scripture does hint at a difference of rank",
+      "holders": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "turns the exclusiveness of the title Head against any earthly headship of the Church, calling the claim that the Church would otherwise be headless the basest sacrilege"
+   }
+  ],
   "themes": [
-   "hath put all things under his feet",
-   "gave him to be the head over all things to the church",
-   "all things under Christ's feet",
-   "head over all to the church"
+   "what the four names denote",
+   "this world and that which is to come",
+   "head over all things to the church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "23",
+  "pericope_label": "Which is his body, the fulness of him that filleth all in all",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill works the figure out with care. As a human body is one, its members united and set in exact proportion, so the church is one general assembly of persons of different gifts, all united under one head whose name they bear; they are so placed as to throw a comeliness on each other, so that it cannot be said of the meanest member that there is no need of it, and their number can neither be increased nor diminished. Calvin supplies the sentence the others quote: this is the highest honour of the church, that until he is united to us the Son of God reckons himself in some measure imperfect — and what consolation to learn that not until we are along with him does he possess all his parts, or wish to be regarded as complete. But the closing clause is added, he says, to prevent the supposition that any real defect would exist in Christ if he were separated from us: his wish to be made perfect in us arises from no want, since all that is good in ourselves or in any creature is the gift of his hand, and his goodness appears the more remarkably in raising us out of nothing that he may dwell in us. He adds one restriction, that though all things are regulated by Christ's will and power, the subject here is the spiritual government of the Church, and to limit the phrase so is the more probable interpretation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke adds what the members receive by the union, since from Christ as head the church has light, life and intelligence; and he asks in what other sense the church could be called the fulness of him who fills all in all — answering that when Jews and Gentiles are brought in the body may be called complete, and Christ has his visible fulness on earth."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The church 'is his body' — the living organism of which Christ is the head; believers are united to him as members to a body, sharing his life; 'the fulness (pleroma) of him that filleth all in all' — either the church is that which is filled by Christ (he fills her with his fulness), or, more strikingly, the church is in some sense the completion of Christ, the body without which the head would be incomplete; 'him that filleth all in all' is Christ, who fills the whole universe with himself (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: it is a high honour that Christ, who fills all things, should account the church his fulness — as though he were not complete without his members; such is his love and union with his body."
+    "summary": "Barnes notes that the comparison is not uncommon in these letters, and draws from it the point that governs the rest of the verse: the church stands to Christ as the body to the head, helping to form the entire person, so that there is a close and necessary union in which one is not complete without the other. On the disputed noun he reports how far interpreters are from agreement — Rosenmüller takes it for a great multitude; Koppe for the whole dominion of the Redeemer; Storr for abundant mercy, connecting the verse with what follows rather than what precedes; Locke as meaning that the church is completed by Christ alone; and Chandler for the complement, comparing writers who use the word of the rowers of a ship, as we say a crew is a ship's complement. Barnes cites Calvin's sentence with approval. Ellicott traces the word through four senses — the physical contents of a thing, the complete tale or number, the full essence including all attributes, and lastly, almost technically in these letters, the fulness of the divine nature, with reference to speculations anticipating Gnosticism. He inclines nevertheless to the sense of complement, citing the cognate word as Euclid uses it, and reasoning that where one thing alone is in view the word must mean the fulness of that nature, but where two are brought in each is the complement of the other — quoting Chrysostom, that the complement of the Head is the Body and of the Body the Head. He reads the sequence as Calvin does, that the writer describes the Lord as conceiving his glorified humanity incomplete without his Church, and then, lest that seem to derogate from his dignity, adds the strongest declaration of his transcendent power, to show that we are infinitely more incomplete without him than he without us. Robertson takes the noun passively, as that which is filled, and the participle as middle."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the word fulness mean here?",
+    "positions": [
+     {
+      "position": "the complement — where two things are brought in, each completes the other, as the complement of the Head is the Body and of the Body the Head",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "interpreters are far from agreement: a multitude, a dominion, abundant mercy, completion by Christ alone, or a ship's complement have all been proposed",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "that which is filled, taken passively, with the participle middle",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "states the boldest form of the claim — that the Son of God reckons himself imperfect until united to us — and then supplies the guard, that his wish to be filled in us arises from no want, since all our good is his own gift"
+   }
+  ],
   "themes": [
-   "Which is his body, the fulness of him that filleth all in all",
-   "the church as Christ's body and his fulness",
-   "union of head and members",
-   "Christ accounting the church his completion"
+   "the church as body",
+   "the many senses of fulness",
+   "in what sense Christ is incomplete without us"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  }
 }
