@@ -2,852 +2,445 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "1-5",
+  "pericope_label": "The passover kept in the wilderness",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: spoken while Israel was encamped at Sinai, before they journeyed thence, in the first month of the second year."
+    "summary": "Gill explains the need of a fresh precept from the other side of Ellicott's answer: without a new command, or an explanation of the former, the people might not have reckoned themselves obliged to keep the feast until they came into the land. He dates the observance to the fourteenth of Nisan, answering to part of our March, and notices with Ellicott what is missing from the account, that nothing is said of the seven days of unleavened bread — flour enough for so great a multitude for seven days being hardly procurable in the wilderness, though enough for a single meal might be had from the neighbouring countries, Midian, where Jethro lived, lying near enough to Sinai to supply it. Calvin reads the reminder itself as a reproach. We may infer how great was the carelessness, nay the ingratitude, of the people from God's having to recall the passover to their memory before a year had elapsed; what would they do fifty years hence, if there was danger of their forgetting in so short a time? Had they been voluntarily assiduous it would have been needless to repeat what was already enjoined, and enjoined severely, with threats. He adds that their obedience is praised precisely because they neither added anything to nor diminished anything from what God commanded."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God gave particular orders for keeping this Passover, otherwise it seems they would not have kept it; it was the day twelvemonth after they came out of Egypt, before they were numbered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD spake unto Moses in the wilderness of Sinai, in the... second year",
-   "the Passover the day twelvemonth after the Exodus",
-   "the memorial of redemption renewed by God's command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry draws a large inference from the timing. The first institution appointed the feast for the land of promise, and no passover was kept after this one until they reached Canaan, which he takes as an early indication that the ceremonial institutions would at last be abolished, since so soon after they were appointed some were suffered to lie asleep for years together. In the obedience he marks two things: Moses faithfully transmitted his orders, magistrates being bound to be monitors and ministers to stir up men's minds by way of remembrance; and the people, though they had lately kept the feast of dedication, did not plead that against this one, for extraordinary performances must not supersede stated services. That they kept it in a desert is the point he presses last — though our condition be solitary and unsettled, we must keep up our attendance upon God by holy ordinances as we have opportunity."
+   },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: without a fresh precept they might not have thought themselves obliged to keep it until they came into Canaan, so a new order is given."
+    "summary": "Wesley accounts for the chapter standing out of its order by the subject rather than the record: the events fall in the first month and so before the numbering of the people, which was not until the second, but the narrative is placed after it because of the special case about the passover which arose later. Clarke thinks the displacement mechanical rather than deliberate. The first fourteen verses belong with the transactions at the opening of the book, and transpositions of this kind are not hard to account for, since in very early times writing was on leaves of papyrus, so that entries were easily deranged and might be bound into a wrong place when a series was afterwards made into a book. He has handled such manuscripts himself, leaves pierced and strung upon a cord, and says that if the cord breaks it is exceedingly difficult to restore each leaf to its place."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: let the children of Israel keep the passover at his appointed season, the fourteenth of the first month."
+    "prevalence": "single",
+    "summary": "Ellicott answers the question why a fresh command was needed at all: no provision had hitherto been made for keeping the passover in the wilderness, since but for the rebellion of the people the next passover after the Egyptian one would have fallen in Canaan, and it was for that one only that provision had been made. He renders the hour as between the two evenings, and prefers statutes and ordinances to rites and ceremonies, observing that since some directions given for the Egyptian passover could not be kept in the wilderness, the reference must be to those of permanent obligation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why does this chapter stand out of chronological order?",
+    "positions": [
+     {
+      "position": "deliberately, the narrative being placed after the numbering because the special case about the passover arose later",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "mechanically, papyrus leaves strung on a cord being easily deranged and bound into the wrong place when the series was made into a book",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "takes the long silence about the passover between this observance and the entry into Canaan as an early hint that the ceremonial institutions would one day be abolished altogether"
+   }
+  ],
   "themes": [
-   "Let the children of Israel also keep the passover at his appointed season",
-   "a fresh command renewing the ordinance",
-   "the memorial of redemption not let lapse"
+   "why a fresh command was needed",
+   "the chapter out of its order",
+   "no seven days of unleavened bread named"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: on the fourteenth day of Nisan or Abib, the first month."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'according to all the statutes and ordinances thereof,' though some directions for the Egyptian Passover could not apply in the wilderness; kept 'between the two evenings' (Exod. 12:6)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "In the fourteenth day... at even... according to all the rites... and... ceremonies",
-   "kept by its full ordinance",
-   "some particulars belonging to the first night alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the time now drawing nigh for the observation of it, it being almost a year since their coming out of Egypt, Moses spake to the children of Israel to keep it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses spake unto the children of Israel, that they should keep the passover",
-   "the time drawing nigh",
-   "God's word faithfully delivered to the people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: only the Passover is mentioned, not the seven days of unleavened bread, which was only enjoined at this time though it used to follow; perhaps the flour for so large a body could not easily be had for seven days in the wilderness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they kept the passover... in the wilderness of Sinai... according to all that the LORD commanded",
-   "the memorial kept even in the wilderness",
-   "God's commands fitted to his people's state"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they were unclean seven days by the dead and so might not eat of any holy thing, the Passover included; they came at once to Moses, the case now provided against though not at the first institution."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "certain men, who were defiled by the dead body... could not keep the passover",
-   "grieved to be shut out",
-   "a longing for the ordinance, rebuking the careless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "6-8",
+  "pericope_label": "The defiled men and their appeal",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they put their question to Moses, the chief magistrate, the more difficult matters being brought to him."
+    "summary": "Gill allows either that a whole household was defiled by a death among them, or that individuals had touched the body or been concerned in interring it, and he raises a prior question — how the men knew they were unclean at all, since no such law stood in the first institution of the passover. His answer comes from the tradition that the section about the red heifer and defilement by the dead was delivered on the day the tabernacle was erected, and so, though recorded later, was given out before this. He notes too that they applied to Moses as chief magistrate although Aaron was high priest. Calvin states their difficulty as a genuine collision of duties: the unclean were not permitted to approach the sacred feast, and yet it was sinful to neglect this exercise of religion, so that a kind of discrepancy arose between two commands. He makes much of the pause that followed, since even Moses confessed himself perplexed and sought time to inquire of God — the extraordinary modesty of the prophet displaying itself in his not daring to pronounce upon a doubtful matter although he was their lawgiver, by which he showed the more clearly that he had not given the Law out of his own head, since he did not dare so much as to interpret it without a fresh command. Of the answer Calvin observes that God takes away the contradiction by a special provision rather than by bending the rule, assigning the second month to those whom just necessity excused, and extending the relief beyond the unclean to men absent on a journey; and he is careful about its limits, that this was no concession to despisers, the men themselves having complained of their own accord, from which we infer their pious solicitude."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley puts the dilemma in the men's own mouths — if we neglect the offering we must be cut off, and if we keep it in these circumstances we must also be cut off; what shall we do? Clarke guesses that the defilement came of assisting at somebody's burial, a work both of necessity and of mercy, and draws out the consequence of the answer given: the passover might on occasion be kept twice, but the man who had no legal hindrance and kept it at neither time was to be cut off, the reason assigned being that he brought not the offering of God in its appointed season. Since Christ our passover is sacrificed for us, he adds, those who do not sooner or later eat the true Passover will be cut off from the rest prepared for the people of God, and for that same reason."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: they complained that they were kept back from offering an offering of the LORD in his appointed season among the children of Israel."
+    "summary": "Ellicott offers a conjecture as to who the men were. It has been supposed that they were Mishael and Elzaphan, who buried their cousins Nadab and Abihu about this time; and the dates fit, since if the consecration of Aaron and his sons began on the first day of the first month, and the deaths could not have fallen before the eighth, then a defilement lasting seven days would leave those who buried them unclean on the fourteenth. He offers it as one of the many undesigned coincidences with which Scripture abounds, and adds that no men would be so likely to bring this particular inquiry to Moses as those whom Moses himself had directed to carry out that burial. He closes on the type, that the legal uncleanness which barred a man from the passover may be regarded as figuring the moral and spiritual unfitness that bars men from the Lord's Supper. Keil records only what was said in the meantime, that Moses told the men to stand while he heard what the Lord would command."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wherefore are we kept back, that we may not offer an offering of the LORD",
-   "grieved to be barred from the feast",
-   "hearts prizing communion with God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he bid them stand still where they were, at the door of the tabernacle (Aben Ezra), while he heard what the LORD would command, not deciding of himself."
+    "question": "How had these particular men become unclean?",
+    "positions": [
+     {
+      "position": "they were probably Mishael and Elzaphan, who had buried Nadab and Abihu seven days before, an undesigned coincidence of dates",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "by assisting at somebody's burial, a work of necessity and mercy, without naming whose",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "either a whole household defiled by a death among them, or individuals who touched the body or helped to inter it",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "reads Moses' refusal to answer as evidence of authorship — a lawgiver who dared not so much as interpret the Law without a fresh command showed thereby that he had not given it out of his own head"
+   }
+  ],
   "themes": [
-   "Stand still, and I will hear what the LORD will command concerning you",
-   "Moses waiting on God, not deciding of himself",
-   "the pattern of seeking God's mind in doubt"
+   "who the defiled men were",
+   "a collision between two commands",
+   "Moses waits for a fresh word"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "9-14",
+  "pericope_label": "The second passover and its terms",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: God spoke from between the cherubim, after Moses had laid the case before him."
+    "prevalence": "single",
+    "summary": "Gill takes the answer as addressed not to the men only who came to Moses for advice but to the whole body of the people, since it carried a rule to be observed in the like case in all succeeding ages as long as the passover was an ordinance of God. He names the second month Ijar, answering to part of our April and part of our May, and reads the interval as deliberate provision: a month was allowed for the defiled to cleanse themselves and for those on a journey to return home and prepare, the feast being neither to be omitted altogether nor deferred any longer than that; and it was to fall on the same day of the month and at the same time of the day as the first, still the more to keep in mind the saving of their firstborn and their deliverance out of Egypt. Of the leftovers he says only that what remained of the flesh was to be burnt with fire, and of the clean man that he is one free from any pollution by a dead body or the like. On the stranger he holds that such a man must become a proselyte of righteousness and be circumcised, since otherwise he might not eat of the passover at all, and he passes on the Jewish reading of the clause, that Ben Gersom refers it to the second passover and to a proselyte who had not been obliged to the first, not being then a proselyte but becoming one between the two, with Aben Ezra understanding it of a second passover likewise, though some, he observes, take the first to be meant."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley widens the two named cases rather than narrowing them. Under these two instances the Hebrews think that other hindrances of like nature are comprehended, as if one be hindered by a disease or by any other such kind of uncleanness, which seems probable both from the nature of the thing and from the reason of the law, that reason being the same in the other cases. Of the stranger he gives the shortest gloss of any voice here: one who is a proselyte."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD gave general instructions for everyone defiled by a corpse or on a distant journey."
+    "summary": "Keil gives the instruction in general terms as covering everyone defiled by a corpse or upon a distant journey, of the men then living and of their future families alike, the second passover to be kept on the fourteenth of the second month between the two evenings and in all respects according to the statute of the feast — of which he names the three leading points, eating the lamb with unleavened bread and bitter herbs, leaving nothing till the next day, and not breaking a bone. Both he and Ellicott stop at the word rendered afar off, which is one of the ten places in the Pentateuch where words carry the dots known as puncta extraordinaria. Ellicott reports the rabbinical explanation as an alternative, that either the word is spurious, not being found where the same case is stated again a few verses later, or it is not to be taken in its literal signification but in a qualified sense; Keil takes the second and specifies it, that distance is reckoned from Jerusalem, or from the threshold of the outer court of the temple, citing the Mishnah for it. Ellicott presses one further point of grammar with a consequence attached: the word rendered ordinances is singular, according to all the ordinance, and its primary reference is probably to the law respecting the paschal lamb itself; and by Jewish tradition the second feast was observed for one day only instead of seven, so that it was not necessary to put away leaven. On the sentence that the offender shall bear his sin he is severe, taking it to mean that he shall be put to death, and he refers the law respecting the stranger back to its fuller statement in the twelfth of Exodus."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What do the dots over the word rendered afar off signify?",
+    "positions": [
+     {
+      "position": "either that the word is spurious, since it is absent where the same case is stated again, or that it is not to be taken literally but in a qualified sense",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the qualified sense — distance reckoned from Jerusalem, or from the threshold of the outer court of the temple",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "reads the two named hindrances as samples rather than a closed list, so that sickness or any other uncleanness of the kind would excuse a man on the same principle"
+   }
+  ],
   "themes": [
-   "the LORD spake unto Moses",
-   "answering from the mercy seat",
-   "one need turned into a perpetual provision"
+   "the marked word afar off",
+   "the statute kept in all its points",
+   "the stranger admitted on terms"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the answer concerned not the men only but all the people, a rule for like cases in all succeeding ages."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: if any man of them or their posterity were unclean by a dead body, or on a distant journey, he should yet keep the passover unto the LORD."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.61
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If any man... shall be unclean... or be in a journey afar off, yet he shall keep the passover",
-   "a second opportunity for the hindered",
-   "God making a way for the willing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the month Ijar, allowing a month for the defiled to cleanse and the absent to return; kept on the same day and hour as the first, still to keep in mind the saving of the firstborn and the deliverance from Egypt, with unleavened bread and bitter herbs."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the fourteenth of the second month at even they were to keep it, with unleavened bread and bitter herbs."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The fourteenth day of the second month at even they shall keep it... with unleavened bread and bitter herbs",
-   "the same day and hour as the first",
-   "the full ordinance, not a half-feast"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: none of the flesh was to be left to the morning, what remained burned with fire."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'according to all the ordinance,' the primary reference being the law of the Paschal lamb, no bone of it broken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "They shall leave none of it unto the morning, nor break any bone of it",
-   "kept by all the ordinances of the passover",
-   "the unbroken lamb foreshadowing Christ (John 19:36)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this is the man free from any pollution and not on a journey, who has no excuse for forbearing to keep the passover."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'shall bear his sin' is, shall be put to death (cf. Lev. 24:15; Num. 18:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man that is clean... and forbeareth to keep the passover... shall be cut off",
-   "grace for the hindered, judgment for the careless",
-   "the despiser of the ordinance bears his sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the stranger must first become a proselyte of righteousness and be circumcised, or he might not eat of the passover."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the law of the stranger — one ordinance both for the stranger and for him born in the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if a stranger shall sojourn... and will keep the passover... ye shall have one ordinance",
-   "the believing stranger a fellow-partaker",
-   "a foreshadow of the gospel's breadth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "15-18",
+  "pericope_label": "The cloud on the tabernacle",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: on the first day of the first month of the second year, when the tabernacle was reared up, the cloud covered it."
+    "summary": "Gill fixes the day as the first of the first month in the second year after the coming out of Egypt, and is careful about the phrase rendered the commandment of the Lord: there was no command in form given, nor any audible voice heard directing when to march, but the removal of the cloud was interpretatively the order and command of God for them to move. Of the taking up he says the cloud went higher than it had been, yet not out of sight, hovering as it were in the air over the tabernacle but at some distance from it, and that this was done by the Lord himself. Calvin meets the obvious objection, that the cloud had guided them like a banner ever since the departure from Egypt and so cannot first have begun to order their marches now. A new fact is being related, he answers: the pillar which had hitherto hung in the air and gone before the camp now settled on the sanctuary, a fresh acquisition of grace proclaimed by a more certain and conspicuous sign, as if God showed himself more closely and familiarly as the leader of the people, so that the cloud more fully illustrated the glory of the tabernacle when it proceeded from thence. On the word mouth he grants that it stands by metonymy for speech and doubts whether God actually spoke, yet holds that the name of speech was rightly given to the sign, since God speaks as much to the eyes by outward signs as He does to the ears by His voice — whence he draws his settled principle, that signs are perverted and nullified unless they are taken to be visible doctrine."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the cloud was the visible sign and symbol of God's presence with Israel; when the tabernacle was finished it settled upon it and covered it, to show God manifested his presence there — by day a cloud, by night a fire."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cloud covered the tabernacle... at even there was... the appearance of fire",
-   "the sign of God's presence",
-   "both shade by day and light by night"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry calls this the history of the cloud, not a natural history, but a divine history of a cloud appointed to be the visible sign and symbol of God's presence with Israel. That it settled on the tabernacle when the tabernacle was finished shows that God manifests his presence with his people in and by his ordinances. Had it been a cloud only it would not have been visible by night, and a fire only would scarcely have been discernible by day, so the pair gave sensible demonstration that he kept them night and day, while something of the nature of the old dispensation might be signified by the two — the cloud denoting its darkness and the fire its terror, in comparison with the more clear and comfortable discoveries God has made of his glory in the face of Jesus Christ. As long as the cloud rested they rested, though it were a month or a year, however much they longed to be pressing on toward Canaan: he that believeth doth not make haste, no time is lost while we are waiting God's time, and it is as acceptable a piece of submission to sit still contentedly when our lot requires it as to work for him when we are called to it. He supposes some appointed to stand sentinel day and night within sight of the cloud, which he takes to be the keeping of the charge of the Lord, and finds the people's constant uncertainty deliberate, that they might hold themselves ready to march upon very short warning — for the same reason, he adds, that we are kept uncertain about the time of our putting off the earthly house of this tabernacle. It is uncomfortable staying when God has departed, but very safe and pleasant going when we see God go before us."
+   },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: it was so night and day, as long as Israel was in the wilderness."
+    "summary": "Wesley reads the phrase as the tabernacle above the tent of the testimony, that is, the part of the tabernacle in which the testimony or ark stood, for there the cloudy pillar rested; and he adds a mark of identification, that this cloud was easily distinguished from other clouds both by its peculiar figure and by its constant residence in that place. The fire he explains as given that they might better discern it and direct their journeys and stations by it. Of the commandment he says briefly that the motion or stay of the cloud is fitly called the command of God, because it was a signification of God's will and their duty. Clarke thinks the section ought to have begun a chapter, citing Calmet, who held that this verse begins a new subject having no connection with what goes before, and that the passage so begun should run on to the end of the following account."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the covering of the dwelling with the cloud that shone by night as fire was constant, not a phenomenon that appeared only at first and then vanished."
+    "summary": "Ellicott renders the phrase the tabernacle belonging to the tent of the testimony, and argues against confining the cloud to that part of the structure in which the two tables were kept. The older narrative states that Moses could not enter the tent of meeting because the cloud abode upon it, where there is no reference to any particular part of the erection, though it was from above the mercy-seat that the presence of Jehovah was specially manifested and in the most holy place that He communed with Moses. He explains why the account is repeated here at all: the history which follows relates the removal of the tabernacle under the guidance of the same cloud that covered it at its erection. He notices a double kindness in it besides, the dark side of the cloud affording a grateful shade by day and the bright side supplying light by night; and he observes that only one instance of disregarding the direction so miraculously vouchsafed is recorded in the whole history. Keil insists that the covering was constant, not a phenomenon which appeared when the dwelling was first erected and then vanished away again; and he explains the settling of the cloud by the fact that the tabernacle was taken to pieces during the march, so that the pillar, which ordinarily soared above the ark of the covenant as it was carried in front of the army, visibly descended from that height as a signal that the sanctuary was to be set up there, and then settled upon it once it stood."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What did the cloud cover?",
+    "positions": [
+     {
+      "position": "the tabernacle as a whole, since Moses could not enter the tent of meeting because the cloud abode upon it, with no part singled out",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the part of the tabernacle in which the ark of the testimony stood, for there the cloudy pillar rested",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "holds with Calmet that the verse begins a subject unconnected with what precedes and ought to have opened a chapter, the section running on into the following account"
+   }
+  ],
   "themes": [
-   "So it was alway: the cloud covered it by day, and... fire by night",
-   "the presence never withdrawn",
-   "God's abiding presence through the wilderness"
+   "what part of the tabernacle the cloud covered",
+   "a standing miracle, not a single wonder",
+   "a commandment given without a voice"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the cloud went up from the tabernacle, the LORD himself doing it, the sign for Israel to move."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: as the cloud rose from the tent they broke up, and in the place where it abode they pitched their tents."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the cloud was taken up... the children of Israel journeyed: and... where the cloud abode... pitched",
-   "led by God's presence, not self-directed",
-   "following the LORD's leading"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was the 'mouth of the LORD' — not an audible voice, but the removal of the cloud was interpretatively his command to move."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: as Jehovah was with his people in the cloud, its rising and falling was his order to journey or to rest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "At the commandment of the LORD the children of Israel journeyed... and... pitched",
-   "the cloud the mouth of the LORD",
-   "providence taken as God's direction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the cloud sometimes tarried many days, even years, in some places."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: whether it rested many days or few, the children of Israel kept the charge of the LORD and journeyed not."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the cloud tarried long... the children of Israel kept the charge of the LORD, and journeyed not",
-   "staying at the LORD's appointment",
-   "the harder grace of waiting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the 'few days' were so few they might easily be numbered, the Targum reading the seven days of a week."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the same rule for the short stay as the long — at the commandment of the LORD they abode and journeyed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the cloud was a few days... according to the commandment of the LORD they abode... and... journeyed",
-   "one rule for the short halt and the long",
-   "submission rendered equally"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
    "Adam Clarke",
-   "Charles Ellicott"
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "19-23",
+  "pericope_label": "Keeping the charge of the Lord",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the cloud sometimes abode but a single night, rising in the morning."
+    "summary": "Gill collects what the Jewish authorities made of the several terms — the few days read by the Targum as the seven days of the week, the year as a full year by the Targum and Aben Ezra, longer by the Vulgate, with Maimonides reporting eighteen years in one place and others nineteen at Kadesh-barnea — and notes that days are sometimes put for years, since in some places the cloud tarried several years together. Of the closing verse he observes that they rested at command though the place were ever so disagreeable, and journeyed at command though the circumstances might be such that they could have liked a continuance; whether agreeable or disagreeable they were obedient to the divine will, and this, or what is equivalent to it, is frequently observed in the paragraph to show that a people otherwise obstinate and perverse, who must in general have been desirous of getting as soon as they could into the land of promise, were in all their stations and journeys submissive. Happy are they, he adds, who have God to be their guide, even unto death. Calvin rejects one reading of the phrase about keeping the charge. Some extend it too far, thinking that when the cloud tarried the children of Israel were as it were at leisure and employed themselves in the worship of God; he restricts it rather to the heedfulness which the passage praises at some length, so that to keep the charge is to regard the will of God with the greatest earnestness and care. Once the cloud had begun to rest in a place the people knew they were to remain there, but if on the next day they were not attentive it might vanish, and their neglect and carelessness might deprive them of this incomparable advantage; the old Latin rendering, that the children of Israel were upon the watch, he thinks not badly given, since day and night they anxiously expected the time when God would command them to move forward. He notes that the last verse confirms this sense, and that Moses was God's interpreter in it. Since both journeying and staying at God's command are counted worthy of praise in the people, he finds that absurd activity condemned which engages itself in endless work, as if men could only obey God by turmoil, whereas it is sometimes no less a virtue to rest when it so pleases God."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: night marches were rare and hard in that desert, yet they went when the cloud led, by day or by night."
+    "summary": "Clarke draws the plain inference from the unequal halts, that they were directed in all their peregrinations by the divine counsel alone, and that in that desert, the heat of the day being severe, the night season is sometimes chosen for a journey, though he thinks the Israelites seldom had recourse to it. On the closing verse he turns argument and application together. Considering the strong disposition this people ever testified to follow their own will in all things, we may well be surprised to find them so implicitly following these directions; and there could be no trick or imposture here, for Moses, had he been the most cunning of men, could never have imitated the appearances of this chapter, the cloud and everything in its motion being so evidently supernatural that the people had no doubt of its being the symbol of the divine presence. God chose to keep them so dependent upon himself and so submissive to his will that he would not even give them regular times of marching or resting, so that they were ever kept ready for the march though perfectly ignorant when it should commence — and this was all well, since they had the presence of God with them. The reader, he says, is here a tenant at will to God Almighty, and knows neither how soon nor in what circumstances he may be called to march into the eternal world. Wesley takes the repetition as its own argument, since it was a constant miracle and a matter we should take particular notice of, mentioned long after by David and by the people of God after their captivity; and he reads the guidance of this cloud as signifying the guidance of the Blessed Spirit, who thus in effect guides all who commit their ways unto the Lord, so that they may well say, what Thou wilt and where Thou wilt, only let me be Thine and always in the way of my duty."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: there must have been sentinels watching by night as by day, whose office was to give the signal to march when the cloud rose."
+    "summary": "Ellicott traces the expression kept the charge of the Lord through its other uses — of Aaron and his sons, of the office of the Levites in keeping the charge of Aaron and of the congregation, and of the people generally in respect of the charge or watch of the Lord — and allows either sense here, that it may imply that the people were to engage in acts of religious worship, or that it may denote adherence to the divine commands and ordinances generally. He renders the recurring formula better as and sometimes, that is, there were times or occasions on which; and from the clause about the cloud being taken up by day or by night he infers that there must have been sentinels constantly watching by night as well as by day, whose office it was to give notice when it was removed. On the longest term he raises a question of date: the word behind a year is literally days, and if the received rendering is correct, as he thinks it probably is, it will follow that these words cannot have been written until after the first arrival at Kadesh, and probably not until after the end of the wanderings in the wilderness. The elaborate manner in which the statement is made and repeated in almost identical terms shows, he says, the great importance the writer ascribed to the divine guardianship exercised over Israel and to their submission to the guidance given them. Keil accounts for the same repetitiousness in the same way, that the elaboration is intended to bring out the importance of the fact, and he lists the possible terms the text names — many days, or a few days, or only from evening till morning and up again in the morning, or a day and a night, or two days, or a month, or simply days, a space of time not precisely determined."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is meant by keeping the charge of the Lord?",
+    "positions": [
+     {
+      "position": "either engaging in acts of religious worship, or adhering to the divine commands and ordinances generally, on the analogy of its other uses",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "not worship undertaken at leisure but watchful heedfulness — regarding the will of God with the greatest earnestness and care, lest the cloud rise unnoticed",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "makes the rendering a year a mark of date, since if it is correct these words cannot have been written until after the first arrival at Kadesh, and probably not until the wanderings were over"
+   }
+  ],
   "themes": [
-   "whether it was by day or by night that the cloud was taken up, they journeyed",
-   "ready to move at any hour",
-   "instant obedience to God's signal"
+   "the unequal halts",
+   "what keeping the charge means",
+   "obedience in resting as in marching"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the varying stays — half a day, a day, two days, a month, even a year or longer (Maimonides says eighteen years in one place)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: it was by the divine counsel alone that they were directed in all their peregrinations."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whether it were two days, or a month, or a year, that the cloud tarried",
-   "Israel stayed till it rose",
-   "continual dependence on God's leading"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: whether the stay or march were agreeable or disagreeable, they were obedient to the divine will; though an obstinate and perverse people who must have longed to reach the land, in this they rested and journeyed at the commandment of the LORD by the hand of Moses, keeping his charge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "At the commandment of the LORD they rested... and... journeyed: they kept the charge of the LORD",
-   "obedient whether it pleased them or not",
-   "taking the haltings and journeys of life from God's hand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

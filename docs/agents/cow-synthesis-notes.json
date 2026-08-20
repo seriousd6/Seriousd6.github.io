@@ -12528,6 +12528,78 @@
       "book": "leviticus",
       "chapter": "24",
       "note": "Length control, six entries: 630, 648, 650, 643, 647, 647, all grade A. One entry drafted in range on the first attempt — the vv1-4 entry at 630 — and it is the only four-voice entry in the chapter, which is now the fourth consecutive confirmation of the voice-count relation from notes 1102, 1107, 1133 and 1140. The rest drafted at 828, 888, 734, 845 and 794 on five and six voices. A second grade-B-from-vocabulary case appeared and was fixed the same way as the two before it: the shewbread entry came off the first draft at ttr 0.587, because cakes, table, piles and frankincense carried nearly all the nouns in a passage about nothing else. Swapping in loaves, board and stacks, and cutting the geometry of the projecting handbreadths, moved it to 0.614 while also taking off the length. That is three instances now — leviticus 9 on sacrifice and fire, exodus 33 on tent and tabernacle, and this — and the rule can be stated firmly: where a chapter's subject supplies one dominant noun, choose two or three synonyms BEFORE drafting, because the meter will otherwise catch it after the work is done. Every effective length cut was again a whole idea (Ellicott's three golden moulds, the three possible placements of the incense bowls, the eight priestly perquisites, Clarke's Kennicott and De Rossi manuscript evidence, Calvin's second objection to the lex talionis, Jarchi's distinction about the wounded beast). Note 1018 holds across sixteen chapters."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "JFB displacement, ratio-law prediction MISSED. Host numbers 9 = canonical chapter position 126; the law derived over ten cases (donor_pos/host_pos, mean 0.834, band 0.806-0.864) predicted a donor near Leviticus 15, window 12-18. The two JFB blocks here, at keys 7 and 13 (stride 6, as usual), are Leviticus 19:23 (fruit trees not to bear in their earliest years, to be regarded as uncircumcised) and Leviticus 19:30. Leviticus 19 is canonical position 109, giving a ratio of 0.865 -- one thousandth above the prior band maximum, and one chapter outside the predicted window. Recording it as a miss rather than widening the band after the fact: the law places the donor at a fixed FRACTION of host position rather than a fixed lag, and that much still holds, but its usable precision is about plus or minus 0.03 x host, which at this position is roughly four chapters. Fourth out-of-sample test; running record three hits (exodus 39, exodus 33, leviticus 24) and one miss."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "2",
+        "7",
+        "13"
+      ],
+      "note": "200-word truncation cap, seventh chapter with the identical signature: Keil capped at exactly 200 words in 8 of his 9 blocks, Gill only where he ran long, no other voice touched. Worst consequence again at key 2, where Keil's block is cut off inside his quotation of vv2-6 before any comment begins, so the key holds pure verse text and his only real comment falls on v6, outside the entry the key sits in -- Keil therefore excluded from entry 1-5. Both JFB blocks (keys 7 and 13) are displaced Leviticus 19 material and are excluded as well; both keys carry other voices, so the exclusions cost nothing."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "22",
+        "23"
+      ],
+      "note": "StudyLight tail rule, sixth discriminating case and still no counterexample: the site boilerplate (nav CSS, copyright, commentary list) is attached to the end of Ellicott's final block, which here is key 22, while the chapter's last key is 23. Gill's separate sacred-texts tail ('Next: Numbers Chapter 10 Sacred Texts') sits at key 23, which is both Gill's last block and the chapter's last key, so this chapter is again NOT discriminating for the Gill tail -- nine chapters now without one, consistent with the possibility that Gill always runs to the chapter's last key and the question is unanswerable from within the corpus."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "18",
+        "19"
+      ],
+      "note": "Editorial footnotes inlined inside Calvin's blocks again, and here they are unusually dangerous. Key 18 carries the editor's apparatus on sacraments spliced mid-sentence into Calvin's argument, complete with Latin quotations from Augustine and volume-and-page citations; key 19 carries an editor's note reporting Dathe, Malvenda and 'other ancient commentators' as ADOPTING the very opinion Calvin is rejecting in the surrounding sentences, plus a Vulgate citation and, at the very end, the line 'They also serve, who only stand, and wait' attributed in the footnote to Milton's sonnet on his blindness. A reader distilling the block without noticing the seams would credit Calvin with Milton's line and with the position he explicitly refuses. The fidelity gate cannot see the difference, since the footnote sits inside the Calvin span."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "Ellicott and Wesley divide on what the cloud covered, and each states the other's position as the thing to be denied. Ellicott renders 'the tabernacle of the tent of the testimony' as the tabernacle BELONGING TO the tent, and argues from the older narrative -- Moses could not enter the tent of meeting because the cloud abode upon it, with no part of the structure singled out -- that there is no sufficient ground for confining the cloud to the chamber where the two tables were kept. Wesley reads the same phrase as 'the tabernacle ABOVE the tent of the testimony', i.e. precisely that part in which the ark stood, 'for there the cloudy pillar stood'. Recorded as a debate in the tags rather than harmonised."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "9",
+      "note": "Length control, sixteenth-plus confirmation of note 1018 and no improvement to report. All five entries overshot on first draft (669, 772, 693, 768, 831 against a 650 ceiling) despite the quota being known before a word was written. Structural cuts -- dropping a whole named idea, e.g. Houbigant's rejoinder to Clarke on the papyrus leaves, Jarchi's remark on asking Moses before Aaron, Calvin's argument that the paschal lamb was a true victim -- moved 26 to 65 words each; lexical shaving moved 4 to 12. Entry 19 needed four passes because I tried shaving before cutting on the last 30 words. The lesson stands: draft to the quota, and when over, cut ideas first. Two entries (15 and 19) landed at 648 and 645, which is tighter to the ceiling than is comfortable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "9",
+      "verses": [
+        "7"
+      ],
+      "note": "Abridgement-rescue in the reverse direction, a sixth confirmation with a new wrinkle. Henry holds keys only at 1 and 15, so his long run-ahead at key 15 -- 'this is repeated again and again, because it was a constant miracle... mentioned long after by David, and by the people of God after their captivity... the guidance of this cloud is spoken of as signifying the guidance of the Blessed Spirit' -- would have been stranded when the material's proper home is the closing entry 19-23. Wesley carries the same material at key 21, inside that span, so it reaches the last entry legitimately through the abridging voice rather than through Henry. Previous cases all ran the other way (Wesley's key rescuing Henry's material for an earlier entry); this is the first where the abridgement carried Henry's material FORWARD past his own last key."
     }
   ]
 }
