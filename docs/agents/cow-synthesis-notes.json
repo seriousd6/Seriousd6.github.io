@@ -9755,6 +9755,75 @@
       "book": "revelation",
       "chapter": "2",
       "note": "Fidelity self-grade, revelation 2, eight entries, every verse checked against the catena. Word counts 649/644/643/640/650/649/649/647, all inside the 350-650 window. Tiling 1 / 2-4 / 5-7 / 8-11 / 12-14 / 15-17 / 18-21 / 22-29 tiles vv1-29 exactly, and respects the four letter boundaries (Ephesus 1-7, Smyrna 8-11, Pergamos 12-17, Thyatira 18-29). Twelve voices appear in the chapter; every claim traces to a block inside its own entry's span. Sectional-block traps checked explicitly: Henry's four blocks sit at keys 1, 8, 12 and 18, one per letter, each covering that whole letter, so he is named only in the entry that sources his block and only for on-span material -- in particular he is NOT named in the 2-4 or 5-7 entries, where his Ephesus block is not sourced. Victorinus and Bede likewise appear only in the key-1 entry, though both discuss vv1-7. Jamieson declared in excluded_voices on entries 1, 5, 12, 18 and 22 (keys 1/7/13/19/25), all Colossians-Ephesians residue. Cyril of Jerusalem dropped silently at keys 1, 7, 10 and 27. Ellicott's 992-word chrome tail at key 28 was excluded before drafting; his genuine 57 words there were used."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "JFB stride bug, 25th instance, and the first PERFECTLY REGULAR one: the displaced blocks fall at keys 5, 11, 17, 23 — an exact arithmetic stride of 6 with no irregular member. Donor is Numbers 28 throughout (new-moon/festival material at key 5; keys 11, 17 and 23 carry unleavened-bread and first-fruits text citing Le 23:5, Nu 28:18-25 and Le 23:18). Keys 11 and 17 are byte-identical; 5 and 23 are different portions of the same donor, so this is the partial-repeat variant first seen at numbers 28. Note also that the donor is again the chapter landed in the immediately preceding batch — second consecutive occurrence (judges 7 took deuteronomy 27, this takes numbers 28). All four blocks excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight boilerplate tail, 21st instance. Attached to the end of Ellicott's block at key 24, with key 25 still following — Ellicott has no block at 25. Confirms the refined rule settled at numbers 28: the tail attaches to the end of Ellicott's FINAL block, which only usually coincides with the chapter's last commented key. Ellicott's real comment at 24 (Rashi's labourer restriction, and the Sabbath objection against the disciples) precedes the tail and is used."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "17",
+        "19",
+        "21"
+      ],
+      "note": "A FOURTH kind of empty-block exclusion, distinct from the three already on record. Clarke's blocks at keys 17, 19 and 21 are pure cross-references with no comment attached at all: 'There shall be no whore - See on Gen 38:15-21 (note).', 'Usury - See on Lev 25:36 (note).', 'When thou shalt vow, etc. - See on Num 30:2 (note), etc.'. Compare the three known kinds — the stride bug (wrong content, note on exodus 7), the bare catchword with no comment (note 887, deuteronomy 27 v1, Gill), and the AV text of following verses with no comment (exodus 7, Keil). This is a pointer to another chapter's commentary rather than any text of its own. Clarke stays in the voices list for the 16-20 entry because his key-18 block on the temple of Venus Melytta is real; he is excluded outright from the 21-23 entry, where 21 is his only block."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "22",
+        "24",
+        "25"
+      ],
+      "note": "Filing rule (note 607) applied in the permitted direction. Keil's block filed at key 22 carries the AV text of vv22-23 with no comment on vows, and then a substantive comment on vv24-25 — the vineyard and cornfield, eating at pleasure but carrying nothing off, and the surviving Arab custom of hungry travellers plucking and rubbing ears. That material TREATS 24-25, and Keil has a key at 25, so it moves to the 24-25 entry and Keil is excluded from the 21-23 entry. Keil's own key-25 block is the bare AV text of the verse with no comment (the third kind of empty block), so without the move he would have had no usable contribution to the closing entry at all."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "1",
+        "15",
+        "24"
+      ],
+      "note": "Three genuine four-way or three-way splits in one chapter, unusually well-defined. (1) v1, what 'entering into the congregation of the Lord' excludes: Clarke and Wesley say civil office and public honour, Wesley arguing from Kahal as the assembly of rulers; Calvin calls both usual readings tame and holds it means exclusion from the sacrifices themselves; Henry sets out three readings including Bishop Patrick's and declines to choose. (2) v15, whether the law shelters any runaway: Clarke and Gill restrict it to one fleeing an idolatrous master for religion, Calvin and Henry to one whose flight from cruelty is judicially proved, Keil to one fled from a harsh heathen owner abroad. Calvin is the only voice who states the objection at full strength first — the law as worded defrauds masters, violates the law of nations, and would fill Canaan with thieves and murderers. (3) v24, whether the grape and corn permissions belong to hired labourers: Rashi, the Chaldee and the Hebrews generally say yes, and Gill, Calvin and Ellicott all reject the restriction, Ellicott on the ground that the objection against the disciples was the Sabbath and not the plucking."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "23",
+      "verses": [
+        "15"
+      ],
+      "note": "Overshoot control, continuing note 866. Every entry in this chapter but two came in over the 650 ceiling on first draft; v15 was the worst at 765 and needed six trim passes. The cause here was not source enumerations (note 866) but a single voice arguing at length against himself: Calvin's block on the runaway slave states four separate objections to the law before answering them, and each objection resists compression because dropping one weakens the argument's shape. The rule that worked was to keep the reductio and the resolution in full and compress the list of objections into one sentence. Grade held at A throughout (final 645, ttr 0.689) — shaving did not cost TTR here, unlike numbers 28 vv30-31 (note 902), because the cuts removed function words rather than distinct vocabulary."
     }
   ]
 }
