@@ -9533,6 +9533,74 @@
         "1"
       ],
       "note": "Gill declared excluded at the v1 entry, and the reason is worth recording because it is a new one. His key-1 block is not displaced and not boilerplate: it is the bare lemma ('And Moses, with the elders of Israel, commanded the people,') with no comment attached at all. Naming him would have meant inventing an attribution, so he was declared excluded instead. undeclarable_voices accepts it, since split_voices does segment the empty block. Distinguish this case in future from the stride bug (wrong content) and from the Keil verse-dump case at exodus 7 (AV text of following verses with no comment): here there is no text at all beyond the catchword."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "2",
+      "note": "Jamieson stride-6 residue, THIRTY-FIFTH chapter. Keys 2/8/14/20/26, offset 2, FIVE MEMBERS AND NO GAPS -- the second-longest clean run recorded, after acts 15's six. Every block is 1 Corinthians 15 material: the first-fruits and the Passover-sabbath dating of the resurrection (key 2), the end of the mediatorial kingdom (key 8), Bengel's gradation from those baptized at the point of death (key 14), the folly of denying a fact of revelation because we do not know the how, with Ezekiel 37:3 (key 20), and the suitability of bodies to their species, De Wette and Estius and 'I believe in the resurrection of the flesh' (key 26). Declared in excluded_voices on five of the six entries. Note the irony: the residue is 1 Cor 15 on the resurrection, dropped into a chapter whose central error is that the resurrection is past already -- a topical matcher would find these blocks highly plausible, which is exactly why they must be checked by provenance and not by subject."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "2",
+      "verses": [
+        "26"
+      ],
+      "note": "Chrome tail, TWENTY-FIRST confirmation and EIGHTEENTH CONSECUTIVE Ellicott carrier. Key 26 Ellicott block measures 1257 words, of which the last 995 are chrome (StudyLight footer, copyright statement, sub-menu CSS, then inline JavaScript); genuine Ellicott is 262 words. Marker string for this chapter: '2 Timothy 2Ti 1 2 Timothy 2Ti'. Carrier is the chapter's last verse here. Chapter reported 36,629 usable source words; real total is 35,634. SEPARATE COINCIDENCE WORTH NOT MISREADING: Adam Clarke's block at the same key 26 is exactly 992 words -- the same length as the chrome measured in joshua 7 and elsewhere -- but it is entirely GENUINE (the Greek of v26, then Wiclif 1378, Coverdale 1535 and other English versions set side by side, then the Korah reading). Length alone is not a chrome test; the marker string is."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "2",
+      "note": "PATRISTIC PROVENANCE IS PER-VOICE, NOT PER-CHAPTER: this chapter carries Chrysostom and Cyril of Jerusalem side by side, one genuine and one residue. CHRYSOSTOM (keys 1, 11, 20) is exactly on-passage at all three: the shipwrecked master and the wounded general on 'be strong in the grace' (v1), the objector who asks 'when I live, I die, and when I die, I live?' on the faithful saying (v11), and 'in a great house there are not only vessels of gold and silver' (v20). His Homilies on 2 Timothy are the actual source. CYRIL OF JERUSALEM (keys 2, 8) is Catechetical Lecture material: key 2 is the three children in the furnace and the power of repentance to quench fire, which has nothing to do with committing the deposit to faithful men; key 8 is the argument that the Virgin was of David's family, which shares the phrase 'seed of David' with v8 but is not comment on the verse. Treated as SILENT rather than declared, because of the VOICE_LABELS defect. Taken with the acts 15 finding that Lightfoot was genuine there, the rule is now firm: check each patristic voice in each chapter; neither 'the fathers are always residue' nor the reverse holds."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "CHRYSOSTOM AND GILL CONTRADICT EACH OTHER BY NAME on what the great house of v20 is. Chrysostom: 'he speaks not of the Church only, but of the world at large. For think not, I pray, that he means it of the Church' -- he needs the wider reading because he is answering the perplexity why the wicked are suffered to remain undestroyed. Gill, arguing the same verse: 'by this great house, in the application of the simile, is not meant the world, as some think' -- he needs the narrower reading because his point is that it should not distress anyone to find wicked men inside the church. Each states the other's position as the view to be rejected. Clarke, Barnes, Ellicott, Robertson and Wesley all side with Gill. This is the first recorded instance in the corpus of a Greek father and a Reformed commentator each explicitly naming and rejecting the other's reading of the same figure."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "2",
+      "verses": [
+        "13"
+      ],
+      "note": "COMFORT OR SEVERITY at v13, 'if we believe not, yet he abideth faithful' -- a five-way split and the sharpest doctrinal division in the chapter. Wesley reads pure comfort: 'though some believe not, God will make good all his promises to them that do believe.' Ellicott denies this in the strongest terms available to him: 'Those who have understood these words as containing soothing, comforting voices for the sinner, for the faithless Christian who has left his first love, are gravely mistaken. The passage is one of distinct severity -- may even be termed one of the sternest in the Book of Life; for it tells how it is impossible even for the pitiful Redeemer to forgive in the future life.' Barnes agrees and turns it against a caricature of his own tradition: 'Let no one then suppose that, because he is elected, he is safe, if he lives in sin... if that were the doctrine of election, it would deserve all the opprobrium that has ever been heaped upon it.' Clarke: 'as true to his threatenings as to his promises.' Gill and Henry hold both senses at once, faithful to the threatening and faithful to the promise. Note that the wesleyan-arminian school is itself split here, Wesley comforting and Clarke threatening."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "2",
+      "verses": [
+        "15"
+      ],
+      "note": "FOUR METAPHORS FOR ONE WORD at v15, 'rightly dividing' (orthotomeo). (1) Clarke reports the common view, that it alludes to the priests dividing the sacrificial victim down the spine so that half the spinal marrow lay each side of the backbone -- and rejects it flatly: 'probably nothing was much farther from the apostle's thoughts than this view, which is now commonly taken', adding that the scrupulous division was not an original Jewish ordinance. (2) Ellicott: laying out a road (Prov 3:6 LXX) or drawing a furrow. (3) Robertson reports Theodoret for the furrow and Parry for a stone mason cutting stones straight, then offers (4) his own: 'Since Paul was a tent-maker and knew how to cut straight the rough camel-hair cloth, why not let that be the metaphor? Certainly plenty of exegesis is crooked enough (crazy-quilt patterns) to call for careful cutting to set it straight.' Separately Ellicott resists Alford and Huther-Meyer, who held the sense of cutting was already lost by Paul's day, as 'premature', granting only that Clement of Alexandria uses the noun for orthodoxy in the third century, and suggesting Paul's own use gave the word a fresh starting-point."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "2",
+      "note": "Gill 200-word cap fires FIVE TIMES in this chapter, at keys 7, 8, 13, 19 and 20 -- each block truncated mid-sentence at exactly 202 words including the head. Examples: key 13 breaks at 'and his salvation is an everlasting and unchangeable one; nor'; key 19 at 'this stands sure upon t'; key 20 at 'and is a very large one, and f'. Keil-and-Delitzsch blocks show the same 200-word cap in OT chapters, so the defect is source-wide and not voice-specific. Standing owner item: a re-fetch of the capped tree. In this chapter the cap cost real content -- Gill's completion of the great-house argument at key 20 is exactly where he denies the world-reading that Chrysostom asserts, and the sentence is cut off mid-clause."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "2timothy",
+      "chapter": "2",
+      "note": "Fidelity self-grade, 2timothy 2, six entries, every verse checked against the catena. Word counts 650/650/650/634/650/650, all inside the 350-650 window. Tiling 1-2 / 3-7 / 8-13 / 14-18 / 19-21 / 22-26 tiles vv1-26 exactly. Ten voices appear in the chapter (Chrysostom, Cyril of Jerusalem, Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Jamieson); every claim traces to a block inside its own entry's span. Two sectional-block traps were checked explicitly: Henry's key-1 block covers vv1-7, so he is named in the 1-2 entry only for v1-2 material and NOT in the 3-7 entry, where his block is not sourced; Calvin appears only at key 1 and so is named only in the first entry. Jamieson declared in excluded_voices on entries 1, 8, 14, 19 and 22 (keys 2/8/14/20/26), all 1 Corinthians 15 residue. Cyril of Jerusalem dropped silently at keys 2 and 8, since the VOICE_LABELS short form makes a correct declaration impossible. Ellicott's 995-word chrome tail at key 26 was excluded before drafting; Clarke's coincidentally 992-word block at the same key is genuine and was used."
     }
   ]
 }
