@@ -13349,6 +13349,69 @@
       "book": "james",
       "chapter": "1",
       "note": "LENGTH CONTROL: the three-voices-per-paragraph rule from note 1214 held up over a full chapter. Across the 11 entries written this session, 4 landed in range on the first draft (13, 18, 25, and 14-15 after one pass) and the mean was 1.4 trim passes, against 5 for acts 24 and 7 for acts 3. First-draft overshoot fell to a mean of about 25 words over the 650 cap rather than 60-90. The rule to keep: three voices per paragraph at roughly 190 words each, target 560-590. Also confirmed again — run the two-way voice check BEFORE trimming, not after: it caught Gill missing from entry 11, which cost an insertion plus a second trim pass to pay for it."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "3",
+      "note": "1john 3: 24 contiguous keys, 42,970 usable source words, tiled into 16 entries. Entry-count predictor (keys-over-2000 + round(remaining/2500)) matched exactly for the fifth consecutive chapter. Bench: Gill, Barnes, Clarke, Robertson at all 24 keys, Calvin at 23, Wesley at 20, Henry at 9 (keys 1,3,4,11,14,16,20,22,23), JFB at 4, Cyril at 3, Augustine at 2. No truncation cap anywhere in this chapter — the longest single block is Barnes at key 16 running past 1,100 words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JFB STRIDE 6 CONFIRMED A FOURTH TIME. All four JFB blocks in 1john 3 sit at keys 6, 12, 18, 24 — stride 6 again, phase 6. Prior chapters: acts 24 keys 2/8/14/20/26, acts 3 keys 4/10/16/22, james 1 keys 1/7/13/19/25. The stride is invariant across four chapters and only the phase moves. Every one of the four blocks here is displaced and all four carry PHILIPPIANS 1 material in continuous forward order: key 6 = Phil 1:11 (fruit of the Spirit / wild olive grafted, quoting Calvin), key 12 = Phil 1:16-17 (those who preach Christ of contention), key 18 = Phil 1:20-21 (to me to live is Christ), key 24 = Phil 1:26 (your rejoicing may abound by my coming again). Same whole-chapter displacement as james 1. All four declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "DISPLACEMENT RATIO: second consecutive miss, and the law should now be treated as dead. NT-internal chapter positions: Philippians 1 = 179 (178 chapters precede Philippians: Mt 28, Mk 16, Lk 24, Jn 21, Ac 28, Rom 16, 1Co 16, 2Co 13, Gal 6, Eph 6), 1 John 3 = 232 (229 precede 1 John, +3). Ratio 179/232 = 0.772 — outside the 0.806-0.864 band, and close to the james 1 miss (0.757) rather than to the acts 24 hit (0.814). Running record: four out-of-sample hits (exodus 39, exodus 33, leviticus 24, acts 24) and three misses (numbers 9, james 1, 1john 3). Three of the last four predictions have failed. The stride-6 regularity is 4-for-4; the ratio is 4-for-7 and trending down. Recommend retiring the ratio law and keeping the stride."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "3",
+      "verses": [
+        "9",
+        "19"
+      ],
+      "note": "AUGUSTINE OF HIPPO is a new voice in this corpus — two blocks in 1john 3 (keys 9 and 19), both from the Homilies on the First Epistle of John, both directly on the verse they are filed under and both used. Added to the SCHOOL map as latin-fathers (already in VALID_SCHOOLS but never previously exercised). CAUTION for the next chapter that draws him: synthesis_qa.VOICE_LABELS lists the bare string 'Augustine' while the corpus writes 'Augustine of Hippo:', exactly the Cyril bug of note 1209 — so split_voices will not match him and declaring him in excluded_voices would produce a validator FAILURE. Same one-line fix serves both: add the full forms ahead of the bare ones in VOICE_LABELS."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "3",
+      "verses": [
+        "3",
+        "5",
+        "9"
+      ],
+      "note": "1john 3 carries the sharpest sustained doctrinal quarrel the loop has met so far, running across four consecutive entries. Clarke argues from vv3-9 for entire deliverance from sin in this life, names the Westminster divines as the opposition, calls it a miserable salvo to say the regenerate sin only occasionally, and tells the Socrates/physiognomist story to ask whether grace may have less power than a heathen's philosophy. Barnes answers on universality — whatever the text proves it proves of every believer alike, so it would make all Christians perfect or none — and Robertson answers on grammar, that the present infinitive means cannot go on sinning and 'a great deal of false theology has grown out of a misunderstanding of the tense'. Calvin takes a third line, that the Spirit's power necessarily retains the elect in obedience, against the Sorbonist motion that leaves free choice. All four positions are recorded in the tags debates for entries 3, 5 and 9 rather than harmonised."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "3",
+      "note": "LENGTH CONTROL held but cost more here than in james 1: mean 2.6 trim passes across the 16 entries against 1.4 in james 1, with three entries needing four or more passes (9, 14, 23-24) and one (15-16) rewritten from scratch after a 916-word first draft. The regression tracks bench depth — where seven or eight voices must be named in 650 words there is simply less room, and the three-voices-per-paragraph rule cannot absorb an eighth. Working refinement: on an eight-voice span, give two voices a single clause each rather than a sentence. One entry (19) first came in at grade B on type-token ratio (0.576 against the 0.58 floor) — the first B first-draft of this loop; it was fixed by varying repeated abstractions (love/faith/conscience/assurance) rather than by trimming, and landed at 0.644."
     }
   ]
 }
