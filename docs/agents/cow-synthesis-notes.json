@@ -10019,6 +10019,128 @@
         "24"
       ],
       "note": "Two pieces of exegesis worth flagging as unusually good, both from Ellicott, and both retained in full at the cost of trimming elsewhere. (1) v21: the dust of the calf was cast into the brook that descended out of the mount, and Ellicott observes that this same stream from the smitten rock in Horeb both gave Israel drink and bore their sin away on its waters — 'and that Rock was Christ'. He supports the identification of the sin with the material object from Leviticus, where sin and sin-offering are one word. This is the strongest typological reading encountered in the Pentateuch corpus so far and it is exegetically disciplined rather than merely devotional. (2) v24: against 'ye have been rebellious from the day that I knew you', Ellicott sets the counterweight that this is only one side of the truth, the other being the words Jehovah himself put into Balaam's mouth — 'He hath not beheld iniquity in Jacob, nor seen perverseness in Israel'. I did not have room for the Balaam counterweight in the prose and record it here so the omission is deliberate and recoverable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTY-EIGHTH chapter and the fifth consecutive one. Keys 3/9/15/21/27 -- OFFSET 3, five members, no gaps, a clean arithmetic run across a 32-verse chapter. Every block is Exodus/Moses material: Moses' beauty at birth, the three forty-year periods of his life (Acts 7:23,30,36), the Angel of the Covenant who calls himself Jehovah (Acts 7:38), and Psalm 118:22 twice. Offsets 0,1,2,3 and 4 are now all attested across the 38 chapters, so the stride can start anywhere in the cycle; offset alone is no longer diagnostic, only the stride is."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "32"
+      ],
+      "note": "Chrome, TWENTY-FOURTH confirmation and the TWENTY-FIRST consecutive Ellicott carrier: key 32 carries 989 words of navigation chrome after 114 genuine words, marker 'Acts Act 28 Romans Rom'. FIRST VARIATION IN THE CHROME LENGTH CONSTANT: every previous instance measured 992 words; this one is 989. The reason is visible in the marker -- it spans a BOOK boundary (Acts 28 -> Romans 1) rather than a chapter boundary within one book, because this is chapter 1, and the shorter book-to-book run costs three words. The constant is therefore not 992 but 992-minus-3 at any chapter 1."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "12"
+      ],
+      "note": "John Lightfoot at key 12 is residue: his note is on ROMANS 3:12 ('They are all gone out of the way'), two chapters off, discussing the Greek version of Psalm 14 and the synagogue interpreter. Unlike Cyril of Jerusalem he IS declarable -- but only under the SHORT form. build.py had to emit excluded_voices=['Lightfoot'], not ['John Lightfoot'], because synthesis_qa.split_voices returns the regex MATCH GROUP, and VOICE_LABELS carries the short 'Lightfoot'. Declaring the full name fails 'excluded_voices names a block absent from this entry's source'. Same defect family as the Cyril silence; here it degrades a declaration rather than forbidding one."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "4",
+        "16",
+        "19",
+        "28"
+      ],
+      "note": "Cyril of Jerusalem duplicate blocks, FOURTH recorded instance (after numbers 23, 2timothy 2 and revelation 2): keys 19 and 28 are byte-identical, both the Catechetical Lecture passage on the soul's freedom that happens to quote Rom 1:19 and 1:28 in a chain of proof texts. All five Cyril blocks in this chapter (keys 3, 4, 16, 19, 28) are Catechetical Lectures, hence residue, and all had to be dropped SILENTLY because 'Cyril of Jerusalem:' matches nothing in VOICE_LABELS. Key 16 is the borderline case: its content (not being ashamed of the Cross; to us which are being saved it is the power of God) is squarely on the theme of Rom 1:16, so it was USED rather than dropped -- a residue voice can land on the passage by coincidence of subject."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "note": "Theodoret of Cyrrhus is genuine and on-passage in 28 of 32 keys -- the LARGEST patristic presence recorded in the corpus, larger than Chrysostom anywhere. He runs alongside Chrysostom (genuine, keys 8, 18, 26, 28) and Cyril (residue) in the same chapter, which confirms again that patristic provenance is per-voice, not per-chapter. Two of his blocks are substantive rather than recitative: at key 25 he turns 'worshipped the creature rather than the Creator' into an anti-Arian argument (those who call the Son a creature and yet adore him must either rank him with God who begat him or stop adoring him), and at key 20 he lists the phenomena that point out the Maker -- the change of seasons, the labourings of the clouds, the fruitfulness of seeds."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "11",
+        "12",
+        "17",
+        "24",
+        "30"
+      ],
+      "note": "Romans 1 carries the densest cluster of flat contradictions yet recorded. (1) Key 11-12: WESLEY argues from 'that I may impart some spiritual gift' that Peter had NOT been at Rome when the letter was written, since otherwise the gift would have been imparted already; THEODORET argues from the same clause the opposite, that because the great Peter HAD already conveyed the gospel there, Paul adds 'to the end ye may be established' and speaks only of watering trees already planted. (2) Key 24-28: WESLEY finds three DEGREES of ungodliness and punishment in the three 'God gave them up'; ROBERTSON denies any progression, calling them one withdrawal repeated. (3) Key 30: BARNES, CLARKE, WESLEY and CALVIN read theostugeis actively (haters of God), CALVIN saying there is no reason for the passive; ELLICOTT says there seem to be NO examples of the active sense and ROBERTSON that all the ancient examples are passive. (4) Key 24: THEODORET, BARNES, WESLEY and CLARKE all make 'gave them up' permissive; CALVIN says they forcibly wrest the word who make it permission only, and his editor quotes Augustine for an 'efficient operation'. (5) Key 17: BARNES denies imputation in terms ('it is not that his righteousness becomes ours; this is not true, and there is no intelligible sense in which that can be understood') where GILL says the Father imputes it to his elect; and ROBERTSON makes dikaiosune cover sanctification where CALVIN expressly excludes the grace of regeneration."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "29"
+      ],
+      "note": "A documentable crossed wire at key 29: BARNES glosses ponEria as 'a desire of injuring others, or malice' and kakia as 'evil in general; rather the ACT of doing wrong than the desire' -- and cites CALVIN by name for the first gloss. Calvin, citing Ammonius that the wicked man is 'the doer of evil', has it exactly the other way: ponEria is practised wickedness, licentiousness in DOING mischief, and kakia is 'that depravity and obliquity of mind which leads us to do harm to our neighbour'. ELLICOTT independently agrees with Calvin (the latter word the vicious disposition, the former its active exercise). So Barnes has reversed the pair while attributing his gloss to the commentator he reversed. Second recorded case of a commentator misattributing a distinction to a named source."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "26",
+        "27",
+        "31"
+      ],
+      "note": "Methodological split at key 26-27, on how far to document the charge. BARNES defends the making of it first ('the shame is not in specifying them, but in their existence; not in the apostle, but in those who practised them'), then argues that the accused could simply have denied it had it been false, then fills a page with Virgil, Maximus Tyrius, Cicero, Xenophon, Plato, Aristotle, Plutarch on Solon, Diogenes Laertius on Zeno, Seneca on the trained troops of boys, and a traveller's report of China. CLARKE, on the same verses, refuses: 'I could produce a multitude of proofs from their own writings; but it is needless to make the subject plainer than the apostle has left it.' The same split recurs at key 31, where Barnes assembles a full dossier on infant exposure (Sparta and the Taygetus cavern, Aristotle, Romulus, the Twelve Tables, Minucius Felix, Pliny, Tertullian, Peking, the Hindoo provinces) and the others give a sentence each."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "22"
+      ],
+      "note": "Calvin's own editor marks Calvin as the outlier at key 22: 'Calvin is peculiar in his exposition of this verse. Most critics agree in thinking that those referred to here were those reputed learned among all nations' -- and sets Beza's roll against him (Druids of the Gauls, soothsayers of the Tuscans, philosophers of the Greeks, priests of the Egyptians, magi of the Persians, gymnosophists of the Indians, Rabbins of the Jews). Calvin holds instead that 'professing themselves to be wise' was not peculiar to the philosophers but innate, coming with us from the womb, and that the error of image-making did not originate with the philosophers at all. First recorded instance of an editor explicitly flagging his own author as against the consensus in the apparatus itself."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "1",
+      "verses": [
+        "7",
+        "15",
+        "16",
+        "29",
+        "31"
+      ],
+      "note": "Two textual questions in Romans 1 are settled by the commentators against their own printed text, and each is reported by more than one voice. (1) 'In Rome' at keys 7 and 15: ELLICOTT builds a case from the Codex Boernerianus omission, its reading 'in the love of God', the second omission at v15, and traces in Origen and the Ambrosian Hilary, for the epistle having circulated as a general treatise with the personal matter removed; ROBERTSON grants the same manuscript facts and calls the evidence 'late and slight', not comparable with the absence of 'in Ephesus' from the two best manuscripts. (2) 'First' at key 16: Ellicott sets out its absence from the Vatican manuscript, a citation by Tertullian and the Codex Boernerianus, calls the evidence 'small in quantity though good in quality', and judges accidental omission more probable; Robertson says only that its genuineness is uncertain. Ellicott also deletes 'of Christ' at v16, 'fornication' at v29 and 'implacable' at v31 -- three deletions Barnes, Clarke, Wesley, Calvin and Theodoret all expound as text, with Robertson confirming two of them."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "1",
+      "note": "Fidelity self-grade A for all fourteen entries of romans 1, the LARGEST chapter attempted to date: 96,445 real usable source words (97,434 sized, less 989 of chrome at key 32) in 14 entries, nearly twice revelation 2. Every claim in every entry is traceable to a named block in data/commentary/cow/romans/1.json; no voice is attributed a position it does not hold; every disagreement listed is a real textual opposition, several of them verbatim contradictions between voices (see the disagreement notes). Word counts, all inside the 350-650 window: 647 / 625 / 644 / 649 / 650 / 649 / 650 / 649 / 649 / 650 / 649 / 649 / 650 / 646. Tiling covers verses 1-32 exactly with no gap or overlap (asserted in build). Residue declared where declarable (Jamieson at keys 3/9/15/21/27, Lightfoot at key 12 under the short label) and dropped silently where the VOICE_LABELS defect forbids declaration (Cyril of Jerusalem, keys 3/4/19/28; key 16 used, being on-theme). Validators green: validate-synthesis.py and validate-data.py both pass."
     }
   ]
 }
