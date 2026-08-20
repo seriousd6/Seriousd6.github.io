@@ -13114,6 +13114,79 @@
       "book": "judges",
       "chapter": "2",
       "note": "The Ellicott block at verse 16 is the chapter's single richest patch of non-devotional material: he derives the title Shophetim, distinguishes it from the ordinary Hebrew verb for judging, cites Artemidorus for the ancient sense of judging as governing, and identifies the office with the Phoenician Suffetes who succeeded the kings of Tyre, citing Livy for the consular power of the Carthaginian Suffetes and noting that Spanish governors of the middle ages and the chief officer of Sardinia bore the same title. He also observes that the disorder of the age shows in the judges themselves - one the son of a stranger, another a woman, none of priestly or splendid birth. Most of this went to the outliers list rather than the prose, for length."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "15",
+        "23"
+      ],
+      "note": "TOOLING BUG worth fixing: the validator cannot see Cyril of Jerusalem blocks at all. synthesis_qa.VOICE_LABELS lists the bare string 'Cyril', and _LABEL_RE requires the label be followed immediately by a colon, but this corpus writes 'Cyril of Jerusalem:' -- so the regex never matches and split_voices treats Cyril's text as a continuation of the PRECEDING voice's segment. Two consequences. (1) No Cyril block can ever be named in excluded_voices: undeclarable_voices reports it as absent and the validator fails the entry. I hit this on acts 3, where Cyril's blocks at keys 6, 15 and 23 are displaced catechetical lectures (on baptism, on preparing the soul, on Pentecost and the third hour) with no bearing on those verses; I had to drop the declarations, which is harmless here since no entry is thin but loses the audit record. (2) usable_source_words and therefore 'synthesis-loop.py size' silently attribute Cyril's words to whichever voice precedes him, so any exclusion of that voice would also remove Cyril's text. The fix is one line: add 'Cyril of Jerusalem' to VOICE_LABELS ahead of 'Cyril', as 'Jamieson, Fausset and Brown' and 'Keil and Delitzsch' already are. Same class of defect may affect any other multi-word patristic label the corpus uses."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB displacement seen from the DONOR end for the first time, and it confirms the ratio law's mechanism. Acts 3 is the chapter whose text was appearing as JFB residue throughout acts 24 (keys 2, 8, 14, 20, 26 there carried Acts 3:1-4, 3:12, 3:17 and 3:22-23 in a forward march). Standing in Acts 3 itself, JFB holds only four keys -- 4, 10, 16 and 22, again stride 6 -- and every one is displaced OUT: key 4 is the six-word fragment 'their impotence being equal to their malignity', key 10 is a Gospel passage about men awed by a warning He takes no notice of, key 16 is 'the only wonder is they did not all say it, but their minds were blinded', key 22 is the bare cross-reference '(See on Joh 7:30)'. So the defect is not that a host chapter borrows from a donor: it is that JFB's blocks are shifted by a constant offset in the source's own ordering, which means every chapter is simultaneously a host receiving foreign text and a donor whose own text has gone elsewhere. That is exactly what a fixed offset in file ordering predicts, and it explains why the ratio is constant while the lag in chapters is not."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "12",
+        "22"
+      ],
+      "note": "Chapter shape. 26 keys contiguous, 50,518 usable source words -- the largest chapter this loop has taken, and 1.26x acts 24. Eleven voices, with an unusually deep patristic bench for this corpus: Gill at all 26 keys, Robertson 25, Barnes 24, Clarke and Ellicott 23, Calvin 19, Wesley 15, Cyril 6, JFB 4 (all displaced), Henry 4, Chrysostom 2. The 200-word truncation cap is absent again, as at acts 24, except that Cyril is capped at exactly 200 in four of his six blocks -- the only voice in either NT chapter to show the OT signature, which suggests the cap belongs to a particular fetcher rather than to a testament. Henry's four keys (1, 12, 19, 22) are section headers, the longest 6,606 words, so his verse-22 block is really commentary on vv25-26 and is stranded there, Wesley holding no key that would rescue it. Three keys exceed the 4,500-word split threshold on their own (1 at 7,153, 12 at 8,328, 22 at 3,003 with 19 at 3,126), so single-verse entries were unavoidable. Final tiling 1 | 2-5 | 6 | 7-8 | 9-11 | 12 | 13-14 | 15-16 | 17-18 | 19 | 20 | 21 | 22 | 23-24 | 25 | 26 = 16 entries, matching the predictor exactly."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "11",
+        "19",
+        "24"
+      ],
+      "note": "A second author's text is spliced inside Gill's blocks, repeatedly, and it is not Gill's. Seven of Gill's blocks in this chapter (keys 1, 2, 4, 6, 11, 19 and 24) run straight from Gill's own comment into a passage of John Lightfoot's Hebrew and Talmudical Exercitations, complete with Greek and Hebrew type, Talmud citations and folio references -- at key 19 the inlined passage is Lightfoot's grammatical argument that 'hopos an' should be rendered 'that the times of refreshing may come' rather than 'when'. There is no seam a parser could find: the label 'John Lightfoot:' appears mid-block, and VOICE_LABELS does contain 'Lightfoot', so split_voices will actually cut there and attribute the remainder to Lightfoot rather than Gill, which is correct by accident. The hazard is for the writer, not the parser: material of real interpretative weight sits under a name the entry never lists among its voices. I attributed the 'hopos an' argument to Clarke, who cites Lightfoot explicitly, rather than to Gill. Same class of defect as the editorial footnotes inlined in Calvin's blocks in the OT chapters, but with a named second author rather than an anonymous editor."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "3",
+      "verses": [
+        "15",
+        "19",
+        "21",
+        "25"
+      ],
+      "note": "Four live disagreements recorded rather than harmonised. (1) At verse 16, whose faith healed the man: Barnes decides for the apostles', since there is no evidence the beggar believed; Clarke canvasses both and refuses to settle; Ellicott says both, and that the faith in each was itself wrought by Christ; Gill denies that faith of either kind had any causal influence at all, allowing it only as the means. (2) At verse 19, whether 'hopos an' means 'when' or 'that so': Ellicott says the conjunction never has the force of when, and Robertson, Clarke and Wesley agree, while Barnes grants the construction admits either and objects that the other reading does not suit the design of the discourse. (3) At verse 21, whether the restitution is a restoring of an earlier state or a completing of a foretold one: Barnes presses consummation and denies universal salvation explicitly; Ellicott and Clarke prefer restoration, and Ellicott draws from it a wider hope of repentance in the unseen world than Christendom has been content with. (4) At verse 25, whether sons of the prophets means disciples (Barnes) or lineal descendants (Gill, Wesley) -- which matters, since Calvin builds his whole case for the covenanted family on the second reading."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "3",
+      "note": "Length control on a sixteen-entry chapter: worse again, and now with a measurable cost. Fifteen of the sixteen entries overshot on first draft, by 20 to 212 words against the 650 ceiling; the mean was seven trim passes and entries 21 and 22 took ten and nine. Only the smallest entry, 7-8 at 913 source words, landed in range first time -- at 535 words, and it is the one entry I drafted deliberately short. That is the experiment's own answer: when I set the target at 500 instead of 640 the draft came in clean, and every entry where I aimed at the ceiling needed five to ten passes to get under it. Fifteen entries landed between 645 and 650, which is not precision but the residue of grinding down from 750 or 800. Two concrete defects came out of the grinding, both caught: a quote-character bug in a tags body of exactly the class recorded before (a key written 'position\" instead of 'position'), and in an earlier chapter of this run a sentence left crediting Barnes with a remark whose referent a cut had removed. Recommendation for the next worker, stated plainly: draft each paragraph to roughly 190 words with three voices, not four, and target 560 to 590 for the entry. The ceiling is not the target."
     }
   ]
 }
