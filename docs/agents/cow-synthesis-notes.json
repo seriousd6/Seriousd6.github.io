@@ -11542,6 +11542,77 @@
         "1-34"
       ],
       "note": "Fidelity self-grade A for all ten entries of 1corinthians 11. Tiling covers 1-34 exactly, no gaps or overlaps: 1-3 (647w), 4-6 (650w), 7-10 (645w), 11-16 (650w), 17-19 (650w), 20-22 (603w), 23-24 (646w), 25-26 (641w), 27-29 (650w), 30-34 (645w) — all inside the 350-650 window. Voice coverage: entries 1-3 and 23-24 name all ten voices present in range (Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Lightfoot and, respectively, Chrysostom and Cyril); entries 17-19 and 27-29 name nine including Chrysostom; the remaining six name the eight that actually appear. Five schools are represented across the chapter: reformed, puritan-evangelical, wesleyan-arminian, grammatical-historical and eastern-antiochene. Exclusions: Jamieson declared on entries 1-3, 7-10, 11-16, 20-22, 25-26 and 30-34; Tertullian declared on entry 1-3; Cyril at key 3 dropped SILENTLY because the VOICE_LABELS regex cannot match the head 'Cyril of Jerusalem:'. Every proposition in the prose is traceable to a named block in data/commentary/cow/1corinthians/11.json; where a voice is reported as standing alone or against the rest (Ellicott and Lightfoot on exousia, Ellicott on the body as the Church, Lightfoot on the angels as devils, Cyril against Ellicott on presence, Robertson against Ellicott on Luke's dependence) the claim was checked against every other block in the range before being written. Gross size 70,342 usable source words; real usable after deducting the 995-word chrome at key 34 and the Jamieson residue is 67,924, the largest chapter attempted in this loop."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "11",
+        "23"
+      ],
+      "note": "JFB displacement, 40th confirmation, and a new sub-kind. Both JFB blocks in this chapter are FRAGMENTS rather than whole displaced passages. Key 11 is 17 words beginning mid-sentence — 'from the excesses incident to camp life, as well as from habits of personal neglect and impurity' — which belongs to no clause in Judges 4 and reads like the tail of a comment on Numbers 31:19-24 or a Nazirite passage. Key 23 is five words, a bare cross-reference, '(See on Nu 30:2)', and Numbers 30 (vows) has nothing to do with Jabin being subdued. Every previous confirmation (33 chapters) has been a substantial block lifted whole from a donor chapter; this is the first where the displaced material is truncated to a stub. Both keys carry other voices, so both exclusions are clean and the entries lose nothing."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "17",
+        "21"
+      ],
+      "note": "Two source blocks in this chapter end mid-word, independent of the JFB problem. Henry at key 17 stops at 'Lastly, We must suppose she kept her tent as q' — cut off inside a word. Keil at key 21 stops at 'even though there can be no doubt that Jael acted under the influence of religious enthusiasm for the' — cut off before the object. Both are the LAST sentence of an otherwise complete and long block, so the truncation is at the tail of the scrape rather than the head. This differs from the JFB displacement, where the fragment begins mid-sentence. Worth watching whether tail-truncation clusters in the same chapters as head-truncation."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's chapter-argument header tally, now seven chapters. Judges 4 key 1 carries the header followed by SUBSTANTIVE comment — 'When Ehud was dead - Why not when Shamgar was dead? Does this not intimate that Shamgar was not reckoned in the number of the judges?' That takes the running tally to five substantive against two empty (numbers 15 and joshua 4 stood alone). Close enough to even that the header carries no predictive information at all: it must be read past every time, and Clarke kept or dropped on what follows it, never on the header's presence."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "10",
+        "12"
+      ],
+      "note": "Fourth instance of the tiling hazard the validators cannot catch, and the costliest yet. Henry has only four keys in this chapter — 1, 4, 10, 17 — and his key-10 block runs on through vv12-15, carrying the richest devotional material in the chapter (Deborah's 'this is the day', 'Has not the Lord gone out before thee? Darest not thou follow when thou hast God himself for thy leader?', and the reflection on God crossing hands to put the head on the woman's shoulders). Under the filing rule that material cannot move to the 12-16 entry, because Henry has no key inside that span. The result is that the battle entry (vv12-16) has no puritan-evangelical school at all, while the muster entry carries Henry material about verses it does not cover and therefore cannot use. Previous instances (joshua 4, genesis 22, leviticus 21) were arguments split across a boundary; this one is a whole school silently absent from the chapter's central pericope. The rule is right — moving it would ground prose in a source the entry does not contain — but the cost should be visible, and it argues again for reading the whole catena before fixing the tiling, since a boundary one verse earlier (11-16 instead of 12-16) would not have helped either."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "21",
+        "23"
+      ],
+      "note": "The sharpest multi-sided moral disagreement met so far, and it is staged rather than resolved. On whether Jael was divinely directed: Gill affirms an impulse upon her spirit which its own effect proved to be of God, since it bred not malice but zeal for God's glory; Ellicott calls that assumption, made in order to defend an act of assassination peculiarly terrible and peculiarly treacherous, unwarrantable to the last degree, and tells those who adopt it not to press such private interpretations on others; Keil grants the religious enthusiasm and still denies that either the prophecy of 4:9 or the praise of 5:24 makes the act morally justified. On the verdict itself, Clarke draws a ten-count indictment — breach of a treaty made with sacrifice and oath, breach of hospitality he says she was bound to defend at the hazard of her own life, deliberate and unprovoked murder — and then refuses to give a verdict: I will not justify, I dare not absolutely condemn. Ellicott adds the structural answer to the argument from silence (ancient narrative marks disapproval by a single casual adjective, as Homer does) and rebukes Bishop Wordsworth by name for reading 4:23 as making the work of Jael the work of God. All four positions were carried into the tags as debates at keys 21 and 23 with holders named, and the prose states no side as settled — the leviticus 21 lesson applied deliberately rather than after the fact."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "4",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight boilerplate tail, 31st instance: attached to Ellicott's final block at key 24, which is also the chapter's last key — so non-discriminating, like the seven before numbers 15. The numbers 28 rule (the tail attaches to the end of Ellicott's final block, wherever that falls) still rests on the two discriminating cases, numbers 15 and exodus 19. Gill's separate sacred-texts navigation tail did not appear in this chapter at all, so its attachment rule remains untested."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "judges",
+      "chapter": "4",
+      "note": "Length control, eight entries: 645, 644, 639, 558, 641, 646, 647, 644. Five needed a trim pass and all five cuts were structural (note 1018), never lexical: the Delphi-Bees etymology, the Marathon comparison, Henry's broken-reed and idol reflection, the Maccabee-Martel etymology, and a three-voice pile-up on one Hebrew idiom compressed to one voice. The one entry that came in without a trim (vv10-11, 558) was the one where I cut at the outline stage — note 1051 — dropping Ellicott's nine-poles tent description, the Sigar em-Messiah tree, the LXX oak-of-the-covetous and Ewald's swamp before writing a word. The pattern holds across three chapters now: pre-cutting produces a first draft under 600, post-cutting produces a first draft at 670-750 and costs two passes. A new wrinkle appeared at vv4-5: the voices list is derived from source presence, so an entry can pass every validator while listing a voice the prose never names. Keil was listed at key 5 and unused, because his key-5 block's only substantive sentence treats v6. I added a Keil clause grounded in his own transition (her seat securing rights at home, the summons securing them abroad) rather than leaving the badge unsupported. Worth a standing check: after assembling, confirm every name in tags.voices actually appears in that entry's prose."
     }
   ]
 }
