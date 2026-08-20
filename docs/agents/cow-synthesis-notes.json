@@ -10506,6 +10506,70 @@
         "11"
       ],
       "note": "Material deliberately omitted from v11, recorded so the omission is recoverable. Clarke's block at key 11 contains an extended eighteenth-century chemical digression: that water is composed of two airs, oxygen and hydrogen, in proportions of eighty-five to fifteen; that the electric spark decomposes them and converts them to water, which he offers as the cause of rain following thunder; and that God might therefore have converted the whole atmosphere into water to drown the globe, in which case the incessant glare of lightning and continual peals of thunder must have added indescribable horrors to the scene. I kept only his account of the subterranean waters and the sinking strata. The chemistry is historically interesting but would have cost the entry a third of its length, and it is superseded rather than merely dated. Flagging it here in case a later reader of this chapter wants Clarke's natural philosophy, which the entry does not represent."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "3",
+        "9",
+        "21"
+      ],
+      "note": "JFB stride bug, 32nd confirmation and the first in Leviticus. All three JFB blocks are foreign: key 3 is the rampart and the two divisions after the golden calf (Exodus 32:26-28), key 9 is Moses interceding after showing the people the heinous nature of their sin (Exodus 32:30-32), key 21 is the stripping off of ornaments in mourning (Exodus 33:4-6). Strictly monotonic, and the donor precedes the target canonically, which is now the eighth verified case of the lag model. Note the spacing: 3, 9, 21 is a gap of six then twelve, i.e. a slot skipped. That is exactly what the reading-head model predicts and the fixed-stride model does not - the apparent stride is the spacing of JFB's own sparse coverage, not a step the corruption takes. All three excluded."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "24"
+      ],
+      "note": "A distinct kind of empty block, now seen clearly: Keil's key-24 block is the verse text alone - 'Leviticus 9:24 And there came a fire out from before the LORD...' - with no comment of any kind following it. This is not Clarke's bare cross-reference and not a truncation; the scrape has captured the pericope heading and nothing else. Excluded at entry 24, where Keil has no other block, so he is an excluded voice for that entry."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "22",
+        "23"
+      ],
+      "note": "Henry appears twice over the same ground in two different works. His key-22 block is the Concise commentary and his key-23 block is the Complete; the Concise block is filed at 22 but comments entirely on vv23-24 (the fire consuming the sacrifice, the Spirit descending in fire on the apostles, the people's joy and reverence). Since he has a key at 23 the displaced material has somewhere to go, so he is excluded from entry 14-22. In this case nothing is lost either way, because the Complete block at 23 already contains everything the Concise block says at greater length - worth recording as the benign case of displacement, where the fix costs nothing."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight boilerplate tail, instance 27, attached to Ellicott's key-24 block. Sixth consecutive chapter in which Ellicott's final block is also the chapter's last key, so this instance again fails to discriminate between the two candidate rules (tail attaches to the end of Ellicott's final block, versus to the chapter's last key). The refined rule from numbers 28 stands but remains untested since deuteronomy 23."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "24"
+      ],
+      "note": "Ellicott's key-24 block cites the chronicler's account of the dedication as '2 Chronicles 27:3'; the passage quoted (the fire coming down, the glory upon the house, 'for he is good, for his mercy endureth for ever') is 2 Chronicles 7:3. A dropped digit in the source, not in the scrape. Handled by naming the chronicler without a chapter-and-verse number, so the bad reference is not propagated."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "9",
+      "verses": [
+        "23",
+        "24"
+      ],
+      "note": "First chapter in which the note-969 rule - where two voices say the same thing at length, name both and quote one - was applied from the first draft rather than in trimming. Entries 4 and 5 came in at 639 and 637 words with zero trim passes, against six passes for entry 1 and a 706-word overshoot on entry 3 in the same chapter. Entry 5 did need one pass, but for lexical variety rather than length: MATTR came in at 0.577 against the 0.58 threshold, and swapping four repetitions of 'sacrifice' and 'fire' for 'victim', 'oblation', 'flame' and 'token' moved it to 0.590 and grade A while dropping only seven words."
     }
   ]
 }
