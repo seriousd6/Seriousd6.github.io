@@ -1,1136 +1,754 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "1-3",
+  "pericope_label": "I am jealous over you with godly jealousy; I have espoused you to one husband",
   "schools": [
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul, being about to enter upon his own praises, uses much previous correction — he who remembers sins God remembered not, and who therefore says he was unworthy of the very name of the Apostles, is clearly seen even by the most insensate to be averse to speaking of himself, and only forced to it; Paul wishing the Corinthians would bear with him a little in his 'folly' and entreating their forbearance — the reluctant self-defence (Paul, compelled by the false apostles' boasting to speak in his own commendation, treating such self-praise as a 'folly' he engages in only under necessity, asking the Corinthians' patience while he does what is so distasteful to him for their sake)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "would to God ye could bear with me a little in my folly",
-   "and indeed bear with me",
-   "the reluctant self-defence",
-   "self-praise treated as a folly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul's concern was not on his own account or with selfish views but 'a godly jealousy,' a zeal of God which he was inspired with by God, for the honour and glory of God, even Jesus Christ who is God over all, and for the good of the church; Paul declaring that he is jealous over them with a godly jealousy, having espoused (betrothed) them to one husband, to present them a chaste virgin to Christ — the betrothal of the church to Christ (Paul, as the friend who had betrothed the Corinthian church to Christ as her one Husband, watching over her with a holy jealousy, like a father guarding a daughter's purity, longing to present her to Christ unspotted and faithful, and so fearing any seduction from her single-hearted devotion, v.3)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the second clause of the first verse is a command or a statement: Chrysostom reads it as an affirmation that they do indeed bear with him and finds the shift a mark of confidence in their affection, and Ellicott agrees, tracing a movement from indignation to the softening memory of their loyalty; Calvin knows Chrysostom’s reading, grants that the Greek is ambiguous and either sense suits, and nevertheless follows the older Latin interpreter in taking it as a command, while Robertson notes only that the two forms are identical",
+   "What part the apostle claims in the marriage figure: Clarke takes him for the groomsman, comparing the Hebrew paranymphs and the Spartan magistrates who had charge of maidens, and Gill and Calvin likewise make all ministers friends of the bridegroom as the Baptist called himself, while Ellicott denies this and holds the verb properly describes the act of the father who gives his daughter in marriage",
+   "What the jealousy of God means: Barnes takes the phrase as a Hebraic superlative, the divine name marking whatever is signally great, so that a vehement attachment is meant, while Calvin distinguishes a jealousy springing from self-love from one cherished on God’s account and makes this the second, and Ellicott paraphrases it as a jealous care after the pattern of God’s own"
+  ],
+  "outliers": [
+   "Ellicott's reconstruction of the opponents' words from the two catch-words of the section, bearing with and folly, one occurring five times and the other eight, from which he infers that Titus had reported them saying something like, we can bear with him no longer, his folly is becoming altogether intolerable",
+   "Clarke's objection to supplying the name of God where the Greek has none, on the ground that too frequent use of the sacred name breeds a familiarity not conducive to reverence and godly fear",
+   "Clarke's derivation of the serpent's subtlety from doing all work, a versatility that accommodates itself to the caprices, prejudices and evil propensities of those it deals with",
+   "Wesley's inference from the temptation of Eve, who was simple and ignorant of evil, that we might be tempted even if there were no sin in us",
+   "Henry's remark that it is as much against the grain for a humble man to speak in his own praise as for a proud man to acknowledge his infirmities",
+   "Chrysostom's argument that a man who remembers sins God has forgotten, and calls himself unworthy of the very name of apostle, is plainly not speaking for the sake of glory"
+  ],
   "themes": [
-   "I am jealous over you with godly jealousy",
-   "I have espoused you to one husband",
-   "present you as a chaste virgin to Christ",
-   "the church betrothed to Christ"
+   "bearing with folly",
+   "godly jealousy",
+   "the church as bride",
+   "the serpent’s subtlety",
+   "simplicity toward Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: jealousy is always attended with fear, care, and solicitude, whether in things natural or spiritual; the apostle, as things were in this church, could not but express his fears; Barnes: Paul had compared the church to a virgin soon to be presented as a bride to the Redeemer, and the mention suggested the image of Eve; Paul fearing lest, as the serpent beguiled Eve through his subtlety, the Corinthians' minds be corrupted from the simplicity that is in Christ — the danger of being led astray by deceivers (Paul, drawing on the fall of Eve, deceived by the serpent's craft, fearing the false apostles' subtle teaching may likewise seduce the church from its single, pure devotion to Christ, corrupting the simplicity of faith and love into something adulterated)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as the serpent beguiled Eve through his subtilty",
-   "corrupted from the simplicity that is in Christ",
-   "the danger of seduction by deceivers",
-   "the single, pure devotion to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "4-6",
+  "pericope_label": "I was not a whit behind the very chiefest apostles",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: 'he that cometh' may mean some particular man who came from Judea to Corinth under the character of a true apostle, or any one of the false apostles who came of their own accord, never sent by Christ or any of his churches; Paul observing, with irony, that if the newcomer preached another Jesus, another spirit, or another gospel than they had received, they might well bear with him — the rebuke of misplaced tolerance (Paul exposing the absurdity of the Corinthians' patience with the false apostles, for these brought no new and better Christ or gospel, which alone might excuse such welcome, but only a corruption of the one already received, so their forbearance was wholly undeserved)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the very chiefest apostles are: Gill, Henry, Barnes, Clarke and Calvin all take them for the true apostles, Henry holding the office equal in all of them and Calvin that God honoured this apostleship with marks of favour no less distinguished than those of John or Peter, while Ellicott denies this with some heat, calls it the insanity of controversy to suppose the words bear on the primacy of Peter, and renders the compound as an ironical coinage for the false teachers, in which Robertson follows him",
+   "Whether the closing clause of the fourth verse is serious or ironical: Barnes sets out three constructions and prefers the serious one, that if a better Saviour could be preached there would be propriety in receiving him, and Clarke, Wesley and Calvin take it the same way, Wesley adding that the case is impossible, while Robertson hears irony; Barnes alone records the third proposal, that the last word should be me rather than him",
+   "How the confession of rude speech consists with the gift of tongues: Barnes answers that the Spirit’s endowment enabled the apostles to speak languages they had never learned and did not perfect them in one learned in childhood, Clarke that the Spirit in general left them to their own language and prevented only equivocal expression, and Calvin that the substance of doctrine is one thing and the ornament of expression another"
+  ],
+  "outliers": [
+   "Ellicott's reconstruction of the Judaising taunt, that a man cutting and stitching all day could hardly be a doctor of the law, with his citation of the son of Sirach excluding the ploughman and the carpenter and the potter from the higher life of wisdom, since they shall not be found where parables are spoken",
+   "Clarke's aside that no tongue is so apt to seduce the understanding by its sounds and harmony as Greek, and that scholars in his own day fall into raptures over the music of a verse whose sense is little regarded and perhaps little worth",
+   "Henry's report of the guesses about the apostle's person, that he was of very low stature with a voice to match, or had some impediment of speech, perhaps a stammering tongue",
+   "Calvin's application to his own century, that men submit without difficulty to a harsh tyranny from their pretended bishops while not hesitating to treat Christ himself with contempt",
+   "Ellicott's conjecture that the different spirit points to a counterfeit inspiration like that of those who had interrupted the praises of the church with the cry of anathema against Jesus"
+  ],
   "themes": [
-   "if he that cometh preacheth another Jesus",
-   "another spirit... another gospel",
-   "ye might well bear with him",
-   "the rebuke of misplaced tolerance"
+   "another Jesus",
+   "a different gospel",
+   "the chiefest apostles",
+   "rude in speech",
+   "knowledge and eloquence"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is very modestly expressed — Paul does not assert and in a haughty, confident way affirm, but only supposes, or thinks it might be admitted, that he was not inferior to or behind in gifts, grace, and usefulness; Matthew Henry: after the preface, the apostle proceeds; Paul supposing that he was not a whit behind the very chiefest apostles — the quiet assertion of his apostolic standing (Paul, against the false apostles who exalted themselves over him, claiming, modestly as a mere 'supposing,' to be in no way inferior to even the greatest of the true apostles in gifts, grace, and labour, so the deceivers' pretended superiority over him was groundless)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I suppose I was not a whit behind",
-   "the very chiefest apostles",
-   "the quiet assertion of his apostolic standing",
-   "modestly claimed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul was not an unlearned man, an idiot in speech, unskilful in language (his writings testify the contrary); he did not in his public ministry use the enticing words of man's wisdom, but he was not deficient in knowledge; Paul granting that though he be rude (unpolished) in speech he is not so in knowledge, having been thoroughly made manifest among them in all things — the substance above the style (Paul conceding, perhaps as the deceivers charged, a lack of rhetorical polish, but insisting he is not lacking in the knowledge of divine things, his whole conduct and teaching openly displayed among the Corinthians, who themselves could vouch for his thorough understanding)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "though I be rude in speech, yet not in knowledge",
-   "throughly made manifest among you in all things",
-   "substance above style",
-   "his knowledge manifest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "7-11",
+  "pericope_label": "I robbed other churches, taking wages of them, to do you service",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul abased himself by behaving among them in a humble manner, in much fear and trembling, without pride or affectation of authority, by using a popular style suited to the common people, and by labouring with his own hands at his trade; Paul asking, with irony, whether he committed an offence by abasing himself (that they might be exalted) in preaching the gospel to them free of charge — the turning of his self-denial against the slander (Paul, whose refusal of pay the false apostles twisted into a proof he was no true apostle, asking whether his humility, working to support himself so the gospel cost them nothing, could really be reckoned a fault, when in fact it was for their exaltation)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Where the word for being burdensome comes from: Barnes reports on Jerome’s authority that it is a provincialism of Cilicia, Ellicott traces it through the one Greek physician in whom it occurs and marks Jerome’s statement unproven for want of evidence, and Robertson counters that its use by that physician suggests a medical term in popular currency rather than a local dialect word",
+   "In what sense the other churches were robbed: Barnes and Ellicott ground it in the absence of an equivalent, a conqueror giving nothing for what he takes and wages being drawn from one employer while another is served, Gill grounds it in the disparity that the givers were poor and the served rich, and Calvin holds that what was contributed gratuitously was nonetheless due by the right of spiritual warfare",
+   "What the exaltation of the Corinthians was: Wesley makes it their becoming children of God, Clarke their receiving the pure doctrines of the gospel and being raised to the highest pitch of light and blessedness, and Calvin their becoming great through an abasement the apostle undertook of his own accord"
+  ],
+  "outliers": [
+   "Ellicott's derivation of the word for burdensome from the name of a fish of the torpedo kind, which benumbs whatever it touches, the same root giving us narcotic, with the gloss that the apostle did not benumb the Corinthians by demanding money of them",
+   "Ellicott's statement of the two-fold charge, that he was not above taking money from other churches but was too proud to take it from theirs, so that to take money at all was mean and not to take it from them was contemptuous",
+   "Calvin's defence of oaths, that two occur within three verses and both are lawful and holy because a good design and a legitimate reason are involved, so that to condemn all oaths indiscriminately is to act the part of fanatics who make no distinction between white and black",
+   "Wesley's question whether the poor have in all ages been more generous than the rich, drawn from the apostle's choosing help from the poor Macedonians rather than the rich Corinthians, with Calvin's exclamation at how few such givers were to be found in his own century",
+   "Ellicott's note that the word for region is peculiar to this apostle in the New Testament and is the source of our word climate, having begun as a term of science and passed into colloquial use, the province being named rather than the city so as to take in the port as well"
+  ],
   "themes": [
-   "have I committed an offence in abasing myself",
-   "that ye might be exalted",
-   "I have preached to you the gospel of God freely",
-   "self-denial turned against the slander"
+   "preaching without charge",
+   "spoiling other churches",
+   "wages and rations",
+   "the burden of a minister",
+   "oaths and asseveration"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'I robbed other churches' means the churches of Macedonia — not that what he had of them was by force and rapine or by spoiling their substance, but what he had of theirs was freely communicated to him; the allusion is to a soldier's custom (using a conquered people), put with hyperbole; Paul declaring, in a striking figure, that he 'robbed' other churches, taking wages of them to do the Corinthians service — the cost of his free ministry borne by others (Paul, so far from burdening the Corinthians, supported in his work among them by the gifts of poorer Macedonian churches, a sacrifice he puts strongly, 'robbed,' to show how careful he was that the Corinthians should bear no expense for the gospel)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I robbed other churches",
-   "taking wages of them, to do you service",
-   "the cost of his free ministry borne by others",
-   "that the Corinthians bear no expense"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Paul was burdensome to no one — literally, he did not lie as a dead weight upon them; Paul declaring that, when present and in want, he was chargeable to no one, his lack supplied by the Macedonian brethren, and that he had kept and would keep himself from being burdensome to the Corinthians — the resolve to take nothing from them (Paul, even when in real need among the Corinthians, refusing to be a financial burden, his wants met by gifts from Macedonia, firmly purposing to maintain this independence so that none could accuse him of self-interest)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I was chargeable to no man",
-   "the brethren which came from Macedonia supplied",
-   "kept myself from being burdensome unto you",
-   "the resolve to burden no one"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul joins an oath to show the firmness of his resolution — 'as the truth of Christ is in me' meaning as sure as Christ is truth who is in him, or as sure as the truth of grace and of the gospel is in his heart and mouth, so surely will he constantly persevere; Paul affirming, as with an oath by the truth of Christ in him, that no man shall stop him of this boasting (of preaching freely) in all the regions of Achaia — the unbreakable resolve of free ministry (Paul, with the solemnity of an oath, declaring his fixed determination that no one shall ever rob him of the ground of glorying he had in offering the gospel without charge throughout the whole region, so dear to him was this mark of disinterested love)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as the truth of Christ is in me",
-   "no man shall stop me of this boasting",
-   "in the regions of Achaia",
-   "the unbreakable resolve of free ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: some might insinuate that Paul's refusal to take support from the Corinthians (and his resolve to take nothing in Achaia) was because he did not love them, that he had no true affection for them; Paul answers by appealing to God, the searcher of hearts; Paul asking why he refuses their support — is it because he does not love them? — and answering with an appeal to God's knowledge — the heart laid open before God (Paul, anticipating the slander that his refusal of pay sprang from a lack of love or aloofness, repelling it not by argument but by calling the heart-searching God to witness the true affection that in fact moved him, the very opposite of indifference)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wherefore? because I love you not?",
-   "God knoweth",
-   "the heart laid open before God",
-   "repelling the slander of indifference"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: as Paul preached the gospel freely at Corinth and in Achaia, so he was determined to do it for the future, for this reason chiefly; Barnes: the course he had been pursuing he would continue, preaching without demanding support; Paul declaring that he will keep doing as he does, to cut off occasion from those who seek occasion, that in their boasting they might be found even as he — the strategy against the deceivers (Paul keeping up his free preaching deliberately to rob the false apostles of any pretext to claim equality with him or to charge him with greed, so that if they would boast of working without pay they would be forced to match his own disinterested practice, which exposed their self-interest)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what I do, that I will do",
-   "cut off occasion from them which desire occasion",
-   "wherein they glory, they may be found even as we",
-   "the strategy against the deceivers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "John Chrysostom",
-   "John Gill"
+   "Cyril of Jerusalem"
   ],
+  "range": "12-15",
+  "pericope_label": "False apostles, transforming themselves into the apostles of Christ",
   "schools": [
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul calls them 'false apostles' precisely because they make pretence of preaching Christ, taking no money, and bringing no different gospel — for they make these pretences for the purpose of deceiving; 'deceitful workers,' for they do work indeed but pull up what has been planted (being well aware that otherwise they could not deceive); Paul plainly declaring that such men are false apostles, deceitful workers, transforming themselves into apostles of Christ — the exposure of the imposters (Paul tearing off the mask, naming the rivals not servants of Christ but counterfeit apostles and crafty deceivers who disguise themselves as true apostles, their fair appearance a deliberate fraud designed to ruin the church under the guise of building it)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "such are false apostles, deceitful workers",
-   "transforming themselves into the apostles of Christ",
-   "the unmasking of the false apostles",
-   "their fair appearance a deliberate fraud"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Chrysostom",
+     "Cyril"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this need not be wondered at, nor is it any new or strange thing, nor should it be thought incredible that there are such persons; Barnes: since Satan himself is capable of appearing to be an angel of light, it is not to be deemed strange that those in his service should do likewise; Paul declaring that it is no marvel the false apostles disguise themselves, for Satan himself is transformed into an angel of light — the master-pattern of deception (the imposture of the false apostles no surprise, since their master Satan is the great disguiser, who clothes himself in the appearance of light, truth, and holiness to deceive, so his agents' counterfeit holiness is but the imitation of his own, Satan deceiving not by open evil but by the appearance of good)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How does Satan deceive?",
-    "sides": [
-     {
-      "position": "Not by open evil but by disguising himself as 'an angel of light' — clothing himself in the appearance of light, truth, and holiness; his agents' counterfeit holiness imitates his own disguise",
-      "holders": [
-       "the witnesses"
-      ]
-     }
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Whether the rival teachers really preached without pay: Calvin says they took no pay at all and made a show of uncommon zeal to allure the ignorant, and Ellicott defends the same inference against the objection that there is no evidence for it, holding that where it follows naturally from the language and nothing contradicts it that is evidence enough; against them Chrysostom says flatly that even this was a falsehood and they took money secretly, Clarke that the passage certainly does not mean they took nothing, Barnes that they probably contrived an ample support under various pretences, and Wesley that the boast was vain in them though not in the apostle",
+   "What the transforming of Satan refers to: Clarke ties it to the temptation in Eden and lists three forms in which the tempter comes, the subtle serpent, the roaring lion and the angel of light, and Barnes looks to the same scene and to the temptation in the wilderness, while Ellicott denies that any single incident is in view since the tense makes it a thing continually done, and looks instead to a claim of angelic authority made by the teachers at Corinth",
+   "What the ministers of righteousness were claiming: Ellicott reconstructs it historically, that they preached a righteousness they said the apostle neglected and claimed the authority of the one called the Just, presenting themselves as a revival of the ancient righteous ones, while Barnes takes it more simply of men of the blackest character putting on the appearance of the greatest sanctity"
+  ],
+  "outliers": [
+   "Chrysostom's opening challenge, that men who preach Christ and take no money and bring in no different gospel should be called false apostles, answered by saying that for this very reason most of all, since they make a pretence of these things in order to deceive, and that they do work indeed but pull up what has been planted",
+   "Cyril of Jerusalem's account of why the devil takes the shape of an angel, not that he may reascend where he was, for having made his heart hard as an anvil he has a will that cannot repent, but that he may envelop those living an angelic life in a mist of blindness",
+   "Calvin's simile that the pretence is exactly as if a harlot were to borrow the apparel of a decent matron, with his application to the golden titles of his own century, which he says are the golden cup in which Babylon gives poison to drink",
+   "Clarke's charge that under the third of the tempter's forms the persecutions and the fires and the horrors of the inquisition were all carried on in the name of religion",
+   "Robertson's gloss on the masquerade as gentlemen of the cloth and nothing but cloth, with his note that the apostle appears to have coined the word for false apostle",
+   "Ellicott's compositional note that the abruptness with which the next verse opens marks another pause in the dictation of the letter"
+  ],
   "themes": [
-   "and no marvel",
-   "Satan himself is transformed into an angel of light",
-   "the master-pattern of deception",
-   "Satan the great disguiser"
+   "cutting off occasion",
+   "false apostles",
+   "transformation and disguise",
+   "an angel of light",
+   "ministers of righteousness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: it is no strange and wonderful thing, easily believed, no man need hesitate to believe it, that Satan's ministers be transformed into ministers of righteousness, since the devil himself, an angel of darkness, is transformed into an angel of light; Paul declaring that it is no great thing if Satan's ministers be transformed as ministers of righteousness, whose end shall be according to their works — the disguise of evil agents and their certain doom (since Satan disguises himself, no surprise that his servants, the false apostles, masquerade as ministers of righteousness, putting on a show of holiness; yet the solemn warning that, whatever their disguise, their final end shall answer to their true, evil works, not their fair pretence)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his ministers also be transformed as the ministers of righteousness",
-   "whose end shall be according to their works",
-   "the disguise of evil agents",
-   "their end answering to their works, not their pretence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "16-20",
+  "pericope_label": "Ye suffer fools gladly, seeing ye yourselves are wise",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul was obliged to praise himself, in vindication of his own character against the false apostles, for the sake of the gospel he preached, and for the advantage and welfare of the Corinthians, that they might not be imposed upon and carried away by the insinuations of these deceitful men; Paul saying again, 'let no man think me a fool; if otherwise, yet as a fool receive me, that I may boast a little' — the repeated disclaimer before boasting (Paul, returning to the distasteful task of self-commendation, again pleading that none reckon him truly foolish for it, but, if they will so judge, to bear with him as one playing the fool, that he may glory a little, as the necessity of defending the gospel required)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What speaking not after the Lord means: Barnes sets out two senses, not by inspiration and not in imitation of the Lord’s example, prefers the second, and reports a third proposal that the words are not meant seriously; Robertson and Clarke take the second, Robertson noting that the meekness and gentleness of Christ had been appealed to a chapter earlier; Wesley takes the first in a qualified form, not by an express command though still under the direction of the Spirit; and Ellicott meets the question of inspiration directly and states the dilemma it raises",
+   "How the third clause of the twentieth verse should be rendered: Ellicott holds the supplied words wrong, since they turn the clause into a feeble repetition of the one before, and renders it of a man taking them in by guile, while Gill, Clarke and Wesley all take it of goods taken away, Clarke of exacted contributions and Wesley of open violence",
+   "Whom the reproach is aimed at: Barnes, Clarke, Ellicott, Robertson and Wesley all read the irony as addressed to the church at large for tolerating the impostors, while Calvin infers that it is not addressed to all indiscriminately but reproves particular persons who had behaved unkindly, and on the list of outrages sets out three constructions, preferring the charge of indolence but yielding to the reading commonly received on patristic authority"
+  ],
+  "outliers": [
+   "Ellicott's suggestion that the word rendered fool means rather insane than merely foolish, so that the plea is for the hearing most men would give even to one thought out of his mind",
+   "Ellicott's statement of the dilemma raised by the disclaimer, whether what is placed on the lower side of the line is to be counted inspired or uninspired, and whether admitting a human element here does not admit it elsewhere in Scripture as well",
+   "Barnes's report of the judgment that this is perhaps the most sarcastic sentence ever penned by the apostle, with Clarke's observation that it would be dishonourable in wise men to fall out with a fool and Wesley's that the irony is a beautiful one",
+   "Barnes's generalisation that a false religion always makes slaves and that only true Christianity leaves perfect freedom",
+   "Ellicott's tracing of the five clauses to the vices denounced in the woes against the Pharisees, with his note that the apostle was himself soon to be smitten on the face before a Jewish court",
+   "Robertson's remark that the apostle is plainly embarrassed at having to boast, whereas some men can do it with complete composure"
+  ],
   "themes": [
-   "let no man think me a fool",
-   "if otherwise, yet as a fool receive me",
-   "that I may boast myself a little",
-   "the repeated disclaimer before boasting"
+   "bearing with a fool",
+   "speaking not after the Lord",
+   "glorying after the flesh",
+   "irony against the wise",
+   "the bondage of false teachers"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul speaks this in vindication and commendation of himself on the subject of glorying; Barnes: the phrase 'not after the Lord' may mean either that Paul does not speak this by inspiration or claiming to be inspired, or, more probably, that he does not speak in the Lord's usual manner (cf. 1 Corinthians 7:12); Paul qualifying that what he speaks in this boasting he speaks not after the Lord (not by his ordinary direction) but as it were foolishly, in this confidence of boasting — the careful distinction in his self-defence (Paul, even while compelled to boast, marking that this self-commendation is not in the manner of Christ's lowliness, who sought not his own glory, but a thing forced on him, spoken as if foolishly, lest any think boasting itself a Christian virtue)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I speak it not after the Lord",
-   "but as it were foolishly",
-   "in this confidence of boasting",
-   "the boasting forced, not Christ's manner"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'many glory after the flesh' means with respect to external things — high birth and parentage, carnal descent, circumcision, learned education, and the like — of which the false apostles, being Jews, boasted, who were many; though a multitude is not to be followed to do evil, Paul thought that since so many were indulged by this church in such boasting, he might do so too; Paul declaring that, since many glory after the flesh, he will glory also — the condescension to the boasters' level (Paul, seeing the false apostles boast of fleshly external advantages, willing for once to meet them on their own ground and boast likewise, not because such glorying is good but to show that even by their own carnal measure he is not their inferior)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seeing that many glory after the flesh",
-   "I will glory also",
-   "meeting the boasters on their own ground",
-   "not their inferior by their own measure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Corinthians bore with the false apostles, who were fools — continually proclaiming their folly, boasting of themselves, ascribing to themselves what did not belong to them, puffed up by their fleshly minds; they indulged these men in their folly, and that with pleasure and delight, not only winking at it but being pleased with it; Paul observing, with irony, that the Corinthians suffer fools gladly since they are themselves wise — the sharp irony of the rebuke (Paul, with cutting irony, saying the 'wise' Corinthians put up gladly with the foolish boasting of the false apostles, the very fact that such wise people tolerate fools being a backhanded reproach of their misplaced patience)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye suffer fools gladly",
-   "seeing ye yourselves are wise",
-   "the cutting irony of the rebuke",
-   "the wise tolerating fools"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Corinthians not only tolerated the foolish boasting of these men with pleasure, but patiently and stupidly bore their oppressions, injuries, and insults — things intolerable, which no man of any sense and wisdom would ever suffer — yet they took all quietly, made no objection, but patiently submitted; Paul listing the indignities the Corinthians endured from the false apostles — being brought into bondage, devoured, taken from, lorded over, and even smitten on the face — the abject submission rebuked (Paul exposing how the Corinthians meekly endured from the deceivers the grossest tyranny: enslaving their consciences, devouring their substance, exploiting and despising and insulting them, a degrading servility all the more shameful set beside their coldness toward him)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if a man bring you into bondage",
-   "if a man devour you... take of you... exalt himself",
-   "if a man smite you on the face",
-   "the abject submission to tyranny rebuked"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "21-23",
+  "pericope_label": "Are they Hebrews? so am I. Are they ministers of Christ? I am more",
   "schools": [
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul again draws back and uses depreciation and correctives beforehand, although he has already said many such things ('would that ye could bear with me in a little foolishness'; 'let no man think me foolish; if ye do, yet as foolish receive me'; 'that which I speak, I speak not after the Lord but as in foolishness'), softening the appearance of self-praise; Paul saying, with irony, that he speaks as if to his reproach, as though he had been weak (in not tyrannizing them as the false apostles did), yet wherein any is bold he too is bold — the ironic turning of the charge (Paul 'confessing' he was too 'weak' to oppress and fleece them as the deceivers did, but declaring that in whatever real ground of boasting any dares to glory, he, speaking foolishly, will dare as boldly)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I speak as concerning reproach, as though we had been weak",
-   "whereinsoever any is bold, I am bold also",
-   "the ironic turning of the charge",
-   "too 'weak' to oppress them"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the nation of the Jews were called Hebrews (not from Abraham, which the Hebrew language will not admit, but otherwise); Paul matches each claim — Hebrew, Israelite, seed of Abraham — for the false apostles boasted of these national and covenant privileges; Paul answering the false apostles' boast of Jewish descent by claiming each title for himself — the equality in covenant privilege (Paul, meeting the deceivers' pride in their Jewish pedigree, showing he lacks nothing they could claim: a Hebrew of pure descent and language, a true Israelite of the covenant people, and a son of Abraham, the three titles covering descent, covenant, and promise, so their boasted privileges gave them no advantage over him)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whose reproach is spoken of: Barnes takes it of the apostle’s own, the things they counted disgraceful in him, and reports two further proposals, that the disgrace is the Corinthians’ or the false teachers’; Ellicott agrees that it is self-disparagement and hears behind it the taunt at his bodily infirmities; Clarke passes on a paraphrase making it the reproach cast on the Corinthians as profane and uncircumcised; and Gill leaves the possibilities open",
+   "What the name Hebrew signifies: Gill rejects at length the derivation from Abraham as betraying ignorance of the language, since Abraham himself bears the name, Calvin derives it from Heber on the evidence of Genesis, and Barnes from the verb meaning to pass over, applied to Abraham as one come from a foreign land, while Clarke and Ellicott are less concerned with the etymology than with what the three titles claimed",
+   "How many imprisonments lie behind the claim: Robertson reports that an early Roman writer numbered them at seven, that only five are known and only one before this letter, and asks whether there was one at Ephesus; Ellicott makes the same count and infers that the historian tends to understate rather than exaggerate these sufferings; Clarke observes that no instance appears of a false apostle imprisoned at all"
+  ],
+  "outliers": [
+   "Chrysostom's catalogue of the successive disclaimers, with his conclusion that if after doing all we ought still to call ourselves unprofitable, no forgiveness can be due to a man who exalts himself when nothing presses him, and his image of the Pharisee who suffered shipwreck even in harbour by striking on that rock",
+   "Ellicott's report of the insinuation behind the second name, that the apostle might be no more than the grandson of a proselyte, on whom a stigma rested which a proverb said was not effaced till the twenty-fourth generation, and his note that the calumny survived into a later sect which asserted he was a Gentile by birth",
+   "Ellicott's note that the stricter sort mourned the Greek version of the Scriptures on an annual fast-day as a national degradation",
+   "Calvin's marking of the turn, that having scattered their carnal glories like smoke by a breath of wind and having been content to stand level with them, he now separates himself from their society altogether when he has occasion to glory in good earnest",
+   "Clarke's thrust that had he preached the necessity of circumcision he would have been as free from opposition as they were",
+   "Ellicott's and Robertson's judgment that the word for folly is here sharpened to mean speaking deliriously, and is the very term of insult that had been flung at him"
+  ],
   "themes": [
-   "are they Hebrews? so am I",
-   "are they Israelites? so am I",
-   "are they the seed of Abraham? so am I",
-   "equality in covenant privilege"
+   "the reproach of weakness",
+   "Hebrews and Israelites",
+   "the seed of Abraham",
+   "ministers of Christ",
+   "labours and imprisonments"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul could have answered that they were not ministers of Christ (being neither sent by Christ nor preachers of him, but false apostles and deceitful workers seeking their own), but chose not to litigate the point, allowing it by a rhetorical concession, and replies that he is more; Paul declaring that, though they claim to be ministers of Christ, he is more — in more abundant labours, stripes above measure, frequent imprisonments, and deaths often — the proof of ministry by suffering (Paul, granting foolishly the deceivers' claim, asserting that he far surpasses them, and proving it not by eloquence or pedigree but by the toils and torments he has borne for Christ, beginning the great catalogue of apostolic sufferings)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "are they ministers of Christ? I am more",
-   "in labours more abundant, in stripes above measure",
-   "in prisons more frequent, in deaths oft",
-   "the proof of ministry by suffering"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "24-28",
+  "pericope_label": "In perils oft, and beside all, the care of all the churches",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: there is no account in Acts or elsewhere of any of these five scourgings, but no doubt of them; the number agrees with Jewish custom — the original law for scourging (Deuteronomy 25:3) allowed forty stripes, but the Jews gave thirty-nine ('forty save one') to avoid exceeding the law by a miscount; Paul recounting that five times he received from the Jews forty stripes save one — the repeated synagogue scourgings (Paul, five separate times, suffering the severe Jewish penalty of thirty-nine lashes, the legal limit short of forty, enduring this cruel and shameful punishment at the hands of his own countrymen for the sake of the gospel, none of which the book of Acts even records)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the night and day in the deep refers to: Clarke reports the common supposition of an unrecorded shipwreck in which he saved himself on a plank, and also a theory that the word means a dreadful dungeon in a city of the Propontis, which he thinks unlikely; Ellicott takes the natural sense of one of the shipwrecks just named and reports the same dungeon theory, comparing the pit into which Jeremiah was let down; Wesley says only that he was probably floating on part of the vessel",
+   "Whether the fastings were chosen: Ellicott holds that, set apart from the hunger and thirst just named, they can hardly mean anything but times of self-chosen abstinence, and Calvin says the same, while Barnes leaves it open as either voluntary or involuntary",
+   "What the things that are without means: Barnes canvasses four proposals, that troubles from other sources are meant, or matters outside the regular routine of the office, or foreign affairs, or simply other things not to be mentioned, and prefers the last, while Clarke takes it of the outward things just enumerated and Wesley of what he suffered on account of others"
+  ],
+  "outliers": [
+   "The argument Barnes sets out at length, that the particulars here cannot be extracted from the history and yet nothing in them is contradicted by it, so that letter and narrative were written independently; with the observation that the mention of stoning comes nearer to a contradiction without incurring one than any case that writer had met with, since the history records one actual stoning and an earlier assault that was prevented",
+   "Gill's correction of the sentimental reading of the thirty-nine stripes, that the number was not abated out of tenderness nor because the offence was judged light, but reached the utmost rigour of the law as their tradition interpreted it",
+   "Ellicott's catalogue of what the daily rush consisted in, the visits of inquirers, the confessions of sin-burdened souls, the craving of perplexed consciences for guidance, the referring of household and church quarrels to his arbitration, and the arrival of messengers from distant churches",
+   "Clarke's citation of a nobleman's reflection on the hardship of it for a man of liberal education, wandering like a vagabond, hungry and almost naked, yet coming into the presence of persons of high life",
+   "Calvin's pastoral qualification, that such trials are not indispensably requisite in all, but that where they appear a greater and more illustrious testimony is afforded, and that the man so distinguished will not despise those less thoroughly tried",
+   "Robertson's remark that the list should shame all who are disposed to find fault with their lot, and his note that the word for robbers means brigands rather than thieves"
+  ],
   "themes": [
-   "five times received I forty stripes save one",
-   "of the Jews",
-   "the severe Jewish penalty",
-   "thirty-nine lashes borne for the gospel"
+   "the thirty-nine stripes",
+   "shipwreck and the deep",
+   "perils by land and sea",
+   "toil and privation",
+   "the care of all the churches"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the beating with rods (wands) was a Roman punishment, distinct from the Jewish scourging with cords; Acts records but one such beating (at Philippi) and one stoning (at Lystra, Acts 14:19), though Paul suffered more; Paul recounting that he was thrice beaten with rods, once stoned, thrice shipwrecked, and a night and a day in the deep — the manifold perils endured (Paul suffering the Roman rod three times, stoned and left for dead once, shipwrecked three times besides the later one of Acts 27, and once spending a night and day adrift in the open sea, a list of dangers that far outran anything the boastful false apostles had borne)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thrice was I beaten with rods, once was I stoned",
-   "thrice I suffered shipwreck",
-   "a night and a day I have been in the deep",
-   "manifold perils far beyond the false apostles'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul journeyed often through several countries and kingdoms to preach the gospel, from Jerusalem round about to Illyricum; Barnes: in perils of waters (rivers, floods, crossing streams), of robbers (many regions, especially Arabia, infested), and the rest; Paul recounting his constant journeyings and the perils that beset him on every side — from rivers, robbers, his own countrymen (Jews), the heathen (Gentiles), in city and wilderness and sea, and among false brethren — the danger from every quarter (Paul's life of travel for the gospel hemmed about with peril at every turn, from nature and from men, from Jew and Gentile, in every place, the most painful being the last, the danger from false brethren who betrayed him)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in journeyings often, in perils of waters",
-   "perils of robbers... countrymen... heathen",
-   "perils in the city... wilderness... sea",
-   "in perils among false brethren"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: these were through long journeys and frequent preaching — 'in labour and trouble,' troublesome labour, for all labour is not so (some, as hunting, is delightful), but the apostle's labours were painful and troublesome to the flesh, though he had much inward spiritual delight in them; Barnes: the weariness resulting from travel and toil; Paul recounting his weariness and painfulness, frequent sleepless nights (watchings), hunger and thirst, frequent fastings, cold and nakedness — the daily privations of the apostle (beyond the dramatic dangers, Paul bearing a constant round of bodily hardship: exhausting toil, lost sleep, want of food and drink, and exposure to cold without sufficient clothing, the hidden, grinding cost of a life poured out for the gospel)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in weariness and painfulness, in watchings often",
-   "in hunger and thirst, in fastings often",
-   "in cold and nakedness",
-   "the daily privations of the apostle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: besides those things that are without (the outward things already mentioned, and many others too tedious to relate), there came upon Paul daily the care of all the churches — not only of all the churches but of all believers; Barnes notes this in addition to the external trials; Paul adding that, besides all the outward sufferings, there pressed on him daily the care of all the churches — the crowning, inward burden (beyond the bodily perils and privations, Paul carrying a ceaseless weight of pastoral anxiety, the daily concern for the welfare, purity, and steadfastness of every church he had founded, an inward burden heavier than any outward trial)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "beside those things that are without",
-   "that which cometh upon me daily",
-   "the care of all the churches",
-   "the crowning inward burden of pastoral care"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "29-33",
+  "pericope_label": "If I must needs glory, I will glory of the things which concern mine infirmities",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: whatever church or believer was weak in the faith, Paul was concerned for them, to instruct, establish, and strengthen them, suiting his discourses, reasonings, and language to their capacity, that they might understand him and take in right notions of things; Paul asking who is weak without his sharing the weakness, and who is offended (made to stumble) without his burning — the sympathy of the pastor's heart (Paul's care for the churches no cold duty but a living fellow-feeling, so that he felt the weakness of every weak believer as his own and was inflamed with grief and indignation whenever any was made to stumble, his heart bound up with the spiritual state of all)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the burning means: Ellicott takes both words in their strongest sense, the stumbling of a grievous sin such as the temptations of the senses lead to, and a burning that elsewhere denotes sensual passion, so that men came with their tales of shame to a sympathy that entered even there; Robertson, Wesley and Barnes keep it to grief, and Clarke takes it of a burning zeal to restore the fallen",
+   "Whether the solemn appeal looks backward or forward: Barnes holds it made in view of the sufferings just recounted and not of what follows, since nothing in the escape at Damascus demanded so solemn an appeal, while Clarke and Calvin refer it forward to the incident that comes after, and Gill takes it of both together",
+   "How Damascus came to be under an Arabian king: Clarke explains it from the war that followed the divorce of that king’s daughter by Herod, and conjectures that the emperor’s death let him seize a favourable moment, while Robertson reports the absence of Roman coins in the city for a stretch of years and the suggestion that a later emperor gave it to him out of dislike for Herod",
+   "Why this particular escape closes the chapter: Ellicott finds in it an element of the ludicrous which gave occasion for jests, so that those who mocked his bodily presence would find matter for mirth, and Robertson calls it a humiliating experience in the city he had entered as a conqueror, while Calvin takes it as a first apprenticeship and finds its point in the closing of the gates of a royal city, which showed with what rage his enemies were inflamed"
+  ],
+  "outliers": [
+   "Clarke's attack on the reading of infirmities as indwelling sin, with his challenge that it would be difficult to produce a single passage in the whole New Testament where the word has the sense of sin or moral corruption",
+   "Barnes's note that philosophers, and the Stoics above all, counted every sympathetic feeling and all sensitiveness to suffering an infirmity, so that what the apostle gloried in they would have reckoned a weakness",
+   "Ellicott's grammatical note that the participle rendered which is is the form constantly used in the Greek Old Testament as the equivalent of the divine name, so that it renders He that is",
+   "Ellicott's conjecture that the solemn attestation was meant, as the words passed from his lips, to introduce a much fuller narrative than the one that actually followed",
+   "Clarke's distinction that nothing here countenances profane swearing, neither the exclamations of the surprised nor the appeals of men conscious of their own falsity who would gain credit by them",
+   "The difference of vocabulary between the two accounts of the escape, a rope-work hamper here against the general term in the history, which Robertson identifies as the basket of one of the miraculous feedings rather than the other"
+  ],
   "themes": [
-   "who is weak, and I am not weak?",
-   "who is offended, and I burn not?",
-   "the sympathy of the pastor's heart",
-   "feeling each one's weakness"
+   "sympathy with the weak",
+   "glorying in infirmities",
+   "the solemn appeal",
+   "Aretas and Damascus",
+   "the escape in a basket"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: glorying was not agreeable to Paul; he was not fond of it, it was a subject he did not delight to dwell upon; what he had done was by force and through necessity, compelled by the boasts of the false apostles, and since he must needs glory to stop their mouths, he would glory in his infirmities; Paul declaring that, if he must glory, he will glory of the things that concern his infirmities — the paradoxical boast in weakness (Paul, forced against his will to boast, choosing for his subject not his strengths or successes but his weaknesses and sufferings, the very things the world counts shameful, so turning the whole exercise of glorying upside down, finding his true ground of boasting in what proved his dependence on God)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if I must needs glory",
-   "I will glory of the things which concern mine infirmities",
-   "the paradoxical boast in weakness",
-   "glorying in what proved his dependence on God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: these words are in the form of an oath, a solemn appeal to God, who knows all things, for the truth of the whole he had declared in the foregoing verses and of the remarkable deliverance he is about to relate — God, the searcher of hearts, the omniscient being to whom all things are open and manifest; Paul calling God, the blessed Father of the Lord Jesus, to witness that he does not lie — the appeal to the omniscient God (Paul, lest any think his catalogue of sufferings exaggerated, sealing it with a solemn oath, invoking the eternally blessed God who knows all things as witness that every word is true, so grave a thing it was to be doubted in his integrity)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the God and Father of our Lord Jesus Christ",
-   "which is blessed for evermore",
-   "knoweth that I lie not",
-   "the appeal to the omniscient God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Aretas (Al-Hareth) was a king of Arabia, of the family of the Gassanii, among whom were many of this name, who for some hundreds of years ruled over Syria, of which Damascus was the metropolis; his governor kept the city, seeking to seize Paul; Paul recounting that at Damascus the governor under King Aretas garrisoned the city, desiring to apprehend him — the peril at the very outset of his ministry (Paul, choosing to close his catalogue with one signal instance, recalling how, early in his Christian life, Acts 9:23-25, the governor under Aretas set a watch on Damascus to seize him, a danger so grave it forced the famous escape, v.33)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the governor under Aretas the king",
-   "kept the city... with a garrison",
-   "desirous to apprehend me",
-   "the peril at the outset of his ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the house in which he was, like Rahab's, was built upon the wall of the city, and as she let down the spies by a cord through the window, and as David was let down by Michal, so the apostle was let down by the brethren in a basket through a window, as Jeremiah was let down (the Septuagint using the same word); Paul recounting that he was let down through a window in a basket by the wall and so escaped the governor's hands — the lowly deliverance as his crowning 'boast' (Paul ending his catalogue of glorying not with a triumph but with this humbling picture of himself smuggled out of a city in a basket, the great apostle's most fitting boast being an escape that displayed not his might but his weakness and God's preserving care)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "through a window in a basket was I let down by the wall",
-   "and escaped his hands",
-   "the lowly deliverance as his crowning boast",
-   "displaying his weakness and God's preserving care"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
