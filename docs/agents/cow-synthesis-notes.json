@@ -9332,6 +9332,62 @@
       "book": "exodus",
       "chapter": "7",
       "note": "Drafting overshoot again, cause five. All eight drafts came in 670-840 against the 650 ceiling. Here the driver was neither many short glosses nor voices arguing at length but SOURCE ENUMERATIONS that resist compression: Clarke's ten-plague chronology, his transcribed traveller's encomium on Nile water, Ellicott's catalogue of the Egyptian water system, Clarke's four reasons for permitting the contest. Each is a list whose items are individually cheap and collectively expensive, and trimming prose around them does not help. Working rule: when a block is a list, decide up front how many items the entry can afford and drop the rest at draft time rather than trimming them one word at a time afterwards."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "23",
+      "verses": [
+        "4",
+        "10",
+        "22",
+        "28"
+      ],
+      "note": "Jamieson stride-6 residue, THIRTY-THIRD consecutive chapter: keys 4, 10, 22, 28 - offset 4, four members, no gap. Repetition signature AT THE HEAD of the run, as at joshua 6: keys 4 and 10 carry the IDENTICAL block (267 words on the position of Reuben's camp and its attendant tribes, Numbers 2 material). Keys 22 and 28 are distinct and later - the consecration of Aaron's four sons (Numbers 3) and the sacrificial sense of the Hebrew for 'bring near' (Numbers 8). So the run repeats its first block once, then advances. Declared via the chapter-wide RESIDUE set; four of the seven entries carry excl=['Jamieson']."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "23",
+      "verses": [
+        "28"
+      ],
+      "note": "Chrome, NINETEENTH confirmation and SIXTEENTH consecutive Ellicott carrier. Ellicott's block at key 28 measures 1041 words, of which 992 are the site nav/footer chrome; the marker is the previous-chapter nav string 'Numbers Num 22 Numbers Num'. Genuine Ellicott payload is 49 words, on Mount Peor as a peak of the northern Abarim looking over the face of Jeshimon. Ellicott is absent from keys 29 and 30, so key 28 is his LAST block though the chapter runs to 30 - the same pattern as romans 2 and the opposite of acts 15, confirming yet again that the carrier is the voice's last block and not the chapter's last verse. Real usable source for numbers 23 is 22,090 words, not the 23,082 the sizer reports."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "23",
+      "verses": [
+        "21",
+        "22",
+        "23"
+      ],
+      "note": "Three sharp disagreements in numbers 23, one of them a direct collision between two voices in the catena. (1) v21, 'He hath not beheld iniquity in Jacob' - FOUR incompatible answers. Gill takes it of NON-IMPUTATION: not that there was no sin nor any observed, but that God did not mark it in strict justice. Wesley narrows the term: not such iniquity as in the Canaanites, which God punishes with utter destruction. Clarke calls the passage difficult and offers two escapes, referring the words to the PATRIARCH Jacob rather than the nation ('a nobler character, Abraham excepted, is not to be found in history'), or taking the two Hebrew words in their commoner senses of trouble and afflictive labour, so the verse promises protection rather than pronouncing on character. CALVIN EXPLICITLY REJECTS GILL'S ANSWER: 'Some reply feebly, that it was not seen, because God did not impute it' - his own reading grounds the saying in adoption and sanctifying grace, 'as Jerusalem was the holy city and the royal abode of God, though it was a den of thieves'. (2) v23, 'no enchantment against Jacob': Calvin sets out three readings and prefers the third, that no divination AVAILS AGAINST Israel; Ellicott adopts the FIRST, that there is no augury IN Jacob because they had no need of it, and quotes Hengstenberg applying it to the Church of all ages. Clarke and Gill side with Calvin's third. (3) v22, the reem: Clarke argues at length that no single-horned animal can be meant, since Moses gives Joseph the plural 'horns of a reem', and settles on the rhinoceros or wild bull; Keil simply renders 'buffalo'."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "23",
+      "note": "Numbers 23 has an internal structural feature worth recording: the chapter narrates THREE attempts to curse, and the commentators give a DIFFERENT reason for each change of station. The first station is explained by Ellicott and Wesley in flatly contradictory terms - Ellicott renders the place a bare or barren height, since heathen augurs chose elevated places with an extensive prospect, while Wesley says the word 'properly signifies the plain' (v3). The second change (v13) is explained optically: Clarke and Wesley by Balaam's nerve, Henry by the strategy of showing only a despicable part, and CALVIN by the art itself - superstitious persons 'imagine that there is some magical power in the sight, as if the eyes contributed partly to the efficacy of their incantations', which he says profane writers show was a commonly received opinion. The third change (v27) is explained by Gill on a wholly different principle - not the view but the religion of the place: 'if not better for the view of the people, yet a more religious place, on which account the king hoped for success.' Ellicott also tracks Balak's own naming of God across the chapter: JEHOVAH at v17, ELOHIM at v27."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "23",
+      "note": "An editorial layer inside a Calvin block, hostile to Calvin himself. At numbers 23:10 the Calvin block carries a note reporting Cornelius a Lapide contrasting the happy deaths of those he deemed righteous with the deaths of those he counted enemies of the Church, and listing CALVIN among the latter: 'Calvin, excruciated, according to Beza, by divers diseases, was in addition preyed upon by lice, as Jerome Bolsec, a physician of Lyons, and formerly his disciple, reports in his Life, ch. 22. Hence observe, that those who persecute the Church, were, by God's just judgment, eaten by worms. Such was the case with Huneric, Herod, Antiochus, the emperors Maximinianus and Arnulphus, and Calvin.' This is the second kind of editorial contamination recorded in Calvin blocks - romans 2 carried a nineteenth-century editor CORRECTING Calvin (Griesbach, Lowth), and numbers 23 carries a Counter-Reformation polemic ATTACKING him, both embedded in the block and typographically indistinguishable from Calvin's own text. Any synthesis of a Calvin block must be read as a composite."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "23",
+      "note": "Fidelity self-grade, all seven entries. Every claim is traceable to a named block in data/commentary/cow/numbers/23.json; no voice is named outside its span; no school appears in prose that is absent from its tags dict. Word counts: 1-3 = 650; 4-8 = 647; 9-12 = 650; 13-17 = 648; 18-21 = 650; 22-24 = 649; 25-30 = 586. All within the 350-650 window; the tiling covers 1-30 exactly. The last entry is deliberately shorter because its span carries only 1,504 real source words, the thinnest in the chapter. Jamieson is declared residue chapter-wide and excluded from the four entries where he appears. Matthew Henry supplies puritan-evangelical in entries 1, 3 and 4 only, being present at just three keys (1, 11, 13); entries 5, 6 and 7 therefore carry three schools rather than four, by source and not by choice. The chapter's sharpest disagreements - the iniquity not beheld, the sense of the enchantment clause, the identity of the reem, and whether Balaam went up a height or down to the plain - are stated as unresolved rather than harmonised, and Calvin's explicit dismissal of Gill's answer as feeble is reported as such."
     }
   ]
 }
