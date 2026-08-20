@@ -8,33 +8,85 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1",
+  "pericope_label": "Come thou into the ark: the invitation and the commendation",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "God calls Noah into the ark: 'and the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation' — God inviting Noah and his whole household to enter the ark ('Come,' rather than 'go,' suggesting God is, as it were, in the ark, calling Noah into the refuge with him, the gracious call to enter the place of safety before the flood, the whole household to be preserved); 'all thy house' (Noah's family, his wife, sons, and sons' wives, the eight souls, 1 Peter 3:20, included in the salvation, God saving not Noah only but his house, the covenant grace extending to the family of the righteous); 'for thee have I seen righteous before me in this generation' (God declaring Noah righteous before him amid a corrupt generation, Noah's righteousness, the fruit of grace and faith, 6:8-9; Hebrews 11:7, the reason given for his preservation, the one righteous man, found amid universal corruption, saved, God's regard to the righteous in the day of judgment, 2 Peter 2:5, 9) — Ellicott, Gill, Calvin, Henry, Clarke."
+    "summary": "Gill places the word seven days before the flood, the ark built and everything ready. Calvin measures what the command cost: Noah had sustained a hundred years of the fiercest assaults, but the severest contest was to bid farewell to the world, renounce society and bury himself in the ark — and the timing made it harder, the face of the earth being lovely just then, in the season when herbs shoot and trees flourish, God choosing the very spring to destroy the world. It was no light trial to leave the only life he had known for six hundred years and live in a sepulchre he had spent a century digging for himself, with nothing to confirm the warning, men all around him feasting and building sumptuous houses. On the commendation Calvin sees a difficulty and will not pass it by: if Noah was saved because he was righteous, it seems to follow that we may deserve life by works. His answers are that the design was to set one man against the whole world, so that in his person the unrighteousness of all might be condemned; and that accepting a man's righteousness is not repugnant to free acceptance, since God accepts gifts he himself conferred, loving men freely, adopting them in Christ, justifying them by mercy, and only then regenerating them — from which good works flow afterwards, not before."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry fastens on the wording and gets the best of the chapter from it. God does not bid Noah go into the ark but come into it, implying that God would go with him, lead him in, keep him company, and in due time bring him out; and that presence made the ark — a prison in itself — not merely a refuge but a palace. He notes too that Noah did not enter until bidden, though he knew what the vessel was for. On the household he will not tidy away what the invitation involved: one son was Ham, who proved a bad man and was yet saved, whence he draws that wicked children often fare better for godly parents' sake, and that there is a mixture of bad with good in the best societies — in Noah's family a Ham, in Christ's a Judas. Henry and Wesley then define the righteousness in nearly identical words: those are righteous indeed who are righteous before God, having not only the form of godliness, by which they appear righteous to men easily imposed upon, but the power of it, by which they approve themselves to God who searches the heart. Henry adds that in a world of wicked people God could see one righteous Noah — that grain of wheat could not be lost, not in so great a heap of chaff."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the definition of righteousness with Henry, almost word for word, marking the difference between the form of godliness and its power."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott fills in what the week was for — the building over, the remaining days spent collecting the animals — and corrects a common misreading: many suppose a hundred and twenty years were spent on the work, but that rests on an untenable reading of an earlier verse which really fixes the duration of human life."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does 'thee have I seen righteous' make salvation a reward of works?",
+    "positions": [
+     {
+      "position": "no — the design was to condemn the world in one man’s person, and God accepts only the gifts he himself conferred, justifying by mercy before regenerating",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "the righteousness meant is that which is real before God rather than apparent to men — one grain of wheat found in a heap of chaff",
+      "holders": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "insists the hardest part of the command was its timing, spring having just come and the doomed world never looking better"
+   }
+  ],
   "themes": [
-   "Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation",
-   "God's command to Noah to enter the ark, with his house",
-   "the righteous man and his household preserved amid the corrupt world",
-   "Noah's righteousness the ground of his preservation"
+   "come, not go",
+   "the trial of leaving a world that looked lovely",
+   "whether Noah was saved for his righteousness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "2": {
@@ -44,312 +96,174 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "2-5",
+  "pericope_label": "Clean and unclean before the law, and the seven days' reprieve",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill infers the distinction of clean and unclean was known before the flood, grounding it in the practice of sacrificing ever since the fall, men having been taught by revelation both to sacrifice and what to offer. On the delay he reports three explanations — mourning for Methuselah, an addition to the years granted for repentance, or simply time for Noah to settle his family and the creatures — and prefers the last. Calvin, on the repeated command, holds it no bare repetition but a commendation of Noah's uniform obedience: in whatever particular it pleased God to try him he remained constant, since it is not becoming to obey one commandment only and then feel free to withdraw. On the number he makes it three pairs with a single animal added for sacrifice, noting that Le Clerc objected and supposed seven of each sex."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the obedience that answers the command: Noah went in on notice, though no cloud threatened and all was serene, walking at every step by faith and not by sense."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the distinction marked which animals were proper for sacrifice and food, suggests the word was spoken on a sabbath, and follows the forty days forward — the period became sacred and proper for humiliation, in the fasts of Moses and Elijah and our Lord, in the respite given to Nineveh, and at length in Lent. Wesley turns the delay into a warning: God granted a reprieve of seven days more, to show how slow he is to anger, but it was all in vain and those days were trifled away like the rest. Noah had told them of judgment at a distance and they put off repenting; now he must tell them it is at the door — and it is common, Wesley adds, for men careless of their souls through years of health, when death looked far off, to be as careless through the seven days of their sickness, when they see it approaching."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The clean and unclean beasts: 'of every clean beast thou shalt take to thee by sevens, the male and his female: and of beasts that are not clean by two, the male and his female' — Noah to take seven (or seven pairs) of every clean beast (more of the clean animals preserved than of the unclean, which are by twos, 6:19, the greater number of clean beasts providing for sacrifice, 8:20, and for man's later use); the distinction of 'clean' and 'not clean' beasts existing before the Mosaic law (which later codified it, Leviticus 11, the distinction, known to Noah, probably for sacrifice, the clean being the animals fit for offering to God, the early knowledge of clean and unclean, given by God or by tradition from the beginning); 'of beasts that are not clean by two, the male and his female' (the unclean beasts preserved by pairs, a male and female of each, sufficient to continue the kind, fewer of the unclean, since they were not needed for sacrifice, the preservation of all the kinds, clean and unclean, but more of the clean) — Keil and Delitzsch, Ellicott, Calvin, Gill, Clarke."
+    "summary": "Ellicott is careful about what the distinction cannot mean: there can be no reference to the Levitical law, which had respect to human food, nor to a division between tame and wild, since all alike are called cattle; the clean were probably those which from Adam and Abel had been offered in sacrifice. He thinks seven of each kind rather than seven pairs, arguing that otherwise few species could have been included, since attending to so large a number would have been beyond Noah and his sons. He alone raises the documentary question and handles it evenly: these fuller orders are given in the name of Jehovah where most of the narrative is Elohistic, from which some assume a Jehovist completed an earlier account — but the sacrifice is as integral to the Chaldean Genesis as the sending forth of the birds, and so indubitably older than Moses. Yet he concedes there is nothing improbable in Moses having had two records before him, and at least a prima facie appearance of two narratives combined here. Keil agrees the seven means three pair and a single one, probably a male for sacrifice, and denies the distinction proves different authorship. Ellicott also makes the forty days the sacred number of trial and patience, the length of the fast in the wilderness and of the sojourn after the Resurrection."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does 'by sevens' mean?",
+    "positions": [
+     {
+      "position": "seven of each kind — seven pairs would have left room for too few species to be attended to",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "three pairs with a seventh added for sacrifice",
+      "holders": [
+       "John Calvin",
+       "Keil and Delitzsch",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "states the documentary case against his own position before answering it from the antiquity of the Chaldean flood narrative"
+   }
+  ],
   "themes": [
-   "Of every clean beast thou shalt take to thee by sevens... and of beasts that are not clean by two, the male and his female",
-   "the distinction of clean and unclean beasts in the gathering",
-   "more of the clean preserved, for sacrifice and use",
-   "the distinction known before the Mosaic law"
+   "a distinction older than the law",
+   "seven of each kind, or seven pairs",
+   "two narratives, or one"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fowls preserved: 'of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth' — the clean fowls (and perhaps the birds generally) to be taken by sevens, male and female (the birds, like the beasts, preserved in the ark, the comprehensive gathering of the air-breathing creatures); the fowls preserved by sevens (the clean), male and female (the greater number providing for sacrifice and for the restocking of the earth, the careful preservation of the bird-kinds); 'to keep seed alive upon the face of all the earth' (the animals and birds preserved to keep their kinds, seed, alive, that the earth might be restocked after the flood, God's purpose in the preservation the renewal of the animal creation, the ark holding the seed of all the kinds, that they might replenish the earth, the divine care for the continuance of the creation) — Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Of fowls also of the air by sevens, the male and the female; to keep seed alive upon the face of all the earth",
-   "the fowls preserved and the seed kept alive",
-   "the bird-kinds preserved to restock the earth after the flood",
-   "God's care for the continuance of the creation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The seven days and forty days: 'for yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy from off the face of the earth' — God giving Noah seven days' notice before the flood (the seven days a final respite, the last of God's longsuffering, during which Noah and the animals enter the ark, the brief, final delay before the judgment falls); the rain to fall 'forty days and forty nights' (the continuous, heavy rain, with the fountains of the deep, v.11, that would cause the flood, forty days and nights of unceasing downpour, the great deluge that would cover the earth); 'every living substance that I have made will I destroy from off the face of the earth' (all living things, save those in the ark, to be destroyed, God repeating the sentence of universal destruction, 6:7, 17, the comprehensive blotting out of all that lived on the earth, the judgment sure and total) — Ellicott, Gill, Clarke, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For yet seven days, and I will cause it to rain upon the earth forty days and forty nights; and every living substance that I have made will I destroy",
-   "the seven days' warning and the forty days' rain",
-   "the final respite and the coming deluge",
-   "the sure, total destruction of all that lived"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Noah's obedience: 'and Noah did according unto all that the LORD commanded him' — Noah obeying God in all that he was commanded (as 6:22, entering the ark with his family, gathering the animals, clean and unclean, and the food, in obedience to God, Noah's faith showing itself in complete obedience, Hebrews 11:7); 'according unto all' (his obedience entire and exact, he doing everything as God directed, holding back nothing, the full, careful obedience of faith, Noah the pattern of thorough, unquestioning obedience to God's word); Noah's obedience flowing from his faith (believing God's word concerning the flood, a thing not seen, Hebrews 11:7, he prepared the ark and obeyed, his obedience, against the scorn of the world and the seeming improbability of the flood, the active faith of the righteous, the model of the believer who obeys God's word and prepares for what God has warned) — Gill, Henry, JFB, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Noah did according unto all that the LORD commanded him",
-   "Noah's obedience in all things",
-   "the entire, exact obedience flowing from faith",
-   "the model of the believer who obeys God's word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Noah's age at the flood: 'and Noah was six hundred years old when the flood of waters was upon the earth' — Noah's age, six hundred years, dating the flood (the flood coming in the six hundredth year of Noah's life, v.11 giving the day, the careful chronology marking the flood as a real, dated event in history); Noah six hundred years old at the flood (he living three hundred fifty years after, 9:28, to nine hundred fifty years, 9:29, the long-lived patriarch witnessing the old world's destruction and the new world's beginning, his age anchoring the chronology); 'the flood (mabbul) of waters was upon the earth' (the great deluge coming upon the earth, the flood, long announced and prepared for, now arriving, the dating by Noah's age marking the certainty and historicity of the event, the flood set in the framework of real time) — Gill, Ellicott, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Noah was six hundred years old when the flood of waters was upon the earth",
-   "Noah's age at the flood",
-   "the flood dated by the patriarch's age, set in real time",
-   "the great deluge arriving as God had announced"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "6-10",
+  "pericope_label": "Six hundred years old, and the beasts that came of themselves",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Noah and his household enter: 'and Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark, because of the waters of the flood' — Noah and his whole household (the eight souls, 1 Peter 3:20) entering the ark, as God had commanded (v.1, they going in 'because of the waters of the flood,' in obedience and faith, taking refuge in the ark from the coming flood); the eight persons — Noah, his three sons, his wife, and his sons' wives — entering the ark (the family of the righteous preserved together, the household of faith taking refuge); 'because of the waters of the flood' (they entering in view of the coming flood, believing God's word, faith moving them to take refuge in the ark before the waters came, the obedience of faith acting on God's warning, Hebrews 11:7, 'moved with fear, prepared an ark,' the household saved by entering the refuge in faith) — Gill, Wesley."
+    "summary": "Gill works out the arithmetic, that Noah was six hundred when the flood began and in his six hundred and first year when it ended, his eldest son by then a hundred; and on the gathering he allows two explanations, that the creatures came impressed with an instinct from God, or by the ministry of angels. Calvin thinks the age repeated for a reason: old age makes men more indolent and morose, so Noah's faith is the more conspicuous for not failing at that period, and his promptitude deserves its own commendation. He guards the phrase that Noah entered because of the waters — it does not mean he was driven in by their rush, but that being moved by the word he perceived through faith a deluge everyone else was ridiculing. On the animals he meets the charge of absurdity by looking back to the creation: every kind once presented itself to Adam to be named, and we dread wild beasts only because, having shaken off God's yoke, we have lost the authority Adam had. What happened here was a restoration of that state, untamed creatures kept in the ark much as hens and geese are kept in a coop. It was humanly impossible that such an assemblage be made in a moment; but because Noah trusted the outcome to God, God gave power to his own precept, so that Noah's faith availed more than all snares and nets, and by that same gate lions and wolves and tigers entered meekly with oxen and lambs."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley states it in one line: the same hand that at first brought them to Adam to be named now brought them to Noah to be preserved."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott follows the same reckoning of the age and adds a detail easily missed — Shem was about a hundred and his brothers younger, and all three were married, though apparently as yet without children. He sets the story beside its Babylonian counterpart, where Xisuthrus takes aboard not only wild animals but seeds of every kind of plant, gold and silver, and slaves both male and female: there a whole tribe is saved with their chief, here one family only. On the seven days he passes on the Jewish tradition that they were the days of mourning for Methuselah, who died in the year of the flood."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How were the animals gathered?",
+    "positions": [
+     {
+      "position": "by a restoration of Adam’s lost authority — Noah’s faith availing more than all snares and nets",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "either by an instinct impressed from God, or by the ministry of angels",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "sets the Babylonian version beside this one, where a whole tribe and its chief are saved with seed, gold and slaves, against a single family here"
+   }
+  ],
   "themes": [
-   "Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark, because of the waters of the flood",
-   "Noah and his household entering the ark",
-   "the eight souls entering the refuge in obedience and faith",
-   "the household saved by entering the ark before the waters came"
+   "faith that did not fail in old age",
+   "why the animals came of their own accord",
+   "one family saved, or a whole tribe"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The classes of creatures: 'of clean beasts, and of beasts that are not clean, and of fowls, and of every thing that creepeth upon the earth' — the verse listing the classes of creatures that entered the ark: clean beasts, unclean beasts, fowls, and creeping things (the comprehensive gathering of all the kinds of land-dwelling, air-breathing creatures, the animals preserved in their classes); both clean and unclean beasts gathered (the clean by sevens, the unclean by twos, vv.2-3, the distinction maintained, both classes preserved, that the kinds might survive); 'fowls, and... every thing that creepeth upon the earth' (the birds and the creeping things, with the beasts, making up the full range of the creatures preserved, all the kinds of air-breathing land creatures entering the ark, the comprehensive preservation of the animal creation, that it might be renewed after the flood) — Gill, Ellicott, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.6
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Of clean beasts, and of beasts that are not clean, and of fowls, and of every thing that creepeth upon the earth",
-   "the classes of creatures gathered to the ark",
-   "the comprehensive preservation of all the animal kinds",
-   "both clean and unclean preserved that the kinds might survive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The creatures enter two by two: 'there went in two and two unto Noah into the ark, the male and the female, as God had commanded Noah' — the creatures entering the ark two by two (a male and female of each kind, as God had commanded, the basic pairs, with the additional clean by sevens, v.2, ensuring the continuance of every kind, the animals coming to Noah and entering the ark); the creatures 'went in... unto Noah' (they coming to Noah and entering the ark, God's providence, 6:20, bringing the animals to the ark, by instinct and divine direction, the creatures coming of themselves, not all hunted out by Noah, God's hand in gathering the kinds); 'the male and the female, as God had commanded Noah' (male and female of each kind, to propagate the species, the entrance of the pairs as God had commanded, the careful fulfillment of God's instruction, the breeding pairs preserved to renew the kinds after the flood) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "There went in two and two unto Noah into the ark, the male and the female, as God had commanded Noah",
-   "the creatures entering the ark two by two",
-   "the breeding pairs brought to the ark by God's providence",
-   "the pairs preserved to renew the kinds after the flood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The flood comes after seven days: 'and it came to pass after seven days, that the waters of the flood were upon the earth' — after the seven days' respite (v.4), the flood coming (God's word exactly fulfilled, the waters of the flood coming upon the earth at the appointed time, the certainty and punctuality of God's judgment); the flood coming 'after seven days' (exactly as God had said, v.4, the seven days of final respite ending, and the flood beginning, God's word sure, fulfilled to the day, the appointed time of judgment come); 'the waters of the flood were upon the earth' (the great deluge beginning, the fountains of the deep and the windows of heaven, v.11, the flood, long announced, now coming, the judgment falling upon the corrupt world, the waters that would destroy all flesh coming upon the earth at God's appointed time) — Gill, Ellicott, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it came to pass after seven days, that the waters of the flood were upon the earth",
-   "the coming of the flood after the seven days",
-   "the punctual fulfillment of God's word, the flood coming as he said",
-   "the judgment falling on the corrupt world at the appointed time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
@@ -358,37 +272,93 @@
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "John Calvin",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "11",
+  "pericope_label": "The date, the fountains and the windows",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The sources of the flood: 'in the six hundredth year of Noah's life, in the second month, the seventeenth day of the month, the same day were all the fountains of the great deep broken up, and the windows of heaven were opened' — the exact dating, 'in the six hundredth year of Noah's life, in the second month, the seventeenth day of the month' (the flood dated to the day, the precise chronology marking the flood as a real, historical event, the day the judgment began recorded); 'all the fountains of the great deep (tehom) were broken up' (the subterranean waters, the great deep, bursting forth, the waters under the earth released, flooding up from below, the breaking up of the fountains of the deep one great source of the flood); 'the windows (floodgates) of heaven were opened' (the waters above, the atmospheric/celestial waters, pouring down, the heavens opening as floodgates, sending the forty days' rain, v.12, the two sources of the flood — the deep below and the heavens above — together causing the deluge, the figure of the ordered separation of waters, 1:6-7, undone, the waters above and below loosed upon the earth in judgment) — Keil and Delitzsch, Ellicott, Henry, Clarke, Calvin."
+    "summary": "Gill reads the six hundredth year as current, not complete, since Noah lived three hundred and fifty years after the flood and not fifty-one. Calvin frames the two causes by going back to the creation: the earth was originally covered with water, and by God's singular kindness the waters receded so that space might be left for living creatures — a thing philosophers must admit is contrary to nature, and which Scripture reckons among God's miracles. God raised for men a theatre in the habitable region of the earth, causing that the subterranean waters should not break out nor the celestial conspire with them; now those barriers were torn up. And here Calvin sets down the sentence that governs the passage: God might have deposited in veins of the earth as much water as human life required, but has designedly placed us between two graves, lest in fancied security we despise the kindness our life depends on — for the element philosophers count a principle of life threatens us with death from above and beneath, except so far as God's hand restrains it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the date at 1656 years from the creation and draws a note from the reckoning: the years of the old world are numbered not by the reigns of giants but by the lives of patriarchs, saints being of more account with God than princes. He and Wesley put the two causes in the language of storehouses — there needed no new creation of waters, God having laid up the deep in store and now broken it up, removing the mounds and fences set at the creation, so the sea returned to cover the earth as at first; while the rain that ordinarily descends in drops came down in streams, the bond of the thick clouds being loosed. Henry ends where the arithmetic began: God made the world in six days but was forty destroying it, for he is slow to anger; yet it came effectually."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reaches Gill's conclusion from the other end, counting the year in the ark and the death at nine hundred and fifty. He identifies the first month as Tisri and the second as Marcheshvan, the change of the year's beginning to Nisan having come only after the deliverance from Egypt; and he ventures a physical account, that an immense quantity of water occupied the centre of the antediluvian earth, so that as it burst forth the surrounding strata must have sunk to fill the vacuum — deriving the word rendered flood from a root meaning to confound. Wesley, with Henry, reckons the month about the beginning of November and notices the homely consequence that Noah had a harvest just before, to victual the ark."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott gives the reason for the autumn reckoning — the ecclesiastical year beginning in Abib commemorates the deliverance from Egypt and can have no place here — so the flood began toward the end of October and lasted till spring; and he proves the year lunar besides, the hundred and fifty days of prevailing running from the seventeenth of the second month to the seventeenth of the seventh, five months of thirty each. On the causes he is more cautious about the language and bolder about the event: the description is usually taken for extraordinary rain in the narrator's popular idiom, but the words suggest a great cosmic catastrophe by which some vast body of water was set loose — without which it is hard to see how the ark, a vessel incapable of sailing, could have gone against the current up to the watershed of Ararat. He adds that the earth's annual evaporation being fixed, its downpour concentrated into forty days would scarcely produce so vast a deluge."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "In which season did the flood begin?",
+    "positions": [
+     {
+      "position": "autumn — the second month of the civil year beginning at Tisri, the Nisan reckoning being later than Egypt",
+      "holders": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "spring — the sacred reckoning was divinely appointed and is more agreeable to nature",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "reads the flood as the lifting of a restraint rather than a new act: God has placed us between two graves, water threatening from above and beneath"
+   }
+  ],
   "themes": [
-   "the same day were all the fountains of the great deep broken up, and the windows of heaven were opened",
-   "the breaking up of the deep and the opening of the windows of heaven",
-   "the waters below and above loosed upon the earth in judgment",
-   "the flood dated to the day, a real historical event"
+   "autumn or spring",
+   "no new water, only the removal of its bounds",
+   "whether rain alone could account for it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "12": {
@@ -396,481 +366,273 @@
    "John Gill",
    "Adam Clarke",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The forty days' rain: 'and the rain was upon the earth forty days and forty nights' — the rain (from the opened windows of heaven, v.11) falling continuously for forty days and forty nights (the unceasing, torrential rain, with the fountains of the deep, causing the flood to rise, the great deluge, exactly as God had said, v.4); the rain continuing 'forty days and forty nights' (a long, continuous downpour, the forty days marking the period of the flood's rising, the rain not ceasing until the waters had covered the earth, the relentless deluge); the forty days' rain fulfilling God's word (v.4, the deluge, long announced, falling upon the earth, the rain from above and the deep from below together flooding the world, the judgment proceeding exactly as God had warned) — Gill, Clarke, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the rain was upon the earth forty days and forty nights",
-   "the forty days' and nights' rain",
-   "the continuous, torrential downpour causing the flood to rise",
-   "the deluge fulfilling God's word exactly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Matthew Henry",
    "Charles Ellicott",
-   "John Calvin"
+   "Keil and Delitzsch"
   ],
+  "range": "12-16",
+  "pericope_label": "Forty days of rain, and the Lord shut him in",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the door and the disposition of the creatures within. Calvin asks why the waters were not loosed at once and gives two reasons — partly for Noah, that by long meditation he might fix more deeply what he had learned by the word; partly for the wicked, that before dying they might feel the warnings they had derided were no empty threats. From this he draws an observation about ourselves: God so tempers his judgments that men may have leisure to consider them, but the depravity of our nature shows in this, that when his anger is poured out suddenly we are stupefied, and when it advances at a measured pace we grow so accustomed to it as to despise it. He defends the repetition that follows as deliberate, the Spirit meaning to hold our minds on a vengeance too terrible for language; and he turns to the carpentry at the end, finding it insufficient — that door must have been large which could admit an elephant, and no pitch tenacious enough to keep out the water through so many seams, so that Moses cuts off idle speculation by declaring the ark kept secure not by human artifice but by the secret power of God."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears in after his kind the language of the creation account, and takes it that just as many species were saved as created, and no more — but adds a warning, that when the occasion was over the restraint was lifted and the creatures were of the same kind as ever, for the ark did not alter their constitution; and hypocrites in the church, outwardly conforming to that ark's laws, may be as unchanged. On the shutting he gives two purposes: to secure Noah, the door shut close lest the waters break in and fast lest any break it down, so that God made him up as he makes up his jewels; and to exclude the rest, since hitherto the door had stood open and even in the last seven days a penitent might have been welcomed, whereas now God had shut it and none can open. His comparison is the finest thing here — God put Adam into paradise but did not shut him in, and Adam threw himself out; putting Noah into the ark he shut him in, so that when he brings a soul to Christ he secures its salvation, which is not in our keeping but in the Mediator's hand."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley notes it rained without intermission or abatement, and on the whole earth at once. Clarke passes on Lightfoot's dating of the rain from the eighteenth of Marcheshvan to the twenty-eighth of Cisleu, and says more grimly that as God shut Noah in he shut the others out, having waited a hundred and twenty years on a generation that did not repent."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The household enters on the day of the flood: 'in the selfsame day entered Noah, and Shem, and Ham, and Japheth, the sons of Noah, and Noah's wife, and the three wives of his sons with them, into the ark' — on the very day the flood began (v.11), Noah and his household entering the ark (the entrance exactly timed to the coming of the flood, God bringing them into the refuge on the day of judgment, the precise providence of God in their preservation); the eight persons — Noah, his three sons, his wife, and his sons' wives (1 Peter 3:20) — entering the ark together (the whole household of the righteous preserved, the named family, the remnant saved from the flood, through whom the race would be renewed); 'with them, into the ark' (the family entering the ark together, the place of safety, God's grace gathering the household into the refuge on the day of the flood, the eight souls, by faith and obedience, taking shelter in the ark from the waters, the salvation of the righteous remnant) — Ellicott, Henry, Calvin, Gill."
+    "summary": "Ellicott finds the ascription remarkable, this act of personal care being assigned to Jehovah by name, whereas in the Chaldean Genesis the deity merely commands Xisuthrus to shut himself in. Keil, surveying what follows, calls the description simple and majestic, the almighty judgment of God set beside the love manifest within it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is meant by the Lord shutting him in?",
+    "positions": [
+     {
+      "position": "security and exclusion at once — as God put Adam in paradise without shutting him in, so shutting Noah in secures what is not in our own keeping",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "that the ark was made watertight by divine power and not by pitch, no joining being solid enough for such a force",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "remarkable chiefly for being ascribed to Jehovah personally, where the Babylonian version has the hero shut himself in",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Henry",
+    "note": "warns that the truce among the animals proved nothing about their natures, and reads hypocrites in the church by the same rule"
+   }
+  ],
   "themes": [
-   "In the selfsame day entered Noah... and Noah's wife, and the three wives of his sons with them, into the ark",
-   "Noah and his household entering the ark on the day of the flood",
-   "the eight souls gathered into the refuge by God's providence",
-   "saved on the day of judgment"
+   "why the rain was gradual",
+   "the ark did not alter their natures",
+   "who shut the door, and on whom"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "All the kinds enter with Noah: 'they, and every beast after his kind, and all the cattle after their kind, and every creeping thing that creepeth upon the earth after his kind, and every fowl after his kind, every bird of every sort' — with Noah's household entering all the kinds of creatures: beasts, cattle, creeping things, and fowls, every bird of every sort (the comprehensive gathering of all the air-breathing land creatures, each after its kind, into the ark); the repeated 'after his/their kind' (each species distinct, entering by kind, the preservation of the distinct kinds, the species of ch. 1, the ark holding representatives of all the kinds, that they might survive and be renewed); 'every bird of every sort (every winged creature)' (the comprehensive preservation of all the kinds of birds and winged creatures, nothing of the air-breathing land creation left to perish without preservation in the ark, the full range of the kinds gathered, God's care for the whole creation) — Keil and Delitzsch, Ellicott, Gill, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every beast after his kind, and all the cattle after their kind, and every creeping thing... and every fowl after his kind, every bird of every sort",
-   "all the kinds of creatures entering the ark with Noah",
-   "the comprehensive preservation of all the distinct kinds",
-   "God's care for the whole creation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The creatures enter by pairs: 'and they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life' — the creatures entering the ark by twos (the basic pairs, with the clean by sevens, v.2, all flesh that had the breath of life, the air-breathing land creatures entering to be preserved, the pairs of all the kinds gathered); the creatures going in 'two and two' (male and female of each kind, to continue the species, the pairs preserving the kinds, the comprehensive entry of the breeding pairs of all flesh); 'wherein is the breath of life' (all the creatures that breathe, the air-breathing land animals and birds, the breath of life marking the living creatures preserved, those that breathed gathered into the ark, while those outside, with the breath of life, would perish, vv.21-22, the preservation of the breathing kinds) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they went in unto Noah into the ark, two and two of all flesh, wherein is the breath of life",
-   "the creatures entering by pairs, all that had the breath of life",
-   "the breeding pairs of all the breathing creatures gathered into the ark",
-   "preserved while those outside would perish"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The LORD shut him in: 'and they that went in, went in male and female of all flesh, as God had commanded him: and the LORD shut him in' — the creatures entering male and female, as God had commanded (the entry exactly as God directed, the breeding pairs of all flesh gathered, the careful fulfillment of God's instruction in the preservation of the kinds, all done as God had commanded, the gathering and entry of the creatures fulfilling God's command exactly, Noah's obedience and God's providence together accomplishing the preservation); 'the LORD shut him in' (God himself closing the door of the ark, the single door, 6:16, shut by God's own hand, the LORD sealing Noah and his household safely within, and shutting out the world, the figure of God's protecting care — Noah secured within — and of the closing of the door of mercy — the world shut out — after God shut the door, none could enter or leave, the ark, sealed by God, bearing Noah safely through the flood) — Ellicott, Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they that went in, went in male and female of all flesh, as God had commanded him: and the LORD shut him in",
-   "the creatures entering male and female, and the LORD shutting Noah in",
-   "God himself sealing the door, securing Noah and shutting out the world",
-   "God's protecting care and the closing of the door of mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
+   "John Calvin",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rising flood lifts the ark: 'and the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth' — during the forty days (the rain and the deep, vv.11-12), the waters rising and increasing (the flood growing, covering more and more of the earth, the waters steadily mounting as the deluge continued); the increasing waters bearing up the ark, and it being lift up above the earth (the rising waters lifting the ark and floating it above the earth, the ark, which had stood on the ground, borne up by the flood, the very waters of judgment, which destroyed the world, lifting and preserving the ark and those within, the ark floating safely on the deluge); the ark, borne up by the waters, preserving Noah and his household above the flood (the same flood that drowned the world carrying the ark and the righteous safely, God's preservation of his own amid the judgment, the ark, lifted above the earth, the refuge that rode out the deluge) — Gill, Henry, JFB, Calvin."
-   }
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the flood was forty days upon the earth; and the waters increased, and bare up the ark, and it was lift up above the earth",
-   "the rising flood lifting up the ark",
-   "the waters of judgment lifting and preserving the ark and the righteous",
-   "the refuge riding safely on the deluge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The waters prevail: 'and the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters' — the waters growing mighty and increasing greatly, overwhelming the earth (the flood prevailing, rising higher and spreading wider, the deluge mounting to a great height, covering the land, the irresistible increase of the waters); the waters 'prevailed' (becoming mighty and dominant, overwhelming all, the flood now in full force, covering the earth, the waters' increasing prevalence marking the progress of the destruction); 'the ark went (floated) upon the face of the waters' (the ark riding safely upon the surface of the prevailing flood, borne up by the very waters that destroyed the world, the ark floating above them, Noah and his household, in the ark, carried safely on the face of the deluge, the refuge of God's preservation riding upon the waters of judgment) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the waters prevailed, and were increased greatly upon the earth; and the ark went upon the face of the waters",
-   "the waters prevailing and the ark riding upon them",
-   "the deluge overwhelming the earth while the ark rode safely above",
-   "the refuge borne up by the waters of judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "17-21",
+  "pericope_label": "The waters prevail, and the ark is lifted up",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill and the traditional reading (the universal/global flood): 'and the waters prevailed exceedingly upon the earth; and all the high hills, that were under the whole heaven, were covered' — the waters growing exceedingly mighty, rising to a great height, covering the whole face of the earth; 'all the high hills, that were under the whole heaven, were covered' teaching that the whole earth, even the highest mountains, was submerged (the flood covering the entire globe, the universal extent of the deluge, as the universal corruption, 6:12, called for a universal judgment); Clarke defends the universality of the deluge against objectors; 'under the whole heaven' marking the universal extent (the whole earth under the whole sky), the universality of the language the chief support of the global reading."
+    "summary": "Gill traces the flight of those outside, from the lower rooms to the housetops, then to the tallest trees, then to the hills, and in vain. Calvin explains why Moses dwells on the totality: the design is that we should not ascribe to fortune the flood by which the world perished, however customary it is for men to veil the works of God; since it is plainly declared that whatever flourished was destroyed, we infer a signal and indisputable judgment — especially as Noah alone remained secure, having embraced by faith the word in which salvation was contained. Two opposites are joined, the whole race destroyed and one family safe, from which we learn how profitable it was for Noah to disregard the world and obey God alone, recorded not to praise the man but to invite our imitation. Peter makes the deliverance a figure of baptism and the Church is justly compared to the ark; but the likeness holds, Calvin insists, only because drawn from the word of God — and the Papists act ridiculously who fabricate an ark without the word."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the temper of those watching the water rise: the profane world probably flattered themselves it would soon abate, but still it increased. When God judges he will overcome — if he begin, he will make an end; and there is warning in the slowness, since the gradual approaches of judgment, designed to bring sinners to repentance, are often abused instead to harden them. On the ark he gets two sentences worth the passage: the waters which broke down everything else bore up the ark, that which to unbelievers is a savour of death unto death being to the faithful a savour of life unto life; and the more the waters increased, the higher the ark rose toward heaven, so that sanctified afflictions are promotions. He then imagines the last hours outside — some climbing the trees and spinning out their terrors, some clinging to the ark and hoping that might be their safety which they had long made their sport, some pleading old acquaintance, to which the answer could only be that he had called and they refused, and that God had shut the door."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley draws one dry inference: the mountains were covered, therefore mountains existed before the flood. Clarke meets the objection that there was not water enough by referring the doubter to Ray's Physico-theological Discourses."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The local-flood view: the flood covered the known world or the region inhabited by man — the 'high hills under the whole heaven' being the mountains of the region (or the whole visible horizon), the flood vast but not strictly global; Ellicott notes considerations bearing on the height (the fifteen cubits, v.20, perhaps above the mountains of the region); 'under the whole heaven' read as the whole region under the visible heaven, the universal language taken as the language of appearance or of the inhabited world. The extent of the flood divides between the universal/global reading (the whole earth and the highest mountains, the traditional view) and the local/regional reading."
+    "prevalence": "several",
+    "summary": "Ellicott takes the fifteen cubits for a measurement rather than a flourish — the draught of the ark, computed after it settled near Ararat, some twenty-two feet, so that there must have been that depth even on the highest summit along its course. He doubts rain alone could account for it: taking England's mean annual rainfall of thirty inches and supposing the whole of it to fall every twenty-four hours, forty days would yield some hundred feet, enough to strip the mountains of soil and dig new courses for the rivers. But water seeks the lower ground throughout, so it is hard to see how it could stand twenty-two feet deep on the heights without some cosmic convulsion carrying the waters from the equator toward the poles — which would also remove the difficulty of the ark being borne against the current up into Armenia. Keil calls the whole description simple and majestic."
    }
   ],
   "debates": [
    {
-    "question": "What was the extent of the flood — universal (global) or local (regional)?",
-    "sides": [
+    "question": "Could forty days of rain produce a flood of that depth?",
+    "positions": [
      {
-      "position": "Universal/global — the flood covered the whole earth, even the highest mountains under the whole heaven (the traditional reading)",
+      "position": "not by rain alone — some cosmic convulsion must have displaced a vast body of water, which also explains the ark travelling up into Armenia",
       "holders": [
-       "Gill",
-       "Clarke",
-       "the traditional view"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Local/regional — a vast flood over the known world or the region inhabited by man, the 'high hills' those of the region",
+      "position": "the objection is answered in the literature; the doubter may consult Ray",
       "holders": [
-       "the local-flood view",
-       "Ellicott (noting considerations)"
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the waters prevailed exceedingly upon the earth; and all the high hills, that were under the whole heaven, were covered",
-   "the waters covering all the high hills (the crux of the flood's extent)",
-   "a universal/global flood vs a local/regional flood",
-   "the universality of the language the support of the global reading"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The waters fifteen cubits above the mountains: 'fifteen cubits upward did the waters prevail; and the mountains were covered' — the waters rising fifteen cubits (about twenty-two feet) above the highest point (the depth sufficient to cover the mountains, fifteen cubits enough to float the ark over the highest peaks and to drown all that remained, the measure of the flood's prevailing height); fifteen cubits of water 'enough to drown' all the creatures (the depth above the mountains ensuring the total destruction, the waters rising high enough that nothing could survive on the highest ground, the ark, thirty cubits high, drawing about fifteen, floating clear above the mountains); 'the mountains were covered' (the waters covering the mountains, whether all the mountains of the globe, on the universal view, or the mountains of the region, on the local view, v.19, the fifteen cubits above the highest point ensuring the covering, the flood prevailing over the highest land, the total submersion of the earth or region marking the completeness of the judgment) — Clarke, Ellicott, Gill."
+    "voice": "Calvin",
+    "note": "allows the ark as a figure of the Church only so far as the likeness is drawn from the word, since a promise gathered Noah's household"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Fifteen cubits upward did the waters prevail; and the mountains were covered",
-   "the waters prevailing fifteen cubits above the mountains",
-   "the depth sufficient to drown all and float the ark clear",
-   "the total submersion marking the completeness of the judgment"
+   "the waters that bore up what they destroyed",
+   "whether rain could reach the summits",
+   "the ark as a figure of the Church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of all flesh: 'and all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man' — all living creatures on the earth (save those in the ark) dying in the flood (the comprehensive death of fowls, cattle, beasts, creeping things, and men, the universal destruction announced, 6:7, 17, accomplished, all flesh perishing); all the classes of air-breathing land creatures perishing (birds, cattle, wild beasts, and creeping things, the whole animal creation outside the ark swept away, the creatures, made for man, sharing in his judgment); 'and every man' (all mankind, save the eight in the ark, perishing in the flood, the corrupt race, given over to wickedness and violence, 6:5, 11, destroyed, the universal judgment falling on all men, the whole world of the ungodly perishing, as Peter notes, 2 Peter 2:5, 'spared not the old world... bringing in the flood upon the world of the ungodly,' the wages of sin paid to the corrupt race) — Gill, Henry, Wesley."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all flesh died that moved upon the earth, both of fowl, and of cattle, and of beast, and of every creeping thing that creepeth upon the earth, and every man",
-   "the death of all flesh in the flood",
-   "the universal destruction of all that moved on the earth save those in the ark",
-   "the corrupt world of the ungodly swept away"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The death of all that breathed: 'all in whose nostrils was the breath of life, of all that was in the dry land, died' — every creature that breathed (had the breath of life in its nostrils), of all that lived on the dry land, dying in the flood (the comprehensive death of all air-breathing creatures outside the ark, the breath of life, given by God, 2:7, taken from all the living of the land); 'all in whose nostrils was the breath of life' (the air-breathing creatures, men and land animals, the qualification marking those that perished — the breathing creatures of the dry land, the fish and sea-creatures, breathing in the water, not included in the destruction); 'of all that was in the dry land, died' (all the land-dwelling, air-breathing creatures perishing, the flood destroying the inhabitants of the dry land, only those in the ark surviving, the total death of the breathing creatures of the land marking the completeness of the judgment) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "All in whose nostrils was the breath of life, of all that was in the dry land, died",
-   "the death of all that breathed on the dry land",
-   "every air-breathing creature of the land perishing",
-   "the breath of life taken from all save those in the ark"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "All destroyed, Noah only remaining: 'and every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven; and they were destroyed from the earth: and Noah only remained alive, and they that were with him in the ark' — every living thing on the face of the ground blotted out (the comprehensive destruction of man, cattle, creeping things, and birds, the whole order of land life, save the ark, swept away, the universal judgment completed); 'they were destroyed (blotted out) from the earth' (the living creatures removed from the earth, the destruction total and final, the corrupt world of the living blotted out, as God had purposed, 6:7, 'I will destroy... from the face of the earth'); 'Noah only remained alive, and they that were with him in the ark' (only Noah and those with him in the ark, the eight souls and the animals, surviving, the sole remnant preserved from the universal destruction, 'Noah only' marking the singular preservation of the righteous, the ark, with its few, the sole surviving life on the earth, from this remnant the world to be renewed, the saved remnant amid the universal judgment, 2 Peter 2:5) — Ellicott, Gill, JFB."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every living substance was destroyed which was upon the face of the ground... and Noah only remained alive, and they that were with him in the ark",
-   "the destruction of all living things and Noah alone remaining",
-   "the universal destruction of all land life, the corrupt world blotted out",
-   "the sole surviving remnant in the ark, from whom the world would be renewed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "22-24",
+  "pericope_label": "A hundred and fifty days, and how they are reckoned",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill enters the caution that every living substance destroyed cannot mean literally everything, since trees survived — after the waters abated there was an olive tree from which the dove brought a leaf — so the sentence must be read of the animals. On the hundred and fifty days he reckons them not from the end of the forty days' rain but from the beginning of the flood, since from the seventeenth day of the second month to the seventeenth of the seventh is exactly five months. That leaves him the difficulty that the waters went on increasing after the rain had stopped, and he adopts Aben Ezra's solution, that there was continual rain afterwards though less vehement, since otherwise the increase is not easy to account for."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke draws an inference from the phrase all that was in the dry land: only such animals as could not live in water were preserved in the ark. On the chronology he follows Lightfoot the other way, keeping the two sums distinct so that the forty days are not included in the hundred and fifty, and when the hundred and fifty were ended there were six months and ten days of the flood past."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The waters prevail 150 days: 'and the waters prevailed upon the earth an hundred and fifty days' — the waters prevailing (remaining at their height, or continuing mighty) upon the earth for a hundred and fifty days (the flood, after the forty days' rain, continuing to prevail for the full period, the long duration of the flood, the waters covering the earth for five months); the hundred and fifty days (including the forty days of rain, or reckoned from the beginning) marking the period during which the waters prevailed at their full height before they began to abate (8:3, the long months during which the earth lay under the flood, the duration marking the thoroughness of the judgment and the trial of Noah's faith and patience in the ark); through the hundred and fifty days, Noah and his household, and the creatures, preserved in the ark, borne up on the prevailing waters (God's care sustaining the remnant through the long flood, the waters prevailing but the ark and its few surviving, the flood running its appointed course before God remembered Noah and made the waters abate, 8:1) — Gill, Ellicott, Clarke."
+    "prevalence": "single",
+    "summary": "Ellicott renders the phrase more exactly as everything that stood erect, and glosses the ground it was blotted from as the adamah, the portion subdued to his own use by the adam. On the reckoning he takes Gill's side and states it most clearly — the rains lasted forty days, for a hundred and ten more the waters still bore up the ark, and then it grounded. He alone reads the last verse for what it implies about the telling: the waters are said to have prevailed, which is literally that they were strong, and yet by that time they had abated, since instead of covering the hills to nearly four fathoms they had let the ark touch dry land. That shift suggests to him the personal experience of someone aboard, who would have known the water was still deep and powerful but would also have felt the vessel take the ground — the same argument he makes about the exactness of the dates, which tradition could have carried correctly only briefly before they had to be written down."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are the forty days included in the hundred and fifty?",
+    "positions": [
+     {
+      "position": "yes — the hundred and fifty run from the flood’s beginning to the grounding on Ararat, exactly five months",
+      "holders": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "no — the two sums are distinct, so six months and ten days had passed when the hundred and fifty ended",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "argues from the word for 'prevailed' being used at the very moment the waters were failing that the account preserves an eyewitness's impressions"
+   }
+  ],
   "themes": [
-   "And the waters prevailed upon the earth an hundred and fifty days",
-   "the waters prevailing a hundred and fifty days",
-   "the deluge continuing at its height for five months",
-   "the ark and its few preserved through the long flood"
+   "what survived the blotting out",
+   "whether the forty days fall inside the hundred and fifty",
+   "a narrative that reads like an eyewitness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  }
 }
