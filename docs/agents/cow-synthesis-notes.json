@@ -8939,6 +8939,69 @@
       "book": "exodus",
       "chapter": "20",
       "note": "Drafting overshoot, fifteen entries measured, and the picture is unchanged from romans 16. First drafts ran 623 to 1053 words against the 650 ceiling: mean 889, median 897, about 37 percent over — worse than romans 16's 29 percent and the worst of the run so far. Only one entry (v2, on a thin 844-word key) came in under the ceiling first time. The five-voices-per-paragraph rule recorded after romans 16 did not help here, because exodus 20 has only eight voices and the problem is different: each commandment attracts a long principled argument from Calvin, a long list of particulars from Clarke, and a long comparative note from Ellicott, so a paragraph with three voices in it is already 300 words. Revised working rule for a law chapter: allow ONE voice per paragraph to run at length and hold the other two to a single clause each; where two voices both argue at length on the same question — Calvin and Clarke on the sabbath's continuing obligation, Ellicott and Calvin on images — give them a paragraph to themselves and admit no third."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "18",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "JFB stride bug, seventeenth confirmed instance. Both JFB blocks in this chapter are displaced from Exodus 6: the v5 block is the genealogy passage authenticating the descent of Moses and Aaron, and the v11 block is a ten-word fragment on a kinship term ('The Septuagint and Syriac versions render it \"his cousin.\"'). Neither comments on Exodus 18. Both declared in excluded_voices; JFB is unusable in this chapter."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "18",
+      "verses": [
+        "7",
+        "14",
+        "26"
+      ],
+      "note": "Keil and Delitzsch blocks at v7, v14 and v26 contain nothing but the reproduced KJV text of a run of verses, with no commentary attached. The v13 and v25 blocks are genuine (verse text followed by real exposition), so Keil is usable in this chapter but not at those three keys; declared in excluded_voices for the entries at v7 and vv14-18."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "18",
+      "verses": [
+        "27"
+      ],
+      "note": "StudyLight boilerplate tail, thirteenth confirmed instance, again attached to Ellicott and again at the chapter's last commented key. Ellicott's genuine note on Hobab is followed by the site chrome, CSS and menu listing. The boilerplate inflates usable_source_words for v27 by roughly a thousand words."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "2",
+        "14"
+      ],
+      "note": "Ellicott's blocks filed at v1 and v2 do not comment on those verses: the v1 block treats v15 ('they come to him to enquire of God') and the v2 block treats v16 ('he makes them know the statutes of God and His laws'). Both were moved to the entry covering vv14-18 under the note 607 rule, since Ellicott has keys at v14 and v17 inside that span. The recovery matters: they supply the two arguments for Moses's practice that Ellicott's own v17 note refers to as 'weighty' without restating."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "18",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "Note 607 fallback fired twice. Henry has only three keys in the chapter (1, 7, 13) and writes one block per section: his v7 block expounds vv7-12 and his v13 block expounds vv13-18. He has no key inside either 8-12 or 14-18, so under the filing rule both stay in the entries they are filed under. Wesley's v15, v16 and v19 blocks are near-verbatim Henry, which risks duplication where Henry's overrun already covers the same ground; at v13 the Henry material was used and Wesley cited separately for his own short gloss."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "18",
+      "note": "Drafting overshoot again, and worse than at exodus 20: first drafts ran 620-1196 on the QA count against a 650 ceiling, mean about 800. The vv19-23 entry drafted at 1196 and had to be rewritten from scratch rather than trimmed. Cause here is a third pattern, distinct from romans 16 (many voices glossing one name) and exodus 20 (three voices each arguing at length): a single long advice-speech that every voice comments on in full, so Calvin, Ellicott, Clarke and Wesley each supply a complete parallel treatment of the same six clauses. Working rule for advice or speech chapters: pick ONE voice to carry each clause and cite the others only where they differ."
     }
   ]
 }

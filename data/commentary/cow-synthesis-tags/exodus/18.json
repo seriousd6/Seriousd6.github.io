@@ -1,994 +1,645 @@
 {
  "1": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro hearing of God's deliverance of Israel: 'when Jethro, the priest of Midian, Moses' father in law, heard of all that God had done for Moses, and for Israel his people, and that the LORD had brought Israel out of Egypt' — Jethro (Reuel, Exodus 2:18, the priest or prince of Midian, Moses' father-in-law) hearing of the great deliverance (the plagues, the Red Sea, the wonders, the report spread abroad, the fame of God's works, Exodus 15:14; Joshua 2:10, the occasion of his visit); the things God had done (for Moses and Israel) — the great works of God (the fame of the deliverance reaching Midian, the report that drew Jethro); 'the LORD had brought Israel out of Egypt' (the great deliverance, the Exodus, the chief of God's works, the report that moved Jethro to come, vv.5, the providence, the fame of God's redemption drawing the Gentile priest) — Henry, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When Jethro, the priest of Midian, Moses' father in law, heard of all that God had done for Moses, and for Israel his people, and that the LORD had brought Israel out of Egypt",
-   "Jethro hearing of God's deliverance of Israel",
-   "the fame of the redemption spreading abroad (Exodus 15:14; Joshua 2:10)",
-   "the great deliverance drawing the Gentile priest to come"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
+   "Matthew Henry"
   ],
+  "range": "1-4",
+  "pericope_label": "Jethro hears, and brings Moses his wife and sons",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin dissents from the general opinion about the separation. Most commentators think Zipporah, enraged over her son's circumcision, turned back on the journey and went to live with her father; but Calvin gives three reasons against it — Moses would never have allowed his sons to be deprived of the redemption of which he was himself the minister, it would not have been consistent that they should afterwards be appointed priests of a God who was not their Redeemer, and had he deposited his family in safety and advanced alone to the contest he would have been deservedly suspected of deceit or of excessive cowardice. He applies the clause about sending her back to the wilderness rather than to Egypt, Moses having sent his wife to visit her father out of respect to an old man nearly connected with him; and he finds in the sons' names a proof of magnanimity, since Moses cannot but have brought on himself the ill-will of his connections by calling their country a strange land. Gill adds that the Targums style Jethro the prince of Midian."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives Jethro two errands and Wesley the same two after him: to congratulate the happiness of Israel and the honour of Moses, and to bring back his wife and children. Though as a Midianite Jethro was not to share in the promised land he shared in the joy of the deliverance, and we may thus make the comforts of others our own by taking pleasure, as God does, in the prosperity of the righteous. Henry defends the earlier separation, since Moses foresaw what discouragements he was likely to meet in Pharaoh's court, but insists the parting could only be temporary, husbands being commanded to dwell with their wives. He reads Gershom, a stranger, as a memorial of Moses's own condition and a memorandum to his son of his, since we are all strangers upon earth as all our fathers were; and Eliezer, my God a help, either backward to the deliverance after the slaying of the Egyptian or forward, as the original will bear, the Lord is my help and will deliver me from the sword of Pharaoh. He closes with a chronological caution, that the incident may well have happened where it stands, before the giving of the law."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the common view that Zipporah had been alarmed at the danger to her son's life and left her husband, but allows the alternative that Moses himself sent them back, foreseeing the troubles they would meet in Egypt, and that Jethro, finding God had delivered them, thought it proper to bring them while Moses was near Horeb. He also suggests that Jethro was the son of Reuel, and so the brother-in-law rather than the father-in-law of Moses, the Hebrew word so translated meaning simply a relative by marriage. Wesley follows Henry throughout, adding only that Moses seems to have sent his family back from the inn where his wife's unwillingness to have her son circumcised had like to have cost him his life."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jethro bringing Zipporah, Moses' wife: 'then Jethro, Moses' father in law, took Zipporah, Moses' wife, after he had sent her back' — Jethro bringing Zipporah (Moses' wife) and her sons (vv.3-4) to Moses, Zipporah having been 'sent back' earlier (perhaps after the incident of the circumcision, Exodus 4:24-26, or sent home for safety during the Egyptian conflict, the reunion of Moses' family, the bringing of the wife and sons); Zipporah (Moses' wife, Exodus 2:21) — brought by her father to Moses (the reunion); 'after he had sent her back' (Zipporah sent home earlier, to Midian, for safety or other cause, Exodus 4:24-26, now restored to Moses, the providence, the family reunited at the mount of God, vv.5) — Keil and Delitzsch, Gill."
+    "summary": "Ellicott follows Eliezer beyond the naming, supposing him the boy Zipporah circumcised in the wilderness, who grew to manhood and had a son Rehabiah whose descendants were very numerous in the time of David; whether Moses gave him the name before parting from him, in allusion to his escape from the Pharaoh who sought to slay him, or first on receiving him back, in allusion to the host destroyed in the sea, Ellicott leaves uncertain. Keil summarises only that Moses received his father-in-law with the honour due to his rank."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why were Zipporah and her sons not with Moses in Egypt?",
+    "positions": [
+     {
+      "position": "either Zipporah turned back of her own accord, alarmed over the circumcision at the inn, or Moses sent them back foreseeing the troubles of Egypt — Clarke allows both",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "neither; Moses underwent the bondage together with his household, and the sending back belongs to the wilderness",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "traces Eliezer's line to Rehabiah and his numerous descendants in the time of David, and leaves open whether the name was given at the parting or at the reunion"
+   }
+  ],
   "themes": [
-   "Then Jethro, Moses' father in law, took Zipporah, Moses' wife, after he had sent her back",
-   "Jethro bringing Zipporah, Moses' wife",
-   "Zipporah sent back earlier (Exodus 4:24-26), now restored to Moses",
-   "the family reunited at the mount (vv.5)"
+   "Jethro brings back Zipporah and her two sons",
+   "whether Moses had sent his family away",
+   "the sense of the names Gershom and Eliezer"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gershom, the son named for Moses' exile: 'and her two sons; of which the name of the one was Gershom; for he said, I have been an alien in a strange land' — Jethro bringing Moses' two sons, the first, Gershom ('a stranger there'), named because Moses had been an alien (a stranger, sojourner) in a strange land (Midian, Exodus 2:22, the name of the exile, the memorial of Moses' pilgrim state); Gershom (Moses' firstborn, Exodus 2:22) — the son of the exile (the name recalling Moses' sojourning); 'I have been an alien in a strange land' (Moses owning himself a stranger, in Midian, the land of his exile, the pilgrim spirit, the godly strangers on earth, Hebrews 11:13-16, the name a testimony to Moses' faith, looking beyond the exile to the promise) — Wesley, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And her two sons; of which the name of the one was Gershom; for he said, I have been an alien in a strange land",
-   "Gershom, the son named for Moses' exile",
-   "the name of the exile (Exodus 2:22)",
-   "the pilgrim spirit of the godly (Hebrews 11:13-16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eliezer, the son named for God's help: 'and the name of the other was Eliezer; for the God of my father, said he, was mine help, and delivered me from the sword of Pharaoh' — Moses' second son, Eliezer ('my God is help'), named because the God of his father had been his help and delivered him from Pharaoh's sword (when Pharaoh sought to slay him, Exodus 2:15, the name of thanksgiving, commemorating God's deliverance, the testimony to God's help); the God of Moses' father (the covenant God) the help and deliverer — the thanksgiving (the faith owning God's deliverance); 'delivered me from the sword of Pharaoh' (God's deliverance of Moses, from Pharaoh's wrath, Exodus 2:15, the name a memorial of the rescue, the faith, the godly naming their children for God's mercies, the providence remembered) — Ellicott, Gill, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the name of the other was Eliezer; for the God of my father, said he, was mine help, and delivered me from the sword of Pharaoh",
-   "Eliezer, the son named for God's help",
-   "the name commemorating God's deliverance from Pharaoh's sword (Exodus 2:15)",
-   "the faith owning God's mercy, the godly naming children for his mercies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
+   "John Calvin",
+   "John Gill"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "5-6",
+  "pericope_label": "Jethro comes to the mount of God",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Jethro coming to Moses at the mount of God: 'and Jethro, Moses' father in law, came with his sons and his wife unto Moses into the wilderness, where he encamped at the mount of God' — Jethro coming with Moses' wife and sons to Moses in the wilderness, where Israel was encamped at the mount of God (Horeb/Sinai, Exodus 3:1; 19:1-2, the visit, the Gentile priest coming to the camp, the reunion of the family, the place, the mount of God, where the law would soon be given); Jethro bringing the family (the wife and sons) — the reunion (the visit); 'where he encamped at the mount of God' (Israel at the mount of God, Horeb/Sinai, the place of the burning bush, Exodus 3:1, and soon of the law, Exodus 19, the providence, the camp at the holy mount, the setting for Jethro's counsel, vv.13-26, before the giving of the law) — JFB, Gill, Calvin."
+    "summary": "Calvin asks what brought the old man out and answers that it was not so much love for Moses as the fame of the miracles which drew him, bowed down with age, from his home into the wilderness. That he was not induced by ambition appears from the sequel, since after he had offered sacrifice and in solemn thanksgiving ascribed all the glory to God alone he returned home again with the same simplicity in which he had come; and Moses himself states the cause at the head of the chapter, saying not that Jethro had heard of his son-in-law's arrival but how wonderful had been God's goodness and power in delivering the people. As to the title of the place, the vision already vouchsafed there had made Horeb worthy of the name, but the reference here is rather to the promulgation of the law, whereby God consecrated the mountain to Himself. Gill notices only that this is the third time in the chapter Jethro is called Moses's father-in-law, either to distinguish him or to do him honour."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke argues at length that the visit stands out of its chronological place. Israel had not yet reached Horeb, which they did not arrive at till the third month, whereas the transactions this account is joined to fall in the second; Moses relates in Deuteronomy that it was when they were about to depart from Horeb, in the second year, that he complained he could not bear the burden of government alone and established captains over thousands and hundreds and fifties and tens, which appears to be the very transaction recorded here; Moses speaks below of the statutes and laws of the Lord as already revealed; and Jethro offers burnt-offerings in the manner the law commands, though that law was not yet given. Clarke would therefore insert the chapter in Numbers, where Moses entreats Hobab to stay as a guide, but adds that the matter is not of much importance. He offers a reason why it stands where it does: Moses had just related the war with Amalek and the curse laid upon them, and may be showing Jethro free from that curse, although the Kenites of his family dwelt among the Amalekites. On the message he agrees with Gill that Jethro was not yet present, and supports the reading behold for I on the authority of the Greek and Syriac and several Samaritan copies."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott meets the same chronological difficulty more mildly, allowing that the mount of God may here be used broadly of the entire Sinaitic mountain region, or that the movement described in the next chapter may have taken place before Jethro's arrival though not related until after it, since Exodus was probably composed in detached portions and arranged afterwards."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Does this chapter stand in its true chronological place?",
+    "positions": [
+     {
+      "position": "no; it belongs in Numbers, after the erection of the tabernacle and the giving of the law",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "not necessarily; the mount of God may be used broadly, or the march may be related out of order, Exodus being composed in detached portions",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "And Jethro, Moses' father in law, came with his sons and his wife unto Moses into the wilderness, where he encamped at the mount of God",
-   "Jethro coming to Moses at the mount of God",
-   "the Gentile priest to the camp, the family reunited (Exodus 3:1)",
-   "the mount of God, soon to be the place of the law (Exodus 19:1-2)"
+   "Jethro arrives at the mount of God",
+   "whether the chapter stands in its chronological place",
+   "the announcement sent ahead by messenger"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro announcing his coming to Moses: 'and he said unto Moses, I thy father in law Jethro am come unto thee, and thy wife, and her two sons with her' — Jethro sending word (or announcing) to Moses that he had come, with Moses' wife and two sons (the message, perhaps sent ahead, that Moses might come out to meet them, v.7, the announcement of the visit, the bringing of the family); Jethro's announcement (sending word of his coming) — the courteous notice (the message ahead of the meeting); 'thy wife, and her two sons with her' (the wife and sons brought, the reunion, the family restored to Moses, the providence, the family reunited before the meeting, v.7) — Gill, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he said unto Moses, I thy father in law Jethro am come unto thee, and thy wife, and her two sons with her",
-   "Jethro announcing his coming to Moses",
-   "the courteous notice of the visit (v.7)",
-   "the family restored to Moses before the meeting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Gill",
+   "Matthew Henry"
   ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "7",
+  "pericope_label": "Moses goes out to meet him, and tells him all",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Moses' respectful welcome of Jethro: 'and Moses went out to meet his father in law, and did obeisance, and kissed him; and they asked each other of their welfare; and they came into the tent' — Moses, the great leader of Israel, going out to meet Jethro, bowing (doing obeisance), and kissing him (the respect and affection, Moses honoring his father-in-law, despite his own high station, the courtesy, the meekness of Moses, honoring the aged and the kindred, Exodus 20:12); Moses' obeisance and kiss (the respectful, affectionate greeting) — the humility of the great leader (the honor to the father-in-law, the meekness of Moses, Numbers 12:3); 'they asked each other of their welfare; and they came into the tent' (the friendly inquiry, after each other's welfare, and the going into the tent, the hospitality, the fellowship, the warm reception, the providence, the meeting that would lead to Jethro's worship, v.12, and counsel, vv.13-26) — Keil and Delitzsch, Henry, Calvin, Ellicott."
+    "summary": "Gill draws a moral from the going out: one at the head of such a vast body of people condescended to go in person, when a guard of his men would have been honour sufficient; and he adds from Aben Ezra that Moses is not said to go out to meet his wife and children, since it was not usual for honourable men so to do. Calvin notes only that the previous verse related what happened last, this transposition being common in Hebrew."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the greeting a lesson in place. Though Moses was a prophet of the Lord, a great prophet, and king in Jeshurun, he showed a very humble respect to his father-in-law: however God is pleased to advance us, we must make conscience of giving honour to whom honour is due, and never look with disdain upon our poor relations, for those that stand high in God's favour are not thereby discharged from the duty they owe to men. Religion does not destroy good manners. Conversation concerning God's wondrous works is profitable conversation, and asking and telling news is capable of being turned to good account by taking notice of God's providence. Jethro rejoiced not only in the honour done his son-in-law but in all the goodness done to Israel — public blessings are the joy of public spirits, and while the Israelites were themselves murmuring here was a Midianite rejoicing, not the only time the faith of the Gentiles shamed the unbelief of the Jews. His confession that the Lord is greater than all gods Henry takes as knowledge he had before but now held better, his faith grown to full assurance on this fresh evidence; and Jethro, hearty in Israel's interests, was cheerfully admitted though a Midianite into fellowship with Moses and the elders, forasmuch as he also was a son of Abraham, though of a younger house."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the three acts as good breeding and politeness accompanied with sincerity — bowing down the general token of respect, the kiss the token of friendship, the enquiry after welfare the proof of affectionate intercourse. On the tent they entered he reports that some understand the tabernacle, and that Moses may have taken his relative first to the house of God before bringing him to his own."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott sets the gestures among the customs of the country. Oriental etiquette required the going forth to meet an honoured guest, as with Abraham and Lot; the obeisance, however, was wholly voluntary, and marks the humility of Moses, who, now that he was the prince of his nation, might well have required Jethro to bow down to him. Kissing is a common form of salutation in the East, even between persons in no way related, and he quotes Herodotus on the Persians, that when they meet in the streets you may know if they are of equal rank by this token, for if they are, instead of speaking they kiss each other on the lips, while if one is a little inferior the kiss is given on the cheek. The asking after welfare he renders literally, that they wished peace to each other."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "documents the kiss of salutation from Herodotus on the Persians, where equals kiss on the lips and a slight inferior on the cheek"
+   }
+  ],
   "themes": [
-   "And Moses went out to meet his father in law, and did obeisance, and kissed him; and they asked each other of their welfare; and they came into the tent",
-   "Moses' respectful welcome of Jethro",
-   "the meekness of the great leader honoring his father-in-law (Exodus 20:12; Numbers 12:3)",
-   "the warm fellowship and hospitality"
+   "the kind greeting between Moses and Jethro",
+   "the narrative of what God had done",
+   "kissing and obeisance as Eastern salutation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses recounting God's deliverance to Jethro: 'and Moses told his father in law all that the LORD had done unto Pharaoh and to the Egyptians for Israel's sake, and all the travail that had come upon them by the way, and how the LORD delivered them' — Moses recounting to Jethro all the LORD had done (the plagues, the Red Sea, the wonders), the hardships (travail) of the way, and the deliverances (the testimony to God's works, Moses ascribing all to the LORD, the rehearsal of the redemption); Moses recounting God's works (the deliverance, the judgments) — the testimony (the glory given to God); 'all the travail that had come upon them by the way, and how the LORD delivered them' (the hardships, the trials of the wilderness, and the deliverances, God's repeated help, the testimony to God's faithfulness, the providence, the rehearsal that moved Jethro to rejoice and bless God, vv.9-11) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses told his father in law all that the LORD had done unto Pharaoh and to the Egyptians for Israel's sake... and how the LORD delivered them",
-   "Moses recounting God's deliverance to Jethro",
-   "the testimony to God's works, the glory given to God",
-   "the rehearsal that moved Jethro to rejoice and bless God (vv.9-11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro rejoicing in God's goodness to Israel: 'and Jethro rejoiced for all the goodness which the LORD had done to Israel, whom he had delivered out of the hand of the Egyptians' — Jethro rejoicing (being glad) at hearing of all God's goodness to Israel (the deliverance, vv.8, the joy of the Gentile priest, rejoicing in God's mercy to his people, the gladness at God's works, the response of faith); Jethro's joy (rejoicing in God's goodness, not envying) — the godly gladness (the sharing in the joy of God's people, Romans 12:15, rejoicing with them that rejoice); 'whom he had delivered out of the hand of the Egyptians' (the deliverance, the cause of the joy, Jethro rejoicing in the redemption, the providence, the Gentile priest glad at God's mercy, a foreshadowing of the Gentiles rejoicing in God's salvation, Romans 15:10) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jethro rejoiced for all the goodness which the LORD had done to Israel, whom he had delivered out of the hand of the Egyptians",
-   "Jethro rejoicing in God's goodness to Israel",
-   "the godly gladness, rejoicing with them that rejoice (Romans 12:15)",
-   "the Gentile priest glad at God's mercy, a foreshadowing of the Gentiles' joy (Romans 15:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro blessing the LORD for the deliverance: 'and Jethro said, Blessed be the LORD, who hath delivered you out of the hand of the Egyptians, and out of the hand of Pharaoh, who hath delivered the people from under the hand of the Egyptians' — Jethro blessing (praising) the LORD for delivering Israel from the Egyptians and Pharaoh (the worship of the Gentile priest, ascribing the glory to the LORD, the blessing of God for the redemption, the response of faith); Jethro's blessing of the LORD (the doxology, the praise of God for the deliverance) — the worship (the glory given to God); 'who hath delivered the people from under the hand of the Egyptians' (the deliverance praised, the redemption of Israel, the providence, the Gentile priest blessing God, a foreshadowing of the nations praising God for his salvation, Psalm 117:1; Romans 15:11) — Calvin, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Jethro said, Blessed be the LORD, who hath delivered you out of the hand of the Egyptians, and out of the hand of Pharaoh",
-   "Jethro blessing the LORD for the deliverance",
-   "the worship of the Gentile priest, the glory given to God",
-   "a foreshadowing of the nations praising God for his salvation (Psalm 117:1; Romans 15:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "range": "8-12",
+  "pericope_label": "Jethro blesses the LORD and offers sacrifice",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Jethro's confession that the LORD is greater than all gods: 'now I know that the LORD is greater than all gods: for in the thing wherein they dealt proudly he was above them' — Jethro's words — 'Now I know that the LORD is greater than all gods': Jethro confessing, on hearing of the deliverance, that the LORD (Jehovah) is greater than all gods (the gods of Egypt, of the nations, the confession of the Gentile priest, owning the supremacy of the true God, perhaps a fuller conversion, or a confirmation of faith, the witnesses noting the confession — the LORD above all the gods, the false gods of Egypt judged, Exodus 12:12, the incomparable God, Exodus 15:11, 'who is like unto thee, O LORD, among the gods?', the knowledge of God by his works, Jethro learning, by the deliverance, the supremacy of the LORD, a foreshadowing of the Gentiles confessing the true God, the nations coming to the light, Isaiah 60:3, the firstfruits of the Gentile confession); the ground of the confession — 'in the thing wherein they dealt proudly he was above them': in the very matter where the Egyptians dealt proudly (the oppression, the drowning of the infants, the pursuit), God being above them (overruling, judging, the proud drowned in the sea they thought to use, Exodus 14:27-28, the just retribution, God paying the proud in their own coin, the Egyptians drowned as they drowned the infants, the proof of God's supremacy, the proud humbled, the LORD exalted); Jethro's 'now I know' — the knowledge of God's supremacy by the deliverance (the confession of faith, the providence, the works of God teaching the knowledge of the LORD, even to the Gentile) — Wesley, JFB, Gill."
+    "summary": "Calvin weighs the confession carefully and finds it genuine but not pure. Although the worship of God was then everywhere profaned by strange additions, Jethro was not so devoted to superstition as to fail to honour the true God, and by the name Jehovah he plainly designates the God of Israel. Yet the comparison he adds, that Jehovah is greater than all gods, implies he was not free from all error: the prophets speak so with a different import, whereas Jethro imagines with the common notion that a multitude of inferior gods are subordinate to the Most High — and where the pure truth of God does not shine, religion is never clear, but always has some dregs mixed with it. Calvin allows him some advance, since in affirming that he now knows the power of God he implies he was more rightly informed than before. On the clause about dealing proudly he observes that the sentence is unfinished, the principal verb wanting to express that God repaid the Egyptians the just wages of their cruelty; the exposition that the Egyptians who drowned the infants were themselves drowned seems to him too limited, and he extends the clause to every punishment they received. On the sacrifice he holds the meal proves the offering lawful, since the elders came not merely to eat bread with Jethro but before God, and would never have polluted themselves to gratify an unholy man; but he denies Jethro slew the victims in right of his Midianite priesthood, holding rather that there was more liberty before the law was given, and says that by bread the manna is incontestably meant. Gill sees behind the idols the evil demons who influenced the magicians."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is firmer than Calvin about Jethro's standing: some think he was now converted, but he probably had this blessing before he knew anything of Moses, who would not likely have married into a heathen family. He takes the pride of the Egyptians to be their tyranny in enslaving God's people while purposing yet more, and God above them in showing himself superior to their gods by the miracles he wrought. Having Jethro a priest by right, he takes the burnt offering as presumptive evidence that the tabernacle was already erected, since before God means before the place where God dwelt. Wesley reads the confession of princes as well as gods, and notes only that they ate soberly and thankfully, their talk such as became saints."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott narrows the clause about dealing proudly to the matter in which the Egyptians dealt most proudly — pursuing Israel with an army after giving them leave to depart, and attempting to recapture or destroy them. On the sacrifice he says Jethro had brought the victims with him and now offered them in thankfulness for God's mercies to himself and his kinsman, occupying a position like Melchizedek's, a priesthood of the most primitive character, probably as patriarch of his tribe; and as Abraham rightly acknowledged Melchizedek's priesthood, so Moses and Aaron acknowledged Jethro's, indicating their acceptance of it by sharing the sacrificial meal which followed."
    }
   ],
   "debates": [
    {
-    "question": "What does Jethro's confession display?",
-    "sides": [
+    "question": "What is meant by the clause, wherein they dealt proudly, he was above them?",
+    "positions": [
      {
-      "position": "The Gentile priest owning the supremacy of the true God, learned by the deliverance (Exodus 12:12; 15:11) - the false gods of Egypt judged, the just retribution where the proud were humbled in their own pride (Exodus 14:27-28); a foreshadowing of the Gentiles confessing the true God (Isaiah 60:3)",
+      "position": "every instance of punishment the Egyptians received, not merely a drowning for a drowning",
       "holders": [
-       "Wesley",
-       "JFB",
-       "Gill",
-       "the reformed reading"
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "specifically the pursuit with an army after Israel had been given leave to depart",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "their tyranny in enslaving God’s people while purposing yet more",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "By what right did Jethro offer the sacrifice?",
+    "positions": [
+     {
+      "position": "by a primitive priesthood like Melchizedek’s, held as patriarch of his tribe",
+      "holders": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "not by his Midianite priesthood, but by the greater liberty that obtained before the law was given",
+      "holders": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Now I know that the LORD is greater than all gods: for in the thing wherein they dealt proudly he was above them",
-   "Jethro's confession that the LORD is greater than all gods",
-   "the Gentile priest owning the supremacy of the true God (Exodus 12:12; 15:11)",
-   "the just retribution where the proud were humbled in their own pride (Exodus 14:27-28); a foreshadowing of the Gentiles' confession (Isaiah 60:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro's sacrifice and the fellowship meal: 'and Jethro, Moses' father in law, took a burnt offering and sacrifices for God: and Aaron came, and all the elders of Israel, to eat bread with Moses' father in law before God' — Jethro offering a burnt offering and sacrifices to God (an act of worship and thanksgiving for the deliverance, the worship of the Gentile priest, offering to the true God, the sacrifice of praise, the confession in act, the worship following the confession, v.11); Jethro's offering (the burnt offering, the sacrifices) — the worship of God (the thanksgiving for the deliverance, the priest of Midian offering to Jehovah); 'Aaron came, and all the elders of Israel, to eat bread with Moses' father in law before God' (the fellowship meal, Aaron and the elders eating with Jethro, the sacrificial feast, before God, the communion, the people joined in worship and fellowship with the Gentile priest, the providence, the fellowship a foreshadowing of the Gentiles joined to Israel in the worship of God, the one table, Ephesians 2:11-19, a type of the gospel feast, Jew and Gentile together) — Ellicott, Gill, Calvin, Wesley."
+    "voice": "Calvin",
+    "note": "grants Jethro a true confession but not a pure one, since he still imagines a multitude of inferior gods subordinate to the Most High"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And Jethro, Moses' father in law, took a burnt offering and sacrifices for God: and Aaron came, and all the elders of Israel, to eat bread with Moses' father in law before God",
-   "Jethro's sacrifice and the fellowship meal",
-   "the worship of the Gentile priest, the sacrifice of praise",
-   "the fellowship of Jew and Gentile, a foreshadowing of the gospel feast (Ephesians 2:11-19)"
+   "Jethro blesses the LORD and confesses him greater than all gods",
+   "wherein they dealt proudly",
+   "the sacrifice and the priesthood of Jethro"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "13": {
   "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
    "John Gill",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses judging the people alone all day: 'and it came to pass on the morrow, that Moses sat to judge the people: and the people stood by Moses from the morning unto the evening' — Moses sitting as judge over the people, hearing their causes and disputes, the people standing before him from morning to evening (the great burden of the cases, the sole judge, Moses alone bearing the whole weight, vv.14, the toil of the office); the great burden (the people waiting all day, the cases endless) — the overload (Moses alone unable to bear it, v.18, the toil of the sole judge); Moses judging (settling disputes, teaching the statutes, vv.15-16) — the labor of governing the people (the sole burden, that Jethro would counsel him to share, vv.17-23, the providence, the occasion of the appointing of judges, the ordering of the government) — Keil and Delitzsch, Henry, Calvin, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And it came to pass on the morrow, that Moses sat to judge the people: and the people stood by Moses from the morning unto the evening",
-   "Moses judging the people alone all day",
-   "the great burden on Moses alone (vv.14, 18)",
-   "the occasion of Jethro's counsel and the appointing of judges (vv.17-23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro questioning Moses' burden: 'and when Moses' father in law saw all that he did to the people, he said, What is this thing that thou doest to the people? why sittest thou thyself alone, and all the people stand by thee from morning unto even?' — Jethro, observing Moses judging alone all day, questioning the arrangement (the wise observation, seeing the burden on Moses, and the people's waiting, the concern, the toil unsustainable, the prelude to the counsel, vv.17-23); Jethro's question (why Moses alone, the burden too great) — the wisdom of the observation (the concern for Moses and the people); 'all the people stand by thee from morning unto even' (the people waiting all day, the cases endless, the delay, the toil, on Moses and the people, the providence, the observation that led to the counsel, the appointing of judges, vv.21-23) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And when Moses' father in law saw all that he did to the people, he said, What is this thing that thou doest to the people? why sittest thou thyself alone...",
-   "Jethro questioning Moses' burden",
-   "the wise observation of the unsustainable toil",
-   "the prelude to the counsel and the appointing of judges (vv.17-23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses explaining that the people seek God's will through him: 'and Moses said unto his father in law, Because the people come unto me to enquire of God' — Moses explaining that the people came to him to enquire of God (to know God's will, to have their causes decided by God's law and judgment, the office, Moses the mediator, the people seeking God's mind through him, the reason for the throng, the people's resort to God through Moses); the people coming (to Moses, as God's representative) — the resort to the mediator (the seeking of God's will); 'to enquire of God' (the people seeking God's will, through Moses, the mediator, the prophet, the judging by God's law, the causes decided by the divine statutes, v.16, the providence, Moses the channel of God's will, a type of Christ the Mediator, through whom we enquire of God, Hebrews 7:25) — Wesley, Gill, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses said unto his father in law, Because the people come unto me to enquire of God",
-   "Moses explaining that the people seek God's will through him",
-   "Moses the mediator, the channel of God's will",
-   "a type of Christ the Mediator, through whom we enquire of God (Hebrews 7:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses judging and teaching God's statutes: 'when they have a matter, they come unto me; and I judge between one and another, and I do make them know the statutes of God, and his laws' — Moses describing his work: judging between disputants (settling causes) and teaching the people the statutes and laws of God (the double office, judge and teacher, the labor, the whole burden of justice and instruction on Moses, the ground of the throng); Moses judging disputes (deciding causes by God's law) — the office of the judge (the settling of differences); 'I do make them know the statutes of God, and his laws' (Moses teaching God's statutes, instructing the people in the law, the office of the teacher, the people taught God's will, the providence, the double burden, judging and teaching, that Jethro would counsel him to share, vv.21-22) — Wesley, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "When they have a matter, they come unto me; and I judge between one and another, and I do make them know the statutes of God, and his laws",
-   "Moses judging and teaching God's statutes",
-   "the double office of judge and teacher",
-   "the whole burden, that Jethro would counsel him to share (vv.21-22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro's frank counsel that the burden was not good: 'and Moses' father in law said unto him, The thing that thou doest is not good' — Jethro frankly telling Moses that the arrangement (Moses judging alone) was 'not good' (not wise, not sustainable, the candid counsel, the father-in-law's wise concern, the rebuke of the impractical method, the burden too great, vv.18, the prelude to the better plan, vv.19-23); Jethro's frankness (telling Moses plainly the method was faulty) — the wise, loving candor (the counsel of a friend, faithful are the wounds of a friend, Proverbs 27:6); Jethro's word ('not good') — the wisdom of the counsel (the burden unsustainable, vv.18, Moses' meekness in receiving it, v.24, the providence, the wise counsel, even from a Gentile, accepted by Moses, the ordering of the government) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses' father in law said unto him, The thing that thou doest is not good",
-   "Jethro's frank counsel that the burden was not good",
-   "the faithful, loving candor of a friend (Proverbs 27:6)",
-   "the prelude to the better plan (vv.19-23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The burden too heavy for Moses alone: 'thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone' — Jethro warning that Moses (and the people) would 'wear away' (be worn out, exhausted) by the burden (the toil unsustainable, too heavy for one man, the people too, wearied by the delay, the impossibility of the sole office, Moses unable to bear it alone, Numbers 11:14, 'I am not able to bear all this people alone'); the wearing-out (of Moses and the people, by the burden) — the toil unsustainable (the need of help); 'this thing is too heavy for thee; thou art not able to perform it thyself alone' (the burden beyond one man, Numbers 11:14, the need of the shared office, vv.21-22, the lesson, the wisdom of sharing the load, the delegation of labor, no one man able to do all) — Gill, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou wilt surely wear away, both thou, and this people that is with thee: for this thing is too heavy for thee; thou art not able to perform it thyself alone",
-   "the burden too heavy for Moses alone",
-   "the toil unsustainable, beyond one man (Numbers 11:14)",
-   "the need of the shared office and delegation of labor (vv.21-22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro's counsel for Moses to be the people's representative to God: 'hearken now unto my voice, I will give thee counsel, and God shall be with thee: Be thou for the people to God-ward, that thou mayest bring the causes unto God' — Jethro offering his counsel, with the modest qualification 'and God shall be with thee' (so far as God approve, the counsel subject to God's will, v.23, the wise, humble advice, the deference to God, the counsel not against God's mind, but for the ordering of the government); Moses to 'be for the people to God-ward' (the people's representative before God, the mediator) — Moses to retain the great office (the mediator, bringing the people's causes to God, the chief work, the mediation, kept by Moses); 'that thou mayest bring the causes unto God' (Moses to bring the people's causes to God, the hard cases, the great matters, v.22, 26, the mediator's office retained, Moses the channel to God, the providence, Moses keeping the mediation, the lesser cases shared, vv.21-22, a type of Christ the Mediator, bringing his people's causes to God, Hebrews 7:25) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hearken now unto my voice, I will give thee counsel, and God shall be with thee: Be thou for the people to God-ward, that thou mayest bring the causes unto God",
-   "Jethro's counsel for Moses to be the people's representative to God",
-   "Moses keeping the great office of mediation, bringing the causes to God",
-   "a type of Christ the Mediator (Hebrews 7:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses to teach the people God's ways: 'and thou shalt teach them ordinances and laws, and shalt shew them the way wherein they must walk, and the work that they must do' — Jethro counseling that Moses should teach the people God's ordinances and laws, showing them the way to walk and the work to do (the office of the teacher, Moses to instruct the people in God's will, the chief work, the teaching and mediation kept by Moses, the lesser cases shared, the instruction of the people); Moses teaching God's ordinances and laws (instructing the people) — the office of the teacher (the people taught God's will); 'shalt shew them the way wherein they must walk, and the work that they must do' (Moses showing the people the way and the work, the practical instruction, how to live and what to do, the guidance in God's ways, Psalm 32:8; Micah 6:8, the providence, Moses the teacher of the people, a type of Christ, the teacher and way, John 14:6) — Clarke, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And thou shalt teach them ordinances and laws, and shalt shew them the way wherein they must walk, and the work that they must do",
-   "Moses to teach the people God's ways",
-   "the office of the teacher, instructing the people in God's will",
-   "showing the way to walk (Micah 6:8), a type of Christ the teacher and way (John 14:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
+  "range": "13",
+  "pericope_label": "Moses sits to judge the people from morning to evening",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The qualifications of the rulers: 'moreover thou shalt provide out of all the people able men, such as fear God, men of truth, hating covetousness; and place such over them, to be rulers of thousands, and rulers of hundreds, rulers of fifties, and rulers of tens' — the four marks — 'able men, such as fear God, men of truth, hating covetousness': Jethro counseling Moses to choose, for rulers and judges, men marked by four qualifications: (1) 'able men' (men of ability, capacity, courage, wisdom, fit for the office); (2) 'such as fear God' (the fear of God the root of righteous judgment, men who reverence God and so will judge justly, 2 Samuel 23:3, 'he that ruleth over men must be just, ruling in the fear of God'); (3) 'men of truth' (honest, faithful, truthful men, not liars or flatterers); (4) 'hating covetousness' (hating bribes and unjust gain, not to be bought, Deuteronomy 16:19, 'a gift doth blind the eyes of the wise'); the witnesses noting these as the abiding qualifications of all who rule and judge (in church and state) — ability, piety, integrity, and freedom from greed, the model for the choice of rulers, elders, and officers (the like qualifications, Deuteronomy 1:13; Acts 6:3, 'men of honest report, full of the Holy Ghost and wisdom'; 1 Timothy 3:1-7; Titus 1:5-9, the elder not greedy of filthy lucre, the standard for godly government); the graded order (rulers of thousands, hundreds, fifties, tens — a hierarchy of judges, the cases rising from the lower to the higher) — the orderly government (the delegation, the shared office, the wisdom of the arrangement, the lesser cases to the lower, the harder to Moses, v.22) — Calvin, Wesley, Gill, Ellicott."
+    "summary": "Calvin thinks the passage memorable because the fault is found in so good a man. In a government over which God presided, and which He honoured with extraordinary manifestations of His glory, there was something deserving reprehension, and Moses, with whom alone God was thus familiar, was deservedly reproved for wearing away both himself and the people by excessive labour. It was a magnanimity never sufficiently praised that he should occupy himself gratuitously for this perverse people though assailed by reproaches; yet Jethro finds occasion of fault in these very praises. Whence we are warned that in the most excellent acts of men some defect is ever lurking: let all, whether kings or magistrates or pastors, know that while they strain every nerve to fulfil their duties, something will always remain which may admit of correction. No single mortal can be sufficient to do everything — for who shall equal Moses, and he was unequal to the burden. As one ray of the sun does not illuminate the world but all combine as one, so God, that He may retain men in mutual society, unites one to another by variously dispensing His gifts, and raises up none out of measure by entire perfection; and Calvin ends with Augustine, that God humbled His servant by this act, as Paul was buffeted lest his revelations exalt him. Gill notes the Targum's dating of the morrow to the day after the atonement, preferring the day after Jethro came."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the day as a display of zeal. Having been employed to redeem Israel out of bondage, Moses is here a further type of Christ in being lawgiver and judge among them: his business was not to make laws but to make known God's, his place being that of a servant. Henry marks four things that might have excused him and did not — his father-in-law's presence, pretext enough for a vacation, though necessary business must take place of ceremonious attentions; his advancement to great honour, which did not tempt him to throw the burden of care upon others, since those think of themselves above what is meet who think it below them to do good; the people's readiness to stone him, though he still made himself the servant of all; and his age, though he kept to it from morning to night, proof that after all his labours his natural force was not diminished."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says only that Moses heard and determined controversies, obliged to sit all day while the people were continually coming and going; Wesley, that he sat to answer enquiries and explain the laws already given."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott sets the scene in the institutions of the age. The office of prince or ruler was in early times regarded as including that of judge; rulers were sometimes even called judges, as were those of Israel from Joshua to Samuel, and ability to judge marked a person out as fit for the kingly office. Moses had from the first undertaken the hearing of all complaints, holding court days when the host was stationary, and no cause was decided by anyone else — either because it had not occurred to him to discharge the duty by deputy, or because he thought his countrymen unfit. That the people stood by him all day shows the causes either very many or very hard, and some have suggested that the division of the Amalekite spoil would have led to disputes. Keil adds that the people came to seek God, that is, to ask a decision from Him, and that by deciding the cases Moses made known the ordinances and laws of God, for every decision rested on some law, which, like all true justice, emanated first from God."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Calvin",
+    "note": "turns the episode into a warning against taking on too much, since God dispenses gifts variously and raises up none out of measure by entire perfection"
+   }
+  ],
+  "themes": [
+   "Moses sits alone to judge from morning to evening",
+   "the fault that lurks in the most excellent acts",
+   "judging as the ancient office of the ruler"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ },
+ "14": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "14-18",
+  "pericope_label": "Jethro objects: the thing that thou doest is not good",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin gathers a doctrine of magistracy out of Moses's answer. Moses replies ingenuously, like one unconscious of any fault, declaring himself the minister of God and the organ of His Spirit; his faithfulness could not be called in question, for he erred only in overwhelming himself with labour. Yet since he says that disputants come to inquire of God, and that he makes them know the statutes of God and His laws, it follows that this is the object of political government, that God's tribunal should be erected on earth, wherein He may exercise the judge's office — to the end that magistrates should not arrogate a power uncontrolled by any laws, nor assume what belongs to God. Then, and then only, will they acquit themselves properly: when they remember that they are the representatives of God. An obligation lies on private individuals too, that they should not rashly appeal to the authority of judges but approach them with pure hearts, as if inquiring of God. On the reproof itself Calvin admires Jethro's moderation: he does not condemn the whole system, after the fashion of morose or ambitious men who by carping at some trifle obscure the noble deeds of others, but by correcting only a part detracts nothing from the just praise of Moses. Gill, following Aben Ezra, distinguishes the two things Moses did — teaching them the mind of God, and deciding causes — and hears in the warning about wearing away an allusion to the leaves of trees in autumn, which fade and wither and fall."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the first of Moses's offices as mediation, since the people came to him to know what God had spoken, and finds in the phrasing about the statutes another argument for his chronology, the words being so particular that they leave little room for doubt the law had already been given. On the warning he renders the doubled Hebrew verb as in wearing away thou wilt wear away, so that Moses would soon become finally exhausted, and the people with him, since many wait so long that their patience must necessarily be worn out. Wesley remarks of the second office that if the people were as quarrelsome with one another as with God, Moses had many causes before him, the more because their trials put them to no expense; and he compresses Jethro's verdict to a phrase — not good, that is, not convenient either for him or for them."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott says the emphatic word in Jethro's question is alone, and states Moses's two arguments more fully than Moses does: the people want decisions which they can feel to have divine sanction, and the ruling of inferior judges would not be regarded as equally authoritative; and Moses does not simply decide the question brought before him, but takes the opportunity to instruct the people in delivering his judgments, expounding principles and teaching morality. Both reasons were clearly of great weight, yet they failed to convince Jethro, who answered that Moses would exhaust both his own strength and the patience of the people, since to keep suitors waiting all day and perhaps dismiss them untried was not fair upon them."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Ellicott",
+    "note": "reconstructs the two arguments for Moses's practice — that the people wanted decisions felt to carry divine sanction, and that he taught while he judged"
+   }
+  ],
+  "themes": [
+   "why sittest thou thyself alone",
+   "the magistrate as the representative of God",
+   "thou wilt surely wear away"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
+  }
+ },
+ "19": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley"
+  ],
+  "range": "19-23",
+  "pericope_label": "Jethro's counsel: able men as rulers of thousands",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin insists that Jethro does not rob Moses of his authority so as to overturn his call from God, but by exhorting him to proceed desires that what God has ordained should remain inviolable. On the choice of judges he says the word rendered provide means to choose out and take the most worthy, so that such an office be not entrusted rashly to any that offers; and among a free people judges should be chosen not for wealth or rank but for superiority in virtue. Jethro enumerates four qualifications — ability in business, the fear of God, integrity, and contempt of riches — not to exclude the others named in Deuteronomy, but to signify that extraordinary virtues are wanted. The Hebrew men of might some take for strong and laborious men capable of bearing fatigue, but in Calvin's opinion Moses designates rather strenuous and courageous persons, opposed to the timid as well as the inactive; piety comes second because vigour of mind and body alike is frail without the fear of God; truth is opposed not only to gross falsehood but to popularity-hunting and flattery; and hatred of covetousness is demanded because nothing is more antagonistic to justice than eagerness for gain. He reads the arrangement as provisional, Jethro having no wish to establish a law for posterity but pointing out a remedy until the people should obtain a peaceful resting-place, and takes the clause about God commanding as a self-correction, since Jethro would have nothing conceded to him which derogates from God's authority. Gill observes that Jethro, as the elder man and a prince of Midian, might counsel a younger man without censure."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks Jethro a man of great understanding whose advice was probably given under the immediate inspiration of God, since after such sacrificial rites the prophetic spirit might well be expected to rest upon him; God could have shown Moses the necessity directly, but chose in this case to help man by man, and so laid a permanent basis for the union of the two families. He traces the ladder of appeal upward past Moses to God, and reports that some rabbins reckoned seventy-eight thousand six hundred officers in all — such computations, he says, are fanciful, since we cannot tell how many of each division there were. Wesley puts the qualifications more briskly: clear heads and stout hearts make good judges."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott renders the clause about God's presence as a wish — may God be with thee, may He give thee wisdom to direct the course aright — and reads the charge as an instruction to remain representative of the people towards God and of God towards the people, taking difficult causes to Him and expounding His laws. He finds the organisation unsurprising: in Egypt, as in all settled governments, the king was the fountain of justice but delegated the hearing of causes to officials of different ranks, and in Arabia a similar practice prevailed, Jethro himself having subordinates who judged small matters. His advice was simply that Moses adopt this established system, on a decimal organisation which may already have existed for the march and the encamping, with appeal from the ruler of ten upward to the ruler of a thousand. The judges were to sit not on occasional court days but continually, and it must have been left to them to decide what were great and what small matters; when the wilderness life ended, Jethro's system ended with it. Of the qualifications Ellicott notes that the last two would approve themselves to men of all times and countries, while the first would generally be deemed superfluous, though it lies at the root of all excellence of character."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Clarke",
+    "note": "dismisses as fanciful the rabbinic and Josephan computations of the number of officers, since the divisions are known but not their multiples"
+   }
+  ],
+  "themes": [
+   "be thou for the people to God-ward",
+   "the qualifications of a judge",
+   "rulers of thousands, hundreds, fifties and tens"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ },
+ "24": {
+  "voices": [
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "24-27",
+  "pericope_label": "Moses takes the counsel, and Jethro departs",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin finds the submission remarkable. Here is an instance of modesty, that Moses is not indisposed to submit to the counsel of his father-in-law; for although Jethro was his superior in age and affinity, in other respects he was far inferior to him. This yielding lays down a rule for all the greatest doctors, that they should not refuse the admonitions of those whom they admit to teach rightly, although they are not of such high dignity — for Cyprian truly declares that none is a good doctor who is not also docile. Gill says Moses weighed the advice well and judged it good, resolving to follow it when he had received directions from God; he notices that though only the first of Jethro's qualifications is named in the record of the choice, no doubt all were attended to, and that the new judges sat any day in the week and any time in the day. He reports the Targum's note that Jethro went to proselytise the children of his own country."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the departure into a meditation on Moses himself. If this be the same transaction related in Numbers, it was with great reluctance that Moses let so able a counsellor go, pressing him to stay and be instead of eyes to them in the desert; but Jethro chose rather to return to his own country, where his family were probably too settled to be removed — many others might be eyes to the Hebrews in the desert, but no man could be a father to his family but himself, and though it is well to labour for the public good, our own families are the first claimants on our care and time. It is strange, he adds, that after this we hear no more of Zipporah, forgotten merely because she was the wife of Moses, who chose to conduct himself so that to the remotest ages there should be proofs of his disinterestedness: while multitudes of the families of Israel are celebrated and dignified, his own he writes in the dust, and he made no provision even for Gershom and Eliezer, whose families were incorporated with the Levites. No history, Clarke concludes, has produced a parallel to this disinterestedness, and the one consideration is sufficient to refute every charge of imposture brought against him and his laws. Wesley draws the moral of the submission: those are not so wise as they would be thought to be who think themselves too wise to be counselled, for a wise man will hear and will increase learning, and not slight good counsel though given by an inferior; and he notes that the Kenites are supposed to be Jethro's posterity, taken afterwards under special protection for the kindness their ancestor showed Israel."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil looks at the shape of the arrangement. The judges chosen were made chiefs over thousands, hundreds, fifties and tens, after the analogy of the military organisation on the march, but so that the arrangement was linked to the natural division of the people into tribes and families. That the decimal division was not made arbitrarily according to the number of heads is evident on two grounds: the judges were chosen from the heads of the tribes and according to their tribes; and the larger divisions of the tribes, the families, were themselves called thousands, because the number of their heads of families would generally average about a thousand — so that in all probability the hundreds and fifties and tens denote smaller natural divisions rather than counted groups. Ellicott takes the dismissal as evidence against a common identification: the supposed identity of Hobab with Jethro seems precluded by it, for Hobab clearly remained till the close of the stay at Sinai, and Moses, instead of dismissing him, was most unwilling that he should depart."
    }
   ],
   "debates": [
    {
-    "question": "What are the qualifications of the godly ruler and judge?",
-    "sides": [
+    "question": "Is Hobab the same person as Jethro?",
+    "positions": [
      {
-      "position": "Four marks - able men (capacity, wisdom), such as fear God (the root of righteous judgment, 2 Samuel 23:3), men of truth (honest, faithful), hating covetousness (not to be bribed, Deuteronomy 16:19); the abiding qualifications for officers in church and state (Deuteronomy 1:13; Acts 6:3; 1 Timothy 3:1-7)",
+      "position": "no; Moses dismissed Jethro here, whereas he was most unwilling that Hobab should depart, and Hobab remained till the close of the stay at Sinai",
       "holders": [
-       "Calvin",
-       "Gill",
-       "Ellicott",
-       "the reformed reading"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the two accounts are of one transaction, in which Moses pressed his father-in-law to stay and be instead of eyes to them",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Moreover thou shalt provide out of all the people able men, such as fear God, men of truth, hating covetousness; and place such over them, to be rulers of thousands...",
-   "the qualifications of the rulers (the crux of the godly judge)",
-   "four marks - able, fearing God, men of truth, hating covetousness (2 Samuel 23:3; Deuteronomy 16:19)",
-   "the abiding model for the choice of officers in church and state (Deuteronomy 1:13; Acts 6:3; 1 Timothy 3:1-7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sharing of the burden among the judges: 'and let them judge the people at all seasons: and it shall be, that every great matter they shall bring unto thee, but every small matter they shall judge: so shall it be easier for thyself, and they shall bear the burden with thee' — the appointed judges to judge the people at all times, deciding the small matters themselves and bringing the great matters to Moses (the shared burden, the lesser cases to the judges, the harder to Moses, the relief of Moses, the load lightened, the orderly government); the division (small cases to the judges, great to Moses) — the orderly arrangement (the graded jurisdiction); 'so shall it be easier for thyself, and they shall bear the burden with thee' (the burden shared, eased for Moses, borne by the judges with him, the wisdom of delegation, the load divided, Numbers 11:17, the Spirit on the seventy, the providence, the relief of Moses, the better government) — Ellicott, Gill, Calvin."
+    "voice": "Clarke",
+    "note": "reads the silence about Zipporah and the sons as evidence of Moses's disinterestedness, since he writes his own family in the dust while dignifying the rest of Israel"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And let them judge the people at all seasons: and it shall be, that every great matter they shall bring unto thee, but every small matter they shall judge: so shall it be easier for thyself, and they shall bear the burden with thee",
-   "the sharing of the burden among the judges",
-   "the wisdom of delegation, the load divided (Numbers 11:17)",
-   "the relief of Moses, the better government"
+   "Moses hearkens to the voice of his father-in-law",
+   "the decimal organisation and the tribes",
+   "Jethro returns to his own land"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro's plan submitted to God's command: 'if thou shalt do this thing, and God command thee so, then thou shalt be able to endure, and all this people shall also go to their place in peace' — Jethro submitting his counsel to God's command ('and God command thee so') — the plan to be followed only if God approved it (the humble deference, the counsel subject to God's will, not imposed, the wise modesty, Jethro not presuming above God); Jethro's deference ('if God command thee so') — the counsel subject to God's approval (the wisdom of submitting the plan to God, the providence, God indeed approving, Numbers 11:16-17; Deuteronomy 1:9-18, the humble counsel); 'then thou shalt be able to endure, and all this people shall also go to their place in peace' (the double benefit, Moses able to endure, not worn out, v.18, the people going home in peace, their causes settled without delay, the wisdom of the plan, the relief of Moses, the satisfaction of the people, the providence, the ordering of the government for the good of all) — Ellicott, Gill, Calvin."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If thou shalt do this thing, and God command thee so, then thou shalt be able to endure, and all this people shall also go to their place in peace",
-   "Jethro's plan submitted to God's command",
-   "the humble deference - the counsel subject to God's will (Deuteronomy 1:9-18)",
-   "the double benefit - the relief of Moses, the peace of the people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses humbly receiving Jethro's counsel: 'so Moses hearkened to the voice of his father in law, and did all that he had said' — Moses, the great leader, humbly receiving the counsel of his father-in-law and doing all he advised (the meekness of Moses, Numbers 12:3, 'the man Moses was very meek' — the great prophet learning from the Gentile priest, the wisdom of receiving good counsel, whoever the counsellor, the humility of the leader); Moses' hearkening (humbly receiving the advice) — the meekness (the great man not despising the counsel of his inferior, the lesson, the wisdom of receiving good counsel, even from the lowly, Proverbs 12:15, 'he that hearkeneth unto counsel is wise'); 'and did all that he had said' (Moses doing all the counsel, the full compliance, the wisdom in practice, the plan carried out, vv.25-26, the providence, the good counsel followed, the government ordered, God confirming the plan, Numbers 11:16-17; Deuteronomy 1:9-18) — Calvin, Wesley, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So Moses hearkened to the voice of his father in law, and did all that he had said",
-   "Moses humbly receiving Jethro's counsel",
-   "the meekness of the great leader (Numbers 12:3)",
-   "the wisdom of receiving good counsel, even from the lowly (Proverbs 12:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses appointing the rulers as counseled: 'and Moses chose able men out of all Israel, and made them heads over the people, rulers of thousands, rulers of hundreds, rulers of fifties, and rulers of tens' — Moses choosing able men (the qualified, v.21) and setting them as rulers over the graded divisions (thousands, hundreds, fifties, tens, the carrying-out of the counsel, the plan put into effect, the ordering of the government, the judges appointed, the burden shared, the wisdom in practice); Moses choosing the able men (the qualified, v.21, the choice ratified by the people, Deuteronomy 1:13) — the appointment of the judges; 'rulers of thousands, rulers of hundreds, rulers of fifties, and rulers of tens' (the graded order, the hierarchy of judges, vv.21-22, the orderly government, the providence, the burden shared, the relief of Moses, the better order) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses chose able men out of all Israel, and made them heads over the people, rulers of thousands, rulers of hundreds, rulers of fifties, and rulers of tens",
-   "Moses appointing the rulers as counseled",
-   "the plan carried out, the judges appointed (v.21; Deuteronomy 1:13)",
-   "the burden shared, the government ordered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The judges judging while Moses kept the hard cases: 'and they judged the people at all seasons: the hard causes they brought unto Moses, but every small matter they judged themselves' — the appointed judges judging the people at all times, bringing the hard cases to Moses and deciding the small matters themselves (the order working, the plan in effect, vv.22, the shared burden, the lesser cases to the judges, the harder to Moses, the relief of Moses); the hard cases to Moses (the great matters reserved for the chief, vv.22) — the graded jurisdiction (the order maintained); 'every small matter they judged themselves' (the small cases decided by the judges, the burden shared, the relief of Moses, the load divided, vv.22, the providence, the orderly government, the wisdom of the plan working) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they judged the people at all seasons: the hard causes they brought unto Moses, but every small matter they judged themselves",
-   "the judges judging while Moses kept the hard cases",
-   "the plan working, the graded jurisdiction (v.22)",
-   "the burden shared, the orderly government"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jethro departing to his own land: 'and Moses let his father in law depart; and he went his way into his own land' — Moses sending Jethro away (letting him depart), and Jethro returning to his own land (Midian, the parting, after the visit, the worship, the counsel, the return of the Gentile priest, Numbers 10:29-32, the later invitation, the Kenites, his descendants, dwelling with Israel, Judges 1:16, the close of the visit); Moses sending Jethro away (with honor, after the visit) — the parting (the close of the fellowship); 'he went his way into his own land' (Jethro returning to Midian, his own land, the providence, the Gentile priest who had worshipped and counseled now departing, the Kenites later joined to Israel, Judges 1:16; 1 Samuel 15:6, the kindness to the descendants of Jethro, the close of the episode before the giving of the law, ch. 19) — Ellicott, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Moses let his father in law depart; and he went his way into his own land",
-   "Jethro departing to his own land",
-   "the honorable parting after the visit, worship, and counsel",
-   "the Kenites, his descendants, later joined to Israel (Judges 1:16); before the giving of the law (ch. 19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
