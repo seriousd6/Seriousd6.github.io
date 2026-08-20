@@ -2,1078 +2,714 @@
  "1": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'the apostles and brethren in Judea' (the twelve and the members of the churches, now more than one) heard of Cornelius's conversion; the momentous event — the Gentiles (the uncircumcised, wholly outside the covenant), not Jews or Samaritans only, receiving the word, the middle wall beginning to fall (Ephesians 2:14); the news exciting interest and objection (the Jewish prejudice making it controversial), the providence bringing the question of the Gentiles' admission before the church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Gentiles had also received the word of God",
-   "news reaching Judea",
-   "the enlargement of the church",
-   "the momentous report"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
   ],
+  "range": "1-3",
+  "pericope_label": "News reaches Jerusalem, and Peter is called to account",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": [
+     "Clarke"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the circumcision party contending with Peter (disputing, reproving, charging him with fault) shows conclusively that the early church did not regard Peter as having any supremacy — they would not have freely reproved the head of the church (a witness against later claims of his primacy); the objection over his going to the uncircumcised (the deep Jewish prejudice against fellowship with Gentiles), the matter settled by evidence not decree, the dispute drawing out the truth's confirmation."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the contention with Peter bear on his supposed supremacy?",
-    "sides": [
-     {
-      "position": "Yes — the free reproof shows the early church did not regard Peter as supreme or infallible",
-      "holders": [
-       "Barnes"
-      ]
-     }
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Who those of the circumcision were: Calvin argues they cannot be simply the Jews, since all the disciples at Jerusalem were circumcised, and takes them for men who allowed no place in the kingdom to any who had not professed the law; Robertson reports a scholar who confines the phrase to the six brethren who accompanied Peter, rejects that, and reads it as Luke anticipating the later controversy",
+   "What the objection actually was: Robertson holds that they did not object to the preaching but to the entering of the house and the eating, while Ellicott takes the charge as resting on ceremonial uncleanness"
+  ],
+  "outliers": [
+   "The agreement of Barnes, Clarke, Robertson and Henry that Peter's being called to account is itself decisive against any supremacy claimed for him, since men who thought him infallible head of the church would have submitted at once",
+   "Calvin's observation that the thing complained of was not forbidden by the law of God but was a tradition from the fathers, and that Peter does not say so but submits himself to the judgment of the church as one of the flock",
+   "Clarke's report of a long addition in one manuscript, which has Peter travelling towards Jerusalem for some time, confirming the brethren and speaking of the grace of God, before the dispute opens"
+  ],
   "themes": [
-   "they that were of the circumcision contended with him",
-   "Peter not regarded as supreme",
-   "the Jewish prejudice",
-   "settled by evidence"
+   "the calling of the Gentiles",
+   "Peter and the primacy",
+   "the circumcision party",
+   "table fellowship",
+   "tradition and law"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: in a Jew, eating with the uncircumcised was no small offense — held a positive transgression of the law and custom of separation, and the circumcision party (not knowing Peter's reason) reasonably called him to account; Gill: Peter went into their houses, lodged, conversed, ate with them; the depth of the Jewish prejudice (the separation a defilement in their eyes), the barrier the gospel had to break to embrace the Gentiles, the breach of the old separation the opening of the new fellowship (what God had cleansed, v.9)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou wentest in to men uncircumcised",
-   "didst eat with them",
-   "the breach of Jewish separation",
-   "the barrier the gospel broke"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Peter rehearsed the matter from the beginning in order — a simple, unvarnished statement of facts the best way to disarm prejudice and silence opposition (which arises from prejudice or false report, removed not by angry contention but by a plain relation of facts); the meekness of Peter (an apostle answering the reproof humbly, not standing on authority — a pattern against his supposed supremacy); the right way to meet opposition (calm, orderly truth, not heat or pride), vindicated by its success (v.18)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter rehearsed the matter from the beginning",
-   "expounded it by order",
-   "disarming prejudice by plain facts",
-   "meekness, not anger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "4-15",
+  "pericope_label": "Peter rehearses the vision, the messengers, and the household",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott/Robertson: Peter's retelling adds touches of vivid personal recollection (the sheet coming 'even to me,' a detail not in Acts 10:11) — the eyewitness recalling the scene; Wesley: the trance suspends the outward senses; Peter begins his account with the vision at Joppa (granted in prayer) — the great sheet from heaven, the divine preparation for the Gentile mission; grounding the whole proceeding in God's revelation (not his own choice), the divine origin the warrant for the mission."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the narrative is repeated almost verbatim: Ellicott grants the difficulty and explains it by supposing Luke had the two accounts from two different sets of informants, whose agreement he took for confirmation, while Robertson treats the repetition as a mark of authenticity preserved deliberately",
+   "How to read the phrase rendered nothing doubting: Robertson reports the critical reading, making no distinction, and holds that the change of voice changes the sense, while Ellicott points out that the verb is the same as the one rendered contended two verses earlier"
+  ],
+  "outliers": [
+   "Ellicott's observation that Peter, guided by the Spirit, raised no debate of the very kind that was now being raised against him, the same Greek verb serving for both",
+   "Barnes's rule drawn from Peter's method, that a plain unvarnished statement of facts disarms prejudice better than angry contention, since opposition commonly rests on exaggerated report",
+   "Robertson's notice that Peter avoids naming Cornelius or his office, and that in mentioning the angel's order for the third time he seems anxious to show he did not go on his own initiative"
+  ],
   "themes": [
-   "a vision, a great sheet let down from heaven",
-   "it came even to me",
-   "the vision of the sheet",
-   "the divine origin of the mission"
+   "the repetition of the narrative",
+   "the vision at Joppa",
+   "the guidance of the Spirit",
+   "household salvation",
+   "the marks of authenticity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott/Robertson: the vividness — Peter recalling the intense, eager gaze on the vision; Gill: the eyes of the mind (a mental vision); the sheet containing all creatures, clean and unclean together (the forbidden and the allowed), figuring the abolition of the distinction of clean and unclean (Leviticus 11) and, more deeply, the admission of the Gentiles (whom the Jews counted unclean) — the ceremonial law fulfilled in Christ (Romans 10:12), preparing Peter to count no man common (Acts 10:28)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fourfooted beasts, creeping things, and fowls",
-   "clean and unclean together",
-   "the abolition of the old distinction",
-   "the Gentiles prefigured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Peter apprehended the heavenly voice in his mind (as Paul in his trance); Robertson discusses the construction; the voice commanding Peter to 'slay and eat' of all creatures (including the forbidden unclean) — declaring the old distinction of clean and unclean abolished (the food-law set aside in Christ, 1 Timothy 4:4), testing Peter's obedience against his lifelong scruples; the deeper meaning — figuring the command to receive the Gentiles (count no man common, Acts 10:28), the divine authority abolishing the separation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "arise, Peter; slay and eat",
-   "the command to disregard the distinction",
-   "the food-law abolished",
-   "the Gentiles figured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Peter took the voice to be the Lord's yet was not obedient (even though hungry) — showing how strict an observer of the ceremonies he was, how deeply prejudiced in their favour; 'Not so, Lord' the refusal, never having eaten the common or unclean; the depth of the ingrained distinction (so deep even a divine command met resistance, repeated three times, v.10); the difficulty of overcoming long prejudice (conscientiousness mixed with prejudice), his reluctance showing the new liberty was God's command, not his invention."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Not so, Lord",
-   "nothing common or unclean hath entered my mouth",
-   "Peter's deep attachment to the law",
-   "overcoming long prejudice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the heavenly voice answered again, correcting Peter's refusal; the great principle 'What God hath cleansed, that call not thou common' — God has cleansed what the law called unclean (all meats, Titus 1:15), abolishing the distinction; the deeper meaning — the Gentiles cleansed (by the gospel, not the law), no longer common or unclean (Acts 10:28), received by God; the cleansing God's act (final and authoritative), the human prejudice to yield, the believer to receive what God receives."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what God hath cleansed, that call not thou common",
-   "the great principle",
-   "the old distinction abolished",
-   "the Gentiles cleansed by God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the voice answered three times, encouraging Peter; Ellicott/Robertson mark the vividness of 'drawn up' (a rapid upward movement, personal recollection); the threefold repetition confirming the certainty and importance of the lesson (as Pharaoh's doubled dream, Genesis 41:32, 'established by God') and overcoming Peter's reluctance (his refusal met by patient, emphatic repetition until his prejudice yielded); the sheet withdrawn, the lesson delivered, providentially joined to the messengers' arrival (v.11)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this was done three times",
-   "all were drawn up into heaven",
-   "the threefold repetition",
-   "the certainty of the lesson"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the moment the vision ended, the three men from Cornelius were at the house — the vision and the messengers providentially joined; God ordering the exact timing so the vision (no man common) and its application (a call to a Gentile) coincided, the vision interpreted by the arrival; the providence guiding the great step (leaving nothing to chance), and serving Peter's defense (the mission of God, not his contrivance) — God joining instruction to its occasion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "immediately there were three men",
-   "sent from Caesarea unto me",
-   "providence joining vision and messengers",
-   "instruction joined to application"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: the six brethren probably present as witnesses to confirm Peter's account; Ellicott/Robertson: 'nothing doubting' (or 'making no distinction') the same word as 'contended' (v.2) — Peter, guided by the Spirit, raised no debate such as the objectors were raising; the Spirit's direct command authorizing his going (not his choice), obedience without doubting; the six witnesses confirming the facts (the truth in many witnesses, 2 Corinthians 13:1), answering the objectors' doubt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit bade me go, nothing doubting",
-   "these six brethren accompanied me",
-   "the Spirit's command",
-   "witnesses confirming the truth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'in his house' fitly added (since an angel entered the house, Peter and the brethren could not be criminal in following), the angel called both man and angel (appearing in human form); Cornelius's angel directing him to send for Peter — the divine call on the Gentile's side matching Peter's vision, God working at both ends (preparing the apostle to go and the seeker to send); the Gentile mission divinely initiated at both ends, serving Peter's defense (the providence the argument)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he had seen an angel in his house",
-   "send for Simon Peter",
-   "the divine call on the Gentile's side",
-   "God working at both ends"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'words' = doctrines of Christ's person and office, peace, pardon, righteousness, salvation (the gospel Peter preached); Barnes: 'all thy house' also baptized and saved (Cornelius feared God with all his house, Acts 10:2); salvation by the preached word (the angel directing to a preacher, not preaching himself — faith by hearing, Romans 10:17; the dignity of preaching, 1 Corinthians 1:21), the promise embracing the whole household, the gospel blessing the family."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "words whereby thou shalt be saved",
-   "thou and all thy house",
-   "salvation by the preached word",
-   "the household embraced"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'began to speak' (Luke's idiom for the thing itself) — it was toward the close of the discourse the Spirit fell; the Holy Ghost falling on the Gentiles 'as on us at the beginning' (Pentecost), the same gift and sign (tongues, Acts 10:46); God's decisive seal on the reception of the Gentiles (given before baptism and without laying on of hands, that none might doubt it was God's act), the Gentile Pentecost matching the Jewish — the divine settling of the question, Peter's strongest argument (v.17)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Holy Ghost fell on them",
-   "as on us at the beginning",
-   "God's seal on the Gentiles",
-   "the Gentile Pentecost"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: Christ's words (Acts 1:5) supposed by many to refer to the apostles alone, but Peter here believed them a promise to all Christians, Jew or Gentile, who believe — seeing the Spirit fall on the Gentiles as a fulfillment; the baptism with the Holy Ghost surpassing John's water (the inward gift surpassing the outward sign), the promise catholic (for all the church, not apostles or Jews only); the remembered word interpreting the event, the Scripture and the event illuminating each other."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was Christ's promise of Spirit-baptism (Acts 1:5) for the apostles only or all believers?",
-    "sides": [
-     {
-      "position": "For all believers, Jew and Gentile — Peter saw its fulfillment in the Gentiles",
-      "holders": [
-       "Clarke",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "John baptized with water; ye with the Holy Ghost",
-   "remembered the word of the Lord",
-   "the promise to all believers",
-   "the baptism of the Spirit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: what power or right had Peter to oppose the manifest will of God that the Gentiles be received? — God had shown his intention by giving them the Spirit, overcoming Peter's prejudices, to resist being to fight against God; the argument grounded in God's own act ('the like gift,' no difference made); the duty of submission to God's manifest will (Romans 9:19), the humility of 'what was I?' (counting himself nothing against God), the conclusive argument silencing the objectors (v.18)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God gave them the like gift",
-   "what was I, that I could withstand God",
-   "submission to God's manifest will",
-   "the conclusive argument"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the objectors 'held their peace and glorified God,' convinced by the manifest will of God; the great truth established — the doors of the church opened to the entire Gentile world, changing the apostles' views, breaking their prejudices, teaching them to look on all men as brethren; the confession 'God hath granted the Gentiles repentance unto life' — repentance God's gift (Acts 5:31; 2 Timothy 2:25), 'unto life' (saving, issuing in eternal life); the prejudice overcome, the Gentile inclusion owned and glorified."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they held their peace, and glorified God",
-   "God hath granted the Gentiles repentance unto life",
-   "the door opened to the Gentiles",
-   "repentance the gift of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the persecution no slight benefit — all things work together for good (Romans 8:28); had they studied how best to establish the church they could have done no better than the persecution dispersing the teachers, spreading the gospel; the scattered believers carrying the word to Phenice, Cyprus, Antioch, but 'to none but the Jews only' (the old limitation, the Gentile mission a distinct act of God, not the natural development); the order — to the Jew first (Romans 1:16); the gospel reaching Antioch, the future center of the Gentile mission."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "scattered upon the persecution about Stephen",
-   "as far as Phenice, Cyprus, and Antioch",
-   "the gospel spread by persecution",
-   "at first to the Jews only"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the men of Cyprus and Cyrene, Greek-speaking, led to address the 'Grecians' (Hellenists — whether Greek-speaking Jews or, more likely, Gentiles) at Antioch, 'preaching the Lord Jesus'; the bold step beyond preaching to Jews only (v.19), the gospel reaching the Greek-speaking world (parallel to and confirming Cornelius's reception); the founding of the church at Antioch, the future center of the Gentile mission (sending out Paul and Barnabas, Acts 13); the Christ-centered preaching, the same gospel to Greeks as to Jews."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "spake unto the Grecians",
-   "preaching the Lord Jesus",
-   "the gospel to the Greek world",
-   "the Antioch church begun"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
+  "range": "16-18",
+  "pericope_label": "The word remembered, the question that ends the debate, and the silence",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: 'the hand of the Lord' not only providence, love, wisdom, but above all the hand of power (the arm of the Lord, efficacious grace) which when revealed makes the gospel believed — but without it no work is done, ministers labour in vain; the power of God attending the preaching at Antioch, so 'a great number believed, and turned unto the Lord' (faith and turning, true conversion); conversion the work of God's power (1 Corinthians 3:7, God giving the increase), the minister depending on him."
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the saying about the two baptisms proves: Robertson concludes that water baptism is merely the symbol or picture of the spiritual baptism in the heart, while Calvin, though distinguishing the minister from the author, warns expressly against making baptism a cold spectacle void of all grace of the Spirit",
+   "What the question who was I is a weapon against: Wesley turns it against church governors who lay down rules of communion excluding those God has admitted, while Calvin turns it against those who oppose the baptizing of infants and against magistrates who silence the martyrs",
+   "How willing the acquiescence was: Calvin takes the ceasing to contend as an evident sign of godliness, while Robertson judges it reluctant and Clarke observes that not all were ultimately satisfied, pointing to the later disputes"
+  ],
+  "outliers": [
+   "Wesley's outburst that laying down rules of Christian communion which exclude any whom God has admitted is a bold usurpation on the authority of the supreme Lord of the Church",
+   "Barnes's claim that a powerful revival of religion destroys more erroneous doctrine than all the fierce contentions ever waged for the purity of the church",
+   "Robertson's report of a suggestion that this affair, however skilfully defended, decreased Peter's influence at Jerusalem and helped open the way for the leadership of James",
+   "Ellicott's inference that the formal approval given here left the later Judaisers opposing the very church from which they pretended to derive their authority"
+  ],
   "themes": [
-   "the hand of the Lord was with them",
-   "a great number believed, and turned",
-   "God's power attending the preaching",
-   "efficacious grace and great conversion"
+   "water and Spirit",
+   "the promise of the Spirit",
+   "withstanding God",
+   "terms of communion",
+   "the church opened to the Gentiles"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
+  }
+ },
+ "19": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "John Chrysostom"
+  ],
+  "range": "19-21",
+  "pericope_label": "Scattered by persecution, and the word spoken at Antioch",
+  "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
+   }
+  ],
+  "debates": [
+   "Whether the word was spoken to Greeks or to Grecian Jews: Clarke and Robertson hold the reading Greeks to be certain, Ellicott finds the manuscripts nearly balanced and decides for Greeks on internal grounds, Barnes and Calvin keep the other reading but expound it of Gentiles all the same, and Henry alone takes it of Hellenist Jews",
+   "What the hand of the Lord with them means: Chrysostom takes it of miracles, Henry expressly prefers the power of grace on the heart because many saw the miracles and were not converted, and Clarke takes it of the energy accompanying the preaching"
+  ],
+  "outliers": [
+   "Chrysostom's remark that had the persecutors made it their express study how best to establish the church they could have done no other thing than this, since they dispersed the teachers",
+   "Robertson's inference from the verse that the hand of the Lord is Jehovah's while the Lord to whom men turned is Jesus, so that the early disciples put Jesus on a par with Jehovah and his deity was no late development read back into the history",
+   "Calvin's rule for how far Christians may flee persecution, namely that they may do so in order to spend what is left of life in spreading the glory of God",
+   "Ellicott's note that one great codex reads Evangelists in this place, an obviously wrong reading which nevertheless tells for Hellenists as the word the transcriber had before him"
+  ],
+  "themes": [
+   "persecution and dispersion",
+   "the founding of the church at Antioch",
+   "a textual crux",
+   "the hand of the Lord",
+   "the deity of Christ"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Lightfoot"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
   ],
+  "range": "22-24",
+  "pericope_label": "Barnabas sent to Antioch, and what he found there",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": [
+     "Clarke"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the Jerusalem church, hearing of the conversion of the Gentiles and the success at Antioch, sent Barnabas to aid the disciples and give their sanction (as they sent Peter and John to Samaria, Acts 8:14); Barnabas, a native of Cyprus (Acts 4:36), peculiarly qualified; the care of the mother church for the new work (confirming, aiding, overseeing, maintaining unity), the providence supplying the right leader (a good man, full of the Holy Ghost and faith, v.24, who would bring Saul, v.25)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether grace once given may be lost: Clarke argues from the exhortation that God gave the grace but they must use it or the gift would be resumed, and denies that any word of Scripture promises an unavoidable recovery from a fall, while Barnes takes the same phrase for a settled plan formed at conversion and Ellicott for the co-operation of the will with grace",
+   "Why Barnabas was chosen: Barnes and Robertson point to his being a Cypriot with friends among the preachers, Ellicott to his known sympathies as the Son of Consolation, and Calvin to the apostles' duty of setting churches in order before Satan could corrupt them"
+  ],
+  "outliers": [
+   "Calvin's warning that Satan, as soon as he sees a gate opened for the gospel, endeavours by all means to corrupt what is sincere, so that the greater a church's gifts the more careful it must be, nothing being easier than to corrupt corn in the blade",
+   "Barnes's observation that Barnabas is praised for no distinguished talents but for piety, with the remark that there is nothing on this earth so mighty as goodness",
+   "Ellicott's suggestion that Luke was the more anxious to record this praise because he had soon to narrate the contention that parted Barnabas from Paul",
+   "Robertson's borrowed judgment that a smaller man than Barnabas would have raised difficulties as to circumcision or baptism"
+  ],
   "themes": [
-   "tidings came to the church at Jerusalem",
-   "they sent forth Barnabas",
-   "the church's care for the new work",
-   "the fitness of Barnabas"
+   "the mother church at Jerusalem",
+   "the mission of Barnabas",
+   "perseverance and falling away",
+   "the character of a minister",
+   "joy in another's success"
+  ],
+  "excluded_voices": [
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'the grace of God' Barnabas saw = the evident effects of efficacious grace in the converts (regeneration, conversion, enlightening, quickening so many souls); Barnabas 'was glad' (the gracious man rejoicing at God's work, without envy or party spirit); his exhortation 'with purpose of heart cleave unto the Lord' (settled resolve, steadfast commitment, not wavering, cf. Joshua 23:8); the encourager (Acts 4:36) exhorting new converts to perseverance, the pastoral care of establishing them."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "had seen the grace of God, was glad",
-   "with purpose of heart cleave unto the Lord",
-   "joy at the grace of God",
-   "exhortation to steadfastness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Barnabas 'a good man' (grace in his soul, doing good works, kind, generous, charitable, having sold his land, Acts 4:37); the threefold commendation — a good man, full of the Holy Ghost (the Spirit's power and gifts), and of faith (strong trust); the 'for' connecting his character to the fruit (because he was good and Spirit-filled, much people were added); the qualifications of a fruitful minister (goodness, the Spirit's fullness, faith), character and fruit joined, God blessing such a ministry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a good man, full of the Holy Ghost and faith",
-   "much people was added unto the Lord",
-   "the character of Barnabas",
-   "character bearing on fruit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Cyril of Jerusalem"
   ],
+  "range": "25-26",
+  "pericope_label": "Saul fetched from Tarsus, and the disciples first called Christians",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the great success and revival at Antioch called for additional labour (as harvest-time seeks aid), Saul in the vicinity (Acts 9:30), eminently fitted, and known to Barnabas (Acts 9:27); the generosity and wisdom of Barnabas — seeking out a greater man than himself to share the fruitful work (no jealousy or self-seeking), the providence joining the two for the great Gentile mission (Acts 13); the self-effacing love preferring the work's good above his own honour (Romans 12:10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Barnabas departed to Tarsus to seek Saul",
-   "the need of additional labour",
-   "the generosity of Barnabas",
-   "joining Barnabas and Saul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Antioch an important city, the apostles attending chiefly to cities as centres of influence; the whole year of teaching establishing the church (the future base of the Gentile mission); 'the disciples were called Christians first in Antioch' — the name derived from Christ, variously held to be given by enemies/heathen in derision, taken by the disciples, or providentially given; whatever its origin, the honoured title of Christ's people (named after him, 1 Peter 4:16), fitting where Jew and Greek were united in one church."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How did the name 'Christians' arise?",
-    "sides": [
-     {
-      "position": "Given by enemies/heathen in derision (a nickname for Christ's followers)",
-      "holders": [
-       "some"
-      ]
-     },
-     {
-      "position": "Taken by the disciples or providentially given — a fit name marking them as Christ's",
-      "holders": [
-       "others"
-      ]
-     }
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Cyril"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Who gave the name Christian: Clarke argues from the verb, which in the New Testament means to name by divine direction, that the name is from God and was probably given through Saul and Barnabas, while Barnes grants that sense is the commonest and yet inclines to the Gentiles having given it, and Robertson holds that the Gentiles must have given it since the Jews would not use the word Christ of them"
+  ],
+  "outliers": [
+   "Ellicott's tracing of the name beyond the verse, to the tradition that the first bishop of Antioch coined it, to his successor forming from it the word Christianity as against Judaism, and to the heathen misspelling that made it come from a word meaning good, which the Christians accepted as an unconscious witness",
+   "Barnes's observation that the name soon became a term of reproach and has usually been so since among the wicked and the gay, though it is the most honourable appellation that can be conferred on a mortal",
+   "Henry's turning of the name into an examination, that multitudes take it to whom it does not rightly belong, and that the name without the reality will only add to our guilt"
+  ],
   "themes": [
-   "a whole year they taught much people",
-   "the disciples were called Christians first in Antioch",
-   "the name derived from Christ",
-   "the year of teaching"
+   "the fetching of Saul",
+   "the name Christian",
+   "disciples and brethren",
+   "profession and reality",
+   "the church at Antioch"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
   }
  },
  "27": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "27-28",
+  "pericope_label": "Prophets come down from Jerusalem, and Agabus foretells the dearth",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Christian prophets came from Jerusalem to Antioch — men with the gift not only of expounding the mysterious OT prophecies but of foretelling things to come; the reality of the prophetic gift in the apostolic church (a gift of the Spirit, 1 Corinthians 12:10; 14:1, including interpretation and prediction); the prophets edifying the church and (Agabus, v.28) foretelling events; the link between the mother church and the new (the prophets a bond of unity), the providence sending them to warn and prepare for the famine."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What prophet means here: Barnes and Clarke both allow that the word often means no more than a teacher, but hold that these men were under divine inspiration and that Agabus at least foretold events",
+   "How far the dearth reached: Ellicott, Wesley and Robertson all take the phrase for the Roman empire rather than the globe, Robertson calling it a common hyperbole and noting that Josephus appears to restrict the famine to Palestine"
+  ],
+  "outliers": [
+   "Henry's remark that Jerusalem, infamous for killing the prophets and abusing them, is now justly deprived of them, and that the best understanding of scripture predictions is got in the way of obedience to scripture instructions",
+   "Barnes's list of four famines under Claudius, and Clarke's narrowing of the date by an editor's note that fixes it to the emperor's fourth consulship against an earlier scholar's dating",
+   "Calvin's list of reasons why God foretells his judgments, ending with the observation that the profit of this prophecy appears in the text itself, since it pricked the men of Antioch forward to relieve their brethren",
+   "Calvin's report from the Roman historians that crusts were thrown at the emperor's head in the market, and that his fear of stoning made him careful ever after to provide victual"
+  ],
   "themes": [
-   "came prophets from Jerusalem unto Antioch",
-   "the gift of prophecy",
-   "the prophets of the apostolic church",
-   "the link between the churches"
+   "the prophetic office",
+   "Agabus",
+   "the famine under Claudius",
+   "the reach of a prophecy",
+   "why judgments are foretold"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown",
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Agabus an itinerant prophet, signifying by the Spirit a great dearth 'throughout all the world' (the Roman oikoumenē), fulfilled under Claudius (historically attested famines); the prophecy by the Spirit and verified by the event — the reality of the Spirit's foreknowledge and the genuineness of the prophetic gift attested by fulfilment; the providence in the warning (foretold that the church might prepare relief, vv.29-30), the foreknowledge serving practical love and the church's charity."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Agabus signified by the Spirit",
-   "great dearth throughout all the world",
-   "fulfilled in the days of Claudius",
-   "prophecy verified, providence warning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "29-30",
+  "pericope_label": "The relief sent to Judea by the hands of Barnabas and Saul",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: 'according to his ability' = as each had prospered (not that they were rich, but each as he could afford, 1 Corinthians 16:2); the Antioch disciples, warned by the prophecy, preparing relief beforehand (the foresight of love); the unity and mutual care of the church (the new Gentile church aiding the Jewish mother church), the Gentile converts particularly bound to aid the Jews from whom they received spiritual things (Romans 15:25-27, the spiritual debt repaid in temporal aid); charity uniting Jew and Gentile."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the elders were to whom the money was sent: Barnes doubts that an office is meant at all and inclines to the aged and prudent members of the church, expressly rejecting Calvin's view that the apostles are intended, while Clarke inclines to the deacons and reports a threefold division of the primitive disciples",
+   "Why Judea alone was relieved when the famine was general: Calvin gives three reasons from its particular distress, but rests the case on gratitude, that those should reap earthly things who have sown spiritual things"
+  ],
+  "outliers": [
+   "Ellicott's observation that this was the beginning of the collection for the poor saints at Jerusalem which afterwards filled so much of the apostle's labours and which he regarded as a bond of union between the Jewish and Gentile sections of the church",
+   "Calvin's rule that each should consider how much is granted him, so that a poor man may have a liberal mind and a small gift be counted a fat and gorgeous sacrifice, with his inference from the word for ministration that rich men are given abundance on condition of being the ministers of the poor",
+   "Clarke's dry historical note that the community of goods had by this time ceased"
+  ],
   "themes": [
-   "every man according to his ability",
-   "determined to send relief to Judaea",
-   "the church's practical charity",
-   "unity across the old division"
+   "famine relief",
+   "gratitude for spiritual mercies",
+   "voluntary giving",
+   "the office of elder",
+   "Jew and Gentile in one church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the disciples not only determined but acted, performing the charity (the resolve carried out, James 4:17); Barnes: the first mention in the NT of 'elders' (presbyters) in the Christian church, the relief sent to the elders (the officers who received and distributed it), carried by Barnabas and Saul; the order and government of the church shown in the elders (the appointed channel for administration and charity); the charity entrusted to faithful hands, integrity and order in handling the church's relief."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "which also they did",
-   "sent it to the elders by Barnabas and Saul",
-   "the charity performed",
-   "the first mention of elders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

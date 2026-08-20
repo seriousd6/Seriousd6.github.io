@@ -12600,6 +12600,195 @@
         "7"
       ],
       "note": "Abridgement-rescue in the reverse direction, a sixth confirmation with a new wrinkle. Henry holds keys only at 1 and 15, so his long run-ahead at key 15 -- 'this is repeated again and again, because it was a constant miracle... mentioned long after by David, and by the people of God after their captivity... the guidance of this cloud is spoken of as signifying the guidance of the Blessed Spirit' -- would have been stranded when the material's proper home is the closing entry 19-23. Wesley carries the same material at key 21, inside that span, so it reaches the last entry legitimately through the abridging voice rather than through Henry. Previous cases all ran the other way (Wesley's key rescuing Henry's material for an earlier entry); this is the first where the abridgement carried Henry's material FORWARD past his own last key."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "15",
+        "19",
+        "23",
+        "24",
+        "27"
+      ],
+      "note": "LIGHTFOOT RESIDUE IS A CLEAN CHAPTER MISFILE WITH THE VERSE INDEX PRESERVED -- THE SHARPEST DEFECT SIGNATURE FOUND SO FAR. John Lightfoot appears at keys 1, 15, 19, 23, 24, 27 of acts 11, and every block is his Horae Hebraicae on ACTS 2. Critically, five of the six land on THE SAME VERSE NUMBER IN THE WRONG CHAPTER: key 15 = Acts 2:15 ('It is but the third hour of the day'), key 19 = Acts 2:19 (the pillaring smoke), key 23 = Acts 2:23 ('delivered by the determinate counsel and foreknowledge of God'), key 24 = Acts 2:24 ('having loosed the pains of death'), key 27 = Acts 2:27 ('Thou wilt not leave my soul in hell'). Only key 1 breaks the pattern, carrying Acts 2:13 (the mockers saying they are full of new wine). This is categorically different from the Jamieson stride: for Lightfoot the VERSE selector is right and the CHAPTER selector is wrong. Whoever fixes the fetcher should be able to test that hypothesis directly against any other chapter carrying Lightfoot blocks. All six declared as residue."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "CORRECTION TO MY OWN PREVIOUS NOTE: THE JAMIESON SOURCE STRIDE IS NOT AN EXACT 5. Last batch (philippians 1) I inferred from Romans 16:8/13/18/23 that the rule was six keys forward in the target and exactly five verses forward in the source, and said the earlier walks fitted. This chapter breaks it. Jamieson here is at keys 3, 9, 15, 21, 27 -- stride 6, offset 3, FIVE members, the eighth stride-6 confirmation -- walking JOHN 12-13, but the anchors are 12:37-41 (the block carries its own range label '37-41'), 12:44, 12:44 AGAIN (keys 9 and 15 are byte-identical, a stall), 13:3, and 13:6. Counting continuously through John 12 (50 verses) the distinct positions are 37, 44, 53, 56: gaps of 7, then 0 at the stall, then 9, then 3. The +5 I reported was probably an artefact of pinning range-comments to a single verse; JFB blocks routinely cover verse ranges, so the anchor is imprecise by several verses either way. The stride of 6 IN THE TARGET KEYS remains exact and is now confirmed eight times; the source stride should be treated as irregular until it can be measured against blocks that carry their own range labels, as the one at key 3 does."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "30"
+      ],
+      "note": "CHROME INSIDE THE ELLICOTT BLOCK AT THE TERMINAL KEY, THIRD CONSECUTIVE CHAPTER. Key 30, Charles Ellicott: block of 1,253 words of which 269 are real commentary, the remainder being the StudyLight footer, CSS and JavaScript, measuring 984 words / 30,326 characters / 126 NEWLINES. Identical in shape to 1thessalonians 5 key 28 and philippians 1 key 30. Three consecutive chapters establishes it: when the last key of a chapter carries an Ellicott block, roughly 984 words of chrome are silently credited to him and the naive usable-source figure is that much too high. Twelfth chrome measurement."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "12",
+        "15",
+        "16",
+        "17",
+        "21",
+        "23",
+        "24",
+        "26"
+      ],
+      "note": "CYRIL RESIDUE: EIGHT BLOCKS, ONE OF THEM GENUINE, AND A NEW DUPLICATE PAIR. Cyril of Jerusalem appears at keys 12, 15, 16, 17, 21, 23, 24, 26 -- the most Cyril blocks yet seen in one chapter. Keys 12 and 15 are BYTE-IDENTICAL (Catechetical Lecture 17.27, Peter healing Aeneas at Lydda and raising Tabitha at Joppa). Keys 16, 17, 21, 23 and 24 are unrelated catechetical material (Phil 4:4; Acts 5:12; Isa 11:2; the Epistles of Paul; the name of Jesus). Key 26 IS ON POINT: Catechetical Lecture 16.28, 'And in Antioch also, a most renowned city of Syria, when the preaching of Christ took effect, Barnabas was sent hence as far as Antioch to help on the good work, being a good man and full of the Holy Ghost' -- which is the subject matter of this very pericope, and it was used. The seven others dropped SILENTLY, since the VOICE_LABELS defect makes 'Cyril of Jerusalem' undeclarable."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "note": "VOICE_LABELS DEFECT, TWENTY-FIVE BATCHES OPEN. scripts/synthesis_qa.py line 145: _LABEL_RE joins the VOICE_LABELS short forms with a trailing \\s*:, so 'Cyril' can never match the head 'Cyril of Jerusalem:'. Note that 'Lightfoot' DOES work, being a suffix of 'John Lightfoot:' -- which is why the six Lightfoot residue blocks in this chapter could be declared while the seven Cyril ones had to be dropped silently. The asymmetry is itself a demonstration of the bug. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "1"
+      ],
+      "note": "CLARKE'S CHAPTER ARGUMENT AT KEY 1 HAS ITS CROSS-REFERENCES REWRITTEN TO ROMANS 8. Clarke's summary of Acts 11 at key 1 reads 'He defends himself by relating at large the whole business concerning Cornelius, Rom 8:4-17. His defense is accepted... Rom 8:18. An account of the proceedings of those who were scattered abroad... Rom 8:19-21' and so on through Rom 8:30. Every reference should be to Acts 11 and the verse numbers are correct; only the book and chapter have been replaced. This is a THIRD distinct flavour of the same underlying fault seen in the Lightfoot blocks -- verse index preserved, book and chapter wrong -- and it appears here inside a reference-tagging layer rather than in block selection."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "20"
+      ],
+      "note": "WHETHER THE WORD WAS SPOKEN TO GREEKS OR GRECIAN JEWS AT 11:20 -- A SIX-WAY SPLIT ON READING AND SENSE. Clarke reports that Hellenes rests on a long list of versions and fathers, that Griesbach admitted it to the text and few critics doubt it, and argues that otherwise the verse does again what was already done. Robertson calls Hellenes 'undoubtedly the correct reading' and rests on the presence of kai, which makes no sense otherwise. Ellicott finds the manuscripts nearly balanced (B and D for Hellenistae, A for Hellenes), notes that the Sinaitic reads the incomprehensible 'Evangelistae', which so far as it goes tells for Hellenistae, and then decides for Hellenes on internal evidence in a numbered four-point argument. Barnes and Calvin BOTH KEEP THE OTHER READING and yet expound it of Gentiles -- Calvin on the ground that the Jews already mentioned were partly of Cyprus, which counted as part of Greece, so Luke must be marking a further class, 'this contrariety doth cause me to expound it of the Gentiles'. Henry alone holds out for Hellenist Jews, citing Lightfoot for the view that they were so called at Antioch as Jews of the corporation of a Syrogrecian city."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "26"
+      ],
+      "note": "WHO GAVE THE NAME CHRISTIAN AT 11:26. Clarke argues from the verb chrematisai, which in the New Testament means to appoint or warn by divine direction (Matt 2:12; Luke 2:26; Acts 10:22), that the name is FROM GOD and was most likely given through Saul and Barnabas, and calls it 'the highest character which any human being can bear upon earth'. Barnes canvasses the same senses, concedes the divine-communication sense is the most usual, and yet inclines the other way, since had the apostles conferred it the record would have said so rather than merely that they were called. Robertson holds the Gentiles must have given it, since the Jews would not use Christos of them and called them Galileans or Nazarenes. Calvin sidesteps: there were Christians at Jerusalem and Samaria before this, since to be a disciple of Christ is to be a Christian, but when they began plainly to be called what they were, the name served to set forth Christ's glory."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "23"
+      ],
+      "note": "PERSEVERANCE AT 11:23, WITH CLARKE AT HIS MOST POLEMICAL. On Barnabas exhorting them to cleave to the Lord with purpose of heart, Clarke writes: 'God gave them the grace... it was their business to use this. If they did not, the gift would be resumed... It is absurd to talk of being children of God, and of absolute, final perseverance, when the soul has lost its spiritual union... if he ever had the salvation of God, he has lost it; he is fallen from grace; nor is there a word in the book of God, fairly and honestly understood, that says such a person shall absolutely and unavoidably arise from his fall.' Barnes reads the same phrase as a settled plan formed at conversion without which there can be no evidence of piety; Ellicott, more mildly, that man's will can frustrate grace and its co-operation in firm resolve was needed. Robertson notes only that the glow of first enthusiasm often passes after a revival."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "17"
+      ],
+      "note": "WHAT WITHSTANDING GOD MEANS AT 11:17 -- WESLEY AND CALVIN TURN THE SAME WORDS AGAINST OPPOSITE TARGETS. Wesley: 'And who are we that we should withstand God? Particularly by laying down rules of Christian communion which exclude any whom he has admitted into the Church of the first born... O that all Church governors would consider how bold an usurpation this is on the authority of the supreme Lord of the Church!' Calvin, at the same verse: 'we do not only resist God by striving against him, but also by lingering... he which doth not receive those whom God offereth, and shutteth the gate which God openeth, he hindereth the work of God so much as in him lieth; as we say at this day, that those men make war against God who are set against the baptizing of infants', adding that magistrates who should assist the martyrs and instead stop their mouths resist in the same manner. Two of the most quotable applications in the chapter, pointing in opposite directions."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "30"
+      ],
+      "note": "WHO THE ELDERS WERE AT 11:30, WITH BARNES NAMING CALVIN. Barnes notes this is the first mention of elders in the Christian church, doubts the synagogue elders can be meant, and inclines to think no office is denoted at all but simply the aged and prudent members entrusted with the distribution; he adds 'Calvin supposes that the apostles were particularly intended. But this is not probable.' Clarke offers a third account, that they were probably those who first believed, reports a division of the primitive disciples into eye-witnesses, firstfruits and successors, and inclines to the deacons."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "2"
+      ],
+      "note": "FOUR VOICES INDEPENDENTLY MAKE 11:2 AN ARGUMENT AGAINST THE PAPACY. Barnes: the fact that Peter was called to account 'shows conclusively that the apostles and early Christians did not regard Peter as having any particular supremacy... If Peter had been regarded as having the authority which the Roman Catholics claim for him, they would have submitted at once.' Clarke: the primitive church at Jerusalem 'had no conception of St. Peter's supremacy... this absurd dream is every where refuted in the New Testament.' Robertson ends his note 'It is plain that Peter was not regarded as any kind of pope or overlord.' Henry: 'so far were they from looking upon him as infallible, or as the supreme head of the church', and notes that Peter himself 'does not insist upon his being the chief of the apostles, for he was far from the thought of that supremacy which his pretended successors claim.' Calvin alone does not take the opening, being occupied instead with identifying the objectors."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "19"
+      ],
+      "note": "CHRYSOSTOM'S SINGLE BLOCK COVERS THE WHOLE SECOND HALF OF THE CHAPTER AND CONTAINS THE BEST PASSAGE IN IT. His one block sits at key 19 (1,290 words) and comments continuously on verses 19-30, which means it can only be used in the entry containing verse 19. Two things in it are worth preserving. On the dispersion: 'If they had made it their express study how best to establish the Church, they would have done no other thing than this - they dispersed the teachers.' On Barnabas going to fetch Saul, an unrestrained encomium: 'He came to the athletic wrestler, the general fit to lead armies, the champion of single combat, the lion - I am at a loss for words, say what I will - the hunting-dog, killer of lions, bull of strength, lamp of brightness, mouth sufficing for a world.'"
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "19",
+        "25",
+        "27"
+      ],
+      "note": "MATTHEW HENRY IS PARAGRAPH-BLOCKED, NOT VERSE-BLOCKED, AND CARRIES BOTH EXPOSITION AND CONCISE. Henry appears at only four keys (1, 19, 25, 27) with blocks of 3,495, 3,955, 200 and 1,782 words. The block at key 1 covers verses 1-18 and the one at key 19 covers 19-30, so twenty-six of the thirty keys have no Henry at all; the 200-word block at key 25 is Concise only. Eighth book in which the Henry text is found spliced or mis-scoped."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "21"
+      ],
+      "note": "ROBERTSON DRAWS A CHRISTOLOGICAL ARGUMENT FROM 11:21. 'The hand of the Lord' is an Old Testament phrase for the hand of Jehovah, while 'turned unto the Lord' in the same verse refers to the Lord Jesus of verse 20 -- 'clearly showing that the early disciples put Jesus on a par with Jehovah. His deity was not a late development read back into the early history.' At the same verse the three-way split on what the hand of the Lord means: Chrysostom takes it of miracles, Clarke of the energy of God accompanying the preaching, and Henry expressly prefers the power of grace on the heart 'because many saw the miracles who were not converted'."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "11",
+      "verses": [
+        "15",
+        "16",
+        "21",
+        "23",
+        "24",
+        "27",
+        "28"
+      ],
+      "note": "THE 200-WORD CAP BITES ON GILL, LIGHTFOOT AND CYRIL. Gill is truncated at exactly 200 words at key 28; Lightfoot at keys 15, 23, 24 and 27; Cyril at keys 16, 21, 23 and 24. In each case the block stops mid-sentence. The standing re-fetch item should note that the cap now demonstrably truncates the two voices whose blocks are ALSO misfiled, so a re-fetch would need to fix both faults at once to be worth doing."
+    },
+    {
+      "at": "2026-08-20",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "11",
+      "note": "FIDELITY SELF-GRADE, acts 11, eight entries, all in window. 1-3 = 646w, 7 voices. 4-15 = 642w, 6. 16-18 = 648w, 7. 19-21 = 649w, 9. 22-24 = 648w, 6. 25-26 = 624w, 9. 27-28 = 634w, 8. 29-30 = 630w, 7. Eight rather than the seven the entry-count guide suggests, because verses 25-26 carry the naming of the Christians, which could not be compressed into a joint entry with 22-24 without losing the four-way disagreement over who gave the name. Every claim traced to a named block in data/commentary/cow/acts/11.json before writing. Exclusions: six John Lightfoot blocks (keys 1, 15, 19, 23, 24, 27) and five Jamieson blocks (keys 3, 9, 15, 21, 27) declared as residue; seven Cyril of Jerusalem blocks dropped silently, the eighth (key 26) used as genuine; about 984 words of chrome inside the Ellicott block at key 30 ignored. Gross usable 42,946; after all exclusions 38,987 by the build's own count."
     }
   ]
 }
