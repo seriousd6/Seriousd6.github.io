@@ -14718,6 +14718,100 @@
       "book": "luke",
       "chapter": "24",
       "note": "WHY LUKE 24 WAS PICKED BUT NOT SYNTHESIZED IN THIS BATCH, and what the next worker inherits. The picker offered luke 24 and the sizer returned 64,720 usable source words across 53 keys, the second largest chapter offered in this run after acts 17. At the standing entry-count formula that is twelve entries. Before drafting I did the structural survey, which turned up two things that made the setup materially heavier than any previous chapter and are filed separately: the Jamieson stride here is VARIABLE rather than fixed, and the Catena Aurea layer runs several fathers together under one head so that inline attributions are invisible to the lint. The chapter also carries twenty-six distinct voice labels, twelve of them new to this build and needing school mappings, and a NAME COLLISION between a bare 'Cyril' head at keys 1 and 41 and a 'Cyril of Jerusalem' head at ten keys, the two co-occurring at both of the bare-Cyril keys. In a catena on Luke the bare Cyril is Cyril of Alexandria, whose Commentary on Luke is the chief Greek source, so the two must be given distinct prose labels or the name check will confuse them. I stopped at that point rather than begin drafting, on the standing rule that a chapter one cannot finish must not be started: this session had already carried three full chapters since its last compaction and twelve entries of this density was not a job I judged I could complete without the prose degrading. Nothing is abandoned in the queue's sense -- no data file was written, no verse was stamped, and the working tree is clean, so luke 24 remains unclaimed and the next worker picks it up whole. WHAT IS ALREADY DONE AND SHOULD NOT BE REDONE: the source survey above; the Jamieson identification, keys 9, 21, 27, 33, 45, 51 carrying Luke 13 into Luke 14; the catena inline-marker census; and a working tiling of twelve entries balanced by source weight, namely 1-4, 5-12, 13-14, 15-20, 21-26, 27-31, 32-35, 36-38, 39-43, 44-46, 47-49, 50-53. Keys 1, 13, 36, 45 and 50 carry the oversized section blocks (5,375 / 9,939 / 7,834 / 2,980 / 4,187 words) and the tiling above isolates them deliberately. RECOMMENDATION: fix the catena block splitter before luke 24 or any other Gospel Catena chapter is attempted, since without it roughly twenty-two passages in this chapter cannot be attributed correctly and Origen cannot be attributed at all."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "JFB displacement, THIRTEENTH chapter, and the pattern is now as firm as anything in the corpus. Deuteronomy 18 carries three displaced JFB terms at keys 6, 12 and 18 — stride 6, phase 6. All three are off-chapter and the donor is a single continuous passage, Numbers 26 (the second census): key 6 = the design of the new census after a lapse of thirty-eight years; key 12 = the principal households, Reuben diminished by Korah's conspiracy; key 18 = the tribe pre-eminent in the guilt of Baal-peor, greatly reduced, with the reflection on God's justice and faithfulness. All three declared in excluded_voices. Stride 6 has held in thirteen of thirteen chapters."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "9",
+        "15"
+      ],
+      "note": "Henry's keys mark his own section heads — SEVENTH confirmation, and the cleanest yet. Deuteronomy 18 has Henry at exactly 1, 9 and 15, which are the chapter's three natural divisions (the priests' portion; the Canaanite abominations; the promised prophet). Henry appears at no other key. The tiling was built on those three boundaries and nothing had to be moved afterwards. Note that Henry's blocks here are enormous — 1,059 / 843 / 2,161 words — so his keys are not merely markers but carry the bulk of the section's exposition."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "22"
+      ],
+      "note": "K&D truncation: the sub-200 rule from Exodus 13 needs one qualification. Deuteronomy 18 has twelve K&D keys, eleven of them exactly 200 words (the corpus cap) and one, key 22, at 45. By the Exodus 13 rule a sub-200 block has ended naturally and is usable to its last word — but key 22 here is PURE LEMMA, the text of v22 and nothing else. The reason is that K&D's actual exposition of vv21-22 (the false prophet discovered by non-fulfilment; the occurrence of what was predicted made the criterion of true prophecy, and not signs and wonders) sits back at key 17, displaced backward. Corrected rule: a sub-200 K&D block has ended naturally, but it may still be empty of exposition if that exposition was displaced to an earlier key — check the preceding K&D block before writing the voice off."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "16"
+      ],
+      "note": "K&D loss at Deuteronomy 18, and a distinction worth recording about when displaced material may be used where it is filed. K&D's key-16 block ends by expounding vv19-20 (the instructions on behaviour towards the prophets, given in the name of the Lord for emphasis; whoever did not hearken, of him the Lord would require it). vv19-20 fall in span 18-21, where K&D has no key, so the material could not relocate — and it was DROPPED rather than used at entry 16-17, because it is plain exposition of vv19-20 and entry 18-21 covers those verses with other voices. Contrast the case at entry 12-14, where K&D's remark WAS used in the entry it is filed under: there the material is an argument about the JUNCTION between v14 and v15 ('when Moses thus attaches to the prohibition the promise, it is evident from this connection alone...'), which is v14 commentary as much as v15. The working distinction: displaced-forward material that expounds the next verse is dropped; displaced-forward material that argues about the seam between this verse and the next stays."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "22"
+      ],
+      "note": "Residue, EIGHTH sighting. Ellicott's key-22 block is 1,031 words of which about 35 are real ('If the thing follow not... one form of our Lord's test for all prophets, By their fruits ye shall know them'); the rest is StudyLight chrome — chapter navigation, copyright text, then CSS, then raw JavaScript (an accordion initialiser). Again the LAST Ellicott block on the chapter's scraped page, consistent with the corrected rule. This is the second sighting of the JavaScript variant after Joshua 11, so the residue now has two established forms and both terminate an Ellicott page."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "15"
+      ],
+      "note": "The chapter's central dispute, and the sharpest three-way split in the corpus so far: who is 'a prophet like unto me'? Gill: a single person, and he rules the alternatives out by name — not Joshua (Aben Ezra), not Jeremiah (Baal Haturim), not David, not a succession (Jarchi) — because a single person only is spoken of and there is a dissimilitude between Moses and any one of the prophets and all of them in succession; it is the Messiah. Clarke, Wesley: the same, Clarke citing Ainsworth's argument from the closing chapter of Deuteronomy that there arose not a prophet in Israel like unto Moses, so the promise cannot be of the ordinary prophets. Henry: BOTH, holding that a succession may be included but that the promise is primarily of Christ and is the clearest promise of him in all the law of Moses. Calvin ALONE takes the singular for a plural: the word is used for a number of prophets, since Moses is treating of the continual manner of the Church's government and not of what God would do within a short time — and he explicitly rejects the Christ-alone reading as 'not at all more correct' than the Joshua/Jeremiah restriction, on the ground that God's intention was to leave the Jews no excuse for turning aside to familiar spirits. K&D would have sided with Calvin (the promise 'neither relates to one particular prophet, nor directly and exclusively to the Messiah') but his statement of it survives only at key 14."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "A second, quieter disagreement at vv9-11 on whether the forbidden arts were real. Gill, Clarke and Wesley describe the practices as impostures dressed in technical vocabulary; Calvin traces them to a natural desire after knowledge that God himself implanted, perverted by the devil's machinations, which makes them a corruption of something good rather than mere fraud; Ellicott goes furthest, noting that four of the practices are ascribed to king Manasseh and adding flatly that 'it is hardly possible that all of them were mere imposture and deceit.' Henry stands at the other pole, calling the arts senseless and absurd, and yet insists their remains survive where Christ's religion is professed, ascribing that survival to the powers and policies of the rulers of the darkness of this world."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "9",
+        "10",
+        "12",
+        "15",
+        "16",
+        "18",
+        "22"
+      ],
+      "note": "Deuteronomy 18 fidelity self-grade: A on all ten entries, no flags, no FLOOR, no TMPL, mean TTR 0.640 / zip 0.453. Length discipline was WORSE than Exodus 13, not better: only 2 of 10 entries came in under 650 first-pass (entry 3 at 564 and entry 22 at 647), and four drafts landed above 800 (entry 10 at 921, entry 15 at 991, entry 12 at 874, entry 6 at 866). Diagnosis: the three-strand rule (note 1339) controls how many topics an entry carries, but not how many WORDS each strand gets, and on a chapter where five or six voices speak at every key each strand quietly grows to 300. Working fix for the next chapter: before drafting, assign each of the three paragraphs an explicit word budget summing to about 600, and write to it — the trimming passes cost far more effort than budgeting would have."
     }
   ]
 }
