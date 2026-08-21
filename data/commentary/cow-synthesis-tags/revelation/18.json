@@ -1,908 +1,549 @@
 {
  "1": {
   "voices": [
-   "Bede",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "Bede"
   ],
+  "range": "1-3",
+  "pericope_label": "Another angel lightens the earth; fallen, fallen is Babylon the great",
   "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Bede"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The glorious herald: 'and after these things I saw another angel come down from heaven, having great power; and the earth was lightened with his glory' — a mighty angel descending from heaven with great power, the earth illumined by his glory (the splendor of the angel marking the importance of the announcement, Babylon's fall, he brings, his glory lighting the whole earth); 'having great power (authority)' a high, mighty angel fitted to proclaim the doom of the great city (the dignity of the messenger befitting the greatness of the message); 'the earth was lightened with his glory' the angel's brightness filling the earth (whether marking the diffusion of the gospel-light at Babylon's fall, or simply the surpassing glory of the herald, the radiance announcing the great proclamation) — Barnes, Robertson, Ellicott."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the descending angel is: Bede takes him for the Lord himself incarnate or else for the doctors of the Church; Clarke reads him as a human messenger of the everlasting gospel who by preaching and writings diffuses the light of truth; Robertson settles only that he is not the angel of the previous chapter who guided John; Ellicott declines the identification altogether and asks instead what the light does",
+   "Whether the doubled cry marks two falls: Henry reports the opinion that the repetition means first her apostasy and then her ruin, and rejects it on the ground that what follows describes her punishment rather than her sin, since unclean spirits and ominous birds were commonly supposed to haunt a city lying in ruins; Robertson takes the repeated aorists simply as a solemn dirge",
+   "What Babylon stands for: Clarke lists Rome pagan, Rome papal and Jerusalem without choosing; Barnes chooses the Papacy and guards the choice, that not the city but the power seated there is meant, so nothing need be looked for literally; Wesley argues from the Romanist premise against it; Gill restricts the drinking nations to the Roman empire and Europe, since the pagan and Mahometan nations have not drunk; Bede looks for no city at all, only the city of the devil"
+  ],
+  "outliers": [
+   "Robertson's borrowing of Swete, that so recently has the angel come from the Presence that in passing he flings a broad belt of light across the dark earth",
+   "Wesley's inference from the brightness of the messenger, that if such is the lustre of the servant no image could display the majesty of the Lord",
+   "The division over the word rendered hold, which Barnes and Robertson take as watch-post or garrison and Ellicott renders prison, with Robertson adding Swete's image of evil spirits building their eyries in the broken towers",
+   "Gill's question why the voice must be loud, answered from the deep sleep and spirit of slumber in which Babylon will be insensible of her ruin until it comes",
+   "Bede's gloss on the merchants, that he calls those rich in sins who by an infelicitous traffic exchange their souls for temporal abundance, excess of luxuries making poor instead of rich",
+   "Robertson's observation that here alone in the New Testament do we catch a glimpse of the vast traffic between east and west that made Rome rich"
+  ],
   "themes": [
-   "another angel come down from heaven, having great power; and the earth was lightened with his glory",
-   "the glorious angel announcing Babylon's fall",
-   "the majestic herald of the great city's doom",
-   "the radiance filling the earth"
+   "the angel lightening the earth",
+   "fallen, fallen is Babylon",
+   "habitation of devils",
+   "the wine of her fornication",
+   "the merchants waxed rich"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The proclamation of Babylon's fall: 'and he cried mightily with a strong voice, saying, Babylon the great is fallen, is fallen, and is become the habitation of devils, and the hold of every foul spirit, and a cage of every unclean and hateful bird' — the angel proclaiming, with a mighty voice, the fall of Babylon (the repetition 'is fallen, is fallen,' echoing 14:8; Isaiah 21:9, marking the certainty and completeness of her ruin); 'is become the habitation of devils (demons), and the hold (haunt) of every foul spirit' (her ruins the dwelling of demons and unclean spirits, the figure of utter desolation and abandonment to evil, drawn from Isaiah 13:21-22; 34:11-15, the desolation of old Babylon and Edom, the once-great city becoming a haunt of demons); 'a cage (haunt) of every unclean and hateful bird' (the desolate ruins inhabited only by unclean birds, the picture of total, loathsome desolation, the proud city reduced to a wilderness of unclean creatures) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Babylon the great is fallen, is fallen",
-   "is become the habitation of devils, and the hold of every foul spirit, and a cage of every unclean and hateful bird",
-   "the proclamation of Babylon's fall and desolation",
-   "the great city reduced to loathsome desolation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The threefold cause of her fall: 'for all nations have drunk of the wine of the wrath of her fornication, and the kings of the earth have committed fornication with her, and the merchants of the earth are waxed rich through the abundance of her delicacies' — the nations having drunk the intoxicating wine of her fornication (14:8; 17:2, she seducing and corrupting all peoples with her idolatry and false worship, her universal corruption a ground of her judgment); the kings entering into corrupt alliance with her (17:2, sharing her idolatry and worldly corruption, their fornication with her a further ground of judgment); the merchants growing rich by her excessive luxury and self-indulgence ('the abundance of her delicacies' — luxury, wantonness, her wealth and sensuality enriching the traders, the third ground her proud luxurious wantonness, the merchants' lament, vv.11-19, following from their dependence on her trade) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all nations have drunk of the wine of the wrath of her fornication",
-   "the kings of the earth have committed fornication with her, and the merchants of the earth are waxed rich through the abundance of her delicacies",
-   "the threefold cause of Babylon's fall",
-   "her corruption of the world and her proud sensuality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "4-8",
+  "pericope_label": "Come out of her, my people; her plagues come in one day",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The call to come out: 'and I heard another voice from heaven, saying, Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues' — a voice from heaven calling God's people to come out of Babylon (echoing Jeremiah 51:6, 45; Isaiah 52:11, the summons to separate from the doomed, corrupt city, lest they share her sins and her judgment); 'that ye be not partakers of her sins' (by remaining in Babylon, God's people would lend their sanction to her sins and be implicated in them, the call to separate a call to purity, to come out from her corruption, cf. 2 Corinthians 6:17, in the historicist reading the duty to separate wholly from corrupt papal Rome); 'that ye receive not of her plagues' (those who remain would share her plagues, v.8, the call also for safety, to escape her doom, God calling his own out before the judgment falls that they perish not with her) — Barnes, Robertson, Ellicott."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the sins reaching heaven are a heap or a cry: Ellicott takes the image literally as a heap firmly fastened and towering like another Babel, and says expressly that this is more than the cry of sin reaching heaven as at Sodom, since the sins themselves have touched the face of heaven; Barnes denies exactly that, holding the meaning is not a pile but that the guilt had become prominent enough to attract God’s attention, and compares the blood of Abel crying from the ground; Robertson and Gill settle the philology in Ellicott’s favour without arguing it, the verb deriving from the word for glue",
+   "What coming out of her requires: Ellicott insists it is not a bodily exodus from Rome but separation from the spirit of the world, though it may sometimes lead to a literal exodus and even to secession from a world-corrupted church; Barnes presses the practical edge harder, that the command not only justifies the Reformation but would have made a longer continuance in that communion an act of guilt once its wickedness was seen",
+   "Of what city the burning is spoken: Barnes argues at length that it may be more than figure and that Rome itself will literally be destroyed by fire, canvassing Jewish and early Christian expectation to that effect; Clarke refuses the whole application, observing that Rome pagan was never so treated since Alaric and Totilas burnt only parts of it, that Rome papal has not been so treated either, and that the description is true of Jerusalem, which is not generally thought to be intended"
+  ],
+  "outliers": [
+   "The spread of opinion on whose voice it is, from Wesley’s flat identification with Christ through Barnes's and Gill's leaning toward God to Ellicott's refusal of the question as unnecessary",
+   "Clarke's substitution of a couplet from Mantuanus for an argument, that those who desire to live a godly life should depart, since at Rome all things are lawful except to be good",
+   "Ellicott's double correction of the received text at the call for recompense, that the word rendered you should be omitted since it is not the saints who repay her, and that the double does not mean double her sins",
+   "Robertson's note that the double recompense was according to the Levitical law, against Wesley's reduction of it to a full retaliation by Hebrew idiom",
+   "Gill's naming of the executioners as the seven angels and the ten kings, and his particular that as she burnt many of the precious saints in the flames, as here in England, so shall she be utterly burnt",
+   "Ellicott's arrangement of the plagues as a fourfold answer, death for her scorn of widowhood, mourning for her revelling, famine for her abundance, and fire for her fornication"
+  ],
   "themes": [
-   "Come out of her, my people, that ye be not partakers of her sins, and that ye receive not of her plagues",
-   "the call to come out of Babylon",
-   "the call to separate from the doomed, corrupt city",
-   "for purity and for safety from her judgment"
+   "come out of her, my people",
+   "partakers of her sins",
+   "sins reaching to heaven",
+   "double unto her double",
+   "her plagues in one day"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The accumulated guilt: 'for her sins have reached unto heaven, and God hath remembered her iniquities' — Babylon's sins having piled up to heaven (clung together, reached up, like the tower of Babel, Genesis 11; cf. Jeremiah 51:9), and God having remembered her iniquities (the accumulated, heaven-high guilt now coming into remembrance for judgment); 'her sins have reached unto heaven' (her iniquities so many and so great that they reach to heaven, the figure of an immense, accumulated mass of guilt crying out for judgment); 'God hath remembered her iniquities' (God, who seemed to delay, now remembering her sins, 16:19, his remembrance issuing in judgment, the time of reckoning for her long-accumulated iniquity come, God not forgetting the sins of the persecutor) — Barnes, Robertson, Ellicott."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "her sins have reached unto heaven, and God hath remembered her iniquities",
-   "Babylon's sins reaching heaven and remembered by God",
-   "the accumulated, heaven-high guilt brought to reckoning",
-   "God's remembrance issuing in judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The call for double retribution: 'reward her even as she rewarded you, and double unto her double according to her works: in the cup which she hath filled fill to her double' — Babylon to be repaid as she dealt with others, and doubly, according to her works (the principle of just, indeed redoubled, retribution, she who filled the cup of corruption to be made to drink a double measure of judgment); 'reward her even as she rewarded you' calling for retribution in kind (she repaid for her treatment of God's people, the persecutor requited, the call addressed to the agents of judgment, or the saints' vindication); 'double unto her double... in the cup which she hath filled fill to her double' the doubled measure (Jeremiah 16:18; 50:29, a full and overflowing measure, the cup of judgment filled double the cup of corruption she filled, the figure of complete, redoubled recompense for her sins) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Reward her even as she rewarded you, and double unto her double according to her works",
-   "in the cup which she hath filled fill to her double",
-   "the call for double retribution on Babylon",
-   "the just, redoubled recompense on the corrupt city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Babylon's pride answered: 'how much she hath glorified herself, and lived deliciously, so much torment and sorrow give her: for she saith in her heart, I sit a queen, and am no widow, and shall see no sorrow' — the measure of her self-glorification and luxury the measure of her coming torment and sorrow (her pride and self-indulgence, living deliciously/luxuriously/wantonly, repaid with proportionate suffering, the higher she exalted herself the deeper her fall); 'she saith in her heart, I sit a queen, and am no widow, and shall see no sorrow' her proud presumption (Babylon presuming she reigns securely as a queen, is no bereaved widow, and will never see sorrow, echoing Isaiah 47:7-8, the boast of old Babylon, her proud false security inviting her sudden ruin); 'shall see no sorrow' the false security (she presuming she is beyond calamity, secure in her power and wealth, this very presumption answered by the sudden, total judgment, v.8) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How much she hath glorified herself, and lived deliciously, so much torment and sorrow give her",
-   "she saith in her heart, I sit a queen, and am no widow, and shall see no sorrow",
-   "Babylon's pride answered by torment",
-   "her proud false security repaid with sudden ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Babylon's sudden destruction: 'therefore shall her plagues come in one day, death, and mourning, and famine; and she shall be utterly burned with fire: for strong is the Lord God who judgeth her' — her plagues falling in a single day (suddenly, all at once, death, mourning, and famine coming swiftly, the abruptness of her ruin contrasting her presumption of lasting security, v.7); 'she shall be utterly burned with fire' (the corrupt city consumed by fire, 17:16; 18:9, 18, the complete, fiery destruction of Babylon, the burning marking her total and irreversible ruin); 'strong (mighty) is the Lord God who judgeth her' (the reason her ruin is sure and total: the God who judges her is mighty, against his strength she cannot stand, her power nothing before the Almighty, the certainty of the judgment resting on God's might) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "her plagues come in one day, death, and mourning, and famine; and she shall be utterly burned with fire",
-   "for strong is the Lord God who judgeth her",
-   "Babylon's sudden and total destruction",
-   "the swift, complete ruin of the proud city before the Almighty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The kings' lament: 'and the kings of the earth, who have committed fornication and lived deliciously with her, shall bewail her, and lament for her, when they shall see the smoke of her burning' — the kings who shared her fornication and luxury (living deliciously/luxuriously with her) now bewailing and lamenting her fall (the first of three laments — kings, merchants, mariners — the partners in her sin mourning her ruin, not in repentance but in self-interest); 'when they shall see the smoke of her burning' (the rising smoke of the burning city, v.8; cf. Genesis 19:28, the sight that draws their lament, the visible token of her destruction); the kings mourning her not for her sin but for the loss of the luxury and gain they shared with her (their grief for themselves, for the pleasures and profits now gone, the lament of those who loved her corruption) — Barnes, Robertson, Ellicott, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the kings of the earth, who have committed fornication and lived deliciously with her, shall bewail her, and lament for her",
-   "when they shall see the smoke of her burning",
-   "the kings lamenting Babylon's burning",
-   "the partners in her sin mourning her ruin out of self-interest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The kings' cry of woe: 'standing afar off for the fear of her torment, saying, Alas, alas, that great city Babylon, that mighty city! for in one hour is thy judgment come' — the kings standing at a distance, afraid of sharing her torment, and crying their lament (they dare not come near but mourn from afar, their fear keeping them back even as they grieve); 'Alas, alas (woe, woe), that great city Babylon, that mighty city' the dirge over the fallen city (the doubled 'alas' the lament over her former greatness and might now brought to ruin, the contrast of her former glory and present destruction); 'in one hour is thy judgment come' (the kings marveling at the swiftness of her fall, in a single hour her judgment come, the abrupt, sudden ruin of the mighty city, the refrain of suddenness, vv.10, 17, 19, astonishing the onlookers) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Standing afar off for the fear of her torment, saying, Alas, alas, that great city Babylon, that mighty city",
-   "for in one hour is thy judgment come",
-   "the kings' cry of woe over the fallen city",
-   "the marvel at the sudden ruin of the mighty city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson"
   ],
+  "range": "9-11",
+  "pericope_label": "The kings bewail her afar off; the merchants weep, for no man buyeth",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The merchants' lament: 'and the merchants of the earth shall weep and mourn over her; for no man buyeth their merchandise any more' — the merchants weeping and mourning over Babylon's fall (the second of the three laments, their grief for the loss of their trade — no one buys their goods any more now that the great market-city is destroyed); 'the merchants of the earth shall weep and mourn over her' (the traders who grew rich by her, v.3, lamenting her ruin, like the kings their grief self-interested, for their own loss); 'for no man buyeth their merchandise any more' (the cause of their grief plainly the collapse of their trade, with Babylon, their great customer and market, destroyed, their merchandise unsold, their mourning for lost profit not for her sin, the self-interest of the merchants laid bare) — Barnes, Robertson, Gill."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the catalogue of merchandise is to be read literally: Gill argues sharply that it cannot be, since such commodities if they do not sell at one place will sell at another, the decline of trade in one city does not stop business the world over, and the ruin of commerce in one place is often the rise of it in another, so that these things will be merchandised somewhere to the end of the world; Barnes treats the enumeration far more lightly, as filling out the representation of what is found in such a city; Robertson takes it as documentary, counting twenty-nine items of import into the port of Rome and citing Galen, Pliny and Aristides on the commerce that made Rome the world’s chief market",
+   "Why the mourners stand afar off: Henry makes it a moral, that Babylon’s friends were willing to share her pleasures but not her plagues; Barnes reads it as impotence, that those who sustained the power will not even attempt to rescue it; Gill offers incapacity and dread together without choosing; Robertson alone describes fascination rather than fear, that there is a weird charm in a burning city, and compares Nero’s delight in the burning of Rome",
+   "What the lament is really about: Henry and Ellicott agree that the sorrow is worldly, but reach it differently, Henry by observing that they lament their ruin and not their idolatry, luxury or persecution, and Ellicott by analysing the grief as fear mingled with selfishness; Barnes turns the same verse political, that the kings of Europe owed their influence to this power and that its fall will be the signal for a general overturning of the thrones of Europe"
+  ],
+  "outliers": [
+   "Henry's identification of what the two classes of mourners had gained, the kings being suffered to be arbitrary and tyrannical over their subjects so long as they were obsequious, the merchants trafficking for indulgences, pardons, dispensations and preferments",
+   "Ellicott's description of the architecture of the three laments, each mourner standing afar off, each beginning with an Alas, and the words in one hour recurring with the monotony of a passing bell heard at intervals amid the strains of sad music",
+   "Wesley's philological aside that Rome was anciently termed by its inhabitants Valentia, that is strong, and that the name Rome itself signifies strength in Greek",
+   "Gill's second argument, that restricting the loss to Rome and its neighbourhood will not help either, since goods unsold there could be sold elsewhere and would not warrant so great a lamentation",
+   "Robertson's observation of how closely the list of items follows the destruction of Tyre in Ezekiel",
+   "Clarke's abandonment of comment in favour of a long paraphrase of Bishop Bale, in which her mitred merchants and soul-sellers wax rich by the sale of oils, cream, ashes, palm, wax, beads, crosses, bells, organs, images, relics and other pedlary wares"
+  ],
   "themes": [
-   "the merchants of the earth shall weep and mourn over her; for no man buyeth their merchandise any more",
-   "the merchants mourning the loss of their trade",
-   "the second lament, self-interested for lost profit",
-   "the collapse of the great market-city"
+   "the kings bewail her",
+   "standing afar off",
+   "in one hour is thy judgment come",
+   "the merchants weep",
+   "no man buyeth their merchandise"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The catalogue of luxury wares: 'the merchandise of gold, and silver, and precious stones, and of pearls, and fine linen, and purple, and silk, and scarlet, and all thyine wood, and all manner vessels of ivory, and all manner vessels of most precious wood, and of brass, and iron, and marble' — a long catalogue of the costly, luxurious wares traded by Babylon (gold, silver, jewels, pearls, fine fabrics — linen, purple, silk, scarlet — precious woods, ivory, and costly metals and stone, the wealth and luxury of the great market-city); the list (precious metals, gems, fine cloth, rare woods, ivory, marble) marking the immense luxury and wealth of Babylon (the merchandise of a city given to extravagance and display, her commerce in all things rare and costly); the detailed inventory (continued in v.13) displaying the vast, varied luxury of Babylon and the extent of the merchants' loss (the listing of her wares emphasizing the worldly opulence now brought to nothing, the abundance of her delicacies, v.3, catalogued) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the merchandise of gold, and silver, and precious stones, and of pearls, and fine linen, and purple, and silk, and scarlet",
-   "all manner vessels of ivory... and of brass, and iron, and marble",
-   "the catalogue of Babylon's luxury merchandise",
-   "the vast, varied opulence now brought to nothing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The catalogue continued: 'and cinnamon, and odours, and ointments, and frankincense, and wine, and oil, and fine flour, and wheat, and beasts, and sheep, and horses, and chariots, and slaves, and souls of men' — the catalogue continuing with spices, perfumes, incense, wine, oil, food, livestock, and chariots (the wares of luxury, religion, food, and transport, the full range of Babylon's commerce); the inclusion of animals, horses, and chariots (the staples and luxuries of trade, the commerce extending from precious goods to beasts and vehicles); the catalogue ending climactically with 'slaves (somaton — bodies), and souls of men' (Babylon trafficking even in human beings, in slaves and the souls/lives of men, the climactic, damning item — the trade in human persons, the inhumanity of her commerce that bought and sold men's bodies and souls, the gravest mark of her corruption) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cinnamon, and odours, and ointments, and frankincense, and wine, and oil, and fine flour, and wheat, and beasts, and sheep, and horses, and chariots",
-   "and slaves, and souls of men",
-   "the catalogue continued, ending with slaves and souls of men",
-   "the inhuman traffic marking the depth of her corruption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "Cyril of Jerusalem"
   ],
+  "range": "12-14",
+  "pericope_label": "The merchandise of Babylon; slaves and souls of men; the fruits departed",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Cyril"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The vanished luxuries: 'and the fruits that thy soul lusted after are departed from thee, and all things which were dainty and goodly are departed from thee, and thou shalt find them no more at all' — the ripe fruits (the autumn fruits, the choice luxuries) her soul craved gone, all her dainty and splendid things departed and never to be found again (the total, irreversible loss of her luxuries); 'the fruits that thy soul lusted after' the luxuries and pleasures she craved and gloried in, now departed (the objects of her sensual desire taken away); 'all things which were dainty and goodly are departed... thou shalt find them no more at all' (the loss total and permanent, her splendid luxurious things gone forever, the emphatic finality 'no more at all' marking the irreversible ruin of her luxury) — Barnes, Robertson, Ellicott."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the cargo is Roman trade or an allegory of church wares: Robertson treats it as documentary and glosses the items from ancient sources, and Barnes runs the same course with Gibbon at his elbow; Gill runs a literal and a mystical reading together, taking the merchandise both for the riches which the Roman clergy bring into their coffers and for the doctrines of the gospel which they pretended to deliver while putting off wood and hay and stubble; Clarke abandons his own comment and prints a long stretch of Bishop Bale itemising the pontifical rings, censers and mitres",
+   "Whether bodies and souls of men are one article or two: Robertson insists the first word means simply bodies, treated as animals or implements alongside the horses and chariots, cites the usage from Genesis, Tobit and Maccabees, and suggests the following conjunction should be rendered even rather than and, making the two phrases one; Barnes reports the narrower construction of Stuart, that the word means grooms, a class of slaves employed about horses and carriages; Wesley keeps the phrases apart and makes the second the worse, that souls of men are continually bought and sold at Rome",
+   "What the fruits are: Barnes and Clarke take the noun from the season, the late summer or dog-days when the fruits ripen, and refer it to any fruit brought as a luxury into a great city; Wesley insists the turn is domestic, that the vision passes from imports to the home delicacies of Rome, and that the word covers pears, peaches, nectarines and all of the apple and plum kinds; Gill takes it mystically, of the universal dominion and the obedience of kings of which a large harvest was expected"
+  ],
+  "outliers": [
+   "Robertson's derivation of the silk from the people from whom the fabric came after Alexander invaded India, and his description of thyine as an odoriferous North African citrus prized for a grain like a peacock's tail or the stripes of a tiger",
+   "Barnes's repeated appeal to Gibbon, that pearls claimed the first rank after the diamond among the luxuries of Rome and that a variety of aromatics was consumed in religious worship and the pomp of funerals",
+   "Gill's citation of Brightman that Spain fetches these wares from the Indies for Rome as Italy fetches the spices from Greece, Arabia and Egypt",
+   "Gill's mystical turn on the cinnamon, that being used by harlots to perfume their bed it refers to the licensed brothels of Rome, each woman paying so much a week, the revenues sometimes reaching twenty thousand ducats a year",
+   "Robertson's note that the slave merchant was named a body-merchant, and his borrowing of Swete's phrase human live stock",
+   "Wesley's observation that the word for chariots is purely Latin inserted into the Greek, which he thinks John used on purpose in describing the luxury of Rome"
+  ],
   "themes": [
-   "the fruits that thy soul lusted after are departed from thee, and all things which were dainty and goodly are departed from thee",
-   "thou shalt find them no more at all",
-   "the vanished luxuries of Babylon",
-   "the total, irreversible loss of her luxury"
+   "the merchandise of Babylon",
+   "slaves and souls of men",
+   "human live stock",
+   "the fruits departed",
+   "dainty and goodly things"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "15": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The merchants' distant lament: 'the merchants of these things, which were made rich by her, shall stand afar off for the fear of her torment, weeping and wailing' — the merchants who grew rich by trading with Babylon standing at a distance, afraid of her torment, weeping and wailing (like the kings, v.10, they keep their distance even as they mourn, their grief for their lost wealth); 'which were made rich by her' (their wealth came from her trade, v.3, their lament for the loss of the riches she brought them, their mourning self-interested); 'stand afar off for the fear of her torment, weeping and wailing' (afraid to come near lest they share her judgment, they mourn from a distance, their weeping and wailing for themselves, for the loss of their gain, the self-interested lament of the enriched traders) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The merchants of these things, which were made rich by her, shall stand afar off for the fear of her torment, weeping and wailing",
-   "the merchants standing afar in fear and grief",
-   "the enriched merchants mourning their lost wealth from afar",
-   "the self-interested lament of the traders"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The merchants' dirge: 'and saying, Alas, alas, that great city, that was clothed in fine linen, and purple, and scarlet, and decked with gold, and precious stones, and pearls!' — the merchants, like the kings (v.10), crying 'Alas, alas' over the great city (they lament her former splendor — clothed in fine linen, purple, and scarlet, decked with gold, jewels, and pearls, echoing the harlot's array, 17:4, the dirge over her vanished magnificence); 'clothed in fine linen, and purple, and scarlet' her former luxurious attire (the very wares they sold her, her splendor, drawn from 17:4, recalled in her ruin); 'decked with gold, and precious stones, and pearls' (the merchants recalling her former opulence, the gold and jewels of their trade, now lost, the contrast of her past magnificence and present ruin sharpening their lament, they mourning the splendor that enriched them) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Alas, alas, that great city, that was clothed in fine linen, and purple, and scarlet",
-   "decked with gold, and precious stones, and pearls",
-   "the merchants' dirge over the splendid city",
-   "mourning the vanished magnificence that enriched them"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sudden ruin and the mariners' lament: 'for in one hour so great riches is come to nought. And every shipmaster, and all the company in ships, and sailors, and as many as trade by sea, stood afar off' — the merchants marveling that in a single hour such great wealth has come to nothing (the suddenness of the ruin, the refrain, vv.10, 19, astonishing them, the vast riches of Babylon destroyed in an hour); 'every shipmaster, and all the company in ships, and sailors, and as many as trade by sea' the third group of mourners (the mariners and seafarers who carried her commerce joining the lament, the third of the three laments — kings, merchants, mariners — all who profited by her sea-trade mourning her fall); 'stood afar off' (like the kings, v.10, and merchants, v.15, they keep their distance, mourning from afar, the seafarers lamenting the loss of the trade that enriched them, the third group of self-interested mourners standing at a distance) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in one hour so great riches is come to nought",
-   "every shipmaster, and all the company in ships, and sailors, and as many as trade by sea, stood afar off",
-   "the sudden loss of riches and the mariners' lament",
-   "the third group of self-interested mourners"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mariners' cry: 'and cried when they saw the smoke of her burning, saying, What city is like unto this great city!' — the mariners, seeing the smoke of her burning (v.9), crying out, 'What city is like unto this great city!' (they lament her as unequaled, marveling that so great a city is destroyed, the dirge over her incomparable greatness now in ruins); 'when they saw the smoke of her burning' (the rising smoke, as v.9, the sight that draws their lament, the visible token of her destruction prompting their cry); 'What city is like unto this great city' (the mariners lamenting her as without equal, the cry, echoing Ezekiel 27:32, the lament over Tyre, marking her as the unrivaled great city now fallen, the wonder that so incomparable a city should perish) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cried when they saw the smoke of her burning, saying, What city is like unto this great city!",
-   "the mariners' cry at the smoke of her burning",
-   "the dirge over her incomparable greatness now in ruins",
-   "the lament over the unrivaled city's fall"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mariners' mourning: 'and they cast dust on their heads, and cried, weeping and wailing, saying, Alas, alas, that great city, wherein were made rich all that had ships in the sea by reason of her costliness! for in one hour is she made desolate' — the mariners casting dust on their heads (the gesture of deep grief and mourning, Ezekiel 27:30; Lamentations 2:10) and crying 'Alas, alas' over the great city (the third lament reaching its climax of grief); 'wherein were made rich all that had ships in the sea by reason of her costliness (her wealth)' (the seafarers grew rich by her costly trade, their lament for their own enrichment now ended, the mariners mourning the source of their wealth); 'in one hour is she made desolate' (the refrain, vv.10, 17, of the sudden, swift desolation, the great rich city made desolate in a single hour, the abruptness of her ruin marking the closing of the threefold lament) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they cast dust on their heads, and cried, weeping and wailing, saying, Alas, alas, that great city",
-   "for in one hour is she made desolate",
-   "the mariners' mourning and the desolation of the city",
-   "the climax of the threefold lament over the suddenly desolate city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
-   "Matthew Henry"
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "15-20",
+  "pericope_label": "The merchants and mariners stand afar off; rejoice over her, thou heaven",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The call to rejoice: 'rejoice over her, thou heaven, and ye holy apostles and prophets; for God hath avenged you on her' — in pointed contrast to the lament of the kings, merchants, and mariners, heaven and the holy apostles and prophets called to rejoice over Babylon's fall (the saints and heaven rejoicing where the worldly mourn); 'heaven, and ye holy apostles and prophets (and saints)' the rejoicers (the redeemed and the heavenly host, especially the apostles and prophets whom Babylon persecuted, those who suffered from her now rejoicing in her judgment); 'for God hath avenged you (judged your judgment) on her' the vindication (God has executed the saints' cause against her, avenging the blood of the persecuted, cf. 6:10; 18:24, the rejoicing grounded in God's vindication of his people, her fall the answer to the martyrs' cry) — Barnes, Robertson, Henry."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the finery of verse sixteen is worn or sold: Barnes takes the city as personified, so that what were articles of traffic now clothe her as a woman dressed in the richest of them; Clarke denies it on lexical grounds, that the verb rendered clothed often signifies to abound or be laden with, as the best Greek writers use it and as Kypke shows, and that these are therefore not personal ornaments but the articles of trade in which the city trafficked",
+   "What the text of verse seventeen reads: Barnes finds the received reading giving the whole company in ships while the editors he follows give one who sails to a place, that is a coaster who does not venture far out to sea and so a lesser class of seafarer; Clarke prefers the same reading and explains the practice behind it, that in those times the compass being unknown every voyage was performed coastwise within sight of land; Robertson notes Nestle’s further conjecture of sea for place and declines it as unnecessary",
+   "Whether the naming of apostles in heaven bears on the date and authorship of the book: Ellicott alone raises the argument, that because the verse names apostles in heaven some have inferred the twelve were all dead before the Apocalypse was written and therefore John did not write it, and answers that the verse states nothing about who has passed into heaven but is simply a summons to all who fought on their Lord’s side"
+  ],
+  "outliers": [
+   "Barnes's reconciliation of the one day of the earlier verse with the one hour here, that the shorter term is what the ruin seemed to the lookers-on",
+   "Gill's proverb that the Jews said if ten measures of riches descended into the world the ancient Romans took nine and the whole world the tenth",
+   "Robertson's single sentence on the smoke, that the eternal city is eternal no longer",
+   "Wesley's principle that most of the expressions describing this downfall are taken from Ezekiel's description of the downfall of Tyre",
+   "Barnes's insistence that the summons to rejoice is not the language of vengeance but of exultation that the cause of truth may now spread without hindrance",
+   "Robertson's observation that the verb for rejoicing here is the same used earlier of the joy of the wicked over the death of the two witnesses, and that the word for judgment means a case brought to trial rather than a sentence"
+  ],
   "themes": [
-   "Rejoice over her, thou heaven, and ye holy apostles and prophets; for God hath avenged you on her",
-   "the call for heaven and the saints to rejoice over Babylon's fall",
-   "the heavenly counterpart to the earthly lament",
-   "the saints rejoicing in God's vindication"
+   "the dirge of the merchants",
+   "in one hour so great riches",
+   "the dirge of the sea-folk",
+   "dust upon their heads",
+   "rejoice over her, thou heaven"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "21-24",
+  "pericope_label": "The millstone cast into the sea; found no more at all; the blood of prophets",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The millstone cast into the sea: 'and a mighty angel took up a stone like a great millstone, and cast it into the sea, saying, Thus with violence shall that great city Babylon be thrown down, and shall be found no more at all' — a mighty angel performing a symbolic act (as Jeremiah 51:63-64, where the scroll with a stone is cast into the Euphrates), casting a great millstone into the sea (the violent, irreversible sinking of the stone signifying the violent, total overthrow of Babylon); 'Thus with violence shall that great city Babylon be thrown down' (as the millstone is hurled down and sinks, so Babylon will be violently, suddenly cast down, the figure of her sudden, forceful, irreversible destruction); 'and shall be found no more at all' (like the stone sunk in the sea, Babylon gone forever, never to be found again, the emphatic finality marking her total, permanent ruin, she vanishing utterly) — Barnes, Robertson, Ellicott."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the prophecy has been fulfilled: Clarke twice denies it, holding that the words are true of ancient Babylon, whose very site is uncertain, and true of Jerusalem, but not true of Rome pagan nor as yet of Rome papal, which still exists, so that there is no city to which all these things are yet applicable and the prophecy must remain to be fulfilled; Barnes applies the whole chapter firmly to Papal Rome as the course of the preceding interpretation demands, and Gill and Wesley assume that application throughout",
+   "How far the blood-guilt reaches: Barnes takes the charge nearly at face value, that persecution there was so constant that all the blood ever shed may be said to have been poured out there; Ellicott denies the literal sense expressly, holding that the world city is founded on principles whose logical outcome is violence and that those who die by her hands, few or many, are evidence of the tendency of her power, and draws the rule that in the heavenly view we are guilty of all that the spirit of our conduct tends to do; Wesley piles up numbers instead and then concedes the figure may be overcharged",
+   "Who the mighty angel is: Gill will have him neither Christ nor a ministering spirit but some man or set of men; Barnes takes him for an angel distinct from the one at the head of the chapter; Ellicott is concerned only that he is strong enough to lift the ponderous stone"
+  ],
+  "outliers": [
+   "Ellicott's reading of the great dead mass sinking helplessly by the law of its own weight as a fall past recovery, and his antithesis that she who sat as a queen upon many waters sinks as a stone in the mighty waters",
+   "Clarke's attention to the mechanics, that the stone falls with the accelerated force of gravitation and with that force greatly increased by the projectile force impressed upon it by the destroying angel",
+   "The independent counting of the refrain, Ellicott finding the words no more repeated six times like a funeral knell and Robertson counting the same negatives grammatically as a fourfold sonorous repetition with two more following",
+   "Wesley's reading of the silences as a social ladder, music being the entertainment of the rich, trade the business of the middle rank, the preparing of bread the employment of the lowest, and marriage the means by which cities are peopled, so that no rank could live there any more",
+   "Robertson's excursus from the Greek word for sorcery to its English descendant, and his examples of quackery in patent medicines, witch-doctors and professional faith-healers, true medical science having had a hard fight to shake off charlatanry",
+   "Gill's retribution on the candle, that where wax candles burned in daylight there will not be one to give light at night, and where candles were lighted for the dead there will not be one for the living"
+  ],
   "themes": [
-   "a mighty angel took up a stone like a great millstone, and cast it into the sea",
-   "Thus with violence shall that great city Babylon be thrown down, and shall be found no more at all",
-   "the millstone cast into the sea, the sign of Babylon's fall",
-   "her sudden, total, irreversible ruin"
+   "the millstone cast into the sea",
+   "found no more at all",
+   "the voice of the bridegroom",
+   "by thy sorceries deceived",
+   "the blood of prophets and saints"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The silence of the desolate city: 'and the voice of harpers, and musicians, and of pipers, and trumpeters, shall be heard no more at all in thee; and no craftsman, of whatsoever craft he be, shall be found any more in thee; and the sound of a millstone shall be heard no more at all in thee' — the music (harpers, musicians, pipers, trumpeters), the work of craftsmen, and the sound of the millstone (the everyday labor of grinding) all ceasing in Babylon (the figure of a city utterly desolate, where all the sounds of festive and productive life are silenced, drawn from Jeremiah 25:10; Ezekiel 26:13); the cessation of music marking the end of all festivity and joy (no more songs or celebrations, the silence of a dead city); the absence of craftsmen and the silence of the millstone marking the end of all industry and daily life (no more work, no more bread ground, the city wholly desolate, devoid of both joy and labor) — Barnes, Robertson, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the voice of harpers, and musicians, and of pipers, and trumpeters, shall be heard no more at all in thee",
-   "no craftsman... and the sound of a millstone shall be heard no more at all in thee",
-   "the silence of music and labor in the desolate city",
-   "the city wholly desolate, devoid of joy and labor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The darkness and the cause: 'and the light of a candle shall shine no more at all in thee; and the voice of the bridegroom and of the bride shall be heard no more at all in thee: for thy merchants were the great men of the earth; for by thy sorceries were all nations deceived' — no lamp shall shine, and no voice of bridegroom and bride (the sounds of joy, marriage, and home, Jeremiah 25:10) shall be heard (the city dark and joyless, all light and gladness extinguished, total desolation); 'thy merchants were the great men (megistanes — magnates, princes) of the earth' (her traders the world's great men, her commerce making her merchants princely, her former greatness and worldly power recalled in her ruin); 'by thy sorceries (pharmakeia — enchantments, magic arts) were all nations deceived' (Babylon deceived all nations by her sorceries, whether literal magic or the figure of her seductive, corrupting deceptions — her false worship, allurements, and intrigues — the cause of her judgment her deception and corruption of the nations) — Barnes, Robertson, Ellicott."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the light of a candle shall shine no more at all in thee; and the voice of the bridegroom and of the bride shall be heard no more",
-   "for by thy sorceries were all nations deceived",
-   "the darkness and silence of the city and the cause of her fall",
-   "the dark, silent city judged for her deceptions"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The blood of the saints found in her: 'and in her was found the blood of prophets, and of saints, and of all that were slain upon the earth' — Babylon found guilty of the blood of the prophets and saints (she the great persecutor, in whom the blood of God's slain people is found, the chief ground of her judgment her bloodguilt against the faithful); 'the blood of prophets, and of saints' (the martyred prophets and faithful found in her, she killed God's people, 17:6; 18:20, her persecution of the saints bringing her judgment); 'and of all that were slain upon the earth' the comprehensive guilt (the blood of all the martyrs, indeed of all unjustly slain, charged to her, as Jerusalem in Matthew 23:35, the great persecuting power held responsible for the blood of God's people through the ages, her comprehensive bloodguilt sealing her doom) — Barnes, Robertson, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in her was found the blood of prophets, and of saints, and of all that were slain upon the earth",
-   "the blood of the saints found in Babylon",
-   "the great persecutor guilty of the martyrs' blood",
-   "her comprehensive bloodguilt sealing her doom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

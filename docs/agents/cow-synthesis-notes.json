@@ -14278,6 +14278,73 @@
       "book": "deuteronomy",
       "chapter": "16",
       "note": "All 7 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.630, mean zip 0.456. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named), and every declared exclusion names a block actually present inside its own span. 4 of 7 entries landed in range on the first draft; the three that overran were the three richest spans (1361, 2085 and 1804 source words) and each needed one or two sentence-level passes. Tiling followed the chapter's own five-part structure (Passover, Weeks, Tabernacles, the three appearances, judges, and the asherah/pillar) rather than any word budget, which is why entry 2-8 covers seven verses: keys 5, 12 and 15 carry Gill ALONE and keys 4, 6, 7 carry only Gill and Wesley, so a verse-level shape would have produced six near-single-voice entries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "18",
+      "verses": [
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "Jamieson stride-6, SIXTEENTH confirmation. Keys 9, 15 and 21 carry blocks with nothing to do with Revelation 18; they walk 1 TIMOTHY 2 across the chapter. k9 is on 1Ti 2:5, God's unity in essence and purpose and the one mediator between God and all men, citing Bengel that all mankind constitute as it were one man before God. k15 is on 1Ti 2:9-10, women's deportment in public worship, quoting Ellicott for 'in seemly guise' and Trench on shamefastness. k21 is on 1Ti 2:15, saved in childbearing, arguing that the curse itself is turned into a condition favourable to her salvation. Offset 3 (keys congruent to 3 mod 6). Target stride is an exact 6, as always; SOURCE verses are 5, 9 and 15, gaps of 4 and 6 -- irregular, consistent with the philippians 2 finding that only the target side is regular. Updated offset tally across sixteen chapters: offset 0 - 1thessalonians 5, romans 14; offset 1 - 1peter 1, 1corinthians 16, judges 2, hebrews 7; offset 2 - acts 21, 1corinthians 11; offset 3 - numbers 24, philemon 1, acts 11, acts 17, philippians 2, revelation 18; offset 4 - philippians 1, 2corinthians 11. OFFSET 5 STILL NEVER OBSERVED. Offset 3 is now the modal offset with six members. Jamieson is in RESIDUE for this chapter and declared as excluded_voices on the three affected entries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "9",
+        "12"
+      ],
+      "note": "THIRD STUCK CYRIL FRAGMENT, plus a fourth distinct block. A Cyril of Jerusalem block appears byte-identical at keys 3 and 9 of this chapter: 200 words, 1,039 chars, md5 1a11faff4532, opening 'For thus shall we raise our thoughts higher than the Jews, who admit indeed by their doctrines that there is One God'. It is a catechetical lecture on the Jews denying that God is the Father of our Lord Jesus Christ. This is DISTINCT from fragment A (2 Cor 4:4, blinded thoughts, 1,070 chars, md5 faf6f21d5467, five occurrences: philemon 1 k25, 1thessalonians 5 k23 and k28, 1corinthians 16 k23, 2corinthians 11 k31) and from fragment B (the two names Jesus Christ, 1,097 chars, md5 763fd91d7fb4, hebrews 7 k17 and k21). Three separate stuck Cyril fragments are now on record. Fragment C repeats WITHIN one chapter at a gap of 6 keys, as fragment B repeated within hebrews 7 at a gap of 4. Unlike fragment B, whose content was genuinely apt to its host chapter and could be used once, fragment C has nothing whatever to do with Revelation 18, so it was silenced at BOTH keys rather than used once. Key 12 carries a FOURTH and different Cyril block (1,099 chars, md5 0617aea8ae3f) on the two comings of Christ from Malachi; that one was used, since Cyril's own quotation of gold, silver, precious stones, wood, hay and stubble tried in the fire genuinely touches the cargo list of Revelation 18:12, and the prose states plainly that Cyril is not commenting on the verse. Pattern worth watching: every stuck Cyril fragment found so far is exactly 200 words as the dump reports it, suggesting a fixed truncation length at the scrape."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "18",
+      "verses": [
+        "24"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME -- ELEVENTH CONSECUTIVE CHAPTER, AND BY FAR THE WORST INSTANCE OF THE RUN. The Charles Ellicott block at revelation 18:24 is 1,246 words, of which only 254 are commentary. The remaining 992 words are page furniture, and unlike the previous ten instances they are not merely navigation labels. The block runs: real comment, then the familiar terminal navigation ('Revelation Rev 17 Revelation Rev Revelation Rev 19 Footnotes:'), then a copyright statement crediting BibleSupport.com, then a StudyLight.org footer with terms of use and contact form text, then RAW CSS (a .sub-menu rule block with colours, flex properties and z-index), then site menu labels and a long list of devotional titles (Spurgeon's Faith's Checkbook, Morning and Evening with Tozer, Bowen's Daily Meditations and others, several of them repeated), then RAW JAVASCRIPT source including document.addEventListener DOMContentLoaded handlers, querySelectorAll calls and a navigation-accordion IIFE referencing study-desk.html. Prior instances of this defect were 900-1,000 words of navigation text; this one is a substantial fraction of a rendered HTML page dumped into a commentary field, executable script included. Chapters affected in sequence: 1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22, romans 14 k23, acts 17 k34, philippians 2 k30, 2corinthians 11 k33, hebrews 7 k28, revelation 18 k24. Ten of the eleven cannot separate 'last verse key' from 'last Ellicott block' because they coincide; judges 2 alone separates them and favours LAST ELLICOTT BLOCK as the trigger. dump.py in the chapter scratchpad was given a revelation-specific cut marker for this run; a general fix would cut at the copyright statement, which is present in every instance."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "BEDE APPEARS IN THIS CHAPTER, and confirms the standing OCR defect. Revelation 18 carries a Bede block at key 1 (300 words), the first time Bede has been a usable voice in this run. It is genuine and apt commentary on Revelation 18 -- the angel understood as the Lord incarnate or the doctors of the Church, Babylon as the city of the devil, and a fine gloss that he calls those rich in sins who by an infelicitous traffic exchange their souls for temporal abundance, since excess of luxuries makes poor instead of rich. Two things to record. First, like Matthew Henry's blocks, it is a SECTION exposition, not a verse comment: the single block filed under key 1 runs numbered notes on verses 1, 2, 3, 4, 6 and 7, so it spans well past the entry it sits in. Second, it confirms the Bede/Lightfoot OCR item already on the owner's re-fetch list. The block carries unescaped HTML entities rendered as literal text (&quot; and &#x27;&#x27; appear inline) and clear OCR corruption: 'madces' for 'makes', 'frotn' for 'from', 'tempc^ral' for 'temporal', and stray carets before quotation marks. The text is usable but the entity noise and the corrupt words would show to a reader if any Bede block were ever surfaced verbatim. Bede is mapped to the latin-fathers school in this chapter's build, and he is visible to split_voices since VOICE_LABELS lists the bare surname 'Bede' -- unlike 'Cyril', which is a prefix of the real head and therefore invisible."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "18",
+      "verses": [
+        "2",
+        "8",
+        "13",
+        "16",
+        "17",
+        "21",
+        "24"
+      ],
+      "note": "The live disputes in revelation 18, all carried into the entry tags. (1) WHAT BABYLON IS, and whether the prophecy is yet fulfilled: Clarke is the dissenting voice and says so twice. At v2 he lists Rome pagan, Rome papal and Jerusalem without choosing; at v8 he asks 'of what city is this spoken?' and answers that Rome pagan was never so treated since Alaric and Totilas burnt only parts of it, that Rome papal has not been so treated either, and that the description is true of Jerusalem, which is not generally thought to be intended; at v24 he concludes there is no city to which all these things are yet applicable and the prophecy must remain to be fulfilled. Barnes goes the other way and argues at length that Rome may literally be burnt, canvassing Jewish and early Christian expectation. Gill, Wesley and Henry assume the papal application throughout. Bede allegorises to the city of the devil and looks for no city at all. (2) WHETHER THE CARGO LIST IS LITERAL: Gill argues sharply that it cannot be, since goods that do not sell in one city sell in another and the ruin of commerce in one place is often the rise of it in another, so all these things will be merchandised somewhere to the end of the world; Robertson treats it as documentary, counts twenty-nine items of import into the port of Rome and cites Galen, Pliny and Aristides; Barnes treats it as scene-setting; Clarke twice abandons his own comment for Bishop Bale's item-by-item Reformation polemic. (3) BODIES AND SOULS OF MEN at v13: Robertson holds the first word means simply bodies, treated as livestock alongside the horses and chariots, and suggests the following conjunction be rendered 'even' so the two phrases are one; Barnes reports Stuart's narrower reading that it means grooms; Wesley keeps them apart and makes souls of men the most gainful merchandise of all at Rome. (4) WORN OR SOLD at v16: Barnes takes the city as personified and clothed in the finery, Clarke denies it on lexical grounds from Kypke, that the verb means to abound or be laden with, so these are trade goods not ornaments. (5) THE TEXT AT v17: Barnes and Clarke both prefer 'one who sails to a place' (a coaster) over the received 'all the company in ships', Clarke explaining that before the compass every voyage was performed within sight of land; Robertson declines Nestle's further conjecture of 'sea' for 'place'. (6) HOW FAR THE BLOOD-GUILT REACHES at v24: Barnes takes it nearly literally, Ellicott denies the literal sense expressly and grounds the charge in the tendency of her principles, Wesley piles up statistics and then concedes they may be overcharged. (7) A DATING ARGUMENT at v20 raised by Ellicott alone: because the verse names apostles in heaven, some have inferred the twelve were all dead before the Apocalypse was written and therefore John did not write it; Ellicott answers that the verse states nothing about who has passed into heaven and is simply a summons to all who fought on their Lord's side."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "18",
+      "note": "Fidelity self-grade, revelation 18, six entries tiling 1-24. Word counts: 1-3 644w (8 voices), 4-8 644w (6), 9-11 649w (7), 12-14 647w (7), 15-20 647w (7), 21-24 650w (6). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-24 is uncovered. NO CALVIN in this chapter, since he wrote no commentary on Revelation; the reformed school is carried by Gill alone throughout, and Bede supplies a latin-fathers entry at 1-3, the first in this run. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's flat refusal of the whole application at v8 and v24, Barnes's argument that Rome may literally burn, Gill's mystical turn on the cinnamon to the licensed brothels of Rome and their revenues, Wesley's Inquisition statistics with his own concession that they may be overcharged, and Robertson's excursus from sorcery to modern quackery and faith-healers. Two summarising decisions are recorded rather than concealed: Clarke's very long Bishop Bale quotations at k11 and k12 (507 and 640 words of Reformation polemic against the mass, relics and clerical wares) are reported as what they are and sampled rather than reproduced at length, and Barnes's chapter-level REMARKS at k24 are used only for the blood-guilt point. DECLARED DEVIATIONS: (a) Jamieson is in RESIDUE for the whole chapter, its three blocks belonging to 1 Timothy 2, and is declared as excluded_voices on the three affected entries. (b) The Cyril blocks at keys 3 and 9 (stuck fragment C, byte-identical to each other and irrelevant to this chapter) are dropped WITHOUT an excluded_voices declaration. This is forced, not chosen: the VOICE_LABELS list in scripts/synthesis_qa.py contains the bare string 'Cyril', which is a PREFIX of the real head 'Cyril of Jerusalem:', so the regex never matches and undeclarable_voices rejects both 'Cyril' and 'Cyril of Jerusalem'. The same defect failed the validator outright at 2corinthians 11 and forced the same silent drop at hebrews 7. That is now three chapters in a row where a genuine exclusion could not be declared. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'. Note that 'Bede' in the same list works correctly, because it is the whole head and not a prefix of it."
     }
   ]
 }
