@@ -16224,6 +16224,91 @@
         "21"
       ],
       "note": "All twelve entries self-graded A (QA 643/641/628/642/642/641/585/640/649/620/638/645; ttr 0.590-0.659). Seven needed a trim pass; with seven to nine voices at nearly every key the 650 cap is the binding constraint throughout, and entry 21 came closest to a grade risk on doctrinal-vocabulary saturation (sin, righteousness, imputed, offering) at ttr 0.590, which is the lowest of the run so far but still clear of the 0.58 floor. Tiling 1 | 2-3 | 4-5 | 6-7 | 8-9 | 10-11 | 12-13 | 14-15 | 16-17 | 18-19 | 20 | 21, following the argument rather than equal source weight; keys 20 and 21 were kept solo because each is a self-contained topic (the embassy, the exchange) and key 21 carries 8,330 source words. JFB excluded at the four keys where it appears. Prevalence by the documented count rule; debates and outliers in the documented structured form."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "4",
+      "note": "STRIDE, strongest confirmation yet of the luke-24 revision. Jamieson residue at keys 1, 7, 13, 19, 25 and 31 — SIX members, the longest run in the series to date; offset 1 (all keys congruent to 1 mod 6). Source is Romans 13-14: k1=Rom 13:1, k7=13:6, k13=13:11, k19=14:1, k25=14:6, k31=14:11. Source gaps are 5, 5, 4, 5, 5 against target gaps of 6, 6, 6, 6, 6 — five consecutive gaps, NOT ONE of which is 6 in the source, and every one quantises UP to the next multiple of six. A fixed-period model of the residue mechanism must treat all five as independent coincidences; the quantisation model predicts all five. Prior evidence: deuteronomy 15 gave 5,5,4 -> 6,6,6 (clean but only three gaps); numbers 19 gave a zero source gap that strains the model; galatians 5 did not discriminate. With six members and five discriminating gaps this is the decisive case."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "30"
+      ],
+      "note": "CROSS-REFERENCE REWRITING — mechanism now identified. Barnes at key 30 lists where the verb is rendered 'to make sorry': 'Matthew 14:9 , Ephesians 17:23 , Ephesians 18:31 , Ephesians 19:22 , Ephesians 26:22 ,37 Mark 14:19 , John 16:20 , 2 Corinthians 2:2 , Ephesians 6:10 , Ephesians 7:8 ,9,11, 1 Thessalonians 4:13'. Barnes wrote Matthew 14:9; 17:23; 18:31; 19:22; 26:22,37 and 2 Corinthians 2:2; 6:10; 7:8,9,11 — bare chapter:verse CONTINUATIONS of a preceding named book. The scraper's linkifier resolved each bare continuation against the CONTAINING book (Ephesians) instead of the antecedent named in the prose, producing seven wrong book names in one sentence. Fully-named refs in the same block survive intact (Mark 14:19, John 16:20, 2 Corinthians 2:2, 1 Thessalonians 4:13). This is the same defect filed at deuteronomy 15 key 4, where Ellicott's 'a passage in the Acts of the Apostles, Deuteronomy 4:34' was a bare '4:34' resolved to Deuteronomy — the mechanism explains both. Consequences: (a) the corruption is invisible wherever the rewritten chapter:verse happens to exist in the containing book, which is most of the time; (b) it is detectable programmatically — scan for a ref whose book equals the containing book and which immediately follows, in a comma/semicolon list, a ref naming a different book. Recommend that scan corpus-wide, plus a re-fetch policy for any block it flags."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "4",
+      "note": "200-WORD CAP — NT/OT feed pattern holds. Gill is capped at exactly 200 words in 12 of his 32 blocks (keys 1,2,3,6,12,18,20,22,23,24,25,30) and his maximum across the chapter is exactly 200, so every one of his long blocks is truncated mid-sentence. No other main voice is capped: Calvin max 1438, Henry 3946, Barnes 2397, Ellicott 1109, Clarke 835, Chrysostom 1910. Cyril's key 24 fragment is a stuck 200 of the kind already filed. This is the seventh chapter confirming the split: Gill is the capped feed in NT books (galatians 5, ephesians 4) while Keil is the capped feed in OT books (genesis 14, numbers 19, deuteronomy 15, exodus 27 at 8/8, 1samuel 6) — 43 of 47 Keil blocks across five OT chapters. Because a cap is invisible wherever a voice's natural block is under 200 words, true incidence exceeds the exact-200 count. Recommend the corpus-wide exact-200 scan reported per voice per book, and a re-fetch of Gill (NT) and Keil (OT) ahead of any further work in those trees."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "2",
+        "3"
+      ],
+      "note": "ELLICOTT MISFILE. His blocks at keys 2 and 3 are not comments on Ephesians 4:2 and 4:3 at all: key 2 is his section-overview of verses 25-30 and key 3 is his section-overview of verses 12-16. Both are unlemmatised introductory headers in the source page, and the splitter assigned them positionally to the next two verse slots. Every Ellicott block from key 4 through key 32 carries a proper lemma and is correctly placed, so the fault is confined to the unlemmatised material that precedes the verse-by-verse notes. Same family as the genesis 14 key 3 misfile (a comment on verse 6). Entry 2-3 was written without Ellicott and he was SILENCED there rather than declared, since an excluded_voices entry would tell the reader something of his was withheld on those verses when in fact he says nothing about them anywhere in the file. Recommend the splitter refuse to assign a block that carries no lemma matching its target verse."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "32"
+      ],
+      "note": "CHROME — per-voice-per-BOOK provenance rule, sixth consecutive confirmation. Ellicott's final block in the chapter (key 32) carries the StudyLight page tail: 128 words of real comment followed by navigation chrome ('Ephesians Eph 3 Ephesians Eph Ephesians Eph 5 Footnotes:') and the copyright block. Gill again carries NO sacred-texts tail anywhere in this chapter, exactly as in galatians 5, exodus 27 and 1samuel 6, though he does carry it in Numbers and Deuteronomy. So the tail follows the site a given BOOK's scrape came from, not the voice — the Ephesians Gill feed and the Numbers Gill feed were fetched from different sources. Standing recommendation unchanged: apply the chrome cut as a MARKER SET tested at every key rather than one string at the final key, and build a per-voice-per-book provenance map so the right marker set is known in advance."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "11",
+        "29",
+        "32"
+      ],
+      "note": "TWO SEPARATE FILING DECISIONS PLUS A NAME-STRIPPING RECURRENCE. (1) Cyril of Jerusalem's block at key 11 is a catechetical passage on the crucifixion with no bearing whatever on the gifts of verses 11-13; it is misfiled, not truncated. SILENCED in entry 11-13 rather than declared, on the standing rule that residue from elsewhere is declared but structurally misfiled or empty material is silenced — an excluded_voices entry would have told the reader something of Cyril's on this passage was withheld when he says nothing about it. His key 30 block, by contrast, is genuinely on the Holy Spirit (the wisdom given to Daniel) and is used in entry 28-30. (2) Ellicott silenced in entry 2-3 for the misfile filed separately. (3) Calvin's editorial apparatus is name-stripped again: at key 29 'The genitive, may no doubt be viewed' and at key 32 'is supposed by to mean beneficence' — proper names deleted and the punctuation left orphaned, the same ' . ' and 'by to' gaps filed at numbers 19 key 22. Systematic in the Calvin feed, not OCR noise; the surviving Eadie quotation at key 30 shows the feed does carry editor material, so the stripping is selective and worth tracing to the fetch step."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "31",
+        "32"
+      ],
+      "note": "The catalogue in verse 31 is read in opposite directions by the only two who comment on its order. Ellicott finds an ascending progression in three stages — bitterness as an acerbity of temper ready to take offence, then wrath and anger as the passionate outburst and the deeper anger behind it, then clamour and evil speaking as the first loud fury passing into deliberate slander — all of them exhibitions of the malice named last, rising out of it and reacting on it. Wesley reads the identical list as a 'beautiful retrogradation' descending from the highest degree of the want of love to the lowest: bitterness the height of settled anger, wrath a lasting displeasure, anger the very first risings of disgust, and pairs each term with the answering virtue in verse 32. Neither is arguing against the other; both are reading order off the same six nouns and getting contrary results. Recorded in the entry's disagreement list."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "4",
+      "verses": [
+        "28"
+      ],
+      "note": "Calvin alone raises the question whether 'working with his hands' binds every Christian to manual labour, calls the literal sense 'excessively hard', and answers that the clause is aimed at a particular excuse — that many are in the habit of pleading want — rather than at prescribing a trade. He then argues from the greater to the less: the man forbidden to steal is required not merely to keep himself but to supply his neighbour. Gill, Barnes, Clarke, Ellicott, Robertson and Wesley all take the clause without noticing the difficulty. Recorded in the entry's disagreement list. A second, smaller division in the same entry: Ellicott calls the received English of verse 29 ('to the use of edifying') a mistranslation by inversion of 'the building up of the need', while Barnes, Clarke and Wesley expound the received rendering and Calvin weighs the same genitive and decides differently, preferring the progress of edification."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "ephesians",
+      "chapter": "4",
+      "note": "FIDELITY SELF-GRADE, all 11 entries. Largest chapter attempted in the series: 73,597 usable source words across 32 keys, 11 voices. Word counts, all inside the 350-650 window: 1=650, 2-3=647, 4-6=646, 7-10=645, 11-13=646, 14-16=647, 17-19=647, 20-24=647, 25-27=647, 28-30=647, 31-32=650. Every proposition in every entry is traceable to a named block within that entry's own verse range; no voice is named in an entry where it has no head. Voice coverage: Gill, Barnes, Clarke, Ellicott, Calvin at all 32 keys; Robertson 31; Wesley 27; Chrysostom, Henry and Jamieson 6 each; Cyril 4. Jamieson is declared as excluded_voices in the six entries containing his residue keys (1, 7, 13, 19, 25, 31). Two SILENT_BY_ENTRY decisions, both argued in the source-defect notes: Ellicott in entry 2-3 (his keys 2 and 3 are section-overviews of other verses, so he says nothing about verses 2-3 anywhere) and Cyril in entry 11-13 (his key 11 block is on the crucifixion). Deliberate omissions, none of which changes any reported position: Clarke's Greek lexicography and his citations of Kypke, Aristophanes, Appian and Lucian at key 29 are summarised as 'a lexicographer he names' and three senses rather than quoted; Barnes's missionary and colonial testimony at keys 25, 28 and 29 is compressed to one instance each; Chrysostom's bee and bile images at key 31 are given in two sentences from roughly 900 words; Calvin's Eadie quotation at key 30 is not reproduced; Clarke's four numbered reflections closing the chapter at key 32 are not used, being a summary of the whole chapter rather than comment on the verse. Truncation carried in the notes and NOT attributed to any commentator in the prose: all twelve of Gill's capped blocks, where his sentences break off mid-clause. Where the cap removed a conclusion I reported only what survives and attributed no absence to him."
     }
   ]
 }

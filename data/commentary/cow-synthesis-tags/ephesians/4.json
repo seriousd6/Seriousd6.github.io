@@ -1,1335 +1,909 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "1",
+  "pericope_label": "I beseech you, walk worthy of the vocation wherewith ye are called",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Read the verse as a rule for teachers — that whoever seeks esteem rather than his hearers’ salvation is a tyrant and not a teacher — and take Paul’s manner of entreaty as the model."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Prefer <em>prisoner for the Lord’s sake</em>, treat the imprisonment as the seal of his commission rather than a discredit, and set out the structure of the remaining chapters before expounding."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Read the bonds as recommending the letter, since a doctrine worth suffering for is worth regarding, and notice that the prisoner asks nothing for himself."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The opening of the practical half (Barnes); Paul beseeches (not commands), grounding the appeal in his bonds 'the prisoner of the Lord' (for the gospel's sake); to 'walk worthy of the vocation' — the life answering the calling, adorning the grace of chapters 1-3 with the graces of regenerate humanity (Ellicott)."
+    "summary": "Derive the particular graces required from the particular argument of the letter — aliens now made one body — rather than from a general catalogue of virtues; and explain the grammar and the Colossians parallel."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the teacher aims not at praise but at the salvation of his hearers."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the imprisonment as a motive to obedience that would comfort him, and preface the chapter with its argument."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether <em>in the Lord</em> qualifies <em>prisoner</em> or <em>beseech</em> — Gill reports both constructions and prefers the first.",
+   "Why Paul names his chains: as a refusal to be ashamed of them (Henry), as confirmation of his apostolic authority (Calvin), as a motive of comfort to be answered by obedience (Wesley), or as a reproach to those whose walk added to his afflictions (Gill).",
+   "Whether the graces required by the calling are a general list of Christian virtues or specifically humility and gentleness, drawn from what this letter has said the calling was (Ellicott)."
+  ],
+  "outliers": [
+   "Chrysostom alone makes the verse a definition of the teaching office, and alone stages Paul’s motive as a dialogue.",
+   "Calvin alone ranks the apostle’s prison above the triumphal chariot of kings.",
+   "Henry alone dwells on what the prisoner refrains from asking."
+  ],
   "themes": [
-   "walk worthy of the vocation",
-   "the prisoner of the Lord",
-   "doctrine into duty",
-   "the keynote of holy living"
+   "Christian calling",
+   "Humility",
+   "Apostolic authority",
+   "Suffering",
+   "Unity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The humble graces that knit believers together — 'lowliness' (humility, Phil 2:3, the first step to unity), 'meekness' (the gentle, unretaliating spirit), 'longsuffering' (patience bearing wrong over time), crowned by 'forbearing one another in love'; the virtues that absorb the daily offenses arising from human temper (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "lowliness and meekness",
-   "longsuffering",
-   "forbearing one another in love",
-   "the graces of unity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "2-3",
+  "pericope_label": "Lowliness, meekness, long-suffering; keeping the unity of the Spirit",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Read the four graces as a strict sequence in which humility is first and forbearance last, trace all breaches of unity to excessive self-love, and prefer <em>harmony of views</em> to the reading that makes the Spirit the producer of the unity — while allowing that the union is of souls and wrought by the Spirit."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Define each grace against the vice it opposes, and gather the whole under love as the law, lesson and livery of Christ’s household."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Endeavouring' (giving diligence) to 'keep the unity of the Spirit' — the oneness the Holy Spirit creates, to be guarded not manufactured; 'in the bond of peace' (peace the ligament, love the bond, Col 3:14); especially apt where Jew and Gentile met; believers keep, not create, the Spirit-wrought unity."
+    "summary": "Deny that <em>of the Spirit</em> refers to the one Holy Spirit and make it unity of affection; explain the danger of division from the Jewish and Gentile composition of the church; and trace the danger of division to the permanent variety of human temperament."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Give the lexical alternatives for forbearing — sustaining one another, or bearing with one another — press the verb for endeavouring as intense labour, and treat the unity as both spiritual in kind and from the Spirit in origin."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether <em>the unity of the Spirit</em> means unity produced by the Holy Spirit or unity of a spiritual kind — Calvin reports the first and prefers the second, Barnes denies the first outright, Gill and Clarke take both.",
+   "Whether the participle means sustaining one another under life’s burdens or bearing with one another’s faults — Clarke gives both without choosing.",
+   "Whether the bond is peace or love — Robertson notes the parallel epistle makes love the bond, and Wesley identifies the two."
+  ],
+  "outliers": [
+   "Calvin alone argues that the graces must be cultivated in the order given, and that exhorting to forbearance before humility is wasted labour.",
+   "Gill alone infers from the command to <em>keep</em> the unity that it already exists, is valuable, and is hard to hold.",
+   "Barnes alone generalises the danger of division from the Ephesian situation to every society of men."
+  ],
   "themes": [
-   "keep the unity of the Spirit",
-   "the bond of peace",
-   "diligence in guarding unity",
-   "Spirit-wrought oneness"
+   "Unity",
+   "Humility",
+   "Meekness",
+   "The Holy Spirit",
+   "Church conflict"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "4": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The first triad of the sevenfold unity, terse and creed-like ('an embryo creed,' Ellicott) — 'one body' (the mystical body of Christ, all believers), 'one Spirit' (the Holy Spirit animating it), 'one hope' (the common heavenly glory); objective realities, not aspirations, so the church ought visibly to be one."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one body, one Spirit",
-   "one hope",
-   "the sevenfold unity",
-   "grounded in heavenly realities"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Chrysostom"
   ],
+  "range": "4-6",
+  "pericope_label": "One body, one Spirit, one hope; one Lord, one faith, one baptism; one God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The central, Christ-focused triad — 'one Lord' (the Lord Jesus alone, the one Master, no rival), 'one faith' (the one trust in him and body of truth confessed, the same for Jew or Gentile), 'one baptism' (the single rite of initiation in the Trinity's name); from the calling to him who calls and the way of coming (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one Lord",
-   "one faith",
-   "one baptism",
-   "the Christ-centred core"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Read the seven unities as an embryo creed rather than a catalogue; refuse to call the Spirit <em>it</em>; deny any intermediate beings beside the one Lord; guard the one baptism against being made the instrument of discipleship; and use the passage to locate the true fault-line of Christian division in the article on the Church rather than in the doctrine of God."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Extend the one body through all time to include those who pleased God before Christ came, and note that Paul grounds his weightiest exhortations on heavenly examples."
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The climax — 'one God and Father of all,' the ultimate source of unity, completing the Trinity (Father, Son, Spirit across vv4-6); the threefold relation 'above all' (sovereign), 'through all' (pervading), 'in all' (indwelling); the main argument from which the rest flow, the Father gathering all to himself (Calvin)."
+    "summary": "Require union of the whole man, and argue from the single inheritance that eternal life cannot be had without harmony here; multiply the figures of the body — natural, political and domestic — and guard the divine unity against any denial of the trinity of persons."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Resolve the seven into the Trinity and the hope of heaven, and read the one baptism as administered in the threefold name and indicative of the whole Christian dispensation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the one body includes: the faithful of every age, with the saints before Christ (Chrysostom), or the church of Jews and Gentiles now divided into denominations that ought to feel their oneness (Barnes).",
+   "Whether the one baptism is the act or its result, and whether it makes disciples or only professes them — Robertson insists on the second in each case.",
+   "Where the real divisions of Christendom lie — Ellicott argues they turn on the doctrine of the Church and not on the doctrine of God."
+  ],
+  "outliers": [
+   "Barnes alone names the denominations of his own country, and alone denies that Christ died for men of one colour rather than another.",
+   "Robertson alone objects to the neuter pronoun for the Spirit on grammatical grounds while refusing its theological consequence.",
+   "Ellicott alone treats the passage as a fragment of a primitive creed."
+  ],
   "themes": [
-   "one God and Father of all",
-   "above, through, and in all",
-   "the climax of unity",
-   "the Trinity the ground"
+   "Unity",
+   "The Church",
+   "Baptism",
+   "Trinity",
+   "Denominations"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "7": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "From unity to diversity — 'but' to every one grace is given (no believer giftless) 'according to the measure of the gift of Christ' (each the proportion Christ assigns, Rom 12:6); the diversity serving unity, for no member is complete in himself but depends on others (Calvin), the gifts binding the body in mutual service."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "grace given to every one",
-   "the measure of the gift of Christ",
-   "unity not uniformity",
-   "diversity serving unity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "7-10",
+  "pericope_label": "Grace according to the measure of the gift; he ascended, he descended",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "A citation of Ps 68:18, a Messianic victory psalm — 'led captivity captive' (the conqueror leading vanquished foes; Christ triumphing over sin, death, Satan); 'gave gifts' the fruit of victory, the ascended Christ enriching his people with the spoils of his conquest."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Why does Paul write 'gave gifts' where the Psalm reads 'received gifts'?",
-    "sides": [
-     {
-      "position": "the conqueror receives spoils in order to distribute them; Christ received the Spirit's fulness to bestow it — Paul draws out the meaning, not alters it",
-      "holders": [
-       "Calvin",
-       "most"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "'he led captivity captive'",
-   "'gave gifts unto men'",
-   "Psalm 68:18",
-   "gifts the fruit of victory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The word 'ascended' implies a prior 'descended' (one cannot go up who was not below); on Christ's deity, his coming down from heaven (saints ascend though never descended, Wesley); 'the lower parts of the earth' debated — the earth itself (incarnation, death, burial) or the regions beneath."
+    "summary": "Read the grace as office, matched to the station each fills; argue that the ascent implies a descent only if the one ascending is God; supply the Roman triumph behind the imagery; and leave the lower parts undecided between the womb and the grave while confining the filling to the church."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Most refer the descent to the depth of his self-emptying in incarnation and death, not a descent into the realm of the dead."
+    "prevalence": "several",
+    "summary": "State the difficulty of the quotation without disguise, explain the change from <em>received</em> to <em>gave</em> from a known use of the verb and from the Targum’s own gloss, and prefer the descent into the regions beneath the earth on the usage of the phrase and the consent of the ancients."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Concede that Paul departs from the quotation’s plain sense and defend him by denying that he is reasoning as a logician; hold the Psalm’s ascent to be God’s and not David’s; make the measure of grace an argument for mutual dependence and against pride; and deny that Christ’s heaven is any place among the spheres."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Note that the measure of grace is never perfected in this life, since God’s children go on growing while they are in the world."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Take the ascension as the article of the Creed that follows the resurrection."
    }
   ],
   "debates": [
-   {
-    "question": "What are 'the lower parts of the earth'?",
-    "sides": [
-     {
-      "position": "the earth itself (lower than heaven) — Christ's incarnation, humiliation, death, and burial",
-      "holders": [
-       "Clarke",
-       "most"
-      ]
-     },
-     {
-      "position": "the regions beneath the earth, a descent into the realm of the dead",
-      "holders": [
-       "some"
-      ]
-     }
-    ]
-   }
+   "What the grace given to each is: a particular office (Clarke), the Spirit’s gracious influences (Barnes), the one grace of Christ apportioned by capacity (Ellicott), or either saving grace or ministerial gift (Gill).",
+   "On what principle Paul applies a psalm about the ark to the ascension — Barnes says the difficulty is real, Calvin concedes the departure from the plain sense and shifts the ground of the defence.",
+   "Why Paul writes <em>gave</em> where the Psalm has <em>received</em> — Ellicott answers from the verb’s use for fetching on another’s behalf and from the Targum’s identical gloss.",
+   "Whether <em>the lower parts of the earth</em> means the earth as lower than heaven, and so the incarnation (Barnes, Clarke, Robertson), or the regions beneath it, and so the descent to the dead (Ellicott, with the ancient interpreters).",
+   "Whether <em>fill all things</em> is unlimited (Ellicott) or means the church filled with his Spirit (Wesley)."
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin alone states the charge of unfair quotation in his opponents’ own words before answering it.",
+   "Wesley alone makes the inference from ascent to descent depend on the deity of the one who ascends.",
+   "Clarke alone renders the whole verse as a Roman triumph, clause by clause."
+  ],
   "themes": [
-   "ascended implies descended",
-   "the lower parts of the earth",
-   "the depth of his humiliation",
-   "exaltation measured by condescension"
+   "Grace",
+   "Ascension",
+   "Descent of Christ",
+   "Spiritual gifts",
+   "Old Testament in the New"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "One person, one purpose — 'he that descended is the same that ascended' (the Incarnation and Ascension of one Lord), now 'far above all heavens' (the supreme place, Eph 1:21); 'that he might fill all things' — the exalted Christ pervading the universe and his church with his presence and grace, the source of every gift."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the descended is the ascended",
-   "far above all heavens",
-   "'that he might fill all things'",
-   "the all-filling Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "11-13",
+  "pericope_label": "He gave some apostles; for the perfecting of the saints; till we all come",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ascended Christ's gifts are the ministers themselves (Ellicott) — 'apostles' (foundational witnesses), 'prophets' (revelation), 'evangelists' (gospel pioneers), 'pastors and teachers' (settled shepherds); the first orders foundational/temporary, the latter perpetual; from the variety springs unity, as varied tones make one melody (Calvin)."
+    "summary": "Read the ministers as themselves gifts because the verb is <em>gave</em>; admit that the office of evangelist can no longer be defined; dispute the threefold parallelism of the English against the Greek prepositions; and set the oneness of faith and knowledge against Gnostic teaching."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Explain why offices are named where gifts are in question, since God never gives the title without the endowment; defend the necessity of a human ministry against the objection that God could order his church without it; treat the apostolate as an extraordinary office now ceased; and prefer to render the disputed noun by a word for civil ordering."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Complain that the distinct gifts survive but are all compounded into the single class of preacher; build on the threefold symmetry of the verses; and press the full measure of the stature as a standard the church declines to be measured by."
    }
   ],
   "debates": [
-   {
-    "question": "Are 'pastors and teachers' one office or two?",
-    "sides": [
-     {
-      "position": "a single class — the shepherd who also teaches",
-      "holders": [
-       "many"
-      ]
-     },
-     {
-      "position": "two distinct functions",
-      "holders": [
-       "some"
-      ]
-     }
-    ]
-   }
+   "Whether the three clauses of verse 12 stand in parallel — Ellicott argues from the change of preposition that they do not, while Wesley builds an elaborate symmetry on the assumption that they do.",
+   "What <em>perfecting</em> means: mending or repair (Robertson), restoration to place and completion (Barnes), or the orderly arrangement of a commonwealth (Calvin, against the older rendering).",
+   "Whether the <em>perfect man</em> implies sinless perfection — denied by Barnes, who means only maturity, and pressed hard by Clarke as a standard of holiness the church evades.",
+   "Whether the unity of the faith is unity of doctrine or the common grace of faith — Gill offers both after excluding two other senses."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone makes the ministers themselves the gifts, on the strength of the verb.",
+   "Clarke alone charges the churches of his own day with collapsing five distinct offices into the single trade of preaching.",
+   "Calvin alone states, and answers, the objection that God could have ordered his church without human ministers."
+  ],
   "themes": [
-   "apostles, prophets, evangelists",
-   "pastors and teachers",
-   "ministers as Christ's gifts",
-   "diversity making unity"
+   "Ministry",
+   "Church offices",
+   "Sanctification",
+   "Unity",
+   "Spiritual maturity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The threefold purpose — 'perfecting' (katartismos, equipping/mending, as setting a bone) the saints, 'for the work of the ministry/service,' 'for the edifying of the body'; the grammar suggesting the ministers equip the saints so the saints do the work and the body is built up — the whole church, not the clergy alone, sharing the work."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "perfecting of the saints",
-   "the work of the ministry",
-   "edifying the body",
-   "equipping every saint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The goal toward which the ministry labours (continuing to the end, Calvin, embracing every individual) — 'the unity of the faith and knowledge of the Son of God,' 'a perfect man' (spiritual manhood/maturity), 'the measure of the stature of the fulness of Christ' (his complete likeness); both corporate and individual, transformation into the image of the Son."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unity of the faith",
-   "knowledge of the Son of God",
-   "unto a perfect man",
-   "the fulness of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The childhood maturity overcomes — 'no more children' (nepioi, the immature, undiscerning, some content to stay babes, Heb 5:13); 'tossed to and fro' (like waves) and 'carried about with every wind of doctrine,' the prey of 'the sleight of men' (trickery, the loaded dice of cheats, Wesley); immaturity making one easy prey for error."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no more children",
-   "tossed to and fro",
-   "every wind of doctrine",
-   "the sleight of men"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The positive path — 'the truth' (sound doctrine, embraced and adhered to, the safeguard against being blown about) 'in love' (truth without love hardens, love without truth deceives; scolding profits not, Clarke); 'grow up into him in all things, the head, even Christ' — maturity as growth into Christ, not mere knowledge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "speaking the truth in love",
-   "grow up into him",
-   "Christ the Head",
-   "truth and love together"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "14-16",
+  "pericope_label": "No more children, tossed to and fro; speaking the truth in love; the body fitly joined",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The body growing from its Head — 'from whom' (Christ the source of all life and increase, as sap from the root, Calvin); 'fitly joined together and compacted' (every member framed into place); 'by that which every joint supplieth' (each part's mutual contribution); 'increase... unto the edifying of itself in love' — growth from the Head yet through the members' loving ministry."
+    "summary": "Limit the childishness meant to impulsiveness and instability rather than to any quality Christ commended; render the participle <em>being true</em> and make constancy in the truth the true antithesis to instability; and correct the English of the body metaphor against the Greek."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Keep a good sense of childhood alongside the bad, and insert a middle stage between infancy and manhood, so that the believer’s life is always youth and never full maturity in this world."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Distinguish the instability that comes from within from the assault that comes from without; take the sleight from the false dice of gamesters; admit ignorance of the other figure; and make the verse a rule against abusive controversy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "In what sense Christians should cease to be children — Ellicott confines the word to a bad sense throughout, while Gill lists respects in which they should remain children still.",
+   "Whether the participle means speaking the truth (Barnes) or being true and holding fast to it (Ellicott, and Calvin’s editor) — the second makes constancy, not candour, the point.",
+   "What the two participles describe: one danger or two, inward fluctuation and outward assault (Wesley)."
+  ],
+  "outliers": [
+   "Calvin alone denies that believers reach manhood at all in this life, making the whole Christian course an adolescence.",
+   "Clarke alone calls scolding and abuse in religious controversy monstrous, and denies that truth needs any defence but love.",
+   "Robertson alone appeals to modern cell biology in support of the apostle’s metaphor."
+  ],
   "themes": [
-   "the whole body fitly joined",
-   "every joint supplieth",
-   "increase from the Head",
-   "edifying itself in love"
+   "Spiritual maturity",
+   "False teaching",
+   "Truth",
+   "Love",
+   "The Church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
+   }
   }
  },
  "17": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "17-19",
+  "pericope_label": "Walk not as other Gentiles; the understanding darkened; past feeling",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A solemn charge ('I say and testify in the Lord') to 'walk not as other Gentiles' — the converted no longer living like the unconverted; the root of pagan life named first, 'the vanity of their mind' (mataiotes, emptiness/futility of a mind that lost the knowledge of God, Rom 1:21), the inward source of the outward sins."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "walk not as other Gentiles",
-   "the vanity of their mind",
-   "the call to holiness",
-   "the root of evil walking"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Analyse the escalating solemnity of the introduction; deny that the darkening was judicial and explain it as the ordinary effect of vice on the mind; construe <em>the life of God</em> as the life God gives; and analyse the escalating solemnity with which the exhortation is introduced."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dark inward roots — 'understanding darkened' (the mind blind in spiritual things), 'alienated from the life of God' (cut off from the divine life God lives and imparts), 'through the ignorance... because of the blindness of their heart' (a willful, moral ignorance from a hardened heart growing darker through sin, Clarke); separation from God's very life the heathen tragedy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the understanding darkened",
-   "alienated from the life of God",
-   "ignorance and blindness of heart",
-   "spiritual death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Justify the severity as a teacher’s duty to alarm as well as instruct, and admire the tact by which Paul draws his example from others rather than charging his readers directly."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The depth of corruption — 'past feeling' (apelgekotes, conscience cauterized, the moral sense deadened; past feeling pain, which urges seeking a cure, Wesley); 'given themselves over' (willingly surrendered) 'unto lasciviousness' (unbridled lust) 'to work all uncleanness with greediness' (every impurity pursued insatiably, as a trade)."
+    "summary": "Trace the darkening to the fall and the ambition to be as God; distinguish three kinds of life, animal, human and supernatural; and describe the hardening as the accumulation of offences under a conscience that still accuses."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Make the darkness cumulative rather than original, connect it with idolatry, report the variant reading <em>despairing</em>, and explain the force of <em>past feeling</em> from the office of pain in driving the sick to a remedy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Take the passage as the turn from unity and love to purity and holiness, urged on the conscience by apostolic authority."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the darkening of the understanding is a judicial act of God (denied explicitly by Barnes), the standing consequence of the fall (Gill), or the cumulative effect of habitual sin (Clarke).",
+   "Whether the text reads <em>past feeling</em> or <em>despairing</em> — the second is in the Latin, Syriac and Arabic versions and an old Greek copy, and is reported by Gill and Clarke.",
+   "How <em>they gave themselves over</em> stands with the statement elsewhere that God gave them up — Barnes denies any inconsistency, Wesley stresses that it was of their own accord.",
+   "What <em>the life of God</em> means: life in God’s estimation, or the life he bestows in regeneration — Calvin gives both and treats them as one."
+  ],
+  "outliers": [
+   "Chrysostom alone points out the accusation Paul deliberately did not make.",
+   "Calvin alone divides life into three kinds and assigns the third to believers only.",
+   "Clarke alone suggests that men without hope of blessedness would have an interest in denying the resurrection."
+  ],
   "themes": [
-   "past feeling",
-   "given over to lasciviousness",
-   "all uncleanness with greediness",
-   "seared conscience"
+   "Gentile darkness",
+   "Sin",
+   "Conscience",
+   "Idolatry",
+   "Regeneration"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A sharp contrast — 'but ye have not so learned Christ'; the unique phrase 'learned Christ' (not merely about him, but Christ himself, as one learns a person — receiving his doctrine, Spirit, and self); incompatible with the old corruption, for one who has learned Christ 'cannot act thus' (Wesley); two masters, two natures."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'ye have not so learned Christ'",
-   "learning Christ himself",
-   "the sharp contrast",
-   "a different principle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'If so be that' a rhetorical doubt expressing strong affirmation ('since indeed'); three stages — 'heard him' (Christ preached and himself heard), 'taught by/in him' (instructed in union with Christ), 'as the truth is in Jesus' (the truth embodied in the historical Jesus); a faithful, thorough delivery, reproving superficial knowledge (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'ye have heard him'",
-   "taught by him",
-   "as the truth is in Jesus",
-   "real schooling in Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The metaphor of clothing — 'put off' (apothesthai) the 'old man' (the corrupt Adamic nature, the body of sin of the 'former conversation') like a filthy worn-out garment; 'corrupt according to the deceitful lusts' (decaying under lusts that promise a happiness they cannot give, Wesley); the demand for repentance and mortification (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "put off the old man",
-   "the former conversation",
-   "corrupt deceitful lusts",
-   "renunciation of the old self"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The inward middle term — 'renewed' (ananeousthai, made new/young again, Col 3:10) 'in the spirit of your mind' (the inmost principle of understanding and will); the Spirit renovating all the faculties at their source, not curbing outward acts only; the hinge between putting off and putting on, for outward change without inward renewal is hollow."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "renewed in the spirit of your mind",
-   "inward renewal",
-   "made new again",
-   "the Spirit's work in the mind"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "20-24",
+  "pericope_label": "Ye have not so learned Christ; put off the old man, put on the new",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The positive completion — 'put on the new man' (the brand-new nature of regeneration, worn in the life); 'after God is created' (by God, after his likeness, the image of God restored, a new creation, 2 Cor 5:17); 'in righteousness and true holiness' (the marks of the divine image — righteousness toward men, holiness toward God); the second creation by Christ's grace (Calvin)."
+    "summary": "Take <em>the Christ</em> as a title of office distinct from the personal name (Ellicott) or, against the Gnostics, as identified with it (Robertson); deny that the conditional carries real doubt, though Barnes allows a delicate one; correct <em>taught by him</em> to <em>taught in him</em>; and read <em>corrupt</em> as decay rather than pollution."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Make the passage a test of professed knowledge, since a life like an unbeliever’s proves nothing has been learned; distinguish a genuine from a counterfeit knowledge of Christ; and define the putting off of the old man precisely as a deposing rather than a destroying."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Report the alternative pointing of the clause, and allow no qualification to the renunciation, the whole former life having been corrupt."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Turn the passage into an appeal to the unbaptised, to prepare through faith for the new birth into freedom and adoption."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether <em>the Christ</em> is here distinguished from <em>Jesus</em> as a title of office (Ellicott) or deliberately identified with him against the Gnostic separation of the two (Robertson).",
+   "Whether <em>if so be that</em> implies real doubt — denied by Ellicott, Robertson and Clarke, allowed as slight and delicate by Barnes.",
+   "Whether the clause should be repointed as two propositions, <em>ye are not so; ye have learned Christ</em> — reported by both Gill and Clarke.",
+   "How far the renunciation extends: to everything of the former life (Clarke) or only to what belonged to the corrupt nature, dress and manners not being in question (Barnes)."
+  ],
+  "outliers": [
+   "Gill alone insists that the old man is neither removed, destroyed nor altered, but only deposed from government.",
+   "Barnes alone infers from the wording that Ephesus had teachers who neglected practical duties.",
+   "Ellicott alone reads <em>corrupt</em> as disintegration, matching the epithet <em>old</em>."
+  ],
   "themes": [
-   "put on the new man",
-   "created after God",
-   "righteousness and true holiness",
-   "the image of God restored"
+   "Regeneration",
+   "Sanctification",
+   "Knowledge of Christ",
+   "The old man",
+   "Baptism"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "25": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "25-27",
+  "pericope_label": "Putting away lying; be ye angry and sin not; give no place to the devil",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Ask what falsehood is meant and answer that it is not idolatry but the deceit that passes between neighbours."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Define a lie exactly enough to exempt fiction and honest error while refusing the officious lie; and derive every particular exhortation from the righteousness of the new man as from a fountain."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The first duty of the new man — 'wherefore' (because the new man is put on) 'putting away lying, speak truth'; the reason 'we are members one of another' (as the body's members do not deceive one another, so Christ's body must deal truthfully); truth the first condition of the mutual confidence on which unity rests (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "putting away lying",
-   "speak truth with his neighbour",
-   "members one of another",
-   "honesty grounded in unity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Explain the need of the command by the character of heathen society; distinguish the reason Paul gives from other true reasons that are not to his purpose here; call the imperative permissive; and defend righteous anger from Christ’s own example while marking its danger."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "A permissive imperative, not a command to be angry — 'if ye be angry, sin not' (Ps 4:4); anger itself not necessarily sin (Christ felt it, Mark 3:5; God's anger burns against sin); anger at sin lawful but free from malice, directed at the fault while pitying the offender (Wesley); 'let not the sun go down' — reconcile quickly, lest emotion harden into resentment."
+    "summary": "Produce ancient authorities for the low value set on truth among the heathen; and deny that anger without sin is practically attainable, turning the imperative into a warning against anger itself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Define what it is to give place to the devil — not grieving at the first motions of sin, consenting to them, and repeating the deed."
    }
   ],
   "debates": [
-   {
-    "question": "Is 'be ye angry' a command or a concession?",
-    "sides": [
-     {
-      "position": "permissive — 'if ye are angry, sin not'; anger may be righteous but must not become sin",
-      "holders": [
-       "Robertson",
-       "Clarke",
-       "Wesley",
-       "most"
-      ]
-     }
-    ]
-   }
+   "Whether <em>be ye angry</em> commands, permits, or effectively forbids: a permissive imperative (Robertson), a recognition that anger may be sinless though perilous (Barnes, Gill), a defence of righteous indignation as a weapon against evil (Ellicott), or a warning that even an apostle could hardly be angry without sin (Clarke).",
+   "What kind of falsehood is forbidden — idolatry is raised and set aside by Chrysostom in favour of ordinary deceit between neighbours.",
+   "Whether an officious lie told for another’s benefit is lawful — Gill raises the case and denies it.",
+   "Why the reason given is membership one of another rather than duty to God or to truth itself — Ellicott insists the other reasons, though true, are beside the apostle’s argument."
   ],
-  "outliers": [],
+  "outliers": [
+   "Barnes alone supports his account of heathen mendacity from the testimony of a colonial jurist and of missionaries; Clarke makes a similar claim but quotes ancient authors for it.",
+   "Clarke alone denies that the verse can be a precept at all.",
+   "Ellicott alone enlists a modern moral philosopher in defence of resentment."
+  ],
   "themes": [
-   "'be ye angry, and sin not'",
-   "anger not necessarily sin",
-   "let not the sun go down",
-   "anger must not fester"
+   "Truth",
+   "Anger",
+   "The devil",
+   "Heathen morals",
+   "Church membership"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Give place' (topon, room, a foothold) to the devil — connected to v26, nursed festering anger the very opening Satan seeks, turning a passing emotion into rooted bitterness; generally understood of Satan the tempter (not a human slanderer); every cherished sin gives the devil a foothold (Calvin), to be left no room."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give no place to the devil",
-   "anger the devil's foothold",
-   "the tempter exploits passion",
-   "leave him no room"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A threefold reversal — 'steal no more' (end the dishonest taking), 'rather let him labour... the thing which is good' (honest toil replacing idleness, the road back to stealing, Wesley; even unemployment no excuse, 2 Thess 3:10), 'that he may have to give to him that needeth' (the former thief now earning to give); vice replaced by its contrary virtue."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "steal no more",
-   "labour with his hands",
-   "that he may have to give",
-   "vice replaced by virtue"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Corrupt' (sapros, rotten/putrid like decayed fruit, Matt 7:17) — foul, useless, harmful talk that defiles speaker and hearers (Henry); the high positive standard 'good to the use of edifying' (suited to the need) 'that it may minister grace' (conveying spiritual benefit); the test not the absence of evil only but the presence of good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no corrupt communication",
-   "good to edifying",
-   "minister grace to the hearers",
-   "speech that builds up"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "28-30",
+  "pericope_label": "Let him that stole steal no more; no corrupt communication; grieve not the Holy Spirit",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Define theft to include concealed frauds and withheld wages; face the objection that the command would bind every man to manual labour and answer that it is aimed at the plea of want; and prefer the reading that makes the genitive the progress of edification."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Grieve not' (lypeite) the Holy Spirit — a person, not a mere influence, made sorrowful as a loving friend by unkind behaviour (Wesley); the foregoing and following sins summed up as grieving him (more than 'quenching' or 'resisting,' Ellicott); the precious motive 'whereby ye are sealed unto the day of redemption' (Eph 1:13) — the grieved Spirit the very One who secures salvation."
+    "summary": "Explain the caution by the prevalence of theft among the heathen and the power of habit; read the positive clause as a supersession of dishonesty by self-sacrifice; give the lexical sense of the word for corrupt; correct the English rendering of the clause about edifying; and argue that grieving implies a personal relation to the Spirit stronger than quenching or resisting."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Reject the alleged rabbinic allowance of theft where alms follow; classify the senses of the word for corrupt from the lexicographers; and trace what follows on the Spirit’s withdrawal — darkness, hardness, and insensibility."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Trace filthy speech to corruption in the speaker and its effect on the hearer, and connect it to the grieving of the Spirit who is the earnest of the redemption day."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Turn from the warning to the Spirit’s operation, instancing the wisdom given to Daniel by which a condemned woman was delivered."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the command to labour with the hands binds all Christians to manual work: Calvin raises the objection, calls the literal sense excessively hard, and limits the clause to the excuse of want.",
+   "Whether stealing may be excused by charity with the proceeds — reported as a rabbinic allowance by Clarke and refused.",
+   "How to render the clause about edifying: the received English (assumed by Barnes, Clarke and Wesley) against Ellicott’s “building up of the need”, with Calvin weighing the same genitive and deciding differently.",
+   "Whether the Spirit is grieved in himself or grieved in godly brethren whom we offend — Calvin reports the second view and rejects it.",
+   "In what sense grief can be predicated of God: an anthropopathy (Gill), a description of conduct fitted to cause grief (Barnes), or evidence of a real personal relation (Ellicott)."
+  ],
+  "outliers": [
+   "Barnes alone infers from the verse that dependence on others is unlawful for any man able to work.",
+   "Clarke alone follows the withdrawal of the Spirit through to insensibility, in which the loss itself can no longer be perceived.",
+   "Cyril alone treats the verse as an occasion for the Spirit’s works rather than for warning."
+  ],
   "themes": [
-   "grieve not the Holy Spirit",
-   "the Spirit a person",
-   "sealed unto the day of redemption",
-   "reverence for the indwelling Guest"
+   "Theft",
+   "Honest labour",
+   "Almsgiving",
+   "Speech",
+   "The Holy Spirit",
+   "Sealing",
+   "Redemption"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "31": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "31-32",
+  "pericope_label": "Put away bitterness, wrath, anger, clamour and evil speaking; be kind, tenderhearted, forgiving",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A catalogue with a progression (Wesley) — 'bitterness' (settled sour resentment, the root), 'wrath' and 'anger' (heated passion and outbursts), 'clamour' (loud brawling), 'evil speaking' (slander/reviling), 'with all malice' (the underlying ill-will); 'be put away' (arthето, carried off like refuse, Col 3:8); the whole brood of angry tempers banished from the new man."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all bitterness and wrath",
-   "clamour and evil speaking",
-   "with all malice",
-   "be put away"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Read the catalogue as an ascending progression from acerbity of temper through passionate outburst to deliberate slander, all exhibitions of malice; gloss the individual terms and correct the rendering of the last; and treat the answering virtues as disposition, with forgiveness that neither condones evil nor withholds chastisement."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The graces replacing malice — 'kind' (chrestoi, used of God's own kindness, Rom 2:4), 'tenderhearted' (eusplanchnoi, compassionate, 1 Pet 3:8), 'forgiving one another' (the opposite of cherished malice); the pattern and motive 'even as God for Christ's sake hath forgiven you' — forgiveness measured by and flowing from God's free pardon, founded on what God has done in Christ (Chrysostom)."
+    "summary": "Read the same catalogue as a descent from the highest degree of the want of love to the lowest, pairing each term with its opposing virtue; identify bitterness with religious censoriousness; and distinguish the two words for anger as the beginning and the extremity of one passion."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Range the senses of bitterness and settle on the first inward offence taken; deny that the two words for anger differ here as power and act; and note that removing malice would correct the rest."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Argue the case by images — the hive no bees will enter, the bile that poisons the body once its vessel breaks — and ground the command to forgive on what God has already done rather than on the promise of future pardon."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the list ascends or descends: Ellicott’s three rising stages from bitterness to evil speaking against Wesley’s retrogradation from the height of settled anger down to the first risings of disgust.",
+   "What bitterness denotes — the corruption of nature, false doctrine, or simply the first offence taken in the mind (Gill), against Clarke’s identification of it with religious censoriousness.",
+   "Whether the two words for anger differ as power and act: the received distinction, reported and set aside by Calvin, against Clarke’s beginning-and-extremity reading.",
+   "Whether the answering virtue is courtesy of manner (Barnes, Clarke) or an inward disposition only (Ellicott, Calvin).",
+   "Whether the participle in the last clause means to forgive or to be beneficent — Calvin reports the second rendering and prefers the first."
+  ],
+  "outliers": [
+   "Clarke alone names an apothecary’s preparation to supply an epithet for the censorious.",
+   "Chrysostom alone argues from apiculture and from physiology rather than from the text’s wording.",
+   "Barnes alone treats politeness as a Christian duty and denies religion to a sour temper.",
+   "Ellicott alone qualifies the command to forgive by excluding condonation and the remission of chastisement."
+  ],
   "themes": [
-   "be ye kind, tenderhearted",
-   "forgiving one another",
-   "as God for Christ's sake forgave you",
-   "the divine pattern"
+   "Anger",
+   "Bitterness",
+   "Speech",
+   "Forgiveness",
+   "Kindness",
+   "Imitation of God"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  }
 }
