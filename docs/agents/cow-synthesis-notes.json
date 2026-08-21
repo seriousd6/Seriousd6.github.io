@@ -13999,6 +13999,130 @@
         "45"
       ],
       "note": "Four live disputes worth keeping. (1) v35, the sharpest in the chapter: Clarke states outright that the doctrine of the eternal Sonship is 'anti-scriptural, and highly dangerous', since son implies a father and therefore precedency in time, so that 'eternal Son' is a positive self-contradiction and the title here belongs to the human nature only; Calvin answers the same particle directly, that he who had been the Son from eternity was here manifested as such in the flesh; Barnes takes the supernatural birth to prove one reason for the name beyond controversy; Ellicott holds the middle ground that the angel's message was a partial and not a complete revelation. (2) v48: Augustine reads the low estate as the virtue of humility, the heavenly ladder by which God descended; Calvin denies flatly that the word means any quality of mind, calling that the imagining of ignorant men, and insists on a mean and despicable condition. (3) v71: Ellicott alone takes the enemies politically, as the Roman conquerors and the house of Herod, against Gill, Clarke, Barnes and Calvin who take them spiritually. (4) vv12-13 and 45: the chapter's running comparison of Zacharias with Mary, where Calvin alone will not acquit Mary — she confined God's power within the limits of nature and 'we need not take much trouble to acquit her' — while Gill, Ellicott and Wesley all distinguish her question sharply from the priest's."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "55"
+      ],
+      "note": "ORPHAN SCRAPE KEY. cow/1corinthians/16.json carries a key '55'; the chapter has 24 verses. Content is John Lightfoot on 1 Cor 15:55 ('O death, where is thy sting'), heavily OCR-damaged. Omitted per the documented 2026-07-22 policy. Corpus-wide survey: only FOUR chapters have a trailing out-of-range key — 2chronicles 27 (16), ezra 10 (44 is real, gappy source, not an orphan), galatians 2 (29), and this one."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "55"
+      ],
+      "note": "SHAPE FORCED BY A RULE COLLISION — owner decision wanted. Two documented rules conflict for any chapter with an orphan key. (a) cow-synthesis-loop.md 2026-07-22: 'omit them rather than synthesize a nonexistent verse.' (b) QA.coverage_problems: once ANY entry declares a range, every SOURCE key must be covered. Verified both ways: ranges + no '55' entry -> hard fail 'verses covered by no entry: [55]'; ranges + a '55' entry -> validator clean but publishes a phantom 1 Cor 16:55. So a ranged chapter cannot omit an orphan. I followed the precedent of the other three orphan chapters (2chronicles 27, galatians 2, ezra 10 — all range:null) and wrote 24 VERSE-LEVEL entries with range null, which is why this chapter has no pericopes. FIX: either let coverage_problems ignore source keys outside the chapter's verse count, or clean the four orphan keys out of cow/."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19"
+      ],
+      "note": "JFB DISPLACEMENT LAW — EIGHTH CONSECUTIVE CONFIRMATION, and the cleanest instance yet. JFB blocks sit at keys 1, 7, 13, 19: stride 6, phase 1. Running record of phases: acts 24 (2/8/14/20/26), acts 3 (4/10/16/22), james 1 (1/7/13/19/25), 1john 3 (6/12/18/24), ephesians 1 (4/10/16/22), romans 4 (4/10/16/22), luke 1 (26/32/38/62/74), 1corinthians 16 (1/7/13/19). Eight for eight; phase varies, stride never. The sequence stops at 19 because 25 is past the chapter end. ALL FOUR blocks are displaced and the donor march is again strictly forward, through ACTS 26-27: v1 = Acts 26:25 (Paul before Festus, 'readiness, self-possession'), v7 = a 6-word orphan fragment, v13 = Acts 27:2 (Adramyttium, Aristarchus the Macedonian), v19 = Acts 27:7 (Cnidus, Coos, Myra, contrary winds). All four declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "24"
+      ],
+      "note": "ELLICOTT CSS RESIDUE IS SYSTEMATIC, NOT RANDOM — now characterised. Ellicott's block at key 24 ends in raw StudyLight page chrome plus ~2KB of stylesheet ('.sub-menu{font-size:12px...'), copyright boilerplate and a contact-form blurb. Third sighting: luke 1 key 80, romans 4 key 25, 1corinthians 16 key 24. ALL THREE ARE THE FINAL VERSE OF THEIR CHAPTER. So the rule is: Ellicott's block on a chapter's last verse carries the trailing page furniture. That is mechanically strippable — a scrub keyed to the last key of each chapter, cutting from the first CSS selector or the 'Footnotes: Copyright Statement' marker, would clean the whole corpus. Ellicott's real comment at 24 is one sentence (the river simile) and survives ahead of the junk."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "23",
+        "5",
+        "22"
+      ],
+      "note": "APPARATUS EMITTED AS COMMENTARY, plus two OCR-damaged blocks. (a) Clarke at key 1 is ONLY the chapter argument — a 125-word table of contents ('The apostle exhorts... 1Cor 16:1-4. Promises to pay them a visit... 1Cor 16:5-9.') with no exposition of v1; declared in excluded_voices. (b) Barnes at key 23 is a bare cross-reference, 'The grace, etc. Romans 16:20' and nothing else; declared in excluded_voices. (c) Calvin's block at key 5 has an EDITORIAL FOOTNOTE SPLICED INTO IT that quotes Adam Clarke verbatim ('St. Paul was now at ... for almost all allow, in opposition to the ... — Dr.'), so a naive reader would attribute Clarke's Ephesus argument to Calvin. (d) Calvin at key 22 has OCR dropouts exactly where his own conclusion on Maranatha should stand ('however, explains it: while others render it, or, Every one, however...'), leaving his position unrecoverable; I reported only what survives and said so in the prose."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "10",
+        "20",
+        "23"
+      ],
+      "note": "CYRIL OF JERUSALEM: 3 keys, usable at ONE. Key 20 is a genuine and excellent on-verse block — the Catechetical Lecture on the kiss of peace, 'Then the Deacon cries aloud, Receive ye one another; and let us kiss one another' — which independently confirms Calvin's conjecture on the same verse that the kiss was liturgical and attached to the Supper. Keys 10 and 23 are off-verse Catechetical material (the Holy Spirit; 2 Cor 4:4 'blinded the thoughts'). Those two are UNUSABLE AND UNDECLARABLE: the corpus writes 'Cyril of Jerusalem:' but VOICE_LABELS holds bare 'Cyril', and _LABEL_RE requires the label be followed immediately by ':', so the full form never matches and naming him in excluded_voices is a validator FAILURE. Omitted silently at 10 and 23, as in previous chapters. The one-line fix remains: add the full forms to VOICE_LABELS ahead of the bare ones."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5",
+        "8",
+        "10",
+        "19",
+        "22"
+      ],
+      "note": "JOHN LIGHTFOOT: 6 blocks, ~1050 words, all unusable. He IS in VOICE_LABELS (bare 'Lightfoot') and the corpus writes 'John Lightfoot:', but he has NO SCHOOL entry, so he cannot be assigned to a school and therefore cannot be declared as a voice. His material here is substantial and good — the Ephesus-vs-Philippi provenance argument at key 5, the Demetrius uproar at 8, the subscription error at 10, house-churches at 19, and a long rabbinic treatment of cherem/anathema at 22 that would have enriched that entry considerably. Same class as the luke 1 catena-aurea finding: real voices the schema cannot name."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "5",
+        "10",
+        "13",
+        "19"
+      ],
+      "note": "MATTHEW HENRY'S KEYS MARK HIS OWN SECTION HEADS — a reusable tiling signal. Henry appears at only 5 of 24 keys: 1, 5, 10, 13, 19. Those are exactly the first verses of his five divisions of the chapter (1-4 the collection, 5-9 the travel plans, 10-12 Timothy and Apollos, 13-18 the exhortations and Stephanas, 19-24 the salutations), and his block at each key expounds the whole section beneath it. Where Henry is sparse he is therefore not missing but STRUCTURAL: his key list hands the writer the commentator's own pericope boundaries for free, before any tiling decision is made. Worth checking on the next chapter where Henry's key count is far below the others. NB the filing rule still binds — his section material may only be used in the entry keyed at his own verse."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "16",
+      "note": "FOUR LIVE DISPUTES worth surfacing to readers. (1) v2 — where the money rests: Robertson and Barnes read 'lay by him in store' as at home, privately; Ellicott rejects that outright (contra Stanley), since the stated object is a bulk sum ready on arrival, which fails if it must still be gathered house to house. Barnes half-concedes the closing clause demands a common treasury. (2) v16 — how far submission reaches: Clarke says flatly it 'does not imply obedience, but kind and courteous demeanour' (citing Kypke); Gill includes hearkening to admonitions and REGARDING THE CENSURES AND REPROOFS passed by the authority of the church — then qualifies it himself, 'so far as they appeared to be agreeably to the word of God'. (3) v19 — what 'the church in their house' is: Calvin and Henry say the FAMILY is itself called a church (Henry: every Christian family should in some respects be a Christian church); Clarke and Robertson say the CONGREGATION that met there, since no church buildings existed; Ellicott says a group of resident FOREIGNERS distinct from Ephesian converts. (4) v22 — Anathema Maranatha: Robertson calls it 'a curious blunder in the King James Version' that the two were ever joined, and Ellicott prints them as separate sentences with 'no connection between these two words', against Barnes, Wesley and Clarke who all treat it as one inherited Jewish excommunication formula."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "16",
+      "verses": [
+        "1",
+        "8",
+        "9",
+        "20"
+      ],
+      "note": "FOUR NOTABLE CONVERGENCES. (1) v1 — Barnes states that the noun for 'collection' occurs nowhere else in the NT and not in the classical writers, deriving it from the ordinary verb; Robertson OVERTURNS him from evidence Barnes could not have had, the papyri and inscriptions showing a late verb and the noun used chiefly of religious collections for a god or a temple. A clean case of the bench being corrected by later discovery. (2) v8 — Gill and Calvin independently reach the same conclusion against the obvious objection: Paul dated his plans by Pentecost not from any regard to the feast (Gill: it was abrogated at the death of Christ) but because the crowds it drew were a preaching opportunity. Calvin argues it explicitly against Erasmus. (3) v9 — Barnes, Wesley, Calvin and Robertson are unanimous that 'many adversaries' is a reason to STAY, not to leave; Clarke alone reads the door as the gates of the Circus Maximus and the adversaries as competitors in the race. (4) v20 — Cyril of Jerusalem's fourth-century description of the deacon's cry and the kiss before the altar-gift is direct confirmation of Calvin's conjecture on the same verse that the kiss was liturgical, and the Apostolical Constitutions quoted in Calvin's note ('the men apart, and the women apart') independently confirms Robertson's 'it seems never to have been promiscuous between the sexes'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "16",
+      "note": "All 24 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.630, mean zip 0.455. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named). Length control much improved on luke 1: 17 of 24 entries landed in range on the FIRST draft against luke 1's mean of 1.9 trim passes. The change that did it was drafting three paragraphs at four voices each rather than five — the diagnosis recorded after luke 1 held up. The two entries that overran badly (v13 at 690 and v22 at 866) were both rich sources where I let a single voice run long: Clarke's military reading of v13 and the anathema apparatus at v22. Note also that one trim on v22 created a comma splice which the next pass caught and fixed — cutting a trailing clause can orphan the conjunction before it."
     }
   ]
 }
