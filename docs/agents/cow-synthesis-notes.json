@@ -14680,6 +14680,44 @@
         "22"
       ],
       "note": "Duration of the pillar — a five-way spread at v22 worth recording because every witness answers and no two agree exactly. Clarke: nobody agrees; probably Succoth (perhaps Rameses) to the Jordan opposite Jericho, after which the ark led; others say Mount Hor and Aaron's death. Gill and Wesley: to the borders of Canaan, the ark taking over at the crossing. Ellicott: most precise of all — probably Abel-shittim. K&D: no terminus, only the principle, that the sign did not depart so long as the people continued in the wilderness. Clarke alone converts the dispute into doctrine (miracle granted while necessary, withdrawn when the canon was complete), which is why his is the strand the entry carries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "9",
+        "21",
+        "27",
+        "33",
+        "45",
+        "51"
+      ],
+      "note": "Jamieson stride-6, EIGHTEENTH confirmation, and the FIRST WITH A VARIABLE TARGET STRIDE. Keys 9, 21, 27, 33, 45 and 51 carry blocks belonging to LUKE 13 running into LUKE 14: the tower in Siloam (k9, on Lu 13:4), the synagogue ruler and 'how the faithful and true Witness tears off the masks which men wear' (k21, on Lu 13:14-16), the mustard seed and the leaven (k27, on Lu 13:18-21), 'who will strive, while entrance is practicable' (k33, on Lu 13:24), the reference to Mt 23:37 for O Jerusalem (k45, on Lu 13:34-35), and the man with the dropsy (k51, on Lu 14:3-6). All six keys are congruent to 3 mod 6, so the arithmetic is intact, BUT THE STRIDE IS NOT CONSTANT: the target gaps run 12, 6, 6, 12, 6, and slots 15 and 39 are genuinely EMPTY -- verified, neither key carries a Jamieson block at all. This is the first observed instance of the sequence skipping slots. The reason appears on the source side. Source verses are 13:4, 13:14, 13:18, 13:24, 13:34, 14:3, giving source gaps of roughly 10, 4, 6, 10, 4. Set beside the target gaps of 12, 6, 6, 12, 6, the correspondence is close and consistent: where the source jumps about ten verses the target jumps twelve, where the source jumps four to six the target jumps six. THE TARGET STRIDE TRACKS THE SOURCE GAP, ROUNDED UP TO A MULTIPLE OF SIX. Every previous chapter had a constant target stride of 6 with an irregular source stride, which looked like a fixed-period insertion; this chapter shows the period is not fixed but quantised, and that the empty slots correspond to larger jumps in the source rather than to random loss. That is a materially different mechanism from the one the earlier seventeen chapters suggested, and it is worth re-examining the earlier data for chapters where a stride slot was assumed absent. Updated offset tally: offset 0 - 1thessalonians 5, romans 14; offset 1 - 1peter 1, 1corinthians 16, judges 2, hebrews 7; offset 2 - acts 21, 1corinthians 11; offset 3 - numbers 24, philemon 1, acts 11, acts 17, philippians 2, revelation 18, luke 24; offset 4 - philippians 1, 2corinthians 11, 1corinthians 9. OFFSET 5 STILL NEVER OBSERVED. NOTE: luke 24 was NOT synthesized in this batch; see the accompanying observation note for why."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "13",
+        "25",
+        "36",
+        "41",
+        "45",
+        "50"
+      ],
+      "note": "CATENA AUREA INLINE ATTRIBUTIONS ARE LOST FROM THE HEAD STRUCTURE. luke 24 carries a Catena Aurea layer, and at seven keys (1, 13, 25, 36, 41, 45, 50) the catena runs SEVERAL FATHERS TOGETHER UNDER A SINGLE strong-tag head. The head names only the FIRST author of the run; every subsequent author is marked inside the block text by a bare all-caps abbreviation -- 'AMBROSE;', 'AUG.', 'CHRYS.', 'CYRIL;', 'BEDE;', 'THEOPHYL.', 'EUSEBIUS.', 'GREG.', 'GLOSS.', 'ORIGEN.'. Example: the block headed Bede at key 1 is 924 words of which the back half is Ambrose; the block headed Theophylact at key 1 contains Theophylact, then Chrysostom, then Cyril, then Eusebius; the block headed Ambrose at key 1 contains Ambrose, then Augustine, then Bede. Counts across the chapter: 65 inline markers, and 22 author-instances whose text sits in a key where that author is NOT among the heads. Broken out: Augustine 6, Chrysostom 4, Bede 4, Gregory 2, Cyril 2, Ambrose 1, Eusebius 1, Theophylact 1, Gloss 1. WHY THIS MATTERS BEYOND TIDINESS: (a) ORIGEN appears twice in the chapter as an inline marker and NEVER ONCE as a head, so Origen is present in the corpus and invisible to every tool that reads the head structure -- the sizer, the validators, the school tagging and the voice lists all behave as though he is not there; (b) any synthesis that names a father from inline-attributed text will be flagged NAMED BUT NOT SOURCED HERE by the chapter lint, since the lint builds its head set from strong tags only, which pushes the writer toward either silence or misattribution to the head author; (c) usable_source_words is unaffected but the per-voice accounting is wrong at seven keys. SUGGESTED FIX, in order of value: teach the block splitter to treat the inline all-caps markers as secondary heads, which would recover Origen and correct the attribution of about 22 passages in this chapter alone. Other Catena chapters in the Gospels are very likely affected the same way and should be checked before any of them is synthesized. luke 24 was NOT synthesized in this batch."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "24",
+      "note": "WHY LUKE 24 WAS PICKED BUT NOT SYNTHESIZED IN THIS BATCH, and what the next worker inherits. The picker offered luke 24 and the sizer returned 64,720 usable source words across 53 keys, the second largest chapter offered in this run after acts 17. At the standing entry-count formula that is twelve entries. Before drafting I did the structural survey, which turned up two things that made the setup materially heavier than any previous chapter and are filed separately: the Jamieson stride here is VARIABLE rather than fixed, and the Catena Aurea layer runs several fathers together under one head so that inline attributions are invisible to the lint. The chapter also carries twenty-six distinct voice labels, twelve of them new to this build and needing school mappings, and a NAME COLLISION between a bare 'Cyril' head at keys 1 and 41 and a 'Cyril of Jerusalem' head at ten keys, the two co-occurring at both of the bare-Cyril keys. In a catena on Luke the bare Cyril is Cyril of Alexandria, whose Commentary on Luke is the chief Greek source, so the two must be given distinct prose labels or the name check will confuse them. I stopped at that point rather than begin drafting, on the standing rule that a chapter one cannot finish must not be started: this session had already carried three full chapters since its last compaction and twelve entries of this density was not a job I judged I could complete without the prose degrading. Nothing is abandoned in the queue's sense -- no data file was written, no verse was stamped, and the working tree is clean, so luke 24 remains unclaimed and the next worker picks it up whole. WHAT IS ALREADY DONE AND SHOULD NOT BE REDONE: the source survey above; the Jamieson identification, keys 9, 21, 27, 33, 45, 51 carrying Luke 13 into Luke 14; the catena inline-marker census; and a working tiling of twelve entries balanced by source weight, namely 1-4, 5-12, 13-14, 15-20, 21-26, 27-31, 32-35, 36-38, 39-43, 44-46, 47-49, 50-53. Keys 1, 13, 36, 45 and 50 carry the oversized section blocks (5,375 / 9,939 / 7,834 / 2,980 / 4,187 words) and the tiling above isolates them deliberately. RECOMMENDATION: fix the catena block splitter before luke 24 or any other Gospel Catena chapter is attempted, since without it roughly twenty-two passages in this chapter cannot be attributed correctly and Origen cannot be attributed at all."
     }
   ]
 }
