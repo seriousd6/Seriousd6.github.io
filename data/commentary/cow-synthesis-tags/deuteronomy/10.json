@@ -1,772 +1,860 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was at the end of the second forty days, after Moses had fallen down before the LORD for the people's sin of the calf; he was to hew the tables and make an ark."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hew thee two tables of stone like unto the first... and make thee an ark of wood",
-   "the covenant restored after the calf",
-   "grace triumphing over the breach"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: though hewn by Moses, the writing was the Lord's; the very same laws, in the same words without variation, to show they were of God and not Moses; to be put in the ark."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will write on the tables the words that were in the first tables... and thou shalt put them in the ark",
-   "the law God's own and unchanged",
-   "kept under the mercy-seat (Heb. 9:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "John Calvin",
+   "Matthew Henry",
+   "Charles Ellicott"
   ],
+  "range": "1",
+  "pericope_label": "At that time the LORD said unto me, Hew thee two tables of stone like unto the first, and come up unto me into the mount, and make thee an ark of wood",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the ark was made (by Bezaleel) of shittim wood, the same as the ark in the holy of holies."
+    "summary": "Fix the occasion at the close of the second forty days, after the intercession, so that the order is itself a token of reconciliation; but deny that the notice of the ark stands in its proper place, since it belonged to the tabernacle, and refuse to require that things related together be referred to the same moment."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Sort the commands rather than the days — the ark ordered in the earlier period, the tables after the vision from the cleft of the rock and before the intercession — and reject Rashi's two arks while allowing that a temporary receptacle may have held the tables until Bezaleel's was finished."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Read the renewal of the broken tables as the surest evidence of reconciliation, and the division of labour as an order of grace: Moses hews the stone, God writes, because the law prepares a heart by conviction while only grace writes the law upon it. Ten words, not ten volumes, and a second edition needing no amendment."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Can the events of this chapter be fitted to a single timeline?",
+    "sides": [
+     {
+      "position": "Yes, if the commands are sorted rather than the days: the ark ordered earlier, the tables after the vision from the rock",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "No — the order of the history is inverted, and it is exacting too much to require that things related together belong to the same moment",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The order belongs to the close of the second forty days, after the intercession",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who made the ark spoken of here?",
+    "sides": [
+     {
+      "position": "Moses began it as a plain chest and Bezaleel finished and overlaid it; or Moses ordered it made against his coming down",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "There were two arks, one for war and one for the tabernacle",
+      "holders": [
+       "Rashi (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "No second ark; at most a temporary receptacle until Bezaleel's was finished",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone allegorises the vessel, making the ark a figure of Christ in whom salvation is now kept safe, and alone turns \"there they be\" on his own hearers — God has entrusted us with Bibles and sabbaths, and there they be."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "His block at this verse is the chapter argument and a bare cross-reference, with no exposition; excluded as carrier material."
+   }
+  ],
+  "themes": [
+   "the second tables",
+   "hewing and writing",
+   "the ark as receptacle"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
+  },
+  "excluded_voices": [
+   "Adam Clarke"
+  ]
+ },
+ "2": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "2-5",
+  "pericope_label": "And I will write on the tables the words that were in the first tables which thou brakest, and thou shalt put them in the ark; and I turned myself and came down from the mount, and put the tables in the ark which I had made; and there they be, as the LORD commanded me",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Correct the common error that Moses wrote the law a second time, tracing it to a change of person in the Exodus narrative; deny any pluperfect in Hebrew, so that \"the ark which I had made\" is simply \"which I made,\" meaning caused to be made; and read the stone tables as figures of the fleshy tables of the heart."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Draw two inferences from the sameness of the words — that they were God's and not Moses', and that no change had been made in them though the people had broken them, of which the breaking of the tables was itself a representation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Take the rewriting as proof that God's wrath was turned away, and the writing of his law in our inward parts as the surest proof of reconciliation."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who wrote the second tables?",
+    "sides": [
+     {
+      "position": "God, not Moses; the contrary opinion rests on a change of person in the Exodus narrative",
+      "holders": [
+       "Ellicott",
+       "Gill",
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone builds a sustained typology from the two pairs of tables — the first answering to the heart of Adam, the second to the new covenant of the Spirit — and alone sets the two Pentecosts side by side as the day of the letter and the day of the Spirit."
+   }
+  ],
+  "themes": [
+   "God the writer",
+   "tables of the heart",
+   "the day of the assembly"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
+  },
+  "excluded_voices": [
+   "Adam Clarke",
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "6": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch"
+  ],
+  "range": "6-7",
+  "pericope_label": "And the children of Israel took their journey from Beeroth of the children of Jaakan to Mosera: there Aaron died, and there he was buried; and Eleazar his son ministered in the priest's office in his stead. From thence they journeyed unto Gudgodah, and from Gudgodah to Jotbath, a land of rivers of waters",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Deny that Moses intends an itinerary at all, since his object is only to mark where Aaron died; recognise in that death the punishment of the people's rebellion and in Eleazar's succession the sign of God's fatherly grace; and account for the divergent place-names by alternative names or by stations passed without encampment."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: refers to the shittim wood (Exod. 25:5)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I made an ark of shittim wood, and hewed two tables of stone like unto the first",
-   "the servant's exact obedience",
-   "the ark a type of Christ, the law treasured in him"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the same laws, in the same letters."
+    "summary": "Read the passage as a parenthesis closed four verses later, inserted as evidence that the intercession was answered; and print at length Kennicott's case that these verses contradict the itinerary given elsewhere and are repaired by the Samaritan Pentateuch — remarks that should not be hastily rejected."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the words on the second tables were the same as on the first — the ten commandments."
+    "prevalence": "single",
+    "summary": "Refuse Knobel's contradiction by referring \"at that time\" not to the fortieth year but generally to the restoration of the covenant at Sinai, and read the separation of Levi as a manifestation of mercy toward Israel."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he wrote on the tables, according to the first writing, the ten commandments",
-   "the moral law immutable through the breach",
-   "fixed and perpetual, the standard unaltered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he turned from the Lord, out of whose hands he had received the tables."
+    "question": "Can the itinerary in these verses be reconciled with the complete catalogue of the march?",
+    "sides": [
+     {
+      "position": "No — the text as it stands contradicts itself on the order of stations and on where Aaron died; the Samaritan Pentateuch repairs it",
+      "holders": [
+       "Kennicott (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "The remarks should not be hastily rejected, though they are not endorsed",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "No itinerary is intended; Moses only marks where Aaron died, and the names may vary or the stations be passed without encampment",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "It is hard to say why these journeys are mentioned here at all",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'there they be' is 'they continued there'; the permanent ark was made afterward by Bezaleel."
+    "question": "Does \"at that time\" date the separation of Levi to Aaron's death?",
+    "sides": [
+     {
+      "position": "No — it refers generally to the restoration of the covenant at Sinai; the alleged contradiction fails",
+      "holders": [
+       "Keil and Delitzsch",
+       "Ellicott",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "A contradiction with the other books stands",
+      "holders": [
+       "Knobel (as reported by Keil and Delitzsch)"
+      ]
+     },
+     {
+      "position": "Later still, after the tabernacle was erected; what stands here may be a renewal",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "His block at this verse is only a pointer to Kennicott’s remarks, which the source files at the end of the chapter; the remarks treat these verses and were read here, where Clarke holds a key."
+   }
+  ],
   "themes": [
-   "put the tables in the ark which I had made; and there they be",
-   "the law's settled and abiding place",
-   "treasured under the mercy-seat"
+   "a parenthesis in the argument",
+   "the disputed itinerary",
+   "Aaron’s death and Eleazar"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the account of Aaron's death and burial; Eleazar his son ministered in the priest's office in his stead."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.74
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there Aaron died... and Eleazar his son ministered in the priest's office in his stead",
-   "the office living on though the man was gone",
-   "pointing to the priest who continueth ever (Heb. 7:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Jarchi takes Gudgodah to be the same as Horhagidgad; Aben Ezra reads it as a general name including several stations."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: continue the list of journeys."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "From thence they journeyed unto Gudgodah; and from Gudgodah to Jotbath, a land of rivers of waters",
-   "God's continued leading from stage to stage",
-   "refreshing his people in the desert"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the separation was after the tabernacle was erected; Levi was to bear the ark, stand to minister, and bless in his name."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD separated the tribe of Levi, to bear the ark... to minister unto him, and to bless in his name",
-   "the threefold office of consecrated service",
-   "a ministry set apart wholly to holy things (Num. 6:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "8-11",
+  "pericope_label": "At that time the LORD separated the tribe of Levi, to bear the ark of the covenant of the LORD, to stand before the LORD to minister unto him, and to bless in his name; wherefore Levi hath no part nor inheritance with his brethren; the LORD is his inheritance. And I stayed in the mount, according to the first time, forty days and forty nights",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Levi had no part in the division of Canaan, being separated to the sanctuary's service, with no leisure to plough and sow."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD is his inheritance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Levi hath no part nor inheritance with his brethren; the LORD is his inheritance",
-   "God himself the portion of his servants",
-   "the LORD the portion of mine inheritance (Ps. 16:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Date the separation at Sinai rather than at Aaron's death, while noting that both events involve the loss of a territorial inheritance through bearing the burden of the law; and answer the critic who says Deuteronomy knows no distinction between priests and Levites by distributing the three duties between them after Rashi."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he stayed and fasted as long as the first time; the LORD hearkened to him and would not destroy them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD hearkened unto me at that time also, and the LORD would not destroy thee",
-   "the power of the mediator's intercession",
-   "pointing to Christ's availing pleading (Heb. 7:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Ground the dignity of the tribe in God's authorship rather than its own merit, so that no one may overthrow the decree in pride; and give the practical reason for the lost inheritance, that a tribe kept at the sanctuary had no leisure to plough and sow."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: upon Moses' supplication, the Lord was graciously pleased not only to forgive but to order him to go before the people, that they might possess the land sworn to their fathers."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Gloss standing before the Lord from its use of prophets and angels as the posture of a minister, define the portion concretely as tithes and offerings, and find in the command to lead the people a type of the one who intercedes and also commands."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does Deuteronomy distinguish priests from Levites?",
+    "sides": [
+     {
+      "position": "Yes — bearing the ark belongs to the Levites, ministering and blessing to the priests",
+      "holders": [
+       "Rashi (as reported by Ellicott)",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The writer knows no such distinction",
+      "holders": [
+       "a recent critic (as reported by Ellicott)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone reads the passage as a guard against rivalry, taking \"unto this day\" to look back over the instances in which God had shown favour to the Levites lest the dispute be reopened."
+   }
+  ],
   "themes": [
-   "Arise, take thy journey before the people, that they may go in and possess the land",
-   "the command to advance sealing the forgiveness",
-   "grace restoring the people to their purpose"
+   "the separation of Levi",
+   "priests and Levites",
+   "the Lord as inheritance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.5
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "12": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "12-13",
+  "pericope_label": "And now, Israel, what doth the LORD thy God require of thee, but to fear the LORD thy God, to walk in all his ways, and to love him, and to serve the LORD thy God with all thy heart and with all thy soul, to keep the commandments of the LORD, and his statutes, which I command thee this day for thy good?",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is asked for all the favours bestowed — the forgiveness of their sins and the renewal of the promise of the land."
+    "summary": "Reduce the whole law to the two heads Christ named, love of God and love of neighbour, so that nothing is required for a good life but piety and justice; treat Paul's \"soberly\" as the seasoning of that life rather than a third ingredient, and explain that where only the second table is named, religion is being tested rather than buried."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Break the demand into four — fear, walk, love, serve — defining heart as the whole of the affections and soul as the will, understanding and judgment, and taking the requirement as duty and gratitude for amazing mercies."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Quote Rashi that after all their sin God asks nothing but fear, report the rabbinic maxim that everything is in Heaven's hand save the fear of Heaven, and set against it the promise that God will put his fear in men's hearts."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: a most pathetic exhortation to obedience, inferred from all God's dealings."
+    "prevalence": "single",
+    "summary": "Hear the verse as an orator's appeal and answer it with the psalmist's question, what shall I render; then list the requirement in seven parts, adding that obedience is not merely rewarded but is itself the better condition, since meekness, sobriety and contentment are what make a man easy and safe and truly great."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the fear of God within a man's own power?",
+    "sides": [
+     {
+      "position": "The rabbinic maxim says everything is in Heaven's hand to bestow except the fear of Heaven",
+      "holders": [
+       "the Rabbis (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "Against it stands the promise that God will put his fear in their hearts",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone uses the verse as the occasion for a summary of the whole law, and alone anticipates the objection that Paul adds a third term by making soberness the seasoning of a pious life rather than an ingredient."
+   }
+  ],
   "themes": [
-   "what doth the LORD thy God require of thee, but to fear the LORD... to love him, and to serve",
-   "the sum of religion in a few words",
-   "the reasonable devotion of a forgiven people (Mic. 6:8)"
+   "what doth the Lord require",
+   "the sum of the law",
+   "fear and love"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
+  },
+  "excluded_voices": [
    "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: both the ten commands and all others were to be kept."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the commandments commanded 'for thy good.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "To keep the commandments of the LORD, and his statutes, which I command thee this day for thy good",
-   "the law given to bless, not burden",
-   "obedience and blessing made one (Ps. 19:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  ]
  },
  "14": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "14-15",
+  "pericope_label": "Behold, the heaven and the heaven of heavens is the LORD's thy God, the earth also, with all that therein is. Only the LORD had a delight in thy fathers to love them, and he chose their seed after them, even you above all people, as it is this day",
   "schools": [
    {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Take the doubled phrase as exhausting the idea of heaven entirely, precisely so that the choice of one nation out of all may stand in contrast; and compress the election to a sentence — the whole world is the Lord's, and for all that he chose thy fathers."
+   },
+   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the airy and starry heaven, and the third heaven, the heaven of heavens, the seat of the divine Majesty, are the Lord's, made and possessed by him; the earth also, with all in it, is his."
+    "prevalence": "several",
+    "summary": "Deny that Israel differed by personal dignity or excellence of race, press the Hebrew that says the Lord coveted to love their fathers as marking an inclination rather than a decision, and call it inestimable condescension that God should pass by heaven and earth to set his heart on a few obscure men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Refuse the tidy threefold division of the heavens as explaining very little, and read the plurals as a statement of the sheer immensity of creation — systems beyond systems in endless gradation, every star a sun with its own attendant worlds."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What do the plural heavens denote?",
+    "sides": [
+     {
+      "position": "Three ascending regions — atmosphere, planetary system, region of the blessed",
+      "holders": [
+       "Gill",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Not that, which explains very little, but the sheer immensity of creation, systems beyond systems",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The doubling simply exhausts the idea of heaven, for the sake of the contrast that follows",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone reads the plural heavens cosmologically, with every star a sun attended by its own worlds and systems ascending in endless gradation to the throne of God."
+   }
+  ],
   "themes": [
-   "the heaven and the heaven of heavens is the LORD's thy God, the earth also, with all that therein is",
-   "the universal sovereignty of God",
-   "the God of all yet loving one people (Ps. 24:1)"
+   "heaven of heavens",
+   "election without merit",
+   "condescension"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: though heaven and earth are the Lord's by creation, he had a special regard and peculiar complacency in Abraham, Isaac, and Jacob, and chose their seed above all people."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.5
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD had a delight in thy fathers to love them, and he chose their seed... above all people",
-   "the freeness of electing love",
-   "grace singling out the few from the all (Eph. 1:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "16": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they were not to content themselves with, nor trust in, outward circumcision, but to be concerned for the circumcision of the heart — the removing of all carnality, sensuality, and hypocrisy, and to be no more stiffnecked."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Circumcise therefore the foreskin of your heart, and be no more stiffnecked",
-   "inward renewal beneath the outward sign",
-   "the circumcision of the heart by the Spirit (Rom. 2:29)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "16-19",
+  "pericope_label": "Circumcise therefore the foreskin of your heart, and be no more stiffnecked. For the LORD your God is God of gods, and Lord of lords, a great God, a mighty, and a terrible, which regardeth not persons, nor taketh reward: he doth execute the judgment of the fatherless and widow, and loveth the stranger. Love ye therefore the stranger: for ye were strangers in the land of Egypt",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he is God of gods — of angels and civil magistrates, so called — his creatures, accountable to him."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: a great, mighty, and terrible God, who regards not persons."
+    "summary": "Define circumcision of heart negatively as laying aside all insensibility to the love of God, and state the dependence flatly — without it neither true fear nor true love of God is possible; then read the Hebrew's second clause as consequence rather than command, and set God's might beside his care for the helpless."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Trace the sense from the rite's original purpose as a consecration separating Abraham's children from the heathen, require a returning love as the only fit answer to experienced grace, and explain the turn to the fatherless and the stranger by our readiness to injure the abject, whom God succours because he accepts no man's person."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the command as proof that the outward rite always pointed at the purification of the soul, and press the figure of the foreskin as the filthiness which leaves a man unclean if not cut away; on the titles that follow, dwell on the power from which all being proceeds."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "If circumcision of heart is God's work, why is it commanded?",
+    "sides": [
+     {
+      "position": "To bring men to a sense of their need of it and stir them to seek it from the God who alone can perform it",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Because the command is at once a demand for returning love and a reproof of past obstinacy",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Because the Hebrew reads as consequence — circumcise the heart, and ye will harden your neck no more",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone quotes Rashi’s pairing of God’s might with his humility, and matches it with the psalm that sets the healing of the broken-hearted beside the numbering of the stars."
+   }
+  ],
   "themes": [
-   "the LORD your God is God of gods, and Lord of lords... which regardeth not persons, nor taketh reward",
-   "majesty joined to perfect impartiality",
-   "no respect of persons with God (Acts 10:34)"
+   "circumcision of the heart",
+   "God of gods",
+   "the fatherless and the stranger"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: God is the patron and defender of the fatherless and widow, who have none to help them, doing them justice himself."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: his love to the stranger in giving him food and raiment."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He doth execute the judgment of the fatherless and widow, and loveth the stranger",
-   "the great God stooping to the weakest",
-   "a Father to the fatherless (Ps. 68:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were to love the stranger because the Lord loves him, and because they themselves had been strangers."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the ground — for ye were strangers in Egypt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Love ye therefore the stranger: for ye were strangers in the land of Egypt",
-   "love taught by God's example and their own affliction",
-   "doing to the sojourner as they would be done by (Exod. 23:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "20-21",
+  "pericope_label": "Thou shalt fear the LORD thy God; him shalt thou serve, and to him shalt thou cleave, and swear by his name. He is thy praise, and he is thy God, that hath done for thee these great and terrible things, which thine eyes have seen",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the fear of the Lord includes the whole worship of him, external and internal."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: in the New Testament this was our Lord's last answer to the tempter — 'him only shalt thou serve' (Matt. 4:10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt fear the LORD thy God; him shalt thou serve, and to him shalt thou cleave",
-   "the whole of true devotion to God alone",
-   "Christ's answer to the tempter (Matt. 4:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Read the four verbs as one reverence shown three ways, in deed, in heart and with the mouth; recover the emphasis of the Hebrew word order, and quote Rashi that the permission to swear follows only when the other qualities are established."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he is the object and matter of their praise, deserving the praises of all his creatures for his perfections, works, and blessings; praise is his due, and comely in his people to give."
+    "prevalence": "several",
+    "summary": "Take the oath from God's side — eternal truth cannot be more grossly insulted than by being summoned as witness to a falsehood — and note that the heathen professed reverence in swearing while excusing deceit toward those they judged to deserve it. Read \"thy praise\" as warning: strip away that glory and nothing remains but shame."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Gloss cleaving as firm confidence, true affection and constant obedience; and turn the closing phrase on the reader, since it is an eternal honour to be in God's friendship, and strange that those who fear him should be ashamed to own it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How is swearing by God's name consistent with reverence?",
+    "sides": [
+     {
+      "position": "It is permitted only after fear, service and cleaving are established, so that the name is not profaned",
+      "holders": [
+       "Rashi (as reported by Ellicott)",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The danger is perjury: eternal truth cannot be more grossly insulted than by being summoned as witness to a falsehood",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "His block at this verse expounds the prohibition of perjury from the law of holiness rather than this verse directly, and reaches it through Cicero and the Thyestes of the poets; it was used only for the clause on swearing, which it does bear upon."
+   }
+  ],
   "themes": [
-   "He is thy praise, and he is thy God, that hath done for thee these great and terrible things",
-   "God himself the theme and ground of praise",
-   "glorying not in self but in him (Jer. 9:24)"
+   "fear, service, cleaving",
+   "swearing by his name",
+   "he is thy praise"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "22": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "22",
+  "pericope_label": "Thy fathers went down into Egypt with threescore and ten persons; and now the LORD thy God hath made thee as the stars of heaven for multitude",
   "schools": [
    {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Meet the difficulty of the rate of increase first from the promise, the multiplication being presented as divine rather than purely natural, and then from the genealogies of Chronicles, where one Simeonite had sixteen sons and six daughters while his brethren had few — modern calculations being perhaps not adequate to such a rate."
+   },
+   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the fathers went down with seventy persons in all, and now the Lord had made them as the stars of heaven for multitude, as he promised."
+    "prevalence": "single",
+    "summary": "Fix the number as seventy in all, Jacob and his sons included, and read the multitude as the plain discharge of the promise that they should be as the stars of heaven."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Set the seventy against the six hundred thousand, note that all of those had themselves died within forty years save three men, and draw the moral that God can as easily diminish and bring low as increase and multiply."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How is the rate of increase to be accounted for?",
+    "sides": [
+     {
+      "position": "As the fulfilment of a divine promise, and not purely natural — but the Chronicles genealogies show extraordinary natural rates too",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "As a display of the power that can as easily diminish and bring low",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "As the plain correspondence of the event to the promise made to Abraham",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone answers the demographic objection from the genealogies of Chronicles, and alone concedes drily that modern calculations may not be adequate to such a rate of increase."
+   }
+  ],
   "themes": [
-   "Thy fathers went down into Egypt with threescore and ten persons; and now the LORD thy God hath made thee as the stars of heaven",
-   "God's faithfulness to the promise",
-   "the word to Abraham visibly fulfilled (Gen. 15:5)"
+   "seventy persons",
+   "as the stars of heaven",
+   "promise fulfilled"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }

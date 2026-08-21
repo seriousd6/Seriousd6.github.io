@@ -16309,6 +16309,107 @@
       "book": "ephesians",
       "chapter": "4",
       "note": "FIDELITY SELF-GRADE, all 11 entries. Largest chapter attempted in the series: 73,597 usable source words across 32 keys, 11 voices. Word counts, all inside the 350-650 window: 1=650, 2-3=647, 4-6=646, 7-10=645, 11-13=646, 14-16=647, 17-19=647, 20-24=647, 25-27=647, 28-30=647, 31-32=650. Every proposition in every entry is traceable to a named block within that entry's own verse range; no voice is named in an entry where it has no head. Voice coverage: Gill, Barnes, Clarke, Ellicott, Calvin at all 32 keys; Robertson 31; Wesley 27; Chrysostom, Henry and Jamieson 6 each; Cyril 4. Jamieson is declared as excluded_voices in the six entries containing his residue keys (1, 7, 13, 19, 25, 31). Two SILENT_BY_ENTRY decisions, both argued in the source-defect notes: Ellicott in entry 2-3 (his keys 2 and 3 are section-overviews of other verses, so he says nothing about verses 2-3 anywhere) and Cyril in entry 11-13 (his key 11 block is on the crucifixion). Deliberate omissions, none of which changes any reported position: Clarke's Greek lexicography and his citations of Kypke, Aristophanes, Appian and Lucian at key 29 are summarised as 'a lexicographer he names' and three senses rather than quoted; Barnes's missionary and colonial testimony at keys 25, 28 and 29 is compressed to one instance each; Chrysostom's bee and bile images at key 31 are given in two sentences from roughly 900 words; Calvin's Eadie quotation at key 30 is not reproduced; Clarke's four numbered reflections closing the chapter at key 32 are not used, being a summary of the whole chapter rather than comment on the verse. Truncation carried in the notes and NOT attributed to any commentator in the prose: all twelve of Gill's capped blocks, where his sentences break off mid-clause. Where the cap removed a conclusion I reported only what survives and attributed no absence to him."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB stride-6 confirmed a 23rd time, and this instance is the tidiest illustration yet of the donor mechanism. Four JFB blocks, at keys 2, 8, 14 and 20 - stride 6 exactly, as predicted by note 1474 - and all four are Numbers 20: key 2 is Num 20:1-2 (En-Mishpat at Kadesh, the water failing), key 8 is Num 20:14-17 (the brotherly message to Edom), key 14 is Num 20:18-21 (the churlish refusal and the change of route), key 20 is Num 20:25-28 (Aaron ascending Hor in the high priest's costume to die). The donor verses advance monotonically with the target keys, and the donor chapter is a single wrong chapter as before. Deuteronomy 10 does mention Aaron's death, so a careless reader could take the key-20 block for genuine comment - it is not; it is Numbers 20 verbatim. All four excluded."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "22"
+      ],
+      "note": "BOTH terminal blocks in this chapter carry scrape chrome, which strengthens the hypothesis logged for 2corinthians 5. Gill's key-22 block ends with the sacred-texts navigation footer ('Next: Deuteronomy Chapter 11 Sacred Texts | Bible ... Index Next: ...') - third sighting of that form, and all three have been at Gill's LAST key in the chapter (genesis 15, deuteronomy 19, here). Ellicott's key-22 block runs 1,172 words of which roughly 900 are StudyLight chrome - copyright text, sub-menu CSS, verse-popup JavaScript - second sighting at Ellicott's terminal block after 2corinthians 5. Two different voices, two different payloads, same position: the chapter-terminal block is the locus. The residue is inside the usable-source count and inflates it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "6",
+        "22"
+      ],
+      "note": "Clarke's material for vv.6-9 is filed at key 22, not at keys 6-9. His key-6 block is only the pointer 'On this and the three following verses see Kennicott's remarks at the end of this chapter'; the remarks themselves - roughly 1,900 words of Kennicott on the itinerary contradiction, Aaron dying at Mosera versus Mount Hor, and the Samaritan Pentateuch's repair - sit inside the 2,099-word Clarke block at key 22, after about 90 words of actual comment on v.22. The source has reproduced Clarke's own end-of-chapter placement literally. Read here under the filing rule, since Clarke holds key 6. Rule for future chapters: when a Clarke block is a pointer to remarks 'at the end of the chapter', go and fetch them from the terminal key."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "7",
+        "9",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "note": "K&D truncation at exactly 201 words hits eight of the twenty-two keys here (2, 7, 9, 13, 15, 17, 19, 21), consistent with the 92.9% corpus rate measured in note 1461. The practical damage is visible: the key-2 block spends its whole allowance quoting the lemma of vv.2-6 and is cut off mid-sentence at 'And the Israelites owed to the grace of their God, which was turned towards them once more, through the intercession of Moses, not' - the exposition beginning exactly where the truncation falls. Key 13 is the same shape, all lemma with the comment on vv.14-16 only just started. Where K&D was usable in this chapter it was because the truncation happened to fall after the lemma rather than during it. This is the concrete cost of the defect, not a theoretical one."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "20"
+      ],
+      "note": "Calvin's block at v.20 is displaced by topic. It expounds the prohibition of perjury from the law of holiness - 'thou shalt not swear by my name falsely, neither shalt thou profane the name of thy God' - with an excursus through Cicero and the Thyestes of the poets, not the text of Deut 10:20. The cause is structural rather than a scrape fault: Calvin's Harmony is arranged by commandment, so his treatment of the swearing clause here pulls in his exposition of a different verse on the same head. Judged usable because the clause 'and swear by his name' does stand in this verse and Calvin's material bears on it directly; used only for that clause and flagged in outliers. Distinct from the editorial-footnote contamination logged in notes 1466 and 1477 - this is Calvin's own text, filed by topic."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "3",
+        "4"
+      ],
+      "note": "Clarke contributes nothing usable to the first five verses. His key-1 block is the chapter argument followed by 'Hew thee two tables of stone - See the notes on Exo 34:1'; keys 3 and 4 are bare cross-references of the same kind. Excluded from both entries as carrier material. Worth recording because it is a different failure from residue or displacement: the block is genuinely Clarke, correctly filed, and simply contains no exposition - he defers to his own notes elsewhere. A synthesis that declares him here on the strength of the label alone would be declaring a voice that says nothing."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "6"
+      ],
+      "note": "The chapter's real crux is preserved in full: whether vv.6-9 can be reconciled with the itinerary given in the complete catalogue of the march. Kennicott, printed by Clarke, argues they cannot - the text has Israel going Bene-jaakan to Mosera where the catalogue has Moseroth to Bene-jaakan; Aaron dies at Mosera here and on Mount Hor seven stations later there; and even granting the marches, what connection is there between arriving at Jotbath and the separation of Levi? - and repairs it from the Samaritan Pentateuch. Clarke declines to endorse but adds that the remarks should not be hastily rejected. Calvin dissolves the problem by denying that an itinerary is intended at all. Keil and Delitzsch fight a second front, refusing Knobel's dating of 'at that time' to the fortieth year. Gill simply admits he cannot say why the journeys are mentioned. Four positions, all preserved in the debates field, and one of the few places in this corpus where a witness prints a textual critic at length."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "2",
+        "6",
+        "8",
+        "12",
+        "14",
+        "16",
+        "20",
+        "22"
+      ],
+      "note": "All nine entries self-graded A (QA 610/503/558/546/623/465/590/484/415; ttr 0.587-0.660). Only entry 2 came near the ttr floor at 0.587, on repetition of tables/ark/written. Unusually for this run, no entry needed a trim pass: with four to six voices per span rather than eight or nine, the floor rather than the cap was the live constraint, and three entries were deliberately written short because the source was thin once residue and carrier were removed. Tiling 1 | 2-5 | 6-7 | 8-11 | 12-13 | 14-15 | 16-19 | 20-21 | 22; an earlier ten-entry plan splitting 18-19 was rejected because that span holds only 418 source words. Six exclusions across the chapter (four JFB, two Clarke carrier, one K&D displaced forward to the 14-15 entry) - the highest exclusion count of any chapter in this run, and all of them source defects rather than editorial choices."
     }
   ]
 }
