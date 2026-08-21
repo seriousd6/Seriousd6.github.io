@@ -1,769 +1,376 @@
 {
  "1": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "1",
+  "pericope_label": "Observe the month of Abib, and keep the passover unto the LORD thy God",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Abib, sometimes called Nisan, answered to part of March and April, named from the corn appearing in ear, appointed the first of the months; in it, by night, the LORD brought them out of Egypt."
+    "prevalence": "several",
+    "summary": "Gill explains the name before the command: Abib, sometimes called Nisan, answered to part of March and part of April and took its name from the corn then appearing in the ear, when all things were in their verdure — the Greek translators simply calling it the month of new fruit. It was appointed first of the months for sacred purposes, and was the month of the exodus and of the first passover. Calvin looks past the mechanics to the purpose, having already treated the institution under the First Commandment, since the Passover was a symbol of redemption in which the people exercised themselves in the pure worship of the one God, acknowledging him as their only Father and distinguishing him from every idol; and he presses what follows from the single sanctuary — one altar was prescribed, as if God would gather them under one banner for the preservation of concord and the unity of the faith."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws out the force of a command to observe the whole month when only one week of it was festival: their preparation beforehand, and their reflection upon it and improvement of it afterwards, were to be so serious as to amount to an observance of the month entire. He notes that the year had previously been reckoned to begin in September, and reports that the Chaldee paraphrasts would not read the deliverance as a departure by night, since there was an express order that no one should stir out of doors till morning — they therefore render the clause as meaning Israel came out by daylight, one expanding it as 'he brought thee out of Egypt, and did wonders by night', the other as 'and thou shalt eat the passover by night'. Henry also observes that the passover was itself a sacrifice, which is why Christ our passover is said to be sacrificed for us, and that no sacrifice was accepted except from the altar that sanctified it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley takes the night straightforwardly, against the Chaldee: it was in the night that Pharaoh was forced to give them leave to depart, so they made their preparations then and perfected the work in the morning; and he notes the change of the year's beginning was by a special order from God in remembrance of the deliverance. Clarke supplies the reason for the feast's name from the same night — the destroying angel, seeing the blood of the appointed sacrifice sprinkled on the lintels and door-posts of the Israelites' houses, passed over them and did not destroy any of their firstborn."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch call it simply the earing month and observe that the precise day is not fixed here because it was already known from Exodus. They warn that the phrase rendered 'keep the passover' is being stretched: it is used primarily of preparing the paschal lamb for a festal meal, but is employed here in a wider sense, so that 'passover' covers not the lamb only but the paschal sacrifices generally — what the rabbins gather under the common name chagiga — meaning all the sacrifices slain during the seven days of unleavened bread, though not the burnt-offerings and sin-offerings prescribed elsewhere for the feast."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Observe the month of Abib, and keep the passover... for in the month of Abib the LORD... brought thee forth out of Egypt by night",
-   "the yearly remembrance of redemption",
-   "Christ our passover sacrificed for us (1 Cor. 5:7)"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the passover, a lamb killed on the fourteenth at night between the two evenings, was typical of Christ, the passover sacrificed for us."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sacrifice at the place which the LORD shall choose."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt therefore sacrifice the passover unto the LORD thy God... in the place which the LORD shall choose",
-   "the lamb typical of Christ",
-   "the one sacrifice, the Lamb of God (John 1:29)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: no leavened bread was to be eaten with the passover."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the unleavened 'bread of affliction' was unsavoury, putting them in mind of their afflictive bondage and the haste of their departure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seven days shalt thou eat unleavened bread... even the bread of affliction... that thou mayest remember",
-   "the memorial of bondage and haste",
-   "the gospel call to purge the old leaven (1 Cor. 5:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
    "John Wesley"
   ],
+  "range": "2-8",
+  "pericope_label": "Sacrifice the passover in the place the LORD shall choose; seven days of unleavened bread",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: before the passover they were to search diligently every room, hole, and crevice, that no leaven remain anywhere."
+    "prevalence": "majority",
+    "summary": "Gill fixes the time from the tradition — the fourteenth of Abib at night, between the two evenings, as the Targum of Jonathan has it — and takes the lamb as a type of Christ, the passover sacrificed for us. He glosses 'within any of thy gates' as the cities, so named because they commonly had gates in which public business was transacted, and understands the place where God would set his name of the ark and the mercy seat with the cherubim over them, meaning Jerusalem once Solomon had built the temple. On the command to roast he concedes that the Hebrew word properly signifies to boil, and that Onkelos so renders it, yet boiling the paschal lamb is expressly forbidden; some therefore refer the verse to the chagigah, and in Josiah's day the passover was roasted with fire while the other offerings were boiled in pots and pans — but the connection with the preceding verses persuades Gill it means the lamb, and he follows Jarchi in taking the word of roasting with fire despite its form. Calvin takes the bread of affliction of the escape rather than the bondage: by this sign they were reminded of getting away in haste, as it were out of the very flames, for they must have been in the greatest extremity when there was no time even to bake bread — so the loaf is so called in order that the manner of the deliverance may the more enhance God's grace."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: 'any of the flesh' is of the passover properly so called."
+    "summary": "Wesley resolves the difficulty of a passover taken from the flock and the herd, when the paschal victim was a lamb or kid only, by widening the noun: the word stands for the feast as a whole, so the clause may be rendered 'thou shalt observe the feast of the passover with sheep and with oxen', as the sacrifices appointed for those days require. He gives three reasons why the killing was confined to the sanctuary — that so great a work might be done with the solemnity God required; that this was a sacrifice and not a sacrament only, with the sprinkling of blood that is the essential part of one; and that it might mark out the place where Christ, the true passover, was to be slain. On the bread he will have both afflictions at once, bread neither usual nor pleasant, to remind them of the miseries endured in Egypt and of the hurry of coming out. Clarke takes it of the bondage alone: baked without leaven it was unsavoury, and its very taste put them in mind of their afflictive servitude."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there shall be no leavened bread seen with thee in all thy coasts seven days",
-   "the diligent search for every particle",
-   "the putting-away of sin entire (2 Cor. 7:1)"
+  "excluded_voices": [
+   "Keil and Delitzsch",
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it might not be sacrificed within any of their gates or cities, but only in Jerusalem, the place the Lord chose, where alone they might kill and eat it."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.48
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou mayest not sacrifice the passover within any of thy gates",
-   "the unity of worship at the one chosen place",
-   "one way of approach to God (Acts 4:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the place where God set his name, the ark and mercy-seat, his Shechinah dwelling — Jerusalem, where Solomon built the temple."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: it was offered in the court of the tabernacle or temple."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there thou shalt sacrifice the passover at even... at the season that thou camest forth out of Egypt",
-   "the time and place fixing a sacred re-enactment",
-   "the redemption vividly renewed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the word for 'roast' can mean 'boil,' but the passover lamb was not to be boiled (expressly forbidden); they turned in the morning to their tents."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt roast and eat it in the place which the LORD thy God shall choose... turn in the morning",
-   "the manner part of the type, roasted with fire",
-   "worship reverent and regulated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: elsewhere it is seven days; the seventh was not exempt from unleavened bread, but distinguished for its special service, a solemn assembly with no work done."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "on the seventh day shall be a solemn assembly to the LORD thy God; thou shalt do no work",
-   "the feast crowned with holy convocation and rest",
-   "redemption issuing in worship (Heb. 10:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "John Calvin"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: after this counting came the feast of weeks, called Pentecost from the fiftieth day. Calvin: the Passover fell when the harvests were beginning to ripen, the firstfruits then offered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Seven weeks shalt thou number... from such time as thou beginnest to put the sickle to the corn",
-   "the feast of weeks bound to the firstfruits",
-   "fulfilled at Pentecost (Acts 2:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the feast of Pentecost, at which the Spirit was poured down on the apostles."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the tribute of a freewill offering of the hand, given as the LORD had blessed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt keep the feast of weeks... with a tribute of a freewill offering of thine hand",
-   "true worship a glad, free gift",
-   "giving as the LORD hath prospered (1 Cor. 16:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were to make a liberal feast and keep it cheerfully before God, thankfully acknowledging his mercies."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the offerings were eaten with festivity and shared with friends in liberality."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt rejoice before the LORD thy God, thou... and the Levite... and the stranger, and the fatherless, and the widow",
-   "worship, joy, and charity wed",
-   "the festal gladness widened to the poor (Neh. 8:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "9-12",
+  "pericope_label": "Seven weeks shalt thou number: the feast of weeks, and rejoicing before the LORD",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "majority",
-    "summary": "Gill: the remembrance of their deliverance from bondage should make them liberal in their freewill offering, generous in the feast, and compassionate to the stranger, widow, and fatherless."
+    "summary": "Gill sets out the reckoning — seven weeks numbered, then a second feast, called from the counting the feast of weeks and sometimes Pentecost from its being the fiftieth day — and notes that it was at this same feast, long afterwards, that the Spirit was poured out upon the apostles. Calvin fits it to the agricultural year, the Passover having fallen when the harvests were just beginning to ripen, and marks a coincidence he thinks worth noting: exactly this number of days lay between the departure from Egypt and the publication of the Law. He treats the command to rejoice as an argument rather than a mood. God exhorts them to willingness on the ground that his service brings this rejoicing with it, and nothing ought to stimulate obedience more than knowing that God consults our good rather than seeking advantage from us. Ungodly men rejoice too, wantonly and intemperately, but their laughter is turned into weeping and gnashing of teeth; so Moses magnifies this other joy as a peculiar blessing — to rejoice before God, as if a father should invite his children to delight themselves together with him. Since tranquillity of conscience, which alone brings true rejoicing, is wanting to the wicked, they do not actually enjoy the merriment they plunge into. Gill draws the practical conclusion from the closing charge to remember the bondage: it should make them liberal in the freewill offering, generous in the feast, and compassionate toward the stranger, the widow and the fatherless."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes what such rejoicing looked like — the offerings eaten with festivity, shared with friends liberally and bestowed on the poor with great generosity, so that these too might partake with joy before the Lord — and then accounts for a related rule in a strikingly plain way: the flesh had to be eaten fresh, since in that climate putrefaction soon set in, which is why nothing was to remain until morning. That consideration, he says, is sufficient by itself, without recourse to the moral and evangelical reasons the learned and devout Ainsworth assigned; and he borrows Harmer's exclamation at how beneficent and cheerful the design of the whole institution is. Wesley notes only that the tribute asked was over and besides what had already been appointed."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt remember that thou wast a bondman in Egypt: and thou shalt observe and do these statutes",
-   "the memory of redemption the spring of compassion",
-   "the redeemed made generous and tender (2 Cor. 8:9)"
+  "excluded_voices": [
+   "Keil and Delitzsch"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: it began on the fifteenth of Tisri (September). Calvin: its first day was the day of ingathering, when the produce of the whole year was stored in their granaries."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt observe the feast of tabernacles seven days, after that thou hast gathered in thy corn and thy wine",
-   "thanksgiving for the ingathering",
-   "looking on to the great ingathering (Rev. 7:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
    "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were to rejoice at the feast of ingathering in gratitude for God's goodness; the Targum adds, with flute and pipe, music increasing the joy."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the rejoicing of all, with the needy included."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt rejoice in thy feast, thou, and thy son... and the Levite, the stranger, and the fatherless, and the widow",
-   "thanksgiving and charity wed",
-   "the festal gladness widened to all (Phil. 4:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "13-15",
+  "pericope_label": "Thou shalt observe the feast of tabernacles seven days, and thou shalt surely rejoice",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "majority",
-    "summary": "Gill: this is the feast of tabernacles, kept seven days unto the LORD; the blessing of God on their increase and works was the ground of their rejoicing."
+    "summary": "Gill dates the feast to the fifteenth of Tisri, answering to September. Calvin explains why that month was chosen, and the reasoning is economic as much as liturgical: the first day was called the day of In-gathering because by then the produce of the whole year had been stored in the granaries and provision cellars, and since the people were resting from their rural labours it was a convenient season — so arranged by God precisely that they might go up to Jerusalem more willingly, the journey costing them little expense and little sacrifice of their domestic interests. He then finds a promise hidden inside what reads as a command. Where our version has 'when the LORD shall have blessed thee', the Hebrew stands literally as 'because he shall bless thee', and Moses is assuring them that if they devote their minds diligently to God's service they will never want grounds for rejoicing, since he will never interrupt the flow of his blessing; so the close of the verse is not a mere command but also a promise. Calvin weighs the small particle carefully, allowing that it may mean 'nevertheless' but noting it equally bears 'however', 'at any rate', or 'truly', and renders it 'only joyful, and not sad' — no sorrow or anxiety being admitted that might hinder the gladness the day required. Gill adds that the Targum of Jonathan brings in the flute and the pipe, instrumental music being used to increase the joy."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch draw out who the rejoicing includes. The law simply enforces the observance of the feast at the central sanctuary and exhorts the people to rejoice at it — but the exhortation is not left to the household head and his own children: he is to allow not only his sons and daughters a share in that joy but the manservant and the maidservant too, together with the portionless Levites and the strangers among them."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "because the LORD thy God shall bless thee in all thine increase... therefore thou shalt surely rejoice",
-   "joy a commanded duty",
-   "thankful gladness the answer to his bounty (Deut. 28:47)"
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.67
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: repeated here for the sake of mentioning the place where they were to appear."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: refers to the three appearances (Exod. 23:17)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Three times in a year shall all thy males appear before the LORD... and they shall not appear before the LORD empty",
-   "regular, costly worship at the chosen place",
-   "none approaching God without a gift (Ps. 96:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the quantity is not fixed in the law but left to the generosity of the people, the rule being that they give according to their ability as the Lord had prospered them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Every man shall give as he is able, according to the blessing of the LORD thy God",
-   "giving in proportion to ability",
-   "the gift measured by the blessing received (1 Cor. 16:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: judges were fixed in the courts of judicature, and officers the executors who stood before them, ordering weights and measures and punishing wrongdoers; they were to judge with just judgment."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judges and officers shalt thou make thee in all thy gates... and they shall judge the people with just judgment",
-   "God's care for righteous government",
-   "rulers his ministers for justice (Rom. 13:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "16-17",
+  "pericope_label": "Three times in a year shall all thy males appear before the LORD, and not empty",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: said to the judges as a direction — not to wrest or pervert judgment, nor pass a wrong sentence."
+    "prevalence": "majority",
+    "summary": "Gill asks why a requirement already given should be repeated, and his answer explains the shape of the whole chapter: it is set down again for the sake of naming the place at which they were to appear, which the earlier statements had not specified — indeed it is chiefly for that reason that the other festivals have been recited here at all. On the size of the gift he observes that the law fixes no quantity; the wise men appointed one afterwards, but the Lord left it to the generosity of the people, laying down only the rule that each give according to his ability and as God had prospered him, Jarchi putting it concretely that the man who has many eatables and much goods shall bring many burnt offerings and many peace offerings. Calvin asks who was actually bound, and answers with a series of concessions to human weakness: God would make allowance for the infirmity of his people and so did not impose five journeys a year, and required only the males to leave their houses — sparing the women, travelling being less convenient for them and, through the fruitfulness God had promised, they were almost always either pregnant or nursing. He reckons boys under twenty excepted too, since 'males' takes in only those comprised in the census. To the objection that in spiritual worship there is no difference between male and female, Calvin replies that the fathers of families presented themselves in the names of their wives and children, so the profession made there extended to the other sex and to those of tender age; and he hears David alluding to it in the psalm of a people who come with voluntary offerings in the day of thy assembly. A second objection he finds anticipated in the law itself: lest they should protest that stripping the land of its defenders invited invasion, God had promised that no one should so much as desire to assail their forsaken homes."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: not to wrest judgment, respect persons, or take a gift, for a gift blinds the eyes of the wise."
+    "summary": "Keil and Delitzsch describe the repetition the same way Gill does — the law that the men appear three times a year at the three feasts just mentioned, now carrying the additional clause 'at the place which the LORD shall choose', together with an explanation of what it means not to appear empty, namely that every man is to bring according to his gift. Ellicott adds a detail from the parallel passage which does not appear here: a promise attached that their land should be safe while they were away from it."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not wrest judgment... neither take a gift: for a gift doth blind the eyes of the wise",
-   "justice guarded from its corrupters",
-   "an incorruptible judgment, free of bribe and favour (2 Chron. 19:7)"
+  "excluded_voices": [
+   "Adam Clarke",
+   "John Wesley"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.5
+   }
   }
  },
- "20": {
+ "18": {
   "voices": [
    "John Gill",
-   "John Calvin"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "18-20",
+  "pericope_label": "Judges and officers shalt thou make thee in all thy gates: that which is altogether just shalt thou follow",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch put the second office higher than the others do: the word means literally writers, and these men were not merely messengers and servants of the courts but secretaries and advisers of the judges, named from their duty of keeping the genealogical lists, and already existing in Egypt. On appointment they hold that the nation is addressed as a whole and directed to appoint judges for itself — to choose them and have them inducted by its rulers, as at Sinai, where the people chose and Moses installed — and they add the sharp caution that election by majorities was unknown to the Mosaic law. Ellicott notes that a fresh synagogue section opens with these words, the land now being considered as the seat of the Kingdom of Jehovah, and points to Joshua as showing that such magistrates were already appointed."
+   },
    {
     "school": "reformed",
     "prevalence": "majority",
-    "summary": "Gill: the Hebrew is 'justice, justice' — strict justice, and nothing else. Calvin: the emphatic repetition inculcates that judges should study equity with inflexible constancy, nothing being more likely to swerve them."
+    "summary": "Gill, following Maimonides, places the judges in the court of judicature and describes the officers as masters of the staff and the whip, who go out into the markets and streets and shops to regulate weights and measures and to smite all who do wrong, everything they do being by order of the judges; he renders the doubled word strictly as justice, justice, and nothing else. Calvin grants that popular election was a real privilege but denies it is a universal rule — it is not conceded to all peoples to elect their judges, God having honoured his chosen people with that prerogative, and what the passage recommends generally is regular government rather than any one method. Whether magistrates come by the suffrages of the people or are imposed in some other way, they are the necessary ministers of God to confine all men under the yoke of the laws, for public utility is what makes their authority agreeable, which it would otherwise be hateful. On the emphatic repetition Calvin explains that it inculcates the study of equity with inflexible constancy, and not without cause, since nothing is more likely than that men's minds should be clouded by favour or hatred, and there are so many quibbles by which justice is perverted that unless judges watch cautiously against deception they will often find themselves ensnared."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry leaves the method of appointment open — however the persons were pitched upon, whether by their sovereign's appointment or the people's election, the power was ordained of God — and counts it a great mercy that justice was brought to the people's doors, more expeditious and less expensive for them. He states the standard bluntly: better not judge at all than not judge with just judgment; and he turns the closing command into a series of demands, to adhere to the principles of justice, act by its rules, countenance its demands, imitate its patterns, and pursue with resolution whatever appears to be just."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reaches for English equivalents, the first office being much what our magistrates or justices of the peace are and the second like our inquest sergeants and beadles, who entered houses and shops to examine weights and measures and the conduct of the people and brought an offender before the magistrate to be punished on the spot; he notes they seem also to have served as heralds in the army, and observes that in China all minor offences are still punished on the spot in the magistrate's presence. Wesley describes the officers as subordinates who brought causes before the judge, made his sentence known and carried it out, and explains why the bribe is singled out: a gift biasses the mind so that a man cannot discern between right and wrong, and it works even on judges accustomed to righteous dealing. Wesley and Henry agree on the later shape of the system, a court of twenty-three judges in every town of more than a hundred and twenty families and a court of three in the smaller ones."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "That which is altogether just shalt thou follow, that thou mayest live, and inherit the land",
-   "the emphatic charge to inflexible justice",
-   "righteousness the foundation of a people's welfare (Prov. 21:3)"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: it was lawful to plant trees and groves, but not for a religious or idolatrous use."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: groves were planted about idol-temples for idolatrous purposes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not plant thee a grove of any trees near unto the altar of the LORD",
-   "God's worship kept clear of idolatry's forms",
-   "shunning the apparatus of false religion (1 Thess. 5:22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "21-22",
+  "pericope_label": "Thou shalt not plant thee a grove, neither set thee up any image, which the LORD hateth",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "majority",
-    "summary": "Gill: the word signifies a statue or pillar set up for idolatry; what was not for idolatry, as a memorial, was not forbidden; the LORD hates every kind of idolatry."
+    "summary": "Gill is careful to say what is not forbidden: the prohibition covers trees of any sort, but it was never unlawful to plant trees or even groves of them — only to plant them for a religious or idolatrous use. On the second prohibition he defines the term as a statue or pillar set up for idolatry, and reports Aben Ezra's important qualification, that what was not set up for idolatry was not forbidden at all, as when a stone was erected in memory of some action or remarkable event. Calvin sets the grove in the wider religious world and treats the rule as one of separation: among the heathen nations groves were sacred, so that no religious object could receive due reverence except under the shade of trees, and lest conformity with so general a custom should vitiate the pure worship of God this distinction was drawn — the intent being that the Jews should fly from all strange rites, in case by approaching the Gentiles too closely they should introduce a sinful medley. That it was needed appears from how eagerly they imitated the nations anyway, there being scarcely any period in which they abstained from the high places, and Isaiah and Jeremiah reproaching them for playing the harlot under every green tree. Calvin then faces a real contradiction: God elsewhere commands that stones be erected on the borders of the land with the sum of the Law inscribed on them, which would collide with this prohibition unless the statue meant here is a false image of God in which men set him before themselves in bodily form. He makes a small grammatical choice with a large result, referring the relative not to the image set up but to the act of setting it up, so that what is declared abominable is the erecting itself — for by that act God's glory is dishonoured, when he is transfigured into a body or anything corporeal is mixed with his spiritual nature."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley gives the reason in a line: this was the practice of idolaters and might be an occasion of reviving idolatry. Clarke turns instead on visibility, observing that groves were planted about the idol temples for the sake of the obscene worship performed in them, and that God would therefore have no groves or thickets about his own altar, so that there might be no room even for the suspicion that anything contrary to the strictest purity was transacted there — every part of the divine worship being publicly performed, for the purpose of general edification."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott reaches Clarke's conclusion independently and in a sentence: the worship of Jehovah allowed of no secret rites, and nothing that might lead toward the abominations of heathen idolatry could be permitted near the altar. He adds that the Hebrew word is sometimes used of images but is here evidently used of the grove itself, and passes on Rashi's explanation of the second term as a single stone, whether statue or pillar. Keil and Delitzsch identify it more narrowly still as a memorial stone or stone pillar dedicated to Baal."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither shalt thou set thee up any image; which the LORD thy God hateth",
-   "idolatry not merely forbidden but hateful to God",
-   "his people to hate what he hates (Jer. 44:4)"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  }
 }

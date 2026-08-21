@@ -14207,6 +14207,77 @@
       "book": "hebrews",
       "chapter": "7",
       "note": "Fidelity self-grade, hebrews 7, eight entries tiling 1-28. Word counts: 1-2 621w (9 voices), 3-6 628w (8), 7-10 584w (7), 11-14 647w (9), 15-19 642w (8), 20-22 647w (7), 23-25 645w (7), 26-28 648w (8). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block in the source catena for the verses in range; no verse in 1-28 is uncovered. Positions I disagree with are stated in the voice's own terms and not softened: Barnes's denial of imputation at v9-10, Robertson's dismissal of the argument as rabbinical refinement, Calvin's editor contradicting Calvin's own rendering at v25, Ellicott's doubt that the Greek bears Barnes's sense at v24, and Clarke's harsh aside about the Jews at v18 (that one I summarised as 'the old law had no energy and furnished no assistance' and did not carry the invective across; the omission is deliberate and is recorded here rather than concealed). DECLARED DEVIATIONS: (a) Jamieson is in RESIDUE for the whole chapter, its five blocks belonging to 2 Corinthians 8-9, and is declared as excluded_voices on the five affected entries. (b) The Cyril block at key 3 (Daniel 7 fragment) and the duplicate Cyril block at key 21 are dropped WITHOUT an excluded_voices declaration. This is not a choice - the VOICE_LABELS list in scripts/synthesis_qa.py contains the bare string 'Cyril', which is a PREFIX of the actual head 'Cyril of Jerusalem:', so the regex never matches and undeclarable_voices rejects both 'Cyril' and 'Cyril of Jerusalem'. The same defect failed the validator outright at 2corinthians 11. The drops are real and are recorded here in place of the declaration the tooling will not accept. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "JFB DISPLACEMENT LAW — NINTH CONSECUTIVE CONFIRMATION, and the first in the Old Testament since the run began. JFB blocks sit at keys 2, 8, 14: stride 6, phase 2. Running record: acts 24 (2/8/14/20/26), acts 3 (4/10/16/22), james 1 (1/7/13/19/25), 1john 3 (6/12/18/24), ephesians 1 (4/10/16/22), romans 4 (4/10/16/22), luke 1 (26/32/38/62/74), 1corinthians 16 (1/7/13/19), deuteronomy 16 (2/8/14). Nine for nine; phase varies, stride never. NEW DATUM ON RUN LENGTH: here the run STOPS at 14 even though key 20 is still inside the chapter and would be the next term. So the stride is invariant but the run length is not — the sequence can terminate before the chapter does, which no previous chapter showed (luke 1 and 1cor 16 both ran to the last term that fit). All three blocks displaced, donor march again strictly forward, this time through NUMBERS 24 (Balaam's oracles): v2 = Num 24:5 ('How goodly are thy tents' — the Bedouin tents and the camp on the plains below Abarim), v8 = Num 24:10 (Balak 'smote his hands together', Oriental sign of violent rage and ignominious dismissal), v14 = Num 24:17 ('I shall see him, but not now' — primarily David, secondarily and pre-eminently the Messiah). All three declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "10",
+        "14",
+        "17",
+        "19"
+      ],
+      "note": "KEIL AND DELITZSCH BLOCKS ARE SYSTEMATICALLY OFFSET IN THIS CHAPTER — lemma dump plus forward-displaced commentary. The pattern: K&D's block at key N opens by quoting the RAW BIBLE TEXT of verses N..N+3, and the exposition that follows (if any) treats the section BEGINNING at the last quoted verse, i.e. the NEXT pericope. Instances: key 2 = 200 words of Deut 16:2-7 verse text and NOTHING else (pure lemma, no exposition at all -> excluded); key 10 = lemma 16:10-13 + commentary on TABERNACLES (vv13-15); key 14 = lemma 16:14-16 + commentary on the THREE ANNUAL APPEARANCES (v16); key 17 = lemma 16:17-18 + commentary on JUDGES AND CIVIL ORDER (v18); key 19 = lemma 16:19-21 + commentary on the ASHERAH (v21). NOT universal — keys 1 and 18 are genuinely on-verse. Because K&D has a key inside each destination span, every displaced piece could be legitimately relocated under the filing rule, so nothing was lost; but a writer who trusted the filing would have attributed Tabernacles material to the Feast of Weeks and judges material to the pilgrim feasts. Check K&D offsets before tiling any OT chapter."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "22"
+      ],
+      "note": "END-OF-CHAPTER RESIDUE CONFIRMED AS LAST-VERSE-SPECIFIC, NOT ELLICOTT-SPECIFIC — this is the sharpest form of the finding so far. At key 22, the chapter's final verse, TWO different witnesses carry trailing page furniture: Ellicott's block ends in StudyLight navigation, copyright boilerplate and ~2KB of raw CSS ('.sub-menu{font-size:12px...'), and GILL's block ends in scrape navigation ('Next: Deuteronomy Chapter 17 Sacred Texts | Bible - Previous: John Gill's Exposition... Index Next:') plus a run of bare version sigla. Fourth sighting overall and now four for four on the final verse: luke 1:80, romans 4:25, 1corinthians 16:24, deuteronomy 16:22 — across both testaments and four different books, and now across two different source witnesses. So the rule is not 'Ellicott is dirty' but 'the LAST KEY of a chapter carries whatever page furniture followed the text in the scrape'. That is mechanically strippable corpus-wide: for each chapter's maximum key, cut from the first CSS selector, from 'Footnotes: Copyright Statement', or from the 'Next:'/'Previous:' navigation marker."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "16",
+        "17"
+      ],
+      "note": "TWO MORE APPARATUS/DISPLACEMENT EXCLUSIONS. (a) Clarke at key 16 is nothing but bare cross-references — 'See Exo 23:14, where all the Jewish feasts are explained. See also Lev 23:34.' — with no exposition, so he is declared in excluded_voices at entry 16-17 even though he is a full voice elsewhere in the chapter. (b) Wesley's block at key 17 comments on 'thou shalt rejoice', which is v15, not v17 ('every man shall give as he is able'); it is displaced BACKWARD. Wesley has no key anywhere in the 13-15 span, so under the filing rule the material cannot be moved to the entry it actually treats, and it does not belong in 16-17 either — declared in excluded_voices. Also worth noting: Ellicott at key 19 is a bare cross-reference too ('See Exodus 23:6; 23:8'), but he carries real exposition at key 18 inside the same span, so he remains a declared voice there."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "18"
+      ],
+      "note": "A GENUINE FOUR-WAY DISPUTE ON WHO APPOINTS JUDGES, unusually topical for a legal chapter. (1) Keil and Delitzsch: the nation is addressed as a whole and told to appoint judges FOR ITSELF — to choose them and have them inducted by its rulers, as at Sinai where the people chose and Moses installed — with the sharp rider that 'election by majorities was unknown to the Mosaic law'. (2) Calvin: popular election was real but was a PRIVILEGE, not a norm — 'it is not conceded to all to elect their judges, because God honored His chosen people with this prerogative'; what the passage recommends generally is regular government, and 'whether magistrates are appointed by the suffrages of the people, or imposed in any other way, let us learn that they are the necessary ministers of God'. (3) Henry: indifferent to method — 'however the persons were pitched upon, whether by the appointment of their sovereign or by the election of the people, the power was ordained of God'. (4) Ellicott: cites Joshua 23:2 to show the magistrates were ALREADY appointed, which cuts against reading the verse as instituting anything. Calvin's supporting maxim is the memorable one: 'Public utility renders the authority of magistrates pleasant and agreeable, though it would else be hateful.'"
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "note": "OTHER DISPUTES AND CONVERGENCES. DISPUTES: (1) v1 'by night' — Wesley says Pharaoh forced them out in the night and they perfected the work in the morning; Henry reports the Chaldee paraphrasts denying a night departure outright, since there was an express order not to stir out of doors till morning, and rendering it that they came out BY DAYLIGHT. (2) v3 'bread of affliction' — Clarke refers it to the BONDAGE (unsavoury, reminding them of servitude), Calvin to the ESCAPE (the straits in which there was no time even to bake), Wesley to BOTH. (3) v7 'roast' — Gill concedes the Hebrew word properly means to BOIL and that Onkelos so renders it, yet boiling the paschal lamb is expressly forbidden; some escape to the chagigah, and Josiah's passover was roasted while the other offerings were boiled — Gill follows Jarchi and takes it of roasting with fire despite the form. (4) v8 six days vs seven — Gill says the seventh is not exempt but merely distinguished by its own service; Wesley solves the arithmetic differently, counting the six as those BESIDES the first. (5) v22 — Gill and Aben Ezra make the pillar unlawful by its PURPOSE (a memorial stone for a remarkable event is fine), while Calvin makes it unlawful by what it REPRESENTS, and reads the relative as referring to the act of erecting rather than the object erected. CONVERGENCES: at v21 Clarke and Ellicott independently give the same reason for banning the grove — not separation from the heathen but publicity, since the worship of Jehovah 'allowed of no secret rites' and nothing was to leave room for suspicion about what was transacted at the altar."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "note": "All 7 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.630, mean zip 0.456. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named), and every declared exclusion names a block actually present inside its own span. 4 of 7 entries landed in range on the first draft; the three that overran were the three richest spans (1361, 2085 and 1804 source words) and each needed one or two sentence-level passes. Tiling followed the chapter's own five-part structure (Passover, Weeks, Tabernacles, the three appearances, judges, and the asherah/pillar) rather than any word budget, which is why entry 2-8 covers seven verses: keys 5, 12 and 15 carry Gill ALONE and keys 4, 6, 7 carry only Gill and Wesley, so a verse-level shape would have produced six near-single-voice entries."
     }
   ]
 }
