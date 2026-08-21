@@ -15334,6 +15334,82 @@
         "24"
       ],
       "note": "Largest chapter written to date: 58,823 usable source words across 24 keys, tiled into 14 entries (1 | 2-5 | 6 | 7-8 | 9-10 | 11-13 | 14 | 15 | 16 | 17-18 | 19 | 20-21 | 22-23 | 24). All 14 entries came in grade A on first or second measurement, 635-649 QA words, no FLOOR or template flags. The per-paragraph draft-and-measure method (notes 1383, 1395) held: the worst overshoot in the whole chapter was 14 words, against the 200-350 word overshoots that cost ten-plus trim passes before the method was adopted."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "5",
+      "note": "200-WORD CAP CONFIRMED ON A MAIN VOICE — this is the decisive case for the truncation defect. In galatians 5, John Gill's 26 blocks have a maximum of EXACTLY 200 words, and 8 of the 26 sit exactly at 200, each breaking off mid-sentence (k1 ends '...in moderation, and with temperance, and so'; the capped keys are 1, 9, 10, 14, 17, 18, 19, 22). Gill's distribution is 23,27,40,71,75,81,96,101,108,113,114,130,132,143,145,152,158,197,200,200,200,200,200,200,200,200 — a hard ceiling, not a natural length distribution. Until now the only 200-word evidence was five stuck Cyril fragments (all exactly 200 words, 1039-1097 chars) which could be dismissed as a Catena-specific artifact. It is not: it is a scrape-wide cap that lands on whichever feed hits it. It is also NOT global per voice — Gill's numbers 27 k23 block was 126 real words and other chapters carry far longer Gill — so the cap is per book/per feed. Consequence: in Galatians, roughly a third of the corpus's single most-present voice is silently truncated, with everything past word 200 lost. The sizer counts the truncated text as the full block, so galatians 5's measured 67,016 usable source words UNDERSTATES the real corpus. Recommend the re-fetch that has been requested for the Cyril fragments be widened to cover Gill across Galatians, and that a corpus-wide scan for exact-200-word blocks be run to find which books/voices are affected."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "TWO DISPLACED VOICES FROM THE SAME REGION OF ROMANS — the strongest evidence yet that displacement is a whole-file offset, not a per-voice quirk. (1) JAMIESON residue at keys 3, 9, 15, 21: four members, target gaps 6/6/6, OFFSET 3. Unlike most chapters the blocks name their own source: k3 quotes Is 45:9 'didst thou make' = Rom 9:20; k9 quotes Ho 1:10 'called sons' with the 'in the place where ... there' comment = Rom 9:26; k15 'What now is the result of the whole? ... the Gentiles ... experienced the blessedness of a justified state' = Rom 9:30; k21 'or, witness, as he well could from his own sad experience ... (See 1Ti 1:13)' = Rom 10:2. SOURCE REGION Romans 9->10. (2) TERTULLIAN at k1, a single 348-word block, is on Rom 8:3 — it exegetes 'sent His Son in the likeness of sinful flesh' and 'the law of sin dwelling in his members' throughout, with no contact whatever with Galatians 5:1. SOURCE Romans 7-8. Two different voices, from two different source trees, both displaced into galatians 5 from adjacent chapters of Romans. That is very hard to explain as independent per-voice error and points instead at the Galatians 5 assembly having been fed from a Romans 8-10 neighbourhood. LUKE-24 REVISION: source gaps here are 6, 4, 5 (Romans 9 has 33 verses, so 9:30->10:2 is 5) against target gaps 6, 6, 6 — each quantises UP to the next multiple of six, exactly as the luke 24 revision predicts. A fixed-period model predicts the same target gaps here, so this chapter does not DISCRIMINATE between the two models, but it is consistent with the revision. TALLY, twentieth chapter: offset 0 — 1thessalonians 5, romans 14, numbers 27; offset 1 — 1peter 1, 1corinthians 16, judges 2, hebrews 7; offset 2 — acts 21, 1corinthians 11; offset 3 — numbers 24, philemon 1, acts 11, acts 17, philippians 2, revelation 18, luke 24, deuteronomy 24, galatians 5; offset 4 — philippians 1, 2corinthians 11, 1corinthians 9. OFFSET 5 STILL NEVER OBSERVED in twenty chapters."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "5",
+      "verses": [
+        "19",
+        "21",
+        "25",
+        "26"
+      ],
+      "note": "MARTIN LUTHER: FIRST APPEARANCE IN THE SERIES, AND THE TEXT IS SCAN-DAMAGED. This is the first chapter I have worked where Luther carries heads (21 of 26 keys), so the 'lutheran' school slug finally gets used in Commentary A. His blocks are the longest in the chapter (median 783 words, max 3,482) and are genuinely valuable — the touchstone passage at k2, the confutation of the schoolmen at k16, the defence of cursing at k12, the distinction between praising the man and praising the ministry at k26. But the source is an OCR of a printed scan and carries three distinct classes of damage. (a) RUNNING PAGE HEADERS leak into the body mid-sentence: 'COMMENTARY ON GALATIANS. 459', '... 481', '... 483', '... 485', '... 535', '... 600', '... 631', '... 632', and a bare '536 COMMENTARY ON GALATIANS.' opening k25. (b) SOFT-HYPHEN LINE BREAKS are preserved as literal hyphen-space: 'con- stant', 'circum- cised', 'sen- tence', 'per- form', 'un- clean', 'Notwithstand- ing', 'historio- graphers'. (c) LETTER-LEVEL OCR ERRORS, mostly l/h and w/v confusions: 'hberty' for liberty, 'hfe' for life, 'beginnelh' for beginneth, 'Avere' for were, 'Ave' for we, 'jnag- nified' for magnified, 'accomphsh' for accomplish, 'beUeve' for believe, 'w4iole' for whole, 'w4sh' for wish, 'ssmie' for same, 'fjith' for faith, 'hiterrora' for his terrors, 'al)olislied' for abolished, 'oiher' for other, 'Paid' for Paul, 'eaith' for saith, 'sinrid' for sin and, 'Tiierefore' for Therefore, 'impos- sible', 'commodity'/'commodity'. Also stray inserted punctuation ('the! works', 'with/ .', 'the ex- ceeding'). NONE OF THIS REACHED THE SYNTHESIS — every Luther quotation was silently normalised — but the underlying data is dirty and any downstream consumer that renders the catena directly will show it. ALSO: k19 Luther is a one-word block, the fragment 'are,' — a null block, presumably the tail of a split that lost its body. It caused no GHOST because Luther is also present at k21 in the same entry, but a chapter where such a fragment stood alone at a key would produce an unusable voice. Recommend Luther be added to the re-fetch list alongside Lightfoot and Bede."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "5",
+      "verses": [
+        "26"
+      ],
+      "note": "CHROME: only ONE family here, and its absence is as informative as its presence. k26 Charles Ellicott carries the StudyLight footer — 59 real words then 983 of chrome. Ellicott's blocks run 1-14 and 16-26, so k26 IS his last block in the chapter: the per-voice rule established at numbers 27 holds again (each voice's scrape carries its own site's page-tail into that voice's last block). What is ABSENT matters more. John Gill also runs to k26 and carries NO sacred-texts navigation tail here, though he carried exactly that at numbers 27 k23. So the sacred-texts family is NOT a property of Gill as a voice — it is a property of the SITE a given book's scrape of that voice came from. Gill's Galatians and Gill's Numbers were fetched from different sources. This refines the recommendation already filed: the splitter needs a marker SET applied at every key (StudyLight on 'Copyright Statement', sacred-texts on 'Sacred Texts | Bible' or the 'Next: <Book> Chapter <n>' pattern), and it cannot assume a voice's chrome family is stable across books. A per-voice-per-book provenance map would be worth building at the same time."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "9",
+        "12"
+      ],
+      "note": "The three sharpest disputes in the first half, all carried into the tags. (1) v4 FALLING FROM GRACE — the chapter's deepest division, and it does not reduce to two positions. Clarke takes it as real apostasy: they had been brought into the grace of the Gospel and by readopting the Mosaic ordinances lost the grace communicated to their souls by which they were preserved in salvation — and refuses to close the case, since 'whether some of them ever rose again is more than we can tell'. Barnes empties it of history, holding the apostle merely makes a supposition and does not say it ever occurred. Ellicott relocates rather than weakens: grace here is 'not a state or disposition in the believer, but a divine act or relation', so what is lost is a standing and the man is 'unchristianised', his relations to Christ cancelled. Robertson keeps the aorist blunt — they left the sphere of grace and took their stand in the sphere of law — then fences it explicitly against a devotional misreading: 'He is not, of course, speaking of occasional sins.' (2) v9 THE LITTLE LEAVEN — a flat contradiction between two strong voices. Calvin: 'This refers, I think, to doctrine, not to men.' Ellicott: 'It seems decidedly more in accordance with the context to take the little leaven as referring rather to a few seceders than to a little bad doctrine.' Barnes canvasses three possibilities and lands with Ellicott; Wesley agrees in five words. Robertson enters a caution against pressing the figure at all, since the proverb involves only leaven's pervasive power and not leaven as a symbol of evil. (3) v12 I WOULD THEY WERE EVEN CUT OFF — three readings. Excommunication (Barnes, Clarke, Wesley); destruction by God's hand (Gill, Calvin); self-castration (Ellicott, Robertson, and per Ellicott 'all the ancient Greek interpreters and a large majority of modern commentators', set against the cult of Cybele centred in Galatia). Barnes knows the third reading, calls it 'singular and monstrous', records his amazement that Robinson's Lexicon adopted it, and quotes Koppe's explanation in Latin rather than English — a decorum move worth noting in its own right. Clarke reports and rejects Wakefield's conjecture that the verb means 'may lament it'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "5",
+      "verses": [
+        "17",
+        "20",
+        "22",
+        "24"
+      ],
+      "note": "Four further disputes from the second half. (4) v17 WHAT THE FRUSTRATED WILL IS WILLING — the two readings invert the verse. Ellicott and Henry take the thwarted desire to be the GOOD one (the flesh prevents the will from acting freely). Wesley reverses the referent outright: 'That ye may not do the things which ye would — That, being thus strengthened by the Spirit, ye may not fulfil the desire of the flesh, as otherwise ye would do.' Barnes meanwhile attacks the English, that 'cannot do' is by far stronger than the original and it is doubted whether the Greek will bear it, preferring Doddridge's 'so that ye do not the things that ye would'. Clarke draws a conclusion from the deadlock the others would resist: 'Who can suppose that he speaks this of adult Christians?' Robertson separately rejects Lightfoot's claim that the verb for lusting cannot be predicated of the Spirit. (5) v20 WITCHCRAFT — the most striking exchange in the chapter. Barnes, having traced pharmakeia from pharmacy through poisoning to magic, withholds assent: 'The apostle does not vouch for the actual existence of witchcraft; but he says that what was known as such was a proof of the corrupt nature of man.' Wesley takes the opposite ground with unusual force: it means witchcraft strictly and not poisoning, since it is joined with the worship of devil-gods and not with murder, and 'To deny therefore that there is, or ever was, any such thing, is, by plain consequence, to deny the authority both of the Old and New Testament.' (6) v22 WHETHER FRUIT IS OPPOSED TO WORKS — Barnes, Robertson, Luther, Gill and Calvin all build on the contrast; Ellicott denies it outright: 'There does not seem to be any essential difference between this term and that used above.' Ellicott is contradicting the near-unanimous reading of the passage's central figure. (7) v24 HOW COMPLETE THE CRUCIFIXION ALREADY IS — five gradations: dead and powerless (Barnes, Ellicott); God designs to save believers from all sin inward and outward (Clarke); not yet destroyed but dethroned (Calvin); still actively felt but never consented to (Luther, who concedes the saints 'neither fear nor love God so perfectly as they ought'); continually weaker and weaker (Wesley). Every position is left standing in the prose and none adjudicated."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "5",
+      "note": "FIDELITY SELF-GRADE, galatians 5 — 67,016 usable source words across 26 keys, the largest chapter attempted in this series and by the standing rule the whole batch on its own. Tiled into 10 entries covering 1-26 exactly. Word counts: 1 635w (9 voices), 2-3 641w (8), 4-6 642w (8), 7-10 648w (9), 11-12 648w (8), 13-14 645w (9), 15-18 649w (9), 19-21 650w (9), 22-23 649w (9), 24-26 649w (8). All ten inside the 350-650 window; build lint clean (no UNKNOWN HEAD, no NAMED-BUT-NOT-SOURCED, no GHOST, no school mismatch); both validators pass. Every verse checked against its own catena block. Every named voice is sourced from a block at a key inside that entry's range. All eight school slugs available were not needed; six are used across the chapter — reformed, lutheran, puritan-evangelical, wesleyan-arminian, grammatical-historical, eastern-antiochene — with 'lutheran' used here for the first time in the series. Where sources conflict the conflict is left standing and both sides named; I have adjudicated none of the seven disputes filed above, including the ones where the majority is plainly against a single voice (Ellicott on fruit-versus-works, Wesley on witchcraft). Positions I would not defend are reported as their authors' and not endorsed — Clarke's inference that God designs to save believers from all sin, Wesley's argument that denying witchcraft denies both Testaments, Calvin's dismissal of the pagan virtues as 'specious disguises'. RESIDUE: Jamieson excluded at four entries and Tertullian at entry 1, both declared as excluded_voices rather than silenced, since the blocks are real text belonging to Romans and the exclusion should be visible. SILENCED: Clarke at entry 1 only, whose k1 block is the chapter-argument outline with no comment on v1 itself — suppressed without a declaration because there is nothing to declare. CHROME at k26 (Ellicott, StudyLight) cut before drafting; no chrome text reached the synthesis. TRUNCATION: 8 of Gill's 26 blocks are cut at exactly 200 words mid-sentence (see the source-defect note). I have quoted Gill only from text that survives the cut, and have not inferred how any truncated sentence ended — but the reader should know that Gill's contribution to this chapter is materially incomplete and that his relative weight against the other voices is understated as a result. Deliberate omissions for length: Barnes' long note reclaiming 'temperance' from its modern sense was kept, but Ellicott's count of the walking-metaphor's New Testament occurrences, Calvin's quotation of a Greek father on bite-versus-devour, Gill's exposition of the Spirit's leading ('dead men cannot be led'), Ellicott's note on the Galatian national character, and Barnes' account of how the proud provoke their inferiors were all cut in trim."
     }
   ]
 }
