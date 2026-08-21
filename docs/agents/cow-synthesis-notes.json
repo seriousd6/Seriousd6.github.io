@@ -16134,6 +16134,96 @@
       "book": "1samuel",
       "chapter": "6",
       "note": "FIDELITY SELF-GRADE, 1samuel 6 — 16,415 usable source words across 21 keys, tiled into 5 entries covering 1-21 exactly. Word counts: 1-6 646w (6 voices), 7-9 620w (5), 10-12 539w (6), 13-18 648w (5), 19-21 648w (5). All five inside the 350-650 window; build lint clean; both validators pass; the standalone quality gate reports zero prose violations before stamping, which I now run before every finish. Seven voices carry heads, all seven used across four schools — reformed, puritan-evangelical, wesleyan-arminian, grammatical-historical. Calvin has no blocks in this chapter. Every verse checked against its own catena block; every named voice sourced from a block at a key inside its entry's range. RESIDUE: Jamieson excluded at the 10-12 entry only, declared as excluded_voices, since the block is real text belonging to the Joshua territory lists. SILENCED: Keil at the 19-21 entry, whose k20 block contains no commentary at all, only the bare text of the two verses. I silenced rather than excluded him because an excluded_voices declaration would tell the reader something had been withheld when there was nothing to withhold; the distinction is explained in the source-defect note. CHROME at k21 (Ellicott, StudyLight) cut before drafting; none reached the synthesis. TRUNCATION: Keil is capped at 200 words at seven of his eight keys, and at k16 the cap removes his entire treatment of the Bethshemesh judgement, which is the chapter's central difficulty. The prose says nothing of the absence and attributes nothing to him there. Where sources conflict the conflict is left standing and both sides named; none of the six disputes filed above is adjudicated. In particular I have NOT taken a side on the number in verse 19, though two of the five voices call the text corrupt and only Wesley defends it: the prose reports Clarke's grounds, Ellicott's agreement and Wesley's harmonisation, and leaves the reader to weigh them. Positions are reported as their authors' and not endorsed, notably Ellicott's attribution of the sacrilege to men heated with wine, which is a reconstruction rather than anything the text says and is presented as his. Deliberate omissions for length: Gill's division of the priests from the diviners at v2; Gill's report that the men were smitten with a thunderbolt; Clarke's excursus tracing the golden images to the ancient practice of talismans and correcting Locke on the word (cut in the final trim, and the corresponding outlier tag removed with it — it would have made a good cross-link to the Maimonides talisman note in the opening entry); and Ellicott's etymology of Kirjath-jearim."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB MECHANISM SOLVED. This chapter is the 22nd confirmation and the cleanest yet: four JFB blocks, at keys 2, 8, 14 and 20, all from Romans 1 - key 2 is Rom 1:1-3 (the gospel of God, according to the holy scriptures, in his human nature), key 8 is Rom 1:9 (whom I serve with my spirit, without ceasing I make mention of you), key 14 is Rom 1:14 (the three-word fragment 'cultivated rude', JFB's gloss on Greeks and Barbarians), key 20 is Rom 1:19 ('rather, which is' - and it even names Rom 1:20 as what follows). Target keys are 2/8/14/20: STRIDE 6. Ephesians 3 and 2timothy 4 were both 5/11/17, also stride 6. So I tested it corpus-wide. Of 974 chapter files carrying two or more JFB blocks, 973 have EVERY gap between consecutive JFB keys a multiple of 6; 716 have a uniform gap of exactly 6, plus 37 at 12, 7 at 18, 3 at 24. The single exception is 2kings 13 ([13,19,21]). The phase varies per chapter - first-key mod 6 is evenly spread (172-199 each) - so each chapter has its own offset. CONCLUSION: the JFB column corpus-wide is a 1-in-6 sample of verses, not a commentary. Combined with the donor-chapter evidence, the ingest is fundamentally broken rather than sporadically corrupt. This supersedes my earlier note 1462, where an aggregate key-count across chapters hid the pattern; the right test is within-chapter gaps, not the global key histogram. Owner decision needed on the whole column."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "Barnes column carries chapter-boundary spill at BOTH ends of this chapter. His key-1 block opens with 'Continuation of Notes of 2nd Corinthians 4:18' followed by ~1,500 words of numbered REMARKS on chapter 4 before reaching 'Verse 1.'; his key-21 block ends with 'The notes on this verse are too large for a single file, they are continued on 2 Corinthians 6:1' and closes with a Charles Wesley hymn. So Barnes blocks at the first and last key of a chapter may contain material belonging to the neighbouring chapters, and a synthesis that reads only the head of a long Barnes block will summarise the wrong chapter. Rule: for Barnes, always seek the 'Verse N.' marker inside the block rather than taking the opening."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "21"
+      ],
+      "note": "StudyLight residue at Ellicott's terminal block, again. Ellicott key 21 runs 1,477 words of which roughly 1,200 are site chrome - copyright statement, terms of use, the full sub-menu CSS, and the verse-popup JavaScript. His actual comment is about 270 words. This is now the same shape observed for Gill's terminal block in genesis 15 and deuteronomy 19 (sacred-texts navigation) but with the StudyLight payload: the residue attaches to whichever voice ends the chapter file. Worth testing whether chapter-terminal blocks are the general locus of scrape chrome regardless of voice."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "20"
+      ],
+      "note": "Calvin column inlines editorial footnotes here too, confirming the pattern logged for deuteronomy 19 and ephesians 3 across a third book. In this chapter the Calvin blocks carry trailing attributions to Erasmus, Chandler, Bloomfield and Augustine, plus long block quotations from a seventeenth-century discourse on 2 Cor 5:8 and from an English exposition, several ending '- Ed.' Separately, Clarke's block on v.20 quotes Wesley's note on the same verse VERBATIM and by name, then adds Charles Wesley's hymn on it. Consequence in both cases: apparent agreement between witnesses may be quotation rather than convergence. Handled here by attributing the beseeching passage to Wesley in the prose and flagging the Clarke-quotes-Wesley overlap in outliers."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "10",
+        "21"
+      ],
+      "note": "Two first-rate in-corpus disputes preserved from this chapter. (a) On v.10 Ellicott attacks 'the system-builders of theology' for evading the plain assertion that each receives according to his deeds, naming justification by faith, imputed righteousness, pardon sealed in blood and priestly absolution as the evasions - and Calvin, a system-builder present in the same catena, had already answered in his own terms, distinguishing evil deeds requited as deserved from good works rewarded only because God first accepts the person of unmerited goodness. (b) On v.21 the corpus splits four ways over 'made him to be sin': Clarke and Wesley for sin-offering, Clarke charging the English version with founding a blasphemous doctrine on a mistranslation; Ellicott flatly denying that sense is even New Testament Greek; Gill and Calvin for imputation, Gill saying Christ was treated as 'not only a sinner, but a mass of sin'; Barnes accepting the offering sense while ruling out abstraction, sinnership and guilt alike. Both recorded in the debates field with all sides named."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "9",
+        "12",
+        "16"
+      ],
+      "note": "Henry holds only four keys in this chapter (1, 9, 12, 16) and his key-1 block covers vv.1-8 while his key-16 block covers vv.16-21, so puritan-evangelical is absent from the 2-3, 4-5, 6-7, 14-15, 18-19, 20 and 21 entries - seven of twelve. Same head-overflow shape as ephesians 3, and again unmitigated, since Wesley's blocks here average under 60 words and carry no comparable sweep. Worth noting as a systematic property of the Pauline epistles in this corpus rather than a per-chapter accident: Henry comments by section, so in any epistle chapter he will occupy two or three entries and be missing from the rest."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "21"
+      ],
+      "note": "All twelve entries self-graded A (QA 643/641/628/642/642/641/585/640/649/620/638/645; ttr 0.590-0.659). Seven needed a trim pass; with seven to nine voices at nearly every key the 650 cap is the binding constraint throughout, and entry 21 came closest to a grade risk on doctrinal-vocabulary saturation (sin, righteousness, imputed, offering) at ttr 0.590, which is the lowest of the run so far but still clear of the 0.58 floor. Tiling 1 | 2-3 | 4-5 | 6-7 | 8-9 | 10-11 | 12-13 | 14-15 | 16-17 | 18-19 | 20 | 21, following the argument rather than equal source weight; keys 20 and 21 were kept solo because each is a self-contained topic (the embassy, the exchange) and key 21 carries 8,330 source words. JFB excluded at the four keys where it appears. Prevalence by the documented count rule; debates and outliers in the documented structured form."
     }
   ]
 }
