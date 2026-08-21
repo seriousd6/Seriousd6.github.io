@@ -15676,6 +15676,92 @@
       "book": "numbers",
       "chapter": "19",
       "note": "FIDELITY SELF-GRADE, numbers 19 — 14,394 usable source words across 22 keys, tiled into 5 entries covering 1-22 exactly. Word counts: 1-4 649w (7 voices), 5-10 648w (6), 11-13 648w (7), 14-18 461w (4), 19-22 579w (5). All five inside the 350-650 window; build lint clean (no UNKNOWN HEAD, no NAMED-BUT-NOT-SOURCED, no GHOST, no school mismatch); both validators pass. Eight voices carry heads; seven are used, across four schools — reformed, puritan-evangelical, wesleyan-arminian, grammatical-historical. Entries 14-18 and 19-22 are deliberately shorter than the rest because their source is thinner (831 and 2,079 words against 5,259 for the opening entry); I have not padded them to match the others, and 14-18 in particular carries only four voices because only four are present at those keys. Every verse checked against its own catena block. Every named voice is sourced from a block at a key inside its entry's range. Where sources conflict the conflict is left standing and both sides named; none of the five disputes filed above is adjudicated — including the direct contradiction between Calvin and Keil over who slew the heifer, where I have stated both and taken neither. Positions are reported as their authors' and not endorsed, notably Clarke's derivation of the rite from anti-Egyptian polemic, Gill's suggestion that the ministers' defilement points at the guilt of those who put Christ to death, and Wesley's use of the running water against those who claim Christ's righteousness without submitting to his Spirit. RESIDUE: Jamieson excluded at four of the five entries, declared as excluded_voices rather than silenced, since the blocks are real text belonging to Leviticus 27 and the exclusion should be visible; note that his k3 and k9 blocks are byte-identical, so the same 211 words are excluded twice. CHROME at k19 (Ellicott, StudyLight) and k22 (Gill, sacred-texts) cut before drafting; no chrome text reached the synthesis. TRUNCATION: Keil is capped at 200 words at nine of his ten keys and Gill at two of twenty-two. I quoted both only from surviving text and inferred nothing about how a truncated sentence ended, but Keil's weight here is far lighter than his real contribution, and his blocks additionally overlap one another, so where I have cited him the material may also stand in the block at the previous key. Deliberate omissions for length: Gill's account of the sprinkling from Maimonides and the Targum (blood taken into the palm, not a vessel), Wesley on the heifer burnt outside the camp as accursed, Wesley on the three materials sanctified for future use, Keil on the structural seam at v10, Gill and Wesley on the burning as figuring Christ's sufferings, Henry on the ashes being distributed through the towns of Canaan, and Calvin's guard that touching a corpse was in itself no atrocious crime since God was not angry at a stain contracted in burying a father."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JFB stride-6 displacement, 20th chapter confirmation, and the clearest diagnostic yet: THE DONOR ADVANCES TOO. JFB appears at exactly three keys in 2timothy 4 — 5, 11 and 17, a clean stride-6 run at phase 5. All three carry 1 CORINTHIANS 16 material, and the donor verses advance in step with the target keys: key 5 carries 1 Cor 16:1 (the collection for the saints in Judea); key 11 carries 1 Cor 16:5-7 (Paul's plan to pass through Macedonia); key 17 carries 1 Cor 16:10-11 (Timothy's youth, 'let no man despise thy youth', set him forward in peace). Target advances 5, 11, 17 (+6, +6); donor advances roughly 1, 5, 10 (+4, +5). Taken with the 1samuel 4 finding (same donor PARAGRAPH duplicated) and the genesis 15 finding (both terms from the same donor chapter), the picture is now: the JFB column is being read from a sequentially advancing pointer into a WRONG source chapter, not sampled at random. All three declared in excluded_voices at entries 5, 11 and 17."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "Two defects of a kind not previously recorded in one chapter. (a) CALVIN IS ALMOST ENTIRELY MISSING. Calvin has exactly one block in 2timothy 4, at key 1 (418 words), and none at any of the other 21 keys. Every other chapter worked this session carried Calvin at most keys or at none; a single surviving block is new. The consequence is that the reformed school rests on Gill alone in twelve of the thirteen entries and is marked 'single' there. Since Calvin's commentary on 2 Timothy certainly covers the whole chapter, this is a scrape gap, not an authorial one — worth checking whether other Pauline chapters show the same one-block pattern. (b) Ellicott's key-21 block is 1,314 words of which only about 180 are commentary; the rest is StudyLight chrome, CSS and raw JavaScript beginning right after the note on Pudens and Claudia. Fifteenth residue sighting, and it inflated the grammatical-historical prevalence figure for entry 19 until corrected by hand."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "2timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "8",
+        "9",
+        "11",
+        "13",
+        "17",
+        "19"
+      ],
+      "note": "Head-overflow loss, fourth chapter running, and the largest yet. Henry has three heads in 2timothy 4 (keys 1, 9, 16) plus two fragments (keys 6, 14). The head at 1 expounds vv1-6, the head at 9 expounds vv9-15, and the head at 16 expounds vv16-22 — so his 4,822 words cover practically the whole chapter while he holds keys at only five of twenty-two. Because Henry has no key inside spans 2, 3-4, 5, 8, 11-12, 13, 17-18 or 19-22, that material was dropped; his v6 material moved legally into entry 6 and his vv14-15 material into entry 14, where he does hold fragments. Unlike genesis 3, genesis 15 and 1samuel 4, there is NO Wesley mitigation of any size here: Wesley's blocks in this chapter are one-liners (9 to 108 words), so what Henry loses is simply lost. The puritan-evangelical school therefore appears in only five of thirteen entries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "8",
+        "9",
+        "11",
+        "13",
+        "14",
+        "16",
+        "17",
+        "19"
+      ],
+      "note": "First chapter of this session in a book where the GRAMMATICAL-HISTORICAL school dominates. Ellicott, Barnes and Robertson between them hold the majority in twelve of thirteen entries — Barnes alone runs 58 to 1,132 words per key and Robertson supplies a philological note at almost every verse. In the Genesis and 1 Samuel chapters worked earlier, reformed or puritan-evangelical almost always dominated. Practical effect on drafting: the three grammatical-historical voices frequently AGREE on a philological point and differ only in emphasis, so the temptation is to let one paragraph become three restatements of one gloss. The fix used throughout was to give each of the three a distinct function in the paragraph — Robertson the Greek form, Barnes the doctrinal or practical inference, Ellicott the historical setting — and to let disagreements between them carry the paragraph where they exist (e.g. the reading 'at his appearing' against 'by his appearing' in entry 1, and the identity of the lion in entry 17)."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "2timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "5",
+        "6",
+        "8",
+        "9",
+        "11",
+        "13",
+        "14",
+        "16",
+        "17",
+        "19"
+      ],
+      "note": "33,724 usable source words across 22 keys, tiled into 13 entries (1 | 2 | 3-4 | 5 | 6-7 | 8 | 9-10 | 11-12 | 13 | 14-15 | 16 | 17-18 | 19-22). All thirteen grade A, 625-650 QA words. Ten of the thirteen needed two or more trim passes to come under the 650 ceiling, markedly more than in the Genesis chapters, because with six to eight voices at nearly every key the natural draft runs 680-720. Two entries sat close to the TTR floor on doctrinal-vocabulary saturation (entry 1 at 0.592, entry 8 at 0.583) — the recurring words being judge, judgment, kingdom, appearing, crown and righteousness, the same failure mode recorded in note 1421. Entry 9 came in at exactly 650, the inclusive ceiling."
     }
   ]
 }
