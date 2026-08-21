@@ -2,834 +2,557 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this was when Moses and the Israelites were at Succoth, shortly after their coming out of Egypt; Matthew Henry: care is here taken to perpetuate the remembrance of the preservation of Israel's firstborn; the witnesses note the LORD speaking to Moses to give the law of the firstborn, just after the great deliverance — the opening of the command that consecrates the firstborn to God (God speaking to fix the memorial of the night of the Passover: 'the LORD spake unto Moses, saying'; the time and place, that this came at Succoth, shortly after their coming out of Egypt, while the deliverance was fresh; the occasion, that God now gives the law of the firstborn to perpetuate the remembrance of how he had preserved Israel's firstborn when he smote Egypt's; that what follows is no small matter but the consecrating of the firstborn to God, a standing memorial of the redemption; that God, having delivered his people, at once gives them ordinances to keep the memory of it alive in every generation)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD spake unto Moses",
-   "saying",
-   "God giving the law of the firstborn just after the deliverance",
-   "perpetuating the remembrance of how God preserved Israel's firstborn when he smote Egypt's"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "1-2",
+  "pericope_label": "Sanctify unto me all the firstborn, whatsoever openeth the womb among the children of Israel",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the law as a memorial: care is taken here to perpetuate the remembrance of the preservation of Israel's firstborn when the firstborn of the Egyptians were slain, and in memory of that distinguishing favour, and in gratitude for it, the firstborn in all ages were to be consecrated to God as his peculiars and then redeemed. God, who by right of creation is proprietor and sovereign of all creatures, here lays claim in particular to the firstborn of the Israelites by right of protection. The parents were not to look upon themselves as interested in their firstborn until they had solemnly presented them to God, recognized his title to them, and received them back at a certain rate from him again. Henry draws three notes from it. What is spared to us by special distinguishing mercy should be dedicated in a peculiar manner to God's honour, at the least by some grateful acknowledgment in works of piety and charity, when our lives or the lives of our children have been given us for a prey. God, who is the first and the best, should have the first and the best, and to him we should resign what is most dear to us and most valuable — the firstborn were the joy and hope of their families, and therefore, says God, they shall be mine, so that it appears we love God best, as we ought, if we are willing to part with what we love best in this world. And it is the church of the firstborn that is sanctified to God."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin refers the law to the First Commandment: God asserts his right over the firstborn lest the recollection of their redemption should ever be lost, and the Israelites were thereby admonished that they must honour the God by whose grace they had escaped in safety from the common destruction of Egypt, and that they were rescued by his special blessing in order that they should consecrate themselves to God their Deliverer. The offering he requires was a mark of separation between them and the heathen nations. The firstborn is called the opening of the womb because it is the beginning of generation; and the phrase 'among the children of Israel', used of brutes as well as of their own children, is meant to distinguish domestic animals from the wild. Calvin then widens the claim: although God commands only the firstborn of the race of Abraham to be offered to him, this must undoubtedly be extended to the sanctification of the whole people, for while he says the firstborn were his because they especially owed their preservation to his mercy, for the same reason he signifies that all were his own. Gill restricts the command to males, as the Targum of Jonathan adds, since only these were sacrificed or redeemed; sanctification here means the separation or devoting of them to the service of God, the firstborn of clean creatures being sacrificed and of unclean redeemed with a price, and the firstborn of men redeemed because it was not lawful to sacrifice them, the redemption money going to the priests as the ministers of the Lord and so to God himself. He places the speaking at Succoth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works from the verb. To sanctify, kadash, signifies to consecrate, separate and set apart a thing or person from all secular purposes to some religious use, and answers exactly to the Greek hagiazo, which he derives from a privative and ge, earth, because everything offered or consecrated to God was separated from all earthly uses; hence a holy person or saint is termed hagios, a person separated from the earth, one who lives a holy life entirely devoted to the service of God. The persons and animals so sanctified were employed in the service of the tabernacle and temple, and such animals as were proper were offered in sacrifice. He sets beside it a modern parallel from Ward's account of Hindoo customs: a vow devotes to an idol the first-born of a goat and of a man, the goat being permitted to run wild as a consecrated animal, and the child having a lock of hair separated which at the appointed time is cut off and placed near the idol; women pray to Gunga for children and promise the first-born to her, and children so devoted are cast into the Ganges but are generally saved by the friendly hand of some stranger. On the qualifying clause he is precise: the first-born meant is the first-born if a male, not the first male if a female had been born previously, and if a man had several wives the first-born of each, if a male, was to be offered. Wesley states the same point Henry does, that the parents were not to look on themselves as interested in their first-born till they had presented them to God and received them back from him again, and glosses 'it is mine' as a special right, the firstborn being preserved by singular favour from the common destruction."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: 'sanctify unto me all the firstborn,' that is, of males, as the Targum adds, for those and not females were sacrificed or redeemed; this sanctification was a setting them apart for sacred use; the witnesses note God commanding that all the firstborn, of man and beast, that opened the womb be sanctified to him, for they were his — the consecrating of the firstborn as God's peculiar portion, a memorial of the sparing in Egypt (God laying his claim on the firstborn: 'Sanctify unto me all the firstborn, whatsoever openeth the womb... both of man and of beast: it is mine'; the command, 'Sanctify unto me all the firstborn,' to set apart the firstborn of the males for sacred use, either to be sacrificed of clean beasts or redeemed of men and unclean beasts; the ground of the claim, 'it is mine,' that God claimed the firstborn as his own peculiar right, because he had spared Israel's firstborn when he slew the firstborn of Egypt, so that they were his by redemption; the type the commentators draw, of Christ the firstborn, and of believers as 'the church of the firstborn,' sanctified and belonging wholly to God; that what God spares and redeems he claims as his own)."
+    "summary": "Keil and Delitzsch take the sanctifying as a giving up to Jehovah for his service, and note that because the expression 'all the first-born' applies to both man and beast, the explanation is added, everything that opens the womb among the Israelites, of man and beast; they observe the Hebrew construction, in which the word for 'all' stands like an adjective after the noun rather than before it, and compare the Greek of the Septuagint at the parallel clause later in the chapter. On the ground of the claim they correct Kurtz, who maintained that the right to the first-born rested on Jehovah being the Lord and Creator of all things, so that as every created object owed its life to him, to him its life should be entirely devoted — a claim advanced without scriptural proof, since Numbers twice states the ground expressly, that on the day when Jehovah smote all the first-born of Egypt he sanctified these to himself. Ellicott argues the reasonableness of each step: it was a reasonable demand that the existing firstborn of Israel, spared by God when the Egyptian firstborn were destroyed, should thenceforth be regarded as his and set apart for his service, and the extension to the beasts was equally reasonable since they too had been spared; while the further requirement that all future firstborn should also be his was intended to perpetuate the memory of the recent deliverance and to help fix it in the mind of the nation. The substitution of a redemption for unclean beasts was necessitated by the case, since they could not be sacrificed, and the redemption of the firstborn sons naturally followed once the Levitical priesthood was established and their services were no longer necessary. He adds that the Jews still observe the ordinance so far as the children are concerned, redeeming the son that has opened the womb on the thirtieth day after birth."
    }
-  ],
-  "debates": [
-   {
-    "question": "Why does God claim all the firstborn as his own?",
-    "sides": [
-     {
-      "position": "By right of redemption — because he spared Israel's firstborn when he slew the firstborn of Egypt, they are his own peculiar portion; a type of Christ the firstborn and of believers, 'the church of the firstborn' (Hebrews 12:23), sanctified and belonging wholly to God",
-      "holders": [
-       "Gill",
-       "the witnesses"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Sanctify unto me all the firstborn, whatsoever openeth the womb among the children of Israel",
-   "both of man and of beast: it is mine",
-   "God claiming the firstborn as his own by redemption, having spared them in Egypt",
-   "a type of Christ the firstborn and of believers, the church of the firstborn"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "3-4",
+  "pericope_label": "Remember this day, in which ye came out from Egypt, out of the house of bondage, in the month Abib",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "majority",
+    "summary": "Calvin explains why the chapter repeats what has just been given at length. Moses goes over the unleavened bread again not so much to instruct as to exhort, for he had already expressed the matter with such clearness that there was no need of further explanation; but it was useful to stimulate them, that they might devote themselves with greater zeal to their duty, and especially lest after a longer lapse of time their ardour should, as usual, gradually abate. He therefore exhorts them that after they came into the land they should diligently observe what he had before commanded. Calvin adds that the context shows the two commands — the sanctifying of the firstborn and the celebrating of the passover — to have had the same object, that their deliverance should retain the elect people in the special service of the true God. On the dating he sees a deliberate comparison: Moses sets the day of their coming out against the whole time of their sojourning in the land of Canaan, as if to say that they were redeemed not to enjoy a mere transient joy, but that they might be mindful of their blessing throughout all ages. Gill supplies the two small connections — that Moses speaks after the Lord had said these things to him, and that the going out was on the fifteenth of Nisan, as the Targum of Jonathan has it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: Moses said, Remember this day, in which ye came out from Egypt, out of the house of bondage; the witnesses note Moses bidding the people remember the day they came out of Egypt, the house of bondage, brought out by strength of hand, and eat no leavened bread — the charge to keep the memory of the redemption, and to purge out leaven (Moses pressing the duty of remembrance: 'Remember this day, in which ye came out from Egypt, out of the house of bondage... there shall no leavened bread be eaten'; the call, 'Remember this day,' that the day of their coming out should be kept in lasting memory, never forgotten; the description of their estate, 'out of the house of bondage,' the cruel slavery from which they were freed; the author of the deliverance, 'by strength of hand the LORD brought you out,' that it was no power of their own but God's mighty hand that wrought it, all the glory his; the ordinance joined to the remembrance, 'there shall no leavened bread be eaten,' that, in memory of their hasty flight, they should eat unleavened bread; the type the commentators draw, of leaven as sin and corruption, to be purged out by the redeemed)."
+    "summary": "Keil and Delitzsch fix the setting and then the words. The directions for the seven days' feast of unleavened bread, already given, were made known by Moses to the people on the day of the exodus, at the first station, namely Succoth; but in this account only the most important points are repeated, and what is newly enjoined is the yearly commemoration. Egypt is here called a slave-house, inasmuch as Israel was employed in slave-labour there and treated as a slave population — a designation that recurs in the Decalogue and in Deuteronomy. On the phrase rendered 'by strength of hand' they observe that it is more emphatic than the more usual construction found earlier in the book, and that it recurs at two further points in this same chapter. Ellicott counts the means by which the remembrance was secured, and makes them four: the month was made to commence the ecclesiastical year, the Passover was instituted, the seven days of unleavened bread were appointed, and the redemption of the firstborn was required, together with the inquiries it would necessitate. On the month itself he is fuller: Abib means green ears of corn, or greenness, and the month of Abib was that in which the wheat came into ear and the earth generally renewed its verdure. It was a vague or shifting month, since it properly began with the day of the full moon that followed next after the vernal equinox; and it retained its name until the Babylonian captivity, when the Babylonian name Nisan superseded the original one, as the later books show."
    }
-  ],
-  "debates": [
-   {
-    "question": "What does the unleavened bread typify?",
-    "sides": [
-     {
-      "position": "Leaven as sin and corruption, to be purged out by the redeemed — kept in memory of the hasty flight from Egypt, and a type for the believer to keep the feast 'with the unleavened bread of sincerity and truth' (1 Corinthians 5:7-8)",
-      "holders": [
-       "the witnesses",
-       "many"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Remember this day, in which ye came out from Egypt, out of the house of bondage",
-   "there shall no leavened bread be eaten",
-   "Moses charging the people to remember the deliverance by God's strength of hand",
-   "the type of leaven as sin and corruption, to be purged out by the redeemed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this day ye came out of Egypt, on the fifteenth of Nisan, as the Targum of Jonathan; the witnesses note Moses marking that on this day, in the month Abib, they came out of Egypt — the fixing of the very time of the deliverance, that it might be exactly kept (the date set down for a lasting memorial: 'This day came ye out in the month Abib'; the precision, 'This day came ye out,' that the exact day was marked, the day of their going out of Egypt, the fifteenth of the month; the month named, 'the month Abib,' the month of green ears, later called Nisan, the first month of the sacred year, made first because of the redemption; the fitness, that the deliverance fell in the spring, the season of new life and harvest beginning, a fit time for the birth of the nation; that God would have the time of his great mercies exactly remembered, the day and the month kept; that the setting of the date roots the feast in real history, no myth but a thing done on a known day)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This day came ye out",
-   "in the month Abib",
-   "the exact day and month of the deliverance marked for a lasting memorial",
-   "the month Abib made first of the sacred year because of the redemption, rooted in real history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "5": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "5-8",
+  "pericope_label": "Thou shalt keep this service in this month: seven days shalt thou eat unleavened bread, and shalt shew thy son",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: though the whole land was called Canaan, there was one nation in particular so called; the land sworn to the fathers, flowing with milk and honey; the witnesses note God appointing that, when brought into the land sworn to the fathers, flowing with milk and honey, they should keep this service in this month — the feast bound to the inheritance, the ordinance to be kept in the land of promise (God tying the feast to the coming possession: 'when the LORD shall bring thee into the land of the Canaanites... that thou shalt keep this service in this month'; the promise renewed, 'the LORD shall bring thee into the land of the Canaanites... which he sware unto thy fathers,' that God's bringing them into Canaan, the land sworn to Abraham, Isaac, and Jacob, was assured, the feast presupposing the certain inheritance; the richness of the land, 'flowing with milk and honey,' the abundant inheritance promised; the charge, 'thou shalt keep this service in this month,' that the feast of unleavened bread should be kept yearly, in this same month, in the land, a perpetual ordinance; that the very command to keep the feast in Canaan was a pledge that they should surely come there)."
+    "summary": "Clarke draws a conclusion from the conditional clause: it is pretty evident from it that the Israelites were not obliged to celebrate the Passover, or to keep the feast of unleavened bread, until they were brought into the promised land. Wesley states the same conclusion in the same place, with one qualification of his own — until then they were not obliged to keep the passover without a particular command from God, which leaves room for the exceptional celebrations that were in fact held. On the unleavened bread itself Clarke simply refers back to the fuller notes he had already given in the previous chapter. Wesley takes up the strictness of the prohibition and describes the Jewish usage that grew from it: before the feast of the passover they cast all the leavened bread out of their houses, either burning it, or burying it, or breaking it small and throwing it into the wind, and they searched diligently with lighted candles in all the corners of their houses lest any leaven should remain. He then gives the strictness two purposes. It was designed to make the feast the more solemn, and consequently the more taken notice of by the children, who would ask why so much ado was made; and it was designed to teach us how solicitous we should be to put away from us all sin."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill contests a rabbinic mitigation. The Jews gather from this place, and from the parallel, that the obligation to eat unleavened bread lasted no longer than the first night of the seven days, and that on the rest it was enough to abstain from leavened bread, other food being lawful as they pleased; but Gill answers that the words are very express in both places, and in the following verse too, for eating unleavened bread as well as for abstaining from leavened, and that otherwise it would not be so clear and plain a commemoration of their case and circumstances when they came out of Egypt, this bread of affliction, as it is called, being what would put them in mind of it. He dates the seven days from the evening of the fourteenth to the evening of the twenty-first, and adds that the cakes of eggs and sugar the Jews now use are, as Leo Modena says, for those who are dainty and of tender stomachs, and for the sick, who eat unleavened bread as well. He also glosses the first name in the list, since though the whole land was called the land of Canaan there was one nation of them particularly so called, distinct from those that follow; and on the showing of the reason to the son he notes that it is to be shown by parents to all their children, sons and daughters, and even unasked, as Maimonides interprets it, Jarchi adding that it is to a son who does not know how to ask or what to ask about. Calvin makes the same point doctrinally: in the preceding chapter it was said 'when your children shall say unto you', and now Moses more briefly commands that God's goodness should be proclaimed although none should make inquiry respecting it, because parents ought to be voluntarily disposed to educate their children in the fear of God. He adds that the memory of their deliverance was to be annually renewed lest it should ever fade away, since religion is easily neglected unless men are diligently exercised in its study."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott handles the list of nations statistically: the full number of the Canaanitish nations was seven, of which five are enumerated here, the other two being the Perizzites and the Girgashites, which seem to have been the least important. The most important were the Canaanites, the Hittites and the Amorites, and these are consequently almost always placed first; and he notes that at the time of the Exodus, and for many centuries afterwards, the actually most powerful nation would seem to have been that of the Hittites, citing both the later biblical notices of them and the Egyptian and Assyrian remains. On the feast of the seventh day he compares the holy convocation ordered in the previous chapter, and records that the Jews regard that day, the twenty-first of Abib, as the anniversary of the passage of the Red Sea. On the obligation question he reports Kalisch, who concludes from this verse and from the parallel in the previous chapter that there was no obligation upon the Israelites to keep the Passover until they obtained possession of Canaan, and who holds that two Passovers only were celebrated before that event — one by Moses in the wilderness of Sinai, and the other by Joshua at Gilgal in the plain of Jericho."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the LORD shall bring thee into the land of the Canaanites... a land flowing with milk and honey",
-   "that thou shalt keep this service in this month",
-   "the feast bound to the inheritance sworn to the fathers",
-   "the very command to keep the feast in Canaan a pledge that they should surely come there"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the obligation to eat unleavened bread, and on the seventh day a feast to the LORD, a holy convocation; the witnesses note God appointing seven days of eating unleavened bread, with a feast to the LORD on the seventh — the set length of the feast and its solemn close (the ordinance given its measure and its holy day: 'Seven days thou shalt eat unleavened bread, and in the seventh day shall be a feast to the LORD'; the term, 'Seven days thou shalt eat unleavened bread,' that the whole feast should last seven days, through all which only unleavened bread should be eaten; the solemn close, 'in the seventh day shall be a feast to the LORD,' that the last day should be kept as a feast to the LORD, a holy convocation, a sabbath of rest and sacred assembly to crown the week; that the feast was thus bounded and marked, a stated time of remembrance and worship; the fitness of the number seven, the number of completeness, for a feast of full and finished redemption; that God appoints the times and forms of his worship, that it be done in order)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.52
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Seven days thou shalt eat unleavened bread",
-   "and in the seventh day shall be a feast to the LORD",
-   "the seven days of unleavened bread crowned by a holy feast to the LORD",
-   "the number seven of completeness fitting a feast of full and finished redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is very express, that not only were they to abstain from eating leavened bread, but no leaven was to be seen in all their quarters; the witnesses note God charging that unleavened bread be eaten seven days, and no leaven be seen anywhere in all their borders — the thoroughness of the purging of leaven, the whole house and land to be clear of it (God pressing the complete removal of leaven: 'there shall no leavened bread be seen with thee, neither shall there be leaven seen with thee in all thy quarters'; the strictness, 'no leavened bread be seen with thee, neither shall there be leaven seen with thee in all thy quarters,' that not only must they not eat leaven but none must be found or seen anywhere within their borders, the whole land swept clean of it; the thoroughness, that the purging was to be entire, no trace of leaven left, in all their coasts; the type the commentators draw, that as leaven figures sin and corruption, so the redeemed must purge it out wholly, not tolerating the least of it, keeping the feast 'with the unleavened bread of sincerity and truth'; that God requires not a partial but a complete putting away of sin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there shall no leavened bread be seen with thee",
-   "neither shall there be leaven seen with thee in all thy quarters",
-   "the strict charge that no leaven be seen anywhere in their borders",
-   "the type that the redeemed must purge out sin wholly, God requiring a complete putting away"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is to be shown not to a single child only, but by parents to all their children, sons and daughters, and even unasked, that they may know the reason of eating unleavened bread; the witnesses note the parent charged to show his son that the feast was kept because of what the LORD did when he came out of Egypt — the duty of teaching the children the meaning of the ordinance (the feast becoming the occasion of instruction: 'thou shalt shew thy son in that day, saying, This is done because of that which the LORD did unto me when I came forth out of Egypt'; the duty laid on parents, 'thou shalt shew thy son,' that the keeping of the feast should be made the occasion of teaching the children, and that not one son only but all, sons and daughters, even unasked; the substance of the teaching, 'This is done because of that which the LORD did unto me,' that the parent should tell the child the reason of the feast, the great deliverance God wrought; the personal owning, 'did unto me,' as though the parent had himself been redeemed, claiming the mercy as his own; the great duty the commentators draw, that the redeemed should diligently teach their children the works of God, that the memory of his mercies be handed down)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt shew thy son in that day",
-   "This is done because of that which the LORD did unto me when I came forth out of Egypt",
-   "the duty of teaching the children the meaning of the feast",
-   "the redeemed teaching their children the works of God, that his mercies be handed down"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "9-10",
+  "pericope_label": "It shall be for a sign unto thee upon thine hand, and for a memorial between thine eyes",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: these are the words of an Israelitish parent to his son, telling him that this feast would serve to refresh his memory with what God did for his people of old; the witnesses note the feast appointed to be a sign on the hand and a memorial between the eyes, that the LORD's law might be in the mouth, since with a strong hand he brought them out — the keeping of the redemption ever in mind and action and speech (the deliverance to govern hand, eye, and tongue: 'it shall be for a sign unto thee upon thine hand, and for a memorial between thine eyes, that the LORD's law may be in thy mouth'; the figures, 'a sign... upon thine hand, and... a memorial between thine eyes,' that the redemption should be kept ever in remembrance, as a thing bound on the hand governing the actions and set before the eyes ever in view, and 'in thy mouth' often spoken of; that the Jews took these words literally for the phylacteries, the frontlets bound on hand and brow, but the commentators rather take the sense as a constant, heart-deep remembrance that should rule all of life; the ground, 'for with a strong hand hath the LORD brought thee out of Egypt,' that the greatness of the deliverance, wrought by God's strong hand, deserved to be so constantly remembered; that God's great mercies should govern our hands, our eyes, and our tongues)."
-   }
-  ],
-  "debates": [
+    "prevalence": "majority",
+    "summary": "Keil and Delitzsch hold both ends of the question at once. The words presuppose the custom of wearing mnemonic signs upon the hand and forehead, but they are not to be traced to the heathen custom of branding soldiers and slaves with marks upon hand and forehead; the parallel commands in Deuteronomy to bind them for a sign upon the hand prove that the allusion is neither to branding nor to writing on the hand. Hence the sign upon the hand probably consisted of a bracelet round the wrist, and the memorial between the eyes of a band worn upon the forehead — and the words are then used figuratively, as a proverbial expression employed to give emphasis to the injunction to bear this precept continually in mind. On the keeping of the ordinance they render the two time-phrases exactly: at its appointed time, that is from the fifteenth to the twenty-first of Abib, and 'from days to days', that is as often as the days returned, therefore from year to year, a construction they illustrate from Judges and Samuel. Ellicott reports the Jewish practice and then defends it. The wearing of tephillin is referred by the Jews themselves to the time of the Exodus and regarded as resting on this passage together with the two in Deuteronomy; the phylacteries consist of small strips of parchment on which certain passages of the Law are written, folded tight, placed in small boxes and attached by bands to the left wrist and the forehead at the hours of prayer. He grants that a similar custom prevailed in Egypt, citing Wilkinson, and that this has been made an objection to the Mosaic institution, since Moses would not have encouraged an Egyptian superstition; but he answers that the adoption of Egyptian customs purged from their superstition is quite in the spirit of the Mosaic institutions and in no way reprehensible. If the Israelites were addicted to wearing amulets like the Egyptians, it would have been a wise proviso to substitute for the magic charms of sorcerers the solemn words of the Law, and so turn a current superstition to good account: the Law was thereby honoured, and the passages selected would come to be generally known."
+   },
    {
-    "question": "Is 'a sign upon thine hand and a memorial between thine eyes' literal phylacteries?",
-    "sides": [
-     {
-      "position": "The Jews took it literally, for the phylacteries (frontlets bound on hand and brow)",
-      "holders": [
-       "the Jews"
-      ]
-     },
-     {
-      "position": "Rather a figure of a constant, heart-deep remembrance of the redemption that should rule all of life — governing the actions (hand), the sight (eyes), and the speech (mouth)",
-      "holders": [
-       "Gill",
-       "the commentators"
-      ]
-     }
-    ]
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the practice in full detail, noting that this direction, repeated and enlarged at the close of the section, gave rise to phylacteries or tephillin, and that this is one of the passages the Jews write upon them to the present day. He lists the four portions of the law they wrote upon slips of parchment or vellum — the sanctifying of the firstborn and the passage beginning 'when the Lord shall bring thee into the land', both from this chapter, together with the Shema and the passage in Deuteronomy beginning 'if ye shall hearken diligently' — thirty verses in all, which, written as described and covered with leather, they tied to the forehead and to the hand or arm. He distinguishes the two forms: those for the head, the frontlets, were written on four slips of parchment, each rolled up by itself and placed in four compartments joined together in one piece of skin or leather, while those designed for the hand were formed of one piece of parchment with the four portions written upon it in four columns and rolled up from one end to the other; and all were to be correct transcripts of the Mosaic text, without one redundant or deficient letter. Wesley takes the other line in a sentence, calling the phrases upon the hand and between the eyes proverbial expressions denoting things which are never out of our thoughts."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill first fixes who is speaking. These are not the words of God or of Moses to the children of Israel, but of an Israelitish parent to his son, telling him that this feast of unleavened bread would serve the same purpose to refresh his memory with what God did for his people of old as the tying of a thing on the hand, or the placing of it before the eye, does for a person who wishes to bring something to his remembrance — which is what the figure alludes to, and like figurative phrases may be observed elsewhere. He then rejects the literal reading outright: the Jews understand this literally, and hence the use of phylacteries among them, which they bind upon the left hand and place upon the forehead between the eyes; but such a practice could be of no use to answer the end next mentioned, that the Lord's law may be in thy mouth. On the following verse he corrects the Targum of Jonathan, which took the ordinance to be kept as the ordinance of the phylacteries: it is the ordinance of unleavened bread."
    }
-  ],
-  "outliers": [],
-  "themes": [
-   "a sign unto thee upon thine hand, and for a memorial between thine eyes, that the LORD's law may be in thy mouth",
-   "for with a strong hand hath the LORD brought thee out of Egypt",
-   "the redemption kept ever in mind, action, and speech",
-   "a constant, heart-deep remembrance ruling the hands, the eyes, and the tongue"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch: this ordinance the Israelites were to keep at its appointed time, from year to year; Gill notes it is not the ordinance of the phylacteries, as the Targum took it, but the ordinance of unleavened bread; the witnesses note the people charged to keep this ordinance in its season from year to year — the perpetual and stated observance of the feast appointed (God binding the feast as a yearly ordinance: 'Thou shalt therefore keep this ordinance in his season from year to year'; the duty, 'keep this ordinance,' not the ordinance of the phylacteries but the ordinance of unleavened bread, the feast just commanded; the time, 'in his season,' that it should be kept at its appointed time, in the right month and days, not at men's pleasure but as God fixed; the perpetuity, 'from year to year,' that the feast should be a standing, yearly observance, kept by every generation, a lasting memorial of the redemption; that God appoints set and recurring times of remembrance, that his mercies be not forgotten; the order and constancy of God's worship, kept in its season)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt therefore keep this ordinance in his season",
-   "from year to year",
-   "the feast bound as a yearly ordinance at its appointed season",
-   "a standing memorial of the redemption for every generation, that his mercies be not forgotten"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "11": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "11-12",
+  "pericope_label": "When the LORD shall bring thee into the land, thou shalt set apart unto the LORD all that openeth the matrix",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: in these verses Moses communicated to the people the law concerning the firstborn, for when the LORD should bring them into the land sworn to their fathers; Gill notes the land of the Canaanites is put for all the rest of the nations; the witnesses note God appointing that, when brought into the land of the Canaanites, as he sware to them and their fathers, and gave it them, the law of the firstborn should be kept — the binding of the law of the firstborn to the coming inheritance (God tying this ordinance also to the possession of the land: 'when the LORD shall bring thee into the land of the Canaanites, as he sware unto thee and to thy fathers, and shall give it thee'; the renewed assurance, 'the LORD shall bring thee into the land of the Canaanites,' that God would surely bring them into Canaan, put for all the nations of the land; the ground, 'as he sware unto thee and to thy fathers,' the covenant oath to Abraham, Isaac, and Jacob, and to the people, a sure foundation; the gift, 'and shall give it thee,' that the land should be their inheritance by God's free gift, not their own getting; that the law of the firstborn, like the feast, presupposes the certain entering of the land, the command a pledge of the promise; God's faithfulness to his sworn covenant)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the LORD shall bring thee into the land of the Canaanites, as he sware unto thee and to thy fathers",
-   "and shall give it thee",
-   "the law of the firstborn bound to the coming inheritance",
-   "given by God's free gift, the command a pledge of the covenant promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Keil and Delitzsch treat this as the point where Moses communicates to the people the law briefly noticed at the head of the chapter, respecting the sanctification of the first-born, and note that it was to come into force only when Israel had taken possession of the promised land. Then everything which opened the womb was to be given up to the Lord; the verb, they explain, means to cause to pass over to Jehovah, that is to consecrate or give up to him as a sacrifice, and they compare its use in Leviticus. The general expression 'all that openeth the womb' includes the first-born of both man and beast, and is then particularized in three clauses: cattle, that is oxen, sheep and goats as the clean domestic animals, but only the males; asses, as the most common of the unclean domestic animals, standing for the whole of that class; and the first-born of the children of Israel. They add the exemption that follows from the wording — the female first-born of man and of beast were not consecrated. Ellicott accounts for the name used of the land: either the superior importance of the Canaanites or their genealogical position in the table of nations caused the term to be used inclusively of all the Palestinian peoples, and the land is accordingly always called the land of Canaan in the patriarchal narratives. On the setting apart he adds a practical gloss — it means to separate off from the rest of the flock or herd, so that the firstling might not be mixed up with those which were not sanctified."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: 'set apart' explains the word 'sanctify,' showing it signifies separating such to the use and service of God, causing it to pass from a man's own power to be the LORD's; the witnesses note God commanding that all that opened the womb, and every firstling of beast, the males, be set apart to the LORD — the actual consecrating of the firstborn as the LORD's portion (the firstborn to be handed over to God: 'thou shalt set apart unto the LORD all that openeth the matrix... the males shall be the LORD's'; the act, 'set apart unto the LORD,' that the firstborn should be separated from common use and given over wholly to the use and service of God, passing from a man's own power to be the LORD's; the breadth, 'all that openeth the matrix, and every firstling... of a beast,' that both the firstborn of men and the firstlings of beasts were claimed; the limit, 'the males shall be the LORD's,' that it was the firstborn males that were thus God's, in memory of the firstborn males spared in Egypt; that what God claims as his own must be actually given over to him, not kept back; that the redeemed and their increase belong to God, to be devoted to his service)."
+    "summary": "Calvin ties the consecration back to its ground: Moses proceeds with what had been glanced at in the beginning of the chapter respecting the first-born, that in this way they should bear witness to the special blessing of God which preserved them when he destroyed the first-born of the Egyptians. He notes that the animals are commanded to be brought to God in order that they should be slain in the tabernacle, and that it is a common figure of speech to say that the faithful and their gifts were placed in God's sight when they entered the tabernacle. On the seven days the firstling was to be kept with its dam he offers two reasons: he conceives the delay was to prevent deceptions, because if the young had been earlier torn from the teats of their dams and immediately delivered to the priests the offering would have been useless; yet he does not doubt that the eighth day was chosen because it was the day prescribed for circumcision. He then marks the two exceptions — a price was to be paid for an ass, the offering of which would have been unclean, and the children had to be redeemed because they could not be offered in sacrifice nor made priests. Gill glosses the phrase 'set apart' as the explanation of the earlier word 'sanctify', showing that it signifies separating such to the use and service of God, and that the verb means to cause a thing to pass from a man's own power and use so as to be the Lord's only; on the naming of the Canaanites he notes simply that the one nation is put for all the rest."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry organizes the section into two heads, further directions concerning the dedicating of the firstborn and further directions concerning the catechising of the children. On the first he distinguishes the classes: the firstlings of clean beasts — calves, lambs and kids — if males, were to be sacrificed; those of unclean beasts, such as colts, were to be redeemed with a lamb or knocked on the head, from which he draws the rule that whatsoever is unclean, as we all are by nature, will be destroyed if it be not redeemed. The firstborn of their children were to be redeemed and by no means sacrificed, as the Gentiles sacrificed their children to Moloch, the price of the redemption being fixed by the later law at five shekels. Henry then reads the arrangement forward into the gospel: we were all obnoxious to the wrath and curse of God, and by the blood of Christ we are redeemed, that we may be joined to the church of the firstborn. That the children required redeeming just as the firstlings of the unclean beasts did he takes as a judgment on their nature, since our children are by nature polluted, and who can bring a clean thing out of an unclean? On the second head he expects the practice itself to prompt the question: it is supposed that when they saw all the firstlings thus devoted they would ask the meaning of it, and their parents and teachers must tell them."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt set apart unto the LORD all that openeth the matrix",
-   "the males shall be the LORD's",
-   "the firstborn of man and beast set apart and given wholly to God",
-   "what God claims as his own must be actually given over, the redeemed and their increase belonging to him"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
  "13": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "13-16",
+  "pericope_label": "Every firstling of an ass thou shalt redeem with a lamb; and when thy son asketh thee, thou shalt say unto him",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the ass as a representative rather than a special case. Since Numbers says that the firstling of an unclean beast shall be redeemed, we may infer that the ass is put here for any unclean beast, or for unclean beasts in general. The lamb was to be given to the Lord, that is, to his priest; and then the owner of the ass might use it for his own service, which without this redemption he could not do, as the law of firstlings in Deuteronomy shows. On the redemption of the first-born of man he gives the price exactly — five standard shekels, or shekels of the sanctuary, every shekel weighing twenty gerahs — and refers back to his earlier notes on both weights. He adds a point of later Jewish law which shifts the obligation down a generation: the Hebrew doctors teach that if a father had neglected or refused to redeem his first-born, the son himself was obliged to do it when he came of age. Wesley touches the same clause briefly, noting only that the price of the redemption was fixed by the law, and on the closing figure says that the frontlets are to be as conspicuous as anything fixed to the forehead or between the eyes."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill works through the rabbinic detail and then disputes it. According to the Jewish canon the firstling of an ass might be redeemed with a lamb only — not with a calf, nor with an animal such as a goat or ram, as Bartenora interprets it, nor with a lamb slain or torn to pieces — the lamb being given to the priest in exchange. Jarchi held that the ass alone was to be redeemed and not the firstling of any other unclean creature, but Gill judges his reasons insufficient: all unclean creatures, such as horses, camels, dogs and swine, are included, and the ass is particularly mentioned because there was a greater plenty of them than of horses and camels and because they were very useful creatures, so that if these were to be redeemed then much more those of less value and less usefulness. He notes that some have thought the prominence of the ass here gave rise to the old calumny that the Jews worshipped an ass's head. On the question that follows he glosses the time-phrase as meaning on the morrow — the day following such a separation of the firstlings, or such a redemption, or any later time — and on Pharaoh he notes that the wording means he showed great reluctance and was with difficulty prevailed upon to dismiss them. On the closing figure Gill again refuses the literal sense: these laws will bring their reason, the destruction of the firstborn of Egypt and the preservation of the firstborn of Israel, as fresh to remembrance as any token upon the hand put there to bring things to mind, and it will be as easily and clearly discerned as anything upon a man's forehead is seen by another."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: every firstling of an ass was to be redeemed with a lamb, which was given to the priest for it, or else its neck broken; the witnesses note God commanding that the firstling of an ass be redeemed with a lamb, or its neck broken, and all the firstborn of man redeemed — the law of redemption for the unclean and for man, a type of redemption by the Lamb (God appointing a ransom for what could not be offered: 'every firstling of an ass thou shalt redeem with a lamb... and all the firstborn of man among thy children shalt thou redeem'; the case of the ass, 'every firstling of an ass thou shalt redeem with a lamb,' that the ass, being an unclean beast, could not be offered to God but must be redeemed with a lamb, given to the priest in its stead, or else its neck broken, it being unfit for the LORD's altar; the case of man, 'all the firstborn of man among thy children shalt thou redeem,' that the firstborn sons, being God's, must yet be redeemed with a price, afterward fixed at five shekels, not sacrificed; the rich type the commentators draw, that the unclean ass redeemed by the lamb figures the sinner, unfit for God, redeemed only by Christ the Lamb who died in his stead; the great gospel truth, that the redeemed are bought with a price, ransomed by the Lamb of God)."
+    "summary": "Ellicott notices what the law does not mention. It is observable that nothing is said of the Israelites possessing horses; horses were well known in Egypt at the time but were kept only by the kings and the great men, and the Hebrews had never been in a position to possess any. Asses, on the contrary, were exceedingly common and formed the ordinary beasts of burden in the country, and in default of camels, which they seem not to have owned, the Israelites must have carried their tents and other baggage on asses. He explains why the ass required redeeming — it was unclean, and in Egypt it is said to have been Typhonian, Set the Evil Principle being represented with long ears which may be those of an ass, cropped towards the upper extremity — and observes that the exchange was favourable to the owner, since the ass colt must have been of considerably more value than the lamb or kid. On the alternative of breaking its neck he gives the law a motive: there will always be in every nation those who grudge to make any offering to God and who will seek to evade every requisition for a gift, and to check such niggardliness this law was made — it would be effectual without requiring to be put in force. On the frontlets he adds that the word here and in Deuteronomy was rendered tephillin in Chaldee, both words properly signifying bands or circlets, and concedes the interpretative question: the injunctions given here might undoubtedly be explained as metaphorical, but those in Deuteronomy seem to have been intended, and were certainly understood, literally. Keil and Delitzsch supply the grammar of the hardening clause, which is elliptical in the Hebrew and means that Pharaoh made hard — his heart being understood — to let them go."
    }
-  ],
-  "debates": [
-   {
-    "question": "What does the firstling of the unclean ass redeemed with a lamb typify?",
-    "sides": [
-     {
-      "position": "The sinner — unclean and unfit for God, who cannot be offered but must be redeemed only by Christ the Lamb, who died in his stead; the redeemed are bought with a price, ransomed by the Lamb of God",
-      "holders": [
-       "the witnesses",
-       "many"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "every firstling of an ass thou shalt redeem with a lamb",
-   "and all the firstborn of man among thy children shalt thou redeem",
-   "the unclean firstling redeemed with a lamb, the firstborn of man with a price",
-   "a type of the sinner, unfit for God, redeemed only by Christ the Lamb who died in his stead"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: when the son asks in time to come, the day following such a separation or redemption of the firstborn, or at any later time; the witnesses note God appointing that, when the son should ask what this meant, the father should answer that by strength of hand the LORD brought them out of Egypt, the house of bondage — the catechizing of the children by their own questions (the ordinance to be explained to the inquiring child: 'when thy son asketh thee in time to come, saying, What is this? that thou shalt say unto him, By strength of hand the LORD brought us out from Egypt'; the occasion, 'when thy son asketh thee... What is this?' that the child, seeing the strange rites of the firstborn, would naturally ask their meaning and so give the parent occasion to teach; the answer appointed, 'By strength of hand the LORD brought us out from Egypt, from the house of bondage,' that the father should point the child to the great deliverance, wrought by God's mighty hand, as the reason of all; the wisdom of God in ordaining rites that should provoke the children's questions and so lead to instruction; the duty of parents to be ready to give a reason of their worship to their children)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when thy son asketh thee in time to come, saying, What is this?",
-   "By strength of hand the LORD brought us out from Egypt, from the house of bondage",
-   "the child's question made the occasion of teaching the deliverance",
-   "the wisdom of God in ordaining rites that provoke the children's questions and lead to instruction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: when Pharaoh showed great reluctance to let them go, with difficulty prevailed upon, the LORD slew all the firstborn of Egypt; the witnesses note the father to tell how, when Pharaoh would hardly let them go, the LORD slew all Egypt's firstborn, and so he sacrifices or redeems the firstborn — the ground of the law of the firstborn in the night of the smiting (the rite traced to the great deliverance: 'when Pharaoh would hardly let us go, that the LORD slew all the firstborn in the land of Egypt... therefore I sacrifice to the LORD all that openeth the matrix... but all the firstborn of my children I redeem'; the occasion recalled, 'when Pharaoh would hardly let us go,' Pharaoh's stubborn refusal, that the LORD slew all the firstborn in the land of Egypt, both of man and beast; the ground of the law, 'therefore I sacrifice to the LORD all that openeth the matrix... but all the firstborn of my children I redeem,' that, because God spared Israel's firstborn and slew Egypt's, the firstborn of Israel, both clean beasts sacrificed and men and unclean beasts redeemed, were the LORD's; that the law of the firstborn was a standing memorial of that night, owning God's right over the spared; that the redeemed should ever own that they are the LORD's by the right of his sparing mercy)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when Pharaoh would hardly let us go, that the LORD slew all the firstborn in the land of Egypt",
-   "therefore I sacrifice to the LORD all that openeth the matrix... but all the firstborn of my children I redeem",
-   "the law of the firstborn traced to the night of the smiting and sparing",
-   "a standing memorial that the redeemed are God's by the right of his sparing mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: these laws concerning the firstlings and the redemption of the firstborn would be a token and memorial, as the feast of unleavened bread before; the witnesses note that these laws of the firstborn should be a token upon the hand and frontlets between the eyes, since by strength of hand the LORD brought them out — the keeping of the redemption ever before them in act and thought (as with the feast, so the firstborn law a constant memorial: 'it shall be for a token upon thine hand, and for frontlets between thine eyes: for by strength of hand the LORD brought us forth out of Egypt'; the figure repeated, 'a token upon thine hand, and... frontlets between thine eyes,' that the redemption should be as constantly remembered and as plainly owned as a thing bound on the hand and worn before the eyes, governing the life; that the Jews again took this for the literal phylacteries, but the commentators rather a heart-deep, life-ruling remembrance; the ground once more, 'for by strength of hand the LORD brought us forth out of Egypt,' the greatness of the deliverance the reason for so constant a memory; that the great works of God deserve to be kept ever in mind and to shape the whole of life)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it shall be for a token upon thine hand, and for frontlets between thine eyes",
-   "for by strength of hand the LORD brought us forth out of Egypt",
-   "the law of the firstborn, like the feast, a constant token of the redemption",
-   "the great works of God kept ever in mind and shaping the whole of life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "17": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "17",
+  "pericope_label": "God led them not through the way of the land of the Philistines, although that was near",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Matthew Henry: here is the choice God made of their way, leading them not the nearest but the safest; the witnesses note God leading Israel not through the near Philistine way, lest they see war and repent and return to Egypt — the wise and tender leading of God, choosing the longer but safer way (God sparing his weak people the trial of war too soon: 'God led them not through the way of the land of the Philistines, although that was near; for God said, Lest... the people repent when they see war, and they return to Egypt'; the choice, 'God led them not through the way of the land of the Philistines, although that was near,' that the short road by the Philistine country was avoided, though it was the nearest to Canaan; the reason, 'Lest peradventure the people repent when they see war, and they return to Egypt,' that God knew his people, newly freed and faint-hearted, were not yet able to face the warlike Philistines and might, at the sight of war, lose heart and turn back to bondage; the tender wisdom of God, who leads his people not by the nearest but by the way they are able to bear, sparing them trials too great for their faith; that God fits the way to the strength of his people, dealing gently with the weak)."
-   }
-  ],
-  "debates": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry treats the verse as the choice God made of their way, and starts from the doctrine of guidance: Moses gave direction, but only as he received it from the Lord, for the way of man is not in himself — he may devise his way and design it, but it is God that directs his steps, so that man proposes and God disposes, and in his disposal we must acquiesce and set ourselves to follow providence. He lays out the geography plainly: there were two ways from Egypt to Canaan, one a short cut from the north of Egypt to the south of Canaan, perhaps four or five days' journey, the other much further about through the wilderness, and God chose the second. Henry then gives several reasons for it. The Egyptians were to be drowned in the Red Sea; the Israelites were to be humbled and proved in the wilderness; God had given Moses the sign that they should serve God in that mountain; and they had again and again told Pharaoh that they must go three days' journey into the wilderness to sacrifice, so that they would justly have been exclaimed against as notorious dissemblers had they not bent their march that way. Before they entered the lists with their enemies, matters had to be settled between them and their God — laws given, ordinances instituted, covenants sealed and the original contract ratified — for which it was necessary to retire into the solitudes of a wilderness, the only closet for such a crowd, the high road being no proper place for these transactions. He sets two texts against each other and reconciles them: it is said that he led them about, some hundreds of miles about, and yet that he led them forth by the right way, for God's way is the right way though it seem about, and if we think he does not lead his people the nearest way we may be sure he leads them the best, as it will appear when we come to our journey's end. Judge nothing before the time. On the particular reason given in the verse he is blunt: they were not as yet fit for war, much less for war with the Philistines, their spirits being broken with slavery, and it was not easy for them to turn their hands of a sudden from the trowel to the sword. The Philistines were formidable enemies, too fierce to be encountered by raw recruits; it was more suitable that they should begin with the Amalekites and be prepared for the wars of Canaan by experiencing the difficulties of the wilderness. Hence his rule: God proportions his people's trials to their strength and will not suffer them to be tempted above what they are able; he knows our frame, and considers our weakness and faintheartedness, and by lesser trials prepares us for greater — bringing Israel out of Egypt as the eagle brings up her young ones, teaching them by degrees to fly."
+   },
    {
-    "question": "Why did God not lead Israel by the near Philistine way?",
-    "sides": [
-     {
-      "position": "In tender wisdom, lest the newly-freed, faint-hearted people see war with the warlike Philistines, lose heart, and turn back to Egypt; God leads his people not by the nearest but by the way they are able to bear, sparing them trials too great for their faith",
-      "holders": [
-       "Matthew Henry",
-       "Gill",
-       "the witnesses"
-      ]
-     }
-    ]
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin gives the same reason and then presses it into a doctrine of accommodation. God did not immediately lead his people by the more direct way into Canaan, which would have been just as easy to him, but preferred to bring them round through the desert by a long, difficult and dangerous journey, lest, if they met enemies to contend against, a ready means of return would have encouraged them to go back into Egypt. We know how great was the supineness and cowardice of this people as soon as any difficulty presented itself, how quick they were to revolt from the divine government whenever a heavier burden than they liked was imposed, and how often they repented of having followed God as their leader, thus prepared to throw away by their ingratitude the grace offered them. Powerless in the use of arms and altogether without experience of military tactics, with what courage would they have engaged an enemy within a few days of their coming out? They would not have borne up against a single assault, but would rather have submitted to the Egyptians with humble supplications for forgiveness. Lest any desire of return should steal over their hearts, God was willing to set up a barrier behind them in the difficulty of the journey. Calvin adds a second, political consideration: had they immediately encountered the inhabitants of Canaan in war, greater troubles would have awaited them, for the Egyptians would by no means have let them alone, but aided by the subsidies and forces of so many peoples would have endeavoured to avenge themselves and, entering into alliances on every side, would have hemmed the unhappy Israelites in. God therefore provided excellently for them by leading them through inaccessible paths, and by their very weariness shutting the door against their ever desiring to return; while afterwards he gradually restored their confidence before they came to fight. Calvin admits that God might otherwise have obviated all these evils, but since he is often wont to deal with his people on human principles he chose the method most suited to their infirmity; and the clause 'God said' refers to his providence, as much as to say that the easier and more ordinary passage was not undesignedly rejected, but that God, knowing it to be more expedient, thus advisedly obviated the temptation. Gill supplies the circumstance of the release, that Pharaoh gave them leave to depart and even urged them to be gone in haste upon the death of his firstborn."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke turns the verse into a psychological diagnosis of a slave population. Had the Israelites been obliged to commence their journey to the promised land by a military campaign, there is little room to doubt that they would have been discouraged, would have rebelled against Moses and Aaron, and would have returned back to Egypt. Their long slavery had so degraded their minds that they were incapable of any great or noble exertions; and it is only on the ground of this mental degradation, the infallible consequence of slavery, that we can account for their many dastardly acts, murmurings and repinings after their escape from Egypt — a point he asks the reader to bear in mind, since it will serve to elucidate several circumstances in the history that follows. He adds the material conditions alongside the moral ones: the Israelites were in all probability unarmed and totally unequipped for battle, encumbered with their flocks and with the culinary utensils they were obliged to carry with them into the wilderness to provide themselves with bread."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott first classifies the passage: in these verses the writer interposes some parenthetic remarks which are not a continuation of the interrupted narrative but rather reflections that occur to him. He then reconstructs the route not taken. The starting point being Tanis or Rameses in the Eastern Delta, not far from the sea, the shortest and apparently easiest route would have been the one along the coast, from Tanis to Pelusium, thence to Rhinocolura, and from Rhinocolura to Gaza, Ascalon and Ashdod, the chief towns of the Philistines; the distance along that line was not more than about two hundred miles and might have been accomplished in a fortnight. He states the question this raises and answers it from the text — such was not the will of God, and the reason why it was not his will is given, that the people would probably have repented when they saw war and would have returned to Egypt. It is implied, he says, that the Philistines were already a strong and warlike people, which they may well have been though they are not mentioned in the contemporary Egyptian monuments, since the Egyptians name very few of the nations of Syria and the few names they record can seldom be identified; and if the Philistines are to be identified with the Purusata of the Egyptian remains, they must be viewed as among the most warlike peoples of the region. He also corrects the conjunction in the received rendering: rather than 'although that was near' it should be 'because that was near' — God did not, because it was near, lead them that way, but another."
    }
-  ],
-  "outliers": [],
-  "themes": [
-   "God led them not through the way of the land of the Philistines, although that was near",
-   "Lest peradventure the people repent when they see war, and they return to Egypt",
-   "God's wise and tender leading, the longer but safer way",
-   "God leading his people by the way they are able to bear, sparing trials too great for their faith"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "18-20",
+  "pericope_label": "God led the people about, through the way of the wilderness of the Red sea; and they encamped in Etham",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley gathers the reasons for the circuit into a list: the Egyptians were to be drowned in the Red Sea, the Israelites were to be humbled and proved in the wilderness, God had given Moses the sign that they should serve God in that mountain, and they had again and again told Pharaoh they must go three days' journey into the wilderness to sacrifice, so that they were bound to march that way or be justly exclaimed against as dissemblers. Before they entered the lists with their enemies matters had to be settled between them and their God — laws given, ordinances instituted, covenants sealed — and for that it was necessary to retire into the solitudes of a wilderness, the only closet for such a crowd, since the high road would be no proper place for these transactions. He adds the reason for not taking the near road: they were not yet fit for war, much less for war with the Philistines, their spirits being broken with slavery, and it was convenient that they should begin with the Amalekites and be prepared for the wars of Canaan by experience. Clarke supplies the topography from Dr. Shaw, who showed that there were two roads from Egypt to Canaan, one through the valleys of Jendilly, Rumeleah and Baideah, bounded on each side by the mountains of the lower Thebais, the other lying higher, with the northern range of the mountains of Mocatee running parallel on the right hand and the desert of Egyptian Arabia, open all the way to the land of the Philistines, on the left; and he locates Etham on the edge of the wilderness of Shur, at the bottom of the Arabian Gulf, as the second place of encampment. On the disputed word rendered 'harnessed' Clarke reports that it is truly astonishing what a variety of opinions are entertained about it, and concludes that it refers simply to the orderly and well-arranged manner in which the Israelites commenced their journey, since to arrange, array or set in order seems to be the ideal meaning of the root — the inspired writer marking the contrary of the hurry and confusion that might have been expected, to show that God had so disposed matters that the utmost regularity prevailed. On the bones he follows Calmet: it is supposed that the Israelites carried the remains of all twelve sons of Jacob, each tribe taking care of its own patriarch while Moses took care of Joseph, since Stephen expressly says that not only Jacob but the fathers were carried from Egypt into Sychem, this was the only opportunity that seems to have presented itself, and the reason that made it proper to remove Joseph's bones had equal weight for the others."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin devotes most of his attention to the same disputed word, and clears the ground of two readings before giving his own. Some have explained it from the numeral five to mean that they were furnished with five kinds of arms, which he calls too absurd; the Hebrews, because they could conjecture nothing better or more probable, almost with one consent understood it to mean that they were armed under the fifth rib — but whence, he asks, were there so many military corselets ready for the Israelites? He rejects so forced and improbable a meaning, and does not doubt that the word is one of number, as though Moses had said that they went out in ranks of five, because if each individual in so great a multitude had tried to advance they would have been in each other's way; he accordingly renders it 'in ranks'. The Greek notion, which departs entirely from the Hebrew and makes it 'in the fifth generation', he judges very foreign to the present narrative. On Joseph's bones Calvin reads a long continuity of faith: it appears from this that even in their adversity the memory of their promised deliverance had never departed from the people, for had not the adjuration of Joseph been currently spoken of in common conversation Moses could never have imagined it, and he expressly states that he acted in obedience to the holy patriarch. It is therefore probable that the bones were so deposited that the hope of the people might be kept alive by seeing daily the urn or coffer which contained them, as if the holy man even after death uplifted from his tomb a sign of their deliverance; for although by that symbolical act he cherished his own faith, desiring that though dead he might enter on the possession of the promised land, he had more regard to his brethren and the whole posterity of the holy race — having known by experience their apathy and the weakness of their faith, and feared lest in a longer lapse of time they should grow more indifferent and at length despise the promise. Gill notes the change of direction, that instead of going west or north-west towards Gaza and the Mediterranean they were directed to turn off to the right, between east and south; that the remains might well be called bones, since at such a distance from Joseph's death the flesh must be gone; that the Jewish tale of Moses being shown the burial place by Sarah the daughter of Asher, with the other fables of how the coffin was found, is not worthy of notice; that Jarchi's view that all the tribes' bones were carried does not appear from the text, though Stephen's account suggests they reached Canaan at some point; and that the march from Succoth was on the second day from their coming out, the sixteenth of Nisan."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: instead of going toward Gaza and the Mediterranean, the Lord directed them to turn off toward the wilderness of the Red Sea; the children of Israel went up harnessed, in orderly array; the witnesses note God leading the people about by the way of the wilderness of the Red Sea, and the children of Israel going up harnessed — the roundabout but appointed way, the people marching out in order (God leading them the circuitous way that served his purpose: 'God led the people about, through the way of the wilderness of the Red sea: and the children of Israel went up harnessed out of the land of Egypt'; the way, 'God led the people about, through the way of the wilderness of the Red sea,' that, instead of the short road, God led them by a roundabout way toward the Red Sea, which, though it seemed to entangle them, served God's purpose, both to spare them war and to make a way for his great wonder at the sea; the manner of their going, 'the children of Israel went up harnessed,' or in orderly array, or armed, out of Egypt, that they marched out not as fleeing fugitives in confusion but in order, ranked and equipped, like an army; that God brought them out with dignity and order, his hosts marching forth; that God's roundabout ways for his people are always wise, leading them where his glory and their good require)."
+    "summary": "Keil and Delitzsch fix the two stations as far as the evidence allows. Of Succoth, whose name means huts and which was probably a shepherd encampment, only so much can be determined, that the place lay to the south-east of Rameses on the way to Etham; Etham was at the end of the desert, which is called the desert of Etham in Numbers and the desert of Shur elsewhere in Exodus, so that it lay where Egypt ends and the desert of Arabia begins, in a line curving from the northern extremity of the Gulf of Arabia up to the Crocodile Lake. Ellicott renders the opening clause 'led the people a circuit', and specifies what was avoided and what was taken: not the direct route through Pelusium, past Lake Serbonis, to Rhinocolura and Gaza, but the most circuitous route possible — the way of the Red Sea and the wilderness of Sinai to the Transjordanic region, the land of the Amorites, and so across Jordan into Canaan proper. He thinks the passage disposes altogether of Brugsch's theory that the Red Sea of the writer of Exodus was Lake Serbonis and that the journey was deflected southward only after that lake was passed. On the disputed participle he is decided: it is generally agreed that 'harnessed' is a wrong translation, since very few of the Israelites can have possessed suits of armour until after the passage of the Red Sea, when they may have stripped the bodies of the slain Egyptians, and the word never has that force; it might mean 'with their loins girded', but that would deprive the statement of any point, since loins were always girded in preparation for a journey. The best explanation, which he attributes to Saadia, Gesenius, Lee, Knobel and Cook, is that the word means organised, in military order. On the stations he concedes that the exact positions of both are uncertain and can only be conjectured, though they probably lay to the south-east of Tanis between that city and the Bitter Lakes, Succoth perhaps at or near Tel Dafneh some fifteen miles from Tanis, and Etham near the modern Ismailia on the verge of the desert; he rejects Brugsch's identification of Etham with the Egyptian Khetam as highly improbable, since the Hebrew aleph never replaces the Egyptian kh, which is a very strong guttural, and suggests instead that E-tham would mean the house of Tum and point to a temple of the Sun-god, specially worshipped in the Eastern Delta. On Joseph he adds only that the body had been embalmed after the Egyptian fashion and that he had ordered it conveyed to Canaan when the Israelites went there."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God led the people about, through the way of the wilderness of the Red sea",
-   "and the children of Israel went up harnessed out of the land of Egypt",
-   "the roundabout way serving God's purpose, to spare them war and make way for his wonder at the sea",
-   "Israel going up in orderly array like an army, God's roundabout ways always wise"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Moses took the bones of Joseph with him, his remains well called bones since at such a distance from his death the flesh must be gone; the witnesses note Moses taking Joseph's bones with him, for Joseph had strictly sworn Israel that, when God visited them, they should carry up his bones — the keeping of Joseph's dying charge, the faith of the patriarch honoured (the oath made long before now performed: 'Moses took the bones of Joseph with him: for he had straitly sworn the children of Israel, saying, God will surely visit you; and ye shall carry up my bones'; the care of Moses, that amid all the haste and tumult of the going out, he took the bones of Joseph with him, not forgetting the sacred charge; the oath recalled, that Joseph had straitly sworn the children of Israel, binding them that when God will surely visit you they should carry up his bones to Canaan; the faith of Joseph in that dying charge, that he believed God's promise to bring his seed into the land and would have his bones rest there, a witness to the coming deliverance; that the oath was now honoured, the faith of the patriarch confirmed by the event)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses took the bones of Joseph with him: for he had straitly sworn the children of Israel",
-   "God will surely visit you; and ye shall carry up my bones away hence with you",
-   "Moses keeping Joseph's dying oath amid all the haste of the going out",
-   "honouring the faith of the patriarch who believed God's promise (Hebrews 11:22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Adam Clarke: they encamped in Etham, at the edge of the wilderness, God not leading them the near way; Gill notes it was the second day from their coming out, the sixteenth of Nisan; the witnesses note Israel journeying from Succoth and encamping in Etham, at the edge of the wilderness — the orderly stages of the march under God's leading (the journey proceeding by appointed stages: 'they took their journey from Succoth, and encamped in Etham, in the edge of the wilderness'; the progress, 'they took their journey from Succoth,' on the second day of their going out, removing from their first resting-place; the next station, 'encamped in Etham, in the edge of the wilderness,' at the border of the great wilderness into which God was leading them, the cultivated land now behind, the desert before; that the Scripture records the stages of the march, that the leading of God might be traced step by step; that God brought them by sure stages, encamping where he appointed, the cloud going before; the comfort, that God orders every stage of his people's pilgrimage, none left to chance)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they took their journey from Succoth",
-   "and encamped in Etham, in the edge of the wilderness",
-   "the orderly stages of the march under God's leading",
-   "God ordering every stage of his people's pilgrimage, none left to chance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "21",
+  "pericope_label": "The LORD went before them by day in a pillar of a cloud, and by night in a pillar of fire",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin proclaims the verse as another of God's mercies — that having redeemed his people he was their constant leader and guide, as the Psalms distinctly recall. It was indeed a marvellous act of loving-kindness that, accommodating himself to their ignorance, he familiarly presented himself before their eyes; he might have protected them some other way from the heat of the sun and directed them in the darkness of the night, but in order that his power might be more manifest he chose to add also his visible presence, to remove all room for doubt. Calvin then enters his caveat about the language. Although the words of Moses seem in some measure to include the Lord in the cloud, we must observe the sacramental mode of speaking, wherein God transfers his name to visible figures — not to affix to them his essence, or to circumscribe his infinity, but only to show that he does not deceitfully expose the signs of his presence to men's eyes, the exhibition of the thing signified being at the same time truly conjoined with them. Therefore, although Moses states that God was in the cloud and in the pillar of fire, he does not wish to draw him down from heaven nor to subject his infinite glory to visible signs, with which his truth may consist without a local presence being required. He turns on Servetus, whose notion he calls mad and execrable: that this cloud was uncreated, as though it were the Deity of Christ, Servetus substituting this one Person for the Three, as if there had then been a corporeal Deity, which he calls the figurative Son, afterwards made flesh. Gill identifies the Lord here with the Angel of Jehovah, not a created but the uncreated Angel, the Angel of Jehovah's presence in whom his name, nature and perfections were, even the Word and Son of God, the Lord Christ, who went before the armies of Israel as their King, Leader and Commander."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley explains why the guide appears at this point and not before: in the two first stages it was enough that God directed Moses whither to march, since he knew the country and the road, but now that they have come to the edge of the wilderness they would have occasion for a guide — and a very good guide they had, infinitely wise, kind and faithful. He identifies the Shechinah, or appearance of the divine Majesty, as a precious manifestation of the eternal Word who in the fulness of time was to be made flesh and dwell among us, Christ having been with the church in the wilderness. He then draws out the comfort in a series: they need not fear missing their way who were thus led, nor being lost who were thus directed, nor being benighted who were thus illuminated, nor being robbed who were thus protected. And he applies it — those who make the glory of God their end and the word of God their rule, the Spirit of God the guide of their affections and the providence of God the guide of their affairs, may be confident that the Lord goes before them as truly as he went before Israel in the wilderness, though not so sensibly. On the pillar's practical effects he notes that it led the way in a vast howling wilderness where there was no road, no track and no way-marks, that it went before them at a rate they could follow, and that it appointed the place of their encampment as infinite Wisdom saw fit, which eased them from care and secured them from danger both in moving and in resting. Clarke likewise takes the Lord here to be the Lord Jesus, on Paul's authority, since it was his Spirit they tempted in the wilderness and he who led them through the desert to the promised rest; the pillar, appearing as cloud by day and fire by night, was the symbol of the divine presence, the Shechinah or divine dwelling place, and the continual proof of God's presence and protection. Clarke insists on the necessity of a guide: it was needed even had they taken the most direct road, and much more when they took a circuitous route not usually travelled and of which they knew nothing except as the luminous pillar pointed it out; and it is very likely that even Moses himself did not know the route God had determined on, nor the places of encampment, until the pillar became stationary and marked them. On the number of pillars he leaves the text undecided but offers a reading — if there was but one, it certainly assumed three different appearances for three important offices: by day a column of cloud to point out the way, by night a pillar of fire, not to direct their journeyings since they seldom travelled by night but to give light to every part of the camp, and in so scorching and barren a desert something further still, a shelter."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the LORD who went before them is called the Angel of the Lord, not a created but the uncreated Angel, the Angel of Jehovah's presence, the Word and Son of God, the Lord Christ; the witnesses note the LORD going before Israel in a pillar of cloud by day to lead, and a pillar of fire by night to give light, that they might go by day and night — the gracious presence and guidance of God, leading and lighting his people (God himself going before them in the cloud and the fire: 'the LORD went before them by day in a pillar of a cloud, to lead them the way; and by night in a pillar of fire, to give them light'; who it was that went before, that 'the LORD' here is 'the Angel of the Lord,' not a created angel but the uncreated Angel, the Angel of Jehovah's presence, the Word and Son of God, the Lord Christ, a pre-incarnate presence of Christ leading his people; the double mercy, 'a pillar of a cloud, to lead them the way' by day and to shade them from the heat, and 'a pillar of fire, to give them light' by night and to warm and guard them; the constancy, 'to go by day and night,' that God's guidance was unbroken, fitted to every hour; the great comfort, that God himself, in Christ, leads and lights his pilgrim people through the wilderness)."
-   }
-  ],
-  "debates": [
+    "summary": "Keil and Delitzsch mark the transition and the change of the divine name together. From Etham, at the edge of the desert which separates Egypt from Asia, the Israelites were to enter the pathless desert and leave the inhabited country; Jehovah then undertook to direct the march and to give them a safe-conduct through a miraculous token of his presence. They note that where the earlier verses say Elohim led them and determined the direction of their road — showing that they did not take the course they pursued upon their own judgment but by the direction of God — these verses say that Jehovah went before them, and they read the closing phrase 'to go by day and night' as meaning that they might march at all hours. Ellicott makes the same connection: having declared that God led the people, the writer now explains how — from Succoth certainly and probably from Rameses, he moved in front of the host in the form of a pillar which had the appearance of smoke by day and of fire by night. He infers from the closing phrase that the Israelites marched some part of each day and some part of each night, which would accord with modern practice and is an arrangement introduced to get the march accomplished before the sun attains his full power, adding that the night journeys are mentioned again in Numbers. He describes the pillar's double function — it was at once a signal and a guide, so that when it moved the people moved, when it stopped they encamped, and where it went they followed — and notices a resemblance to the fire and smoke signals which generals used when at the head of their armies, citing Lepsius, the Anastasi papyrus and Quintus Curtius; the pillar indicated that God had constituted himself the generalissimo of the host, though it was altogether of a miraculous and abnormal character."
+   },
    {
-    "question": "Who is the LORD who went before Israel in the pillar of cloud and fire?",
-    "sides": [
-     {
-      "position": "The Angel of the LORD — not a created angel but the uncreated Angel, the Angel of Jehovah's presence, the Word and Son of God, a pre-incarnate presence of Christ leading and lighting his pilgrim people through the wilderness",
-      "holders": [
-       "Gill",
-       "many"
-      ]
-     }
-    ]
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the pillar as an appearance of the Divine Majesty and as evidence of a settled principle: those whom God brings into a wilderness he will not leave nor lose there, but will take care to lead them through it. It was a great satisfaction to Moses and the pious Israelites to be sure that they were under divine guidance, and those who make the glory of God their end and the word of God their rule, the Spirit of God the guide of their affections and the providence of God the guide of their affairs, may be sure that the Lord goes before them though they cannot see it with their eyes, since we must now live by faith. He notes the pillar's offices briefly — when Israel marched it went before and pointed out the place of encampment as divine Wisdom saw fit, sheltering by day from the heat and giving light by night — and then makes the transfer that governs his whole treatment of the verse. The Bible is a light to our feet and a lantern to our paths, with which the Saviour's love has provided us; it testifies of Christ; it is to us what the pillar was to the Israelites. Henry closes by pointing to the voice which cries, I am the Light of the world, and he that followeth me shall not walk in darkness but shall have the Light of life, and by naming Jesus Christ alone, as shown in the Bible and as the Holy Spirit in answer to prayer recommends him to the soul, the Way, the Truth and the Life."
    }
-  ],
-  "outliers": [],
-  "themes": [
-   "the LORD went before them by day in a pillar of a cloud, to lead them the way",
-   "and by night in a pillar of fire, to give them light",
-   "the LORD, the uncreated Angel, going before Israel in cloud and fire",
-   "a pre-incarnate presence of Christ leading and lighting his pilgrim people"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "22",
+  "pericope_label": "He took not away the pillar of the cloud by day, nor the pillar of fire by night, from before the people",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the disagreement and then rises above it. Neither Jews nor Gentiles are agreed how long the cloud continued with the Israelites; it is very probable that it first visited them at Succoth, if it did not accompany them from Rameses, and that it continued until they came to the river Jordan to pass over opposite Jericho, after which it appears that the ark alone was their guide, as it always marched at their head; but others think it went no farther than Mount Hor and never appeared after the death of Aaron. We may safely assert, he says, that while it was indispensably necessary it continued with them, and when it was not so it was removed — and it is worthy of remark that the ark of the covenant became its substitute. While a miracle was necessary a miracle was granted; when that was no longer necessary, the testimony of the Lord deposited in the ark was deemed sufficient by him who cannot err. Clarke extends the rule to the present dispensation: under the Gospel, miracles were necessary at its first promulgation, but after the canon of Scripture was completed, the new covenant having been made, ratified by the blood of the Lamb and published by the Holy Spirit, God withdrew generally those outward signs, leaving his word for a continual testimony and sealing it on the souls of believers by the Spirit of truth. He adds a comparative observation: the ancient heathen writers represent their gods, in their pretended manifestations to men, as always encompassed with a cloud, Homer and Virgil abounding with examples of the kind, and he asks whether it is not very probable that they borrowed this, as they did many other things in their mythologic theology, from the tradition of Jehovah guiding his people through the desert by means of the cloud. Wesley makes the permanence itself the point — the pillar was not taken away, not even when they seemed to have less occasion for it, and it never left them till it brought them to the borders of Canaan, being a cloud which the wind could not scatter. He then reads it sacramentally, by way of Paul: the children of Israel were baptized unto Moses in this cloud, and by coming under it they signified their putting themselves under the conduct and command of Moses. Protection draws allegiance; this cloud was the badge of God's protection, and so became the bond of their allegiance. Thus they were initiated and admitted under that government at the very moment when they were entering upon the wilderness; and it signifies the special conduct and protection which the church of Christ is under in this world."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill answers the duration question in a sentence and fixes the succession. The cloud always appeared in the daytime, and was a guide and a shelter; and neither pillar was taken from before the people, but continued till they came through the wilderness to the borders of the land of Canaan, when they needed it no longer and it left them — for when they passed over Jordan the ark went before them instead."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the pillar always appeared, the cloud by day a guide and shelter, the fire by night, continuing till they came through the wilderness to the borders of the land; the witnesses note that God took not away the pillar of cloud by day nor of fire by night from before the people — the unfailing constancy of God's presence and guidance (God's leading never failing his people: 'He took not away the pillar of the cloud by day, nor the pillar of fire by night, from before the people'; the constancy, 'He took not away the pillar of the cloud by day, nor the pillar of fire by night,' that the cloud and fire were never withdrawn, the cloud always appearing by day as guide and shelter, the fire by night as light and guard; the duration, that this continued all the way till they came through the wilderness to the borders of the land, the whole long journey; the great comfort the commentators draw, that God's presence with his people, once given, was not taken away but abode constantly with them through all their wanderings; the faithfulness of God, who, having undertaken to lead his people, never forsook them, leading them all the way; the type of God's abiding presence with his church, never withdrawn)."
+    "summary": "Keil and Delitzsch state the principle the verse asserts without entering the debate over the terminus: this sign of the presence of God did not depart from Israel so long as the people continued in the wilderness. Ellicott gives the cross-references that bear on the question — the standing notice at the end of Exodus and the two passages in Numbers which describe the cloud's movements — and then offers the most precise answer of any of the witnesses: the cloud probably disappeared at Abel-shittim, the last station named in the wilderness itinerary before the crossing."
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He took not away the pillar of the cloud by day, nor the pillar of fire by night",
-   "from before the people",
-   "the pillar of cloud and fire never taken away, abiding constantly through the whole journey",
-   "the faithfulness of God who never forsakes his own, a type of his abiding presence with his church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  }
 }

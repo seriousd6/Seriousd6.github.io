@@ -14573,6 +14573,113 @@
       "book": "1corinthians",
       "chapter": "9",
       "note": "Fidelity self-grade, 1corinthians 9, nine entries tiling 1-27. Word counts: 1-2 649w (10 voices), 3-6 641w (9), 7-9 649w (7), 10-12 650w (7), 13-15 650w (10), 16-18 650w (7), 19-22 649w (10), 23-25 649w (9), 26-27 650w (8). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-27 is uncovered. This is the widest voice list of the run: Chrysostom, Cyril, Gill, Calvin, Henry, LIGHTFOOT (first appearance as a usable voice), Clarke, Wesley, Barnes, Ellicott and Robertson, across five schools. Lightfoot is mapped to puritan-evangelical alongside Henry. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's use of the muzzled ox against the decree of reprobation, Wesley's full doctrine of conditional election at the last verse with Paul named as an instance, Gill's flat denial that any bodily austerity is meant, Clarke's proposal to render 'the gospel' as 'the prize', and Chrysostom's warning against a soteriological misreading of the race. Two summarising decisions are recorded rather than concealed: Barnes's and Clarke's chapter-level end matter at k27 (1,523 and 1,743 words) is used only for the points that bear on the verse, and Clarke's long Epictetus quotation is compressed rather than reproduced entire. DECLARED DEVIATIONS: Jamieson is in RESIDUE for the whole chapter, its four blocks belonging to Acts 20-21, and is declared as excluded_voices on the four affected entries. NO UNDECLARABLE DROPS THIS CHAPTER -- the single Cyril block at k22 was genuinely apt and was used, so the VOICE_LABELS prefix defect did not bite here as it did at 2corinthians 11, hebrews 7 and revelation 18. The defect remains unfixed and will bite again on the next chapter where a Cyril block must be dropped; the one-line fix is to list 'Cyril of Jerusalem' instead of 'Cyril' in scripts/synthesis_qa.py."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "9",
+        "11",
+        "13",
+        "17",
+        "18",
+        "21",
+        "22"
+      ],
+      "note": "Exodus 13 fidelity self-grade: A on all ten entries, no flags, no FLOOR, no TMPL, mean TTR 0.627 / zip 0.449. Length discipline held better than any chapter this run: 8 of 10 entries first-pass in range. The two overshoots were both the pillar entries — 21 came in at 734 and needed five separate cuts to reach 648, and it is the entry where the three-strand rule (note 1339) was hardest to apply, because seven voices speak at key 21 and four of them independently identify the Lord with Christ. Recording the working fix: where several voices agree on a single identification, compress them into ONE clause naming all of them rather than giving each its own sentence — that alone saved about 60 words."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB displacement, twelfth chapter and the strongest run yet: Exodus 13 carries FOUR displaced JFB terms at keys 4, 10, 16 and 22 — stride 6, phase 4. Every one of the four is off-chapter and the donor march runs strictly forward through Exodus 2: key 4 = Ex 2:5 (Pharaoh's daughter bathing, the crocodile enclosure in the sacred stream), key 10 = Ex 2:9-10 (Jochebed parting with Moses the second time, the naming by the princess), key 16 = Ex 2:15-16 (the flight in the second year of Thothmes I, Midian on the eastern shore of the gulf, Dahab-Madian), key 22 = Ex 2:16 (the 'prince of Midian' gloss and the shepherdesses). All four declared in excluded_voices. Stride 6 has now held in twelve of twelve chapters; phase continues to vary freely."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "11",
+        "17",
+        "21"
+      ],
+      "note": "Henry's keys mark his own section heads — SIXTH confirmation. Exodus 13 has Henry at 1, 11, 17 and 21, which are exactly his four section divisions (firstborn law; firstlings and catechising; the choice of the way; the pillar). No span in the final tiling crosses a Henry boundary. The rule is now reliable enough to seed tiling before any other analysis, with the caveat already recorded at Joshua 11: it gives candidate boundaries, not final entry edges."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "22"
+      ],
+      "note": "K&D truncation — a counter-example that sharpens the corpus-wide finding. Exodus 13 has eleven K&D keys, ten of them exactly 200 words (the cap) and one, key 22, at 45 words. Key 22 is therefore the rare uncapped K&D block, and its 45 words are real exposition after the lemma: 'This sign of the presence of God did not depart from Israel so long as the people continued in the wilderness.' Contrast Joshua 11, where the short K&D block was junk. Practical rule: a K&D block UNDER 200 words has ended naturally and is usable to its last word; a block AT exactly 200 has been cut mid-exposition and whatever it was about to say is lost."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "16"
+      ],
+      "note": "Two K&D losses in Exodus 13 that the filing rule cannot repair. K&D's key-4 block spends its 200-word budget quoting the lemmas of vv 4-8 and reaches genuine exposition only at v8 (the elliptical relative in 'because of that which Jehovah did to me', with the completion supplied from the context); v8 falls in span 5-8, where K&D has no key, so it cannot be relocated. Likewise K&D's key-16 block quotes v16 and then expounds v17 (the Philistine road, the anxious 'lest' after 'said'); v17 is its own span and K&D has no key there. Both dropped. By contrast K&D's key-12 note on v15 DID relocate legitimately into entry 13-16, because K&D has key 16 inside that span."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "8"
+      ],
+      "note": "Calvin loss at Exodus 13. His key-8 block ends by expounding v9 — the comparison of the passover to the ring on the finger and the ornament bound on the forehead, constantly seen. v9 falls in span 9-10, where Calvin has no key, so the material could not move and was dropped. Worth noting because it removes the one Reformed voice from the four-way phylactery dispute at vv9-10, leaving Gill to carry that side alone."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "22"
+      ],
+      "note": "Residue, seventh sighting, and the type is stable. Ellicott's key-22 block is 1,011 words of which roughly 27 are real commentary ('He took not away. —Comp. …The cloud probably disappeared at Abel-shittim'); the remainder is StudyLight chrome — footer links, copyright text, then raw CSS. This is again the LAST Ellicott block on the chapter's scraped page, confirming the corrected rule (residue follows the last block of a given commentator's page, not the chapter's last verse). Ellicott remained usable at 22 after the real 27 words were extracted."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "Four-way dispute at vv9-10 on the sign upon the hand, the best-documented in the chapter. Gill: figurative only, and he presses the argument that a literal phylactery 'could be of no use to answer the end next mentioned', that the Lord's law may be in thy mouth. Wesley: proverbial, things never out of our thoughts — one sentence. K&D: the words presuppose a real custom of mnemonic bands (a bracelet at the wrist, a band on the forehead) but are NOT traceable to heathen branding of soldiers and slaves, and are then used figuratively. Ellicott: the practice is real, ancient, and defensible — a similar custom prevailed in Egypt (Wilkinson), and adopting an Egyptian custom purged of superstition is quite in the spirit of the Mosaic institutions, substituting the words of the Law for the magic charms of sorcerers. Clarke stands apart by not arguing at all: he simply documents the tephillin in full technical detail (the four portions, thirty verses, four compartments for the head and one rolled column for the hand). Ellicott alone concedes the split verdict at v16 — this passage might be metaphorical, but the Deuteronomy commands 'seem to have been intended, and were certainly understood, literally.'"
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "13",
+      "verses": [
+        "22"
+      ],
+      "note": "Duration of the pillar — a five-way spread at v22 worth recording because every witness answers and no two agree exactly. Clarke: nobody agrees; probably Succoth (perhaps Rameses) to the Jordan opposite Jericho, after which the ark led; others say Mount Hor and Aaron's death. Gill and Wesley: to the borders of Canaan, the ark taking over at the crossing. Ellicott: most precise of all — probably Abel-shittim. K&D: no terminus, only the principle, that the sign did not depart so long as the people continued in the wilderness. Clarke alone converts the dispute into doctrine (miracle granted while necessary, withdrawn when the canon was complete), which is why his is the strand the entry carries."
     }
   ]
 }
