@@ -14500,6 +14500,79 @@
       "book": "joshua",
       "chapter": "11",
       "note": "All 10 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.652, mean zip 0.461. Two-way voice check clean before assembly (0 declared-but-unnamed, 0 excluded-but-named); every exclusion names a block present in its own span. LENGTH CONTROL RECOVERED: 5 of 10 entries landed in range on the first draft (against 0 of 9 on exodus 3), and the corrective rule recorded after exodus 3 is what did it — for any span over ~2500 source words with 6+ voices, choose the three or four strands the entry will carry BEFORE drafting rather than trimming afterwards. It was applied deliberately to entry 1 (3022 words, 6 voices) and entry 15-18 (3819 words, 7 voices); the second still needed five passes, the first four, but both were drafted at ~750 rather than exodus 3's ~820-940, and every other entry was at most one pass from range. The remaining overshoot is concentrated entirely in the two largest spans, which suggests the strand-picking should be harder still there: three strands, not four."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "9",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "Jamieson stride-6, SEVENTEENTH confirmation. Keys 4, 10, 16 and 22 carry blocks belonging to ACTS 20 running into ACTS 21, Paul's farewell to the Ephesian elders at Miletus. k4 comments on Acts 20:28, take heed to yourselves and to all the flock, with the 1Ti 3 cross-references and the Alford note on bishops and elders being apostolically synonymous. k10 is on Acts 20:32, the word of his grace which is able to build you up. k16 is on Acts 20:36-38, 'Nothing can be more touching than these three concluding verses, leaving an indelible impression of rare ministerial fidelity and affection on the apostle's part.' k22 is on Acts 21:4, finding out the disciples at Tyre. Offset 4 (keys congruent to 4 mod 6), four members. Target stride exact at 6; SOURCE verses 28, 32, 36 and 21:4 -- gaps of 4, 4 and roughly 8 across the chapter break, irregular as always. Updated tally across seventeen chapters: offset 0 - 1thessalonians 5, romans 14; offset 1 - 1peter 1, 1corinthians 16, judges 2, hebrews 7; offset 2 - acts 21, 1corinthians 11; offset 3 - numbers 24, philemon 1, acts 11, acts 17, philippians 2, revelation 18; offset 4 - philippians 1, 2corinthians 11, 1corinthians 9. OFFSET 5 STILL NEVER OBSERVED after seventeen chapters. Jamieson is in RESIDUE here and declared as excluded_voices on the four affected entries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "3",
+        "13",
+        "21",
+        "27"
+      ],
+      "note": "JOHN LIGHTFOOT APPEARS IN THIS CHAPTER, and the OCR damage is severe enough to destroy exactly what makes him worth having. Lightfoot supplies genuine Horae Hebraicae material at keys 1, 3, 13, 21 and 27, and it is apt and useful: Paul saw the Lord twice, at Damascus and in the Jerusalem trance, and alone among the apostles saw him after the ascension (k1); the necessity of the apology was the accusation of taking maintenance from heathen churches (k3); among those who wrought in holy things without serving at the altar were the men who picked the worms out of the altar wood, blemished men unfit to minister there but nourished from the consecrated things, from tract Shekalim, with the further point from tract Tamid that none but the king might sit within the court, so the verb means besieging rather than sitting at the altar (k13); the question whether those without law are the Sadducees or the heathen (k21); and the Hebrew equivalences for approved and not approved (k27). THE DAMAGE: the Hebrew is destroyed outright, surviving only as Latin-letter garbage -- 'WW5', 'D5', 'WW', 'DVT MS oyonnan', 'bape'. The Greek is mangled: 'Tots' for the article in 'Tots anomois', 'pocedpevovtes' for the participle, ligature breaks such as 'adoki- mos' and 'preach- ing' and 'cast- away' and 'con- cerning'. HTML entities appear as literal text throughout (&quot; and &amp;). Since Lightfoot's whole contribution is rabbinic citation, the OCR has removed the evidence and left only the assertions. This confirms and sharpens the standing Lightfoot/Bede re-fetch item: a re-fetch is not cosmetic here, it is the difference between a citable voice and an uncitable one. Note that VOICE_LABELS contains the bare surname 'Lightfoot', which works only because it is a SUFFIX of the real head 'John Lightfoot:' -- the same accident that saves 'Chrysostom' and 'Robertson' and fails for 'Cyril'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "9",
+      "verses": [
+        "22",
+        "27"
+      ],
+      "note": "A FIFTH DISTINCT CYRIL FRAGMENT, and it is the first one that is unambiguously apt. Key 22 carries a Cyril of Jerusalem block of 200 words, 1,047 chars, md5 97dca4e2be49, opening 'But the Saviour comes in various forms to each man for his profit. For to those who have need of gladness He becomes a Vine; and to those who want to enter in He stands as a Door; and to those who need to offer up their prayers He stands a mediating High Priest.' It goes on: 'He is made all things to all men, remaining in His own nature what He is.' The catechetical lecture is applying the very phrase of 1 Corinthians 9:22 to CHRIST rather than to Paul -- an inversion of the text that is genuinely illuminating and directly on the verse it is filed under. It was therefore USED, not silenced. Running tally of distinct Cyril fragments: A, the 2 Cor 4:4 blinded-thoughts block (1,070 chars, faf6f21d5467), five occurrences across philemon 1, 1thessalonians 5 twice, 1corinthians 16 and 2corinthians 11; B, the two-names block (1,097 chars, 763fd91d7fb4), hebrews 7 k17 and k21; C, the raise-our-thoughts-higher-than-the-Jews block (1,039 chars, 1a11faff4532), revelation 18 k3 and k9; D, the two-comings-from-Malachi block (1,099 chars, 0617aea8ae3f), revelation 18 k12; E, this one. EVERY ONE OF THE FIVE IS EXACTLY 200 WORDS as the dumper reports it, and all five fall between 1,039 and 1,097 chars. That is now five independent samples supporting a fixed truncation at the scrape rather than natural block boundaries -- worth checking against the Cyril source tree directly."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "9",
+      "verses": [
+        "27"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME -- TWELFTH CONSECUTIVE CHAPTER. The Charles Ellicott block at 1corinthians 9:27 is 1,348 words, of which about 350 are commentary; the remaining roughly 1,000 words are the same page dump logged at revelation 18: terminal navigation ('1 Corinthians 1Co 8 ... 1Co 10 Footnotes:'), the StudyLight copyright footer crediting BibleSupport.com, raw CSS, site menus and devotional lists, and raw JavaScript including DOMContentLoaded handlers and a navigation-accordion IIFE referencing study-desk.html. Sequence now: 1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22, romans 14 k23, acts 17 k34, philippians 2 k30, 2corinthians 11 k33, hebrews 7 k28, revelation 18 k24, 1corinthians 9 k27. Eleven of the twelve cannot separate 'last verse key' from 'last Ellicott block' because they coincide; judges 2 alone separates them and favours LAST ELLICOTT BLOCK. The navigation label is chapter-relative (prev/next chapter), confirming it is the page's own chapter navigation. A general fix should cut at the string 'Copyright Statement These files are public domain', which has now been present in every instance across twelve chapters; the per-chapter cut markers currently hand-set in each scratchpad dump.py are a workaround, not a fix. ALSO at key 27: Albert Barnes (1,523w) and Adam Clarke (1,743w) carry chapter-level end matter rather than comment on the verse -- SEVENTH consecutive chapter for that defect, and the sizer still counts every word of it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "9",
+      "verses": [
+        "5",
+        "9",
+        "10",
+        "17",
+        "21",
+        "22",
+        "23",
+        "24",
+        "27"
+      ],
+      "note": "The live disputes in 1corinthians 9. (1) THE SISTER WHO IS A WIFE, v5: Gill calls it a Hebraism answering to the sister-spouse of the Canticles and rejects the reading that makes her a rich woman ministering of her substance, since that would relieve the churches of the very charge Paul claims; Ellicott dismisses the same Roman reading as inadmissible because the appeal to Peter settles it, and records that the practice growing out of that misapprehension was condemned at the first council of Nicaea; Henry argues from the word for power, which implies authority to require attendance such as no man has over any but a wife or servant; Clarke takes it as decisive against clerical celibacy while noting Clement said the apostles carried their wives not as wives but as sisters; Calvin reports and denies Eusebius's inference that Paul was married and had left his wife somewhere. (2) CLARKE AGAINST REPROBATION, v9: from 'doth God take care for oxen' Clarke argues that God could not reprobate an ox since he careth for oxen and surely cannot reprobate a man, and to the reply that a man has sinned and an ox cannot he answers that the decree is supposed to be from eternity and a man can no more sin before he exists than an ox can when he exists. Ellicott meanwhile enters the opposite caution, that the words must not be read as denying divine regard for the brute creation, which runs through the Mosaic law and appears in the closing question of Jonah. (3) THE TEXT AT v10: Clarke reports that the best MSS give simply 'in hope of partaking' and quotes Bishop Pearce that the longer words are superfluous if not wrong, Griesbach having removed them; CALVIN DESCRIBES THE SAME VARIANT, SAYS HE WOULD PREFER THE SHORTER WERE HE AT LIBERTY TO CHOOSE, AND THEN DECLINES TO FOLLOW HIS OWN PREFERENCE because most Greek manuscripts agree in the other and the meaning is unaffected -- a commentator refusing his own conjecture, worth recording as a method. (4) WHO IS WITHOUT LAW, v21: Lightfoot asks whether the Sadducees or the heathen are meant, tells his reader to inquire, and confesses that how Paul could conform to the heathen is not easy to judge; CLARKE NAMES LIGHTFOOT AND REFUSES HIM on two grounds, that Paul could expect no success among men who denied the resurrection and that among the heathen he might appear as one who was not a Jew. This is the only place in the run so far where two voices in the same catena argue with each other by name. (5) WHO THE WEAK ARE, v22: Gill and Barnes take them for weak Christians; Ellicott says we can scarcely read it so, since the whole passage treats of classes outside the Church, and makes it the weak points rather than the strong points of Jews, proselytes and Gentiles. (6) THE GOSPEL OR THE PRIZE, v23: Clarke proposes that the word we translate the gospel should here be rendered the prize or reward; Robertson reads the compound the other way, that Paul does not wish to enjoy the gospel just by himself. (7) HOW FAR THE RACE HOLDS, v24: Clarke, Calvin, Wesley and Henry all state that only one won there while all may win here, Henry adding that there should nevertheless be a noble emulation; CHRYSOSTOM ALONE GUARDS THE OTHER FLANK, warning expressly that the words are not to be taken as though only one out of many would be saved, far from it. (8) THE BUFFETED BODY, v27: Clarke takes the body itself for the enemy to be mortified by abstinence and severe labour; Gill denies expressly that watchings, fastings, whipping, scourging or lying on the bare ground are meant, making it the body of sin; Ellicott insists the language is figurative throughout and concerns the appetites; Robertson denies the Gnostic premise that Paul thought his body evil; Calvin notes the ancient monks obeyed it literally and still missed the main thing. (9) WHAT A CASTAWAY PROVES, v27: Wesley presses the verse into a full doctrine of conditional election, that believers are elected to privileges which if abused leave those very elect persons reprobate, and names Paul as the instance; Ellicott corrects the rendering, that the Greek means one who has not behaved according to the prescribed regulations rather than a castaway."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "9",
+      "note": "Fidelity self-grade, 1corinthians 9, nine entries tiling 1-27. Word counts: 1-2 649w (10 voices), 3-6 641w (9), 7-9 649w (7), 10-12 650w (7), 13-15 650w (10), 16-18 650w (7), 19-22 649w (10), 23-25 649w (9), 26-27 650w (8). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-27 is uncovered. This is the widest voice list of the run: Chrysostom, Cyril, Gill, Calvin, Henry, LIGHTFOOT (first appearance as a usable voice), Clarke, Wesley, Barnes, Ellicott and Robertson, across five schools. Lightfoot is mapped to puritan-evangelical alongside Henry. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's use of the muzzled ox against the decree of reprobation, Wesley's full doctrine of conditional election at the last verse with Paul named as an instance, Gill's flat denial that any bodily austerity is meant, Clarke's proposal to render 'the gospel' as 'the prize', and Chrysostom's warning against a soteriological misreading of the race. Two summarising decisions are recorded rather than concealed: Barnes's and Clarke's chapter-level end matter at k27 (1,523 and 1,743 words) is used only for the points that bear on the verse, and Clarke's long Epictetus quotation is compressed rather than reproduced entire. DECLARED DEVIATIONS: Jamieson is in RESIDUE for the whole chapter, its four blocks belonging to Acts 20-21, and is declared as excluded_voices on the four affected entries. NO UNDECLARABLE DROPS THIS CHAPTER -- the single Cyril block at k22 was genuinely apt and was used, so the VOICE_LABELS prefix defect did not bite here as it did at 2corinthians 11, hebrews 7 and revelation 18. The defect remains unfixed and will bite again on the next chapter where a Cyril block must be dropped; the one-line fix is to list 'Cyril of Jerusalem' instead of 'Cyril' in scripts/synthesis_qa.py."
     }
   ]
 }

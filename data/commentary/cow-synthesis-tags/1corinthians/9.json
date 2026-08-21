@@ -1,963 +1,867 @@
 {
  "1": {
   "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "John Chrysostom",
-   "John Gill"
+   "John Lightfoot"
   ],
+  "range": "1-2",
+  "pericope_label": "Am I not free, am I not an apostle; ye are the seal of mine apostleship",
   "schools": [
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: having said he would eat no flesh forever if it made his brother stumble, Paul now shows by deeds something he had slighted — proving by his own example the self-denial he urged, lest any think his words mere boasting; Paul asserting, by a series of questions, that he is an apostle, free, has seen the risen Christ (on the Damascus road, a mark of apostleship), and that the Corinthians are his work in the Lord (the church he founded, the proof and seal of his apostleship) — the establishing of his apostolic standing and rights, the ground for the argument that he had rights (to maintenance, etc.) which he yet forwent for the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Am I not an apostle? am I not free?",
-   "have I not seen Jesus Christ our Lord?",
-   "are not ye my work in the Lord?",
-   "the apostle's credentials and rights"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Henry",
+     "Lightfoot"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this said by way of supposition, not concession — for Paul was an apostle to many (the apostle of the Gentiles), but be that as it may, he was certainly an apostle to the Corinthians; Paul declaring that, even if he were not an apostle to others, he certainly was to the Corinthians, for they are the seal of his apostleship in the Lord — the Corinthian church the proof and confirmation of his apostleship (their conversion and existence as a church, wrought through his ministry, the very seal/authenticating mark that he was sent of God, for God blessed his ministry), the converts the evidence of the blessed ministry."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What order the opening clauses stand in and what the freedom means: Gill reports that the Syriac, Ethiopic, Vulgate and Alexandrian copy put the clause about freedom first and that many interpreters prefer it, the argument then rising from the less to the greater; Ellicott prefers the same order on manuscript grounds and finds the thought grows more naturally out of the preceding chapter; Gill will not fix the sense of the freedom, offering liberty in things indifferent, freedom from the ceremonial law at large, or the right to a maintenance, while Robertson takes it of Mosaic ceremonialism and Wesley reads the clauses as a rising scale",
+   "How often Paul saw the Lord: Lightfoot says twice, on the road to Damascus when he was marked out for an apostle and in the trance at Jerusalem when he was marked out for the apostle of the Gentiles, and claims further that he alone among the apostles saw the Lord after the ascension; Robertson gathers half a dozen passages and observes that they qualify him though he was not one of the twelve; Ellicott names three occasions and infers from the unanswered question that the fact was generally admitted",
+   "Whether the argument from success proves too much: Calvin alone raises the objection himself, that the same reasoning would serve the false apostles who also gather disciples, and answers that pure doctrine is required before any man may argue from his effect, so that impostors have no ground of congratulation though they deceive nations and kingdoms; Barnes by contrast presses the conversion as absolute proof and irrefragable demonstration without meeting that difficulty"
+  ],
+  "outliers": [
+   "Chrysostom's account of why the argument stands here, that Paul had promised to eat no flesh for ever and was compelled to show by deeds something he had slighted for his brother's sake, and his escalation that the admirable part is not the abstinence but the habit of it at the cost of much trouble and danger",
+   "Calvin's principle that whatever law a man imposes on others he should submit to himself, and his reason for citing past conduct rather than the promise, that a promise for the future might not be believed by all",
+   "Henry's pastoral note that it is no strange nor new thing for a minister to meet unkind returns for great good-will and successful service",
+   "Clarke's statement of the injustice, that the very thing which was the highest proof of Paul's disinterested benevolence was produced by his opponents as an argument against him",
+   "Barnes's reconstruction of the four charges behind the chapter, that Paul had not seen Christ, that he lived unlike the other apostles, that he and Barnabas laboured with their hands, and that his not claiming maintenance showed he knew he had no right to it",
+   "Clarke's antiquarian note that the seal was a figure cut in a stone and set in a ring by which letters of credence were stamped, and that the moderns contend in vain to rival the ancient engravers"
+  ],
   "themes": [
-   "if I be not an apostle unto others, yet... to you",
-   "the seal of mine apostleship are ye in the Lord",
-   "the church the proof of his apostleship",
-   "the converts the authenticating seal"
+   "am I not free",
+   "the marks of an apostle",
+   "have I not seen Jesus our Lord",
+   "the seal of mine apostleship",
+   "self-denial by example"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
+  "range": "3-6",
+  "pericope_label": "My answer to them that examine me; have we not power to eat and drink",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Henry",
+     "Lightfoot"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: these words belong to the preceding — that when any called his apostleship in question and examined him, this (his apostleship and its seal, v.1-2) was his answer in defence of himself; Paul stating that his answer to those who examine (question, scrutinize) him is this, namely the proof of his apostleship and the rights it carried — the apostle's defence against his critics (there were those at Corinth, perhaps the false apostles, who questioned his standing, his refusal of maintenance perhaps taken as a mark against him), pointing to his apostleship, his sight of Christ, and the Corinthian church as his vindication, the calm defence by plain proofs."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mine answer to them that do examine me is this",
-   "them that do examine me",
-   "the apostle's defence against critics",
-   "the vindication by his apostleship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: having proved his apostleship, Paul establishes his right to a maintenance as a gospel minister — by 'power to eat and drink' he means not the common right of mankind but the right to be maintained at the church's expense; Paul asserting his right (power) to eat and drink, that is, to be maintained by the churches he served — the first of the apostle's rights (the right of the gospel minister to a livelihood from those he serves, a lawful claim, to be proved at length, vv.7-14), the right Paul possessed yet forwent (v.15, the point of the chapter, the self-denial), followed by the right to a wife (v.5) and to forbear working (v.6)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Have we not power to eat and to drink?",
-   "the right to maintenance",
-   "the minister's lawful livelihood",
-   "the right possessed yet forgone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'a sister, a wife' is a Hebraism (a believing wife); the sense the papists put on it (a woman, not a wife, to minister) is rejected — the other apostles, the Lord's brethren, and Cephas (Peter) had believing wives whom they led about and were maintained with; Paul asserting his right to lead about a believing wife and have her maintained, as did the others — the apostles' right to marriage and a wife's support (a lawful right exercised by Peter and others, refuting the later notion of mandatory apostolic/clerical celibacy), which Paul also had though he did not use it (remaining unmarried for the gospel)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'lead about a sister, a wife' support apostolic celibacy or marriage?",
-    "sides": [
-     {
-      "position": "It refers to a believing wife — the apostles, the Lord's brethren, and Peter were married, refuting mandatory apostolic celibacy (against the papist gloss of a mere ministering woman)",
-      "holders": [
-       "Gill",
-       "Protestant"
-      ]
-     }
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Whether the sentence about his defence looks backward or forward: Gill reports that some refer it to the questions following but holds it belongs to what precedes; Clarke attaches it to the two preceding verses and Wesley to what has just been given; Ellicott says flatly that it refers to what has gone before and not to what follows; Robertson alone will have it both ways, referring it to what precedes and to what follows alike",
+   "What the sister who is a wife means: Gill calls it a Hebraism answering to the sister-spouse of the Canticles and rejects the reading that makes her a rich woman ministering of her substance, since that would relieve the churches of the very charge Paul is claiming; Ellicott dismisses the same Roman reading because the appeal to Peter makes it inadmissible, and records that the practice growing out of that misapprehension was condemned at the first council of Nicaea; Henry argues from the word for power, which implies authority to require attendance, such as no man has over any but a wife or servant; Clarke takes the verse as decisive against clerical celibacy while noting that Clement of Alexandria said the apostles carried their wives not as wives but as sisters",
+   "Whether Paul himself was married: Calvin reports that Eusebius inferred from these words that Paul was married and had left his wife somewhere lest she burden the churches, and denies there is any foundation for it, since he might urge the right without possessing it; Robertson agrees that plainly Paul had no wife at this time"
+  ],
+  "outliers": [
+   "Robertson's warning that the noun for defence does not carry our sense of apologising, and his aside that the critics at Corinth were investigating Paul with sharp eyes to find faults, as pastors are still kept under the critic's spy-glass",
+   "Lightfoot's motive for the whole apology, given by no one else, that Paul was accused of taking maintenance from heathen churches, or watched by cavillers to see whether he would, and turned to mechanic labour to stop the mouths of the Jews who barked against him",
+   "Calvin's turn of the argument on the readers, that the Corinthians injure themselves by refusing the acknowledgment, since their faith and his apostleship must stand or fall together",
+   "Robertson's observation that this is the first mention of Barnabas since the dispute at Antioch and that it is made in good spirit, with the suggestion that the two received no help on the first journey and Paul had no financial aid until Philippi",
+   "Clarke's excursus into English usage, that a clergyman's provision came to be called a living and his work the cure of souls, whether from the word for care or because the souls are diseased and the minister a physician",
+   "Calvin's concession and limitation together, that Peter was acknowledged first among the apostles since every society needs one to preside, but that the pre-eminence was not lordship and the first place in one church is not dominion over the world"
+  ],
   "themes": [
-   "power to lead about a sister, a wife",
-   "as... other apostles, and... Cephas",
-   "the apostles' right to marry",
-   "refuting apostolic celibacy"
+   "my answer to them that examine me",
+   "power to eat and drink",
+   "a sister, a wife",
+   "the brethren of the Lord and Cephas",
+   "power to forbear working"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul and Barnabas were long companions and fellow travellers; 'are we alone exempted from those rights common to others?'; Barnes: they had wrought together as tentmakers (Acts 18:3), but this did not mean they had no claim to support; Paul asking whether he and Barnabas alone lacked the right to forbear working (to be supported without labouring at a trade) — the right to be free from manual labour (the apostles, like other gospel ministers, had the right to be maintained and so to give themselves wholly to the ministry), though Paul and Barnabas chose to work (not because they lacked the right but by choice, for the gospel)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I only and Barnabas",
-   "power to forbear working",
-   "the right to be supported",
-   "they chose to labour for the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "7-9",
+  "pericope_label": "Who goeth a warfare at his own charges; thou shalt not muzzle the ox",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the soldier serves at the public charge (the senate having made an act that soldiers should have a stipend); the apostle argues from common practice that gospel ministers, being soldiers of Christ, should be maintained; Paul arguing for the minister's support by three analogies — the soldier (who serves at another's charges), the vinedresser (who eats the fruit of his vineyard), and the shepherd (who drinks the milk of his flock) — the natural justice of the minister's maintenance drawn from common life (as the soldier, farmer, and shepherd are supported by their labour, so the gospel minister, labouring in Christ's warfare, vineyard, and flock, should be supported)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the question about the oxen means: Barnes and Wesley supply a word, asking whether God cares for oxen only and whether he has not a further meaning; Clarke turns it into an argument from the lesser to the greater, that God cannot be solicitous for oxen and regardless of man; Ellicott enters the opposite caution, that the words must not be taken as denying the divine regard for the brute creation, which runs through the Mosaic law and appears in the closing question of Jonah, but as stating the ultimate and highest object of God’s love",
+   "Clarke’s use of the verse against the decree of reprobation, which no other voice in the chapter follows: God could not reprobate an ox since he careth for oxen, and surely cannot reprobate a man; and to the reply that a man has sinned and an ox cannot, he answers that the decree is supposed to be from eternity, and a man can no more sin before he exists than an ox can when he exists",
+   "Why this proof text and not a clearer one: Calvin alone asks why Paul chose the muzzled ox when plainer passages lay to hand, such as the command that the hireling’s wages not remain overnight, and answers that there is more force in this one, since a requirement to care for cattle yields an argument from the less to the greater about the equity God expects among men; Barnes meanwhile guards the inference, that Moses is not being made to speak of the Christian ministry, only that the principle was settled there"
+  ],
+  "outliers": [
+   "Robertson's derivation of the word for a soldier's pay from a term for cooked meat bought with bread, so that it meant rations before wages, and his note that it is the word used of the wages of sin",
+   "Gill's and Calvin's agreement that men have served at their own charges, Gill naming the Habessines and the ancient Romans and dating the senate's act for a stipend before Paul wrote",
+   "Ellicott's textual preference for the shorter reading, that the vineyard owner eats his fruit while the keeper of a flock eats of the milk, since a man may eat fruit but is sustained by milk only through selling it",
+   "Ellicott's observation that Paul never takes up the Lord's own image of Christ the Shepherd and the Church his flock, with a single exception at Miletus, and does not take it up even here where the word flock stood in his own sentence, whereas it is Peter's favourite image",
+   "Robertson's remark that the catalogue of illustrations is proof enough in all conscience and still not enough for churches that starve their pastors in the name of piety",
+   "Robertson's description of the threshing-floor, with oxen or donkeys dragging a sledge over the grain as they still do in Andalusia and Palestine, and the hieroglyphic inscription bidding the oxen thresh measures of grain for themselves and measures for their masters"
+  ],
   "themes": [
-   "who goeth a warfare... at his own charges?",
-   "planteth a vineyard, and eateth... of the fruit",
-   "feedeth a flock, and eateth... of the milk",
-   "the natural justice of the minister's maintenance"
+   "the soldier and his wages",
+   "the vineyard and the flock",
+   "thou shalt not muzzle the ox",
+   "doth God care for oxen",
+   "the labourer worthy of support"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Paul asks whether he speaks this on his own authority (merely as a man, from common reasoning) or whether this reasonable thing is supported by the authority of God — the law of Moses saying the same; Paul moving from the argument of common life (the soldier, vineyard, flock, v.7) to the higher authority of the law — the grounding of the minister's right not only in natural justice but in the divine law (what reason and common practice teach, the law of God also confirms, the two agreeing), the appeal to the law strengthening the argument (the right resting not only on reason but on God's word)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "say I these things as a man?",
-   "saith not the law the same also?",
-   "the appeal from reason to the law",
-   "grounded in the divine law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the citation from Deuteronomy 25:4 — to muzzle means to bind the mouth to prevent eating; the ox treading out the corn (to thresh it) was not to be muzzled but allowed to eat of it; Paul citing the law that forbids muzzling the ox, and asking whether God's care is for oxen merely — the principle that the labourer should share in the fruit of his labour (as the ox eats the corn it treads), the law, though about the ox, given chiefly for a higher purpose (v.10, teaching that those who labour, the minister, should be maintained, the principle applied to the gospel minister who labours and should be supported)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not muzzle the ox that treadeth out the corn",
-   "Doth God take care for oxen?",
-   "the labourer's share in the fruit",
-   "the law given chiefly for a higher purpose"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "10-12",
+  "pericope_label": "Saith he it altogether for our sakes; we have not used this power",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: God delivered the law about the ox not merely for the ox's sake, but chiefly for the sake of men — the Jewish writers themselves saying the ox is mentioned to express man; Paul declaring that the law (of the unmuzzled ox) was written altogether (chiefly) for our sakes — that the plowman should plow in hope and the thresher partake of his hope — the higher application (the law's deeper purpose being to teach that the labourer, the minister, should work in the hope of sharing in the fruit, and should indeed partake/be maintained), the deeper purpose of the law (not the ox merely but the principle of the labourer's right to share)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the text of the ploughing clause should be: Clarke reports that many of the best manuscripts give simply in hope of partaking and quotes Bishop Pearce that the longer words are superfluous if not wrong, since men do not live in hope to partake of their hope but of what their hope was for, Griesbach having left them out; Calvin describes the same double reading, counts the manuscripts on each side, and then declines to follow his own preference, saying that were he at liberty to choose he would prefer the shorter but that since most Greek manuscripts agree in the other and the meaning is unaffected he has not ventured to alter it",
+   "How far the word altogether reaches: Barnes denies flatly that it can mean the law was made solely for ministers, since that would contradict a law which had a real reference to oxen, since the argument does not require it, and since the word may be rendered chiefly or doubtless as elsewhere in Luke and Acts; Gill leans the other way, that God delivered the law not merely for the ox but chiefly for men, citing Jarchi that the ox is named in order to express man",
+   "Whether the ploughing and threshing are literal or spiritual: Ellicott says the question has been much discussed and takes them literally, as God’s sanction upon the principle uniting earthly labour with reward, the application to spiritual work following from the less to the greater; Robertson observes what the others miss, that the two halves are not parallel, since the thresher may be the ox but the plougher can hardly be"
+  ],
+  "outliers": [
+   "Barnes's three grounds for limiting the word altogether, and his parallels for the weaker sense from Luke and Acts",
+   "Gill's citation of Jarchi that the ox is named in the law in order to express man, with a second Jewish authority reading the law of the bird's nest the same way",
+   "Calvin's anticipation of the cavil that gospel fruit is spiritual and so its ministers should demand nothing carnal, answered from the greater to the less, that in proportion as the soul excels the body does the word excel outward sustenance",
+   "Ellicott's ear for a slight touch of sarcasm, since the earlier argument established a labourer's right to payment in kind and Paul now asks only a reward as inferior to his work as carnal things are to spiritual",
+   "Gill's expansion of the sowing figure into the parable of the soils, the wayside hearers on whom no impression is made, the stony who show affection without root, the thorny who are at first promising",
+   "Robertson's note that the word for hindrance means a cutting in and is very rare, and his judgment that Paul's care to avoid it rather than insist on his rights is an eloquent example for modern men"
+  ],
   "themes": [
-   "For our sakes, no doubt, this is written",
-   "he that ploweth should plow in hope",
-   "the labourer working in hope of the fruit",
-   "the deeper purpose of the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the preachers of the gospel are compared to sowers; the seed they sow is the word of God; if they have sown the choice spiritual seed, it is no great thing to reap temporal support; Paul arguing that, having sown spiritual things (the gospel) among the Corinthians, it is no great thing for the ministers to reap their carnal (temporal) things — the equity of the exchange (the minister gives the greater, spiritual and eternal benefits, and receives the lesser, material support, so the maintenance is a small and just return), the value of the spiritual over the temporal (the things sown far exceeding the things reaped)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if we have sown unto you spiritual things",
-   "is it a great thing if we shall reap your carnal things?",
-   "the just exchange",
-   "the minister gives the greater"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'this power' is the right of a maintenance, which others (the true ministers, or even false apostles) justly claimed and enjoyed; if they had this right, Paul had it the more (as their father in the faith); Paul arguing that, if others have the right of maintenance over the Corinthians, he has it the more, yet he has not used this right but suffers all things lest he hinder the gospel — the supreme example (Paul forgoing his clear right rather than place any obstacle before the gospel, lest his receiving support give occasion for the charge of preaching for gain, enduring hardship and self-support that the gospel be not hindered)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if others be partakers of this power... are not we rather?",
+   "for our sakes",
+   "he that ploweth in hope",
+   "spiritual things and carnal things",
    "we have not used this power",
-   "suffer all things, lest we should hinder the gospel",
-   "the right forgone for the gospel"
+   "lest we hinder the gospel"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "13": {
   "voices": [
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "John Chrysostom",
-   "John Gill"
+   "John Lightfoot"
   ],
+  "range": "13-15",
+  "pericope_label": "They which minister about holy things; the Lord ordained; I have used none of these",
   "schools": [
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul takes great care to show that the receiving was not forbidden — adducing the law expressly given concerning the priests, a closer example than the oxen; Paul citing the example of those who minister about holy things, living of the temple, and those who wait at the altar, sharing with the altar — the further argument for the minister's maintenance (drawn from the priests and Levites under the law, who were supported from the temple offerings and the altar, sharing in the sacrifices), showing that God himself ordained, in the law, that those who serve in sacred things be maintained by them (the divine pattern applied to the gospel minister)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they which minister about holy things live of the things of the temple",
-   "they which wait at the altar are partakers with the altar",
-   "the priests' maintenance",
-   "God ordained sacred ministers be supported"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Henry",
+     "Lightfoot"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: it is an order and appointment of the Lord Jesus Christ that his ministering servants, who labour in preaching, should be sufficiently provided with a comfortable livelihood; Paul declaring that, even so, the Lord has ordained that those who preach the gospel should live of the gospel — the crowning argument (the express command of Christ himself, Luke 10:7; Matthew 10:10, that gospel ministers be maintained by those they serve, as the priests by the temple, v.13), the divine ordinance resting the minister's right on the firmest ground (the Lord's own appointment, not merely reason, the law, or the priests' example, but Christ's express command)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the two classes of ministrants are: Barnes takes the first for the Levites and the second for the priests who offered sacrifice; Clarke widens the first to all the officers, priests and Levites and Nethinim alike, observing that the priests partook of the sacrifices while the rest lived on tithes and first fruits since it was not lawful for them to live on the sacrifices; Ellicott divides by the kind of support rather than the rank; Lightfoot supplies rabbinic detail nobody else has, that among those who wrought in holy things without serving at the altar were the men who picked the worms out of the altar wood, blemished men unfit to minister there but nourished from the consecrated things",
+   "What waiting at the altar means: Lightfoot corrects the picture, since none but the king might sit within the court, so that the word means rather besieging the altar, spread everywhere about it, some carrying off ashes, some killing the sacrifice, others sprinkling the blood; the others take the term simply of constant attendance",
+   "How the broken sentence of the last verse should be read: Robertson says the tangled syntax reflects the intensity of Paul’s feeling and marks the violent break where the expected infinitive gives way to a bare future, no man shall make my glorying void; Ellicott reports a great variety of readings and sets out more than one reconstruction of the sentence"
+  ],
+  "outliers": [
+   "Chrysostom's attention to the phrasing, that Paul wrote not that the ministers receive from those who offer but that they eat of the temple, so that neither the receivers may be blamed nor the givers lifted up, and that this indicates their moderation and that it does not behove them to make money or be rich",
+   "The agreement of Gill and Ellicott in rejecting outright the reading that the priests meant are those of the heathen temples, which the Ethiopic version suggests and Ellicott calls wholly inadmissible",
+   "Ellicott's quotation of Bengel, that if the Mass were a sacrifice Paul would undoubtedly have fitted the second half of his sentence to it",
+   "Barnes's limitation of what the ordinance grants, that the word is live and not grow rich, lay up treasures, speculate, or turn merchant or farmer",
+   "Clarke's Jewish maxim that the inhabitants of a town where a wise man dwelt should support him because he had forsaken the world's pleasures to study",
+   "Henry's definition of the glorying, that it implies nothing of boasting or self-conceit or catching at applause but a high degree of satisfaction and comfort"
+  ],
   "themes": [
-   "the Lord hath ordained",
-   "they which preach the gospel should live of the gospel",
-   "the crowning argument",
-   "Christ's own command for the minister's support"
+   "they which minister about holy things",
+   "partakers with the altar",
+   "the Lord ordained",
+   "live of the gospel",
+   "my glorying made void"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul had used none of these arguments or rights for himself; nor did he write these things that it should be done to him — but it were better to die than to have his glorying (in preaching freely) made void; Paul declaring that he has used none of these rights, nor written to claim them (lest they think he was hinting for support), and that he would rather die than have his glorying made void — the strength of his resolve (having established his full right to maintenance, he yet refuses it, holding his free preaching so dear, a ground of joy and rejoicing, that he would rather die than lose it), the disclaimer of self-interest."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have used none of these things",
-   "neither have I written... that it should be so done unto me",
-   "better for me to die, than... my glorying void",
-   "the refusal of the right"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "16-18",
+  "pericope_label": "Necessity is laid upon me; what is my reward then",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul's sense is that, though he preached the gospel ever so well or freely, he had nothing to glory of in the mere preaching, since necessity was laid upon him; Paul declaring that, though he preaches the gospel, he has nothing to glory of in that, for necessity is laid upon him, and woe to him if he preach not — the constraint of the divine commission (the bare preaching no ground of boasting, since Paul preaches under a necessity, the call and command of God, with a woe upon him if he fail, doing but what he is bound to do), his ground of glorying elsewhere (v.15, in preaching free of charge, the voluntary self-denial he need not do)."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the word rendered abuse means: Clarke argues that it does not mean abusing but using to the uttermost, exacting everything a man may claim by law, and Robertson agrees so far as the grammar goes, taking the compound in its perfective force as using to the full; Wesley keeps a shade of the older sense and renders it an unseasonable use",
+   "How the difficult passage should be construed: Barnes admits the three verses are very difficult and have been very variously understood; Ellicott proposes to remove the question mark altogether and read the last verse as one sentence, asking what reward is to be his which induces him to make the gospel without charge; Clarke will not settle it and prints two other men’s renderings beside his own, from Knatchbull and from Wakefield; Robertson admits the reasoning is not wholly clear and cuts the knot by making the freedom of charge itself the whole reward",
+   "Whether the passage establishes works of supererogation: Calvin alone raises the Roman inference, that since Paul might have fulfilled his office by preaching and here adds something over and above, a class of works beyond duty is established, and he refuses it, holding that what is added is not beyond duty but the very willingness without which the duty is not discharged as it should be"
+  ],
+  "outliers": [
+   "Wesley's observation that Paul speaks here in a manner peculiar to himself, since another might have preached willingly and still received a maintenance, whereas if Paul had received anything he would have called that preaching unwillingly, and another might have used the power without abusing it, whereas Paul would have called his using it at all an abuse",
+   "Clarke's double warning, woe to the man who runs when God has not sent him and woe to him who refuses to run or ceases to run when God has sent him",
+   "Robertson's turning of the necessity into a compliment, that Paul could do no other and deserves no credit for it, having heard a real call, with the wish that the same were true of every modern preacher",
+   "Gill's distinction that Paul might glory before men and against the false teachers but not before God, since the gifts, the light, the courage and the success were all of grace",
+   "Clarke's double-edged application, that preachers who insist on their privileges tempt people to think they seek secular goods, and yet the people readiest to think so are those unwilling to grant common necessaries to those who watch over them",
+   "Barnes's two guards on the conclusion, that Paul did not give up his support because he had no right to it, and that he does not say others would do well to follow him in it"
+  ],
   "themes": [
-   "though I preach the gospel, I have nothing to glory of",
    "necessity is laid upon me",
-   "woe is unto me, if I preach not the gospel",
-   "the constraint of the divine commission"
+   "woe is unto me if I preach not",
+   "willingly and unwillingly",
+   "a dispensation committed to me",
+   "the gospel without charge"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul supposes a case — if he did this thing willingly (freely, without reward, in love, going beyond the bare duty), he has a reward; but a dispensation (a stewardship) is committed to him regardless; Paul distinguishing — if he does this willingly he has a reward, but if merely under constraint (doing only what he must) a dispensation of the gospel is yet committed to him — the difference between the willing service that earns a reward (the free, self-denying service beyond the bare duty, Paul's ground of reward, preaching free of charge) and the mere discharge of the committed stewardship (the bound duty, the necessity, v.16)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if I do this thing willingly, I have a reward",
-   "if against my will, a dispensation... is committed unto me",
-   "the willing vs the constrained service",
-   "the willing self-denial Paul's ground of reward"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul has no reward to claim as a debt (he is but an unprofitable servant doing his duty); the only reward that remains is this — to make the gospel without charge; Paul declaring that his reward is this — that, preaching the gospel, he may make it without charge (free of cost to the hearers), not abusing his right in the gospel — the reward Paul sought (not money, honour, or even a debt-reward, but the joy of preaching the gospel freely, a self-rewarding service), forgoing his right rather than abusing it (using it in a way that might hinder the gospel or be misread as greed), the high motive (the gospel's free course and a clear conscience)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what is my reward then?",
-   "make the gospel of Christ without charge",
-   "that I abuse not my power in the gospel",
-   "the joy of preaching freely"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "Cyril of Jerusalem",
+   "John Lightfoot"
   ],
+  "range": "19-22",
+  "pericope_label": "Free from all, servant to all; I am made all things to all men",
   "schools": [
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Cyril"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Henry",
+     "Lightfoot"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: as an apostle in the highest office, Paul had none over him and was independent for his maintenance, yet he made himself a servant; Paul declaring that, though free from all men, he made himself servant to all, that he might gain the more — the great principle of his ministry (being free, under no obligation and beholden to none, he voluntarily became the servant of all, accommodating himself, in things indifferent, to win the more to Christ), the freedom used not for self but in self-denying service (the aim to gain/win souls), the principle of accommodation for the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "though I be free from all men",
-   "yet have I made myself servant unto all",
-   "that I might gain the more",
-   "freedom used in self-denying service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul became as a Jew (in religious observances) when, for their sake, he circumcised Timothy, purified himself, shaved his head, observed the sabbath — accommodating himself to win them; Paul declaring that to the Jews he became as a Jew, and to those under the law as under the law, that he might gain them — the accommodation to the Jews (in things indifferent, the ceremonial observances, now abrogated but harmless, conforming to remove needless offense and win them), without compromising the gospel (he would not yield in the essentials, as the circumcision of Titus, Galatians 2:3), the limit that only things indifferent were accommodated."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unto the Jews I became as a Jew",
-   "to them that are under the law, as under the law",
-   "accommodation in things indifferent",
-   "without compromising the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'them that are without law' are the Gentiles, without the written law of Moses; Paul accommodated himself to them, as if without law — yet with the careful guard that he was not without law to God; Paul declaring that to those without law (the Gentiles) he became as without law — yet not without law to God, but under the law to Christ — that he might gain them — the accommodation to the Gentiles (not imposing the Mosaic law, living as they did in things indifferent, to win them), with the guard against lawlessness (his 'as without law' only in the abrogated ceremonial law, never without the moral law of God, always under the law of Christ, the law of love)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'as without law' mean Paul was lawless or antinomian?",
-    "sides": [
-     {
-      "position": "No — he accommodated only in the abrogated ceremonial law; he was 'not without law to God, but under the law to Christ' (always bound by God's moral law and Christ's law of love)",
-      "holders": [
-       "the witnesses"
-      ]
-     }
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Who the men without law are, disputed between two voices in the catena itself: Lightfoot raises the question whether the Sadducees or the heathen are meant, tells his reader to inquire, confesses that how Paul could make himself conformable to the heathen is not easy to judge, and allows conformity to the Sadducees in rites but never in their heresy about the resurrection; Clarke names Lightfoot and refuses the suggestion on two grounds, that Paul could expect no success among men who denied the resurrection and a future world, and that among the heathen he might well appear as one who was not a Jew; Gill, Ellicott, Robertson and Wesley take the phrase of the heathen without discussion",
+   "Who the weak are: Gill and Barnes take them for weak Christians, scrupulous about meats and offended by things lawful in themselves; Ellicott says we can scarcely read it so, since the whole passage treats of classes outside the Church whom Paul hoped to gain, and renders it that he assimilated himself to the weak points rather than the strong points of Jews, proselytes and Gentiles alike",
+   "Who the men under the law are: Ellicott makes them proselytes as distinct from Jews by birth; Barnes takes it as another way of naming the same people, perhaps those living in Judea itself; Lightfoot suggests the Jews at large as against the Pharisees in particular, who seemed to subject themselves to the law more than the rest of the nation"
+  ],
+  "outliers": [
+   "Gill's notice that the word men is not in the original and the phrase may as well be neuter, so that the freedom is from the curse of the moral law and the yoke of the ceremonial, with Barnes and Calvin weighing the same ambiguity and preferring the personal sense",
+   "Henry's statement of the paradox, that Paul was free-born and a citizen of Rome and depended on no one, yet was careful to please as a servant is careful to please his master, and made himself a servant that others might be made free",
+   "The agreement of Clarke and Ellicott that the clause denying Paul was himself under the law belongs to the text, Clarke listing the uncials and versions behind it and Ellicott ascribing its absence to a copyist's oversight",
+   "Robertson's phrase borrowed from Evans, not an outlaw of God but an inlaw of Christ",
+   "Ellicott's ear for humility in the close, that the natural climax would have been to win all and that Paul dared not hope for so great a reward, writing instead that he might save some",
+   "Cyril's inversion of the phrase, applying it to Christ, who comes in various forms to each man for his profit, a Vine to those who need gladness, a Door to those who would enter, a High Priest to those who must offer prayers, a Sheep to those who have sins, and is made all things to all men while remaining in his own nature what he is"
+  ],
   "themes": [
-   "to them that are without law, as without law",
-   "not without law to God, but under the law to Christ",
-   "accommodation to the Gentiles",
-   "the guard against lawlessness"
+   "free from all, servant to all",
+   "to the Jews as a Jew",
+   "to them without law",
+   "the law of Christ",
+   "all things to all men"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul became as weak to the weak Christians (those scrupling meats, etc.), so consulting their peace and edification that, rather than offend them, he complied with them; Paul declaring that to the weak he became as weak, and that he is made all things to all men, that he might by all means save some — the summary of his accommodating ministry (adapting himself, in things indifferent, to all — Jew, Gentile, weak — condescending, becoming all things, to win every sort), the single aim the salvation of souls, the limit that the accommodation is in things indifferent not the gospel (he never compromised the truth, only adapted the manner), the model for the evangelist."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to the weak became I as weak",
-   "I am made all things to all men",
-   "that I might by all means save some",
-   "adapting in things indifferent to win every sort"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Paul did all this not for his own temporal advantage, nor to curry favour, nor for wealth or honour, but for the spread of the gospel; Paul declaring that he does all this for the gospel's sake, that he might be a partaker of it with them — the pure motive of his accommodation (not self-interest but the advancement of the gospel and the sharing in its blessings and reward), the self-forgetting aim (not his own gain but the gospel and the souls), the wish to be a partaker of the gospel with those he won (sharing in its blessings, reward, and joy)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this I do for the gospel's sake",
-   "that I might be partaker thereof with you",
-   "the pure motive",
-   "the gospel's advancement and its blessing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
+  "range": "23-25",
+  "pericope_label": "This I do for the gospel; they which run in a race; temperate in all things",
   "schools": [
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": [
+     "Chrysostom"
+    ]
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul, having shown the usefulness of condescension and his own self-denial (rising higher than all toward perfection by declining to receive, descending lower than all), now touches them more sharply, turning to the figure of the games to spur them on; Paul drawing the figure of the race — all run, but one receives the prize, so run that ye may obtain — the call to earnest, wholehearted effort in the Christian life (as the runners strain every nerve for the prize, so believers must run the spiritual race with all earnestness to obtain the prize of eternal life, the incorruptible crown, v.25), unlike the games (where only one wins) all who run earnestly may obtain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they which run in a race run all, but one receiveth the prize",
-   "so run, that ye may obtain",
-   "the figure of the race",
-   "earnest, wholehearted effort"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Henry"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: 'striveth for the mastery' means engaged in the athletic contests (wrestling, boxing, running); such were rigorously temperate in training; Paul observing that every competitor is temperate in all things, and that they do it for a corruptible crown (a fading garland of leaves) but believers for an incorruptible (the eternal, unfading reward) — the call to self-discipline (as the athlete subjects himself to strict temperance and training for a fading garland, so the believer should exercise far greater self-discipline, subduing the body, appetites, and flesh, for the eternal crown), the contrast of the corruptible and incorruptible crowns."
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the word rendered the gospel means in the first verse: Clarke goes further than anyone else and proposes that it should here be rendered the prize or reward, so that Paul does all this for the sake of the prize that he may partake of it with them; Robertson reads the sentence the other way, taking the compound to mean a joint partaker with others and finding in it Paul’s evangelistic passion, that he does not wish to enjoy the gospel just by himself; Barnes and Ellicott keep to the common sense, that Paul hoped to share the salvation he preached",
+   "How far the comparison with the race holds: Clarke, Calvin, Wesley and Henry all state the disanalogy, that there only one received the prize though all ran while here all who run may receive it, Henry adding that there should nevertheless be a noble emulation and a glorious contest who shall get first to heaven; Chrysostom alone guards the other flank, warning expressly that the words are not to be taken as though here also only one out of many would be saved, far from it, but as setting forth the exceeding diligence it is our duty to use",
+   "What the turn to the games is doing in the argument: Chrysostom reads it as a sharpening of the rebuke, a covert intimation that what the Corinthians counted a mark of perfectness is a superfluous and useless labour, not said out clearly lest they grow insolent, whereas Barnes and Ellicott take it simply as an illustration of self-denial drawn from a spectacle familiar to the readers"
+  ],
+  "outliers": [
+   "The agreement of Gill, Clarke and Ellicott that the better manuscripts read all things rather than this, Clarke listing the uncials and the Coptic, Ethiopic, Vulgate, Itala, Armenian and Sahidic behind it",
+   "Ellicott's account of the games themselves, that none but freemen could enter, that competitors had to satisfy the officers of ten months' training and thirty days at the gymnasium, that a herald proclaimed each man's name and country, and that the victor returning home entered his native town through a breach made in the walls",
+   "Gill's note that the Corinthians were themselves presidents of these games, so that the allusion needed no explaining",
+   "The divergence in measuring the course, Gill making it six hundred and twenty-five feet where Robertson makes it six hundred and six and three quarters",
+   "Clarke's long quotation of Epictetus on the cost of an Olympic victory, the strict regimen, the food one dislikes, the trainer obeyed as a physician, and at the end a broken arm, mouthfuls of dust, many stripes and defeat",
+   "Wesley's sting, that the moderns only have discovered that it is legal to do all this and more for an eternal crown than the Greeks did for a corruptible one"
+  ],
   "themes": [
-   "every man that striveth for the mastery is temperate in all things",
-   "a corruptible crown; but we an incorruptible",
-   "the athlete's temperance",
-   "far greater self-discipline for the eternal crown"
+   "for the gospel’s sake",
+   "they which run in a race",
+   "so run that ye may obtain",
+   "temperate in all things",
+   "a corruptible crown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
+   }
   }
  },
  "26": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
+  "range": "26-27",
+  "pericope_label": "I therefore so run; I keep under my body, lest I be a castaway",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "Gill",
+     "Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Lightfoot"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Clarke",
+     "Wesley"
+    ]
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul animates the Corinthians by his own example — he ran with cheerfulness and certainty, looking to Jesus, steadfast in his course; Paul declaring that he runs not as uncertainly (not aimlessly, not in doubt of the goal, but with a clear aim) and fights (boxes) not as one beating the air (in vain blows, empty motions) but with real, effective effort (his blows landing on the enemy, his own flesh, v.27) — his own example of purposeful, earnest, effective effort in the Christian race (animating the Corinthians by his pattern)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I therefore so run, not as uncertainly",
-   "so fight I, not as one that beateth the air",
-   "purposeful, effective effort",
-   "Paul his own example"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the allusion is to boxers, who give black eyes; Paul means not a maceration of the body but a keeping it under, subduing its sinful affections and lusts; Paul declaring that he keeps under his body and brings it into subjection, lest, having preached to others, he himself should be a castaway (disapproved, rejected) — the rigorous self-discipline of the apostle; the debate on 'castaway': the Arminian reading that even Paul might finally fall (the possibility of apostasy real), the Reformed reading as the language of holy diligence and the means by which the elect persevere (Paul's care itself the divinely-appointed safeguard, not a fear of final falling) and a warning against mere profession (the preacher himself unsaved)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'lest I myself should be a castaway' teach a true believer may finally fall?",
-    "sides": [
-     {
-      "position": "Yes — even the apostle might finally fall; the warning shows the real possibility of apostasy",
-      "holders": [
-       "Arminian"
-      ]
-     },
-     {
-      "position": "It is the language of holy diligence and the means by which the elect persevere (Paul's care the divinely-appointed safeguard, the elect not finally perishing), and a warning against mere profession (the preacher himself unsaved)",
-      "holders": [
-       "Reformed"
-      ]
-     }
+    "summary": [
+     "Barnes",
+     "Ellicott",
+     "Robertson"
     ]
    }
   ],
-  "outliers": [],
+  "debates": [
+   "Whether the buffeting of the body is literal or figurative: Clarke takes the body itself for the enemy, to be mortified by self-denial, abstinence and severe labour and made the slave of the soul; Gill denies this expressly, that it means neither immoderate watchings and fastings nor whipping and scourging and lying on the bare ground, but the body of sin and the corruption of nature; Ellicott insists the language of the whole passage is figurative and refers not to inflicting pain but to subduing the appetites; Robertson denies the Gnostic premise that Paul thought his body evil; Calvin observes that the ancient monks meant to obey the precept literally and yet the main thing was wanting in them",
+   "What the adverb in the first verse means: Barnes takes it that Paul did not run without knowing what he aimed at; Clarke offers three senses together, uncertainly, since only one could win however many ran, ignorantly, as of a man who does not know the course, and without observation, since all eyes were on the runners and Paul knew his false brethren waited for his halting; Calvin reports a reading he does not adopt, that the words refer to full assurance of hope, preferring himself that the point is to direct the course straight so that it may not be wavering",
+   "What the last word means and what it proves: Ellicott says the common rendering castaway conveys a wrong impression, the Greek meaning rather one who has not behaved according to the prescribed regulations; Robertson finds the tone the important thing, a wholesome fear instead of smug complacency in the greatest of all heralds; Wesley presses it into doctrine, holding that this single text gives a just notion of election and reprobation, since believers are elected to privileges which if abused will leave those very elect persons reprobate, Paul himself being the instance"
+  ],
+  "outliers": [
+   "Clarke's third sense of the adverb, without observation, filled out from Paul's own situation, that his false brethren waited for his halting, the persecuting Jews and Gentiles longed for his downfall, and the Church looked on him with anxiety",
+   "Robertson's explanation of beating the air as the shadow-fighting a boxer practised without an opponent, with the remark that Paul smote something more solid than air",
+   "Gill's support for the sense of the verb from a story of Menedemus, so pugnacious in scholastic exercises that his opponents never departed without black eyes",
+   "Robertson's image, borrowed from Robertson and Plummer, of chariot horses which must be kept well in hand by whip and rein",
+   "Clarke's account of the herald's office at the games, that he proclaimed the conditions, displayed the prizes, exhorted the combatants, pronounced the names of the victors and set the crowns on their heads",
+   "Lightfoot's pursuit of the last word into the rabbinic vocabulary, matching it with the Hebrew terms for approved and not approved, fit and unfit"
+  ],
   "themes": [
-   "I keep under my body, and bring it into subjection",
-   "lest... I myself should be a castaway",
-   "rigorous self-discipline",
-   "the perseverance debate"
+   "not as uncertainly",
+   "beating the air",
+   "I keep under my body",
+   "bring it into subjection",
+   "lest I be a castaway"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  }
 }
