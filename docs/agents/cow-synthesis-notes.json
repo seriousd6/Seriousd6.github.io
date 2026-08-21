@@ -14439,6 +14439,67 @@
       "book": "exodus",
       "chapter": "3",
       "note": "All 9 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.658, mean zip 0.463. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named); every declared exclusion names a block present inside its own span. LENGTH CONTROL WAS BAD HERE and I want it recorded honestly: first drafts ran 758, 783, 819, 821, 823, 824 and 941 words against a 650 ceiling, and every entry needed between two and five trim passes — far worse than 1corinthians 16, where 17 of 24 landed first-pass. The cause is not the four-voices-per-paragraph rule, which held; it is that exodus 3 pairs very large spans (2548-4301 source words) with six or seven substantial voices per span, so the material genuinely exceeds what 650 words can hold and the drafting error is in deciding what to LEAVE OUT before writing rather than trimming after. One entry (13-15) first drafted at 913 words also came back grade B on TTR 0.580; a compact rewrite rather than incremental trimming fixed both length and TTR at once. RULE FOR NEXT TIME: when a span exceeds ~2500 source words with 6+ voices, pick the three or four strands the entry will carry BEFORE drafting and discard the rest deliberately."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "11",
+      "verses": [
+        "22"
+      ],
+      "note": "SCRAPE RESIDUE RULE CORRECTED — it follows ELLICOTT'S LAST BLOCK, not the chapter's last verse. Joshua 11 has 23 keys; the junk is at key 22, NOT key 23, and key 23 is clean. Ellicott's key-22 block is 1021 words of which only about 30 are real commentary ('Goliath of Gath and his gigantic relatives seem to have been a part of this remnant'); the remaining ~990 are StudyLight navigation, copyright boilerplate, CSS — and, new this time, RAW JAVASCRIPT (a study-desk widget binder, 'var d2=ref.getAttribute...'). Ellicott simply has no block at key 23, so the furniture attached to the last block he does have. That reconciles all five earlier sightings (luke 1:80, romans 4:25, 1corinthians 16:24, deuteronomy 16:22, exodus 3:22), where Ellicott happened to be present on the final verse and the two rules coincided. Sixth sighting overall. NOTE ALSO that deuteronomy 16:22 showed GILL carrying navigation residue on the same key, so the general rule is: the last block of a given commentator's scraped page carries whatever page furniture followed it. A scrub should therefore key on the LAST BLOCK PER COMMENTATOR PER CHAPTER, not on the chapter's maximum verse key, and must strip JS as well as CSS: cut from the first CSS selector, from 'Footnotes: Copyright Statement', from a 'Next:'/'Previous:' navigation marker, or from the first JavaScript token."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "10",
+        "15"
+      ],
+      "note": "HENRY'S KEYS MARK HIS SECTION HEADS — FOURTH CONFIRMATION, and it drove the tiling. Henry appears at only 3 of 23 keys: 1, 10, 15, which are the heads of the chapter's three natural divisions (vv1-9 the northern coalition and Merom, 10-14 Hazor and the cities, 15-23 the summary of the conquest). Prior confirmations: 1corinthians 16 (1/5/10/13/19), deuteronomy 16 (1/18), exodus 3 (1/7/11/16). I tiled on that basis and subdivided only where a section exceeded ~4500 source words. ONE DEPARTURE WORTH RECORDING: v15 was NOT given its own entry even though Henry heads a section there, because key 15 is Gill 22 words + Henry 1599 words — a single-voice entry. It was merged into 15-18 instead, which brought seven voices to the span. The rule gives you the boundaries; it does not follow that every boundary should become an entry edge."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "11",
+      "verses": [
+        "17",
+        "23"
+      ],
+      "note": "JFB DISPLACEMENT LAW — FIRST PARTIAL BREAK IN THE DISPLACEMENT PATTERN, though the stride holds. JFB sits at keys 17 and 23: interval of 6, phase 5. As in exodus 3 this is only TWO terms, so it corroborates the stride without independently confirming a run. The new fact is that the two blocks behave DIFFERENTLY. Key 17 is displaced as usual — 17 words on 'the directions given for the instruction of their children', which is Deuteronomy material and has nothing to do with Joshua's northern campaign; excluded at entry 15-18. But key 23 is 234 words of GENUINE, ON-CHAPTER commentary: the theological defence of the herem ('This relentless doom of extermination... cannot be reconciled with the attributes of the divine character, except on the assumption that their gross idolatry and enormous wickedness left no reasonable hope of their repentance'), plus the Eber-usurpation argument and the prudential reading of the ban on alliances. It is used as a declared voice at entry 23 and carries that entry. So through eleven chapters the stride-6 spacing has never failed, but this is the first chapter in which a stride block was NOT displaced. Running record of phases: acts 24 (2/8/14/20/26), acts 3 (4/10/16/22), james 1 (1/7/13/19/25), 1john 3 (6/12/18/24), ephesians 1 (4/10/16/22), romans 4 (4/10/16/22), luke 1 (26/32/38/62/74), 1corinthians 16 (1/7/13/19), deuteronomy 16 (2/8/14), exodus 3 (8/14), joshua 11 (17/23)."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "11",
+      "verses": [
+        "5",
+        "10",
+        "11",
+        "22",
+        "17"
+      ],
+      "note": "K&D 200-WORD TRUNCATION — second worked example, and this time the damage is NOT fully recoverable. Ten of eleven K&D blocks here are exactly 200 words (key 22 is 66). Per key: 2, 3, 4, 7, 8 are on-verse and usable; 11 is essentially all lemma (vv11-16 quoted); 22 is 66 words of PURE LEMMA -> K&D excluded at entry 21-22. TWO PIECES ARE LOST OUTRIGHT, which exodus 3 was lucky enough to avoid. Key 5 is lemma vv5-6 plus commentary on V6 (the emphatic pronoun before the verb, 'I will provide for...'), but K&D has NO key at 6, so under the filing rule it cannot be moved and simply cannot be used. Key 10 is lemma v10 plus a genuinely useful note on V13 ('the singular upon their hill is to be taken as distributive: standing, now as then, each upon its hill'), but K&D has no key at 12, 13 or 14, so that too is lost — and it would have been the fourth voice in a three-way dispute about what 'stood still in their strength' means. Only key 17's tail (on vv19-20, the hardening) could be relocated, because K&D has key 19 inside that span. So the recoverability of truncated K&D material depends entirely on whether K&D happens to hold a key in the destination span, and here it failed twice."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "11",
+      "note": "THE LIVE DISPUTES. (1) v13 — what 'the cities that stood still in their strength' means, THREE readings. Walls not demolished when taken (Gill, from Kimchi and Jarchi; Wesley, 'with their fence, walls or bulwarks'). Built on mounds or hills (Ellicott literally, with the Vulgate; Clarke prefers this on the practical ground that hill cities could be held cheaply as places of refuge, and notes it makes 'Jerusalem shall be builded on her own heap' read as 'on her own hill'). Or cities that stayed NEUTRAL — Clarke reports this reading and declines it, Ellicott adopts it as his own judgement ('those who remained absolutely neutral in the war'). (2) vv19-20 — the hardest question in the chapter, and a genuine four-way. CALVIN states the objection against himself: Moses forbade any league with these nations, so peace was not available; 'had they made a hundred attempts to avoid war, they must nevertheless have perished', and it seems unjust to blame men acting under compulsion. He notes the SEPTUAGINT evaded the problem by rendering the verse without the peace clause at all. GILL answers with the Jewish tradition that Joshua sent three offers on first landing (flee, make peace, or fight) and all chose war. K&D shut that door: 'It cannot be inferred from this, that if the Canaanites had received the Israelites amicably, God would have withdrawn His command to destroy them.' CLARKE relocates the guilt earlier — they had sinned against all the light they had, and their refusal of peace was the PROOF of wilful idolatry, not its cause. ELLICOTT reads the hardening as evidence for the defence: it 'goes to prove... that the conquest of Canaan was not intended to be a massacre of the unresisting inhabitants'. (3) vv16/21 — composition. CLARKE takes 'the mountain of Israel' as proof of post-Joshua editing, 'incontestable evidence that several notes have been added to this book since the days of Joshua'. CALVIN denies any mountain of that name is meant at all, reading an antithesis between the hill country of the ten tribes and that of Judah. WESLEY answers Clarke directly at v21: it does not follow, and even a later clause added by Ezra is unnecessary, since Judah's pre-eminence was already visible in Joshua's own day. (4) v9 — whether 'houghed' means disabled or killed: Clarke says killed outright, Wesley says hamstrung and unfit for war, Ellicott says we cannot be certain."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "11",
+      "note": "All 10 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.652, mean zip 0.461. Two-way voice check clean before assembly (0 declared-but-unnamed, 0 excluded-but-named); every exclusion names a block present in its own span. LENGTH CONTROL RECOVERED: 5 of 10 entries landed in range on the first draft (against 0 of 9 on exodus 3), and the corrective rule recorded after exodus 3 is what did it — for any span over ~2500 source words with 6+ voices, choose the three or four strands the entry will carry BEFORE drafting rather than trimming afterwards. It was applied deliberately to entry 1 (3022 words, 6 voices) and entry 15-18 (3819 words, 7 voices); the second still needed five passes, the first four, but both were drafted at ~750 rather than exodus 3's ~820-940, and every other entry was at most one pass from range. The remaining overshoot is concentrated entirely in the two largest spans, which suggests the strand-picking should be harder still there: three strands, not four."
     }
   ]
 }
