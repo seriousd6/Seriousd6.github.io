@@ -16410,6 +16410,81 @@
         "22"
       ],
       "note": "All nine entries self-graded A (QA 610/503/558/546/623/465/590/484/415; ttr 0.587-0.660). Only entry 2 came near the ttr floor at 0.587, on repetition of tables/ark/written. Unusually for this run, no entry needed a trim pass: with four to six voices per span rather than eight or nine, the floor rather than the cap was the live constraint, and three entries were deliberately written short because the source was thin once residue and carrier were removed. Tiling 1 | 2-5 | 6-7 | 8-11 | 12-13 | 14-15 | 16-19 | 20-21 | 22; an earlier ten-entry plan splitting 18-19 was rejected because that span holds only 418 source words. Six exclusions across the chapter (four JFB, two Clarke carrier, one K&D displaced forward to the 14-15 entry) - the highest exclusion count of any chapter in this run, and all of them source defects rather than editorial choices."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "note": "STRIDE — PROVEN AT CORPUS SCALE, AND THE MECHANISM IDENTIFIED. Ran the test across the whole cow tree instead of one chapter. Of 748 chapter files carrying three or more Jamieson blocks, 747 have EVERY key in a single residue class mod 6. The one apparent exception, 2kings 13, is not one: its odd key 21 is not a Jamieson block at all but raw SWORD importer metadata ('type=\"x-importer\" subType=\"x-osis2mod\" n=\"$Rev: 3769 $ (SWORD') sitting beside the label. So the true count is 748 of 748, no exceptions. The stride-6 model is no longer an inference from single chapters; it is a corpus-wide invariant. SECOND AND LARGER FINDING: the residue RELOCATES, it does not duplicate. All 36 chapters of Numbers carry Jamieson residue, and not one of them carries Jamieson's actual commentary on Numbers. numbers/1 holds his note on ruminating animals (Leviticus 11); numbers/2-4 hold the leprosy laws (Leviticus 13-14); numbers/21-23 and 26 hold the census, the standards and the sons of Aaron (Numbers 1-3); numbers/33 holds the wilderness passover (Numbers 9). Meanwhile Jamieson's genuine commentary on Numbers 22-23, the Balaam narrative, exists NOWHERE in the corpus except as five displaced blocks in deuteronomy 14 — grep for 'no spirit of penitence', 'grand entertainment to Balaam' and 'unexpected eulogy on Israel' returns deuteronomy/14.json and nothing else. The Jamieson tree is therefore not merely noisy, it is systematically MIS-INDEXED, with real commentary silently absent from its own file and present under a wrong key elsewhere. THIRD: the lag drifts, and the drift explains the quantisation. Measured against the file it sits in, the Jamieson source runs about 17 chapters behind at numbers 1, about 21 behind at numbers 22, and about 24 behind at numbers 33. A source pointer that advances five verses for every six target keys falls behind exactly one verse per six keys, which over the ~900 verses between numbers 1 and numbers 33 gives six or seven chapters of slip — the observed drift. This is the same quantise-up behaviour recorded at ephesians 4 (gaps 5,5,4,5,5 against 6,6,6,6,6) seen now from the other end, and it accounts for the repeated blocks too: numbers/22 keys 10 and 16 are byte-identical, and numbers/30 and numbers/31 open with the same sentence, which is what happens when the target advances and the source pointer does not. RECOMMENDATION, and this is the point of the note: because the displacement is a monotone function of position, it is INVERTIBLE. The Jamieson tree does not need re-fetching so much as re-indexing — recover the offset class per chapter, walk the source pointer back, and the misplaced blocks land on the verses they were written for. That would restore commentary currently lost, not merely suppress noise. Worth an owner decision before any further Jamieson re-fetch is scheduled."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "note": "200-WORD CAP and CHROME, both confirmed again, and chrome in a NEW FORM. Cap: KEIL is capped at exactly 200 words in 5 of his 6 blocks (keys 2, 4, 23, 25, 26) and his maximum in the chapter is exactly 200; only key 29 escapes, at 54 words, being naturally short. GILL is capped in 2 of 20 (keys 28, 29) and his maximum is likewise exactly 200, so both of his long blocks are truncated mid-sentence. Every other voice runs free — Henry 1896, Ellicott 1296 (before chrome), Calvin 785, Clarke 706. Sixth OT chapter confirming Keil as the capped feed in the OT tree: 48 of 53 blocks across genesis 14, numbers 19, deuteronomy 15, exodus 27, 1samuel 6 and now deuteronomy 14. Keil's capped blocks here are the range-keyed running kind, so the cap also truncates a commentary that was already spanning several verses. CHROME: Ellicott's last block (key 29, the chapter's last key) carries 314 real words followed by roughly 1,037 words of RAW INLINE JAVASCRIPT — _bindClick handlers, a navigation accordion, '/study-desk.html?q1=' hrefs — not the StudyLight or sacred-texts text footer seen in every previous chapter. Gill's key 29 block additionally carries a 'Next: Deuteronomy Chapter 15' navigation tail, so BOTH voices carry chrome here and in two different forms. The single-marker cut used through this series misses the JavaScript entirely; the marker SET recommended since numbers 27 catches it, and this chapter is the case that proves the marker set has to include script fragments and not only copyright and navigation text."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "verses": [
+        "6",
+        "9",
+        "12",
+        "19",
+        "20",
+        "21",
+        "2"
+      ],
+      "note": "NAME-STRIPPING AT SCALE — the worst instance in the series so far, and it destroys a whole voice's contribution. Gill's cross-references are gutted throughout this chapter, the referenced name deleted and the punctuation left orphaned. Key 6 ends 'See Gill on ; see Gill on ; see Gill on ; see Gill on ; see Gill on ; see Gill on .' — six stripped references in a row. Key 9 has four ('See Gill on , , , .'), key 19 two, key 20 one, key 12 several inline ('the same names as in , excepting one'), and key 2 ends 'should not conform to the customs of Gentiles ... see ,'. Key 21 is the extreme case: Gill's entire block is 'This law is repeated from ; see Gill on ,' — twenty words, of which the only content-bearing words are the stripped references, so the block conveys nothing at all and the voice is effectively absent from that verse while still holding a head there. The same defect was filed at numbers 19 key 22 (Calvin's ' . had used the words cited by . ') and ephesians 4 keys 29 and 32 (Calvin, 'is supposed by to mean beneficence'). It is systematic across at least the Gill and Calvin feeds, it is not OCR noise, and it is silent: nothing in the rendered text tells a reader that a reference was removed. Two consequences for the loop. First, a block can pass every structural check and still be empty, which means the GHOST check catches the wholly-absent case but not this one. Second, any tooling that measures 'usable source words' overcounts these blocks. Recommend a corpus scan for the signatures 'see ; ', 'on , ,', 'by to', ' . had', and generally a preposition or citation verb followed immediately by punctuation, reported per voice per book, before the next re-fetch is scoped."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "verses": [
+        "7",
+        "10",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "note": "TILING AGAINST A GAPPY SOURCE — a rule I had not met before, worth recording for the next worker. The catena for this chapter has no blocks at verses 7, 10 and 15-18; its keys run [1-6] [8-9] [11-14] [19-29]. validate-synthesis.py requires the declared spans to tile the SOURCE KEYS exactly, so a range may not cross a gap: my first tiling used 4-20 and failed with 'entries cover verses absent from the source: [7, 10, 15, 16, 17, 18]'. A span that crossed a gap would advertise commentary on a verse the catena has nothing for, which is exactly what the check exists to prevent. The practical consequence is that the runs, not the pericopes, set the outer bound on grouping, and a short run can force an entry the material does not really support: the run [8-9] here carries only Jamieson residue at key 8 and a 38-word Gill note at key 9, so it had to be written thin (126 words against 38 usable, declared 'thin': true, Jamieson declared excluded). That is legal — the thin exemption measures the union of the span after excluded_voices, and 38 is far under the 200-word ceiling — but it is the thinnest entry I have written, and the honest thing to say is that verses 8 and 9 have one witness and one rule between them. Note also that the local build harness asserted coverage of 1..LAST_V, which is the WRONG invariant for a gappy chapter and masked the problem until the validator caught it; the assertion should be against the source key set."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "verses": [
+        "22",
+        "23",
+        "28",
+        "29"
+      ],
+      "note": "THE TITHE PASSAGE CARRIES THE SHARPEST DIVISION IN THE CHAPTER, ON THREE AXES. (1) Whether the tithes of the whole land really went to one place. Calvin says the command so read is ABSURD: the Levites were dispersed through the country, so carrying every tithe to Jerusalem would amount to destroying them by famine. He rejects the conjecture earlier commentators were driven to — that the people voluntarily set apart a further tithe for the journey — as an improbable doubling of the burden, and reconstructs a local collection with a separate tithing carried up as a sacred offering. He supports it with two arguments of his own: that carrying grain up only for the Levites to carry it home again would be expense without advantage, and that the threats requiring Levites to pay the priests faithfully would be pointless if the priests already held the whole quantity. Keil and Ellicott take the single-sanctuary rule at face value and solve the distance problem by commutation to money. (2) Whether the third year introduces a further tithe. Gill reports Aben Ezra for a genuine third tithe and cites a variant text of Tobit 1:7 that supports it (one copy gives the third tithe to the repair of the temple, another to the stranger, fatherless and widow); Maimonides and the general Jewish view, Ellicott, and Calvin most emphatically ('those are mistaken, in my opinion, who think that another kind of tithe is here referred to') make it the second tithe redirected. (3) Why the ministry was left dependent, where Clarke and Calvin explain the same arrangement in OPPOSITE directions: Clarke makes the Levite's reliance on freewill offerings a designed incentive, binding minister and people to each other, while Calvin makes the third-year diversion a check that withdraws part of the Levites' abundance lest they give themselves to luxurious habits, leaving them not more than a twelfth. Both are arguments from the effect on the clergy and they point against each other. All three axes are recorded in the entries' debate lists."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "verses": [
+        "1"
+      ],
+      "note": "WESLEY ABRIDGES HENRY AGAIN, and here it is near-verbatim, the clearest instance yet. On verse 1 Henry writes: 'Methinks this is like a parent's charge to his little children, that are foolish, careless, and wilful, and are apt to play with knives: Children, you shall not cut yourselves. This is the intention of those commands which oblige us to deny ourselves ... And this also is the design of those providences which most cross us, to remove from us those things by which we are in danger of doing ourselves harm.' Wesley writes: 'Is not this like a parent's charge to his little children, playing with knives, \"Do not cut yourselves!\" This is, the intention of those commands, which obliges us to deny ourselves ... And as this also is, the design of cross providences, to remove from us those things by which we are in danger of doing ourselves harm.' Same two observations, same order, same images, several clauses word for word. The prose says so explicitly rather than counting them as two witnesses. This is the sixth chapter in the series showing the dependence — numbers 27, genesis 14, deuteronomy 15 (twice), exodus 27, and now deuteronomy 14 — against one clear counter-case (1samuel 6, where Henry runs a different line entirely). The standing question for the owner is unchanged and still unanswered: whether the tags' prevalence field should down-weight agreement traceable to a common source. On the present evidence a Henry/Wesley pair should not count as 'several' in the wesleyan-arminian and puritan-evangelical schools simultaneously, since the second is an abridgement of the first."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "14",
+      "note": "FIDELITY SELF-GRADE, all 8 entries. Source: 12,083 usable words across 23 catena keys, 8 voices. The chapter's source keys are gappy (nothing at verses 7, 10, 15-18), so the spans tile the source keys and not 1-29: runs [1-6] [8-9] [11-14] [19-29]. Word counts, all inside the applicable window: 1-3 = 649, 4-6 = 585, 8-9 = 126 (declared thin, 120-349), 11-14 = 361, 19-21 = 558, 22-23 = 643, 24-27 = 448, 28-29 = 645. Every proposition in every entry is traceable to a named block inside that entry's own verse range; no voice is named in an entry where it has no head. Voice coverage: Gill 20 keys, Ellicott 13, Clarke 8, Keil 6, Jamieson 5 (all residue), Calvin 5, Wesley 4, Henry 2. Jamieson is declared as excluded_voices in the four entries containing his residue keys (2, 8, 14, 20, 26). ONE SILENT_BY_ENTRY decision: Keil at entry 28-29, whose key 29 block is the bare text of the verse (54 words) with no exposition whatever — nothing was withheld from the reader, so he is silenced rather than declared, following the 1samuel 6 precedent. GILL AT KEY 21 is the difficult case: his block there is twenty words consisting almost entirely of stripped cross-references, so it carries no proposition. He is named in that entry only for what the block actually asserts, that the law is a repetition, and nothing is attributed to him about the reference itself. Deliberate omissions, none of which changes any reported position: Clarke's full Linnaean apparatus at keys 4 and 5 is given by three examples rather than the whole; his catalogue of travellers' identifications is compressed; Henry's key 1 block is a whole-chapter overview and only its material on verses 1-2 is used, the rest falling outside the entry's range; Calvin's French editorial glosses are not reproduced; Gill's Targum citations are summarised. Truncation carried in the notes and NOT attributed to any commentator in the prose: Keil's five capped blocks and Gill's two, where sentences break off mid-clause. Where the cap removed a conclusion I reported only what survives and attributed no absence to anyone."
     }
   ]
 }
