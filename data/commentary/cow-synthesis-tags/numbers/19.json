@@ -2,803 +2,377 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "1-4",
+  "pericope_label": "The ordinance of the red heifer; Eleazar and the sprinkled blood",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: spoken in the wilderness of Sinai, when the Lord commanded unclean persons be put out of the camp and some were defiled by a dead body and unfit for the passover."
+    "summary": "Date the ordinance to Sinai on rabbinic authority; make the killing the priest’s own office and the people’s offering vicarious; read the removal outside the camp as the sign of a curse fulfilled at Golgotha, guarded against the inference that the victim was polluted; and take the aim of the rite to be that purity can come only from the sanctuary."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Explain the law as an emergency provision against the massed defilement of the wilderness death sentence; deny that the priest killed the victim; and account for the wholly extramural rite by its purpose, which was not fellowship at the altar but an antidote to the infection of death."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Refer both the species and the colour to Egyptian cult practice that the law was framed against; and read the colour, the untouched neck and the place of burning as figures of Christ’s blood, his voluntary submission and his suffering outside the gate."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the divine appointment for the solemn burning of a red heifer to ashes, and the preserving of the ashes for purification."
+    "prevalence": "single",
+    "summary": "Explain the colour by its rarity and the exacting rabbinic standard, and press the typology of the red earth and the reddened Christ, while denying that the rite was properly a sacrifice of expiation since it was not performed at the altar."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "When the ordinance was given: at Sinai and merely repeated here (Gill, from Aben Ezra and Jewish tradition), or now, as a remedy for the unprecedented mortality following God’s sentence (Keil).",
+   "Who slew the heifer: the priest, as his peculiar office (Calvin), or a member of the congregation, the priest doing nothing but sprinkle (Keil). The two are irreconcilable.",
+   "Why the heifer was red: to counter Egyptian sacrifices to Typhon (Clarke), because the colour was rare and therefore remarkable (Henry), or to shadow the blood of Christ (Wesley, Henry).",
+   "Whether the rite was properly expiatory — Henry denies it, on the ground that it was not performed at the altar."
+  ],
+  "outliers": [
+   "Clarke alone explains both the species and the colour of the victim as polemic against Egyptian religion.",
+   "Keil alone ties the law to the demographic emergency of the wilderness generation rather than to typology.",
+   "Gill alone reports the physical mechanics of the sprinkling, from Maimonides and the Targum."
+  ],
   "themes": [
-   "the LORD spake unto Moses and unto Aaron",
-   "the ordinance of the red heifer",
-   "a standing remedy for the defilement of death"
+   "Purification",
+   "Typology",
+   "Priesthood",
+   "Death and uncleanness",
+   "The blood of Christ"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a ceremonial ordinance, founded not on plain reason but in the will of God, intended as a type and shadow of the blood and sacrifice of Christ and the efficacy of that to cleanse from sin; the heifer red, without blemish, never yoked (Heb. 9:13-14)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a red heifer without spot, wherein is no blemish, and upon which never came yoke",
-   "a type of Christ in every mark",
-   "the shadow of his cleansing blood (Heb. 9:13-14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: given to Eleazar, not Aaron, that the high priest might not be defiled and hindered in his office, and to inure Eleazar to his work."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the sacrifice was superintended by Eleazar, brought without the camp and slain before his face."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give her unto Eleazar the priest... bring her forth without the camp, and one shall slay her",
-   "the victim led beyond the holy place",
-   "Jesus suffering without the gate (Heb. 13:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with Ainsworth: the blood sprinkled with the finger toward the tabernacle; the finger signified the Spirit of Christ, the 'finger of God,' who takes Christ's blood and sprinkles it on the hearts of his people, freeing them from an evil conscience (Heb. 9:14)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Eleazar sprinkled of her blood directly before the tabernacle seven times."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sprinkle of her blood directly before the tabernacle... seven times",
-   "the perfect presentation of atoning blood",
-   "the Spirit applying Christ's blood to the conscience (Heb. 9:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "5-10",
+  "pericope_label": "The burning of the heifer; cedar, hyssop and scarlet; the ashes gathered",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: relays the rabbinic account of the burning at the mount of Olives, the cow bound and laid on a pile of cedar, the priest looking on; the whole creature consumed."
+    "summary": "Resolve the paradox that a purifying sacrifice defiles its ministers by locating the pollution outside the victim, and read the materials cast into the fire as joining blood to water and as evidence of the victim’s own purity; preserve the rabbinic ceremonial in full and defend the rendering of the water’s name."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: one burned the heifer in his sight — skin, flesh, blood, with her dung."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one shall burn the heifer... her skin, and her flesh, and her blood, with her dung",
-   "the whole creature consumed, nothing reserved",
-   "the entire self-offering of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: these were the same three things used at the cleansing of the leper (Lev. 14:4)."
+    "summary": "Explain the officiants’ defilement by the transfer of the uncleanness of sin and death to the sin-offering rather than by contact with unclean people; assign emblematic senses to cedar, hyssop and scarlet; and mark the structural seam between the general rules and the particular cases."
    },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: cedar wood, hyssop, and scarlet cast into the midst of the burning of the heifer."
+    "summary": "Draw two lessons from the priest’s defilement — the imperfection of the Levitical priesthood, and Christ reckoned a sinner for our sakes — and explain the water’s name from the separated condition of those it cleansed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why those who handled the heifer became unclean: because they had acted for unclean people and shared their uncleanness (a view Keil names and rejects), or because the uncleanness of sin and death had passed to the sin-offering (Keil, Calvin, Gill).",
+   "Whether cedar, hyssop and scarlet carry emblematic meanings of their own (Ellicott) or were cast in for the functional purpose of joining the blood’s sprinkling to the water’s (Calvin).",
+   "Whether <em>water of separation</em> is named from expiation or from the separated state of the unclean — Calvin and Wesley differ on the ground of the name.",
+   "Who is meant by <em>the stranger</em>: the Gentile afar off who receives remission through Christ (Ellicott) or simply a proselyte (Wesley)."
+  ],
+  "outliers": [
+   "Gill alone applies the defilement of the ministers to the guilt of those who put Christ to death, and alone preserves the ritual detail — the tower of wood, the threefold question, the causeway over the Kidron, the sifting of the ashes.",
+   "Keil alone names and rejects a modern commentator’s explanation of the officiants’ uncleanness."
+  ],
   "themes": [
-   "cedar wood, and hyssop, and scarlet... into the midst of the burning of the heifer",
-   "the same emblems as the leper's cleansing (Lev. 14:4)",
-   "the purifying power of Christ's blood (Ps. 51:7)"
+   "Purification",
+   "Typology",
+   "Priesthood",
+   "Ritual",
+   "Atonement"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: all who were employed about the heifer, from first to last, were defiled in their garments; the creature was reckoned so impure, though its ashes were for purifying, that whoever handled it needed washing."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priest shall wash his clothes... and... be unclean until the even",
-   "the rite that cleanses defiling its ministers",
-   "Christ made sin to cleanse us (2 Cor. 5:21)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this shows one distinct from him that sprinkled the blood, all concerned in the work being defiled."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: he that burned her washed his clothes, bathed his flesh, and was unclean until the even."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that burneth her shall wash his clothes... and shall be unclean until the even",
-   "every minister of the cleansing defiled",
-   "the cost of dealing with defilement"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: great care was taken that the priest who burned the cow be pure, separated seven days, a causeway built over Kidron lest any unseen grave defile; the ashes laid up and kept for the congregation as a water of separation, a purification for sin."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: a clean man gathered the ashes and laid them up without the camp in a clean place, kept for a water of separation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a clean man shall gather up the ashes... for a water of separation: it is a purification for sin",
-   "one sacrifice of abiding efficacy",
-   "Christ offered once, ever fresh to cleanse (Heb. 10:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: even the gatherer of the ashes was defiled and must wash his clothes."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the statute reaching the stranger figures that the remission of sins through Christ Jesus was not only to the Jews and their children, but also to all that were afar off (Acts 2:39)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it shall be unto the children of Israel, and unto the stranger... for a statute for ever",
-   "the cleansing offered to all alike",
-   "the remission in Christ to all afar off (Acts 2:39)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "11-13",
+  "pericope_label": "He that toucheth the dead; the third day and the seventh; the penalty of neglect",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the seven-day defilement as a measure of man’s peculiar sinfulness; expound the idiom by which purifying is called sinning, and admit with the rabbis that the reason of the law is unknown; restrict the death penalty to presumptuous neglect, and find Christ’s resurrection typified in the third day."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this is instanced as the principal pollution for which the water of purification was appointed; touching a dead beast defiled only till evening, but a dead man seven days."
+    "summary": "Make the corpse a mirror of the curse and extend the defilement to the dead works of unbelief; distinguish postponed purification, which was redeemable, from entering the sanctuary unclean, which was capital; and insist the offence lay not in the touch itself but in polluting holy things."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: whoever touched a corpse was unclean seven days."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "He that toucheth the dead body of any man shall be unclean seven days",
-   "death the chief emblem of sin's pollution",
-   "cleansed by the blood that purges dead works (Heb. 9:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he was to purify himself with the water of purification, first on the third day."
+    "summary": "Ground the longer defilement in death as the wages of sin; propose a construction of the verse requiring both the third and the seventh day, on the authority of the versions; and state the consequence of neglect without softening it."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: purified on the third and seventh days; but if not on the third, then not clean on the seventh."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Call the law one of the greatest and most unaccountable burdens of the ceremonial system, since far grosser uncleannesses were purged with common water by evening."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why a corpse defiles seven days and a carcase only one: to mark man’s peculiar sinfulness (Clarke), because death is the wages of sin (Ellicott), because every dead man shows the defacing of God’s image (Calvin) — while Henry calls the disproportion simply unaccountable.",
+   "Whether the verse requires purification on both the third and the seventh day, as Ellicott argues from the Greek and Latin versions, or admits the sense of the received rendering.",
+   "Whether the death penalty falls on every neglect or only on presumptuous neglect (Wesley) — and whether it attaches to the uncleanness itself or to entering the sanctuary in it (Calvin).",
+   "Whether the reason for a red female victim is recoverable at all — Clarke reports the rabbinic confession that it is not."
+  ],
+  "outliers": [
+   "Henry alone refuses to justify the law and calls it unaccountable.",
+   "Calvin alone extends the defilement of the dead to the dead works of unbelief.",
+   "Clarke alone explains the Hebrew idiom by an English one, and alone quotes the admission that Solomon could not find the reason out."
+  ],
   "themes": [
-   "He shall purify himself with it on the third day, and on the seventh day he shall be clean",
-   "the third as needful as the seventh",
-   "God's cleansing used in his own way and time"
+   "Death",
+   "Sin",
+   "Purification",
+   "Law",
+   "Resurrection"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this is of the man who neglects the means God appointed for his cleansing. Calvin: the severity shows how pleasing purity is to God; a forgotten sprinkling might be made up later, but to enter the sanctuary unclean was a capital crime, mixing holy and profane."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whosoever toucheth the dead... and purifieth not himself, defileth the tabernacle... shall be cut off",
-   "how dear purity is to God",
-   "the holy not to be confounded with the unclean"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a tent is named because the Israelites then dwelt in tents, but the law holds equally for a house; all who came in and all that was in it were unclean seven days."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when a man dieth in a tent: all that come into the tent... shall be unclean seven days",
-   "the pervasiveness of death's pollution",
-   "the contagiousness of corruption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with Jarchi and Maimonides: this is to be understood of an earthen vessel; the open vessel took the defilement, the covered was preserved."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: every open vessel which had no covering bound upon it was unclean."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every open vessel, which hath no covering bound upon it, is unclean",
-   "the covered vessel kept, the open defiled",
-   "the unguarded heart takes the taint of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: one slain by the sword or any violent death, or one dead a natural death, or even a bone or a grave, defiled seven days."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: whosoever touched one slain, a dead body, a bone of a man, or a grave, was unclean seven days."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whosoever toucheth one that is slain... or a dead body, or a bone of a man, or a grave, shall be unclean",
-   "death's pollution clinging to its least remains",
-   "sin's contagion reaching further than we know"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Charles Ellicott",
-   "John Wesley"
+   "Keil and Delitzsch"
   ],
+  "range": "14-18",
+  "pericope_label": "The law of the tent and the open vessel; the water of separation prepared",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Extend the law from tents to houses on the ground that tents were merely the present circumstance, narrow the open vessel to earthenware on rabbinic authority, cover every manner of death between the two clauses, and deny — against the Targum — that the sprinkler had to be a priest."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the ashes of the burnt heifer of purification for sin, with running water put thereto in a vessel; Ellicott: 'the ashes of the burnt sin-offering.'"
+    "summary": "Correct the rendering to <em>the ashes of the burnt sin-offering</em>, explain the uncovered vessel by the corpse’s smell rather than by symbolism, and credit hyssop with an inherent purifying property."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: the running water (from a spring or river, the purest) signifies God's Spirit, by which alone true purification is obtained; those who promise themselves Christ's righteousness while submitting not to his Spirit deceive themselves."
+    "prevalence": "single",
+    "summary": "Take the running water for the Spirit of God, and press the consequence: those who claim Christ’s righteousness without submitting to his Spirit deceive themselves, since the ashes cleanse only in the running water."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the open vessel means earthenware only (Gill, from the Targum, Jarchi and Maimonides) or any uncovered vessel (Keil, who explains the covering by the smell of the corpse).",
+   "Whether the man who sprinkled had to be a priest — asserted by the Targum of Jonathan, denied by Gill, and left open by Keil.",
+   "Whether hyssop was chosen for an inherent purifying power (Keil) or as an emblem."
+  ],
+  "outliers": [
+   "Wesley alone makes the running water a figure of the Spirit and uses it against a presumed reliance on imputed righteousness.",
+   "Gill alone insists the law of the tent applies equally to a house."
+  ],
   "themes": [
-   "the ashes of the burnt heifer of purification for sin, and running water... in a vessel",
-   "the virtue of the sacrifice and the Spirit joined",
-   "no purifying where the blood is not applied by the Spirit"
+   "Purification",
+   "The Holy Spirit",
+   "Ritual",
+   "Death and uncleanness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: three stalks of hyssop bound together, the sprinkler being a clean person, not necessarily a priest."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: he sprinkled it upon the tent, vessels, and persons, and upon him that touched a bone, one slain, one dead, or a grave."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.55
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a clean person shall take hyssop, and dip it in the water, and sprinkle it upon... the persons",
-   "the lowly herb of purging (Ps. 51:7)",
-   "the cleansing applied to all that sin defiled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "John Calvin",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "19-22",
+  "pericope_label": "The sprinkling on the third and seventh day; the perpetual statute",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Explain why a cleansing water defiles its handler — the virtue lies in God’s appointment and not in the work done, the arrangement exposes the imperfection of the Levitical priesthood, and it proves that an ordinance does not depend on the minister’s own purity; and restrict the penalty to contemptuous refusal."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the clean priest, or any clean person, sprinkled the water of purification upon the unclean on the third and seventh days."
+    "summary": "Set out the ambiguity of the Hebrew and decide it from the following clause in favour of persons infecting things; explain the closing verse as forestalling the charge that God punishes trifles with death; and limit the <em>perpetual</em> statute to the coming of Christ."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the clean person purifies the unclean, who then washes himself and is clean at even."
+    "summary": "Repair the pronouns of the nineteenth verse so that the clean man purifies and the unclean man washes, and otherwise let the text stand."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the last verse means <em>whosoever toucheth an unclean thing</em> or <em>whosoever the unclean person toucheth</em> — Hebrew has no neuter, and Calvin says either sense would serve before deciding from the next clause.",
+   "Who the unclean person of the last verse is: the man defiled merely by handling the water, or the man under the seven-day uncleanness (Gill and Wesley take the second).",
+   "How a statute can be called perpetual — Gill alone bounds it at the abolition of the ceremonial law.",
+   "Whether the sprinkler had to be a priest, as the Targum of Jonathan has it."
+  ],
+  "outliers": [
+   "Wesley alone confronts the paradox that the same water cleanses and defiles, and draws from it that an ordinance’s efficacy does not depend on the minister.",
+   "Calvin alone treats the closing verse as an anticipation of the reader’s objection rather than as further legislation."
+  ],
   "themes": [
-   "the clean person shall sprinkle upon the unclean on the third day, and on the seventh",
-   "the cleansing brought from another and washed through",
-   "clean at even, restored to fellowship"
+   "Purification",
+   "Sin’s contagion",
+   "Sacraments",
+   "Priesthood",
+   "Ceremonial law"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this is of the man unclean by touching any dead body, bone, or grave."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: 'shall not purify himself' is one who contemptuously refuses to submit to this way of purification."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man that shall be unclean, and shall not purify himself... shall be cut off",
-   "the warning fastened on contempt of the cleansing",
-   "to scorn the one cleansing is to perish in it (Heb. 10:29)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it was a perpetual statute to Israel throughout their generations, until the coming of the Messiah, when the ceremonial law of washings and purifications was abolished; the sprinkler and he that touched the water were themselves made unclean (Heb. 9:10)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that sprinkleth the water of separation shall wash his clothes... he that toucheth... unclean until even",
-   "the cleansing defiling its minister",
-   "the shadow standing till the reformation (Heb. 9:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this is of the person unclean by touching a dead body, bone, or grave; whatever he touched was unclean, and the soul that touched that — denoting the spreading nature of pollution."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whatsoever the unclean person toucheth shall be unclean; and the soul that toucheth it shall be unclean",
-   "the contagiousness of uncleanness",
-   "sin catching and communicative, stopped only by God's cleansing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
