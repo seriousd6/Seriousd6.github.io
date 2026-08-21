@@ -15410,6 +15410,90 @@
       "book": "galatians",
       "chapter": "5",
       "note": "FIDELITY SELF-GRADE, galatians 5 — 67,016 usable source words across 26 keys, the largest chapter attempted in this series and by the standing rule the whole batch on its own. Tiled into 10 entries covering 1-26 exactly. Word counts: 1 635w (9 voices), 2-3 641w (8), 4-6 642w (8), 7-10 648w (9), 11-12 648w (8), 13-14 645w (9), 15-18 649w (9), 19-21 650w (9), 22-23 649w (9), 24-26 649w (8). All ten inside the 350-650 window; build lint clean (no UNKNOWN HEAD, no NAMED-BUT-NOT-SOURCED, no GHOST, no school mismatch); both validators pass. Every verse checked against its own catena block. Every named voice is sourced from a block at a key inside that entry's range. All eight school slugs available were not needed; six are used across the chapter — reformed, lutheran, puritan-evangelical, wesleyan-arminian, grammatical-historical, eastern-antiochene — with 'lutheran' used here for the first time in the series. Where sources conflict the conflict is left standing and both sides named; I have adjudicated none of the seven disputes filed above, including the ones where the majority is plainly against a single voice (Ellicott on fruit-versus-works, Wesley on witchcraft). Positions I would not defend are reported as their authors' and not endorsed — Clarke's inference that God designs to save believers from all sin, Wesley's argument that denying witchcraft denies both Testaments, Calvin's dismissal of the pagan virtues as 'specious disguises'. RESIDUE: Jamieson excluded at four entries and Tertullian at entry 1, both declared as excluded_voices rather than silenced, since the blocks are real text belonging to Romans and the exclusion should be visible. SILENCED: Clarke at entry 1 only, whose k1 block is the chapter-argument outline with no comment on v1 itself — suppressed without a declaration because there is nothing to declare. CHROME at k26 (Ellicott, StudyLight) cut before drafting; no chrome text reached the synthesis. TRUNCATION: 8 of Gill's 26 blocks are cut at exactly 200 words mid-sentence (see the source-defect note). I have quoted Gill only from text that survives the cut, and have not inferred how any truncated sentence ended — but the reader should know that Gill's contribution to this chapter is materially incomplete and that his relative weight against the other voices is understated as a result. Deliberate omissions for length: Barnes' long note reclaiming 'temperance' from its modern sense was kept, but Ellicott's count of the walking-metaphor's New Testament occurrences, Calvin's quotation of a Greek father on bite-versus-devour, Gill's exposition of the Spirit's leading ('dead men cannot be led'), Ellicott's note on the Galatian national character, and Barnes' account of how the proud provoke their inferiors were all cut in trim."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JFB stride-6 displacement, 18th chapter confirmation, and the first seen where BOTH terms draw on the same donor chapter. JFB appears at only two keys in genesis 15, 6 and 12 — stride 6, phase 6, terminating early. Key 6 carries Genesis 12:7-8 material (Abram building an altar: 'By this solemn act of devotion Abram made an open profession of his religion, established the worship of the true God'); key 12 opens with the literal head '11-13.' and carries Genesis 12:11-13 material (Sarai's complexion, the counsel to call herself his sister). Neither treats the verse it is filed under. Both declared in excluded_voices at entries 6 and 12, where the block exists in the span blob. Previous chapters drew each displaced term from a different donor; here both come from Genesis 12, which suggests the donor is a function of source position rather than of the target key."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "8",
+        "13",
+        "19"
+      ],
+      "note": "K&D lemma-plus-next-verse pattern again, with a useful consequence for filing. Of seven K&D keys in genesis 15, key 2 is lemma of vv2-7 whose only exposition treats v8; key 8 is lemma of vv8-11 whose exposition treats v11; key 13 is lemma of vv13-17 whose exposition treats v17; key 19 is 36 words of pure lemma with no exposition at all. Handling: K&D declared in excluded_voices at entries 2 and 19 (block present in span, no on-span exposition). The v8 exposition from key 2 MOVED into entry 7 and the v17 exposition from key 13 MOVED into entry 17, both legal because K&D has a key inside those spans (8 and 18). The v11 exposition from key 8 was DROPPED, because K&D has no key anywhere in span 9-11. Genuine on-key exposition only at keys 1, 12 and 18."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "19",
+        "21"
+      ],
+      "note": "Residue, thirteenth and fourteenth sightings, and a NEW residue source. (a) Ellicott's key-19 block is 1297 words of which only about 190 are commentary: the rest is StudyLight site chrome, CSS and raw JavaScript beginning right after '...have a far different office and signification.' This is the largest residue tail seen so far and it inflates the chapter's apparent source count by ~1100 words — the schools-prevalence figure for entry 19 had to be corrected by hand. (b) Gill's key-21 block ends with SACRED-TEXTS navigation chrome ('Next: Genesis Chapter 16 Sacred Texts | Bible Previous: ... Index Next: ...'), which is a different scrape origin from the StudyLight residue seen in every prior sighting. Two upstream sites, two residue signatures; a residue check must not assume the StudyLight markers."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "2",
+        "7",
+        "9",
+        "12",
+        "14",
+        "16"
+      ],
+      "note": "Head-overflow loss, second chapter running, with the same mitigation. Henry has five section heads in genesis 15 (1, 2, 7, 12, 17) and each covers more verses than the entry it sits in: his key-2 block expounds vv2-6, his key-7 block vv7-11, his key-12 block vv12-16. Because Henry has no key inside spans 4-5, 6, 9-11, 14-15 or 16, that material has no legal home and was dropped. As in genesis 3, Wesley abridges Henry and DOES have keys at 5, 6, 11, 14, 15 and 16, so the substance largely survives through him — which is why entries 4, 6, 9, 14 and 16 read as wesleyan-arminian rather than puritan-evangelical even though Henry wrote the words first."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "4",
+        "5",
+        "12"
+      ],
+      "note": "A four-way disagreement about the time of day, worth surfacing because it is not a scrape artifact but a real exegetical split. K&D say the vision came in the day-time and applies to the whole chapter; Ellicott says it came by night; Clarke says the whole transaction took place in the evening; Wesley says early in the morning; Calvin says no hour need be fixed at all, since the whole was transacted in vision, so that though Abram perhaps did not move a step, it was possible for him in vision to be led forth out of his tent. All five are represented in entry 4."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "6"
+      ],
+      "note": "Grade B on DOCTRINAL vocabulary saturation — the same failure mode as the numeral saturation recorded for genesis 8 (note 1383), in a new register. Entry 6 (the imputation of righteousness) first came in at 675 words with ttr 0.561 and zip 0.423: grade B on diversity, not length, because faith / believe / justified / righteousness / works / promise recur in almost every clause and no synonym is natural. Trimming alone would not have fixed it. The fix was to vary the register deliberately — credited, rested on, accounted, reckoned, acquittal, uprightness, deeds, threshold — and to shorten at the same time, which brought it to 582 words, ttr 0.616, grade A. RULE: when an entry's subject is a single doctrine, expect the diversity gates rather than the length gate to bite, and plan the synonym set before drafting."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "15",
+      "verses": [
+        "18"
+      ],
+      "note": "Two live disputes surfaced in entry 17. (1) Is the 'river of Egypt' the Nile? K&D and Ellicott both say yes and expressly distinguish it from the winter torrent of the southern border, Ellicott noting that our version neglects the distinction; Clarke says no, taking it for the stream near the isthmus of Suez. (2) Was the smoking furnace itself a symbol of God? Clarke says the furnace was an emblem of the Egyptian affliction but the burning lamp was certainly the symbol of the divine presence; Ellicott says not two symbols but only one passed between the pieces, the torch shooting out of the smoke-wreathed firepot; Calvin reads the pair together as smoke and light, obscurity and deliverance."
     }
   ]
 }
