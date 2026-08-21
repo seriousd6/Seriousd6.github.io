@@ -15963,6 +15963,130 @@
       "book": "exodus",
       "chapter": "27",
       "note": "FIDELITY SELF-GRADE, exodus 27 — 12,156 usable source words across 21 keys, tiled into 5 entries covering 1-21 exactly. Word counts: 1-5 647w (7 voices), 6-8 375w (4), 9-15 625w (7), 16-19 464w (4), 20-21 650w (7). All five inside the 350-650 window; build lint clean; both validators pass; the standalone quality gate reports zero prose violations before stamping. Eight voices carry heads, seven are used, across four schools. Entries 6-8 and 16-19 are deliberately short — their sources are 552 and 882 words against 4,261 for the closing entry — and I have not padded them; entry 6-8 carries only four voices because only four are present at those keys, and two of Ellicott's blocks there are ten-word cross-references to his own earlier notes, which I have described as such rather than quoted. Every verse checked against its own catena block. Every named voice is sourced from a block at a key inside its entry's range. A NOTE ON A DISPUTE THAT CROSSES MY OWN TILING: the question whether the altar was hollow or filled with earth is argued at v1 by Ellicott and at v8 by Gill, so it falls in two different entries. I have presented Ellicott's and Keil's reconstruction in the 1-5 entry and Gill's rejection of it in the 6-8 entry, and in the second I say plainly that Keil takes the filling for granted, so a reader of either entry can see that the point is contested. This is a limitation of pericope tiling rather than an error, but it is worth recording that a dispute can be split across entries and look weaker in each than it is. Where sources conflict the conflict is left standing and both sides named; none of the seven disputes filed above is adjudicated. Positions are reported as their authors' and not endorsed, notably Clarke's suggestion that the perpetual fire of Vesta was modelled on this rite, Gill's reading of the altar's hollowness as the self-emptying of Christ, and Henry's and Gill's incompatible ecclesiologies drawn from the same courtyard. RESIDUE: Jamieson excluded at the 9-15 and 16-19 entries, declared as excluded_voices rather than silenced, since the blocks are real text belonging to Exodus 14. CHROME at k21 (Ellicott, StudyLight) cut before drafting; no chrome reached the synthesis. TRUNCATION: Keil is capped at 200 words at ALL EIGHT of his keys, and at k18 the cap removes the conclusion of his account of why the court existed at all. Following the rule I adopted after the deuteronomy 15 gate rejection, the prose reports only the surviving portion and attributes no absence to him; the loss is recorded in the source-defect note. Deliberate omissions for length: Calvin on the burnt offering as of a sweet savour despite the corruption of the flesh; Clarke's report of Calmet's reconstruction of the altar and his concession of a great variety of opinions; Wesley's and Gill's separate accounts of the grating; Ellicott on why curved lines were avoided in Hebrew furniture; Keil's description of the daily trimming of the lamps; and Keil on the quality and colour of beaten oil."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "5",
+        "8",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21"
+      ],
+      "note": "CORPUS-WIDE TRUNCATION, quantified. Source blocks are hard-cut at exactly 201 words, mid-sentence, and the cut is voice-selective. Sampling 33 chapter files across the tree: Keil and Delitzsch 195 of 210 blocks end at exactly 201 words (92.9%); Cyril of Jerusalem 31 of 56 (55.4%); John Gill 98 of 683 (14.3%); every other voice at or near zero (Clarke 1 of 566, Ellicott 0 of 548, Wesley 0 of 484, Calvin 0 of 323, Barnes 0 of 257, Robertson 0 of 246, Henry 0 of 116, JFB 0 of 99, Chrysostom 0 of 19). In Ephesians 3 this hits Gill at nine keys and Cyril at four. This explains the per-chapter observation logged for months that K&D blocks are 'capped at 201' — it is not a K&D style, it is a scrape truncation on three columns, presumably a different fetch path from the other voices. Every synthesis over a truncated block has been written from a partial source. Worth an owner decision: the K&D column is essentially unusable at full length."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JFB corruption, 21st confirmation, and a CORRECTION to the emerging hypothesis. Ephesians 3 has exactly three JFB blocks, at keys 5, 11 and 17, and all three are Romans 12: key 5 is Romans 12:6 (the analogy of faith), key 11 is Romans 12:13 (given to hospitality), key 17 is Romans 12:18 (live peaceably with all men). Donor verses advance monotonically with the target keys, as in 2timothy 4. Striking coincidence: 2timothy 4 also had exactly three JFB blocks at keys 5, 11 and 17, drawn from 1 Corinthians 16. BUT a corpus-wide check kills the stride generalisation: across 1189 chapter files, 1121 carry JFB and the 3863 JFB blocks are spread evenly over keys (5:153, 3:151, 1:150, 9:150, 4:148, 10:147 ...). So the 5/11/17 target pattern is local to these two Pauline chapters, not a global rule. What survives is the donor-pointer finding: within a corrupted chapter the JFB blocks come from ONE wrong chapter and advance through it in order."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "3"
+      ],
+      "note": "Ellicott column mis-filed by section. His blocks at keys 2 and 3 are not comment on vv.2-3 at all: key 2 carries his section-introduction to vv.14-19 (the prayer) and key 3 his section-introduction to vv.20-21 (the doxology). The scraper has attached Ellicott's section headers to the wrong verse keys. Both were moved under the filing rule to the entries whose verses they treat (Ellicott holds keys 14 and 21), and Ellicott is declared excluded from the 2-4 entry. First sighting of section-header displacement in the Ellicott column; worth checking whether it recurs wherever Ellicott's commentary uses section headings."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "9",
+        "14",
+        "16"
+      ],
+      "note": "Cyril of Jerusalem's column is a catechetical-lecture corpus keyed by proof-text, and where the verse is not actually cited the block is arbitrary. In Ephesians 3 he appears at four keys: key 5 genuinely cites the verse among proofs of the Spirit's personality, and key 16 cites vv.14-16 among the Spirit's titles - both usable. Key 9 is a lecture on Antichrist and the great tribulation from Matthew 24 and Daniel, and key 14 a lecture on the blinding of unbelievers from 2 Corinthians 4:4. Neither has any bearing on its key. Rule for future chapters: check every Cyril block for an actual citation of the target verse before declaring him."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "9",
+        "14"
+      ],
+      "note": "TOOLING GAP found while landing this chapter. synthesis_qa.VOICE_LABELS carries the short form 'Cyril', and the regex requires the label to be immediately followed by a colon; the catena writes 'Cyril of Jerusalem:', so split_voices never sees the block. Consequence: a Cyril block CANNOT be declared in excluded_voices - validate-synthesis.py rejects it as 'names a block absent from this entry's source' - even though the block is plainly there, and even though 'Cyril of Jerusalem' is the established form in the voices list (mark 2, matthew 25). 'Chrysostom' is unaffected because 'John Chrysostom:' still contains 'Chrysostom:'. Two corrupt Cyril blocks in this chapter were therefore recorded in outliers rather than excluded_voices. Fix is one line: add 'Cyril of Jerusalem' to VOICE_LABELS ahead of 'Cyril'. Owner decision, not made here."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "15",
+        "17",
+        "20",
+        "1",
+        "13"
+      ],
+      "note": "The Calvin column systematically inlines the Calvin Translation Society's editorial footnotes, with their trailing attributions left in the text - now confirmed as a pattern, not a one-off. Deuteronomy 19:14 carried Adam Clarke's Calmet note verbatim; in Ephesians 3 the same column carries '- Erasmus' at keys 1 and 10, '- Chandler' at keys 13 and 15 (the Diana of Ephesus material), and '- Bloomfield' at key 17. Consequence for synthesis: Calvin's blocks contain third-party material, so apparent agreement between reformed and another school may be transmission rather than independent judgement. Handled here by attributing the Diana note to Chandler in the prose and flagging it in outliers."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "8",
+        "13",
+        "14",
+        "20"
+      ],
+      "note": "Head-overflow in Ephesians 3 concentrates Henry into four of twelve entries. He holds keys 1, 8, 13, 14 and 20 only; his key-1 block covers vv.1-13 and his key-14 block covers vv.14-21, so puritan-evangelical is absent from entries 2-4, 5-7, 9, 10-11, 15-16, 17 and 18-19. Henry's exposition of the four dimensions and of the fulness of God is filed at keys 13 and 14 and cannot move to the 18-19 entry, where he holds no key, so it is dropped - the same loss pattern as 2timothy 4. Unlike Deuteronomy, Wesley does not mitigate here, since he has no key at 18 or 19 either and his blocks average 40 words."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "10",
+        "11"
+      ],
+      "note": "Rare in-corpus rebuttal by name. On 'the eternal purpose' Barnes writes that 'the interpretation proposed by Whitby, Locke, Clarke, and others, is wholly at variance with the settled use of the word' - naming Adam Clarke, who IS a witness in this same catena and does hold that reading (a purpose concerning the periods, the Jewish and gospel dispensations each with a fixed span). Almost every other disagreement this corpus preserves is a witness against a non-witness (Keil against Knobel, Calvin against Erasmus). Here two of the eight voices contradict each other directly and both blocks are present. Recorded as a debate with both sides, and flagged in outliers."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "ephesians",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "12",
+        "14",
+        "15",
+        "17",
+        "18",
+        "20"
+      ],
+      "note": "All twelve entries self-graded A (QA 637/643/647/636/640/649/613/637/644/648/601/646; ttr 0.594-0.689). Nine of twelve needed at least one trim pass: with eight to nine voices at most keys, natural drafts land 650-670 and the cap is the binding constraint, not the floor. Tiling 1 | 2-4 | 5-7 | 8 | 9 | 10-11 | 12-13 | 14 | 15-16 | 17 | 18-19 | 20-21; an earlier plan splitting 4 and 7 into their own entries was rejected because both fall under 900 source words and would have run near a 1:1 prose-to-source ratio. Prevalence computed by the documented count rule (1=single, 2=several, >half=majority, all=unanimous) rather than the word-share rule used earlier in this run; debates and outliers written in the documented structured form."
     }
   ]
 }

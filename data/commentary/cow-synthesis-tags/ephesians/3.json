@@ -2,740 +2,1243 @@
  "1": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "1",
+  "pericope_label": "For this cause I Paul, the prisoner of Jesus Christ for you Gentiles",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul was a prisoner not actively (whom Christ had apprehended by his grace) but passively, made a prisoner for Christ, on account of preaching Christ and his gospel — not for any capital crime, as theft or murder; therefore he was not ashamed of his bonds but rather gloried in them, a prison often being the very port of the gospel's advance; Paul, beginning a prayer (resumed at v.14), describing himself as the prisoner of Jesus Christ for the sake of the Gentiles — the honoured bondage borne for the Gentiles (Paul, far from ashamed of his imprisonment, naming himself 'the prisoner of Jesus Christ,' counting his chains an honour, for he was bound not as a criminal but for the very cause of bringing the gospel to the Gentiles, his bonds the badge of his faithful service)."
+    "summary": "Carry the suspended nominative past the whole digression and locate its resumption at the bowing of the knees rather than the plea against fainting; supply the missing verb so that Paul is the prisoner, following Tindale and a line of translators, and read the chains as proof of the mission rather than an interruption of it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Turn the imprisonment into evidence. Christ's glory converts what the world counts a reproach into the highest honour, so that the chains of a prisoner of Jesus Christ outrank the crowns of kings; and since the suffering was for no capital crime and was borne on the Ephesians' own account, it confirms the doctrine rather than discrediting it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Supply the history — the Jews persecuted Paul to bonds for admitting Gentiles without circumcision, whence Caesarea, the appeal, and Rome — and read the phrase \"for you Gentiles\" as meaning for their advantage and for the assertion of their right to these blessings."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Offer both readings of the opening phrase without choosing, and press the pastoral consequence: Christ's servants, when imprisoned, are his prisoners, and he thinks no worse of them for the character the world gives them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Where does the sentence broken off at the opening resume?",
+    "sides": [
+     {
+      "position": "At “I bow my knees”, on the strength of the repeated “for this cause” and the greater weight of that sentence",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "At the opening of the chapter, the intervening verses being a digression",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "Paul may have begun the prayer here and been diverted into the paragraph that follows",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone suggests that Paul began the closing prayer here and was diverted by his own words into the long paragraph that follows."
+   }
+  ],
   "themes": [
-   "I Paul, the prisoner of Jesus Christ",
-   "for you Gentiles",
-   "the honoured bondage borne for the Gentiles",
-   "his chains the badge of faithful service"
+   "imprisonment as credential",
+   "the suspended sentence",
+   "apostle to the Gentiles"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "2-4",
+  "pericope_label": "If ye have heard of the dispensation of the grace of God which is given me to you-ward: how that by revelation he made known unto me the mystery, as I wrote afore in few words, whereby, when ye read, ye may understand my knowledge in the mystery of Christ",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the 'dispensation of the grace of God' is not the free love and favour of God in his heart, nor internal grace wrought in the apostle, but either the gift of grace qualifying him for the ministry, or rather the doctrine of grace, the gospel, the subject matter of his ministry, committed to him as a trust; Paul referring to the dispensation of the grace of God given him toward the Gentiles, which they had heard of — the stewardship of the gospel for the Gentiles (Paul speaking of the special trust, the stewardship, of God's grace committed to him: the office and commission to dispense the gospel of grace to the Gentiles, of which they had heard, so his apostleship to them was no self-chosen role but a divine stewardship of grace laid upon him for their good)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dispensation of the grace of God",
-   "which is given me to you-ward",
-   "the stewardship of the gospel for the Gentiles",
-   "a divine trust laid on Paul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Treat the conditional particle as assuming what it appears to question, and weigh the three candidates for what Paul \"wrote afore\" — this letter, a lost letter, or the two foregoing chapters — inclining to the last, and correcting \"in few words\" to mean briefly rather than shortly before."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the gospel is sometimes called a mystery — the mystery of the gospel, of godliness, of faith — its several doctrines being the mysteries of the kingdom of heaven (a trinity of persons in the Godhead and the like); Paul declaring that by revelation God made known to him the mystery, as he had briefly written before — the mystery received by divine revelation (Paul receiving the gospel-mystery, chiefly the truth of the Gentiles' inclusion in Christ, not from men nor by study but by direct revelation from God, who unveiled to him what had been hidden, so his message rested on God's own disclosure, not human invention)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by revelation he made known unto me the mystery",
-   "as I wrote afore in few words",
-   "the mystery received by divine revelation",
-   "not from men nor by study, but from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Take the dispensation as the doctrine of grace rather than an inward gift, and defend the appeal to revelation against two abuses: the fanatics who ascribe their own dreams to the Spirit, and the sneer that a lost apostolic letter leaves Scripture mutilated — the surviving canon being no accident but a body adjusted by the counsel of God."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: by reading the foregoing chapters and seriously considering what is contained in them, they may perceive Paul's knowledge; Barnes: by the bare reading of which you may understand the view he entertains of the plan of salvation, particularly God's intention in regard to the salvation of the Gentiles; Paul observing that, when they read what he has written, they may understand his knowledge in the mystery of Christ — the apostle's insight open to the reader (Paul, far from withholding his understanding, setting down in writing such things that any who read with care will perceive the depth of his insight into 'the mystery of Christ,' the whole gospel-secret of redemption and the Gentiles' calling, so his readers are made sharers in the revelation given him)."
+    "summary": "Render the particle \"seeing that,\" since the Ephesians had learned all this while Paul was among them, and defend the reading \"was made known\" from a long list of manuscripts, versions and fathers, so that the doctrine is shown to rest on revelation and not on Paul's opinion."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does “as I wrote afore in few words” refer to?",
+    "sides": [
+     {
+      "position": "The two foregoing chapters",
+      "holders": [
+       "Barnes",
+       "Robertson",
+       "Bloomfield (as reported by Barnes)",
+       "Grotius (as reported by Barnes)",
+       "Locke (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "An earlier letter now lost",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone argues from the lost letter to the integrity of the canon, holding that what survives is not an accident of transmission but a body adjusted by the counsel of God."
+   }
+  ],
   "themes": [
-   "when ye read, ye may understand",
-   "my knowledge in the mystery of Christ",
-   "the apostle's insight open to the reader",
-   "readers made sharers in the revelation"
+   "revelation not tradition",
+   "the lost letter and the canon",
+   "stewardship of the gospel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  },
+  "excluded_voices": [
+   "Charles Ellicott"
+  ]
  },
  "5": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
   ],
+  "range": "5-7",
+  "pericope_label": "Which in other ages was not made known unto the sons of men, as it is now revealed unto his holy apostles and prophets by the Spirit: that the Gentiles should be fellowheirs, and of the same body, and partakers of his promise in Christ by the gospel, whereof I was made a minister",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the mystery of Christ and the gospel was not made known to men in general, nor so clearly, under former ages — though some hints were given to Adam immediately after his fall, the gospel preached before to Abraham, and Moses and David and others knew something of it — but it is now more fully dispensed; Paul declaring that the mystery, not made known in former ages as it now is, has been revealed to the holy apostles and prophets by the Spirit — the new clearness of the gospel revelation (the truth now made plain, the Gentiles' full and equal sharing in Christ, once hidden or only dimly intimated, now clearly unveiled by the Spirit to the New Testament apostles and prophets, the bearers of the completed revelation, so what the saints of old saw afar off is now openly displayed)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "which in other ages was not made known unto the sons of men",
-   "now revealed unto his holy apostles and prophets",
-   "by the Spirit",
-   "the new clearness of the gospel revelation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the Gentiles should be fellowheirs with the Jews of all the blessings of grace, of lasting salvation, and of the eternal, incorruptible, never-fading inheritance in heaven; heirs of God and joint heirs with Christ, inheriting all things — heirs by being Christ's, by their adoption through him, and their justification by his righteousness; Paul stating the very content of the mystery — that the Gentiles should be fellowheirs, of the same body, and partakers of God's promise in Christ through the gospel — the full equality of the Gentiles in Christ (the great secret now revealed being the Gentiles' complete and equal share with the Jews in the privileges of grace: joint heirs of the same inheritance, members of the same body the church, and partakers of the same promise, all in Christ and through the gospel, the old wall between Jew and Gentile wholly abolished)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Gentiles should be fellowheirs, and of the same body",
-   "partakers of his promise in Christ by the gospel",
-   "the substance of the mystery",
-   "the Gentiles' full equality in Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Read \"the sons of men\" as an Old Testament phrase deliberately set against the \"holy\" apostles, where holiness marks official call rather than character; identify the prophets as those of the Christian church and infer that their office lapsed once the written revelation was complete; and count the three fellow- compounds as late, rare, and in one case unique."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: Paul was made a minister of the gospel not by men but by God; he is a true minister of the gospel who is called of God to the work of the ministry, qualified by him with grace and gifts for it, and who faithfully discharges it according to the ability God has given; Paul declaring that he was made a minister of this gospel according to the gift of God's grace, given by the effectual working of his power — the ministry as a gift of grace and power (Paul ascribing his whole ministry to God: he became a minister not by his own choosing or worth but by the free gift of God's grace, and was made fit and effective for it by the mighty, effectual working of God's power, so both his office and his ability to fill it were wholly of God)."
+    "summary": "Answer the objection that the prophets had already foretold the calling of the nations by distinguishing the fact from its time and manner: the apostles themselves, who had both the predictions and their Master's word, still recoiled from the Gentile mission because the manner was hidden; and the older revelation lay in types, shadows and short obscure hints."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Insist on what was genuinely new — not that the Gentiles would be called, which the prophets had made clear, but that they should be saved without the yoke of the Mosaic law and the Jews freed from it; and press the Ezekiel echo in \"son of man.\""
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cite the verse not as exposition but as proof, among a catena of texts, that the Holy Spirit subsists, lives, speaks and foretells."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Had the calling of the Gentiles been made known before?",
+    "sides": [
+     {
+      "position": "The fact was foretold, but the time and manner were left undetermined, so that even the apostles recoiled from it",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The calling was clear in the prophets; what was wholly new was salvation without the yoke of the Mosaic law",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It was known only in types, shadows and short obscure hints",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone infers from the verse that the prophetic office was temporary, ceasing when the written revelation was complete."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "His block is not exposition of this verse but a catechetical lecture that cites it among proofs of the Spirit’s personality."
+   }
+  ],
   "themes": [
-   "whereof I was made a minister",
-   "according to the gift of the grace of God",
-   "by the effectual working of his power",
-   "office and ability both wholly of God"
+   "what was hidden and what was new",
+   "holy apostles and prophets",
+   "Gentiles as fellow-heirs"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "8": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "8",
+  "pericope_label": "Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ",
   "schools": [
    {
-    "school": "eastern-antiochene",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Chrysostom: the surpassing lowliness of Paul, who, when about to speak of the vastness of God's grace, calls himself 'less than the least of all saints' — coining a word beyond grammar (a comparative on a superlative) to express his deep sense of his own unworthiness; Paul declaring that to him, less than the least of all saints, this grace was given, to preach among the Gentiles the unsearchable riches of Christ — the unworthy preacher of inexhaustible riches (Paul, with the deepest self-abasement, counting himself below the lowest of the saints, remembering his former persecutions, marvelling that so high a grace was given to one so unworthy: the commission to proclaim to the Gentiles the 'unsearchable riches of Christ,' treasures of grace and glory so vast they can never be traced out or exhausted)."
+    "summary": "Analyse the coined comparative built on a superlative — a form unparalleled in the New Testament though not unknown in later Greek — and trace \"unsearchable\" to the metaphor of tracking footsteps that cannot be followed to their source; but enter the caution that the self-abasement was not mock humility, since Paul defended his apostolic rights when occasion required."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Take the confession as sincere against the suspicion of feigned humility, while confining it to what Paul was in himself apart from grace; and generalise it — the greatest saints are the most humble, having the largest discoveries of grace and the keenest sense of their own vileness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Explain the manufacture of the word and decline to better the received rendering; refer the untrackable footsteps to God's own plans and providences, and observe that Paul's letters in chronological order show his views brightening as he advances, so that he could never have exhausted the subject."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Make the phrase the lesson of the day, weighing it against \"not meet to be called an apostle\" and finding this the stronger self-abasement, the more remarkable for coming after so many great and good deeds."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Add the pastoral edge: many are not enriched with these riches, yet it is a great favour to have them preached and offered, and if we are not enriched the fault is our own."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the self-abasement to be taken at face value?",
+    "sides": [
+     {
+      "position": "Yes, and it is the strongest of all Paul's self-descriptions, the more so for coming after his greatest labours",
+      "holders": [
+       "Chrysostom",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Yes as to what he was in himself, but it is not mock humility, since he defended his apostolic rights when occasion required",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone weighs this self-description against the parallel in Corinthians and judges this the stronger of the two."
+   }
+  ],
   "themes": [
-   "unto me, who am less than the least of all saints",
-   "is this grace given",
-   "preach among the Gentiles the unsearchable riches of Christ",
-   "deep humility joined to high commission"
+   "humility and office",
+   "a coined comparative",
+   "the untrackable riches"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "9",
+  "pericope_label": "And to make all men see what is the fellowship of the mystery, which from the beginning of the world hath been hid in God, who created all things by Jesus Christ",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the 'fellowship of the mystery' (or the dispensation of it) is the communication of grace by the gospel, a participation of its truths and doctrines, and the communion with Father, Son, and Spirit to which the gospel calls and leads; Paul declaring his charge to make all men see the fellowship of the mystery, which from the world's beginning had been hidden in God, the Creator of all things by Jesus Christ — the open publication of what was hidden in God (Paul's task to bring into the light, for all to see, the gospel-mystery that had lain concealed in God's own eternal counsel from the foundation of the world, now at last unveiled, the same God who had hidden it being the Creator of all things by Christ)."
+    "summary": "Prefer \"dispensation\" to \"fellowship\" on manuscript authority, referring it to the order God has ordained for manifesting the truth to men and angels; reject \"by Jesus Christ\" as a gloss imported from Colossians; and distinguish enlightening, which ministry can do, from making men see, which is the Spirit's work alone."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Hold that ministers enlighten instrumentally and God efficiently, and that \"all men\" means some of all sorts; hear in the metaphor a claim that grace now shines at noon-day, and rebuke the impatience that resents God's right to keep his purposes concealed until he pleases to reveal them."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Marshal the versions and fathers for the better reading and pronounce the closing clause indisputably spurious, drawing the doctrinal moral at once — no inferiority of Christ can be argued from a clause so poorly attested."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the true reading “fellowship” or “dispensation” of the mystery?",
+    "sides": [
+     {
+      "position": "“Dispensation”, on manuscript, versional and patristic authority",
+      "holders": [
+       "Clarke",
+       "Ellicott",
+       "Barnes",
+       "Griesbach (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "“Fellowship” retains a real sense — the doctrine now common to all believers, against the reserved doctrines of the pagan mysteries",
+      "holders": [
+       "Whately (as reported by Barnes)"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Are the words “by Jesus Christ” genuine?",
+    "sides": [
+     {
+      "position": "Spurious, a gloss imported from the parallel in Colossians",
+      "holders": [
+       "Clarke",
+       "Ellicott",
+       "Barnes",
+       "White (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "Read as genuine, and referred to the spiritual renewal rather than the first creation",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone contrasts the passage with the pagan mystery religions, following Whately, to argue that Christianity has no reserved doctrines and no truths entrusted to a priesthood alone."
+   }
+  ],
   "themes": [
-   "to make all men see what is the fellowship of the mystery",
-   "which from the beginning of the world hath been hid in God",
-   "who created all things by Jesus Christ",
-   "the open publication of the hidden mystery"
+   "textual criticism",
+   "no reserved doctrines",
+   "enlightening and seeing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "10-11",
+  "pericope_label": "To the intent that now unto the principalities and powers in heavenly places might be known by the church the manifold wisdom of God, according to the eternal purpose which he purposed in Christ Jesus our Lord",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: by 'principalities and powers in heavenly places' are meant not civil magistrates, much less evil angels, but the good angels, the angels in heaven; Paul declaring the further purpose — that now, through the church, the manifold wisdom of God might be made known to the principalities and powers in heavenly places — the church as the theatre of God's wisdom to angels (God's grand design in the gospel-mystery reaching even to the angelic world: the holy angels, beholding the church, Jew and Gentile gathered into one body by grace, learning and admiring the 'manifold,' many-coloured and richly varied, wisdom of God, which devised so wonderful a salvation, the redeemed company being the very display before heaven of God's wisdom)."
+    "summary": "Take the principalities as angels who learn from the church, so that this world may be a lesson to spheres of being beyond our conception; render \"manifold\" as many-coloured and find the variety in the church's teaching and life; and reject the reading of \"eternal purpose\" as an arrangement of ages, insisting that God has a plan and that any plan of his must be eternal."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Deny that the words can be shifted to devils, since nothing remarkable would be said in informing them; make the church a mirror in which angels see a wisdom new to them, while refusing the inference that angels attend our assemblies; and rebuke the narrowness that measures God's wisdom by one dispensation only."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Canvass three identifications of the principalities and report Macknight's, that the angelic orders learn as the dispensations unfold; read \"manifold\" as multifarious, plans laid on an infinite scale and accomplished by endless means that no malice can defeat; and take the eternal purpose as a purpose concerning the periods."
    }
   ],
   "debates": [
    {
-    "question": "Who are the 'principalities and powers' that learn God's wisdom by the church?",
+    "question": "Who are the principalities and powers?",
     "sides": [
      {
-      "position": "The good angels in heaven — who, beholding the church (Jew and Gentile in one body), learn and admire God's manifold wisdom",
+      "position": "The good angels, who learn the manifold wisdom of God from the church",
       "holders": [
        "Gill",
-       "the witnesses"
+       "Calvin",
+       "Ellicott",
+       "Macknight (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "Possibly evil angels, or the converted Jewish rulers and rabbins",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does “the eternal purpose” mean?",
+    "sides": [
+     {
+      "position": "A purpose concerning the periods — the appointed span of the Jewish and gospel dispensations",
+      "holders": [
+       "Clarke",
+       "Whitby (as reported by Barnes)",
+       "Locke (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "A purpose eternal in the proper sense; the alternative is at variance with the settled use of the word and evades the doctrine that God has a plan",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "unto the principalities and powers in heavenly places",
-   "might be known by the church the manifold wisdom of God",
-   "the church the theatre of God's wisdom to angels",
-   "the manifold, many-coloured wisdom of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the whole of salvation, in which is displayed the great wisdom of God, is according to a purpose of his — the scheme fixed in the council of peace, the thing itself effected in pursuance of it, Christ the Redeemer set forth in it, his incarnation, the time of his coming, his sufferings and death with all their circumstances decreed by God; Paul declaring that all this is according to the eternal purpose which God purposed in Christ Jesus our Lord — the grounding of the whole plan in God's eternal counsel (the entire mystery, the Gentiles' calling, the church, the display of wisdom to angels, no afterthought or accident of history but the unfolding in time of a purpose God had formed in eternity and centred in Christ, so the gospel rests on the firm foundation of God's everlasting design)."
+    "voice": "John Calvin",
+    "note": "Alone rejects the inference that angels attend Christian assemblies and grow in knowledge alongside the congregation."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Names Clarke among the expositors he is refuting — one of the few places in this corpus where one witness rebuts another by name."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "according to the eternal purpose",
-   "which he purposed in Christ Jesus our Lord",
-   "the whole plan grounded in God's eternal counsel",
-   "no afterthought, but purposed in eternity"
+   "angels as learners",
+   "many-coloured wisdom",
+   "the eternal purpose"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: in Christ we have access into the holy of holies, to the throne of grace there, and to God the Father as seated on it — Christ being the way of access, union to him giving the right of access, his mediation procuring audience of God and acceptance, both of person and service; and this access is with boldness, denoting liberty of coming granted by God and a liberty in their own souls to speak out their minds plainly; Paul declaring that in Christ believers have boldness and access to God with confidence through faith in him — the free and confident approach to God through Christ (believers drawing near not timidly or as strangers but with boldness, freedom of speech, access, an introduction into the very presence of the Father, and confidence, settled assurance, all received by faith in Christ, whose mediation opens the way)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in whom we have boldness and access",
-   "with confidence",
-   "by the faith of him",
-   "the free and confident approach to God through Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
+  "range": "12-13",
+  "pericope_label": "In whom we have boldness and access with confidence by the faith of him. Wherefore I desire that ye faint not at my tribulations for you, which is your glory",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul was a man attended with many tribulations and great afflictions, which he suffered not as an evildoer (from God or men); he was not ashamed of them but gloried and took pleasure in them, having much of God's presence in them, never taken unawares, always expecting them and helped to look to the glory that should follow; Paul desiring that they not faint at his tribulations endured for them, which are their glory — the sufferings of the apostle turned to the church's honour (Paul, knowing his imprisonment might dishearten the Gentile believers, as if their cause were shameful or failing, entreating them not to lose heart, for his very afflictions, borne for their sakes in defending and advancing their gospel, are not their shame but their glory, a token of how precious their salvation is)."
+    "summary": "Distinguish the two gifts — boldness of utterance before men and angels, and confident access before God as sons rather than servants — each resting on a different aspect of faith; settle the genitive as objective; and correct the account of what the Ephesians were in danger of, which was discouragement at a faith that exposed its friends to such calamities, not doubt of its truth."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Define faith by its fruits in three stages — belief of the promise, the trust that rests on it, and the confidence that banishes fear — holding that to separate confidence from faith is to take heat and light from the sun, so that a doubting conscience is evidence of unbelief; and admire the pastor who draws comfort from prison for those in no danger."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Picture the access as a petitioner brought before the king by a favourite and the boldness as a child's freedom with an indulgent father; insist that we come only in Christ's name, which is why prayers are closed in it; and reduce the last clause to five words — the not fainting is your glory."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Notice that Paul seems more anxious lest the believers be discouraged by his tribulations than about what he had himself to bear."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What danger were the Ephesians in from Paul's imprisonment?",
+    "sides": [
+     {
+      "position": "Losing heart in a religion that exposed its friends to such calamities",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Concluding that the religion itself was vain and false",
+      "holders": [
+       "Koppe (as reported by Barnes)"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone turns the verse into a definition of faith in three stages and applies it against the schoolmen who enjoin hesitation in prayer."
+   }
+  ],
   "themes": [
-   "that ye faint not at my tribulations for you",
-   "which is your glory",
-   "the apostle's sufferings turned to the church's honour",
-   "a token of how precious their salvation is"
+   "boldness and access",
+   "faith and confidence",
+   "suffering as the church’s glory"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "14",
+  "pericope_label": "For this cause I bow my knees unto the Father of our Lord Jesus Christ",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul prays for the perseverance of the saints, which is the pure gift of God and what he has promised, and therefore to be sought for (for what God has designed and promised, he will be sought to), his view also being to stir up the saints to pray for themselves; the gesture he uses, bowing the knees, expresses reverence and humility in prayer; Paul declaring that for this cause he bows his knees to the Father of the Lord Jesus Christ — the reverent posture of earnest intercession (Paul, resuming the prayer begun in v.1, turning to fervent intercession for the Ephesians, and marking its earnestness and reverence by the very posture of his body: bowing his knees, kneeling, before the Father, the God and Father of the Lord Jesus, in humble, worshipful supplication for their spiritual establishment)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for this cause I bow my knees",
-   "unto the Father of our Lord Jesus Christ",
-   "the reverent posture of earnest intercession",
-   "resuming the great prayer for the Ephesians"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this may refer either to God the Father of Christ, who is the Father of the whole family in heaven and in earth (not only the Father of Christ but the Father of spirits, of angelic spirits and of the souls of men, and the Father of all the saints by adopting grace, whether above or below, all the household of God), or to Christ the everlasting Father; Paul observing that of the Father the whole family in heaven and earth is named — the one family of God in heaven and earth (Paul, having named the Father, marking that from him the entire family of God takes its name and being: the holy angels and the glorified saints above, and the believers still on earth below, all one household, deriving their sonship and their very name as God's family from the one Father, so heaven and earth are united in him)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "of whom the whole family",
-   "in heaven and earth is named",
-   "the one family of God in heaven and earth",
-   "all deriving their name from the one Father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Prefer a reference to the verse immediately preceding over a resumption of the opening, summarise the prayer as moving from the Spirit's strengthening to the indwelling of Christ and on to the fulness of God, judge \"of our Lord Jesus Christ\" an interpolation from a gloss, and doubt that Paul knelt as he dictated."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the grant is according to, and out of, that rich, plenteous, and glorious fulness of grace and strength in Christ Jesus; Barnes: according to the glorious abundance of his mercy (Philippians 4:19), out of those stores of rich grace that can never be exhausted, the word 'riches' denoting abundance; Paul praying that God would grant them, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man — the inward strengthening from God's rich glory (Paul's first great request being for inward power: that God, out of the boundless riches of his glory, not sparingly but in proportion to his own infinite fulness, would strengthen the believers with might by his Spirit in the 'inner man,' the renewed soul, the hidden person of the heart, making them mighty within for faith, holiness, and endurance)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "according to the riches of his glory",
-   "to be strengthened with might by his Spirit",
-   "in the inner man",
-   "inward power from God's rich glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Explain why the prayer is reported — to stir the readers to pray likewise, since the seed of the word is scattered in vain unless God makes it fruitful — and draw the lesson for ministers: the Spirit's work does not make instruction superfluous but gives it weight, and is no excuse for sloth."
+   },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the inhabitant Christ is he who dwells in the highest heavens, who dwells in the Father and the Father in him, in whom all fulness dwells, the fulness of the Godhead and the fulness of grace, so that those in whose hearts he dwells cannot want any good thing and are in the greatest safety; Paul praying that Christ may dwell in their hearts by faith, they being rooted and grounded in love — the indwelling Christ and the foundation of love (Paul's prayer rising to its heart: that Christ himself may take up a settled, permanent dwelling in their hearts, received and retained by faith, and that they, like a tree well-rooted and a building well-founded, may be firmly established in love, God's love to them and theirs to him and one another, the soil and foundation from which all spiritual growth and stability spring)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that Christ may dwell in your hearts by faith",
-   "being rooted and grounded in love",
-   "the indwelling Christ",
-   "the foundation of love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Take the verse as resuming what was begun in the opening, and read the gesture as an outward expression owed to the reverence the heart should feel in drawing near to God."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is the end of their being rooted and grounded in love — that they, together with the rest of the saints interested in it, might have a larger and more comprehensive view; Barnes: it was Paul's desire that others, as well as they, might understand and appreciate the wonders of redemption; Paul praying that they may be able to comprehend, with all saints, the breadth, length, depth, and height — the grasp of the immeasurable love and grace of God (Paul praying the believers, rooted in love, may be enabled, in company with all the saints, to take in the vast dimensions of God's love in Christ, or of the whole mystery of redemption, a greatness so immense it can be apprehended only in part, and only by the whole communion of the saints together)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "may be able to comprehend with all saints",
-   "what is the breadth, and length, and depth, and height",
-   "the immeasurable dimensions of God's love",
-   "apprehended only with all the saints"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the love of Christ to his own, his church and people, is special and peculiar, free and sovereign, as early as the Father's love, durable and unchangeable, the greatest love ever heard of, matchless and unparalleled, exceeding strong and affectionate, wonderful and surprising (its instances his engaging as surety, his espousing them, etc.); Paul praying that they might know the love of Christ which passes knowledge, that they might be filled with all the fulness of God — the knowledge of the boundless love and the fulness of God (Paul's prayer reaching its height in two immense petitions: that they may 'know,' by experience and in measure, the love of Christ which yet surpasses all knowledge, so vast it can never be fully comprehended, and that they may be 'filled with all the fulness of God,' filled according to their capacity with the graces and likeness of God, as full of God as a creature can be)."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Turn the posture into a rebuke of those who sit or stand at prayer, arguing from the respect paid to a man of rank or a king, and find in the whole prayer a second dedication, Paul kneeling as Solomon did to dedicate the Christian church."
    }
   ],
   "debates": [
    {
-    "question": "How can one 'know the love of Christ which passeth knowledge'?",
+    "question": "Is kneeling required in prayer?",
     "sides": [
      {
-      "position": "By knowing it truly in experience and in measure, while it yet surpasses full comprehension — knowing in part a love so vast it can never be wholly grasped",
+      "position": "It is the proper posture, and its abandonment in the churches is to be regretted",
       "holders": [
-       "the witnesses"
+       "Barnes",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The gesture is indifferent; the heart is the thing, though reverence commonly expresses itself so",
+      "holders": [
+       "Gill",
+       "Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone turns the posture into a sustained rebuke of contemporary congregations, and alone reads the prayer as a dedication of the Christian church answering Solomon’s at the temple."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "His block is a catechetical lecture on the blinding of unbelievers and has no bearing on this verse."
+   }
+  ],
   "themes": [
-   "to know the love of Christ, which passeth knowledge",
-   "that ye might be filled with all the fulness of God",
-   "the boundless love of Christ",
-   "filled, according to capacity, with God's fulness"
+   "posture in prayer",
+   "prayer as pastoral duty",
+   "the Father of all"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ },
+ "15": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
+  ],
+  "range": "15-16",
+  "pericope_label": "Of whom the whole family in heaven and earth is named, that he would grant you, according to the riches of his glory, to be strengthened with might by his Spirit in the inner man",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Report the division over the antecedent, weigh and reject the rendering \"fatherhood\" on grounds of usage, and read \"family\" as any body of rational beings united under a common fatherhood and bearing its ancestor's name; then distinguish this petition from the earlier one as asking strength rather than light, and for the whole inner man rather than the eyes of the heart."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Refer \"of whom\" to Christ rather than the Father, since referring it to the Father revives the very distinction the passage abolishes; make union to the body of Christ the one relationship that counts in heaven and earth; and deny that any believer advances so far as to need no further growth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the Father as the antecedent without argument; press the singular \"family\" against the notion that each order forms its own household; and call the petition one of the most sublime in the whole of Scripture, measured by God's own infinite fulness as a king gives according to his dignity."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Quote the verse in passing among proofs that the Spirit of the Father, the Comforter and the Spirit of truth are one under different titles."
+   }
+  ],
+  "debates": [
+   {
+    "question": "To whom does “of whom” refer?",
+    "sides": [
+     {
+      "position": "To Christ, since referring it to the Father revives the very Jew–Gentile distinction the passage abolishes",
+      "holders": [
+       "Calvin",
+       "Barnes",
+       "Locke (as reported by Barnes)",
+       "Doddridge (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "To the Father",
+      "holders": [
+       "Wesley",
+       "Erasmus (as reported by Calvin)",
+       "Koppe (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "Either is possible",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Should the noun be rendered “family” or “fatherhood”?",
+    "sides": [
+     {
+      "position": "“Every family” — the rendering “fatherhood” is tempting but contrary to usage",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The singular is deliberate: one family, not many households",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "His column here carries an editorial note credited to Chandler, setting the “whole family” against the federation of Asiatic cities united in the worship of Diana of Ephesus — material that is not Calvin’s own."
+   }
+  ],
+  "themes": [
+   "every family named from God",
+   "fatherhood and family",
+   "strength in the inner man"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "17",
+  "pericope_label": "That Christ may dwell in your hearts by faith; that ye, being rooted and grounded in love",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Identify the indwelling of Christ with the gift of the Spirit rather than making it a consequence, faith being simply the condition; gloss the verb as making oneself at home; place the two participles with the following clause; and deny that love is the root or foundation, which is Christ, love being the condition of growth."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Distinguish this personal indwelling from omnipresence and from a merely spiritual presence, and bind Spirit and Christ inseparably together; insist that fellowship with Christ follows faith rather than being identical with it, since faith is not a distant view but a warm embrace; and refuse the inference that love is the foundation of salvation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the whole through the figure of the temple — man made God's dwelling, defiled and abandoned, repaired by Christ — with the warning that a heart which is not God's house will be a hold of unclean spirits; and take the double metaphor as agriculture and architecture together."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is love the root and foundation spoken of?",
+    "sides": [
+     {
+      "position": "No — the foundation is Christ himself; love is the condition under which growth takes place",
+      "holders": [
+       "Ellicott",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The metaphors are simply of firmness, love being the soil and the ground alike",
+      "holders": [
+       "Barnes",
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone breaks off to observe that a deal of fixing would be needed in our hearts before Christ could be at home in them."
+   }
+  ],
+  "themes": [
+   "Christ indwelling",
+   "the heart as temple",
+   "rooted and grounded"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "18": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "18-19",
+  "pericope_label": "May be able to comprehend with all saints what is the breadth, and length, and depth, and height; and to know the love of Christ, which passeth knowledge, that ye might be filled with all the fulness of God",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Hold that Paul deliberately left the four dimensions without a noun, so that no supplement is fully satisfactory; refuse the easy resolution of the paradox by opposing spiritual to head-knowledge, reading the tense instead as knowing from time to time what in its entirety always exceeds discovery; and correct \"filled with\" to \"filled up to\" the fulness of God."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Dismiss Augustine's cruciform allegory and Ambrose's sphere and take the dimensions to mean simply the love of Christ, which contains the whole of wisdom; contend against the schoolmen that the certainty of faith is real knowledge though taught by the Spirit; and warn against reading the fulness as an equality with God."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Reject the allusion to the temple of Diana in favour of the temple at Jerusalem, and refuse to soften the closing clause by inserting the word \"communicable\" — Paul means what he says, and what God fills neither sin nor Satan can fill."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Of what are the breadth, length, depth and height?",
+    "sides": [
+     {
+      "position": "Of nothing specified — Paul left the phrase deliberately incomplete",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Of the love of Christ",
+      "holders": [
+       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Of the spiritual temple, by allusion to the temple at Jerusalem rather than that of Diana",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Possibly of the temple of Diana at Ephesus, or of the calling of the Gentiles",
+      "holders": [
+       "Chandler (as reported by Barnes)",
+       "Locke (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "Of the cross, its four dimensions figuring love, hope, patience and humility",
+      "holders": [
+       "Augustine (as reported by Calvin)"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How can what passes knowledge be known?",
+    "sides": [
+     {
+      "position": "The tense means knowing from time to time what in its entirety always exceeds discovery; there is no opposition of spiritual to head-knowledge",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The verb may mean to acknowledge or approve; or the knowledge surpassed is rabbinic and Greek science",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It is simply the language of a heart full to overflowing",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone names and dismisses the patristic readings of the four dimensions, calling Augustine’s cruciform allegory ingenious and entertaining but beside Paul’s meaning."
+   }
+  ],
+  "themes": [
+   "the four dimensions",
+   "knowing what passes knowledge",
+   "the fulness of God"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "20-21",
+  "pericope_label": "Now unto him that is able to do exceeding abundantly above all that we ask or think, according to the power that worketh in us, unto him be glory in the church by Christ Jesus throughout all ages, world without end. Amen",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Note the rare double compound and the middle voice of the asking; render the closing formula literally as all the generations of the age of the ages, each generation adding its thanksgiving to a chorus filling eternity; and turn the chapter's doctrine against every attempt to confine the gospel to a favoured caste, ancestry, complexion or class."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this conclusion of the prayer celebrates the power of God, a perfection essential to him and very large and extensive — reaching to all things, to every thing he wills (his actual or ordinative power), to more than he has willed (his absolute power), to all things past, present, and future, and to things impossible to nature; Paul ascribing praise to God, who is able to do exceeding abundantly above all that we ask or think, according to the power that works in believers — the God whose power exceeds all asking and thought (Paul, his great prayer ended, breaking into praise of the God whose ability infinitely surpasses even the largest petitions and highest imaginings of his people, piling word on word, 'exceeding abundantly above all,' to reach after the immeasurable, and grounding the assurance of it in the very power already at work within them by the Spirit)."
+    "summary": "Define the power as exerted rather than viewed apart from its act, and set out its limits — God cannot do what contradicts his nature or his decrees; locate the rendering of glory in the church, where alone the mysteries of grace are known; and give the striking permission that faith of the proper kind need fear no excess."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Climb the gradation of asking, thinking, and beyond both, and bind God's ability to his willingness, since power without willingness would be no comfort to the church; and close with an estimate of the chapter as unequalled in the New Testament for matter and sublimity."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "State the rule the passage teaches — that it is proper always to end prayer with praise, and to expect and ask for more on the strength of what Christ has already done."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far may the closing clause be pressed?",
+    "sides": [
+     {
+      "position": "At full strength — inserting “communicable” to soften it is idle and impertinent",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Not to an equality with God, which would be a foolish and wicked dream",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The preposition is “up to” rather than “with”, so the clause describes conformation to Christ's image",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "note": "Alone qualifies the doxology by naming what God cannot do — whatever contradicts his nature or his decrees."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Appends remarks turning the chapter against exclusion by caste, ancestry, wealth and complexion, naming the doctrine that a lighter skin marks the favourite of heaven and dooms others to servitude."
+   }
+  ],
   "themes": [
-   "able to do exceeding abundantly above all that we ask or think",
-   "according to the power that worketh in us",
-   "the God whose power exceeds all asking and thought",
-   "grounded in the power already at work within"
+   "doxology",
+   "power and willingness",
+   "glory in the church"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this doxology, or ascription of glory to God, with which Paul concludes his prayer, gives glory to God on account of his perfections (to be celebrated), the works of creation and providence (to be commended and acquiesced in), temporal mercies (for which thanks should be given), and especially spiritual mercies; glory rendered in the church, the proper place, and by Christ Jesus, the only Mediator; Paul ascribing glory to God in the church by Christ Jesus throughout all ages, world without end, sealed with 'Amen' — the eternal glory of God in the church through Christ (Paul ending the doxology by giving all glory to God and naming the place and the means: glory rendered 'in the church,' the redeemed company being the great theatre and instrument of his praise, and 'by Christ Jesus,' the one Mediator through whom alone acceptable praise ascends, and that without end, through all generations and into eternity)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unto him be glory in the church by Christ Jesus",
-   "throughout all ages, world without end. Amen",
-   "the eternal glory of God in the church",
-   "the church the theatre of praise, Christ the Mediator"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
