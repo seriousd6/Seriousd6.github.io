@@ -2,2611 +2,1219 @@
  "1": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "A.T. Robertson"
   ],
+  "range": "1",
+  "pericope_label": "The high priest asks: are these things so?",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Allow some colour of justice, since the accused was permitted to defend himself, and set out what the question actually charged — the destruction of the temple and the changing of the customs."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Allow only a show of fairness, the president having prejudged the case; and turn from the question to the speaker, who is ready and mighty in the Scriptures, inferring from the abrupt ending that the speech is incomplete."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Grant a colour of equity and withdraw it, since the court asks not what warrant the teaching had but only whether the words were said; press the parallel with the tribunals of a later age; and answer the objection that the reply is long and irrelevant by showing that the charge of apostasy is met throughout."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The high priest's question opens Stephen's great unfinished apologia (interrupted at v.51), probably reported by Paul (Ellicott) — the first survey of Israel's history as divine education, containing germs developed by Paul and Hebrews, and a series of cruxes testing inspiration theories."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: Stephen answers the charge by rehearsing history — the promise older than the law, God's presence never confined to the temple, Israel always rejecting God's messengers, building toward killing the Messiah."
+    "summary": "Match the question to a formal arraignment; explain the historical method by the impossibility of answering the two charges yes or no, and by what such an audience would consent to hear; and defend the report of the speech as genuine on grounds of style and of who was present to preserve it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the question was a fair one: some colour of justice (Clarke), a show of fairness masking a prejudged case (Henry), or a colour of equity that collapses on inspection into a demand for a confession (Calvin).",
+   "Why the defence is historical rather than direct: because the charges admitted no simple answer (Robertson), because the history itself proves the belief denied him and secures a hearing (Barnes), or because the apparent irrelevance is only apparent (Calvin, answering the objection he raises against himself).",
+   "Whether the speech as we have it is complete — Henry and Barnes both infer from the interruption that it is not."
+  ],
+  "outliers": [
+   "Calvin alone reads the high priest’s procedure as the pattern of a later inquisition and names the penalty it ends in.",
+   "Robertson alone argues for the authenticity of the speech against the view that it was composed by the historian, and names the witnesses who could have preserved it.",
+   "Barnes alone explains the choice of subject by what the audience was willing to listen to."
+  ],
   "themes": [
-   "are these things so",
-   "the high priest's question",
-   "Stephen's great apologia",
-   "Israel's history as divine education"
+   "Trial",
+   "Blasphemy",
+   "The temple",
+   "Sacred history",
+   "Persecution"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Stephen addresses the council respectfully (Barnes, Clarke); 'the God of glory' invokes the Shekinah and refutes the blasphemy charge (Robertson); 'before Charran' resolved by Genesis 15:7, Joshua 24:3 — Stephen, like Philo/Josephus, stresses both calls (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'the God of glory' distinguishes the true God from false gods; God appeared in a strange land, before temple or law — the thread of the whole speech."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the God of glory appeared to Abraham",
-   "Men, brethren, and fathers",
-   "before he dwelt in Charran",
-   "God not confined to one place"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The call to leave country and kindred for an unnamed land required and displayed strong faith — trusting the bare promise, going not knowing where (Barnes, Robertson, Hebrews 11:8)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Abraham's obedience on the bare word of God the pattern of all faith; believers called to deny themselves and forsake all that hinders following God — Abraham the father of the faithful."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "get thee out of thy country",
-   "the land which I shall shew thee",
-   "the faith of Abraham",
-   "following God by faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
+  "range": "2-4",
+  "pericope_label": "The God of glory appeared to Abraham in Mesopotamia; get thee out of thy country; his removal after his father died",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The chronological crux (Terah died at 205, leaving 60 years after Abraham left Haran at 75) resolved variously — the Samaritan reading (105), Abraham not the eldest (born when Terah was 130, Barnes, Ellicott, Robertson), or Stephen's indifference to minutiae in a speech from memory (Ellicott)."
+    "summary": "Judge the speech an interrupted fragment whose incompleteness argues for the genuineness of the report, probably derived from Paul; take the opening title as itself a refutation of the charge of blasphemy; and set out the chronological difficulty about Terah with its several solutions, one commentator conceding that the speaker held only to the broad outline and another that no explanation is certain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Correct the rendering of the address, which names two classes and not three; and harmonise the chronology by supposing Abraham to have lived partly with his father and partly in Canaan until his father’s death."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Abraham obeyed without delay, subduing his affections to God's command."
+    "prevalence": "several",
+    "summary": "Distinguish this call, spoken in Mesopotamia, from the later one; explain why the title of fathers is conceded to an unjust court and how far such deference reaches; read the deferred showing of the land as the trial of faith; and account for the stay at Charran by the father’s sickness."
    }
   ],
   "debates": [
-   {
-    "question": "How is 'when his father was dead' reconciled with Terah living 60 years after Abraham left Haran?",
-    "sides": [
-     {
-      "position": "Abraham was not the eldest, born when Terah was 130 (named first for prominence)",
-      "holders": [
-       "Barnes",
-       "Ellicott",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "Stephen surveyed the broad outlines, indifferent to chronological minutiae",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "The Jewish 'moral death' of Terah's idolatry before Abraham left",
-      "holders": [
-       "Kuinoel"
-      ]
-     }
-    ]
-   }
+   "Whether the words quoted in the third verse are the call recorded in Genesis or an earlier and distinct one — Gill and Lightfoot argue for two calls from the absence of “thy father’s house”, Barnes assumes one.",
+   "How the sixty years between Abraham’s departure and Terah’s death are to be accounted for: a textual error (Barnes), Abraham named first for honour rather than age (Ellicott, Robertson), a harmonising of the two residences (Wesley), or an inexactness in the speaker’s own recollection (Ellicott’s preference) — with Robertson holding that no solution is certain.",
+   "How many classes the opening address names, and whether the received English misrepresents it (Clarke against the common rendering).",
+   "Whether the report of the speech is trustworthy — Ellicott argues from its very incompleteness that it is."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone prefaces the speech with a critical estimate of its transmission, and alone prefers an explanation of the chronology that concedes inexactness in the speaker.",
+   "Calvin alone asks on what terms an honourable title may be conceded to a hostile tribunal, and turns the answer against the courts of his own day.",
+   "Lightfoot alone attacks the Greek translators of the genealogy for adding a death to every name in it.",
+   "Wesley alone reduces the argument of the whole speech to the priority of promise over law and of law over temple."
+  ],
   "themes": [
-   "when his father was dead",
-   "removed into this land",
-   "the chronological crux",
-   "faith's prompt obedience"
+   "Abraham",
+   "Call and promise",
+   "Faith",
+   "Chronology",
+   "Blasphemy",
+   "Sacred history"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abraham received no possession but the burial-field he bought (Barnes); the promise of the land for his seed, given when he had no child and his wife was barren, a strong instance of faith against hope (Romans 4:18, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God exercised Abraham's patience, upheld him by his word alone; the promise (seemingly a mockery) meekly embraced — faith resting on the promise where it sees nothing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "none inheritance, not so much as to set his foot on",
-   "he promised to give it to his seed",
-   "when as yet he had no child",
-   "faith resting on the promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "5-8",
+  "pericope_label": "No inheritance, not so much as a foot’s tread; the four hundred years foretold; the covenant of circumcision",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 400 years a round number for 430 (Exodus 12:40), which (per the LXX) covers the whole period from Abraham's call, not Egypt alone (~215 years there) — resolving the crux with Galatians 3:17 (Barnes, Ellicott, Robertson)."
+    "summary": "Distinguish what was bought from what was given; weigh the competing reckonings of the sojourn and conclude that chronological precision is not to be looked for, no solution being certain; note that the closing words of the seventh verse are transferred from Horeb to Canaan and explain it by the freedom of recollection; read the argument as a threat to the persecutors’ tenure of the land; and state exactly what the speaker concedes and what he asserts about circumcision."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Explain the four hundred years as a round number dropping the odd tens, as writers not professedly chronological always do; distinguish the three acts of a judge and fix the sense here as punishment; and take the purchase of a burial field as itself a proof of the buyer’s strangerhood."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: God seems contrary to himself, promising the land yet foretelling bondage, to extend faith's reach; Chrysostom: God suffered the affliction, as he exercises his people in temptation though he has promised the kingdom."
+    "summary": "Draw from the empty-handed patriarch that a possession answering none of the uses of this life is none, and that the promise is the stay where the thing is wanting; join the judgement of the oppressor to the deliverance of the oppressed; and argue from the priority of the call and the promise that salvation does not begin in the outward sign."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Press the long interval as proof that delay does not falsify a promise, and exclaim that through all those years of promise there was neither sacrifice nor circumcision."
    }
   ],
   "debates": [
-   {
-    "question": "How is the '400 years' reconciled with the 430 (Exodus 12:40; Galatians 3:17) and ~215 in Egypt?",
-    "sides": [
-     {
-      "position": "400 a round number for 430, covering the whole period from Abraham's call (LXX reading)",
-      "holders": [
-       "Barnes",
-       "Ellicott",
-       "Robertson"
-      ]
-     }
-    ]
-   }
+   "How the four hundred years are to be reconciled with the four hundred and thirty: a round number with the tens dropped (Clarke), an unresolved perplexity (Barnes), a difference traceable to the Greek and Samaritan texts and not to be settled precisely (Ellicott), or a question no solution answers (Robertson).",
+   "Whether the closing words of the seventh verse belong to Horeb or to Canaan — Robertson and Ellicott agree the source refers to Horeb and differ on how deliberate the transfer is.",
+   "What the mention of circumcision concedes: Ellicott alone holds that the speaker does not deny having taught that the customs would be changed, and that his point is the priority of promise over sign rather than the abolition of the sign.",
+   "Whether the argument about the land is historical or minatory — Lightfoot alone reads it as a warning that possession is not unconditional."
   ],
-  "outliers": [],
+  "outliers": [
+   "Lightfoot alone turns the patriarchs’ landlessness into a direct threat against the hearers’ title to the country.",
+   "Chrysostom alone argues from the four hundred years to the delay of the kingdom rather than to a chronological problem.",
+   "Ellicott alone concedes that the speaker’s recollection is free rather than exact, and does so twice in these four verses.",
+   "Clarke alone disposes of the chronological difficulty by a convention of ordinary usage rather than by textual or historical argument."
+  ],
   "themes": [
-   "his seed should sojourn in a strange land",
-   "four hundred years",
-   "the bondage foretold",
-   "faith tried through affliction"
+   "Promise",
+   "Circumcision",
+   "Chronology",
+   "Bondage",
+   "The land",
+   "Judgement"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Will I judge' = punish the oppressor (Barnes, Clarke); 'serve me in this place' combines Genesis 15:17 and Exodus 3:12 (which referred to Horeb), freely applied by Stephen to the land of promise (Ellicott, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God judges the oppressor for his people's sake (the Judge who leaves no injury unpunished); the end of deliverance is the true worship of God — promised before the temple."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the nation will I judge",
-   "shall serve me in this place",
-   "God vindicates his people",
-   "worship the goal of redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Circumcision the sign and seal following the promise (Robertson); Stephen's apologetic point — it followed the promise, not the ground of election (laying Paul's Galatians 3:17 argument), yet from God and to be reverenced (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the promise and call preceded circumcision, so the glory does not depend on it (Romans 4); the sacraments God's true seals of his love, figuring nothing he does not perform."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the covenant of circumcision",
-   "circumcised him the eighth day",
-   "the twelve patriarchs",
-   "the sign following the promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "9-16",
+  "pericope_label": "The patriarchs sell Joseph; Jacob goes down into Egypt with seventy-five souls; the burial at Sychem",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The patriarchs' envy in selling Joseph the first step in Stephen's induction — God's chosen always rejected by the nation's representatives, as envy led to delivering up Jesus (Ellicott); Joseph the type of the rejected Christ (Chrysostom)."
+    "summary": "Trace the seventy-five to the Greek version and, in one case, concede that the speaker took it from that version without investigating; canvass the traditions about the patriarchs’ graves, preferring a Samaritan one; decline to choose between the competing authorities; and entertain the possibility that the received text is corrupt and that a different name should stand in it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Name the persons the Greek version inserts; and explain the burial verse as a compression of two purchases and two graves into one sentence, a concise manner of speaking usual among the Hebrews where the story was well known."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the honourable name 'patriarchs' deepens the reproach — the boasted fathers were murderers of their brother; 'God was with him' delivered far from the temple, in Egypt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the patriarchs, moved with envy",
-   "sold Joseph into Egypt",
-   "but God was with him",
-   "Joseph the type of the rejected Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God delivered the rejected Joseph and made him governor of Egypt — the slave raised to rule the 'great house' of Pharaoh (Robertson); favour the result of his God-given wisdom (Barnes)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God exalted Joseph to preserve his father's family; though Pharaoh made him ruler, it was the hand of God — all human gifts and favour are God's; the rejected one raised to save those who rejected him (a type of Christ)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "delivered him out of all his afflictions",
-   "made him governor over Egypt",
-   "the rejected one exalted",
-   "Joseph the type of the exalted Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The famine over Egypt and Canaan left the patriarchs without sustenance (Barnes); the occasion driving Israel to Egypt and Joseph."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Joseph's prior exaltation the means God used to feed the brethren who sold him — his free goodness in making the rejected one the preserver; the patriarchs driven out of the land as sojourners."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there came a dearth",
-   "our fathers found no sustenance",
-   "the famine that drove Israel to Egypt",
-   "God's providence through Joseph"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob sent his sons (all but Benjamin) on the first of two journeys for grain (Barnes, Robertson); Stephen recounts the history swiftly, showing reverence for the Mosaic record; the famine driving the brothers to the Joseph they had sold."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jacob heard there was corn in Egypt",
-   "sent out our fathers first",
-   "the providential reunion",
-   "driven to the rejected brother"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "At the second visit Joseph reveals himself to his brethren and his kindred is made known to Pharaoh (Gill, Robertson) — the climax of reconciliation, the rejected brother revealing himself in mercy, not vengeance (Genesis 45)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Joseph not only forgives but honours and provides for the brethren who wronged him — the rejected one's grace, a type of Christ revealing himself to save his own."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph made known to his brethren",
-   "at the second time",
-   "the rejected one's self-disclosure",
-   "grace toward the guilty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'75 souls' follows the LXX of Genesis 46:27 (which adds descendants of Joseph to the Hebrew's 70) — a difference between the Greek and Hebrew texts, not an error; Stephen as a Hellenistic Jew used the LXX (Barnes, Ellicott, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a copyist's variation; the lesson against over-curiosity about numbers — the small number purposely expressed to show God's power in enlarging the kindred into a nation."
+    "summary": "Raise the possibility that the number was not written deliberately by the translators but crept in by negligence, the Greeks writing numbers in letters; weigh the reports about the graves and decline to affirm anything for certain, allowing that empty tombs may have stood for some; and object that the sentence does not concern Jacob at all."
    }
   ],
   "debates": [
-   {
-    "question": "Why does Stephen say 75 souls when the Hebrew gives 70?",
-    "sides": [
-     {
-      "position": "Stephen follows the LXX, which adds descendants of Joseph — a textual difference, not an error",
-      "holders": [
-       "Barnes",
-       "Ellicott",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "A copyist's variation in the texts",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
+   "How the seventy-five souls stand to the seventy of the Hebrew: a straightforward following of the Greek version (Barnes, Clarke, Robertson, Wesley), an uncritical acceptance of it by a Hellenistic speaker (Ellicott), a possible corruption within the Greek version itself (Calvin), or evidence that its books had different translators (Lightfoot).",
+   "How the burial at Sychem is to be reconciled with the burial at Machpelah: a rhetorical compression of two events (Wesley), a Samaritan tradition the speaker followed (Ellicott), a standoff between equally weighted authorities (Clarke), an open question (Calvin), or an error in the text to be mended by conjecture (Robertson).",
+   "Whether the sentence includes Jacob at all — Gill denies it, Ellicott says the words appear to include him, Robertson allows that the subject may be the fathers only."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone attributes the numerical difference to the speaker’s own want of investigation rather than to a textual question.",
+   "Calvin alone suspects the Greek translators’ number of being a copying accident, and gives the palaeographical reason.",
+   "Lightfoot alone infers from the discrepancy that the books of the Greek version had more than one translator.",
+   "Robertson alone contemplates emending the New Testament text by conjecture, citing the count of primitive errors in it."
+  ],
   "themes": [
-   "called his father Jacob and all his kindred",
-   "threescore and fifteen souls",
-   "the 75 vs 70 crux",
-   "the LXX number"
+   "Joseph",
+   "Egypt",
+   "Textual criticism",
+   "The Septuagint",
+   "Burial",
+   "Patriarchs"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob and all the patriarchs died in Egypt, in a strange land, before possessing the promised land (Barnes); the fathers died as sojourners, holding the promise but not the possession, awaiting fulfillment in their seed."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jacob went down into Egypt and died",
-   "he and our fathers",
-   "the patriarchs died as sojourners",
-   "the promise held, not possessed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The chief crux: 'Abraham bought of the sons of Emmor' conflates Abraham's Machpelah (Hebron) and Jacob's Shechem purchase — resolved as a textual error (Abraham for Jacob, Pearce, Hackett, Robertson), a compression of two purchases (Wesley), or a Samaritan tradition (Ellicott); the difficulty tests inspiration but not Luke's faithful report."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'a fault in the word Abraham' — the text must be amended; Joseph was buried in the field Jacob bought, not Abraham's Machpelah."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is 'Abraham bought of the sons of Emmor' reconciled (Abraham bought Machpelah, Jacob bought Shechem)?",
-    "sides": [
-     {
-      "position": "A textual/copyist error — 'Abraham' for 'Jacob'",
-      "holders": [
-       "Robertson",
-       "Calvin",
-       "Bishop Pearce"
-      ]
-     },
-     {
-      "position": "Stephen compressed two distinct purchases into one",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "Stephen followed a Samaritan tradition carrying Shechem back to Abraham",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "carried over into Sychem",
-   "the sepulchre that Abraham bought",
-   "the sons of Emmor",
-   "the chief crux of the speech"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "As the time of the promise sworn to Abraham drew near, Israel multiplied in Egypt — the fulfillment beginning amid the bondage; Henry marks Stephen's reverence for Moses throughout (answering the blasphemy charge)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the growth of the people, despite oppression, the providence of God toward the promised deliverance at its appointed time."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the time of the promise drew nigh",
-   "the people grew and multiplied",
-   "God's faithfulness to the promise",
-   "multiplication amid bondage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A new king (probably a new dynasty after the shepherd kings, Robertson) 'knew not Joseph' — did not favour his people (Barnes, Clarke); national ingratitude and the turn from favour to oppression, the beginning of the bondage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "another king arose",
-   "which knew not Joseph",
-   "national ingratitude",
-   "the turn to oppression"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "A.T. Robertson"
   ],
+  "range": "17-22",
+  "pericope_label": "The people multiply; Moses is born, exposed, taken up by Pharaoh’s daughter and taught all the wisdom of the Egyptians",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Pharaoh 'dealt subtilly' (played the sophist, used craft, Robertson) and cruelly, commanding the casting out of male children (Exodus 1:22) — the height of cunning cruelty to weaken and destroy the nation."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the unequal rate of the people’s increase the lesson, providence moving fastest as it nears its end, so that slowness earlier is no ground of discouragement."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the tyrant invented pretexts for heavier burdens, yet his barbarism only set forth God's incredible power, frustrating all his striving — the extremity of affliction the occasion of deliverance."
+    "summary": "Set the birth against the decree that should have prevented it, and take the moment when nothing can be hoped from men as the fittest for God to work; deny that Moses was a magician; and press the danger of the Egyptian training along with the questions unbelief raises about the delay of the deliverance."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Explain the description of the child as a Hebrew superlative, or reject that and construe it of urbanity as God regarded him; identify the verb of taking up as the term for adopting a foundling; describe the content of Egyptian learning and its transmission westward; and observe that Scripture nowhere states the education, which rests on later tradition and serves as a plea for secular learning."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Give the list of Egyptian sciences and report the rabbinic identification of that wisdom with magic; read the exposure as the means by which the deliverer was bred for a kingdom; and distinguish weight of speech from readiness of utterance."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the description of the infant means: a Hebrew superlative for very handsome (Barnes, Clarke, Ellicott) or, on the etymology and the force of the dative, fair as God regarded him and marked by city polish rather than beauty (Robertson).",
+   "Whether the wisdom Moses learned included magic — reported from the rabbis by Clarke, expressly denied by Gill.",
+   "Whether the education is a fact of the sacred history at all: Ellicott alone notes that the Pentateuch does not state it and traces it to a half-legendary tradition.",
+   "How “mighty in words” stands with Moses’ own confession of slow speech — Wesley alone distinguishes weight from readiness."
+  ],
+  "outliers": [
+   "Robertson alone abandons the received sense of the adjective and derives it from the word for a city.",
+   "Ellicott alone reads the passage as an argument for the value of secular learning, comparing later Christian apologists.",
+   "Calvin alone treats the Egyptian education as a hazard needing to be overruled, and alone states the objections unbelief raises against the delay.",
+   "Henry alone reasons from the two unequal halves of the interval to a rule about the pace of providence."
+  ],
   "themes": [
-   "dealt subtilly with our kindred",
-   "cast out their young children",
-   "the cunning cruelty of Pharaoh",
-   "God frustrates the tyrant"
+   "Providence",
+   "Moses",
+   "Egypt",
+   "Learning",
+   "Deliverance",
+   "Adoption"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses 'exceeding fair' — the Hebraism 'fair to God' denoting surpassing beauty (Barnes, Ellicott, LXX of Exodus 2:2), the same word as Hebrews 11:23; the beauty moved his parents to hide him by faith."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the deliverer born at the height of the persecution, when no human hope remained — God works best where man's help fails, perfecting his power in weakness."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses was born",
-   "exceeding fair",
-   "born at the height of persecution",
-   "the deliverer preserved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses, cast out, taken up by Pharaoh's daughter and reared as her son ('took up' the term for adopting an exposed child, Robertson); the providence that prepared the deliverer — reared in the oppressor's palace, perhaps designed for the throne (Robertson, Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cast out, Pharaoh's daughter took him up",
-   "nourished him for her own son",
-   "the adoption",
-   "the oppressor's house the deliverer's school"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses learned in all Egyptian wisdom (science, astronomy, medicine, Barnes, Robertson), a man of the schools like Paul; Stephen's note an indirect plea for heathen wisdom in the divine education (Ellicott); 'mighty in words' reconciled with Exodus 4:10 as humility before a great task."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God framed Moses' mind to finish his work; yet Moses set forth in Scripture only what pertains to godliness, guarding against Egyptian corruptions."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "learned in all the wisdom of the Egyptians",
-   "mighty in words and in deeds",
-   "Moses prepared by God",
-   "heathen wisdom in divine education"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "23-29",
+  "pericope_label": "Moses at forty visits his brethren, avenges the oppressed, is refused, and flees into Midian",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses at forty (the first of three forty-year periods, by Jewish tradition, Robertson) — 'it came into his heart' a Hebrew image; 'visit' a purposeful going to see and aid his oppressed people (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a new motion of the Spirit awakening Moses from his long neglect in the palace to care for his brethren — the turning of the deliverer toward his people (cf. Hebrews 11:24-26)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "full forty years old",
-   "it came into his heart to visit his brethren",
-   "the deliverer turns to his people",
-   "stirred by the Spirit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses defended the wronged Hebrew and slew the Egyptian (Exodus 2:11-12) — his first act for his people; 'avenged' the phrase used at Luke 18:7 (Ellicott)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the divinely-appointed first token of Moses' calling as deliverer — not private murder but the heroic act of one God had armed, the work of the Spirit; Moses offered as deliverer, though the people hoped for nothing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seeing one of them suffer wrong",
-   "smote the Egyptian",
-   "the first token of Moses' calling",
-   "the deliverer begins his work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses supposed his brethren would understand God was delivering them by his hand, but they understood not — the rhetorical heart of Stephen's point (Robertson); the people's blindness their failure to receive their God-appointed deliverer (Barnes), prefiguring the rejection of Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he supposed his brethren would understand",
-   "but they understood not",
-   "the rejection of the deliverer",
-   "blindness to God's salvation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses tried to reconcile two striving Hebrews — 'ye are brethren' (a conative attempt at peace, Robertson); the appeal to brotherhood the deliverer's good office (Barnes)."
+    "summary": "Mark the age as coming from tradition and not from Scripture; read the visit as a late awakening rather than a lifelong attachment, the deliverer having long neglected his brethren; ground the expectation of recognition on the public facts of his birth and rank; and lay the guilt of the refusal on the whole people, whose silence made one man’s insolence their own."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the people maliciously rejected this grace, delaying their deliverance forty years; the lesson that God's servants, even doing good, suffer injury and hear evil."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as they strove, would have set them at one",
-   "ye are brethren",
-   "the deliverer's good office rejected",
-   "seeking the peace of his people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The wrongdoer thrust Moses away — 'Who made thee a ruler and a judge?' — the rejection of the God-appointed deliverer (the wrongdoer hardest to reconcile, Robertson); Ellicott: stressed (repeated v.35) as the pattern of Israel's rejection of God's ministers, proof that the rejected Jesus too was sent from God."
+    "summary": "Report the tradition of the three forty-year periods and show it to be a received schema told of others besides Moses; deny that the conjunction means “for”, which would make the killing deliberate; correct the tense of the attempted reconciliation and the form of the address; and credit the speaker’s account of Moses’ prophetic consciousness to good authority outside Scripture."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: God's instruments often rejected on the pretext of lacking a human call."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thrust him away",
-   "who made thee a ruler and a judge",
-   "the rejection of the deliverer",
-   "the pattern of rejecting God's ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The wrongdoer threw Moses' slaying of the Egyptian in his face, revealing that the deed (supposed secret, Exodus 2:12) was known (Barnes) — deepening the rejection and driving Moses to flee; a direct thrust expecting 'no' (Robertson)."
+    "summary": "Hold that the desire to deliver was infused early by the Spirit and issued in the renunciation of the Egyptian crown; explain the expectation of recognition by a commission the people should have received as Moses had; and attribute the failure to their stupidity and sloth."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Moses was long attached to his nation or long estranged from it: Clarke has the desire infused early and shown in his refusal of the crown, Calvin reads the visit as the awaking of a mind that had neglected them.",
+   "How the conjunction at the twenty-fifth verse is to be rendered, and so whether the killing of the Egyptian was deliberate — Ellicott denies the received “for” on the ground that it imports a deliberateness the Exodus narrative does not have.",
+   "On what authority the age of forty and the prophetic consciousness of Moses rest, both being absent from Scripture: tradition (Gill, Barnes, Clarke), a schema applied to several sages (Lightfoot on the first), good authority and national consent (Lightfoot on the second).",
+   "Whether the guilt of the refusal is one man’s or the whole people’s — Calvin argues the second from their silence."
+  ],
+  "outliers": [
+   "Lightfoot alone shows the threefold forty to be a stock pattern told of later rabbis, and so a schema rather than a chronology.",
+   "Ellicott alone lets a single conjunction decide the moral character of the killing.",
+   "Calvin alone denies that Moses had always owned his people, against the sense he says many take.",
+   "Lightfoot alone attributes a prophetic consciousness to Moses while still in the Egyptian court."
+  ],
   "themes": [
-   "wilt thou kill me as thou diddest the Egyptian",
-   "the deed exposed",
-   "the deepening rejection",
-   "the deliverer driven to flight"
+   "Moses",
+   "Tradition",
+   "Deliverance",
+   "Rejection",
+   "Israel’s guilt",
+   "Exile"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Moses fled to Midian (Arabia, east of the Red Sea), his deed exposed and life threatened (Exodus 2:15); a sojourner like Abraham (Robertson) for forty years — his exile and preparation, the second forty-year period; begat Gershom and Eliezer (Barnes)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "then fled Moses",
-   "a stranger in the land of Madian",
-   "the rejected deliverer in exile",
-   "forty years of preparation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Cyril of Jerusalem"
   ],
+  "range": "30-34",
+  "pericope_label": "The bush that burned and was not consumed; I am the God of thy fathers; I have seen the affliction of my people",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "After forty years in Midian (Moses now eighty), the angel of the Lord appeared in the flame of fire in the bush at Sinai (Exodus 3:2) — the second theophany, calling Moses to deliverance; in a strange land, not the temple (pressing Stephen's theme)."
-   },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Stephen's evident reverence for Moses — nothing could be spoken more honourably, answering the charge of blasphemy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forty years were expired",
-   "an angel in a flame of fire in a bush",
-   "the burning bush at Sinai",
-   "the deliverer called at last"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The bush burning unconsumed; the 'angel of the Lord' (v30) here named Jehovah himself — the words Christ uses for the resurrection (Matt 22:32); voice to the Lord, manifestation to the angel (Exod 3:4)."
+    "summary": "Take the honour paid to Moses here as itself the answer to the charge of blaspheming him, and read the forty years’ delay as designed, so that the deliverance should plainly be God’s work and not the deliverer’s."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God so dealt with the fathers that they might know his majesty, distinguishing true visions from Satan's counterfeits."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the burning bush",
-   "Moses wondered",
-   "the voice of the Lord",
-   "the angel = Jehovah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'I am the God of thy fathers' — the covenant self-naming, the words by which Christ proved the resurrection (Matt 22:32: God of the living); Stephen perhaps knew the Lord's use against the Sadducees."
+    "summary": "Reckon the eighty years from tradition; weigh what the exchange of a court for a shepherd’s office would have cost, and the doubts it must have raised; explain that God authenticates his visions so that they may be told from Satan’s counterfeits; and account for the divine titles as condescensions to senses that cannot bear the bare majesty."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: visions profit little without doctrine joined; God names himself the God of the fathers to recall his covenant."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'God of thy fathers'",
-   "Abraham, Isaac, Jacob",
-   "Moses trembled",
-   "the living covenant God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Put off thy shoes' an act of reverence (priests barefoot, Josh 5:15); even desert ground near the bush was 'holy' by God's presence — a fine stroke for Stephen's argument against confining God to the temple."
+    "summary": "Reconcile the two names of the mountain as peaks of one range and identify the shrub; take the angel of the bush for Jehovah and the eternal Word, or else lay down the contrary rule that visible manifestations are angelic and audible ones are of the Word; and read the quotation as a thrust at the Sadducees on the bench, whom Christ had already met with it."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the holiness of places depends on the peculiar presence of God there, not the place itself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'put off thy shoes'",
-   "holy ground",
-   "reverence before God",
-   "holiness not confined to the temple"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'I have surely seen' (idon eidon, the emphatic Hebrew infinitive absolute, Exod 3:7) — God's exact, deep regard for his people's affliction; 'come down' = about to deliver, sending Moses as his instrument."
+    "summary": "Identify the angel with the Son of God on the ground that he calls himself Jehovah; and pass the passage over to the exposition of the parallel narrative."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God 'sees' our miseries when he has respect to us and cares for our safety."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Use the same words to prove a life to come against opponents who receive the Law only, the title implying that those named have being and subsistence."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who appeared in the bush: the angel is Jehovah himself and the eternal Word (Robertson, Wesley), or the visible manifestation is angelic while the voice alone is of the Word (Ellicott’s rule, which reverses the arrangement).",
+   "Whether Sinai and Horeb are the same mountain — Barnes and Robertson answer that they are peaks of one range, Ellicott treats it as a simple substitution of the familiar name.",
+   "What the quotation is doing in this speech: recalling the covenant with the fathers (Gill, Barnes), proving the resurrection against Sadducees (Robertson, Ellicott), or proving a life to come from the Law alone against those who reject the prophets (Cyril).",
+   "Why God takes a title from the fathers at all — Calvin alone answers from the incapacity of human sense for unclothed majesty."
+  ],
+  "outliers": [
+   "Ellicott alone lays down a general rule distinguishing what is seen in a theophany from what is heard, and alone places the speaker’s quotation inside the party divisions of the court trying him.",
+   "Henry alone argues from the honour paid to Moses in the speech that the charge of blaspheming him is refuted by the speech itself.",
+   "Calvin alone asks how a genuine vision is to be told from a counterfeit, and makes the answer a condition of faith in any oracle.",
+   "Cyril alone applies the verse against opponents who accept only the Pentateuch."
+  ],
   "themes": [
-   "'I have seen the affliction'",
-   "God come down to deliver",
-   "Moses sent",
-   "the compassion that saves"
+   "The burning bush",
+   "Angel of the Lord",
+   "Theophany",
+   "Resurrection",
+   "Moses",
+   "Delay"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "35": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "35-38",
+  "pericope_label": "This Moses whom they refused, God sent to be ruler and deliverer; a prophet like unto me; the church in the wilderness",
   "schools": [
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: 'This Moses' whom they set at naught, God sent as ruler — 'just as they themselves now' reject Christ."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Count the rhetorical repetition and read the whole passage as a parallel between Moses and Jesus, pressed in the rare noun for deliverer; mark the point at which the court would have caught the drift and infer the effect on the style of what follows; defend or reject “church” as the rendering of the assembly; and note that the Exodus narrative mentions no angel at the giving of the law."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sixfold 'This Moses' (anaphora) draws the parallel with Jesus; 'ruler and redeemer' (the word chosen for the parallel) — Israel refused him, yet God made him deliverer; so they now refuse Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'this Moses whom they refused'",
-   "ruler and redeemer",
-   "the Moses-Christ parallel",
-   "rejected then exalted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wonders and signs in Egypt, at the Red Sea, and through forty years; the rejected Moses vindicated by mighty works — as Jesus was 'approved of God' by miracles."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Set the refusal of Moses beside the hearers’ own generation disowning their king, and press the identity of the one rejected and afterwards sent."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke presses the parallel — the one they rejected was their only redeemer, attested by wonders; so of Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wonders and signs",
-   "brought them out",
-   "the deliverer vindicated",
-   "Moses and Christ attested"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Moses foretold 'a prophet like unto me' (Deut 18:18) = the Messiah, Jesus (cf Acts 3:22); a 'neat turn' — in opposing Christ they oppose the Moses they revere."
+    "summary": "Answer the objection that these men did not refuse Moses by the imputation of the fathers’ sin to children of the same spirit; identify the angel as no created angel, since he took the divine name; declare that Moses announced the very prophet they had killed; and explain why the oracles are called living."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Stephen proves Christ is the end of the law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'a prophet like unto me'",
-   "Moses foretells Christ",
-   "Deuteronomy 18:18",
-   "opposing Moses by rejecting Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Church in the wilderness' = the congregation at Sinai; Moses the mediator who received the law from an angel (Gal 3:19) and gave the 'living oracles' — the life-giving word; Stephen honours, not blasphemes, Moses."
+    "summary": "Take the refusal as proof that the deliverance was undeserved, God delivering them as it were against their will; hold that the passage proves Christ to be the end of the law though it does not say so in terms, while allowing that the prophecy also fits the other prophets; and find in the wilderness assembly a pledge that God always has a church."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the assembly in the wilderness should be called a church or a congregation: Ellicott defends the received word and gives the history of the earlier versions, Robertson prefers congregation.",
+   "How the law can be said to have been given by an angel when the narrative ascribes it to God: the angel designates him who was God (Barnes), Moses mediated between the angel and the people (Clarke, Robertson), and Robertson adds that Exodus mentions no angel.",
+   "Whether the hearers can be charged with a refusal made by their fathers — Wesley alone raises and answers it.",
+   "How far the prophecy of a prophet like Moses is exclusively of Christ — Calvin holds it proves Christ the end of the law while agreeing also to the other prophets."
+  ],
+  "outliers": [
+   "Chrysostom alone pairs the taunt against Moses with the hearers’ own disowning of their king.",
+   "Ellicott alone reads a change in the style of the later verses as evidence that the court had begun to interrupt.",
+   "Calvin alone says the people were delivered against their will.",
+   "Robertson alone observes that the source narrative supplies no angel for the giving of the law."
+  ],
   "themes": [
-   "the church in the wilderness",
-   "the living oracles",
-   "Moses the mediator",
-   "the law honoured"
+   "Moses and Christ",
+   "Rejection",
+   "Deliverance",
+   "The law by angels",
+   "The congregation",
+   "Prophecy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "39": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They 'thrust him from them' (aposanto, the same verb as v27) and 'turned back in heart to Egypt' — rejecting Moses then as they reject Christ now (Ellicott); a settled disposition, not one act."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: horrible, more than blind fury, to crave the superstitions of the Egypt where they had suffered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "would not obey Moses",
-   "thrust him away",
-   "turned back to Egypt",
-   "the pattern of rejection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Make us gods to go before us' (Exod 32:1), perhaps echoing the pillar — how quickly they forgot; rejecting Moses passes at once into idolatry."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: their filthy, detestable treachery — making a calf to worship instead of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'make us gods'",
-   "the absent Moses dismissed",
-   "descent into idolatry",
-   "quickly forgotten"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They 'made a calf' (emoschopoiesan, a coined word) modelled on the Egyptian Apis, sacrificed, and 'rejoiced in the works of their own hands' — Stephen bluntly names 'the idol'; worshipping what they made."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the golden calf",
-   "sacrifice to the idol",
-   "works of their own hands",
-   "Egyptian idolatry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "39-43",
+  "pericope_label": "The fathers turn back to Egypt and make a calf; God gives them up to the host of heaven; Moloch and Remphan",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'God turned and gave them up' (paredoken, as in Rom 1:24-28) to worship the host of heaven instead of the Lord of hosts (Amos 5:25); 'the book of the prophets' = the twelve."
+    "summary": "Mark the repetition of the word for thrusting away; argue from the Hebrew that the calf broke the second commandment and not the first; state the inconsistency between the prophet’s question and the Pentateuch; supply the Pauline parallel for the giving-up; canvass the identifications of the two idols and report that some take one word for statues rather than a name; and cite a rabbinic dispute in which this verse was already a proof-text."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: this giving-up to deeper idolatry was the saddest punishment of all for that sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'God turned and gave them up'",
-   "the host of heaven",
-   "judicial abandonment",
-   "idolatry punished by idolatry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Read the abandonment as the punishment of the earlier sin and the pattern of the later giving-up of the heathen world to a reprobate mind."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "'The tabernacle of Moloch' (the Ammonite god of child-sacrifice) and 'the star of Remphan' (Saturn), carried alongside the ark; quoted from Amos 5:26 (LXX) — the prophets' own witness; the sentence exile 'beyond Babylon.'"
+    "summary": "Find the aggravation in the direction of the longing, back toward a bondage lately escaped, and in a return made in mind rather than in body; and describe the first fall as the entrance to a labyrinth, one idol multiplying into many by just vengeance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Grant that sacrifices were offered in the wilderness and deny that they were offered uprightly; set the Greek and Hebrew of the idol names side by side and pronounce the place obscure; identify the two gods with planets; and notice that the threatened exile has been carried from Damascus to Babylon."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the prophet’s question can stand when the Pentateuch records sacrifices in the wilderness: an inconsistency to be acknowledged (Ellicott), sacrifices offered but not uprightly and so not accepted (Clarke, Wesley), or a question already disputed in the schools (Lightfoot).",
+   "What the two idol names are: a tabernacle of Moloch and a star of Remphan, or Siccuth your king with Chiun — Clarke reports both texts and calls the place obscure, Ellicott inclines to the proper name, Robertson reports that some read statues rather than any name.",
+   "Whether the golden calf broke the first or the second commandment — Ellicott alone raises the question and answers the second.",
+   "Why the exile is said to be beyond Babylon when the prophet wrote beyond Damascus — noticed by Wesley alone."
+  ],
+  "outliers": [
+   "Ellicott alone determines which commandment the calf transgressed, on the number of the Hebrew noun.",
+   "Lightfoot alone shows the verse to have been a standing proof-text in a rabbinic dispute about sacrifice in the wilderness.",
+   "Wesley alone notices the alteration of the place of exile and assigns the fulfilment.",
+   "Robertson alone reads the whole preceding narrative as preparation for a blow still to come."
+  ],
   "themes": [
-   "the tabernacle of Moloch",
-   "the star of Remphan",
-   "portable idolatry",
-   "carried away to exile"
+   "Idolatry",
+   "The golden calf",
+   "Judicial abandonment",
+   "Prophecy",
+   "Textual difficulty",
+   "Exile"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.06
+   }
   }
  },
  "44": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "44-47",
+  "pericope_label": "The tabernacle of witness made after the pattern, brought in with Joshua; David asks, Solomon builds",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The tabernacle of witness/testimony' (marturiou), the wilderness tent (not the temple), set against 'the tabernacle of Moloch'; made to the pattern God showed Moses, bearing the testimony of the law."
+    "summary": "Explain the title of the tabernacle and the Greek version’s use of it; note that the phrase was suggested by the idol’s tabernacle just before, and that the argument now turns to the freedom of God from any one place; state the concession and its limit, that the sanction of tabernacle and temple is admitted but denied to be final; and prefer the Hebrew form of the captain’s name while finding a gain in the ambiguity here."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Confine the testimony to the two tables; insist that the name should always be rendered Joshua in such places; explain the refusal to David by the wars and the blood; and observe that the petition was not granted, God remaining without a temple till the son built one."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God commanded how he would be worshipped, so the guilt of idolatry lies wholly on the people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the tabernacle of witness",
-   "made to the pattern",
-   "true worship ordained",
-   "God's appointment vs idols"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'With Jesus' = Joshua (Heb 4:8), who brought the tabernacle into the land of the dispossessed Gentiles; the sanctuary remained a movable tent until David — God's presence never tied to one spot (Wesley)."
+    "summary": "Give both names of the tabernacle and both reasons; clear God of blame for the people’s errors, since he had prescribed the manner of his worship, and charge them with adding to the rule and with losing sight of the end of the temple; and defend Solomon from the suspicion of having misconceived the nature of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the Greek name in the forty-fifth verse should be turned into Joshua: Barnes and Clarke say it should, Ellicott concedes the general rule but finds a gain in leaving the identity of the two names visible.",
+   "What the speech concedes about the temple and what it withholds — Ellicott states the concession and the limit twice, Clarke reads the whole as a rebuke of reliance on outward privilege, Calvin as an acquittal of God rather than an attack on the building.",
+   "Whether the speech reflects on Solomon — Calvin raises the suspicion and answers that Solomon knew God was to be sought in heaven, and that the work was commanded and promised.",
+   "What David asked for: a tent or a house — Robertson distinguishes the words, Wesley notes the petition was refused."
+  ],
+  "outliers": [
+   "Ellicott alone observes that the name of Jesus occurs in the whole defence only in the Greek form of Joshua’s name.",
+   "Robertson alone traces the phrase to the idol’s tabernacle named a few lines earlier, and alone reports the papyrus evidence about the word for a successor.",
+   "Calvin alone defends Solomon by name against an inference the speech might seem to invite."
+  ],
   "themes": [
-   "brought in with Joshua",
-   "the movable tabernacle",
-   "into Canaan",
-   "God's presence not fixed"
+   "The tabernacle",
+   "The temple",
+   "Worship",
+   "Joshua",
+   "David and Solomon",
+   "Outward privilege"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "David 'found favour before God' and 'asked for himself' (etesato) to build a fixed house (2 Sam 7:2; Ps 132:5), but did not obtain it — God dwelt in the tent till Solomon; Stephen honours the temple's origin, answering the charge."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David found favour",
-   "desired to build",
-   "the man after God's heart",
-   "the temple's pious origin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Solomon, not David (the man of war, 1 Chron 22:8), built the temple (1 Kgs 8:27); David prepared, Solomon built — the father's desire fulfilled by the son."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: an indirect rebuke — Solomon built by God's command and promise, yet God cannot be housed in a building."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Solomon built the house",
-   "David prepared",
-   "the temple erected",
-   "yet God uncontained"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "48": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "48-50",
+  "pericope_label": "The Most High dwelleth not in temples made with hands: heaven is my throne and earth my footstool",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The emphatic 'not' — the Most High dwells not in houses of hands, as Solomon owned at the dedication (1 Kgs 8:27); it broke down any exclusive holiness in the temple, placing its downfall within God's purpose; no blasphemy but higher truth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the Most High dwelleth not in temples'",
-   "God uncontained",
-   "Solomon's own confession",
-   "the temple not exclusive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Isaiah 66:1 — heaven God's throne, earth his footstool; 'what house?' carries scorn for confining God, who is spirit and worshipped anywhere; grounded in the Scripture the Sanhedrin revered."
+    "summary": "Refer the doctrine to Solomon’s own words at the dedication, the divine majesty being uncontainable by the whole compass of nature; and reconstruct the interruption, the hearers raising a clamour once they saw what conclusions were coming."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God cannot be comprehended within any space; those err who measure his worship by their own notions of place."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'heaven is my throne'",
-   "'what house will ye build me?'",
-   "Isaiah 66:1",
-   "God's boundless majesty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Deny that the language about sitting implies body or parts, the point being incomprehensibility by place; warn against measuring God or his worship by human nature; conclude that God needs nothing we offer and that true worship is therefore not contained in ceremonies; and note that the prophet’s words are an assertion where the speech makes them a question."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Isaiah's close — God's hand made all things, so no house or offering can enrich or contain the Creator; Clarke: the rising clamour likely cut Stephen short near here."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God needs not our sacrifices; his true worship is not contained in ceremonies but in the heart."
+    "summary": "Admit that the reason for the remark is not clear and then state what it achieves, that a house God does not need may be destroyed; observe that the true text speaks of things made with hands and not of temples; trace the doctrine to a possible Samaritan connection; and draw out the universality it establishes, together with the effect it had on the court."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the denial is introduced at this point, having just conceded the divine sanction of the temple — Barnes says the reason is not very clear and argues only from the consequence.",
+   "Where the speaker’s doctrine of the temple comes from: Solomon’s own prayer (Clarke, Wesley, Gill, Robertson), or an echo of Samaritan opinion reaching him by some connection (Ellicott).",
+   "Whether the closing words are a question or an assertion — Gill notes that the prophet states them without the interrogation.",
+   "What the passage establishes: that this temple might be destroyed (Barnes), that its holiness was never exclusive (Ellicott), that worship is spiritual and universal (Robertson), or that ceremonies are no part of true worship at all (Calvin)."
+  ],
+  "outliers": [
+   "Barnes alone confesses that he cannot see why the remark is introduced where it is.",
+   "Ellicott alone accounts for the doctrine by the speaker’s supposed connection with the Samaritans.",
+   "Robertson alone treats the strength of the argument as the cause of the violence that answered it.",
+   "Clarke alone reconstructs the interruption and makes it the reason the tone of the speech changes."
+  ],
   "themes": [
-   "'hath not my hand made all?'",
-   "the Creator needs nothing",
-   "worship not in ceremonies",
-   "the argument's summit"
+   "The temple",
+   "Divine immensity",
+   "Worship",
+   "Universality",
+   "Ceremonies",
+   "Interruption"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
   }
  },
  "51": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "John Lightfoot"
   ],
+  "range": "51-53",
+  "pericope_label": "Ye stiffnecked and uncircumcised, ye do always resist the Holy Ghost; which of the prophets have not your fathers persecuted?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Stiffnecked' (sklerotrachloi, like oxen unyielding to the yoke) and 'uncircumcised in heart and ears'; the sudden turn from calm history to indictment — 'as your fathers did, so do ye,' always resisting the Spirit."
+    "summary": "Read the change of tone as the mark of an interruption, or refuse that inference and account for it by the natural climax of the argument; trace both epithets to the older Scriptures and turn the second against men who boasted of exclusive privilege; and weigh the title of the Just One, which was not among the received names of the Messiah."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the speech moving to show that temple-service must yield to worship in spirit and truth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'ye stiffnecked'",
-   "uncircumcised in heart",
-   "resist the Holy Ghost",
-   "as your fathers did"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Echoing Christ's own charge (Matt 23:29-37; Luke 13:34): the fathers persecuted the prophets who foretold 'the Just One,' and this generation are now his 'betrayers and murderers' — the pattern culminating in the Messiah's death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "persecuted the prophets",
-   "'the Just One'",
-   "betrayers and murderers",
-   "the Messiah's blood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "53": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'As ordained of angels' (eis diatagas angelon) — the law given through angelic mediation (Gal 3:19), with the greater solemnity; they received it yet 'have not kept it' — the boast become the measure of guilt."
+    "prevalence": "single",
+    "summary": "Reconstruct the unspoken conclusion, that the temple service must give way to worship in spirit and truth, and explain the outbreak by the hearers’ willingness to hear their history and unwillingness to hear its application."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they called their fury 'zeal for the law' while themselves transgressing it — the true despisers are the accusers."
+    "prevalence": "several",
+    "summary": "Hold that more was to have been said, the long approach having been designed to tame the hearers, and place the outbreak at the proof that law and temple alike had been corrupted; and take the stiff neck for a refusal of the yoke of God’s law."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Derive the first epithet from oxen that will not bend to the yoke and the second from the meaning of circumcision; read both as predictions fulfilled in the verses immediately following; and give two grounds for the title of the Just One, the integrity of the life and the acquittal before Pilate."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Set against the charge of resisting the Spirit the fact that those who disputed with this speaker could not resist the wisdom and the Spirit by which he spoke."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the speech was interrupted here: Barnes, Ellicott, Henry and Calvin all infer an interruption from the change of tone, while Robertson answers that the natural climax explains it without one.",
+   "Whether the charge that they persecuted every prophet is literally true — Barnes says it is a national characteristic and not a universal fact.",
+   "Whether “the Just One” was a current title of the Messiah — Ellicott doubts it and traces its adoption to the church at Jerusalem, while Clarke grounds it in the life and in the judicial acquittal.",
+   "Whether the two epithets describe the hearers or predict what they are about to do — Wesley alone takes them as predictions."
+  ],
+  "outliers": [
+   "Robertson alone denies that an interruption need be assumed to explain the change of tone.",
+   "Lightfoot alone supplies a rabbinic story in which the same rebuke, in the same words, was answered by killing the man who gave it.",
+   "Ellicott alone notes that the reproach of an uncircumcised heart had been aimed at strangers and is here turned on those who claimed exclusive privilege.",
+   "Clarke alone grounds the title of the Just One in a Roman magistrate’s verdict."
+  ],
   "themes": [
-   "received the law by angels",
-   "'have not kept it'",
-   "the charge reversed",
-   "privilege and guilt"
+   "Resistance to the Spirit",
+   "Persecution of prophets",
+   "Circumcision of the heart",
+   "Interruption",
+   "The Just One",
+   "Martyrdom"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
+   }
   }
  },
  "54": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Cut to the heart' (dieprionto, 'sawn through'), a keener pang than the 'pricked' of Acts 2:37 — but producing the frenzy of fury, not repentance; gnashing teeth (the only literal NT use)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the wrong-doers in torment, while the innocent Stephen, having done no wrong, stands calm."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cut to the heart",
-   "gnashed their teeth",
-   "conviction unto wrath",
-   "the word divides"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "55": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Full of the Spirit, he saw God's glory and 'Jesus standing' (where elsewhere he sits, Acts 2:34) — the risen Lord risen to welcome and cheer his witness; the Shekinah, Christ as Mediator; vision granted as the court's rage peaked."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "full of the Holy Ghost",
-   "the glory of God",
-   "Jesus standing",
-   "the Lord receives his witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "56": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom",
+   "Cyril of Jerusalem",
+   "John Lightfoot"
   ],
+  "range": "54-56",
+  "pericope_label": "They gnash on him with their teeth; he sees the glory of God and the Son of man standing at the right hand",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The Son of man' (rarely on any lips but Christ's, Lightfoot) — Stephen recites Daniel 7:13, recalling Matt 26:64, the very claim for which Jesus was condemned; the vision given to the spiritual eye."
+    "summary": "Render the verb of the fifty-fourth verse as a sawing through and mark the gnashing as the single literal use of a familiar figure, expressing brute passion; hold the vision to have been inward and explain how the report of it reached the writer; note that the posture is standing where elsewhere it is sitting; observe that the title of the Son of man occurs certainly nowhere else outside the Gospels; and trace the words to the vision of Daniel, where a rabbinic commentator reads them of the Messiah."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God meant the vision to comfort Stephen and torment his enemies, as he triumphs over their judgment."
+    "prevalence": "several",
+    "summary": "Trace the proceeding from a colour of judgment through interruption to cries meant to drown every further word, and call the result madness rather than anger; deny that the heavens were changed at all, a new quickness of sight having been granted to one man only; and read the upward look as the recourse of a man destitute of every human help."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Set the scene as hell and heaven serving as foils to each other, and note that no vote, verdict or sentence of the court is recorded."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Give the same violent sense to the verb; explain the standing as a readiness to receive the martyr, or as the Mediator’s official posture, while allowing that elsewhere he is said to sit."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Turn the fury back on the accusers, since the man wronged had the better right to be angry and used no calumny; and, on the clause itself, amass the testimonies that the Son sits at the right hand."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether anything happened outwardly: Calvin denies any change in the heavens and grants only a new power of sight to one man, and Ellicott likewise makes the vision inward, drawing from it that the council saw nothing and took the claim for further blasphemy.",
+   "Why the Son is standing where he is elsewhere seated: a rising to cheer the dying man (Robertson), a readiness to receive him (Wesley), or the posture of his mediatorial office (Clarke) — while Cyril collects the witnesses for the sitting.",
+   "Whether the proceeding was ever a trial at all — Henry notes that no vote, verdict or sentence is recorded.",
+   "How the vision could be reported when only one man saw it — Ellicott alone answers, from the martyr’s face and from his words."
+  ],
+  "outliers": [
+   "Ellicott alone notices that the gnashing of teeth is used literally here and figuratively everywhere else, and alone accounts for the transmission of a vision nobody else witnessed.",
+   "Chrysostom alone argues that the accused had the better title to indignation than his judges.",
+   "Cyril alone gathers the evidence against the posture the verse describes.",
+   "Lightfoot alone produces a Jewish commentator who reads the Daniel vision of the Messiah."
+  ],
   "themes": [
-   "'the heavens opened'",
-   "the Son of man standing",
-   "Daniel 7:13",
-   "confessing the exalted Christ"
+   "Fury",
+   "Martyrdom",
+   "Vision",
+   "The Son of man",
+   "Right hand of God",
+   "Trial"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "57": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They 'stopped their ears' (syneschon, with their hands), feigning horror at blasphemy (Matt 26:65), and 'rushed upon him with one accord'; all forms of fair trial abandoned, fanaticism with full play — the trial dissolving into a lynching."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "stopped their ears",
-   "ran upon him",
-   "mob violence",
-   "willful deafness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "58": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "57-58",
+  "pericope_label": "They stop their ears, cast him out of the city and stone him; the witnesses lay their clothes at Saul’s feet",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Distinguish the crowd from the court; choose between a feigned zeal and a real torment at hearing Christ glorified, and prefer the second; and measure the sentence against the law it claimed, which defines a false prophet as one who draws the people to strange gods, so that the death was unjust and the martyr suffers the punishment of the wicked, the cause alone making the difference."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Stoned 'without the city' (Lev 24:14), the witnesses casting the first stones; 'were stoning' (imperfect) through his prayers; the clothes laid at the feet of 'Saul' — the future apostle consenting."
+    "summary": "Hold that it was a popular tumult in which no vote was taken, and account for the absence of Roman restraint; note nevertheless that the legal forms of place and of the witnesses’ part were observed; and supply the rabbinic rule that fixed the place of stoning outside three camps."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley apostrophises Saul — who would himself suffer in the same cause; the martyr's dying prayer reached him."
+    "prevalence": "several",
+    "summary": "Deny that any sentence was passed, the stoning coming first and the justification after; read the stopped ears as an admission that the words, if true, convicted the hearers of murder; and turn to the young man who kept the clothes and the cause he would afterwards die in."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the death was a judicial act: no sentence at all (Wesley, Clarke), a tumult in which no vote was taken and Roman restraint happened to be absent (Robertson, Ellicott), or an irregular condemnation in which the forms of place and manner were still kept (Barnes, supported by the rule Lightfoot supplies).",
+   "Why the ears were stopped: a pretence of hearing blasphemy (Robertson), an unwillingness to hear what would convict them of murder (Clarke), or a rage that could not bear to hear Christ glorified (Calvin, choosing against a feigned zeal).",
+   "Whether the stoning answered to the law it invoked — Calvin alone tests it against the statutory definition of a false prophet and finds it does not."
+  ],
+  "outliers": [
+   "Lightfoot alone gives the rabbinic reckoning of the three camps that fixed where a stoning might take place.",
+   "Ellicott alone compares the scene with a later church council and with the apostolic rule that a bishop must not be a striker.",
+   "Robertson alone proposes a gap between Roman governors as the occasion.",
+   "Wesley alone addresses the bystander who held the clothes and sets his later death beside this one."
+  ],
   "themes": [
-   "cast out and stoned",
-   "the witnesses' clothes",
-   "Saul consenting",
-   "the first martyr"
+   "Martyrdom",
+   "Mob violence",
+   "Law and legality",
+   "Witnesses",
+   "Blasphemy",
+   "Saul"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  },
  "59": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
+   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "59-60",
+  "pericope_label": "Lord Jesus, receive my spirit; Lord, lay not this sin to their charge; and he fell asleep",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'God' is not in the Greek — Stephen prays directly to 'Lord Jesus, receive my spirit'; direct prayer to Christ as God (Ellicott, citing Pliny), an act of worship none but God may receive (Wesley) — confessing Christ's deity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Lord Jesus, receive my spirit'",
-   "prayer to Christ",
-   "the deity of Christ",
-   "committing his soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "60": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Show that the word “God” is an insertion absent from every ancient copy, so that the prayer is addressed to Christ, and support the point from a Roman governor’s report of Christian worship; note that the stoning continued through the prayer and that the kneeling was worship; argue from the resemblance to the dying prayer of Christ that the crucifixion narrative was already known to the speaker; and set the expression for death against its rabbinic parallels."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The prayer 'lay not this sin to their charge' strikingly resembles Christ's 'Father, forgive them' (Luke 23:34); 'fell asleep' a tender term for death — the martyr conformed to his Lord, forgiving his murderers."
+    "summary": "Deny the genuineness of the same word on manuscript and patristic evidence, and infer that prayer is here offered to Christ in the most solemn circumstance possible; argue that such an act of worship could not be paid to a creature; and read the second prayer as the disciple closely copying his Master."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Stephen joins love of men with faith in Christ — this affection must mark all who would be gathered to him."
+    "prevalence": "several",
+    "summary": "Find in the law that made the witnesses cast the first stone a check that these men overrode, having already killed with their tongues; note that some show of judgment survived even in the tumult; and observe that the prayer for enemies was made at the moment when revenge would most naturally have been desired."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What follows from the absence of the word “God” from the text: that the prayer was addressed to Christ and is therefore an act of divine worship — argued independently by Barnes, Clarke, Wesley and Ellicott.",
+   "Whether the resemblance between this prayer and the dying prayer of Christ is imitation or evidence: Barnes, Clarke, Robertson and Calvin treat it as the mind of Christ reproduced, while Ellicott makes it proof that the crucifixion narrative was already known to the speaker.",
+   "Whether “fell asleep” is a distinctively scriptural way of describing a saint’s death (Barnes) or a common rabbinic idiom (Lightfoot).",
+   "Whether the proceeding retained any judicial character — Calvin allows a show of judgment in the witnesses casting the first stones."
+  ],
+  "outliers": [
+   "Ellicott alone treats the likeness of the two prayers as a question of literary dependence, and alone names the accuser he thinks the prayer was chiefly for.",
+   "Calvin alone explains why the law required the witnesses to throw first, and turns their willingness into the measure of their guilt.",
+   "Lightfoot alone shows the language of falling asleep to be common in the rabbinic writers.",
+   "Robertson alone notes that the stoning continued throughout the prayer."
+  ],
   "themes": [
-   "'lay not this sin to their charge'",
-   "forgiving his murderers",
-   "'he fell asleep'",
-   "conformed to Christ"
+   "Prayer to Christ",
+   "Worship",
+   "Forgiveness of enemies",
+   "Martyrdom",
+   "Textual criticism",
+   "Death as sleep"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
+   }
   }
  }
 }
