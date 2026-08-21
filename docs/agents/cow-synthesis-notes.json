@@ -14844,6 +14844,109 @@
       "book": "genesis",
       "chapter": "48",
       "note": "Fidelity self-grade, genesis 48, five entries tiling 1-22. Word counts: 1-7 646w (7 voices), 8-12 648w (7), 13-16 648w (6), 17-21 646w (6), 22 648w (5). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-22 is uncovered. Voices: Gill, Calvin, Henry, Clarke, Wesley, Ellicott and KEIL AND DELITZSCH, the last new to this build and mapped to grammatical-historical per the standing voice-to-school map. The final entry covers a single verse, which the entry-count formula supports (22 keys and 19,002 words give five entries) and which the material justifies, since verse 22 carries a self-contained crux with five distinct answers. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's argument from the patriarchs' composure to their belief in the immortality of the soul, Clarke's attack on Delaney for praising Joseph's prostration, Calvin's warning against those who 'hew out dry and perforated cisterns in seeking causes of divine adoption', Gill's flat denial that the portion was taken from the Amorite or by sword and bow, and Wesley's account of divine freedom, which lands close to Calvin's from the opposite camp. ONE SUMMARISING DECISION recorded rather than concealed: at verse 16 all four voices who touch the Angel identify him with Christ, and rather than flatten that into a single agreed reading the entry sets out their four distinct arguments -- Gill from the works predicated, Clarke from the word Goel and the law of the redeeming kinsman, Calvin from the divine worship offered, Wesley by assertion -- because the convergence is more informative than the conclusion. DECLARED DEVIATION: Jamieson is in RESIDUE for the whole chapter, its single block belonging to Genesis 41, and is declared as excluded_voices on the 1-7 entry. No undeclarable drops this chapter."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB displacement, FOURTEENTH chapter, and the first NT epistle in the run to show it. 1 Timothy 5 carries four displaced JFB terms at keys 4, 10, 16 and 22 — stride 6, phase 4. All four are off-chapter and the donor is a single continuous passage, 1 Corinthians 14: key 4 = revelation/prophesying/knowledge/doctrine corresponding pairs, key 10 = 'a foreigner… one speaking a foreign language', key 16 = 'I will pray with the understanding' and the unlearned man's Amen, key 22 = the law quotation from Isaiah 28 about other tongues. All four declared in excluded_voices. Stride 6 has now held in fourteen of fourteen chapters, across OT narrative, OT law, Gospels, Acts and now the Pastorals — the defect is in the scrape, not in any book."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "9",
+        "17"
+      ],
+      "note": "Henry's keys mark his own section heads — EIGHTH confirmation, with one qualification new to this chapter. Henry appears at 1, 3, 9 and 17, but the blocks are wildly uneven: 318, 1804, 120 and 2052 words. The 1804 and 2052 blocks are true section heads (widows; elders), key 1 is the chapter opening, and key 9 at 120 words is a FRAGMENT, not a head — it reads as a stray paragraph of Henry's concise commentary rather than his exposition. Refinement to the rule: Henry's keys mark section heads when the block is large; a short Henry block (under ~200 words) may be a fragment and should not be given a tiling boundary on its own."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "17",
+        "18",
+        "19"
+      ],
+      "note": "Gill truncation in 1 Timothy 5, and a second, worse scrape defect. Gill's blocks at keys 1, 3 and 17 are all exactly 200 words — the same cap already documented for K&D and suspected for Gill corpus-wide. Worse: Gill's key-18 block is the single word 'In', and his key-19 block is 12 words. Wesley's key-18 block is 'Deut 25:4' — two words, a bare cross-reference with no comment. So on v18 (the ox and the labourer) BOTH Gill and Wesley are effectively absent from the corpus, and the verse had to be carried by Barnes, Clarke, Ellicott and Robertson alone. Worth checking whether one-to-three-word blocks occur elsewhere; they are a distinct defect from the 200-word cap and would be easy to detect corpus-wide."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "25"
+      ],
+      "note": "Residue, NINTH sighting, and the first where the real content dominates. Ellicott's key-25 block is 1,518 words, of which roughly 200 are genuine and substantial commentary on the hidden good works, followed by an 'EXCURSUS' heading, then StudyLight chrome, then raw JavaScript. Every previous sighting had a tiny real fragment (27-35 words) buried in junk; here the junk is appended to a full-length note. Rule holds — it is again the LAST Ellicott block on the chapter's scraped page — but the practical lesson is that block length is no guide to whether residue is present: a long Ellicott block at the chapter's end still needs the tail inspected."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "23"
+      ],
+      "note": "Calvin is present at ONE key only in this whole chapter (key 1, 259 words) and absent from the other twenty-four; Cyril of Jerusalem appears once, at key 23, capped at exactly 200 words. Chrysostom appears three times (keys 8, 11, 21) with no stride pattern, and his blocks read as genuine on-verse homily material. The Calvin gap is the notable one: his commentary on the Pastorals exists, so a single 259-word block across a 25-verse chapter looks like a scrape gap rather than an authorial silence. Flagging for the owner — if other NT chapters show the same one-key Calvin pattern, the Calvin fetch for that corpus may have failed."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "9",
+        "11"
+      ],
+      "note": "Two disputes about the widows' roll that the chapter never settles. First, what the enrolment IS: Gill argues it is simply the list of widows relieved by the church and explicitly rejects the deaconess reading (with the Arabic version against him); Wesley and Clarke take it as admission to the female diaconate; Ellicott reconstructs 'an official band of workers… a distinct order, formally entered on the Church's list'; Robertson agrees there was church work attached. Second, what 'the wife of one man' requires: Clarke lists three readings (conjugal fidelity; one husband at a time; never married more than once) and prefers the first on the authority of the Greek fathers; Robertson takes the third flatly; Wesley takes the widest, 'whether with one or more persons successively'. Both disputes are live and none of the six voices concedes."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "11"
+      ],
+      "note": "The chapter's sharpest philological split, on the verb at v11. Barnes protests that the English 'wax wanton' conveys a thought by no means in the original and does injustice to the apostle AND to the younger widows — in the Greek there is no idea of lasciviousness or lewdness, and 'wanton' in 1611 meant roving in gaiety or sport. Clarke agrees on the sense but derives it differently, from words meaning to remove and the rein, a metaphor from a pampered horse whose rein has been taken away. Robertson goes straight the other way and glosses it 'to feel the impulse of sexual desire', recording Souter's 'exercise youthful vigour against Christ'. The same three-way pattern recurs at 'having damnation' (Ellicott and Barnes both insisting on judgment rather than damnation) and at the laying on of hands in v22 (Gill: ordination only; Ellicott: ordination plus absolution of penitents; Robertson: undecidable, 'suits either situation, or both')."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "9",
+        "11",
+        "13",
+        "17",
+        "18",
+        "21",
+        "23",
+        "24"
+      ],
+      "note": "1 Timothy 5 fidelity self-grade: A on all twelve entries, no flags, no FLOOR, no TMPL, mean TTR 0.648 / zip 0.454. Length discipline improved but is still the main cost. Note 1365's fix (explicit paragraph budgets) was applied from entry 3 onward and worked: entry 1, drafted before the fix, came in at 855 and took eleven trim passes; entries drafted after it averaged about 720 first-pass and most took two or three. The further refinement that actually moved the number was capping each paragraph at THREE voices rather than trying to give all seven or eight a sentence — at roughly 30 words a sentence, an eight-voice entry cannot come in under 720 if every voice speaks in every paragraph. Recommended rule for the next NT chapter, where six to eight voices per key is normal: three paragraphs, three voices each, about 65 words per voice, and let each voice speak once in the entry rather than once per paragraph."
     }
   ]
 }
