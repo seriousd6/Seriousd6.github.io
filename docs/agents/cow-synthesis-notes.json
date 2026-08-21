@@ -16485,6 +16485,106 @@
       "book": "deuteronomy",
       "chapter": "14",
       "note": "FIDELITY SELF-GRADE, all 8 entries. Source: 12,083 usable words across 23 catena keys, 8 voices. The chapter's source keys are gappy (nothing at verses 7, 10, 15-18), so the spans tile the source keys and not 1-29: runs [1-6] [8-9] [11-14] [19-29]. Word counts, all inside the applicable window: 1-3 = 649, 4-6 = 585, 8-9 = 126 (declared thin, 120-349), 11-14 = 361, 19-21 = 558, 22-23 = 643, 24-27 = 448, 28-29 = 645. Every proposition in every entry is traceable to a named block inside that entry's own verse range; no voice is named in an entry where it has no head. Voice coverage: Gill 20 keys, Ellicott 13, Clarke 8, Keil 6, Jamieson 5 (all residue), Calvin 5, Wesley 4, Henry 2. Jamieson is declared as excluded_voices in the four entries containing his residue keys (2, 8, 14, 20, 26). ONE SILENT_BY_ENTRY decision: Keil at entry 28-29, whose key 29 block is the bare text of the verse (54 words) with no exposition whatever — nothing was withheld from the reader, so he is silenced rather than declared, following the 1samuel 6 precedent. GILL AT KEY 21 is the difficult case: his block there is twenty words consisting almost entirely of stripped cross-references, so it carries no proposition. He is named in that entry only for what the block actually asserts, that the law is a repetition, and nothing is attributed to him about the reference itself. Deliberate omissions, none of which changes any reported position: Clarke's full Linnaean apparatus at keys 4 and 5 is given by three examples rather than the whole; his catalogue of travellers' identifications is compressed; Henry's key 1 block is a whole-chapter overview and only its material on verses 1-2 is used, the rest falling outside the entry's range; Calvin's French editorial glosses are not reproduced; Gill's Targum citations are summarised. Truncation carried in the notes and NOT attributed to any commentator in the prose: Keil's five capped blocks and Gill's two, where sentences break off mid-clause. Where the cap removed a conclusion I reported only what survives and attributed no absence to anyone."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JFB stride-6 confirmed a 24th time, with a REFINEMENT to the donor model. Five JFB blocks, at keys 4, 10, 16, 22 and 28 - stride 6 exactly - and all five are Romans: key 4 is Rom 14:16 (this liberty of yours as to Jewish meats and days), key 10 is Rom 14:21 (nor to do any thing whereby thy brother stumbleth, with the three-word gradation), key 16 is Rom 15:2 (please his neighbour for his good to edification), key 22 is Rom 15:7 (receive ye one another as Christ received us), key 28 is Rom 15:8 (Christ a minister of the circumcision). The refinement: the donor run CROSSES A CHAPTER BOUNDARY, 14:16 to 15:8. So the donor is not 'one wrong chapter' as note 1474 put it, but a continuous advancing run through the donor text that ignores chapter divisions. All five excluded."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "11",
+        "18",
+        "19",
+        "20",
+        "23",
+        "25",
+        "27",
+        "33"
+      ],
+      "note": "CYRIL COLUMN MECHANISM IDENTIFIED. The Cyril of Jerusalem column is a proof-text index, not a commentary, and the same catechetical section is duplicated at every verse it happens to quote. Demonstration in this chapter: keys 18 and 19 carry BYTE-IDENTICAL blocks - Catechetical Lecture section 33, the catena of Pauline Spirit-texts - because that section quotes both verses; and the very same section was filed at ephesians 3 key 5, which it also quotes. Keys 11, 25 and 27 likewise carry sections that genuinely cite their verses and are usable. Keys 20, 23 and 33, by contrast, carry sections that do not quote their verse at all (the 2 Cor 4:4 blinding lecture at 20 - itself a duplicate of ephesians 3 key 14 - a Golgotha lecture at 23, a baptism lecture at 33) and are arbitrary. RULE: a Cyril block is usable only if it quotes the target verse; check for the citation before declaring him, and expect duplicates across keys and across books."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "33"
+      ],
+      "note": "StudyLight chrome at Ellicott's terminal block, third sighting (after 2corinthians 5 and deuteronomy 10). Ellicott key 33 runs 1,194 words of which roughly 800 are copyright statement, sub-menu CSS and verse-popup JavaScript; his actual comment on the verse is about 120 words. The pattern from note 1491 now holds across three books and two voices: the chrome attaches to whichever voice ends the chapter file. It is inside the usable-source count and inflates it, which matters here because key 33 is credited with 5,200 source words."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "31",
+        "33"
+      ],
+      "note": "Clarke's and Calvin's end-of-chapter placement recurs, in the two forms already logged. Clarke's key-33 block runs 2,033 words of which only about 90 comment on v.33; the rest is Macknight's excursus on the mystery of marriage, which belongs to v.32 and was read into the 31-33 entry (the same shape as the Kennicott case in deuteronomy 10, note 1492). Calvin's column again inlines editorial footnotes with trailing attributions - Eadie at keys 2, 18 and 33, Bloomfield at 15, Chandler at 4 - confirming across a fifth book the pattern first logged for deuteronomy 19. The Eadie note at key 33, on why the two marital commands are asymmetrical, is the best single sentence in the chapter and is NOT Calvin's; attributed as such in the prose and flagged in outliers."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "Two exceptional textual moments preserved from this chapter. (a) At v.9 EVERY voice in the catena independently notices the same variant and five of six prefer the same reading: Clarke marshals the uncials and versions for 'the fruit of the light' against the received 'fruit of the Spirit' on the ground that the Spirit is nowhere named in the context; Gill cites the Alexandrian copy; Robertson notes the late manuscripts; Wesley simply adopts it; Ellicott says the easier phrase was substituted 'to the great detriment of the force and coherency of the whole passage'; Calvin professes to wonder how 'Spirit' crept in, while adding that the meaning is unaffected. Unanimity of this kind across eight independent commentators is rare in this corpus. (b) At v.14 the quotation cannot be located in Scripture at all, and the catena splits three ways - an early Christian hymn (Ellicott, Clarke, Robertson), a lost book (Epiphanius, Jerome and others as reported by Barnes), or no citation at all, the verb being impersonal and the speaker the gospel or Christ through his ministers (Clarke, Calvin, Wesley). Both recorded in the debates field with all sides named."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "15",
+        "21",
+        "22"
+      ],
+      "note": "Henry holds only five keys in this chapter (1, 3, 15, 21, 22) and his key-3 block covers vv.3-14, so puritan-evangelical is absent from the 5-7, 8-10, 11-13, 14, 18-19, 25-27, 28-30 and 31-33 entries - eight of thirteen. Same section-commentary shape logged for ephesians 3 and 2corinthians 5, and now confirmed across three Pauline chapters: Henry will occupy two to five entries in any epistle chapter and be missing from the rest. Chrysostom is sparser still (keys 5, 15, 22) but each of his three blocks is substantive and distinctive, so eastern-antiochene is thin but never empty where it appears."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "ephesians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "11",
+        "14",
+        "15",
+        "18",
+        "20",
+        "22",
+        "25",
+        "28",
+        "31"
+      ],
+      "note": "All thirteen entries self-graded A (QA 639/646/639/538/598/632/622/632/632/632/642/593/621; ttr 0.601-0.680). Three needed a trim pass. At 33 source keys this is the largest key count handled in this run and the tiling followed the argument rather than equal weight: 1-2 | 3-4 | 5-7 | 8-10 | 11-13 | 14 | 15-17 | 18-19 | 20-21 | 22-24 | 25-27 | 28-30 | 31-33, with v.14 kept solo because the unplaceable quotation is a self-contained crux. Eight exclusions (five JFB, three Cyril), all source defects. One correction made during assembly: the school-summary for the 15-17 entry initially credited Henry's remark about complaining of bad times to Clarke; the prose had it right and the summary was fixed before landing."
     }
   ]
 }

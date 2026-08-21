@@ -2,1474 +2,1342 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's lofty exhortation (drawing the consequence 'therefore' from 4:32): 'be ye followers (mimetai — imitators) of God' — believers are to imitate God himself, especially in his forgiving love and goodness; 'as dear (beloved) children' — as children naturally imitate a loved father, so believers, God's beloved children, are to copy their Father, the relationship making the imitation fitting (Barnes, Robertson, Henry)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: nothing less than the imitation of God himself is set before the believer; the dignity of being his children calls for likeness to him in love and goodness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Be ye therefore followers of God, as dear children",
-   "the call to imitate God",
-   "as beloved children copying their Father",
-   "the imitation of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "1-2",
+  "pericope_label": "Be ye therefore followers of God, as dear children; and walk in love, as Christ also hath loved us, and hath given himself for us an offering and a sacrifice to God for a sweetsmelling savour",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The command: 'walk (order your whole life) in love, as (after the pattern of) Christ also hath loved us' — Christ's love is the model and measure of the believer's love; his love shown in that he 'gave himself for us an offering and a sacrifice to God' — his self-surrender on the cross, a true sacrifice (the terms drawn from the Levitical offerings) presented to God on our behalf; 'for a sweetsmelling savour' — a fragrant offering, well-pleasing and acceptable to God (Barnes, Robertson)."
+    "summary": "Read the phrase as unique and striking, fixing the imitation on love above every other attribute, and note that the command to be perfect is glossed elsewhere as being merciful; then distinguish the two nouns for Christ's death precisely, the offering being the perfect obedience of his humility and the sacrifice its completion in blood — an incidental but complete summary of the atonement."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ's sacrifice was the sweet savour that reconciled God to us; the believer's love is to be patterned on this self-giving, ordering the whole walk by the love that gave itself for us."
+    "prevalence": "several",
+    "summary": "Enter the limitation before the command runs too far: God is not to be imitated in his works of infinite power, which is impossible, but in righteousness and mercy; and take the chapter division as unhappy, since it has cut apart parts of a subject closely joined."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Press the force of the word, which properly means personating another, assuming his gait and speech — the root of our word mimic — and prefer imitation of God to imitation of Homer, Virgil or Alexander; identify the two offerings with the Hebrew meal-offering and sin-offering."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Take the imitation as putting great honour on practical religion, and read \"as dear children\" as its own argument, since children resemble their parents in the features of the face and the dispositions of the mind."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far may God be imitated?",
+    "sides": [
+     {
+      "position": "Not in his works of infinite power, which is impossible, but in righteousness and mercy",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Chiefly in love, since the command to be perfect is glossed elsewhere as being merciful",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "Alone measures the command against classical models, asking how much more honourable it is to imitate God than Homer, Virgil or Alexander."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone enters the negative that the offering was made to God and not to the devil, invoking Anselm."
+   }
+  ],
   "themes": [
-   "walk in love, as Christ also hath loved us",
-   "hath given himself for us an offering and a sacrifice to God for a sweetsmelling savour",
-   "walking in love after Christ's self-sacrifice",
-   "Christ's love the pattern"
+   "imitators of God",
+   "walking in love",
+   "offering and sacrifice"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "3-4",
+  "pericope_label": "But fornication, and all uncleanness, or covetousness, let it not be once named among you, as becometh saints; neither filthiness, nor foolish talking, nor jesting, which are not convenient: but rather giving of thanks",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul, turning from love to its opposite, forbids 'fornication, and all uncleanness (akatharsia — impurity of every kind), or covetousness (pleonexia — greed, often linked with impurity)' — the sins of lust and grasping desire; these are not to 'be once named (mentioned with approval, or spoken of lightly) among you' — so far should believers be from them that they should not even be a topic of casual or approving talk, 'as becometh (is fitting for) saints' (Barnes, Robertson, Henry)."
+    "summary": "Turn the company the word keeps into an indictment of a later age, asking why covetousness is not now ranked with the vices Paul ranks it with; distinguish two kinds of foul speech, the brutal talk of the fool and the refined versatility that fears nothing but dulness; and refuse to condemn courtesy, cheerfulness or good-natured humour along with levity."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: such purity becometh the saints, the holy ones set apart to God; their character demands the utter avoidance of these sins, which are wholly unfit for those consecrated to him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fornication, and all uncleanness, or covetousness, let it not be once named among you",
-   "as becometh saints",
-   "the call to utter purity",
-   "sin not even named among saints"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul forbids three sins of speech: 'filthiness (obscenity, shameful talk), foolish talking (morologia — silly, empty speech), nor jesting (eutrapelia — coarse wit, ribald joking)' — 'which are not convenient (not fitting, unbecoming)' for believers; 'jesting' meaning not innocent cheerfulness but the clever, coarse wit that turns easily to indecency, the abuse of humor; 'but rather giving of thanks' — gracious, thankful speech replacing corrupt or empty talk (Barnes, Robertson, Ellicott)."
+    "summary": "Take the third vice in its plain sense of an immoderate desire of gain, while noting that its position may point rather to an insatiable appetite after the lusts just named; and condemn pleasantry not as mirth but as the garb under which idle talk conceals itself."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: in place of filthy or foolish talk, the speech that becomes saints is gracious and thankful; thanksgiving is the right and wholesome use of the tongue God has given."
+    "prevalence": "several",
+    "summary": "Treat the three terms as species of one thing, since the pleasure-taker never has enough any more than the miser; define the word for jesting as artfully turned discourse whose chaste words carry an obscene sense; and ask how a man who has been trifling in company can go apart to magnify God for the tongue he abused."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Report both readings of covetousness and call the love of the world spiritual idolatry, since the epicure makes a god of his belly and the covetous man of his money."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the third vice named mean avarice or lust?",
+    "sides": [
+     {
+      "position": "Avarice, an immoderate desire of gain",
+      "holders": [
+       "Calvin",
+       "Barnes",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "An insatiable appetite after the lusts just named, from the company it keeps",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Possibly both, the three terms being species of one thing",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The ambiguity is instructive, since the Tenth Commandment joins the two kinds of coveting",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone turns the verse into a sustained indictment of his own age for not ranking covetousness with the vices Paul ranks it with, and predicts that when it is so ranked the conversion of the world will not be far off."
+   }
+  ],
   "themes": [
-   "neither filthiness, nor foolish talking, nor jesting, which are not convenient",
-   "but rather giving of thanks",
-   "the call to pure speech",
-   "corrupt talk replaced by thanksgiving"
+   "the three vices",
+   "covetousness as idolatry",
+   "filthy talking and jesting"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "5": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
+   "Albert Barnes",
    "A.T. Robertson",
-   "John Calvin"
+   "John Chrysostom"
   ],
+  "range": "5-7",
+  "pericope_label": "For this ye know, that no whoremonger, nor unclean person, nor covetous man, who is an idolater, hath any inheritance in the kingdom of Christ and of God. Let no man deceive you with vain words: be not ye therefore partakers with them",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The solemn certainty ('this ye know'): 'no whoremonger (fornicator), nor unclean person, nor covetous man' — those habitually given to impurity or greed are shut out; 'who is an idolater' — the covetous man is an idolater, for covetousness is idolatry, the greedy man making a god of his wealth and desire, worshipping the creature instead of the Creator (Colossians 3:5); such persons 'have no inheritance in the kingdom of Christ and of God' — the habitual practice of these sins bars from the kingdom (Barnes, Robertson)."
+    "summary": "Trace the descent into idolatry in two stages, resting on a gift of God until he is lost in it, then setting up another object on the vacant throne; identify the deceivers as early Antinomian Gnostics who held that what is done in the body cannot touch the soul; and decline to press the single article as proof of Christ's deity here, while granting Paul taught it elsewhere."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Answer the charge of harshness by distinguishing sentence on the sins from sentence on the sinner, since those who repent are no longer the persons they were; keep the charge of idolatry exact by noting it is not the idolatry Scripture usually condemns; and quote the excuses themselves — that this is a trivial fault, that God is not so cruel under grace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Document the local morals from Athenaeus and Demosthenes — the temples to Venus, the division of women into three classes — and ask whether the vain words are not the teaching of the lawgivers and philosophers who upheld that system."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Calvin): covetousness is named idolatry because it dethrones God in the heart and sets up gain in his place; the habitual practice of these sins excludes from the inheritance — a sobering warning even to professing believers."
+    "prevalence": "single",
+    "summary": "Name the abatement in advance: men have always said that the covetous man being an idolater is hyperbole, and by such abatements they explain away all the commandments."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no whoremonger, nor unclean person, nor covetous man, who is an idolater, hath any inheritance",
-   "the kingdom of Christ and of God",
-   "the impure and covetous excluded from the kingdom",
-   "covetousness is idolatry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul warns: 'let no man deceive you with vain (empty, hollow) words' — against those who would excuse or make light of these sins with plausible but empty arguments; 'for because of these things (the sins of impurity and covetousness) cometh the wrath of God' — God's wrath surely falls on such sins, they are not trivial but bring down judgment; 'upon the children of disobedience' — those characterized by disobedience to God (the same phrase as 2:2), the impenitent who practise these sins (Barnes, Robertson)."
+    "question": "Who are the deceivers with vain words?",
+    "sides": [
+     {
+      "position": "An early Antinomian Gnosticism holding that what is done in the body cannot touch the soul",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The lawgivers and philosophers of Greece, who upheld the local sexual system by authority and example",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Friends still moving in those circles, and philosophers who defended such practices",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let no man deceive you with vain words",
-   "because of these things cometh the wrath of God upon the children of disobedience",
-   "the warning against deceivers",
-   "the wrath of God on the disobedient"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's conclusion ('therefore'): 'be not ye partakers (symmetochoi — sharers, fellow-participants) with them' — believers are not to join in the sins of the children of disobedience, nor share in their conduct; to be partakers with them would be to take part in their sins and so in their judgment, so believers are to keep clear of both the deeds and the doom of the disobedient (Barnes, Robertson, Gill)."
+    "voice": "Adam Clarke",
+    "note": "Alone documents Ephesian morals from Athenaeus and Demosthenes, including the temples dedicated to Venus and the sentence dividing women into three classes."
+   },
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone anticipates the objection rather than answering it, naming in advance the men who will call the charge of idolatry hyperbolical."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Be not ye therefore partakers with them",
-   "the call not to share in the sins of the disobedient",
-   "keeping clear of their deeds and doom",
-   "separation from sin"
+   "exclusion from the kingdom",
+   "vain words",
+   "partakers with them"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "8-10",
+  "pericope_label": "For ye were sometimes darkness, but now are ye light in the Lord: walk as children of light; for the fruit of the Spirit is in all goodness and righteousness and truth; proving what is acceptable unto the Lord",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The strong figure: not merely in darkness and in light, but believers 'were (themselves) darkness' (so given over to ignorance and sin) and 'now are ye light in the Lord' — themselves become light, illumined and transformed in union with the Lord; the change is 'in the Lord,' believers being light not of themselves but by union with Christ, the light of the world; 'walk as children of light' — live consistently with the new nature, in holiness and truth (Barnes, Robertson)."
+    "summary": "Make the difference between walking in darkness and being darkness the point, so that the reprobate becomes a new source of the darkness he spreads; press the metaphor of fruit literally, since light is the condition of the life that bears and darkness destroys it; and define proving as trying each case by the full light of God."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Take darkness for the whole nature of man before regeneration, since out of Christ everything lies under the prince of darkness; and insist that the trial be made by Scripture and not by human reason, which is corrupt and fallible."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): being now light, believers are to walk as children of light, their conduct matching their illumined nature; the new being requires a new walk."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye were sometimes darkness, but now are ye light in the Lord",
-   "walk as children of light",
-   "former darkness and present light",
-   "the walk of light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The parenthetical explanation of what the walk of light produces: 'the fruit of the Spirit (or, of the light, as the better manuscripts read) is in all goodness and righteousness and truth' — the threefold fruit that the light yields: 'goodness (benevolence, kindness toward others), righteousness (justice, uprightness), and truth (sincerity, integrity, honesty)' — the moral fruit that marks the children of light, standing over against the unfruitful works of darkness (Barnes, Robertson)."
+    "summary": "Report the manuscript evidence for reading the fruit of the light rather than of the Spirit, on the ground that the Spirit is nowhere named in the context, and order the three qualities as a sequence — goodness in the disposition, righteousness in the conduct, truth directing both."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the fruit of the Spirit is in all goodness and righteousness and truth",
-   "the fruit of the light",
-   "goodness, righteousness, and truth",
-   "the moral fruit of the children of light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The children of light, in their walk, are 'proving (dokimazo — testing, examining, discerning) what is acceptable (euareston — well-pleasing) unto the Lord' — making it their constant study to find out and do what pleases God; the measure of conduct is not human opinion or custom but 'what is acceptable unto the Lord,' the believer's aim being to please Christ, testing every action by that standard; the walk of light is active and discerning, not passive (Barnes, Robertson, JFB)."
+    "question": "Is the true reading \"the fruit of the Spirit\" or \"the fruit of the light\"?",
+    "sides": [
+     {
+      "position": "Of the light — the reading of the leading uncials and versions, and the Spirit is nowhere named in the context",
+      "holders": [
+       "Clarke",
+       "Ellicott",
+       "Robertson",
+       "Gill",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Of the light, though the sense is unaffected either way",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone argues that the metaphor of fruit is literally exact, since light is the physical condition of the vegetative life that bears and darkness destroys it."
+   }
+  ],
   "themes": [
-   "Proving what is acceptable unto the Lord",
-   "the call to prove what pleases the Lord",
-   "testing conduct by God's pleasure",
-   "the discerning walk of light"
+   "darkness and light",
+   "fruit of the light",
+   "proving what pleases God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "11": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "11-13",
+  "pericope_label": "And have no fellowship with the unfruitful works of darkness, but rather reprove them. For it is a shame even to speak of those things which are done of them in secret. But all things that are reproved are made manifest by the light",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's command: 'have no fellowship (no participation, no sharing) with the unfruitful (barren, profitless) works of darkness' — the deeds of sin, which produce nothing good, are to be wholly avoided; the works of darkness are 'unfruitful,' yielding no good fruit (only shame and ruin), in contrast to the fruit of light (v.9); 'but rather reprove (elencho — expose, convict, rebuke) them' — believers are not merely to abstain but to expose and rebuke the works of darkness by their light and witness (Barnes, Robertson)."
+    "summary": "Define fellowship as keeping terms with evil rather than sharing in it, since sin prevails more by cowardly indulgence than by love of it; hold that sin may be branded without polluting the tongue by describing it; and allow that a man must sometimes turn on the light even when doing so is disgraceful."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the children of light must not only avoid the deeds of darkness but expose and convict them; their holy walk and witness are themselves a reproof to sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "have no fellowship with the unfruitful works of darkness, but rather reprove them",
-   "shunning and reproving the works of darkness",
-   "the barren deeds of sin",
-   "exposing darkness by the light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul gives a reason for shunning these works: 'it is a shame (aischron — shameful, disgraceful) even to speak of those things which are done of them (the children of disobedience) in secret' — the deeds of darkness are so vile that merely to describe them is shameful; they are 'done in secret,' hidden, practised in darkness and concealment, for they cannot bear the light; their secrecy is itself a mark of their shamefulness, and explains why believers reprove rather than partake (Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is a shame even to speak of those things which are done of them in secret",
-   "the shameful secret deeds of darkness",
-   "sins too vile to describe",
-   "done in secret, shunning the light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The principle: 'all things that are reproved (exposed, convicted) are made manifest (brought to light, shown for what they are) by the light' — when the light shines on the works of darkness, it reveals their true nature; the maxim 'whatsoever doth make manifest (reveal, bring to light) is light' — it is the very nature and property of light to reveal, so that which exposes hidden things is itself light; the believer, as light, by his holy life exposes the works of darkness (Barnes, Robertson)."
+    "summary": "Note that Paul forbids fellowship with the works and not with the workers, so that civil dealing is not prohibited; supply the works rather than the doers as the object of reproving; and observe that where an offence is manifest all are eager to clear themselves of guilt while few guard against connivance."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the light not only exposes but may transform — what is made manifest by the light may itself become light; the exposing of sin can be the first step toward its conversion."
+    "prevalence": "several",
+    "summary": "Read the works of darkness as the night mysteries celebrated in caves and kept secret on pain of death, and name the Bacchanalian rites the Roman senate itself banished; keep the personal object of the verb and let it carry testimony, conviction and rebuke together."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Apply the clause to heretical teachers, warning catechumens not even to greet a man who holds that Christ was assembled out of contributions from twenty-nine aeons."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does \"reprove\" govern?",
+    "sides": [
+     {
+      "position": "The works of darkness, so that reproving means bringing them to the light",
+      "holders": [
+       "Calvin",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The doers, so that it means testimony, conviction and rebuke of persons",
+      "holders": [
+       "Clarke",
+       "Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "May the sins in question be described in order to condemn them?",
+    "sides": [
+     {
+      "position": "No — naming them raises polluting images, and pictures defile even when they condemn",
+      "holders": [
+       "Barnes",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Sometimes one must speak out and turn on the light, disgraceful though it is",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone turns the verse against the reforming zeal of his own day, questioning whether ministers should portray such vices from the pulpit or reformers describe them to the world."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "Applies the clause to Valentinian teachers, warning catechumens not even to greet them — a use that independently supports the Gnostic reading of the “vain words” earlier in the chapter."
+   }
+  ],
   "themes": [
-   "all things that are reproved are made manifest by the light",
-   "whatsoever doth make manifest is light",
-   "the light exposing and making manifest",
-   "the believer as light unmasking darkness"
+   "no fellowship",
+   "reproving the works",
+   "shame in speaking"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "14",
+  "pericope_label": "Wherefore he saith, Awake thou that sleepest, and arise from the dead, and Christ shall give thee light",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Robertson (with Clarke): the words are most likely a fragment of an early Christian hymn — the rhythmical character of the Greek, and the impossibility of finding a close scriptural original, point to a sung verse (like the embryo creeds of 1 Corinthians 15:3-4; 1 Timothy 3:16); some early hymn began 'Awake, thou that sleepest...' The summons is to the sinner asleep and dead in sin — 'awake (rouse from spiritual slumber), arise from the dead' — with the promise 'Christ shall give thee light (epiphausei — shall dawn upon thee),' Christ the day-star shining on those who rouse and turn to him."
+    "summary": "Dispose of both scriptural candidates for the quotation on grounds of wording and design, list the conjectures of a lost source, and conclude that the words are not Scripture though their form shows them well known — most likely an early Christian hymn, whose rhythm is rough but distinct."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Barnes, Wesley): Christ is speaking through his ministers in the ordinary message of gospel preaching, freely alluding to the prophecies of Christ's kingdom (Isaiah 60:1; 26:19) rather than citing one verbatim; the gospel constantly cries to the dead to rise to the light of Christ. Barnes doubts any formal quotation is intended, taking Paul to speak as an inspired man; some Fathers (Epiphanius, Syncellus) supposed a lost apocryphal source (Elijah or Jeremiah), and Grotius read 'it (the light) saith.'"
+    "prevalence": "several",
+    "summary": "Decline the search altogether and take Christ to be speaking through his ministers, since the daily object of preaching is to raise the dead; and guard the last clause against the notion that Christ's light follows our rising, when in fact his enlightening is our rising."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Print the supposed hymn in its three Greek lines while also offering the alternative that the verb is impersonal and refers to the gospel just named, so that this is the standing voice of the gospel everywhere; and press both figures, the sleeper who may be woken and the dead who can do nothing."
    }
   ],
   "debates": [
    {
-    "question": "What is the source of 'Awake thou that sleepest...'?",
+    "question": "Where does the quotation come from?",
     "sides": [
      {
-      "position": "A fragment of an early Christian hymn",
+      "position": "From an early Christian hymn, whose rhythm survives in the Greek",
       "holders": [
        "Ellicott",
-       "Robertson",
-       "Clarke"
+       "Clarke",
+       "Robertson"
       ]
      },
      {
-      "position": "Christ speaking through the gospel, freely alluding to Isaiah (60:1; 26:19) — not a verbatim citation",
+      "position": "From no citation at all: the verb is impersonal and refers to the gospel, or to Christ speaking through his ministers",
       "holders": [
+       "Clarke",
        "Calvin",
-       "Barnes",
        "Wesley"
       ]
      },
      {
-      "position": "A lost apocryphal prophecy (of Elijah or Jeremiah)",
+      "position": "From a lost book — a prophecy of Elijah, a writing of Jeremiah, or an apocryphal work",
       "holders": [
-       "Epiphanius",
-       "Syncellus"
+       "Epiphanius (as reported by Barnes)",
+       "Jerome (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "From no scriptural passage that can be adduced, though the form shows it well known",
+      "holders": [
+       "Barnes",
+       "Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone prints the conjectured hymn in its three Greek lines, while also offering the quite different solution that the verb is impersonal and the speaker is the gospel itself."
+   }
+  ],
   "themes": [
-   "Awake thou that sleepest, and arise from the dead, and Christ shall give thee light",
-   "the summons to awake and arise to Christ's light",
-   "the crux of the quotation's source",
-   "the call to spiritual life"
+   "an unplaceable quotation",
+   "awake and arise",
+   "Christ shall give light"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "15": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
    "John Wesley",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "15-17",
+  "pericope_label": "See then that ye walk circumspectly, not as fools, but as wise, redeeming the time, because the days are evil. Wherefore be ye not unwise, but understanding what the will of the Lord is",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's charge: 'see (take heed) then that ye walk circumspectly (akribos — carefully, accurately, exactly)' — believers are to order their lives with exact care and watchfulness, attentive to their conduct; 'not as fools (the unwise, who live carelessly and without thought) but as wise (the prudent, who order life by true wisdom)' — the choice between a foolish and a wise walk (Barnes, Robertson, Chrysostom)."
+    "summary": "Correct \"circumspectly\" to strictly or accurately, so that the idea is finding the clear line of right and keeping to it rather than looking about for dangers; render the next phrase as the opportunity rather than the time, and draw the lesson of the unjust steward, that the children of light should show the shrewdness of the world's buyers and sellers."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the Christian life requires watchful, careful, wise conduct — not the heedless living of the foolish, but the deliberate prudence of the wise, taking heed to every step."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "See then that ye walk circumspectly, not as fools, but as wise",
-   "the call to walk circumspectly and wisely",
-   "exact care in conduct",
-   "the choice between foolish and wise walking"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The charge: 'redeeming the time (exagorazomenoi ton kairon — buying up the opportunity, making the most of every season)' — believers are to seize and use well every opportunity for good, as a merchant buys up a valuable commodity; time and opportunity are precious and fleeting, and to 'redeem' them is to rescue them from waste and turn them to good account, no opportunity for godliness or service to be lost (Barnes, Robertson)."
+    "summary": "Set the believer in a crowded theatre, living under the eye of God and of angels; and price the redemption of opportunity as withdrawal from the allurements that lead men astray and the abandoning of every hindrance."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): 'the days are evil' — full of sin, danger, and temptation (perhaps also of persecution); the evil of the times makes the wise use of every opportunity the more urgent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Redeeming the time, because the days are evil",
-   "the call to redeem the time",
-   "buying up every opportunity for good",
-   "the urgency of evil days"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's repeated charge: 'be ye not unwise (aphrones — foolish, senseless) but understanding (synientes — perceiving, grasping) what the will of the Lord is' — believers are to apply themselves to know and comprehend God's will; true wisdom consists in understanding what the Lord requires and approves, the wise walk grounded in knowing God's will, not in human cleverness; this sums up the call to wisdom of v.15 (Barnes, Robertson, Calvin)."
+    "summary": "Trace the word for wisdom through Pythagoras's coinage of philosopher and give the empty Gentile philosopher the name of fool; and read the walking exactly as getting to the highest pitch of every point of holiness, buying every moment out of the hands of sloth and ease."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Supply the persecuted setting — cities at war with them, households divided — and read the command as meaning that they should give no handle for hatred on any score except the gospel itself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make time a talent given by God and misspent whenever it is not employed to his design, and turn the common complaint round — people apt to complain of bad times would do better to let that stir them to redeem the time."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does \"circumspectly\" render the word rightly?",
+    "sides": [
+     {
+      "position": "No — it means strictly or accurately, of finding the line of right and keeping to it",
+      "holders": [
+       "Clarke",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The traditional sense will serve: watchful care against surrounding temptations",
+      "holders": [
+       "Barnes",
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone supplies the persecuted setting — cities at war with the Christians and households divided — and reads the command as forbidding any handle for hatred except the gospel itself."
+   },
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone turns the complaint about bad times into an argument for redeeming the time."
+   }
+  ],
   "themes": [
-   "be ye not unwise, but understanding what the will of the Lord is",
-   "the call to understand the will of the Lord",
-   "true wisdom in knowing God's will",
-   "the wise walk grounded in God's will"
+   "walking strictly",
+   "redeeming the opportunity",
+   "the will of the Lord"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "18": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
+   "Adam Clarke",
    "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
+  "range": "18-19",
+  "pericope_label": "And be not drunk with wine, wherein is excess; but be filled with the Spirit; speaking to yourselves in psalms and hymns and spiritual songs, singing and making melody in your heart to the Lord",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul forbids drunkenness: 'be not drunk with wine, wherein is excess (asotia — riot, profligacy, dissoluteness)' — intoxication, which leads to debauchery and the loss of self-control; the striking antithesis 'but be filled with (in, by) the Spirit' — over against the false stimulation and excess of drink, believers are to be filled with the Holy Spirit, who produces a true and holy exhilaration; the filling a continual, present command (Barnes, Robertson)."
+    "summary": "Analyse drunkenness not as an appetite gratified but as a reckless pursuit of excitement, confused in the Dionysiac frenzy with divine inspiration; separate the three kinds of song by their music rather than their authorship, and cite Pliny's description of Christians singing among themselves by turns."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Wesley): believers are to be ever filled with the Spirit, the source of spiritual joy, song, and thanksgiving (vv.19-20); the Spirit's fulness is the holy counterpart to the empty excess of drink."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be not drunk with wine, wherein is excess; but be filled with the Spirit",
-   "the contrast between drunkenness and being filled with the Spirit",
-   "the Spirit's holy exhilaration",
-   "the continual filling of the Spirit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The fulness of the Spirit overflows in praise: 'speaking to yourselves (to one another) in psalms and hymns and spiritual songs' — believers edifying and encouraging each other through sacred song; the three kinds being 'psalms' (the Old Testament psalms, or songs to accompaniment), 'hymns' (songs of praise to God), and 'spiritual songs' (sacred songs of various kinds, prompted by the Spirit) — a rich variety of praise (Barnes, Robertson)."
+    "summary": "Derive the word for excess from a negative and the verb to save, so that it pictures a man past saving, and note that where wine reigns profligacy follows of course; set the boundaries of the prohibition carefully, since it is a habit and not a single act that makes a drunkard."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the whole against the Bacchic rites, where priests professed to be filled with the god they served and delivered oracles in that condition; distinguish psalms, extemporary hymns and premeditated odes, and infer from the absence of inspired Christian songs that the larger effusion of the Spirit was meant to supply the lack."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Wesley): the singing is 'in your heart' (from the heart, with inward devotion, not mere lip-service) and 'to the Lord' (directed to God, for his glory); true praise is the heart's melody offered to God."
+    "prevalence": "single",
+    "summary": "Quote the clause among a catena of texts proving that the Holy Spirit subsists, lives and speaks."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are the psalms, hymns and spiritual songs?",
+    "sides": [
+     {
+      "position": "Three names for the one Book of Psalms",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Distinct kinds: the psalter, extemporary hymns under the Spirit, and premeditated odes",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Distinguished by their music: accompanied psalter, purely vocal hymns of the church's own making",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "New Christian composition is implied, the Spirit's larger effusion supplying what was not given in writing",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "Alone infers from the absence of inspired songs for the Christian dispensation that the larger effusion of the Spirit was meant to supply the lack."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "His block here is the same catechetical section that the source also files at the next verse and at another chapter entirely: it quotes the verse rather than expounding it."
+   }
+  ],
   "themes": [
-   "Speaking to yourselves in psalms and hymns and spiritual songs",
-   "singing and making melody in your heart to the Lord",
-   "mutual praise in sacred song",
-   "the heart's melody to the Lord"
+   "drunkenness and the Spirit",
+   "psalms, hymns and songs",
+   "singing in the heart"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The further mark of the Spirit-filled life: 'giving thanks always (at all times) for all things (in every circumstance) unto God and the Father' — a continual, comprehensive gratitude; thanksgiving is to be 'always' (without ceasing) and 'for all things,' not only for blessings but in every circumstance, even adversity, trusting God's good purpose, the believer finding cause for thanks in all (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Wesley): thanksgiving is offered 'in the name of (through, by the mediation of) our Lord Jesus Christ' — all our praise and thanks reach God through Christ, the one mediator through whom alone our worship is accepted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Giving thanks always for all things unto God and the Father",
-   "in the name of our Lord Jesus Christ",
-   "constant thanksgiving for all things",
-   "thanks through Christ the mediator"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "20-21",
+  "pericope_label": "Giving thanks always for all things unto God and the Father in the name of our Lord Jesus Christ; submitting yourselves one to another in the fear of God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The transition to the household duties: 'submitting yourselves (hypotassomenoi — yielding, subordinating yourselves) one to another' — a general principle of mutual deference and humility among believers, each yielding to others in love; this is the broad principle that governs the specific relationships now to follow (wives and husbands, children and parents, servants and masters), each fulfilling his proper duty in a spirit of humble submission, though the particular submission differs by relation (Barnes, Robertson, Henry)."
+    "summary": "Report the reading that makes the thanksgiving be offered for all persons rather than all things; describe unbroken thankfulness as the inner music of Christian life and the invariable element of public worship; and suspect that the New Testament's frequent insistence on subjection answers a real tendency to disregard restraint in the first exuberance of liberty."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: this submission is 'in the fear of God (or of Christ)' — not from mere social custom but from reverence for God, who appoints these relations and to whom all are accountable; the fear of God is the motive and bond of all right subjection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Submitting yourselves one to another in the fear of God",
-   "the call to mutual submission",
-   "humble deference grounding the household duties",
-   "submission in the fear of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The first household duty: 'wives, submit yourselves (the verb carried over from v.21) unto your own husbands' — the wife is to yield to and honour her own husband's leadership in the home; 'as unto the Lord' — the submission rendered as part of her devotion to Christ, as though to the Lord himself, a form of obedience to Christ who appointed the order (Barnes, Robertson, Chrysostom)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): this is no degrading servitude but the honourable order God established; the wife submits not to a tyrant but to a husband bound to love her as Christ loves the church (v.25), and her submission is part of her reverence for the Lord."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wives, submit yourselves unto your own husbands, as unto the Lord",
-   "the call for wives to submit to their husbands",
-   "submission as to the Lord",
-   "the honourable order God appointed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of the wife's submission: 'the husband is the head of the wife, even as (after the pattern of) Christ is the head of the church' — the husband's headship in the home mirrors Christ's headship over the church; 'head' denoting leadership, authority, and care — not tyranny but the responsible direction a head gives to the body; 'and he is the saviour of the body' — of Christ uniquely added, his being the saviour of the church (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): 'saviour of the body' is a glory belonging to Christ alone; yet the husband too is, in his measure, the protector and provider for his wife, leading and caring for her as Christ does the church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the husband is the head of the wife, even as Christ is the head of the church",
-   "he is the saviour of the body",
-   "the husband's headship patterned on Christ",
-   "leadership and care, not tyranny"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The conclusion ('therefore'): 'as the church is subject unto Christ, so let the wives be to their own husbands' — the church's glad subjection to Christ is the model for the wife's submission to her husband; 'in every thing' — in all things lawful and proper, within the sphere of the marriage relation; the submission is comprehensive, though always (as understood) limited by obedience to God, never requiring sin (Barnes, Robertson, Calvin)."
+    "summary": "Refuse to exempt anyone from mutual subjection, not even kings and governors, whose authority exists for the community's service; and point to the fear named in the clause as the only thing that can subdue our fierceness — while suspecting that the variant reading was introduced by someone who found the received phrase harsh."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: as the church's subjection to Christ is loving and willing, so the wife's submission is to be — not slavish but the glad yielding of love within God's appointed order."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as the church is subject unto Christ, so let the wives be to their own husbands in every thing",
-   "the wife's submission patterned on the church",
-   "subjection in every thing",
-   "willing submission within God's order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The husband's corresponding duty, weightier than the wife's submission: 'husbands, love your wives' — the husband's whole obligation is summed in self-giving love, not mere authority; 'even as (after the pattern of) Christ also loved the church' — the husband's love patterned on Christ's love for the church, the highest conceivable standard; 'and gave himself for it' — Christ's love went to the length of dying for her, the husband's love to be self-sacrificing, ready to give itself wholly for the wife's good (Barnes, Robertson)."
+    "summary": "Ground thanksgiving in the doctrine that all things work together for good; report the manuscript evidence for the fear of Christ rather than of God while holding that neither reading changes the sense; and warn against tenacity over indifferent matters that disturbs the church's peace."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): Christ gave himself for the church in love; the husband's love is to imitate this self-sacrifice, seeking the wife's good even at his own cost, as Christ sought the church's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Husbands, love your wives, even as Christ also loved the church, and gave himself for it",
-   "the call for husbands to love their wives as Christ loved the church",
-   "self-sacrificing love",
-   "Christ's love the pattern"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The purpose of Christ's self-giving: 'that he might sanctify (set apart, make holy) and cleanse (purify) it (the church)' — Christ gave himself not only to redeem but to purify the church, making her holy; 'with the washing of water by the word' — most take this as referring to baptism (the outward washing) joined with the word (the gospel, which gives baptism its meaning and power), the cleansing being by the word applied, of which baptism is the sign (Barnes, Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): the outward washing signifies the inward cleansing of the soul by the word and Spirit; the word is the instrument by which Christ purifies his church, the sign and the thing signified going together."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that he might sanctify and cleanse it with the washing of water by the word",
-   "Christ's purpose to sanctify and cleanse the church",
-   "the washing of water by the word",
-   "baptism and the word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ultimate purpose of Christ's sanctifying work: 'that he might present it (the church) to himself a glorious church (endoxon — in splendour, radiant)' — Christ will at last present the church to himself in perfect glory; the figure of a flawless bride, 'not having spot (stain), or wrinkle (mark of age or decay), or any such thing' — the church perfectly pure and beautiful, free from every defect; 'but that it should be holy and without blemish (amomos — unblemished, faultless)' (Barnes, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the church will be holy and without blemish — the final, perfect holiness of the bride made spotless for her husband Christ; this is the goal and consummation of all his sanctifying work."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that he might present it to himself a glorious church, not having spot, or wrinkle",
-   "that it should be holy and without blemish",
-   "Christ presenting the church glorious",
-   "the spotless bride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The inference ('so'): from Christ's love for the church, 'men ought to love their wives as their own bodies' — with the same care a man naturally has for his own body, since husband and wife are one flesh; 'he that loveth his wife loveth himself' — because the two are one, the husband who loves his wife is, in effect, loving himself, her good being his own (Barnes, Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): to love one's wife is not a burden but the most natural thing, for she is part of oneself; the husband cares for her as for his own body, her welfare bound up with his."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So ought men to love their wives as their own bodies",
-   "He that loveth his wife loveth himself",
-   "loving the wife as one's own body",
-   "husband and wife one flesh"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The appeal to nature: 'no man ever yet hated his own flesh (his own body), but nourisheth (ektrephei — feeds, sustains) and cherisheth (thalpei — warms, fosters, tends, as a bird warms its young) it' — every man naturally cares for and tends his own body; the husband is to care for his wife with such nourishing tenderness, 'even as the Lord (Christ) the church' (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Wesley): Christ nourishes and cherishes the church with tender, sustaining care, and the husband's care for his wife is to mirror it; the love is not cold authority but warm, fostering tenderness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no man ever yet hated his own flesh; but nourisheth and cherisheth it",
-   "even as the Lord the church",
-   "the husband nourishing his wife as Christ the church",
-   "tender, fostering care"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of Christ's care for the church: 'we are members of his body' — believers are united to Christ as members to a body, parts of him, sharing his life, which is why he nourishes and cherishes the church; 'of his flesh, and of his bones' — the strong figure (echoing Genesis 2:23, Adam's words of Eve) expressing the closest possible union between Christ and believers, as intimate as that of Adam and Eve, or of body and members (Barnes, Robertson)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): the believer's union with Christ is so close that we are reckoned part of him, his flesh and bones; such is the intimacy of the mystical union between Christ and his church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we are members of his body, of his flesh, and of his bones",
-   "believers as members of Christ's body",
-   "the closest union with Christ",
-   "the mystical union echoing Genesis 2:23"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul quotes Genesis 2:24 (the institution of marriage): 'for this cause shall a man leave his father and mother, and shall be joined (proskollethesetai — cleave, be glued) unto his wife, and they two shall be one flesh' — the foundational statement of the marriage union; 'one flesh' expressing the intimate, indissoluble union of husband and wife (no longer two but one, the closest of human bonds, taking precedence even over the tie to parents); cited because it pictures the union of Christ and the church (v.32, Barnes, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a man leave his father and mother, and shall be joined unto his wife, and they two shall be one flesh",
-   "the one flesh of marriage cited from Genesis",
-   "the indissoluble marriage union",
-   "marriage picturing Christ and the church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Mystery (mysterion)' means something once concealed, hidden, before unknown, now revealed (as in 1:9) — here the profound truth that the eternal Son of God should form so intimate a union with his people, of which marriage is a figure; 'great' because so deep. Paul's express words 'but I speak concerning Christ and the church' show (Barnes strongly: solely; Robertson, Ellicott: chiefly) that his statement of the mystery refers to the union of Christ and the church, the antitype, not to marriage as such. They reject the Roman Catholic inference that marriage is a sacrament, which arose only from the Vulgate's rendering of mysterion by 'sacramentum' — a verbal accident, not the sense of the Greek (Barnes, Robertson, Ellicott, Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he is overwhelmed by the depth of this spiritual union between Christ and the church, which no language can explain — let us labour rather to feel Christ living in us than to discover its nature. He sharply rejects the Papists' use of this verse to make marriage a sacrament: they were deceived by the Latin 'sacramentum' translating the Greek mysterion (the same word used in this Epistle of the calling of the Gentiles); the blunder 'arose from the grossest ignorance,' for marriage is no sacred symbol of grace like Baptism or the Supper, and Paul's own correction ('I speak of Christ and the church') guards against the mistake."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Describe mutual submission as a temper rather than a structure — bearing one another's burdens instead of advancing above others or giving laws to one another — with Paul's becoming all things to all men as the example."
    }
   ],
   "debates": [
    {
-    "question": "Does 'this is a great mystery' prove that marriage is a sacrament?",
+    "question": "Is the true reading \"the fear of God\" or \"the fear of Christ\"?",
     "sides": [
      {
-      "position": "No — 'mystery' is a profound revealed truth (the union of Christ and the church, figured by marriage); the sacrament-reading rests only on the Vulgate's 'sacramentum' for mysterion",
+      "position": "Christ, on the evidence of the uncials, versions and fathers, though the sense is unchanged",
       "holders": [
-       "Barnes",
-       "Robertson",
-       "Ellicott",
-       "Calvin",
        "Clarke"
       ]
      },
      {
-      "position": "Yes — marriage is a sacrament (Roman Catholic, from the Vulgate 'sacramentum hoc magnum est')",
+      "position": "God; the variant was probably introduced by someone who found the received phrase harsh",
       "holders": [
-       "the Church of Rome (rejected by the Protestant voices)"
+       "Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone reports Barrow’s rendering of the phrase as thanksgiving for all persons, and connects it with the Prayer Book’s thanks for God’s kindness to us and to all men."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone refuses to exempt kings and governors from mutual subjection, on the ground that their authority exists for the community’s service."
+   }
+  ],
   "themes": [
-   "This is a great mystery: but I speak concerning Christ and the church",
-   "the great mystery of Christ and the church",
-   "the crux of marriage as a sacrament",
-   "the Vulgate's sacramentum rejected"
+   "thanksgiving always",
+   "mutual submission",
+   "the fear of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
- "33": {
+ "22": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "22-24",
+  "pericope_label": "Wives, submit yourselves unto your own husbands, as unto the Lord. For the husband is the head of the wife, even as Christ is the head of the church: and he is the saviour of the body",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's practical summary ('nevertheless,' returning from the digression on Christ and the church to the immediate duty): 'let every one of you in particular so love his wife even as himself' — each husband to love his own wife as he loves himself; 'and the wife see that she reverence (phobetai — fear, in the sense of respect, honour) her husband' — the wife to give her husband reverence and honour; the love and the reverence answering to each other (Barnes, Robertson)."
+    "summary": "Set the verse beside the parallel chain in the earlier letter, where headship is simple lordship, and show that here the headship of Christ over the whole church yields a spiritual unity requiring self-sacrifice in the head as much as obedience to him; mark the qualifying clause as a tremendous difference hastily added."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Refer the qualifying pronoun to Christ and argue that nothing yields a wife more advantage than subjection, so that to refuse the means of her safety is to choose destruction; and narrow the scope of the duty, which is owed to her husband only and to no other."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "State the exception first — unless where God forbids — and set out at length what a wife may not obey in, a profligate husband or one using authority to keep her from the means of grace; observe that the inferior party is named first throughout, since inferiors must do their duty whatever their superiors do."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the two duties together — the husband's self-giving love and the wife's reverent honour — make the Christian marriage a reflection of Christ and the church, each fulfilling the proper part of the one bond."
+    "prevalence": "single",
+    "summary": "Praise the bond rather than the ordinance, calling the love of husband and wife more despotic than any despotism, since other affections may be strong but this one is strong and unfading."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Sum the whole relation up as unity and love, in which failures on both sides alter nothing of the relation itself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far does the submission extend?",
+    "sides": [
+     {
+      "position": "To every lawful thing, but not to what is criminal, nor where a husband would keep his wife from the means of grace",
+      "holders": [
+       "Clarke",
+       "Wesley",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "To her husband only, and not to any other man, nor to her children or household",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone praises the bond itself rather than the ordinance, calling this love more despotic than any despotism because it is not only strong but unfading."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone notices that the inferior party is named before the superior throughout the section, and explains it from the general proposition about submission."
+   }
+  ],
   "themes": [
-   "let every one of you in particular so love his wife even as himself",
-   "the wife see that she reverence her husband",
-   "the summary duty of love and reverence",
-   "marriage reflecting Christ and the church"
+   "wives and husbands",
+   "the husband as head",
+   "saviour of the body"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "25": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
+  ],
+  "range": "25-27",
+  "pericope_label": "Husbands, love your wives, even as Christ also loved the church, and gave himself for it; that he might sanctify and cleanse it with the washing of water by the word, that he might present it to himself a glorious church, not having spot, or wrinkle, or any such thing",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Make the likeness a condition of authority — only so far as a husband shows the like love, in sympathy, forbearance and abhorrence of tyranny, has he any right to claim lordship — and render the cleansing as in the laver of the water in the Word, while denying that the cleansing takes place in the bath except symbolically."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Guard the sacrament from becoming an idol, since God employs baptism to declare that we are washed and at the same time performs what it represents, but nothing may be ascribed to the sign or the minister that belongs to God; and note that the Pelagians used the presentation to prove perfection in this life, and were answered by Augustine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Found the husband's authority on his love, which must be such as would lead him to risk his life for her, and extend it to labouring for her salvation; trace the presentation to the royal bride brought in raiment of needlework, with the bridal purifications of Esther behind the cleansing."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Press the timing on candidates for baptism: they are not asked to be without spot before receiving the grace, since it is for remission of sins they were called, but that their conscience, found uncondemned, may concur with the grace when it is given."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is granted to the washing of water?",
+    "sides": [
+     {
+      "position": "Baptism, in which God declares that we are washed and at the same time performs what it represents — but nothing may be ascribed to sign or minister",
+      "holders": [
+       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Baptism, but the cleansing takes place in it only symbolically",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Baptism together with the spoken word — the question of faith and the baptismal formula",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Less the inward work of sanctification than justification by the blood and righteousness of Christ",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone breaks off to defend Paul against the charge that he elsewhere gives a degrading view of marriage, calling this the noblest picture of marriage ever drawn."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "Alone applies the “spot or wrinkle” to candidates awaiting baptism, insisting that purity is not required before the grace but that the conscience should be uncondemned when it is given."
+   }
+  ],
+  "themes": [
+   "love as Christ loved",
+   "the washing of water",
+   "without spot or wrinkle"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ },
+ "28": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "28-30",
+  "pericope_label": "So ought men to love their wives as their own bodies. For no man ever yet hated his own flesh; but nourisheth and cherisheth it, even as the Lord the church: for we are members of his body",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Correct the reference of \"so\" to the love of Christ just described rather than to the comparison following; observe that the figure assumes the Christian estimate of the body as part of the true self, incompatible with the Gnostic view of matter as evil; and pronounce the closing words about flesh and bones no part of the true text."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Put the argument as a syllogism from nature — every man loves himself, no man can love himself without loving his wife, therefore the man who does not love his wife is a monster — and refuse to weaken the closing clause, which is no exaggeration but the simple truth and means more than that Christ shares our nature."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Report the proverbial Jewish maxim that a wife is as her husband's own body; reduce the two verbs to feeding and clothing; and hold the middle ground on the last clause, that Christ partook of our nature as we partook of Adam's."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How literally is \"of his flesh and of his bones\" to be taken?",
+    "sides": [
+     {
+      "position": "Not literally at all: the union is of attachment, feeling and love, not physical",
+      "holders": [
+       "Barnes",
+       "Gill"
+      ]
+     },
+     {
+      "position": "No exaggeration but the simple truth, meaning more than that Christ shares our nature",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The words are not genuine, being wanting in the leading uncials",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone observes that the comparison presupposes the Christian estimate of the body as part of the true self, and is incompatible with the Gnostic view of matter as the source of evil."
+   }
+  ],
+  "themes": [
+   "as their own bodies",
+   "nourish and cherish",
+   "members of his body"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "31": {
+  "voices": [
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
+  ],
+  "range": "31-33",
+  "pericope_label": "For this cause shall a man leave his father and mother, and shall be joined unto his wife, and they two shall be one flesh. This is a great mystery: but I speak concerning Christ and the church",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Prefer the simpler reference of \"for this cause\" to the wife being as the husband's own body, calling the mystical connection too strained even here, and reject as absurd the reading that makes the \"man\" of the quotation mean Christ; trace the sacramental use of the word mystery to the Latin rendering."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Read the quotation as teaching that members of Christ share his substance, and use it against those who deny such intercourse; then decline to define the mystery at all, being overwhelmed by its depth and unashamed to confess ignorance and admiration together."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Render the joining as gluing or cementing, so that a well-glued board breaks in the solid wood before the joint, and death alone parts husband and wife; and deny that the Latin rendering of mystery makes marriage a sacrament in the sense the Church of Rome uses."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the Latin rendering of \"mystery\" make marriage a sacrament?",
+    "sides": [
+     {
+      "position": "No — the Greek means something concealed and now disclosed, not a sacrament",
+      "holders": [
+       "Barnes",
+       "Clarke",
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "To what does \"for this cause\" refer?",
+    "sides": [
+     {
+      "position": "To the wife being as the husband's own body, two verses earlier",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "To the union of Christ and the church just described",
+      "holders": [
+       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Not, at any rate, so as to make the \"man\" of the quotation mean Christ",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone renders the joining as gluing, with the figure of a well-glued board breaking in the solid wood before the joint gives way."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "His column carries an editorial note credited to Eadie explaining why the two commands are asymmetrical — each party is enjoined not what is instinctive but what directs the instinct — material that is not Calvin’s own."
+   }
+  ],
+  "themes": [
+   "one flesh",
+   "a great mystery",
+   "love and reverence"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  }
 }
