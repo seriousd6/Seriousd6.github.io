@@ -14123,6 +14123,90 @@
       "book": "1corinthians",
       "chapter": "16",
       "note": "All 24 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.630, mean zip 0.455. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named). Length control much improved on luke 1: 17 of 24 entries landed in range on the FIRST draft against luke 1's mean of 1.9 trim passes. The change that did it was drafting three paragraphs at four voices each rather than five — the diagnosis recorded after luke 1 held up. The two entries that overran badly (v13 at 690 and v22 at 866) were both rich sources where I let a single voice run long: Clarke's military reading of v13 and the anathema apparatus at v22. Note also that one trim on v22 created a comma splice which the next pass caught and fixed — cutting a trailing clause can orphan the conjunction before it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "Jamieson stride-6, FIFTEENTH confirmation. Keys 1, 7, 13, 19, 25 carry blocks that have nothing to do with Hebrews 7; they are walking 2 Corinthians 8 into 2 Corinthians 9 (Titus and the collection: 'Which put the same earnest care for you into the heart of Titus' at k13 quoting 2Co 8:6/8:16-17; at k19 'The Septuagint (Pr 3:4; Ro 12:17). The oldest manuscripts read, For we provide'; at k25 the section heading '2Co 9:1-15. Reasons for His Sending Titus'). Offset 1 (keys congruent to 1 mod 6). TARGET stride is exact and repeatable at 6; SOURCE stride is irregular, as established at philippians 2. Corrected offset tally across all confirmations: offset 0 - 1thessalonians 5, romans 14; offset 1 - 1peter 1, 1corinthians 16, judges 2, hebrews 7; offset 2 - acts 21, 1corinthians 11; offset 3 - numbers 24, philemon 1, acts 11, acts 17, philippians 2; offset 4 - philippians 1, 2corinthians 11. OFFSET 5 STILL NEVER OBSERVED across fifteen chapters. Jamieson is in RESIDUE for this chapter and declared as excluded_voices on the five affected entries."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "17",
+        "21"
+      ],
+      "note": "NEW SECOND STUCK CYRIL FRAGMENT. A Cyril of Jerusalem block appears byte-identical at keys 17 and 21 of this chapter: 1,097 chars, md5 763fd91d7fb4, opening 'And He is called by two names, Jesus Christ; Jesus, because He saves,-Christ, because He is a Priest.' This is DISTINCT from the long-tracked stuck fragment A (the 2 Cor 4:4 block on blinded thoughts, 1,070 chars, md5 faf6f21d5467) which has now been verified byte-identical at philemon 1 k25, 1thessalonians 5 k23 and k28, 1corinthians 16 k23, and 2corinthians 11 k31. Fragment B differs from A in two ways worth recording: it is duplicated WITHIN a single chapter at a gap of 4 keys rather than repeating across books, and its content is genuinely apt to Hebrews 7, since it quotes Psalm 110:4 and argues the high priesthood from Aaron. Treatment: the block was used once, at the 15-19 entry, and silenced at 20-22 to avoid quoting the same text twice under different verse ranges. A third, unrelated 41-word Cyril fragment on Daniel 7 sits at key 3 of this chapter and was likewise silenced. So this chapter alone contains three distinct Cyril blocks, two of them duplicated or misfiled."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "28"
+      ],
+      "note": "Terminal chrome inside the Ellicott block at the last key, TENTH CONSECUTIVE CHAPTER. Ellicott at hebrews 7:28 ends with navigation furniture swallowed into the commentary text ('Hebrews Heb 6 Hebrews Heb Hebrews Heb 8'), the same family of defect logged at 1thessalonians 5 k28, philippians 1 k30, acts 11 k30, 1corinthians 16 k24, judges 2 k22, romans 14 k23, acts 17 k34, philippians 2 k30, and 2corinthians 11 k33. Roughly 984 words per instance across the run. Nine of the ten chapters cannot distinguish 'last verse key in the chapter' from 'last Ellicott block in the chapter' because the two coincide; judges 2 alone separates them and favours LAST ELLICOTT BLOCK as the trigger. The chrome is inert for prose purposes but inflates usable_source_words on every chapter that has an Ellicott tail, and it is the single most reproducible scraper defect in the corpus."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "11",
+        "19",
+        "26",
+        "28"
+      ],
+      "note": "Chapter- and section-level blocks filed under one verse key, FIFTH CONSECUTIVE CHAPTER. Matthew Henry appears in this chapter only four times (keys 1, 11, 19, 26) and each block is a section commentary covering a span of verses rather than the verse it is filed under; the k11 block explicitly runs 'v. 11, 12, &c' and continues through v. 14. Barnes and Clarke both attach chapter-level end matter at k28, Barnes 1,504 words (a REMARKS section summarising the whole chapter in numbered points) and Clarke 1,423 words (eight numbered respects in which Christ's priesthood exceeds the Levitical, plus a dissertation on the word surety). Together those two blocks at a single key are 2,927 words, about 6 percent of the chapter's gross. Prior instances: romans 14 Henry k1 at 9,820 words (21 percent of gross), acts 17 Henry x5 at 15,456 (18 percent), philippians 2 Henry x5 at 6,586 (11 percent) plus Barnes k30, 2corinthians 11 Henry x4 plus Barnes and Clarke at k33. Standing suggestion, now filed five times: teach the sizer to discount oversized blocks sitting at a chapter's structural keys, since they systematically overstate the per-verse work remaining and push such chapters to the head of a --worst-first queue."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "10"
+      ],
+      "note": "Who Melchizedek was, and how far the argument from silence carries. On the person: Gill and Clarke canvass and reject the rabbinic identification with Shem and the patristic guesses (an angel, the Holy Ghost, a pre-incarnate appearing of the Son), holding him a real Canaanite king-priest; Calvin is the sharpest, calling it childish to suppose the man who met Abraham is still alive, and resting the whole 'without father, without mother' on the silence of the record rather than on any fact about the man. On the silence itself the split is between those who make it a positive type (Calvin, Gill, Clarke, Ellicott: Scripture records neither his death nor a successor, so he is REPRESENTED as living) and Barnes, who attacks the softening reading that only a changing priesthood is contrasted with an unchanging one, arguing it would never have occurred to anyone but for the difficulty and does not escape it either. On Levi paying tithes in Abraham: Gill and Clarke take seminal inclusion (Gill drawing the parallel of all mankind sinning in Adam's loins); Barnes expressly denies three constructions - that Levi actually paid, that Abraham was his appointed representative, that the act was imputed - and offers instead a father selling an estate the son would have inherited; Robertson cools the whole thing to 'a rabbinical imaginative refinement that would appeal to Jews'. Calvin alone raises the objection that Judah paid on the same reckoning, and so did Christ after the flesh, and answers it twice, by a peculiar privilege exempting Christ and by the rule that a type is not to be set against its reality."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "25",
+        "26",
+        "27"
+      ],
+      "note": "Four further live disputes in this chapter, all recorded in the entry tags. (1) How far the change of law reaches, v12: Calvin restricts it to what peculiarly belonged to Moses and insists the rule of life and the gratuitous covenant of life stand; Barnes restricts it on different grounds, that it cannot touch the decalogue since that predates the priesthood and did not depend on it; Gill goes furthest and calls the priesthood not translated but utterly abolished. The three limits do not coincide and the reasons given are independent of each other. (2) The sense of aparabaton at v24: Barnes prefers the marginal 'which passeth not from one to another' and denies the idea is strictly unchangeableness; Ellicott takes it as inviolable and DOUBTS WHETHER THE GREEK WILL BEAR the marginal meaning at all; Robertson sides with Ellicott. This is the sharpest lexical disagreement in the chapter. (3) Whether eis to panteles at v25 is temporal or complete: Robertson notes the Vulgate takes it temporally but that the common sense is completely; Calvin's own version follows the Vulgate and reads 'for ever', and his EDITOR contradicts him in the note, citing Erasmus, Beza, Capellus and Schleusner for the non-temporal sense and further arguing the phrase attaches to 'able' rather than to 'save'. (4) 'Separate from sinners' at v26 and 'daily' at v27: Ellicott lays out two constructions for each and picks opposite sides from Robertson on the first; on the second he is the only commentator who treats the daily offering as a crux at all, observing that the language suits the annual day of atonement and that neither the morning and evening sacrifices nor the high priest's meat-offering answer to it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "7",
+      "note": "Fidelity self-grade, hebrews 7, eight entries tiling 1-28. Word counts: 1-2 621w (9 voices), 3-6 628w (8), 7-10 584w (7), 11-14 647w (9), 15-19 642w (8), 20-22 647w (7), 23-25 645w (7), 26-28 648w (8). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block in the source catena for the verses in range; no verse in 1-28 is uncovered. Positions I disagree with are stated in the voice's own terms and not softened: Barnes's denial of imputation at v9-10, Robertson's dismissal of the argument as rabbinical refinement, Calvin's editor contradicting Calvin's own rendering at v25, Ellicott's doubt that the Greek bears Barnes's sense at v24, and Clarke's harsh aside about the Jews at v18 (that one I summarised as 'the old law had no energy and furnished no assistance' and did not carry the invective across; the omission is deliberate and is recorded here rather than concealed). DECLARED DEVIATIONS: (a) Jamieson is in RESIDUE for the whole chapter, its five blocks belonging to 2 Corinthians 8-9, and is declared as excluded_voices on the five affected entries. (b) The Cyril block at key 3 (Daniel 7 fragment) and the duplicate Cyril block at key 21 are dropped WITHOUT an excluded_voices declaration. This is not a choice - the VOICE_LABELS list in scripts/synthesis_qa.py contains the bare string 'Cyril', which is a PREFIX of the actual head 'Cyril of Jerusalem:', so the regex never matches and undeclarable_voices rejects both 'Cyril' and 'Cyril of Jerusalem'. The same defect failed the validator outright at 2corinthians 11. The drops are real and are recorded here in place of the declaration the tooling will not accept. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'."
     }
   ]
 }
