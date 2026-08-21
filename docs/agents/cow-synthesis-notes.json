@@ -15827,6 +15827,13 @@
       "book": "deuteronomy",
       "chapter": "15",
       "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/deuteronomy-15-20260821-095621"
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "15",
+      "note": "CORRECTION to the deuteronomy 15 fidelity note above, and a gate finding worth recording. THE CORRECTION: that note said I had stated explicitly in the prose of the 16-18 entry that Keil's answer falls where his block breaks off. That sentence is no longer in the prose and the claim in the earlier note is now wrong. The chapter gate rejected the first attempt with defect META on 15:16, and on inspection two phrases were at fault: 'where the commentary is thinnest', which matches the META pattern for narrating the source's thinness rather than commenting on the verse, and the clause about his block breaking off, which narrates the source apparatus to the reader. Both were removed. The prose now records only what Keil is on record as saying — that he names two explanations of 'a double hired servant' and rejects both — and says nothing about the truncation. The full record of what the cap destroyed stays in the source-defect note filed above, which is the right place for it. THE FINDING: this is a genuine tension in the loop's rules that the owner may want to rule on. The prose rules rightly forbid narrating source defects to the reader, and the META and NOISE detectors enforce that. But where a truncation removes a commentator's conclusion after his refutations survive, silence about it makes the prose imply that the commentator refuted two views and offered nothing — which misrepresents him. My resolution here was to report only the refutations, attribute no absence to him, and carry the truncation in the notes. That keeps the reader-facing text clean and the record honest, and I suggest it as the standing rule for this case; but it is a judgement I made rather than one the loop doc covers. A second, smaller point: the phrase that tripped META was ordinary English about a disagreement being thin on evidence, not an attempt to narrate the source. The pattern 'the comment(ary) is (thin)' will fire on 'the commentary is thinnest' because the alternation is not anchored at the word end. Worth tightening if false positives are unwelcome, though in this instance the flag caught a real second offence in the same sentence's neighbour, so it earned its keep."
     }
   ]
 }

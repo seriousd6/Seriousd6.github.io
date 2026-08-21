@@ -1,800 +1,460 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was not of servants, who served six years from their own start, but the sabbatical release of debts, at the end of every seven years."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "At the end of every seven years thou shalt make a release",
-   "a merciful remission of debts",
-   "a type of the gospel jubilee (Luke 4:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "1-3",
+  "pericope_label": "The year of release; the creditor’s hand; the foreigner excepted",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Set out both readings of the release and prefer permanent cancellation, hedged by conditions — an Israelite debtor, poor, who borrowed for subsistence — while holding a solvent debtor bound in conscience though not in law."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this gives the rules to be observed in making the release."
+    "summary": "Deny that the release touched servants and fix it at the opening of the seventh year rather than its close; justify the exception of foreigners by their being outside the covenant; and read the whole statute as a restraint on accumulated wealth, framed to preserve a condition of mediocrity and so the nation’s liberty."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: he shall not exact it of his neighbour or brother, because it is called the LORD's release."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Every creditor that lendeth ought... shall release it... because it is called the LORD'S release",
-   "mercy lifted to a sacred duty",
-   "we forgive because forgiven (Matt. 18:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Place the law as an extension of the earlier sabbatical legislation, and distinguish the alien of another nation from the resident foreigner in order to show that the exception implies no hostility."
+   },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: of a foreigner the debt might be exacted, on the seventh year or after. Calvin: it was just that despisers of the Law should not enjoy the sabbatical benefit, since God appointed it for his own people."
+    "summary": "Follow the same account of the release and identify the year with the sabbatical year, referring the reader back to the earlier statutes rather than expounding them again."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the release extinguished the debt permanently or merely stayed the suit for that year — Henry reports both and prefers the first.",
+   "When in the seventh year the release took effect: at its beginning (Gill, arguing that otherwise it would be no year of rest) or simply during it.",
+   "Whether the release applied to servants as well as debts — denied by Gill, who distinguishes the sabbatical year from the jubilee.",
+   "Why foreigners were excepted: because they suffered no loss of income in the seventh year and a creditor’s ordinary right stands (Keil), or because despisers of the Law had no title to a benefit given to the elect people (Calvin)."
+  ],
+  "outliers": [
+   "Calvin alone gives an economic and political rationale — that the law existed to prevent a wealthy few from tyrannising over the rest.",
+   "Keil alone anticipates and rebuts the charge that the foreigner clause is xenophobic.",
+   "Wesley’s comment on this passage is Henry’s, abridged nearly verbatim."
+  ],
   "themes": [
-   "Of a foreigner thou mayest exact it again: but that which is thine with thy brother thine hand shall release",
-   "the special mercy of the covenant people",
-   "a peculiar love within the household (Gal. 6:10)"
+   "Debt",
+   "Poverty",
+   "Sabbath",
+   "Justice",
+   "Covenant community"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the law was never meant to screen the able from paying just debts, but only the truly poor; were they obedient, there would be no debts to release, the LORD greatly blessing them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Save when there shall be no poor among you; for the LORD shall greatly bless thee",
-   "the ideal bound to obedience",
-   "God's abundance banishing want (Acts 4:34)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "4-6",
+  "pericope_label": "No poor among you; the blessing, the lending and the ruling",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this being the case, there would be no more poor among them, or they would be so blessed as to release the poor's debts without hurting themselves."
+    "summary": "Take the clause as a real exception exempting the solvent, refuse the reading that makes it a promise, and derive the whole blessing from the covenant — so that poverty in Israel would be evidence of the people’s own depravity, and the promise of produce is conditional on their liberality."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the condition of careful hearkening unto the voice of the LORD."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Only if thou carefully hearken unto the voice of the LORD thy God, to observe to do all these commandments",
-   "the blessing conditioned on obedience",
-   "the way of obedience the way of blessing (Deut. 28:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Settle the clause by grammar — a jussive, hence an imperative not to create poverty (Keil), or a purpose clause (Ellicott) — reconcile it with the later admission that the poor never cease, work the vocabulary of pledging and lending, and trace the clause forward to the community of goods in Acts."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: God is faithful who promised, and gives the blessing according to the nature of the promise; conditional temporal promises given as the condition is performed; they would lend to many nations and not borrow."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Prefer the marginal purpose-clause rendering, so that the verse gives the reason of the law, and dispose of the apparent contradiction by taking the promise comparatively."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What <em>save when there shall be no poor</em> means: an exception where none are poor (Gill), a promise that none will be (reported by Gill from the Targum), a purpose clause giving the law’s reason (Wesley, Ellicott), a jussive command not to make the poor poorer (Keil), or a comparative statement (Clarke).",
+   "Whether the clause contradicts the later assurance that the poor will never cease from the land — Keil and Clarke each resolve it differently.",
+   "Whether lending to many nations and ruling over them is prediction or rhetorical amplification (Calvin takes the second).",
+   "Whether the promised blessing means universal prosperity or only that no one is left in want (Ellicott argues the second)."
+  ],
+  "outliers": [
+   "Ellicott alone reads the verse as the source of the description of the Jerusalem church in Acts, and alone enlists Rashi in support.",
+   "Calvin alone concludes that poverty among the Israelites would prove the people’s own wickedness."
+  ],
   "themes": [
-   "thou shalt lend unto many nations, but thou shalt not borrow",
-   "the dignity of a people that walks with God",
-   "made rich to give and bless others (2 Cor. 9:11)"
+   "Poverty",
+   "Blessing",
+   "Covenant",
+   "Almsgiving",
+   "Debt"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.5
+   }
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: there would be poor among them if they did not keep the commandments, as the Targums say."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the poor of one's own city come first, 'the poor of thine own city before the poor of another.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt not harden thine heart, nor shut thine hand from thy poor brother",
-   "charity an inward compassion before an outward act",
-   "the shut hand betraying the hard heart (1 John 3:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "7-11",
+  "pericope_label": "The poor brother; the wicked thought; open thine hand wide",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the hand is to be opened wide and given bountifully, the heart first opened, the affections moved, a willing mind disposed to give generously."
+    "summary": "Treat the promise of no poor as conditional and defeated by Israel’s disobedience; personify the heart of Belial as Satan’s working; require the heart opened before the hand; and press the timing, that relief be given at the opening of the release year as though repayment were days away."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the lending of sufficient for his need."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt open thine hand wide unto him, and shalt surely lend him sufficient for his need",
-   "a free, ample liberality from an opened heart",
-   "giving full and proportioned to need (2 Cor. 9:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Reconcile the two statements by distinguishing falling into poverty from remaining in it, and ground its permanence in providential discipline; parse the wicked thought grammatically; and import Rashi’s practical rulings wholesale as the best commentary on the law."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the 'heart of Belial' — the worthless heart without the yoke of God's law, in which Satan works to incline to evil thoughts; the evil thought was to refuse the poor as the year of release drew near."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the belial heart as simply good-for-nothing, expound the evil eye against the single eye as covetousness against liberality, treat the perpetuity of the poor as God’s provision for exercising compassion, and allow no measure of charity but the other’s need and one’s own ability."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the promise of no poor stands with the poor never ceasing: a forfeited condition (Gill), a distinction between falling into want and remaining in it (Ellicott), a providential ordinance for discipline (Keil), a mercy that keeps compassion in exercise (Clarke), or no contradiction at all since the earlier verse only forbade abandoning the destitute (Calvin).",
+   "Whether the wicked heart is a heart of Belial in the personal sense (Gill) or belial as an adjective meaning worthless (Clarke, Keil).",
+   "Whether the poor may be given more than bare necessity — Rashi’s rulings, reported by Ellicott, allow a horse to ride on while denying any duty to make him rich."
+  ],
+  "outliers": [
+   "Ellicott alone declares his method, that he is transcribing Rashi almost entire in order to show the Jews understood Christian charity from Moses.",
+   "Clarke alone says that without the poor a man would become a Stoic or a brute.",
+   "Ellicott alone states that God will never make all men absolutely equal in this world.",
+   "Calvin alone times the relief to the opening of the release year."
+  ],
   "themes": [
-   "Beware that there be not a thought in thy wicked heart... The seventh year... is at hand... and thou givest him nought",
-   "covetousness dressed as prudence",
-   "love gives where no return is hoped (Luke 6:35)"
+   "Almsgiving",
+   "Poverty",
+   "Covetousness",
+   "Rabbinic exegesis",
+   "Providence"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he must surely give, even a hundred times if asked, to the limit of what is sufficient for present want; the heart not grieved, and God would bless him for it."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt surely give him, and thine heart shall not be grieved... the LORD thy God shall bless thee",
-   "cheerful, ungrudging giving",
-   "the cheerful giver loved and rewarded (2 Cor. 9:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: there would always be such objects for charity; had they been obedient there would have been none, but God foresaw they would not keep his commands, so the poor remain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "For the poor shall never cease out of the land... Thou shalt open thine hand wide unto thy brother",
-   "the abiding poor a standing call to charity",
-   "the poor always with us (Matt. 26:11)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a man might be sold by the sanhedrim for theft, or a father might sell his daughter under age, or one might sell himself for poverty; after six years' service he was to go free in the seventh."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if thy brother, an Hebrew... be sold unto thee, and serve thee six years; then in the seventh year thou shalt let him go free",
-   "a merciful bound to bondage",
-   "the brethren a free and redeemed people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "12-15",
+  "pericope_label": "The Hebrew servant released in the seventh year and furnished liberally",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this was when he discharged him from servitude and made him a free man."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: thou shalt not let him go away empty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when thou sendest him out free from thee, thou shalt not let him go away empty",
-   "liberty not left barren",
-   "the freed man furnished, not abandoned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: 'loading thou shalt load him' — give as much as he can carry, to supply his present want and set him up in the world, of that wherewith the LORD had blessed him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt furnish him liberally out of thy flock, and out of thy floor, and out of thy winepress",
-   "the parting gift lavish, not token",
-   "freely received, freely give (Matt. 10:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were used hardly in Egypt, their lives made bitter, and so should show the greater compassion to servants."
+    "summary": "Take the seventh year as the seventh of service and not the sabbatical year (Keil) — or the reverse (Ellicott) — trace the Egypt motive through the whole law, and read the provision for released thieves as a standing rebuke to modern practice."
    },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Ellicott: remember thou wast a bondman in the land of Egypt."
+    "summary": "Press the Hebrew for a loading that is honourable as well as generous, while denying that the law aimed at enriching the freed man or at coercing the unwilling giver; ground the obligation in the brotherhood of Hebrew slaves, who must not fare worse than hirelings."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "List the three ways a Hebrew came into servitude, note the jubilee as an additional discharge, and draw the principle that God’s people are a free people not to be held in perpetual slavery."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Compute the six years from the start of service, itemise what the flock, floor and winepress were to yield and why the freed man needed them, and read the spoils of Egypt as withheld wages that God paid."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the seventh year is the seventh of the man’s service (Keil, Wesley, Henry) or the sabbatical year whenever it fell (Ellicott) — on Ellicott’s view a slave would rarely serve six full years.",
+   "How liberal the furnishing was meant to be: as much as the man can carry, and honourably (Gill), or enough for a fresh start but expressly not enrichment (Calvin).",
+   "Whether the law is enforceable or an appeal to willing generosity — Calvin denies it is a civil enactment for extorting from the avaricious.",
+   "Why the law is repeated here when it already stands in Exodus — Keil denies it was to extend it to women."
+  ],
+  "outliers": [
+   "Ellicott alone turns the law into a criticism of his own country, judging Christian England to fall short of Mosaic provision for discharged thieves.",
+   "Gill alone finds in the verb for furnishing the sense of ornamental chains, and so an honourable discharge.",
+   "Wesley alone treats the spoils of Egypt as unpaid wages justly recovered."
+  ],
   "themes": [
-   "thou shalt remember that thou wast a bondman... and the LORD thy God redeemed thee",
-   "kindness rooted in their own redemption",
-   "the redeemed showing redemption's kindness (Eph. 4:32)"
+   "Slavery and manumission",
+   "Liberty",
+   "Restitution",
+   "Generosity",
+   "The exodus"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "16-18",
+  "pericope_label": "The servant who will not go out; the awl; a double hired servant",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the servant might say he would not go away, nor quit his service."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: because he loveth thee and thy house, and is well with thee."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if he say unto thee, I will not go away from thee; because he loveth thee and thine house",
-   "glad service preferred to bare liberty",
-   "a figure of Christ the willing servant (Ps. 40:7-8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the awl was thrust through his ear unto the door — not of the master's house but, by the Targum, of the court of judicature, before whom he declared his desire."
+    "summary": "Justify the option of perpetual service as a guard against a manumission that would amount to abandonment; harmonise the maidservant’s release with the apparently contrary earlier statute; and reject both current explanations of the double wages."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the boring of the ear, the servant his for ever."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt take an awl, and thrust it through his ear unto the door, and he shall be thy servant for ever",
-   "the token of a chosen, lifelong service",
-   "the opened ear, a type of Christ (Ps. 40:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the master should not grudge him his liberty nor what is given at his dismissal. Calvin: how difficult this law was to the niggardly Jews, whom God reproves for their mean and grudging spirit."
+    "prevalence": "several",
+    "summary": "Locate the boring of the ear at the court rather than the master’s house, on rabbinic authority; leave the double wages undecided between two readings; and take the verse’s purpose to be the reproof of grudging enfranchisement."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Allow <em>for ever</em> to reach only to the jubilee, and read the clause about the maidservant as covering both liberal dismissal and perpetual service alike."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the ear was bored at the master’s door, as the text seems to say, or at the door of the court (Gill, from the Targum of Jonathan).",
+   "Whether <em>for ever</em> means lifelong (Keil) or only until the jubilee (Wesley).",
+   "What <em>worth a double hired servant</em> means: that slaves worked harder than paid labourers, or that six years is twice a hireling’s usual term — Calvin offers both, Keil rejects both.",
+   "Whether the maidservant’s release contradicts the earlier statute — Ellicott denies it, distinguishing the manner of going out from the fact of it."
+  ],
+  "outliers": [
+   "Keil alone defends the option of lifelong service as a mercy, on the ground that freedom without prospects is a kind of expulsion.",
+   "Ellicott alone works out the position of an unmarried female slave and concludes her rights matched a man’s."
+  ],
   "themes": [
-   "It shall not seem hard unto thee, when thou sendest him away free... he hath been worth a double hired servant",
-   "meanness rebuked, generosity no loss",
-   "releasing without regret what kindness requires"
+   "Slavery and manumission",
+   "Mercy",
+   "Women",
+   "Wages",
+   "Rabbinic exegesis"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.56
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "19-23",
+  "pericope_label": "The firstlings sanctified; the blemished firstling eaten in thy gates",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Refer the prohibition on working and shearing to the female firstlings specifically, on Patrick’s authority, and ground the whole law in thankful remembrance of the sparing of Israel’s firstborn in Egypt."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this was according to the law of the firstborn already given."
+    "summary": "Read the prohibition of the firstborn generally and explain it by the temptation to use the animal first and offer it deteriorated afterwards; generalise from the necessity of such a law to the greed of men who will cheat God himself."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the firstlings sanctified, with no work or shearing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "All the firstling males... thou shalt sanctify unto the LORD... no work... nor shear",
-   "what is devoted to God kept sacred",
-   "the firstborn the LORD's, pointing to Christ (Col. 1:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: if of male firstlings, only the priests might eat, being devoted to the Lord; if of the people in common, then of female or second firstlings; eaten before the LORD in the chosen place."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt eat it before the LORD thy God year by year in the place which the LORD shall choose",
-   "the devoted gift a feast of fellowship",
-   "religion clothed in thankful gladness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: if there be any blemish, as lame or blind."
+    "summary": "Reconcile this precept with the assignment of firstlings to the priests by distinguishing two collections in the year; and resolve the apparent contradiction between sanctifying the firstling and being forbidden to sanctify it, by distinguishing recognition of God’s property from a voluntary vow."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: God will have both a perfect priest and a perfect offering (Lev. 22:20)."
+    "summary": "Follow the female-firstling reading and require even these to be offered as peace offerings; and take the eating to belong to the annual feasts, remarking that God makes duty and interest run together."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the ban on working and shearing concerns the female firstlings only (Henry, Wesley, and bishop Patrick) or the firstborn generally (Keil, Calvin).",
+   "Who eats the firstling, given that the firstlings are elsewhere assigned to the priests: the priest is addressed here (Rashi, reported by Ellicott and by Gill under his other name); the unblemished go to the priest and the unfit to the owner; or two separate collections in the year account for both (Ellicott’s own preference).",
+   "How <em>thou shalt sanctify</em> stands with the rule that no man shall sanctify a firstling — resolved by Ellicott alone."
+  ],
+  "outliers": [
+   "Calvin alone argues from the existence of the law to the depravity of the men it was written for.",
+   "Clarke alone answers Satan’s question about Job from this verse, and answers it in the affirmative."
+  ],
   "themes": [
-   "if there be any blemish therein... thou shalt not sacrifice it unto the LORD",
-   "God requiring a perfect offering",
-   "the unblemished Lamb, Christ without spot (1 Pet. 1:19)"
+   "Firstfruits",
+   "Worship",
+   "Greed",
+   "Priesthood",
+   "Sacrifice"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: though it might not be sacrificed nor eaten as a sacred feast at Jerusalem, it might be eaten as common food in their own houses, by clean and unclean alike, as the roebuck and the hart."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt eat it within thy gates: the unclean and the clean person shall eat it alike",
-   "the imperfect put to lawful common use",
-   "the sacred kept unblemished, nothing wasted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the blood was not to be eaten but poured upon the ground as water, as taught before (Deut. 12:16); this held even for the firstling eaten as common food."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Only thou shalt not eat the blood thereof; thou shalt pour it upon the ground as water",
-   "the abiding ban on blood, the life sacred",
-   "pointing to the blood of Christ (Heb. 9:22)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
