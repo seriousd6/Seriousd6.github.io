@@ -14345,6 +14345,100 @@
       "book": "revelation",
       "chapter": "18",
       "note": "Fidelity self-grade, revelation 18, six entries tiling 1-24. Word counts: 1-3 644w (8 voices), 4-8 644w (6), 9-11 649w (7), 12-14 647w (7), 15-20 647w (7), 21-24 650w (6). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-24 is uncovered. NO CALVIN in this chapter, since he wrote no commentary on Revelation; the reformed school is carried by Gill alone throughout, and Bede supplies a latin-fathers entry at 1-3, the first in this run. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's flat refusal of the whole application at v8 and v24, Barnes's argument that Rome may literally burn, Gill's mystical turn on the cinnamon to the licensed brothels of Rome and their revenues, Wesley's Inquisition statistics with his own concession that they may be overcharged, and Robertson's excursus from sorcery to modern quackery and faith-healers. Two summarising decisions are recorded rather than concealed: Clarke's very long Bishop Bale quotations at k11 and k12 (507 and 640 words of Reformation polemic against the mass, relics and clerical wares) are reported as what they are and sampled rather than reproduced at length, and Barnes's chapter-level REMARKS at k24 are used only for the blood-guilt point. DECLARED DEVIATIONS: (a) Jamieson is in RESIDUE for the whole chapter, its three blocks belonging to 1 Timothy 2, and is declared as excluded_voices on the three affected entries. (b) The Cyril blocks at keys 3 and 9 (stuck fragment C, byte-identical to each other and irrelevant to this chapter) are dropped WITHOUT an excluded_voices declaration. This is forced, not chosen: the VOICE_LABELS list in scripts/synthesis_qa.py contains the bare string 'Cyril', which is a PREFIX of the real head 'Cyril of Jerusalem:', so the regex never matches and undeclarable_voices rejects both 'Cyril' and 'Cyril of Jerusalem'. The same defect failed the validator outright at 2corinthians 11 and forced the same silent drop at hebrews 7. That is now three chapters in a row where a genuine exclusion could not be declared. One-line fix: list 'Cyril of Jerusalem' instead of 'Cyril'. Note that 'Bede' in the same list works correctly, because it is the whole head and not a prefix of it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "note": "CORPUS-WIDE: KEIL AND DELITZSCH IS TRUNCATED AT 200 WORDS IN 93% OF ITS BLOCKS. Measured across every file in data/commentary/cow/: K&D has 10,472 blocks, of which 9,727 (92.9%) are EXACTLY 200 words, and ZERO exceed 200 — maximum observed is exactly 200. That is a hard cap applied at scrape time, not natural block length. For comparison, every other witness routinely runs far longer: Matthew Henry to 14,242 words, Adam Clarke to 10,884, John Calvin to 7,841, Wesley to 7,153, Barnes to 5,044, JFB to 4,647, Ellicott to 2,667. The cap is not global — it bites K&D almost universally and NOBODY else at that rate, except John Gill, who shows a suspicious spike of 2,756 blocks at exactly 200 words (9.3%) while only 798 of his blocks exceed 200 and his max is 695; that pattern suggests a subset of Gill's chapters came through the same capped scrape path. WHY IT MATTERS DISPROPORTIONATELY: K&D is the principal Old Testament commentary in this corpus, and the remaining generate queue is entirely OT (419 chapters). Every one of those chapters will be written against a K&D cut off mid-sentence. WORSE: K&D's blocks characteristically OPEN by quoting the raw lemma for a range of verses, so the 200-word budget is often consumed entirely by scripture text and the exposition is truncated away before it starts — see the deuteronomy 16 note of the same date, where keys 2, 10, 14, 17 and 19 are all lemma-plus-fragment and key 2 is 200 words of pure verse text with no commentary at all. OWNER ACTION: this is a re-scrape question, not something a writer can work around."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "10",
+        "14",
+        "17",
+        "19"
+      ],
+      "note": "REFINEMENT of my earlier deuteronomy 16 note this same date about K&D blocks being 'systematically offset'. The observation stands but the DIAGNOSIS was wrong, and the corrected cause is more useful. I described K&D's blocks as lemma dumps whose commentary was displaced forward into the next pericope. The real mechanism is the corpus-wide 200-word truncation cap on K&D (see the separate corpus-wide note of this date: 9,727 of 10,472 K&D blocks are exactly 200 words and none exceed it). K&D characteristically opens a block by quoting the lemma for several verses; the cap then cuts the block at word 200, so what survives is the verse text plus whatever commentary happened to begin before the cap — which is why the surviving fragment always seems to be about the NEXT section rather than the filed one. It is truncation, not displacement. Practical consequence is unchanged (check what K&D's block actually treats before trusting its key), but the fix is different: this is repaired by re-scraping K&D without the cap, not by relocating material."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "3",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "JFB DISPLACEMENT LAW — TENTH DATUM, but a WEAK one, and I want the next reader to treat it as weak. JFB appears at only two keys, 8 and 14: one interval of 6, phase 2. Two terms establish a single interval, not a run, so this chapter corroborates the stride without independently confirming it the way a three- or four-term sequence does. Running record: acts 24 (2/8/14/20/26), acts 3 (4/10/16/22), james 1 (1/7/13/19/25), 1john 3 (6/12/18/24), ephesians 1 (4/10/16/22), romans 4 (4/10/16/22), luke 1 (26/32/38/62/74), 1corinthians 16 (1/7/13/19), deuteronomy 16 (2/8/14), exodus 3 (8/14). Ten for ten on stride; phase still varies freely. Both blocks here are displaced and the donor march is again strictly forward, this time through GENESIS 43-44 (Joseph's brothers): v8 = Gen 43:34 (the double mess, Benjamin's portion five times as much, 'drank freely'), v14 = Gen 44:2 (the silver cup missing from the governor's house, the messenger sent to search them). Both declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "11",
+        "16"
+      ],
+      "note": "MATTHEW HENRY'S KEYS MARK HIS SECTION HEADS — THIRD CHAPTER CONFIRMING IT, and the cleanest instance yet. Henry appears at only 4 of 22 keys: 1, 7, 11, 16. Those are exactly the first verses of the chapter's four natural divisions — vv1-6 the burning bush, 7-10 the commission, 11-15 the objections and the Name, 16-22 the instructions — and his block at each key expounds the whole section beneath it. Prior confirmations: 1corinthians 16 (Henry at 1/5/10/13/19 = the collection, the travel plans, Timothy and Apollos, the exhortations, the salutations); deuteronomy 16 (Henry at 1/18 = the feasts and the judges). The rule now looks reliable enough to USE: where Henry's key count is far below the other witnesses, his key list hands you the commentator's own pericope boundaries before you make any tiling decision. Exodus 3 was tiled on exactly that basis, subdividing only where one of Henry's sections exceeded ~4500 source words (1-6 split into 1 | 2-3 | 4-6; 11-15 into 11-12 | 13-15; 16-22 into 16-17 | 18-20 | 21-22). The filing rule still binds — Henry's section material may only be used in the entry keyed at his own verse."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "3",
+        "8",
+        "12",
+        "14",
+        "17",
+        "22"
+      ],
+      "note": "K&D 200-WORD TRUNCATION, WORKED EXAMPLE — and a warning that the damage is recoverable here only by luck. Every K&D block in this chapter is exactly 200 words except key 22 (45). See the corpus-wide note of this date: 9,727 of 10,472 K&D blocks corpus-wide are exactly 200 words and none exceed it. What the cap does in practice is visible here key by key. K&D opens a block by quoting the lemma for several verses, so the cap eats the exposition: key 3 = lemma vv3-6 plus a fragment on v6; key 8 = lemma vv8-9 plus a fragment on v11 ('he had learned humility in the school of Midian'); key 12 = lemma vv12-13 plus a fragment on v13; key 14 = lemma vv14-15 plus a fragment on v16; key 17 = lemma vv17-18 plus a seven-word stub on v21; key 22 = 45 words of PURE LEMMA with no commentary at all. Only keys 1, 2 and 7 are on-verse and intact enough to use directly. THE LUCK: because K&D's keys happen to fall one inside each successive span of this tiling, every displaced fragment could be legitimately relocated under the filing rule — key 8's fragment into entry 11-12 (K&D has key 12 there), key 12's into 13-15 (key 14), key 14's into 16-17 (key 17). That will NOT generally hold. Where it does not, the material is simply lost. K&D is declared in excluded_voices at entry 21-22, where key 22 is lemma-only and key 17's surviving stub says nothing."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "3",
+      "verses": [
+        "22"
+      ],
+      "note": "END-OF-CHAPTER RESIDUE: FIFTH SIGHTING, FIVE FOR FIVE ON THE FINAL VERSE. Ellicott's block at key 22 — the last verse of the chapter — ends in StudyLight navigation, copyright boilerplate and ~2KB of raw CSS ('.sub-menu{font-size:12px...'). Running record, all on a chapter's maximum key: luke 1:80, romans 4:25, 1corinthians 16:24, deuteronomy 16:22, exodus 3:22 — five chapters, five books, both testaments. Deuteronomy 16:22 also showed GILL carrying scrape navigation on the same key, so it is not an Ellicott-specific fault but a property of the last key in a chapter. The scrub is mechanical: for each chapter's maximum key, cut from the first CSS selector, from 'Footnotes: Copyright Statement', or from the 'Next:'/'Previous:' navigation marker."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "3",
+      "note": "THE LIVE DISPUTES IN THIS CHAPTER, several of them unusually sharp. (1) v11 — why the man who once killed an Egyptian now hesitates. Henry calls it a fluctuation of temper, 'good men are not always alike bold and zealous'. Calvin flatly reverses the valuation: the hesitation is 'the excuse of modesty... not only free from blame but worthy of praise', and the EARLIER boldness was the fault, Moses having 'advanced hastily at first, not having sufficiently considered his own powers'. K&D side with Calvin in a phrase — he 'had learned humility in the school of Midian'. (2) v12 — is the worship on the mountain the sign? Clarke: 'This was NOT the sign.' Ellicott: it is precisely the sign, and there is nothing odd in that, since it accords with the divine economy to give tokens 'which are future, and appeal to faith only'. Flatly contradictory. (3) v13 — why would the people ask God's name? Clarke and Ellicott explain it by Egypt (they had 'drank deep into the Egyptian superstitions'; every god in a polytheism has a name). K&D and Calvin both refuse the Egyptian explanation, K&D because the fathers' name 'cannot have vanished entirely from the memory of the people', Calvin because it is incredible that the prophet had forgotten the God he served. (4) v16 — did an enslaved people keep any government? Clarke: 'not likely the Hebrews were permitted to have any regular government at this time.' Ellicott, citing Rosenmuller, infers from this very verse that they DID enjoy internal organisation and native government. (5) v19 — 'no, not by a mighty hand'. Clarke says the received rendering is a 'palpable contradiction' and takes the negative particle as 'unless/except' (so: not until he sees the hand stretched out), citing Becke's Bible 1549, the Vulgate's nisi and the LXX. Ellicott renders it 'not EVEN under a mighty hand' — the exact opposite. Calvin notes only that 'interpreters differ'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "22"
+      ],
+      "note": "TWO APOLOGETIC SET-PIECES worth flagging, three centuries apart and on the same kind of evidence. (a) v4 — Ellicott takes the Hebrew 'when JEHOVAH saw, ELOHIM called' as decisive against the documentary hypothesis: 'The German theory of two authors of Exodus, one Jehovistic and the other Elohistic, is completely refuted by this passage; for it is impossible to ascribe one clause of a sentence to one author, and the next to another.' Compare Calvin at v1, who makes the Horeb/Sinai double name answer 'certain modern cavillers, who have argued, at least, against the identity of the author of the Pentateuch'. Two commentators, centuries apart, both defending Mosaic authorship from an alternation of names inside one chapter. (b) v22 — the spoiling of the Egyptians is met two quite different ways. Clarke and Gill answer it as UNPAID WAGES (Clarke: 'if accounts were fairly balanced, Egypt would be found still in considerable arrears to Israel'). Calvin knows that defence, grants that their labour deserved recompense, and judges it too small a ground; his own answer is divine ownership — 'let us see what every one's property is. Who will boast that he has anything, except what is given him by God?' — with the guard that this does not make God arbitrary, 'because His will is the most certain rule of perfect equity'. Note also that Clarke, Wesley, Ellicott and Calvin are unanimous that 'borrow' is a mistranslation, Clarke observing that the common English version 'is almost the sole transgressor' among ancient and modern versions alike, having copied Becke's Bible of 1549."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "3",
+      "note": "All 9 entries self-graded A. Every entry 350-650 on both counters, 0 flags in every category, mean TTR 0.658, mean zip 0.463. Two-way voice check ran clean before assembly (0 declared-but-unnamed, 0 excluded-but-named); every declared exclusion names a block present inside its own span. LENGTH CONTROL WAS BAD HERE and I want it recorded honestly: first drafts ran 758, 783, 819, 821, 823, 824 and 941 words against a 650 ceiling, and every entry needed between two and five trim passes — far worse than 1corinthians 16, where 17 of 24 landed first-pass. The cause is not the four-voices-per-paragraph rule, which held; it is that exodus 3 pairs very large spans (2548-4301 source words) with six or seven substantial voices per span, so the material genuinely exceeds what 650 words can hold and the drafting error is in deciding what to LEAVE OUT before writing rather than trimming after. One entry (13-15) first drafted at 913 words also came back grade B on TTR 0.580; a compact rewrite rather than incremental trimming fixed both length and TTR at once. RULE FOR NEXT TIME: when a span exceeds ~2500 source words with 6+ voices, pick the three or four strands the entry will carry BEFORE drafting and discard the rest deliberately."
     }
   ]
 }
