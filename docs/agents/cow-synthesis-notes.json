@@ -15834,6 +15834,91 @@
       "book": "deuteronomy",
       "chapter": "15",
       "note": "CORRECTION to the deuteronomy 15 fidelity note above, and a gate finding worth recording. THE CORRECTION: that note said I had stated explicitly in the prose of the 16-18 entry that Keil's answer falls where his block breaks off. That sentence is no longer in the prose and the claim in the earlier note is now wrong. The chapter gate rejected the first attempt with defect META on 15:16, and on inspection two phrases were at fault: 'where the commentary is thinnest', which matches the META pattern for narrating the source's thinness rather than commenting on the verse, and the clause about his block breaking off, which narrates the source apparatus to the reader. Both were removed. The prose now records only what Keil is on record as saying — that he names two explanations of 'a double hired servant' and rejects both — and says nothing about the truncation. The full record of what the cap destroyed stays in the source-defect note filed above, which is the right place for it. THE FINDING: this is a genuine tension in the loop's rules that the owner may want to rule on. The prose rules rightly forbid narrating source defects to the reader, and the META and NOISE detectors enforce that. But where a truncation removes a commentator's conclusion after his refutations survive, silence about it makes the prose imply that the commentator refuted two views and offered nothing — which misrepresents him. My resolution here was to report only the refutations, attribute no absence to him, and carry the truncation in the notes. That keeps the reader-facing text clean and the record honest, and I suggest it as the standing rule for this case; but it is a judgement I made rather than one the loop doc covers. A second, smaller point: the phrase that tripped META was ordinary English about a disagreement being thin on evidence, not an attempt to narrate the source. The pattern 'the comment(ary) is (thin)' will fire on 'the commentary is thinnest' because the alternation is not anchored at the word end. Worth tightening if false positives are unwelcome, though in this instance the flag caught a real second offence in the same sentence's neighbour, so it earned its keep."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "No JFB anywhere in Deuteronomy 19: 21 source keys, zero Jamieson blocks. Worth flagging against the twenty confirmed donor-chapter corruptions in the JFB column — this chapter offers no stride test at all, and a wholly absent column is itself a scrape symptom rather than a commentator's silence."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "21"
+      ],
+      "note": "Gill's terminal block (key 21) ends with sacred-texts navigation chrome: 'Next: Deuteronomy Chapter 20 Sacred Texts | Bible Previous: John Gill's Exposition ... Index Next: ...' — 32 words of residue. Second sighting of this residue FORM (genesis 15 key 21 was the first), and the pattern now has a shape: both sightings sit at Gill's LAST key in the chapter, not at a random block. Hypothesis worth testing corpus-wide: the sacred-texts footer is appended to the chapter-terminal Gill block only. Distinct from the twelve prior StudyLight CSS/JS sightings. Excluded from the school word counts by hand cap."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "14"
+      ],
+      "note": "Cross-source contamination, first sighting of this direction: Calvin's block on v.14 reproduces Adam Clarke's Calmet note on the Roman digests VERBATIM, trailing attribution '- Adam Clarke' left in the text. An editorial footnote from the translator's edition of Calvin has been scraped into the commentary body. Consequence for synthesis: reformed and wesleyan-arminian appear to agree on Roman penal practice here, but the agreement is transmission, not independent judgement. Recorded in the entry's outliers field so the display does not read it as convergence."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "14",
+        "16",
+        "19"
+      ],
+      "note": "Head-overflow in Deuteronomy 19 concentrates rather than loses. Henry holds only three keys (1, 14, 15); his key-1 head covers vv.1-13 and his key-14 head covers vv.14-21, so the whole of Henry lands in two of the five entries and puritan-evangelical is absent from entries 16-18 and 19-21. Unlike genesis 3/15 and 1samuel 4, Wesley does not mitigate: his blocks at keys 16 and 21 are 43 and 25 words. Net effect is not dropped material (all of Henry is used at the key he is filed under) but an uneven school spread across the chapter — the mirror image of the 2timothy 4 failure, where the same head shape produced outright loss."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "11",
+        "12",
+        "15",
+        "16",
+        "18"
+      ],
+      "note": "K&D block behaviour in Deuteronomy is MIXED, confirming that the book-by-book rule from note 1424 holds and must be checked per book. Keys 11, 16 and 18 are lemma-then-genuine-on-key exposition (the 1 Samuel pattern). Key 12, however, runs its lemma through v.14 and carries the whole landmark exposition — the Genesis lemma-plus-next-verse pattern. That material was moved to the 14-15 entry under the filing rule, K&D holding key 15 inside that span. Do not assume either pattern in Deuteronomy; map first."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "11",
+        "12",
+        "16",
+        "17"
+      ],
+      "note": "Two live critical disputes preserved in the tags: (a) Keil against Riehm, Vater and De Wette on whether the elders who fetch a murderer out of a free city thereby acquire a judicial function the earlier legislation withheld — the critics read a discrepancy, Keil confines the elders to ordinary magistracy; (b) Keil against Knobel on whether 'before the LORD' means the central tribunal at the sanctuary or the local courts. Both are named-opponent disputes inside a single voice's block, which is the only form of scholarly disagreement this corpus preserves — the other seven voices never engage nineteenth-century critics by name."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "4",
+        "14",
+        "16",
+        "19"
+      ],
+      "note": "All five entries self-graded A on first or second pass (QA 636/639/637/497/501; ttr 0.625/0.618/0.689/0.625/0.608). No voice excluded anywhere in the chapter — every voice present in every span's blob is declared and used, which is the first clean sweep in this run. Tiling 1-3 | 4-13 | 14-13 corrected to 4-13 | 14-15 | 16-18 | 19-21; an earlier six-entry plan splitting 4-8 from 9-13 was rejected because span 4-8 held only 428 source words against Henry's 1675-word head, giving a 1.2:1 prose-to-source ratio in one entry and starving the other."
     }
   ]
 }
