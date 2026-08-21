@@ -15547,6 +15547,80 @@
       "book": "genesis",
       "chapter": "14",
       "note": "FIDELITY SELF-GRADE, genesis 14 — 23,346 usable source words across 24 keys, tiled into 6 entries covering 1-24 exactly. Word counts: 1-4 634w (7 voices), 5-9 641w (5), 10-12 625w (4), 13-16 650w (7), 17-20 648w (7), 21-24 648w (6). All six inside the 350-650 window; build lint clean (no UNKNOWN HEAD, no NAMED-BUT-NOT-SOURCED, no GHOST, no school mismatch); both validators pass. Seven voices, four schools — reformed, puritan-evangelical, wesleyan-arminian, grammatical-historical. NO EXCLUSIONS AND NO SILENCES: this is the first chapter in the series with nothing to declare, no residue, no patristic fragments, no structural blocks to suppress. Every verse checked against its own catena block. Every named voice is sourced from a block at a key inside its entry's range, WITH ONE DECLARED EXCEPTION: Ellicott's k3 block is misfiled and comments on verse 6, so I used it in the 5-9 entry rather than in 1-4. Verse 6 falls inside that entry and Ellicott has legitimate heads there at k5, k7 and k8, so nothing is attributed to a pericope it does not belong to — but the material was drawn from a key outside the entry's range and that is recorded rather than concealed. Where sources conflict the conflict is left standing and both sides named; none of the five disputes filed above is adjudicated, including the ones where a single voice stands against the rest (Clarke on 'the Hebrew', Ellicott on the slimepits, Ellicott on the king of Sodom's offer being merely customary). Positions reported as their authors' and not endorsed include Clarke's dismissal of the sacrificial reading of the bread and wine as 'an idle conjecture', Calvin's construction of Melchizedek as head of the whole Church, and Calvin's imputation of servile calculation to the king of Sodom. TRUNCATION: Keil is capped at 200 words at seven of his eight keys and Gill at four of his twenty-four (see the source-defect note). I have quoted both only from text that survives the cut and have not inferred how any truncated sentence ended, but Keil's weight in this chapter is much lighter than his real contribution would be, and the reader should know that his thinness here is an artefact of the source and not of his commentary. Deliberate omissions for length: Ellicott on Hobah and the limit of the pursuit, Ellicott and Calvin on the origin of the name 'the king's dale', Ellicott's identification of Salem against the rival Salem in Ephraim, Gill's typological reading of the priestly blessing, Gill's four-division conjecture about the night attack, Wesley's summary of the raised hand, and Gill's statement that Abram abridged his own rights but not his allies'."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "4",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "JFB stride-6 displacement, 19th chapter confirmation, and the WORST variant yet: a duplicated donor block. JFB appears at exactly three keys in 1samuel 4 — 6, 12 and 18, a clean stride-6 run at phase 6. All three carry JOSHUA 10 material (the pursuit to Makkedah, the five kings hanged on trees, the sweep of southern Palestine). Worse, the blocks at keys 12 and 18 are BYTE-IDENTICAL: the same donor paragraph pasted twice. Previous chapters showed each term drawing on a different passage; genesis 15 showed both terms drawing on the same donor chapter; this shows the same donor PARAGRAPH repeated at two keys, which means the corruption is not a single mis-offset read but a repeating one. All three declared in excluded_voices at entries 4, 12 and 17."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "10",
+        "13",
+        "16",
+        "17"
+      ],
+      "note": "K&D behaves DIFFERENTLY in 1 Samuel than in Genesis, and the difference is worth recording because it changes the handling. Of twelve K&D keys in this chapter, ten carry genuine on-key exposition after the lemma (keys 2, 3, 6, 10, 13, 16, 17 expound the verse they are filed under; keys 1, 4, 7, 11 expound within their own span). Only key 20 is pure lemma, and it alone required an exclusion. Compare genesis 15, where seven of eleven keys expounded the NEXT verse and two were pure lemma. The 200-word cap is still in force — every substantive block is exactly 201 words — but the truncation falls after the exposition here rather than swallowing it. Do not assume the genesis pattern when opening a new book; map the blocks first."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "1samuel",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "7",
+        "12",
+        "13",
+        "17"
+      ],
+      "note": "Head-overflow loss, third chapter running. Henry has four heads in 1samuel 4 (keys 1, 10, 12, 19). The head at 1 expounds vv1-9 and the head at 12 expounds vv12-18, each covering far more verses than the entry it sits in; since Henry has no key inside spans 2-3, 4-6, 7-9, 13-16 or 17-18, that material was dropped. The head at 10 covers exactly its span (10-11) and the head at 19 covers exactly its span (19-22), so those two entries lose nothing. As in genesis 3 and genesis 15, Wesley abridges Henry and holds keys at 3, 5, 7, 8, 11, 13, 18, 20 and 22, so much of the substance survives through him — the pattern is now consistent enough across three chapters to treat as a rule rather than a coincidence."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "4",
+      "verses": [
+        "17",
+        "18"
+      ],
+      "note": "A tiling decision worth recording as precedent. The first tiling split 17 and 18 into separate entries. That would have forced K&D out of entry 17, because its key-17 block is lemma of vv17-18 followed by exposition of v18 only, and K&D has no key at 18 to move the material to — leaving entry 17 as effectively a solo Clarke entry (Clarke 813 words, Gill 46). Merging to span 17-18 makes the displaced v18 exposition legal (same span) and yields a five-voice entry. RULE: when a finer split would strand a voice's only exposition outside its own span AND leave the resulting entry near-solo, merge instead. Finer tiling maximises output, but not at the cost of an entry that is one commentator talking to himself."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "7",
+        "10",
+        "12",
+        "13",
+        "17",
+        "19"
+      ],
+      "note": "Second chapter of the batch: 16,515 usable source words across 22 keys, tiled into 9 entries (1 | 2-3 | 4-6 | 7-9 | 10-11 | 12 | 13-16 | 17-18 | 19-22). All nine grade A, 598-649 QA words. No Calvin anywhere in 1 Samuel in this corpus, so reformed rests on Gill alone and is 'single' in eight of the nine entries; grammatical-historical (Ellicott plus K&D) carries the majority in five entries, which is unusual — in the Genesis chapters reformed or puritan-evangelical almost always dominated. Two entries came close to the TTR floor (entry 2 at 0.585, entry 19 at 0.597 after a rewrite from 0.584) on the same doctrinal-vocabulary saturation recorded in note 1421: here the recurring words were ark, glory, joy and loss."
     }
   ]
 }
