@@ -13873,6 +13873,132 @@
       "book": "2corinthians",
       "chapter": "11",
       "note": "Fidelity self-grade, 2corinthians 11, eight entries, all in window: 1-3 608w, 4-6 629w, 7-11 607w, 12-15 589w, 16-20 599w, 21-23 614w, 24-28 637w, 29-33 647w. Every claim traced to a named block in data/commentary/cow/2corinthians/11.json before writing. No voice is named in prose without a head in that entry's verses; no voice with a head goes unnamed, except the one case forced by tooling described below. The build lint enforces both and passed clean on all eight, at 7 to 9 named voices per entry. Jamieson excluded at keys 4/10/16/22/28 as stride-6 residue and declared in each of the five affected entries. Chrome stripped from Ellicott at key 33 before drafting. Clarke's end-of-chapter excursus at key 33 and Barnes's chapter-level block at the same key used only where they treat the verses in hand; Calvin's blocks used only for what is demonstrably his own argument, the editorial apparatus merged into them being set aside and logged separately. ONE DEVIATION, forced and recorded: the Cyril of Jerusalem block at key 31 is foreign residue (the stuck 2 Corinthians 4:4 fragment) and was dropped, but it could NOT be declared in excluded_voices under any spelling because of the VOICE_LABELS prefix defect, which makes the block invisible to split_voices and so makes the declaration fail validation. The drop is therefore real but undeclared in the tags, and is documented in two source-defect notes on this chapter. Eleven distinct voices across four schools; no entry carries all five, since Henry appears at only four keys and the eastern voices at five. Real usable after removing residue, chrome and the stuck fragment: 52,807 words against a gross of 54,399. Entry count 8 set by max(33/4.5, 52807/7000) = 7.5, tiled 1-3, 4-6, 7-11, 12-15, 16-20, 21-23, 24-28, 29-33 on the natural sense units of the chapter, covering 1..33 exactly."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "1",
+      "note": "Chapter shape: 80 contiguous keys, 128,210 catena words — the largest pick I have seen, 2.8x the previous batch. Of that, 21,491 words belong to a CATENA-AUREA layer that is not in the corpus voice set (see the source-defect note), leaving ~106,719 usable. Tiled into 41 entries. The keys-over-2000 plus remaining/2500 predictor called 42; the final tiling came to 41 after one deliberate adjustment (21-23|24-25 re-tiled to 21-22|23-25 so that the catena's own paragraph unit at vv23-25 stayed intact). Bench: Gill 80, Ellicott 72, Clarke 70, Robertson 66, Barnes 64, Calvin 62, Wesley 39, Cyril of Jerusalem 19, Chrysostom 12, Henry 6 (paragraph heads at 1,5,26,39,57,67), JFB 5, Augustine 3. Trim discipline was the weak point: mean 1.9 trim passes per entry, with five entries needing four or more. The cause is stable and diagnosable — first drafts ran ~690 words against a 650 ceiling because three paragraphs of five voices each land at ~230 rather than the ~190 the budget allows."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "note": "MAJOR: luke 1's catena carries a CATENA AUREA layer absent from every chapter worked so far — 94 blocks and 21,491 words of patristic exposition under labels that are NOT corpus voices: Lightfoot 26 blocks/4,470 words, Bede 18/4,670, Ambrose 16/7,065, Theophylact 11/1,308, 'Greek Ex' 6/1,426, Origen 5/1,207, Basil 5/629, 'Gloss' 4/370, plus single blocks from Eusebius, Titus Bostrensis and Damascene. All of it was left unused, since adding voice identities is a corpus-schema decision, not a writer's. Note that synthesis_qa.VOICE_LABELS ALREADY recognises bare 'Bede', 'Origen', 'Basil', 'Lightfoot', 'Theodoret' and 'Gregory' — they are split correctly but have no entry in the SCHOOL map, so they cannot be declared in voices. Adding SCHOOL entries (Ambrose/Bede -> latin-fathers, Theophylact -> eastern-antiochene, Origen -> eastern-alexandrian, Basil -> eastern-antiochene or a new cappadocian slug) would recover roughly a sixth of this chapter's source and would likely apply across the Gospels. Recommend the owner decide."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "5",
+        "11",
+        "18",
+        "23",
+        "26",
+        "30",
+        "36",
+        "59",
+        "69",
+        "74",
+        "75",
+        "48",
+        "49"
+      ],
+      "note": "MISATTRIBUTION HAZARD, and the reason the first profile of this chapter was wrong. The catena aurea nests further authorities INSIDE an already-labelled block, marked 'NAME;' in capitals (THEOPHYLACT; BEDE; AMBROSE; ORIGEN; GREG. NYSS.) rather than 'Name:'. A splitter that only looks for 'Name:' silently appends all of that to the preceding voice — so a naive pass over key 1 attributes Theophylact's and Cyril's words to Chrysostom, and over key 5 attributes Bede's to Chrysostom. My first profile of luke 1 missed both this and the bare-label voices; I re-profiled and rewrote the dump helper to mark every capitalised NAME; with a 'stop here' banner before any prose was written against it. Any future chapter carrying a catena aurea layer needs the same guard."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "5",
+        "11",
+        "18",
+        "23",
+        "26",
+        "30",
+        "36",
+        "59",
+        "69",
+        "74",
+        "75",
+        "48",
+        "49"
+      ],
+      "note": "Corpus voices appearing under SHORT labels: this chapter writes bare 'Chrysostom:' (12 keys) and bare 'Augustine:' (3 keys), where the corpus elsewhere writes 'John Chrysostom:' and 'Augustine of Hippo:'. Both short forms ARE in VOICE_LABELS, so split_voices handles them; the tags here declare the full corpus names in voices while the prose attributions ground against the short labels in the blob, and the fidelity audit passed at 0.00%. This is the mirror image of the standing Cyril bug: 'Cyril of Jerusalem:' is what the corpus writes and bare 'Cyril' is what VOICE_LABELS holds, so that voice still cannot be declared in excluded_voices. One fix would settle both — add the full forms AHEAD of the bare ones in VOICE_LABELS."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "26",
+        "32",
+        "38",
+        "62",
+        "74"
+      ],
+      "note": "JFB displacement, SEVENTH consecutive stride-6 confirmation, and the strongest evidence yet. Phase 2 here: 26, 32, 38, 62, 74. Donor is Mark 10-11, a continuous forward march — Mt 20:20 and Salome at 26; 'of My Father' from Mt 20:23 at 32; the ransom saying of Mt 20:28 at 38; the Monday morning and the fig tree of Mk 11 at 62; and an eleven-word stub of Mk 11:22 at 74. What makes this the strongest instance is that the GAPS confirm the stride as well as the hits: keys 44, 50, 56 and 68 fall exactly on phase 2 and carry NO JFB block at all, so the run is 26,32,38,[44],[50],[56],62,[68],74 rather than an irregular scatter. Running record of the stride across acts 24, acts 3, james 1, 1john 3, ephesians 1, romans 4 and luke 1: seven for seven, phase varying, stride never. All five declared in excluded_voices."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "34",
+        "37",
+        "58",
+        "72",
+        "80"
+      ],
+      "note": "Apparatus emitted as commentary — four instances of Barnes and one of Clarke, plus a second sighting of the raw-CSS defect. Barnes at key 34 is the literal sentinel string 'Lk 1:35 . No material from Barnes on this particular verse.'; at key 37 and key 58 his blocks are bare cross-reference markers ('(l) \"For with God\" Mt 19:26, Rom 4:21'); Clarke at key 72 is the single line 'His holy covenant - See the note on Luk 1:54.' Where the voice had real material elsewhere in the entry this is harmless, but at entries 57-58 and 72-73 it left the voice with nothing usable, so 'Albert Barnes' and 'Adam Clarke' are declared in excluded_voices there — the two-way voice check caught both, and they are the only two it caught in 41 entries. Separately, Ellicott's block at key 80 ends in the page footer followed by several hundred words of raw stylesheet, exactly as his block at romans 4:25 did. That makes the CSS-residue defect cross-book and recurring rather than a one-off, and it inflates the measured source words of whatever key it lands on."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "8",
+        "13",
+        "15",
+        "23",
+        "27",
+        "31",
+        "35",
+        "41",
+        "42",
+        "45",
+        "59",
+        "66",
+        "67",
+        "71",
+        "76"
+      ],
+      "note": "Cyril of Jerusalem appears at 19 keys and is usable at only four (26, 32, 34, 43). The rest are Catechetical Lectures material with no bearing on the verse they are filed under: the Antioch/Barnabas passage at 8, 23 and 59 (three identical copies), the Pentecost passage at 15, 41 and 67, a passage on clouds and rain and ice at 16, one on Jeroboam and Manasseh at 76, one on Jonah at 71. Two distinct problems are compounded here — byte-identical duplication across keys, already recorded for ephesians 1 and romans 4, and wholesale off-verse filing. None of the fifteen could be declared in excluded_voices because of the VOICE_LABELS gap, so they are simply absent from voices; the effect is that this chapter's measured source is overstated by however many words those fifteen blocks carry."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "1",
+      "verses": [
+        "35",
+        "48",
+        "70",
+        "12",
+        "45"
+      ],
+      "note": "Four live disputes worth keeping. (1) v35, the sharpest in the chapter: Clarke states outright that the doctrine of the eternal Sonship is 'anti-scriptural, and highly dangerous', since son implies a father and therefore precedency in time, so that 'eternal Son' is a positive self-contradiction and the title here belongs to the human nature only; Calvin answers the same particle directly, that he who had been the Son from eternity was here manifested as such in the flesh; Barnes takes the supernatural birth to prove one reason for the name beyond controversy; Ellicott holds the middle ground that the angel's message was a partial and not a complete revelation. (2) v48: Augustine reads the low estate as the virtue of humility, the heavenly ladder by which God descended; Calvin denies flatly that the word means any quality of mind, calling that the imagining of ignorant men, and insists on a mean and despicable condition. (3) v71: Ellicott alone takes the enemies politically, as the Roman conquerors and the house of Herod, against Gill, Clarke, Barnes and Calvin who take them spiritually. (4) vv12-13 and 45: the chapter's running comparison of Zacharias with Mary, where Calvin alone will not acquit Mary — she confined God's power within the limits of nature and 'we need not take much trouble to acquit her' — while Gill, Ellicott and Wesley all distinguish her question sharply from the priest's."
     }
   ]
 }
