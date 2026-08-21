@@ -15070,6 +15070,102 @@
       "book": "deuteronomy",
       "chapter": "24",
       "note": "Fidelity self-grade, deuteronomy 24, five entries tiling 1-22. Word counts: 1-4 650w (6 voices), 5-9 650w (7), 10-13 587w (5), 14-16 644w (7), 17-22 616w (5). All within the 350-650 window. Every claim in every entry is attributed to a named voice and traceable to that voice's block for the verses in range; no verse in 1-22 is uncovered. Voices: Gill, Calvin, Henry, Clarke, Wesley, Ellicott and Keil and Delitzsch, across four schools. Ellicott appears only at keys 5, 6, 7 and 16, so he is named in the first two entries and absent from the last three, which is correct and not an omission. Positions I disagree with are stated in the voice's own terms and not softened: Clarke's claim that any cause of dislike sufficed for divorce, his absolute reading of the woman's defilement, and his statement that the gleanings were the property of the poor; Calvin's double hedge against both the wealthy despoiling themselves and the poor claiming the remainder as of right; Wesley's admission of commanded exceptions to the rule against punishing children, instancing Achan; and Calvin's dismissal of the sanitary reading of the leprosy law as poor and almost unmeaning. One point of interpretive care recorded rather than concealed: at verse 16 Wesley cites Achan as an exception to the rule while Ellicott treats Achan as falling outside the rule entirely, and the entry presents both without adjudicating, because the disagreement is about the scope of the precept and neither voice engages the other. DECLARED DEVIATION: Jamieson is in RESIDUE for the whole chapter, its two blocks belonging to Numbers 29, and is declared as excluded_voices on the 14-16 and 17-22 entries. No undeclarable drops. SELF-CORRECTION LOGGED SEPARATELY: my first pass over this chapter recorded it as having no chrome anywhere, which was wrong -- I had searched only for the StudyLight marker. The last key does carry chrome, in Gill's block, from sacred-texts.com. The accompanying source-defect note gives the correction and what it implies for the thirteen chapters recorded before it."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB displacement, SIXTEENTH chapter, stride 6 phase 4 with four terms. All four are off-chapter and the donor is a single continuous passage, Romans 3: key 4 is a textual note on 'But if' being beyond doubt the true reading; key 10 is on circumcision as the outward sign and seal of the covenant; key 16 is the objection 'what better are we Jews for all our advantages?'; key 22 is the further objection that the more faithless we are, the more illustrious God's fidelity appears. All four declared in excluded_voices. Sixteen chapters, sixteen confirmations of stride 6 — OT law and narrative, Gospels, Acts, Pastorals, and now the Corinthian correspondence."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "9"
+      ],
+      "note": "Cyril of Jerusalem at key 9 is DISPLACED — his block is Catechetical Lecture material on 'he blinded the thoughts of them that believe not', which is 2 Corinthians 4:4, not 8:9 — and it CANNOT be declared in excluded_voices. Verified empirically this run: QA.undeclarable_voices() returns ['Cyril of Jerusalem'] for that key even though the block is plainly present, because VOICE_LABELS holds the bare string 'Cyril' while the corpus writes 'Cyril of Jerusalem:'. JFB at the same keys returns [] and declares fine. The only safe handling is therefore to OMIT Cyril from the voices list and record the drop in a note, since declaring him would fail the validator. This is now the second chapter where a Cyril block had to be silently omitted; the one-word fix (add 'Cyril of Jerusalem' to VOICE_LABELS) would let the data carry these drops instead of the notes file. Flagging for the owner."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "15",
+        "18"
+      ],
+      "note": "Gill truncation in 2 Corinthians 8, plus a second instance of the one-to-five-word block class first documented at 1 Timothy 5. Gill is capped at exactly 200 words at keys 1, 13 and 19 (the corpus-wide cap). Worse, his key-15 block is 'As it is written,.... In ' — five words, cut off mid-clause — so Gill contributes nothing at all to the manna quotation, which is the whole point of that verse. Compare 1 Timothy 5 key 18, where Gill's block was the single word 'In'. Both truncations occur where Gill was about to give a cross-reference, which suggests the scrape drops the block at the point where the source page emits a reference link. That is a testable hypothesis and would be cheap to check corpus-wide."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "24"
+      ],
+      "note": "Residue, ELEVENTH sighting. Ellicott's key-24 block is genuine and substantial for most of its length — the 'in the face of the churches' exposition — before breaking into StudyLight chrome and raw JavaScript. Again the LAST Ellicott block on the chapter's scraped page, consistent with the corrected rule. Barnes and Clarke at the same key end with their own chapter-summary apparatus ('REMARKS on 2nd Corinthians Chapter 8' and a numbered list), which is a different thing from residue — it is real authorial matter, just not verse commentary, and Clarke's summary of the chapter's rhetoric was usable."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "18",
+        "22"
+      ],
+      "note": "Two unnamed brethren, and no two witnesses identify them alike. On the first: Wesley and the patristic current say Luke; Clarke lists Luke, Silas, Barnabas, Mark and Apollos and declines to choose; Barnes says it is impossible to determine and not material; Ellicott shows the Lucan tradition rests on the assumption, for which there is no evidence, that Luke was already known as a Gospel writer, yet grants it still has more evidence than any rival; Calvin ALONE commits, following Chrysostom, to Barnabas. On the second: Barnes calls conjecture useless, Clarke guesses Apollos, Robertson will say only that it was someone Paul had tested, and Ellicott makes a positive case for Tychicus that none of the others raise — he went up to Jerusalem on this very business, and the tone of the later letters matches. Worth recording because the two disputes have different shapes: the first is a contest between named traditions, the second an argument from silence in which only Ellicott offers evidence."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "14"
+      ],
+      "note": "Whether the 'equality' of v14 is temporal only, or temporal and spiritual, splits the corpus three ways and the split is instructive. Wesley allows a further meaning: the Corinthians' temporal bounty supplies Judea's temporal wants, and the prayers of Judea bring down spiritual blessings on the benefactors. Calvin knows a stronger form of that reading — that the Gospel had already flowed to Corinth FROM Jerusalem, so the spiritual debt ran the other way — and rejects it as foreign to Paul's intention, substituting the communion of saints, in which whatever is discharged to one member redounds to the whole body. Ellicott is the most restrictive, calling it reading too much between the lines to find here the thought Paul expresses in Romans, that the equality lay in money for spiritual privileges. Gill keeps to the plainest sense. So the two readings Calvin and Ellicott reject are not the same reading, which is easy to miss."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "20"
+      ],
+      "note": "A philological disagreement worth keeping because both sides are defensible. On the participle at v20 Gill and Calvin both hear a NAUTICAL metaphor — Gill of mariners steering another way to shun a rock, Calvin of furling or altering a ship's sails to change course, which he supports from Plutarch's use of the verb for tempests of the mind that will not let a man shift his course. Robertson derives it plainly from an old verb meaning to set or arrange, giving 'arranging this for ourselves', with no metaphor at all. The nautical sense is the older commentators' common property and the plain sense is the philologist's; neither is obviously wrong, and the entry carries both."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "9",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "note": "2 Corinthians 8 fidelity self-grade: A on all twelve entries, no flags, no FLOOR, no TMPL, mean TTR 0.628 / zip 0.447. Length: entry 1 was drafted before I switched methods and cost about fifteen trim passes to come down from 865; every entry from 3 onward used the per-paragraph draft-and-measure method recorded in note 1383, and the difference is decisive — entries 3, 10, 12, 16, 18, 22 and 24 landed in range on the first or second assembly. The refinement this chapter adds: when a paragraph measures over about 250 words, trim THAT paragraph before drafting the next one, rather than assembling all three and trimming the whole. Trimming in place is cheap; trimming a finished 750-word entry is not, because every cut has to be checked against the voice-coverage requirement. Eight voices per entry is the practical ceiling at 650 words — beyond that each voice gets under 70 words and the prose turns into a list."
     }
   ]
 }
