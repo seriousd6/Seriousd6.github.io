@@ -14947,6 +14947,86 @@
         "24"
       ],
       "note": "1 Timothy 5 fidelity self-grade: A on all twelve entries, no flags, no FLOOR, no TMPL, mean TTR 0.648 / zip 0.454. Length discipline improved but is still the main cost. Note 1365's fix (explicit paragraph budgets) was applied from entry 3 onward and worked: entry 1, drafted before the fix, came in at 855 and took eleven trim passes; entries drafted after it averaged about 720 first-pass and most took two or three. The further refinement that actually moved the number was capping each paragraph at THREE voices rather than trying to give all seven or eight a sentence — at roughly 30 words a sentence, an eight-voice entry cannot come in under 720 if every voice speaks in every paragraph. Recommended rule for the next NT chapter, where six to eight voices per key is normal: three paragraphs, three voices each, about 65 words per voice, and let each voice speak once in the entry rather than once per paragraph."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "4",
+        "10"
+      ],
+      "note": "JFB displacement, FIFTEENTH chapter, and the subtlest instance yet. Genesis 8 carries two displaced JFB terms at keys 4 and 10 — stride 6, phase 4, holding again. What is new is that the donor is the IMMEDIATELY PRECEDING chapter, Genesis 7, so the displaced text is about the same flood and reads as plausibly on-chapter to a careless eye. Key 4 comments on a repeated announcement of the flood, citing the doubled dream of Genesis 41 as parallel — that is Genesis 7:4, not the ark resting on Ararat. Key 10 says 'The ark was finished; and Noah now, in the spirit of implicit faith… waited for directions from God' — that is Genesis 7:5, not the second sending of the dove. Both excluded. Practical warning for future chapters: where the donor is adjacent, the usual test (obviously wrong subject matter) fails, and the displacement must be caught by asking what verse the comment would be answering."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "2",
+        "14",
+        "21"
+      ],
+      "note": "K&D in Genesis 8 is present at four keys and contributes real exposition at exactly ONE place, all of it displaced. Keys 2, 7 and 14 are capped at exactly 200 words (the corpus-wide cap) and keys 2 and 14 spend the whole budget transcribing the lemmas of the following verses; key 21 is 77 words and, like 1 Timothy 5 key 22, is PURE LEMMA — the sub-200 block that has ended naturally but says nothing. The only usable K&D material is the raven exposition at the tail of key 2, which treats vv6-7 and was relocated into the 6-12 entry because K&D has key 7 inside that span. K&D was therefore declared in excluded_voices at entries 1, 13 and 21. Note the widened use of excluded_voices: previously it named displaced/off-chapter material only; here it names blocks that are present in source but carry no exposition at all. The validator accepts this (it only requires the named block to exist), and declaring it puts the loss in the data rather than only in a note."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "rejected",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "14"
+      ],
+      "note": "K&D loss at Genesis 8 that could not be repaired. The key-14 block spends its 200 words on the lemmas of vv14-20 and reaches genuine exposition only at v20 — 'The first thing which Noah did, was to build an altar for burnt sacrifice, to thank the Lord' — which is cut off by the cap mid-sentence. v20 is its own span and K&D has no key there, so the material could not be relocated and was dropped. This is the third chapter running where K&D's only real contribution sits past the cap in a block whose budget was consumed by lemma quotation."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "22"
+      ],
+      "note": "Residue, TENTH sighting. Ellicott's key-22 block runs long and is genuine for most of its length — the six-seasons refutation and the account of the great alternations — before breaking into StudyLight chrome and then raw JavaScript. Consistent with the corrected rule (residue terminates a commentator's scraped page, and this is Ellicott's last block on Genesis 8). Second confirmation of the 1 Timothy 5 lesson that block length is no guide: a long Ellicott block at a chapter's end still needs its tail inspected."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "22"
+      ],
+      "note": "How many seasons the closing verse names is a clean three-way split, and it cuts across the usual school lines. Clarke alone reads six divisions, takes them for the actual postdiluvian seasons of Armenia where Noah then was, and supports the reading from the Targum of Jonathan and the Coptic calendar. Ellicott calls the six-season reading untenable and refutes it agriculturally — Palestine itself has two seed times, winter crops sown in October and November, summer crops in January and February — reading the verse instead as the great alternations on which the earth's well-being depends. Calvin reaches Ellicott's conclusion by a different route, that the Jews erroneously divide the year into six parts whereas Moses, by setting summer against winter, divides it popularly into two. So the Reformed and grammatical-historical voices agree against the Wesleyan one, which is the reverse of the alignment on most disputed points in this corpus."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "7"
+      ],
+      "note": "Whether the raven returned is disputed on the Hebrew, and the corpus is unusually unanimous against the popular reading. Clarke: the common supposition that the raven flew off and was seen no more is a meaning the Hebrew will not bear, since the words are 'going forth and returning'; and it must be allowed, since the bird could not have kept the wing twenty-one days. K&D and Wesley read it the same way — it returned but was never taken back in. Ellicott agrees and adds a mechanism, that Noah retained the raven's mate and so had security for its return each night to its old perch. Ellicott alone reports the contrary tradition (the Chaldean Genesis, many commentators, and the ancient versions), that the raven did not return, having found abundant food in the floating dead bodies. Calvin and Gill supply the same reason for choosing the bird — it feeds on carrion, so if the earth were dry the smell of carcasses would keep it away, and its return was therefore itself the report."
+    },
+    {
+      "at": "2026-08-21",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "4",
+        "6",
+        "13",
+        "15",
+        "20",
+        "21",
+        "22"
+      ],
+      "note": "Genesis 8 fidelity self-grade: A on all eight entries, no flags, no FLOOR, no TMPL. One entry needed a second pass for a different reason than usual: entry 13 (the chronology of the drying) first came back grade B on BOTH diversity measures, TTR 0.554 and compression 0.403, because a chapter-dating entry is inherently full of repeated numerals and date formulas ('month', 'days', 'seventeenth', 'hundred and fifty'). The fix was not trimming but restructuring — replacing Ellicott's spelled-out table with his two conclusions, and stating the 354/365 arithmetic once instead of three times. New rule worth keeping: for any entry whose material is mostly dates or numbers, expect the diversity gates rather than the length gate to bite, and plan to state each figure ONCE across the whole entry. On length, the per-paragraph draft-and-measure method (write one paragraph, count it, then write the next) was adopted from entry 4 onward and is a clear improvement on note 1373's rule alone: entry 1, drafted whole, came in at 865 and took ten passes; entry 4, the first drafted paragraph by paragraph, came in at 608 first time and needed none."
     }
   ]
 }
