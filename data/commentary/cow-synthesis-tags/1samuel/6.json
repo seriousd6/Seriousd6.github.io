@@ -2,771 +2,373 @@
  "1": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "Charles Ellicott"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "1-6",
+  "pericope_label": "The ark seven months in Philistia; the priests and diviners; the trespass offering",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Prefer <em>country</em> to <em>field</em> while reporting the alternative, date the capture by counting back from harvest, correct Josephus on the length of the captivity, and canvass what the golden images were, down to the rabbinic reading of them as talismans."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Use the <em>field</em> reading to account for the plague of mice unrecorded in the previous chapter, and measure the loss as Israel’s, seven months punished by the absence of the ark."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ark remaining seven months among the Philistines: 'and the ark of the LORD was in the country of the Philistines seven months' — the ark stayed seven months, the plague continuing (the and the ark of the LORD was in the country of the Philistines, in the country, the seven months, the time, the figure, the ark a plague to its captors for the whole season, God afflicting them till they let it go, the truth that the ark was seven months among the Philistines, the plague enduring, Psalm 105:14, the figure of God's hand pressing the foe until he releases the holy thing, the seven months, the ark's stay, vv.5:11); the ark among the Philistines (the captivity, Psalm 105:14) — the captivity (in the country); 'seven months' (the season of the plague, the duration, the figure, God's hand pressing the foe until he releases the holy thing, the providence, the time, the priests and diviners consulted to follow, vv.2) — Keil and Delitzsch, Gill."
+    "summary": "Supply the practice of ancient divination and of votive offerings where the text assumes it, judge the Philistines to have conceived Israel’s God as a capricious tribal deity, and defend the priests’ knowledge of the Exodus as unremarkable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Admit ignorance of what divination actually consisted in; find in the impulse to send gifts a principle common to all nations and endorsed by the law; and defend the offerers’ motive as humiliation rather than mockery."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether <em>in the field</em> means the open country where the ark was abandoned (Procopius, and the inference Henry builds on it) or simply the territory of the Philistines (Gill and Henry’s own preference, with the Targum).",
+   "How long the ark was in Philistia — seven months by the text, four by Josephus, whom Gill corrects.",
+   "What the Philistines supposed they were placating: a capricious deity of their own kind (Ellicott) or a God whose claims they dimly and rightly perceived (Gill, Clarke).",
+   "What the golden images represented — the cities, the whole man, the diseased part, or talismans made to carry away the disease (Maimonides, in Gill)."
+  ],
+  "outliers": [
+   "Clarke alone confesses that what divination consisted in is unknown.",
+   "Ellicott alone follows the custom of votive images from pagan antiquity into Christian churches and into modern practice.",
+   "Ellicott alone notes that the mice enter the Hebrew text here but stand earlier in the Greek."
+  ],
   "themes": [
-   "And the ark of the LORD was in the country of the Philistines seven months.",
-   "The ark remaining seven months among the Philistines",
-   "the ark staying seven months, the plague continuing",
-   "God's hand pressing the foe until he releases the holy thing (Psalm 105:14)"
+   "The ark",
+   "Judgment",
+   "Divination",
+   "Idolatry",
+   "Providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Philistines consulting their priests how to send the ark home: 'and the Philistines called for the priests and the diviners, saying, What shall we do to the ark of the LORD? tell us wherewith we shall send it to his place' — they sought counsel how to return the ark (the and the Philistines called for the priests and the diviners, saying, What shall we do to the ark of the LORD?, the inquiry, the tell us wherewith we shall send it to his place, how to send it, the figure, the heathen seeking guidance to be rid of the ark, owning its power, the truth that the Philistines consulted how to send the ark home, Daniel 2:2, the figure of the foe constrained to honour the holy thing he would be rid of, the inquiry of the priests, how to send it, vv.1); the Philistines consulting their priests (the counsel, Daniel 2:2) — the inquiry (what shall we do); 'tell us wherewith we shall send it to his place' (how to return the ark with due honour, the manner, the figure, the foe constrained to honour the holy thing he would be rid of, the providence, the inquiry, the counsel to send a trespass offering to follow, vv.3) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the Philistines called for the priests and the diviners, saying, What shall we do to the ark of the LORD? tell us wherewith we shall send it to his place.",
-   "The Philistines consulting their priests how to send the ark home",
-   "the Philistines seeking counsel how to return the ark",
-   "the foe constrained to honour the holy thing he would be rid of (Daniel 2:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The priests advising to send a trespass offering with the ark: 'and they said, If ye send away the ark of the God of Israel, send it not empty; but in any wise return him a trespass offering: then ye shall be healed, and it shall be known to you why his hand is not removed from you' — the priests counselled a trespass offering for healing (the and they said, If ye send away the ark of the God of Israel, send it not empty; but in any wise return him a trespass offering, the trespass offering, the then ye shall be healed, and it shall be known to you why his hand is not removed from you, the hope of healing, the figure, the heathen acknowledgment of guilt and the need of atonement, the dim sense of sin, the truth that the priests counselled a trespass offering for healing, Leviticus 5:15, the figure of the conscience that owns guilt and seeks to appease the offended God, the trespass offering, the hope of healing, vv.2); the counsel to send a trespass offering (the atonement, Leviticus 5:15) — the offering (a trespass offering); 'then ye shall be healed... why his hand is not removed from you' (the hope of healing by the offering, the appeasement, the figure, the conscience that owns guilt and seeks to appease the offended God, the providence, the counsel, the golden emerods and mice to follow, vv.4-5) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they said, If ye send away the ark of the God of Israel, send it not empty; but in any wise return him a trespass offering: then ye shall be healed, and it shall be known to you why his hand is not removed from you.",
-   "The priests advising to send a trespass offering with the ark",
-   "the priests counselling a trespass offering for healing",
-   "the conscience that owns guilt and seeks to appease the offended God (Leviticus 5:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The trespass offering of five golden tumours and mice for the five lords: 'then said they, What shall be the trespass offering which we shall return to him? They answered, Five golden emerods, and five golden mice, according to the number of the lords of the Philistines: for one plague was on you all, and on your lords' — golden images of the plagues, one for each lord (the then said they, What shall be the trespass offering which we shall return to him? They answered, Five golden emerods, and five golden mice, golden images, the according to the number of the lords of the Philistines: for one plague was on you all, and on your lords, for the five lords, the figure, the offering shaped to the plague, owning the source of the affliction, the truth that they made golden images of the plagues, one per lord, Exodus 8:17, the figure of the confession that shapes its offering to its sin, the trespass offering, the golden images, vv.3); the golden emerods and mice (the offering, Exodus 8:17) — the images (five golden emerods and mice); 'according to the number of the lords of the Philistines: for one plague was on you all' (one image per lord, the common plague owned, the confession, the figure, the confession that shapes its offering to its sin, the providence, the offering, the counsel to give glory to God to follow, vv.5) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then said they, What shall be the trespass offering which we shall return to him? They answered, Five golden emerods, and five golden mice, according to the number of the lords of the Philistines: for one plague was on you all, and on your lords.",
-   "The trespass offering of five golden tumours and mice for the five lords",
-   "golden images of the plagues, one for each lord",
-   "the confession that shapes its offering to its sin (Exodus 8:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The counsel to give glory to the God of Israel that he might lighten his hand: 'wherefore ye shall make images of your emerods, and images of your mice that mar the land; and ye shall give glory unto the God of Israel: peradventure he will lighten his hand from off you, and from off your gods, and from off your land' — they were to give glory to God in hope of relief (the wherefore ye shall make images of your emerods, and images of your mice that mar the land, the images, the and ye shall give glory unto the God of Israel: peradventure he will lighten his hand from off you, and from off your gods, and from off your land, give glory to God, the figure, the heathen counselled to honour the God they had defied, the dim hope of mercy, the truth that they were to give glory to the God of Israel, Joshua 7:19, the figure of the forced homage of the foe to the God whose hand he feels, the giving of glory, the hope of relief, vv.4); the images of the plagues that marred the land (the offering, Joshua 7:19) — the images (emerods and mice); 'ye shall give glory unto the God of Israel: peradventure he will lighten his hand' (the homage to God in hope of relief, the appeasement, the figure, the forced homage of the foe to the God whose hand he feels, the providence, the homage, the counsel not to harden the heart as Egypt to follow, vv.6) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wherefore ye shall make images of your emerods, and images of your mice that mar the land; and ye shall give glory unto the God of Israel: peradventure he will lighten his hand from off you, and from off your gods, and from off your land.",
-   "The counsel to give glory to the God of Israel that he might lighten his hand",
-   "the Philistines counselled to honour the God they had defied in hope of relief",
-   "the forced homage of the foe to the God whose hand he feels (Joshua 7:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The warning not to harden the heart as Egypt and Pharaoh did: 'wherefore then do ye harden your hearts, as the Egyptians and Pharaoh hardened their hearts? when he had wrought wonderfully among them, did they not let the people go, and they departed?' — they were warned not to harden their hearts as Egypt (the wherefore then do ye harden your hearts, as the Egyptians and Pharaoh hardened their hearts?, the warning, the when he had wrought wonderfully among them, did they not let the people go, and they departed?, the example of Egypt, the figure, the warning from Egypt's ruin, the folly of resisting God's hand, the truth that they were warned not to harden as Pharaoh did, Exodus 9:34, the figure of the folly that resists God till it is destroyed, the warning of the priests, the example of Egypt, vv.5); the warning against hardening as Egypt (the caution, Exodus 9:34) — the warning (harden not your hearts); 'did they not let the people go, and they departed?' (Egypt forced at last to let Israel go, the lesson, the figure, the folly that resists God till it is destroyed, the providence, the warning, the new cart and the kine to follow, vv.7) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Wherefore then do ye harden your hearts, as the Egyptians and Pharaoh hardened their hearts? when he had wrought wonderfully among them, did they not let the people go, and they departed?",
-   "The warning not to harden the heart as Egypt and Pharaoh did",
-   "the Philistines warned not to harden as Egypt and Pharaoh did",
-   "the folly that resists God till it is destroyed (Exodus 9:34)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The counsel to make a new cart and yoke two milch kine to bear the ark: 'now therefore make a new cart, and take two milch kine, on which there hath come no yoke, and tie the kine to the cart, and bring their calves home from them' — a new cart and untrained nursing cows were prepared as a test (the now therefore make a new cart, and take two milch kine, on which there hath come no yoke, the new cart and kine, the and tie the kine to the cart, and bring their calves home from them, the calves kept back, the figure, the device that would prove whether God or chance ruled, against all nature, the truth that they used untrained kine parted from their calves as a test, Numbers 19:2, the figure of the test devised to discern the hand of God, the new cart, the kine and calves, vv.6); the new cart and untrained kine (the test, Numbers 19:2) — the device (new cart and kine); 'tie the kine to the cart, and bring their calves home from them' (the calves kept back to test the kine's course, the proof, the figure, the test devised to discern the hand of God, the providence, the device, the test of the kine's way to follow, vv.8-9) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Now therefore make a new cart, and take two milch kine, on which there hath come no yoke, and tie the kine to the cart, and bring their calves home from them:",
-   "The counsel to make a new cart and yoke two milch kine to bear the ark",
-   "untrained nursing cows parted from their calves prepared as a test",
-   "the test devised to discern the hand of God (Numbers 19:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ark and golden offering laid on the cart to be sent away: 'and take the ark of the LORD, and lay it upon the cart; and put the jewels of gold, which ye return him for a trespass offering, in a coffer by the side thereof; and send it away, that it may go' — the ark and the trespass offering were set on the cart (the and take the ark of the LORD, and lay it upon the cart, the ark on the cart, the and put the jewels of gold, which ye return him for a trespass offering, in a coffer by the side thereof; and send it away, that it may go, the offering beside it, the figure, the ark and the offering committed to the test, the foe letting it go, the truth that they laid the ark and offering on the cart to send it, 2 Samuel 6:3, the figure of the holy thing released by the foe with its tribute, the ark on the cart, the offering beside, vv.7); the ark laid on the cart (the sending, 2 Samuel 6:3) — the ark (on the cart); 'put the jewels of gold... in a coffer by the side thereof; and send it away' (the golden offering set beside the ark, the tribute, the figure, the holy thing released by the foe with its tribute, the providence, the sending, the test of the kine's course to follow, vv.9) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And take the ark of the LORD, and lay it upon the cart; and put the jewels of gold, which ye return him for a trespass offering, in a coffer by the side thereof; and send it away, that it may go.",
-   "The ark and golden offering laid on the cart to be sent away",
-   "the ark and the trespass offering set on the cart to be sent",
-   "the holy thing released by the foe with its tribute (2 Samuel 6:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "John Calvin"
+   "Keil and Delitzsch"
   ],
+  "range": "7-9",
+  "pericope_label": "The new cart, the two milch kine, and the test",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Ground the new cart in the meaning of sanctification, call the trial complete on two independent grounds, and expound <em>chance</em> from the Hebrew and the English alike as an event of concurring natural causes still wholly within the divine government."
+   },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Explain the cart by the absence of Levites before appealing to the ark’s honour, and keep to what the lords were directed to observe."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Philistines' test, whether the kine would bear the ark to Bethshemesh of themselves or it was chance: 'and see, if it goeth up by the way of his own coast to Bethshemesh, then he hath done us this great evil: but if not, then we shall know that it is not his hand that smote us; it was a chance that happened to us' — the proof between God's hand and chance — 'and see, if it goeth up by the way of his own coast to Bethshemesh, then he hath done us this great evil: but if not, then we shall know that it is not his hand that smote us; it was a chance that happened to us': the Philistines devise a decisive test to learn whether God or chance had afflicted them (the witnesses noting the significance — the shrewd and decisive nature of the test, for the kine were untrained to the yoke, were nursing mothers parted from their calves, and by every law of nature would have turned back lowing to their young, if therefore against all nature they went straight up the road to Bethshemesh in Israel, drawing the ark, it could be nothing but the hand of God overruling them, and the Philistines would know certainly that their plagues were his stroke and no chance, the witnesses noting that the very heathen here reason rightly, that what is against nature and according to God's purpose is the proof of his hand, and that to ascribe such things to chance is the refuge of unbelief, the test that nature could not pass but God could overrule, the hand of God distinguished from chance, the heathen owning that God's overruling is the proof, the lesson — that nothing comes by chance, but the hand of God overrules all events, and the believer discerns his hand where the unbeliever sees only accident, 'the lot is cast into the lap; but the whole disposing thereof is of the LORD,' Proverbs 16:33, the truth that not a sparrow falls without the Father, and all things are ordered by his providence, 'are not two sparrows sold for a farthing? and one of them shall not fall on the ground without your Father,' Matthew 10:29, the figure — the overruling providence of God that governs all events, even the course of beasts, fulfilled in him who works all things after the counsel of his own will, 'who worketh all things after the counsel of his own will,' Ephesians 1:11, the truth that to call God's dealings chance is the blindness of unbelief, but faith sees his hand in all, the figure of the question whether the hand of God or mere chance rules in the events that befall men, the call to discern the hand of God in all that happens, the assurance that nothing befalls by chance but all by his providence); the Philistines testing whether the kine would go straight to Bethshemesh against nature, proving the hand of God (the test of God's hand, Proverbs 16:33) — the test (if it goeth to Bethshemesh); 'but if not, then we shall know that it is not his hand that smote us; it was a chance that happened to us' (the Philistines reasoning that if the kine turned back it was chance, but the untrained nursing cows going straight up against all nature could be nothing but God's overruling, not a sparrow falling without the Father, the hand of God against chance, Matthew 10:29; Ephesians 1:11) — the figure (the overruling providence of God that governs all events, the providence, the test, the kine going straight to Bethshemesh to follow, vv.10-12) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Report the reverence shown as a right feeling while passing on a rival explanation from the virtue of new things; set out both branches of the test and the diviners’ own expectation; and contrast Philistine awe with Israelite carelessness to come."
    }
   ],
   "debates": [
-   {
-    "question": "What does the test of the kine reveal about God's hand and chance?",
-    "sides": [
-     {
-      "position": "The question whether the hand of God or mere chance rules in the events that befall men - the untrained nursing kine going straight to Bethshemesh against all nature could be nothing but God's overruling, the heathen reasoning rightly that what is against nature is the proof of his hand, nothing coming by chance but God overruling all (Proverbs 16:33), not a sparrow falling without the Father (Matthew 10:29), God working all things after the counsel of his will (Ephesians 1:11)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "Why the cart was new: because what has served common use may not serve God (Clarke), because no Levites were at hand to carry the ark and honour required a new vehicle (Gill), or because new things were supposed to have a peculiar virtue (the Speaker’s Commentary, reported by Ellicott alongside the reverent explanation).",
+   "What the Philistine priests expected the test to show — Ellicott alone says they were confident the cows would go home, and therefore that the plague would prove natural.",
+   "Whether <em>chance</em> names something outside divine government — denied at length by Clarke, who redefines the word from its roots in two languages."
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone derives the English <em>chance</em> from the French and connects it with the legal term escheat.",
+   "Clarke alone objects that <em>jewels</em> mistranslates a word meaning vessels or implements.",
+   "Ellicott alone anticipates the fate of the men of Bethshemesh in order to sharpen the Philistines’ reverence."
+  ],
   "themes": [
-   "And see, if it goeth up by the way of his own coast to Bethshemesh, then he hath done us this great evil: but if not, then we shall know that it is not his hand that smote us; it was a chance that happened to us.",
-   "The Philistines' test, whether the kine would bear the ark to Bethshemesh of themselves or it was chance (the crux of whether the hand of God or mere chance rules in the events that befall men)",
-   "the shrewd test, for the kine were untrained nursing mothers parted from their calves and by nature would have turned back, so that if against all nature they went straight to Bethshemesh it could be nothing but the hand of God overruling",
-   "the heathen reasoning rightly that what is against nature and according to God's purpose is the proof of his hand, that nothing comes by chance but God overrules all, not a sparrow falling without the Father, God working all things after the counsel of his will (Proverbs 16:33; Matthew 10:29; Ephesians 1:11)"
+   "Providence",
+   "Chance",
+   "Reverence",
+   "The ark",
+   "Testing God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.4
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "10-12",
+  "pericope_label": "The Philistines send the ark away; the kine take the straight way to Bethshemesh",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Read the return as a second exodus — no ransom taken, gold given to be rid of it — and draw the rule that God takes honour from those who seek to dishonour him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Find the proof in the lowing, which shows the natural instinct persisting while the behaviour contradicts it; note the crossroads and the lords’ personal attendance as guards against imposture."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The men yoking the kine to the cart and shutting up the calves: 'and the men did so; and took two milch kine, and tied them to the cart, and shut up their calves at home' — the Philistines carried out the test as counselled (the and the men did so; and took two milch kine, and tied them to the cart, the kine yoked, the and shut up their calves at home, the calves shut up, the figure, the test set in motion, the calves kept back to prove the kine's course, the truth that they yoked the kine and shut up the calves, 1 Samuel 6:7, the figure of the proof prepared against all nature, the doing of the men, the calves shut up, vv.7); the kine yoked to the cart (the test, 1 Samuel 6:7) — the yoking (tied to the cart); 'shut up their calves at home' (the calves kept back to test the kine, the proof, the figure, the proof prepared against all nature, the providence, the doing, the kine going straight to Bethshemesh to follow, vv.12) — Keil and Delitzsch, Gill."
+    "summary": "Argue from the plainness of the narrative itself to its truth, and follow the arrival, the great stone, the burnt offering and the Levites’ handling of the ark in order."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Observe that Philistines handled the ark unpunished where an Israelite was afterwards struck for it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the cart was deliberately set at a fork between the road to Ekron and the road to Bethshemesh — reported by Clarke as the view of some.",
+   "What the lowing signifies: the cows calling for their calves (Clarke) or, more precisely, evidence that instinct was overborne rather than removed (Wesley).",
+   "Why the Philistine lords accompanied the cart to the border — to prevent imposture (Wesley) or to secure the fullest conviction of God’s interposition (Clarke)."
+  ],
+  "outliers": [
+   "Henry alone aligns the ark’s return point by point with the exodus, down to the gold given to speed its departure.",
+   "Gill alone contrasts the unpunished Philistines with Uzzah.",
+   "Ellicott alone rests a case for the narrative’s authenticity on its unadorned style."
+  ],
   "themes": [
-   "And the men did so; and took two milch kine, and tied them to the cart, and shut up their calves at home:",
-   "The men yoking the kine to the cart and shutting up the calves",
-   "the nursing kine yoked and their calves shut away",
-   "the proof prepared against all nature (1 Samuel 6:7)"
+   "Providence",
+   "The ark",
+   "Exodus typology",
+   "Divine glory",
+   "Judgment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ark and the golden offering laid on the cart: 'and they laid the ark of the LORD upon the cart, and the coffer with the mice of gold and the images of their emerods' — the ark and trespass offering were set on the cart for the journey (the and they laid the ark of the LORD upon the cart, the ark laid, the and the coffer with the mice of gold and the images of their emerods, the offering laid, the figure, the holy ark and the heathen tribute borne together homeward, the truth that they set the ark and the golden offering on the cart, 1 Samuel 6:8, the figure of the holy thing sent home with the foe's tribute, the laying of the ark, the offering on the cart, vv.8); the ark laid on the cart (the loading, 1 Samuel 6:8) — the ark (on the cart); 'the coffer with the mice of gold and the images of their emerods' (the golden tribute set beside the ark, the offering, the figure, the holy thing sent home with the foe's tribute, the providence, the laying, the kine going straight to Bethshemesh to follow, vv.12) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they laid the ark of the LORD upon the cart, and the coffer with the mice of gold and the images of their emerods.",
-   "The ark and the golden offering laid on the cart",
-   "the ark and the golden offering set on the cart for the journey",
-   "the holy thing sent home with the foe's tribute (1 Samuel 6:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The kine going straight to Bethshemesh, lowing, turning not aside: 'and the kine took the straight way to the way of Bethshemesh, and went along the highway, lowing as they went, and turned not aside to the right hand or to the left; and the lords of the Philistines went after them unto the border of Bethshemesh' — the kine went straight on against nature, lowing for their calves yet not turning back (the and the kine took the straight way to the way of Bethshemesh, and went along the highway, lowing as they went, the straight way, the and turned not aside to the right hand or to the left; and the lords of the Philistines went after them unto the border of Bethshemesh, turned not aside, the figure, the overruling of God against nature, the kine drawn by his hand though their instinct called them back, the truth that the kine went straight on against nature, proving God's hand, Proverbs 21:1, the figure of the hand of God overruling the very instincts of the beasts, the straight way, the proof given, vv.9); the kine going straight, lowing for their calves (the proof, Proverbs 21:1) — the straight way (lowing as they went); 'turned not aside to the right hand or to the left' (the kine not turning back though their instinct called, the overruling, the figure, the hand of God overruling the very instincts of the beasts, the providence, the proof, the men of Bethshemesh receiving the ark to follow, vv.13-14) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the kine took the straight way to the way of Bethshemesh, and went along the highway, lowing as they went, and turned not aside to the right hand or to the left; and the lords of the Philistines went after them unto the border of Bethshemesh.",
-   "The kine going straight to Bethshemesh, lowing, turning not aside",
-   "the kine going straight on against nature, lowing for their calves yet not turning back",
-   "the hand of God overruling the very instincts of the beasts (Proverbs 21:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "13-18",
+  "pericope_label": "The reapers of Bethshemesh; the great stone; the five golden emerods",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Concede a double irregularity in the sacrifice — female victims and an unchosen place — and excuse it only by the extraordinary case; explain the destruction of cart and cattle by their having passed out of secular use."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The men of Bethshemesh seeing the ark and rejoicing: 'and they of Bethshemesh were reaping their wheat harvest in the valley: and they lifted up their eyes, and saw the ark, and rejoiced to see it' — the reapers saw the returning ark and rejoiced (the and they of Bethshemesh were reaping their wheat harvest in the valley, the harvest, the and they lifted up their eyes, and saw the ark, and rejoiced to see it, the joy, the figure, the joy of God's people at the return of his presence, the ark restored, the truth that the men of Bethshemesh rejoiced to see the ark return, Psalm 126:1, the figure of the gladness at the return of God's presence, the harvest, the joy of Bethshemesh, vv.12); the men reaping the wheat harvest (the season, Psalm 126:1) — the harvest (reaping wheat); 'lifted up their eyes, and saw the ark, and rejoiced to see it' (the gladness at the ark's return, the rejoicing, the figure, the gladness at the return of God's presence, the providence, the joy, the cart stopping at the great stone to follow, vv.14) — Keil and Delitzsch, Gill."
+    "summary": "Deny any irregularity, since the ark’s presence made the place lawful; read the priestly character of Bethshemesh as explaining the disaster to come; and infer that the ark rested in all five cities though only three are named."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Read the notice about the Levites as a pluperfect, identify them as priests, and note that the city belonged to the very Kohathites charged with carrying the ark; date the harvest so as to supply the crowd of witnesses."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the sacrifice broke the law: a double error excusable only by necessity (Wesley) or no transgression at all, the ark’s presence sanctifying the place (Ellicott).",
+   "Why the cows were killed and the cart burnt — as a thank-offering of joy (Keil) or because neither could be returned to common use (Clarke).",
+   "Whether those who took down the ark were priests or Levites strictly so called — Gill insists on priests, Clarke is content with Levites.",
+   "Who Joshua the Bethshemite was — unknown, and Gill will not decide whether he was a Levite."
+  ],
+  "outliers": [
+   "Ellicott alone treats the whole episode as an indictment of a priesthood that had forfeited its office, and reads the coming judgement as unsurprising in consequence.",
+   "Gill alone notes that Bethshemesh belonged to the Kohathites, whose charge was the ark itself."
+  ],
   "themes": [
-   "And they of Bethshemesh were reaping their wheat harvest in the valley: and they lifted up their eyes, and saw the ark, and rejoiced to see it.",
-   "The men of Bethshemesh seeing the ark and rejoicing",
-   "the reapers seeing the returning ark and rejoicing",
-   "the gladness at the return of God's presence (Psalm 126:1)"
+   "Sacrifice",
+   "Priesthood",
+   "The ark",
+   "Law and necessity",
+   "Judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The cart stopping at the great stone, the kine offered as a burnt offering: 'and the cart came into the field of Joshua, a Bethshemite, and stood there, where there was a great stone: and they clave the wood of the cart, and offered the kine a burnt offering unto the LORD' — the cart halted and the kine were offered up (the and the cart came into the field of Joshua, a Bethshemite, and stood there, where there was a great stone, the cart halted, the and they clave the wood of the cart, and offered the kine a burnt offering unto the LORD, the kine offered, the figure, the spontaneous worship at the ark's return, the kine and cart given to God, the truth that they offered the kine as a burnt offering at the ark's return, Leviticus 1:3, the figure of the thankful worship that meets the return of God's presence, the cart halted, the burnt offering, vv.13); the cart stopping at the great stone (the place, Leviticus 1:3) — the halting (at the great stone); 'clave the wood of the cart, and offered the kine a burnt offering unto the LORD' (the kine and cart offered to God, the worship, the figure, the thankful worship that meets the return of God's presence, the providence, the offering, the Levites taking down the ark to follow, vv.15) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the cart came into the field of Joshua, a Bethshemite, and stood there, where there was a great stone: and they clave the wood of the cart, and offered the kine a burnt offering unto the LORD.",
-   "The cart stopping at the great stone, the kine offered as a burnt offering",
-   "the kine offered up at the ark's return",
-   "the thankful worship that meets the return of God's presence (Leviticus 1:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Levites taking down the ark and the people offering sacrifices: 'and the Levites took down the ark of the LORD, and the coffer that was with it, wherein the jewels of gold were, and put them on the great stone: and the men of Bethshemesh offered burnt offerings and sacrificed sacrifices the same day unto the LORD' — the Levites handled the ark and the people worshipped (the and the Levites took down the ark of the LORD, and the coffer that was with it, wherein the jewels of gold were, and put them on the great stone, the Levites took down the ark, the and the men of Bethshemesh offered burnt offerings and sacrificed sacrifices the same day unto the LORD, the sacrifices, the figure, the due handling of the ark by the Levites and the thankful worship of the people, the truth that the Levites took the ark and the people sacrificed, Numbers 4:15, the figure of the ordered worship that receives the returning ark, the Levites and the ark, the sacrifices offered, vv.14); the Levites taking down the ark (the order, Numbers 4:15) — the Levites (took down the ark); 'the men of Bethshemesh offered burnt offerings and sacrificed sacrifices... unto the LORD' (the people's thankful worship, the offerings, the figure, the ordered worship that receives the returning ark, the providence, the worship, the smiting of the men who looked into the ark to follow, vv.19) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the Levites took down the ark of the LORD, and the coffer that was with it, wherein the jewels of gold were, and put them on the great stone: and the men of Bethshemesh offered burnt offerings and sacrificed sacrifices the same day unto the LORD.",
-   "The Levites taking down the ark and the people offering sacrifices",
-   "the Levites handling the ark and the people worshipping",
-   "the ordered worship that receives the returning ark (Numbers 4:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The five lords seeing all and returning to Ekron: 'and when the five lords of the Philistines had seen it, they returned to Ekron the same day' — the lords witnessed the proof and went home (the and when the five lords of the Philistines had seen it, the lords saw, the they returned to Ekron the same day, returned home, the figure, the foe witnessing the hand of God and departing, the proof confirmed before them, the truth that the lords saw the proof and returned, 1 Samuel 6:12, the figure of the enemy who sees God's hand yet only departs, the lords witnessing, the return to Ekron, vv.12); the lords seeing the proof (the witnessing, 1 Samuel 6:12) — the lords (had seen it); 'they returned to Ekron the same day' (the lords going home, the departure, the figure, the enemy who sees God's hand yet only departs, the providence, the witnessing, the golden offering numbered to follow, vv.17-18) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And when the five lords of the Philistines had seen it, they returned to Ekron the same day.",
-   "The five lords seeing all and returning to Ekron",
-   "the lords witnessing the proof and going home",
-   "the enemy who sees God's hand yet only departs (1 Samuel 6:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The golden tumours returned, one for each Philistine city: 'and these are the golden emerods which the Philistines returned for a trespass offering unto the LORD; for Ashdod one, for Gaza one, for Askelon one, for Gath one, for Ekron one' — the golden offering numbered for the five cities (the and these are the golden emerods which the Philistines returned for a trespass offering unto the LORD, the offering, the for Ashdod one, for Gaza one, for Askelon one, for Gath one, for Ekron one, the five cities, the figure, the tribute owning the hand of God on all the cities, the confession of the whole land, the truth that each city sent its offering, owning the plague, 1 Samuel 6:4, the figure of the whole land confessing God's hand, the golden offering, the five cities, vv.4); the golden offering returned (the tribute, 1 Samuel 6:4) — the offering (golden emerods); 'for Ashdod one, for Gaza one, for Askelon one, for Gath one, for Ekron one' (one for each of the five cities, the confession, the figure, the whole land confessing God's hand, the providence, the offering, the great stone a witness to follow, vv.18) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And these are the golden emerods which the Philistines returned for a trespass offering unto the LORD; for Ashdod one, for Gaza one, for Askelon one, for Gath one, for Ekron one;",
-   "The golden tumours returned, one for each Philistine city",
-   "the golden offering numbered for the five cities",
-   "the whole land confessing God's hand (1 Samuel 6:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The golden mice for all the cities, and the great stone a lasting witness: 'and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords, both of fenced cities, and of country villages, even unto the great stone of Abel, whereon they set down the ark of the LORD: which stone remaineth unto this day in the field of Joshua, the Bethshemite' — the golden mice for all the cities, the stone a lasting witness (the and the golden mice, according to the number of all the cities of the Philistines belonging to the five lords, both of fenced cities, and of country villages, the golden mice, the even unto the great stone of Abel, whereon they set down the ark of the LORD: which stone remaineth unto this day in the field of Joshua, the Bethshemite, the great stone, the figure, the tribute for all the cities and the abiding memorial of the ark's return, the truth that the offering was for all the cities and the stone a witness, Joshua 4:9, the figure of the lasting memorial of God's mighty work, the golden mice, the great stone, vv.17); the golden mice for all the cities (the tribute, Joshua 4:9) — the mice (for all the cities); 'the great stone of Abel... which stone remaineth unto this day' (the stone a lasting witness of the return, the memorial, the figure, the lasting memorial of God's mighty work, the providence, the memorial, the smiting of the men who looked into the ark to follow, vv.19) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the golden mice, according to the number of all the cities of the Philistines belonging to the five lords, both of fenced cities, and of country villages, even unto the great stone of Abel, whereon they set down the ark of the LORD: which stone remaineth unto this day in the field of Joshua, the Bethshemite.",
-   "The golden mice for all the cities, and the great stone a lasting witness",
-   "the golden mice for all the cities and the great stone a lasting witness",
-   "the lasting memorial of God's mighty work (Joshua 4:9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "19-21",
+  "pericope_label": "The men of Bethshemesh smitten; the ark sent to Kirjath-jearim",
   "schools": [
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "That God smote the men of Bethshemesh for looking into the ark: 'and he smote the men of Bethshemesh, because they had looked into the ark of the LORD, even he smote of the people fifty thousand and threescore and ten men: and the people lamented, because the LORD had smitten many of the people with a great slaughter' — the holiness of God that demands reverence — 'and he smote the men of Bethshemesh, because they had looked into the ark of the LORD... and the people lamented, because the LORD had smitten many of the people with a great slaughter': God struck the men of Bethshemesh dead for irreverently prying into the ark (the witnesses noting the significance — that the same God who had vindicated his honour against the heathen now vindicated it among his own people, for the men of Bethshemesh, in unholy curiosity, looked into the ark, which even the Levites might not do, and God smote them with a great slaughter, teaching that his holiness is not to be presumed upon, that familiarity must not breed irreverence, and that his own people may not profane his holy things any more than his enemies, the very mercy of the ark's return turned to judgment by their want of reverence, the witnesses noting that the judgment fell not because they rejoiced in the ark but because they treated the holy with irreverent boldness, the holiness that demands reverence from God's own people, the curiosity that profanes the holy, the mercy turned to judgment by irreverence, the lesson — that God is greatly to be feared and reverenced in the assembly of his saints, and his holy things not to be presumed upon, 'God is greatly to be feared in the assembly of the saints, and to be had in reverence of all them that are about him,' Psalm 89:7, the truth that to draw near to God irreverently is to provoke his judgment, as Nadab and Abihu, 'I will be sanctified in them that come nigh me,' Leviticus 10:3, the figure — the holiness of God that must be approached with reverence and godly fear, fulfilled in the worship that serves God acceptably, 'let us have grace, whereby we may serve God acceptably with reverence and godly fear: for our God is a consuming fire,' Hebrews 12:28-29, the truth that the nearer the privilege, the greater the reverence God requires, the figure of the holiness of God that will not be profaned even by his own people, and the reverence his presence demands, the call to draw near with reverence and godly fear, the warning against presuming upon the holy); God smiting the men of Bethshemesh for prying with unholy curiosity into the ark which even the Levites might not look into, the holiness of God vindicated among his own people (the judgment for irreverence, Psalm 89:7) — the smiting (looked into the ark); 'even he smote of the people fifty thousand and threescore and ten men: and the people lamented, because the LORD had smitten many of the people with a great slaughter' (the great slaughter and the people's lament, the mercy of the ark's return turned to judgment by their irreverence, God sanctified in them that come nigh him, the great slaughter, Leviticus 10:3; Hebrews 12:28-29) — the figure (the holiness of God approached with reverence and godly fear, the providence, the judgment, the men of Bethshemesh asking who can stand before this holy God to follow, vv.20) — Calvin, Keil, Ellicott, Gill."
+    "summary": "Defend the received number by widening the population; treat the curiosity as natural though culpable; and read the cry as blame-shifting, a standing habit of consciences under terror."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Judge the Hebrew figure corrupt and show how the versions divide it; reconstruct the offence as drunken irreverence by the priestly chief men, while rejecting a rendering that would soften it; and find in the survivors’ superstition a real conviction of sin that anticipates Samuel’s reformation."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Leave the cry open between complaint and reverence, and add that no one can stand except through the mercy seat; give positive reasons for the choice of Kirjath-jearim while leaving Shiloh’s fate undecided."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Explain the offence from the psychology of the forbidden, and distinguish the pretext of checking the tables from the real motive of prying into what God had concealed."
    }
   ],
   "debates": [
-   {
-    "question": "Why did God smite the men of Bethshemesh for looking into the ark?",
-    "sides": [
-     {
-      "position": "The holiness of God that will not be profaned even by his own people, and the reverence his presence demands - the men in unholy curiosity looking into the ark which even the Levites might not, his holiness not to be presumed upon, his own people not to profane his holy things, the mercy turned to judgment by irreverence, God greatly to be feared in the assembly of his saints (Psalm 89:7), sanctified in them that come nigh him (Leviticus 10:3), served with reverence for he is a consuming fire (Hebrews 12:28-29)",
-      "holders": [
-       "Calvin",
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Gill",
-       "the reformed reading"
-      ]
-     }
-    ]
-   }
+   "Whether the text’s fifty thousand and seventy can stand: corrupt or interpolated (Clarke, Ellicott), or defensible if <em>the people</em> means those gathered from all parts (Wesley).",
+   "What the offence was: natural curiosity (Wesley), curiosity about the forbidden dressed in a pretext (Henry), or drunken irreverence in the priestly leaders (Ellicott).",
+   "Whether the Hebrew means looked <em>into</em> the ark or merely stared <em>at</em> it — Ellicott reports the second and rejects it.",
+   "Whether <em>who is able to stand</em> is an evasion that blames God (Clarke, Wesley), a reverent confession (Gill’s alternative), or superstition containing genuine conviction (Ellicott).",
+   "Why Kirjath-jearim rather than Shiloh — because Shiloh was already destroyed (Clarke), or for reasons of safety and standing, with Shiloh’s fate left open (Gill, Wesley)."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone attributes the sacrilege to men heated with wine, and alone reads the aftermath as the seed of Samuel’s reformation.",
+   "Henry alone observes that the ark’s concealment was itself what provoked the desire to see it."
+  ],
   "themes": [
-   "And he smote the men of Bethshemesh, because they had looked into the ark of the LORD, even he smote of the people fifty thousand and threescore and ten men: and the people lamented, because the LORD had smitten many of the people with a great slaughter.",
-   "That God smote the men of Bethshemesh for looking into the ark (the crux of the holiness of God that will not be profaned even by his own people, and the reverence his presence demands)",
-   "the God who vindicated his honour against the heathen now vindicating it among his own people, the men of Bethshemesh in unholy curiosity looking into the ark which even the Levites might not, his holiness not to be presumed upon nor familiarity to breed irreverence",
-   "his own people not to profane his holy things, the mercy turned to judgment by their want of reverence, God greatly to be feared in the assembly of his saints, sanctified in them that come nigh him, served with reverence for he is a consuming fire (Psalm 89:7; Leviticus 10:3; Hebrews 12:28-29)"
+   "Sacrilege",
+   "Judgment",
+   "Holiness",
+   "Textual criticism",
+   "Repentance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-21",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The men of Bethshemesh asking who could stand before the holy God: 'and the men of Bethshemesh said, Who is able to stand before this holy LORD God? and to whom shall he go up from us?' — the people, stricken, owned the holiness of God in awe (the and the men of Bethshemesh said, Who is able to stand before this holy LORD God?, the awe, the and to whom shall he go up from us?, the ark to be removed, the figure, the awe of the holy God that overwhelms the sinner, the sense of unworthiness, the truth that the people owned none could stand before the holy God, Malachi 3:2, the figure of the sinner's dread before the holiness of God, the awe of Bethshemesh, the holy God, vv.19); the people's awe before the holy God (the dread, Malachi 3:2) — the awe (who is able to stand); 'to whom shall he go up from us?' (the ark to be sent elsewhere, the sense of unworthiness, the figure, the sinner's dread before the holiness of God, the providence, the awe, the ark sent to Kirjathjearim to follow, vv.21) — Keil and Delitzsch, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the men of Bethshemesh said, Who is able to stand before this holy LORD God? and to whom shall he go up from us?",
-   "The men of Bethshemesh asking who could stand before the holy God",
-   "the people, stricken, owning the holiness of God in awe",
-   "the sinner's dread before the holiness of God (Malachi 3:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The men of Bethshemesh sending to Kirjathjearim to fetch the ark: 'and they sent messengers to the inhabitants of Kirjathjearim, saying, The Philistines have brought again the ark of the LORD; come ye down, and fetch it up to you' — the men of Bethshemesh sent the ark away to Kirjathjearim (the and they sent messengers to the inhabitants of Kirjathjearim, saying, The Philistines have brought again the ark of the LORD, the message, the come ye down, and fetch it up to you, fetch the ark, the figure, the ark passed on in fear, the holy presence both desired and dreaded, the truth that they sent the ark to Kirjathjearim after the smiting, 1 Samuel 7:1, the figure of the holy presence that men both seek and fear to keep, the sending, the ark to Kirjathjearim, vv.20); the message sent to Kirjathjearim (the sending, 1 Samuel 7:1) — the message (the ark brought again); 'come ye down, and fetch it up to you' (the ark to be taken to Kirjathjearim, the removal, the figure, the holy presence that men both seek and fear to keep, the providence, the sending, the ark abiding in Kirjathjearim and Samuel's reformation to follow, ch.7) — Keil and Delitzsch, Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And they sent messengers to the inhabitants of Kirjathjearim, saying, The Philistines have brought again the ark of the LORD; come ye down, and fetch it up to you.",
-   "The men of Bethshemesh sending to Kirjathjearim to fetch the ark",
-   "the men of Bethshemesh sending the ark to Kirjathjearim after the smiting",
-   "the holy presence that men both seek and fear to keep (1 Samuel 7:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
