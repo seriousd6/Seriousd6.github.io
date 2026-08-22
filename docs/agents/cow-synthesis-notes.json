@@ -17506,6 +17506,60 @@
         "16"
       ],
       "note": "Three substantive disagreements worth flagging beyond the confessional ones. (1) THE TRADITIONS OF MY FATHERS at k14: Ellicott, Robertson, Wesley and Barnes all take these for the pharisaic oral law - Ellicott naming the Mishnah - while Calvin denies it flatly, holding that Paul means the law of God itself received through his parents, and Luther says the same in terms, that these are not pharisaical or human traditions but the holy law of Moses received as an inheritance. Four against two, and the two are the Reformers. (2) ANOTHER GOSPEL at k6: Clarke alone takes it for an actual apocryphal document, noting that more than seventy such gospels are named in Fabricius and that some urged circumcision, so that Paul refers to one of them; everyone else takes it for the Judaizing message. (3) REVEALED IN ME at k16: Gill and Ellicott take 'in me' inwardly, of the mind and consciousness, while Calvin calls the construction a Hebrew idiom meaning simply 'to me' and Robertson prefers 'in my case' after Lightfoot; Wesley refuses to choose and takes both. The last is the only one where the split does not follow the schools at all."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "4",
+      "verses": [
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB residue, 30th chapter confirming, and the second consecutive chapter to reproduce the galatians 3 mechanism exactly. Jamieson appears at keys 10, 16 and 22 -- gap 6 throughout, a clean mod-6 class -- and the donor is 1 Corinthians 3 read strictly forward as the target key advances: key 10 gives 3:5 (Who is Paul? who is Apollos? ministers by whom ye believed), key 16 gives 3:10 (a wise masterbuilder laying a foundation), key 22 gives 3:14-15 (the work burned, saved yet so as by fire). Coming immediately after galatians 3, where the same shape held with five members and Romans 8 as donor, this settles the mechanism: one donor chapter is consumed sequentially and one block emitted per six target keys. The donor differs per target chapter and carries no relation to it. All three excluded."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "9",
+        "13",
+        "15",
+        "23"
+      ],
+      "note": "Cyril of Jerusalem, second chapter running, and now the block cap is pinned. His blocks here sit at keys 4, 9, 13, 15 and 23 and are 203 words each except one truncated to 87 by the end of the key -- and in galatians 3 they were 203 and 189 (the 189 being one block emitted twice). So Cyril's cap is 203, a distinct value from Gill's 200/201 and Keil's 201; the cap is per-source, not global. Value is mixed exactly as before: the key-4 block genuinely quotes Philippians 4:4 and is on point, the key-9 block quotes 1 Thessalonians 5:23 and touches this verse only through the phrase God of peace, and keys 13, 15 and 23 are foreign (chrismation, baptism, an exegetical dispute over 2 Corinthians 4:4). None of them can be declared in excluded_voices, because split_voices cannot see the label 'Cyril of Jerusalem:' and folds each block into the preceding voice -- here Wesley at keys 9 and 15, Calvin at key 13, Ellicott at key 23. The measured consequence is that those voices' word counts are inflated by about 200 each wherever Cyril follows them."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "23"
+      ],
+      "note": "Terminal-key overflow, sighting 12, and the richest specimen so far: key 23 carries FOUR distinct kinds of matter at once. Barnes is 3,397 words of which perhaps 150 comment on the benediction; the rest is a discussion of the subscription, then a long editorial excursus on Greek athletics sourced to Potter's Archaeologia Graeca and Kitto's Cyclopaedia, ending 'End of Barnes Notes on Philippians.' Clarke is 779 words ending in the printer's colophon, 'Finished correction for the press, Dec. 16th, 1831. - A. C.' Ellicott is 1,289 words ending in the StudyLight footer and CSS, with a Cyril block appended after it. So the terminal key sweeps up the author's own end-of-book matter, the printer's colophon, the site chrome, and a residue block -- four layers, only the first of which is even nineteenth-century editorial rather than modern scrape. The chapter-initial defect is present too, seventh chapter confirming: Barnes opens key 1 with 'Philippians CHAPTER 4 ANALYSIS OF THE CHAPTER' and Clarke with the verse-by-verse chapter argument, the same pair as at 1corinthians 4 and galatians 3."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "4",
+      "verses": [
+        "22"
+      ],
+      "note": "Calvin footnote defect, seventh book confirming. His key-22 block runs 1,811 words and contains, verbatim inside it, a passage of Adam Clarke introduced as 'Some imagine,' says Dr. A. Clarke -- a nineteenth-century editor's note absorbed into the reformer's text with no boundary marker the splitter can see. The practical rule stands and is worth restating: never credit Calvin with a sentence that names a modern authority, cites page numbers, or reads in nineteenth-century English. Here the tell is the honorific Dr. before a name Calvin could not have known."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "philippians",
+      "chapter": "4",
+      "note": "Fidelity self-grade A for all six entries (1-3, 4-7, 8-9, 10-14, 15-20, 21-23). Expansion ratios 0.06 to 0.17 against a corpus median of 0.84; the documented invention signal is expansion above about 6x, so these are distillation. Chrysostom is declared at entries 4 and 10 on genuine on-verse blocks that split_voices does see, since his label is the bare surname. Wesley is undeclared at entries 15 and 21, where what the splitter attributes to him is substantially Cyril residue folded in after a one-line gloss -- attributing it would have credited him with another writer's words. One selection worth recording: at entry 4 the genuine Cyril block on Philippians 4:4 was available and not used, the paragraph going to Chrysostom's treatment of the same verse instead, because Chrysostom's block is separately labelled and therefore verifiable."
     }
   ]
 }
