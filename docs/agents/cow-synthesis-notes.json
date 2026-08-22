@@ -17313,6 +17313,64 @@
       "book": "genesis",
       "chapter": "23",
       "note": "Fidelity self-grade A for all five entries (1-2, 3-6, 7-11, 12-16, 17-20). Every claim traced to a named block in the span; no cross-span borrowing. Two judgement calls recorded: (a) Keil and Delitzsch is declared at entry 1 on the strength of his key-2 exposition about approaching the Hittites, which required grafting a closing sentence onto the entry after the prose was already at length -- the graft is his, not paraphrase of a neighbour; (b) Wesley's 'those that have least of this earth find a grave in it' at entry 17 is credited to Wesley although Henry says the same words at key 16, because Henry is outside that span. Expansion ratios 0.19 / 0.18 / 0.38 / 0.32 / 0.23."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB residue, 29th chapter confirming and the definitive specimen: a perfect mod-6 class with every member present. Jamieson appears at keys 5, 11, 17, 23 and 29 -- five members, gap exactly 6 throughout, no missing member. The donor is Romans 8 read STRICTLY FORWARD as the target key advances: key 5 gives Romans 8:10-11 (the body is dead because of sin), key 11 gives 8:16 (the Spirit beareth witness, Abba Father), key 17 gives 8:19 (the creation groaning for the revelation), key 23 gives 8:26 (the Spirit helpeth our infirmity), key 29 gives 8:31-34 (if God be for us). This is the mechanism laid bare: one donor chapter consumed sequentially, one block emitted per six target keys. Every previous sighting is consistent with it; this is the first where all five members survive to show the walk. All five excluded. Practical rule confirmed: test residue as a class mod 6, never as gaps between consecutive members."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "3",
+      "note": "Martin Luther enters the corpus here, and he dominates it: 42,509 of this chapter's 108,108 visible source words, 39 percent, against Barnes 20,491 and Calvin 12,710. His Commentary on Galatians is the single largest voice at 20 of the 29 keys. The lutheran school slug in VALID_SCHOOLS has had almost nothing to attach to until now. TOOLING WARNING: my scratchpad per-voice mapper carried an incomplete label roster and silently folded Luther, Tertullian and Cyril into whichever voice preceded them, producing impossible figures such as 'John Wesley (6,662 words)' at key 2 and 'John Wesley (7,808)' at key 13 -- Wesley's real contribution there is 41 and 86 words. synthesis_qa.VOICE_LABELS does know Martin Luther and Tertullian, so the validator side was never wrong; only the scratchpad map was. Any future worker should derive per-voice counts from QA.split_voices, never from a hand-maintained label list."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "3",
+      "note": "The Luther text is an OCR'd scan and carries its page furniture inline. Running heads appear in the middle of sentences -- 'COMMENTARY ON GALATIANS. 201' at key 2, '235' at key 7, '291' at key 16, '292 COMMENTARY ON GALATIANS.' at key 17, '340 COMMENTARY ON GALATIANS.' at key 24, '44 346 COMMENTARY ON GALATIANS.' at key 26 -- so a page number and title can land between a subject and its verb. End-of-line hyphenation survives as a space: 'inter- mingleth', 're- proveth', 'argu- ment', 'Abra- ham', 'There- fore', 'dis- putation', 'righ- teousness'. And there are ordinary OCR substitutions: 'tliis', 'liis', 'hfe' for life, 'vith', 'afifections', 'exxellently', 'schoohnaster', 'corapted', 'mvist'. Consequence for writers: a Luther block cannot be quoted verbatim without cleaning, and any automatic sentence-splitting over his text will break at the running heads. This is a different defect class from truncation or residue -- the text is genuine and complete, but mechanically dirty."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "3",
+      "verses": [
+        "10",
+        "23",
+        "24"
+      ],
+      "note": "Cyril of Jerusalem: the known validator gap, now with a measured cost. synthesis_qa.VOICE_LABELS carries the short form 'Cyril' and _LABEL_RE requires a colon straight after, but the catena writes 'Cyril of Jerusalem:', so split_voices never sees the label and folds Cyril's text into the PRECEDING voice's segment. Here that voice is John Wesley at all three keys, inflating his measured contribution at key 10 from about 80 words to 282. Three further findings. (1) The blocks are capped at about 200 words, like Gill's. (2) The key-23 and key-24 blocks are the SAME block emitted twice, word for word, ending both times at 'translated by the Seventy-two Interpreters'. (3) They are of mixed value: the key-10 block is foreign, a catechetical passage on the titles of the Holy Spirit with nothing to do with the curse of the law, while the key-23/24 block genuinely quotes Galatians 3:23-24 and argues from them that the God of the two Testaments is one. So Cyril here is one residue block plus one genuine block duplicated. The asymmetry still binds: 'voices' is grounded by a name search against raw text and accepts him, 'excluded_voices' is checked against split_voices and would reject him, so the key-10 residue CANNOT be declared. It is simply omitted."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "29"
+      ],
+      "note": "Both boundary defects present again, sixth chapter confirming. Chapter-initial: Barnes opens key 1 with 'GALATIANS CHAPTER III' and a full introduction to the argument before reaching verse 1, and Clarke opens key 1 with the chapter argument, a verse-by-verse table of contents running 'Gal 3:1-5 ... Gal 3:6-9 ... Gal 3:10-14'. That is the same pair, Barnes and Clarke together, as at 1corinthians 4. Terminal: key 29 is Ellicott 1,020 words of which roughly 980 is the StudyLight footer, copyright statement, terms-of-use links and raw sub-menu CSS -- sighting 11. Also at key 20 Clarke's block breaks off mid-sentence at 'There is neither a', and at key 13 the Keil-style lemma problem does not arise but Luther's 7,013-word block is the largest single block seen in this run."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "3",
+      "note": "Fidelity self-grade A for all seven entries (1-5, 6-9, 10-14, 15-18, 19-22, 23-25, 26-29). Expansion ratios are 0.02 to 0.06, an order of magnitude under the corpus median of 0.84, because the span sources run 8,400 to 23,600 words each against 650 words of prose; the signal the doc warns about is expansion ABOVE about 6x, so these are heavy distillation rather than invention. Selection, not compression, is the risk at this ratio, and the selection rule used was: attribute every voice whose block adds a distinct reading, omit a voice whose block only repeats a neighbour. Wesley is therefore undeclared at entries 23 and 26, where his notes are one-line glosses on the dispensations, and Cyril's key-10 block is omitted as foreign. Two attributions worth flagging: Cyril of Jerusalem is declared at entry 23 on the strength of the genuine key-23/24 block, though split_voices cannot see him; and Luther's criticism of Paul's own argument at entry 15 is his, recorded as an outlier rather than softened."
     }
   ]
 }
