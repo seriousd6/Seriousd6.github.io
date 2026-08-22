@@ -17685,6 +17685,42 @@
       "book": "revelation",
       "chapter": "22",
       "note": "Fidelity self-grade A for all five entries (1-5, 6-9, 10-15, 16-17, 18-21). Expansion ratios 0.07 to 0.18 against a corpus median of 0.84; the invention signal is expansion above about 6x, so these are distillation. Bede is declared at entry 1 for the legible half of a badly OCR-corrupted block, and nothing was drawn from the unreadable half. Calvin is absent from this chapter entirely, as he wrote no commentary on Revelation, so the reformed school rests on Gill alone throughout. Cyril of Jerusalem residue is present at keys 1, 2 and 21, folded into Wesley by the splitter as at galatians 3 and philippians 4, and again cannot be declared excluded; none of it was used. Entry 10 was extended after first draft because verse 15 fell inside its range and had not been reached in the prose."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "12",
+      "note": "MAJOR FINDING, corpus-wide: Wesley's Old Testament Notes reproduce Matthew Henry verbatim, so Henry and Wesley are NOT two independent witnesses on OT chapters. Measured on this chapter with difflib against the catena itself: at key 1, 281 of Wesley's 417 words (67 percent) are shared with Henry's block, including a single unbroken run of 31 words -- 'We have here the call by which Abram was removed out of the land of his nativity into the land of promise...'. At key 4 the overlap is 43 percent of Wesley, at key 6 it is 59 percent, at key 10 it is 19 percent. This is not a scrape defect; Wesley's Notes are historically an abridgement of Henry and Poole. But the consequence for this pipeline is severe and silent: the SCHOOL map puts Henry in puritan-evangelical and Wesley in wesleyan-arminian, so wherever both are declared on an OT chapter the prevalence machinery reports two schools agreeing when there is one source. Worse, a writer paraphrasing both will produce sentences of the form 'Henry and Wesley say the same thing in the same words' as though that were a convergence of witnesses -- I wrote exactly such a sentence at genesis 23 entry 1 before understanding this. Recommended rule going forward: on any OT chapter where Henry and Wesley both have blocks at the same key, diff them before attributing, and credit the point to Henry alone unless Wesley's block adds something Henry's does not contain. Applied here: Wesley is undeclared at entry 6, where his whole contribution at key 6 is Henry's sentence, and his key-4 note was likewise not used."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "Calvin footnote defect, ninth book confirming, and two variants of placement in one chapter. At key 1 the interpolation is INSIDE Calvin's block and refers to Calvin in the third person: 'Many learned commentators, Dr A. Clarke among the number, suppose this to have been a second call from God... But the objections adduced by Calvin against such an interpretation are of great weight.' That is the sharpest specimen yet, since the text names Calvin as someone else, and names Adam Clarke, who is another voice in the same catena -- so a synthesis could unwittingly have Calvin cite Clarke. At key 15 the placement is different again: the editorial footnote comes FIRST, at the head of the block, quoting Taylor and citing Hengstenberg's Egypt and the Books of Moses p. 199 on whether Egyptian women went unveiled, before any of Calvin's own words appear. Previous sightings had the interpolation inline or appended; head-of-block is new. The screening rule holds and can be stated more sharply: in a Calvin block, any sentence naming a post-Reformation authority, giving a page number, or speaking of Calvin in the third person is editorial."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "12",
+      "verses": [
+        "11",
+        "16"
+      ],
+      "note": "Two smaller defects. JFB residue at key 11 only, 18 words, donor Genesis 10 ('In the general division of the earth, the countries of Armenia, Mesopotamia, and Syria, fell to his descendants' -- the table of nations, Shem's line). A single member, so no mod-6 class can be tested here; recorded because the three preceding chapters each carried a clean three- or five-member class, and a lone 18-word member shows the same pointer can also fire once and tiny, far below any size heuristic. Excluded. Separately, Keil and Delitzsch is lemma-only at key 16: all 127 words are the quoted text of verses 16 to 20 with no exposition, so he is silent by entry at entry 14 -- removed from voices but not declared excluded, the block being genuine rather than foreign. He is usable at keys 1, 2, 5, 7, 8, 9 and 11, where exposition survives the 200-word cap. Third chapter confirming that K&D's habit of prefixing full verse text guarantees empty blocks whenever the lemma runs long."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "12",
+      "note": "Fidelity self-grade A for all five entries (1-3, 4-5, 6-9, 10-13, 14-20). Expansion ratios 0.07 to 0.20 against a corpus median of 0.84; the invention signal is expansion above about 6x, so these are distillation. The Henry/Wesley duplication governed the attribution throughout: Wesley is declared only where his block carries something Henry's does not, and is left undeclared at entry 6 because his whole key-6 contribution is a sentence of Henry's. One draft error caught and corrected before landing: the first version of entry 6 read 'Henry finds... and Wesley adds that he could not have ground to pitch his tent on but by their permission', which is precisely the false-corroboration the duplication produces -- that clause is Henry's, and the sentence now credits it to Henry alone. Clarke's chapter argument occupies the head of key 1, ninth chapter confirming the chapter-initial pattern, and was not used."
     }
   ]
 }
