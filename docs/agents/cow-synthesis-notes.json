@@ -17721,6 +17721,124 @@
       "book": "genesis",
       "chapter": "12",
       "note": "Fidelity self-grade A for all five entries (1-3, 4-5, 6-9, 10-13, 14-20). Expansion ratios 0.07 to 0.20 against a corpus median of 0.84; the invention signal is expansion above about 6x, so these are distillation. The Henry/Wesley duplication governed the attribution throughout: Wesley is declared only where his block carries something Henry's does not, and is left undeclared at entry 6 because his whole key-6 contribution is a sentence of Henry's. One draft error caught and corrected before landing: the first version of entry 6 read 'Henry finds... and Wesley adds that he could not have ground to pitch his tent on but by their permission', which is precisely the false-corroboration the duplication produces -- that clause is Henry's, and the sentence now credits it to Henry alone. Clarke's chapter argument occupies the head of key 1, ninth chapter confirming the chapter-initial pattern, and was not used."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "14",
+        "22",
+        "28",
+        "31",
+        "38",
+        "42"
+      ],
+      "note": "THE MOST SERIOUS ATTRIBUTION DEFECT FOUND IN THIS RUN. The patristic feed for this chapter is not a set of single-voice blocks at all: it is the Catena Aurea, chopped into runs and headed by whichever father happened to open each run, with the other fathers' extracts left inside the block under inline capitalised attributions. The block headed 'Theophylact' at k1 contains, after two sentences of Theophylact, extracts marked 'CYRIL.' and 'ORIGEN;'. The block headed 'Ambrose' at k1 contains 'CYRIL;', 'GREG.', 'ORIGEN;' and 'BASIL;'. The block headed 'Basil' at k1 contains 'AMBROSE;'. The same holds at k5, k9, k14, k22, k28, k31, k38 and k42. Consequences. (1) Voice attribution in this feed is correct ONLY for the opening extract of each block; everything after the first inline capital belongs to somebody else. (2) The head names are not a list of the voices present: 'GREG.', 'TITUS BOST.' and 'GREEK EX.' appear inline and have no head anywhere in the chapter, so their material cannot be attributed at all under the current tooling. (3) The writer's rule I adopted, and which I recommend as the standing one until the feed is fixed, is to use an inline extract only where that father ALSO has a head somewhere inside the entry's span; otherwise the material is unusable. I lost Chrysostom's comment on the fever at k38 to exactly this rule. A corpus scan for a capitalised proper name followed by a period or semicolon inside a commentary body would find every affected block."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "3",
+        "9",
+        "14"
+      ],
+      "note": "The same catena splitter cuts a father's name in half. The block at k9 is headed 'Maxim' and its body begins with the two characters 'US;' - that is, the catena's 'MAXIMUS;' was split so that 'Maxim' became the block head and 'US;' the first word of the text. This is direct evidence for the mechanism proposed in the note above: the importer is scanning for a capitalised token and treating it as a head, with no check that the token is a complete name. The same chapter also carries 'Athan' as a head, which is the catena's own abbreviation and therefore innocent, and both 'Cyril' and 'Cyril of Jerusalem' and 'Cyril of Alexandria' as three separate heads - which is the VOICE_LABELS prefix bug already filed against scripts/synthesis_qa.py, appearing here in its worst form, since a bare match on 'Cyril' hits all three. My build had to use a negative lookahead to keep them apart."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "12"
+      ],
+      "note": "Fidelity self-grade, all eleven entries. 1-4 642w, 5-8 649w, 9-10 584w, 12-13 489w, 14-15 619w, 16-21 649w, 22-27 649w, 28-30 646w, 31-37 655w wait 648w, 38-41 575w, 42-44 492w; all inside the window. Key 11 is ABSENT from the source, so no entry may span it and the temptation is forced into two runs, 1-10 and 12-13; I split the first further at 1-4 and 5-8 because ten keys carried fifteen heads. This is the largest chapter in the run by voice count - twenty-four distinct heads - and the entries name up to fourteen voices each, so every voice gets a sentence or two and no more. Attribution rule used throughout: an inline catena extract is attributed to the father the catena names, and used only where that father has a head inside the entry's own span. Nothing is drawn from the four Jamieson blocks, declared as excluded residue."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "31",
+        "33",
+        "34",
+        "36",
+        "38",
+        "41",
+        "43"
+      ],
+      "note": "Empty-marker blocks at scale. Albert Barnes carries the literal sentence 'No entry from BARNES for this verse' followed only by a marginal cross-reference at keys 4, 6, 8, 10, 12, 31, 33, 34, 36, 38, 41 and 43 - twelve of his thirty-three blocks in this chapter, more than a third. John Wesley's blocks at k4, k8, k10, k12, k27, k38 and k42 are bare scripture references with no comment at all ('De 8:3.', 'Mr 1:35.'). These are empty markers rather than withheld commentary, so I have silenced them rather than declaring them as excluded_voices; but they matter for two reasons. First, they inflate every head count and every word count taken from head presence, including the sizer. Second, the GHOST check treats a head with no usable content exactly like a head with content, so an entry that happens to span only empty Barnes markers forces the writer either to name a voice that says nothing or to silence him by hand. A cheap fix would be to teach the tooling the literal string 'No entry from' and a body consisting solely of a scripture reference."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "4",
+      "note": "Correction to the fidelity note filed immediately above: the word count for the 31-37 entry is garbled there, reading '655w wait 648w'. The figure as landed is 648 words. The other ten counts in that note are correct as given."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "9",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson: 752 chapters, no exception. Four blocks, at keys 3, 9, 21 and 27 - all congruent to 3 mod 6. None is on Luke 4: k3 is on the parable of the fig tree from the Olivet discourse, k9 on the same discourse ('Take ye heed, watch and pray'), k21 on Judas holding the bag in John 12, k27 on the thirty pieces of silver in Matthew 26. Note that these four are NOT drawn from one continuous stretch of a single book, unlike every previous chapter measured, where the residue came from a single run of consecutive source verses. Here the sources jump between the Olivet discourse, John and Matthew. That is the first residue set in this run that is not internally consecutive, and it should be recorded against the monotone-drift model: either the model needs a term for the Gospels' parallel material, or these four blocks come from a harmony rather than from a continuous commentary. Worth checking before the re-indexing decision is scoped, since an invertible displacement is the whole basis of that proposal."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "44"
+      ],
+      "note": "Chrome, and the largest single tail measured in this run. The Ellicott block at k44, the last key of the chapter, runs 997 words raw and 7 words usable - a tail of 990 words, or 99.3 percent of the block. The surviving comment is the whole of his note: 'He preached. - Literally, was preaching.' Compare the 985-word Ellicott tail at the last key of revelation 19 and the 984-word tail at the last key of exodus 1: three chapters in three different books, all Ellicott, all at the final key, all between 984 and 990 words. That consistency is itself informative - it suggests a fixed block of navigation matter appended to the last Ellicott block of every chapter, which would be removable by a single rule rather than by per-chapter markers. Also worth noting for the sizer: this chapter's reported 51,720 usable source words include those 990."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "9",
+        "16",
+        "17"
+      ],
+      "note": "Three disagreements in this chapter are worth keeping. (1) THE ORDER OF THE TEMPTATIONS, raised four times by five voices with five positions: Gill holds Matthew's order the true one which Luke neglects without contradicting, and argues it from Matthew's connecting words; Clarke agrees that the kingdoms stand last in Matthew and that nothing can have followed; Lightfoot merely records that the pinnacle is second in Matthew and third here; Augustine says it is uncertain which came first and that it matters little provided all took place; Robertson refuses to choose and characterises both, Luke's order being geographical (wilderness, mountain, Jerusalem) and Matthew's climactic (hunger, nervous dread, ambition), with a climax in Luke's too (sense, man, God). (2) HOW THE KINGDOMS WERE SHOWN: Theophylact states against the commoner view that they were shown in visible form; Robertson calls the panorama mental while allowing a visible Satan; Ellicott makes it the ecstatic compression of images characteristic of the soul in vision. (3) WHETHER THE PASSAGE AT NAZARETH WAS APPOINTED: Ellicott and Clarke take it for the lesson of the day, Ellicott adding that in the modern Jewish calendar the chapter is the second lesson for the day of Atonement; Calvin denies it, holding that a liberty of choice was allowed and Christ chose deliberately; Wesley says he opened upon it by particular providence."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "4",
+      "verses": [
+        "19"
+      ],
+      "note": "Two moderns rebuke the fathers on the same point, and one of the rebuked is a voice in this very chapter. On 'the acceptable year of the Lord' Ellicott writes that 'a somewhat slavish literalism' led some of the Fathers to infer that our Lord's ministry lasted a single year, and Robertson names Clement of Alexandria and Origen as having argued it, adding that this is to turn figures into fact. Origen has four blocks in this chapter and is one of the voices the synthesis draws on. The catena does not carry his one-year argument here, so the charge cannot be checked against the text in front of me, and I have therefore reported it as Robertson's attribution rather than as Origen's position - naming Robertson's two Alexandrians without using Origen's name, which would also have tripped the sourcing check, since he has no head in the entry where the rebuke falls. Recorded because it is a case where the merged catena puts a father and his modern critic in the same chapter without putting them in the same entry, so a reader of either entry alone would not know the other existed."
     }
   ]
 }
