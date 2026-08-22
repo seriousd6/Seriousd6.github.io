@@ -17371,6 +17371,141 @@
       "book": "galatians",
       "chapter": "3",
       "note": "Fidelity self-grade A for all seven entries (1-5, 6-9, 10-14, 15-18, 19-22, 23-25, 26-29). Expansion ratios are 0.02 to 0.06, an order of magnitude under the corpus median of 0.84, because the span sources run 8,400 to 23,600 words each against 650 words of prose; the signal the doc warns about is expansion ABOVE about 6x, so these are heavy distillation rather than invention. Selection, not compression, is the risk at this ratio, and the selection rule used was: attribute every voice whose block adds a distinct reading, omit a voice whose block only repeats a neighbour. Wesley is therefore undeclared at entries 23 and 26, where his notes are one-line glosses on the dispensations, and Cyril's key-10 block is omitted as foreign. Two attributions worth flagging: Cyril of Jerusalem is declared at entry 23 on the strength of the genuine key-23/24 block, though split_voices cannot see him; and Luther's criticism of Paul's own argument at entry 15 is his, recorded as an outlier rather than softened."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "1",
+      "note": "Fidelity self-grade, all nine entries. 1 647w, 2-5 650w, 6-7 650w, 8-10 646w, 11-12 646w, 13-14 650w, 15-17 647w, 18-20 650w, 21-24 648w; all inside the 350-650 window, nine pericopes tiling the contiguous keys 1-24. This is the largest chapter attempted in this run at 75,795 usable source words across thirteen voices, so every entry runs at the top of the window and still leaves a great deal unused; verse 1 is given an entry of its own because the chapter's whole argument is contained in it. Every named voice has a head inside its own range. Positions I could not check against a second witness are attributed to the voice that reports them - Theodoret via Clarke, Doddridge via Barnes, Paley via Clarke, Bloomfield and Lightfoot and Burton via Robertson, Schoettgen and Fabricius via Clarke, Erasmus and Jerome and OEcumenius via Calvin. Nothing is drawn from the four Jamieson blocks, which are declared as excluded residue."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "9",
+        "13"
+      ],
+      "note": "THE 200-WORD CAP IS NOT ONE CAP. This chapter shows three different values operating simultaneously on four different feeds, which refines the standing finding substantially. Tertullian: 2 of 2 blocks at EXACTLY 350 words, maximum 350, both breaking off mid-sentence (k1 at 'under what bill of lading you admitted', k6 at 'so well known in the law, the only'). John Chrysostom: his single block is EXACTLY 300 words and ends with an explicit ellipsis character. Cyril of Jerusalem: 4 of 4 at EXACTLY 200, maximum 200, all four ending in an ellipsis - 100 percent, matching the acts 7 measurement. John Gill: 7 of 24 at exactly 200, maximum 200, the settled NT pattern. So the cap is a per-feed parameter, not a corpus constant, and the three values seen so far are 200, 300 and 350. Any re-fetch scoping has to be per feed, and the corpus scan for capped feeds must look for a per-voice modal maximum rather than for the number 200."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "Jamieson: the stride holds and the drift is confirmed at the far end of the corpus. Four blocks, at keys 4, 10, 16 and 22 - ALL congruent to 4 mod 6, so the corpus finding stands at 750 chapters with no exception. None of the four is on Galatians: k4 is on Romans 6:21, k10 on Romans 7:3, k16 on Romans 7:7, k22 on Romans 7:12. Two things follow. First, the lag here is the largest yet measured - roughly thirty-nine chapters back through 2 Corinthians and 1 Corinthians into Romans - at the deepest corpus position yet measured, which is what a displacement monotone in position predicts and which extends the series four (genesis 28), thirteen (exodus 39), about seventeen (numbers 1), about thirty-nine (galatians 1). Second, this chapter gives the cleanest quantise-up measurement so far: as the target advances 4 to 10 to 16 to 22, a stride of exactly 6 every time, the source advances 6:21 to 7:3 to 7:7 to 7:12, gaps of about 5, 4 and 5 verses. Not one source gap is 6; every one quantises up. Jamieson's genuine commentary on Galatians 1 is not in this file."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "A SECOND BORROWING PAIR, INDEPENDENT OF WESLEY AND HENRY: Barnes copies Clarke. Both open the chapter with a history of the province, and the two accounts share a clause word for word. Clarke: 'As these were mixed with various Grecian families, the country was also called Gallograecia, see Justin, lib. xxiv. 4; xxv. 2; xxvii. 3'. Barnes: 'These were mixed with various Grecian families, and the country was also called Gallograecia.-- Justin, lib. xxiv. 4; xxv. 2; xxvii. 3'. The citation string is identical down to the section numbers and their punctuation, and both cite Pausanias, Attic. cap. iv for the conquest in the sentence immediately before. Clarke's commentary precedes Barnes's Notes by roughly two decades, so Barnes is the borrower. This matters beyond the instance: it means the tags' prevalence field over-reports agreement in the modern voices as well as in the Wesley/Henry pair, and the identical-citation-string signature gives a cheap corpus-wide detector - two voices citing the same authority with the same volume-and-section punctuation are far more likely to be copying than converging."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "6",
+        "18"
+      ],
+      "note": "Two more cases of a voice in this catena quoting another voice in the same catena, with both ends visible in the file. First, Barnes at k6: 'It is remarked by Luther, (Com. in loco,) that Paul here uses as mild a word as possible' - and Luther's own block at that very key says exactly that, that Paul does not set upon them with vehement words but after a fatherly sort. Second, Calvin's k18 block carries a note quoting Bloomfield on the verb historesai, and Barnes's block at the same key attributes the same fifteen-days observation to Bloomfield by name. Together with the Keil-quoting-Calvin case at genesis 28 and the Barnes/Clarke borrowing above, that is four instances in three chapters where apparent agreement in the catena is demonstrably transmission. The prevalence field, which currently counts heads, is measuring something other than independent testimony."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "A displacement that documents itself. Barnes's block at k1 is 4,574 words and is almost entirely the introduction to the epistle - the geography of Galatia, the character of the people, and an analysis of the chapter's argument - with no comment on verse 1 at all. It ends with an editorial notice in the text: '**** Due to space limitations, See Notes on Verses 1 and 2 combined in Notes for Galatians Chapter 1, verse 2.********'. And the k2 block opens with the matching notice: '**Due to the length of Introductory Material to Chapter, Notes for Verses 1 and 2 have been combined in notes for Verse 2.**' followed by 'Verse 1. Paul, an apostle.' So Barnes's comment on verse 1 is filed under key 2, and the feed says so in both places. This is the first displacement encountered that announces itself rather than having to be inferred, and the marker string ('Due to space limitations' / 'have been combined in notes for') is an exact search key for finding every other instance in the Barnes tree."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "7",
+        "13",
+        "15",
+        "17",
+        "18",
+        "20"
+      ],
+      "note": "The Luther feed is a scan OCR and the damage is systematic, confirming the galatians 5 finding with precise instances. Printed running heads are absorbed mid-sentence throughout: '30 COMMENTARY ON GALATIANS.' inside a clause at k1, 'COMMENTARY ON GALATIANS. 31' a paragraph later, and the same at k3, k6, k7, k13, k15, k17, k18, k20 - the page number attaching to whichever side of the head the line break fell. End-of-line hyphenation is preserved as a real hyphen plus space ('over-thrown', 'per-secuteth', 'con-demning', 'know-ledge'), so those words will not match a search. And letter-level OCR errors are frequent: 'sufler' for suffer, 'Avho' for who, 'alsQ' for also, 'fach' for teach, 'beUeve' for believe, 'hst' for list, 'gr\\-efi' for given, 'Weis' for was, 'inestunable' for inestimable, 'cathoUc' for catholic. Any Luther re-fetch must strip running heads and rejoin hyphenation, not merely raise a cap; and until then a text search of this feed will silently miss whatever fell across a line break."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "7",
+        "10",
+        "11",
+        "16",
+        "18",
+        "23",
+        "24"
+      ],
+      "note": "Editor's apparatus inside Calvin blocks, fifth chapter running, and in this one it appears at six separate keys. k3 and k11 carry French renderings of Calvin's clauses with a dangling attribution mark. k7 opens with a Greek textual note in the third person that ends 'This is ingenious, but, like all conjectural criticism on the New Testament, is of no value' - a verdict of the editor's, not Calvin's, standing before Calvin's own text begins at 'Some explain it thus'. k10 carries a long lexical note on peitho citing Matthew 28:14, Acts 12:20, Pindar and 2 Maccabees. k16 carries quotations attributed by name to Beza and to Bloomfield. k18 quotes Bloomfield and Grotius. k23 quotes Beza and k24 quotes OEcumenius. In every case the apparatus sits inside the block under Calvin's head, and at k7 and k16 it takes a position of its own on the question Calvin is discussing. Nothing from any of it is attributed to Calvin in the synthesis. Across exodus 1, exodus 39, genesis 28 and now galatians 1 this is a standing property of the feed; a Calvin re-fetch has to strip apparatus, and the third-person mention of Calvin's own name is the detector."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "8",
+        "9"
+      ],
+      "note": "Cyril of Jerusalem: the blocks at k8 and k9 are byte-identical, the same 200 words of Catechetical Lecture 5 on keeping the delivered creed, both ending mid-phrase at 'For though we or an'. The spacing is ONE key, not six, which adds a third data point to the correction filed at 2peter 1: cross-key duplication in this corpus is not tied to the mod-6 stride. Running list of duplicate spacings measured: 6 keys (acts 7 Jamieson), 36 keys (acts 7 Cyril), 8 keys (2peter 1 Cyril), 1 key (galatians 1 Cyril). The one regularity is the truncation point - both copies stop exactly where the lemma of Galatians 1:8 begins, which suggests the emitter cuts at the quotation boundary rather than at a word count in these cases, even though the count also happens to be 200."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "8",
+        "18"
+      ],
+      "note": "Ellicott twice states the confessional stake in a reading and then decides against his own side, which is worth recording because it is rare and because both decisions matter. At k8, on the preposition in 'other than that which we preached': the word may mean 'besides' or 'contrary to'; he notes that the first sense has been favoured by Protestant and the second by Roman Catholic commentators, since one seems to exclude and the other to admit an appeal to tradition - and he then decides for 'contrary', on the exegetical ground that the Judaizers offered an opposition of principles rather than an addition. Calvin, on the same clause, decides the other way, holding that their doctrine was not contrary to Paul's nor even different but corrupted by false additions. At k18, on 'to see Cephas': Ellicott writes that 'Roman Catholic commentators argue from this passage, not without reason, that St Peter must at this time have taken the lead in the Church.' Two clean instances of a commentator naming the interest that would bias him and then ruling against it."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "1",
+      "verses": [
+        "6",
+        "14",
+        "16"
+      ],
+      "note": "Three substantive disagreements worth flagging beyond the confessional ones. (1) THE TRADITIONS OF MY FATHERS at k14: Ellicott, Robertson, Wesley and Barnes all take these for the pharisaic oral law - Ellicott naming the Mishnah - while Calvin denies it flatly, holding that Paul means the law of God itself received through his parents, and Luther says the same in terms, that these are not pharisaical or human traditions but the holy law of Moses received as an inheritance. Four against two, and the two are the Reformers. (2) ANOTHER GOSPEL at k6: Clarke alone takes it for an actual apocryphal document, noting that more than seventy such gospels are named in Fabricius and that some urged circumcision, so that Paul refers to one of them; everyone else takes it for the Judaizing message. (3) REVEALED IN ME at k16: Gill and Ellicott take 'in me' inwardly, of the mind and consciousness, while Calvin calls the construction a Hebrew idiom meaning simply 'to me' and Robertson prefers 'in my case' after Lightfoot; Wesley refuses to choose and takes both. The last is the only one where the split does not follow the schools at all."
     }
   ]
 }
