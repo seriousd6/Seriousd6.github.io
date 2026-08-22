@@ -17560,6 +17560,90 @@
       "book": "philippians",
       "chapter": "4",
       "note": "Fidelity self-grade A for all six entries (1-3, 4-7, 8-9, 10-14, 15-20, 21-23). Expansion ratios 0.06 to 0.17 against a corpus median of 0.84; the documented invention signal is expansion above about 6x, so these are distillation. Chrysostom is declared at entries 4 and 10 on genuine on-verse blocks that split_voices does see, since his label is the bare surname. Wesley is undeclared at entries 15 and 21, where what the splitter attributes to him is substantially Cyril residue folded in after a one-line gloss -- attributing it would have credited him with another writer's words. One selection worth recording: at entry 4 the genuine Cyril block on Philippians 4:4 was available and not used, the paragraph going to Chrysostom's treatment of the same verse instead, because Chrysostom's block is separately labelled and therefore verifiable."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "19",
+      "note": "Fidelity self-grade, all seven entries. 1-4 555w, 5-8 650w, 9-10 645w, 11-13 648w, 14-16 649w, 17-18 637w, 19-21 638w; all inside the window, seven pericopes tiling the contiguous keys 1-21. The boundary between the first two entries was moved from 1-5/6-8 to 1-4/5-8 after drafting, because the Matthew Henry block filed at key 5 comments on verses 6 to 8 and Henry has no head anywhere in 6-8; putting key 5 into the second entry brings his head into the span that his comment actually treats and recovers about 670 words of material that would otherwise have been unusable. Every named voice has a head inside its own range. Positions I could not check against a second witness are attributed to the voice that reports them - Grotius via Barnes and via Clarke, Dodd via Clarke, Daubuz and Victor Vitensis via Gill, Swete and Beckwith and Charles via Robertson, the Sohar via Clarke. Nothing is drawn from the four Jamieson blocks, which are declared as excluded residue."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson: the stride holds at 751 chapters and the drift series gains its largest point. Four blocks, at keys 2, 8, 14 and 20 - ALL congruent to 2 mod 6. None is on Revelation: k2 is on 1 Timothy 3:4-5 (ruling his own house, children in subjection), k8 on 1 Timothy 3:9 (the mystery of the faith in a pure conscience), k14 on 1 Timothy 3:14 ('though I hope to come unto thee shortly'), k20 on 1 Timothy 4:1-2 (the hypocrisy of lying speakers). Counting NT chapters, 1 Timothy 3 sits about sixty-four chapters before Revelation 19, which is by a wide margin the largest lag yet measured and occurs at the deepest corpus position yet measured. The series now reads: 4 chapters at genesis 28, 13 at exodus 39, about 17 at numbers 1, about 39 at galatians 1, about 64 here - monotone in position across five independent measurements, which is strong evidence that the displacement is an invertible function of position and that the tree needs RE-INDEXING rather than re-fetching. QUANTISE-UP holds too: as the target advances 2, 8, 14, 20 with a stride of exactly 6 each time, the source advances 3:4, 3:9, 3:14, 4:1 - gaps of 5, 5 and 3. Not one source gap is 6."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "19"
+      ],
+      "note": "SECOND FEED AT THE 300-WORD CAP. Bede's single block in this chapter is EXACTLY 300 words and breaks off mid-WORD - the text ends 'For the Church also continually sings Al', cut inside 'Alleluia'. That is the second feed measured at 300 after John Chrysostom at galatians 1, so 300 is a real per-feed cap value and not a coincidence of one block. It also settles a question the earlier instances left open: the cap is applied by word count and cuts wherever the count runs out, including inside a word, rather than at any sentence or clause boundary. Cap values now measured: 200 (Gill in NT books, Keil in OT books, Cyril, Lightfoot), 300 (Chrysostom, Bede), 350 (Tertullian). Cyril's k19 block here is at exactly 200 with the usual trailing ellipsis, consistent with the acts 7 and galatians 1 measurements."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "1"
+      ],
+      "note": "The Bede feed carries unconverted HTML entities and scan-OCR damage, a defect family previously recorded for Luther and Lightfoot. Its single block prints '&#x27;' where an apostrophe belongs and '&quot;' where quotation marks belong, in every instance, so the text reads 'begin in the Hebrew with &quot;Praise ye the Lord,&quot;' rather than with real punctuation - which means a search of this feed for any quoted phrase will fail. Alongside that: 'St Luke xvL 25' for xvi, a stray '**' standing in for an opening quotation mark, and marginal reference marks ('trumpets, (multitudes)*') absorbed into the running text. Since this is the only Bede block in the chapter I cannot say whether the entity corruption is feed-wide, but a corpus scan for the literal strings '&#x27;' and '&quot;' inside commentary bodies would settle it cheaply and would also catch any other feed with the same problem."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "An intra-chapter misfiling, and a second one that cost material. (1) The Victorinus of Pettau block is filed at key 1 but is not on verse 1: it opens by quoting Revelation 19:11 ('And I saw heaven opened, and behold a white horse'), numbers itself '11.', and comments on the rider and the heavenly army. Victorinus has no head anywhere else in the chapter, so his comment cannot be moved to the entry that covers the verses it treats; the block is silenced at the 1-4 entry and his 93 words are lost to the synthesis. (2) The Matthew Henry block filed at key 5 comments on verses 6 to 8 - the marriage-song, the bride's dress, the stola. That one WAS recoverable, by moving the pericope boundary so that key 5 falls in the 5-8 entry, and the note on that entry records it. Both are the same shape as the Keil lead-displacement recorded at genesis 28: the block is filed one pericope before the verses it discusses. The difference is only whether the voice happens to have another head in the right span. Worth a corpus scan: a block whose first sentence quotes a verse number higher than its own key is mechanically detectable."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "15",
+        "19"
+      ],
+      "note": "Cyril of Jerusalem twice reads a phrase of this chapter against every other voice, and in the same direction both times - away from the eschatological referent and towards a present or historical one. At verse 15 the others take the rod of iron for Christ's own rule, Ellicott and Robertson noting that the verb is to shepherd; Cyril says flatly that the kingdom of the Romans is clearly called a rod of iron, referring to an argument he has made earlier, and brings in Daniel's stone cut without hands to say what overthrows it. At verse 19 the others take the gathering of the kings for the last battle; Cyril applies 'they gather themselves together against the Lord and against His Anointed' to the Jews of his own day who confess one God and deny that he is the Father of Christ, saying that they rage and gather still. Recorded because it is the clearest case in this run of a patristic voice and a modern commentary using the same words with entirely different referents, and because a reader consulting both would have no way to see that the disagreement is about what the text is talking about rather than about what it means."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "8"
+      ],
+      "note": "The fine linen at verse 8 divides the commentators along a line that cuts across the schools. Barnes insists it is given and therefore not the wearer's own: the righteousness obtained by faith through the merits of the Redeemer, and he quotes Philippians 3:9 for it. Clarke denies exactly that in terms - 'The fine linen here spoken of is not the righteousness of Christ imputed to believers, for it is here called the righteousness of the saints - that which the grace and Spirit of Christ has wrought in them.' Henry and Wesley take both at once, imputed for justification and imparted for sanctification. Ellicott holds the two halves together by another route, noting that the Greek noun is plural, righteousnesses, and that the robe is divine in source yet really the wearer's; Robertson renders it the righteous acts of the saints and draws out that there is work for the Bride as well as for Christ. So the Arminian Clarke rules out imputation while the Arminian Wesley keeps it, and the two grammatical-historical voices land on opposite sides of Barnes. The tags' school summaries cannot represent this without saying that a school is divided against itself, which is what I have done."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "19",
+      "verses": [
+        "17",
+        "20"
+      ],
+      "note": "Two voices break off from exposition to praise the writing, at different places and for opposite qualities, and both passages are worth keeping. Barnes at verse 17, on the angel standing in the sun: 'The description is as simple as it can be; and yet as sublime. The fewest words possible are used; and yet the image is distinct and clear... It is difficult to conceive of an image more sublime than this.' Wesley at verse 20, on the absence of the battle: the chapter exhibits the two opposing armies and all the apparatus for a battle and then gives the victory immediately, 'without one word of an engagement or fighting', which he calls the most exact propriety, since what struggle can there be between omnipotence and all creation united against it - 'Every description must have fallen short of this admirable silence.' Barnes admires what is said, Wesley what is not. Recorded as an instance of a kind of comment the synthesis rules have no category for and which is easy to lose in summarising: it is neither exegesis nor application, and it is the only place in the chapter where either man steps back from the text to look at it."
     }
   ]
 }
