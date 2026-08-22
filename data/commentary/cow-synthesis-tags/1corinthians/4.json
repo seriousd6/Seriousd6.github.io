@@ -2,854 +2,994 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "1-2",
+  "pericope_label": "Let a man so account of us, as of the ministers of Christ, and stewards of the mysteries of God. Moreover it is required in stewards, that a man be found faithful.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Two titles — 'ministers' (hyperetas, 'under-rowers,' the lowest servants at the oar, marking subordination and toil) and 'stewards of the mysteries of God' (entrusted with the gospel's treasures); valued, not over-valued (Henry), neither masters nor despised."
+    "summary": "Rank the two titles precisely: the word for minister is stronger than the one used a chapter earlier, implying not merely a man under a superior but the officer whose business is to obey orders, while the steward, though a slave under his lord, is master over the other slaves; then argue from consequence that the second verse must mean inquiry is made here on earth in the case of stewards, since the received rendering would license the very preference of one teacher over another that the epistle opposes."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Turn the requirement of fidelity against Rome, since Papists demand that whatever they teach carry the authority of law simply because they are called pastors, while Paul is so far from being satisfied with the title that even a legitimate call is not enough without fidelity in discharging it; and refuse to let honest teachers off, since not every man who teaches truth is faithful, but only he who desires from the heart to serve the Lord."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Do the etymology in full &mdash; an under-rower on the lowest bench of a galley, and a steward who provides the household's food in season and keeps exact accounts to lay before his master &mdash; and take the oar devotionally as well, for the pains every faithful minister spends in his Lord's work."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the pair of titles a rule against both extremes: not to be overvalued, being ministers and not masters, stewards and not lords, with no authority to propagate their own fancies; and not to be undervalued, since they are stewards of divine mysteries, high-stewards in the kingdom of grace."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How should the second verse be rendered?",
+    "sides": [
+     {
+      "position": "Moreover here on earth inquiry is made in the case of stewards in order that one may be found faithful; the received English would license the very preference of one teacher over another that the epistle opposes",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "It is required in stewards that a man be found faithful, fidelity being the cardinal virtue of an office of trust",
+      "holders": [
+       "Barnes",
+       "Gill",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The manuscripts divide between it is sought and ye seek, an easy confusion once the vowels were pronounced alike",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where should this chapter have begun?",
+    "sides": [
+     {
+      "position": "At the sixth verse, the third chapter properly ending at the fifth",
+      "holders": [
+       "Barnes",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "At the twenty-first verse, which opens what follows rather than closing what precedes",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "note": "Alone turns the lexical point devotional, finding in the oar the pains every faithful minister takes and breaking off into prayer &mdash; where are these ministers to be found? Lord, thou knowest."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone turns the requirement of fidelity into a polemic against Rome, and alone refuses to let honest teachers off, citing Augustine on the hireling as a middle term between the wolf and the good teacher."
+   }
+  ],
   "themes": [
    "ministers of Christ",
    "stewards of the mysteries",
-   "under-rowers",
-   "valued not idolised"
+   "fidelity required"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Of a steward one thing is required — that he 'be found faithful' (proved faithful); not brilliance or popularity but fidelity to the trust committed, dispensing the master's goods, not his own."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the title of steward is empty without an upright stewardship, whose rule is fidelity."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "required in stewards",
-   "faithfulness",
-   "fidelity to the trust",
-   "the true measure of ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "3": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "3-5",
+  "pericope_label": "But with me it is a very small thing that I should be judged of you, or of man’s judgment: yea, I judge not mine own self. For I know nothing by myself; yet am I not hereby justified: but he that judgeth me is the Lord. Therefore judge nothing before the time, until the Lord come, who both will bring to light the hidden things of darkness, and will make manifest the counsels of the hearts: and then shall every man have praise of God.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Being judged of men 'a very small thing' (eis elachiston) — not insensible to good opinion but answerable to his Master only; he does not even rest on his own self-judgment; freeing the minister from partisans' flattery and criticism."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: against the disease of restless prying and judging, which Christ chastised (Matt 7:1)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "judged of you a small thing",
-   "indifferent to man's judgment",
-   "'I judge not myself'",
-   "answerable to the Master"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I know nothing against myself' (ouden synoida) — of his apostolic faithfulness, not sinlessness (Calvin); yet not thereby justified, for self-knowledge is fallible; 'he that judgeth me is the Lord,' the one competent Judge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'I know nothing by myself'",
-   "not thereby justified",
-   "the Lord judgeth me",
-   "conscience not the final verdict"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Judge nothing before the time' — stop the censorious habit ruining the church (Matt 7:1); wait for the Lord, who reveals the hidden and lays bare the heart's counsels; 'then shall every man have praise of God' — the misjudged steward commended."
+    "summary": "Read man's day against the Lord's day and deny the competency of the court sitting at Corinth; supply the ellipsis in the clause about knowing nothing, limiting it to the apostleship rather than to sinlessness at large; and refuse to let a clear conscience settle anything, since failure to be conscious of one's sins is not innocence and most prisoners plead not guilty."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he reproves hasty, rash judgment, not all discernment."
+    "prevalence": "several",
+    "summary": "Mark the limit of the refusal, since it is the part of a good pastor to submit both doctrine and life to the Church's judgment and the sign of a good conscience not to shun careful inspection &mdash; what Paul rejects being a judgment already corrupted; then warn that what looks cleanest to us is filthy in God's eyes, so his strictness is not to be measured by our own opinion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Argue from usage that the phrase means a day appointed by a magistrate for trying a man, and that the adjective carries the sense of woeful; supply the tag from Horace behind the verb for guilty knowledge; and let the final state be settled not by one's own judgment but at the appointed time."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Name the fault a disease: a restless prying and unseasonable curiosity which, unlike other sins, carries no pleasure but only punishment, so that men bearing beams in their own eyes turn exact inquisitors of their neighbours' motes &mdash; at Corinth, ridiculing godly men for want of learning while rating fluent speakers highly."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does “man's day” mean?",
+    "sides": [
+     {
+      "position": "A day appointed by a magistrate for trying a man, the adjective carrying the sense of woeful",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Simply the day of the Lord: Paul lived with it so constantly before him that the words became synonymous",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "A human day set against the Lord's day, the tribunal Paul recognises against the one he does not care to satisfy",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone supplies a pagan echo of the argument, quoting the emperor Marcus Aurelius on the strangeness of men valuing their own opinion of themselves less than the opinion of others."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone explains the obsolete English rather than the Greek, tracing the sense of “by” as “concerning” through the Old Testament and through a woman in Foxe accused of speaking evil words by the queen."
+   }
+  ],
   "themes": [
-   "'judge nothing before the time'",
-   "until the Lord come",
-   "counsels of hearts manifest",
-   "praise of God"
+   "man’s day",
+   "I judge not myself",
+   "judge nothing before the time"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "6": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "6-7",
+  "pericope_label": "And these things, brethren, I have in a figure transferred to myself and to Apollos for your sakes; that ye might learn in us not to think of men above that which is written, that no one of you be puffed up for one against another. For who maketh thee to differ from another? and what hast thou that thou didst not receive? now if thou didst receive it, why dost thou glory, as if thou hadst not received it?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Transferred in a figure' (meteschematisa) — Paul applied to himself and Apollos what concerned the real party-leaders, 'for your sakes,' to teach without offence 'not to think of men above that which is written' — esteem of teachers bound to Scripture."
+    "summary": "Weigh the two readings of why these names were used and prefer the argument from greater to less; admit the elliptical proverb about not going beyond what is written cannot be reproduced in English, and refer it to the whole tone of the Old Testament; and observe that the question about differing shuts out pride of intellect, blood, race, country and religion alike."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Show that those attached to Paul had not been so instructed and did not begin the parties; then turn the question to church order, since God assigned every member his own place, and if one leaps into another's office the body is undone."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Report Bishop Pearce's paraphrase, that Paul used his own name to spare naming the teachers actually heading parties, and guess at a ringleader; then keep the three questions narrow and personal, addressed to one puffed-up teacher, and say plainly that the general doctrine others build on the verse, though true, is no part of the apostle's meaning here."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: he argued as if himself the person addressed, the dignity of the named persons restraining wrath."
+    "prevalence": "single",
+    "summary": "Explain the manoeuvre in two images: so long as harsh expressions were needed Paul kept the curtain drawn and argued as though he were the person addressed, and only when the time came for a gentler process removed the mask &mdash; as attendants take the physician's food from his hands so the sick child will accept it from a father."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Take the maxim as broadly as it will go: nothing we have is properly our own, boasting is for ever excluded, and to glory in ourselves is to be proud at once of meanness, impotence and want."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why does Paul name himself and Apollos rather than the real party leaders?",
+    "sides": [
+     {
+      "position": "Because no one had actually been set up as head of a party, the names being illustrative only",
+      "holders": [
+       "Locke (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "To argue from the greater to the less: if it was improper to make them heads of factions, how much more the inferior teachers",
+      "holders": [
+       "Barnes",
+       "Clarke",
+       "Bishop Pearce (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "Out of delicacy, since writing directly about Cephas and his admirers might have had his motive misread",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Because those attached to Paul had not been so instructed and did not begin the parties",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How far do the three questions of the seventh verse reach?",
+    "sides": [
+     {
+      "position": "Only to one puffed-up teacher at Corinth: the general doctrine built on the verse is true but is no part of Paul's meaning here",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "As far as they will go: nothing we have is properly our own, and boasting is for ever excluded",
+      "holders": [
+       "Henry",
+       "Barnes",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "To the whole question of pride of intellect, blood, race, country and religion",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "To church order, since God assigns every member his place",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone records that ten years before the challenge of Pelagius the study of this verse crystallised the Augustinian doctrines in Augustine’s own mind."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone observes that the Corinthians were not puffing up their teachers so much as themselves."
+   }
+  ],
   "themes": [
    "transferred in a figure",
-   "to myself and Apollos",
-   "not above what is written",
-   "pastoral tact"
+   "not beyond what is written",
+   "who maketh thee to differ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Three questions demolishing pride — 'who maketh thee to differ?' (diakrinei), 'what hast thou that thou didst not receive?', 'why glory as if not received?'; every distinction a free gift from God, so boasting is folly and ingratitude — the cure for self-conceit."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'who maketh thee to differ?'",
-   "'what hast thou that thou didst not receive?'",
-   "all is a gift",
-   "the cure for pride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
   ],
+  "range": "8-9",
+  "pericope_label": "Now ye are full, now ye are rich, ye have reigned as kings without us: and I would to God ye did reign, that we also might reign with you. For I think that God hath set forth us the apostles last, as it were appointed to death: for we are made a spectacle unto the world, and to angels, and to men.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keen irony — 'full, rich, reigning as kings, without us,' as if they had reached the summit; a still-carnal church fancying itself perfected; the wistful 'I would to God ye did reign' — the kingdom not yet come, contrasting their triumphalism with the apostles' suffering."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'now ye are full, rich'",
-   "reigned as kings",
-   "irony against complacency",
-   "premature triumphalism"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Defend the irony as a device while using it &mdash; the passage being most pungent and cutting sarcasm, with Elijah on the priests of Baal for precedent &mdash; and mark the climb from a man filled at a feast to one too rich to want to one raised to a throne; then set the apostles in the arena, weighing whether the phrase means simply the lowest condition or the men brought out last with no chance of escape."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The arena imagery — God set the apostles 'last' (eschatous apedeixen), like condemned gladiators 'appointed to death,' a 'spectacle' (theatron) to world, angels, and men; their suffering reality set against the Corinthians' fancied royalty."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Press the charge of ingratitude: Apollos and Paul are now esteemed nothing though by their instrumentality the Lord conferred everything, and what inhumanity to rest complacently in God's gifts while despising those through whom they came; then read a triumph rather than an arena, prisoners led round for show and afterwards strangled."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Give Whitby's straightforward paraphrase and then dissent from it, holding a strong irony intended; quote Whitby again on the two kinds of Roman show, the morning fighters armed and the midday gladiators naked, and ask who at that time would have coveted the apostolate; and compare the Corinthians to children who, having risen in the world, disregard their poor parents."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Turn the verse forward to the martyrs, who confess by being made a spectacle to the world, to angels and to men, martyrdom being itself a baptism."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the eighth verse ironical?",
+    "sides": [
+     {
+      "position": "Yes, and cuttingly so, an instance showing that irony may sometimes be proper",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Robertson",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The plain paraphrase is possible, that the Corinthians really are full and rich and flourishing without needing him",
+      "holders": [
+       "Whitby (as reported by Clarke)"
+      ]
+     },
+     {
+      "position": "A strong irony is intended, one which taken with what precedes must have stung them to the heart",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone turns the charge of ingratitude on the reader &mdash; it is not unusual for people to forget, if not despise, the men by whom they were brought to the truth. Reader, is this thy case?"
+   }
+  ],
   "themes": [
-   "apostles set forth last",
-   "appointed to death",
-   "a spectacle to world and angels",
-   "the arena"
+   "full, rich, reigning",
+   "set forth last",
+   "a spectacle to the world"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "10": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "10-11",
+  "pericope_label": "We are fools for Christ’s sake, but ye are wise in Christ; we are weak, but ye are strong; ye are honourable, but we are despised. Even unto this present hour we both hunger, and thirst, and are naked, and are buffeted, and have no certain dwellingplace;",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Three ironic antitheses — apostles 'fools, weak, despised' vs Corinthians 'wise, strong, honourable' (touching teaching, demeanour, worldly position); the apostles' folly 'for Christ's sake' (Phil 3:7), a chosen reproach; the church's inverted values exposed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'fools for Christ's sake'",
-   "weak vs strong",
-   "despised vs honourable",
-   "inverted values"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Set out the anatomy of the three antitheses &mdash; teaching, demeanour, worldly position, with the order inverting at the close &mdash; and observe that the reverse was probably true, Paul being bold while many of them were timid and time-serving; then count the ten verbs and four participles that follow and note how rare several of them are."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The irony drops to plain reality — 'to this present hour' (achri tes arti horas) the apostles hunger, thirst, go naked, are buffeted, homeless; a graphic picture of Paul's continuing condition, not past trials; shaming the Corinthians' ease."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Head off the misreading that Paul really abases himself and seriously credits the Corinthians with what he lacks, since the whole is a concession made in mockery; and explain that he paints his condition as if in a picture so that they may lay aside loftiness and embrace the cross as he did."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Apply the rule of thumb that changing the persons makes the epithets fit; keep the theatre in view with Philo on the Jews at Rome, hissed and hooted as if exhibited on a stage; and make the picture a triumph &mdash; a man with an impediment in his speech and a person rather contemptible than graceful, appearing in tattered dress before persons of the highest distinction and commanding their attention."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Show the sentence working as argument rather than complaint: having said the apostles were set forth last as doomed to death, Paul now demonstrates in what sense, and these very marks are the signs of genuine teachers while the rivals prided themselves on the opposites."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the picture behind “set forth last”?",
+    "sides": [
+     {
+      "position": "The amphitheatre: those brought out at the close of the spectacles with no chance of escape",
+      "holders": [
+       "Barnes",
+       "Clarke",
+       "Robertson",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Simply the lowest condition, a condition like that of beasts",
+      "holders": [
+       "Grotius (as reported by Barnes)",
+       "Tertullian (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "A triumph rather than an arena: prisoners led round for show and afterwards strangled",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone supplies a contemporary parallel for the hooting, quoting Philo on the treatment of the Jews at Rome as though exhibited upon a theatre."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone turns the catalogue of hardships into a triumph, picturing Paul with an impediment in his speech and a person rather contemptible than graceful, commanding the attention of persons of the highest distinction in tattered dress."
+   }
+  ],
   "themes": [
-   "hunger and thirst",
-   "naked and buffeted",
-   "no certain dwelling",
-   "the cost of ministry"
+   "fools for Christ’s sake",
+   "the triple contrast",
+   "hunger and homelessness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "12-13",
+  "pericope_label": "And labour, working with our own hands: being reviled, we bless; being persecuted, we suffer it: Being defamed, we intreat: we are made as the filth of the world, and are the offscouring of all things unto this day.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "They 'toil' (kopiomen) with their own hands (tent-making, Acts 18:3; 1 Thess 2:9), not to burden the churches; reviled, they bless; persecuted, they endure — the temper of Christ, returning grace for abuse, rebuking the Corinthians' contention."
+    "summary": "Explain that the responses are thrown in by the way, so that in recounting his trials Paul was incidentally teaching the readers how to bear their own; hear behind the first clause the language of Peter about Jesus and the command from the Sermon; and trace the closing words to the expiatory victims, noting the word used of the scapegoat and the Athenian formula for those flung into the sea."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Observe that Paul says not merely that he labours but that he works with his own hands, naming a mean and mechanical occupation, and perhaps striking at false apostles too tender to be touched with a little finger; then follow the preposition, which suggests the devoted men led round the streets so the cleansing might be more complete."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Argue from experience that man is naturally proud and repays insult with insult, so that only the grace of Christ can render blessing for cursing; and supply the heathen ritual in full &mdash; the abject men kept a year at public expense, crowned with flowers, loaded with the country's curses, whipped and burnt, their ashes thrown into the sea with the words, be thou our propitiation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whom does Paul entreat when defamed?",
+    "sides": [
+     {
+      "position": "The revilers themselves, beseeching them to examine the gospel candidly",
+      "holders": [
+       "Barnes",
+       "Gill"
+      ]
+     },
+     {
+      "position": "God on their behalf, praying for their repentance",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone draws the conclusion the others leave implicit, that the apostles are not merely the refuse of all men but are so for the sake of others."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone hesitates over the expiatory sense, wondering whether Paul at Ephesus had actually heard such a cry raised against him."
+   }
+  ],
   "themes": [
    "working with our own hands",
-   "'being reviled, we bless'",
-   "Christlike forbearance",
-   "grace for abuse"
+   "blessing when reviled",
+   "filth and offscouring"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Defamed, we intreat'; 'the filth of the world... the offscouring of all things' (perikatharmata, sweepings/rinsings) — recalling the heathen expiatory victims, the lowest wretches loaded with curses to cleanse a city; the climax of abasement, shaming the Corinthians' pride."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'being defamed, we intreat'",
-   "filth of the world",
-   "offscouring of all things",
-   "the climax of abasement"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Cyril of Jerusalem"
   ],
+  "range": "14-16",
+  "pericope_label": "I write not these things to shame you, but as my beloved sons I warn you. For though ye have ten thousand instructors in Christ, yet have ye not many fathers: for in Christ Jesus I have begotten you through the gospel. Wherefore I beseech you, be ye followers of me.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Not to shame you' (entrepon — the harsh tone suddenly changed) but to warn as beloved children; the sharp irony was a father's discipline, not an enemy's gall (Henry) — faithful enough to wound, loving enough to heal."
+    "summary": "Mark the abrupt change of tone as characteristic of Paul and unparalleled in the other apostles; explain that the pedagogue was the servant who led a child to school rather than the teacher, so that the authority claimed is a father's; and turn the call to imitation into a test for ministers, that a man should so live as to be able without ostentation to point at his own example."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he spoke not to cover them with shame but with paternal affection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'not to shame but warn'",
-   "beloved sons",
-   "fatherly tenderness",
-   "reproof in love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Ten thousand instructers' (paidagogous, the replaceable guardian-slaves who led children to school) but only one father; the emphatic 'I' begot them in Christ through the gospel — a unique, unrepeatable relation giving Paul a claim no other teacher has."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ten thousand instructers",
-   "not many fathers",
-   "begotten through the gospel",
-   "unique fatherhood"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Face the awkwardness others pass over, since a father's chastisement is meant to make a son ashamed and the letter has tended that way throughout &mdash; what is disclaimed being only public disgrace, since friendly admonition keeps the shame between the two parties; and enter the limitation without which the call to imitation would be dangerous, that no man is to be followed except so far as he leads us to Christ."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "'Be ye imitators of me' (mimetai mou ginesthe, keep on becoming) — as children resemble their father (Phil 3:17); chiefly his humility, refusal of party-spirit, and Christlike temper; no arrogance, for the pattern leads through him to Christ."
+    "summary": "Give the etymology of imitator, which yields our word mimic, and the ground of the appeal, that Paul lived for God and eternity while the sowers of sedition were actuated by worldly motives; and press the exclusiveness of the fatherhood, which shuts out not only Apollos but Silas and Timothy."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cite the verse to prove that in Scripture the name father is not confined to the natural father, since Paul begot the Corinthians after the Spirit and Job called himself a father of the needy by caring for them."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Draw the pastoral rule: the letter is written not with the gall of an enemy but the bowels of a father, and in reproving sin we should regard the sinner's reputation as well as his reformation, since reproofs that expose exasperate while those that warn kindly reform."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does Paul mean not to shame them at all?",
+    "sides": [
+     {
+      "position": "Not entirely: a father's chastisement is meant to make a son ashamed, and he says elsewhere that he wrote so they might begin to be ashamed; what he disclaims is public disgrace",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "He simply has no wish to make them ashamed, his design being higher than that",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "He means it is not by way of finding fault for their failure to provide for him",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone quotes an authority on how the word for pedagogue has since come to carry an idea near contempt, and on the sentence that settles the argument &mdash; such a man may have some interest in his pupil but never the natural tenderness of a father."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "note": "Alone uses the verse outside the argument altogether, to prove that in Scripture the name father is not confined to the natural father, citing Job as a father of the needy."
+   }
+  ],
   "themes": [
-   "'be ye followers of me'",
-   "imitate the father",
-   "family likeness",
-   "discipleship not pride"
+   "not to shame but to warn",
+   "ten thousand tutors",
+   "be imitators of me"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "17": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
+   "Albert Barnes",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Chrysostom"
   ],
+  "range": "17-18",
+  "pericope_label": "For this cause have I sent unto you Timotheus, who is my beloved son, and faithful in the Lord, who shall bring you into remembrance of my ways which be in Christ, as I teach every where in every church. Now some are puffed up, as though I would not come to you.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Timothy sent ahead (Acts 19:21-22), Paul's 'beloved son' in the faith, to remind them of Paul's 'ways in Christ' as he taught 'every where' — a faithful witness recalling them to the apostolic pattern common to all the churches, from which they had strayed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Timothy sent",
-   "beloved son in the faith",
-   "remembrance of my ways",
-   "the pattern in every church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Reconstruct the sequence of messengers in detail, why Timothy was sent ahead and why a letter had to overtake him, adding that a man of his nervous and gentle temperament could not have been left to face such anarchy alone; and generalise the last verse into an observation about the haughtiness men assume when they think themselves in no danger of reproof."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "'Some are puffed up' (ephysiothesan, the same swelling as 3:6) 'as though I would not come' — emboldened in his absence, perhaps reading Timothy's sending as proof he dared not come; the way of false teachers, presuming on the good's absence (Calvin)."
+    "summary": "Isolate the two commissions given to Timothy, to recall what they should have remembered of themselves and to testify how uniform the teaching was everywhere &mdash; the second needed because Paul had been accused of assuming more authority here than elsewhere; and read the puffing up as the standing custom of false apostles, who take advantage of good men's absence and never come frankly to an equal combat."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Say that the same plan of discipline was followed in every place, and that Paul teaches no less by example than by precept; and credit him with foresight rather than report, seeing by a divine light the thoughts that would arise in their hearts."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Begin from Paul's frustration at not coming himself, knowing what a help his presence was and what a mischief his absence, and notice that Timothy is called faithful not simply but in the Lord &mdash; high praise in worldly things, higher in spiritual."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Press the uniformity into a principle: Paul had not one doctrine for one place and another for another, the truth of Christ being one and invariable; and justify the errand by the observation that those who have had the best teaching are apt to forget, so the same truth taught again may make a quicker impression."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "When and why was Timothy sent?",
+    "sides": [
+     {
+      "position": "Before the letter, with Erastus into Macedonia; worse news then arrived from Chloe's household, so a letter had to overtake him, a man of gentle temperament not being fit to face such anarchy alone",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "He had already gone and afterwards returned to Ephesus before the uproar",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "As an ambassador who might settle the difficulties as well as Paul himself, though his arrival was not certain",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone reconstructs Timothy’s itinerary and infers his temperament, suggesting it was the result of his having been brought up entirely by women."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone generalises the puffing up into a rule about the type, that wicked men never come forward frankly to an equal combat but betray by indirect windings how little confidence they have."
+   }
+  ],
   "themes": [
-   "'some are puffed up'",
-   "as though I would not come",
-   "arrogance in his absence",
-   "mistaking forbearance for fear"
+   "the sending of Timothy",
+   "my ways in Christ",
+   "some are puffed up"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I will come shortly, if the Lord will' (ean ho kyrios thelese, James 4:15) — holding his plans under God; he will test not 'the speech' of the puffed-up but 'the power,' the real spiritual authority; not to terrify but to deflate their insolence (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'I will come shortly'",
-   "'if the Lord will'",
-   "not speech but power",
-   "the pretenders tested"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'The kingdom of God is not in word but in power' (Matt 3:2) — not empty boasting or eloquence but the mighty energy of the Spirit converting, sanctifying, ruling the heart and building the church; the criterion by which the boasters will be tested."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the kingdom in power not word",
-   "not eloquence but the Spirit's energy",
-   "real religion",
-   "the true criterion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Albert Barnes",
+   "A.T. Robertson"
   ],
+  "range": "19-21",
+  "pericope_label": "But I will come to you shortly, if the Lord will, and will know, not the speech of them which are puffed up, but the power. For the kingdom of God is not in word, but in power. What will ye? shall I come unto you with a rod, or in love, and in the spirit of meekness?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'With a rod, or in love?' (en rhabdo, the father's/schoolmaster's staff, cf Isa 11:4) — Paul gives them the choice; the manner of his coming depends on their repentance, preserving both apostolic authority (he has a rod) and paternal affection (he would rather come gently)."
+    "summary": "State that it is from no fear of them that he stays away, and record the judgment that the passage can scarcely be paralleled for nerve and dignity even in Demosthenes; distribute the word power three ways, the miraculous, the converting and the governing; and catch the image in the rod, which both the shepherd and the pedagogue carried."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Show that Paul presses on their consciences rather than threatening to thunder, since they knew he was furnished with divine influence; and make outward gracefulness in teaching a body elegant and of beautiful colour while the power is the soul, without which preaching is dead whatever beauty it has."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Note that the word for power often means miracles outright, and deny that Christ's religion consists in eloquence or even in doctrines; then supply the background that made the threat credible, the synagogue whipping of those who would not amend and the apostolic punishments of Ananias and Elymas."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the “power” set against speech?",
+    "sides": [
+     {
+      "position": "Miraculous power, since the word often means miracles outright",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Three things at once: the power that founded the church, the Spirit's power in tongues and conversion, and the continual power needed to govern",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "The soul of preaching as against its body: zeal, constancy and purity of conscience rather than intellect or eloquence",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The power of God ruling the heart",
+      "holders": [
+       "Wesley",
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone records Bloomfield’s judgment that the passage cannot easily be paralleled for nerve and vigour, or dignity and composed confidence, even in Demosthenes."
+   },
+   {
+    "voice": "John Gill",
+    "note": "Alone enters the caution that this was said by way of threatening and not of prophecy, since it is not certain that Paul ever did come to them afterwards."
+   }
+  ],
   "themes": [
-   "'with a rod, or in love?'",
-   "the choice laid before them",
-   "authority and tenderness",
-   "a final summons"
+   "if the Lord will",
+   "not word but power",
+   "with a rod or in love"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  }
 }
