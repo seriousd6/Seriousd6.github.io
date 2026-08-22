@@ -16970,6 +16970,123 @@
         "3"
       ],
       "note": "Jamieson has exactly one block in this chapter, 36 words at k3, and it is not commentary on Exodus 1. With only a single member there is no run and therefore no residue class to measure, so this chapter contributes nothing to the mod-6 stride finding either way; it is declared as excluded residue rather than silenced, since a reader would otherwise be told nothing was withheld when something was. Consistent with the corpus finding that the Jamieson tree is displaced rather than duplicated."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "39",
+      "note": "Fidelity self-grade, all eight entries. 1-3 581w, 6-10 140w thin, 23-25 223w thin, 27-30 262w thin, 32-34 610w, 37-39 360w, 41 358w, 43 572w. The chapter's source keys are gappy - 1,2,3,6,7,8,9,10,23,24,25,27,28,29,30,32,33,34,37,38,39,41,43 - so the eight entries are the eight contiguous runs and the tiling is forced, not chosen. Three entries are thin against a measured source of 56, 130 and 176 usable words. Two entries sit deliberately at the bottom of the full window because their runs measure 274 and 235 usable words, just above the 200-word thin ceiling; both are written short rather than padded to the target. Every named voice is sourced at a key inside its own range."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "1",
+        "32"
+      ],
+      "note": "NEW DEFECT FAMILY: the Matthew Henry feed splices the Concise commentary onto the tail of the Exposition block, and the join is detectable by a change in scripture-reference style. Both Henry blocks in this chapter show it. At k1 the Exposition body cites 'Rev. vii. 13, 15' and 'Rev. xix. 8' in roman numerals, then the block continues into a condensed restatement of its own second half citing 'Re 19:8' in the arabic short form. At k32 the same thing happens: the body cites '2 Chron. xxix. 36' and 'Rev.'-style refs, and the appended tail cites 'Col 2:9' and 'Re 21:3'. The tail is not additional comment - it is the same argument compressed, so a reader gets the material twice and a word-count sizer counts it twice. The style shift gives a clean programmatic signature for a corpus-wide scan: a Henry block containing both a roman-numeral verse reference and an arabic short-form reference."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "1"
+      ],
+      "note": "Dittography inside the Henry k1 block, independent of the Concise splice: 'girded himself with the curious girdle of resolution, to go through with his undertaking - charged himself with the curious girdle of resolution, to go through with his undertaking - charged himself with all God's spiritual Israel'. The clause 'the curious girdle of resolution, to go through with his undertaking - charged himself with' is repeated verbatim, so the sentence reads as though Christ girded and charged himself with the same girdle twice. This is a duplication inside a single block rather than across keys, which is a different failure from the cross-key repetition recorded at acts 7 and 2peter 1."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "9",
+        "33",
+        "39"
+      ],
+      "note": "Jamieson stride, seven hundred and forty-ninth chapter with no exception. Three blocks, at keys 9, 33 and 39, all congruent to 3 mod 6. None of the three is on Exodus 39: k9 is on the lampstand and cites Exodus 25:32-36 in its own text, k33 is on the goats' hair curtains of Exodus 26:7-13, k39 is on the boards and bars of Exodus 26:15-30. The source therefore lags the target by roughly thirteen chapters here, the same direction as the Numbers displacement and a smaller lag, which is what a monotone drift in position predicts - Exodus 39 sits earlier in the corpus than Numbers 1, and its lag is correspondingly shorter than the seventeen chapters measured there. Jamieson's genuine commentary on Exodus 39 is not in this file and I did not find it elsewhere."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "2",
+        "33",
+        "38",
+        "41",
+        "43"
+      ],
+      "note": "The 200-word cap, and the mechanism that partly hides it. Keil 3 of 4 blocks at exactly 200 (k2, k33, k38); the fourth, k41, runs 178 and stops of its own accord. Gill 2 of 5 at exactly 200 (k2, k43), and the k43 block breaks off mid-quotation of Jarchi at the words 'and the', losing the second half of a blessing formula. Two observations that qualify earlier notes. First, Keil's k2 block is 200 words of the biblical text of Exodus 39:2-9 and contains no comment at all - the cap was reached before any comment began, so the block holds a head and conveys nothing, the same shape as the name-stripped Gill block at deuteronomy 14 k21 that the GHOST check cannot catch. It is silenced here rather than declared, since nothing is being withheld. Second, Keil's k41 block is the CONTINUATION of his k38 block and repeats about 130 of its 200 words verbatim before going on to new material. That overlap is why any of his comment survives at all, and it is also why the sizer over-reports: those 130 words are counted twice. Running OT total for Keil at exactly 200 is now 61 of 67 across eight chapters."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "1",
+        "32",
+        "43"
+      ],
+      "note": "Wesley abridges Henry three more times in this chapter, bringing the running count to eleven instances. At k1 Wesley reproduces Henry's 'Those that wear robes of honour must look upon them as clothes of service' paragraph and the whole high-priest typology that follows it. At k32 he reproduces Henry's account of the five months and the three reasons for the despatch, keeping 'The workmen were taught of God, and so were kept from making blunders, which would have retarded them' almost word for word. At k43 he reproduces Henry's k32 section on the blessing - 'He not only praised them, but prayed for them: he blessed them as one having authority' and the whole argument about wages, the manna and the raiment that waxed not old. The k43 case is the first cross-key instance recorded: Wesley's block under one key abridges Henry's block filed under a different key eleven verses earlier, so a per-key comparison would have missed it."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "1"
+      ],
+      "note": "A countable disagreement about the chapter's own structure. Calvin at k1 says the clause 'as the Lord commanded Moses' is repeated seven times and that the repetition is meant to awaken attention. Henry at k1 says there are six paragraphs closing that way and lists their verses - 5, 7, 21, 26, 29, 31. Neither refers to the other and neither shows any sign that the count is in dispute. The chapter as it stands carries the refrain more often than either figure, so both men are counting something narrower than every occurrence, and they are not counting the same thing. Recorded because it is the rare case where two voices contradict each other on a fact a reader can check in ten seconds, and the synthesis has to report both rather than adjudicate."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "3"
+      ],
+      "note": "Clarke refuses an inference Ellicott draws from the same verse. On the gold beaten into plates and cut into wires, Ellicott says the method is 'nowhere else mentioned' and 'implies a ruder state of the art of metallurgy than we should have expected'. Clarke says he 'cannot suppose that the Israelites had not then the art of making gold thread, as they possessed several ornamental arts much more difficult', and explains the beaten plates by the requirements of the figure instead. This is a clean instance of the same datum read as evidence of capability by one voice and of incapacity by the other, with the disagreement resting entirely on a prior estimate of what the people could do."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "37",
+        "41"
+      ],
+      "note": "Two entries in this chapter sit just above the thin ceiling and are worth flagging as a rule-boundary case rather than a defect. The run 37-39 measures 274 usable source words after the Jamieson residue is excluded, and the isolated key 41 measures 235; both are above THIN_SOURCE_MAX of 200, so both must reach the 350-word floor. Each is written at 360 and 358 words respectively, which is an expansion of about 1.3x and 1.5x against its source. Nothing is invented - the disagreement over 'the lamps to be set in order' and Ellicott's argument about the missing conjunction genuinely carry that much - but the shape is worth recording, because a gappy chapter forces short runs into their own entries and the floor then bites hardest exactly where the source is thinnest. If the owner ever revisits the window, the case for scaling the floor to the span's source rather than stepping it at 200 is strongest here."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "43"
+      ],
+      "note": "Chrome, one family and one voice only. Ellicott k43 carries 985 words of book-and-chapter navigation tail, 1032 raw down to 47 usable - a run of labels of the form 'Exodus Exo 38 Exodus Exo ...'. No other voice carries a tail anywhere in this chapter, which is the opposite pattern from exodus 1, where Gill and Ellicott both carried one at the last key. Together the two chapters confirm that chrome is per voice per chapter and cannot be predicted from the book: the same Ellicott feed carries a tail at the last key of both chapters, but the same Gill feed carries one at exodus 1 k22 and none at exodus 39 k43. Also worth noting for the sizer: the raw span figure for key 43 is 2112 usable words by the current measure, against about 1127 once the tail is cut, so the sizer is 87 percent high on that key - a larger error than the 26 percent recorded at hebrews 13."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "32"
+      ],
+      "note": "Editor's apparatus inside a Calvin block again, third chapter running. The k32 block carries an interpolated gloss mid-sentence - a French phrase with its English translation and a dangling attribution mark - inside Calvin's sentence about the mouth of the witness, and closes with a bare misfiled chapter marker reading 'Exodus 24'. The gloss is a translator's variant reading, not Calvin's text, and the trailing marker points at the wrong chapter entirely. Same family as exodus 1 k18 and k21, 2peter 1 k3 and hebrews 13 k24. On the evidence now standing it is a property of this Calvin feed rather than an accident of any one volume, and any Calvin re-fetch has to strip apparatus rather than merely raise a cap."
     }
   ]
 }
