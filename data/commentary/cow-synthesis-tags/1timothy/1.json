@@ -1,707 +1,741 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: great and admirable is the dignity of an apostle, and Paul constantly sets forth the causes of it, not as if he took the honour to himself but as intrusted with it and under the necessity of so doing (as when he says he was 'called' and 'by the will of God,' and 'a necessity is laid upon me,' 1 Corinthians 9:16); Paul opening the letter as an apostle of Jesus Christ by the commandment of God our Saviour and the Lord Jesus Christ, who is our hope — the apostleship by divine command and the titles of God and Christ (Paul grounding his office not in his own will but in the express 'commandment' of God, his apostleship laid on him by divine appointment, and naming God 'our Saviour,' the author of salvation, and the Lord Jesus Christ 'our hope,' the ground and substance of the believer's hope, so the very salutation carries rich doctrine)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul, an apostle of Jesus Christ by the commandment of God our Saviour",
-   "Lord Jesus Christ, which is our hope",
-   "the apostleship by divine command",
-   "God our Saviour, Christ our hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
-   "Albert Barnes"
+   "John Calvin",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "1-2",
+  "pericope_label": "Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ, which is our hope; Unto Timothy, my own son in the faith: Grace, mercy, and peace, from God our Father and Jesus Christ our Lord.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Timothy was Paul's own son in the faith — not in the flesh or by natural descent (as some have thought), but in a spiritual sense, in the faith of Christ, though the apostle was not properly his spiritual father or the instrument of his conversion (Timothy being already a converted person and a disciple of Christ); Paul addressing Timothy as his own son in the faith, with the benediction of grace, mercy, and peace from God the Father and Jesus Christ — the tender bond and the fuller blessing to a fellow-minister (Paul greeting Timothy as a true spiritual son, the affection of a father in the gospel, and invoking upon him not the usual 'grace and peace' only but adding 'mercy' between them, a fuller blessing fitting for a minister of the gospel who has special need of God's mercy in his great work, all flowing from the Father and the Lord Jesus Christ together)."
+    "summary": "Find the force of the claim in the preposition, since the idiom means by way of command, so that Paul writes as an apostle under orders; note that the title Saviour applies as properly to the Father as to the Lord Jesus, God being the great author of salvation; read the letter as written with a double purpose, an affectionate reminder from an old master to a disciple exposed to great perils; and gloss the word for son as legitimate rather than spurious, while marking the mercy added to the usual greeting as the mark of an old man's deepening tenderness."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Ask why an apostolic title is asserted at all in a private letter, since Timothy needed no proof of it and would have been content with the name, so that the designation must be maintained for other eyes than his; and add that the office is named less for the recipient's sake than for those to whom what follows must come with weight and authority."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the word apostle at its bare meaning first, a person sent from one to another with no dignity implied, and then observe what the New Testament makes of it, men sent expressly from God with the message of salvation, which is the highest character a human being can bear; draw from the address that familiarity is to be set aside where the things of God are concerned; and read the last title as the summary of the rest, since without Jesus the world was hopeless and he is called our hope exactly as he is called our life, our peace and our righteousness."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Begin from the office and call the dignity of an apostle great and admirable, noticing that Paul constantly sets out the grounds of it &mdash; not as a man taking honour to himself, but as one entrusted with it and under a necessity of saying so."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Count the credentials in the inscription and find them unquestionable, since the writer has not only a commission but a commandment, and that not only from God our Saviour but from Jesus Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was Paul the instrument of Timothy's conversion?",
+    "sides": [
+     {
+      "position": "Yes: Timothy was converted by his instrumentality, and Paul, having no children of his own, adopted him as a son",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "No: Timothy was already a converted disciple, well reported of by the brethren, when Paul first met him, so the name of son comes from his youth, from affection, or from later instruction",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "The relationship is closer than any fleshly one, whatever its origin",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "It may be settled either way by the rabbinic maxim that he who teaches the law to his neighbour's son is reckoned to have begotten him, though the Greek may equally mean beloved son",
+      "holders": [
+       "Sanhedrin (as reported by Clarke)",
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone asks why an apostolic title should be asserted in a private letter at all, and answers that Timothy needed no such proof, so the designation is maintained for other eyes than his."
+   },
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone reads the salutation as an exercise in not taking honour to oneself, observing that Paul sets out the grounds of his office as a man entrusted with it and under necessity rather than as one claiming it."
+   }
+  ],
   "themes": [
-   "unto Timothy, my own son in the faith",
-   "grace, mercy, and peace",
-   "from God our Father and Jesus Christ our Lord",
-   "the added 'mercy' fitting for a minister"
+   "an apostle by commandment",
+   "Christ our hope",
+   "my own son in the faith"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "3-7",
+  "pericope_label": "As I besought thee to abide still at Ephesus, when I went into Macedonia, that thou mightest charge some that they teach no other doctrine, Neither give heed to fables and endless genealogies, which minister questions, rather than godly edifying which is in faith: so do. Now the end of the commandment is charity out of a pure heart, and of a good conscience, and of faith unfeigned: From which some having swerved have turned aside unto vain jangling; Desiring to be teachers of the law; understanding neither what they say, nor whereof they affirm.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: it is clear from this that Paul and Timothy had been labouring together at Ephesus, and the language accords with the supposition that Paul had been compelled to leave before he had completed what he wished, leaving Timothy to carry it on; Paul reminding Timothy that he had besought him to remain at Ephesus, when Paul went into Macedonia, that he might charge some to teach no other doctrine — the commission to guard the church against false doctrine (Paul recalling the reason he had left Timothy at Ephesus: not for idleness but with a solemn charge to 'charge some,' the false teachers troubling the church, 'that they teach no other doctrine' than the apostolic gospel, so Timothy's first and chief task was the guarding of sound doctrine and the silencing of error)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I besought thee to abide still at Ephesus",
-   "that thou mightest charge some",
-   "that they teach no other doctrine",
-   "Timothy's task the guarding of sound doctrine"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Reconstruct the circumstances from the sentence, that Paul and Timothy had worked together at Ephesus and Paul was compelled to leave before finishing, so that what he left behind was a standing commission rather than a single order; date the parting after the first Roman imprisonment and beyond the period covered by the Acts; note that the false teachers are deliberately unnamed because the letter was meant as a public document, though names are given readily enough at the chapter's end; and supply the history of the Jewish oral law, handed down by a succession of teachers, enlarged by famous Rabbis and preserved for centuries by memory or in secret rolls."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: the 'fables' are old wives' fables or Jewish fables, the traditions of the elders — anything not true, or, if true, yet idle, vain, trifling, and unprofitable; Barnes: they were probably the idle and puerile superstitions of the Jews; Paul charging that Timothy give no heed to fables and endless genealogies, which minister questions rather than godly edifying in faith — the rejection of vain speculation in favour of edifying faith (Paul specifying what the false teachers peddled: 'fables,' the unprofitable myths and traditions of the Jews, and 'endless genealogies,' interminable tracing of descents and speculations, which 'minister questions,' breed disputes and idle controversies, rather than the true 'godly edifying which is in faith,' the building up of souls in the faith, so Timothy is to turn from barren speculation to what truly edifies)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "neither give heed to fables and endless genealogies",
-   "which minister questions",
-   "rather than godly edifying which is in faith",
-   "turning from speculation to what edifies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Give a motive for the arrangement, that a bad seed had been sown and Paul, obliged to go into Macedonia, wanted a man of tried prudence to stay and stop a pernicious doctrine from spreading; observe that no people ever possessed a greater stock of fables than the Jews and point the reader to the Talmud for them; understand the genealogies as pedigrees that could never be made out in either direction, especially those touching the Messiah and the priesthood; and distinguish these from the genealogies of Scripture, which are not in question."
+   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: nothing is so injurious to mankind as to undervalue friendship and love and not to cultivate it with the greatest care, as nothing is so beneficial as to pursue it to the utmost (Christ showing this, 'if two of you shall agree on earth...'); Paul, against the wranglers, sets up love as the very end and scope of all the commandment; Paul declaring that the end of the commandment is charity out of a pure heart, a good conscience, and faith unfeigned — the goal of all teaching is love (Paul setting against the false teachers' barren wrangling the true 'end,' aim, design, and scope, of the whole commandment and gospel charge: not vain disputes but 'charity,' love to God and man, flowing from three holy springs: 'a pure heart,' cleansed and renewed, 'a good conscience,' free from guilt and hypocrisy, and 'faith unfeigned,' a real, sincere faith, so the whole of true religion comes to flower in love born of a cleansed and believing heart)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "now the end of the commandment is charity",
-   "out of a pure heart",
-   "of a good conscience, and of faith unfeigned",
-   "the goal of all teaching is love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Turn the word about love into a warning on friendship, that nothing is so injurious to mankind as to undervalue it, and that the neglect of it has been the occasion of all heresies &mdash; since men who did not love their brethren came to envy those in high repute, and from envying grew eager for power."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the apostle describes the persons he suspected of teaching other doctrines and introducing fables and endless genealogies — such who departed from the above things (love, a pure heart, a good conscience, and unfeigned faith); they erred from the commandment or law, notwithstanding their great pretensions to a regard for it, or at least missed the mark, the end and design of it; Paul declaring that from these some, having swerved, have turned aside unto vain jangling — the departure from the true aim into empty wrangling (Paul showing the sad result when the false teachers missed the true 'end' of the commandment: having 'swerved,' missed the mark and departed from love and a pure heart and sincere faith, they 'turned aside unto vain jangling,' empty, idle, and unprofitable talk, mere noise and dispute, so that, abandoning the goal of love, they fell into fruitless babbling)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "from which some having swerved",
-   "have turned aside unto vain jangling",
-   "the departure from love into empty wrangling",
-   "abandoning the goal, falling into babbling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the divine law the commandment in view and find its whole scope in engaging us to love God and one another, so that whatever weakens either our love to God or our love to the brethren defeats the end of the commandment itself."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: they were very fond of being called Rabbi, Rabbi, and styled doctors of the law, and of being thought to have skill in interpreting the law and good talents in expounding and preaching on it, which was now most in vogue and gained the greatest applause, when the preaching of the gospel was treated with contempt not only by the unbelieving Jews but by judaizing teachers; Paul declaring that they desire to be teachers of the law, understanding neither what they say nor whereof they affirm — the ambition of ignorant men to be law-teachers (Paul exposing the false teachers' real character: filled with the ambition 'to be teachers of the law,' craving the honour and title of doctors of the law then in high vogue, yet utterly incompetent, 'understanding neither what they say,' not even grasping their own assertions, 'nor whereof they affirm,' nor the subjects they so confidently pronounced upon, empty pretenders ignorant of the very thing they professed to teach)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Take the end of the commandment as the design of the charge just given, whose purpose was to keep peace and brotherly love, both of which are hindered by speculative notions, fabulous stories and genealogical contentions; and describe the men who swerved as having erred from the law they professed to honour, missing its end and creating feuds and divisions where they should have promoted love."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Had those who swerved ever held what they missed?",
+    "sides": [
+     {
+      "position": "No: the verb means to miss a mark, and it does not follow that a man who misses one had ever hit it",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "They had once been in the right direction but did not keep in it, and are still reckoned within the church",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "They pretended to aim at the mark and missed it",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the commandment whose end is charity?",
+    "sides": [
+     {
+      "position": "The charge just given to Timothy, whose design was peace and brotherly love",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "The divine law, whose whole scope is to engage us to love God and one another",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "Taken by some for the gospel and by others for this particular injunction",
+      "holders": [
+       "Doddridge (as reported by Barnes)",
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone traces all heresy to a failure of friendship, arguing that men who did not love their brethren came to envy those in high repute and from envying grew eager for power."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone supplies the history of the Jewish oral law behind the charge about fables, handed down by a succession of teachers, enlarged by famous Rabbis, and preserved for centuries by memory or in secret rolls."
+   }
+  ],
   "themes": [
-   "desiring to be teachers of the law",
-   "understanding neither what they say",
-   "nor whereof they affirm",
-   "the ambition of ignorant men to teach"
+   "teach no other doctrine",
+   "fables and endless genealogies",
+   "the end of the commandment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "8": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "8-11",
+  "pericope_label": "But we know that the law is good, if a man use it lawfully; Knowing this, that the law is not made for a righteous man, but for the lawless and disobedient, for the ungodly and for sinners, for unholy and profane, for murderers of fathers and murderers of mothers, for manslayers, For whoremongers, for them that defile themselves with mankind, for menstealers, for liars, for perjured persons, and if there be any other thing that is contrary to sound doctrine; According to the glorious gospel of the blessed God, which was committed to my trust.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul says this to prevent an objection that might be made — that seeing he bore so hard on those fond of being teachers of the law, he was himself against the law and the preaching and proper use of it; but this is not to be concluded, for he and his fellow labourers and all true believers know from the Scriptures of truth that the law is good; Paul affirming that the law is good if a man use it lawfully — the goodness of the law in its right use (Paul, having rebuked the false law-teachers, guarding against any charge that he despised the law itself: 'we know that the law is good,' holy, just, and good in its own nature as God's own, yet only 'if a man use it lawfully,' in its proper intended way, not as a means of justification which it cannot give but for the ends God designed, so the fault lay not in the law but in its abuse by the ignorant teachers)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "but we know that the law is good",
-   "if a man use it lawfully",
-   "the goodness of the law in its right use",
-   "the fault in its abuse, not the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Read the concession as a defence against an obvious charge, since a man who presses so hard on teachers of the law will be represented as its enemy; then list the ways the following sentence has been taken &mdash; of the ceremonial code, of the denunciatory part of the law, or of law's general office in restraining the wicked &mdash; and take the righteous man to mean the Christian in the full sense, justified by faith and sanctified, for whom a code enacted centuries earlier was never framed; note how many terms in the catalogue of offenders are rare or unique, several occurring nowhere else in the New Testament."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Grant the whole Mosaic law rather than a part of it, since even the ceremonial is good as it points to Christ while the moral is holy and just in its own nature, useful to convince unbelievers and to guide believers; put the disputed clause grammatically, that the law is not said to have been made otherwise than for the righteous man but not to lie against him, since he does not transgress it; and read the catalogue of offenders as following the commandments in order, the lawless breaking the first, the ungodly the second, the profane the third."
+   },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: no man is naturally righteous since Adam (excepting the man Christ Jesus); some righteous in their own opinion or others' esteem are not truly so; none are righteous or can be justified before God by the works of the law; those only are righteous men who are made so through the imputation of Christ's righteousness, and for such the law is not made as a terror; Paul declaring that the law is not made for a righteous man but for the lawless, disobedient, ungodly, sinners, unholy, profane, and murderers — the law's restraining terror aimed at the wicked not the justified (Paul explaining the lawful use of the law: 'not made for a righteous man,' the believer justified by Christ's righteousness, led by the Spirit and needing no lash of threat, but 'for the lawless and disobedient,' naming a fearful catalogue of the grossly wicked, the ungodly, profane, parricides, murderers, against whom the law stands as a curb, a terror, and a condemnation, restraining and exposing their sin)."
+    "prevalence": "single",
+    "summary": "Guard the term righteous before allowing the sentence, since no man is naturally righteous since Adam and none can be justified by the works of the law, so that the man meant is one made righteous by an imputed righteousness received by faith; limit the concession to the moral law, the ceremonial being by then annulled for its weakness and unprofitableness; and give the reason the gospel is invoked as the standard at the close, that no doctrine is sound but what agrees with it."
    }
   ],
   "debates": [
    {
-    "question": "For whom is the law 'made'?",
+    "question": "Which law is conceded to be good?",
     "sides": [
      {
-      "position": "Not for the righteous (the believer justified by Christ, led by the Spirit, who needs no lash of threat) but for the lawless and wicked, against whom it stands as a curb, terror, and condemnation",
+      "position": "The moral law only, the ceremonial being by then annulled for its weakness and unprofitableness",
       "holders": [
-       "the witnesses",
-       "Reformed"
+       "Gill"
+      ]
+     },
+     {
+      "position": "The whole Mosaic law, the ceremonial as pointing to Christ and the moral as holy in its own nature",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "The law as God gave it, good in itself and in its tendency, when interpreted according to its own spirit and design",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The law used lawfully, that is, used to make men conscious of sin and of deserving punishment",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense is the law not made for a righteous man?",
+    "sides": [
+     {
+      "position": "The ceremonial law is meant",
+      "holders": [
+       "Clarke (as reported by Barnes)",
+       "Rosenmuller (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "The denunciatory part of the law is meant",
+      "holders": [
+       "Doddridge (as reported by Barnes)",
+       "Bloomfield (as reported by Barnes)"
+      ]
+     },
+     {
+      "position": "The chief purpose of law is to restrain the wicked, and it does not lie against a man who does not transgress it",
+      "holders": [
+       "Clarke",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "The righteous man is the Christian justified by faith, for whom the Mosaic code was never enacted",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "knowing this, that the law is not made for a righteous man",
-   "but for the lawless and disobedient",
-   "for the ungodly and for sinners... murderers",
-   "the law's terror for the wicked, not the justified"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: whoremongers (fornicators and adulterers, transgressors of the seventh command) God will judge, and such shall have their portion in the lake of fire; Barnes: 'them that defile themselves with mankind' are sodomites (the crime abounding in ancient times, Romans 1:27); Paul continuing the list — whoremongers, sodomites, menstealers (slave-traders), liars, perjured persons — and all that is contrary to sound doctrine — the further sins the law condemns and the test of sound teaching (Paul completing his catalogue of the gross sins against which the law is directed, sexual immorality of various kinds, the man-stealing of slave-traders, lying, and perjury, and then, with a sweeping clause, adding 'and if there be any other thing that is contrary to sound doctrine,' so the standard of judgment is the 'sound doctrine' of the gospel, and whatever opposes that wholesome teaching is condemned along with the rest)."
+    "voice": "John Wesley",
+    "note": "Alone reads the catalogue of offenders as following the commandments in order, the lawless breaking the first, the ungodly and sinners the second, the unholy and profane the third."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "note": "Alone works the catalogue lexically rather than morally, noting how many of its terms are rare or unique and that one appears to be a late form coined for the occasion."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "for whoremongers... menstealers... liars... perjured persons",
-   "if there be any other thing that is contrary to sound doctrine",
-   "the catalogue of gross sins the law condemns",
-   "sound doctrine the standard of judgment"
+   "the law is good",
+   "if a man use it lawfully",
+   "not made for a righteous man"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: no doctrine is sound but what is agreeable to the gospel — a very great encomium of it: the doctrine preached by the apostles was not only gospel, or good news and glad tidings, but the gospel of God, of which he is the author, which relates to his glory, the glory of all his perfections, which reveals his purposes, shows his covenant, and exhibits the blessings; Paul declaring that this sound doctrine is according to the glorious gospel of the blessed God, committed to his trust — the sound doctrine measured by the glorious gospel entrusted to Paul (Paul naming the standard by which all teaching is judged: 'the glorious gospel of the blessed God,' called 'glorious' because it displays all God's perfections and glory, and 'of the blessed God' as its author, and adding that this gospel 'was committed to my trust,' so he holds it as a sacred deposit, a stewardship to be guarded and faithfully dispensed)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "according to the glorious gospel of the blessed God",
-   "which was committed to my trust",
-   "sound doctrine measured by the glorious gospel",
-   "a sacred deposit to be guarded and dispensed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "12": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the advantages of humility are generally acknowledged, yet it is a thing not easily met with — there is affectation of humble talking enough and to spare, but humbleness of mind nowhere; this quality Paul so cultivated that he is ever looking out for inducements to be humble, and those conscious of great merits must struggle much with themselves to be humble; Paul thanking Christ Jesus our Lord, who enabled him, counting him faithful and putting him into the ministry — the grateful acknowledgment of Christ's enabling grace and trust (Paul, about to recall his own former sin, first breaking into thanksgiving to Christ for three things: that he 'hath enabled me,' given strength and gifts for the work, that 'he counted me faithful,' judged and made him trustworthy, and that he was 'putting me into the ministry,' placing so great a trust in his hands, so Paul owns his whole ministry, its power, trust, and very calling, as the gracious gift of Christ)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I thank Christ Jesus our Lord, who hath enabled me",
-   "for that he counted me faithful",
-   "putting me into the ministry",
-   "his whole ministry the gift of Christ's grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "12-14",
+  "pericope_label": "And I thank Christ Jesus our Lord, who hath enabled me, for that he counted me faithful, putting me into the ministry; Who was before a blasphemer, and a persecutor, and injurious: but I obtained mercy, because I did it ignorantly in unbelief. And the grace of our Lord was exceeding abundant with faith and love which is in Christ Jesus.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul was before a blasphemer of the name of Christ, contrary to which he thought he ought to do many things, calling him an impostor and deceiver, and not only blaspheming that name himself but compelling others to blaspheme it also; this and what follows is said to illustrate the grace of God in his conversion and call to the ministry; Paul confessing that he was before a blasphemer, persecutor, and injurious, but obtained mercy because he did it ignorantly in unbelief — the chief of sinners obtaining mercy in his ignorance (Paul, to magnify the grace just owned, recalling his dark past: a 'blasphemer' reviling Christ and his name, a 'persecutor' violently hunting the church, and 'injurious,' insolent and outrageous in his hostility, yet 'I obtained mercy,' and adding the ground on which God dealt mercifully: 'because I did it ignorantly in unbelief,' not in the malice of a known truth resisted but in the blindness of unbelief, so his sin, though great, was not the unpardonable sin against light)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who was before a blasphemer, and a persecutor, and injurious",
-   "but I obtained mercy",
-   "because I did it ignorantly in unbelief",
-   "mercy to the former persecutor, magnifying grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Weigh what the word blasphemer can mean here, since the writer was no open blasphemer in the modern sense and no profane swearer, his character having been the reverse; what he had done was to revile the name of Christ and oppose his cause while not believing him the Messiah, and in that opposition he was really guilty; note the cost of the calling, which required abandoning a career of persecution together with every scheme of ambition; and observe that the phrase used for thanking occurs nowhere else in this writer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the word for ministry at its plainest, as the deaconship or service of mankind by preaching, and let the strengthening include the miraculous gifts of the Spirit; gloss the three terms of the confession as speaking impiously of Jesus, exterminating to the utmost of one's power all who called on his name, and being as full of insolence as of malevolence while thinking all the while to do God service; then make the plea of ignorance the hinge, not as excusing the sin but as leaving the sinner capable of mercy, which he would hardly have been had he acted against his own conviction &mdash; and note that the text says mercy was had because of ignorance, not because of an unconditional election."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Read the passage as a lesson in humility, remarking that its advantages are generally acknowledged while the thing itself is nowhere found, there being affectation of humble talking enough and to spare; and note that a man conscious of great merits must struggle to be humble, and was the more exposed here because a good conscience swells a man like a gathering humour."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Draw three points about the ministry from the thanksgiving: that putting men into it is Christ's work, since ministers cannot properly make themselves and God condemned the prophets who ran unsent; that whom he calls he qualifies, so that men no way fit for the work were not of his putting into it; and that he gives not ability only but fidelity."
+   },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the grace here is the love of God (the Ethiopic reading 'the grace of God,' of God the Father, distinguished in the text from Jesus Christ); God is abundant in grace and goodness, rich and plenteous in mercy, and there is an overflow of love in his heart to his chosen people, which in conversion flows out and abounds and superabounds; Paul declaring that the grace of our Lord was exceeding abundant, with faith and love in Christ Jesus — the superabounding grace that brought faith and love where sin had reigned (Paul crowning his confession by magnifying the grace that met his great sin: 'the grace of our Lord was exceeding abundant,' not merely abundant but overflowing and superabounding, more than equal to his guilt, and that grace came 'with faith and love which is in Christ Jesus,' so that where blasphemy and hatred had ruled, grace planted the very opposite graces, the faith that believes in Christ and the love that cleaves to him, both flowing from him as their source)."
+    "prevalence": "single",
+    "summary": "Set the thanksgiving against the men just described, who were fond of being teachers and called doctors of the law, whereas the apostle counted it a high honour and special favour to be a preacher of the gospel, and would not glory in gifts he had not given himself but returns the glory of them to Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How strong is the word blasphemer here?",
+    "sides": [
+     {
+      "position": "Not open blasphemy in the modern sense, since Paul treated sacred things with the utmost respect; he reviled the name of Christ while not believing him the Messiah",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Blasphemy in the truest sense of the terrible word, since a man who had seen Stephen die and still panted for the blood of the church knew he was not merely reviling men",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Speaking impiously of Jesus, his doctrine, his ways and his followers",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the plea of ignorance do?",
+    "sides": [
+     {
+      "position": "It is why mercy was extended, Paul having acted under the prejudices of his countrymen, though it does not excuse the conduct",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It did not take away the sin but left him capable of mercy, which he would hardly have been had he acted against his own conviction &mdash; and the text says mercy came for this reason, not because of an unconditional election",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone turns the thanksgiving into an essay on humility, remarking that there is affectation of humble talking enough and to spare while humbleness of mind is nowhere to be found, and that a good conscience swells a man like a gathering humour."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone uses the plea of ignorance against a doctrine, observing that the text gives ignorance and not unconditional election as the reason mercy was obtained."
+   }
+  ],
   "themes": [
-   "and the grace of our Lord was exceeding abundant",
-   "with faith and love which is in Christ Jesus",
-   "superabounding grace over Paul's sin",
-   "faith and love planted where hatred ruled"
+   "who hath enabled me",
+   "a blasphemer and a persecutor",
+   "I obtained mercy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "15": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the favours of God so far exceed human hope and expectation that often they are not believed, for God has bestowed such things as the mind of man never looked for; so the apostles spend much discourse in securing a belief of the gifts granted us of God, as men receiving some great good ask themselves if it is not a dream, not believing it; Paul declaring it a faithful saying, worthy of all acceptation, that Christ Jesus came into the world to save sinners, of whom he is chief — the heart of the gospel sealed and Paul's own place as chief of sinners (Paul gathering the whole gospel into one weighty, trustworthy maxim, 'Christ Jesus came into the world to save sinners,' sealing it as 'a faithful saying,' certainly true, and 'worthy of all acceptation,' to be embraced by all, so the purpose of Christ's coming was the saving of sinners as such, and Paul, far from excepting himself, claiming the lowest place, 'of whom I am chief,' counting himself the foremost of sinners saved, so his own case becomes the great proof of the saying's truth)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this is a faithful saying, and worthy of all acceptation",
-   "Christ Jesus came into the world to save sinners",
-   "of whom I am chief",
-   "the gospel's heart sealed, Paul the chief example"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
   ],
+  "range": "15-17",
+  "pericope_label": "This is a faithful saying, and worthy of all acceptation, that Christ Jesus came into the world to save sinners; of whom I am chief. Howbeit for this cause I obtained mercy, that in me first Jesus Christ might shew forth all longsuffering, for a pattern to them which should hereafter believe on him to life everlasting. Now unto the King eternal, immortal, invisible, the only wise God, be honour and glory for ever and ever. Amen.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: this was one of the causes, a leading reason, of his pardon — not the only one, for God had other ends; but this was a design of his conversion, that there might be for all ages a permanent proof that sins of the deepest dye may be forgiven; Paul declaring that for this cause he obtained mercy, that in him first Jesus might show all longsuffering as a pattern for those who should hereafter believe — the pardon of the chief sinner set as a permanent pattern of hope (Paul, having owned himself chief of sinners, seeing in his own conversion a divine design: God obtained mercy for him 'first,' as a foremost or pre-eminent instance, 'that in me Jesus Christ might shew forth all longsuffering,' displaying the full extent of his patient mercy on the worst of men, 'for a pattern,' a sample and encouraging example, to all who should 'hereafter believe on him to life everlasting,' so no sinner, however great, need despair, the chief of sinners being saved to assure the rest)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for this cause I obtained mercy",
-   "that in me first Jesus Christ might shew forth all longsuffering",
-   "for a pattern to them which should hereafter believe",
-   "the chief sinner's pardon a pattern of hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Identify the opening words as a fixed formula found only in these letters and once at the close of the Apocalypse, used for weighty truths repeated in the assemblies until they became watchwords, in which may be seen the germs of the later creeds; observe that the phrase about Christ coming into the world is Johannine language the writer cannot have read, so that no formal quotation is in view but a saying already current; correct the English word first, which means foremost in guilt rather than earliest in time; and render the word for pattern as a rough outline or sketch."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the two epithets in order and give a reason for each, that the saying may be credited without the slightest hesitation because God himself has spoken it and the death of Christ has confirmed it, and that it is worthy of all acceptation because all men are sinners and justly condemned, so that what concerns every man deserves to be received by every man; press the last word of the verse, that Christ came to save sinners without exception; and reduce the purpose of the example to its shortest form, that none might hereafter despair."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Explain why such a formula was needed at all: the favours of God so far exceed human hope that they are often not believed, and a man receiving some great good asks himself whether it is not a dream &mdash; what seemed incredible here being that enemies and sinners, justified neither by the law nor by works, should be advanced through faith alone."
+   },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this doxology, or ascription of glory to God on account of the grace bestowed upon the apostle, may be considered as referring to all three divine Persons, Father, Son, and Spirit, who are the one and only God, to whom all the attributes of wisdom, power, eternity, immortality (incorruptibleness), and invisibility belong, and who are jointly concerned in the grace bestowed upon any; Paul ascribing honour and glory for ever to the King eternal, immortal, invisible, the only wise God — the outburst of praise to the glorious God on account of his grace (Paul, overwhelmed by the grace shown to him, breaking into a great doxology, heaping up the incommunicable titles of God: 'King eternal,' the everlasting Sovereign of all ages, 'immortal,' incorruptible and deathless, 'invisible,' unseen by mortal eyes, 'the only wise God,' alone possessing perfect wisdom, and ascribing to this God 'honour and glory for ever and ever,' sealing it with 'Amen,' so the contemplation of grace rises into the worship of the glorious Giver)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "now unto the King eternal, immortal, invisible",
-   "the only wise God",
-   "be honour and glory for ever and ever. Amen",
-   "the contemplation of grace rising into worship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the office of a teacher and that of a priest is of great dignity, and to bring forward one that is worthy requires a divine election; so it was of old and so it is now, when we make a choice without human passion, not looking to any temporal consideration, swayed neither by friendship nor enmity (for though we be not partakers of so great a measure of the Spirit as they, a good purpose is sufficient to draw the election); Paul committing this charge to Timothy, according to the prophecies that went before on him, that he might war a good warfare — the ministry as a warfare entered by divine designation (Paul, returning to his main purpose, solemnly 'committing,' delivering as a sacred trust, 'this charge' to Timothy his son, and reminding him that his calling was marked out 'according to the prophecies which went before on thee,' the inspired utterances that had pointed him out for the work, so that, strengthened by the memory that God himself had designated him, Timothy might 'war a good warfare,' fighting the noble fight of faith against error and for the truth, as a soldier of Christ)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this charge I commit unto thee, son Timothy",
-   "according to the prophecies which went before on thee",
-   "that thou by them mightest war a good warfare",
-   "the ministry a warfare entered by divine designation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: by 'faith' is meant not the grace of faith but the doctrine of faith (a sense often used in this epistle), and the 'holding' of it is not a mere profession or retaining without wavering (which all believers do), but a holding it forth in the ministry of the word, in opposition to concealing or dropping it or any part of it; joined to a good conscience, which keeps the doctrine pure; Paul charging Timothy to hold faith and a good conscience, which some having put away have made shipwreck of faith — the bond of sound doctrine and a good conscience, and the ruin of those who part them (Paul naming the twin things Timothy must keep in his warfare: 'faith,' the sound doctrine of the gospel held fast and held forth, and 'a good conscience,' purity and integrity of heart and life, the two closely bound, for a corrupt conscience soon corrupts the doctrine, and warning by the example of those who, 'having put away' a good conscience, have 'made shipwreck' of the faith itself, the loss of holiness leading to the wreck of belief)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "holding faith, and a good conscience",
-   "which some having put away",
-   "concerning faith have made shipwreck",
-   "the loss of holiness wrecking belief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Hymenaeus (mentioned in 2 Timothy 2:17) made shipwreck of the doctrine of the resurrection of the dead, whereby the faith of some nominal believers was overthrown, attended with the putting away of a good conscience he seemingly before had, his profane and vain babblings increasing to more ungodliness; Alexander seems to be the same coppersmith who did Paul much evil (2 Timothy 4:14); Paul naming Hymenaeus and Alexander, whom he had delivered to Satan that they might learn not to blaspheme — the apostolic discipline of two notorious errorists for their correction (Paul giving two examples of those who had wrecked their faith, Hymenaeus who denied or perverted the resurrection and Alexander likely the coppersmith who opposed Paul, whom Paul had 'delivered unto Satan,' by his apostolic authority excommunicating them and giving them over to Satan's buffeting, perhaps with bodily affliction, and that not for their destruction but their correction, 'that they may learn not to blaspheme,' the severe act aimed at bringing them to repentance)."
+    "prevalence": "single",
+    "summary": "Give the formula a polemical edge, set as it is against fables, endless genealogies and contentions about the law, and unfold what the faithfulness consists in: God's faithfulness to himself and to his own perfections, to a law thereby made honourable, to a word of promise now fulfilled, and Christ's faithfulness in carrying the work through."
    }
   ],
   "debates": [
    {
-    "question": "What is the purpose of delivering Hymenaeus and Alexander to Satan?",
+    "question": "What is the faithful saying?",
     "sides": [
      {
-      "position": "Not their destruction but their correction — the apostolic excommunication and giving over to Satan's buffeting aimed at bringing them to repentance, 'that they may learn not to blaspheme'",
+      "position": "A fixed formula of the early churches, rehearsed until it became a watchword, in which may be seen the germs of the creeds",
       "holders": [
-       "the witnesses"
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "A definite saying being quoted, in language known from the Fourth Gospel though Paul could not have read it",
+      "holders": [
+       "Lock (as reported by Robertson)",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "A doctrine assuredly true and to be depended on, thrown in parenthetically because the writer's mind was full of the subject",
+      "holders": [
+       "Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone identifies the faithful sayings as liturgical watchwords repeated in the assemblies of the first churches, and sees in them the germs of the later creeds."
+   },
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone explains why such a formula was needed, that the favours of God so far exceed human hope that men receiving them ask whether it is not a dream."
+   }
+  ],
   "themes": [
-   "of whom is Hymenaeus and Alexander",
-   "whom I have delivered unto Satan",
-   "that they may learn not to blaspheme",
-   "apostolic discipline aimed at correction"
+   "a faithful saying",
+   "of whom I am chief",
+   "the King eternal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "18": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
+  ],
+  "range": "18-20",
+  "pericope_label": "This charge I commit unto thee, son Timothy, according to the prophecies which went before on thee, that thou by them mightest war a good warfare; Holding faith, and a good conscience; which some having put away concerning faith have made shipwreck: Of whom is Hymeneus and Alexander; whom I have delivered unto Satan, that they may learn not to blaspheme.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Take the prophecies as hopes long entertained of the young man, so that in trusting him the apostle acted in conformity with expectations already cherished; find in the opening verb the image of setting food beside a man and then of entrusting, a banking figure making the charge a deposit lodged for keeping; read the whole as a bequest, the last heritage an old master would leave his favourite disciple; and take the holding of faith as fidelity, the loyalty a good soldier owes, rather than as adherence to a system of doctrine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Keep prediction and performance apart, since the calling was foretold while the behaviour in it remained contingent on the use made of grace, which is exactly why an exhortation to war a good warfare is added; work the nautical figure hard, with conscience thrust away as a foolhardy soldier throws off shield and breastplate or a mad sailor his pilot, helm and compass; and press the wreck to a conclusion, that none can make shipwreck of faith who never had it, so that these men were once true believers and fell not only foully but finally."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Turn the mention of prophecies into a rule for choosing ministers, since the office is of great dignity and to bring forward a worthy man requires a divine election &mdash; had when the choice is made without human passion, looking to no temporal consideration and swayed neither by friendship nor enmity, as the apostles chose Matthias by prayer before they had received the Spirit; and complain that the church has since advanced to the extreme of negligence."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Define the ministry from the charge, as a trust committed to men to see the gospel duly applied according to its Author's design; and take up the figure that follows, that the ministry is a warfare, a good warfare against sin and Satan, waged under the banner of the Captain of our salvation and against his enemies."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Note that the apostle has returned after a digression about his own conversion to the subject he began with, and that the charge includes preaching the gospel himself as well as forbidding others to teach otherwise; take faith here for the body of Christian truth rather than the grace of faith, and make the holding of it a public holding forth in the ministry rather than a bare profession retained without wavering."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What were the prophecies that went before on Timothy?",
+    "sides": [
+     {
+      "position": "Hopes long entertained of him, that he was a man to whom important trusts might be committed",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Predictions by inspired men of what he should be, though his behaviour in the calling remained contingent",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Words uttered when he was received as an evangelist, probably by many persons",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Can a man make shipwreck of faith he once had?",
+    "sides": [
+     {
+      "position": "Yes: none can make shipwreck of faith who never had it, so these were once true believers and fell finally, since ships once wrecked cannot afterwards be saved",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "What is held is fidelity rather than a system of doctrine, and what was thrust away was the good conscience",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Faith here is the body of Christian truth, held forth publicly in the ministry rather than merely professed",
+      "holders": [
+       "Gill",
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone turns the verse into a rule for ecclesiastical elections, requiring that a choice be made without human passion and swayed neither by friendship nor enmity, and complaining that the church of his own day has advanced to the extreme of negligence."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone presses the shipwreck to a final conclusion, that none can wreck a faith he never had, so that these men were once true believers and fell not only foully but finally."
+   }
+  ],
+  "themes": [
+   "war a good warfare",
+   "faith and a good conscience",
+   "Hymenaeus and Alexander"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-22",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  }
 }

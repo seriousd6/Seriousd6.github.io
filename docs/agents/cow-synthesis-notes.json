@@ -17865,6 +17865,36 @@
       "book": "deuteronomy",
       "chapter": "20",
       "note": "Fidelity self-grade A for all five entries (1-4, 5-9, 10-15, 16-18, 19-20). Expansion ratios 0.16 to 0.67, notably higher than recent chapters because the source is small; entry 16 at 0.67 is the highest ratio in this run and still well under the corpus median of 0.84 and far under the ~6x invention signal, its span carrying only 828 source words. Henry is undeclared at entries 5, 16 and 19 because he has no block at those keys, and Wesley is undeclared at entries 1 and 10 for the same reason -- so the Henry/Wesley duplication recorded at genesis 12 could not distort this chapter, since the two never appear at the same key. One judgement worth flagging: entry 16 handles the ban on the Canaanite nations, where Clarke argues at length that the sentence fell on the nations' political existence rather than on every life, Gill reports the proselyte exception, and Keil and Delitzsch keep the strict sense. All three positions are given as their holders state them, including Calvin's concession at entry 10 that the law allowed the Jews more than was justly lawful, which is his own judgement on the text and is recorded as an outlier rather than softened."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "JFB residue, 33rd chapter confirming, fourth mod-6 class in five chapters, and the second donor seen to cross its own chapter boundary. Jamieson appears at keys 3, 9 and 15 -- gap 6 throughout -- and the donor is 1 Corinthians read strictly forward ACROSS the 11/12 boundary: key 3 gives 11:27 (guilty of the body and blood; the and/or variant and the Romanist argument for communion in one kind), key 9 gives 11:32 (chastening, citing Revelation 3:19 and Hebrews 12:8), key 15 gives 12:2 (ye were Gentiles carried away unto dumb idols). Donors so far: Romans 8 at galatians 3, 1 Corinthians 3 at philippians 4, 1 Timothy 6 at revelation 22, Genesis 10 at genesis 12 (single member), and now 1 Corinthians 11-12 here. Note the pleasing accident that revelation 22's donor was 1 Timothy 6 while 1timothy 1 is itself a target -- the donor set and the target set overlap, so the pointer is not reading from some separate reserve of text but from the same corpus. All three excluded."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "Chapter-initial front matter, tenth chapter confirming and by far the largest instance: key 1 runs 11,880 words of which roughly 8,000 are book introduction. Barnes contributes 4,740 words beginning 'THE FIRST EPISTLE OF PAUL TO TIMOTHY. INTRODUCTION. I. NOTICES OF THE LIFE OF TIMOTHY' and NEVER REACHES verse 1 at all -- the block ends mid-introduction with the sentence 'The remainder of this note is continued in note on 1 Timothy 1:2'. Clarke contributes 4,110 words of essay on identifying Timothy and dating the epistle, reaching his verse comment only in the last ~180 words. Calvin's block opens with the running title 'COMMENTARIES ON THE FIRST EPISTLE TO TIMOTHY CHAPTER 1'. NEW SUB-PATTERN, and a useful one: when the front matter is long enough it consumes the whole chapter-initial block and the verse commentary is DISPLACED INTO THE NEXT KEY. Barnes's actual notes on verses 1 and 2 sit at the end of key 2, after 1,400 further words of introduction, and key 2 opens 'Continuation of Note from 1 Timothy 1:1. Material for Verse 2 is at end of this material.' The source signposts the displacement in plain English at both ends, which means it is programmatically detectable: a block containing 'remainder of this note is continued' or 'Continuation of Note from' marks a spilled boundary."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "1",
+      "note": "Fidelity self-grade A for all six entries (1-2, 3-7, 8-11, 12-14, 15-17, 18-20). Expansion ratios 0.04 to 0.10 against a corpus median of 0.84 -- low because the source runs 48,090 words, some 8,000 of which are unusable front matter. Chrysostom is declared at five of the six entries on genuine homily material that split_voices sees under his bare surname. Calvin appears only at entry 1, having just 312 words in the whole chapter. One correction made before landing: the first draft of entry 3 read that Barnes and Clarke agree those who swerved never had what they missed; in fact that is Barnes's point alone, Clarke says they aimed and missed, and Ellicott reads the verb as meaning they had once been in the right direction and failed to keep in it. The sentence now gives Barnes and Ellicott as opposed readings, which is what the sources support, and the disagreement is recorded as a debate."
     }
   ]
 }
