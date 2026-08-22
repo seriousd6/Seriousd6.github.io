@@ -17131,6 +17131,129 @@
       "book": "leviticus",
       "chapter": "10",
       "note": "FIDELITY SELF-GRADE, all 7 entries, all grade A. Source: 20 catena keys, 20,527 usable words as the sizer reported them, of which roughly 1,600 (7.8 percent) is not comment on these verses — about 1,238 words of StudyLight chrome inside Ellicott's key-20 block, Clarke's chapter argument at the head of his key-1 block, and 229 words of Jamieson residue at keys 2, 14 and 20. Word counts, all inside the 350-650 window: 1-2 = 650, 3 = 650, 4-7 = 648, 8-11 = 645, 12-15 = 648, 16-18 = 649, 19-20 = 648. Type-token ratios 0.598 to 0.673, zip ratios 0.421 to 0.465, so every entry clears the A threshold on both axes, though entries 12 and 16 sit closest to the type-token floor and would not have survived much more compression. TILING: seven entries over twenty verses, cut at the narrative's own joints — the sin and the fire (1-2), the saying and Aaron's silence given a whole entry to itself because the chapter turns on it (3), the carrying out and the ban on mourning (4-7), the wine law and its purposes (8-11), the resumed instructions about the priests' portions (12-15), the goat that was burnt and the rebuke (16-18), and Aaron's answer with the contentment of Moses (19-20). Coverage_problems returns empty. Expansion ratios run 0.15 to 0.39; entry 16 at 0.39 is the highest I have written and reflects a genuinely thin span, 1,675 source words across three keys. VOICE COVERAGE: Gill at all 20 keys; Ellicott at 20; Wesley 16; Clarke 13; Keil 7; Calvin 6; Henry 4 (keys 1, 3, 8, 12); Jamieson 3 (all residue, all declared excluded). HEAD PLACEMENT: Henry comments by section, so he is named only in entries 1, 3, 8 and 12 and kept out of 4, 16 and 19 where he has no head; Calvin likewise is absent from entry 19. KEIL DECLARED SILENT IN TWO ENTRIES: at keys 13 and 20 his blocks are pure lemma, the 200-word cap being consumed entirely by quoted verse text, so there is nothing of his to attribute; he is not listed among those entries' voices and is not declared excluded either, since the blocks are genuine rather than foreign. This is the first time in my series I have had to use that category. DELIBERATE OMISSIONS, none of which changes a reported position: Henry's key-1 and key-3 blocks (2,084 and 2,576 words) are used only for the material inside each entry's range and his long applications are dropped; Clarke's chapter argument is not used; Clarke's closing peroration at key 20 about human institutions in worship is compressed to one sentence; Gill's rehearsal of the rabbinic authorities is given once rather than enumerated. TRUNCATION CARRIED IN THE NOTES AND NOT ATTRIBUTED TO ANY COMMENTATOR IN THE PROSE: Keil's six capped blocks and Gill's two. Where the cap removed a conclusion I reported only what survives and attributed no absence to anyone."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "28",
+      "note": "Fidelity self-grade, all seven entries. 1-5 641w, 6-9 631w, 10-11 650w, 12-15 648w, 16-17 638w, 18-19 641w, 20-22 650w; all inside the 350-650 window, seven pericopes tiling the contiguous keys 1-22. Keys are contiguous here, so the pericopes are chosen rather than forced; the boundary between 10-11 and 12-15 was moved after a first draft so that the ladder and the oracle spoken from above it stand in the same entry rather than being split across two. Every named voice has a head inside its own range. Positions I could not check against a second witness are attributed to the voice that states them - Shuckford is absent here, but Skinner and Kennicott come by way of Clarke, Onkelos and the Chaldee by way of Clarke, Jarchi and the Targum of Jonathan by way of Gill, and Augustine is not in this chapter. Nothing is drawn from the Jamieson block at key 18, which is declared as excluded residue."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "6",
+        "10",
+        "16",
+        "20"
+      ],
+      "note": "The Matthew Henry Concise/Exposition defect recorded at exodus 39 reproduces here, and this chapter shows a SECOND form of it. The reference-style signature holds exactly. Henry's k1 block (1250 words) carries five roman-numeral references and no arabic short-form ones; k6 (498w) three roman, none arabic; k16 (1733w) eleven roman, none arabic - all pure Exposition. Henry's k10 block (1960w) carries six roman references and then a single arabic one, 'Joh 1:5', at 88 percent of the way through the block: the Concise tail spliced onto the Exposition, exactly as at exodus 39 k1 and k32. But k20 is different and new: 211 words, ZERO roman references and one arabic, '1Co 16:2' - it is the Concise text alone, with no Exposition served at all. So the feed does not only append the Concise; at some keys it substitutes it. A corpus scan should therefore look for two signatures, not one: a Henry block mixing both reference styles (splice), and a short Henry block carrying only arabic short-form references (substitution)."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "7",
+        "11",
+        "17",
+        "19",
+        "21"
+      ],
+      "note": "NEW AND SPECIFIC: Keil's blocks LEAD their filing key throughout this chapter, and the offset is systematic rather than random. Each block quotes a run of verses starting at its own key and then comments on the verses at the END of that quotation, so the comment lands one pericope later than the key it is filed under. The k7 block quotes verses 7-10 and then comments on verses 10-11 (Jacob travelling from Beersheba, 'he hit upon the place' as an apparently accidental but really appointed choice, the definite article, the stone pillow). The k11 block quotes verses 11-15 and is cut by the 200-word cap before any comment begins. The k17 block quotes verse 17 and then comments on verses 18-19 (the pillar as monument, the oil as consecration, Bethel against Luz). The k19 block quotes 19-20 and then comments on 20-22 (the vow, and the Elohim/Jehovah alternation). The k21 block is 52 words of pure quotation. Consequence for the writer: naming Keil in the entry his block sits under would attribute to that pericope a comment on the next one. I have instead silenced his k7 and k17 blocks in the entries keyed on them and used their comment in the entry that actually covers the verses they treat, where he has a head of his own. This is a filing artefact of the importer, not a defect in Keil, and it is probably corpus-wide wherever his commentary is pericope-based - worth a scan."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "18"
+      ],
+      "note": "Jamieson residue and the drift. One 32-word block, at key 18, and it is not on Genesis 28: it is on Genesis 24:65-67, Rebekah's veil and 'when Isaac saw his wife, he loved her'. Source lags target by four chapters. That is the SHORTEST lag measured in this run, at the earliest position in the corpus measured so far - four chapters at genesis 28, about thirteen at exodus 39, about seventeen at numbers 1 - which is exactly what a displacement monotone in corpus position predicts, and is further evidence that the tree needs re-indexing rather than re-fetching. With a single member there is no residue class and no stride determinable, so this chapter neither confirms nor threatens the mod-6 finding. Jamieson's genuine commentary on Genesis 28 is not in this file."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "2",
+        "7",
+        "11",
+        "17",
+        "19",
+        "21"
+      ],
+      "note": "The 200-word cap: Keil 6 of 7 blocks at exactly 200 (k1, k2, k7, k11, k17, k19); the seventh, k21, runs 52 and stops of its own accord. Running OT total is now 67 of 74 measured Keil blocks capped, across nine chapters. Two things worth recording about this chapter's instances. First, the k11 block is 200 words of pure biblical text - the cap was spent on the quotation before any comment began, the same wholly-empty-block shape seen at exodus 39 k2. Second, and unlike exodus 39 k38/k41, the surviving comment here is NOT recovered by an overlapping restart: each block quotes forward from its own key, so where the cap falls inside the quotation the comment for those verses is simply lost. Gill runs entirely free here - 22 blocks, maximum 188 words, not one at 200 - which is the settled OT pattern for him and the reverse of his NT behaviour."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "2",
+        "10",
+        "11",
+        "19"
+      ],
+      "note": "Three separate factual disagreements in one chapter, all of them checkable and none of them acknowledged by any party. (1) THE JOURNEY. Henry has Jacob covering above forty miles from Beersheba to Bethel in a single day. Clarke gives the distance as about forty-eight miles and says plainly that this is too great a journey for one day over what we may conceive very unready roads. Ellicott, placing the site twelve miles north of Jerusalem, has him at least four days on the route, and builds on it - the four days of meditation and prayer are what prepared him to be accepted. (2) THE COMPANY. Clarke argues from the stone pillow and from Jacob's own later words about his staff that he travelled alone and destitute: 'He had God alone with him.' Gill has him alone but provisioned, with letters of recommendation from his parents and money enough for the road, and uses the oil as evidence of baggage - the very argument Clarke had dismissed as 'no rational argument'. Ellicott answers the argument directly, saying we are not to suppose the heir of the blessing was sent away without a few trusty servants and that the expression about the staff does not require it. This is the rare case of an explicit reply: Ellicott is rebutting the position Clarke states. (3) BETHEL AND LUZ. Keil argues from the antithesis in verse 19 that the name was given to the town. Ellicott holds that Luz and Bethel were distinct places, that Jacob slept a mile or two from the town, and that the name passed to it only when Ephraim took Luz. Calvin cuts under both by denying there was a town there yet at all."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "11",
+        "12",
+        "18"
+      ],
+      "note": "Calvin rejects the allegorical reading twice in this chapter, in the same form both times, and each time against the reading the others adopt. At verse 12: 'The interpretation of some of the Hebrews, that the ladder is a figure of the Divine Providence, cannot be admitted: for the Lord has given another sign more suitable' - where Clarke makes providence the ladder's PRIMARY design and Wesley elaborates it at length as his first head. At verse 18: other commentators argue with more subtlety that the stone was a symbol of Christ on whom all the graces of the Spirit were poured out, but Calvin says he does not know that any such thing was intended. In both places the refusal is grounded the same way, that the text supplies its own sign and the interpreter must not supply a better one. Ellicott performs the same move once, on the rabbinic identification of the place with Moriah and the stone with the altar-stone of the binding of Isaac, which he calls allegorical rather than expository. Worth recording because the three-way split on the ladder - Clarke's three simultaneous designs, Wesley's two, Calvin's flat refusal of the first - is the sharpest exegetical disagreement in the chapter and is invisible unless all three are read together."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "1",
+        "6",
+        "11",
+        "16",
+        "17",
+        "20"
+      ],
+      "note": "Wesley abridges Henry SIX times in this chapter, the highest count in any single chapter so far, and the running total across this run is now seventeen instances. At k1 he takes Henry's 'Those that have the blessing must keep the charge annexed to it, and not think to separate what God has joined' word for word. At k6 he takes the opening of Henry's Esau paragraph verbatim. At k11 he takes 'his comfort in the divine blessing, and his confidence in the divine protection, made him easy, even when he lay thus exposed; being sure that his God made him to dwell in safety, he could lie down and sleep upon a stone'. At k16 he takes Henry's whole first head, 'God's manifestations of himself to his people carry their own evidence along with them', to the end of the paragraph. At k17 he takes Henry's second head on the fear, including the Hosea reference. At k20 he takes 'We need desire no more to make us easy and happy' and 'The tenth is a fit proportion to be devoted to God, and employed for him; though it may be more or less, as God prospers us'. Two of these are cross-key, k11 and k20 drawing on Henry blocks filed at k10, so a per-key comparison would miss them. The k6 case is the most interesting: Henry offers the Esau passage as a disjunction, 'either to show the influence of a good example ... or to show the folly of an after-wit', and Wesley keeps only the first limb and drops the second, so what stands in the source as an open question becomes a settled account in the abridgement. That is a change of meaning, not merely of length, and it bears on the open question of whether the prevalence field should down-weight agreement traceable to a common source: here the two voices do not even agree."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "18"
+      ],
+      "note": "One voice in the catena quotes another by name. Keil's comment on the anointing of the pillar reads that the oil consecrated it as a memorial of the mercy shown there, 'visionis insigne mnemosynon, Calvin', and expressly not as an idol or an object of divine worship - and Calvin's own block at the same verse is present in this chapter, arguing precisely that, that Moses does not mean the stone was made an idol but a special memorial. So the catena contains both the citation and its source, sitting under the same key. Recorded because it is the first instance I have seen where agreement between two voices in a merged catena is demonstrably citation rather than convergence AND both ends are visible in the same file - the Wesley/Henry cases are inference from wording, this one is explicit. It is a second reason, independent of the Wesley/Henry overlaps, why the tags' prevalence field over-reports agreement."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "28",
+      "verses": [
+        "3",
+        "12",
+        "14"
+      ],
+      "note": "Editor's apparatus inside Calvin blocks, fourth chapter running, and here it is not merely intrusive but argumentative. The k3 block carries a bracketed note in the third person about editions - 'In the editions of Amsterdam and Berlin, the name Jacob is here inserted; and the old English version has it too. The mistake is obvious, and stands corrected in the French translation' - dropped inside a sentence of Calvin's. The k12 block goes further: after Calvin rejects the providential reading of the ladder, the editor's paragraph DISAGREES WITH HIM in the third person, saying 'Whatever force and truth, as well as beauty, there may be in the exposition of Calvin which follows, he appears to have dismissed too hastily the opinion of the Jews' and defending the very reading Calvin refuses. The k14 block carries a Latin lemma and an editorial remark that 'the reader will perceive that Calvin's remarks turn chiefly on the expression bless themselves, which does not appear in our version'. A synthesis that attributed any of this to Calvin would have him arguing against himself. Same family as exodus 1 k18/k21, exodus 39 k32, 2peter 1 k3, hebrews 13 k24. On four chapters running this is a standing property of the Calvin feed, and stripping apparatus - not raising a cap - is what a Calvin re-fetch has to do."
     }
   ]
 }
