@@ -17644,6 +17644,47 @@
         "20"
       ],
       "note": "Two voices break off from exposition to praise the writing, at different places and for opposite qualities, and both passages are worth keeping. Barnes at verse 17, on the angel standing in the sun: 'The description is as simple as it can be; and yet as sublime. The fewest words possible are used; and yet the image is distinct and clear... It is difficult to conceive of an image more sublime than this.' Wesley at verse 20, on the absence of the battle: the chapter exhibits the two opposing armies and all the apparatus for a battle and then gives the victory immediately, 'without one word of an engagement or fighting', which he calls the most exact propriety, since what struggle can there be between omnipotence and all creation united against it - 'Every description must have fallen short of this admirable silence.' Barnes admires what is said, Wesley what is not. Recorded as an instance of a kind of comment the synthesis rules have no category for and which is easy to lose in summarising: it is neither exegesis nor application, and it is the only place in the chapter where either man steps back from the text to look at it."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "22",
+      "verses": [
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB residue, 31st chapter confirming, and the THIRD consecutive chapter to reproduce the mod-6 walk. Jamieson appears at keys 8, 14 and 20 -- gap 6 throughout -- and the donor is 1 Timothy 6 read strictly forward: key 8 gives 6:4 (proud, knowing nothing, doting about questions and strifes of words), key 14 gives 6:9 (they that will be rich fall into temptation), key 20 gives 6:14 (keep the commandment without spot until the appearing). Three chapters in a row now, with three different donors -- Romans 8 at galatians 3, 1 Corinthians 3 at philippians 4, 1 Timothy 6 here -- and the identical emission rule each time. The mechanism can be treated as established: one donor chapter consumed sequentially, one block per six target keys, donor bearing no relation to target. All three excluded."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "NEW DEFECT CLASS: unreadable OCR. Bede's block at key 1 is 300 words of which roughly the first 40 percent is not English at all but mangled character soup with HTML entities left in -- 'rtvdr. th&#x27;te rhrCT 6riifei)^idx&#x27;flbws*i&#x27;the&#x27;inidst t3f the dty' is the opening, which is trying to say something about the river flowing in the midst of the city. The rest of the block recovers and is perfectly legible: the twelve months intimating all the time of life, the cross bearing fruit through the doctrine of the twelve apostles, and the leaves read as a perpetual song. A page running head is embedded mid-block too ('Explanation of the Apocalypse. [bk. iii.]'), as in the Luther scan at galatians 3. This is distinct from truncation, residue and chrome: the text is the right text, in the right place, on the right verse, and simply cannot be read. Bede is declared for entry 1 on the legible portion only; nothing was paraphrased out of the corrupt half. Any de-truncation or cleanup pass should treat entity-laden character soup as its own category, since a length check will not catch it and a voice check will pass it."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "6",
+        "21"
+      ],
+      "note": "Boundary overflow attaches to SECTION edges, not only chapter edges -- a refinement of the rule recorded at genesis 23 and philippians 4. Barnes proves it twice inside this one chapter: his key-5 block is 2,341 words, most of it 'REMARKS ON CHAP. XXI., XXII. 1--5' appended after the verse comment, and his key-6 block opens with 'ANALYSIS OF CHAPTER XXII. 6--20' before reaching the verse. So the same author's front matter and back matter both land mid-chapter, at whichever key begins or ends a printed section. Clarke's key-1 block is the ordinary chapter argument, eighth chapter confirming that pattern. Terminal key 21 is sighting 13 and adds a first: Ellicott's 1,421 words end not in CSS or footer text but in a live JavaScript block -- fetch calls, DOMParser, querySelectorAll, event binding -- so executable page script is now inside the commentary corpus. Wesley's 784 words at the same key carry his whole chronological table of the book's contents plus a Cyril block, and Clarke's 640 carry a dispute about the dating of the Apocalypse."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "22",
+      "note": "Fidelity self-grade A for all five entries (1-5, 6-9, 10-15, 16-17, 18-21). Expansion ratios 0.07 to 0.18 against a corpus median of 0.84; the invention signal is expansion above about 6x, so these are distillation. Bede is declared at entry 1 for the legible half of a badly OCR-corrupted block, and nothing was drawn from the unreadable half. Calvin is absent from this chapter entirely, as he wrote no commentary on Revelation, so the reformed school rests on Gill alone throughout. Cyril of Jerusalem residue is present at keys 1, 2 and 21, folded into Wesley by the splitter as at galatians 3 and philippians 4, and again cannot be declared excluded; none of it was used. Entry 10 was extended after first draft because verse 15 fell inside its range and had not been reached in the prose."
     }
   ]
 }
