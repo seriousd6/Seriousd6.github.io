@@ -17895,6 +17895,91 @@
       "book": "1timothy",
       "chapter": "1",
       "note": "Fidelity self-grade A for all six entries (1-2, 3-7, 8-11, 12-14, 15-17, 18-20). Expansion ratios 0.04 to 0.10 against a corpus median of 0.84 -- low because the source runs 48,090 words, some 8,000 of which are unusable front matter. Chrysostom is declared at five of the six entries on genuine homily material that split_voices sees under his bare surname. Calvin appears only at entry 1, having just 312 words in the whole chapter. One correction made before landing: the first draft of entry 3 read that Barnes and Clarke agree those who swerved never had what they missed; in fact that is Barnes's point alone, Clarke says they aimed and missed, and Ellicott reads the verb as meaning they had once been in the right direction and failed to keep in it. The sentence now gives Barnes and Ellicott as opposed readings, which is what the sources support, and the disagreement is recorded as a debate."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "9",
+      "note": "Fidelity self-grade, all seven entries. 1-3 643w (Bede, Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Wesley); 4-6 642w (Gill, Barnes, Clarke, Ellicott, Robertson, Wesley); 7-9 649w (same six, Jamieson excluded); 10-12 634w (same six); 13-15 649w (Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Wesley, Jamieson excluded); 16-19 635w (Gill, Barnes, Clarke, Ellicott, Robertson); 20-21 627w (Gill, Barnes, Clarke, Robertson, Jamieson excluded). Every claim traced to a head inside its own span; no inline catena extracts used. Chapter source 40,228 usable words over 21 contiguous keys."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JAMIESON STRIDE: 753 chapters, still no exception. All three Jamieson blocks in revelation 9 sit at keys 9, 15 and 21 — every one congruent to 3 mod 6, target stride exactly 6. Residue sources are 1 Thessalonians: k9 is 1Th 3:1-5, k15 is 1Th 3:10 (opens 'See on 1Th 2:9'), k21 is the 1Th 4:1-18 section header. Source gaps 5 then ~8; quantise-up holds at k9-k15, and the k15-k21 pair is the widest source gap measured to date. Lag from revelation 9 back to 1 Thessalonians is ~62 chapters, sitting just under the ~64 measured at revelation 19 and consistent with drift being monotone in corpus position. Note that the residue for BOTH revelation chapters measured so far lands in the Pauline letters, and both land in adjacent epistles."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "BEDE AT EXACTLY 300, third occurrence. The single Bede block in this chapter (k1) is exactly 300 words, matching revelation 19 (where it cut mid-word inside 'Alleluia') and galatians 1 (Chrysostom 300). The 300 cap is now confirmed across two books for the Bede feed specifically. The same block carries HTML-entity corruption and OCR damage: literal '&#x27;' and '&quot;' sequences left unresolved, plus 'ispoken briefly^', 'v/&#x27;' and 'It For even the elect *' with a stray guillemet. Bede belongs on the re-fetch list on both counts."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "VICTORINUS MISFILED AT k1 FOR THE SECOND CHAPTER RUNNING. Same signature as revelation 19: exactly one Victorinus of Pettau block in the chapter, always filed at key 1, always commenting on other verses — here it opens by quoting Revelation 9:13-14, the sixth trumpet and the angels at the Euphrates, twelve verses downstream of its filing key. Two chapters, two identical displacements, one block each. This looks like a whole-chapter Victorinus note being attached to the chapter's first verse key rather than a per-verse feed. SILENCED rather than declared: an excluded_voices entry would tell the reader something was withheld, when in fact nothing about verses 1-3 was ever there."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "2",
+        "3"
+      ],
+      "note": "INTERPRETIVE FREE-FOR-ALL ON THE FALLEN STAR, the widest spread of identifications recorded in a single entry so far. Wesley: a good angel of the invisible world, the falling meaning only swiftness. Ellicott: an evil power, argued from the perfect participle, from the Lucifer emblem in Isaiah and from Christ's saying about Satan as lightning — a good angel 'seems hardly possible'. Robertson: same, from the tense alone. Henry: an eminent bishop, or Boniface III, made universal bishop by a usurping emperor 'as the reward of his flattery'. Gill: Mahomet and the publishing of the Alcoran. Clarke reports the field with visible impatience and includes 'Signior Pastorini professes to believe that Luther is intended!' — the exclamation mark is his. Six mutually exclusive readings of one figure, and the only agreement is between the two grammarians, who reach it by grammar rather than by history."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "15",
+        "16",
+        "20",
+        "21"
+      ],
+      "note": "TWO COMMENTATORS DISSENTING FROM THEIR OWN SIDE, both Clarke, in the same chapter. (a) At v15 he lays out the arithmetic of the hour/day/month/year in full — 24 hours to a day, 4 weeks to a month, 12 months to a year — and then refuses to perform the sum, referring those who read the divisions as prophetic periods elsewhere, 'not professing to discuss such uncertainties'. Wesley, on the same verse, performs exactly that sum and gets 212 years; Clarke elsewhere gets 150 for the five months where Wesley gets 79. Same rule, incompatible totals, from writers of the same school. (b) At v21 he gives the complete anti-Roman identification of sorceries, fornication and thefts, then withdraws his assent: 'it is going too far to say that this is the true interpretation. And yet to express any doubt on this subject is with some little else than heresy.' This is the second instance of the pattern first noted at Ellicott in galatians 1 — a commentator naming the confessional stake and deciding against his own side. Worth a corpus scan for the phrase-shape 'it is going too far to say'."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "21"
+      ],
+      "note": "BARNES MULTI-PART NOTE ARTIFACT, new marker string. The Barnes block at k21 opens with the literal line 'This is part 2 of 4 Parts of the Note for Revelation 9:20-21.' and k12 opens 'Continuation of Barnes Notes on Revelation 9:11'. These are feed-level splitting artifacts, not authorial text, and they join the galatians 1 marker ('**** Due to space limitations, See Notes on Verses 1 and 2 combined...'). Three distinct Barnes splice markers now collected; add 'This is part N of M Parts of the Note' and 'Continuation of Barnes Notes on' to the corpus scan alongside the space-limitations string. Practical effect here: a single Barnes note on vv.20-21 is spread over two keys and the sizer counts it twice."
+    },
+    {
+      "at": "2026-08-22",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "9",
+      "verses": [
+        "16",
+        "20"
+      ],
+      "note": "BARNES ARGUES HIMSELF INTO A CORNER AND SAYS SO. Building the Turkish identification of the sixth trumpet, he notes that the reckoning by 'two myriads of myriads' matches the Turkman toman, and cites Gibbon's own phrase 'the myriads of Turkish horse'. Then: 'if it were supposed that John was writing after the event, this would be the language which he would be likely to employ — for this is nearly the identical language employed by the historian Gibbon.' He offers as evidence of fulfilment a resemblance that would equally follow from vaticinium ex eventu, and states the alternative without noticing that it undercuts him. Ellicott, on the same number, draws the opposite conclusion — that its bewildering size 'might have been sufficient to keep interpreters from looking for some slavishly literal fulfilment'."
     }
   ]
 }
