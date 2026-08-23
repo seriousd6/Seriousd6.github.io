@@ -19053,6 +19053,40 @@
         "20"
       ],
       "note": "Ellicott end-of-chapter chrome tail, THIRTEENTH measurement, and a near-exact repeat of its neighbour: judges 15 k20 is 1058 raw words of which only about 76 comment on v20, against judges 14 k20 at 1063 words for about 90. Same slot, same size, same feed, adjacent chapters - which is further evidence that the tail is generated per chapter by the same mechanism and not by anything in the text. Caps confirmed again: Keil 12 of 13 blocks at exactly 200, only k19 (at 58) under, the identical 12-of-13 split as judges 14; Gill at exactly 200 twice, k4 and k19. One thing worth flagging for the re-fetch list: Clarke's k4 block runs to 841 words and his k20 to 679, both far above his median here of about 100, and both are genuine authorial content - the k4 block is his full defence of the number of the foxes and the k20 block is the Ovid excursus. So a length-based heuristic for detecting chrome would take two of Clarke's best blocks in this chapter and leave Ellicott's actual chrome untouched, since at 1058 it is only marginally longer. Only the copyright marker discriminates, thirteen for thirteen."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "judges",
+      "chapter": "10",
+      "note": "Four entries tiling all 18 keys, all in window: 1-4 649w, 5-8 649w, 9-12 650w, 13-18 617w. Six voices carry heads; five are used (Gill 18 blocks, Ellicott 17, Keil 10, Clarke 9, Henry 3) and Jamieson (2) is declared as residue at entries 1 and 13. FOUR entries rather than five: keys 13-15 carry only about 670 usable source words and 16-18 about 580 once the Ellicott chrome at k18 is cut, so split into separate entries both would have been far too thin to fill the window honestly; merged, 13-18 has about 1,250 words behind 617, which is still the leanest ratio in the chapter and is why that entry runs shortest. Every named attribution checked against a head inside its own span; Henry has heads only at k1, k6 and k10, so entry 13-18 carries four voices and three schools. Every scripture reference in prose is a .ref link."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "10",
+      "note": "Jamieson residue: a THIRD Judges measurement, and it interpolates cleanly between the other two. Two blocks, keys 3 and 15 - congruent to 3 mod 6, the SAME offset as judges 14 (keys 3, 9, 15), with key 9 a dropped slot in the middle, exactly the genesis 13 pattern. Source is DEUTERONOMY 29 in order: k3 is Dt 29:2-8 (the appeal to their own memory of the Exodus miracles and of the territory just acquired) and k15 is Dt 29:10-22 (the whole congregation assembled to renew the covenant), the second block citing De 29:12 and De 29:22 by name. LAG: judges 10 is canonical chapter 221 (50+40+27+36+34+24+10), Deuteronomy 29 is 182, so lag 39. Judges 14 gave 225 against Deuteronomy 32 at 185, lag 40. Four chapters apart, lag grows by exactly one, which is the 0.16 OT slope. Three Judges chapters now measured: 10 (lag 39, offset 3, one slot dropped), 14 (lag 40, offset 3, full stride), 15 (no blocks at all). The model holds at every point, and the two neighbours 14 and 15 - same book, same length, adjacent - differing between a full stride and nothing at all remains the strongest evidence that presence is governed entirely on the source side."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "10",
+      "verses": [
+        "18"
+      ],
+      "note": "Ellicott end-of-chapter chrome tail, FOURTEENTH measurement and the third consecutive Judges chapter at the last key: judges 10 k18 is 1024 raw words of which about 42 comment on v18, against judges 15 k20 at 1058 for about 76 and judges 14 k20 at 1063 for about 90. Three chapters running, same slot, sizes within 40 words of each other while the genuine content varies by a factor of two - which is as clear as this can get that the tail is generated per chapter and is independent of the text it is attached to. Caps: Keil 9 of 10 blocks at exactly 200, only k18 (at 37) under. And that k18 block is the SECOND instance of the structural artefact first recorded at genesis 13 k15: its 37 words are nothing but the reprinted text of v18, with no comment of any kind. Here it did not need silencing because Keil is used elsewhere in the same entry, but a chapter where such a block fell alone in its span would produce a false ghost. Worth teaching the tooling to recognise a block whose body is a verbatim reprint of its own verse."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "10",
+      "verses": [
+        "11"
+      ],
+      "note": "Three splits in this chapter worth surfacing. (1) HOW THE DIVINE ANSWER CAME, at v11, produces five distinct positions from five voices, which is the widest spread I have met on a single question. Gill lists the candidates (a prophet, as two rabbis hold, whom a third takes for Phinehas though he could not then have been living; a created angel; or the uncreated one in human form). Clarke leaves it open - 'by what means these reproofs were conveyed to the Israelites, we know not'. Henry cannot decide between the angel of ch.2 and the prophet of ch.6. Keil RULES OUT both, from the silence: 'not to be regarded as having been given through an extraordinary manifestation (theophany), or through the medium of a prophet, for that would certainly have been recorded'. Ellicott proposes there was no messenger at all - 'the method of the Divine communication is not specified. A stern experience might have spoken to the national conviction with prophetic voice.' (2) HOW MANY GODS are listed at v6: Keil and Ellicott independently count SEVEN and independently call the count significant, each matching it to the seven nations of vv.11-12 (Keil 'unmistakeable', Ellicott 'obvious symmetry'), neither citing the other - a clean independent-observation case. Clarke numbers FIVE, pairing nation with deity. (3) THE RETRACTED THREAT at v13: 'I will deliver you no more' is reversed three verses later, and the two grammatical-historical voices solve it differently - Ellicott by making the threat conditional as elsewhere in Scripture, Keil by distinguishing God's nature from his attitude, 'the change in the purpose of God does not imply any changeableness in the divine nature'."
     }
   ]
 }
