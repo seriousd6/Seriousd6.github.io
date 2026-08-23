@@ -19336,6 +19336,73 @@
         "23"
       ],
       "note": "Ellicott end-of-chapter chrome tail, SIXTEENTH measurement: romans 6 k23 is 1038 raw words of which about 56 comment on v23. Caps confirmed again and one is new: 300 for Chrysostom (k5 and k19, both exactly 300 - the fifth measurement of that cap); 200 for Gill (eight blocks at exactly 200 in this chapter alone), for Theodoret (four) and for Cyril. The Gill count is worth flagging on its own: eight of his twenty-three blocks here sit at exactly the cap, which is the highest proportion I have recorded for that feed, and it means a third of Gill's contribution to this chapter is truncated mid-sentence. Any measure of what a voice actually says about a verse has to treat an exact-cap block as a lower bound, not a value."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "9",
+        "21",
+        "27",
+        "33",
+        "45",
+        "51"
+      ],
+      "note": "Jamieson residue, TENTH chapter, a FOURTH residue class, and the first donor of a new kind. Affected keys are 9, 21, 27, 33, 45 and 51 - every one congruent to 3 mod 6. Six members, second only to Nehemiah 7's seven. Mod-6 target selection now holds in ten chapters out of ten, with four classes observed (0, 2, 3, 4). What is new is the DONOR: every previous case borrowed from a different book (Acts, Romans, Numbers, Genesis, 1 Chronicles, Mark, 1 Corinthians, 2 Corinthians). Here the donor is LUKE ITSELF, eleven chapters earlier, walking forward across its own chapter boundary: k9 -> Lk 13:4 (a tower of the city wall near the pool of Siloam, 'of its fall nothing is known'); k21 -> Lk 13:15-16 (the sabbath hypocrisy, citing Mt 12:9-13 and Lk 6:9, 'how the faithful and true Witness tears off the masks which men wear'); k27 -> Lk 13:18-21 (mustard seed and leaven, with the refusal to allegorise the woman as the Church or the three measures as spirit, soul and body); k33 -> Lk 13:24-25 (strive to enter in; the master of the house rising and shutting the door); k45 -> Lk 13:34-35 (O Jerusalem); k51 -> Lk 14:3-6. Both sequences are monotonic, the donor advancing slightly slower than the target (donor steps about 11, 4, 6, 9, 4 against target steps 12, 6, 6, 12, 6), and the donor crosses from Luke 13 into Luke 14 exactly as the target crosses from k45 to k51. Same slope family as Ephesians 2, 2 Corinthians 3 and Deuteronomy 30. I initially guessed Acts 27-28 by analogy with the previous chapter and was wrong; the donor has to be read, not inferred from the last case. All 315 Jamieson words are residue."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "25",
+        "36",
+        "41"
+      ],
+      "note": "THREE laundering traps in one chapter, all the same shape, and the tooling had to be extended to see them. Luke 24 is a Catena Aurea chapter: split_voices recognises Bede, Cyril, Gregory, Augustine, Chrysostom and Tertullian as block labels, but the catena also carries AMBROSE, EUSEBIUS, THEOPHYLACT, CYRIL OF JERUSALEM and GREGORY OF NYSSA mid-block, where their material is silently credited to the host. Concretely: (1) at k1 the remark that the differing hours 'caused great perplexity to many' is AMBROSE inside a Bede block; (2) also at k1 the reconciliation of one angel against two - one seen within the outer enclosure, two afterwards standing - is AUGUSTINE inside that same Ambrose passage, and Augustine's own labelled blocks are at k25 and k36, so declaring him on entry 1 would have passed the chapter-wide grounding check while being false; (3) at k41 the bitter-herbs-versus-honeycomb reading is GREGORY OF NYSSA inside a Cyril block, and the labelled 'Gregory' of this chapter is Gregory the Great at k13, k25 and k45 - two different men behind one surname, which the validator cannot distinguish at all. I extended dump3.py's KNOWN label set with Ambrose, Eusebius, Cyril, Athanasius, Hilary, Isidore, Titus and Epiphanius. That helps but does not solve it: the sub-splitter matches Titlecase-followed-by-colon, and the catena also uses bare uppercase forms (CHRYS., AUG., EUSEBIUS.) which still slip through. In the prose all three are attributed to the catena by name and none of the three is declared. Declared voices per entry were cut accordingly: Augustine dropped from entry 1, Gregory dropped from entry 36."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "13",
+        "36",
+        "50",
+        "53"
+      ],
+      "note": "Two section-shaped source patterns in this chapter, one helpful and one not. (1) HENRY IS SECTION-SHAPED, not verse-shaped. His 15,479 words land at only three keys - k13 (6,844), k36 (4,717) and k50 (1,646) - and each block expounds a whole pericope: k13 covers vv13-35, k36 covers vv36-49, k50 covers vv50-53. This is convenient when the tiling puts a section head at those keys, which mine did, but it creates a trap for any tiling that splits a Henry section: entries 25 (vv25-35) and 44 (vv44-49) have NO Henry block in their spans even though Henry has written at length about those verses. Declaring him there would pass chapter-wide grounding and be false; using his material there would be worse. Both entries were written without him, which is why the puritan school is absent from two of the six. (2) The Ellicott chapter-final chrome recurs at k53: 1,170 words of which 255 are genuine and about 915 are the StudyLight template. SEVENTH hand-confirmation, and the first in a gospel rather than an epistle, which rules out any suspicion that the pattern is epistle-specific. Clarke at k53 is 853 words and is an end-of-gospel essay rather than comment on v53 - the Clarke analogue of the Barnes REMARKS block, and worth watching for at the last key of every gospel. Barnes, unusually, is only 117 words at k53 and carries no REMARKS essay here."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "30",
+        "50"
+      ],
+      "note": "Two things worth surfacing about how these commentators use each other. (1) AN OPEN DEPENDENCY at v50. Clarke's 606-word note on the Bethany-versus-Olivet distance is Lightfoot's argument reproduced whole - the numbered difficulties, the sabbath day's journey against the fifteen furlongs, the Josephus passage about the Egyptian pretender with the Greek quoted - and Clarke credits it openly, 'thus reconciled by Dr. Lightfoot'. That is the cleanest case of acknowledged borrowing I have met in this corpus, and it is the right way to read the many unacknowledged ones: where two voices in a span agree in detail and order, the default assumption should be dependence, not independent confirmation. I reported it as a dependency rather than counting Clarke as a second witness. (2) A FOUR-TO-ONE SPLIT at v30 on whether the breaking of bread was the eucharist. Lightfoot calls it strange that anyone should think so, since Christ meant to disappear in the very distribution and 'the supper was ended before it began', nor does it appear any of them tasted a bit. Clarke says there is 'not the most distant evidence' of it. Barnes says it was not sacramental but a common supper. Calvin reports that Augustine and most other commentators held the opposite, allows it 'might be said with some plausibility' that the Lord was recognised in the mirror of his own supper, and rejects it as resting on no probable grounds - so the majority view of the tradition is preserved only in the report of the man rejecting it. Ellicott alone affirms it, and hedges by anticipating later theological language rather than claiming the rite."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "13",
+        "25",
+        "36",
+        "44",
+        "50"
+      ],
+      "note": "Largest chapter attempted in this run: 64,720 usable source words across 53 contiguous keys, tiled into six pericope entries - 1-12 | 13-24 | 25-35 | 36-43 | 44-49 | 50-53 - at 629-644 words each, all grade A on first assembly (entry 44 came in at 652 and was trimmed). Raw source per span 8,492 / 15,124 / 11,811 / 13,071 / 8,420 / 7,614; expansion ratios 0.04 to 0.08, the lowest recorded. Two things about tiling a chapter this size. First, the pericope boundaries were set by the narrative, not by word count, and the resulting 2x spread was accepted rather than balanced away - splitting the Emmaus road anywhere other than at v25 would have cut the exposition from the recognition. Second, the fat keys are fat for different reasons and the difference matters: k13 (9,922) and k36 (7,816) are large because Henry parked a whole section exposition there, which is real content; k53 (2,201) is large because of scraper chrome, which is not. Budgeting off raw key size treats those identically. The practical rule from this chapter and the two before it: before picking, subtract the Ellicott chapter-final chrome and any Barnes REMARKS or Clarke end-of-book essay from the last key, and check whether the largest interior key is a section-shaped commentator rather than dense verse comment. Ten Catena Aurea and patristic voices appear in the chapter; six are declarable block labels and four are mid-block only."
     }
   ]
 }
