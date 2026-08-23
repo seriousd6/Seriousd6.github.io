@@ -19785,6 +19785,63 @@
       "book": "deuteronomy",
       "chapter": "17",
       "note": "FIDELITY SELF-GRADE, deuteronomy 17, six entries over 20 keys and 16,771 usable source words. Word counts: 1-3 648, 4-7 623, 8-11 647, 12-15 649, 16-18 644, 19-20 495. All six in window. Spans follow the chapter's four sections, splitting the two long ones: the blemished victim and the idolater (1-3), the procedure of trial (4-7), the appeal to the priests and judge (8-11), the penalty for presumption and the permission of a king (12-15), the king's three prohibitions and his copy of the law (16-18), and the reading of it (19-20). Voice coverage: eight voices -- Calvin 12 blocks/5029w, Henry 3/4437, Gill 20/1943, Ellicott 3/1535, Keil 8/1493, Clarke 11/1051, Wesley 16/1017, Jamieson 3/100. DECLARED: Jamieson as residue in entries 1-3, 8-11 and 12-15. SILENCED BY ENTRY: Keil at 19-20, his k19 block being pure reprinted biblical text with no comment at all; grammatical-historical is carried there by Ellicott. NOTE ON A SELF-CORRECTION MADE INSIDE THE PROSE: in the 8-11 entry I first wrote that Calvin 'stands with Wesley, requiring acquiescence even on the most disagreeable points'. That is what he says at v9, but at v12 he says the opposite about the binding of conscience. Rather than drop either, the 8-11 entry now flags that he qualifies it sharply a verse later and the 12-15 entry gives the qualification in full. A reader who saw only one entry would otherwise carry away a false view of his position, and the same risk applies wherever a commentator's blocks straddle a span boundary -- which for Calvin in this chapter they do twelve times. ELLICOTT is unusually sparse here, only three blocks (k1, k18, k20), so grammatical-historical rests mainly on Keil in the middle entries. CHROME at k20: Ellicott 1078 raw words, the twentieth measurement, at the last key as always. Gill's k20 block also ends with the navigation string 'Next: Deuteronomy Chapter 18', the second recorded instance of the Gill chrome family after deuteronomy 26. CAPS: Keil 7 of 8 blocks at exactly 200 body words; Gill 2 of 20 at exactly 200. AUTHORITIES CITED BUT NOT NAMED: Jarchi, Aben Ezra, Maimonides, Knobel, Schultz, the Targum of Jonathan, Urijah. Michal, Solomon, Joash, Jehoshaphat and Josiah are named where the citing voice is itself sourced in the entry."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson residue, FOURTEENTH chapter, class 2 mod 6 for the fifth time (Philippians 3, 1 Corinthians 6, Hebrews 3, Revelation 14). Keys 2, 8, 14, 20 - four members, constant step 6, every class-2 key in the chapter affected with no exceptions. Mod-6 target selection now holds fourteen out of fourteen. Donor is ACTS 9: k2 -> Acts 9:10-18 (Ananias's 'childlike obedience to the heavenly vision', the note that 'Lord' here means Jesus as almost invariably in the Epistles, the Spirit descending not necessarily after baptism); k8 -> Acts 9:24-25 (the danger at Damascus, 'the governor under Aretas the king kept the city', citing 2 Cor 11:32); k14 -> Acts 9:26-28 ('for fifteen days, lodging with Peter', Gal 1:18); k20 -> Acts 9:32 (Peter 'not now fleeing from persecution, but peacefully visiting the churches', Lydda near Joppa). IMPORTANT DIFFERENCE from the last six identifications: the walk is monotonic forward but the STEP IS IRREGULAR - roughly +14, +2, +6 in the donor against a steady +6 in the target - rather than the near-uniform slightly-slower-than-target slope of Ephesians 2, 2 Corinthians 3, Luke 24, Revelation 14 and Hebrews 6. That puts this case in the same sub-family as Nehemiah 7 (forward walk, irregular step) and means the donor mapping has at least two shapes, not one. Worth saying plainly because I have been treating the uniform slope as the signature; it is the common case, not the only one."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "5",
+      "verses": [
+        "3",
+        "10",
+        "13",
+        "15",
+        "18",
+        "20"
+      ],
+      "note": "TWO patterns in this chapter that the grounding check cannot see. (1) THE CHRYSOSTOM TRAP, fourth instance. Chrysostom has exactly one labelled block in Romans 5, at k12 (300 words). Entry 18 names him in its prose - Robertson reports that 'Chrysostom explains hina here as ekbasis (result)' against Denney's final reading - but there is no Chrysostom block anywhere in keys 18-21. Declared him on entry 12 only. This is now the fourth chapter running where the vector is identical: a father quoted inside a modern grammatical-historical commentator in a doxographical aside about who reads a word which way. (2) A NEW ONE: WESLEY IS A CATENA CARRIER IN ROMANS. His blocks quote THEODORET OF CYRRHUS at length and by name at k3, k9, k10, k13, k15, k16 and k18 - at least seven times in one chapter, each time introduced as 'Theodoret of Cyrrhus:' followed by a paragraph of continuous quotation that often runs longer than Wesley's own comment. At k13 the Theodoret material supplies a reading of 'until the law' (that it means until the END of the law) which no other voice in the chapter offers, so the substance is genuinely valuable - but it is Theodoret's, not Wesley's, and split_voices sees only Wesley. Theodoret is not a recognised block label anywhere in this corpus as far as I have seen, so he can never be declared; the honest handling is to attribute in prose as 'Wesley quotes Theodoret' and declare only Wesley, which is what I did. Worth checking whether the Wesley-plus-Theodoret pattern holds across Romans generally, because if it does then every Romans chapter has a hidden patristic voice that no declaration will ever surface."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "7",
+        "15",
+        "20"
+      ],
+      "note": "Four splits worth surfacing, and three of them are about how a text should be READ rather than what it means. (1) v1, WE HAVE or LET US HAVE peace. Ellicott: manuscript authority 'compels us to read Let us have, though the older reading would seem to make the best sense', and he floats a very early copyist's error later corrected by conjecture. Robertson: the subjunctive is 'the correct text beyond a doubt' and 'it is curious how perverse many real scholars have been on this word and phrase here. Godet, for instance. Vincent says that it is difficult if not impossible to explain it' - then resolves it by tense, the volitive present meaning keep on enjoying peace rather than make peace. (2) v7, RIGHTEOUS versus GOOD. Robertson quotes Lightfoot for 'all the difference in the world', a difference of sympathy. Ellicott grants the distinction and then says 'this distinction is not insisted upon here. The two words are used almost convertibly.' (3) v15, MANY or THE MANY. Ellicott presses the article and quotes Bentley via Lightfoot that 'by this accurate version some hurtful mistakes about partial redemption and absolute reprobation' would have been avoided - a translation point carrying a whole soteriology. Robertson answers that it is 'not necessary to Paul's argument to make the many in each case correspond'. (4) v20, the HINA: final or ecbatic. Robertson lays out both, attributing the result-reading to Chrysostom against Denney's purpose-reading, and declines to decide; Wesley decides flatly - 'the consequence (not the design)'. Also worth recording: Ellicott excuses the chapter's broken syntax by noting the letter was dictated and never revised, quoting Vaughan asking the reader to picture the writer at work - a rare instance of a commentator explaining a difficulty by the physical circumstances of composition rather than by exegesis."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "9",
+        "12",
+        "15",
+        "18",
+        "21"
+      ],
+      "note": "63,536 usable source words over 21 contiguous keys, tiled 1-5 | 6-8 | 9-11 | 12-14 | 15-17 | 18-21 at 623-648 words each, all grade A. Raw per span 12,318 / 10,909 / 3,625 / 15,144 / 7,994 / 13,521; expansion 0.04 to 0.17. Second-largest chapter attempted in this run after Luke 24. The 12-14 span is the heaviest at 15,144 raw words and also the hardest, since Barnes alone puts 4,161 words at k12 and 1,961 at k14, and the passage is the one Barnes himself calls 'usually considered one of the most difficult portions of the New Testament'. Two structural notes for whoever takes the rest of Romans. First, the chapter divides cleanly at 12 because the apostle's own sentence breaks there and is resumed at 18 - the tiling should follow the broken protasis rather than fight it, which is why 12-14 (the interruption) and 15-17 (the contrast) and 18-21 (the resumption) are three entries and not two. Second, ELLICOTT CHROME at k21 is the TENTH confirmation: 1,072 words of which about 175 are genuine comment on v21 and the rest is the StudyLight template. Clarke at the same key is 1,879 words and is an end-of-chapter essay rather than comment on the verse, the same shape as his end-of-gospel essay at Luke 24 k53. So the chapter-final subtraction rule now applies to Clarke as well as to Barnes and Ellicott."
     }
   ]
 }
