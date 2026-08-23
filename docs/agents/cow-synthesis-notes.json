@@ -20443,6 +20443,128 @@
       "book": "2corinthians",
       "chapter": "6",
       "note": "FIDELITY SELF-GRADE, 2corinthians 6 -- eight entries over 18 contiguous source keys, 43,524 usable source words (41,894 after chrome), 12 voices. Over the 40,000-word line, so this was the whole batch. Every verse checked against its source blocks before writing and again after each trim pass. WORD COUNTS (window 350-650, no thin exemptions): 1 alone 650w / 10 voices, all six schools present in a single verse; 2-3 649w / 8; 4-5 645w / 7 (Jamieson excluded, residue at k4); 6-8 648w / 8; 9-10 649w / 6 (Jamieson excluded, k10); 11-13 648w / 9; 14-16 650w / 8; 17-18 648w / 8. Total 5,187 synthesis words from 43,524 source words = 11.9% expansion ratio. ATTRIBUTION: no claim in the prose is untraceable to a named block within its span. GRADE: HIGH confidence throughout. The voice set is the standard Pauline one plus Chrysostom, Tertullian and Cyril of Jerusalem, with none of the Catena-Aurea nesting that forced a medium grade on luke 16. The disagreements are unusually clean because most are disagreements of fact or of grammar -- what an absent pronoun refers to, whether the yoke is marriage or desertion or idolatry, how Belial is spelt and derived, whether a verse should be moved -- rather than of doctrine. TWO PLACES WHERE I NAMED A DEFECT IN THE PROSE RATHER THAN WRITING AROUND IT: the Tertullian block at k1 (a note on the previous chapter) and the Barnes block at k1 (two thirds of it front matter continuing the previous chapter), both attributed accurately as what they are; and at k2, k11 and k15 I named the editorial matter printed with Calvin as editorial rather than attributing it to him. ONE CARE TAKEN: at k5 Calvin reports Chrysostom's reading of a word, and at k6 dismisses an inference of Chrysostom's as frivolous. Chrysostom is a head at k1 and k11 but NOT at k4-8, so naming him in those entries would have raised a NAMED BUT NOT SOURCED error; I wrote 'an earlier expositor' and 'a second reading of the word' instead. At k11, where Chrysostom IS a head, I named him. This is accurate but the reader loses an attribution the source actually supplies -- a small cost of the lint rule, worth noting since it will recur wherever one voice cites another across a span boundary. DEGRADATION SIGNAL, unchanged and now four chapters deep this session: EVERY ONE of the eight entries overshot the 650-word ceiling on first draft. First-draft lengths were 750, 824, 778, 970, 784, 782, 859 and 834 words against a 650 ceiling -- a mean overshoot of 27%, the worst of the session. THREE of the eight needed a complete prose rewrite before sentence-level trimming could finish, and one (6-8) needed two rewrites and six further trim passes. Across the four chapters landed today, THIRTY-ONE OF THIRTY-ONE entries have needed compression. ROTATION REMAINS THE STANDING FLAG and my context is now very long."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "3",
+        "15",
+        "21"
+      ],
+      "note": "JAMIESON RESIDUE, and the strongest structural evidence yet for the re-indexing decision. Three Jamieson blocks in this chapter, at keys 3, 15 and 21 -- offset 3 mod 6, with the slot at key 9 dropped. Source book is 1 Corinthians 6: k3 = 1 Cor 6:9-11 territory, k15 = 1 Cor 6:13-16 (the body is for the Lord; members of an harlot), k21 = 1 Cor 6:16-19 (ransom paid to God's justice; the temple; the spirit interpolated in the margin). Rate about 5.5 then 4 source verses per 6 target keys, a shallow decline. THE HEADLINE: colossians 3 residue ENDS at 1 Cor 6:19-20 and colossians 4 residue BEGINS at 1 Cor 7:3-4. The source pointer is CONTINUOUS ACROSS THE TARGET CHAPTER BOUNDARY even though the target offset resets (3 mod 6 here, 1 mod 6 in colossians 4). Combined with the byte-identical seam at romans 6 k22 / romans 7 k4, this means the emitter walks one source stream continuously while the target stride is computed per chapter on the verse number. Offsets seen to date: genesis 2=1, exodus 24=1, deuteronomy 17=3, deuteronomy 26=2, romans 12=1, romans 6=4, romans 7=4, luke 16=4, colossians 4=1, 2corinthians 6=4, colossians 3=3. Nothing yet at 0 or 5. Six source books: Acts 10, Acts 13, Luke 7, 1 Cor 7, Romans 1, 1 Cor 6."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "TERTULLIAN OFF-TARGET FOR THE THIRD CONSECUTIVE CHAPTER. The single Tertullian block in this chapter (342 words at key 1) expounds Philippians 1, not Colossians 3. colossians 4 gave Philemon and Marcion, 2corinthians 6 gave 2 Corinthians 5, and now Philippians 1. Three chapters running, three different wrong books. The Tertullian tree appears to be keyed by something other than content and should be re-fetched whole rather than patched chapter by chapter."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "BARNES CHAPTER FRONT MATTER, second consecutive chapter. The Barnes block at key 1 opens with COLOSSIANS CHAPTER 3 ANALYSIS OF THE CHAPTER before any comment on verse 1, exactly as 2corinthians 6 key 1 opened with Continuation of Notes on 2 Corinthians 5:21. This was previously catalogued as a Henry-only defect (chapter-argument openings); it is now clearly a Barnes defect too. A detector on the strings ANALYSIS OF THE CHAPTER and Continuation of Notes on would catch both instances."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "8",
+        "15",
+        "16",
+        "17"
+      ],
+      "note": "CALVIN EDITORIAL APPARATUS INLINE WITH NO MARKUP -- fifth chapter running (romans 7, luke 16, colossians 4, 2corinthians 6, colossians 3). Instances here: key 8 carries an anecdote of a Scythian at Athens printed as if Calvin's own; key 15 carries a block quotation of Adam Clarke's note on the same verse, attributed in the text to Dr. A. Clarke, sitting inside the Calvin block -- a commentator two centuries later quoted inside the commentary being summarised; keys 15-17 carry repeated French glosses of the translator (Les enseignemens concernans le deuoir particulier d'vn chacun, and others) and a Latin tag from Juvenal with an editorial Ed. signature. This is no longer an accident of one file; it is a property of the Calvin source and needs a stripping rule, not per-chapter judgement."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "note": "NEW DEFECT: STUB BLOCKS WITH DANGLING CROSS-REFERENCES through the whole household code. Gill's blocks at keys 18, 19, 20, 21, 22 end with the literal string See Gill on . -- the cross-reference target has been lost, leaving a sentence that points nowhere. Barnes's blocks at keys 23, 24 and 25 are the entire string Colossians 3:22 . and nothing else: three words, no comment. Clarke at 19 and 22 is a bare See on Eph 6:5-8 (note). The effect is that for the last eight verses of the chapter three of the four fullest expositors supply no exposition at all, and the synthesis has to be built from Robertson, Calvin, Wesley and a little Ellicott. Two things follow. (1) The dangling See Gill on . is a scrape failure that could be repaired if the source retains the anchor. (2) A three-word block that is only a verse number should probably not count as a present block for the GHOST lint at all -- key 22 raised GHOST for Barnes purely on the strength of three stub blocks, and had to be answered by naming him as supplying only cross-references."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "16",
+        "17",
+        "20",
+        "25"
+      ],
+      "note": "TWO SMALLER SOURCE ITEMS. (1) Cyril of Jerusalem appears at keys 16 and 17 by catchword only: at 16 he is proving from a chain of texts that the Holy Ghost subsists, and Eph 5:19 (psalms and hymns and spiritual songs) is one link in the chain; at 17 he is showing from Exodus 34 that the Lord proclaimed the name of the Lord, matched on the word name. Neither block expounds Colossians. Contrast key 20, where his block on honouring father and mother is genuine exposition of this verse. So Cyril blocks in this tree are a mix of real comment and catchword matches and cannot be trusted wholesale -- but he is NOT a mod-6 residue stream, checked again here as at 2corinthians 6. (2) The Ellicott block at key 25 ends with the nav strip Colossians Col 2 Colossians Col Colossians Col 4, a fourth chrome family after the Ellicott copyright statement, the Gill Next: Book Chapter n footer, and the Christian Classics Electronic Library trailer on Tertullian blocks."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "5",
+        "11",
+        "15",
+        "21",
+        "25"
+      ],
+      "note": "SIX SUBSTANTIVE DISAGREEMENTS IN THIS CHAPTER. (1) 3:2 things on the earth -- Calvin alone reads the phrase of ceremonies and outward observances, the same polemical target he finds throughout the letter; Barnes reads it of wealth, honour and pleasure, the ordinary moral sense. (2) 3:5 Ellicott says outright that the verse contains only half the truth, since mortifying the members is the negative side and the positive is supplied only later -- an unusually blunt criticism of the text by a Victorian commentator. (3) 3:11 Ellicott explains BOTH the insertion of barbarian and Scythian and the omission of male and female from the local situation, where Barnes and Robertson treat the list as simply universal. (4) 3:15 the verb: Gill, Barnes, Clarke, Robertson and Calvin all take it from the games (umpire, arbiter, awarder of the prize); Wesley alone reads it as reward, making the peace the recompense of preceding love and obedience. A clean five-to-one split on a single word. (5) 3:21 Ellicott rejects the received provoke not to anger as borrowed from Ephesians and reads provoke not to emulation, so that the fault forbidden to fathers is over-stimulation of a willing child, not exasperation -- Robertson keeps the ordinary sense. The two readings give opposite parenting advice from the same verse. (6) 3:25 he that doeth wrong: Ellicott says clearly the master; Calvin reads it wholly of the master and adds a pastoral reason (servants otherwise avenge themselves); Clarke reads it wholly of the servant; Gill allows both; Robertson says it is not clear, holds of either, and reports Lightfoot applying it to both at once. A genuine three-way split with a fourth voice declining to choose."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "8",
+        "15",
+        "16",
+        "20",
+        "23"
+      ],
+      "note": "NOTABLE MATERIAL WORTH KEEPING. (1) 3:5 the Chrysostom block is not a comment at all but an apology to an offended congregation, printed in the catena as exposition. (2) 3:8-9 Cyril of Jerusalem gives the putting off of the old man its most vivid figure: a former viper's brood is to shed the slough of its old life as a serpent rubs off the old skin and grows young again. (3) 3:16 Calvin turns the indwelling word against those of his own day who interdict the Christian people from the Scriptures and cry that no pestilence is more to be dreaded than throwing the reading open to the common people -- the apostle, he says, addresses men and women of all ranks. (4) 3:16 Chrysostom commits Scripture reading particularly to the married and worldly, and argues it from the economics of a fine: the rich in money is impoverished by paying, but the man rich in doctrine spends nothing when he bears what he would not choose. (5) 3:16 Barnes and Ellicott independently make the same large claim, that hymns shape a church's theology more than its preaching or its creeds -- Barnes via the saying that whoever makes a nation's ballads need not care who makes its laws. (6) 3:16 three positions on where one comma falls: Clarke says bad pointing has made the verse scarcely intelligible and the original absolutely requires his arrangement, Ellicott reaches the same division from the symmetry of the Greek and against the English version, Robertson answers that either punctuation makes good sense and the older manuscripts had none at all. (7) 3:20 Calvin and Cyril of Jerusalem reach the same exception (obey parents except against God) by entirely different routes -- Calvin by importing the qualification from Ephesians, Cyril by the added word more in he that loveth father or mother more than me. (8) 3:23 Wesley turns single-heartedness into a defence against disappointment rather than a duty: men-pleasers are soon dejected and made angry, the single-hearted never disappointed, because their aim cannot be touched by the treatment of those they serve."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "colossians",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "12",
+        "15",
+        "18",
+        "22"
+      ],
+      "note": "FIDELITY SELF-GRADE, colossians 3, eight entries, 25 keys, 33734 usable source words, 12 voices. Word counts as landed: 1-2 650w 10 voices; 3-4 646w 7 voices (Jamieson residue excluded); 5-7 649w 9 voices; 8-11 648w 9 voices; 12-14 649w 8 voices; 15-17 649w 9 voices (Jamieson excluded); 18-21 650w 10 voices (Jamieson excluded); 22-25 648w 7 voices. Every claim in every entry is traceable to a named block in data/commentary/cow/colossians/3.json; nothing is supplied from outside the catena. Accuracy costs incurred, both from the NAMED BUT NOT SOURCED HERE lint: at 8-11 the Scythian-at-Athens anecdote had to be attributed to the editorial matter printed with Calvin rather than to Calvin, which is correct but vaguer than the source; at 22-25 Robertson names Lightfoot as taking the wrongdoer to be master and servant at once, and since Lightfoot is not a head in this chapter he had to become one commentator. The same cost was recorded at 2corinthians 6 (Calvin citing Chrysostom) and will recur wherever a source cites a commentator who happens to be a voice elsewhere in the corpus. Compression: all eight entries overshot the 650-word ceiling on first draft, entry 8-11 by 211 words (861 down to 648, one whole-prose rewrite plus nine trim passes); the mean first-draft overshoot for the chapter was about 15 percent, better than 2corinthians 6 at 27 percent. Running total across five chapters this rotation: 39 of 39 entries have needed compression."
     }
   ]
 }
