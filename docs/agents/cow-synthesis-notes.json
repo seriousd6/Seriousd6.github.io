@@ -19698,6 +19698,60 @@
         "16"
       ],
       "note": "51,229 usable source words over 20 contiguous keys, tiled 1-3 | 4-6 | 7-8 | 9-12 | 13-15 | 16-20 at 628-645 words each, all grade A. Raw source per span 13,227 / 10,412 / 3,556 / 8,762 / 2,542 / 12,465 - a 5x spread, accepted deliberately because the pericopes are unambiguous and both small spans carry dense content rather than inventory (the reverse of the Exodus 31 case, where a small span had to be merged). Expansion ratios 0.05 to 0.25. What makes this chapter unusual is the DENSITY OF NAMED DISPUTE: v1-2 has a six-way on the plural 'baptisms', v6 a five-way on the conditional, v9-10 a four-way on whether reward implies merit, v15 a three-way on what Abraham obtained, v18 a two-way on the two immutable things with Barnes reporting the rival view before rejecting it. Every one of my six entries had a live crux to organise a paragraph around, which is rare; most chapters yield three or four. Every entry also overran on first assembly (656-677) and needed trimming, which is the signature of a chapter with more to say than the window allows - the opposite failure mode from the thin spans of Exodus 31. Worth noting for whoever picks the remaining Hebrews chapters: budget the writing time by number of live cruxes, not by source words."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "26",
+      "note": "CORRECTION TO MY OWN NOTE ON THIS CHAPTER. In the deuteronomy 26 source-defect and build notes I recorded that Keil sits at exactly 203 words nine times of ten and called 203 'a new cap value; elsewhere in the corpus his cap reads 200'. That is wrong and there is no new cap. The 203 was an artefact of my survey script, which counted the voice-name prefix along with the body: 'Keil and Delitzsch:' is three words, so a 200-word capped block measures 203. The same artefact produced the '202' I would have read for Gill, whose prefix 'John Gill:' is two words. Verified directly against exodus 24 and re-verified against deuteronomy 26: every capped Keil block is body-only 200, and every capped Gill block is body-only 200, in both chapters. THE CAP IS 200 IN BOTH FEEDS, as recorded everywhere else in the corpus. The substantive point in the original note stands unchanged and is the one that matters: an exact repeated value is evidence of TRUNCATION, not of an author's habit, and every such chapter belongs on the re-fetch list -- the same test that disproved the supposed Chrysostom 300-word cap. Only the claim of a distinct 203-word cap is withdrawn. Flagging this because the false cap value, left standing, would have looked like evidence that the Keil feed was ingested twice under different settings, which it is not."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "24",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "JAMIESON: A CLEAN SECOND WITHIN-CHAPTER EMISSION-RATE MEASUREMENT, and a fifth OT lag point. Two blocks, keys 7 and 13 (both = 1 mod 6, the stride of 6 holding), 90w and 89w -- NOT byte-identical, so unlike deuteronomy 26 this chapter yields two independent emissions. Both are Jamieson on EXODUS 12, the passover: k7 is the lamb taken on the tenth day with a kid permitted, and the service domestic because the threatened evil was to every house, which is his run over Ex 12:3-5; k13 is roast and not sodden for expedition, the unleavened bread, and 'bitters' for the affliction in Egypt, which is Ex 12:8-9. LAG: exodus 24 is canonical chapter 74, exodus 12 is canonical 62, so lag = 12. The re-fitted slope of 0.18 predicts 13.3 and the old 0.16 predicts 11.8; actual 12 falls between them. This point therefore CONFIRMS LINEARITY AT LOW POSITION but does not discriminate between the two slopes -- which is worth saying plainly, because at p=74 the two fits are only 1.5 chapters apart and no measurement here could separate them. The discriminating points remain the high-position ones (judges 10 at 221, ruth 3 at 235). EMISSION RATE: source midpoint v4 at key 7 and source midpoint v8.5 at key 13 gives +4.5 source verses per 6 target keys. genesis 2 gave +5 per 6 from two distinct blocks in a single chapter. Two independent within-chapter measurements, in different books at very different canonical positions, agreeing inside the noise. The rate is now the best-supported part of the model."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "10",
+        "11",
+        "13"
+      ],
+      "note": "WESLEY-HENRY TRANSMISSION: THE KEY-CO-OCCURRENCE TEST IS THE WRONG TEST, and this chapter shows why. In my deuteronomy 26 fidelity note I recorded that Henry and Wesley never share a key there, and concluded that the abridgement dependence measured three times at genesis 2 'cannot be measured here at all'. exodus 24 corrects the method. Here Wesley abridges Henry at least five times -- k1 ('Worship ye afar off... enter into God's gates with humble and solemn adorations'), k2 ('a type of Christ, who as the high priest entered alone into the most holy place... typifying the covenant of grace'), k3 (the whole 'he laid before them all the precepts... they had before consented in general' passage), k10 (the entire sapphire-pavement exposition, minus Henry's wisdom-versus-sapphires moral), and k13 (the Joshua passage, including the citation of Bishop Pearson, which Wesley spells 'Peirson'). But Henry has only THREE blocks in this chapter, at k1, k9 and k12, while the Wesley blocks that reproduce them sit at k1, k2, k3, k10, k11 and k13. Only ONE of the five abridgements shares a key with its source. THE REASON is structural: Henry's blocks are long and cover verse RANGES, while Wesley's are short and per-verse, so Wesley's abridgement of a Henry block on vv.1-8 is distributed across keys 1, 2 and 3. Key co-occurrence therefore measures the block granularity of the two feeds, not the dependence between them. CONSEQUENCE: the deuteronomy 26 conclusion should be treated as unproven rather than negative -- Henry's three long blocks there may well be abridged in Wesley's ten short ones without a single shared key. Any corpus-wide measurement of this dependence must match on CONTENT (shingled n-grams over the block bodies, Wesley against every Henry block in the same chapter), never on key equality. The 'Peirson' spelling is a usable fingerprint for spot-checking such a matcher."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "24",
+      "verses": [
+        "3",
+        "4",
+        "6",
+        "10",
+        "14"
+      ],
+      "note": "FIVE DISAGREEMENTS WORTH PRESERVING. (1) WHAT WAS RECITED, v3: Clarke includes the decalogue outright, with the laws of chs.20-23; Gill excludes it because the people had heard the ten from God themselves, confining the recital to the judicial laws; Keil agrees with Gill and specifies the extent as Ex 20:22-26 plus chs.21-23; Ellicott takes a middle course, an outline of general purport and main heads but not the details, since otherwise reading the book to them afterwards would have been pointless. (2) THE ORIGIN OF WRITING, v4, a flat contradiction: Wesley says God probably taught Moses the use of letters on the mount, and that Moses taught them to Israel 'from whom they afterwards travelled to Greece and other nations'; Ellicott says the familiarity of Moses with writing is presumed throughout the Pentateuch and that one 'learned in all the wisdom of the Egyptians' could not well be ignorant of so ordinary an Egyptian accomplishment. (3) WHAT THE TWELVE PILLARS ARE FOR, v4: Clarke and Ellicott make them the second contracting party over against the altar; Calvin gives them a wholly different office -- they stood there so the people would know they were not kept at a distance in token of rejection, being still remembered before God, who 'embraced them all, as it were, by means of these statues'. (4) HEATHEN BLOOD-COVENANTS, v6-8: Keil states that the division of the blood 'had no connection whatever' with the heathen customs adduced by Bahr and Knobel; Ellicott adduces them at length from Homer, Herodotus, Xenophon, Lucian, Pomponius Mela and Tacitus, holding that such rites were felt to add force and sacredness; Calvin sides with Ellicott, that covenants have in all ages and among heathen nations been accompanied with sacrifice. Keil is the outlier and says so explicitly. (5) DID THE ELDERS STAY, v14, a two-against-two with consequences: Keil and Ellicott have them remain in the plain, Ellicott adding that the camp was not to move however long the colloquy lasted; Calvin refuses to take the adverb so precisely and holds they were sent back to their charge, which they could not exercise unless in communication with the people; Clarke agrees they returned, and makes their return the grand cause of the golden calf, since they probably reported Moses lost. NB Clarke gives a SECOND and different cause at v17 -- that the people, seeing the devouring fire and Moses long delayed, supposed he had been consumed by it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "24",
+      "note": "FIDELITY SELF-GRADE, exodus 24, six entries over 18 keys and 17,921 usable source words. Word counts: 1-2 646, 3-5 645, 6-8 644, 9-11 649, 12-14 650, 15-18 650. All six in window; every one needed three or more trim passes, and 9-11 needed four after a GHOST catch. Spans follow the chapter's structure -- the summons and graded approach (1-2), the recital and the altar (3-5), the blood and the book (6-8), the elders seeing God (9-11), the second summons and the regency (12-14), the cloud and the forty days (15-18). Voice coverage: eight voices -- Calvin 7 blocks/3887w, Henry 3/3423, Ellicott 17/3097, Clarke 14/2715, Gill 18/1703, Keil 8/1624, Wesley 11/1293, Jamieson 2/179. DECLARED: Jamieson as residue in entries 6-8 and 12-14. FLAGS AGAINST MYSELF. (a) GHOST CAUGHT AND FIXED at entry 9-11: my first draft declared grammatical-historical and discussed Keil only in the tags, leaving his k10 block present in the span but unused in the prose. The linter caught it; I added his observation that the representatives went back down with Moses when the meal ended. This is the second GHOST of its kind in the run (the first was 2corinthians 10, Henry at 7-9) and both had the same cause -- a voice whose only contribution is a structural remark that is easy to leave in the tags. (b) Clarke's k1 block is a verse-by-verse CHAPTER ARGUMENT, the chapter-level front-matter defect now seen in five books (1corinthians 3, romans 6, 2corinthians 10, deuteronomy 26 and here). I used none of it as comment, only its content where it duplicates his verse notes. (c) CHROME at k18: Ellicott 1039 raw words of which about 55 are comment -- the nineteenth measurement, at the last key as always. (d) CAPS: Keil 8 of 8 blocks at exactly 200 body words, Gill 3 of 18 at exactly 200; both to be read as truncation, not habit, and note that my survey counter adds the voice-name prefix, which is what produced the spurious '203' I reported at deuteronomy 26 and have now corrected. AUTHORITIES CITED BUT NOT NAMED: Calmet, Schultz, Bahr, Knobel, Abarbanel, Onkelos, Jarchi, Aben Ezra, Willet, Bezaleel's father Hur only as identified. Augustine and Bishop Pearson are named where the citing voice is itself sourced in the entry."
     }
   ]
 }
