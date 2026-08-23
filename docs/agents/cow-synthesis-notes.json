@@ -20168,6 +20168,84 @@
       "book": "luke",
       "chapter": "16",
       "note": "FIDELITY SELF-GRADE, luke 16 -- eleven entries over 31 contiguous source keys, 57,564 usable source words (56,128 after chrome), TWENTY-FIVE distinct voices, the widest voice set met in the corpus so far. Every verse checked against its source blocks before writing and again after each trim pass. WORD COUNTS (window 350-650, no thin exemptions): 1-2 648w / 13 voices; 3-5 620w / 7 (Jamieson excluded, residue at k4); 6-7 631w / 6; 8-9 642w / 13; 10-12 649w / 8; 13-15 645w / 11; 16-18 645w / 9; 19-21 650w / 14; 22-24 648w / 16 -- the largest voice count in any entry written to date, all five modern schools plus latin-fathers and eastern-antiochene; 25-27 646w / 11; 28-31 650w / 8 (Jamieson excluded, residue at k28). Total 7,074 synthesis words from 57,564 source words = 12.3% expansion ratio. ATTRIBUTION: no claim in the prose is untraceable to a named block within its span. GRADE: HIGH confidence on the modern voices and on the disagreements, which are unusually explicit here because the commentators answer each other by name and by position (Ellicott listing thirteen rivals; Clarke denying the cruelty everyone else assumes; Calvin and Ellicott opposed on the single word 'son'). MEDIUM confidence on the patristic attributions, and the reason is a source defect rather than a judgement call: the Catena Aurea blocks carry nested attributions inline with no markup, so material the Catena gives to one father is filed under another. I wrote using outer head names only and avoided naming any nested father not independently a head in the same span, which keeps the synthesis exactly as accurate as the data and no more. Two Cyril of Alexandria blocks (k1, k10) are bare lection text and were silenced; a Cyril of Jerusalem block at k22 is residue on Acts 11 and was likewise silenced. Because the QA VOICE_LABELS list cannot express those labels, none of the three could be declared as excluded_voices, so this chapter's residue is invisible to corpus QA -- flagged separately. DEGRADATION SIGNAL, unchanged: EVERY ONE of the eleven entries overshot the 650-word ceiling on first draft, three of them by more than 25% (10-12 at 835 before trimming, 19-21 at 851, 25-27 at 867), and two needed a full prose rewrite rather than sentence trimming. Six of the eleven took four or more trim passes. ROTATION REMAINS THE STANDING FLAG -- this is the second full chapter of this session and the second consecutive batch in which every single entry needed compression."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson residue at keys 4, 10, 16 — class 4 mod 6, three members at constant step 6. Sixteenth chapter characterised and the sixteenth mod-6 hit; target-key selection is now mod-6 in sixteen of sixteen cases across five residue classes (0, 2, 3, 4 and now a second class-4 chapter). Donor is Colossians 1: k4 gives Col 1:7 (Epaphras and the 'also' omitted in the oldest manuscripts), k10 gives Col 1:12 (giving thanks unto the Father, who made us meet), k16 gives Col 1:17 (He is before all things). Donor advances 7, 12, 17 — plus 5 then plus 5 against a target advancing plus 6, the uniform slower-slope family. The legacy entries this repair replaces had laundered Jamieson into the voices list at all three keys; the repair moves it to excluded_voices on entries 4, 9 and 12."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "5",
+        "13"
+      ],
+      "note": "NEW TOKENIZER DEFECT, corpus-wide. synthesis_qa._LABEL_RE requires a bare surname from VOICE_LABELS followed immediately by a colon, so any block whose label carries a toponym or epithet is invisible to split_voices and is silently folded into the PRECEDING voice's segment. Confirmed here three times: 'Victorinus of Pettau:' at k1 (183 words, becomes the leading None segment) and 'Cyril of Jerusalem:' at k5 and k13 (each ~200 words, absorbed into the tails of Wesley and Robertson respectively). The same trap must apply to 'Cyril of Alexandria', 'Augustine of Hippo', 'Gregory the Great' and 'Theodoret of Cyrrhus', all of which the corpus already uses as declared voice names (Augustine of Hippo 307 uses, Cyril of Alexandria 122, Cyril of Jerusalem 835). Three consequences: attributions get mis-assigned to whichever modern commentator precedes the block; usable_source_words is inflated because such a block can never be excluded; and undeclarable_voices rejects the long-form name in excluded_voices while ungrounded_voices accepts it in voices, so the two gates disagree. I wrote this chapter with a local dumper using an extended label regex. Worth an owner decision on whether _LABEL_RE should carry the long forms."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "5",
+        "13"
+      ],
+      "note": "Second, independent residue stream in this chapter: the Cyril of Jerusalem blocks are Catechetical Lecture text, selected per key and truncated at ~200 words mid-sentence (same 200-word cap already documented for Gill and Keil). At k13 the block is about the firmament and the waters above the heaven — wholly unrelated to the golden girdle — and is pure filler, so Cyril is NOT declared on the entry covering 12-16. At k5 it happens to be on point: the argument that those who confess one God but deny the Father of Jesus Christ contradict their own prophets, and it breaks off exactly at Ps 88:28 LXX, 'And I will make him my [firstborn, higher than the kings of the earth]' — the very verse Ellicott and Robertson both cite on 'the first begotten of the dead' and 'the prince of the kings of the earth'. So the excerpt was cut to the target verse even though the source is a catechetical lecture. Cyril declared on entry 4 only."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "20"
+      ],
+      "note": "Chrome at BOTH ends of this chapter, a first. At k1 there is a new class: book-preface material at the first key of a book's first chapter — Barnes 3,769 words opening with the scraper line about introductory material being found under Malachi, and Clarke 5,670 words of survey (the four hypotheses of interpretation, the authorship question, Wetstein's synopsis, Bale's commentary) before any verse comment at all, roughly 9,000 words of book-level matter. Much of Clarke's is genuinely usable and I used it, but it must be budgeted separately from verse comment. At k20 the familiar Ellicott chapter-final StudyLight boilerplate appears for the THIRTEENTH confirmed time, and this is the worst instance yet: about 900 words of raw CSS, JavaScript and the site's entire book_data array, plus a navigation fragment. Barnes at k20 by contrast ends in a genuine peroration, not chrome. Rule stands: subtract Ellicott chrome, Barnes REMARKS and Clarke end-of-book essays before budgeting a final span, and now also subtract book-preface matter before budgeting a first span."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "The seven spirits are the sharpest five-way division I have met in a single verse, and one commentator names another to his face. Clarke argues for seven angels from Tobit 12:15, the Targum on Gen 11:7 and Pirkey Eliezer, and calls it 'most evident from the place, the number, and the tradition'. Barnes canvasses four opinions in order and lists the angel party as 'Beza, Drusius, Hammond, Wetstein, Rosenmuller, Clarke, Professor Stuart' — naming Clarke explicitly — then decides for the Holy Spirit because angels are nowhere called the Spirits of God. Ellicott calls the angel reading 'plainly untenable'. Wesley argues it from the book's internal usage: the angels are never termed spirits in Revelation, and when all the angels stand and worship the seven spirits neither stand nor worship. Henry takes it as the perfect Spirit in his diversity of gifts, and Victorinus at k1 had already found the sevenfold Spirit in Isaiah. Carried into entry 4 as a five-sided debate."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "7",
+        "8"
+      ],
+      "note": "Two clean head-on collisions in this chapter worth keeping. (1) v7: Gill rules out the fall-of-Jerusalem reading on a date, since on the received dating of Domitian's last years the vision falls twenty-odd years after the event; Clarke asserts the same reading and treats it as presumptive proof the book PREDATES the overthrow of the Jewish state. Same verse, opposite chronologies, neither aware of the other. (2) v8: Gill calls Alpha and Omega 'no small proof of the proper deity of Christ' and Ellicott 'a strong declaration of His divinity', while Barnes — agreeing the language could belong to no one but the true God — refuses to use the verse as a proof-text at all, because the manuscripts now preferred read theos where the received text reads kurios. Robertson resolves it the other way, noting the speaker changes unannounced and that only here and at 21:5f is God himself introduced speaking."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "1",
+      "verses": [
+        "7",
+        "12"
+      ],
+      "note": "Sixth laundering-trap instance this session, and it stayed clean. At v7 Ellicott reports that Augustine saw in 'the clouds' the emblem of the saints of the Church spreading as a fertilising cloud over the world; Augustine has no labelled block anywhere in this chapter, so the reading is carried in the prose as Ellicott's report and Augustine is not declared. Same discipline applied to the doxography inside Barnes at v4 (Eichhorn, Ewald, Grotius, Heinrichs, Beza, Stuart), inside Robertson at v1 (Hort, Swete, Milligan, Moffatt) and inside Ellicott throughout (Plumptre, Maurice, Wordsworth, Vaughan, Trench, Grotius) — I removed a Hort/Swete debate entry from the tags for this reason and reattributed the position to Robertson, who reports it. Rule unchanged: declare a voice only where it has a labelled block in span."
     }
   ]
 }
