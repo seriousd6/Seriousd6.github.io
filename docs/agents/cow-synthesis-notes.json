@@ -19403,6 +19403,70 @@
         "50"
       ],
       "note": "Largest chapter attempted in this run: 64,720 usable source words across 53 contiguous keys, tiled into six pericope entries - 1-12 | 13-24 | 25-35 | 36-43 | 44-49 | 50-53 - at 629-644 words each, all grade A on first assembly (entry 44 came in at 652 and was trimmed). Raw source per span 8,492 / 15,124 / 11,811 / 13,071 / 8,420 / 7,614; expansion ratios 0.04 to 0.08, the lowest recorded. Two things about tiling a chapter this size. First, the pericope boundaries were set by the narrative, not by word count, and the resulting 2x spread was accepted rather than balanced away - splitting the Emmaus road anywhere other than at v25 would have cut the exposition from the recognition. Second, the fat keys are fat for different reasons and the difference matters: k13 (9,922) and k36 (7,816) are large because Henry parked a whole section exposition there, which is real content; k53 (2,201) is large because of scraper chrome, which is not. Budgeting off raw key size treats those identically. The practical rule from this chapter and the two before it: before picking, subtract the Ellicott chapter-final chrome and any Barnes REMARKS or Clarke end-of-book essay from the last key, and check whether the largest interior key is a section-shaped commentator rather than dense verse comment. Ten Catena Aurea and patristic voices appear in the chapter; six are declarable block labels and four are mid-block only."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "10",
+      "note": "Six entries tiling all 18 keys, all in window: 1-3 619w, 4-6 647w, 7-9 650w, 10-12 633w, 13-15 628w, 16-18 648w. Eleven voices carry heads; nine are used (Barnes 18 blocks, Ellicott 18, Clarke 18, Robertson 18, Gill 18, Calvin 15, Wesley 14, Henry 3, Chrysostom 2). Jamieson (3 blocks) declared as residue at entries 4, 10 and 16; Cyril of Jerusalem (4 blocks) silenced entirely, none of the four being on the verse. One attribution trap avoided: Wesley's k10 block passes on the traditional description of Paul's person and credits it to Chrysostom by name, but Chrysostom has no head in span 10-12, so the description is reported as coming from 'an early father'. Every scripture reference in prose is a .ref link."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "10",
+      "verses": [
+        "14"
+      ],
+      "note": "FIRST TRIPLE DUPLICATE in the Cyril feed, and the fifth book showing duplication. Cyril of Jerusalem has four blocks here and k14, k15 and k16 are ALL THREE byte-identical at 172 words each - a passage arguing about the force of the word 'until' in 2 Cor 3:15 (the vail on their heart), which has nothing whatever to do with 10:14-16. The previous cases were all pairs: ephesians 6 (k1=k3, k17=k18), 1corinthians 3 (k12=k13), romans 6 (k3=k4). His remaining block here, k2, is on Psalm 16 and is equally unrelated to 10:2. So this chapter is the first in which the whole Cyril contribution is unusable, and it is silenced entirely rather than per-entry. Note how this cuts against the romans 6 finding, where four of six Cyril blocks were genuinely on the verse by catchword: the feed is not uniformly bad and not uniformly good, which means a blanket rule in either direction is wrong. What the two chapters together suggest is that the duplication and the relevance are separate problems - duplication is mechanical and detectable by hashing, relevance is not - and that de-duplication should be done first, since it is cheap and would have removed two of this chapter's four blocks outright. The VOICE_LABELS prefix bug still blocks declaring any of this through excluded_voices, now in six chapters."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "CORRECTION TO MY OWN EARLIER NOTES: the Chrysostom 300-word cap is not real. I recorded it five times (ephesians 6, 1thessalonians 2, romans 6 among them) as a per-feed cap, on the strength of blocks landing at exactly 300. In 2corinthians 10 his two blocks are 626 words (k1) and 347 (k7), both single blocks with one head each. So 300 is not a ceiling on the Chrysostom feed; the repeated exact-300 readings elsewhere must come from something else - most likely a per-chapter or per-fetch truncation that happened to apply in those books and not here. That matters for the re-fetch list: chapters where Chrysostom sits at exactly 300 should be treated as truncated and re-fetched, rather than accepted as complete short blocks, and the same caution should be applied to any cap I have inferred from exact-value repetition alone. The 200 cap for Gill, Keil, Cyril and Theodoret and the 300 for Bede are still supported by many measurements, but they deserve the same test: find one chapter where the feed exceeds the supposed cap and the cap is disproved."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "10",
+      "verses": [
+        "17"
+      ],
+      "note": "A checkable one-verse misalignment in the Robertson feed. His block at k17 is five words long - the shortest block I have met anywhere in the corpus - and reads in full: 'Paul quotes Pr 27:2.' But v17 is 'he that glorieth, let him glory in the Lord', which is a quotation of Jeremiah 9:24 (as Paul himself uses it at 1 Cor 1:31). Proverbs 27:2 is 'Let another man praise thee, and not thine own mouth' - which is the natural cross-reference for v18, 'not he that commendeth himself is approved', the very next verse. So the note appears to have landed one key early. This is worth recording because it is FALSIFIABLE in a way most of my source-defect notes are not: if the Robertson feed is re-fetched, either his v17 note reads Jer 9:24 (in which case the reference here is corrupted) or his v18 note is missing its Proverbs citation (in which case the block was displaced). Either way the check is cheap. It also suggests a general test for the whole corpus that costs nothing: any block whose body is a bare scripture citation can have that citation checked against the verse it sits on, and a systematic offset would show up immediately."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "10",
+      "note": "Jamieson residue: the NT series now has eight points and this one interpolates between two existing anchors. Three blocks at keys 5, 11 and 17 - stride 6, offset 5, full stride, no gap - all on ROMANS 3-4 in order: k5 on the propitiatory sacrifice and the phrase 'faith upon' (Rom 3:25), k11 on whether justification by faith dissolves the obligation of the law (Rom 3:31), k17 on wages against favour against right (Rom 4:4). Source advances 3:25 to 3:31 to 4:4, i.e. +6 and +4 verses per 6 target keys, averaging the measured 5-per-6 rate exactly. LAG: 2corinthians 10 is NT chapter 159 (28+16+24+21+28+16+16+10); Romans 3 is 120. Lag = 39. The series now reads romans 6 at 123/24-25, romans 10 at 127/26, 1corinthians 3 at 136/30, 2corinthians 10 at 159/39, galatians 1 at 163/39, ephesians 6 at 174/42, 1thessalonians 2 at 184/44, revelation 9 at 268/62. This point falls between 1corinthians 3 and galatians 1 and lands where the line predicts, in a book not previously measured. Eight NT points and eight OT points now agree with the same two-stream model."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "10",
+      "verses": [
+        "10"
+      ],
+      "note": "Two splits worth surfacing, both turning on evidence rather than doctrine. (1) THE TONE OF THE OPENING, v1. Henry hears mildness - the Apostle 'addresses them in a very mild and humble manner' and is 'desirous that no occasion may be given him to use severity' - and Wesley agrees, taking the entreaty as 'copying after the meekness and gentleness of Christ'. Ellicott hears the exact opposite: 'He speaks in the tone of the suppressed indignation which shows itself in a keen incisive irony,' the opening formula being one 'he reserves as emphasising an exceptionally strong emotion.' At v9 Ellicott sharpens it further - 'There is, of course, an implied warning, almost a menace, in the entreaty.' Same words, opposite readings of the voice behind them, and neither side is arguing from anything but the text. (2) WHO SPOKE THE TAUNT AT v10, where two voices reach the same answer by wholly independent routes. Robertson goes to the manuscripts: the reading behind the old Latin gives 'they say', but the critical editors prefer the singular 'says one' - the leader. Gill, with no Greek apparatus, gets there from the versions: 'instead of say they, in which way both the Syriac and Vulgate Latin' read it as singular, and 'the apostle seems to have in view some one particular person, though he does not choose to name him.' A textual critic and a seventeenth-century Baptist converging on one reading from different evidence is the kind of agreement the prevalence field ought to be able to mark as strong, and currently cannot distinguish from two men repeating a commonplace."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "10",
+      "verses": [
+        "18"
+      ],
+      "note": "Ellicott end-of-chapter chrome tail, SEVENTEENTH measurement: 2corinthians 10 k18 is 1060 raw words of which about 78 comment on v18. And the chapter-level front matter defect appears in a THIRD book with the same two feeds as before: at k1 Barnes opens 'INTRODUCTION to 2nd Corinthians Chapter 10 PAUL, having finished the subject of the duty of alms-giving in the previous chapter, enters in this on a vindication of himself', while Clarke's k1 block is again a verse-by-verse summary of the whole chapter's argument ('The apostle vindicates himself against the aspersions cast on his person by the false apostle... 2Cor 10:1-6. He shows them the impropriety of judging after the outward appearance, 2Cor 10:7...') with the actual note on v1 following after. Three books now - 1corinthians 3, romans 6, 2corinthians 10 - and both feeds every time, which makes it a settled convention of the source edition rather than an occasional accident. The practical consequence is the same each time: k1 and the last key are inflated in both feeds simultaneously, so the two keys where an entry most needs balanced voices are the two where the length signal is least trustworthy."
     }
   ]
 }
