@@ -20306,6 +20306,76 @@
       "book": "colossians",
       "chapter": "4",
       "note": "FIDELITY SELF-GRADE, colossians 4 -- six entries over 18 contiguous source keys, 27,374 usable source words (24,142 after chrome), 11 voices. Every verse checked against its source blocks before writing and again after each trim pass. WORD COUNTS (window 350-650, no thin exemptions): 1-2 629w / 8 voices (Jamieson excluded, residue at k1); 3-5 650w / 9; 6-8 646w / 9 (Jamieson excluded, k7); 9-11 648w / 8; 12-14 647w / 8 (Jamieson excluded, k13); 15-18 648w / 7. Total 3,868 synthesis words from 27,374 source words = 14.1% expansion ratio, the highest of the three chapters landed this session (romans 7 was 10.7%, luke 16 12.3%) -- because this chapter is mostly short salutation verses where the commentators are dense rather than discursive. ATTRIBUTION: no claim in the prose is untraceable to a named block within its span. GRADE: HIGH confidence throughout. This is a standard Pauline voice set with none of the Catena-Aurea nesting that forced a medium grade on luke 16, and the disagreements are unusually clean because they are disagreements of fact -- who Onesimus was, who Luke was, which of two men was the prisoner, what the Laodicean letter was, whether the gender of a householder can be determined -- rather than of doctrine. TWO PLACES WHERE I NAMED A DEFECT IN THE PROSE RATHER THAN WRITING AROUND IT: the Tertullian block at k7 (a note on Philemon, not on this chapter, plus a scrape trailer) and the editorial matter printed with Calvin at k9 (Paley's argument answering Calvin's own doubt, two centuries after his death). Both are attributed accurately as what they are. DEGRADATION SIGNAL, unchanged and now three chapters deep: EVERY ONE of the six entries overshot the 650-word ceiling on first draft. Five of the six overshot by more than 20% (803, 804, 738, 811, 859, 891 words against a 650 ceiling), and FOUR of the six needed a complete prose rewrite before sentence-level trimming could finish the job -- the worst ratio in the session. Across the three chapters landed today, twenty-three of twenty-three entries needed compression. ROTATION REMAINS THE STANDING FLAG, and my context is now long enough that I am declining the optional second chapter of this batch rather than starting one I might not finish well."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "11",
+        "17"
+      ],
+      "note": "Jamieson residue at keys 11 and 17 — class 5 mod 6, a NEW residue class (11%6=5, 17%6=5), two members at step 6. Seventeenth chapter characterised and the seventeenth mod-6 hit; target-key selection is now mod-6 in seventeen of seventeen cases across five residue classes (0, 2, 3, 4, 5). Donor is Philippians 2: k11 gives Php 2:5 (Have this mind in you, the oldest manuscripts' reading) and k17 gives Php 2:10-11 (every knee shall bend, to worship in the name of Jesus). Donor advances 5 then 10, that is plus 5 against a target advancing plus 6 — the uniform slower-slope family again. Only two members here because the chapter has 21 keys and class 5 gives 5, 11, 17 — k5 carries no Jamieson block at all, so the stream is not strictly complete within its class. Declared excluded_voices on entries 11 and 15."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "5",
+        "12",
+        "13",
+        "17",
+        "18"
+      ],
+      "note": "Second confirmation of the _LABEL_RE toponym defect first characterised at revelation 1, and this chapter is the strongest case for fixing it. Augustine of Hippo has three labelled blocks here (k4, k12, k17, each capped at 300 words) and Cyril of Jerusalem three (k5, k12, k18, capped at ~200) — six blocks, roughly 1,500 words, ALL invisible to split_voices because the label carries a toponym, and all silently folded into the preceding voice's segment. Augustine's blocks are the Homilies on the First Epistle of John, the classic patristic commentary on this very book, so the defect is hiding the single most apposite voice in the corpus for 1 John. The extended-label dumper handled it again. Two chapters now confirm the defect; recommending the owner add the long forms to VOICE_LABELS."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "12",
+        "18"
+      ],
+      "note": "The Cyril of Jerusalem stream is keyword-selected, now confirmed across two chapters. The excerpts are Catechetical Lecture text cut to ~200 words, and they land on topic exactly when the lecture happens to quote the target verse. Here: k12 expounds 'No man hath seen God at any time' directly and is fully usable; k18 is a resurrection narrative but closes by quoting 'perfect love casteth out fear' and applying it to the women at the tomb against the soldiers, so it is usable as a patristic application; k5 is on Christ as Maker of the world and is unrelated to 'they are of the world', so Cyril was NOT declared on the entry covering 4-6. Same pattern as revelation 1, where k5 was cut to Ps 88:28 and k13 was pure filler about the firmament. Practical rule: read each Cyril block before declaring him — the stream is on-topic about two times in three."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "8",
+        "16"
+      ],
+      "note": "Best theological collision of this session, and it is three-cornered. On 'God is love': Clarke calls love the essence of the divine nature with all other attributes only modifications of it, and turns the verse into a direct argument against unconditional reprobation — God has made no one for perdition, has never rendered it impossible by any necessitating decree for a fallen soul to find mercy, so how can such a decree stand in the presence of this text? Wesley independently makes the same observation about the abstract nouns (God is styled holy and righteous but never holiness or righteousness, as he is styled Love) and calls it the reigning attribute. Calvin denies the shared premise outright: 'I know that many reason more refinedly, and that the ancients especially have perverted this passage in order to prove the divinity of the Spirit... Here then he does not speak of the essence of God, but only shews what he is found to be by us.' Robertson polices the grammar between them — the predicate is anarthrous, so God is love but love is not God. Four positions on one sentence, with Gill and Calvin both present in the chapter while Clarke aims the verse at their doctrine."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "18",
+        "19"
+      ],
+      "note": "Two more clean disputes. (1) v18: Gill, Wesley and Robertson all deploy the servile/filial fear distinction — Robertson quoting Bengel's four conditions of men, Wesley giving the same ladder in English as the natural man, the awakened, the babe and the father in Christ. Calvin repudiates the distinction as foreign to the text: he grants the doctrine true in itself but says 'it has nothing in common with this passage', where the contrast is between torment and calm, and adds 'I regard what the Apostle means, not what others think'. Wesley's ladder is almost certainly Bengel's, which Robertson cites in Latin — a rare case of two voices in one chapter drawing on the same third source without either naming the other. (2) v19: Barnes warns that if being loved first were the whole ground of loving God the love would be mere selfishness, and locates the real ground in the excellence of the divine character apart from any benefit — which runs directly against Clarke's second ground (obligation and gratitude) and against Gill's whole account of a love caused by prior grace."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "1john",
+      "chapter": "4",
+      "verses": [
+        "3"
+      ],
+      "note": "Seventh laundering-trap instance this session, avoided. Robertson at v3 names 'Irenaeus, Tertullian, Augustine' as witnesses to the Latin reading that has the false teacher dissolving Jesus. Augustine DOES have labelled blocks in this chapter, but at keys 4, 12 and 17 only — not in the 1-3 span — so declaring him on entry 1 would have been grounded chapter-wide by the validator while being false to the entry. Wrote the point as the Latin witnesses without naming him, and declared Augustine only on the three entries where his homilies actually sit. Same discipline applied to Brooke, Westcott, Moffatt, David Smith and Bengel inside Robertson, and to the doxography inside Barnes (Benson, Socrates, Wetstein, Lucke)."
     }
   ]
 }
