@@ -20565,6 +20565,49 @@
         "22"
       ],
       "note": "FIDELITY SELF-GRADE, colossians 3, eight entries, 25 keys, 33734 usable source words, 12 voices. Word counts as landed: 1-2 650w 10 voices; 3-4 646w 7 voices (Jamieson residue excluded); 5-7 649w 9 voices; 8-11 648w 9 voices; 12-14 649w 8 voices; 15-17 649w 9 voices (Jamieson excluded); 18-21 650w 10 voices (Jamieson excluded); 22-25 648w 7 voices. Every claim in every entry is traceable to a named block in data/commentary/cow/colossians/3.json; nothing is supplied from outside the catena. Accuracy costs incurred, both from the NAMED BUT NOT SOURCED HERE lint: at 8-11 the Scythian-at-Athens anecdote had to be attributed to the editorial matter printed with Calvin rather than to Calvin, which is correct but vaguer than the source; at 22-25 Robertson names Lightfoot as taking the wrongdoer to be master and servant at once, and since Lightfoot is not a head in this chapter he had to become one commentator. The same cost was recorded at 2corinthians 6 (Calvin citing Chrysostom) and will recur wherever a source cites a commentator who happens to be a voice elsewhere in the corpus. Compression: all eight entries overshot the 650-word ceiling on first draft, entry 8-11 by 211 words (861 down to 648, one whole-prose rewrite plus nine trim passes); the mean first-draft overshoot for the chapter was about 15 percent, better than 2corinthians 6 at 27 percent. Running total across five chapters this rotation: 39 of 39 entries have needed compression."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "22"
+      ],
+      "note": "Jamieson residue at keys 4 and 22 — class 4 mod 6, two members at step 18 (three lattice positions apart; 10 and 16 carry no Jamieson block, so the class is sparse). Nineteenth chapter characterised and the nineteenth mod-6 hit. Donor is Joshua 7 to 8: k4 gives Josh 7:23-24 (the stolen articles laid out before the Lord on account of the ban — Achan) and k22 gives Josh 8:12ff (the detachment of liers-in-wait, and the division of spoil between combatants and people per Num 31:27). Counting Joshua 7 as 26 verses the donor advances 23 to 38, that is plus 15 against a target advancing plus 18 — the uniform slower-slope family again. Declared excluded_voices on entries 1 and 18."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "4",
+      "verses": [
+        "20"
+      ],
+      "note": "Fourteenth confirmation of the Ellicott StudyLight chrome, and it refines the rule. The boilerplate (~970 words of navigation, copyright and script) is attached to Ellicott's block at k20, NOT at the chapter's last key, which is k22. Ellicott simply has no block at 21 or 22, so the chrome rides on his LAST BLOCK IN THE CHAPTER rather than on the final verse. Practical consequence for budgeting: do not look only at the final key when subtracting chrome — find the voice's last block. Here it inflated k20 from a real 330 words of chronology argument to 1,302."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "ruth",
+      "chapter": "4",
+      "verses": [
+        "7",
+        "14"
+      ],
+      "note": "Two clean disputes in a small chapter. (1) v7, the shoe: Keil argues a DATE from it — the word 'formerly' plus the fact that the custom needs explaining at all show it had lapsed before the book was composed. Ellicott rejects the inference on lexical grounds, the same Hebrew word occurring in Deuteronomy and Judges without implying great antiquity. Alongside that, Gill argues the rite is a custom and not a statute (neither Lev 25 nor Deut 25 prescribes this manner), while noting Josephus is express that the law is meant; Clarke explains the difference from Deut 25 as the omission of the contemptuous half — no spitting — because the man had a reasonable excuse. (2) v14, who the goel is: Keil says flatly it is the newborn child and not Boaz, and rejects the property-redemption reading of Carpzov and Rosenmueller; Ellicott agrees in one line; Wesley takes it the other way, rendering it as thanks that God had not suffered her kinsman (Boaz) to fail her as the other kinsman did."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "4",
+      "verses": [
+        "13",
+        "16"
+      ],
+      "note": "Two things worth keeping from this chapter. (1) Wesley closes his note on v13 with the identical sentence Henry uses in his exposition of the same verse — 'he that forsakes all for Christ shall find more than all with him' — a straightforward dependence of Wesley on Henry, and the second case this session of two declared voices in one chapter drawing silently on a common source (the other was Wesley and Robertson both using Bengel's four conditions of men at 1john 4:18). (2) Clarke at v16 interrupts the commentary with a medical theory: the aged draw vigour from the young and the young take premature decrepitude in exchange, which he identifies as the whole of Bacon's enigmatic secret for the cure of old age and uses to explain the physicians' advice to the aged David. He then carries the theory into v17, arguing that Obed was 'the nourisher of her old age' precisely by lying in her bosom, and calling the neighbours who named him 'skillful people'. It is the most striking outlier in the chapter and is carried in the prose as his."
     }
   ]
 }
