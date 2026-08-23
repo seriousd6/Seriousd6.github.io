@@ -20711,6 +20711,66 @@
         "20"
       ],
       "note": "FIDELITY SELF-GRADE, 2peter 2, eight entries, 22 keys, 47448 usable source words (the largest chapter attempted this rotation and over the 40000 single-chapter line, so it was the whole batch), 9 voices, no patristic voices at all. Word counts as landed: 1-2 650w 8 voices; 3-5 649w 8 voices; 6-8 650w 7 voices (Jamieson residue excluded); 9-10 644w 8 voices; 11-13 649w 7 voices (Jamieson excluded); 14-16 646w 7 voices; 17-19 650w 8 voices (Jamieson excluded); 20-22 649w 7 voices. Every claim in every entry is traceable to a named block in data/commentary/cow/2peter/2.json; nothing is supplied from outside the catena. Accuracy costs: (a) at 20-22 Clarke quotes Augustine inside his own block and Augustine is a voice elsewhere in the corpus, so the NAMED BUT NOT SOURCED HERE lint forced a Latin father -- the same cost recorded at 2corinthians 6 (Calvin citing Chrysostom), colossians 3 (the Scythian anecdote) and colossians 3 22-25 (Robertson citing Lightfoot); this is now four chapters running and should be treated as a known systematic cost of that lint rule rather than an incident. (b) At 1-2 the reformed side is recorded as silent on the redemption crux because Gill's block is truncated at 200 words before reaching it -- accurate as to the source, but the entry cannot represent what Gill would have said. Compression: all eight entries overshot the 650-word ceiling on first draft. Overshoots by span: 1-2 by 56, 3-5 by 80, 6-8 by 135, 9-10 by 31, 11-13 by 53, 14-16 by 58, 17-19 by 68, 20-22 by 64. Mean first-draft overshoot about 10 percent, the lowest of the rotation (colossians 3 was 15 percent, 2corinthians 6 was 27), which I attribute to drafting against a 645 target rather than freely. No entry needed a whole-prose rewrite this time, the first chapter of the rotation where that was true. Running total across six chapters this rotation: 47 of 47 entries have needed compression."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson residue at keys 3, 9, 15 — class 3 mod 6, three members at constant step 6. Twentieth chapter characterised and the twentieth mod-6 hit. Donor is Acts 28: k3 gives Acts 28:21-22 (the Jews at Rome having had no letters, 'this sect everywhere spoken against', Tholuck named, the appeal to Caesar), k9 gives Acts 28:25 (the visitors divided, the parting testimony from the Scriptures both sides owned as the Holy Ghost speaking). TWO NEW FINDINGS. (1) k15 is only five words — 'Commentary by David Brown' — the closing BYLINE of the JFB commentary on Acts. The donor stream has run off the end of the donor book entirely and the residue keeps sampling at step 6 into the trailing chrome. That is direct evidence the donor is a linear read-through of a source document rather than a verse-keyed lookup. (2) Acts 28 was ALSO the donor for 2corinthians 3, landed earlier this session. Same donor book, later position, adjacent target chapters — which suggests one continuous donor stream sliced across consecutive target chapters in canonical order, not an independent draw per chapter. Worth checking 2corinthians 5 when it comes up: if the pattern holds its donor should be at or past the end of Acts. Declared excluded_voices on entries 3, 8 and 13."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "16",
+        "17"
+      ],
+      "note": "NEW DEFECT CLASS: cross-voice duplication inside a key. Verbatim text from one commentator is appended to another's block in the same key, so the receiving block is contaminated. Detected by shingling every pair of blocks per key: k1 Clarke into Calvin (29 shared 12-grams — the whole ekkakoumen/egkakoumen variant note with Wakefield), k16 Clarke into Calvin (5), k17 Barnes into Calvin (33). All three land in the CALVIN block, so in this chapter the Calvin stream is the sink. Consequence for fidelity: split_voices reports these as Calvin's own words and the validator cannot see the problem, so attributing the Wakefield note to Calvin would have been false while passing every gate. I wrote a per-key overlap detector and a cleaner that strips borrowed runs before reading, and attributed the variant note to Clarke only. This is distinct from the residue (foreign chapter) and from the two label-format defects; it is the fourth scrape defect class characterised this session."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "6",
+        "7",
+        "17"
+      ],
+      "note": "Tooling caution and three trap instances. CAUTION: my extended caps/name splitter (built for the luke 12 Catena) produced a FALSE POSITIVE here, emitting an 'Ambrose' block at k6 that is really Calvin's prose reporting Ambrose's and Chrysostom's expositions of 'light out of darkness'. The chapter survey's strong-tag scan showed no Ambrose at k6, which is the check that caught it. Any name-plus-punctuation splitter will do this wherever a commentator names another mid-sentence; always cross-check against the strong-tag survey before declaring. TRAPS AVOIDED: (1) at k6 Ambrose and Chrysostom are Calvin's doxography, not blocks — not declared; (2) at k7 Clarke cites Chrysostom on fired versus unfired clay, and Chrysostom's real blocks are at k1 and k8 only, so not declared on the 5-7 entry; (3) at k17 Clarke cites Blackwall via Doddridge and Barnes cites Bloomfield — both carried as the reporters'. DELIBERATE EXCEPTION: entry 3 names Hilary, Chrysostom, Augustine and Ambrose inside Calvin's historical account of why the Fathers read 'God' for 'Satan'. They are named as figures in that account and explicitly framed as Calvin's report; none is declared. My ghost-checker flags this and the flag is expected."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "10",
+        "12"
+      ],
+      "note": "Three first-rate disputes. (1) v4, who is the god of this world: Calvin says no one judging rightly can doubt it is Satan and then explains WHY the Fathers thought otherwise — Hilary pressed by Arians, Chrysostom and Augustine by Manicheans, 'we see what the heat of controversy does'. Cyril's block at k4 preserves a specimen of exactly that controversy, the Manes/Archelaus exchange on this verse. And Clarke, centuries later, revives the reading Calvin condemned: 'I feel considerable reluctance to assign the epithet the God to Satan... the contrary might be well vindicated.' Barnes names Clarke by name as inclining to it before setting it aside. A patristic dispute, its diagnosis, and its modern revival, all inside one entry. (2) v10, the dying of Jesus: Ellicott reads it medically — 'deadness', the state of a corpse, a life of conflict with disease — and at v11 says outright that the persecution reading is wrong. Barnes, Clarke, Robertson and Wesley all take it of persecution. Ellicott alone against four. (3) v12: Calvin reads 'death worketh in us but life in you' as IRONY against readers who had contrived a Christianity without a cross; Ellicott says the pathos of 1 Cor 4:8-13 is here but 'without the irony which is there perceptible'. Flat contradiction, and Calvin doubles down at v13 by calling it 'a correction of the foregoing irony'."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "4",
+      "verses": [
+        "8",
+        "13"
+      ],
+      "note": "Two more. (1) v8, where the four antitheses get their imagery: Clarke refers them wholesale to the Isthmian games and divides them three to wrestling and one to the footrace, glossing each by technical usage from Aristotle and Hesychius; Ellicott makes them military throughout, the soldier hemmed in, pursued, struck down by a javelin, and compares 'faint yet pursuing'; Barnes hedges between wrestlers and gladiators; Robertson takes the first verb from the pressing of grapes. Alongside that, Wesley assigns the first four terms to inward affliction and the next four to outward, while Calvin insists the trouble is external and argues it from the word, 'as the beating and allision of the waves against a rock make no trouble in the rock'. (2) v13, the spirit of faith: Gill makes it the Holy Spirit outright, since the faith is God's gift and operation; Barnes denies the identification and makes the phrase mean faith itself; Ellicott takes a middle position, the human spirit in fellowship with the Divine. And on whose faith is 'the same', Wesley refers it to the saints of old and David in particular — the very reading Calvin knows, grants to be true in itself, and rejects as not answering to the argument, since the fellowship in view is with the Corinthians."
     }
   ]
 }
