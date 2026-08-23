@@ -19904,6 +19904,46 @@
       "book": "romans",
       "chapter": "12",
       "note": "FIDELITY SELF-GRADE, romans 12, nine entries over 21 keys and 61,055 usable source words -- the largest chapter attempted in this run, half again the size of genesis 2. Word counts: 1 650, 2 648, 3-5 650, 6-8 650, 9-11 647, 12-13 623, 14-16 648, 17-18 649, 19-21 649. All nine in window; every one required trimming, most of them three or more passes. Verses 1 and 2 stand alone because Henry's 11,654-word block sits on key 1 and would otherwise have swamped a grouped entry (see the source-defect note); the rest follow the chapter's own joints. Voice coverage: eleven voices -- Barnes 21 blocks/15,362w, Henry 4/12,550, Calvin 19/11,854, Clarke 21/7,468, Ellicott 21/4,580, Gill 21/2,815, Robertson 20/2,001, Theodoret 19/1,926, Wesley 17/1,094, Chrysostom 3/900, Jamieson 4/138. DECLARED: Jamieson as residue in entries 1, 6-8, 12-13 and 19-21. RATIO: about 5,800 words of prose from 61,055 of source, or 9.5 percent -- the lowest of the run, and unavoidable at this density. That is the honest cost of a chapter this size at nine entries: a great deal of good material was left out, and the entries are selections rather than digests. TWO GHOSTS CAUGHT AND FIXED, both the same failure as at exodus 24: Clarke at entry 1 and Wesley at entry 3-5 were present in the span, discussed in the tags, and missing from the prose. That is now the third and fourth instance of this specific error in the run, always with a voice whose contribution is a single structural or cross-referencing remark. It is worth naming as a standing hazard: when a voice's only content is a chapter argument or a back-reference, it is easy to summarise him in the school description and forget to name him in the prose. Theodoret at entry 14-16 was a third near-miss, caught by the same linter. NAMES USED: Seneca, Thomas Aquinas, William Penn, Griesbach and Keble are named where the citing voice is itself sourced in the entry; Moore, Stuart, Flatt, Theophylact, Jerome, Doddridge, Macknight, Beza, Mede, Erasmus and Alford are cited by the sources but not named in the prose."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "19",
+        "20",
+        "26",
+        "30",
+        "31",
+        "32"
+      ],
+      "note": "SECOND chapter after nehemiah 7 that the Jamieson residue makes unwritable, and the mechanism is identical. Exodus 36 has 19 sparse source keys - 1-9, 14, 19-20, 26, 30-32, 35, 37-38 - with gaps at 10-13, 15-18, 21-25, 27-29, 33-34 and 36. Because a span may not cover a verse absent from the source, the seven contiguous runs ARE the tiling; no merging across a gap is legal, so the entry count is forced at seven. Only one of the seven is writable. Run 1-9 has 4,725 usable words and is fine. Run 26 is 151 words of which ALL are Jamieson, so excluding the residue leaves it DEAD - zero usable words - and it cannot be merged with a neighbour because verses 21-25 and 27-29 are not keys. Runs 19-20 (29 usable words, Ellicott 16 plus Clarke 13) and 30-32 (75 usable after excluding 51 residue words) are far below what any honest distillation can carry; run 35 at 245 usable sits above the thin exemption's 200-word ceiling and so would need 350 output words from 245 of source, which is padding. THE RESIDUE IS REAL: keys 2, 26, 32 and 38, all congruent to 2 mod 6, carry commentary on EXODUS 22-23 - k2 on the pawned garment of Ex 22:26-27 ('the bed of the poor is usually nothing else than a mat'), k26 on the three annual feasts of Ex 23:14-17, k32 on the prohibition against seething a kid in its mother's milk at Ex 23:19, k38 on the concluding promises and warnings of Ex 23:20-33. That is a within-book donor thirteen chapters earlier, the second such case after Luke 24 borrowed from Luke 13-14. Not attempted. Recording so the next offer of this chapter can be skipped on sight."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "4",
+        "6",
+        "12",
+        "15"
+      ],
+      "note": "17,251 usable source words over 18 contiguous keys, tiled 1-3 | 4-5 | 6-11 | 12-14 | 15-18 at 634-643 words each, all grade A. Raw per span 5,809 / 1,874 / 3,666 / 3,041 / 2,924; expansion 0.11 to 0.34. The tiling follows the chapter's own three-case structure, which Ellicott states explicitly at v1 (the false prophet vv1-5, the private individual vv6-11, the city vv12-18) - but I split the first case at 3/4 and the third at 14/15 because each divides cleanly into the offence and the sentence, giving five entries rather than three and keeping the spans between 1,874 and 5,809 raw words. VOICE PROFILE: no Barnes, no Robertson, no Chrysostom anywhere in the chapter; Calvin supplies 7,960 of the 17,251 words, nearly half, and is the only voice at k7. Entry 4 has only four declarable voices (Calvin, Gill, Keil, Wesley) because keys 4-5 carry nothing from Barnes, Clarke, Ellicott or Henry - the thinnest voice roster of any entry I have written, though each of the four had real content. ELLICOTT CHROME at k17 is the ELEVENTH confirmation: 1,053 words of which about 50 are genuine comment on v17 and the rest is the StudyLight template. Also worth noting that Keil's blocks are again all capped at exactly 200 words and consist largely of reprinted verse text, the pattern recorded at Exodus 31 - five of the six Keil blocks here follow it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "13",
+      "verses": [
+        "5",
+        "15"
+      ],
+      "note": "This chapter puts the commentators under unusual pressure because the law it expounds commands executions, and two places show how differently they handle that. (1) v5, WHO MAY BE PUT TO DEATH. Calvin sets two explicit limits before defending the penalty: not for 'some particular or trifling error' but only for 'authors of apostasy, who pluck up religion by the roots'; and not at all 'until a positive religion should be established' by public consent and 'sure and indisputable proofs'. He then draws a two-edged conclusion - 'whilst their severity is preposterous who defend superstitions with the sword, so also in a well constituted polity, profane men are by no means to be tolerated' - and mounts an argument from lesser offences to greater (adulterers, poisoners, thieves are punished; shall the corrupters of doctrine go free?). His EDITOR appends a long footnote treating this passage as 'his final apology for the part he took' in the death of Servetus, and quotes M. de Felice's four points in his defence. That footnote is part of the source and I reported its existence rather than passing over it. (2) v15, WHETHER THE INNOCENT DIE TOO. Wesley restricts 'the inhabitants' to 'all that are guilty, not the innocent part, such as disowned this apostacy, who doubtless by choice, at least upon warning, would come out of so wicked a place'. Calvin takes the objection in its hardest form and refuses the escape: 'If any should object that the little children at least were innocent, I reply that, since all are condemned by the judgment of God from the least to the greatest, we contend against Him in vain.' Reported both plainly without adjudicating. (3) A smaller but pleasing case at v11: Keil and Delitzsch quote Calvin BY NAME in order to borrow his phrase 'the utility and fruit of severity' and then guard it, denying that fear of punishment is the principle of the law or the modern deterrent theory. Direct cross-citation between two voices in the same span."
     }
   ]
 }
