@@ -18215,6 +18215,24 @@
         "19"
       ],
       "note": "MATTHEW HENRY CONCISE/EXPOSITION: THIRD FORM OF THE DEFECT. Henry has four blocks in this chapter. k1 (2280w), k10 (3517w) and k19 (1172w) are Exposition — numbered divisions, roman-numeral scripture references ('Acts xiv. 12', 'Exod. xxxii. 6'). But k5 (274w) is the CONCISE: short, undivided, summary in manner ('The servants of old were generally slaves. The apostles were to teach servants and masters their duties, in doing which evils would be lessened, till slavery should be rooted out by the influence of Christianity'), with no roman numerals. So within a single chapter the feed serves Exposition at three keys and Concise at a fourth. This is a third signature, distinct from the two already recorded: at revelation 19 the Concise was SPLICED ONTO THE TAIL of the Exposition, detectable by the shift from roman to arabic references; at genesis 28 k20 the Concise was served INSTEAD OF the Exposition for that key; here both works appear at different keys of the same chapter with no marker of the switch. All three signatures should go into the corpus scan together, since a scan built for any one of them will miss the others."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "5",
+      "verses": [
+        "15",
+        "16"
+      ],
+      "note": "Two small defects, both already-known classes. (1) JFB residue at key 16 only, 101 words, donor Exodus 29 -- the seven days of altar consecration, 'when thou hast made an atonement for it' rendered 'upon it', with the daily removal of ashes and the prescribed unction. A lone member, so no mod-6 class can be tested; this is the second single-member sighting after genesis 12, and both are short. Excluded. (2) Keil and Delitzsch is lemma-only at key 15: all 200 words are the quoted text of verses 15 to 19 with no exposition, so he is silent by entry at entry 14, removed from voices but not declared excluded since the block is genuine rather than foreign. He is usable at keys 2, 3, 5, 6, 8 and 12. Fourth chapter confirming that K&D's habit of prefixing the full verse text guarantees an empty block whenever the lemma runs long -- and here the lemma runs five verses."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "5",
+      "note": "Fidelity self-grade A for all five entries (1-4, 5-6, 7-13, 14-16, 17-19). Expansion ratios 0.13 to 0.36, the highest in several chapters because the source is small at 13,570 words; still well under the corpus median of 0.84. One error caught and corrected before landing, worth recording because it is the failure mode the tiling is meant to prevent: the first draft of entry 5 (verses 5-6) credited Keil and Delitzsch with the detail that a man who could not afford two pigeons was to bring a tenth of an ephah of fine flour without oil or frankincense. That material is in his key-8 block, which belongs to entry 7, not entry 5. Cross-span borrowing of exactly this kind would have been invisible to every validator, since the voice is genuine and declared and the sentence is accurate -- it is only in the wrong entry. The sentence was removed from entry 5 and the point is made in entry 7, where the source sits. Practical rule: when a voice appears in adjacent spans, check which key a remembered detail came from before attributing it, since the reading is done span by span but the memory of it is not."
     }
   ]
 }
