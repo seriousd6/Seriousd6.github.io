@@ -18622,6 +18622,70 @@
         "20"
       ],
       "note": "ELLICOTT CHROME TAIL, EIGHTH INSTANCE — and the Henry Concise/Exposition mixture, fourth instance. (a) The Ellicott block at k20 is 1063 words of which only about the first 90 are comment ('To his companion, whom he had used as his friend...'); the rest is the navigation tail and boilerplate. Series: exodus 1 k22 984w, revelation 19 k43 985w, luke 4 k44 990w, deuteronomy 8 k20 1037w, judges 14 k20 1063w, 1samuel 3 k20 1070w, 1thessalonians 2 k19 1111w, ephesians 6 k24 1175w. The marker 'Copyright Statement These files are public domain' holds in all eight. (b) Henry has three blocks here: k1 (2323w) and k10 (2075w) are Exposition, with numbered divisions and the usual reference style, but k5 is 116 words of pure CONCISE ('By enabling him to kill a lion, God let Samson know what he could do in the strength of the Spirit'). That is the same form recorded at ephesians 6 — the two works served at different keys of one chapter with no marker of the switch — and is now the fourth instance overall, after the revelation 19 splice and the genesis 28 substitution. All three signatures should go into one scan; a detector built for any one will miss the others."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "19"
+      ],
+      "note": "CORPUS-WIDE, MEASURED. The Ellicott chapter-final scraper boilerplate is not a handful of bad blocks -- it is universal. Scanning all 1,189 chapters under data/commentary/cow: 870 have a chapter-final Charles Ellicott block, and ALL 870 of them carry the StudyLight page chrome (site footer, a full CSS stylesheet with media queries, and the commentary/concordance/dictionary navigation menus) appended inside the commentary value. Total junk: 807,979 words, median 926 per block, min 926, max 1,227 -- the tight range confirms it is one fixed template, not variable page content. Detection is trivial and exact: the tail begins at the first occurrence of '.sub-menu{' or 'StudyLight.org'. Cause is almost certainly that the extractor has no closing boundary for the last verse block on an Ellicott page and runs to end-of-document. Consequences: every Ellicott chapter-final block is inflated by ~900-1,200 words, which corrupts any per-voice word count, any longest-block heuristic, and the 'usable source words' figure the batch budget is computed from. Recorded first at philippians 3 key 21, again at mark 9 key 50, and now measured here. Cheap fix: truncate at that marker on load, or at ingest."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "Jamieson residue at keys 2, 8, 14 -- the residue-2 mod-6 class again, exactly as at philippians 3 and 1corinthians 6, and truncated here only because the chapter stops at 19 keys (a key 20 would complete the set). Donor is 2 CORINTHIANS 5, read VERSE-ALIGNED: key 2 carries JFB on 5:2-4 (not to be unclothed but clothed upon; what is mortal swallowed up of life), key 8 on 5:8-9 (confidence whether we die before or are found alive; 'make it our ambition'; well-pleasing), key 14 on 5:14 (the love of Christ constraineth us). This is the SECOND verse-aligned donor, after 1corinthians 6 / Acts 19, against the unaligned mark 9 / Mark 4 case. Running tally of the class: residue-2 at philippians 3 (donor 1 Cor 1-2, walked forward across a chapter boundary), 1corinthians 6 (Acts 19, verse-aligned), hebrews 3 (2 Cor 5, verse-aligned); residue-0 at mark 9 (Mark 4, unaligned). All 350 Jamieson words in this chapter are residue."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "13"
+      ],
+      "note": "The Cyril of Jerusalem splice recurs, smaller than at mark 9: two occurrences, key 5 hosted by Wesley (203 words) and key 13 hosted by Calvin (175 words). Wesley's real contribution at key 5 is therefore about 53 words, not 256; Calvin's at key 13 about 642, not 817. No other unrecognised catena labels appear in this chapter (no Theophylact, Pseudo-Jerome, Gloss). Confirms the splice is not confined to the catena-heavy Gospel chapters -- it reaches an epistle with no catena material at all, which suggests the Cyril text is being injected by a different mechanism from the Catena Aurea label problem, even though both surface the same way."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "16"
+      ],
+      "note": "Calvin's exposition of v16 rests on the reading every other commentator here rejects. Ellicott, Clarke, Barnes and Robertson all take tines as interrogative (who provoked? was it not all?), Ellicott noting the oldest MSS carry no accents so the judgment is free, crediting Bengel with recovering it in modern times while an ancient Syriac version and three Greek fathers had it already. Calvin takes the indefinite (some), and builds a positive pastoral point on it: the milder word deliberately softens David's severity, avoids offence, and sets believing fathers before the readers as examples to imitate rather than commanding them to dissent from their fathers wholly. Recorded because the two readings are not a shade of meaning but two different arguments, and because the accent is editorial rather than manuscript evidence -- so this is a case where the corpus preserves a genuine pre-critical reading alongside the modern one."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Duplication watch: Ellicott quotes Bengel for the antithesis 'as Apostle Jesus pleads the cause of God with us; as High Priest He pleads our cause with God', and Wesley's note on the same verse is the same sentence almost verbatim ('The messenger of God, who pleads the cause of God with us. And High Priest - Who pleads our cause with God'). Wesley's Notes are known to follow Bengel closely, so this is one source reaching the page twice, not two agreeing voices -- the genesis 12 Henry/Wesley trap in a different pairing. Prose credits the antithesis to Bengel via Ellicott and gives Wesley only his distinctive compression of both titles into the single word Mediator."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "3",
+      "verses": [
+        "7",
+        "15"
+      ],
+      "note": "Three separate structural questions in this one chapter turn on where a clause attaches, and the commentators disagree on all three: whether 'Wherefore' in v7 governs 'harden not' in v8 or 'take heed' in v12 (Robertson and Calvin's editors for the first, Ellicott and Calvin himself for the second); whether v15 attaches to v14, to v13, or opens a new paragraph (Ellicott, Robertson, and Calvin's editor canvassing all three, with Stuart and Bloomfield starting a paragraph); and whether the forty years in v9 belongs with what precedes or follows. Worth noting as a chapter-level feature: Hebrews 3 is unusually punctuation-dependent, and the commentators are explicit that the manuscripts give no help, since accents and stops are editorial. Any tiling of this chapter is therefore taking a side by implication; the one used here (1-2 | 3-6 | 7-11 | 12-13 | 14-15 | 16-19) keeps the quotation whole and does not prejudge v15."
     }
   ]
 }
