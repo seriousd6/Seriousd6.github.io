@@ -1,696 +1,382 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it was a year after, in wheat harvest; her father would not suffer him to go in."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Samson visited his wife with a kid... But her father would not suffer him to go in",
-   "readiness for peace met with rejection by the unfaithful",
-   "I am for peace: but when I speak, they are for war (Ps. 120:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he affirmed confidently he thought Samson utterly hated her; offered the younger sister instead."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I verily thought that thou hadst utterly hated her... is not her younger sister fairer than she? take her",
-   "the world making light of faithfulness, offering a substitute for its wrong",
-   "they speak vanity every one with his neighbour: with flattering lips... they speak (Ps. 12:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "1-4",
+  "pericope_label": "Samson returns with a kid, is refused his wife, and fires the standing corn",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he said this respecting them, either within himself or openly."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: his words, now shall I be blameless."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Now shall I be more blameless than the Philistines, though I do them a displeasure",
-   "the appointed judge against the oppressors, yet vengeance belonging to God",
-   "avenge not yourselves... Vengeance is mine; I will repay, saith the Lord (Rom. 12:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Identify the kid as a customary present and find the same gift elsewhere in the histories and the parables; divide the question of the father, allowing that his supposition was reasonable after a bridegroom left in anger, but holding that an honourable man must have restored the dowry, the offer of the younger sister being an attempt to find an equivalent for what he had wrongly kept; note the vehemence of the Hebrew idiom; correct the rendering of the animals to jackals, which resemble foxes, are classed with them by the Arabs, herd together at Joppa and Gaza and in Galilee, and may easily be caught, three hundred foxes being another matter; and explain the mechanics, the firebrands being resinous wood loosely trailed between the tails and the pairing meant to impede the beasts so they should not dart away and put the torch out."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Read the kid as a token of reconciliation, the value inconsiderable but the use customary, and think it generously done by the party who was offended and need not have made the first motion, since in quarrels between near relations the wisest and best are those most forward to forgive; allow the father nothing, since he measured a Nazarite by the common temper of the Philistines and made the worst of jealousies patronize the worst of robberies, it never bearing us out in doing ill to say we thought others designed ill; explain the refusal of the younger sister as a point of law; and read the revenge as public rather than private, the affront being taken as done to the whole nation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Hold that Samson had given real cause to be thought hateful and that the father was perfectly sincere in offering the younger daughter; defend the number of the animals in numbered points, adding the argument from spectacle, since in countries where such beasts were scarcer hundreds of lions and thousands of stags have been exhibited at once; and report fairly the objection that the number is improbable and the use stranger still, animals tied tail to tail pulling contrary ways and so standing still."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this should not be thought incredible, since Canaan abounded with foxes; he turned tail to tail with a firebrand between."
+    "prevalence": "single",
+    "summary": "Argue for foxes and marshal the evidence — that the country abounded with them, that places took their names from the word, that a traveller reports them swarming in the hedges and ruins, and that being pernicious to vines they would be numerous where the vineyards were — adding that they need not all have been caught by one man or in one day, and that a creature very like a fox went there two hundred in company; and mark the vehemence of the father&#x27;s idiom, affirming confidently and constantly a hatred that left no hope of reconciliation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the father&#x27;s supposition was reasonable, and whether his conduct was honest.",
+   "Why the offer of the younger sister was refused.",
+   "Whether the creatures caught were foxes or jackals, and whether three hundred could be taken at all.",
+   "Whether the burning of the corn was private revenge or a public act."
+  ],
+  "outliers": [
+   "Henry alone explains the refusal of the younger sister from the law forbidding a wife to her sister.",
+   "Clarke alone defends the father as perfectly sincere, and alone reports the objection that beasts tied tail to tail would stand still.",
+   "Gill alone holds out for foxes against the reading that makes them jackals.",
+   "Ellicott alone explains the pairing of the animals as a device to slow them down and keep the torch alight."
+  ],
   "themes": [
-   "Samson... caught three hundred foxes, and took firebrands, and... put a firebrand in the midst between two tails",
-   "the resourcefulness God gives his instruments to smite the enemy",
-   "whatsoever the LORD pleased, that did he in heaven, and in earth (Ps. 135:6)"
+   "Revenge",
+   "Marriage",
+   "Deceit",
+   "Nation",
+   "Providence",
+   "Anger"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the foxes, frightened by the fire near them, ran into the standing corn; the shocks, standing corn, vineyards, and olives were burnt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he let them go into the standing corn of the Philistines, and burnt up both the shocks, and also the standing corn, with the vineyards and olives",
-   "God stripping the oppressor of his wealth in a moment",
-   "the increase of his house shall depart... in the day of his wrath (Job 20:28)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they inquired who was the author of the mischief."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: they burnt her and her father, the very thing first threatened."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Philistines came up, and burnt her and her father with fire",
-   "the very fire she feared and betrayed him to escape now consuming her",
-   "the fear of the wicked, it shall come upon him (Prov. 10:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "5-8",
+  "pericope_label": "The corn burnt, the woman burnt, and the slaughter at the rock Etam",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they had burnt his wife and her father, thinking to appease him."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: his word, yet will I be avenged."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Though ye have done this, yet will I be avenged of you, and after that I will cease",
-   "the bitter, endless cycle of vengeance one wrong breeds in another",
-   "recompense to no man evil for evil... avenge not yourselves (Rom. 12:17-19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Reconstruct the arson as a night scene watched from a rocky fastness, note that burning an Arab&#x27;s crops is still the deadliest injury and was used elsewhere in the histories to force an interview, and produce the Roman custom of torches tied to foxes at the Cerealia while refusing to draw from it the connection others have drawn; mark the extent of the burning from shocks to standing corn to olive gardens; deny that the Philistines burnt the woman to appease the injured man, since men looking at blackened fields would not perform an act of justice for the enemy who blackened them, and reject the notion that they had the Jewish penalty for adultery in mind, burning a man with his house being the ordinary revenge of those days; call the deed a barbarity that fully justified the war it provoked; refuse both the reading cavalry and infantry and the reference to wrestling, canvassing instead a Greek custom of laying severed extremities under the armpits, or else letting the phrase stand as a proverb for unsparing slaughter; observe that it is nowhere said the man was alone in these raids; and correct the top of the rock to a ravine or cave of the cliff, since men do not go down to a summit and the word is rendered cleft elsewhere."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Think the burning of the woman and her father was probably done to appease the injured man, whom they saw to have been unjustly treated by both; prefer the grappling for the smiting, since with no weapon he must close and, after the manner of wrestlers, trip up their feet and bruise them to death; and place the rock in Simeon on the borders of Dan, thinking it a fortified place."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he smote them on hip and thigh with his hands, having no weapon of war, with a great slaughter; dwelt in the top of the rock Etam."
+    "prevalence": "single",
+    "summary": "Supply the mechanism of the burning, that the beasts are naturally afraid of fire and would run for the first shelter with it at their tails; read the burning of the woman and her father as an attempt to appease a man they feared; and offer three constructions of the smiting — the hands upon hips and thighs for want of a weapon, the legs kicking them about, or a mere proverb for laying on at a great rate — while doubting the version that makes it horse and foot, since there is no sign of a regular army in the field."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the Philistines burnt the woman and her father to appease Samson or to spite him.",
+   "What the phrase hip and thigh describes.",
+   "Whether Samson acted alone in these raids.",
+   "Where the rock Etam stood, and whether it was a summit or a cleft."
+  ],
+  "outliers": [
+   "Ellicott alone cites the Roman custom of torches tied to foxes, and alone refuses the inference usually drawn from it.",
+   "Ellicott alone proposes a custom of mutilating corpses as the origin of the phrase hip and thigh.",
+   "Ellicott alone corrects the top of the rock to a cleft, arguing it from the narrative&#x27;s own going down and bringing up.",
+   "Keil alone passes the verdict that the burning fully justified the war that followed it.",
+   "Clarke and Gill alone read the burning as an attempt at appeasement rather than revenge."
+  ],
   "themes": [
-   "he smote them hip and thigh with a great slaughter: and he went down and dwelt in the top of the rock Etam",
-   "God making his servant mighty against the foe; the rock a refuge",
-   "in the time of trouble... he shall set me up upon a rock (Ps. 27:5)"
+   "Revenge",
+   "Fire",
+   "Cruelty",
+   "Refuge",
+   "Judgment",
+   "Deliverance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "9-12",
+  "pericope_label": "The Philistines encamp in Lehi, and three thousand men of Judah bind Samson",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they went up from Palestine, which lay low on the seashore."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: them pitching in Judah and spreading in Lehi."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then the Philistines went up, and pitched in Judah, and spread themselves in Lehi",
-   "Judah sunk in subjection bearing the enemy's invasion for one man's sake",
-   "the wicked watcheth the righteous, and seeketh to slay him (Ps. 37:32)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Judah sent a deputation to know the reason of this formidable appearance."
+    "summary": "Doubt the etymology the narrative supplies, since the name is used before the incident said to have given it, as another place-name is elsewhere, and since jaw would not be an unnatural name for a range of sharp rocks, tooth being used so already — while reporting honestly that Josephus says the place had no name before; take the site as untraceable, dismiss the early church tradition about it as worthless, and pass on a modern identification with a fortified hill on the road to Beersheba; measure the abject condition of the Lion Tribe by its reproach against the national hero and its baseness in betraying him, since he finds no sympathy and there are no patriots in search of heroes; note that he was not of that tribe, which seems to have been living in contented servitude; report as a reproach that instead of crowding round a deliverer they cast his rescue at him as a fault; correct the going up to a going down into the cave; and suppose him parleying from a point of vantage he could have held for a time."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the answer, to bind Samson and do to him as he had done."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "To bind Samson are we come up, to do to him as he hath done to us",
-   "the enmity of the world against the deliverer God raises up",
-   "then... took Jesus, and bound him (John 18:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Be fiercest of all on the betrayal, calling them degenerate branches of a valiant tribe, unworthy to carry the lion of Judah in their standard; offer two motives and prefer the second — a foolish fondness for forfeited precedency, which would rather be oppressed by strangers than rescued by a man of another tribe, the church&#x27;s deliverance having often been obstructed by such jealousies, or else plain awe of the oppressor — and conclude that sin dispirits men, infatuates them, and hides from their eyes the things that belong to their peace; and lift the scene off its own ground, seeing in the army sent against one man who was himself an army the band that came to seize a greater deliverer, whom a tenth would have served since his hour was come, and ten times as many could not have taken had he not yielded."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they went down to the cave of the rock of Etam; said, knowest thou not the Philistines rule over us?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Knowest thou not that the Philistines are rulers over us? what is this that thou hast done unto us?",
-   "a people broken by bondage resenting the one who would free them",
-   "they answered him, We... were never in bondage to any man (John 8:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they were come down into the cave where he was."
+    "prevalence": "single",
+    "summary": "Register the versions against the text on the direction of the journey, the Hebrew having them go up to the top of the rock while the Greek and Latin have them go down into the cave, which one authority takes for a cave dug in the rock, and note the same tension the other way about two verses later; and observe that three thousand was a large party to take one man, the reason being that they knew his strength."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the demand that they swear not to fall on him."
+    "prevalence": "single",
+    "summary": "Infer from the number that he was strongly posted and they thought no fewer would reduce him; give the Philistine calculation, that they had no wish for an open rupture with Israel provided the author of their disasters were handed over; and explain the oath, that he could not bear the thought of contending with and slaying his own countrymen, there being no doubt he could have freed himself from their hands as easily as from the enemy&#x27;s."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the place was named from the jawbone or already bore the name.",
+   "Whether the men of Judah went up to a summit or down into a cave.",
+   "Why Judah betrayed him — tribal jealousy, or fear of the oppressor.",
+   "Why Samson required an oath before submitting to be bound."
+  ],
+  "outliers": [
+   "Ellicott alone argues that the etymology may run backwards, the play on words being fitted to the incident afterwards.",
+   "Henry alone reads the arrest as a figure of a later and greater one.",
+   "Clarke alone says he could have freed himself from his countrymen as easily as from the Philistines.",
+   "Keil alone reports the early tradition about the site as worthless and offers a modern identification instead."
+  ],
   "themes": [
-   "We are come down to bind thee, that we may deliver thee into the hand of the Philistines",
-   "the betrayal of the deliverer by his own to appease the oppressor",
-   "the chief priests... bound Jesus... and delivered him to Pilate (Mark 15:1)"
+   "Betrayal",
+   "Deliverance",
+   "Servitude",
+   "Courage",
+   "Naming",
+   "Providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they would not slay him themselves; nor would the Jews put Christ to death themselves, though his betrayers and murderers; bound him with two new cords."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we will bind thee fast, and deliver thee into their hand: but surely we will not kill thee. And they bound him with two new cords",
-   "a shadow of the binding and delivering-up of Christ by his own people",
-   "it is not lawful for us to put any man to death (John 18:31)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "13-16",
+  "pericope_label": "Bound with new cords, loosed at Lehi, and the song over the jawbone",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Lehi, so called from what happened there, six miles from Etam."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the cords became as flax burnt with fire, and his bands loosed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit of the LORD came mightily upon him, and the cords... became as flax that was burnt with fire, and his bands loosed",
-   "no chains holding the man God empowers; the deliverer cannot be held",
-   "it was not possible that he should be holden of it (Acts 2:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the jawbone of an ass lately killed, which perhaps had flesh upon it; he slew a thousand men therewith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he found a new jawbone of an ass... and slew a thousand men therewith",
-   "God working mighty deliverance by the meanest of weapons",
-   "God hath chosen the weak things of the world to confound the things which are mighty (1 Cor. 1:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he said this in a kind of triumphant song."
+    "summary": "Take the naming of the place as proleptic, the name being first given when the bone was thrown away, and read the loosing as poetry, the cords becoming like threads burnt with fire and the fetters melting from the hands, the description rising into parallelism; press the same words further, since the shout was a cheer and not a war cry, the verb an onomatopoeia, and the bands melted or flowed off rather than merely loosed, whence the colour and rhythm of the narrative seem influenced by a lost poem; ask whether the cave lay down the face of a cliff, citing brigands&#x27; caves reached only by lowering men in chests; gloss the jawbone as moist and not yet brittle, and alone raise the difficulty that a Nazarite was forbidden to touch a carcase; lighten the number, since the verb is smote rather than slew and such expressions are general; infer from the doubled heaps that the thousand fell in several encounters and not one; and rebuild the closing couplet as a pun on the words for heap and ass and for a thousand and an ox, defending the wordplay as arising from deep emotion rather than levity."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the song, heaps upon heaps."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Note that the place was afterwards so called from what happened there, and pass on one estimate of its distance from the rock; take the jawbone as lately killed and still moist with the matter of the wound, as the physicians use the word, and therefore tough enough to strike with where an old bone would be dry and brittle, adding that the asses of those countries were perhaps larger than ours."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Argue from the economy of the narrative that the word means the putrid state of the animal, so that a dead ass in putrefaction would let the jaw be separated the more easily from its integuments — a circumstance worth recording, whereas a bone freshly parted from a head would not be; and reject the received rendering of the closing song, offering instead that it runs with the jawbone of this ass, an ass of two asses, and with the jawbone of this ass I have slain a thousand men."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the place was named from this deed or already bore the name.",
+   "What is meant by calling the jawbone new — fresh, moist, or putrid.",
+   "How the closing couplet should be rendered.",
+   "Whether the thousand fell in a single encounter or in several."
+  ],
+  "outliers": [
+   "Keil alone infers from the doubled heaps that there was more than one encounter.",
+   "Clarke alone argues that a merely fresh jawbone would not be worth an historian&#x27;s notice, and so reads the word as putrid.",
+   "Ellicott alone raises the Nazarite prohibition against touching a carcase.",
+   "Ellicott alone reconstructs the closing song as a pun and defends the wordplay as a mark of feeling rather than of levity."
+  ],
   "themes": [
-   "With the jawbone of an ass, heaps upon heaps, with the jaw of an ass have I slain a thousand men",
-   "the joy of victory, yet beware ascribing too much to oneself",
-   "not unto us, O LORD... but unto thy name give glory (Ps. 115:1)"
+   "Strength",
+   "Deliverance",
+   "Poetry",
+   "Naming",
+   "Weakness",
+   "Triumph"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
+   }
   }
  },
  "17": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "17-20",
+  "pericope_label": "Ramath-lehi, the spring of the crier, and twenty years of judging",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the song probably consisted of more than is here expressed."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Call the thirst the natural consequence of excessive fatigue; argue from the statement that the fountain is in Lehi unto this day that it cannot have been in the jawbone of an ass, which is a most unfortunate rendering; report a textual variant of forty years and dismiss it for want of any manuscript or version, passing on the reckoning that the twenty began in the eighteenth year of the servitude."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: Ramath-lehi, the hill of the jawbone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he cast away the jawbone out of his hand, and called that place Ramathlehi",
-   "memorials that recall the LORD's deliverances for the generations",
-   "this shall be written for the generation to come (Ps. 102:18)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Explain the thirst by the harvest heat and the length of the pursuit; call the notion of a fountain in a tooth-socket of the jawbone a childish misinterpretation of the kind that constantly defaces the exegesis of Scripture, since the place is named Lehi and the spring would naturally be called a socket once the cliff had been called a jawbone; place the cleaving simply at the town, as water was given at Horeb and at Kadesh; weigh three derivations of the place-name and prefer the hill of Lehi to the lifting up or the casting away of the jawbone, the last requiring a different form; and confess ignorance why the closing verse stands here and again at the end of the following chapter, the judgeship being probably the vague prerogative of a military hero."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Josephus thinks the thirst came as a rebuke for ascribing the victory to his own strength; he owned, Thou hast given this great deliverance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he was sore athirst, and called on the LORD... Thou hast given this great deliverance into the hand of thy servant",
-   "God humbling his servant to feel his dependence; the cry of weakness heard",
-   "he giveth power to the faint; and to them that have no might he increaseth strength (Isa. 40:29)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Report the older opinion that the thirst was a rebuke for ascribing the victory to his own strength and reject it, since thirst is no wonder in a man who had been bound, had exerted himself so, had killed a thousand with his own hand and had sung a triumph over it; hesitate over the spring, giving first the socket left by a grinder knocked from its place and remarking that blood would more naturally have issued from it than water, then reporting the version that has God cleave the rock, and ending with the rock on which the bone was cast; and keep the qualification that this man only began to deliver Israel and was no author of a perfect salvation, though a check upon the oppressor and a preservative from idolatry."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: God clave a hollow place, a socket in the form of a mortar, and water came out; he called it En-hakkore, the well of him that cried."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Take up the opinion the others reject and make it your own, that God would keep him from being proud of his great strength and let him know that he was but a man, the chastisement falling because he had not mentioned God in the memorial of the victory but taken all the praise himself, so that now he is under a sensible conviction that his own arm could not have saved him; add that he had drunk largely of his enemies&#x27; blood, but blood will never quench any man&#x27;s thirst; turn the moment back on the tribe that betrayed him, who might have met their conqueror with bread and wine as Melchizedek met Abram and instead left their deliverer to perish for a draught of water, the greatest slights being often put upon those who do the greatest services; and observe that those who forget to attend God with their praises may be compelled to attend him with their prayers."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the thirst was a natural consequence of the fight or a chastisement for the song.",
+   "Whether the water came from the jawbone or from the ground at Lehi.",
+   "What the name given to the place means.",
+   "How the twenty years of judging are to be reckoned."
+  ],
+  "outliers": [
+   "Henry alone treats the thirst as a rebuke for taking the praise of the victory to himself.",
+   "Ellicott alone calls the jawbone-fountain a childish misinterpretation, and alone explains the name of the spring as a further play on words.",
+   "Clarke alone argues from the words unto this day that the fountain cannot have been in the bone.",
+   "Clarke alone reports the variant reading of forty years and rejects it for want of manuscript support.",
+   "Gill alone leaves the question of the spring undecided, reporting both the socket and the rock."
+  ],
   "themes": [
-   "God clave an hollow place... there came water thereout... and he revived: wherefore he called the name thereof Enhakkore",
-   "God providing for the fainting and answering the cry of the needy",
-   "this poor man cried, and the LORD heard him, and saved him out of all his troubles (Ps. 34:6)"
+   "Thirst",
+   "Prayer",
+   "Weakness",
+   "Providence",
+   "Deliverance",
+   "Ingratitude"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he only began to deliver Israel, not completely, while the Philistines still had power; he judged Israel twenty years."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he judged Israel in the days of the Philistines twenty years",
-   "the partial deliverers pointing on to the one full and final Deliverer",
-   "he shall begin to deliver Israel out of the hand of the Philistines (Judg. 13:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
