@@ -20041,6 +20041,48 @@
       "book": "romans",
       "chapter": "7",
       "note": "FIDELITY SELF-GRADE, romans 7 -- ten entries over 25 contiguous source keys, 59,960 usable source words, 12 voices. Every verse checked against its source blocks before writing and again after each trim pass. WORD COUNTS (window 350-650, no thin exemptions used): 1-3 647w / 9 voices; 4-6 649w / 8 (Jamieson excluded, residue at k4); 7-8 640w / 9; 9-12 648w / 8 (Jamieson excluded, k10); 13 616w / 8; 14 646w / 10 -- the widest voice spread in the chapter, all five schools; 15-17 629w / 9 (Jamieson excluded, k16); 18-20 648w / 8; 21-23 643w / 10 (Jamieson excluded, k22); 24-25 649w / 8. Total 6,415 synthesis words from 59,960 source words = 10.7% expansion ratio. EVERY ENTRY IS ATTRIBUTED: no claim in the prose is made that is not traceable to a named block in that span. GRADE: high confidence on attribution and on the disagreements, which are unusually clean in this chapter because the voices answer each other by name (Gill refuting the readings Theodoret and Clarke hold; Clarke answering Barnes's proof-text at k22; Wesley contradicting Clarke at k18). MEDIUM confidence on two things, both flagged as source defects rather than judgement calls. (1) The Calvin blocks carry editorial apparatus inline with no markup; at 9-12 I wrote around it and at 15-17 I named it as editorial matter rather than attributing it to Calvin, but a reader without the source cannot verify that split. (2) Five Henry blocks come from two different works (full Exposition at k1/k7/k14, Concise at k18/k23); I summarised each in its own register but attributed both to 'Henry', which is what the catena claims. DEGRADATION SIGNAL, unchanged and worsening: EVERY ONE of the ten entries overshot the 650-word ceiling on first draft, by 20-35%, and needed one to six trim passes. I lowered the first-draft target to ~600 words partway through and the overshoot persisted. The expansion ratio here (10.7%) is close to romans 12's 9.5%, the lowest recorded. ROTATION REMAINS THE STANDING FLAG."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "12",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "Jamieson residue at keys 6, 12, 18 — class 0 mod 6, three members at constant step 6. Fifteenth chapter characterised and the fifteenth mod-6 hit; target-key selection is now mod-6 in fifteen of fifteen cases across four residue classes. Donor is Romans 5 to 6 — the chapter this worker landed one batch earlier, the first time a donor is a chapter the same worker has just written. k6 gives Rom 5:13-14 (until the law sin was in the world), k12 gives Rom 5:18 (resuming the unfinished comparison, the list of interpreters completing the ellipsis each way), k18 gives Rom 6:1 (shall we continue in sin). Counting Rom 5 as 21 verses the donor advances 13, 18, 22 — plus 5 then plus 4 against a target advancing plus 6, the uniform slower-slope family rather than the irregular forward walk. Declared excluded_voices on entries 5, 11 and 14."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "12",
+      "verses": [
+        "7"
+      ],
+      "note": "The thorn in the flesh is a five-way crux here, and two of the readings are reports about the same father that contradict each other. Clarke lists the older conjectures and assigns headache to Chrysostom; Calvin says Chrysostom inclined rather to refer the thorn to Hymeneus and Alexander and men like them. Both are secondhand — Chrysostom's own blocks in this chapter are at keys 1, 11 and 16 and say nothing of the thorn — so neither report can be checked against the source and Chrysostom was deliberately NOT declared on entry 7. Fifth instance of the laundering trap this session and the same vector every time: a father quoted inside a modern commentator in a doxographical aside. The conflict itself is worth keeping: the corpus contains two mutually exclusive claims about what one father held, and a synthesis that repeated either as fact would be inventing a source."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "12",
+      "verses": [
+        "16"
+      ],
+      "note": "Clarke does not merely reject the reading that takes 'being crafty, I caught you with guile' as the apostle's own confession — he condemns the doctrine drawn from it. Many suppose the phrase is his own and have concluded from it that guile and deceit are lawful in the service of a religious purpose; Clarke calls that doctrine abominable and holds the words are most evidently those of his detractors. Ellicott reaches the same reading by a different route, reconstructing the sneer in the objectors' voice and noting a modern translator has done well to put the charges in quotation marks. Carried into entry 14 as a debate."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "12",
+      "verses": [
+        "21"
+      ],
+      "note": "Twelfth confirmation of the Ellicott chapter-final StudyLight boilerplate, here at k21 (~900-1000 junk words). Prior sightings: ephesians 2 k22, 2corinthians 3 k18, luke 24 k53, exodus 31 k18, hebrews 6 k20, romans 5 k21, deuteronomy 13 k17. The practical rule is now firm — before budgeting a final span, subtract the Ellicott chrome, the Barnes REMARKS essay (which stacks with it at the last key in four epistles so far) and Clarke's end-of-book essay where the chapter closes a book."
     }
   ]
 }
