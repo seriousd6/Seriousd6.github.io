@@ -19564,6 +19564,55 @@
       "book": "genesis",
       "chapter": "2",
       "note": "FIDELITY SELF-GRADE, genesis 2, eight entries over 25 keys and 43,100 usable source words (over the 40k line, so the whole batch). Word counts: 1-3 616, 4-6 645, 7-9 649, 10-12 645, 13-15 646, 16-18 650, 19-21 648, 22-25 648. All eight in window; all eight required trimming from first draft, four of them three passes or more, and 22-25 needed two full rewrites (974 then 881 then 792 down to 648) because the source is densest at the end. Voice coverage: eight voices in the chapter -- Calvin 18 blocks/14,463w, Henry 7/9,699, Clarke 20/6,269, Ellicott 21/5,268, Gill 25/3,425, Wesley 9/2,038, Keil 9/1,640, Jamieson 2/63. Every entry names every voice that has usable material at its keys. DECLARED: Jamieson as residue at entries 13-15 and 22-25 (see the zero-lag note). SILENCED BY ENTRY: Keil at 10-12, 19-21 and 22-25, all three being reprinted biblical text with either no comment or a comment belonging to a verse in another span (see the source-defect note). Spans are a clean stride of three keys throughout, which the chapter supports: the thinnest span is 13-15 at roughly 1,700 usable words, and no rebalancing was needed. AUTHORITIES CITED BUT NOT NAMED, to avoid claiming a head that is not in the span: Reland, Sayce, Rawlinson, Bar-Hebraeus, Delitzsch's own gloss inside the Keil block, Dathe, Hengstenberg, Jarchi, Aben Ezra, Onkelos, Josephus, Bochart, Parkhurst, Milton. Dathe and Jerome are named where the citing voice is itself sourced in the entry. NOT USED: Clarke's k19 block (22 words, a bare cross-reference to the preceding chapter) carries no content, though he is sourced at k20 in the same entry."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "31",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson residue, TWELFTH chapter, class 3 mod 6 for the second time (Luke 24 was the first). Keys 3, 9 and 15 - three members at a constant step of 6, and every key in this chapter congruent to 3 mod 6 is affected, with no exceptions and no false positives. Mod-6 target selection now holds in twelve chapters out of twelve, across four classes (0, 2, 3, 4), with class 2 seen four times, class 0 three, class 3 twice and class 4 twice. 283 words, all residue. I did not chase the donor this time: the three blocks are 86, 86 and 111 words, too short to fix a donor sequence with any confidence, and the two-point-minimum rule I have been using needs distinctive content rather than merely three data points. Recording the class and the step, and leaving the donor unidentified rather than guessing - the Luke 24 batch showed that extrapolating a donor from the previous chapter's answer produces a wrong one."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "31",
+      "verses": [
+        "2",
+        "7",
+        "13",
+        "18"
+      ],
+      "note": "Two source artefacts confirmed here, one old and one newly generalised. (1) THE KEIL 200-WORD CAP WITH VERSE-REPRINT BODY. All three Keil blocks in this chapter are exactly 200 words, and each consists of the reprinted KJV text of a run of verses followed by a fragment of real comment cut off mid-sentence: k2 reprints vv2-6 then adds two sentences on Oholiab; k7 reprints vv7-12 then begins a comment on the sabbath; k13 reprints vv13-18 and gets no comment at all before the cap. This is the structural artefact first recorded at genesis 13 k15 and seen again at judges 10 k18, but here it is the RULE for the voice rather than an exception - three of three blocks. A span containing only a Keil block of this kind would produce a declared voice with nothing to declare. (2) THE ELLICOTT CHAPTER-FINAL CHROME at k18: 1,217 words of which 302 are genuine comment and about 915 are the StudyLight template. EIGHTH hand-confirmation and the FIRST in the Pentateuch - previous confirmations were four epistles, one gospel and the corpus-wide scan. That removes any remaining suspicion that the pattern is genre-specific; it tracks the chapter-final position and nothing else."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "31",
+      "verses": [
+        "1",
+        "7",
+        "12",
+        "18"
+      ],
+      "note": "A THREE-ENTRY chapter, and the reasoning is worth recording because the temptation was to make it five. Exodus 31 is 18 verses in three clear movements - the calling of the craftsmen (1-11), the sabbath command (12-17), the two tables (18) - and the obvious refinement was to split 1-11 into the call (1-6) and the list of works (7-11), and 12-17 into the sign (12-14) and the law (15-17). I dumped keys 7-11 before committing and found them almost entirely list-recitation: Gill's six blocks total 305 words of which most is cross-reference, Clarke's total 144, Keil's 200 is the verse-reprint artefact, and the only genuine interpretive content in the whole run is Ellicott's 187 words on the cloths of service. That is not enough to carry a 350-word entry at grade A without padding, and the span at 805 raw words sits in the dead zone between the thin exemption's 200-word ceiling and the 350-word floor - the same trap that forced the merge at deuteronomy 25 vv11-12. So three entries, at 4,885 / 3,831 / 2,946 raw source words, expansion 0.13 / 0.16 / 0.21. The general rule this confirms: DUMP THE THIN SPAN BEFORE FIXING THE TILING. Raw word counts do not distinguish a run of dense exposition from a run of inventory, and in the Pentateuch the difference is common enough to decide the entry count."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "31",
+      "verses": [
+        "6",
+        "17"
+      ],
+      "note": "Two splits here, and both turn on how far a text may be pressed. (1) THE WISDOM GIVEN TO THE ALREADY WISE-HEARTED at v6. Calvin names the contradiction outright - if they already excelled in intelligence, what was the object of this new inspiration? - reports the common solution that special grace merely aids natural ability, and rejects it: 'when anything grows in us, and our endowments manifest themselves more conspicuously, our progress is only derived from the continued operation of the Spirit', the prior gift being 'only, as it were, the seed'. Clarke takes precisely the position Calvin rejects, that every man with a natural genius 'had an increase of wisdom by immediate inspiration'. Gill narrows the gift away from grace entirely, to 'ingenuity and skill in manual arts, and mechanical operations'. Wesley states the widest form: 'skill in common employments is the gift of God'. Four voices, four positions, on a verse most readers pass over. (2) HOW LONG THE SIGN LASTS at v17. Gill limits the 'for ever' to the end of the Jewish state at the coming of Christ, listing the land, circumcision, the passover and the atonement fast as parallel cases where the same word is bounded. Clarke argues the opposite from typology: 'the type must continue in force till the antitype come', therefore the observance must be perpetually kept up. Ellicott sidesteps both by pointing past them to 'that final rest which he may be sure remaineth for the people of God'. This is a live confessional disagreement about sabbath continuance being conducted in the margins of an Exodus commentary, and it is worth surfacing as a disagreement rather than resolving."
     }
   ]
 }
