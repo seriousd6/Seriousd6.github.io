@@ -18273,6 +18273,71 @@
         "20"
       ],
       "note": "ELLICOTT END-OF-CHAPTER TAIL, SIXTH INSTANCE. The k20 block is 1070 words of which roughly the first 180 are comment ('A prophet of the Lord. — Then from the northern to the southern cities...'); the rest is the CSS stylesheet and JavaScript bundle already recorded. Running series for this feed: exodus 1 k22 984w, revelation 19 k43 985w, luke 4 k44 990w, deuteronomy 8 k20 1037w, ephesians 6 k24 1175w, 1samuel 3 k20 1070w. Six measurements, one boundary marker throughout. NOTE the counterexample in the same chapter, which matters for any automated rule: Clarke's block at k21 is 740 words and is GENUINE throughout — his closing essay on neglected religious education, ending 'Parents who neglect this, neglect the present and eternal interests of their offspring.' Two long blocks at the last two keys of one chapter, one entirely chrome and one entirely authorial. A length-based or position-based heuristic would destroy the Clarke essay; only the copyright-line marker distinguishes them."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson residue, four-member mod-6 class (keys 2, 8, 14, 20), donor 1 Corinthians 1->2 walked strictly forward: 1:29-31 (let him glory in the Lord) at key 2, 2:2 (save Jesus Christ and him crucified) at key 8, 2:6-7 (we speak wisdom ... hidden) at key 14, 2:12 (the spirit which is of God) at key 20. Crosses the donor's own chapter boundary, so the walk is by continuous text and not by verse number. This is the seventh clean mod-6 class in eight chapters and the third whose donor crosses a chapter boundary. Every Jamieson block in this chapter is residue -- 623 words, none of it on Philippians 3 -- so the whole voice is excluded here."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "21"
+      ],
+      "note": "Ellicott's key-21 block is genuine and on-verse for roughly the first 500 words, then runs straight into scraper boilerplate: the StudyLight site footer, a full CSS stylesheet with media queries, and the site's commentary/concordance/dictionary navigation menus, all unescaped inside the commentary value. Same family as the Bede OCR soup at revelation 22 (genuine block, unreadable tail) but a different mechanism -- not bad character recognition but an unbounded scrape that swallowed the page chrome. Detectable programmatically: the tail contains brace-and-semicolon CSS and no sentence punctuation."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "21"
+      ],
+      "note": "Barnes's key-21 block carries a chapter-end REMARKS essay after the verse commentary -- eleven numbered reflections on rejoicing, on mistaking religion for gloom, and on the resurrection -- pushing the block to 3,006 words, more than double any other in the chapter. Same section-edge overflow class recorded at revelation 22 (mid-chapter REMARKS and ANALYSIS headings). Confirms the pattern is Barnes-specific and signposted in plain English: the word REMARKS on its own line marks the boundary between on-verse commentary and the essay."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "Genuine four-way disagreement over the verb rendered 'already perfect' in v12, preserved rather than harmonised. Clarke holds it is the technical athletic word that had come to mean martyrdom, documenting Philo, Clement of Alexandria, Basil, Oecumenius and Eusebius, and calls the moral reading 'most falsely and dangerously imagined'. Barnes takes it as moral and lists the critics (Bloomfield, Koppe, Rosenmuller, Robinson, Clarke) who do not -- so Barnes has read Clarke's position and rejected it. Robertson and Ellicott land near Barnes without the heat. Clearest instance so far of a source disagreement where one commentator explicitly cites the party he refutes."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "9"
+      ],
+      "note": "Calvin declines the passive rendering of heurisko in v9 that every other voice adopts, arguing the form carries an active signification (to recover what you gave up) and citing Budaeus. Gill flags the divergence by name -- 'Calvin, different from other interpreters, reads the words actively' -- allows the sense is true in substance, and still judges the passive best. A rare case in this corpus of one commentator naming another and adjudicating; recorded as a debate rather than folded into a consensus."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "philippians",
+      "chapter": "3",
+      "verses": [
+        "8",
+        "17"
+      ],
+      "note": "Lightfoot is named twice in the finished prose (Ellicott citing him on skybalon at key 8, Robertson quoting him at key 17) but has no block of his own in this chapter -- both are citations inside another commentator's text. Declared neither in voices nor in excluded_voices, and the prose attributes each point to the citing commentator. Worth recording because acts 12 had the opposite case: Lightfoot present as a real block AND carrying Acts 13 residue in the same chapter. A surname in the prose is not evidence of a voice."
     }
   ]
 }
