@@ -1,696 +1,463 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: no sacrifice of any sort was to have a blemish, typical of the unblemished and immaculate Lamb of God, who, without sin, offered himself without spot to God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou shalt not sacrifice unto the LORD... any bullock, or sheep, wherein is blemish... an abomination",
-   "the perfect offering honouring God",
-   "Christ the immaculate Lamb without spot (Heb. 9:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "1-3",
+  "pericope_label": "No blemished sacrifice, and the idolater put to death on the testimony of two or three witnesses",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Give the principle that God is the best of beings and whatever he is served with ought to be the best in its kind, noting that the second word might better be rendered any evil matter or thing, so as to cover sickness or weakness not discernible at first view; make the victim a type of the Lamb without blemish; observe that the one period when imperfect creatures were complained of on any scale was after the captivity had cured the nation of idolatry; sharpen the parallel with the preceding chapter, since it was already capital to seduce others to idolatry and here it is made no less a crime to be seduced, so that if the blind mislead the blind both fall into the ditch, and add that the law which works death proved ineffectual; and note that the idolatry specified is the most ancient and plausible kind, the worship of sun and moon and stars, so that the worship of stocks and stones is worse — remarking that if nothing more could be said against it than that God had not commanded it, that alone had been enough."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: this was in any of their cities in the land of Canaan."
+    "summary": "Observe that the same punishment is decreed here as against apostates, so that corrupting God's worship by gross superstition is reckoned no less weighty than abandoning religion outright; fix on the phrase transgressing his covenant and draw from it that the thief, the fornicator and the drunkard transgress the Law but are not in this category, since what is punished is not simple impiety but the perfidy of forsaking true religion after having devoted oneself to God; list the tokens of severity — a woman dying as well as a man, the whole people joining in the stoning, the evil removed from the midst of the land — and set against them the tokens of moderation, that diligent inquiry must be made, that no sentence may be pronounced unless the matter is fully proved, and that one man's accusation cannot convict, since God would not have judges shed blood inconsiderately under pretext of zeal; and note that the repetition of that man or that woman is deliberate, the weakness of the female sex not being allowed to extenuate the guilt here. Add that the sacrifice was typical of the immaculate Lamb of God, and report the Targum's expansion that the offender went after the evil imagination, lusting after other lovers."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Put the rule as a test anyone can apply, that God must not have offered to him what you would not use yourself, and extend it from the sacrifice to the worshipper, to the sincerity and uprightness of heart God requires in all who approach him; note that bullock and sheep stand for the greater and smaller sacrifices, the two most eminent kinds standing for all; call idolatry a breach of the faith given to God and a dissolution of a matrimonial covenant, a renouncing of God and his worship for other gods; and add a grammatical note, that I have not commanded means I have forbidden, such negative expressions being emphatical."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: man or woman that hath wrought wickedness in transgressing his covenant."
+    "summary": "Ask why the precept stands here at all, the law of the purity of victims being given in full elsewhere among the special laws of holiness, and answer that one principle unites the apparently unrelated topics of these chapters — the holy days, the administration of justice, the absence of groves and images, and the perfection of sacrifices — namely that the holiness of the God of Israel necessitates them all, truth and justice and purity being demanded of everything that comes near him; note that the Hebrew word may mean either a lamb or a kid, and that the one time imperfect victims are complained of at length is in the last of the prophets. Elsewhere state the procedure plainly: the facts carefully inquired into, death only on the testimony of two or three and never of one, the witnesses' own hands first upon the condemned, and the execution at the gate of the town where the crime was committed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why a law about blemished victims stands among laws of justice and worship.",
+   "What the blemish covers, and what the unblemished victim signifies.",
+   "Why idolatry is called a transgression of the covenant rather than simply a sin.",
+   "What restrains the severity of the sentence.",
+   "Why the worship of the host of heaven is the form specified."
+  ],
+  "outliers": [
+   "Ellicott alone gives a unifying principle for the miscellany of laws in these chapters.",
+   "Henry and Ellicott independently arrive at the same prophet as the one period when this law was flouted.",
+   "Calvin alone distinguishes idolatry from theft and drunkenness as covenant-breaking rather than mere transgression.",
+   "Calvin alone notices that the repetition of man and woman forecloses an excuse from the weakness of the sex.",
+   "Wesley alone treats the clause about what God had not commanded as a figure of speech."
+  ],
   "themes": [
-   "man or woman, that hath wrought wickedness... in transgressing his covenant",
-   "idolatry the gravest crime",
-   "covenant-treason against the King"
+   "Sacrifice",
+   "Holiness",
+   "Idolatry",
+   "Covenant",
+   "Witnesses",
+   "Judgment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with the Targum: going after the evil imagination, lusting after other lovers, forsaking the true God and his worship."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: serving the sun, moon, or host of heaven, which God had not commanded."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "served other gods... either the sun, or moon, or any of the host of heaven",
-   "adoring the creature above the Creator",
-   "the works of God made a rival to him (Rom. 1:25)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley"
   ],
+  "range": "4-7",
+  "pericope_label": "Diligent inquiry, the two or three witnesses, and the witnesses' hands first upon the condemned",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: a report of this kind was not to be neglected, yet not concluded on by hearsay; it was to be looked into and the witnesses thoroughly examined, the matter found true and certain."
+    "prevalence": "several",
+    "summary": "Read the requirement of inquiry as cutting both ways, since judges are not only restrained from precipitate condemnation but stimulated to beware of passing over anything that needed to be known — they often failing in their duty because they wilfully connive at guilt, so that God would have them neither slumber nor ignore sinister reports; observe that the severity with which God exacts punishment for murder shows how highly he rates human life, and that the rule of witnesses shows equal care for innocent blood, nothing being more dangerous than to expose a man's life to the tongue of a single individual, while balancing this with the consideration that if two or three would not suffice there would be no end to litigation; explain the witnesses' hands as a remedy against light accusations, since the tongue of many is too hasty and men do not hesitate to stab people verbally when they would not dare to lay a finger on them, so that no testimony should be admitted from anyone whose hand is not prepared to execute the sentence; and add that the ancient people employed no public executioners, for the sake of solemnity and reverence, and that stoning was probably chosen because it required many hands, the whole people casting at once both to prove their indignation and because stoning one after another would have made the death lingering and cruel. Elsewhere report the rabbinic refinements that a third witness turns the scale where two contradict two, and that because the text says at the mouth of the witnesses the testimony was held to be necessarily spoken and not written."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the verse as a sequence of filters — the thing told privately by a confidential person, then found notorious and publicly scandalous, then examined as to the persons reporting and the circumstances, then found not to rest on vague rumour or hearsay or malice, and at last substantiated by the fullest evidence — all necessary since the charge affected a man's life; give as the ground for requiring two witnesses that one might be deceived or prejudiced or malicious; add the rabbinic exclusions, that the testimony of children, women, servants, familiar friends or enemies, and persons of dissolute life or evil fame was rejected; and explain the witnesses' hands as a caution to them, that if they had accused falsely through malice they might now be afraid to imbrue their hands in innocent blood."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What diligent inquiry requires of a judge, and whether it can fail by negligence as well as by haste.",
+   "Why two or three witnesses are required, and why not more.",
+   "Whether testimony had to be spoken rather than written.",
+   "Why the witnesses had to cast the first stones, and why the penalty was stoning."
+  ],
+  "outliers": [
+   "Calvin alone turns the command to inquire into a charge against judges who connive at guilt.",
+   "Calvin alone argues that requiring more than three witnesses would leave litigation without end.",
+   "Gill alone reports the rule that testimony must be at the mouth and not from the handwriting.",
+   "Calvin alone notes that no public executioners were used, and explains stoning by the number of hands it needs."
+  ],
   "themes": [
-   "enquired diligently, and, behold, it be true, and the thing certain",
-   "justice resting on established fact",
-   "none condemned on rumour (Prov. 18:13)"
+   "Judgment",
+   "Witnesses",
+   "Evidence",
+   "Punishment",
+   "Innocent blood"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this was after being brought before a court, tried, found guilty, and sentenced, then brought forth to execution and stoned with stones till dead."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.45
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then shalt thou bring forth that man or that woman... and shalt stone them with stones, till they die",
-   "punishment bound to lawful trial",
-   "the evil put away from the nation (1 Cor. 5:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: two witnesses were sufficient, three the better, but on the testimony of one, sentence might not be pronounced."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "At the mouth of two witnesses, or three witnesses, shall he... be put to death; but at the mouth of one witness... not",
-   "life guarded from single testimony",
-   "every matter established by witnesses (Matt. 18:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill, with Aben Ezra: they were to cast the first stone, a further trial of their testimony; their readiness showed their zeal for God's honour, and afterward all the people joined."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The hands of the witnesses shall be first upon him... and afterward the hands of all the people",
-   "the rite testing the witnesses' sincerity",
-   "the community sharing in putting away evil"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "8-11",
+  "pericope_label": "The hard case carried up to the priests and the judge, and the duty of abiding by their sentence",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: spoken to inferior judges in the country cities, who might have cases too wonderful or hidden, beyond their capacity."
-   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: such matters carried up to the place the LORD should choose."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If there arise a matter too hard for thee in judgment... get thee up into the place which the LORD... shall choose",
-   "a higher court for difficult cases",
-   "God's ordering of justice in degrees"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Render the opening as a matter too marvellous for judgment, meaning too difficult to decide, and take the three pairs to mean that it is unclear by what legal provision a fatal blow, a civil dispute or a bodily injury is to be settled; insist that although Israel is addressed as a nation the words go neither to the local courts first and the litigants last nor directly to the parties, but simply to those whose duty it was to administer justice; and state the sanction without softening it, that no one was to resist in pride, resistance to the priest being dissatisfaction with his interpretation of the law and resistance to the judge discontent with the sentence founded on it, such conduct being punished with death as rebellion against God, in whose name the right had been spoken."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the priests of the tribe of Levi; Maimonides observes the great sanhedrin should have priests and Levites in it, who should show the sentence of judgment."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt come unto the priests the Levites, and unto the judge... and they shall shew thee the sentence of judgment",
-   "the supreme tribunal joining priest and judge",
-   "justice resting on the law of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the inferior courts were to return and proceed according to the judgment of the great court at Jerusalem."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Translate the three pairs into the vocabulary of English law — the blood that cried against the blood demanded, where it was doubtful whether the killing was wilful or casual; the declaration of the plaintiff against that of the defendant; an action of assault and battery — and add the essential point that the difficulty need not be evidential, since though the evidence were plain, doubts might still arise about the sense of the law and its application, so that the inferior court must find a special verdict and take time to advise, it being no dishonour to a judge to own the difficulty."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: the lower judge bound to follow the higher court's direction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt do according to the sentence, which they... shall shew thee",
-   "submission to the higher authority",
-   "the order and unity of justice (Heb. 13:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Sort the three pairs as capital, civil and criminal causes, and note that a matter became one of controversy when the magistrates were themselves divided about it; take the judge to be probably the high priest, named separately from the priests because among them he especially was to be consulted; deny that obedience to the court is limited, since though the judge is confined to his rule in giving sentence it is fit and reasonable that people be bound simply to acquiesce in the sentence of their last and highest judge, or else there would be no end of strife; and give the practical reason for the arrangement, that the priests and Levites, being lawyers by birth and continual practice, were reasonably considered the best qualified to decide difficult points."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: they were not to make any new law, but to teach the law of God; so far as their judgment agreed with that law they were to be regarded."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the duty not to decline from their sentence, to the right hand or to the left."
+    "summary": "Refute the opinion that the high priest alone is meant by the judge, since the text distinctly enumerates the priests, the Levites and the judge, while allowing that the singular may stand for a plurality and appealing to the later appointment of Levites and priests and chief fathers to preside at Jerusalem, where the high priest was over matters of the Lord and the king's governor over civil causes; describe the principal office of the priests under a single head, that they should declare what is right in doubtful matters out of the Law of God, and argue from the greater to the less, that if their sentence must be submitted to where a man's life is at stake, all exception is removed with respect to God's worship and spiritual doctrine; concede that the priests are not the sole judges, others being associated as colleagues, while holding the dignity of the priesthood especially exalted; and require the people to acquiesce in their judgment even on the most disagreeable points. Elsewhere prefer to identify the judge as the president of the great sanhedrin who succeeded Moses, note that the priests meant are those of the tribe of Levi since not all priests were of that genealogy, and lay down the limit that the court was not to make any new law but to teach the law of God, being regarded so far as their sense of things agreed with it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the three pairs of terms mean, and whether the difficulty is one of evidence or of law.",
+   "Who is addressed by the command to bring the case up.",
+   "Whether the judge is the high priest, a single ruler, or the president of the court.",
+   "Whether obedience to the court is unconditional or bounded by the law it teaches."
+  ],
+  "outliers": [
+   "Henry alone renders the three pairs in the terms of his own legal system, down to the special verdict.",
+   "Keil alone rules out two proposals about whom the command addresses.",
+   "Calvin expressly refutes the identification of the judge with the high priest that Wesley adopts.",
+   "Gill bounds the duty of obedience by the court's fidelity to the law; Wesley and Calvin require simple acquiescence.",
+   "Clarke alone explains the priests' competence by their being lawyers by birth and continual practice."
+  ],
   "themes": [
-   "According to the sentence of the law which they shall teach thee... thou shalt not decline",
-   "authority bounded by the law of God",
-   "the ruling weighty as it declares his statutes (Mal. 2:7)"
+   "Courts",
+   "Appeal",
+   "Priesthood",
+   "Authority",
+   "Obedience",
+   "Law"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "12-15",
+  "pericope_label": "The penalty for presumption against the court, and the law permitting a king",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the country judge who, after applying to Jerusalem, is conceited in his own opinion, rejects theirs, and obstinately takes his own way."
+    "summary": "Qualify the demand for acquiescence just made: the priests were not armed with tyrannical authority, so that it should be sinful to reject whatever they decreed of their own fancy, since God did not dethrone himself when he appointed them nor bind men's consciences to obey their ordinances without distinction, but only put reins on those who think nothing of undervaluing the government of the Church — reverence being due to all lawful commands, while God has never exalted any mortal so high as to abdicate his own rights, so that it has often been necessary boldly to reject what the priests commanded; add that the publicity of the punishment is the point, impunity being a bait to sin and the nurse of unbridled licentiousness; object to kingship on historical grounds, that under the judges the very difference of their government separated the Jews from the nations round about, all of whom had kings, so that once they chose kings they were mixed with the Gentiles and fell the more easily into other corruptions, the similarity of governments uniting them more closely; warn that the splendour of the royal name might make them forget that God retained the sovereignty; read the reservation of the choice as a rebuke of their audacity in demanding a king by hasty impulse; and explain the exclusion of foreigners by the risk of apostasy, a stranger forcing his native gods upon them and persecuting true religion by the royal power. Elsewhere describe the offender as the country judge who, having applied for direction, is conceited in his own opinion, deny that the verse commands a king rather than permitting one, and note that when in later times they appointed kings without consulting God it is complained of."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the man who acts presumptuously."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man that will do presumptuously, and will not hearken... even that man shall die",
-   "the contempt of lawful authority a grave offence",
-   "order guarded against rebellious self-will (Rom. 13:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: all the people, and particularly the judges in their cities, would hear what was done to the obstinate elder and be afraid to commit the like."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the deterrent — all the people shall hear and fear."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And all the people shall hear, and fear, and do no more presumptuously",
-   "the just punishment of one a warning to many",
-   "the dread of penalty restraining sin (1 Tim. 5:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this concerns coming into the land of Canaan."
+    "summary": "State the ground of the death penalty narrowly, that the man refusing the final determination was in rebellion against the highest authority and the public could have no pledge for his conduct; hold that God here only foresees and foretells what they would do without approving it, and that when they did it for this very reason he declared his utter dislike; note that God reserved the nomination both of the family and of the person; add that a brother was likeliest to maintain religion and rule with gentleness, and would be a fit type of Christ, who was to be one of their brethren; and carry the clause forward into the Gospels, since it was on the ground of this command that the question about tribute to Caesar was put — they being then under a foreign power, so that an affirmative answer would have condemned him by this law and a negative would have been reported to Caesar."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: after the laws for subjects fitly follow laws concerning kings, for those that rule others must remember they are themselves under command."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will set a king over me, like as all the nations that are about me",
-   "the foreseen desire for a king",
-   "rulers themselves under command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Hold that the having of a king was neither promised as a mercy nor commanded as a duty but permitted, and that provided the ends of government were answered they were not tied to any one form; grant that the motive was irregular, being a wish to be like the nations from which God had distinguished them, but hold that God would indulge it because he meant to serve his own purposes by making the regal government typical of the kingdom of the Messiah; and give the principle that kings are God's vicegerents and it is therefore fit he should choose them, reckoning the people happy in having an oracle to consult in so weighty an affair."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: not a command to set a king but a permission, in case they desired one, with the restriction to appoint none but whom God should choose, from among their brethren, not a stranger."
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Put the matter structurally: an earthly kingdom was not opposed to the rule of Jehovah provided the king was the man Jehovah chose, and the appointment of a king is not commanded as the institution of judges was, because Israel could exist under God's government without an earthly king at all."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the sentence of the priests binds the conscience.",
+   "Whether the law about a king approves, permits, or merely foresees the desire for one.",
+   "What was lost when Israel exchanged judges for kings.",
+   "Why the king had to be chosen by God and taken from among the brethren."
+  ],
+  "outliers": [
+   "Calvin demands acquiescence in the priests' judgment at one verse and denies that consciences are bound by their ordinances at the next; both belong to his position.",
+   "Calvin alone argues that the form of government under the judges was itself a barrier against the nations.",
+   "Wesley alone says God declared his utter dislike of the request for a king.",
+   "Clarke alone connects the clause about a foreign king with the question about tribute to Caesar."
+  ],
   "themes": [
-   "Thou shalt... set him king over thee, whom the LORD thy God shall choose... not a stranger",
-   "the throne under God's appointment",
-   "the King chosen of God and made our brother (Heb. 2:17)"
+   "Authority",
+   "Conscience",
+   "Church government",
+   "Kingship",
+   "Theocracy",
+   "Apostasy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: that he might not put his trust in outward things, as some trust in horses and chariots, nor oppress his subjects with a standing army, keeping no more horses than for his own use."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shall not multiply horses to himself, nor cause the people to return to Egypt",
-   "the king not to trust in military might",
-   "safety in God, not in chariots (Ps. 20:7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the multiplying of wives would turn his heart from the duty of his office and from religion, as Solomon's heart was turned by his idolatrous wives; he was not greatly to multiply silver and gold."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Neither shall he multiply wives to himself, that his heart turn not away: neither... silver and gold",
-   "guarding the king from lust and greed",
-   "the heart drawn from God by indulgence (1 Kings 11:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "John Calvin",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "16-18",
+  "pericope_label": "The king forbidden to multiply horses, wives and treasure, and required to write out the law",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the danger of the horses to be traffic with Egypt, which furnished Canaan with them, fearing that the commerce would lead to idolatry, that reliance on a well-appointed cavalry would displace trust in God, and that extending dominion by cavalry would scatter Israel among idolatrous nations and destroy the distinctness on which the Messianic prophecies depend; allow horses for the king's own use but not for officers and guard, still less for war, and gloss the warning about returning as a warning against being infected again with Egypt's idolatries; hold that many wives meant foreign alliances and with them the manners and idolatry of other nations, instancing the king who sinned against this precept; observe that the phrase about writing the law is the source of the book's Greek and modern name, and that the original kept before the priests was the standard from which every copy was taken and against which every copy was compared, the priests probably revising each transcript to keep errors from creeping into the sacred text; and say that the king wrote it with his own hand, so that it might be a perfect copy and carry the greater weight as coming from the hand and presence of God."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the Septuagint and Vulgate interpret 'this law' of the book of Deuteronomy, a summary of God's laws to the people."
+    "summary": "Read the doubled clause about horses by taking the particle in its sense of for the sake of, so that an immoderate stud is condemned for what it would lead to — a king with many horses being tempted to march an army into Egypt, the fear being invasion rather than import — and preface it with the principle that royal power must be kept within legal bounds lest it act like a runaway horse, the desires of kings being insatiable and all things seeming lawful to them; argue from the restriction on wives that kings needed closer restraint than others lest their example give countenance to incontinency, which refutes those who conclude that what was specially forbidden to kings was thereby permitted to private men, and add the expense, since such is the ambition of women that each would have desired royal treatment and they would have vied in finery; judge that the great king transgressed this law, somewhat excusably given his repudiation by his wife, though lust plainly had more power over him than the continence God prescribed; take the turning away of the heart separately rather than as the reason, as a warning that the splendour of the dignity may unsettle the judgment, nothing being harder than for a man in great power to remain temperate; hold that treasure is forbidden because it cannot be heaped up without rapine and violent exactions; reject the narrow reading of what was to be written, since the whole sum of doctrine is meant, what is delivered in Exodus and Leviticus as well as here; and have the priests present the book in a solemn ceremony, as though God deposited a treasure with the king, giving the reason for the command to read in it lifelong with some bitterness, since kings are usually supplied with books only out of ostentation and, having tasted what is in them, grow tired and cease to read. Elsewhere keep to the domestic reason for the horses, that a standing force would let the king tyrannise over his subjects, report the rabbinic limits on horses and on wives, and canvass whether the copy meant this book, the whole Pentateuch, or only the law about kings."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the king writing a copy from that before the priests the Levites."
+    "prevalence": "single",
+    "summary": "Observe that this phrase is the source of the book's Greek and modern name, the word primarily denoting repetition, and that the Hebrew word became the name of the text of the Talmud, whose idea is to repeat the law — though this is a peculiar repetition, dealing chiefly in minutiae and leaving the weightier matters out; look for traces of the practice and find them at the coronation of Joash, in the teaching of the Law under Jehoshaphat, and in the reading of the book found in the temple to Josiah, remarking that it is singular we hear nothing of it in connection with David or Solomon unless the former's being a prophet as well as a king made the mention unnecessary; and end on the true king of Israel, whose mission was to fulfil the law and the prophets."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the horses are forbidden because of trade with Egypt or because of war against it.",
+   "Whether what was forbidden to kings was thereby allowed to private men.",
+   "Whether the turning away of the heart is the reason for the prohibition or a separate warning.",
+   "How much of the law the king had to copy out.",
+   "Why the copy had to be taken from the original kept by the priests."
+  ],
+  "outliers": [
+   "Clarke and Wesley fear the road into Egypt for commerce; Calvin fears it for invasion.",
+   "Calvin alone uses the restriction on kings to refute the inference that private men were left free.",
+   "Calvin alone reads the clause about the heart as a warning about judgment rather than about wives.",
+   "Clarke alone infers a system of priestly proof-reading to keep errors out of the text.",
+   "Ellicott alone notes the silence of the record about David and Solomon, and calls the Talmudic repetition of the law a peculiar one."
+  ],
   "themes": [
-   "when he sitteth upon the throne... he shall write him a copy of this law in a book",
-   "the king putting himself under God's word",
-   "the ruler himself ruled by the law"
+   "Kingship",
+   "Egypt",
+   "Marriage",
+   "Wealth",
+   "Scripture",
+   "Transmission"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "19-20",
+  "pericope_label": "The law kept by the king and read all his days, that his heart be not lifted up",
   "schools": [
    {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Explain the copying in constitutional terms — it was the surest way of bringing the king to an acquaintance with the divine law, and was necessary because these laws were permanent and no king of this people could make a new one, their kings being always considered mere vicegerents of Jehovah; turn the clause about keeping the book on the reader, since it is not enough to have Bibles but we must use them daily, our souls needing constant meals of that manna, which if well digested will afford true nourishment and strength; press the psychology of humility, that the scriptures diligently read keep a king humble by showing him that though a king he is subject to a higher monarch, to whom he must give account of all his administrations and from whom receive a sentence agreeable to their quality, which is enough to abate the pride of the haughtiest person in the world; and hold that the crown was designed to be hereditary, defending the arrangement on general grounds, since long experience has proved to almost all nations that hereditary succession in regal government is on the whole the safest and best calculated to secure the public tranquillity."
+   },
+   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: it was to be with him always, and he was to read it every day, meditating on it night and day as a good man does, to learn the fear of the LORD and to keep all the words of the law."
+    "prevalence": "single",
+    "summary": "Take the phrase that the book shall be with him literally, so that it went wherever he went, at home or abroad, whether he sat on his throne or lay down, except where it was not proper to read, the reading being daily meditation; say that the heart was not to be lifted up on account of the office, since the king was himself subject to the law of God and accountable for all his actions, and that ruling well according to those laws was the way to rule long; and follow the rabbinic comment that makes the crown elective but with a standing preference, the king's son being preferred before any other man if he was fit for the kingdom, so that it continued in the same family provided they walked in the ways of the Lord."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Deny that the promise about his children makes the crown simply hereditary, since the verse shows the kingdom would be hereditary only so far as Jehovah willed it to be so; and add an observation that is really an argument about the book itself — that no dynasty except David's ever continued for more than five generations, and only two for more than two, while David's was perpetual by promise, a striking fact which could hardly have escaped notice if it had been known to the writer of this book."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the king had to write and keep the law himself.",
+   "How reading the law was expected to keep a king humble.",
+   "Whether the crown of Israel was hereditary, elective, or held at God's pleasure."
+  ],
+  "outliers": [
+   "Clarke alone argues for hereditary monarchy on grounds drawn from the experience of nations rather than from the text.",
+   "Gill alone reports the rule that a fit son was to be preferred, making the crown elective in form and dynastic in practice.",
+   "Ellicott turns the dynastic history of Israel into an argument about when this book was written.",
+   "Wesley alone applies the command to read to the reader rather than to the king."
+  ],
   "themes": [
-   "he shall read therein all the days of his life: that he may learn to fear the LORD his God",
-   "the godly ruler a daily student of the word",
-   "meditating in the law day and night (Ps. 1:2)"
+   "Kingship",
+   "Scripture",
+   "Humility",
+   "Succession",
+   "Accountability"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: that his heart be not lifted up above his brethren on account of his office, considering he was subject to the law of God and accountable to him, and that he turn not aside, that his days be prolonged."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "That his heart be not lifted up above his brethren... that he may prolong his days in his kingdom",
-   "the throne established by humility and obedience",
-   "Christ the humble King exalted forever (Phil. 2:8-9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
