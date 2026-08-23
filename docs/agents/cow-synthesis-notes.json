@@ -18785,6 +18785,60 @@
         "12"
       ],
       "note": "Gill reports the rabbinic reading of 'cut off her hand' as a price set upon the hand rather than an amputation (Jarchi), with Aben Ezra comparing the law of retaliation, which the same writers commonly understand of monetary compensation. No other voice in this chapter addresses whether the penalty was ever executed literally, and Calvin argues the opposite way -- that the severity is the point and that the clause forbidding pity exists so judges should not be remiss in inflicting it. Both are in the prose. Noting it because the chapter is a rare case where the corpus preserves a live rabbinic mitigation of a hard text alongside a Reformation reading that insists on its harshness, and a synthesis that reported only one of them would misrepresent the witnesses."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "genesis",
+      "chapter": "13",
+      "note": "Six entries, all in window and all built only from this chapter's own catena: 1-3 644w, 4-6 577w, 7-9 646w, 10-12 648w, 13-15 646w, 16-18 646w. Seven voices with heads (Gill 18 blocks, Calvin 11, Clarke 12, Ellicott 6, Wesley 7, Keil 5, Henry 4); no Jamieson blocks anywhere in the chapter. Every named attribution checked against a head inside its own span: I deleted a cross-entry reference to Wesley at 4-6 (he has no head there) and softened an 'alone' claim at 1-3 that Gill duplicates a verse later. At 13-15 Calvin dismisses a speculation he ascribes by name to Luther; since Luther has no head in this chapter I reported it as 'an earlier reformer's speculation' rather than naming him. Every scripture reference in prose is a .ref link."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "13",
+      "verses": [
+        "18"
+      ],
+      "note": "Ellicott end-of-chapter chrome tail, ELEVENTH measurement. genesis 13 k18 is 1099 raw words of which only ~105 are comment on v18; the rest is the standard trailer, here escalating to CSS and raw JavaScript as at ephesians 6 and romans 10. The marker 'Copyright Statement These files are public domain' holds again, eleven for eleven. This chapter is the third in a row (after deuteronomy 8 and 1samuel 3) where the LONGEST block at the last key is the chrome and a shorter one is authorial: Clarke's 738w block sits at the same k18 and is genuine throughout. Neither length nor position discriminates; only the marker does. A single removable rule keyed on that string would recover roughly a thousand words of false corpus per chapter across the whole Ellicott feed."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "13",
+      "verses": [
+        "10"
+      ],
+      "note": "Henry Concise spliced onto the Exposition, SIXTH instance and a clean example of the revelation 19 signature. The k10 block is 947 words: the Exposition runs to '...brought it upon themselves by an unadvised choice', then the Concise treatment of the SAME verses is appended with no marker, restarting at 'Abram having offered Lot the choice, he at once accepted it.' The join is detectable by the reference style alone - the Exposition half cites 'Isa. iii. 9', 'Ezek. xvi. 49', '2 Pet. ii. 7, 8', 'Ps. cxx. 5' in roman numerals, the Concise half cites 'Eze 16:49' in arabic. Roughly the last 200 words of the block are a compressed restatement of the first 700, so any prevalence or word-count measure over the Henry feed double-counts them."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "13",
+      "verses": [
+        "15"
+      ],
+      "note": "Keil at k15 is 107 words of pure reprinted scripture - the text of vv.15-18 verbatim, no comment of any kind - so I silenced it for the 13-15 entry rather than declaring it. This is the same structural artefact seen at k11, where the block also opens by reprinting the verses but does go on to comment; at k15 the comment never arrives. Four of the chapter's five Keil blocks sit at exactly 200 words, confirming the 200 cap for that feed. The interaction matters: when a capped feed prepends the verse text, the cap can consume the entire block, so an exact-200 Keil block is not evidence that 200 words of commentary exist."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "13",
+      "note": "Jamieson residue stream, final refinement of the model. genesis 13 carries NO Jamieson blocks at all. A scan of Genesis 1-20 shows why: where the stream is emitting, the residue lands on a strict stride of 6 target keys (gen 5 at keys 1,7,13,19 - a full stride), but blocks are DROPPED from stride slots where the source stream has nothing to say (gen 10 at 5,11,17,29 with 23 missing; gen 6, 13 and 14 carry none whatever). So the stride belongs to the SLOT, not to the content, and a chapter's block count is not a measure of anything about that chapter. Combined with the measurements from judges 14 (5 source verses advanced per 6 target keys) and romans 10 (one stream per testament, restarting at the boundary, lag approx 0.16 of OT position and 0.23 of NT position because NT chapters are shorter), the emitter is now fully characterised. Any re-indexing must account for dropped slots and for the one-block overlap at each chapter seam, or it will both duplicate and mis-target."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "13",
+      "verses": [
+        "17"
+      ],
+      "note": "The command to walk the length and breadth of the land is read in two opposite directions, and the split is not confessional. Gill takes it as survey and seisin and adds the Targum of Jonathan's note that a possession was legally made by walking; Wesley reads it as enter and take possession, the land appearing better than on a distant prospect; Ellicott makes it the ordinary necessity of nomad life and adds the pleasure of knowing the seed will inherit each spot visited. Calvin reads the same command as designed to produce the contrary conviction - that Abram may 'more clearly perceive himself to be a stranger' and, 'exhausted by continual and fruitless disquietude', despair of any stable possession, since he is 'scarcely permitted to drink water' from wells he dug himself. The three take the circuit as an act of ownership; Calvin takes it as the exercise that removes the sense of ownership. A prevalence field counting three against one would misrepresent this: it is not a majority reading with a dissenter but two incompatible construals of the same imperative."
     }
   ]
 }

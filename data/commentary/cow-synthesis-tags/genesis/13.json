@@ -2,665 +2,467 @@
  "1": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
    "Adam Clarke",
-   "John Calvin"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "1-3",
+  "pericope_label": "Abram comes up out of Egypt very rich, and returns to the altar at Bethel",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Build on the word for rich meaning heavy, and enumerate the burdens of wealth — care in getting, fear in keeping, temptation in using, guilt in abusing, sorrow in losing, and account at last to be given — while balancing it with the notes that God sometimes makes good men rich, that such riches are the fruit of his blessing, and that piety consists very well with prosperity; and warn that places of temptation must be left as soon as possible."
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Abram returns from Egypt: 'and Abram went up out of Egypt, he, and his wife, and all that he had, and Lot with him, into the south' — Abram returning from Egypt (going 'up' toward the higher land of Canaan) with his wife Sarai (restored, 12:19), his nephew Lot, and all his possessions (the patriarch, delivered from Egypt, coming back to the land of promise, the return from the place of his fault and trial); Abram coming up with Sarai (restored to him), Lot, and all his substance (increased in Egypt, 12:16, the household of the patriarch returning intact, God's mercy bringing him safely out, with his wife and goods, despite his fault); 'into the south' (Abram coming into the south, the Negev, the southern part of Canaan, where he had been before going to Egypt, 12:9, the patriarch retracing his steps, returning to the land of promise and to his worship, vv.3-4, the pilgrim back in Canaan, to renew his sojourn) — Gill, Henry, Calvin."
+    "summary": "Remark how surprising it is that the Egyptians let the acquired wealth be carried off; set the patriarch against the common case, since moderate wealth hinders many from raising their heads toward heaven while abundance buries men in the earth, and show that he refused the fair pretext of staying where God had blessed him; report two rabbinic accounts of his journeys, of courtesy to former hosts and of pacing suited to the herds; and define calling on the name of the Lord as public profession rather than private prayer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Note that the property of those times was not flocks only but silver and gold, and pass on the report that part of it was earned by teaching the Egyptians arts and sciences; place the south in Canaan rather than Egypt; and conjecture that the altar was gone because Abram had taken it down himself to keep it from Canaanite pollution, so that he returned to the place of it either to revive the memory of communion or to pay his vows."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Confirm that the word for rich means weighty, and note that the possessions counted include slaves as well as cattle and treasure."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the word for rich implies about wealth, and whether prosperity consorts with piety.",
+   "Whether wealth given by God may be a reason for staying where it was gained.",
+   "How long the stay in Egypt lasted, and how the wealth was acquired.",
+   "What calling on the name of the Lord means, and what became of the altar."
+  ],
+  "outliers": [
+   "Henry alone turns the weight of riches into a catalogue of six burdens.",
+   "Calvin alone remarks that the Egyptians might have been expected not to let the wealth leave.",
+   "Gill alone sets a three-month chronology beside a twenty-year one and leaves both standing.",
+   "Wesley supposes Abram dismantled his own altar to keep the Canaanites from polluting it.",
+   "Calvin alone distinguishes invoking God from public profession, and rejects the reading that makes the inhabitants converts."
+  ],
   "themes": [
-   "And Abram went up out of Egypt, he, and his wife, and all that he had, and Lot with him, into the south",
-   "Abram's going up out of Egypt back to Canaan",
-   "the patriarch, delivered and restored, returning to the land of promise",
-   "Sarai restored and the substance increased (12:16, 19)"
+   "Wealth",
+   "Providence",
+   "Worship",
+   "Pilgrimage",
+   "Temptation",
+   "Altars"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abram's riches: 'and Abram was very rich in cattle, in silver, and in gold' — Abram having become very wealthy, abounding in livestock (cattle, the chief wealth of the pastoral patriarch), silver, and gold (his riches, increased in Egypt, 12:16, the great substance of the patriarch, a mark of God's blessing on him); Abram's wealth chiefly in cattle (flocks and herds, the substance of a nomadic herdsman, his great flocks and herds, the wealth that would soon require the parting from Lot, vv.6-7, the land not bearing them both); 'in silver, and in gold' (Abram also having silver and gold, the patriarch rich in precious metals as well as livestock, the blessing of God on Abram in temporal things, yet his true riches the promises of God, and he remaining a pilgrim and stranger, Hebrews 11:9, not setting his heart on his wealth) — Keil and Delitzsch, Gill, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.27
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Abram was very rich in cattle, in silver, and in gold",
-   "Abram's great riches",
-   "the great substance of the pilgrim patriarch, a mark of God's blessing",
-   "the wealth that would require the parting from Lot (vv.6-7)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abram returns to Bethel: 'and he went on his journeys from the south even to Bethel, unto the place where his tent had been at the beginning, between Bethel and Hai' — Abram traveling by stages from the Negev back to Bethel, to the very place where he had pitched his tent and built an altar before going to Egypt (12:8, the patriarch returning to the place of his former worship, retracing his steps to where he had called on the LORD); Abram returning to 'the place where his tent had been at the beginning' (to the spot of his earlier altar and worship, 12:8, the patriarch, after the trial and fault of Egypt, returning to the place and the practice of his devotion, the renewal of his worship after his lapse, the believer returning to his first works); 'between Bethel and Hai (Ai)' (the place of Abram's former encampment and altar, 12:8, the patriarch coming back to where he had worshiped, to renew his calling on the name of the LORD, v.4, the return to the altar marking the restoration of his communion with God after Egypt) — Gill, Wesley, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And he went on his journeys from the south even to Bethel, unto the place where his tent had been at the beginning, between Bethel and Hai",
-   "Abram's return to Bethel, the place of his former altar",
-   "the patriarch returning to the place and practice of his devotion after Egypt",
-   "the believer returning to his first works"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abram's renewed worship: 'unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD' — Abram coming to the place of the altar he had built at the first (12:8), and there renewing his worship, calling on the name of the LORD (the patriarch resuming his public worship of God at his former altar, the restoration of his devotion after Egypt); Abram returning to 'the place of the altar... at the first' (to the altar of his earlier worship, 12:8, the patriarch, after his lapse and deliverance, coming back to the altar, the believer renewing his worship at the place of his former communion); 'there Abram called on the name of the LORD' (Abram again worshiping and praying, calling on the LORD, as at the first, 12:8, the public profession and worship renewed, the patriarch, humbled by his fault in Egypt, returning to call on God, the restoration of communion and worship, the believer's return to prayer and praise) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Unto the place of the altar, which he had made there at the first: and there Abram called on the name of the LORD",
-   "Abram's renewed worship at the altar",
-   "the patriarch renewing his devotion at the place of his former communion",
-   "the believer's return to prayer and praise after his lapse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
-   "John Calvin"
+   "Adam Clarke",
+   "Keil and Delitzsch"
   ],
+  "range": "4-6",
+  "pericope_label": "The place of the altar, and the strife that wealth made between the herdsmen",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Lot's wealth: 'and Lot also, which went with Abram, had flocks, and herds, and tents' — Lot, Abram's nephew, who had accompanied him, also having become wealthy, possessing his own flocks, herds, and tents (the prosperity of Lot, sharing, perhaps under God's blessing on Abram, in the increase, the substance of Lot that, with Abram's, would prove too great for the land, v.6); Lot having flocks, herds, and tents (the wealth of a pastoral household, Lot prospering alongside Abram, the increase of both men's substance setting the stage for the strife, v.7, and the parting, vv.8-9); Lot's prosperity, with Abram's (v.2), making their joint dwelling impossible (v.6, the very blessing of increase becoming the occasion of strife between their herdsmen, the wealth that should have been a benefit bringing a difficulty, the setting for Abram's generous parting from Lot, vv.8-9) — Gill, Henry, Calvin."
+    "summary": "Offer three accounts of the vanished altar — that it fell of itself, that the Canaanites destroyed it, or that Abram took it down to keep it from pollution — and note that the text says he came to the place of the altar and not to the altar; refuse to impute the quarrel either to Abram&#x27;s moroseness or to his nephew&#x27;s forwardness, and assign it instead to the design of God, who allays the sweetness of wealth with bitterness lest a servant&#x27;s mind be enchanted by success; and draw from it a restraint on inordinate desire and a medicine for the troubled rich."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Trace the quarrel to the riches and distinguish two effects, that wealth set the men at a distance because the place was too strait, and set them at variance because riches breed contention among relations — with the observation that every comfort in this world has its cross attending it; and account for the nephew&#x27;s prosperity by his company, since those who share the obedience of God&#x27;s people share their comforts."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Give three causes of the separation rather than one, the size of the flocks, the ground already occupied by Canaanite and Perizzite, and an envy between the herdsmen that the text does not state; and note what the flocks supplied, clothing and food and drink, besides the beasts offered in sacrifice."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "State the pressure exactly, that the land did not furnish grazing for herds so numerous and that the presence of Canaanite and Perizzite increased the difficulty; and explain the elder man&#x27;s generosity in yielding the choice by his confident assurance that the Lord would so direct it that the promise would be fulfilled."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What became of the altar Abram had built before going down to Egypt.",
+   "Whether the quarrel is to be blamed on either party, or referred to the purpose of God.",
+   "What caused the separation besides the size of the flocks.",
+   "Why the elder man left the choice of country to the younger."
+  ],
+  "outliers": [
+   "Calvin alone puts the question of fault and then sets it aside for the design of God.",
+   "Calvin alone measures the loss by saying Abram would sooner have cast away his riches than his nephew.",
+   "Clarke alone adds envy between the herdsmen as a cause the narrative does not mention.",
+   "Keil alone grounds the magnanimity in a confidence that the promise governed the outcome.",
+   "Gill offers three explanations of the altar&#x27;s disappearance and commits to none of them."
+  ],
   "themes": [
-   "And Lot also, which went with Abram, had flocks, and herds, and tents",
-   "Lot's own wealth in flocks, herds, and tents",
-   "the nephew prospering alongside Abram",
-   "the wealth that would prove too great for the land and bring the strife"
+   "Wealth",
+   "Strife",
+   "Providence",
+   "Generosity",
+   "Family",
+   "Altars"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The land cannot bear them: 'and the land was not able to bear them, that they might dwell together: for their substance was great, so that they could not dwell together' — the land (the pasturage and water available) unable to support both Abram's and Lot's great flocks and herds together (their combined substance too great for the region, especially as the Canaanite and Perizzite also held the land, v.7, the abundance of both making their joint dwelling impossible); the land unable to bear them (the pasturage insufficient for both households' livestock, the very increase that God had blessed them with now straining the land, the difficulty of two great pastoral households dwelling in the same limited region); 'their substance was great, so that they could not dwell together' (the greatness of their wealth forcing a separation, the blessing of abundance becoming the occasion of difficulty and, through the herdsmen, of strife, v.7, the need for Abram and Lot to part, the setting for Abram's generous proposal, vv.8-9) — Keil and Delitzsch, Gill, Clarke."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the land was not able to bear them, that they might dwell together: for their substance was great, so that they could not dwell together",
-   "the land could not bear Abram and Lot together",
-   "the abundance of both households too great for the region",
-   "the blessing of wealth becoming the occasion of difficulty and parting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The strife of the herdsmen: 'and there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle: and the Canaanite and the Perizzite dwelled then in the land' — the servants of Abram and Lot quarreling (over pasturage and water, the land being too strait, v.6, the strife between the herdsmen threatening the peace between the households, the occasion of the parting, the contention that Abram would resolve by generous separation, vv.8-9); the strife arising among the herdsmen (over the limited pasture, the contention, if unchecked, breeding division and reproach, the quarrel of the servants endangering the unity of the family, Abram's wisdom and charity to settle it, vv.8-9); 'the Canaanite and the Perizzite dwelled then in the land' (the note marking that the heathen inhabitants, Canaanites and Perizzites, were present, watching, the strife between the servants of the godly a scandal before the heathen, dishonoring God and the true religion, the presence of the watching pagans making the contention the more grievous, and Abram's peacemaking the more necessary, lest the name of God be reproached) — Ellicott, Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And there was a strife between the herdmen of Abram's cattle and the herdmen of Lot's cattle: and the Canaanite and the Perizzite dwelled then in the land",
-   "the strife between the herdsmen and the presence of the Canaanite and Perizzite",
-   "the quarrel over pasturage threatening the family's peace",
-   "the watching heathen making the strife a scandal, calling for peacemaking"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
-   "John Calvin"
+   "John Wesley",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "7-9",
+  "pericope_label": "The Canaanite in the land, the appeal to brotherhood, and the choice offered to Lot",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Abram's appeal for peace: 'and Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren' — Abram, the elder and the greater, taking the initiative to end the strife (he seeking peace, deprecating contention between himself and Lot and between their servants, the patriarch's charity and humility, seeking peace rather than standing on his rights, the peacemaker, Matthew 5:9); Abram seeking to remove all strife — between the principals and between the servants (the patriarch, concerned for peace and for the honor of God before the heathen, v.7, not letting the quarrel continue, his wisdom in addressing the root of the contention); 'for we be brethren' (Abram appealing to their kinship, uncle and nephew, near kin, brethren ought not to strive, the bond of family and of faith holding them in peace, the appeal to brotherhood as the ground of concord, Abram's charity, valuing peace and kinship above pasturage and rights) — Gill, Clarke, Calvin, Henry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee, and between my herdmen and thy herdmen; for we be brethren",
-   "Abram's gracious appeal for peace with Lot",
-   "the patriarch seeking peace and appealing to kinship, the peacemaker (Matthew 5:9)",
-   "valuing concord above pasturage and his own rights"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Read the note about the Canaanite and Perizzite as geography, reconstructing the Perizzites as a townless pastoral people pushed inland by maritime settlers, so that the districts were divided between them and two great clans could find no unoccupied pasture; and describe the country surrendered, the whole circuit of the Jordan watered like the garden of the Lord and like Egypt."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Abram offers Lot first choice: 'is not the whole land before thee? separate thyself, I pray thee, from me: if thou wilt take the left hand, then I will go to the right; or if thou depart to the right hand, then I will go to the left' — Abram proposing a peaceful separation (the whole land lying open before them, with room enough, Abram urging Lot to part from him, that they might dwell apart and the strife cease, the wise and generous proposal to end the contention by separation); Abram, the elder and the greater (to whom the land was promised), giving Lot the first choice — 'if thou wilt take the left hand, then I will go to the right' (Abram waiving his right of precedence, yielding the choice to his younger kinsman, the remarkable charity and humility of Abram, preferring peace and his nephew's good to his own advantage); Abram's offer of first choice showing his faith and self-denial (he trusting God for his portion and not grasping at the best for himself, the man to whom the whole land was promised letting his nephew choose first, the generosity that springs from faith, Abram content to take what was left, trusting God's promise, the pattern of charity and peaceableness) — Keil and Delitzsch, Gill, Calvin, Henry."
+    "summary": "Read the same clause morally, since the quarrel was dangerous, the common enemy being at hand to plunder both if they fell out, and scandalous, the neighbours watching them for the singularity of their religion and ready to improve the quarrel to their reproach; list what the kinship amounted to — one family, one God worshipped alike, one promise, one end — and lay down that where strife is unavoidable in a situation the situation must be changed, no secular advantage counterbalancing the loss of peace."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Report what the herdsmen were likely quarrelling over and set aside a rabbinic account in which the nephew&#x27;s men justified trespass by his expectation of inheriting; draw from the size of the household an argument for small establishments, since a crowd is commonly turbulent and repose is best had in a small house; warn that when Satan cannot raise enmity between us directly he entangles us in the quarrels of others; explain why the masters are named when only the servants strove; and admit that the appeal to kinship is a lower motive called in because the fear of God is less effectual with us than it should be."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the presence of the Canaanite and the Perizzite is mentioned at this point.",
+   "What the herdsmen were contending for.",
+   "Why Abram speaks of strife between himself and Lot when only their servants were quarrelling.",
+   "On what ground the elder man gives up the choice that was his by right."
+  ],
+  "outliers": [
+   "Ellicott alone reconstructs the settlement of the country to explain why there was no room.",
+   "Wesley alone gives the danger and the scandal of the quarrel as the reason the clause is added.",
+   "Gill alone reports the rabbinic story in which the nephew&#x27;s herdsmen defend trespass by his expectation of inheriting.",
+   "Calvin alone turns the episode into an argument for keeping a small household.",
+   "Calvin alone admits that the appeal to blood is used because a higher motive is not strong enough in us."
+  ],
   "themes": [
-   "Is not the whole land before thee? separate thyself, I pray thee, from me: if thou wilt take the left hand, then I will go to the right",
-   "Abram's generous offer of first choice to Lot",
-   "the patriarch waiving his precedence, giving his nephew first choice",
-   "the self-denial and faith of Abram, content to take what was left"
+   "Peace",
+   "Kinship",
+   "Strife",
+   "Land",
+   "Humility",
+   "Providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.33
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Matthew Henry",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "Keil and Delitzsch"
   ],
+  "range": "10-12",
+  "pericope_label": "Lot lifts up his eyes, chooses the plain of Jordan, and pitches toward Sodom",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Note that the nephew had not the ingenuity to return the choice, and take the lifting up of the eyes chiefly of the understanding unless he stood on some eminence; say that he should have contended with his uncle for the palm of modesty and that whoever is intent on his own advantage wants humanity towards others; and refuse the reading that makes the garden of the Lord mean merely excellent, since Moses does not propose a general similitude but says that region was watered, as he had of the first abode of man."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Look for reluctance at the parting and the civility of returning the choice, find neither, and conclude that passion and selfishness make men rude; then trace what the choice cost — captivity, a vexed soul, and at last the mountain he had refused — laying down that sensual choices are sinful choices, that God often gives great plenty to great sinners, and that the righteous man&#x27;s coming among them was a mercy, since God sends preachers before he sends destroyers."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Make a maxim of it, that a little civility or good breeding is of great importance in the concerns of life; gloss the garden of the Lord in five words as paradise; and repair the awkward clause by re-ordering it after Houbigant, so that before the destruction the land was, as thou goest to Zoar, well watered as paradise was by its four streams and Egypt by the overflowing of the Nile."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Lot's worldly choice: 'and Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the LORD destroyed Sodom and Gomorrah, even as the garden of the LORD, like the land of Egypt, as thou comest unto Zoar' — Lot, given the choice (v.9), looking and seeing the plain of Jordan, well watered and fertile (he choosing by the sight of his eyes, by what seemed best for his flocks and his prosperity, the choice governed by worldly advantage, not by spiritual considerations); the plain, at that time (before God destroyed Sodom and Gomorrah, ch. 19), as fair as 'the garden of the LORD (Eden)' or 'the land of Egypt' (the well-watered Nile valley, the land looking like paradise, but its fairness deceptive, it lying under the shadow of coming judgment, and near the wicked cities, v.13, the narrator's note, 'before the LORD destroyed Sodom,' marking the irony of Lot's choice); Lot choosing by the eye, looking to the richness of the land and his own gain, taking no account of the wickedness of Sodom (v.13) or of the danger to his soul (the choice of the worldly man, walking by sight, the fair appearance masking the spiritual peril, the contrast with Abram, who walked by faith, Lot's choice leading him toward Sodom and into trouble, ch. 14; 19) — Ellicott, Gill, Henry, Calvin."
+    "summary": "Describe the Jordan valley as a geological fault lying below the level of the Mediterranean, once a chain of lakes, now dried by the loss of the forests and receding to leave salt wastes; put the chooser on the high ground between Bethel and Ai and argue from the sightline that the city stood at the north end of the sea; emend Zoar to Zoan on the Syriac; and read the separation as God&#x27;s own will, the promise renewed afterwards being an inward assurance, since the verb of speaking is unaccompanied by any appearing."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What is meant by lifting up the eyes — sight from a height, or the mind casting about.",
+   "How to construe the clause as thou comest unto Zoar, whether by emending the name or by re-ordering the sentence.",
+   "Whether the garden of the Lord means Eden specifically or is a Hebrew idiom for anything excellent.",
+   "Whether the separation was merely Lot&#x27;s doing or was according to the will of God."
+  ],
+  "outliers": [
+   "Ellicott alone gives the geology of the valley and places the cities at the northern end of the sea.",
+   "Ellicott alone emends Zoar to Zoan; Clarke alone repairs the same clause by Houbigant&#x27;s re-ordering, leaving the name standing.",
+   "Calvin alone insists that Eden itself is pointed out rather than a general figure for fertility.",
+   "Keil alone infers the inward mode of the renewed promise from the absence of any word of appearing."
+  ],
   "themes": [
-   "And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where... even as the garden of the LORD, like the land of Egypt",
-   "Lot's worldly choice of the well-watered plain of Jordan",
-   "the choice by sight, for gain, heedless of Sodom's wickedness",
-   "the deceptive fairness masking the coming judgment, in contrast to Abram's faith"
+   "Choice",
+   "Covetousness",
+   "Judgment",
+   "Land",
+   "Providence",
+   "Humility"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lot chooses the plain and parts from Abram: 'then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other' — Lot taking for himself the whole fertile plain of Jordan (the choicest part, as it then seemed, he choosing the best for himself, leaving the rest to Abram, the selfish choice of the worldly man, grasping the apparent advantage); 'Lot journeyed east' (he moving eastward, toward the plain and the cities, toward Sodom, v.12, the direction of his journey taking him toward the wicked cities, the move that would bring him into peril, Lot departing toward the world he had chosen); 'they separated themselves the one from the other' (Abram and Lot parting, each going his way, the peaceful separation that ended the strife, vv.7-9, the parting of the godly uncle and the worldly nephew, Lot toward Sodom, Abram remaining in Canaan, v.12, the separation that set the course of each man's history) — Keil and Delitzsch, Ellicott, Clarke, Gill."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Then Lot chose him all the plain of Jordan; and Lot journeyed east: and they separated themselves the one from the other",
-   "Lot's choice of the plain and the separation from Abram",
-   "the worldly nephew taking the best and moving toward Sodom",
-   "the peaceful parting that set the course of each man's history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abram in Canaan, Lot toward Sodom: 'Abram dwelled in the land of Canaan, and Lot dwelled in the cities of the plain, and pitched his tent toward Sodom' — Abram remaining in the land of Canaan (the land of promise), while Lot dwelt among the cities of the plain, pitching his tent toward Sodom (the contrast between the godly uncle, content in the promised land, and the worldly nephew, drawing near the wicked city); Abram dwelling in Canaan (the land God had promised to his seed, 12:7, the patriarch, having yielded the choice, remaining in the land of promise, content with God's portion, the man of faith abiding where God had placed him); 'pitched his tent toward Sodom' (Lot moving his dwelling toward Sodom, the wicked city, v.13, the gradual drawing near to evil, he soon to dwell in Sodom itself, 14:12; 19:1, the first step of Lot's declension — pitching toward Sodom, then dwelling in it, the danger of choosing nearness to the wicked for worldly gain, the worldly choice leading toward spiritual peril) — Gill."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Abram dwelled in the land of Canaan, and Lot dwelled in the cities of the plain, and pitched his tent toward Sodom",
-   "Abram dwelling in Canaan and Lot pitching toward Sodom",
-   "the godly uncle content in the land of promise, the worldly nephew near the wicked city",
-   "the first step of Lot's declension toward Sodom (14:12; 19:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wickedness of Sodom: 'but the men of Sodom were wicked and sinners before the LORD exceedingly' — the inhabitants of Sodom, near whom Lot pitched (v.12), exceedingly wicked (their sin great and open, 'before the LORD,' in his sight, and provoking him, the city ripe for the judgment that would come, ch. 19, the note setting the peril of Lot's choice in sharp relief); the men of Sodom 'wicked (toward men, in injustice and violence) and sinners (toward God, in impiety and vice)' (their sin both against God and against man, the gross and abominable wickedness of Sodom, the sins later named, ch. 19; Ezekiel 16:49-50, the exceeding, ripe wickedness of the city); 'before the LORD exceedingly' (their sin open before God and provoking his wrath, the wickedness so great as to cry to heaven, 18:20, the note warning of Lot's danger in choosing to dwell near such a people, for worldly gain exposing himself and his family to the contagion and the judgment of Sodom, ch. 19, the peril of the worldly choice) — Gill, Calvin, Clarke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "But the men of Sodom were wicked and sinners before the LORD exceedingly",
-   "the exceeding wickedness of the men of Sodom",
-   "their sin against God and man, the city ripe for judgment (Ezekiel 16:49-50)",
-   "the peril of Lot's choice to dwell near such a people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "13-15",
+  "pericope_label": "The wickedness of Sodom, and the promise renewed to Abram after the parting",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The LORD renews the promise after Lot's departure: 'and the LORD said unto Abram, after that Lot was separated from him, Lift up now thine eyes, and look from the place where thou art northward, and southward, and eastward, and westward' — God renewing his promise to Abram immediately after Lot had parted from him (the timing marked — after Abram's generous self-denial, vv.8-9, God coming to comfort and reward him, the patriarch, who had yielded the choice to Lot, now receiving the assurance of God's gift of the whole land); God bidding Abram 'lift up now thine eyes, and look... northward, and southward, and eastward, and westward' (to survey the whole land in every direction, in contrast to Lot, who 'lifted up his eyes,' v.10, for his own gain, Abram bidden by God to lift up his eyes and behold the land God would give him, the whole land, in all directions, promised to Abram and his seed); God's renewing the promise after Abram's self-denial showing that the man who yields his rights for peace loses nothing (God giving Abram the whole land, far more than the plain Lot chose, the reward of faith and charity, the comfort of God to his servant, the contrast between Lot's grasping choice and Abram's God-given inheritance) — Ellicott, Gill, Henry, Calvin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And the LORD said unto Abram, after that Lot was separated from him, Lift up now thine eyes, and look... northward, and southward, and eastward, and westward",
-   "the LORD renewing the promise of the land to Abram after Lot's departure",
-   "the reward of Abram's self-denial and charity, given the whole land",
-   "Abram bidden to lift up his eyes by God, in contrast to Lot's choice by sight (v.10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
+    "summary": "Set out the fork, that the nephew either did not know what the men of the city were or knew and was tempted anyway, and add the rabbinic reading of the particle as although; raise as a difficulty why they are called wicked before the Lord and not before men, and answer that they were abandoned to execrable crimes whose cry rose to heaven; argue that a fertile country granted to the unworthy gives the wicked no ground of self-congratulation and the godly no reason to envy them; call the word of God the medicine brought to alleviate the pain of the parting; find the design of the separation in the fact that the land was assigned to one man alone; reject the speculation that God spoke through a prophet; take the gift as title now and possession hereafter; and deny that for ever simply denotes perpetuity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the two words to their roots — the one meaning to break in pieces and afflict, so that these men confounded the distinctions between right and wrong, the other to miss the mark, so that a sinner ever aims at happiness and constantly misses it — and make the phrase before the Lord the mark of sinners of no common character; compress the same into three words, impudent daring sinners; suppose the angel of the covenant appeared in open day, since the land was to be viewed and the dust numbered, where the later revelation was plainly at night; and cap for ever at the coming of Christ by lexicon, the word meaning either eternity or a hidden period closing a dispensation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the timing the whole point and give four senses to the phrase after that Lot was separated from him — after the quarrel was over, since calm spirits are best prepared for grace; after the self-denying condescension, God making up in spiritual peace what is lost for neighbourly peace; after the loss of a kinsman&#x27;s society, communion with God supplying the want of conversation with friends; and after the departure to the plain, lest there be envy, since the one had the paradise but the other had the promise."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The land promised for ever: 'for all the land which thou seest, to thee will I give it, and to thy seed for ever' — God promising Abram the whole land he beheld (the land of Canaan, in all directions, v.14, the grant of the land to Abram, though he himself possessed none of it, Acts 7:5, but received it in promise, and to his seed, the covenant gift of the land confirmed and enlarged); 'to thy seed for ever' (the land promised to Abram's seed, his posterity, Israel, for ever, the duration 'for ever' variously understood: some taking it of the literal, perpetual possession of Canaan by Abram's natural seed, Israel, to the end of the present age, the land given to that part of his seed which descended through Isaac and Jacob, possessed until the consummation; others reading 'for ever' as a long but not strictly endless duration, the Hebrew olam meaning a long age, the period appointed; a spiritual/typological reading adding that the land-promise points beyond the earthly Canaan to the heavenly inheritance, the eternal rest of the seed, Hebrews 11:10, 16, Abraham looking for the city with foundations, the earthly land a type of the everlasting inheritance); the perpetual grant resting on God's covenant faithfulness (whether read of the literal land to Israel for the appointed age, or as pointing to the heavenly inheritance, the promise sure, the land given to Abram's seed by God's unbreakable word, the covenant of grace embracing both the earthly type and the heavenly substance) — Keil and Delitzsch, Gill, Clarke, Calvin."
+    "prevalence": "single",
+    "summary": "Weigh what the parting cost, the relative having shared the exile and being probably regarded as heir in a childless state, so that the promise is made more definite in compensation."
    }
   ],
   "debates": [
-   {
-    "question": "In what sense is the land given to Abram's seed 'for ever'?",
-    "sides": [
-     {
-      "position": "The literal, perpetual possession of Canaan by Abram's natural seed (Israel) for the appointed age, until the consummation",
-      "holders": [
-       "the literal reading",
-       "Gill"
-      ]
-     },
-     {
-      "position": "A long but bounded duration (olam = a long age), the appointed period",
-      "holders": [
-       "the bounded-duration reading"
-      ]
-     },
-     {
-      "position": "A typological pointing beyond earthly Canaan to the heavenly inheritance, the eternal rest of the seed (Hebrews 11:10, 16)",
-      "holders": [
-       "the typological reading"
-      ]
-     }
-    ]
-   }
+   "Whether the choice was made in ignorance of the neighbours or in spite of them.",
+   "Why the men of the city are called wicked before the Lord rather than before men.",
+   "In what manner the word came to Abram — an articulate voice, a visible appearance in daylight, or a prophet&#x27;s mouth.",
+   "How far the term for ever extends."
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone works both words back to their roots to define what wickedness and sin are.",
+   "Calvin alone turns the fertility of the condemned country into a warning against envying the prosperous wicked.",
+   "Henry alone makes the timing of the visit the substance of the passage, drawing four lessons from a single clause.",
+   "Ellicott alone reads the promise as consolation for the loss of a presumed heir."
+  ],
   "themes": [
-   "For all the land which thou seest, to thee will I give it, and to thy seed for ever",
-   "the promise of the land to Abram's seed for ever (the crux of the land-grant)",
-   "literal perpetual Canaan vs a bounded 'for ever' (olam) vs the heavenly inheritance (Hebrews 11:10, 16)",
-   "the grant sure by God's covenant faithfulness"
+   "Judgment",
+   "Sin",
+   "Promise",
+   "Peace",
+   "Providence",
+   "Comfort"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The seed as the dust of the earth: 'and I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth, then shall thy seed also be numbered' — God promising Abram a posterity as numberless as the dust of the earth (the promise of a vast multitude of descendants, to a man whose wife was barren, 11:30, God promising an innumerable seed, the human impossibility against which the promise shines); the hyperbole of multitude — 'if a man can number the dust of the earth, then shall thy seed also be numbered' (as the dust cannot be counted, so Abram's seed beyond numbering, the vast multitude of his descendants, Israel, and the multitude of his spiritual seed, all believers, Romans 4:16-18, Galatians 3:7, 29, the immense fulfillment of the promise); the promise of an innumerable seed to a childless old man calling for faith (Abram believing God, who quickeneth the dead and calleth things that are not as though they were, Romans 4:17-21, the promise embracing both his natural seed, Israel, and his spiritual seed, all who are of faith, of every nation, the numberless multitude of the faithful, the children of Abraham) — Gill, Calvin, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And I will make thy seed as the dust of the earth: so that if a man can number the dust of the earth, then shall thy seed also be numbered",
-   "the promise of a seed as numberless as the dust of the earth",
-   "the vast multitude of Abram's descendants, natural and spiritual (Romans 4:16-18)",
-   "the promise to a barren man, calling for the faith that believes God who quickens the dead"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Abram bidden to walk the land: 'arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee' — God bidding Abram arise and walk through the land, in its length and breadth (to traverse and survey the land that God would give him, the patriarch invited to take possession, as it were, by walking through it, the symbolic taking of the land in faith); Abram to walk through the land, length and breadth (to view and traverse the whole, the act of walking through it a kind of symbolic possession, a customary token of ownership, Abram bidden to make the land his own, in faith, by traversing it, the patriarch taking possession of the promise by walking the land); 'for I will give it unto thee' (the ground of the command God's gift, God to give the land to Abram, and his seed, v.15, the patriarch walking through it not as owning it yet, Acts 7:5, but in faith of God's promise, the assurance of the gift confirmed by the invitation to walk through it) — Gill, Ellicott, Wesley."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Arise, walk through the land in the length of it and in the breadth of it; for I will give it unto thee",
-   "God bidding Abram walk through the land he would give him",
-   "the symbolic taking of possession by walking the land, in faith",
-   "the patriarch walking it not as owning it yet (Acts 7:5) but in faith of the promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Charles Ellicott"
   ],
+  "range": "16-18",
+  "pericope_label": "The seed as the dust, the command to walk the land, and the altar at Mamre",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Abram dwells at Mamre and builds an altar: 'then Abram removed his tent, and came and dwelt in the plain of Mamre, which is in Hebron, and built there an altar unto the LORD' — Abram moving his tent and settling at Mamre, near Hebron (a place in the south of Canaan, the patriarch, still a tent-dweller, Hebrews 11:9, making Mamre his chief dwelling-place, Hebron, a place of importance in Abram's history, and his burial-place, ch. 23); Abram dwelling at Mamre (named from an Amorite ally of Abram, 14:13, the patriarch settling in the oaks of Mamre, his principal residence in Canaan, the place from which much of his later history unfolds, chs. 14; 18, the dwelling of the man of faith in the land of promise); 'built there an altar unto the LORD' (wherever Abram dwelt, he building an altar and worshiping God, as at Shechem, 12:7, and Bethel, 12:8, the patriarch's habit of worship, the altar at Mamre marking his devotion and his profession of the true God in the land, the man of faith setting up the worship of God in his dwelling-place) — Ellicott, Gill, Clarke."
+    "summary": "Call the dust a hyperbolical expression for the multitude of the posterity, in Solomon&#x27;s days and in the latter day and especially of the spiritual seed; take the command to walk as survey and seisin, adding the Targum&#x27;s note that possession was made by walking; be interested in the oaks as shade rather than as a shrine, while granting that later superstition may have taken its rise there; but also set aside the subtleties of others, find the force of the promise in the gap between a solitary man and the countless particles of dust, read the circuit of the land as designed to make him perceive himself a stranger and despair of stable possession, treat the verb as a difficulty between pitched and removed, and explain the altar as a public profession of the true God among profane altars, consecrated by the word."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the dust the same practical way and point to the multitude under Solomon; make the removing of the tent a lesson in not fixing here but walking through to a better Canaan in the condition of a pilgrim; derive the word for altar from a root meaning to slay, so that sacrifice was offered, and read the building of it as thankfulness for the visit; identify the Amorite and the city of the four; and close the chapter on riches, since happiness has its seat in the mind and earthly goods engender care, anxiety and strife."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Explain why a nomad must change his ground at all, the uplands being rich in spring, burnt up in summer and exposed to winds and rain in winter, and add that the walking now carries the pleasure of knowing his seed will inherit each spot; derive Hebron from alliance, perhaps from the confederacy with the Amorite, and take it for a district as well as a city."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the comparison to dust is meant to convey, and how a childless man is to receive it.",
+   "Why Abram is commanded to walk the length and breadth of the land — to take possession, or to learn that he has none.",
+   "Whether the verb at the last verse means pitched or removed.",
+   "Why the altar was built, and what the oaks of Mamre were chosen for."
+  ],
+  "outliers": [
+   "Gill alone reports the Targum&#x27;s note that possession was legally made by walking, and alone reports the later veneration of Abram&#x27;s oak.",
+   "Calvin alone reads the circuit of the land as an exercise designed to make Abram feel a stranger rather than an owner.",
+   "Ellicott alone explains the necessity behind a nomad&#x27;s repeated change of ground.",
+   "Clarke alone turns the close of the chapter into a verdict on riches."
+  ],
   "themes": [
-   "Then Abram removed his tent, and came and dwelt in the plain of Mamre, which is in Hebron, and built there an altar unto the LORD",
-   "Abram's removal to Mamre in Hebron and his building of an altar",
-   "the tent-dwelling man of faith making Mamre his chief dwelling (Hebrews 11:9)",
-   "the patriarch's habit of worship, setting up the altar wherever he dwelt"
+   "Promise",
+   "Faith",
+   "Pilgrimage",
+   "Worship",
+   "Riches",
+   "Land"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  }
 }
