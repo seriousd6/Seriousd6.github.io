@@ -18109,6 +18109,112 @@
       "book": "acts",
       "chapter": "12",
       "note": "Fidelity self-grade A for all six entries (1-5, 6-11, 12-17, 18-19, 20-23, 24-25). Expansion ratios 0.04 to 0.28 against a corpus median of 0.84. Lightfoot is declared at entries 1 and 20, where his blocks are on-verse, and excluded at entry 12, where they carry Acts 13 material; he is neither declared nor excluded at entry 6, where the only mention of his name in the prose is Ellicott citing him, so he appears there as a reported critic in a debate rather than as a witness. Chrysostom is declared only at entry 18; his 1,131 words at key 1 were read and not used, the entry having no room once the historical identification of Herod was set out. Henry is undeclared at entries 1 and 24, where he has no block. One judgement recorded: at entry 18 Chrysostom asks why God let the guards die and answers it, which is the only place in the chapter where a commentator questions the justice of the narrative rather than explaining it; his answer is given as he gives it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "ephesians",
+      "chapter": "6",
+      "note": "Fidelity self-grade, all eight entries. 1-3 645w (10 voices: Chrysostom, Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Cyril); 4-6 649w (9, Jamieson excluded); 7-9 649w (7); 10-12 643w (9, Jamieson excluded); 13-15 646w (8); 16-18 644w (8, Jamieson excluded); 19-21 645w (8); 22-24 649w (7, Jamieson excluded, Cyril silenced). Every claim traced to a head inside its own span. TWO DELIBERATE OMISSIONS, both from misfiled Ellicott blocks — see the separate note: his block at k1 is the section header on 6:10-17 and his block at k2 is his comment on v18, self-labelled '(18)'. I did not use either, since using them would have put content from one pericope inside another; the material at k2 is consequently missing from the 16-18 entry, where it belongs. Chapter sized at 55,550 usable words, but roughly 6,900 of that is chrome at k24 alone (see notes), so the true figure is nearer 48,600."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "ELLICOTT MISFILED AT THE HEAD OF THE CHAPTER — TWO BLOCKS, ONE VACATING ITS PROPER KEY. Checked every Ellicott block in the chapter against its key. k3 through k24 are correctly aligned. But k1 is not a comment on v1 at all: it is his section header on 6:10-17 ('In Ephesians 6:10-17. St. Paul sums up his practical exhortation in that magnificent description...'), which belongs at k10. And k2 is his comment on VERSE 18, carrying the verse number in its own text: '(18) Praying always with all prayer and Supplication.' There is no Ellicott block at k18, so this is not a shift — it is two blocks displaced to the front of the chapter, one of which left its proper key empty. Attribution is certain (the block labels itself), so the filing is recoverable: k1's content should move to k10 and k2's to k18. Distinct from the Victorinus pattern (one block per chapter, always at k1, always about other verses) in that here the displaced material has a demonstrable home. Worth a corpus scan for Ellicott blocks whose first characters are a parenthesised verse number that disagrees with their key."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "24"
+      ],
+      "note": "CALVIN'S BACK MATTER DUMPED INTO THE LAST VERSE — A NEW AND LARGE CHROME FAMILY. The Calvin block at k24 is 5,928 words. Only the first ~230 comment on v24 (the sense of en aphtharsia, following Erasmus). The remaining ~5,700 are CALVIN'S OWN TRANSLATION OF THE BIBLICAL TEXT of Galatians and Ephesians, printed complete as the volume's back matter, with his French alternative renderings inline as footnotes ('Par grace, ou, en la grace de Christ'). The dump runs Galatians 1 through 6 and Ephesians 1 through 4 at least. This is not navigation chrome and not an editor's apparatus — it is an entire biblical text mis-scoped into one commentary block, and it is the largest single non-content payload measured anywhere in the corpus. Detector: the run begins after the genuine comment with continuous scripture prose and no exposition; the French gloss pattern (a quoted French phrase followed by its English) recurs every few hundred words. Practical effect: the sizer over-reports this chapter by about 5,700 words from this block alone."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "24"
+      ],
+      "note": "ELLICOTT END-OF-BOOK TAIL: NOW CSS AS WELL AS JAVASCRIPT. The Ellicott block at k24 is 1,175 words: genuine comment on the salutation for roughly the first 200, then a RAW CSS STYLESHEET (.int-s-button, .lex-search-div, media queries) followed by the JavaScript bundle already recorded at deuteronomy 8 k20 — the verse_popups.cgi fetch, the scriptRef click binder, the accordion initialiser. deuteronomy 8 showed the end-of-CHAPTER tail reaching into script; this is the end-of-BOOK tail and it is larger, carrying the page's stylesheet too. Running series for the same feed: exodus 1 k22 984w, revelation 19 k43 985w, luke 4 k44 990w, deuteronomy 8 k20 1037w, ephesians 6 k24 1175w. The boundary marker 'Copyright Statement These files are public domain' holds in every instance; everything after it can be dropped. NOTE the contrast at the same key: Clarke's 1,065-word block here is genuine throughout — the versional subscriptions, his judgment that subscriptions were 'added in a much later age, and generally by unskillful hands', and his colophon 'Finished the correction for a new edition, Dec. 15th, 1831.' Length alone does not identify chrome."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JAMIESON STRIDE: four keys, perfect progression, and the NT drift model survives where Deuteronomy broke it. The four Jamieson blocks sit at keys 6, 12, 18 and 24 — an exact arithmetic progression of difference 6, all congruent to 0 mod 6. Residue is Romans 15-16: k6 is Rom 15:18 ('I will not dare to go beyond what Christ hath wrought by me'), k18 is Rom 15:32 ('with you refresh myself'), k24 is Rom 16:3 (Prisca, 'the wife is here named before the husband'). LAG: ephesians 6 is canonical chapter 1103 and Romans 15 is 1061, a lag of 42 — which sits right beside the galatians 1 measurement (position 1092, lag ~39) and continues the monotone NT series through revelation (1103/42, 1197/62, 1207/64). That matters because deuteronomy 8 did NOT fit: position 161 with a lag of 67 where the model predicts ~20. With ephesians 6 confirming the NT progression, the deuteronomy outlier is better explained as that book's tree carrying its own offset than as the drift being non-monotone. Recommend the owner treat the drift as monotone WITHIN a tree and check for per-book or per-testament offsets before scoping the re-indexing."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "3",
+        "11",
+        "16",
+        "17",
+        "18",
+        "24"
+      ],
+      "note": "CYRIL OF JERUSALEM IS A TOPICAL FLORILEGIUM, NOT A COMMENTARY, AND IT DUPLICATES. Seven Cyril blocks in this chapter, but only FIVE distinct texts: k1 and k3 are byte-identical (193w, on honouring parents), and k17 and k18 are byte-identical (200w, on the subsistence of the Holy Ghost). The others are matched to their keys by catchword rather than by exposition — k11 is the baptismal chrism because the verse says 'put on'; k16 is faith stopping the lions' mouths because the verse says 'shield of faith'; k24 is a eucharistic passage from the Catechetical Lectures that comments on nothing in the closing benediction at all. This is a different mechanism from the Catena Aurea splitting defect: there the attribution was wrong; here the attribution is right and the ASSIGNMENT is decorative. Two consequences for the tooling: duplicate blocks inflate both the head count and the sizer, and GHOST cannot distinguish a florilegium match from a real comment. Cyril's cap is the same 200 measured at galatians 1 (4 of 4); three of his seven here sit at exactly 200. I silenced the k24 block for the 22-24 entry on the standing rule for blocks that comment on nothing in their span."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "19"
+      ],
+      "note": "THE SLAVERY PASSAGE: FIVE POSITIONS, AND ONE COMMENTATOR ARGUING AGAINST HIS OWN TEXT'S MISUSE. Clarke: 'In heathen countries slavery was in some sort excusable; among Christians it is an enormity and a crime for which perdition has scarcely an adequate state of punishment' — and in the same block, that a Christian slave was bound to serve faithfully the man whose money bought him, 'howsoever illegal that traffic may be considered.' Barnes is the most remarkable. At v7 he forbids the master two inferences: that a pious slave's submission means the slave thinks him right, and that religion's command of obedience means religion approves the master — 'It does this no more than it sanctioned the conduct of Nero and Mary, because religion required [the martyrs to submit].' At v8: 'Religion does not approve of slavery. It is the friend of human rights.' At v6 he turns the command against eyeservice into a structural indictment: a hired freeman may be trusted out of sight, a slave may not, which is why drivers are necessary, and only religion removes the need — 'the extensive prevalence of true religion would set the slave at liberty.' Then at v19, expounding a request for prayer, he breaks off to count: 'not far from ten thousand prisoners... not far from three millions of slaves' in his own country. Ellicott locates the limit in the phrase 'according to the flesh' and credits the abolition to a conception logically worked out; Chrysostom says slavery is 'nothing but a name'; Henry expects it 'rooted out by the influence of Christianity'; Calvin describes the institution exactly and warns servants that the gospel procured them no carnal freedom. Filed because the entry could only carry the summary: the primary sources here are worth reading whole."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "11",
+        "12"
+      ],
+      "note": "CALVIN EDITOR'S APPARATUS, SEVENTH CHAPTER RUNNING — THREE INSTANCES IN ONE CHAPTER. Same defect recorded at deuteronomy 8: translator's footnotes spliced inline into the body, mid-sentence. (a) k1: Calvin asks 'Why does the apostle use the word instead of' and the sentence is broken by a Greek-and-English footnote ending '— Bloomfield.' before resuming 'which has a greater extent of meaning?'. (b) k11: a Plutarch citation on the etymology of wrestling ('Plutarch tells us, (Symp. l. 2., page 638,)...') interpolated into the exposition of the wiles of the devil. (c) k12: another Bloomfield footnote, this one a long passage on Maximus Tyrius and Socrates, Plato, Xenophon and Diogenes wrestling with their several adversaries, planted at the head of the block before Calvin's own comment begins. Detector candidates now: a clause ending in an em-dash followed by a proper name and a full stop; the strings 'LXX. autem', \"C.'s own translation\", 'Bloomfield.' Note again that Calvin's OWN cross-references ('See Colossians 4:1', 'See volume 1 page 468') are his arrangement and should be kept — only the interpolated footnotes are the defect, and they are distinguishable because they break a sentence in half."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "ephesians",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "10",
+        "19"
+      ],
+      "note": "MATTHEW HENRY CONCISE/EXPOSITION: THIRD FORM OF THE DEFECT. Henry has four blocks in this chapter. k1 (2280w), k10 (3517w) and k19 (1172w) are Exposition — numbered divisions, roman-numeral scripture references ('Acts xiv. 12', 'Exod. xxxii. 6'). But k5 (274w) is the CONCISE: short, undivided, summary in manner ('The servants of old were generally slaves. The apostles were to teach servants and masters their duties, in doing which evils would be lessened, till slavery should be rooted out by the influence of Christianity'), with no roman numerals. So within a single chapter the feed serves Exposition at three keys and Concise at a fourth. This is a third signature, distinct from the two already recorded: at revelation 19 the Concise was SPLICED ONTO THE TAIL of the Exposition, detectable by the shift from roman to arabic references; at genesis 28 k20 the Concise was served INSTEAD OF the Exposition for that key; here both works appear at different keys of the same chapter with no marker of the switch. All three signatures should go into the corpus scan together, since a scan built for any one of them will miss the others."
     }
   ]
 }
