@@ -1,776 +1,781 @@
 {
  "1": {
   "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
    "John Chrysostom",
-   "John Gill"
+   "Theodoret of Cyrrhus"
   ],
+  "range": "1",
+  "pericope_label": "The appeal by the mercies of God to present the body a living sacrifice",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Make the transition a claim about method: the soul is regenerated into a celestial life by the saving knowledge of God, and it is vain to try to form the life aright without first proving that the origin of all righteousness in men is in God and Christ. This is the main difference between the gospel and philosophy, for the philosophers speak excellently about morals but whatever shines in their precepts is a beautiful superstructure without a foundation, a mutilated doctrine like a body without a head — and the schoolmen of the day come nearer the heathen philosophers than the apostles. Note also that the address as brethren expresses both the relation and the affection."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Draw from the inferential particle that none of the doctrines of the gospel are meant to be cold and barren speculations, and that the apostle plainly never supposed the doctrines of grace tended to licentiousness, though many have said that justification by faith, election and perseverance do; imagine the apostle pausing in his dictation at the climax of the argument and perhaps not resuming until another sitting, the sequence being as much one of feeling as of reasoning; insist that your bodies is not a periphrasis for yourselves but means the body strictly, the part of a man most apt to be an occasion of falling; and identify the verb as the technical term for offering a sacrifice, glossing the last phrase as worship rendered by the reason or soul, the adjective coming from the word for reason."
+   },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: after discoursing at large on the love of God toward man and his unspeakable concern, Paul puts forward this exhortation to persuade those who received the benefit to live worthy of the gift, and though so great a person does not decline to beseech them (not for his own gain but theirs); Paul beseeching, by the mercies of God (the gospel motive, Romans 1-11, the love constraining, 2 Corinthians 5:14), to present the body a living sacrifice, holy and acceptable — their 'reasonable service' (reasonable/rational befitting a reasonable creature, or spiritual, of the mind not mere ritual); the whole consecration of the redeemed life (the body devoted, 1 Corinthians 6:20)."
+    "summary": "Observe that so great and good a person does not decline beseeching, and not for any enjoyment he was likely to get himself but for what his hearers would gain, since the mercies of God themselves take the attitude of suppliants — as though a man wishing to move someone who had received great kindness were to bring the benefactor himself as a suppliant; say likewise that he lays down laws but sinks his authority and puts his instructions forward with entreaties; and explain why living had to be added at once, since having said sacrifice the apostle had to prevent anyone supposing he bade them kill themselves."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Give the pastoral reason for entreaty rather than command, that though he might with authority command, for love's sake he rather beseeches, and many are sooner wrought upon if they are accosted kindly, being more easily led than driven; and take your bodies to mean the whole self, expressed so because under the law it was the bodies of beasts that were offered, noting that the offering was sacrificed by the priest but presented by the offerer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Read the verse as a deliberate recapitulation, matching each phrase to something earlier in the epistle — the mercies of God set against the wrath of God, your bodies against the vile abuse of their bodies, living against the life of the just by faith, holy against what the holy law requires, acceptable against the impossibility of pleasing God in the flesh — and turn the last phrase into a comparison, that the worship of the heathen was utterly unreasonable and so was the glorying of the Jews, but a Christian acts in all things by the highest reason, inferring his own duty from the mercy of God."
    }
   ],
   "debates": [
-   {
-    "question": "What is 'reasonable service' (logikēn latreian)?",
-    "sides": [
-     {
-      "position": "Reasonable/rational worship, befitting a reasonable creature, and/or spiritual worship of the mind and heart (not mere outward ritual)",
-      "holders": [
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "What the inferential particle carries over from the doctrinal chapters.",
+   "Why the apostle entreats where he might command.",
+   "Whether your bodies means the body strictly or the whole self.",
+   "What the last phrase of the verse means by reasonable."
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin alone contrasts the gospel with philosophy, and calls a morality without doctrine a body without a head.",
+   "Barnes alone uses the verse against the charge that the doctrines of grace lead to licentiousness.",
+   "Ellicott alone pictures a pause in the dictation at this point.",
+   "Ellicott quotes Chrysostom by name for how the body becomes a sacrifice, at a verse where Chrysostom is himself present.",
+   "Wesley alone treats every phrase of the verse as a back-reference to the earlier chapters."
+  ],
   "themes": [
-   "present your bodies a living sacrifice",
-   "by the mercies of God",
-   "your reasonable service",
-   "the whole consecration of the redeemed life"
+   "Consecration",
+   "Sacrifice",
+   "Doctrine and practice",
+   "Body",
+   "Worship",
+   "Mercy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.04
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "2",
+  "pericope_label": "Not conformed to this world but transformed by the renewing of the mind",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: 'this world' may mean the Mosaic dispensation (the worldly sanctuary now passed) or the present evil age with its customs, maxims, and fashions, to which believers are not to conform; be not conformed to this world (the outward fashioning to the world's pattern refused) but be transformed by the renewing of the mind (the inward change of nature, the Spirit renewing the understanding, affections, and will, the metamorphosis of the soul) — the contrast of outward conformity and inward transformation; the renewed mind proving (discerning, testing, approving) the will of God, which is good (beneficial), acceptable (well-pleasing), and perfect (complete)."
+    "summary": "Warn that the English pair conformed and transformed looks like a play on words and is not one, the two Greek words being clearly distinct, the difference lying between an outward conformity or disguise and a thorough inward assimilation; take the first verb as a present imperative with a negative, meaning stop being fashioned or do not make a habit of it, and coin the phrase that one should not take this age as a fashion plate; note that the word rendered world here is not the usual one but denotes an age or generation, so that the precept may be aimed at a particular wicked age or extended to every age alike, and make it the state of the world as it stood at the coming of Christ, set against the newly inaugurated Messianic reign; be frank about the difficulty of applying the rule, since many think they are not conformed to the world while easily perceiving that their neighbour is; and treat the mind as in itself neutral, an instrument of evil when informed by an evil principle and of good when informed by the Spirit, performing the discrimination that supplies the data to conscience, so that it is the rational part of conscience rather than conscience itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Render the second verb literally as metamorphosed or transfigured, a radical and universal change both outward and inward, and support it from a pagan quarter, quoting a philosopher who perceived that he was not merely being amended but transformed; allow both the Jewish economy and the manners of the surrounding Gentiles under this world, warning against reviving usages that Christ had abolished, and list pride, luxury, vanity, extravagance in dress and riotous living as prevailing now exactly as they did then; draw the practical order, that the inward change must produce the outward, since where the spirit and temper and disposition of the mind are not renewed an outward change is of little worth and short standing; and take the proving to be knowledge by sure trial, easily done by one who has presented himself to God, with the will of God meaning the whole preceptive part of Christianity, in itself so excellently good, so acceptable to God and so perfective of our natures — the non-conformity required being neither in judgment, spirit, nor behaviour."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Offer the same alternatives for this world, the Mosaic dispensation or the men of the world, and then qualify the prohibition as none of the others do, since it does not touch conformity in dress and civil usage provided pride and luxury are guarded against, decency and sobriety observed, and the different abilities of persons and stations in life attended to; and make the sharpest claim in the chapter about the renewing of the mind, that the renovation required is not of the flesh only nor of the inferior part of the soul as the schoolmen explain it, but of the mind — the greatest part of us, and the part to which the philosophers ascribe supremacy, calling it the leading power and imagining reason a most wise queen, whom the apostle pulls down from her throne and reduces to nothing by teaching that we must be renewed in mind, since however we flatter ourselves every man must be born again who would enter the kingdom of God, being in mind and heart altogether alienated from the righteousness of God."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Ask why fashion is the right word for what is renounced, and answer that wealth and power and the other pomps are called fashions because only future things are substances, being alone permanent, as the fashion of this world passeth away; and prove it from reversals — many have fallen from the height of abundance into the extremest poverty, others sprung from the lowest parents have been entrusted with the noblest offices, and some who raised a haughty brow and enlarged themselves in pride, thinking themselves superior to everybody, were suddenly carried off and became ill-savoured dust."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the two verbs are a play on words, and what distinguishes them.",
+   "What this world means, and whether the prohibition reaches dress and civil custom.",
+   "What faculty is renewed, and what becomes of reason in the process.",
+   "Why the things renounced are called a fashion."
+  ],
+  "outliers": [
+   "Ellicott alone points out that the English wordplay has no counterpart in the Greek.",
+   "Clarke alone supports the sense of the second verb from a pagan moralist.",
+   "Gill qualifies the prohibition to protect ordinary civil usage; Clarke allows it no such reservation.",
+   "Barnes alone admits how hard the rule is to apply, and that men apply it to their neighbours more readily than to themselves.",
+   "Calvin alone stages the renewal as the dethroning of reason, whom the philosophers had crowned queen."
+  ],
   "themes": [
-   "be not conformed to this world",
-   "transformed by the renewing of your mind",
-   "prove... the will of God",
-   "conformity vs transformation"
+   "Nonconformity",
+   "Renewal",
+   "Mind",
+   "Conscience",
+   "Worldliness",
+   "Transience"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "John Chrysostom",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "3-5",
+  "pericope_label": "Not to think of himself more highly than he ought, since the many are one body in Christ",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Take the grace by which the apostle speaks for his office rather than any inward gift, and make the most of it: before specifying his command he reminds them of the authority given him, so that they might attend to his voice as to God's own — as if to say, I speak not of myself, but as God's ambassador I bring you the commands entrusted to me — and having secured authority by that preface he laid them under the necessity of obeying unless they were prepared to despise God in the person of his minister; draw from the figure of the body the moral of contentment, that each should keep to the measure of his capacity and not thrust himself into what belongs to others, and observe that since men could not of themselves come into such a union Christ himself becomes the bond of it; and take the phrase in Christ as marking the body off from any body politic, one body in Christ and not in Caesar or any earthly monarch."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul speaks 'through the grace given' — the grace of apostleship, the authority received from Christ to give instructions to the churches; Paul charging every man not to think of himself more highly than he ought, but to think soberly (with sound judgment, modesty, humility), according as God hath dealt the measure of faith — the warning against pride and self-conceit, the call to humble, sober self-estimation (measuring oneself not by self-flattery but by the gifts and faith God has apportioned, 1 Corinthians 4:7, 'what hast thou that thou didst not receive?'), preparing for the teaching on the body (vv.4-5, the humility that becomes the member)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not to think of himself more highly than he ought",
-   "to think soberly",
-   "the measure of faith",
-   "humble sober self-estimation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Render the play on words woodenly to show its shape — not to be high-minded beyond what he ought to be minded, but to be minded unto sober-mindedness — explaining that to be minded means to have the thoughts and feelings habitually turned in a direction; note the double play and draw the conclusion that self-conceit is here treated as a species of insanity; explain why the warning was needed at Rome, where the prevailing habit of judging was by rank, wealth, eloquence or office; make the measure of faith a graduated standard, so that he who has the strongest faith may assume the highest standard and offer himself for the highest offices and so on down the scale, provided his estimate of his own faith is single-minded and not biased by self-love; make Christ the unifying principle of the Church as the personality or will is the unifying principle in a man, while insisting elsewhere that the union means no physical or literal union, no destruction of personal identity and nothing mysterious, the sacred writers never intending such expressions to be explained literally, since the union is the most tender in this world but no more mysterious than that which binds friend to friend; and correct the English, since strictly the members are members in relation to the body and not to each other, so that we should rather say fellow-members with one another."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Restrict the grace to the apostleship, the authority to command and give instructions to churches; call the construction a paronomasia and take the second verb apart, sound joined to mind, so that it means to think discreetly and modestly; and take faith here for the Christian religion itself and the measure for the degree of knowledge and experience each has of it."
+   },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: Paul uses the same illustration as to the Corinthians (1 Corinthians 12) to allay the same passion of haughtiness — great is its power to correct the disease of pride (are we not all one body, both great and small, and members one of another? why then by haughtiness separate thyself?); many members in one body, and not all with the same office — the diversity of the members and their offices grounding both humility (each has his own place, none superior or independent) and unity (many members, one body, members one of another); the natural body the pattern of the church (the spiritual body of Christ, diverse gifts and offices, one body)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many members in one body",
-   "all members have not the same office",
-   "the figure of the body",
-   "grounding humility and unity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Say that by sobriety the apostle designates the healthy state of the mind, to teach us that arrogance is the sickness of the intellect, and that in this he imitates his Master, who pronounced his first blessing on the poor in spirit; say also that the word faith here means grace, since it is by faith that the gift of grace comes; and find two levellings in the figure of the body and then a third — that we are members one of another, not the small of the great only but also the great of the small, that we are all one body, and beyond both that the gift was of grace, so that a man did not take it nor find it either — pressing the vocabulary, since when the apostle touches the gifts he does not say that one received more and another less but that they differ."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the chosen, redeemed, justified, and sanctified, though few in comparison with the world and many in themselves, make up one body, the church, of which Christ is the head; we, being many, are one body in Christ, and every one members one of another — the union of the believers with Christ as the head (the vital union, the head and the body) and with one another as fellow-members (the mutual membership, the believers belonging to one another); the double union (vertical and horizontal) the ground of the love, humility, and service that follow (vv.9-21, members of one body caring for one another), the comfort of the membership in Christ."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Turn the whole into a warning that cuts both ways: pride is a sin in us by nature and we need to be armed against it, but as we must not be proud of our talents, so we must take heed lest under a pretence of humility and self-denial we grow slothful in laying out ourselves for others — we must not say, I am nothing, therefore I will sit still and do nothing, but, I am nothing in myself, and therefore I will lay out myself to the utmost in the strength of the grace of Christ."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the grace given to the apostle means, and what it licenses him to command.",
+   "What the play on words conveys that the English cannot.",
+   "What the measure of faith supplies a measure of.",
+   "Whether humility can become an excuse for doing nothing.",
+   "What being one body in Christ does and does not mean."
+  ],
+  "outliers": [
+   "Robertson calls self-conceit a species of insanity and Theodoret calls arrogance the sickness of the intellect, from opposite ends of the corpus.",
+   "Ellicott alone makes the measure of faith a graduated scale of offices a man may aspire to.",
+   "Henry alone warns that self-denial can be a pretext for sloth.",
+   "Chrysostom alone notes that the gifts are called differing rather than greater and less.",
+   "Barnes denies the union with Christ is mysterious at all; Ellicott makes Christ the unifying principle of the Church."
+  ],
   "themes": [
-   "we, being many, are one body in Christ",
-   "every one members one of another",
-   "union with Christ the head",
-   "the mutual membership"
+   "Humility",
+   "Authority",
+   "Gifts",
+   "Body of Christ",
+   "Union",
+   "Sobriety"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "6": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "6-8",
+  "pericope_label": "Gifts differing according to the grace given: prophecy, ministry, teaching, exhortation, giving, ruling and mercy",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take prophecy here not as the extraordinary gift of declaring mysteries or foretelling things to come but as the ordinary gift of expounding scripture, and make the measure a rule of interpretation — as the oracles of God, according to their general tenor and to that grand scheme of doctrine delivered in them touching original sin, justification by faith and present inward salvation, so that every article about which any question arises is determined by this rule and every doubtful scripture interpreted according to the grand truths that run through the whole; call the word for ministry the term for the deacon's office; and take the ruler to be one who defends or patronises rather than governs, so that the word signifies receiving and providing for strangers, especially the persecuted who had left their homes destitute, and perhaps entertaining the apostolic teachers who travelled from place to place, the same word being used of the woman called a succourer of many. Elsewhere make the ruler one that has the care of a flock."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: as in the natural body the members have different faculties, so in the spiritual body the church the members have diversities of gifts, given according to grace; having gifts differing according to the grace given (not earned but of grace, the free endowments), each to use his — the prophet (preacher, the inspired or expounding ministry) to prophesy 'according to the proportion of faith' (according to the measure of faith/the degree of the gift, or the rule/standard of the faith, the body of truth — prophesying in agreement with the truth, within one's measure); the variety of gifts to follow (vv.6-8), each used in its place."
+    "summary": "Call the word for ministry the technical term for the office of deacon, instituted to provide for the practical business as opposed to the spiritual ministrations of the church and covering alms, the poor, the sick and widows — while elsewhere reviewing the whole usage of the word and coming down on the other side, that the apostle meant not those properly called deacons but those engaged in the ministry of the word; take prophesying as referring to the more recondite portions of the faith; mark the grammatical shift at he that teacheth, where the construction changes from the accusative to the nominative articular participle so that a verb must be supplied for each clause that follows, and gloss the ruler as the one standing in front, diligence as haste in the sense of earnestness, and cheerfulness as a late word found nowhere else in the New Testament; make the ruler anyone holding a position of prominence; hold that at this point the apostle passes from the definite functions of the ministry to what was common to all members, so that giving is to be taken widely, simplicity meaning singleness of motive since he who gives to be seen of men exhausts the merit of the act; and observe that the kindness of charity is doubled when done in a cheerful and kindly way, there being a class of religious minds especially apt to forget it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Insist that the last clauses name offices: the givers are the deacons who presided in dispensing the public charities, not men giving of their own property, and those who show mercy are the widows and others appointed to take care of the sick, since there were two distinct offices, to provide necessaries for the poor and to attend to their condition; take the word for ruling of those committed with the government of the church, the elders who presided and exercised discipline, and then extend it universally to all kinds of governors; observe that as nothing gives more solace to the sick than to see men cheerful and prompt in assisting them, so to observe sadness in the face of the helper makes them feel themselves despised; and distinguish the temperaments of preachers, some being sons of thunder and others sons of consolation."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Take prophecy to cover not only foreknowledge of the future but the understanding of hidden things."
    }
   ],
   "debates": [
-   {
-    "question": "What is 'the proportion of faith' for prophecy?",
-    "sides": [
-     {
-      "position": "According to the measure of faith given (the degree of the gift) and/or the rule/standard of the faith (the body of truth) — prophesying in agreement with the truth",
-      "holders": [
-       "the witnesses"
-      ]
-     }
-    ]
-   }
+   "What prophecy means here, and what the proportion of faith measures.",
+   "Whether ministry means the diaconate or the ministry of the word.",
+   "What the ruler rules, and whether the word means to govern or to protect.",
+   "Whether giving and showing mercy name church offices or duties common to all.",
+   "Why cheerfulness is required of the one who shows mercy."
   ],
-  "outliers": [],
+  "outliers": [
+   "Wesley alone turns the proportion of faith into a rule for interpreting doubtful scriptures by the tenor of the whole.",
+   "Ellicott and Clarke make ministry the deacon's office; Barnes reviews the usage and decides it means preaching.",
+   "Robertson alone notices that the grammar changes in the middle of the list and that a verb must be supplied throughout.",
+   "Clarke alone reads ruling as the protection and entertainment of strangers rather than government.",
+   "Calvin makes giving and mercy two distinct church offices; Ellicott makes them duties of every member."
+  ],
   "themes": [
-   "gifts differing according to the grace",
-   "whether prophecy, let us prophesy according to the proportion of faith",
-   "the diversity of gifts from grace",
-   "the right use of the gift"
+   "Gifts",
+   "Prophecy",
+   "Ministry",
+   "Charity",
+   "Church order",
+   "Cheerfulness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'ministry' here may signify the office of ministering to the poor saints (the deacon's office, distinct from prophesying), to be attended with diligence, care, and constancy; let him with the gift of ministry wait on (attend diligently to) his ministering, and the teacher on his teaching — each gift exercised in its own sphere with diligence (the minister serving, the teacher teaching, none neglecting his gift nor intruding on another's, the proper sphere, the order of service), the diligence and constancy required (not slothfully or fitfully but faithfully), the dignity of each gift in the body (both service and instruction needful)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "or ministry, let us wait on our ministering",
-   "he that teacheth, on teaching",
-   "each gift in its own sphere",
-   "the diligent use of each gift"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: exhortation a branch of preaching, more practical, giving a word of exhortation as cases require (chiefly the pastor's work); Paul completing the list of gifts — the exhorter on exhortation, the giver with simplicity (singleness of heart, sincerity, liberality, without grudging or ostentation), the ruler with diligence (earnest care, not slackness), the one showing mercy with cheerfulness (gladly, not with gloom, 2 Corinthians 9:7) — each gift used not only diligently but in its right spirit (the manner as important as the act, the proper temper crowning the gift, the grace adorning the service)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that giveth, let him do it with simplicity",
-   "he that ruleth, with diligence",
-   "he that sheweth mercy, with cheerfulness",
-   "the manner as important as the act"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "9-11",
+  "pericope_label": "Love without dissimulation, brotherly affection, and diligence with fervency of spirit",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Say the strongest thing about love without dissimulation: it is difficult to express how ingenious almost all men are at pretending a love they do not have, since they not only deceive others but impose on themselves, persuading themselves that they do not love amiss those whom they neglect and really slight, so that anyone may be a witness to himself whether he has anything in the recesses of his heart opposed to love; observe that the word for affection joins brotherly love to the natural love of parents and children; hold that our flesh, like the ass, is always torpid and needs goads, and that only the fervency of the Spirit can correct our sloth, answering the objection that though this fervency is God's gift it remains our duty to shake off sloth and cherish the flame kindled from heaven, since for the most part the Spirit is suppressed through our own fault. Elsewhere take the diligence enjoined of the affairs of piety and religion rather than of the callings of life."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: having addressed the officers, Paul now stirs up the exercise of grace and the duties common to all members, beginning with love — the cement of the saints, the bond of perfectness, without which all gifts are nothing; let love be without dissimulation (unfeigned, sincere, not hypocritical, from the heart, 1 Peter 1:22), abhor that which is evil (hate, loathe sin, the moral revulsion) and cleave to that which is good (cling, hold fast to the right) — the sincere love the root of the duties, joined to the moral bent of the renewed heart (v.2, hating what God hates, loving what God loves, the union of love and holiness)."
+    "summary": "Distinguish the love of this verse, which is benevolence toward all mankind, from the brotherly love specified next, and insist that genuine benevolence is not what professes attachment but what is evinced in acts of kindness; link the clauses through the word for unfeigned, so that love arises from genuine and deep emotion with an intense hatred of evil and as strong an adhesion to good, admitting frankly that the apostle does not say how those in whom these emotions are naturally weak may strengthen them and offering only the shortest advice, to become Christians; note that these are participles doing the work of imperatives, an idiom running on through the following verses; observe that the word for affection occurs nowhere else in the New Testament and denotes the tenderness between parents and children; suggest that preferring is rather anticipating, the Christian taking the initiative and showing honour without waiting to receive it; correct the English of the next verse, since the word means zeal and refers to the spiritual and not the practical life — while elsewhere making it industry, and listing four ways religion promotes it, so that an idle man and a Christian are names which do not harmonize; and take fervency in its etymological sense of boiling, comparing the Christian temperament to water bubbling over a flame, with in spirit meaning not the Holy Spirit but that part of a man which is spirit."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Work the two verbs etymologically, taking abhor as hating with horror and tracing the root to the feigned river of hell by which the gods swore, any god who falsified the oath being deprived of nectar and ambrosia for a hundred years, so that the river was reputed hateful and the verb came to mean as hateful as hell, while the answering verb means being cemented or glued to the good; give the word for affection the sense of the indescribable tenderness a mother bears her child, and note that a colonist named his city from the other word in this verse, an appellation it then bore with strict propriety; make the diligence enjoined a matter of industry, since the God who forbade working on the seventh day enjoined it on the other six, so that he who neglects to labour during the week is as culpable as he who works on the Sabbath; supply the method of preferring others, which is to consider habitually what is good in them and what is evil in ourselves; and report that a well-attested variant reads serving the time rather than the Lord, that an editor received it into the text and that most critics contend for it."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Call the yielding of the first place to a neighbour a proof of true and perfect love; and make the spirit here the spiritual grace given, to which alacrity is to be brought as fuel to a fire, since the Spirit is quenched in those unworthy of the grace."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Add that God is served not only by working for him but by sitting still quietly when he calls us to suffer, patience for God's sake being true piety."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What makes love feigned, and whether a man can tell it of himself.",
+   "What the words for abhorring and cleaving convey.",
+   "Whether preferring one another means yielding honour or taking the initiative in giving it.",
+   "Whether the diligence commanded is spiritual zeal or ordinary industry.",
+   "Whether the text reads serving the Lord or serving the time."
+  ],
+  "outliers": [
+   "Calvin alone locates the hypocrisy of love in self-deception rather than in deceiving others.",
+   "Ellicott alone admits that the apostle does not say how weak affections may be strengthened.",
+   "Clarke traces the verb for abhorring to the river Styx, and the word for brotherly love to the naming of Philadelphia.",
+   "Ellicott and Gill make the diligence spiritual; Barnes and Clarke make it industry in ordinary work.",
+   "Clarke reports that most critics prefer the variant serving the time; Ellicott calls it no doubt wrong."
+  ],
   "themes": [
-   "let love be without dissimulation",
-   "abhor that which is evil",
-   "cleave to that which is good",
-   "sincere love and holiness"
+   "Love",
+   "Sincerity",
+   "Brotherhood",
+   "Honour",
+   "Diligence",
+   "Zeal"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this a branch of the love just advised — the objects 'brethren,' not in the natural sense but spiritual, born of God, to whom tender, family affection is due; be kindly affectioned one to another with brotherly love (tenderly loving, the family affection of the saints as brethren born of God) and in honour preferring one another (esteeming others above oneself, giving place, the humility that honours others, Philippians 2:3, 'in lowliness of mind let each esteem other better than themselves') — the warm love and the lowly honour of the brotherhood, the bond knitting the saints in affection and esteem."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be kindly affectioned one to another with brotherly love",
-   "in honour preferring one another",
-   "tender brotherly love",
-   "the humility that prefers others"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'business' here means not worldly affairs but spiritual business — the affairs of piety and religion, the service of God, in which we should not be slothful; not slothful in business (diligent, especially in the spiritual life, the earnest application), fervent in spirit (warm, zealous, boiling, not lukewarm or cold, against the deadness that creeps in, Revelation 3:16), serving the Lord (all directed to his service, the Lord the aim and crown) — the threefold charge (diligence against sloth, fervour against coldness, the serving of the Lord the aim), the warm, diligent, God-serving life of the believer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not slothful in business",
-   "fervent in spirit",
-   "serving the Lord",
-   "diligence, fervour, and service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "12-13",
+  "pericope_label": "Rejoicing in hope, patient in tribulation, distributing to the saints and given to hospitality",
   "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Set out the plan of the passage — faith and love hitherto, hope from this verse, and afterwards duties toward others, saints, persecutors, friends, strangers and enemies; remark that it is notable how the apostle, treating expressly of the duties that flow from the communion of saints, never says one word about the dead; say that hospitality means not only embracing the opportunities that offer but seeking them; and supply the circumstances that made the duty urgent, since houses of public accommodation were exceedingly scarce in ancient times, the apostles were itinerants and Christians were often flying before persecution, so that providing for strangers in distress is the proper meaning of the word. Elsewhere report the variant reading memorials for necessities and dismiss it, being unable to see any good sense it can make in the text."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Bind the three clauses to what precedes: the man who is fervent in spirit both obeys his Master readily and waits for the enjoyment of the blessings looked for, rising superior to the temptations that befall him, arming himself with steadfastness against their attacks and continually calling the divine grace to his assistance — which is what continuing instant in prayer means, that he does so incessantly; and widen hospitality past the brethren, since the guests meant are not the saints only but such as have come from any quarter whatever and need entertainment."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: 'rejoicing in hope' (of the glory of God) placed between serving the Lord and patience in tribulation — for nothing more animates cheerful service or patience under affliction than the hope of being for ever with the Lord; rejoicing in hope (the joy of the prospect of glory, the cheering hope), patient in tribulation (enduring affliction with steadfast endurance), continuing instant in prayer (constant, persevering, earnest, 1 Thessalonians 5:17, 'pray without ceasing') — the threefold grace upholding the believer through trials (hope cheering, patience bearing, prayer sustaining), the three connected (hope producing patience, patience driving to prayer, prayer renewing hope)."
+    "summary": "Take the word rendered distributing to mean having things in common, and hold that one of the most striking effects of Christianity was to loosen men's grasp on what they owned — while marking the limit, that the direction does not mean they were literally to hold all things in common, which would be to go back to a state of savage barbarity, only that they were to be liberal and share their good things with the needy; take saints to mean simply Christians and refer the precept to the well-known poverty of the early communities; diagnose the variant reading memorials as alluding to the later ecclesiastical usage of holding festivals in honour of martyrs, and turn the case into a general argument, that the best manuscripts are wonderfully free from corruptions of this kind and even inferior ones admit them to a much smaller extent than might have been expected; and gloss the word for hospitality as pursuing, as in a chase or hunt, adding the play the Greek allows, that they were to pursue hospitality as their enemies pursued them."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Widen the circle before narrowing it, since all men in want are to be relieved, even enemies, and particularly those nearly related to us, but especially they that are of the household of faith; put the principle sharply, that the chief duty of love is to do good to those from whom we expect the least recompense, since those most pressed down with want are commonly the most despised, the benefits conferred on them being reckoned lost, so that God commends them to us particularly — for it is only then that we prove our love genuine, when we relieve needy brethren for no other reason than to exercise our benevolence; and call the variant reading a depravation introduced by certain of the fathers to countenance the veneration of the monuments and sepulchres of martyrs, objecting that there were then no monuments of martyrs at Rome at all."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What distributing implies about property, and how far community of goods is meant.",
+   "Whom the relief is owed to, and on what principle.",
+   "Whether the text reads necessities or memorials, and what the variant reveals.",
+   "How wide hospitality reaches, and why the duty was urgent."
+  ],
+  "outliers": [
+   "Barnes reads community of goods into the verb and then rules out taking it literally.",
+   "Calvin makes the least likely to repay the first claimants on love.",
+   "Three voices trace the variant reading to the cult of the martyrs, and Wesley reaches the same controversy from the apostle's silence about the dead.",
+   "Ellicott turns a single corrupt reading into an argument for the general purity of the manuscripts.",
+   "Robertson alone notices that hospitality is to be pursued with the verb used of persecution."
+  ],
   "themes": [
-   "rejoicing in hope",
-   "patient in tribulation",
-   "continuing instant in prayer",
-   "the graces that uphold through trials"
+   "Hope",
+   "Patience",
+   "Prayer",
+   "Almsgiving",
+   "Hospitality",
+   "Textual criticism"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: 'distributing' (or communicating) to the necessity of saints — all in want are to be relieved, even enemies, and especially those of the household of faith; distributing to the necessity of saints (relieving the real wants of the poor brethren, sharing one's substance, the liberality to the needy) and given to hospitality (eager for, pursuing it, welcoming and entertaining the saints and strangers, Hebrews 13:2) — the practical charity of the body (the love that meets material need, the love in deed, 1 John 3:17-18, the fellowship of giving and welcoming), 'given to' hospitality meaning more than practising it (pursuing it, seeking to welcome)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "distributing to the necessity of saints",
-   "given to hospitality",
-   "practical charity of the body",
-   "the love in giving and welcoming"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
    "John Chrysostom",
-   "John Gill"
+   "Theodoret of Cyrrhus"
   ],
+  "range": "14-16",
+  "pericope_label": "Blessing persecutors, weeping and rejoicing with others, and condescending to men of low estate",
   "schools": [
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: having taught how they ought to be minded toward one another and joined the members closely into one, Paul next leads them forth to the battle without (toward those outside), made easier from this point (he who has practised well among his own will more easily deal with strangers); bless them which persecute you, bless and curse not — the returning of blessing for persecution (to pray for, speak well of, and seek the good of the persecutor, not imprecate or revile, the opposite of the natural cursing and revenge, Matthew 5:44) — the hardest of the love-commands, the spirit of Christ toward enemies (who prayed for his murderers, Luke 23:34)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bless them which persecute you",
-   "bless, and curse not",
-   "returning blessing for persecution",
-   "the spirit of Christ toward enemies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Read the order of the chapter as a campaign: having taught them how to be minded towards one another and joined the members closely into one, the apostle now leads them out to the battle without, which is easier from this point, since he who has not managed matters well with his own side will find more difficulty arranging affairs with strangers, while he who has practised among these will have the advantage of those outside; and mark how far the command goes beyond the obvious, since the apostle did not say be not spiteful or revengeful but required something far better, for that a wise man might do, whereas this is quite an angel's part."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Enter a caution about the passage as a whole, that the reader is not scrupulously to look for a precise order in these precepts but must be content with short unconnected sayings deduced from the principle laid down at the chapter's opening; define the failure of sympathy at both ends, since such is the nature of true love that a man would rather weep with his brother than look on his grief at a distance and live at ease, so that not to regard a brother's happiness with joy is envy and not to grieve at his misfortunes is inhumanity; and guard the command to be of the same mind from a misreading, since it is not sameness of judgment or agreement in sentiments and forms of discipline that is meant, but having the same love and thinking as well of others as of oneself."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: rejoicing with those who rejoice (in good and lawful things, as prosperity) a difficult task — for unless one has a near concern in another's good he is apt to envy or repine; rejoice with them that rejoice and weep with them that weep — the sympathy of the body (entering into one another's joys and sorrows, 1 Corinthians 12:26, 'if one member suffer, all suffer; if one be honoured, all rejoice'), the fellow-feeling that shares the gladness without envy and the grief without indifference (both harder than they seem, the love that makes another's joy and sorrow its own)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rejoice with them that do rejoice",
-   "weep with them that weep",
-   "the sympathy of the body",
-   "fellow-feeling without envy or indifference"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Date the coincidence with the Sermon on the Mount, since it was probably about the time this epistle was written, or a year or two later, that the compositions which took the shape of our gospels began, so the apostle need not have seen one, the record of the Lord's teaching being at first preserved and circulated orally; hold likewise that the words are like that passage in spirit, not a quotation but a reminiscence; explain that cursing means properly to devote to destruction, which where there is power implies it and where there is not implies invoking God's aid to destroy, and call this one of the most severe and difficult duties of the Christian religion, which nothing but religion will enable men to perform; observe that the feeling of sympathy is more under the control of the will than might be supposed, becoming so by a conscious direction given to the whole life, and that this injunction is among those most fully carried out in modern times, having entered the social code and belonging as much to the gentleman as to the Christian, so that the danger now is that the expression of sympathy should be unreal; lay out the options for being of the same mind before giving a literal rendering, that we seek for our brethren what we seek for ourselves and do not seek honours or offices for ourselves that we do not seek for them; and on the last clause think the common rendering right, that we let ourselves be carried along in the stream with those beneath us in rank and station, mixing freely and lending a hand without letting social assumptions keep us at a distance and without any conscious appearance of condescension, while noting that the case may be masculine or neuter, so that it is either lowly men or lowly things."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: 'be of the same mind' not sameness of judgment in every point but having the same love, the same accord and affection, esteeming others better than oneself; be of the same mind (the harmony of mutual affection), mind not high things but condescend to men of low estate (not aspiring to the great but stooping to/associating with the lowly, the poor, the obscure), be not wise in your own conceits (not trusting one's own wisdom or despising others' counsel, Proverbs 3:7) — the threefold charge against pride (harmony against discord, condescension against ambition, modesty against self-conceit), the lowliness that becomes the members of the one body."
+    "summary": "Reduce the command about persecutors to the temper required, which is to have the loving, forgiving mind that was in the Lord; note in passing that the direct opposite of weeping is laughter, but that this does not so well suit a Christian; and deliver a verdict on the vice opposed in the last clause, that attachment to high things and high men is the vice of little, shallow minds, such persons being conscious of no consequence in themselves and seeking credit by associating with rank, and failing that affecting honourable titles — so let the poor, godly man be your chief companion, and pass through life with as little noise and show as possible."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the command to bless persecutors comes at this point in the chapter.",
+   "Whether the apostle is quoting the Sermon on the Mount or recalling it.",
+   "Whether sympathy can be commanded, given that it is a feeling.",
+   "What being of the same mind requires, and what it does not.",
+   "Whether the last clause means lowly men or lowly things."
+  ],
+  "outliers": [
+   "Chrysostom alone reads the sequence as training on one's own side before the battle without, and calls blessing persecutors an angel's part.",
+   "Ellicott and Robertson independently deny that the verse is a quotation, Ellicott on the ground that the gospels were not yet written.",
+   "Ellicott alone observes that the duty has passed into the social code, so that its present danger is insincerity.",
+   "Gill alone denies that unity of mind means agreement in judgment or in forms of discipline.",
+   "Clarke alone diagnoses social climbing as the vice of those who know themselves to be of no consequence."
+  ],
   "themes": [
-   "be of the same mind one toward another",
-   "condescend to men of low estate",
-   "be not wise in your own conceits",
-   "the lowliness that becomes the body"
+   "Persecution",
+   "Blessing",
+   "Sympathy",
+   "Unity",
+   "Humility",
+   "Ambition"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
   }
  },
  "17": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "17-18",
+  "pericope_label": "Recompensing no man evil for evil, and living peaceably with all men so far as it is possible",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Begin further back than the verse, with the reason retaliation comes so naturally: since men became enemies to God they have been very ready to be enemies one to another, and those who embrace religion must expect to meet enemies in a world whose smiles seldom agree with Christ's; give a severe verdict on repaying evil, that it is a brutish recompence befitting only animals, which are conscious of no being above them nor of any existence hereafter; and add that we are not only to do but to study and take care to do what is amiable and creditable, so as to recommend religion to all with whom we converse."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Weigh the command from the other end, as an achievement rather than a prohibition: to render no man evil for evil is an excellence belonging to virtue in its highest state of perfection, and approaching near to a total emancipation from the passions; and set beside the next clause the apostle's own rule elsewhere, to give none offence, neither to the Jews, nor to the Gentiles, nor to the church of God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: 'recompense to no man evil for evil' — neither evil words for evil words (railing for railing), nor evil deeds for evil deeds (one ill turn for another); private revenge here forbidden, though the magistrate may punish evil (Romans 13:4, the distinction between private vengeance forbidden and the magistrate's lawful office); the believer not returning injury for injury (the spirit of Christ, 1 Peter 2:23), and providing things honest in the sight of all men (taking thought for honourable, becoming conduct, giving no just occasion of reproach, the blameless walk before the world) — the no-revenge and the honest walk joined."
+    "summary": "Say that the qualifications imply peace cannot always be had, and draw two duties from the second clause — we are to do our utmost to preserve peace and appease the anger of others, and we are never to begin or originate a quarrel, since for their assaults we are not answerable but for our own conduct we are, and on no occasion are we to commence a warfare; render the phrase literally as the part that proceeds from you, and quote the summary that all our part is to be peace; and produce the decisive counter-example from the writer's own life, which was one of almost constant conflict, concluding that peace would not always be possible and that the Christian can only be responsible for himself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Gloss the verb for providing as thinking beforehand, contriving to give as little offence as may be to any; and argue the duty of peace from self-interest as much as from charity, since to live at peace with neighbours, friends and even family is often very difficult, but the man who loves God must labour after it for his own sake, no one being able to have broils and misunderstandings without having his own peace materially disturbed — he must, to be happy, be at peace with all men, whether they will be at peace with him or not — and note that the apostle knew the difficulty, which is why the double qualification stands in the text: though it be but barely possible, labour after it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Treat peaceableness as a thing that can fail in two opposite directions, and state both cautions. Such a life, ordered so as to render us beloved by all, is no common gift, and to attain it a man needs not only perfect uprightness but courteous and kind manners, which may conciliate the just and good and make a favourable impression even on the hearts of the ungodly. But first, we are not to seek such esteem as would make us refuse to undergo anyone's hatred for Christ when that becomes necessary — and some who render themselves amicable to all by sweetness of manner are nevertheless hated by their nearest connections on account of the gospel. And second, courteousness must not degenerate into compliance, so as to lead us to flatter the vices of men for the sake of preserving peace; it being because peace with all men cannot always be had that the two exceptions are annexed. Elsewhere put the duty in three verbs, that peace is to be sought, pursued and cultivated."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the impulse to repay evil is so natural, and what repaying it makes a man.",
+   "What providing things honest in the sight of all men requires.",
+   "What the two qualifications on living peaceably concede.",
+   "How peaceableness can be pursued too far."
+  ],
+  "outliers": [
+   "Theodoret alone makes refusing retaliation a mark of virtue approaching freedom from the passions.",
+   "Ellicott alone uses the apostle's own embattled life to show that the command cannot always be kept.",
+   "Clarke alone argues for peace on the ground that quarrelling destroys one's own happiness.",
+   "Calvin alone names the two failures of peaceableness — refusing hatred that must be borne for Christ, and flattering the vices of men to keep the peace."
+  ],
   "themes": [
-   "recompense to no man evil for evil",
-   "provide things honest in the sight of all men",
-   "renouncing private revenge",
-   "the blameless walk before all"
+   "Retaliation",
+   "Peace",
+   "Reputation",
+   "Courtesy",
+   "Compliance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: 'if it be possible' implies that it cannot always be done (peace depends on others too), still it should be an object of desire; 'as much as lieth in you' implies we are to do our utmost to preserve peace and to appease the anger and malice of others; the believer to live peaceably with all men — the pursuit of peace qualified by the two limits ('if it be possible,' for peace is not always attainable and not to be bought at the cost of truth or conscience; 'as much as lieth in you,' the believer's part to do all he can, the responsibility owned), the duty of peaceableness sought as far as conscience and others allow."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if it be possible... live peaceably with all men",
-   "as much as lieth in you",
-   "the pursuit of peace",
-   "peace as far as conscience and others allow"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Theodoret of Cyrrhus"
   ],
+  "range": "19-21",
+  "pericope_label": "Give place unto wrath, feed thine enemy, and overcome evil with good",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Turn the prohibition into something positive before the text does: we fulfil the precepts of not revenging and not repaying evil only when we go beyond abstaining from injury to doing good, since it is a kind of indirect retaliation to turn our kindness aside from those who have wronged us, so that whatever a man's ability, in whatever business his enemy wants his wealth or counsel or efforts, he ought to help him; define the enemy as not one whom we regard with hatred but one who entertains enmity towards us, adding that if such are to be helped according to the flesh, much less is their salvation to be opposed by imprecating vengeance on them; report the division of opinion about the coals, some understanding the destruction that returns on the enemy's head when he is treated better than he deserves and his guilt is doubled; and state the paradox of victory, that if we try to retaliate perverseness we confess ourselves overcome by it, whereas returning good for evil shows the invincible firmness of the mind — he who attempts to overcome evil with evil may surpass his enemy in doing injury, but to his own ruin, for by acting so he carries on war for the devil. Elsewhere distinguish three evils not to be overcome by, the evil one, the evil of indwelling sin, and the evil of the man who has done the injury, warning that if we return evil for evil then not we but the wrongdoer is the conqueror."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the affectionate 'dearly beloved' used to move them (they were dear to Paul and beloved of God); avenge not yourselves, but rather give place unto wrath ('give place' chiefly meaning leave room for God's wrath, commit the matter to his righteous judgment; some take it as giving place to the adversary's wrath, yielding), for 'Vengeance is mine; I will repay, saith the Lord' (Deuteronomy 32:35, God reserving vengeance to himself, the believer not to usurp it) — the renouncing of self-vengeance, the trust that commits the wrong to God the righteous Judge (1 Peter 2:23), the comfort that God will repay."
+    "summary": "Note that the same phrase elsewhere describes the divine vengeance, and take the coals here in a strictly metaphorical sense — thou shalt take the best and most summary vengeance upon him — while allowing an underlying idea of awakening shame and remorse; identify the word behind the coals as the root of anthracite and call it a metaphor for keen anguish, comparing the Arab proverbs about coals in the heart and fire in the liver, and add that such kindness may lead to repentance; make the largest claim in the chapter, that to overcome evil with good is the noble and grand sentiment of the Christian religion, nothing like it being found in the heathen classics or having existed among pagan nations — while elsewhere citing a Roman moralist for the same maxim; and state the paradox that the infliction of vengeance is not a sign of strength but of weakness, so that to repress the desire for revenge is a victory over self which is nobler and also more effectual, disarming the enemy and turning him into a friend."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Cut through the dispute about the coals with a quatrain about smelting: so artists melt the sullen ore of lead by heaping coals of fire upon its head, and in the kind warmth the metal learns to glow, and pure from dross the silver runs below; supply the mechanism by which returning good works, since a moral enemy is more easily overcome by kindness than by hostility — against hostility he arms himself and all the evil passions of his heart concentrate against the man trying to retaliate, but where the injured man labours to do him good for his evil his passions have no longer any motive, his mind relaxes, the turbulence of his passions is calmed, reason and conscience are permitted to speak, and he is disarmed, or rather finds he has no use for his weapons; cite the scholastic maxim that he is overcome of evil who sins against another because that other sinned against him; and add what the rest leave out, that if you see no present fruit, yet persevere."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Name the danger in the harsher reading of the coals and refuse it: we are not to suppose that we minister to our enemies in order that they may suffer the heavier retribution hereafter."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'give place unto wrath' mean?",
-    "sides": [
-     {
-      "position": "Give place to God's wrath — leave room for God to avenge, committing the matter to his righteous judgment (chief sense)",
-      "holders": [
-       "most"
-      ]
-     },
-     {
-      "position": "Give place to the adversary's wrath — yield, do not resist",
-      "holders": [
-       "some"
-      ]
-     }
-    ]
-   }
+   "Whether not avenging is enough, or whether kindness is owed as well.",
+   "What the coals of fire signify, and whether they are a vengeance or a remedy.",
+   "Whether the precept has any parallel outside Christianity.",
+   "How returning good actually disarms an enemy.",
+   "Why retaliating is itself a defeat."
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin alone calls withholding kindness from an enemy a form of indirect retaliation.",
+   "Wesley alone settles the coals of fire with a verse about smelting lead.",
+   "Theodoret alone forbids the motive of doing good in order to increase an enemy's punishment.",
+   "Barnes says nothing like this sentiment exists in the heathen classics; Robertson cites Seneca for it at the same verse.",
+   "Clarke alone traces step by step what kindness does to an enemy's passions."
+  ],
   "themes": [
-   "avenge not yourselves, but rather give place unto wrath",
-   "Vengeance is mine; I will repay",
-   "leaving vengeance to God",
-   "the wrong committed to the Judge"
+   "Vengeance",
+   "Enemies",
+   "Kindness",
+   "Victory",
+   "Perseverance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: these words taken from Proverbs 25:21, to be understood (as a Jewish writer observes) in their literal sense — so far should the saints be from revenging themselves that they should do good to their enemies; if thine enemy hunger feed him, if he thirst give him drink, for in so doing thou shalt heap coals of fire on his head — the positive love returning good for evil (beyond non-revenge, v.19, to active good); 'coals of fire' chiefly the kindness that melts the enemy to shame and repentance (softening him, the love that wins), or, if he remains hardened, leaving him the more inexcusable (the guilt aggravated); the overcoming of the enemy by kindness (v.21)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [
-   {
-    "question": "What does 'heap coals of fire on his head' mean?",
-    "sides": [
-     {
-      "position": "The kindness, like coals, melts the enemy to shame and repentance (the chief, kindest sense)",
-      "holders": [
-       "most"
-      ]
-     },
-     {
-      "position": "If unmelted, the kindness leaves the enemy the more inexcusable, aggravating his guilt",
-      "holders": [
-       "some"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "if thine enemy hunger, feed him",
-   "heap coals of fire on his head",
-   "doing good to the enemy",
-   "the kindness that may melt him to repentance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: the believer not to be overcome by the evil one (Satan, who stirs up revenge), nor by the evil of sin within, nor by the evil of others' injuries, but to resist and conquer; be not overcome of evil, but overcome evil with good — the grand principle crowning the section (vv.14-21), the believer not conquered by the evil done to him (driven to revenge, bitterness, retaliation, hatred) but conquering the evil by returning good (answering it with kindness, melting the enemy, v.20, or keeping himself from being drawn into evil) — the triumph of good over evil, the Christian victory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be not overcome of evil",
-   "overcome evil with good",
-   "the triumph of good over evil",
-   "the Christian victory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

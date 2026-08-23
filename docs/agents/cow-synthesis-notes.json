@@ -19842,6 +19842,68 @@
         "21"
       ],
       "note": "63,536 usable source words over 21 contiguous keys, tiled 1-5 | 6-8 | 9-11 | 12-14 | 15-17 | 18-21 at 623-648 words each, all grade A. Raw per span 12,318 / 10,909 / 3,625 / 15,144 / 7,994 / 13,521; expansion 0.04 to 0.17. Second-largest chapter attempted in this run after Luke 24. The 12-14 span is the heaviest at 15,144 raw words and also the hardest, since Barnes alone puts 4,161 words at k12 and 1,961 at k14, and the passage is the one Barnes himself calls 'usually considered one of the most difficult portions of the New Testament'. Two structural notes for whoever takes the rest of Romans. First, the chapter divides cleanly at 12 because the apostle's own sentence breaks there and is resumed at 18 - the tiling should follow the broken protasis rather than fight it, which is why 12-14 (the interruption) and 15-17 (the contrast) and 18-21 (the resumption) are three entries and not two. Second, ELLICOTT CHROME at k21 is the TENTH confirmation: 1,072 words of which about 175 are genuine comment on v21 and the rest is the StudyLight template. Clarke at the same key is 1,879 words and is an end-of-chapter essay rather than comment on the verse, the same shape as his end-of-gospel essay at Luke 24 k53. So the chapter-final subtraction rule now applies to Clarke as well as to Barnes and Ellicott."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "26",
+        "19",
+        "20",
+        "31",
+        "32",
+        "37"
+      ],
+      "note": "BLOCKED, NOT ATTEMPTED -- needs an owner decision on the source file, like numbers 31. I sized and surveyed exodus 36 (19 source keys, 5,887 usable words) and did not start writing, because the chapter cannot be tiled honestly under the current rules. THE HARD BLOCKER: the source keys are NON-CONTIGUOUS -- 1,2,3,4,5,6,7,8,9,14,19,20,26,30,31,32,35,37,38 -- and KEY 26 CONTAINS EXACTLY ONE BLOCK, which is Jamieson on EXODUS 23:14-17 (the three annual festivals), i.e. pure residue. Declared as residue it leaves the entry with zero voices and zero words; silenced it leaves the same. Since coverage_problems flags any span covering a verse absent from the source, key 26 cannot be absorbed into a neighbouring range either (25, 27, 28 and 29 do not exist), so ANY use of ranges in this chapter forces an entry at 26 that cannot be written. THE SOFT BLOCKER: five further keys hold nothing but a bare cross-reference to the parallel construction account -- k19 Ellicott 16w 'This verse corresponds exactly to Exodus 26:14', k20 Clarke 13w 'See Clarke's note on Exo 26:15', k31 Clarke 10w, k32 Ellicott 18w, k37 Clarke 13w. Writing 120 words on any of these is exactly the filler the prose rules forbid, and grouping them is what ranges are for -- but ranges are unavailable while key 26 stands. THE ROOT CAUSE is worth naming: Exodus 36 re-narrates the construction already prescribed in Exodus 26, so the commentators mostly refer back rather than comment, and Clarke says so outright at k38 -- 'There is scarcely any thing particular in this chapter that has not been touched on before.' This is a chapter-shaped instance of the bare-scripture-reference defect already logged at 1corinthians 3 k4. TWO POSSIBLE REMEDIES, both the owner's call: (1) allow a range to span source-key gaps, i.e. let coverage_problems ignore covered verses absent from the source rather than flagging them as extra, which would let 19-20, 26-32 and 37-38 group naturally and is a two-line change; or (2) treat a residue-only key as legitimately omissible and write the chapter with no ranges at all, following the established precedent -- five chapters already omit source keys (numbers 29 omits five of them, 2chronicles 27, numbers 34, galatians 2 and 1corinthians 16 omit one each), and all five declare no ranges, so the validator skips coverage for them. Option 1 is much the better outcome for this chapter and probably for every other partial-scrape chapter in the queue; option 2 costs nothing but leaves six keys unwritten. I picked again rather than land something padded."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19"
+      ],
+      "note": "JAMIESON: A FOURTH FULL STRIDE, AND THE NT SLOPE IS NOT THE OT SLOPE. Four blocks at keys 1, 7, 13 and 19 -- all = 1 mod 6, no slot dropped, and all four distinct, though again the unusually SMALL fragments characteristic of the NT feed (15w, 32w, 11w, 80w) rather than the paragraph-sized OT blocks. Content: k1 'the first necessity of the sinner, and so the first experienced blessing of the Gospel'; k7 the intervening days spent in further inquiry, the excitement reaching the Gentiles who crowded into the synagogue; k13 'implying some stay in Antioch and missionary activity in its vicinity'; k19 not captured in full. k7 and k13 are plainly ACTS 13 -- the Pisidian Antioch sabbath, where the whole city came together the next sabbath (Ac 13:44) and Paul and Barnabas stayed on. romans 12 is NT chapter 129 (28+16+24+21+28+12); Acts 13 is NT chapter 102 (89+13); lag = 27. THE POINT WORTH RECORDING: the OT slope re-fitted through the origin is 0.175, which would predict a lag of 22.6 here. The NT points give a consistently HIGHER ratio -- romans 6 (123) lag 24-25, romans 12 (129) lag 27, 1corinthians 3 (136) lag 30, 2corinthians 10 (159) lag 39 -- i.e. ratios of 0.20, 0.21, 0.22, 0.245. These do not sit on one line through the origin with the OT points, and within the NT the ratio itself climbs with position, which a single slope cannot produce. Either the NT stream has its own faster drift, or the relation is not linear across the whole canon. The four NT points are now enough to say that plainly, and the honest statement of the model is: stride of 6 on the slot, holding in 4 of 4 chapters measured this window; emission ~5 source verses per 6 target keys with scatter; and a lag that is linear-ish WITHIN each testament but with a materially different coefficient, OT about 0.175 and NT about 0.20 rising. Do not fit one line to both."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "12",
+      "verses": [
+        "7",
+        "13",
+        "14",
+        "16",
+        "21"
+      ],
+      "note": "FIVE DISAGREEMENTS, AND ONE UNUSUALLY STRONG CONVERGENCE. (1) MINISTRY, v7: Ellicott and Clarke call the word the technical term for the deacon's office; Barnes reviews the whole NT usage and comes down the other way, that the apostle meant those engaged in the ministry of the WORD, not deacons properly so called. (2) OFFICES OR DUTIES, v8: Calvin insists the givers are the deacons dispensing public charity and those who show mercy are the widows appointed to nurse the sick, 'for there were two different offices'; Ellicott holds that at this point the apostle passes from the definite functions of the ministry to what was common to ALL members, so that giving is to be taken widely. (3) IS THE APOSTLE QUOTING THE SERMON ON THE MOUNT, v14: Theodoret says flatly 'this was a law of our Lord's, for the Lord enjoined it to the holy Apostles (Matt. v. 44)'; Ellicott denies it is a quotation and dates the denial -- the compositions that became our gospels began about the time this epistle was written, so the precept reached Paul orally; Robertson independently agrees, 'like Mt 5:44 in spirit, not a quotation, but a reminiscence.' A fifth-century Antiochene and two nineteenth-century critics, and the moderns are the ones denying the citation. (4) HAS THE PRECEPT ANY PAGAN PARALLEL, v21: Barnes makes the largest claim in the chapter -- overcoming evil with good is 'the noble and grand sentiment of the Christian religion. Nothing like this is to be found in the heathen classics; and nothing like it ever existed among pagan nations.' Robertson, glossing the SAME VERSE, cites Seneca for it. Clarke had already cited Seneca at v2 for the sense of 'transformed'. Barnes's claim is refuted from inside his own catena. (5) SPIRITUAL OR PRACTICAL DILIGENCE, v11: Ellicott corrects the English outright -- the word means zeal and refers to the spiritual life, whatever the English reader supposes -- and Gill agrees; Barnes and Clarke make it ordinary industry, Barnes concluding that 'an idle man and a Christian are names which do not harmonize' and Clarke that he who neglects to labour during the week is as culpable as he who works on the Sabbath. THE CONVERGENCE, v13: the variant reading MEMORIALS for NECESSITIES draws four independent treatments -- Clarke reports and dismisses it, Calvin's text calls it a depravation introduced by certain fathers to countenance veneration of the martyrs' sepulchres (objecting that there were then no martyr monuments at Rome), Ellicott diagnoses the same motive and turns the case into a general argument for the purity of the manuscript tradition, and Wesley reaches the identical controversy WITHOUT any appeal to manuscripts, from the apostle's silence: 'treating expressly of the duties flowing from the communion of saints, yet never says one word about the dead.' Four voices, three schools, one target."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "4",
+        "14",
+        "21"
+      ],
+      "note": "THREE DEFECTS, ONE OF THEM THE LARGEST OF ITS KIND YET SEEN. (1) HENRY AT KEY 1 IS 11,654 WORDS -- the whole chapter's exposition dumped onto verse 1. This is the chapter-level front-matter defect at a scale far beyond anything previously logged (the earlier instances, at 1corinthians 3, romans 6, 2corinthians 10, deuteronomy 26, deuteronomy 17 and exodus 24, ran to a few hundred or at most two thousand words). Henry has only four blocks in the chapter -- k1 11,654, k3 214, k9 392, k17 290 -- so 92 percent of his contribution sits on one key and covers all twenty-one verses. Consequence for the work: entries 1 and 2 had to stand alone rather than be grouped, and Henry is unavailable as a puritan-evangelical voice in five of the nine entries even though he certainly comments on those verses; he is simply filed elsewhere. Clarke's k1 block carries his usual chapter argument on top of that. (2) CHRYSOSTOM AT EXACTLY 300 WORDS THREE TIMES (k1, k4, k14), and he has only those three blocks in the chapter. 300 is the value that was wrongly read as an authorial cap until 2corinthians 10 broke it with single blocks of 626 and 347. These are truncations, and romans 12 belongs on the re-fetch list; the k1 block visibly breaks off mid-sentence ('For it was not this, but this...'). Theodoret sits at exactly 200 four times and Gill six times, on the same reading. (3) CHROME at k21: Ellicott 1,055 raw words of which about 73 are comment -- the twenty-first measurement, at the last key as always. NOTE ALSO a probable block-boundary fault: the dump renders Wesley's k1 and several later Wesley blocks as running straight on into Theodoret's text without a break, though the survey parser splits them correctly on the strong tags. Worth a look on re-fetch, since a reader of the raw catena would attribute Theodoret's words to Wesley."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "12",
+      "note": "FIDELITY SELF-GRADE, romans 12, nine entries over 21 keys and 61,055 usable source words -- the largest chapter attempted in this run, half again the size of genesis 2. Word counts: 1 650, 2 648, 3-5 650, 6-8 650, 9-11 647, 12-13 623, 14-16 648, 17-18 649, 19-21 649. All nine in window; every one required trimming, most of them three or more passes. Verses 1 and 2 stand alone because Henry's 11,654-word block sits on key 1 and would otherwise have swamped a grouped entry (see the source-defect note); the rest follow the chapter's own joints. Voice coverage: eleven voices -- Barnes 21 blocks/15,362w, Henry 4/12,550, Calvin 19/11,854, Clarke 21/7,468, Ellicott 21/4,580, Gill 21/2,815, Robertson 20/2,001, Theodoret 19/1,926, Wesley 17/1,094, Chrysostom 3/900, Jamieson 4/138. DECLARED: Jamieson as residue in entries 1, 6-8, 12-13 and 19-21. RATIO: about 5,800 words of prose from 61,055 of source, or 9.5 percent -- the lowest of the run, and unavoidable at this density. That is the honest cost of a chapter this size at nine entries: a great deal of good material was left out, and the entries are selections rather than digests. TWO GHOSTS CAUGHT AND FIXED, both the same failure as at exodus 24: Clarke at entry 1 and Wesley at entry 3-5 were present in the span, discussed in the tags, and missing from the prose. That is now the third and fourth instance of this specific error in the run, always with a voice whose contribution is a single structural or cross-referencing remark. It is worth naming as a standing hazard: when a voice's only content is a chapter argument or a back-reference, it is easy to summarise him in the school description and forget to name him in the prose. Theodoret at entry 14-16 was a third near-miss, caught by the same linter. NAMES USED: Seneca, Thomas Aquinas, William Penn, Griesbach and Keble are named where the citing voice is itself sourced in the entry; Moore, Stuart, Flatt, Theophylact, Jerome, Doddridge, Macknight, Beza, Mede, Erasmus and Alford are cited by the sources but not named in the prose."
     }
   ]
 }
