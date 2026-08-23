@@ -19944,6 +19944,103 @@
         "15"
       ],
       "note": "This chapter puts the commentators under unusual pressure because the law it expounds commands executions, and two places show how differently they handle that. (1) v5, WHO MAY BE PUT TO DEATH. Calvin sets two explicit limits before defending the penalty: not for 'some particular or trifling error' but only for 'authors of apostasy, who pluck up religion by the roots'; and not at all 'until a positive religion should be established' by public consent and 'sure and indisputable proofs'. He then draws a two-edged conclusion - 'whilst their severity is preposterous who defend superstitions with the sword, so also in a well constituted polity, profane men are by no means to be tolerated' - and mounts an argument from lesser offences to greater (adulterers, poisoners, thieves are punished; shall the corrupters of doctrine go free?). His EDITOR appends a long footnote treating this passage as 'his final apology for the part he took' in the death of Servetus, and quotes M. de Felice's four points in his defence. That footnote is part of the source and I reported its existence rather than passing over it. (2) v15, WHETHER THE INNOCENT DIE TOO. Wesley restricts 'the inhabitants' to 'all that are guilty, not the innocent part, such as disowned this apostacy, who doubtless by choice, at least upon warning, would come out of so wicked a place'. Calvin takes the objection in its hardest form and refuses the escape: 'If any should object that the little children at least were innocent, I reply that, since all are condemned by the judgment of God from the least to the greatest, we contend against Him in vain.' Reported both plainly without adjudicating. (3) A smaller but pleasing case at v11: Keil and Delitzsch quote Calvin BY NAME in order to borrow his phrase 'the utility and fruit of severity' and then guard it, denying that fear of punishment is the principle of the law or the modern deterrent theory. Direct cross-citation between two voices in the same span."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JAMIESON RESIDUE, romans 7 -- THE CHAPTER-SEAM DUPLICATE CONFIRMED BY BYTES, AND THE STRIDE IS PER-CHAPTER. Four residue blocks at keys 4, 10, 16, 22 -- all = 4 mod 6, a full stride with no slot dropped. All four are Acts 10, the Cornelius narrative, in order: k4 = the flat roof, chosen place in the East for cool retirement, noon (Ac 10:9); k10 = 'were inquiring' and the Spirit bidding Peter go with them (Ac 10:17-20); k16 = Cornelius falling at Peter's feet and Peter declining the honour (Ac 10:25-26); k22 = the four-day reckoning of the messengers (Ac 10:30). TWO FINDINGS. (1) romans 6 k22 and romans 7 k4 are BYTE-IDENTICAL: 'the flat roof, the chosen place in the East for cool retirement. noon.' This is the long-flagged one-block overlap at each chapter seam, now proven by bytes rather than inferred. (2) Both chapters sit at offset 4 mod 6. romans 6 has 23 source keys and 23 is not a multiple of 6, so a stride running on a continuous global index WOULD have shifted the offset at the seam. It did not. THE STRIDE IS THEREFORE COMPUTED ON THE VERSE NUMBER WITHIN THE CHAPTER, NOT ON A RUNNING COUNT ACROSS THE CORPUS. Offsets observed to date: genesis 2 = 1, exodus 24 = 1, deuteronomy 17 = 3, deuteronomy 26 = 2, romans 12 = 1, romans 6 = 4, romans 7 = 4. WITHIN-CHAPTER EMISSION RATE DECLINES MONOTONICALLY HERE: k4 to k10 spans Ac 10:9 to 10:17-20, about 9.5 source verses per 6 target keys; k10 to k16 spans 10:17-20 to 10:25-26, about 7; k16 to k22 spans 10:25-26 to 10:30, about 4.5. Earlier within-chapter rates were 4.5 (exodus 24), 5 (genesis 2), 6 (deuteronomy 17). The honest statement remains ~5 per 6 with real scatter, and romans 7 shows the scatter is not noise but a trend inside a single chapter. NT slope still differs from OT slope: romans 6 (123, 24-25), romans 7 (129 approx, same family), romans 12 (129, 27), 1corinthians 3 (136, 30), 2corinthians 10 (159, 39) give ratios climbing with position, which no single origin-line produces. Do not fit one line to both testaments. This is the strongest evidence yet for the re-indexing decision still pending with the owner."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "13",
+        "15",
+        "22",
+        "24"
+      ],
+      "note": "CALVIN EDITORIAL APPARATUS BLEEDING INTO THE COMMENTARY TEXT -- FOUR INSTANCES IN ONE CHAPTER, WITH NO MARKUP TO SEPARATE THEM. The Calvin blocks in this catena carry the 19th-century translator's/editor's footnotes inline, in the same paragraph and the same voice, with nothing to mark the change of hand. Four clear cases here. (1) k13: Calvin argues that the law called the ministration of death in 2 Cor 3 represents not the law's real character but the false opinion of opponents; the very next sentence reads 'This can hardly be admitted. The Apostle in Corinthians evidently states a fact...' -- a flat contradiction of the sentence before it. (2) k15: 'It appears from this, that Calvin did not apply the foregoing words...' -- Calvin referred to in the THIRD PERSON inside his own block, followed by a catalogue of rival schemes he never mentions: Hammond's 'law state' (Stuart's phrase), Locke's Jew living between Abraham and the giving of the law, Vitringa's fiction about the law's effects on Jews and proselytes. (3) k22: a lexical note comparing Macknight's, Stuart's and the common version's renderings of the verb, and pronouncing 'our common version is the best' -- an English translator's judgement, impossible for Calvin. (4) k24: Schleusner cited on the adjective, plus Septuagint parallels at Ps 137:8 and Isa 33:1. CONSEQUENCE FOR SYNTHESIS: a summariser reading these blocks as one voice will attribute to Calvin positions he did not hold and, worse, will report him contradicting himself. I wrote around it in the prose at 9-12 and named the editorial matter explicitly at 15-17, but that is a per-chapter workaround. This is a corpus-wide defect in the Calvin source, not a romans 7 accident -- it was flagged before on the re-fetch list as 'Calvin (editor's apparatus)' and this chapter shows the density: four instances in twenty-five keys. RECOMMENDED: on re-fetch, keep only the Calvin body and drop the apparatus, or wrap the apparatus in a distinguishable tag so build tooling can strip it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "9",
+        "12",
+        "13",
+        "14",
+        "15",
+        "18",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "note": "ROMANS 7 TRUNCATION AND CHROME CENSUS -- add to the re-fetch list. EXACT-CAP TRUNCATIONS (body ends mid-sentence at a round number; the cap counts BODY words only, not the voice-name prefix -- see the correction filed against deuteronomy 26). Gill at exactly 200 on SEVEN keys: 5, 9, 13, 15, 22, 24, 25. Theodoret at exactly 200 on FIVE keys: 3, 4, 6, 12, 13. Wesley at exactly 200 on k7 -- FIRST TIME WESLEY HAS HIT THE CAP anywhere in the corpus so far; his blocks are usually far shorter than 200, so this is a genuine truncation of an unusually long note, not a coincidence. Cyril at exactly 200 on k23. Chrysostom at exactly 300 on k14 -- and k14 is Chrysostom's ONLY block in the whole chapter, so the single Chrysostom contribution to romans 7 is a truncated one. Clarke, Barnes, Robertson, Calvin, Ellicott, Henry and Jamieson show no exact-cap blocks here. ELLICOTT CHROME TAIL, 23rd INSTANCE MEASURED: k25 holds 1996 words of which the commentary body is 183 and the remaining 1813 are navigation and copyright chrome, starting at the literal string 'Copyright Statement These files are public domain'. That single removable rule would strip 1813 words from one key in this chapter alone. The second chrome family (Gill's 'Next: <Book> Chapter <n>' navigation string) does not appear in romans 7. HENRY IS TWO DIFFERENT WORKS IN ONE CATENA: five Henry blocks, of which k1 (2282w), k7 (2223w) and k14 (3421w) are the full Exposition -- chapter-level front matter dumped onto the first key of each argument -- while k18 (238w) and k23 (429w) are plainly the Concise commentary, a different register and a different work, with nothing in the markup to distinguish them. Same hazard as the Calvin apparatus: a summariser reading them as one voice will report a single commentator changing his manner mid-chapter."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "14",
+        "18",
+        "19",
+        "22"
+      ],
+      "note": "THE REGENERATE/UNREGENERATE QUESTION IS THE SPINE OF THIS CHAPTER AND THE CATENA SPLITS FIVE WAYS, NOT TWO. (1) Barnes (k14) holds the passage describes a man UNDER THE GOSPEL, after conversion, and gives four numbered reasons: it is the obvious sense to plain men without a theory; making it pre-conversion would repeat settled ground and leave open whether the law can sanctify a believer; the later expressions cannot be said by an impenitent sinner; it accords with parallel descriptions of the Christian's conflict. He rests the whole case at k22 on the verb of delight, which occurs nowhere else in the NT and denotes sensible pleasure rather than intellectual assent -- 'never yet did an impenitent sinner find emotions of pleasure in the contemplation of the pure and spiritual law of God.' (2) Clarke (k14) takes the opposite side with heat: the apostle personates a Jew under the law; by 'I' he cannot mean himself or any believer; and if the words held of a believer they would prove the GOSPEL as insufficient as the law. He says the contrary opinion 'has most pitifully and most shamefully not only lowered the standard of Christianity, but destroyed its influence and disgraced its character.' At k22 he answers Barnes's proof-text directly: every Jew who receives the OT must acknowledge the law's excellence, and 'to say that the inward man means the regenerate part of the soul is supportable by no argument' -- citing Plato and Plotinus via Wetstein, and Yalkut Rubeni on the Jewish side. (3) Calvin (k14, k17) holds the regenerate reading and rests it on the DISOWNING rather than the delight: the man denies being wholly possessed by sin and declares himself exempt from its bondage, which no unrenewed man could say. (4) Theodoret (k14) refers it to the man before the coming of grace. (5) Wesley (k14) REFUSES THE ALTERNATIVE, making the passage the whole process of a man reasoning, groaning, striving and escaping from the legal to the evangelical state, and at k25 keeps it to the end -- the 'I' is 'the person whom I am personating, till this deliverance is wrought.' (6) Henry (k14) alone states the deadlock AS a deadlock and expounds the passage twice over, once each way, without deciding. NOTE that Robertson (k15) sides with the pre-conversion reading on the strength of 'sold under sin' and quotes Denney's formula -- 'the unregenerate man's experience, surviving at least in memory into regenerate days, and read with regenerate eyes' -- which is the only position in the catena that dissolves the dichotomy rather than choosing a side or refusing to."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "9",
+        "18",
+        "19",
+        "21"
+      ],
+      "note": "THREE FURTHER DISAGREEMENTS WORTH KEEPING FROM ROMANS 7. (1) GILL NAMES AND REJECTS TWO POSITIONS HELD BY VOICES IN HIS OWN CATENA (k9). Expounding 'I was alive without the law once' he says it is spoken neither in the person of Adam -- who never lived without law, having the law of nature written on his heart and a positive precept about the fruit, and in whom sin could not be said to REVIVE since it never lived before -- nor in the person of a Jew before Sinai, since the sons of Abraham had circumcision and sacrifices besides the law of nature. THEODORET holds precisely the first (Adam before his transgression, the serpent, Eve, the shared sentence) and CLARKE, quoting Whitby, holds precisely the second (the seed of Abraham, not obnoxious to death for what the law had not yet threatened). Three positions, all inside one chapter's catena, with the refutation printed above the things it refutes. (2) CLARKE'S DEFENCE OF THE WILL (k18-k19) IS A DIRECT ATTACK ON THE REFORMED READING OF THIS VERY CHAPTER. He holds that some faculties suffered less in the Fall because their concurrence is necessary to salvation, and that 'It is not the Will that leads men astray; but the corrupt Passions which oppose and oppress the will. It is truly astonishing into what endless mistakes men have fallen on this point, and what systems of divinity have been built on these mistakes. The will, this almost only friend to God in the human soul, has been slandered as God's worst enemy, and even by those who had the seventh chapter to the Romans before their eyes!' Set against Calvin at k18, who divides the believer into two parts (the relics of the flesh, and grace) and includes under 'flesh' everything a man brings from the womb; and against WESLEY at the same key, whose one-line gloss -- 'The flesh here signifies the whole man as he is by nature' -- contradicts his own school's champion and agrees with Calvin. Wesley against Clarke inside the wesleyan-arminian slot is unusual and worth flagging. (3) THE WORD 'LAW' AT v21 (k21). Ellicott's note lays out the two live readings and states the objection to the majority one -- that taking it as 'rule' or 'habitually-repeated fact' gives the word a sense it bears NOWHERE ELSE in Paul -- then offers Vaughan's alternative, an anacoluthon. Clarke takes 'rule' openly, glossing it with Hesychius as confirmed habit. CALVIN counts FOUR laws in the passage (the law of God, the law of the mind, the law of unrighteousness, the law of the members) where everyone else finds two, defending the third by the observation that even a tyrant's enactments are called laws though not properly. Theodoret sidesteps the whole question by REPUNCTUATING, putting a full stop after the wish to do right."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "7",
+      "verses": [
+        "20",
+        "21",
+        "23",
+        "24",
+        "25"
+      ],
+      "note": "ROMANS 7: CLASSICAL AND PATRISTIC MATERIAL THE CATENA CARRIES THAT IS WORTH INDEXING SEPARATELY. (a) k20 -- Clarke tells XENOPHON's story from the Cyropaedia of Araspes the Persian nobleman, entrusted with the captive Panthea, confessing to Cyrus 'I am convinced that I have two souls; if I had but one soul, it could not at the same time pant after vice and virtue' -- adduced to explain why ancient philosophers posited two souls in man. (b) k23 -- Robertson lists PLATO, OVID, SENECA and EPICTETUS as describing the same dual struggle between conscience and deeds. Note that this is the same move Robertson made at romans 12:21, where he cited Seneca against Barnes's claim that 'nothing like this is to be found in the heathen classics'; the pattern is consistent enough to be worth a corpus-wide index of Robertson's classical citations. (c) k24 -- Clarke quotes VIRGIL, Aeneid viii.485ff, five lines of Latin on the tyrant Mezentius who bound the living to the dead face to face until the putrefaction killed them, as the image behind 'the body of this death'. He gives both the Latin and an English verse rendering. (d) k22 -- Calvin cites AUGUSTINE, who calls the contest between spirit and flesh 'the Christian struggle'. (e) k23 -- CYRIL of Jerusalem does not expound the verse at all but uses it to argue the INCARNATION: 'The Devil had used the flesh as an instrument against us; and Paul knowing this, saith...' -- therefore God became truly man, that by the very same weapons the victory might be won back. Cyril's other block here (k16) is likewise not exegesis but a guard on FREE WILL, warning the catechumen not to listen to anyone 'perversely interpreting the words, But if I do that which I would not', and answering with Isaiah's 'If ye be willing and hearken unto Me'. BOTH Cyril blocks in this chapter are catechetical excerpts aimed at a doctrine rather than commentary on the verse; that is consistent with his two blocks in every chapter surveyed so far, and supports treating the Cyril source as a doctrinal cross-reference rather than a commentary voice. (f) k21 -- Gill identifies the 'law' the apostle finds with the rabbinic YETZER HARA, and reports that 'evil' is the first of the seven names the rabbis give it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "7",
+      "note": "FIDELITY SELF-GRADE, romans 7 -- ten entries over 25 contiguous source keys, 59,960 usable source words, 12 voices. Every verse checked against its source blocks before writing and again after each trim pass. WORD COUNTS (window 350-650, no thin exemptions used): 1-3 647w / 9 voices; 4-6 649w / 8 (Jamieson excluded, residue at k4); 7-8 640w / 9; 9-12 648w / 8 (Jamieson excluded, k10); 13 616w / 8; 14 646w / 10 -- the widest voice spread in the chapter, all five schools; 15-17 629w / 9 (Jamieson excluded, k16); 18-20 648w / 8; 21-23 643w / 10 (Jamieson excluded, k22); 24-25 649w / 8. Total 6,415 synthesis words from 59,960 source words = 10.7% expansion ratio. EVERY ENTRY IS ATTRIBUTED: no claim in the prose is made that is not traceable to a named block in that span. GRADE: high confidence on attribution and on the disagreements, which are unusually clean in this chapter because the voices answer each other by name (Gill refuting the readings Theodoret and Clarke hold; Clarke answering Barnes's proof-text at k22; Wesley contradicting Clarke at k18). MEDIUM confidence on two things, both flagged as source defects rather than judgement calls. (1) The Calvin blocks carry editorial apparatus inline with no markup; at 9-12 I wrote around it and at 15-17 I named it as editorial matter rather than attributing it to Calvin, but a reader without the source cannot verify that split. (2) Five Henry blocks come from two different works (full Exposition at k1/k7/k14, Concise at k18/k23); I summarised each in its own register but attributed both to 'Henry', which is what the catena claims. DEGRADATION SIGNAL, unchanged and worsening: EVERY ONE of the ten entries overshot the 650-word ceiling on first draft, by 20-35%, and needed one to six trim passes. I lowered the first-draft target to ~600 words partway through and the overshoot persisted. The expansion ratio here (10.7%) is close to romans 12's 9.5%, the lowest recorded. ROTATION REMAINS THE STANDING FLAG."
     }
   ]
 }
