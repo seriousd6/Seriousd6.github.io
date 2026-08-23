@@ -2,657 +2,320 @@
  "1": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "1-4",
+  "pericope_label": "The basket of firstfruits brought to the sanctuary and set down before the altar",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Distinguish this private basket from the sheaf offered for the whole land after the passover, and describe the practice of going into the field as the fruits ripened, marking what was most forward, and laying by wheat, barley, grapes, figs, pomegranates, olives and dates in one basket with leaves between them; then draw three lessons — to acknowledge God as the giver of what supports natural life, to deny ourselves, since what is first ripe is what we are fondest of and laying it by teaches us to prefer his name to our appetite, and to give God the first and best as those who believe him the first and best of beings, which is what those do who consecrate the days of their youth."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the land of Canaan, on whose borders they now were, just entering in."
+    "summary": "Explain that the firstfruits were required for the same reason as the tribute for every soul, that they might confess themselves and all they had to be God's, but with this difference, that where the tribute symbolised their emancipation the firstfruits testified that the land was tributary and they held it only as tenants at will, the sovereignty remaining with God; so that the rite renewed yearly the recollection of their adoption, they being fed not promiscuously like the Gentiles but like children, their food therefore sacred; add that the typical rite has ceased while its true observation remains, since whether we eat or drink we are to do all to the glory of God, and that the words the offerer says confess the land was gained neither by strength nor by fortune but by free gift according to promise, dating themselves from Jacob rather than Abraham because in him grace shone out more brightly. Elsewhere separate this offering from the barley sheaf, the two wave loaves and the cake of the dough, note that only seven kinds were owed, report that the priest waved the basket with his hand under the owner's toward the corners of the earth in acknowledgment that the Lord owns the whole, and pass on the reading that the priest of those days means the high priest, whom you take as typical of Christ, by whom we offer the sacrifice of praise."
    },
    {
     "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Handle the one grammatical point bearing on quantity: the word is partitive, a portion of the first of the fruit, from which it does not follow — against the commentator who so argues — that the firstfruits were not all delivered at the sanctuary, but only that not all of them had to be put in a basket and set down there."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: come in, possess it, and dwell therein."
+    "summary": "Make the offering the duty of each master of a family, either on first settling in the land or once a year at one of the three feasts; and explain its purpose as keeping them in continual remembrance of God's kindness in preserving them and fulfilling his promises, the firstfruits being consecrated to the author of every good and perfect gift."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How this basket of firstfruits differed from the other firstfruit offerings of the calendar.",
+   "Whether all the firstfruits had to be delivered at the sanctuary.",
+   "When and how often the basket was to be brought.",
+   "What the offering was meant to confess about the tenure of the land."
+  ],
+  "outliers": [
+   "Calvin alone pairs the firstfruits with the poll tribute and makes them opposite symbols, of tenancy and of emancipation.",
+   "Keil alone reads the partitive strictly and corrects an inference drawn from it.",
+   "Henry alone finds self-denial in the law, on the ground that the earliest fruit is the most desired.",
+   "Gill alone reports the waving of the basket toward the corners of the earth.",
+   "Calvin alone notices that the confession begins with Jacob rather than Abraham."
+  ],
   "themes": [
-   "when thou art come in unto the land... and possessest it, and dwellest therein",
-   "the inheritance present and enjoyed",
-   "thanksgiving the response, the Giver owned (Deut. 8:10)"
+   "Firstfruits",
+   "Thanksgiving",
+   "Land",
+   "Stewardship",
+   "Self-denial",
+   "Worship"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this oblation differed from the sheaf at barley harvest, the wave loaves at Pentecost, and the cake of the first dough; the firstfruits put in a basket and brought to the place of God's name."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt take of the first of all the fruit of the earth... in a basket, and shalt go unto the place which the LORD... shall choose",
-   "owning God the giver of the harvest",
-   "Christ the firstfruits (1 Cor. 15:20)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he went to the priest whose course it was to minister, or, by the Targum, the high priest, to profess that he had come into the land sworn to the fathers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I profess this day unto the LORD thy God, that I am come unto the country which the LORD sware unto our fathers",
-   "the offering joined to a confession of faith",
-   "owning God's faithfulness with the mouth (Heb. 13:15)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the priest waved it, the waving toward the corners of the earth an acknowledgment of the Lord as proprietor of all; the basket set down before the altar."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priest shall take the basket out of thine hand, and set it down before the altar",
-   "the firstfruits presented to God",
-   "owning his lordship, the earth is the LORD's (Ps. 24:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he was to speak with a loud voice before the Lord, the confession recalling the father's low estate and the great nation God made of him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "A Syrian ready to perish was my father... and became there a nation, great, mighty, and populous",
-   "humble beginnings magnifying grace",
-   "look unto the rock whence ye are hewn (Isa. 51:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "5-11",
+  "pericope_label": "The confession beginning a Syrian ready to perish was my father, and the command to rejoice",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: they ordered the male children killed by the midwives, and by another edict drowned."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the evil entreating, affliction, and hard bondage."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Egyptians evil entreated us, and afflicted us, and laid upon us hard bondage",
-   "the depth of misery recalled",
-   "heightening the praise of mercy (Exod. 1:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they cried unto the LORD by reason of their hard bondage; the LORD heard their voice and looked on their affliction, labour, and oppression."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when we cried unto the LORD... the LORD heard our voice, and looked on our affliction",
-   "the cry of the oppressed reaching God",
-   "this poor man cried, and the LORD heard him (Ps. 34:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the LORD brought them forth out of Egypt after some time."
-   },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: refers to the mighty hand and outstretched arm (Deut. 4:34)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD brought us forth out of Egypt with a mighty hand... and with signs, and with wonders",
-   "the redemption wrought by God's power alone",
-   "salvation his alone, according to his mercy (Titus 3:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he brought them to this place after forty years' travel through the wilderness; the land flowed with milk and honey."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he hath brought us into this place, and hath given us this land... that floweth with milk and honey",
-   "the bringing-in completing the redemption",
-   "out, that he might bring in (Deut. 6:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the bringing of the firstfruits of the land."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: 'it' is the basket of firstfruits."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have brought the firstfruits of the land, which thou, O LORD, hast given me... and worship before the LORD",
-   "offering and worship from remembered grace",
-   "what shall I render unto the LORD (Ps. 116:12)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: rejoicing in all the blessings of goodness and mercies of life, which God in his kind providence had favoured them with."
+    "summary": "Lay out the six ways the opening words of the confession have been rendered — that a Syrian persecuted my father, that my father abandoned Syria, that Laban endeavoured to destroy him, that he was led out of Syria into Egypt, that Laban almost destroyed him, and that famine oppressed him so that he went down into Egypt, this last got by detaching a letter and finding the sense of famine in the Arabic cognate — and judge that the Syrian is Jacob, so called from his long residence with his father-in-law, his being ready to perish referring to the hard usage and severe labour of that service; take the epithet as true also by origin, since the patriarchs came from Mesopotamia, by education and conversation, and by his wives and children, and leave the peril open between poverty and the rage of a brother and the treachery of a father-in-law; and press the command to rejoice, since God intends his followers to be happy and to eat their bread with gladness and singleness of heart, while those who eat grudgingly under pretence of unworthiness profane his bounties and get no thanks for their voluntary humility — the Levite having no inheritance and the stranger no home, let the one rejoice with you and the other find you his friend and father, and let a man take comfort in all his employments once he has sanctified them by giving God his portion, tracing the streams up to the fountain."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: rejoicing with house, Levite, and stranger."
+    "prevalence": "single",
+    "summary": "Render the opening of the confession as a lost, a perishing Aramaean was my father, against the versions that make the Aramaean Laban the one who sought to destroy him; reject the reading by which the renewed command to set the basket down implies that the offerer held it in his hand throughout the prayer, in direct opposition to the earlier verses, treating the words instead as a remark closing the instructions; and hold that the rejoicing points to the sacrificial meal following the act of worship, and that the presentation was made on the pilgrimages to the sanctuary at the three yearly festivals, against the attempt to restrict the words to meals prepared from the tithes."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Note that the offerer was to lift up his voice, or, on another reading, to answer the priest's question what is this thou hast brought; that the evil entreatment was the two edicts, first that the midwives should kill the male children and then that the people should drown them; that the bringing to this place came only after forty years' travel through the wilderness; and that the good things to rejoice in are all the blessings of goodness and mercies of life which God in his kind providence had bestowed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the opening words of the confession should be rendered, and whether the Syrian is Jacob or Laban.",
+   "In what sense Jacob was ready to perish.",
+   "Whether the renewed command to set down the basket means the offerer held it throughout the prayer.",
+   "What occasion the rejoicing belongs to, and who is to share in it."
+  ],
+  "outliers": [
+   "Clarke assembles six competing renderings of the same four words before giving his own.",
+   "Wesley alone makes the epithet true on three separate grounds at once.",
+   "Keil alone treats the repetition at verse 10 as a closing remark rather than a description of the offerer's posture.",
+   "Clarke alone warns that grudging use of God's gifts under a show of unworthiness is itself a profanation."
+  ],
   "themes": [
-   "thou shalt rejoice in every good thing which the LORD thy God hath given... thou, and the Levite, and the stranger",
-   "the firstfruits crowned with thankful joy",
-   "worship overflowing in kindness (Phil. 4:4)"
+   "Confession",
+   "Deliverance",
+   "Jacob",
+   "Rejoicing",
+   "Levite",
+   "Stranger"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.47
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
+  "range": "12-15",
+  "pericope_label": "The third year's tithe, the protestation that it was rightly disposed of, and the prayer for blessing",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill, with Maimonides: the tithing is finished at the feast of passover."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the tithe of the third year given to the needy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the third year, which is the year of tithing... that they may eat within thy gates, and be filled",
-   "worship bound to charity",
-   "the increase held in trust for the poor (James 1:27)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: this declaration was made before the Lord, not in the temple, since the tithe was eaten with the poor in the owner's gates."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: I have not transgressed nor forgotten thy commandments."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have brought away the hallowed things out of mine house... I have not transgressed thy commandments",
-   "obedience sincere and answerable to God",
-   "walking blameless before him (Luke 1:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the hallowed things were not to be eaten in mourning or grief, nor in the defilement of the dead, but with joy; he had hearkened to the voice of the LORD and done all commanded."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have not eaten thereof in my mourning, neither... for any unclean use, nor... for the dead: but I have hearkened",
-   "the holy things kept undefiled",
-   "obedience exact in the least (Lev. 22:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this prayer desires that God, from heaven his holy habitation, would look with an eye of love and delight on his people, though unholy in themselves, and bless Israel and the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Look down from thy holy habitation, from heaven, and bless thy people Israel, and the land",
-   "obedience emboldening the heart to ask blessing",
-   "the unholy seeking God's favour in grace (Ps. 80:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these are the words of Moses, referring not only to the laws last mentioned but to all repeated in this book, to be kept with all the heart and soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt therefore keep and do them with all thine heart, and with all thy soul",
-   "wholehearted obedience the spirit of all his commands",
-   "serving God wholly, not by halves (Deut. 6:5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they had affirmed, protested, and most solemnly declared the LORD to be their God, and him only, refusing all other gods, engaging to walk in his ways and keep his statutes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou hast avouched the LORD this day to be thy God, and to walk in his ways",
-   "a deliberate, confessed allegiance",
-   "the LORD our God will we serve (Josh. 24:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: God affirmed and declared them his special people above all on earth, his jewels, his peculiar treasure."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Explain that the second tithe, spent in the other two years on extraordinaries at the feasts, was in the third year spent at home in entertaining the poor; hold that because it was disposed of out of sight of the priests, and great confidence was reposed in the people's honesty, the protestation was made at the sanctuary at the next feast, as it were upon oath, that the trust had been faithfully kept; and draw the parallel that though we are no longer under such appropriations of our revenue we are commanded to give alms, and then, and not otherwise, all things are clean to us — noting that the clause about forgetting forecloses the excuse that the commandment slipped the mind."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the LORD publicly declared them his."
+    "summary": "Describe how the third year widened the company from owners and Levites at Jerusalem to strangers, fatherless and widows in their own dwellings, and note that by the letter of the law the tithe was for the Levites and drawn only once in three years; call the declaration a private address to God, said solemnly but at home; take eating in mourning to mean grudging rather than grief — not eaten in sorrow at giving away so much of one's profits, but cheerfully feasted with the poor as commanded; read the giving to the dead as funeral feasting, since provisions were sent to the relations of the deceased and both guests and food were then legally polluted, a double fault, while elsewhere reading it of idolatry, an idol being generally a dead man whom ignorance had deified, and comparing the flesh offered to idols and afterwards sold in the shambles; and take the order of profession and prayer as instruction in how vain the prayers of disobedient persons are."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Report the rabbinic ruling that the tithing was reckoned finished at the passover, and deny that the declaration was made in the tabernacle or temple at all, since the tithe was eaten in the owner's own gates; observe that Moses stimulates them by setting God before their eyes as if the tithes were paid into his hand, nothing awakening men more than when God is produced as their judge, so that the speaker condemns himself if he has defrauded and prays for grace if he has not; insist that the claim not to have transgressed or forgotten refers to the matter in hand only, since it would be temerity and arrogance to boast of having kept the whole law, the words signifying desire rather than perfection; canvass three renderings of the second denial and prefer the adverbial sense, that nothing was appropriated impurely; follow the funeral reading of the third while objecting that it is unclear why such a denial should be needed; take eating in mourning, with almost universal consent, to mean that even poverty did not tempt them to touch the hallowed things, while allowing that it might mean the anxiety of a guilty mind; conclude from the command to bless a land already flowing with milk and honey that it was not fertile by nature but because God daily watered it by his secret blessing; and read the petition as asking God to look with an eye of complacency from heaven on people unholy in themselves."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "State flatly that saying before the Lord here does not denote prayer in the sanctuary, and explain why a prayer is prescribed for this tithe and not the others — because this one was consumed throughout the land in meals for the poor, so that the requirement would not follow by analogy from the firstfruits, as it would where the meal was eaten at the sanctuary; and take eating in mourning to mean mourning for the dead, that is, a state of legal uncleanness, the second denial meaning that nothing was removed while in that state."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What changed about the tithe in the third year, and who ate it.",
+   "Whether the protestation was made at the sanctuary or at home.",
+   "How a man could claim not to have transgressed or forgotten the commandments.",
+   "What eating in mourning means, and what giving to the dead means.",
+   "Why a land already flowing with milk and honey should need to be blessed."
+  ],
+  "outliers": [
+   "Henry alone places the protestation at the sanctuary; three others place it at home.",
+   "Keil alone explains why this tithe and no other required a prayer.",
+   "Calvin alone defuses the apparent claim to perfect obedience by reading it as desire rather than achievement.",
+   "Wesley alone takes mourning to mean grudging the gift rather than grieving for the dead.",
+   "Calvin alone infers from the prayer that the fertility of Canaan was maintained daily rather than native to it."
+  ],
   "themes": [
-   "the LORD hath avouched thee this day to be his peculiar people, as he hath promised",
-   "the mutual covenant of belonging",
-   "a peculiar people, his own treasure (Titus 2:14)"
+   "Tithes",
+   "Charity",
+   "Conscience",
+   "Uncleanness",
+   "Idolatry",
+   "Blessing"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
+   }
   }
  },
- "19": {
+ "16": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "16-19",
+  "pericope_label": "The mutual avouching, and the promise to set Israel high above all nations",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: none of the nations had the LORD for their God and King as Israel, nor such laws; these gave them a superiority over all, in praise, name, and honour; they should be a holy people unto the LORD."
+    "prevalence": "several",
+    "summary": "Take this day as Moses' own word, covering everything repeated in the book, since this was the last day on which the whole account was finished, and add the rabbinic turn that every day was to be reckoned new, as if the laws had been given that morning; note that the exaltation is comparative — other nations were made famous for extent, wealth and number, but Israel stood higher for having the Lord as God and King and for having such laws, the end being to make them not merely high but holy; leave the verse at one point for a paragraph on the elect in Christ among all nations, adopted, regenerated and certified by the Spirit; insist that God is the author of the Law and that men grow careless unless often stirred up, so that by often calling them to obedience God indirectly rebukes their indifference; explain with all thy soul as serious apprehension free of disguise, nothing being more displeasing to God than hypocrisy; answer the objection that no mortal can keep the Law with the whole heart by saying that the whole heart is set against a divided one and means an undeceitful one, and that it is not absurd to propose to believers an object they aim at though the flesh keeps them from reaching it; and make the exaltation reciprocal but hidden, since God desires to be glorified only by making us partakers of his glory, while this excellency of the Church, being spiritual, obtains its praise before God and the angels alone."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Draw two enforcements from the passage. First, that these are God's commands and not the dictates of the lawgiver's own wisdom — do them and not dispute them, do them and not draw back, and not carelessly or hypocritically but with the whole heart and soul. Second, that the covenant binds both ways: Israel had avouched God implicitly by attending on his word and expressly at Sinai, and would do so again before parting, from which it follows that we forswear ourselves and violate the most sacred engagement if, having taken the Lord for our God, we do not make conscience of obeying him."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Find two things in the mutual avouching: that Israel's acceptance of the laws was a practical declaration that the nation would take Jehovah as its God and walk in his ways, and that the Lord's giving of them was a practical confirmation of his promise that Israel should be his treasured people of possession; render the verb causatively, so that Israel did not avouch but let the Lord say it, giving him occasion to say he would be their God; and turn the three words of the promise about, so that Israel becomes an object of praise and renown and glorification, not of itself but of the God who made it, among all nations — the sanctifying of the people being the design and end of its election."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Keep the plain sense of the verb as a public declaration, and hold that God avouched on his side by the blessings he pours down and by eminent manifestations of his power and favour, so that the covenant is thereby made and ratified; then take the promised exaltation into public and national politics, since righteousness exalteth a nation but sin is a reproach to any people — Israel being the greatest of nations while it kept the testimonies and the most contemptible when it forsook them — and address your own country directly, that neither fleets nor armies, however well appointed, can secure permanence among the nations, but righteousness alone; and close on the confession itself as affecting, since men brought into affluence were commanded to remember and publicly acknowledge their former wretchedness, one who rises from poverty and forgets it becoming proud, insolent and oppressive."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What this day covers, given that the laws had been rehearsed over several days.",
+   "Whether the verb means that Israel avouched God or that Israel gave God occasion to speak.",
+   "How obedience with the whole heart can be demanded if no one can render it.",
+   "What being set high above all nations consists in, and whether it is visible."
+  ],
+  "outliers": [
+   "Keil alone reads the verb causatively, against the plain sense the other three keep.",
+   "Calvin twice in this chapter defuses an apparent claim of perfect obedience by distinguishing the aim from the attainment.",
+   "Calvin makes the exaltation spiritual and hidden from the world; Clarke makes it national and visible, and applies it to his own country by name.",
+   "Gill turns the avouching into a paragraph on the elect in Christ, well beyond the verse.",
+   "Clarke alone ends the chapter by reflecting on what remembering former poverty does to a man who has grown rich."
+  ],
   "themes": [
-   "to make thee high above all nations... in praise, and in name, and in honour; and that thou mayest be an holy people",
-   "the covenant's crown of exaltation and holiness",
-   "an holy nation to show his praise (1 Pet. 2:9)"
+   "Covenant",
+   "Obedience",
+   "Law",
+   "Election",
+   "Nationhood",
+   "Holiness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.24
+   }
   }
  }
 }
