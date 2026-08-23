@@ -18969,6 +18969,49 @@
         "23"
       ],
       "note": "Ellicott end-of-chapter chrome tail, TWELFTH measurement: k23 is 1119 raw words of which only about 137 comment on v23, the remainder being the usual trailer, cut here at the marker '1 Corinthians 1Co 2 1 Corinthians 1Co'. Caps confirmed again per feed: 200 for Gill (five blocks at exactly 200 - k9, k10, k16, k22, k23), 200 for Lightfoot (both blocks), 200 for Cyril of Jerusalem (all three). Two smaller items for the tooling list. Barnes at k4 is an eighteen-word body consisting solely of a cross-reference and a marginal-reference letter code - 'For while one saith, etc. 1 Corinthians 1:12. (c) I am of Paul 1 Corinthians 1:12' - with no comment at all; that is the bare-scripture-reference body already on the owner's list, and it now has a concrete instance to test against. And Robertson's k8 block carries a dateable authorial aside, 'the dreadful drouth of 1930 testifies while these words are written', which is useful as a provenance marker for that feed's edition."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "33",
+      "verses": [
+        "6",
+        "18"
+      ],
+      "note": "Jamieson residue at keys 6 and 18 -- two members, both congruent to 0 mod 6 and twelve apart. Donor is GENESIS 29: key 6 carries JFB on the well at Haran (the covering not removed until all the flocks are collected in the owner's presence, and the three flocks waiting for Rachel), key 18 on the three days' hospitality among pastoral people and the wages for which Jacob engaged to stay, the hand of Rachel. The donor passages sit about twelve verses apart (roughly 29:3 and 29:15) as the target keys do, so the mapping here looks like a CONSTANT OFFSET of about minus three -- the verse-aligned family again but shifted rather than exact. Only two data points and JFB block boundaries span several verses, so the offset is approximate. Both Jamieson blocks in the chapter are residue: 148 words, none on Genesis 33. Running tally, seven chapters: target-key selection has been mod-6 in every single case, while the donor mapping has been exactly verse-aligned twice, offset-aligned once (here), forward-walked with irregular step twice, unordered once, and constant replication once."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "33",
+      "verses": [
+        "4"
+      ],
+      "note": "Clarke and Ellicott report the SAME scribal evidence and draw opposite conclusions from it. Both note the extraordinary points the Masoretes set over the word for 'and he kissed him' in Genesis 33:4. Clarke says the rabbis dotted each letter to make the word emphatic, and that they meant thereby to draw attention to the reality of the change in Esau and the sincerity of his welcome. Ellicott says the Masorites are supposed to have signified by the same marks that Esau's kiss was NOT a sign of genuine love, and adds that 'for such an ill-natured supposition there is no warrant whatsoever'. Recorded because it is the clearest case yet in this corpus of two commentators citing one piece of manuscript evidence for contradictory readings of a character; both are in the prose, unreconciled."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "genesis",
+      "chapter": "33",
+      "verses": [
+        "14"
+      ],
+      "note": "Calvin charges Jacob with lying about following Esau to Seir, and stands alone against four. His case: the reasons alleged (tender children, flocks with young) are true but urged under false pretexts, since Jacob afterwards turned his journey in another direction, so he promised what he did not intend; and the principle is pressed hard, that 'truth is so precious to God, that he will not allow us to lie or deceive, even when no injury follows'. Against him: his OWN EDITOR prints a rebuttal beneath the text, that there is no reason to doubt Jacob meant what he said, that he may have had other reasons for avoiding close intercourse with an irreligious man, that it is by no means certain he never went to Seir (though he would have gone without wives and flocks), and that the silence of the sacred writers proves neither that he failed to go nor that he did not intend to, which is all sincerity required. Clarke supposes him perfectly sincere and later prevented; Wesley presumes the visit was made and simply not recorded; Ellicott thinks the purpose lapsed because Esau had not yet settled at Seir. Preserved as a debate rather than harmonised, because Calvin's reading turns on a moral principle he states explicitly and the others do not engage."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "33",
+      "verses": [
+        "5",
+        "16",
+        "17"
+      ],
+      "note": "Wesley reproduces Henry almost verbatim twice in this chapter, at keys 5 and 16. Key 5: Wesley's 'Eleven or twelve little ones followed Jacob, the eldest of them not fourteen years old: Who are these? saith Esau. Jacob had sent him an account of the increase of his estate, but made no mention of his children, perhaps because he would not expose them to his rage, if he should meet him as an enemy' is Henry's sentence with the clauses barely altered. Key 16: Wesley's paragraph on Succoth ('Having in a friendly manner parted with Esau, who was gone to his own country, he comes to a place, where he rested, set up booths for his cattle...') is again Henry abridged, down to the Deuteronomy 26:5 citation about the Syrian ready to perish. Wesley's OT Notes are known to condense Henry, and this is the third chapter where the duplication has surfaced (genesis 12 first, measured by difflib at 67 percent shared words on one key). Consequence if unnoticed: Henry is puritan-evangelical and Wesley wesleyan-arminian in the school map, so prevalence would report two schools agreeing where there is one source. Prose credits Henry for the shared material and gives Wesley only what is his own."
     }
   ]
 }
