@@ -1,183 +1,98 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "1-3",
+  "pericope_label": "Not able to bear meat: the Corinthians still carnal, and still divided",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Carnal' (sarkinois, 'men of flesh,' distinct from the worse sarkikos of v3); 'babes in Christ' — weak in grace though eminent in gifts (Wesley); the sanctified are so only in part (Henry, 2 Pet 3:18)."
-   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: having overturned worldly philosophy, Paul comes to a new argument, meeting their conceit."
+    "prevalence": "single",
+    "summary": "Reconstruct the objection the Apostle is answering, that if the things preached are of the Spirit there is no call to keep attacking the wisdom that is from without, and answer that even in spiritual things these hearers are learners and hindmost; and observe that he writes could not rather than did not, so that the rebuke may not look like grudging."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Take milk for the elementary doctrines of the new birth, repentance and faith and meat for the more sublime, noting the same figure in the Epistle to the Hebrews and in classical writers; distinguish the two Greek adjectives, the one denoting the material of flesh and the other fitness for it, so that all men are made of flesh but the spiritual ought not to live by it; call the joining of a verb of drinking to solid food a zeugma, and deny that the word means flesh as against bread; and read the clause as for ye were not yet able, marking where description of their first state turns into rebuke for continuing in it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Set aside the Syriac reading that would make them unregenerate, insisting only that carnality still prevailed; add the Jewish comparison of the law to milk; ask whether the Apostle transformed Christ to suit his hearers and answer that the accommodation is of manner and form and not of substance; hold that while natural corruption prevails the wisdom of God finds no admittance, the sparks of piety being choked, so that a learner must first renounce his own judgment and will; and trace the arrogance to the mercantile temper of the city, which made subtle and showy teachers welcome."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Sort the three faults into thought, word and deed — envying the state of the soul, strife the state of the words, divisions the outcome — and draw from the milk the rule that every preacher should suit his doctrine to his hearers."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Note that the sanctified are sanctified only in part, that these had received the first principles without growing up to maturity in them, and that they were nevertheless proud of their knowledge, since it is but too common for persons of very moderate understanding to have a great measure of self-conceit."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "babes in Christ",
-   "carnal not spiritual",
-   "spiritual immaturity",
-   "room for growth"
+  "debates": [
+   "Whether calling them carnal denies that they are regenerate or only that they are mature.",
+   "Whether the Apostle&#x27;s accommodation to his hearers touched the substance of what he taught or only its manner.",
+   "Where the description of their former state turns into a rebuke for their present one.",
+   "What the three named faults are, and how they are related to each other."
   ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+  "outliers": [
+   "Chrysostom alone reconstructs the objection the passage answers, and alone weighs the choice of could not over did not.",
+   "Robertson alone separates the two Greek adjectives for flesh and alone calls the construction a zeugma.",
+   "Gill alone reports the Jewish comparison of the law to milk and alone sets aside the Syriac reading.",
+   "Calvin alone explains the Corinthian arrogance from the mercantile character of the city."
+  ],
+  "themes": [
+   "Growth",
+   "Division",
+   "Teaching",
+   "Wisdom",
+   "Pride",
+   "Flesh"
+  ],
+  "excluded_voices": [
    "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Milk' the elementary doctrines (new birth, repentance, faith; cf Heb 5:12-14), 'meat' the deeper; suit the doctrine to the hearer (Wesley); the sting in 'neither yet now are ye able' — persisting immaturity."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the difference is in manner and form, not substance — the same Christ preached, adapted to capacity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "milk not meat",
-   "elementary doctrines",
-   "suited to capacity",
-   "arrested growth"
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Carnal' (sarkikos, living according to the flesh); the three faults — envying (heart), strife (words), divisions (deeds); to 'walk as men' is to live by the world's principles; their quarrels the proof of carnality, not gifts the proof of spirituality."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: while the flesh prevails, the wisdom of God finds no admittance."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'ye are yet carnal'",
-   "envying, strife, divisions",
-   "'walk as men'",
-   "factions prove carnality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I am of Paul / of Apollos' (cf 1 Cor 1:12) — Paul and Apollos taught the same gospel, so preferring one was a clannish preference of persons, the essence of carnal division; the Spirit allows no party zeal, even for the truest teacher (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'I am of Paul / Apollos'",
-   "party-spirit",
-   "loyalty due to Christ",
-   "no party zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -186,76 +101,78 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "4-6",
+  "pericope_label": "I am of Paul, I am of Apollos: ministers as servants, and the increase from God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Not 'who' (tis) but 'what' (ti) — Paul and Apollos are merely 'ministers' (diakonoi), servants through whom they believed, each as the Lord gave; on a level, none the head of a sect; Paul names himself to avoid envy (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'what is Paul?'",
-   "ministers, not masters",
-   "servants through whom ye believed",
-   "the teachers levelled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Explain that only two factions are named as types of the rest, the Apostle choosing those who bore his own name so that no personal jealousy could be suspected; anchor the planting and watering in the narrative of the founding of the church and the later coming of the eloquent teacher taught at Ephesus; press the neuter interrogative, what rather than who, and the plain sense of the word for ministers as servants, the technical sense of deacon coming later; read the clause about the parties as an indefinite temporal one with the subjunctive of repetition, and the word men as mere human creatures; observe that the two verbs of planting and watering are aorists while the giving of the increase is an imperfect, a continuous blessing; and conclude that God is the fountain of all blessing and no instrument may be regarded as such."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Paul 'planted' at Corinth (Acts 18:1), Apollos 'watered' (Acts 18:24), 'but God gave the increase' (imperfect, kept on giving) — complementary works, not rival; the growth God's sole prerogative."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Note that the two teachers held the same creed with no difference between them, so that what captivated the people must have been something in the outward manner, the one being probably more eloquent — which is itself the proof of carnality; observe that the Apostle condemns division even in his own favour, since the Spirit of God allows no party zeal; refer whatever difference there is in ministerial talents to God&#x27;s own distribution, which being infallible must be right; and hold that neither sower nor waterer produces the multiplication of the grain, in the spiritual world or the natural."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the word and preaching are necessary means, yet powerless without the divine blessing that alone gives life."
+    "prevalence": "several",
+    "summary": "Say that the Apostle personates the Corinthians so that the description may have more force, since they did not say any such thing in express words, and that where such ambition prevails the gospel has little or no success; ask in a row of questions whether these men were more than men, what authority they had, and whether they were the authors of a new religion or founders of a sect to go by their names; and unfold the husbandry at length, that ploughing and sowing are needed but the labour would be of no avail did not the Lord act from heaven, so that diligence is not in vain and yet the fruit comes only by his blessing."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "State the danger plainly, that these were but ministers and mere instruments used by the God of all grace, whereas some had made more of them as though they were lords of their faith and authors of their religion, and warn that we should take care not to deify ministers nor put them in the place of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why these two teachers are named and not the other parties as well.",
+   "What the word rendered ministers concedes to those who bear it.",
+   "Whether the attraction of one teacher over another was doctrinal or merely a matter of manner.",
+   "What the change of tense at the giving of the increase implies."
+  ],
+  "outliers": [
+   "Robertson alone reads the argument out of the tenses, two aorists against an imperfect.",
+   "Robertson alone presses the neuter interrogative, what rather than who.",
+   "Clarke alone infers that the real attraction was the greater eloquence of the one teacher.",
+   "Ellicott alone anchors the figure of planting and watering in the recorded history of the church.",
+   "Wesley alone observes that the Apostle condemns the party formed in his own favour."
+  ],
   "themes": [
-   "'I planted, Apollos watered'",
-   "God gave the increase",
-   "co-labourers not rivals",
-   "the increase God's alone"
+   "Ministry",
+   "Humility",
+   "Growth",
+   "Division",
+   "Providence",
+   "Preaching"
+  ],
+  "excluded_voices": [
+   "Lightfoot"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "7": {
@@ -268,252 +185,160 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "7-9",
+  "pericope_label": "Neither planter nor waterer is anything: one work, several rewards, and God&#x27;s field",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ministers are 'nothing' (comparatively, not absolutely) beside the God who gives the increase; 'God is the whole and we are not anything' — all the glory his alone, leaving no room for glorying in men."
+    "summary": "Keep the depreciation from proving too much by taking it comparatively, since the labourer&#x27;s agency is indispensable even though God could do without it, and gloss the phrase as anything worth mentioning; let the logic stand that God is the whole and we are not anything, noting the neuter again in the word for one; number the unity as a unity of end, the employments tending to one result rather than clashing, and each being as necessary as the other; insist that the Apostle writes but and not and, so that individuality of reward stands beside unity of work; set out both senses of the disputed compound without forcing either, or take it boldly as partnership with God; and count the threefold repetition of the divine name, observing that the metaphor shifts from agriculture to architecture because the second can be amplified further."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Turn the verse into a doxology, the seed, the ground, the labourers and the produce all being God&#x27;s, and reduce it to the line that without him neither planting nor watering avails; state that God rewards not according to the success of the labour, which depends on himself, but according to the quantum of faithful labour bestowed, so that he who labours much with small success has a great reward; prefer the rendering fellow labourers of God, on the ground that the preposition may join the teachers to one another rather than to God, or else decline to choose and keep both senses at once."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul depreciates the ministers not absolutely but in respect of the glory due to God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "neither planter nor waterer anything",
-   "God gives the increase",
-   "ministers nothing comparatively",
-   "all glory to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Planter and waterer 'are one' in cause and aim (not rivals), yet 'each shall receive his own reward according to his labour' — unity of purpose with individuality of accountability; reward from God, by labour, not from men by fame."
+    "summary": "List first the ways the two are not one, being different men in different offices and unequal in gifts and usefulness, and then the ways they are, in commission, gospel, aim and affection; warn that this depreciation must be read against the Apostle&#x27;s other manner of speaking of ministers, since elsewhere he views one as set apart to regenerate souls and to nourish them; argue that the teachers are so linked that their connection allows no separation, all having one end and serving one Lord; and make the disputed compound the commendation of the ministry, that God who could accomplish the whole himself calls puny mortals to be as it were his coadjutors."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How far the denial that the planter is anything may be pressed without denying that his work is needed.",
+   "In what respects the planter and the waterer are one, and in what respects they are not.",
+   "Whether the reward answers to the success of the labour or to the labour itself.",
+   "Whether the compound means fellow workers with God or workers belonging to God."
+  ],
+  "outliers": [
+   "Barnes alone guards the denial by observing that God could give increase without a planter and yet does not.",
+   "Gill alone sets out the ways in which the two ministers are not one before setting out the ways in which they are.",
+   "Clarke alone prefers the rendering fellow labourers of God, taking the preposition to join the teachers to each other.",
+   "Ellicott alone counts the threefold repetition of the divine name and notes the abrupt shift of metaphor as characteristic."
+  ],
   "themes": [
-   "planter and waterer are one",
-   "each rewarded by his labour",
-   "unity and individuality",
-   "reward from God"
+   "Ministry",
+   "Reward",
+   "Unity",
+   "Growth",
+   "Humility",
+   "Labour"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The thrice-repeated 'God's' — 'God's fellow-workers' (theou synergoi, 2 Cor 6:1), 'God's husbandry' (field), 'God's building'; God lets his servants labour with him; the church and its teachers alike belong to God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the best argument — the reward is sure because the work is the Lord's."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "labourers together with God",
-   "God's husbandry",
-   "God's building",
-   "all belongs to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'According to the grace of God' guards against self-laudation (Rom 12:3); the 'wise master-builder' (sophos architekton) laid the foundation; the warning 'take heed how he buildeth' to all who teach after him."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: there may be bad building on a good foundation — let every man take heed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wise masterbuilder",
-   "the foundation laid",
-   "'take heed how he buildeth'",
-   "grace not self"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Other foundation' (themelion allon, masculine — Christ in mind) can no man lay; the one foundation laid once for all is Jesus Christ; all other supposed foundations sandy and false."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ the only foundation of the Church — the Corinthians, tickled with novelty, must be brought back to him alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "other foundation none",
-   "Jesus Christ the foundation",
-   "the rock of hope",
-   "the base unalterable"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "10-12",
+  "pericope_label": "A wise masterbuilder: the one foundation, and what is built upon it",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Three durable (gold, silver, marble) and three perishable (wood, hay, stubble) — palace vs mud hut; sound doctrine and faithful work vs error and human invention; chosen for their behaviour in fire, anticipating the test."
+    "summary": "Observe that the grace of God is premised so that the claim may not be self-laudation, and that the indefinite another avoids invidiousness; read the self-defence as forced upon the Apostle by those who had blamed him directly, since it is not always wise for a preacher to defend himself but it is sometimes necessary; find the argument in the masculine gender of the word for other, which shows the person of Christ is in view and leaves no room beside him for a second Saviour; refuse the detailed allegorising of the six materials in favour of the broad contrast of permanent with ephemeral work, correcting the picture so that the stones are costly building stone rather than gems, the hay is filling for chinks and the stubble is thatch; note the palace set against the mud hut; and widen the application from teachers to any Christian and the hopes he cherishes."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Ascribe the gifts and the usefulness to rich grace and note that the phrase for masterbuilder is the Septuagint&#x27;s; list the foundations men do attempt to lay instead — fleshly privilege, carnal descent, religious education, outward profession, a man&#x27;s own righteousness, the absolute mercy of God — and call them all sandy; divide the statement into the two claims that Christ is the only foundation and that these hearers were rightly founded on him by this preaching, from which they could not draw back without forsaking Christ; and hold that to bury Christ under a mass of strange doctrines is as criminal as raising vile materials on a foundation of gold is absurd."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Say that the grace is premised lest the Apostle seem to ascribe the work to himself; distinguish the design of the building, which is God&#x27;s, from its execution, entrusted chiefly to the architect he used; insist that among true apostles there can be no two opinions about the foundation, the only fear being a bad superstructure raised upon a good one; and read the six materials as doctrines, three that will bear the fire and three that will not, the latter being all forms of human invention, and name the false ones then current in the city."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Turn the premise into a warning that spiritual pride is abominable, being the use of God&#x27;s greatest favours to feed our own vanity and make idols of ourselves; and warn that there may be bad building on a good foundation, since nothing may be laid on it but what the foundation will bear."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Take the fire that is coming and turn aside to the question all men ask, whether hell fire has any end, answering from the Lord&#x27;s own words that their fire shall not be quenched, and admitting that the hearers turn chill at it while pleading that the charge to say so is God&#x27;s own."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the Apostle praises his own work, and what makes the praise permissible.",
+   "Who laid the foundation, and what men attempt to lay in its place.",
+   "Whether the six building materials stand for particular doctrines or only for durable and perishable work in general.",
+   "How far the warning reaches — to teachers only, or to every believer&#x27;s hopes."
+  ],
+  "outliers": [
+   "Robertson alone reads the masculine gender of the word for other as putting the person of Christ in view.",
+   "Robertson and Calvin alone explain the self-praise as forced on the Apostle by those who had accused him.",
+   "Ellicott alone refuses to allegorise the six materials and corrects the physical picture instead.",
+   "Gill alone enumerates the rival foundations men attempt to lay.",
+   "Chrysostom alone turns from the building to the duration of the fire."
+  ],
   "themes": [
-   "gold, silver, precious stones",
-   "wood, hay, stubble",
-   "sound vs false doctrine",
-   "materials tried by fire"
+   "Foundation",
+   "Grace",
+   "Doctrine",
+   "Judgment",
+   "Pride",
+   "Building"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.07
+   }
   }
  },
  "13": {
@@ -524,128 +349,75 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'The day' the day of judgment (1 Thess 5:4), revealing the hidden; the work 'revealed in fire' (2 Thess 1:8; Mal 3:1-3) and tried 'of what sort it is' — quality judged then, not appearance now."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the day shall declare it",
-   "revealed by fire",
-   "work tried of what sort",
-   "accountability"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "13-15",
+  "pericope_label": "The day shall declare it: work tried by fire, reward and loss",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "If the work 'abide' the fire — sound doctrine and true labour surviving — 'he shall receive a reward' (a special degree of glory, Wesley); the fire preserves and approves the precious; nothing truly built on Christ is lost."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if the work abide",
-   "a reward",
-   "enduring labour crowned",
-   "the precious survives"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Refer the day to the approaching destruction of Jerusalem, the punishment coming on a rebellious people, on the ground that so read the terms and metaphors are clear and consistent; suspect an allusion to the purifying of vessels under the law, where what could bear the fire was purified by fire and the rest by water; report fully the alternative construction by which the loss falls on the work rather than the man, nothing being left of it but the measure of truth it contained; notice that what faith beholds as certain and near is spoken of as already present; and grant that the man whose work burns still receives some degree of glory, having held the foundation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "His work 'burned down' (katakaesetai), he 'suffers loss' (reward forfeited), yet 'himself saved, so as through fire' — narrowly, like one snatched from a burning house; the whole metaphorical."
+    "summary": "Take the day for the day of judgment while allowing that it may mean time in general; settle that the day and not the work or the Lord is the subject of the verb, and that the fire is testing and not purgatorial; prefer revealed in fire to by fire, and say outright that the passage is metaphorical, the doctrine of purgatory having been evolved from a literal reading of it; picture the loser as a man escaping through a conflagration with nothing saved; note that the condition is assumed as true; observe that the word for loss elsewhere covers the loss of the soul itself but here does not; and read the loss as a diminished standing rather than a ruin."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Collate the old versions, suspect that some words were added by way of explanation, and settle the sense from ordinary use, a day being when darkness is dispelled and truth brought to light; call those fools who depend on man&#x27;s estimation, since doctrines fly about unsettled and glitter like empty bubbles until they are thoroughly tested, so that the applauses of the world are to be reckoned as nothing; register the reading that refers the loss to the doctrine; and keep the burning to the preacher&#x27;s doctrine, rejected by the churches for not bearing the fire of God&#x27;s word, the hearers themselves seeing the deformity of the building."
    }
   ],
   "debates": [
-   {
-    "question": "Does 'saved, yet so as by fire' teach purgatory?",
-    "sides": [
-     {
-      "position": "No — the fire is the metaphorical testing of the work at judgment, not a purging of the soul; the Roman doctrine wrongly built on it",
-      "holders": [
-       "Ellicott",
-       "Clarke"
-      ]
-     }
-    ]
-   }
+   "What the day is — the day of judgment, the fall of Jerusalem, or time in general.",
+   "Whether the fire is purgatorial or merely a test.",
+   "Whether the loss described falls upon the man or upon his work.",
+   "What the phrase revealed by fire is governed by."
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone refers the whole passage to the approaching destruction of Jerusalem.",
+   "Ellicott alone prefers in fire to by fire, and alone names the doctrine of purgatory as the error a literal reading produces.",
+   "Calvin alone collates the older English versions and suspects a gloss in the text.",
+   "Robertson alone settles the grammatical subject of the verb, and alone weighs the force of the preposition in the word for burning.",
+   "Wesley alone allows the man whose work is burned some degree of glory notwithstanding."
+  ],
   "themes": [
-   "the work burned",
-   "'suffer loss'",
-   "'saved, yet so as by fire'",
-   "against purgatory"
+   "Judgment",
+   "Fire",
+   "Reward",
+   "Doctrine",
+   "Testing",
+   "Loss"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "16": {
@@ -658,212 +430,87 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "16-18",
+  "pericope_label": "Ye are the temple of God: the church-wrecker, and the wisdom that must become folly",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'A temple of God' (naos, the inner sanctuary, not hieron) where the Spirit makes his home — as the Shechinah filled the temple, so the Spirit indwells the church; a consecrated, holy building."
+    "summary": "Take the temple as the community of Christians rather than the individual; supply the word, which is the sanctuary itself and not the sacred enclosure, the Spirit making his home in men and not in temples made with hands; read the verse as the completion of the architectural figure and hear a reproach in the opening question; take destroying as the exact opposite of building up, attach the relative to holy rather than to temple; call it a gross sin to be a church-wrecker, some preachers leaving ruin behind them like a tornado; explain the turn of the chapter as a return to the magnifying of one teacher above another; quote the maxim that all human philosophy repugnant to the gospel is vain deceit; and diagnose the partisan who works himself into a pious phrenzy and hypnotizes himself with his own supposed devotion to truth."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul turns from the teachers to the people — take care you be not defiled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye are the temple of God",
-   "the Spirit dwelleth in you",
-   "the church holy",
-   "sacred dignity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The same verb in both clauses (phtheirei) — 'destroy the temple... him will God destroy,' exact retribution; the sin grave because its object is holy; aimed at the false teachers and schismatics marring God's temple."
+    "summary": "Reason from the older case, that as the congregation of Israel was the temple because God dwelt among them so the whole church is, since where God is there is his temple; insist that the clause is not consistently translated, the verb being the same in both halves, so that whoever destroys the temple God will destroy; distinguish the erring man who barely escapes from the obstinate opposer who has judgment without mercy, and say that this man is not saved at all, not even as through the fire; suspect a particular troublesome man behind the warning, who thought himself wiser than seven men that could render a reason; and state the cure, that he become a fool such as the world accounts so, and so be wise in God&#x27;s account."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a dreadful threat against those who corrupt the church, intruding to rule in God's place."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "defile the temple",
-   "'him shall God destroy'",
-   "the temple is holy",
-   "exact retribution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Let no man deceive himself' (some were); the self-wise must 'become a fool' — renounce worldly wisdom and embrace the gospel the world counts foolish — to be truly wise; humility the remedy for conceit (Henry)."
+    "summary": "Mark the change of address from the teachers to the pupils, the honour conferred being meant to make them the more reprehensible, that they may not prostitute themselves to the service of men; specify the profanation in view as men intruding themselves to bear rule in the Church in the place of God, since once we are tinctured with the contrivances of men the temple is polluted as with filth; name the defilement as philosophy and vain deceit; and put a finger on the true sore, that the whole mischief originated in their being wise in their own conceit, hearers as well as teachers, the simplicity of the gospel being insipid to too fastidious a taste."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: this touches the true sore — the whole trouble sprang from their being wise in their own conceit."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Prescribe humility and a modest opinion of themselves as the remedy for the divisions, since we are in great danger of deceiving ourselves when we have too high an opinion of human wisdom and arts."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Read the turn of the chapter as part of a longer arc, the Apostle having launched out before the proper time into his accusation of the fornicator and half opened it obscurely so as to make that man&#x27;s conscience quail, and now hastening back to finish the battle with heathen wisdom before returning to him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the temple is the individual believer or the congregation.",
+   "What the defiling of the temple consists in.",
+   "Whether the destroyer is finally lost, or only the erring man barely saved.",
+   "Why the argument turns back at this point, and what it is turning back to."
+  ],
+  "outliers": [
+   "Clarke alone insists that the one verb be translated the same way in both halves of the threat.",
+   "Ellicott alone attaches the relative to holy rather than to temple, making holiness the reason they are the temple.",
+   "Chrysostom alone reads the passage as an interruption of the accusation of the fornicator rather than of the argument about teachers.",
+   "Robertson alone describes the self-deception as a phrenzy the partisan induces in himself.",
+   "Clarke alone suspects a particular troublesome individual behind the warning."
+  ],
   "themes": [
-   "'let no man deceive himself'",
-   "become a fool to be wise",
-   "humility the cure",
-   "against self-conceit"
+   "Holiness",
+   "Church",
+   "Judgment",
+   "Wisdom",
+   "Humility",
+   "Division"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The wisdom of this world is foolishness with God' — not science/learning but the world's wisdom about religion; Scripture (Job 5:13) confirms God 'taketh the wise in their own craftiness,' their cleverness becoming their snare."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "worldly wisdom foolishness",
-   "'taketh the wise in their craftiness'",
-   "Job 5:13",
-   "wisdom as a snare"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A second proof from Ps 94:11 (Paul changing 'men' to 'wise' for the context): the Lord knows the 'thoughts/reasonings' (dialogismous) of the wise are 'vain' (useless, futile) — testimony piled on testimony against boasted wisdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the thoughts of the wise are vain'",
-   "Psalm 94:11",
-   "a second witness",
-   "reasonings futile before God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -872,38 +519,77 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "19-21",
+  "pericope_label": "The wisdom of this world is foolishness with God, so let no man glory in men",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Let no man glory in men' — the conclusion from the self-conceit condemned; but the surprising ground is 'all things are yours' — to call oneself by a man's name is to degrade oneself, claiming a part when one owns the whole."
+    "summary": "Deny that the verse condemns true wisdom, science or law, God being the friend of truth on all subjects and requiring us to know his works; observe that one quotation is from Job and one from the Psalms and count how often that book is used elsewhere in the New Testament; weigh the vivid verb for grasping with the hand, found nowhere else there but present in the papyri, and note that the second quotation alters men to the wise in harmony with the Hebrew; narrow the second text to what God sees of the thoughts of the wise rather than to his omniscience at large; take the closing inference as pointing forward rather than back, the writer&#x27;s enthusiasm carrying him past what the argument required; and call the particle merely inferential, glorying in party being a species of self-conceit inconsistent with glorying in the Lord."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God takes away from mankind universally every ground of glorying."
+    "prevalence": "several",
+    "summary": "Grant that natural perspicacity, the liberal arts and the sciences are gifts of God, but confine them within their own bounds as unable to penetrate his heavenly kingdom, so that they are handmaid and not mistress; present the argument as one taken from opposites, since we cannot be wise before God unless we are fools before the world; remark that the formula of adding a second proof answers to a rabbinic usage where the first does not clearly settle the matter, and name the two witnesses; describe how the teachers were idolised, called masters and had their hearers&#x27; faith pinned on their sleeve; and press the inference furthest, that nothing being more vain than man there is little security in leaning on an evanescent shadow, and that any supremacy of man impairing the glory of Christ involves sacrilege."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Reserve nothing, and ask whether the occult wisdom of the rabbins or the wire-drawn speculations of the philosophers has made one soul wise unto salvation, since folly is spending time and strength to no purpose; extend the vanity of human knowledge to every kind of wisdom that does not lead immediately to God; find the sting in the manner of the taking, the wise being caught not merely while they think themselves wise but by their very wisdom, which is their snare; and turn to the compensation, that he who has God for his portion has all, the ministers being not lords but servants."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Describe what the fault looks like in practice — forgetting that ministers are men, paying them the deference due only to God, setting them at the head of parties, and servilely and implicitly following their dictates."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the verse condemns human learning as such or only learning that presumes beyond its province.",
+   "How often the book of Job is drawn on elsewhere in the New Testament.",
+   "Whether the second citation asserts God&#x27;s omniscience or something narrower.",
+   "Whether the closing inference looks back to the argument or forward to what follows."
+  ],
+  "outliers": [
+   "Clarke alone refuses to reserve anything for philosophy and asks whether any soul has been saved by it.",
+   "Ellicott alone takes the closing therefore as pointing forward rather than back.",
+   "Gill alone identifies the rabbinic formula behind the citing of a second proof, and alone names Eliphaz as the first witness.",
+   "Robertson alone weighs the verb for grasping and the alteration of the Greek version at the second quotation."
+  ],
   "themes": [
-   "'let no man glory in men'",
-   "'all things are yours'",
-   "factions as self-impoverishment",
-   "the believer's riches"
+   "Wisdom",
+   "Folly",
+   "Scripture",
+   "Ministry",
+   "Humility",
+   "Boasting"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
  "22": {
@@ -911,80 +597,75 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "22-23",
+  "pericope_label": "All things are yours, and ye are Christ&#x27;s, and Christ is God&#x27;s",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The sweeping catalogue — Paul, Apollos, Cephas (all the teachers), the world, life, death, things present and to come — all belong to the believer; the bold leap from Peter to the world enlarging the thought (Wesley); why glory in one when you possess all?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul, Apollos, Cephas",
-   "the world, life, death",
-   "all are yours",
-   "the believer heir of all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Notice that the leap from the last apostle named to the world enlarges the thought and argues impatience of enumerating the rest, and draw the practical end, to contend no more about little things but be united in love as they are in blessings; turn the possession round to show what it forbids, since the ministers are appointed for the hearers and not the hearers for the ministers, as the ordinances are for them and not they for the ordinances; narrow the word for world to the inhabitants of it rather than the thing itself; and refer the last clause to the mediatorial office, in which he must in a certain way be considered inferior, while in his own essential and eternal nature there is no inequality, all his services being referred to his Father&#x27;s glory."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ascending chain — all things yours, ye are Christ's, Christ is God's; the riches held in subordination, flowing from union with Christ, who refers all to God; 'Christ is God's' guards against making even his name a faction."
+    "summary": "State the doctrine that ministers belong to the church, whose members share their learning and zeal in common, one being as much entitled to the benefit as another; attend to what is not in the text, every word of these verses standing without the article though none is indefinite, since proper names and words for single objects need none, and conclude that the wealth of the Christian takes in all things and all leaders and leaves no room for partisan wrangling; explain the final clause as both the climax of a gradual ascent and a guard against the party bearing Christ&#x27;s name arrogating anything from the preceding words; add that in that early age there was no danger of the clause being misunderstood as it has been since; and keep the argument in view, that belonging to Christ and he to God forbids devoting oneself to a man."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ's being 'God's' concerns his humanity and mediation (Phil 2:7-8), by which he joins us to the Father."
+    "prevalence": "several",
+    "summary": "Put the gifts as received for the church and bestowed not so much for the ministers&#x27; own use as for the good of others; set the station of the teachers by the one place that cannot be shared, so that nothing may detract from the authority of the sole Master, alone worthy to be heard and alone commended by the Father with the words hear ye him; explain the added clause as showing that the sum of our felicity is union with God the chief good, gathered under the Master he has set over us; refer the subjection to Christ&#x27;s humanity, since in taking our flesh he assumed the form of a servant; and trace the title through its grounds — special gift, purchase, surrender, profession, possession — pressing the mutual property to the hardest case, that even the believer&#x27;s sins are laid on Christ by imputation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the word rendered world covers in this list.",
+   "Why the sentence does not end at the words ye are Christ&#x27;s.",
+   "In what sense Christ is said to be God&#x27;s.",
+   "What the absence of the article throughout these verses signifies."
+  ],
+  "outliers": [
+   "Wesley alone reads the jump from the last name to the world as impatience with enumerating.",
+   "Clarke alone restricts the word for world to the inhabitants of it.",
+   "Robertson alone treats the absence of the article as the point of the verse.",
+   "Ellicott alone explains the final clause as a guard against the party that bore Christ&#x27;s own name.",
+   "Gill alone extends the mutual property to the believer&#x27;s sins, laid on Christ by imputation."
+  ],
   "themes": [
-   "'ye are Christ's'",
-   "'Christ is God's'",
-   "the chain of belonging",
-   "union with Christ"
+   "Possession",
+   "Ministry",
+   "Christ",
+   "Unity",
+   "Mediation",
+   "Inheritance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
+   }
   }
  }
 }

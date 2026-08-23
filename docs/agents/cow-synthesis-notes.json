@@ -18895,6 +18895,80 @@
         "19"
       ],
       "note": "Calvin explicitly refuses the reading Gill offers as an option. On 'I call heaven and earth to record', Gill allows either the literal inanimate bodies or, figuratively, their inhabitants -- angels and men. Calvin: the words 'do not address men and angels, as some tamely expound it', but attribute sense to things inanimate by way of amplification. Worth recording as a case where the corpus contains an explicit rebuttal of one witness's alternative by another, which is rarer than simple divergence and is the kind of thing a synthesis should surface rather than average out."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "3",
+      "note": "Eight entries tiling all 23 keys, all in window: 1-3 648w, 4-6 633w, 7-9 649w, 10-12 649w, 13-15 650w, 16-18 649w, 19-21 648w, 22-23 649w. Twelve voices carry heads; nine are used (Barnes 23 blocks, Gill 23, Clarke 23, Calvin 22, Robertson 22, Ellicott 20, Wesley 22, Henry 7, Chrysostom 3). Jamieson (4 blocks) is declared as residue, Lightfoot (2) declared as misfiled, Cyril of Jerusalem (3) silenced as florilegium. Every named attribution checked against a head inside its own span. Two traps avoided: Robertson's k12 block quotes Lightfoot by name for the palace-and-mud-hut phrase, but Lightfoot has no head in span 10-12, so the phrase is reported unattributed; Robertson's k13 block cites Ellicott by name for the anti-purgatorial reading, and there Ellicott DOES have heads in the same span, so the citation is reported as made. Every scripture reference in prose is a .ref link."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "3",
+      "note": "Jamieson residue: the cleanest lag measurement in the corpus so far, and it confirms the two-stream model at a new point. Four blocks at keys 2, 8, 14, 20 - stride 6 from offset 2, no gap. All four are Jamieson on ACTS 17, in order: k2 the Epicureans and Stoics (17:18), k8 'God that made the world' (17:24), k14 'graven by art and man's device' (17:29), k20 the Greeks and the Resurrection (17:32). Source advances 17:18 to 17:24 to 17:29 to 17:32 across the four slots - about 5 source verses per 6 target keys, the same rate measured at judges 14. LAG: 1corinthians 3 is NT chapter 136 (28+16+24+21+28+16+3); Acts 17 is NT chapter 106; lag = 30. The NT series predicts 0.23 x 136 = 31.3. Measured 30. That is the eleventh contiguous-region confirmation and the closest fit yet, at a position between the romans 10 and galatians 1 anchors."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "NEW DEFECT FAMILY: Barnes's chapter-level front and back matter is keyed to the first and last verses of the chapter. The k1 block (1200w) opens 'CHAPTER 3 THE design of this chapter is substantially the same as the former' - that is his chapter introduction, not a note on v1. The k23 block (3246w) carries his verse note and then his whole end-of-chapter 'Remarks' section, a numbered series of practical inferences on the entire chapter, ending '(24.) Christians Should regard themselves as devoted to the Saviour.' Both are genuinely authorial - none of the chrome markers appear ('Copyright Statement', 'public domain', 'This is part N of M Parts', 'Due to space limitations', 'Continuation of Barnes Notes') - so this is NOT the Ellicott chrome family and NOT the Barnes splice family already catalogued. It is a third thing: real commentary at the wrong granularity, chapter-level material presented as verse-level. Consequence: Barnes's first and last keys in every chapter are inflated far above his own median (here ~500w), which corrupts any per-verse length statistic and makes him look like the dominant voice at exactly the two keys where an entry most needs balance."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "Lightfoot misfiling, and a probable MECHANISM for it. Two blocks, both at the 200 cap, both wrong. k1 opens 'ADDENDA TO CHAP. XIV.' - his appendix to 1 Corinthians 14 on what Bibles were read in Jewish meetings; wrong chapter. k5 opens 'ver. 5, were saved. For those words achris hou to pleroma ton ethnon eiselthe' - that is ROMANS 11:25, the fulness of the Gentiles; wrong book. Note where it landed: the block's own internal running marker reads 'ver. 5', and it was filed at key 5. That suggests the splitter keys Lightfoot blocks by the 'ver. N' string inside the note rather than by context, which would also explain the 1corinthians 10 case, where a block carrying the running head 'Ch.x.17.' landed on key 11 rather than 17 (the head there names a chapter-and-verse, so a naive scan for the first number would pick up something else). If that is right the fix is cheap and mechanical: parse the running marker properly and re-key, or drop blocks whose marker disagrees with their key. Both blocks here are DECLARED rather than silenced, being identifiable authorial material from elsewhere."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "12"
+      ],
+      "note": "Cyril of Jerusalem is a florilegium here too - THIRD book confirming it, and the second with byte-identical duplicates. Three blocks, all at exactly the 200 cap. k12 and k13 are IDENTICAL, both being Catechetical Lecture 15 on the two comings of Christ, opening '2. And concerning these two comings, Malachi the Prophet says...'. k16 is a different lecture again, on the identity of the Holy Spirit with the Comforter and the Spirit of Truth, which comments on nothing in v16 beyond sharing the word Spirit. Compare ephesians 6, where k1=k3 and k17=k18 were byte-identical, and 1thessalonians 2, where his single block was on 2 Cor 4:4. All three silenced rather than declared, because synthesis_qa.VOICE_LABELS holds the bare 'Cyril' with a regex demanding a colon immediately after the label, so the head 'Cyril of Jerusalem:' cannot be emitted through excluded_voices at all. That prefix bug is now blocking correct declaration in four chapters and should be fixed alongside the Cyril of Jerusalem / Cyril of Alexandria disambiguation."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Attributed borrowing, and a rare case of two commentators disagreeing on a bibliographical fact. (a) Robertson's block at k13 argues the fire is 'a metaphor that must not be understood as purgatorial, but simple testing' and credits Ellicott by name; Ellicott's own block two verses later says the same thing independently in the chapter's own catena, adding that Roman divines evolved purgatory from a literal reading. So the corpus contains both the borrower and the source, with the debt acknowledged - the same shape as Keil citing Calvin at deuteronomy 8, and the opposite of Barnes copying Clarke unattributed at galatians 1 and Ellicott reproducing Keil unattributed at 1samuel 3. (b) At k19 the two men disagree about the New Testament's use of Job. Ellicott says that apart from James 5:11 on the proverbial patience of Job - where the writer says the readers have HEARD, not read - this is the only allusion to the book anywhere in the New Testament. Robertson says Job is quoted in the New Testament only here and at Romans 11:35, both times varying from the Septuagint. They are counting different things (allusions vs quotations) and neither says so, which is exactly the kind of apparent agreement-or-disagreement the prevalence field cannot currently represent."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "9"
+      ],
+      "note": "Two substantial exegetical splits in this chapter, both worth surfacing to readers. (1) At v9 the compound synergoi divides the whole bench four ways, and the split is not confessional. Barnes lays out both senses without choosing - co-workers WITH God in a joint work, or workers BELONGING to God. Clarke argues for the second, rendering it 'fellow labourers of God' with Bishop Pearce, on the ground that the preposition may join the teachers to one another rather than to God. Robertson takes the first boldly: 'God is the major partner in the enterprise of each life, but he lets us work with him.' Calvin takes the first too and makes it the commendation of the ministry, that God who could do the whole himself calls 'puny mortals' to be his coadjutors. Wesley declines to choose and keeps both at once. Five positions on one preposition, from four schools, with the two grammatical-historical voices on opposite sides of it. (2) At v13 Clarke alone refers the whole day-and-fire passage to the approaching destruction of Jerusalem rather than to the last judgment, and says that read so 'all the terms and metaphors will appear clear and consistent'. Everyone else takes it eschatologically. Barnes hedges toward a third reading, that 'day' may simply mean time in general, as we say time will show."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "3",
+      "verses": [
+        "23"
+      ],
+      "note": "Ellicott end-of-chapter chrome tail, TWELFTH measurement: k23 is 1119 raw words of which only about 137 comment on v23, the remainder being the usual trailer, cut here at the marker '1 Corinthians 1Co 2 1 Corinthians 1Co'. Caps confirmed again per feed: 200 for Gill (five blocks at exactly 200 - k9, k10, k16, k22, k23), 200 for Lightfoot (both blocks), 200 for Cyril of Jerusalem (all three). Two smaller items for the tooling list. Barnes at k4 is an eighteen-word body consisting solely of a cross-reference and a marginal-reference letter code - 'For while one saith, etc. 1 Corinthians 1:12. (c) I am of Paul 1 Corinthians 1:12' - with no comment at all; that is the bare-scripture-reference body already on the owner's list, and it now has a concrete instance to test against. And Robertson's k8 block carries a dateable authorial aside, 'the dreadful drouth of 1930 testifies while these words are written', which is useful as a provenance marker for that feed's edition."
     }
   ]
 }
