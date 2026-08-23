@@ -18485,6 +18485,91 @@
         "11"
       ],
       "note": "Calvin against Gill and Robertson on the word 'some' in 'such were some of you'. Gill and Robertson take it restrictively (not all of them, and not all of everything). Calvin argues the Greek indefinite is redundant ornament, not restriction, and that human nature universally contains the seed of all the vices listed, grounding it on the way the same apostle piles up crimes in Romans 1 and 3 without every reader being sanguinary. Recorded as a debate because the two readings give materially different doctrines of the catalogue: a list of what some Corinthians did, or a list of what all unrenewed men are liable to."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "9",
+        "14",
+        "30",
+        "38",
+        "43"
+      ],
+      "note": "The unrecognised-label defect first recorded at 1corinthians 6 (Cyril of Jerusalem) generalises here to a whole class: the Catena Aurea attributions. Five labels appear in this chapter that synthesis_qa.VOICE_LABELS does not know -- Theophylact (6 occurrences), Pseudo-Jerome (5), Gloss (3), Remigius (1), Jerome (1). Where such a label OPENS a block the text arrives as (UNLABELLED): 1,289 words across keys 1, 14 and 30, unattributable but at least not misattributed. Where it appears MID-BLOCK, after a recognised father, the following text is silently credited to that father: 12 occurrences land inside Chrysostom (8), Bede (2), Origen (1) and Augustine (1). Separately the Cyril of Jerusalem splice recurs on 9 keys (1, 4, 7, 9, 12, 24, 31, 41, 47), 1,622 words, hosted by Wesley (6) and Robertson (3) -- so Wesley's apparent 2,485 words in this chapter are really about 1,472 and Robertson's 3,953 about 3,344. Recommended fix: add the Catena names to VOICE_LABELS, or at minimum have split_voices emit an (UNRECOGNISED LABEL) boundary wherever a capitalised-name-plus-colon occurs mid-block. I wrote this chapter through a sub-splitter (scratchpad dump3.py) that segments on those labels; without it the prose would have credited Chrysostom with Theophylact."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "24",
+        "36",
+        "42",
+        "48"
+      ],
+      "note": "Jamieson residue at keys 24, 36, 42, 48 -- a mod-6 class again, this time all congruent to 0 (philippians 3 and 1corinthians 6 were both the residue-2 class). Donor is MARK 4: key 24 carries JFB on 4:1 (a great multitude, the ship of 3:9, crowded on the seashore), key 36 the bare cross-reference 'See on Mt 13:10-17' belonging to 4:10-12, key 42 the stony ground of 4:5-6, key 48 the candle of 4:21. Crucially the donor content is NOT verse-aligned here and not even monotonic (key 42 draws from 4:5-6, which precedes what key 36 draws from). So the two halves of the defect behave differently: the mod-6 selection of TARGET keys is stable across three chapters now, while the donor mapping was exactly verse-aligned at 1corinthians 6 and is unordered here. Whatever produces the residue picks its target slots arithmetically and its content some other way. All 207 Jamieson words in this chapter are residue."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "2",
+        "38",
+        "43",
+        "49"
+      ],
+      "note": "Lightfoot is entirely genuine and on-verse in mark 9 -- all five blocks (keys 1, 2, 38, 43, 49) sit on the right verses: the kingdom coming in power, the doubt about Tabor, the exorcist casting out devils in the name, the rabbinic canon on cutting off the hand, and Scaliger on being salted with fire. This is the negative control the acts 12 and 1corinthians 6 cases needed. Lightfoot residue is therefore per-chapter, not a property of the voice, which matches the rule recorded at acts 12: a voice cannot be classified at chapter level, only block by block -- and now also, a voice that carried residue in one chapter cannot be presumed to carry it in the next."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "50"
+      ],
+      "note": "Ellicott's key-50 block -- the LAST key of the chapter -- runs into StudyLight scraper boilerplate: site footer, a full CSS stylesheet with media queries, and the commentary/concordance/dictionary navigation menus, unescaped inside the commentary value, inflating the block to 1,109 words. This is the second instance, after philippians 3 key 21, and the pattern is now specific: both are Ellicott, and both are the final key of their chapter. Hypothesis for the scraper bug: the extractor has no closing boundary for the last verse block on an Ellicott page and runs to end-of-document. Cheap to test corpus-wide by checking whether every Ellicott chapter-final block contains '.sub-menu{' or 'StudyLight.org'."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "43",
+        "44",
+        "48"
+      ],
+      "note": "Six-way split on whether the worm and the fire are literal, preserved as a debate: Chrysostom denies a visible worm and makes it conscience, each man his own accuser; Gill presses conscience into detail; Wesley names the gnawings (pride, self-will, desire, malice, envy, shame, sorrow, despair); Barnes supposes no real worm and perhaps no material fire; Augustine weighs the question at length, reporting those who assign both to the soul and read the fire as burning grief, judging pain of body and soul alike more credible, and concluding it is easier to say both belong to the body than that neither does; Bede splits them, the worm accusing inwardly and the fire raging without. Separately Chrysostom, Bede and Wesley all take the hand, foot and eye as intimate friends rather than limbs -- against Gill and Lightfoot, who keep the wider sense and supply the rabbinic canons prescribing amputation."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "48"
+      ],
+      "note": "Robertson states as plain fact that the Valley of Hinnom, desecrated by child sacrifice, was the city rubbish dump 'where worms gnawed and fires burned'. Ellicott allows the same picture only as a possibility and warns explicitly that 'the authorities are hardly definite enough to warrant the positive statement'. Recorded because it is a rare case in this corpus of one commentator flagging the evidentiary weakness of a claim another asserts flatly, and because the garbage-dump gloss is repeated everywhere in modern preaching; the prose gives both and marks which is the guarded one."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "9",
+      "verses": [
+        "38",
+        "42"
+      ],
+      "note": "The Catena blocks filed under key 38 cover Mark 9:38-42 as a unit, so Gregory's material on the millstone and the depths of the sea sits at key 38 while belonging by sense to verse 42. Under the tiling used here (38-41 | 42-48) that material falls outside the entry it discusses and was deliberately NOT used in entry 42 -- the cross-span borrowing trap recorded at leviticus 5. Worth noting generally: catena sources group several verses under one key, so key number and verse number come apart for the patristic voices in a way they do not for the verse-by-verse commentators, and an entry boundary drawn on verse sense can cut a catena block in half."
     }
   ]
 }
