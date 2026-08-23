@@ -19651,6 +19651,53 @@
       "book": "deuteronomy",
       "chapter": "26",
       "note": "FIDELITY SELF-GRADE, deuteronomy 26, four entries over 19 keys and 11,177 usable source words. Word counts: 1-4 629, 5-11 616, 12-15 650, 16-19 650. All four in window; three needed three or more trim passes. Spans follow the chapter's own structure -- the basket brought and set down (1-4), the confession and the command to rejoice (5-11), the third-year tithe with its protestation and prayer (12-15), the mutual avouching (16-19) -- rather than a fixed stride, because the material is very unevenly distributed: k1, k12 and k16 carry Henry's three long blocks (1591, 866, 822 words) and eight keys carry nothing but a Gill note of under thirty words. Voice coverage: seven voices -- Henry 3 blocks/3283w, Calvin 7/2598, Keil 10/1869, Gill 19/1450, Clarke 10/1135, Wesley 10/610, Jamieson 2/232. DECLARED: Jamieson as residue in entries 1-4 and 5-11 (the two blocks are a byte-identical duplicate; see the source-defect note). Entry 5-11 has only four voices and no Henry or Calvin block at all, so puritan-evangelical is not declared there -- correctly, since neither has anything at those keys. TWO THINGS TO FLAG AGAINST MYSELF. First, Keil's comment on the Aramaean of v5 sits in his block at KEY 2, which belongs to entry 1-4, but I reported it in entry 5-11 where the verse itself falls and where Clarke and Wesley discuss the same words; Keil is independently sourced at k6 in that span, so no voice is named without a block, but the material crossed a span boundary and a reader comparing block to entry should know it. His blocks reprint multi-verse runs, which is what makes this happen. Second, HENRY AND WESLEY NEVER SHARE A KEY IN THIS CHAPTER -- Henry has k1, k12, k16 and Wesley has k2, k5, k10, k11, k13, k14, k15, k17, k18 -- so the Wesley-abridging-Henry dependence measured three times over at genesis 2 cannot be measured here at all. That is worth knowing before anyone generalises the genesis 2 result: the co-occurrence rate of those two feeds is itself book-dependent, and where it is zero the transmission is invisible rather than absent. AUTHORITIES CITED BUT NOT NAMED, having no head in the span: Schultz, Houbigant, Maimonides, Jarchi, Aben Ezra, Clericus, Knobel, Riehm."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "6",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson residue, THIRTEENTH chapter, class 4 mod 6 for the third time (Deuteronomy 25, Ephesians 2 and 2 Corinthians 3 were the others). Keys 4, 10 and 16, three members at a constant step of 6, every class-4 key in the chapter affected with no exceptions. Mod-6 target selection now holds in thirteen chapters out of thirteen across four classes. The donor is 2 CORINTHIANS 7-8, read as a forward walk crossing the donor's own chapter boundary: k4 -> 2 Cor 7:8 (the sorrowful letter, 'I do not regret it, though I did regret it', with the note that the Greek words for regret and repent are distinct); k10 -> 2 Cor 7:13 ('we have been comforted... in our comfort we exceedingly the more joyed for the joy of Titus'); k16 -> 2 Cor 8:1 (the collection, the Macedonians' liberality, Paul's engagement in Galatians 2:10). Counting 2 Cor 7 as sixteen verses the donor advances 8 -> 13 -> 17, that is +5 then +4, against a target advancing +6 each time. That is the same sub-unit slope now recorded at Ephesians 2 (Romans 11-12), 2 Corinthians 3 (Acts 28), Luke 24 (Luke 13-14), Revelation 14 (2 Thessalonians 1-2) and Deuteronomy 30. SIX independent donor identifications now share the shape: monotonic forward walk, donor advancing slightly slower than the target, crossing a chapter boundary in the donor when the target crosses one of its own steps. Note also that this chapter's donor is 2 Corinthians, which was itself a residue TARGET two batches ago - the defect is not confined to a fixed set of donor books."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "6",
+      "verses": [
+        "6"
+      ],
+      "note": "The best-documented translation dispute I have met in this corpus, and the two sides disagree about the TRANSLATORS rather than the text. At v6 all parties agree the received 'if they shall fall away' is wrong: the participle is aorist like the three before it and must be rendered 'and fell away'. What splits them is why the error is there. Clarke quotes Macknight in full: the translators 'following Beza, who without any authority from ancient MSS. has inserted in his version the word si, if, have rendered this clause, If they fall away, that this text might not appear to contradict the doctrine of the perseverance of the saints' - and Clarke adds pointedly that Macknight 'was a Calvinist, and he was a thorough scholar and an honest man; but, professing to give a translation of the epistle, he consulted not his creed but his candour'. Ellicott agrees the rendering is 'altogether incorrect, the Greek admitting of one rendering only', then answers the charge directly: 'the suspicion sometimes expressed that this is one of the (very few) instances in which our translators have been misled by dogmatic bias seems altogether unfounded. On tracing back the translation we find it due, not to the Genevan versions, in which the influence of Calvin and Beza is predominant, but to Erasmus, Luther, and Tyndale.' That is a testable historical claim answering a testable historical accusation, and it is worth recording as a model of what a real disagreement between commentators looks like when both sides are competent. Barnes occupies a third position - concedes on J. P. Wilson's authority that there is no 'if' in the Greek, yet defends the received version as conveying the sense, treating the whole as a supposed case. Wesley denies exactly that: 'Here is not a supposition, but a plain relation of fact.' Gill denies the case can be supposed of true believers at all. Five positions on one participle."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "6",
+      "verses": [
+        "20"
+      ],
+      "note": "Chapter-final key 20 carries the stacked payload again: Barnes 2,522 words of which only 228 are comment on v20, the remaining 2,294 being a REMARKS essay on the whole chapter; and Ellicott 1,128 words of which 212 are genuine and about 916 are the StudyLight template. That is the NINTH hand-confirmation of the Ellicott chrome and the FOURTH epistle in which the Barnes REMARKS block and the Ellicott chrome sit stacked at the last key (Ephesians 2 k22, 2 Corinthians 3 k18, Hebrews 6 k20; Luke 24 k53 had the chrome with a Clarke end-of-gospel essay instead). Key 20's raw size of 4,723 is the largest in the chapter and would have made the closing span look the heaviest work; its usable content is about 2,400, which put it in line with the rest. The rule now has enough instances behind it to state flatly: in any epistle, subtract the Barnes REMARKS block and the Ellicott chrome from the final key before budgeting or tiling, because between them they routinely account for half that key's raw words."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "4",
+        "7",
+        "9",
+        "13",
+        "16"
+      ],
+      "note": "51,229 usable source words over 20 contiguous keys, tiled 1-3 | 4-6 | 7-8 | 9-12 | 13-15 | 16-20 at 628-645 words each, all grade A. Raw source per span 13,227 / 10,412 / 3,556 / 8,762 / 2,542 / 12,465 - a 5x spread, accepted deliberately because the pericopes are unambiguous and both small spans carry dense content rather than inventory (the reverse of the Exodus 31 case, where a small span had to be merged). Expansion ratios 0.05 to 0.25. What makes this chapter unusual is the DENSITY OF NAMED DISPUTE: v1-2 has a six-way on the plural 'baptisms', v6 a five-way on the conditional, v9-10 a four-way on whether reward implies merit, v15 a three-way on what Abraham obtained, v18 a two-way on the two immutable things with Barnes reporting the rival view before rejecting it. Every one of my six entries had a live crux to organise a paragraph around, which is rare; most chapters yield three or four. Every entry also overran on first assembly (656-677) and needed trimming, which is the signature of a chapter with more to say than the window allows - the opposite failure mode from the thin spans of Exodus 31. Worth noting for whoever picks the remaining Hebrews chapters: budget the writing time by number of live cruxes, not by source words."
     }
   ]
 }
