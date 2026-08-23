@@ -18070,6 +18070,45 @@
         "15"
       ],
       "note": "SUSPECTED REFERENCE ERROR, NOT ACTED ON. Ellicott at v15 lists the occurrences of challamish (flint) as 'Deuteronomy 32:13, Job 28:9, Psalms 114:8 (an allusion to this passage), and Isaiah 1:7'. The first three are right. Isaiah 1:7 is about the country being desolate and burned with fire; the flint verse in Isaiah is 50:7, 'I have set my face like a flint'. This looks like a digit dropped either by Ellicott or by the feed, but I have not checked a print edition and did not use the reference in the prose, so it is filed as suspected rather than confirmed. Worth including in any pass that verifies scripture citations inside commentary blocks against the text they claim to cite -- that check would be cheap and would catch this whole class."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "12",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB residue, 35th chapter confirming, sixth mod-6 class in seven chapters. Jamieson appears at keys 2, 8, 14 and 20 -- gap 6 throughout -- and the donor is John 13 walked strictly forward: key 2 gives 13:12 (Know ye what I have done to you? -- 'the question was put merely to summon their attention'), key 8 gives 13:17-18 (happy are ye if ye do them; he that eateth bread with me hath lifted up his heel, with the note that the beatitude is on no supposition applicable to Judas), key 14 gives 13:23 (the disciple whom Jesus loved reclining next to him -- 'thus modestly does our Evangelist denote himself'), key 20 gives 13:27-30 (the successive steps by which Judas reached the climax of his guilt). Donor list now: Romans 8, 1 Corinthians 3, 1 Timothy 6, Genesis 10, 1 Corinthians 11-12, Ephesians 2-3, John 13. All four excluded."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "12",
+        "13"
+      ],
+      "note": "A SECOND, DISTINCT RESIDUE MECHANISM: John Lightfoot, and it is not mod-6. He has six blocks in this chapter and they split cleanly by content. On-verse at keys 2 ('He killed James with the sword', with the rabbinic list of the four deaths delivered to the Sanhedrim), 20 ('Because their country was nourished by the king's country', with Ezekiel 27:17 on Judah trading wheat with Tyre) and 23 ('And he was eaten of worms', comparing Josephus). FOREIGN at keys 1, 12 and 13, where the material is all from ACTS 13 -- the commissioning and imposition of hands, the deputy Sergius Paulus (anthupatos), and 'They came to Perga in Pamphylia' with Strabo on the river Cestrus. So the donor here is the IMMEDIATELY FOLLOWING CHAPTER, not an unrelated book, and the members do not form an arithmetic class (keys 1, 12, 13 with gaps 11 and 1). This is the first residue in 35 chapters that is neither mod-6 nor a boundary sweep, and the first where one voice is simultaneously genuine and foreign in the same chapter. Practical consequence: a voice cannot be classified as residue or genuine at chapter level; it must be judged block by block. Lightfoot's text is also OCR-damaged in the same way as Bede at revelation 22, with Hebrew and Greek reduced to character soup ('mop stoning; MID NW burning; AW Killing'), so the rabbinic citations are unusable even where the surrounding English is readable."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "12",
+      "note": "TOOLING TRAP, caught by the validator and worth recording so the next worker does not lose a run to it. A voice may need TWO DIFFERENT SPELLINGS depending on which tags field it goes in. The corpus convention for the voices list is the full name 'John Lightfoot' (see mark 15), and ungrounded_voices accepts it because it searches the raw source pool by name keys. But excluded_voices is checked by undeclarable_voices, which does an exact lowercased match against the names split_voices returns -- and synthesis_qa.VOICE_LABELS carries only the bare surname 'Lightfoot'. Declaring 'John Lightfoot' in excluded_voices therefore fails the validator with 'names a block absent from this entry's source', even though the block is plainly there. My own pre-flight check missed it because I had written a loose substring test; the validator caught it. The rule: excluded_voices must use the exact string from VOICE_LABELS, voices may use the fuller corpus form. The same trap is latent for every VOICE_LABELS entry that is a bare surname or short form -- Robertson, Chrysostom, Cyril, Bede, Augustine, Origen, Basil, Tertullian, Theodoret, Victorinus, Gregory, Leo."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "12",
+      "note": "Fidelity self-grade A for all six entries (1-5, 6-11, 12-17, 18-19, 20-23, 24-25). Expansion ratios 0.04 to 0.28 against a corpus median of 0.84. Lightfoot is declared at entries 1 and 20, where his blocks are on-verse, and excluded at entry 12, where they carry Acts 13 material; he is neither declared nor excluded at entry 6, where the only mention of his name in the prose is Ellicott citing him, so he appears there as a reported critic in a debate rather than as a witness. Chrysostom is declared only at entry 18; his 1,131 words at key 1 were read and not used, the entry having no room once the historical identification of Herod was set out. Henry is undeclared at entries 1 and 24, where he has no block. One judgement recorded: at entry 18 Chrysostom asks why God let the guards die and answers it, which is the only place in the chapter where a commentator questions the justice of the narrative rather than explaining it; his answer is given as he gives it."
     }
   ]
 }

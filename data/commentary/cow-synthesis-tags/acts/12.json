@@ -1,1046 +1,708 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
+   "John Calvin",
    "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot"
   ],
+  "range": "1-5",
+  "pericope_label": "Now about that time Herod the king stretched forth his hands to vex certain of the church. And he killed James the brother of John with the sword. And because he saw it pleased the Jews, he proceeded further to take Peter also. (Then were the days of unleavened bread.) And when he had apprehended him, he put him in prison, and delivered him to four quaternions of soldiers to keep him; intending after Easter to bring him forth to the people. Peter therefore was kept in prison: but prayer was made without ceasing of the church unto God for him.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Herod Agrippa I (A.D. 44, the year of his death), grandson of Herod the Great, brother of Herodias; the civil power now turned against the church."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: rest and trouble alternate in the text — God blends them."
+    "summary": "Fix the king exactly, since Herod Agrippa the First was king of Palestine for three years only and no Herod was king again after Herod the Great, so that the title in the text is accurate at this particular moment; fill in the career that made such a man possible, sent to Rome as a boy after his father fell to his grandfather's suspicions and growing up intimate with the future Caligula; argue from the manner of execution, since a Sanhedrin sentence for blasphemy would have been stoning and decapitation shows a civil ruler adopting Roman punishments; illustrate the king's craving for popular favour from the story of his weeping at the law about setting a stranger over Israel; and supply the rabbinic list of the four deaths delivered into the hands of the Sanhedrim."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the church had a short truce to recover courage and fight afresh; not to think one or two conflicts the end."
+    "prevalence": "several",
+    "summary": "Attend to the timing rather than the man, noting that the church had enjoyed a short truce and warning the faithful not to expect perpetual rest after one or two conflicts as worn-out soldiers expect a discharge, but to be content if the Lord grants time to recover strength; and distinguish the causes of persecution, since a perverse zeal sometimes drives men to shed innocent blood for their superstitions while the greater part are moved only by private advantage, this king belonging to the second sort."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Trace the family connections that place the king &mdash; grandson of Herod the Great, nephew to the Herod who beheaded John, brother to Herodias, father to the Agrippa before whom Paul would later make his defence; note the fulfilment of the word to the sons of Zebedee that they should drink their Lord's cup, one brother going to God first of the apostles and the other last; observe that the number of the apostles was thereby reduced to eleven and never filled up, since the apostles had no successors; and reserve indignation for the rendering of the Passover as Easter, perhaps the most unhappy translation ever made."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why was James killed with the sword rather than stoned?",
+    "sides": [
+     {
+      "position": "Because a Sanhedrin sentence for blasphemy would have been stoning; decapitation shows a civil ruler adopting Roman punishments and terrifying the Jews by them",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Because killing with the sword was itself one of the four deaths delivered into the hands of the Sanhedrim",
+      "holders": [
+       "Lightfoot"
+      ]
+     },
+     {
+      "position": "Because the Roman procurators were entrusted with authority over life, whether by beheading or by piercing through",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What moved Herod to persecute?",
+    "sides": [
+     {
+      "position": "Not zeal for Moses' law nor hatred of the gospel, but private advantage &mdash; he proceeds in cruelty to win the people's favour",
+      "holders": [
+       "Calvin",
+       "Gill"
+      ]
+     },
+     {
+      "position": "The ruling policy of his house: political expediency rather than fanatic zeal, sharpened by his sensitivity to popular opinion about his Idumaean descent",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The need of a ruler holding his appointment from Rome to court a people to whom foreign rule was always unpopular",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone reads the persecution as a lesson about the rhythm of the church’s life, warning the faithful not to expect perpetual rest after one or two conflicts as worn-out soldiers expect a discharge."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone draws from the death of James that the number of the apostles was reduced to eleven and never filled up, since the apostles had no successors; and alone attacks the rendering of the Passover as Easter as perhaps the most unhappy translation ever made."
+   }
+  ],
   "themes": [
    "Herod the king",
-   "new persecution",
-   "rest and trouble alternate",
-   "the civil power"
+   "James killed with the sword",
+   "four quaternions of soldiers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "James, son of Zebedee, the 'son of thunder,' first apostle to die — fulfilling Christ's prophecy of his cup (Mark 10:38); beheading by the sword marked a civil, Roman-style sentence, not Jewish stoning; not James the Lord's brother."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "James beheaded",
-   "first apostle martyred",
-   "Christ's prophecy fulfilled",
-   "the sword"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Herod seized Peter to please the Jews — persecution from political expediency, not fanatic zeal (the Herodian policy); the days of unleavened bread deferred the public execution."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Herod persecuted to provide for his own affairs and win the people's favour, not from zeal for the law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'it pleased the Jews'",
-   "Peter seized",
-   "persecution for popularity",
-   "days of unleavened bread"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Four quaternions = 16 soldiers, four per watch, Peter chained between two — his third imprisonment; 'after Easter' an absurd mistranslation of 'after the Passover' (meta to pascha); escape humanly impossible."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Peter shut up as in his grave, quite past hope — the extremity in which God acts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "four quaternions",
-   "heavy guard",
-   "'after the Passover' (not Easter)",
-   "past hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Prayer made earnestly' (ektenos) — fervent, intent, persevering; the church meeting as usual at Mary's house; the deliverance a signal answer to prayer."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: all the church fought with their prayers alongside the imprisoned apostle — the church's weapon against the king's power."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "prayer without ceasing",
-   "the church's weapon",
-   "prayer vs the king",
-   "God hears in extremity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "6": {
   "voices": [
-   "John Gill",
+   "John Calvin",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "6-11",
+  "pericope_label": "And when Herod would have brought him forth, the same night Peter was sleeping between two soldiers, bound with two chains: and the keepers before the door kept the prison. And, behold, the angel of the Lord came upon him, and a light shined in the prison: and he smote Peter on the side, and raised him up, saying, Arise up quickly. And his chains fell off from his hands. And the angel said unto him, Gird thyself, and bind on thy sandals. And so he did. And he saith unto him, Cast thy garment about thee, and follow me. And he went out, and followed him; and wist not that it was true which was done by the angel; but thought he saw a vision. When they were past the first and the second ward, they came unto the iron gate that leadeth unto the city; which opened to them of his own accord: and they went out, and passed on through one street; and forthwith the angel departed from him. And when Peter was come to himself, he said, Now I know of a surety, that the Lord hath sent his angel, and hath delivered me out of the hand of Herod, and from all the expectation of the people of the Jews.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The night before execution Peter sleeps calmly, chained between two soldiers — the sleep God gives his beloved (Ps 127:2), undisturbed by fear of death."
+    "summary": "Explain the arrangement that makes the prisoner's sleep remarkable, one chain fastened to each of two soldiers lying either side of him while two more kept the door; reject the notion that the light was lightning, since light and splendour commonly accompany heavenly visitors, and observe that the phrase for the angel's sudden standing by is a form used seven times in this writer's Gospel and eight in the Acts and nowhere else; note that the word rendered prison here means properly a dwelling or chamber; and admit that the language about the wards is not clear, while insisting that on any reading the difficulties of escape are made plain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Say the thing in the fewest words &mdash; easy and void of fear &mdash; and describe the chains by which each arm was bound to a different soldier; then reconstruct the topography of the escape from three walls about the old city and successive gates through them, the prison at the outer wall and the iron gate at the inner, plated over for security as eastern gates still are; and refuse all patience to a rationalising divine who made the angel an illusion and credited the escape to a friendly prefect."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: a peaceful conscience, lively hope, and the Spirit's comforts keep men calm in the prospect of death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sleeping between two soldiers",
-   "bound with two chains",
-   "the calm of faith",
-   "the eve of execution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angel 'stood by him' (epeste, as to the shepherds, Luke 2:9), light in the cell, a touch to wake him, and the chains fell off — the angelic ministry that had freed the apostles before (Acts 5:19)."
+    "prevalence": "single",
+    "summary": "Take the sleep as evidence of what a peaceful conscience can do, since a lively hope and the consolations of the Spirit keep men calm in the full prospect of death, even men who have been most distracted with terrors on that account; and note that God's time to help is when things are brought to the last extremity, so that when he will work salvation for his people every difficulty is overcome and even gates of iron are made to open."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: perhaps Peter alone saw the light, the soldiers amazed or in deep sleep, God blinding their senses."
+    "prevalence": "single",
+    "summary": "Answer the objection that the prayers of the church came too late, since God often takes his time at the last and farthest point of necessity, and suggest that they prayed less for the apostle's life than that he might be armed with invincible fortitude; and ask why the deliverance was staged at all when God could have carried him away in a moment, answering that he overcomes one strait after another so that the glory of the miracle might be greater, as he made the world in six days not from need of time but to hold us in meditation on his works."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who saw the light in the cell?",
+    "sides": [
+     {
+      "position": "Peter alone, and it would be to him an undoubted proof of divine interposition",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Peter alone, the soldiers sleeping too soundly or being too amazed to perceive anything &mdash; either for his use in the darkness or as a token of the heavenly glory",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The light corresponds to the glory of the Lord in the nativity narrative, the phrase being identical",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the first and second ward?",
+    "sides": [
+     {
+      "position": "Successive gates through three city walls, the prison at the outer and the iron gate at the inner",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Two courtyards passed on the way out from the innermost dungeon",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The prison lay between the inner and outer walls of the city",
+      "holders": [
+       "Lightfoot (as reported by Ellicott)"
+      ]
+     },
+     {
+      "position": "It is not clear: perhaps single soldiers, perhaps guards beyond the sixteen &mdash; but on any reading the difficulties of escape are plain",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone asks why the escape was staged in successive stages when God could have carried Peter away in a moment, answering that the glory of the miracle is increased by it, as the world was made in six days not from need of time."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone turns aside to attack a rationalising commentator who made the angel an illusion and credited the escape to a friendly prison prefect."
+   }
+  ],
   "themes": [
+   "Peter was sleeping",
    "the angel of the Lord",
-   "light in the prison",
-   "the chains fell off",
-   "prayer answered"
+   "the iron gate"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Gird thyself, bind on thy sandals, follow me' — Peter dresses fully and unhurriedly (Clarke: a proof all was done leisurely, no hurry); the rescue proceeds with calm order, owing nothing to human haste."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'gird thyself... follow me'",
-   "unhurried deliverance",
-   "calm order",
-   "God's composure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter 'wist not' it was real, kept following, 'thought he saw a vision' — the dreamlike daze of a deliverance beyond hope; the introspective detail suggesting Peter as Luke's informant (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'wist not that it was true'",
-   "thought a vision",
-   "the dazed apostle",
-   "beyond expectation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Past the guard-posts to the iron gate, which 'opened of its own accord' untouched; the angel led him one street then departed — every obstacle yielding without human effort."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God overcame the straits one after another, that the glory of the miracle might be the greater."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "past the wards",
-   "the iron gate opened of itself",
-   "every barrier yields",
-   "the angel departs"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Come to himself' (as the prodigal); the daze gone, he knows 'of a surety' the Lord sent his angel and delivered him from Herod — a personal reminiscence, ascribing all to God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: his words a thanksgiving, extolling the benefit of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'come to himself'",
-   "'now I know of a surety'",
-   "delivered from Herod",
-   "ascribing it to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "12": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mary's house, home of John Mark (the evangelist, Peter's 'son' 1 Pet 5:13, cousin of Barnabas); 'many gathered praying' — the church interceding for the very deliverance now accomplished."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Mary a matron of rare godliness, her house as a temple of God; Henry: they continued in prayer, not fainting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Mary's house",
-   "John Mark",
-   "many gathered praying",
-   "the freed apostle seeks the church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter knocks at the gateway (pylon); 'Rhoda' (Greek, 'rose'), a servant girl, comes to listen — Luke's naming of the slave shows his care for detail; the door shut for fear of the Jews."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter knocking",
-   "Rhoda the servant",
-   "the door shut for fear",
-   "Luke's vivid detail"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Knowing Peter's familiar voice, Rhoda 'for joy' (apo tes charas) forgets to open the gate and runs to tell — gladness overpowering presence of mind, a life-like touch characteristic of Luke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "she knew Peter's voice",
-   "opened not for gladness",
-   "Rhoda's joyful haste",
-   "Luke's realism"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Thou art mad' — a curious rebuff from those praying all night for his release; they would not believe the answer, supposing 'his angel' (the Jewish guardian-angel belief, on which Scripture is silent) — God answers more readily than his people believe."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'thou art mad'",
-   "'it is his angel'",
-   "weak faith in prayer",
-   "the answer disbelieved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter 'continued knocking' until all heard; opening, they 'saw him' and were astonished — their amazement the measure of how little they expected the answer; his persistence urgent, in danger of recapture."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter continued knocking",
-   "they were astonished",
-   "unbelief overcome",
-   "the freed apostle seen"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Beckoning for silence (kataseisas), he tells 'how the Lord brought him out' (crediting God), sends word to James (the Lord's brother, leader of the Jerusalem church) and the brethren, then withdraws — grateful and prudent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "beckoning for silence",
-   "'how the Lord brought him out'",
-   "'shew these things to James'",
-   "prudent departure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "At daybreak 'no small stir' (litotes) — the sixteen soldiers in confusion and dread at Peter's inexplicable disappearance, knowing escape meant their death under Roman law."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom grapples with why the guards suffered — the time of judgment, when each is rendered his due, was not yet."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'no small stir'",
-   "the soldiers' panic",
-   "the inexplicable escape",
-   "God's wonder confounds enemies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Herod examines (anakrinas, forensic) the keepers and has them executed — the Roman penalty for a prisoner's escape; the innocent suffering for the righteous (Wesley); he withdraws to Caesarea in shame, baffled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sought him, found him not",
-   "the keepers executed",
-   "the baffled tyrant",
-   "retreat to Caesarea"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Herod 'highly displeased' (thymomachon, hot quarrel) with Tyre and Sidon, who, dependent on his country for food (cf Ezek 27:17), sue for peace through Blastus — the dispute setting the stage for his public oration."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a memorable history showing what end awaits the Church's enemies and how God hates pride — Herod its lively image."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "displeased with Tyre and Sidon",
-   "they desired peace",
-   "dependent for food",
-   "the stage for downfall"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The 'set day' the second day of games at Caesarea for Claudius (told fully by Josephus, Ant. xix); Herod enthroned in a silver-wrought robe dazzling in the morning sun — human grandeur at its zenith before the fall."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "royal apparel",
-   "sat upon his throne",
-   "the oration",
-   "Josephus confirms"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "A.T. Robertson"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Gentile crowd 'kept on shouting' (imperfect) 'the voice of a god' — pagan emperor-worship flattery to win his favour (matching Josephus); Herod received the honour due to God alone without rebuke."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the voice of a god'",
-   "blasphemous flattery",
-   "emperor-worship",
-   "honour usurped from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "12-17",
+  "pericope_label": "And when he had considered the thing, he came to the house of Mary the mother of John, whose surname was Mark; where many were gathered together praying. And as Peter knocked at the door of the gate, a damsel came to hearken, named Rhoda. And when she knew Peter’s voice, she opened not the gate for gladness, but ran in, and told how Peter stood before the gate. And they said unto her, Thou art mad. But she constantly affirmed that it was even so. Then said they, It is his angel. But Peter continued knocking: and when they had opened the door, and saw him, they were astonished. But he, beckoning unto them with the hand to hold their peace, declared unto them how the Lord had brought him out of the prison. And he said, Go shew these things unto James, and to the brethren. And he departed, and went into another place.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The angel 'smote him' (epataxen, the verb of v7's gentle touch, here severe) — because he gave not God the glory, accepting divine honour; eaten of worms, like Nebuchadnezzar's pride before a fall (Dan 4:30); confirmed by Josephus."
+    "summary": "Gather what can be inferred about the household &mdash; that Mark was probably converted by Peter, who calls him his son; that he was cousin to Barnabas and so connected with the tribe of Levi; that a house serving as the church's meeting place indicates comparative wealth; and that the absence of any father makes it likely the mother was a widow; take the naming of a slave girl as evidence of the historian's care over details, since opening the door to strangers was commonly a female slave's office; and distinguish the two words used for the entrance, the door itself and the passageway leading from it."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God resists the proud (1 Pet 5:5) — Herod the lively image; the angel who freed Peter now smites the persecutor."
+    "prevalence": "several",
+    "summary": "Infer the mistress's rare godliness from her house being as it were a certain temple of God, and reason that the brethren must have met in companies at several places in the city, since one house could not hold them all and a single gathering could not have avoided the fear of tumult; and take the brethren to whom the news was to be carried as the apostles and elders rather than the whole church, since the man named would worthily have his fellows in office certified first."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Draw the practical rule that God's providence leaves room for the use of our prudence even where he has undertaken to perform and perfect what he has begun; and remark on the reception of the news, that what we most earnestly wish for we are often most backward to believe, so that men ought always to pray and not to faint, continuing in prayer as long as they are kept waiting for a mercy."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Explain the name of the girl, which means a rose, and note the custom of giving daughters the names of flowers and trees &mdash; a lily, a myrtle, a palm; suppose the door shut for fear of the Jews and the knocking done at an outer gate across the courtyard, which is why she had to go and listen at all; report the Jewish belief in a guardian angel that assumes the likeness of the man it protects, with the stories of Elijah appearing as various rabbins, while allowing that the word may simply mean a messenger; and observe that the apostle here defers to another and that no supremacy for him can be found in it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did the praying church disbelieve the answer to its prayer?",
+    "sides": [
+     {
+      "position": "It shows with how little faith men pray, since they were overwhelmed at the success of their own petitions and slow to believe the thing sought could be granted",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "They may have prayed in faith without expecting deliverance, asking rather that Peter might be supported and bear a glorious testimony by his death",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "What we most earnestly wish for we are often most backward to believe",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by It is his angel?",
+    "sides": [
+     {
+      "position": "The common Jewish belief that every man has a guardian angel which assumes his likeness when it appears &mdash; a belief the record of a casual utterance cannot be taken to sanction",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The same belief, with the rabbinic stories of Elijah appearing in the likeness of various teachers",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Possibly only a messenger sent from Peter, since the word means a messenger in general",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone builds five separate inferences about Mark’s family out of the mention of his mother’s house &mdash; his conversion by Peter, his kinship to Barnabas, the family’s comparative wealth, his mother’s widowhood, and his identity with the evangelist."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone turns the disbelief of the praying church into a reproof of the reader, observing that Christians are often surprised when their prayers are answered and that this shows how little faith they pray with."
+   }
+  ],
   "themes": [
-   "the angel smote him",
-   "'gave not God the glory'",
-   "eaten of worms",
-   "God resists the proud"
+   "the house of Mary",
+   "a damsel named Rhoda",
+   "it is his angel"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
+  },
+  "excluded_voices": [
+   "Lightfoot",
+   "Jamieson, Fausset and Brown"
+  ]
+ },
+ "18": {
+  "voices": [
+   "John Calvin",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Chrysostom"
+  ],
+  "range": "18-19",
+  "pericope_label": "Now as soon as it was day, there was no small stir among the soldiers, what was become of Peter. And when Herod had sought for him, and found him not, he examined the keepers, and commanded that they should be put to death. And he went down from Judea to Cesarea, and there abode.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Describe the exposure of the guards, who were answerable for the prisoner with their lives, and settle the phrase about their fate as half-technical and half-euphemistic, literally that they should be led away, capital punishment being by Roman usage the almost inevitable penalty for letting a prisoner escape &mdash; as the gaoler at Philippi showed when he was on the point of anticipating sentence by suicide; note that this was ordinary Roman routine and no proof of special cruelty; observe that a rigid scrutiny of the guards shows the king had no intention of admitting a miraculous interposition; and add that he went down to the coast for the public games in honour of the emperor."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Raise the question the narrative leaves open, why God should look on quietly while the soldiers are put to death, when it was possible to have rescued them too &mdash; answering that it was not yet the time of judgment when each is rendered his deserts, and that it was not the apostle who put them into the king's hands; then find the king's real grievance in being made ridiculous, as his grandfather had been cut to the heart by the wise men, and note that he had heard under examination that the chains were left behind and the sandals taken."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Read the examination as a judicial proceeding that convicted the judge, since the king could not suspect violence or subtlety, so that on finding the soldiers blameless he was himself compelled to be a witness of a deliverance wrought by God &mdash; an excellent example of blindness, that a man should see so much and be moved so little; and hesitate honestly over what the command was, since the words may mean either that the men were carried off to prison or dragged at once to execution."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "State the ordinary practice, that jailers and watchmen suffered the punishment which should have fallen on the prisoner whose escape they were supposed to have favoured; and confess ignorance where the sources are silent, since how soon the king went down to the coast and how long he stayed there are not known."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why were the soldiers left to die?",
+    "sides": [
+     {
+      "position": "It was not yet the time of judgment when each is rendered his deserts, and it was not Peter who put them into Herod's hands",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Capital punishment was the almost inevitable Roman penalty for letting a prisoner escape, and no special cruelty is shown",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Jailers ordinarily suffered the punishment which should have fallen on the prisoner",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Were the keepers executed or imprisoned?",
+    "sides": [
+     {
+      "position": "The words may mean either carried off to prison or dragged at once to execution; the first would be rage mixed with tyranny and shame",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Led away to execution, the phrase being half-technical and half-euphemistic",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "note": "Alone asks why God permitted the guards to die, and locates the king’s real motive in the humiliation of being made ridiculous rather than in the escape itself."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone reads the judicial examination as convicting the judge, since Herod, finding the soldiers blameless, was compelled to become a witness of the very deliverance he refused to acknowledge."
+   }
+  ],
+  "themes": [
+   "no small stir",
+   "he examined the keepers",
+   "down to Caesarea"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
+ },
+ "20": {
+  "voices": [
+   "John Calvin",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "John Wesley",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Lightfoot"
+  ],
+  "range": "20-23",
+  "pericope_label": "And Herod was highly displeased with them of Tyre and Sidon: but they came with one accord to him, and, having made Blastus the king’s chamberlain their friend, desired peace; because their country was nourished by the king’s country. And upon a set day Herod, arrayed in royal apparel, sat upon his throne, and made an oration unto them. And the people gave a shout, saying, It is the voice of a god, and not of a man. And immediately the angel of the Lord smote him, because he gave not God the glory: and he was eaten of worms, and gave up the ghost.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Confess that the cause of the quarrel is unrecorded and that conjecture is useless, since even the historian who narrates the journey passes it over, while allowing that commerce is the likeliest ground; explain what made the cities anxious, that with large populations on narrow strips of territory they depended on imported corn and oil and wine, a relation traceable from the days of Solomon down to the prophet's oracle against Tyre; set the parallel account beside the text and find the two supplementing each other without contradiction, down to the robe of silver tissue and the second day of the festival; and be careful about the stroke, since disease and death are often ascribed to an angel in Scripture so that no miracle need be intended, though a divine judgment certainly is."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Suppose the chamberlain a eunuch with considerable influence over his master, so that reaching the king meant bribing the servant; give the detail of the robe, a garment wrought wholly of silver whose contexture was truly wonderful, worn into the theatre early so that the first rays of the sun struck it; observe that the reconciliation delivered the Christians of those parts from scarcity by the providence of God; and refuse the excuse of custom for the flattery, since the commonness of a wicked custom rather increases than lessens the guilt of it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the pride the whole point, since the measure of the king's iniquity was filled up by it and a haughty spirit commonly goes before a fall; and observe that God reckoned with him not merely for putting one apostle to death but for the design and endeavour against another, sinners being called to account for the mischief they would have done as well as for the mischief they did."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Compare the two accounts closely and note that the historian calls him Agrippa throughout where the evangelist calls him Herod, suggesting that Agrippa was his own name while the other was the dynastic title assumed on becoming king; then read the episode as a glass showing both the end prepared for the enemies of the church and how greatly God hates pride, and turn it on the reader &mdash; if pride was punished so sharply in a king whom prosperity had puffed up, what shall become of common men."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What was the quarrel with Tyre and Sidon about?",
+    "sides": [
+     {
+      "position": "Unrecorded, and conjecture is useless, since even Josephus passes it over",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Probably commerce, the cities having perhaps embarrassed the king's regulations",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Probably commercial, since Phoenicia belonged to Syria and Herod had no authority there",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Fear of a prohibition on exports of corn and oil and wine, on which the cities depended for subsistence",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone states plainly that the cause of the quarrel is nowhere recorded and that it is useless to conjecture, having checked the historian who narrates the journey."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone refuses the excuse of custom for the crowd’s flattery, holding that the commonness of a wicked custom rather increases than lessens the guilt of it."
+   }
+  ],
+  "themes": [
+   "Blastus the king’s chamberlain",
+   "the voice of a god",
+   "eaten of worms"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "24": {
   "voices": [
    "John Gill",
+   "John Calvin",
    "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "A.T. Robertson"
   ],
+  "range": "24-25",
+  "pericope_label": "But the word of God grew and multiplied. And Barnabas and Saul returned from Jerusalem, when they had fulfilled their ministry, and took with them John, whose surname was Mark.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Grew and multiplied' (imperfect) — the reaction from James's death and Peter's imprisonment; the chief persecutor's death left free scope for the preachers."
+    "summary": "Give the plain historical cause of the growth, that the death of the chief persecutor left free scope for the preachers, and call it the reaction from the death of one apostle and the imprisonment of another; then handle the textual difficulty in the last verse, where the likely reading is that they returned from Jerusalem though two great uncials give to Jerusalem, an impossible reading contradicted by what stands on either side of it; note that the aorist participle for taking Mark along does not express action later than the main verb; and identify the ministry fulfilled as the carrying of alms, the same word being used for it as for the relief when the collection was first described."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: with the tyrant removed the church was suddenly delivered — the church always outlives her enemies."
+    "prevalence": "several",
+    "summary": "State the growth as a general rule with a figure to carry it, that when the tyrant was taken away the church was delivered as out of the jaws of the wolf, and that though the faithful are counted sheep appointed to be slain the church always outlives her enemies; identify the fulfilled ministry as the alms gathered at Antioch after the prophet foretold the famine; and see the shadow already in the man taken along, since he whose mother had just been honourably commended would afterwards be the cause of grievous and dangerous discord between the two who now took him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Hear agricultural language in the summary, since the two verbs describe corn growing into stalk and ear and then being multiplied in the full ear, so that the sentence probably alludes to the parable of the sower where the seed is the word of God &mdash; and give a reason for the growth, that there was no corruption in the word and that God watered it from on high; then trace the course of the young companion from here to Cyprus and onward until he left the apostles at Perga."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the reading returned from Jerusalem or to Jerusalem?",
+    "sides": [
+     {
+      "position": "From Jerusalem is the probable text; to Jerusalem, though given by two great uncials, is an impossible reading contradicted by the surrounding narrative",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "From Jerusalem, and several witnesses supply the destination, unto Antioch, which is certainly right",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "From Jerusalem, the ministry fulfilled being the carrying of the alms",
+      "holders": [
+       "Barnes",
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone hears the parable of the sower behind the two verbs of the summary, which describe corn growing into stalk and ear and then multiplying in the full ear."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone steps back to the shape of the book, observing that from this point the historian records chiefly the labours of Paul and seldom mentions the other apostles again."
+   }
+  ],
   "themes": [
    "the word of God grew",
-   "triumph over the persecutor",
-   "the church outlives her enemies",
-   "the gospel invincible"
+   "their ministry fulfilled",
+   "John whose surname was Mark"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnabas and Saul return to Antioch, the famine-relief ministry to Jerusalem fulfilled (Acts 11:29-30), taking John Mark (Barnabas's cousin, son of Mary) — stitching the episode back into the gospel's advance toward the first missionary journey."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Barnabas and Saul return",
-   "ministry fulfilled",
-   "took John Mark",
-   "the mission resumes"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
