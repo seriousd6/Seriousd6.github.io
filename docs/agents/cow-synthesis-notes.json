@@ -18233,6 +18233,46 @@
       "book": "leviticus",
       "chapter": "5",
       "note": "Fidelity self-grade A for all five entries (1-4, 5-6, 7-13, 14-16, 17-19). Expansion ratios 0.13 to 0.36, the highest in several chapters because the source is small at 13,570 words; still well under the corpus median of 0.84. One error caught and corrected before landing, worth recording because it is the failure mode the tiling is meant to prevent: the first draft of entry 5 (verses 5-6) credited Keil and Delitzsch with the detail that a man who could not afford two pigeons was to bring a tenth of an ephah of fine flour without oil or frankincense. That material is in his key-8 block, which belongs to entry 7, not entry 5. Cross-span borrowing of exactly this kind would have been invisible to every validator, since the voice is genuine and declared and the sentence is accurate -- it is only in the wrong entry. The sentence was removed from entry 5 and the point is made in entry 7, where the source sits. Practical rule: when a voice appears in adjacent spans, check which key a remembered detail came from before attributing it, since the reading is done span by span but the memory of it is not."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all five entries. 1-3 649w (Gill, Henry, Clarke, Ellicott, Wesley, Keil); 4-10 612w (Gill, Clarke, Keil, Wesley, Ellicott; Jamieson excluded); 11-14 648w (six voices); 15-18 647w (Gill, Clarke, Ellicott, Wesley, Keil; Jamieson excluded); 19-21 644w (six voices). Every claim traced to a head inside its own span. Five pericopes rather than seven three-key spans, following the natural divisions of the narrative — the setting, the threefold call, the message, the telling of Eli, and Samuel established. Chapter sized at 14,164 usable words, of which about 890 at k20 is the Ellicott chrome tail, so the true figure is nearer 13,300."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "★ THE JAMIESON MECHANISM IS NOW VISIBLE, AND IT IS NOT A PER-CHAPTER DISPLACEMENT. The three Jamieson blocks here sit at keys 4, 10, 16, all congruent to 4 mod 6, with source Joshua 10 (k4 the Gibeonite appeal, k10 the discomfiting of the Amorites, k16 the five kings in the cave at Makkedah). The decisive observation is that 1samuel 4 key 6 carries the IDENTICAL Makkedah block. The same source text is filed at two different target keys in two adjacent chapters. Scanning 1samuel 1-6 shows what is happening: the residue is ONE CONTINUOUS STREAM of Jamieson-on-Joshua being poured across consecutive 1 Samuel chapters, one block emitted every 6 target keys, running on across chapter boundaries and overlapping by one block at each boundary. 1sam1 draws on Joshua 8 (keys =4 mod 6), 1sam2 on Joshua 9-10:2 (=5), 1sam3 on Joshua 10:4-16 (=4), 1sam4 on Joshua 10:16+ (=0), 1sam5 on Joshua 10:28+ (=1), 1sam6 on Joshua 11 (=0). THIS EXPLAINS EVERYTHING MEASURED OVER 753+ CHAPTERS: the stride of 6 belongs to the EMITTER, not to any target chapter, and the per-chapter residue class is simply wherever the stream happens to stand when the chapter starts — which is why every chapter shows a single class and why the class differs between chapters. The apparent monotone drift in corpus position is the accumulated offset of a stream that has been running since the start of the corpus. FOR THE RE-INDEXING DECISION: this is much better news than a per-chapter displacement. There is one stream to re-align, not 753 displacements to invert. Recommend the owner scope the fix as identifying the stream's start and its emission rule, and note that the boundary overlap means a naive re-alignment will duplicate one block per chapter boundary."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "3",
+      "verses": [
+        "16",
+        "18"
+      ],
+      "note": "ELLICOTT REPRODUCES KEIL, UNATTRIBUTED — a third borrowing datum, and the cleanest verbal match yet. On Eli's reply at v18, Keil writes: 'his reply proves that, with all his weakness and criminal indulgence towards his wicked sons, Eli was thoroughly devoted to the Lord in his heart.' Ellicott writes: 'indicates that Eli, in spite of his weakness and foolish partiality for his sons, was thoroughly devoted to the Lord in his heart.' The concessive clause is reworded; the eight-word predicate is verbatim. Keil's English translation (1864) precedes Ellicott (1884), so the direction is Keil to Ellicott. This joins Barnes-copies-Clarke at galatians 1 (identical citation string, unattributed) and Keil-cites-Calvin at deuteronomy 8 (same argument, attributed by name). Three cases now, in three combinations: unattributed prose borrowing between moderns, unattributed citation borrowing between moderns, and attributed borrowing across confessions. All three inflate the prevalence field the same way — two voices counted as agreeing independently when one is copying the other. The detector for this case is different from the others and cheap: index every commentary block by its distinctive 6-to-10-word spans and look for spans shared across voices. I flagged the borrowing in the entry prose itself rather than presenting the two as independent witnesses."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "3",
+      "verses": [
+        "20"
+      ],
+      "note": "ELLICOTT END-OF-CHAPTER TAIL, SIXTH INSTANCE. The k20 block is 1070 words of which roughly the first 180 are comment ('A prophet of the Lord. — Then from the northern to the southern cities...'); the rest is the CSS stylesheet and JavaScript bundle already recorded. Running series for this feed: exodus 1 k22 984w, revelation 19 k43 985w, luke 4 k44 990w, deuteronomy 8 k20 1037w, ephesians 6 k24 1175w, 1samuel 3 k20 1070w. Six measurements, one boundary marker throughout. NOTE the counterexample in the same chapter, which matters for any automated rule: Clarke's block at k21 is 740 words and is GENUINE throughout — his closing essay on neglected religious education, ending 'Parents who neglect this, neglect the present and eternal interests of their offspring.' Two long blocks at the last two keys of one chapter, one entirely chrome and one entirely authorial. A length-based or position-based heuristic would destroy the Clarke essay; only the copyright-line marker distinguishes them."
     }
   ]
 }
