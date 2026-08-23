@@ -1,689 +1,394 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Timnath fell by lot to Judah, then to Dan, and was now in the hands of the Philistines; he saw a woman of the Philistines."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And Samson went down to Timnath, and saw a woman in Timnath of the daughters of the Philistines",
-   "the peril of the unguarded sight leading the heart astray",
-   "I made a covenant with mine eyes; why then should I think upon a maid? (Job 31:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he told them, desiring their approbation and consent, acting a dutiful part, an example to children to advise with parents."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he... told his father and his mother... now therefore get her for me to wife",
-   "the duty to seek parents' counsel, yet a will fixed on the unlawful",
-   "children, obey your parents in the Lord: for this is right (Eph. 6:1)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "1-4",
+  "pericope_label": "Samson sees a woman of Timnath, and it was of the Lord",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: their expected objection."
-   },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Restrict the phrase to permission, since in no other sense can it be understood; refuse to let the reason she is right in my eyes pass as warrant for the random choice of a spouse, comparing the will that makes its own determinations its rule of right to the motto cast on the cannon of Louis the Fourteenth, that his will backed by instruments of destruction shall decide right and wrong; and supply the later history of the town."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke: to marry any not of the Israelitish stock was contrary to the law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Is there never a woman among the daughters of thy brethren... that thou goest to take a wife of the uncircumcised Philistines?",
-   "parents warning against the unequal yoke forbidden by God's law",
-   "be ye not unequally yoked together with unbelievers (2 Cor. 6:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Take the phrase to mean that God overruled events to his own ends, making the fierceness of men praise him, and cite the sense of divine rule found even in Homer; warn that some make Jehovah the seeker of the quarrel, which is unlikely; state the law exactly, since only Canaanite marriages are expressly forbidden, so that the parents&#x27; aversion rests on the reason of the prohibition rather than its letter; and note the peculiar hatred carried by the word uncircumcised."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Samson knew it was of the Lord, his desire not arising from carnal affection merely; the Philistines had dominion over Israel."
+    "prevalence": "single",
+    "summary": "Hold that Samson himself knew the marriage was of the Lord, his desire arising not from carnal affection — she was not the fairer of the two sisters — but from the Spirit urging him toward the occasion it would give against the Philistines, which he concealed from his parents; and set out the rival solutions to the difficulty that others go up to the town where he goes down."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Deny that the case is exemplary at all: Samson was himself a riddle and a paradox, doing what was great and good by what seemed weak and evil, designed to be no pattern for men who must walk by rule rather than example, but a type of him who knew no sin and was made sin for us."
    }
   ],
   "debates": [
-   [
-    "Was Samson's choice his fault or God's leading?",
-    "The witnesses note the tension: the marriage was contrary to the law and sprang from Samson's own desire, yet 'it was of the LORD' — God overruling his inclination for a deliverance purpose. Gill holds Samson acted under a divine impulse; others stress that God overruled a real fault. Either way the providence does not excuse the unequal yoke."
-   ]
+   "In what sense a forbidden marriage can be said to be of the Lord.",
+   "Whether Samson acted on a divine impulse he understood, or was merely overruled.",
+   "Whether the law actually forbade a Philistine marriage, or only reached it by its reason.",
+   "Whether liking is a sufficient ground for choosing a spouse."
   ],
-  "outliers": [],
+  "outliers": [
+   "Henry alone escapes the difficulty by denying that Samson is a pattern, making him a type instead.",
+   "Gill alone credits Samson with knowing the divine purpose, against those who allow only permission.",
+   "Ellicott alone illustrates the overruling of God from the opening of the Iliad.",
+   "Ellicott alone reports the reading that makes Jehovah the one seeking a quarrel.",
+   "Clarke alone likens the sufficiency of a lover&#x27;s will to the motto on a king&#x27;s artillery."
+  ],
   "themes": [
-   "his father and his mother knew not that it was of the LORD, that he sought an occasion against the Philistines",
-   "the mystery of providence overruling men's course to God's purpose",
-   "surely the wrath of man shall praise thee (Ps. 76:10)"
+   "Providence",
+   "Marriage",
+   "Law",
+   "Typology",
+   "Judgment",
+   "Self-will"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the parents were prevailed upon to go, his affections being so set on the marriage; a young lion roared against him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a young lion roared against him",
-   "the people of God meeting the roaring foe in unexpected places",
-   "your adversary the devil, as a roaring lion, walketh about, seeking whom he may devour (1 Pet. 5:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "5-9",
+  "pericope_label": "The lion torn in the vineyards, and the honey found in its carcase",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Spirit of might from the Lord, inspiring courage and increasing his bodily strength."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Insist that the feat was not done by natural strength but by the Spirit coming upon him, the might being neither his own nor at his command but attached by God&#x27;s will to his hair and his Nazarite state; treat the ancient belief that bees breed in dead oxen as support for the narrative, quoting Virgil at length; and reckon the interval before the wedding at about a year, that being the usual space between espousal and marriage."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: he rent the lion as a kid."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit of the LORD came mightily upon him, and he rent him as he would have rent a kid",
-   "Samson's strength a gift of the Spirit, the weak made mighty",
-   "be strong in the Lord, and in the power of his might (Eph. 6:10)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Collect parallels until the exploit looks heroic rather than impossible — Josephus recalling Hercules, an athlete at Olympus, Arabs, David and Benaiah — and correct the verb to mean pervaded; prove from place-names that lions were then common; answer the objection about the bees by showing that the word means a sun-dried skeleton, which bees do not shun, or else that the body was dried without putrefying; deny that the honey could be taken without breaking the Nazarite vow unless a skeleton is no dead body; and decline to fix the length of the interval."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he entered conversation to judge her other qualifications besides outward form; she pleased Samson well."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he went down, and talked with the woman; and she pleased Samson well",
-   "the desire of the flesh and eye governing the weightiest choices",
-   "the lust of the flesh, and the lust of the eyes... is not of the Father (1 John 2:16)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Exculpate Samson over the honey, since on Josephus&#x27;s account he took pieces of the comb and ate as he walked without touching the carcase, a defilement a Nazarite had especially to avoid; supply a year for the betrothal, twelve months being allowed the bride to prepare; and entertain the reading that it was the father who spoke about the woman to her relations."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: matters being settled and the espousals made, he returned at the time for the marriage; there was a swarm of bees and honey in the carcase."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Allegorise the scene: young people do not consider how they expose themselves to the lion that seeks to devour when they wander from prudent and pious parents, nor what lions lurk in vineyards; and since Christ has conquered that roaring lion, believers like Samson find honey in the carcase."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the killing of the lion is to be explained by supernatural strength or set beside other feats of strong men.",
+   "Whether bees would nest in a dead body, and what the word rendered carcase means.",
+   "Whether Samson violated his Nazarite vow in taking the honey.",
+   "Why he concealed from his parents where the honey came from."
+  ],
+  "outliers": [
+   "Clarke and Ellicott put the same passage of Virgil to opposite uses, one as evidence for the story and the other as the vulgar error that must be cleared away.",
+   "Ellicott alone argues from the place-names of Palestine that its wild beasts were once common.",
+   "Ellicott alone holds that the vow was broken unless a skeleton counts as no dead body, where Gill exculpates him outright.",
+   "Keil alone rejects the skeleton reading as too little, on the ground that bees would not hive in bare bones.",
+   "Ellicott alone suggests the riddle was already framed and the silence meant to protect it."
+  ],
   "themes": [
-   "he turned aside to see the carcase of the lion: and, behold, there was a swarm of bees and honey in the carcase",
-   "God bringing sweetness out of the bitter, life out of death",
-   "O death, where is thy sting?... thanks be to God, which giveth us the victory (1 Cor. 15:55-57)"
+   "Providence",
+   "Strength",
+   "Nazarite Vow",
+   "Natural History",
+   "Typology",
+   "Marriage Customs"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Josephus says he took pieces of the honeycomb and ate as he went; he told them not he had taken it from the lion's carcase."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he gave them, and they did eat: but he told not them that he had taken the honey out of the carcase of the lion",
-   "things wisely kept for a season, yet discretion in walking with God",
-   "a prudent man concealeth knowledge (Prov. 12:23)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the father went down about the consummation of the marriage; Samson made a feast, as the young men used to do."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Samson made there a feast; for so used the young men to do",
-   "lawful customs kept, yet beware the company among the ungodly",
-   "evil communications corrupt good manners (1 Cor. 15:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "10-14",
+  "pericope_label": "The wedding feast, the thirty companions, and the riddle of the eater and the sweet",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Philistines of Timnath brought them when they saw he was come to consummate his marriage."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Approve the feast on principle, since a Nazarite need not affect singularity in such a thing, it being no part of religion to go against the innocent usages of the place we live in, and a reproach to religion when its professors are thought covetous and morose; and offer two readings of the thirty companions, preferring the darker, that men jealous of his strength sent them as a guard or as spies."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the thirty companions."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when they saw him, that they brought thirty companions to be with him",
-   "the unequal yoke compassing the believer with the world's company",
-   "I have hated the congregation of evil doers (Ps. 26:4-5)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: he said it to his thirty companions, very likely on the first day of the feast."
+    "summary": "Take the bride&#x27;s relations to have supplied the companions, since Samson brought none — which suggests his marriage was unpopular at home — and reject the ancient variant that makes them afraid of him, since it needs an altered text and does not suit the words that follow; gather the parallels for riddles at feasts, from Solomon to the Sphinx, and grant that this riddle was unfair while defending the terms of the wager as generous; and take the word rendered sheets for fine linen worn next the skin."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the riddle and the wager."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will now put forth a riddle unto you... then I will give you thirty sheets and thirty change of garments",
-   "God turning even a feast's diversion to his purpose",
-   "to understand a proverb... the words of the wise, and their dark sayings (Prov. 1:6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: if they could not explain it in the time allowed."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Describe the Greek custom of enigmas at festivals, with a crown for the solver and a forfeit of water or brine drunk at one draught for the rest; hold that the riddle could not have been solved without knowing the fact behind it, and that it was cast in verse; identify the promised garments with the Arab hayk, in which the easterner wraps himself as a Highlander in his plaid; and report the versions that read bitter for strong."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: their reply, Put forth thy riddle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye cannot declare it me, then shall ye give me thirty sheets... Put forth thy riddle, that we may hear it",
-   "the cleverness of the world trusting in itself",
-   "the wisdom of this world is foolishness with God (1 Cor. 3:19)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: out of a devouring eater, such as the lion, came forth honey, which Samson and his parents ate."
+    "prevalence": "single",
+    "summary": "Observe that the father went down about the business of the woman, that all three went together, and that the honey of the riddle was such as some men lived on."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who brought the thirty companions, and whether they came to honour Samson or to watch him.",
+   "Whether the ancient reading that they feared him can stand.",
+   "Whether the riddle was a fair one, and whether the wager attached to it was.",
+   "What garments were staked, and whether the second term of the riddle means strong or bitter."
+  ],
+  "outliers": [
+   "Henry alone defends conformity to local custom as no breach of religion, and warns against a reputation for moroseness.",
+   "Ellicott alone infers from the absence of Samson&#x27;s own friends that the marriage was unpopular among his countrymen.",
+   "Keil and Ellicott independently reject the same Greek variant, on different grounds.",
+   "Ellicott alone quotes Shakespeare against the fairness of the riddle, and translates a German folk-riddle of his own accord.",
+   "Ellicott alone argues that the stake was generous even though the riddle was not fair."
+  ],
   "themes": [
-   "Out of the eater came forth meat, and out of the strong came forth sweetness",
-   "a shadow of the gospel: sweetness and life out of the Strong One's conquest of death",
-   "through death he might destroy him that had the power of death (Heb. 2:14)"
+   "Marriage Customs",
+   "Riddles",
+   "Hospitality",
+   "Textual Criticism",
+   "Antiquities",
+   "Suspicion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they applied to his wife some time before the seventh day, pressing her hard, threatening to burn her and her father's house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Entice thy husband, that he may declare unto us the riddle, lest we burn thee and thy father's house with fire",
-   "the world resorting to threats and treachery when fair means fail",
-   "they bend their tongues like their bow for lies (Jer. 9:3)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "15-18",
+  "pericope_label": "The threat, the weeping wife, and the ploughing with my heifer",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: she came to get the explanation, thinking her tears would move him."
+    "prevalence": "single",
+    "summary": "Report that the versions read the fourth day for the seventh to remove the difficulty, prefer the rabbinic explanation that the day named is the sabbath, and record the further proposal that the whole affair covered fourteen days; and note that the answer was brought in before sunset, in time to escape the forfeit."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: Samson's wife wept before him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Samson's wife wept before him, and said, Thou dost but hate me, and lovest me not",
-   "the importunity and tears of an unbelieving partner a snare",
-   "the lips of a strange woman drop as an honeycomb... but her end is bitter (Prov. 5:3-4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Deny that the two notices of the seventh day conflict, since the woman had pressed him daily out of curiosity before the threat made her urgent; weigh both parties, finding Samson in no favourable light and the Philistines mean, treacherous and brutal, and observing that the threat to burn her was afterwards carried out; qualify the wife&#x27;s betrayal by the menaces she was under; and refuse the reading that makes the proverb a charge of adultery, there being no sufficient reason for it."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she wept the remaining days, lying sore upon him; he told her, and she told the riddle to her people."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Allow the wife no motive but obliging her paramours, and take the proverb as a direct charge of adultery, supporting it from Theognis, Plautus and Martial, in all of whom ploughing another man&#x27;s ground is the standing euphemism, and from the Greek and Syriac versions and a rabbinic authority."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How the seventh day of the threat can be reconciled with weeping through the seven days.",
+   "Which party in the story is the more blameable.",
+   "How far the wife&#x27;s betrayal is excused by the threat against her life.",
+   "Whether the proverb about ploughing accuses her of adultery."
+  ],
+  "outliers": [
+   "The versions cut the chronological knot by altering the number, where the commentators harmonise it.",
+   "Ellicott alone passes judgment on the Philistines as well as on Samson.",
+   "Ellicott alone suggests the secret was told late in the hope that it could not be passed on in time.",
+   "Clarke alone builds the charge of adultery on a wall of classical euphemism, and Ellicott alone dismisses it in a sentence.",
+   "Keil calls the proverb perfectly clear without saying what it means, in a passage where two others disagree flatly about it."
+  ],
   "themes": [
-   "she wept before him the seven days... he told her, because she lay sore upon him: and she told the riddle to the children of her people",
-   "the peril of yielding to the wearing importunity of the ungodly",
-   "give not that which is holy unto the dogs (Matt. 7:6)"
+   "Marriage",
+   "Betrayal",
+   "Proverbs",
+   "Chronology",
+   "Judgment",
+   "Coercion"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they answered before sundown, soon enough to free themselves from the obligation; Samson said, if ye had not plowed with my heifer."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.44
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "If ye had not plowed with my heifer, ye had not found out my riddle",
-   "ill-gotten gains no true victory; the world's treachery exposed",
-   "bread of deceit is sweet... but afterwards his mouth shall be filled with gravel (Prov. 20:17)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "19-20",
+  "pericope_label": "Ashkelon, the wager paid, and the wife given to his companion",
   "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Spirit of might from the Lord filled him with zeal and courage and increased his strength."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: he gave the changes to them that expounded the riddle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit of the LORD came upon him, and he went down to Ashkelon, and slew thirty men of them, and took their spoil",
-   "God turning the affront into a stroke against the Philistines",
-   "he taketh the wise in their own craftiness (Job 5:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Argue from the order of the narrative that revenge was not the motive, since the anger is kindled only after the deed and is directed at the wife rather than the Philistines; or else decline to defend the act at all, since its morality can be judged only from the standpoint of its time; conjecture that a feast supplied the occasion, rich garments not being everyday wear; raise the possibility that the spoil was armour rather than clothing; and lay the decisive blame on the woman&#x27;s family, who made the breach irreparable when the marriage tie was not yet broken."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Identify the spoil with the garments of the modern eastern wardrobe; suppose the wife preferred the other man and went to him at once, her betrayal proving her husband was not dear to her whatever tears she shed; and close on the secret rather than the marriage — a man who could not keep his own was foolish to expect better of another, and those who complain of betrayed confidences were their own first betrayers, since a secret never let out of one&#x27;s bosom cannot be betrayed."
+   },
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: she was given by her father, with her consent, both being provoked by Samson leaving her, to his companion."
+    "prevalence": "single",
+    "summary": "Report that the father gave her away with her own consent, both being affronted at being left, and judging her not merely injured but thereby discharged and free to marry another."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the killing at Ashkelon was revenge, and whether it may be judged at all.",
+   "What occasion supplied thirty men wearing garments worth taking.",
+   "Whether the spoil was clothing or armour.",
+   "Who broke the marriage — the husband who left, or the family who gave the bride away."
+  ],
+  "outliers": [
+   "Keil alone defends the act by the sequence of the narrative, showing the anger followed rather than prompted the deed.",
+   "Ellicott alone refuses the moral question outright, referring it to the standpoint of the time.",
+   "Ellicott alone conjectures a festival as the occasion, reasoning from what men would have been wearing.",
+   "Ellicott reports a rendering that would revive the charge of adultery he had himself dismissed two verses earlier.",
+   "Clarke alone turns the betrayal into a maxim against confiding secrets at all."
+  ],
   "themes": [
-   "But Samson's wife was given to his companion, whom he had used as his friend",
-   "the unequal yoke ending in grief and betrayal",
-   "mine own familiar friend... hath lifted up his heel against me (Ps. 41:9)"
+   "Retribution",
+   "Marriage",
+   "Betrayal",
+   "Secrecy",
+   "Providence",
+   "Ethics"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-23",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.33
+   }
   }
  }
 }
