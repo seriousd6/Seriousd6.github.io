@@ -18742,6 +18742,49 @@
         "17"
       ],
       "note": "BARNES REASSIGNS THE SPEAKING PARTS OF THE CHAPTER — a structural reading I have not seen elsewhere. At v.16 he confesses the difficulty openly ('It is not easy to see the connexion... After all the attention which I have been able to give it, I am inclined to regard it as an admission of the apostle'). Then at v.17 he does something more drastic: 'So then faith cometh by hearing... This I take to be clearly the language of the objector.' On his reading the most famous sentence in the chapter is not Paul's own conclusion but the objector turning Isaiah back on Paul — if a report was necessary, men cannot be condemned for not obeying what never reached them. Every other commentator here (Calvin, Ellicott, Theodoret, Clarke) takes v.17 as the apostle's inference. ELLICOTT INDEPENDENTLY SEES THE SAME ROUGHNESS and repairs it differently, by interleaving: 'The argument does not run quite smoothly... He begins to introduce this second topic before he has quite done with the first. Romans 10:17 goes back to and connects logically with Romans 10:15, while Romans 10:16 anticipates Romans 10:19; 10:21.' Two commentators detecting one seam and cutting it in different places. Filed because a reader given only the majority reading would never know the verse was contested, and because the tags' prevalence field currently has no way to record that one voice assigns a verse to a different speaker altogether."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "25",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson residue at keys 4, 10, 16 -- a mod-6 class again, and a THIRD distinct residue value (0 at mark 9; 2 at philippians 3, 1corinthians 6 and hebrews 3; 4 here). Donor is NUMBERS 29: the feast of booths or tabernacles, its seven days with the first and last kept as sabbaths, the prescribed daily offerings, and the observation that the sacrifices varied in a progressive ratio of decrease every day (with a [Patrick] citation). NEW CONTENT MODE: the SAME 170-word block is repeated BYTE-IDENTICALLY at all three keys (md5 bd956046365f), rather than three different donor passages. This is the cleanest evidence yet that the defect has two independent halves. The arithmetic selection of target keys is stable across all five chapters observed; the content mapping is not, and now has four observed modes -- verse-aligned (1corinthians 6 / Acts 19; hebrews 3 / 2 Cor 5), walked forward across a chapter boundary (philippians 3 / 1 Cor 1-2), unordered (mark 9 / Mark 4), and constant replication (here). All 510 Jamieson words in this chapter are residue."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "25",
+      "verses": [
+        "11",
+        "12"
+      ],
+      "note": "Tiling decision worth recording. Verses 11-12 form a clear pericope by sense (the woman who intervenes in a fight) but only two voices comment substantively -- Calvin 160 words and Gill 168 -- while the 528-word span puts it out of reach of the thin exemption, which requires a source blob of 200 visible words or fewer. Writing it as its own entry produced 371 words and a FLOOR flag ('length written to the minimum rather than to the material'), which is the audit correctly reporting that the length was not earned. Rather than pad to clear the flag, I merged 11-12 with the just-weights section (13-16) into one 11-16 entry, giving 5 entries rather than 6. Recorded because the gap between the thin exemption's 200-word ceiling and the 350-word floor is a real hole: a span of 200-600 source words with few voices has no honest option except merging, and merging is only available when an adjacent pericope will take it."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "25",
+      "verses": [
+        "5"
+      ],
+      "note": "Calvin reads 'brethren' in the levirate law as kinsmen rather than actual brothers, and the argument is doctrinal rather than lexical: taking it literally would set the law against the incest prohibition, so that God would contradict himself; and he cites Boaz, who married Ruth as a near kinsman and not as a brother-in-law. Gill holds the literal sense and narrows it further from Maimonides -- brothers on the father's side only, since there is no brotherhood but on the father's side; Keil and Delitzsch keep the brother-in-law and note the verb is denominative, formed from the noun. Preserved as a debate because the two readings give different scopes to the whole law."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "25",
+      "verses": [
+        "12"
+      ],
+      "note": "Gill reports the rabbinic reading of 'cut off her hand' as a price set upon the hand rather than an amputation (Jarchi), with Aben Ezra comparing the law of retaliation, which the same writers commonly understand of monetary compensation. No other voice in this chapter addresses whether the penalty was ever executed literally, and Calvin argues the opposite way -- that the severity is the point and that the clause forbidding pity exists so judges should not be remiss in inflicting it. Both are in the prose. Noting it because the chapter is a rare case where the corpus preserves a live rabbinic mitigation of a hard text alongside a Reformation reading that insists on its harshness, and a synthesis that reported only one of them would misrepresent the witnesses."
     }
   ]
 }
