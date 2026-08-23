@@ -18010,6 +18010,66 @@
       "book": "1peter",
       "chapter": "3",
       "note": "Fidelity self-grade A for all six entries (1-4, 5-7, 8-12, 13-17, 18-20, 21-22). Expansion ratios 0.04 to 0.07 against a corpus median of 0.84 -- the source runs 69,987 words, the largest chapter landed in this run after galatians 3. Two spans required deliberate restraint rather than compression. At entry 1 the question whether ornament is forbidden absolutely has five distinct positions ranging from Wesley's flat prohibition to Barnes's defence of ornament in principle, and all five are given as their holders state them rather than averaged. At entry 18, the spirits in prison, the corpus openly disagrees and one voice reports Luther's admission that he did not know what the passage means; the entry says so instead of choosing. Gill is present but undeclared at entry 5 and Wesley at entry 13, in both cases because their blocks there only restate what a neighbour says at greater length. Cyril of Jerusalem residue is folded into Wesley at key 21 by the splitter, as in the three preceding chapters, and again could not be declared excluded; none of it was used."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "note": "Fidelity self-grade, all six entries. 1-3 649w (Gill, Henry, Clarke, Ellicott, Calvin, Wesley, Keil); 4-6 642w (Gill, Keil, Clarke, Ellicott, Calvin, Wesley); 7-9 601w (same six); 10-12 617w (Gill, Henry, Ellicott, Calvin, Wesley, Keil; Jamieson excluded); 13-16 579w (Gill, Wesley, Clarke, Ellicott, Calvin); 17-20 551w (Gill, Calvin, Clarke, Ellicott; Jamieson excluded, Keil silenced). Every claim traced to a head inside its own span. Chapter source 17,715 usable words over 20 contiguous keys, but see the separate note on the Ellicott k20 tail: roughly 1,000 of those words are navigation chrome and raw JavaScript, so the true usable figure is nearer 16,700."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "verses": [
+        "11",
+        "17"
+      ],
+      "note": "JAMIESON STRIDE — FIRST WHOLE-BOOK SCAN, AND IT IS CLEAN. Rather than measure one chapter, I scanned every Deuteronomy chapter in the cow tree for Jamieson keys. 33 chapters carry them, and in EVERY ONE the keys form a single residue class mod 6 with no exception: deut 28 has eleven keys (3,9,15,21,27,33,39,45,51,57,63), all congruent to 3; deut 4 has seven, all congruent to 4; deut 32 has seven, all congruent to 2. Sample sizes up to eleven, 33 chapters, zero violations. This is much stronger evidence than the one-chapter-at-a-time accumulation, and it matters for the re-indexing decision: within a chapter the target keys are a strict arithmetic progression of common difference 6, so the displacement is invertible per chapter once the source anchor of the first key is identified. deuteronomy 8 itself has keys 11 and 17, both congruent to 5, with residue from Leviticus (k11 on reserving holy things, k17 on the deputy high priest and the sin offering led outside the camp, citing Le 4:17). NOTE A COMPLICATION: the lag here is roughly 67 chapters (Deut 8 is canonical chapter 161, Lev 4 is 94), which does NOT fit the monotone-in-corpus-position model built from genesis 28 (lag 4), exodus 39 (13), numbers 1 (17), galatians 1 (39), revelation 19 (64) and revelation 9 (62). At canonical position 161 that model predicts a lag near 20, not 67. Either the drift is not monotone, or Deuteronomy's Jamieson tree carries its own offset. The stride finding is unaffected; the drift model needs revisiting before it is relied on."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "verses": [
+        "20"
+      ],
+      "note": "ELLICOTT END-OF-CHAPTER TAIL, WORST INSTANCE YET: RAW JAVASCRIPT IN THE BLOCK. The Ellicott block at k20 is 1037 words of which only about the first 50 are commentary. The remainder is the navigation tail already recorded at exodus 1 k22 (984w), revelation 19 k43 (985w) and luke 4 k44 (990w) — chapter links, copyright statement, terms of use, dead-link notice — but this time it continues into executable page script: a click-binding IIFE building study-desk URLs (_bindClick, getAttribute('data-vt'), '/study-desk.html?q1='), and an accordion initialiser operating on getElementById('navigation'). Previous measurements stopped at the copyright boilerplate; this one shows the scraper captured the page's inline <script> as well. That raises the priority of the single removable rule: it is not only inflating the sizer, it is putting JavaScript source into a commentary corpus. Detector suggestion: the string 'Copyright Statement These files are public domain' already marks the boundary in every instance measured, and everything after it can be dropped."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "ATTRIBUTED BORROWING, THE CLEAN COUNTERPART TO BARNES-COPIES-CLARKE. At v5 Keil glosses the verb for chastening as 'to admonish, chasten, educate; like paideuein' and then quotes, by name, 'It includes everything belonging to a proper education (Calvin)'. Calvin's own block on the same verse is present in this chapter and makes exactly that argument: the verb 'is taken by some in too restricted a sense for to chastise, whereas it comprehends the whole process of a proper education.' So we have the source and the borrower side by side in one chapter, three centuries and two confessions apart, with the debt openly acknowledged. This is the honest form of what galatians 1 showed dishonestly (Barnes reproducing Clarke's Galatia history with an identical citation string and no acknowledgment). Both cases bear on the same question already raised for the tags: the prevalence field counts Keil and Calvin here as two independent voices agreeing, when on this point they are one voice cited twice. If prevalence is ever down-weighted for transmission, attributed borrowing like this is the easiest case to detect — search for a voice name appearing inside another voice's block."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "verses": [
+        "11",
+        "15"
+      ],
+      "note": "CALVIN EDITOR'S APPARATUS, SIXTH CHAPTER RUNNING, AND THE WORST FORM SO FAR. The Calvin block at k11 has a translator's footnote spliced inline into the body, mid-sentence, in untranslated Latin and Greek: Calvin writes 'Moses will hereafter speak in his Song of the rebelliousness of this people,' and the sentence is then interrupted by 'LXX. autem pro eo (Jeshurun) substituerunt ho egapemenos ... fatente etiam Steucho, se nescire a quo verbo id nomen duci possit si Dilectum significat, -- C.'s own translation of the word is The beloved, waxen fat, and grown thick, kicked.' before resuming 'It was needful, then, that a restraint should be put...'. The same block also carries visibly damaged text: 'he warns them to themselves (for he uses this word for to from that impious ingratitude' has lost a phrase. Elsewhere in the chapter the apparatus appears as bare page references ('See note on Deuteronomy 11:2, p. 383') and as harmony cross-references ('The passage which I have interwoven from Deuteronomy 11'), which are Calvin's arrangement rather than corruption and should be kept. The footnote splices are not. Detector: a Latin clause beginning 'LXX. autem' or a dash followed by \"C.'s own translation\"."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "8",
+      "verses": [
+        "15"
+      ],
+      "note": "SUSPECTED REFERENCE ERROR, NOT ACTED ON. Ellicott at v15 lists the occurrences of challamish (flint) as 'Deuteronomy 32:13, Job 28:9, Psalms 114:8 (an allusion to this passage), and Isaiah 1:7'. The first three are right. Isaiah 1:7 is about the country being desolate and burned with fire; the flint verse in Isaiah is 50:7, 'I have set my face like a flint'. This looks like a digit dropped either by Ellicott or by the feed, but I have not checked a print edition and did not use the reference in the prose, so it is filed as suspected rather than confirmed. Worth including in any pass that verifies scripture citations inside commentary blocks against the text they claim to cite -- that check would be cheap and would catch this whole class."
     }
   ]
 }
