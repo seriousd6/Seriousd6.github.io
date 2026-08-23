@@ -18410,6 +18410,81 @@
         "12"
       ],
       "note": "TWO INDEPENDENT CONVERGENCES WORTH THE PREVALENCE FIELD'S ATTENTION, both benign. (a) At v5 Wesley and Ellicott independently notice the same fine point: the appeal is to the Thessalonians for the absence of flattery, because men could judge that, and to God for freedom from covetous design, because only God could; and where the matter is mixed, at v10, to both. Neither cites the other and the wording is quite different — this is genuine independent observation, unlike the Keil-to-Ellicott borrowing recorded at 1samuel 3. (b) At v10 Calvin and Ellicott give OPPOSITE explanations of the same qualifying clause, 'among you that believe': Calvin says it restricts the jury to those who judge uprightly, since the servants of Christ cannot escape calumny from a world that hates them; Ellicott says it names the place where, if anywhere, they might have been tempted to be lax. Both are defensible and the disagreement is invisible unless the two are set side by side. Filed as a reminder that the prevalence field needs to distinguish three things, not two: agreement by transmission, agreement by independent observation, and apparent agreement that conceals a real difference of reading."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "9",
+        "10",
+        "11",
+        "13",
+        "15",
+        "19"
+      ],
+      "note": "NEW DEFECT CLASS: an unrecognised voice label causing silent misattribution. Six Cyril of Jerusalem passages (1,171 words in four distinct texts, two of them duplicated across two keys each) are spliced onto the tails of other commentators' blocks at keys 9, 10, 11, 13, 15 and 19. The literal string 'Cyril of Jerusalem:' is present in the text, but synthesis_qa.split_voices does not recognise it as a label, so the words are credited to the host voice: Wesley four times (keys 9, 11, 13, 19), Barnes once (key 10), Calvin once (key 15). Wesley's apparent 1,550 words in this chapter are really about 768. Nothing catches this -- the host voice is genuine and on-verse, the appended text is genuine patristic commentary, and no length or coverage check fires. Had I used any of it I would have credited Wesley or Barnes with Cyril's homily. Detectable programmatically by grepping block bodies for 'Cyril of Jerusalem:' and any other VOICE-name-plus-colon that split_voices does not split on."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson residue at keys 2, 8, 14, 20 -- the SAME four-member mod-6 key set as philippians 3, and here the donor alignment is exact. Donor is ACTS 19, read VERSE-ALIGNED rather than merely walked forward: key 2 carries JFB on Acts 19:4-5 (the baptism at Ephesus, citing Ac 19:4 by name), key 8 his 'See on Ac 17:2,3' cross-reference which sits at Acts 19:8, key 14 the note on Sceva as 'head, possibly, of one of the twenty-four courses' at Acts 19:14, key 20 the magicians confessing their deluding practices at Acts 19:18-19. This is the strongest evidence yet on the mechanism: the mod-6 spacing is the SELECTION of which keys receive residue, while the content is keyed one-to-one to the donor chapter's same verse numbers. Every Jamieson block here is residue (89 words, none on 1 Cor 6), so the voice is excluded wherever it appears."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "12"
+      ],
+      "note": "Lightfoot is genuine and foreign in the same chapter, and here the residue walks in BOTH directions -- new relative to acts 12, where it was forward-only. On-verse at keys 3 and 4 (we shall judge angels; the five Jewish benches and pecuniary versus capital judgments). Residue at key 1, which carries 1 Cor 5:12-13 ('them that are without', 'therefore put away', the future tense of exaireite) from the PREVIOUS chapter; at key 5, which carries 1 Cor 7:5 ('Defraud ye not one the other') from the NEXT; and at key 12, which carries the Nicolaitans and meat offered to idols from 1 Cor 8. So one voice is bidirectionally displaced within a single chapter. Consequence for tagging: entry 1 (keys 1-4) both declares Lightfoot in voices, from keys 3-4, and contains residue it cannot exclude; entries 5 and 12 hold nothing but residue and exclude him."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "3",
+        "4"
+      ],
+      "note": "Lightfoot's genuine key-3 and key-4 blocks are the SOURCE the other commentators route through, and both Clarke and Barnes say so by name. Clarke reproduces Lightfoot on judging angels almost word for word ('He saith not, as he did before, The saints shall judge the angels, but we shall judge them'), and cites him again for the five Jewish benches; Barnes writes 'See Lightfoot' for the same point about the lowest orders of judges. Prose credits Lightfoot for the substance and notes Clarke adopts it, rather than reporting Clarke and Lightfoot as two agreeing voices -- the same false-corroboration trap as Henry reproducing Wesley at genesis 12, but here running in the opposite direction, from an obscure voice into two famous ones."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "11"
+      ],
+      "note": "Five-way split on whether washed/sanctified/justified is in inverted order, preserved as a debate: Henry calls it a rhetorical change of the natural order; Clarke denies flatly that anything is inverted and defends the sequence by deriving hagiazo from alpha-privative plus ge, 'separated from the earth' (the etymology is wrong, but it is his and it carries his argument); Barnes reads a genuine sequence of regeneration, progressive sanctification and pardon; Robertson dissolves the problem by the middle voice of apelousasthe, making the washing the readers' own baptismal act expressing two prior divine acts, and cites Findlay that the twin conceptions commonly appear in reverse order; Ellicott refuses to press the order at all."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "6",
+      "verses": [
+        "9",
+        "11"
+      ],
+      "note": "Calvin against Gill and Robertson on the word 'some' in 'such were some of you'. Gill and Robertson take it restrictively (not all of them, and not all of everything). Calvin argues the Greek indefinite is redundant ornament, not restriction, and that human nature universally contains the seed of all the vices listed, grounding it on the way the same apostle piles up crimes in Romans 1 and 3 without every reader being sanguinary. Recorded as a debate because the two readings give materially different doctrines of the catalogue: a list of what some Corinthians did, or a list of what all unrenewed men are liable to."
     }
   ]
 }
