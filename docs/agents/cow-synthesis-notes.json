@@ -23501,6 +23501,13 @@
         "8"
       ],
       "note": "Convergences the debates field cannot express. (1) FIVE voices independently attack the word 'charity' -- Ellicott on the Greek being absent from the heathen writers, Clarke on the self-contradiction the rendering produces at v3, Calvin quoting the English translation history and blaming the last revisers, Robertson calling the Latin wholly inadequate, and Henry warning that most men hear almsgiving. That is the widest agreement against the received text found anywhere in this corpus so far. (2) Wesley's note at v4 and Clarke's are nearly word for word -- 'suffers all the weakness, ignorance, errors, and infirmities of the children of God; all the malice and wickedness of the children of the world' -- another instance of the Wesley-to-Clarke dependence already logged in other chapters, here running so close that the prose attributes the phrasing to Clarke and reports Wesley as agreeing in almost the same terms. (3) Wesley and Barnes reach independently for the identical figure at v8, starlight lost in the light of noon, from different starting points."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "14",
+      "note": "NOT STARTED -- worker context exhausted; second consecutive declined pick. luke 14 sizes at 41,042 usable source words across 35 keys, which is OVER the loop's own ~40,000 whole-batch threshold: larger than titus 1 (38,959) and with more keys than mark 11 (33), the heaviest chapter this worker has completed. This is batch eleven for this session. The reasoning is the same as for romans 13 an hour ago: the risk is not a slow chapter but a degraded one landing under a self-graded A, which passes every automated gate and is the single failure mode the loop cannot detect downstream. Nothing is lost -- the picker holds no state and no partial work exists. NOTE FOR THE OWNER: this worker has now declined two consecutive picks and is effectively stalled; the queue is not moving on this side and rotation, not another poke, is what unblocks it. Also worth recording: --spread 40 rotated the offer from romans 13 to luke 14 rather than re-offering the head, so romans 13 remains unstarted and unclaimed as well."
     }
   ]
 }
