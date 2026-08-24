@@ -22107,6 +22107,63 @@
         "26"
       ],
       "note": "Independent convergences in 1john 2 worth recording. (1) At v20 Wesley and Robertson, working centuries apart, both suspect that the word 'chrism' was chosen in deliberate opposition to 'antichrist' just used in v18 -- neither cites the other. (2) At v26 Calvin makes driving away wolves as much a pastor's duty as gathering the flock, and Robertson says the same of the writer himself, that he is doing his part to rescue the sheep from the wolves as Paul did. (3) At v28 Henry notes that the apostle includes HIMSELF in 'that WE may have confidence' -- 'let not us be ashamed of you' -- and Clarke independently reads the shame as the minister's over converts who have apostatised and so are not his crown of rejoicing. (4) At v23 Barnes and Clarke each assemble an independent apparatus of manuscripts, versions and fathers to argue the italicised clause back into the text. These are the kind of agreements a synthesis surfaces and a single-commentary reading cannot, and they are accumulating: the same pattern was logged at acts 25 (Barnes and Clarke each turning the Roman legal rule into a patriotic tribute) and 1timothy 6 (Clarke citing Wesley by name)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "10",
+        "13"
+      ],
+      "note": "All three entries fidelity-self-graded A. Every declared voice is named in its own entry and every attribution traces to that voice's block; audit reports 0 ungroundable attributions across 3/3 verses. Jamieson, Fausset and Brown is in excluded_voices at entry 13 for the reason in the source-defect note. Tiled 1-9 | 10-12 | 13-16 rather than more finely because the real content of k16 is about 196 words once the chrome is discounted, not the 1199 the raw count suggests."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "17",
+      "verses": [
+        "16"
+      ],
+      "note": "Chapter-final chrome, and the prediction from the hebrews 2 note holds. In the hebrews 2 note I observed that the Ellicott chrome had landed on the LAST key of the chapter in two consecutive books and suggested checking each chapter's final Ellicott block for a CSS or menu signature. That is exactly what this chapter shows: Ellicott k16 is 1053 words of which only about 50 are real commentary, the remainder being StudyLight boilerplate, CSS rules, navigation menus AND raw JavaScript. Gill k16 carries the same defect in smaller form, ending with site navigation. Three consecutive chapters (2corinthians 2 k17, hebrews 2 k18, leviticus 17 k16), always the chapter's final key, now across both testaments and two different voices. This is a scrape artefact at chapter boundaries, not random noise, and a cheap guard is available: flag any block whose text contains a CSS brace pattern or a Next:/Previous: navigation string. Note the practical consequence for tiling, which is the reason this matters beyond tidiness: the raw word count for the last key badly overstates the writable material, so a tiler that budgets by raw counts will cut the final entry too fine."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "17",
+      "verses": [
+        "13"
+      ],
+      "note": "Jamieson donor-stream residue, fourth consecutive chapter. The Jamieson block at k13 (86 words) is commentary on Exodus 39, the formal inspection of the finished tabernacle and Moses blessing the workmen, pasted into the law of hunting and pouring out blood. Benign, not blocking: k13 also carries Gill and Ellicott, so the tiling is unaffected, and the voice is excluded at entry 13. DONOR-PROXIMITY TEST: I proposed in the hebrews 2 note that the donor tends to sit roughly two books earlier than the target in canonical order (Acts 27-28 into 2 Corinthians; 2 Corinthians 4 into Hebrews). This chapter does NOT fit that rule - Exodus is the book immediately before Leviticus, one book earlier, not two - though it is still adjacent and still earlier. The weaker claim that survives all four observations is only that the donor precedes the target and lies nearby in canonical order. I am recording the falsification rather than quietly restating the rule."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "8",
+        "9",
+        "14"
+      ],
+      "note": "Source truncation at exactly 200 words, affecting Keil and Delitzsch throughout this chapter and Gill twice. Eight of the 56 voice blocks here are exactly 200 words long, and they break mid-sentence: k1 ends at 'on the one hand to oppose an effectual barrier', k2 at 'after whom they go a whoring). This', k8 at 'the soul which gives life to the flesh) is in the'. Six of the eight are Keil. Two consequences worth recording. First, Keil's argument is routinely cut off before its conclusion, so a synthesiser reading only the block will attribute to him a position he may not have finished stating; I kept his attributions to what the surviving text actually says. Second, several Keil blocks here (k4, k9, k15) are largely just the KJV verse text reproduced rather than exposition, so his usable commentary in this chapter is far thinner than the word counts imply. The 200-word cap appears in other chapters too (Gill blocks hit it repeatedly in hebrews 2 and 2corinthians 2), so it looks like a corpus-wide extraction limit rather than anything peculiar to Leviticus."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "17",
+      "verses": [
+        "10"
+      ],
+      "note": "Two independent commentators reach for the same modern authority. On 'the life of the flesh is in the blood', Clarke mounts a long defence of the vitality of the blood, citing Harvey's demonstration of the circulation in 1628 and then rehearsing John Hunter's experimental proofs; Gill, quite separately and in his own idiom, cites 'our famous Dr. Harvey, who found out the circulation of the blood' and calls the blood the first that lives and the last that dies. A Puritan-era expositor and a Methodist commentator a century apart both answering a Levitical verse with seventeenth-century anatomy is the kind of convergence the debates field cannot express, so it is noted here. Also recorded: the Henry-to-Wesley dependence fires again at k10, where Wesley reproduces Henry's sentence 'Write that man undone, for ever undone, against whom God sets his face' almost verbatim. That is now the fifth chapter in which the dependence has been observed."
     }
   ]
 }
