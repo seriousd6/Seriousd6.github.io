@@ -22639,6 +22639,71 @@
       "book": "galatians",
       "chapter": "2",
       "note": "INCIDENT, MASTER IS RED, and the loop tool cannot land the fix. Galatians 2 (commit 4f99661d) landed WITHOUT the scripts/synthesis_qa.py change it depends on, so the full-corpus validate-synthesis.py has been failing on master since 12:49 UTC on 2026-08-24 with: FAIL A galatians 2: pericopes tile the chapter (verses covered by no entry: 29). CI validate.yml runs the full validator on every push, so master CI is red; three later chapters (exodus 17, numbers 2, joshua 5) landed on top of it. WHY IT WAS LOST: synthesis-loop.py finish does git reset --hard origin/master and then git add of only the chapter blobs plus the notebook, so a working-tree change under scripts/ is discarded, not committed. I compounded this by running my own git reset --hard origin/master between chapters as the loop instructions require. WHY THE FIX IS NEEDED: galatians 2 has 21 verses but the source carries a key 29 (a Luther fragment that overflowed his verse-20 block). The loop doc says to OMIT out-of-range scrape keys, but coverage_problems demanded an entry for every source key, and that rule only applies to chapters declaring pericope ranges -- so a ranged chapter with a phantom key has no legal output. THE FIX, in scripts/synthesis_qa.py, function coverage_problems: after the line 'want = {int(k) for k in source_keys}', insert 'required = want' followed by 'if want:' / 'body, n = set(), min(want)' / 'while n in want: body.add(n); n += 1' / 'required = body'; and change 'missing = sorted(want - set(seen))' to 'missing = sorted(required - set(seen))'. The extra check must keep measuring against the FULL want, or ten chapters that legitimately span an interior gap start failing -- that was verified by a full-corpus run. Verses run contiguously, so a source key past a gap cannot be a verse of the chapter. I did not push this by hand because the loop instructions forbid it. Someone with commit rights should apply it; until then master CI stays red."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "36",
+      "note": "FOLLOW-UP to my rejected note, after c55d2989 relaxed coverage_problems. The new rule requires only the contiguous run starting at the lowest key, so a tiling of just {'1':'1-9'} now PASSES for exodus 36, and {'1':'1-8'} now passes for nehemiah 7 (both verified). That is a real change, so the hard block I recorded is no longer mechanical. But I have NOT acted on it, because the two cases are not the case the rule was written for. The doc justifies the relaxation on the ground that a key past the first gap 'cannot be a verse of the chapter' -- true for 2 Chronicles 27 key 16 in a 9-verse chapter and Galatians 2 key 29 in a 21-verse chapter, where the stray key is beyond the real verse count. Exodus 36 has 38 verses and nehemiah 7 has 73; every key past the gap in both IS a real verse carrying real commentary. Landing vv1-9 alone would silently drop 29 genuine verses, and vv1-8 of nehemiah 7 would drop 65. Whether partial coverage of a sparse chapter is preferable to no coverage is an editorial question about the corpus, not a checker question, so it is the owner's to answer. If the answer is yes, both chapters become writable immediately and the first runs are well supplied (~4,800 and ~2,600 usable words); if no, coverage_problems may want to distinguish a key beyond the chapter's verse count from an interior gap."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "10",
+        "12",
+        "15"
+      ],
+      "note": "All six entries self-graded A for fidelity. Every attribution traced to the named voice's own block. One narrowing: Ellicott's k15 block is 1,161 words of which only 247 are commentary, so his contribution to entry 15 is limited to what survives -- the list of candidate referents with the evidence from Acts and Romans, the refusal to subject a jubilant utterance of praise to minute analysis, and the reading of the abruptness as a pause in dictation. Nothing was carried into that entry from the chrome. Note also that this chapter has ten voices, the widest set I have handled, including Chrysostom; entry 1 declares nine and each is used."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "Ellicott k15: 1,161 words of which only 247 are commentary; the rest is StudyLight chrome. Eighth consecutive chapter with the defect. Here the key is BOTH chapter-final and Ellicott-stream-final, so it is consistent with the corrected rule from joshua 5 (the last key of the voice's stream) and does not discriminate between that rule and the chapter-final one I wrongly generalised at numbers 2. Joshua 5 remains the case that settles it."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "9",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson is ENTIRELY donor residue for the THIRD chapter running: k3 and k9 are commentary on ROMANS 3 (the Psalmist on depravity from Ps 14 and 53, then 'from generals to particulars' on the members of the body), and k15 is on ROMANS 1:17 and 3:28 (the righteousness of God apart from the law). Excluded at entries 1, 8 and 15. Fourteenth chapter with donor residue overall. Two things are new. (1) The donor is the same book across all three blocks but the blocks are NOT duplicates of each other, unlike numbers 2 where one block was stamped three times -- so the residue can be a contiguous run of a foreign chapter's commentary, not just a repeated fragment. (2) With numbers 2 (Leviticus 13) and joshua 5 (Deuteronomy 2), the last three chapters have had Jamieson wholly absent and wholly replaced. If that rate holds, treating any Jamieson block as suspect until checked is now the cheaper default."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "9",
+      "verses": [
+        "10"
+      ],
+      "note": "A convergence the debates field records as three separate positions: Robertson, Ellicott and Clarke all independently trace the verb epichoregein to the chorus-leader of the Greek theatre who defrayed the cost of a chorus at his own expense. None cites another. They then diverge on what the etymology yields -- Robertson stops at 'to supply generally', Ellicott builds a transmission history (barely in the LXX, transferred by Paul apparently first to the divine bounty, taken up by Peter possibly from Paul's letters), and Clarke extracts 'furnishes one thing after another so that there is no want or chasm' and applies it to providence linking causes and effects. Same datum, three different uses; the tags can show the divergence but not the shared origin."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "15"
+      ],
+      "note": "Two clean head-on contradictions in one chapter, both between commentators who name the position they reject. (1) At v7 Henry and Ellicott make deliberation the virtue -- charity done with thought and design, the verb denoting a settled resolve and not a passing impulse -- while Barnes argues the opposite at length, that one should follow the first prompting of the heart because deliberation lets avarice in, defending it with 'man at best is too selfish to be likely to give too much'. (2) At v15 Barnes reports Whitby's reading (that the unspeakable gift is the Corinthians' charitable disposition) and dismisses it as falling far below the design of the passage, while Clarke argues his way to that same reading from the previous verse and endorses Whitby's paraphrase by name. Rare to have both sides of a cited authority visible within one chapter's catena."
     }
   ]
 }
