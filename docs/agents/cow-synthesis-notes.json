@@ -20985,6 +20985,56 @@
         "15"
       ],
       "note": "FIDELITY SELF-GRADE, genesis 20, six entries, 18 contiguous keys, 17277 usable source words, 8 voices. Word counts as landed: 1-2 640w 7 voices; 3-5 646w 7 voices (Jamieson residue excluded); 6-8 650w 6 voices; 9-11 649w 7 voices; 12-14 645w 6 voices; 15-18 644w 6 voices. Six entries rather than eight because the chapter is short: about 2900 source words per entry, against 4200 at colossians 3 and 5900 at 2peter 2. Every claim is traceable to a named block in data/commentary/cow/genesis/20.json. KEIL AND DELITZSCH was added to the build maps for this chapter, under grammatical-historical, with LAST set to the bare Keil; that is the second new voice added in two batches, after Victorinus of Pettau at revelation 11. No NAMED BUT NOT SOURCED lint fired in this chapter -- the first clean chapter in six on that count. The authorities cited inside blocks (Aben Ezra, Jarchi, Ben Melech, Knobel, Dathe, Professor Bush, Ebn Batrick, Dr Dodd, Ainsworth, Maimon) are none of them voices in ORDER, so all passed; but note that the risk is structural and will fire again the moment a block cites Lightfoot, Bede, Augustine or another name that is a voice elsewhere. COMPRESSION: five of six first drafts overshot, by 21, 22, 112, 56, 55 and 22 words respectively; mean overshoot about 8 percent, the lowest of any chapter this rotation apart from revelation 11, where none overshot. The 6-8 entry was the outlier at 112 over and needed two rounds of trimming plus one dropped sentence. One GHOST fired, on Gill at 9-11, whose three blocks there are bare connectives (Who might be in the king's palace; Continuing his discourse with him; In defence of himself, as well as he could) -- the same stub-block problem recorded at colossians 3 and 2peter 2, and answered the same way, by naming him as supplying only the connective. Running total across the rotation: 52 of 62 entries have needed compression."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "JAMIESON RESIDUE, TWENTY-THIRD CHAPTER, MOD-6 AGAIN. Three blocks at keys 3, 9, 15 -- offset 3 mod 6, constant step 6, twenty-third consecutive chapter in which the residue keys are congruent mod 6. Donor is EXODUS 28, the priestly garments: k3 the ephod of byssus with gold threads and the onyx shoulder-stones, k9 and k15 the breastplate, a span square and doubled, twelve stones in four rows, the lapidary's art learned in Egypt, a ring at each corner for the golden chains. K9 AND K15 ARE BYTE-IDENTICAL, 123 words each, md5 2c66095af233. That is the SECOND STALL IN TWO CHAPTERS (acts 1 k19==k25, md5 aab26b3863f2), which moves the stall from a curiosity to a recurring tail failure mode: where 2corinthians 4 k15 showed EXHAUSTION (five words, 'Commentary by David Brown', the JFB closing byline), these two show the donor pointer failing to advance and the same block being emitted twice. Both failures land on the LAST member of the residue class, consistent with a linear read-through of the donor running out of material. Practical consequence unchanged: Jamieson is excluded_voices on every entry whose range contains a residue key -- here entries 1-3, 8-13 and 14-16."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "2",
+      "verses": [
+        "14"
+      ],
+      "note": "ELLICOTT STUDYLIGHT CHAPTER-FINAL CHROME, FIFTEENTH CONFIRMATION -- and it again rides on ELLICOTT'S LAST BLOCK IN THE CHAPTER rather than on the chapter's last key. Ellicott's k14 block is 1113 words of which only the first ~120 are commentary (the third kind of meat offering is of firstfruits; these verses should properly come after v12; parched corn was and is a favourite article of food in the East). Everything after 'the same as those given with regard to the other two kinds' is chrome: a run of bare chapter links, a copyright and terms-of-use footer, then roughly 800 words of raw CSS from the site's sub-menu stylesheet, then a directory listing of the site's commentaries, concordances, dictionaries and encyclopedias. Ellicott has no block at k15 or k16, which is why the chrome landed at k14 -- the rule established at ruth 4 holds again and should now be treated as settled. Also worth recording: KEIL AND DELITZSCH BLOCKS IN THIS CHAPTER ARE HARD-CAPPED AT 200 WORDS (k2, k5, k6, k8, k13 all report exactly 200, k15 reports 56 because it is the tail). Each Keil block opens by reprinting the KJV text of two to five verses before any comment, so the 200-word cap can leave a block that is almost entirely verse text with one clause of commentary at the end -- k8 gives five full verses and then a single sentence. Budgeting Keil material by block length badly overstates what is actually there."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "7",
+        "11",
+        "13",
+        "14"
+      ],
+      "note": "NOTABLE MATERIAL. (1) 2:1 WESLEY CORRECTS THE ENGLISH BIBLE: 'A meal-offering (not meat-offering, an ancient false print, which has run thro' many editions of our bible).' He is alone in the chapter on this, and it is the cleanest instance yet of a witness treating the received English text as a printer's error rather than a translation choice. (2) 2:1 CLARKE DATES THE OFFERING BEFORE THE FALL: the minchah 'was the earliest oblation offered to the Supreme Being, and probably was in use before sin entered into the world, and consequently before bloody sacrifices, or piacular victims, had been ordained' -- and identifies it with Cain's offering, which turns the usual reading of Genesis 4 on its head, Cain's fault lying not in the kind of offering but elsewhere. (3) 2:4-7 THE THREE VESSELS ARE THE BEST ARCHAEOLOGICAL DISAGREEMENT IN THE CHAPTER, and it turns on one Arabic word. Clarke identifies the marchesheth with the shallow ta-jen used for frying; Keil denies the gridiron the LXX supplies, argues from a root meaning to boil that a boiling vessel is meant, and has ALREADY assigned the ta-jen to the machabath (the second vessel) as the equivalent of the LXX's tegannon. So Clarke and Keil give the same foreign word to different pans. Ellicott sides with Keil on function (a deep stew-pan, not a frying-pan) without engaging the etymology. Gill ignores travellers entirely and distinguishes the vessels from Maimonides by whether they have a lip: no lip means stiff paste, a lip means thin paste that flows. Four witnesses, three methods -- etymology, travel report, and rabbinic rule. (4) 2:11 CLARKE ON HONEY AND THE COLLEGE OF PHYSICIANS: honey is 'apt to gripe and prove purgative. On this latter account the College of Physicians have totally left it out of all medicinal preparations' -- and he connects it to the text by noting that the priests ATE these offerings as ordinary diet, and that the offerings of the poorer sort were the most numerous. A rare case of a witness giving a dietary-practical reason that actually depends on who consumed the offering. (5) 2:11 CALVIN'S METHOD ON DISPUTED POINTS, displayed unusually plainly: he lists four explanations of the honey ban with their authors (R. Salomon for sweet fruits, Philo for the impurity of the bee, Oleaster for the offensive smell, 'many commentators' for the Gentile sacrifices), says 'I scarcely dare to make any assertion as to this', then advances his own as merely 'more probable' -- that cooked honey turns sour and ferments the bread. He also passes by 'other more subtle allegories, in which I see no other use than to gratify curious ears.' (6) 2:13 ELLICOTT ON THE ARAB SALT COVENANT: 'When the Arabs make a covenant together, they put salt on the blade of a sword, from whence every one puts a little into his mouth. This constitutes them blood relations, and they remain faithful to each other even when in danger of life.' He derives from the same root the phrase 'salted with the salt of the palace' in Ezra, meaning bound by sacred obligations of fidelity to the king. (7) 2:13 HENRY ON THE LOGISTICS OF SALT: it was 'not brought by the offerers, but was provided at the public charge, as the wood was', and 'there was a chamber in the court of the temple called the chamber of salt, in which they laid it up.' (8) 2:14 CLARKE'S PICTURE OF GOD AT TABLE: because the tabernacle was his house with its golden table and shewbread, 'he represents himself as partaking with them of all the aliments that were in use, and even sitting down with the poor to a repast on parched corn.'"
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "14"
+      ],
+      "note": "FIDELITY SELF-GRADE, leviticus 2, FOUR entries, 16 contiguous keys, 14318 usable source words, 8 voices. Word counts as landed: 1-3 647w 7 voices (Jamieson excluded); 4-7 554w 5 voices; 8-13 643w 7 voices (Jamieson excluded); 14-16 546w 6 voices (Jamieson excluded). All four grade A on the recomputed metrics (MATTR-200 in 0.605-0.635, zip 0.441-0.456); the audit reports 0 defects of every category and 0 fidelity failures. FOUR ENTRIES RATHER THAN FIVE WAS A DELIBERATE TILING CHOICE. The obvious five-way split puts a boundary after v10, but keys 8, 9 and 10 carry only 531 usable source words between them -- Gill's k10 block is thirteen words -- so a 8-10 entry would have been starved and a 11-13 entry over-fed. Folding them into one 8-13 entry gives source budgets of 4183 / 3551 / 4498 / 2086, which is the flattest distribution available. The lesson generalises: in the Levitical legal chapters the source mass follows the CONTROVERSIAL verses (leaven, honey, salt) and not the verse count, so tiling should be budgeted on source words per candidate range, not on verses per entry. COMPRESSION: only ONE of four first drafts overshot the 650 window (8-13, by 15 words), fixed with three sentence-level substitutions in one pass. That is the lowest overshoot rate of any chapter this rotation; the cause is almost certainly that the four-entry tiling gave each entry more room than the usual six-entry split. GHOST CHECK CLEAN ON FIRST RUN -- no DECLARED-NOT-PRESENT, no PRESENT-NOT-DECLARED, no DECLARED-NOT-USED, no EXCLUDED-BUT-NAMED. That is the first chapter this rotation to pass the ghost check without a repair pass; the six preceding chapters each needed at least one voice given a real clause after firing DECLARED-NOT-USED. CROSS-VOICE DUPLICATION SCAN (12-word shingles, threshold 5) RETURNED NOTHING for this chapter -- unlike 2corinthians 4 (three pairs) and acts 1 (one pair). VOICE DISTRIBUTION IS UNEVEN BY DESIGN: entry 4-7 legitimately has only five voices because Calvin and Henry write nothing at keys 4-7 (both cover the whole chapter from a single k1 block), so their material on the vessels lives in entry 1-3's school summaries rather than in 4-7. Anyone comparing entry voice counts across this chapter should not read that as thinning."
     }
   ]
 }
