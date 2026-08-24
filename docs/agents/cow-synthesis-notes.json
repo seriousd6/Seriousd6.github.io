@@ -21966,6 +21966,19 @@
       "book": "acts",
       "chapter": "25",
       "note": "FIDELITY SELF-GRADE, acts 25, seven entries, 27 keys, 34057 usable source words, 11 voices. Every claim traced to a named block before writing; the voice roster for each span was checked against the source heads BEFORE drafting, per the procedure fix adopted after the ghost lints in 1corinthians 2, and no ghost or unsourced name appeared in any entry. Word counts: 1-5 649w (8 voices), 6-9 645w (7), 10-12 645w (7), 13-14 647w (8), 15-18 644w (7), 19-22 649w (7), 23-27 650w (8). All seven in the 350-650 window, none thin. Exclusions: Jamieson residue at k4/k10/k16/k22 (wrong chapter entirely, see the residue note); Cyril of Jerusalem silenced chapter-wide (single off-target block at k9). No school mismatch, no unknown heads, tiling complete over keys 1-27 with no gaps, duplicates or extras. Grade: high confidence on all seven. The chapter is unusually well served -- Barnes, Robertson and Gill all have blocks at every one of the 27 keys, Calvin at 13, and the one patristic block is on target -- so no entry rests on a thin base. The weakest is 15-18, where Gill's four blocks are bare connectives and the substance rests on Barnes, Clarke, Ellicott, Robertson and Calvin."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "rejected",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "24",
+        "48",
+        "60"
+      ],
+      "note": "BLOCKED, not attempted — same defect class as numbers 31, and an owner decision on the source file would unblock both. Offered by the picker at the 09:14Z poke; rejected after mechanical verification, tree left untouched.\n\nThe chapter has 22 source keys falling into nine contiguous runs: 1-8, 12, 19, 24, 33-34, 48, 54, 60, 68-73. Four of those runs (12, 24, 48, 60) are single keys whose ONLY voice is Jamieson residue. Because QA.coverage_problems forbids an entry from covering a verse absent from the source, the tiling must align to the runs, so those four keys must each become their own entry. I tested three tilings rather than asserting it: omitting the four keys fails with 'verses covered by no entry: [12, 24, 48, 60]'; absorbing k12 into the run before it fails with 'entries cover verses absent from the source: [9, 10, 11]'; only the shape that gives every run its own entry passes. So there is no legal tiling that avoids four content-free entries.\n\nWhat is in those four keys is commentary on 1 Chronicles 3 and 4 — David's sons born after the removal to Jerusalem, the dislocated genealogy from Jeconiah through Zerubbabel, Caleb called a Kenezite, and the potters of Netaim and Gedera — pasted into the register of the returned exiles. Writing 350-650 words on Nehemiah 7:12, 24, 48 and 60 from that material would be fabrication, and it is fabrication the pipeline cannot catch: the fidelity check only asks whether a declared voice appears somewhere in the chapter's catena, so declaring Jamieson on k12 and writing Chronicles genealogy onto a verse about the children of Elam would pass every gate while being entirely invented. I did not do it.\n\nRecorded so the chapter is not silently retried by the next worker. The corpus pre-flight I ran earlier this rotation lists sixteen chapters with this defect; a single decision on the Jamieson source file clears all of them."
     }
   ]
 }
