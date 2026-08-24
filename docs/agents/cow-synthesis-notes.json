@@ -22965,6 +22965,48 @@
         "16"
       ],
       "note": "Ellicott k16: 137 real words of 1,051; the rest StudyLight chrome. ELEVENTH consecutive chapter, chapter-final and stream-final together. Also worth recording for this chapter: Keil is truncated at exactly 200 words in NINE of sixteen keys (k1-k7, k10, k14), the heaviest ratio yet at over half the chapter, and several of those blocks reprint overlapping runs of verse text -- k3 and k4 in particular repeat substantially the same material with the commentary cut off the end. His 1,000 counted words in entry 1 hold perhaps 250 of exposition."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "judges",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JAMIESON RESIDUE, and a REFINEMENT to the single-pointer model. 3 blocks at keys 1, 7, 13 -- offset 1 mod 6, every sixth key as usual. Donor is DEUTERONOMY 33, the blessing of Moses: k1 = Deut 33:12 (Benjamin, dwell between his shoulders, Zion in Judah and Moriah in Benjamin), k7 = Deut 33:17 (firstling of the bullock, horns of unicorns, Ephraim and Manasseh), k13 = Deut 33:22 (Dan is a lion's whelp, he shall leap from Bashan). Again the donor is EARLIER in canonical order than the host -- five for five now. THE NEW DATUM: the host advances 6 keys per emission while the donor advances only 5 VERSES (33:12, 17, 22). That is not a verse-for-verse lockstep. It fits a pointer that advances ONE JFB BLOCK per emission, since JFB groups verses and Deut 33 has no block at every verse. This predicts the donor stride will look irregular in verse numbers but regular in blocks -- checkable against any chapter whose donor has been identified."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "judges",
+      "chapter": "17",
+      "verses": [
+        "10",
+        "13"
+      ],
+      "note": "SHARPEST DISAGREEMENT OF THE CHAPTER, and one of the cleanest in the corpus: Clarke and Ellicott read the same facts to opposite verdicts. On the wage, Clarke reckons ten shekels at about thirty shillings a year with board and calls it 'very good wages in those early times'; Ellicott reckons twenty-five shillings and writes 'thus the grandson of Moses became priest of an idolatrous worship at a salary of 25s. a year'. On Micah himself, Clarke holds he and his mother were 'perfectly sincere' and 'perfectly disinterested', that without their expense the place would have been destitute of the knowledge of the true God, and that he 'deserves more praise than blame'; he then names his own bias -- 'It cannot be considered any particular crime, should these notes be found at any time leaning to the other side.' Ellicott answers that we cannot know whether it was hypocrisy or ignorance, and that so far as Micah was sincere the Lord did him good by stripping him of his gorgeous instruments of superstition. A commentator explicitly declaring his own interpretive lean is rare enough to be worth flagging."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "judges",
+      "chapter": "17",
+      "verses": [
+        "5",
+        "7",
+        "10"
+      ],
+      "note": "Two structural observations. (1) Ellicott withholds and then drops the identification that reframes the chapter: the young Levite is a grandson of Moses, a fact the narrative itself only discloses in ch. 18. He uses it twice, once neutrally at v7 and once as an indictment at v10. (2) Keil's grammar note at v5 has narrative consequences the English hides: 'the man Micah' stands at the head absolutely, the verse is a circumstantial clause, and its verbs are pluperfects -- so the shrine, ephod, teraphim and officiating son already existed when the mother made her image. The KJV sequence implies the opposite order."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "judges",
+      "chapter": "17",
+      "note": "FIDELITY SELF-GRADE A, all four entries. Every clause traced to a named block in data/commentary/cow/judges/17.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at keys 1, 7 and 13. Word counts: 1-4 649, 5-6 650, 7-9 649, 10-13 650 (window 350-650). Source total 11,133 usable words across 13 keys, 5 real voices (Ellicott, Henry, Clarke, Keil, Gill) plus the Jamieson residue. Schools across the chapter: grammatical-historical, reformed, puritan-evangelical, wesleyan-arminian. One GHOST caught and fixed in the 7-9 entry (Keil squeezed out during trimming; repaired by adding his sourced point that Bethlehem was not a Levitical town, never by silencing)."
     }
   ]
 }
