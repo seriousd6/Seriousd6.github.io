@@ -22223,6 +22223,92 @@
         "9"
       ],
       "note": "The richest interpretive divergence I have met in this rotation, and it is worth recording in full because the entries could only carry part of it. On the seven heads the chapter's voices divide four ways: Robertson and Barnes take the seven mountains as plain Rome, the city known to its own poets as seven-hilled; Ellicott keeps Rome but treats the literalism as the vehicle of a broader symbol, the world-city sitting among the empires that have risen like mountains through history; Wesley narrows to the hills as they stood under the papacy, with the older palace hill deserted; Clarke denies the reference to Rome altogether on the ground that modern Rome does not stand on those hills, and takes mountains figuratively for seven great powers. On the seven kings the split is between kingdoms and men, and Ellicott's argument is the strongest on either side, resting on the verb: the word used of the five that fell is the one employed for political catastrophe, so applied to individuals it would be forced to mean merely that they died. Robertson holds for men and concedes candidly that the identification is one of the puzzles of the book. Recorded as debates on entry 9; the prose gives all four readings of the mountains and both of the kings without adjudicating between them."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "PHANTOM KEY BEYOND THE CHAPTER'S VERSE COUNT -- a new defect shape. Galatians 2 has 21 verses, but the source carries a key '29' holding a 169-word Martin Luther fragment that begins mid-sentence and plainly belongs to his verse-20 block (the brazen-serpent passage: turn our eyes wholly to the brazen serpent, Jesus Christ crucified). It carries the usual Luther scan damage -- righ- teousness broken across a line, ofN. conscience. This is NOT the 2 Chronicles 27 shape: ch27 key 16 holds FOREIGN-passage material (Henry on ch28), whereas this key holds material belonging to THIS chapter that simply overflowed its own key. Recommend a whole-tree scan for source keys greater than the chapter's verse count, split by whether the content is foreign (re-index) or overflow (merge back into the preceding key). The eleven entries tile 1-21 and the fragment is not drawn on."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "2",
+      "note": "TOOLING: the pericope tiling check contradicted the documented omit-out-of-range-keys rule. coverage_problems demanded an entry for every source key, so a chapter that declares pericope ranges could not omit a phantom key -- galatians 2 failed with 'verses covered by no entry: [29]' and had no legal output: covering 29 by extending the last range makes 22-28 'absent from the source', and a twelfth entry at key 29 would render a verse 29 in a 21-verse chapter to readers. Fixed narrowly: coverage now requires only the contiguous run of keys starting at the lowest, since verses run contiguously and a key past a gap cannot be a verse of the chapter. The 'extra' check still measures against the FULL source key set, so no chapter that used to pass has been narrowed -- verified by a full corpus run of validate-synthesis.py (an earlier shape of the fix broke 10 chapters that legitimately span an interior gap, which is what forced the split between required and want). Loop doc note added under the 2026-07-22 out-of-range entry."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "JAMIESON RESIDUE, offset 3 mod 6 -- the colossians 3 class. Four blocks at keys 3, 9, 15, 21. Source is ROMANS 7-8: k3 = Rom 7:17/20 (that work it / that principle of sin that still has its abode in me), k9 = Rom 7:22 (from the bottom of my heart, on delight vs consent), k15 = the CHAPTER SUMMARY prefixed to Romans 8 (In this surpassing chapter the several streams of the preceding argument meet and flow in one river of the water of life), k21 = Rom 8:6 (the mind of the flesh, the mind of the spirit). SECOND case of the walk landing on NON-VERSE front matter -- 1john 2 k24 hit a book preface (the essay on the authenticity of Philippians), this one hits a chapter summary. The BACKWARD RULE holds again: Galatians is served from Romans, earlier in the canon. Every identified case now points EARLIER in a canonically ordered corpus -- revelation from Colossians/1 Thessalonians, acts 25 from acts 4, 1timothy 6 from 1 Corinthians 14, 1john 2 from Ephesians 6, galatians 2 from Romans 7-8. Not one points forward. Model it as a single NEGATIVE global pointer into a concatenated tree; any fix must handle non-verse material in the stream (book prefaces, chapter summaries, end-of-book subscriptions, Review-of-book matter)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "PATRISTIC TILING -- seventh confirmation, and it RETIRES a standing recommendation. Both patristic blocks in this chapter sit at k1 and both are ON TARGET: Tertullian expounds Gal 2:1-2 directly (against Marcion's edited text -- how great the apostle's desire was to be approved by the very men his adversary wished understood as allies of Judaism), and John Chrysostom expounds the same verses from his Galatians commentary (the objection about running in vain, resolved by the revelation). Both men wrote works ON Galatians. Neither is silenced. This is the seventh confirmation of the hypothesis that patristic trees are tiled by SCRIPTURE CITATION rather than position, and it specifically retires the earlier recommendation of an expensive whole-tree re-fetch for Tertullian: he lands correctly where he cites. The remedy stands as two-stage -- (1) drop patristic blocks citing nothing in the chapter, (2) re-key the survivors by which verse they actually quote -- with the 1john 2 refinement that a citation-match pass must also detect homily apparatus (prefaces, blocks that are purely the lesson read aloud, cross-references to a previous day's homily)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "2",
+      "note": "SCAN AND CHROME, recurring shapes. (a) MARTIN LUTHER is the dominant voice here -- 20 blocks, 33,864 words, 38 percent of the chapter -- and carries heavy scan damage throughout: hyphenation broken across lines (righ- teousness, dissimu- lation, COMBfENTART), embedded page headers (COMMENTARY ON GALATIANS. 93 / 97 / 100 / 105 / 111 / 116 / 122 / 129 / 159 / 169 / 183) and running folios dropped mid-sentence, OCR substitutions (hve for live, Uveth for liveth, ndt for not, bour>d for bound, ise for the). (b) ALBERT BARNES chapter front matter -- ELEVENTH consecutive chapter. (c) ADAM CLARKE chapter argument -- NINTH consecutive. (d) CHARLES ELLICOTT navigation chrome at block tails (a bare 'Galatians Gal 1 Galatians Gal Galatians Gal 3' strip at k21). All four are stable, mechanical, and worth a single tree-wide pass rather than per-chapter handling."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "11",
+        "17"
+      ],
+      "note": "The chapter's substantive disagreements, all carried in the prose. (1) CHRONOLOGY: fourteen years from the visit just mentioned (Ellicott, decisive on 'I went up again') vs from the conversion (Clarke's chronologer); Gill makes it seventeen from the conversion, Luther eighteen. (2) WHICH JOURNEY: Calvin DENIES outright that this is the Acts 15 council journey, and his argument is from the rebuke that follows -- Peter would not have dissembled at Antioch if the decree had already been published, so the rebuke, and therefore this visit, must fall earlier. Ellicott, Robertson and Wesley all take it as the Council. (3) WHO IS CEPHAS: Gill and Clarke both report and both reject the ancient dodge that the man rebuked was one of the seventy, not the apostle; Clarke notes the controversy has run more than fifteen hundred years, and that the most learned Catholic writers and popes take it of Peter. (4) WHO IS ADDRESSED from v15: Calvin says the speech to Peter ENDS at v14 (what had Peter to do with this argument?), Barnes says it runs to v21. (5) HOW FAR THE UNION GOES at v20: Robertson says the separate personality is merged into that of Christ; Ellicott denies any actual union of the human and divine and calls the figure metaphor. (6) Luther holds Peter sinned NOT AT ALL in eating with the Gentiles and was reproved only for the dissembling."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "9",
+        "11",
+        "20",
+        "21"
+      ],
+      "note": "CONVERGENCES a synthesis surfaces and single-commentary reading cannot. (a) BARNABAS: five voices independently fasten on his defection -- Clarke calls him the gentle, loving-hearted Barnabas; Wesley says he was borne away as with a torrent; Robertson calls it a solemn moment when Paul saw the Jerusalem victory vanish; Ellicott traces the breach that soon separated the two apostles to this moment; Luther says Paul alone standeth to the truth, for he had lost Barnabas his companion. (b) ANTI-PAPAL INFERENCE from opposite ends: Henry argues from the PLACE (no colour of reason that Peter was bishop of Antioch, else Paul would not have withstood him in his own church), Calvin from the MANNER (an official act in the apostolic character -- another thunderbolt striking the papacy). (c) THE DIVISION OF SPHERES: Barnes, Luther and Calvin each independently raise the same objection (Paul preached in synagogues, Peter to Cornelius) and answer it three different ways -- main business, historical dispersal at the fall of Jerusalem, and a command addressed to the office in general. Calvin adds, drily, that probably not one of the twelve ever passed into Europe and that what is alleged of Peter may for aught he knows be fabulous. (d) TWO THIEVES: Gill denies a literal crucifixion because only the two thieves were crucified with him; Robertson notes the same compound verb is used in the Gospels of the robbers -- the same lexical fact reached from devotional and grammatical ends. (e) CLARKE'S ARGUMENT FROM EMBARRASSMENT at v21: had the apostles acted in concert to impose a forgery, the falling out of the parties would have discovered the cheat, so the quarrel itself is evidence of the truth of the Gospel."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "2",
+      "note": "FIDELITY SELF-GRADE, galatians 2, eleven entries, all A. Each entry was re-read against the union of its source keys after the last trim pass; every claim traces to a named witness in this chapter's catena, and the expansion is framing only. Word counts: 1-2 649 (11 voices, seven schools), 3-5 650 (8), 6-8 646 (8), 9-10 650 (8), 11-13 649 (9), 14 650 (8), 15-16 650 (9), 17-18 648 (8), 19 650 (8), 20 650 (9), 21 650 (8). All eleven inside the 350-650 window; no thin exemptions claimed. 88,977 usable source words across 22 keys, so every entry is a heavy compression rather than an expansion -- the fidelity risk here is omission, not invention, and the omissions are deliberate (Luther runs 33,864 words and is quoted only where he says something the others do not). NAMED-BUT-NOT-SOURCED avoidance forced three paraphrases: Robertson's source cites Lightfoot by name (written as 'one commentator'), Ellicott's v11 note names Origen, Chrysostom and Augustine as parties to the staged-scene theory (written as 'one Alexandrian', 'one of the Greek fathers', 'the bishop of Hippo'), and Calvin's v21 footnote quotes Chrysostom (written as 'one father'). Jerome, Marcion, Porphyry, Cerinthus, Gamaliel, Cicero and Simon Magus are not in the voice map and were written plainly. This is the twelfth-plus consecutive chapter where the lint has forced this dance; the owner decision on the named-but-not-sourced rule is badly overdue."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "2",
+      "note": "PERICOPE PLAN for galatians 2 (22 source keys, 88,977 usable words, 12 voices -- the largest chapter this loop has attempted). Eleven entries: 1-2 (the fourteen years and the private conference), 3-5 (Titus and the false brethren), 6-8 (them of repute and the division of spheres), 9-10 (pillars, the right hand, the poor), 11-13 (the Antioch rebuke), 14 (walking uprightly), 15-16 (justified by faith), 17-18 (minister of sin, building again), 19 (dead to the law), 20 (crucified with Christ), 21 (frustrating grace). Grouped where the witnesses treat the material as one movement, split where they do not -- v14, v19, v20 and v21 each keep their own entry because the catena is deepest there (v20 alone runs 8,196 words). Voice census: Luther 20 blocks/33,864w, Barnes 21/15,543, Calvin 20/11,708, Ellicott 21/7,880, Henry 4/5,897 (keys 1, 11, 15, 20), Clarke 20/4,357, Robertson 21/3,677, Gill 21/2,775, Wesley 20/1,636, Jamieson 4/635 (residue), Tertullian 1/350 (k1), John Chrysostom 1/300 (k1)."
     }
   ]
 }
