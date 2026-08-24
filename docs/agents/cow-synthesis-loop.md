@@ -82,6 +82,21 @@ canonical sweep.
 > Ahaz). Treat these as scrape corruption: **omit them** rather than synthesize a
 > nonexistent verse (documented in the ch27 commit). A source-vs-synthesis
 > key-diff will legitimately show ch27 as 9-vs-10; that is expected, not a defect.
+>
+> **Coverage and out-of-range keys (2026-08-24):** the pericope tiling check used
+> to demand an entry for EVERY source key, which contradicted the omit rule above
+> the moment a chapter declared ranges — Galatians 2 (21 verses) carries a key
+> `29` holding a Martin Luther fragment that overflowed his verse-20 block.
+> `synthesis_qa.coverage_problems` now requires only the contiguous run of keys
+> starting at the lowest one; anything past the first gap is advisory. Verses run
+> contiguously, so a key separated from the body by a gap cannot be a verse of
+> the chapter. The `extra` check still measures against the full source key set —
+> narrowing it there fails ten chapters that legitimately span an interior gap.
+>
+> **NB for loop workers:** `synthesis-loop.py finish` resets hard to
+> `origin/master` and commits only the chapter blobs plus the notebook, so a fix
+> under `scripts/` CANNOT ride along with a chapter. Land it separately, or it is
+> silently discarded — which is how galatians 2 shipped red on 2026-08-24.
 
 ## Running it unattended
 

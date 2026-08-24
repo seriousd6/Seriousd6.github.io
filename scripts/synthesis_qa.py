@@ -253,6 +253,22 @@ def coverage_problems(source_keys, entries):
     """
     problems, seen = [], {}
     want = {int(k) for k in source_keys}
+    # Out-of-range scrape keys are not verses of this chapter and must not be
+    # demanded. Verses run contiguously, so a source key separated from the body
+    # by a gap is scrape corruption -- the documented 2 Chronicles 27 key "16"
+    # in a 9-verse chapter, or the Galatians 2 key "29" holding a Luther fragment
+    # that overflowed his verse-20 block. The loop doc says to OMIT those keys;
+    # before this, coverage silently contradicted that instruction the moment a
+    # chapter declared pericope ranges. Only the run starting at the lowest key
+    # is required; anything past the first gap is advisory (see --coverage).
+    # NB the `extra` check below must keep measuring against the FULL key set:
+    # narrowing it there fails ten chapters that legitimately span an interior gap.
+    required = want
+    if want:
+        body, n = set(), min(want)
+        while n in want:
+            body.add(n); n += 1
+        required = body
     for key in sorted(entries, key=lambda k: int(k)):
         try:
             lo, hi = parse_range(key, entries[key])
@@ -268,7 +284,7 @@ def coverage_problems(source_keys, entries):
             if v in seen:
                 problems.append(f'verse {v} is covered twice (by {seen[v]} and {key})')
             seen[v] = key
-    missing = sorted(want - set(seen))
+    missing = sorted(required - set(seen))
     if missing:
         problems.append(f'verses covered by no entry: {missing[:12]}'
                         + ('…' if len(missing) > 12 else ''))
