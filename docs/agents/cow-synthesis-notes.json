@@ -22164,6 +22164,65 @@
         "10"
       ],
       "note": "Two independent commentators reach for the same modern authority. On 'the life of the flesh is in the blood', Clarke mounts a long defence of the vitality of the blood, citing Harvey's demonstration of the circulation in 1628 and then rehearsing John Hunter's experimental proofs; Gill, quite separately and in his own idiom, cites 'our famous Dr. Harvey, who found out the circulation of the blood' and calls the blood the first that lives and the last that dies. A Puritan-era expositor and a Methodist commentator a century apart both answering a Levitical verse with seventeenth-century anatomy is the kind of convergence the debates field cannot express, so it is noted here. Also recorded: the Henry-to-Wesley dependence fires again at k10, where Wesley reproduces Henry's sentence 'Write that man undone, for ever undone, against whom God sets his face' almost verbatim. That is now the fifth chapter in which the dependence has been observed."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "9",
+        "12",
+        "15"
+      ],
+      "note": "All six entries fidelity-self-graded A. Every declared voice is named in its own entry and every attribution traces to that voice's block; audit reports 0 ungroundable attributions across 6/6 verses. Jamieson, Fausset and Brown is in excluded_voices at entries 3, 9 and 15. Bede is declared only at entry 1, being present only at k1. A note on handling: this chapter's Protestant expositors (Gill, Barnes, Clarke, Henry) identify the harlot with the Church of Rome in polemical terms. I have attributed every such identification by name so that it reads as their position rather than the synthesis speaking, and have kept Ellicott's own caution against merely local interpretations, and Robertson's remark that other cities may follow Rome in their train, in the prose as the counterweight the sources themselves supply."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "17",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson donor-stream residue, FIFTH consecutive chapter. The Jamieson blocks at k4 (105 words), k10 (228) and k16 (182) are commentary on 1 Timothy 1 - the pure heart and good conscience and unfeigned faith, the law made for the lawless, Paul as chief of sinners and foremost sample of mercy - pasted into Revelation 17. Benign, not blocking: each residue key sits inside a run carrying real voices, so the tiling is unaffected. On the donor-proximity question: the donor again precedes the target in canonical order and is not far from it, which is the weak claim that survived the leviticus 17 falsification. Five donors are now on record - Exodus 22-23, Exodus 27-28, Numbers 3-4, Numbers 7, Acts 27-28, 2 Corinthians 4, Exodus 39, 1 Timothy 1 - and the only property common to all is that the donor precedes the target."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "17",
+      "verses": [
+        "18"
+      ],
+      "note": "Chapter-final chrome, FOURTH consecutive chapter, and the automated screen works. In the leviticus 17 note I proposed flagging any block containing a CSS brace pattern or a Next:/Previous: navigation string. I built that screen into this chapter's pre-flight and it caught Ellicott k18 automatically before any writing began: 1101 words of which only about 116 are real commentary, the chrome starting at character 651 and running through copyright text, CSS rules, navigation menus and raw JavaScript. Recommend the screen be made part of the standard pre-flight, since its practical value is not tidiness but tiling - the raw count for the chapter's last key overstated the writable material by roughly ten to one here, and a tiler budgeting by raw counts would have cut the final entry far too fine."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "8",
+        "18"
+      ],
+      "note": "Cyril of Jerusalem contamination is NOT confined to the Wesley stream. Previously recorded at 2corinthians 2 k15 and hebrews 2 k10/k12/k13, always inside John Wesley blocks, which led me to locate the fault in the Wesley source file. This chapter shows the same Catechetical Lectures material inside Wesley k2 and k8 AND inside ROBERTSON k18, which ends its genuine comment on the woman being the city of Rome and then continues with Cyril on the Son's eternal generation. That is seven instances across three books and now two different voices. Correcting my earlier inference: the injection is not specific to the Wesley file, so a cleanup keyed on Wesley alone would miss cases. Note also that Bede k1 in this chapter carries a third defect class again - unescaped HTML entities and OCR noise from a scanned edition, including running heads and corrupted words - so three distinct contamination mechanisms are present in one chapter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "17",
+      "verses": [
+        "9"
+      ],
+      "note": "The richest interpretive divergence I have met in this rotation, and it is worth recording in full because the entries could only carry part of it. On the seven heads the chapter's voices divide four ways: Robertson and Barnes take the seven mountains as plain Rome, the city known to its own poets as seven-hilled; Ellicott keeps Rome but treats the literalism as the vehicle of a broader symbol, the world-city sitting among the empires that have risen like mountains through history; Wesley narrows to the hills as they stood under the papacy, with the older palace hill deserted; Clarke denies the reference to Rome altogether on the ground that modern Rome does not stand on those hills, and takes mountains figuratively for seven great powers. On the seven kings the split is between kingdoms and men, and Ellicott's argument is the strongest on either side, resting on the verb: the word used of the five that fell is the one employed for political catastrophe, so applied to individuals it would be forced to mean merely that they died. Robertson holds for men and concedes candidly that the identification is one of the puzzles of the book. Recorded as debates on entry 9; the prose gives all four readings of the mountains and both of the kings without adjudicating between them."
     }
   ]
 }
