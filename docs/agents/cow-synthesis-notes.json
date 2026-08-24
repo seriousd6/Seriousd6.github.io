@@ -22041,6 +22041,72 @@
       "book": "1timothy",
       "chapter": "6",
       "note": "FIDELITY SELF-GRADE, 1timothy 6, eight entries, 21 keys, 39381 usable source words, 11 voices. Every claim traced to a named block before writing; span voice rosters checked against the source heads BEFORE drafting; no ghost, no unsourced name, no unknown head, no school mismatch. Word counts: 1-2 650w (9 voices), 3-5 650w (6), 6-8 646w (7), 9-10 650w (6), 11-12 649w (7), 13-16 650w (9), 17-19 650w (7), 20-21 650w (6). All eight in the 350-650 window, none thin; tiling complete over keys 1-21 with no gaps, duplicates or extras. Exclusions: Jamieson residue at k2/k8/k14 (wrong epistle entirely); Cyril of Jerusalem silenced in entries 3-5 and 20-21 only, and allowed in 13-16 where his block genuinely expounds the passage. Grade: high confidence on all eight. Barnes, Ellicott, Clarke, Robertson and Gill each have a block at every one of the 21 keys, so no entry rests on a thin base; the weakest support is 9-10 and 20-21, where only six voices survive and Henry is absent. Note for the record that entry 13-16 carries nine voices across four schools including two patristic ones, the widest spread of the chapter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JAMIESON RESIDUE, offset-0 class, and the walk runs off the end of a book into its successor's FRONT MATTER -- a shape not seen before. 4 blocks at keys 6, 12, 18, 24 (offset 0 mod 6, the 2peter 2 and galatians 6 class). Source: k6 = Eph 6:12 (the wrestling against principalities), k12 = Eph 6:17 (the helmet of salvation), k18 = Eph 6:22 (that ye might know our affairs), and then k24 = the PREFATORY ESSAY to Philippians on the internal and external evidence for its authenticity -- not a verse comment at all, but the book introduction. So the pointer walked Eph 6:12 -> 6:17 -> 6:22, reached the end of Ephesians, and stepped into the front matter of the next book. TWO CONSEQUENCES. (1) Any re-indexing fix must handle non-verse material in the stream: book introductions, prefaces and (by extension) the end-of-book subscriptions and reviews already logged at 1timothy 6 are all in the same concatenated sequence and will be hit by some offsets. (2) The offset-0 class now has two of its three identified cases pointing into EPHESIANS -- 2peter 2 was served from Ephesians 5, 1john 2 from Ephesians 6, adjacent chapters. galatians 6 (Romans 9-10) is the odd one out. That near-coincidence is worth checking: if offset 0 really lands in Ephesians 5-6, galatians 6 may have been mis-measured. Backward in canon again, as in every identified case."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "2",
+      "note": "PATRISTIC TILING HYPOTHESIS: sixth data point, and the first chapter where a father is on target throughout. Augustine of Hippo has 3 blocks (k12, k18, k27) and all three are from his Homilies on the First Epistle of John, so all three are on this text -- the citation rule predicts exactly this. Cyril of Jerusalem has 4 blocks and scores 2 or 3 of 4: k22 and k23 are squarely on target (his Catechetical Lectures expound 'who is the liar but he that denieth that Jesus is the Christ' and 'he that denieth the Son hath not the Father' almost verbatim), k19 on Simon Magus as the inventor of heresy is loosely apt at 'they went out from us', and k15 on walking spiritually is off target. His Lectures quote 1 John 2:22-23 heavily and 2:15 not at all. Six chapters, no counter-example. A REFINEMENT THE EARLIER CHAPTERS DID NOT SHOW: Augustine's k12 and k27 blocks are HOMILY APPARATUS rather than exposition -- k12 is the preface about hearing the Scriptures and guarding against heretics, k27 is the lesson read aloud in church, running from 2:27 straight into 3:8 and closing with 'ye remember, brethren, that yesterday's lesson was brought to a close at...'. So even an on-target patristic tree carries non-expository matter keyed to verses. A citation-match pass should therefore also detect and drop (a) homily prefaces, (b) blocks that are purely the lesson text, and (c) cross-references to a previous day's homily."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "29"
+      ],
+      "note": "NEW VOICE NAME AND A SECOND TRUNCATED TREE. (1) This chapter introduces the head 'Augustine of Hippo', which is NOT the same string as the 'Augustine' already in the loop's voice map. Both forms are now live in the corpus. The scratchpad build map and the survey dump list both had to be extended by hand, and a bare surname written in prose would bind to the wrong entry -- the same bare-surname trap already recorded for Cyril. Recommend the owner normalise patristic head strings across the tree, or at minimum publish the full list of distinct head strings so downstream tooling can key on it. (2) Charles Ellicott has exactly ONE block in this chapter, at k29, 1098 words. Ellicott's commentary covers 1 John in full, so 28 of 29 keys are missing. This is the second instance of the truncated-major-voice shape logged in two batches -- Calvin had one block of twenty-one keys in 1timothy 6. The coverage audit recommended there should be run: for any voice with a known complete commentary on a book, flag chapters where the block count is 1 or 2 against a key count above 10. Two independent instances in two chapters suggests this is common rather than incidental."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "2",
+      "verses": [
+        "2",
+        "5",
+        "15",
+        "18",
+        "23",
+        "27",
+        "29"
+      ],
+      "note": "Live disagreements in 1john 2, an unusually contested chapter. (1) The extent of the propitiation at v2: Gill restricts 'our sins' to believers who are Jews; Clarke calls any limitation 'a violent outrage against God and his word'; Wesley says as wide as sin extends, the propitiation extends also; and Calvin, remarkably, reports the scholastic sufficient-for-all, efficient-for-the-elect formula, ALLOWS IT TO BE TRUE, and then denies that it suits this passage, since the design was to make the benefit common to the whole Church. (2) Love perfected at v5: Barnes denies the verse says anything about sinless perfection; Wesley, from whom the opposite might be expected, glosses 'perfected' merely as 'perfectly known'. (3) The lust of the eyes at v16: Henry and Clarke take it as covetousness; Wesley takes it as the pleasures of imagination, the internal sense whereby we relish whatever is grand, new or beautiful, and moves covetousness to the third head. (4) The last hour at v18 gets five answers: the last hour of the apostolic age (Gill), the end of the Jewish polity (Henry), a perilous time rather than a chronological last, with the letter written before Jerusalem fell (Clarke), the last dispensation which may run many ages (Barnes), and openly undecided (Robertson). Calvin alone confronts the objection that the centuries since falsify the prophecy. (5) Whether the departure at v19 proves the perseverance of the saints: Barnes makes it a universal proof; Clarke dissents on 'they were not ALL of us', holding that some who went out were sincere. (6) The italicised clause at v23: Barnes and Clarke independently marshal manuscript evidence to restore it. (7) Needing no teacher at v27: Calvin, Clarke and Wesley all independently refuse the enthusiast reading and defend the outward ministry. (8) Whether 'he is righteous' at v29 is the Father or the Son: Gill says Christ; Ellicott and Calvin say the Father, both because the new birth is nowhere ascribed to the Son; Robertson says plainly God despite the adjective."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "1john",
+      "chapter": "2",
+      "note": "FIDELITY SELF-GRADE, 1john 2, ten entries, 29 keys, 62227 usable source words -- the largest chapter attempted in this loop, and over the 40k line, so it was the whole batch. Every claim traced to a named block before writing; span voice rosters checked against the source heads before drafting. Word counts: 1-2 649w (7 voices), 3-6 636w (7), 7-11 649w (7), 12-14 645w (8), 15-17 636w (7), 18-19 649w (9), 20-21 649w (7), 22-23 649w (7), 24-27 650w (8), 28-29 647w (8). All ten in the 350-650 window, none thin; tiling complete over keys 1-29 with no gaps, duplicates or extras; no school mismatch, no unknown head. Exclusions: Jamieson residue at k6/k12/k18/k24 (Ephesians 6 and the Philippians preface); Cyril of Jerusalem silenced in entry 15-17 only, and used in 18-19 and 22-23 where his blocks bear on the text. Two GHOST lints were caught and fixed during drafting, both John Gill in entries 20 and 22 -- Gill's blocks in this chapter are often bare connectives and are easy to overlook when the entry is dominated by Barnes and Calvin; the fix in both cases was to add a sourced Gill clause rather than to silence him. Grade: high confidence on all ten. Barnes, Calvin, Clarke, Robertson and Gill each have a block at every one of the 29 keys, so no entry rests on a thin base; the widest spread is 18-19 with nine voices across five schools, including both patristic voices."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "2",
+      "verses": [
+        "16",
+        "20",
+        "26"
+      ],
+      "note": "Independent convergences in 1john 2 worth recording. (1) At v20 Wesley and Robertson, working centuries apart, both suspect that the word 'chrism' was chosen in deliberate opposition to 'antichrist' just used in v18 -- neither cites the other. (2) At v26 Calvin makes driving away wolves as much a pastor's duty as gathering the flock, and Robertson says the same of the writer himself, that he is doing his part to rescue the sheep from the wolves as Paul did. (3) At v28 Henry notes that the apostle includes HIMSELF in 'that WE may have confidence' -- 'let not us be ashamed of you' -- and Clarke independently reads the shame as the minister's over converts who have apostatised and so are not his crown of rejoicing. (4) At v23 Barnes and Clarke each assemble an independent apparatus of manuscripts, versions and fathers to argue the italicised clause back into the text. These are the kind of agreements a synthesis surfaces and a single-commentary reading cannot, and they are accumulating: the same pattern was logged at acts 25 (Barnes and Clarke each turning the Roman legal rule into a patriotic tribute) and 1timothy 6 (Clarke citing Wesley by name)."
     }
   ]
 }
