@@ -1,589 +1,929 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the priest is the common father, as it were, of all the world, and so it is proper that he should care for all, even as God whom he serves; from praying for all men two advantages result — first, hatred toward those who are without is done away, for no one can feel hatred toward those for whom he prays; Paul exhorting that, first of all, supplications, prayers, intercessions, and thanksgivings be made for all men — the breadth of public prayer reaching to all mankind (Paul, as a chief duty of the church's worship, urging the offering of prayer of every kind: 'supplications,' humble requests in need, 'prayers,' general devotions, 'intercessions,' pleadings on others' behalf, and 'giving of thanks,' gratitude, and that 'for all men,' the whole human family, of every sort and condition, so the church's heart, like God's, is to be enlarged in compassionate prayer for all)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I exhort therefore, that, first of all",
-   "supplications, prayers, intercessions, and giving of thanks",
-   "be made for all men",
-   "the breadth of public prayer for all mankind"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: if in order to put an end to public wars, tumults, and battles the priest is exhorted to offer prayers for kings and governors, much more ought private individuals to do it; for there are three very grievous kinds of war — the public, when our soldiers are attacked by foreign armies, the civil, when even in peace we are at war with one another, and the war within, when the individual is at war with himself; Paul charging that prayer be made for kings and all in authority, that the church may lead a quiet and peaceable life in all godliness and honesty — the prayer for rulers and its aim of a peaceful, godly life (Paul singling out from 'all men' the special object of prayer for 'kings and all that are in authority,' even heathen persecutors, and naming the end: 'that we may lead a quiet and peaceable life,' free from disturbance and persecution, 'in all godliness and honesty,' that under the shelter of public peace the church might serve God in piety and live in honest seriousness)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for kings, and for all that are in authority",
-   "that we may lead a quiet and peaceable life",
-   "in all godliness and honesty",
-   "prayer for rulers, even heathen ones"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
+   "Matthew Henry",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Chrysostom",
+   "John Calvin",
+   "Adam Clarke",
    "John Gill",
-   "Albert Barnes"
+   "Robertson",
+   "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "Supplications for all men, for kings and all in authority",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: not only to live peaceably and quietly under the government (since that is the ordination of God) and to live soberly, righteously, and godly (which his grace teaches), but to pray for all sorts of men, and for those set in the highest place of government, even though enemies and persecutors, is good in itself and in the sight of an omniscient God; Paul declaring that this (prayer for all men and for rulers) is good and acceptable in the sight of God our Saviour — the divine approval of wide, compassionate prayer (Paul confirming the duty by its pleasing God: such large-hearted intercession, even for enemies and persecutors, is 'good,' right and excellent in itself, and 'acceptable in the sight of God our Saviour,' well-pleasing to him who sees the heart, the very title 'God our Saviour' hinting why, for the God who saves and desires the salvation of men delights in the prayers of his people for all)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for this is good and acceptable",
-   "in the sight of God our Saviour",
-   "the divine approval of wide prayer",
-   "well-pleasing to the God who saves"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Begin with the connective, since it carries the argument: the detailed injunctions are issued in pursuance of the charge already laid down, so the first detail is that the congregation pray. Take \"first of all\" as primacy of importance rather than order of service. Do not spend the hour dividing the four terms; give the working distinctions &mdash; a request for a particular benefit, the general word for prayer, a drawing near into free speech with God, and gratitude, the one form that outlasts the rest &mdash; and move on. Then supply the history the text assumes: Josephus on the refusal to pray for Roman magistrates, Tertullian's and Polycarp's testimony that the charge was kept, and the fact that the kings in view included Nero. Close on the last word, better rendered gravity or decorum than honesty."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Preach it as pastoral care rather than as polity. The one who leads is the common father of all the world, so his prayer must reach as far as God's own care. Draw the two effects out plainly: no one can hate the man he prays for, and those prayed for are made gentler by it &mdash; then press the hard case, what it meant for persecutors to learn that those they scourged were praying for them. Use the image of the father struck in the face by the child he carries and losing nothing of his affection. Answer the objection that \"all men\" means only the faithful by pointing at the kings, and note that the wider phrase stands first so the charge cannot be read as flattery of power."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the salvation God wills that all men should enjoy is not a mere possibility of salvation, or putting them in a salvable state, or an offer, or a proposal of sufficient means in his word, but a real, certain, and actual salvation which he has determined they shall have, sure from his own appointment and the provision of Christ; and 'all men' he takes to mean all sorts and conditions of men, the elect of every kind (Jews and Gentiles, high and low), not every individual without exception; Paul declaring that God will have all men to be saved and to come to the knowledge of the truth — the much-debated will of God for the salvation of all (Paul grounding the duty of praying for all men in God's own gracious will toward all); the great debate: the Reformed reading 'all men' as all kinds and conditions of men, the elect out of every sort, whom God effectually wills and saves; others (the Arminian and general reading) taking it of every individual without exception, God sincerely desiring and willing the salvation of all though all are not saved; both agreeing the verse grounds wide prayer in God's saving goodness, which reaches to men of every sort."
+    "summary": "Take the objection head on before expounding anything: why should we be anxious about the salvation of unbelievers? The command exists precisely to refuse that limit, and the congregation is to include those who at present have no connection with it. On the four words, do not manufacture precision the text does not supply; say honestly what can and cannot be distinguished, refuse the ceremonial construction some have put on them, and treat the heaping of terms as a goad to a duty at which we are all sluggish. Then handle the rulers concretely: these were enemies and persecutors, and the apostle enjoins prayer for them against a practice of cursing the nations and praying for none but one's own."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Open with what prayer is, not what it does: the vehemence of holy zeal and the ardour of divine love arising from a calm and undisturbed soul. Then set the fourfold division to work &mdash; averting evils, obtaining needed good, pleading for others, and thanks &mdash; and say plainly that this is a direction for the public assembly, offered for heathens as well as Christians and for enemies as well as friends. Bring in the ancient testimonies to show the practice was kept, from Cyprian before the proconsul to Tertullian's petition for a faithful senate and an obedient people. End on the magistrate: even the lowest of them does much good or much harm, which is reason enough to pray."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the scope the doctrine. See how far this religion was from being a sect, when it taught men to pray not only for those of their own way but for all. Note that no form is prescribed, only heads, so the liberty of prayer is left where the Spirit put it. On the rulers, grant frankly that they were heathens and persecutors, and say we must pray for them though we ourselves suffer under them. Then guard the petition from ambition: he does not say that we may grow rich or be in honour under them, but that we may lead a quiet and peaceable life &mdash; and remind the hearers that we cannot expect to be kept quiet unless we keep in all godliness and honesty."
    }
   ],
   "debates": [
    {
-    "question": "Whom does God 'will to be saved' — all kinds of men, or every individual?",
+    "question": "How are the four terms for prayer to be distinguished?",
     "sides": [
      {
-      "position": "All sorts and conditions of men — the elect out of every kind, Jew and Gentile, high and low, whom God effectually wills and actually saves",
+      "position": "Supplication is a request for a particular benefit and a species of the general word for prayer; intercession is a drawing near into free and familiar speech with God; thanksgiving is the form that alone survives in heaven",
       "holders": [
-       "Gill",
-       "Reformed"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Every individual without exception — God sincerely desires and wills the salvation of all, though all are not saved",
+      "position": "Four distinct acts: averting evils of every kind, obtaining the good things we need, pleading on behalf of others, and praising God for mercies received",
       "holders": [
-       "Arminian",
-       "general"
+       "Adam Clarke",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "The difference between three of the four is not thoroughly understood; the ceremonial construction put upon them is childish, and the heaping of words is meant to rouse a duty at which we are sluggish",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Supplication is imploring help in time of need, prayer any offering up of our desires, intercession prayer for others; true prayer is the vehemence of holy zeal from a calm soul",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is prayer for rulers enjoined, and what is its object?",
+    "sides": [
+     {
+      "position": "That their wise rule may secure peace, and that the constant repetition of such prayer may stamp out all thought of revolt among the worshippers themselves",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Because so much depends on their character and plans, and God has power to incline their hearts; the Christian asks only not to be harassed in the enjoyment of his religion",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Because their safety is our security, and government is appointed by God for the public good; the rulers are a sort of bulwark within which those enclosed are at peace",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Because it is for the public good that there be civil government, and we must pray for them though we ourselves suffer under them",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Because even the lowest country magistrate frequently does much good or much harm",
+      "holders": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Chrysostom",
+    "note": "Alone makes the one who leads the common father of all the world, and alone draws out the two effects of praying for enemies -- that hatred is done away, since no one can hate the man he prays for, and that those prayed for lose their ferocity; his image is a father struck in the face by the child he carries, who loses nothing of his affection."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone supplies the external testimony that the charge was kept, quoting the Apology of Tertullian on intercession for the emperors and Polycarp's charge to pray for persecutors and cruel enemies, and alone cites Josephus on the refusal to pray for Roman magistrates that helped bring on the war."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone argues from the exhortation itself against a prescribed liturgy, reasoning that a bishop who had written the petitions would have no occasion to urge his presbyters to offer them."
+   }
+  ],
   "themes": [
-   "who will have all men to be saved",
-   "and to come unto the knowledge of the truth",
-   "the will of God for the salvation of all",
-   "grounding wide prayer in God's saving goodness"
+   "I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men",
+   "For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  },
+  "excluded_voices": [
+   "Origen"
+  ]
+ },
+ "3": {
+  "voices": [
+   "Albert Barnes",
+   "Charles Ellicott",
+   "John Gill",
+   "Adam Clarke",
+   "Robertson",
+   "John Wesley"
+  ],
+  "range": "3-4",
+  "pericope_label": "God our Saviour will have all men to be saved",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "This is where the sermon has to be careful, and the care is exegetical before it is doctrinal. Show that the verb of willing is not the verb of decree: what God wills in that sense is done, so this must denote desire, or what accords with his nature, as he wills that sickness be relieved and the oppressed go free. Refuse the escape that \"all men\" means some of every rank, and give the reasons &mdash; the plain sense, the unrestricted prayer commanded above for which this is the stated ground, and the unrestricted reasons that follow. Then set the limit the other way: the will is not to save all, or all would be saved, but that all should be saved, redemption universal yet conditional. Note that the word for knowledge is the full one."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Preach the will as effectual or not at all. What is willed here is no bare possibility, no offer, no placing of men in a salvable state, but a real and actual salvation, determined beforehand and made certain by God's own appointment, by the covenant, and by the mission that accomplished it. Press the alternative: a will hanging on man's performance could leave every man unsaved, and any who were saved would be saved of him that willeth, which Scripture denies. Do not let the hearers rest in a divided will, antecedent and consequent. On the opening verse, keep the point that prayer for enemies and persecutors is good in itself and in the sight of one who does not see as man sees, and is accepted only through Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "State the doctrine without hedging and let the text carry it: he wills seriously that all be saved, not a part only and much less the smallest part, and therefore he wills that all be prayed for. Ask the congregation the blunt question &mdash; in the face of such a declaration, how can any Christian soul suppose that God ever unconditionally and eternally reprobated any man? Then close the door on fatalism from the other side: those who come to the knowledge of the truth are not compelled, for the word means acknowledgment, the receiving of the truth as the rule of faith and the model of the life. Finish with the practical edge: if we ask why more are not converted, the answer is that we do not pray enough."
+   }
+  ],
+  "debates": [
+   {
+    "question": "In what sense does God will that all men be saved?",
+    "sides": [
+     {
+      "position": "Not as an absolute decree, which would certainly take effect, but as a desire agreeable to his nature; he has made provision, uses proper means, and if men are not saved the fault is their own",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Not a will to save all, or all would be saved, but a will that all should be saved; through Christ's death all are rendered capable of salvation, redemption being universal yet conditional",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "A real, certain and actual salvation determined beforehand and secured by appointment, covenant and mission; not conditional, for then none might be saved",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "He wills the salvation of all seriously, not a part only and much less the smallest part; to suppose any man unconditionally and eternally reprobated is to know neither the nature of God nor the bowels of Christ",
+      "holders": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "God's wish and will so far as he can influence men",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by coming to the knowledge of the truth?",
+    "sides": [
+     {
+      "position": "The full knowledge, the intellectual apprehension of Christianity, guarded against those who would lead the people astray",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Acknowledgment: that the truth be proclaimed, and when heard, received as the rule of faith and the model of the life",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Not the merely theoretical but the practical and saving truth as revealed in the gospel",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The knowledge which brings salvation, and to which men are not compelled",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone sets out three grounds for refusing the reading that all men means some of every rank and class: that it strains the obvious sense, that the prayer commanded above is for mankind without exception and this is given as its reason, and that the reasons which follow are unlimited in the same way."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone turns the verse into a rebuke of the praying church rather than an argument about the decree, answering the question why more are not converted with the reply that we do not pray enough."
+   }
+  ],
+  "themes": [
+   "For this is good and acceptable in the sight of God our Saviour",
+   "Who will have all men to be saved, and to come unto the knowledge of the truth"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
  "5": {
   "voices": [
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Adam Clarke",
    "John Gill",
-   "Albert Barnes"
+   "Robertson",
+   "John Wesley"
   ],
+  "range": "5-7",
+  "pericope_label": "One God, one mediator, who gave himself a ransom for all",
   "schools": [
    {
-    "school": "reformed",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: this does not so much regard the unity of God with respect to himself or his divine essence (though that is a truth) as the unity of God with respect to men — that there is but one God, the Creator of all men and, in a providential way, the Saviour of all men, of Jews and Gentiles alike, which is a reason why all sorts should be prayed for; Paul declaring that there is one God and one Mediator between God and men, the man Christ Jesus — the one God and one Mediator the ground of universal prayer and salvation (Paul grounding the breadth of prayer and of God's saving will in two great unities: 'one God,' the one Creator and Lord of all men of every nation, and 'one mediator between God and men,' that Mediator 'the man Christ Jesus,' truly man and, as elsewhere, truly God, the one appointed go-between who alone bridges the gulf between the holy God and sinful men, so that, since there is but one God and one Mediator for all, the prayer and the gospel are to reach to all)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for there is one God",
-   "and one mediator between God and men",
-   "the man Christ Jesus",
-   "the one God and Mediator grounding universal prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Let the singulars do the preaching. One God is the regular Pauline premise for a universal gospel; one Mediator means there is not one for kings and another for their subjects, one for the rich and another for the poor, one for the master and another for the slave. Give the philology where it pays: the noun is a late word for a middle man, and the word for ransom joins a prefix of exchange to a preposition of substitution, so that both ideas stand in it. On the human nature named here, show why it is named &mdash; the Mediator must have taken it before he could suffer the death that was the ransom, and the mention silently refuses any teaching that the crucified was a phantom. On the testimony clause, say only that witness was to be borne in its own times."
+   },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Read the unity toward men rather than as a bare statement about the divine essence, or the verse will not carry the argument it is given to carry: one Creator, one providential preserver, one covenant God of Jew and Gentile alike, and therefore all sorts of men are to be prayed for. Then hold the ransom to its own logic. It was himself he gave, body and soul and life, into the hands of justice, in the room of those he redeemed. Grant the word \"all\" and deny that it means every individual, and give the reason plainly: were the price paid for each, each would be freed, or else God receives a sufficient satisfaction and still refuses to release the captive, which cannot be said of him."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: what the Mediator gave as a ransom for men is 'himself' — his body and his soul, which were both made an offering for sin, his life which is the result of their union, his whole human nature as in union with his divine person, so might truly be said to be himself; this he gave into the hands of men, of justice, and of death, and that voluntarily, which shows his great love; Paul declaring that Christ gave himself a ransom for all, to be testified in due time — the ransom of Christ given for all, the substance of the gospel testimony (Paul naming the work of the one Mediator: he 'gave himself,' his whole self body and soul in his sacrifice, as 'a ransom,' a price of redemption paid to deliver captives, 'for all,' read with v.4 either as all kinds of men, the ransom certainly redeeming the elect of every sort, or as a ransom of universal sufficiency offered to all, and adding that this great fact was 'to be testified in due time,' published as the gospel's central witness in God's appointed season, so the redeeming death of Christ is the truth to be proclaimed to all)."
+    "summary": "Build the argument in steps and let the hearers count them: there is one God; he is the Creator of all; he has made his kindness known to all; he wills all to be saved; and he has provided one Mediator, who gave himself a ransom for all. Then say the conclusion outright &mdash; as surely as God created all men, so surely Christ died for all. Explain the ransom as an exchange in kind, a like or an equal given, life for life, and add that the dignity of the person redeeming made it more than equivalent to all mankind. Use the one Mediator against every other, whether the saints of a corrupt Christendom or the many mediators the heathen set up to pacify their superior gods, and end on the duty of publishing the testimony to every nation."
    }
   ],
   "debates": [
    {
-    "question": "For whom did Christ give himself 'a ransom for all'?",
+    "question": "How far does the ransom for all extend?",
     "sides": [
      {
-      "position": "A ransom that actually redeems all kinds of men — the elect of every sort, certainly delivered",
+      "position": "To every human soul, for as surely as God created all men, so surely Christ died for all",
       "holders": [
-       "Gill",
-       "Reformed"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "A ransom of universal sufficiency, given and offered for all men without exception",
+      "position": "To all, and this is itself the proof that God desires the salvation of all; whatever it proves for any of the race it proves for all",
       "holders": [
-       "others"
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "To all mankind, the price of redemption, his life in exchange for their forfeited lives",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Not to every individual of mankind, for then all would be delivered and saved; otherwise the price is paid in vain, or God receives satisfaction and still refuses to free the captive",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Such a ransom as gives a like or an equal, life for life, and from the dignity of the person redeeming more than equivalent to all mankind",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the testimony borne in its own times?",
+    "sides": [
+     {
+      "position": "That the truth would be made known through all the world at the proper season, not having been fully known under the ancient dispensation",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "The death itself was the witness to the truth of the offering made in the eternal counsels",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The doctrine reserved for its own times, to be delivered in due course to every nation, as the versions and the older translators variously render it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "His own seasons, chosen by his own wisdom",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "A testimony in its due seasons, standing in apposition to the preceding clause without predicate or participle",
+      "holders": [
+       "Robertson"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone presses the one Mediator into a social argument, that there is not one for kings and another for their subjects, one for the rich and another for the poor, one for the master and another for the slave, so that a servant may know himself regarded with the same interest as his owner."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone canvasses the text of the testimony clause at length, setting the printed Vulgate beside the renderings of Macknight, Wakefield and Rosenmueller, reporting a single Cambridge manuscript that reads mystery for testimony, and tracing how the reading printed under one pope was corrected under the next."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone reads the mention of the Mediator's manhood as a silent refutation of the docetic error that the figure nailed to the cross was no man but a phantom."
+   }
+  ],
   "themes": [
-   "who gave himself a ransom for all",
-   "to be testified in due time",
-   "Christ's whole self the price of redemption",
-   "the gospel's central witness"
+   "For there is one God, and one mediator between God and men, the man Christ Jesus",
+   "Who gave himself a ransom for all, to be testified in due time",
+   "Whereunto I am ordained a preacher, and an apostle... a teacher of the Gentiles in faith and verity"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
- "7": {
+ "8": {
   "voices": [
+   "Albert Barnes",
+   "Chrysostom",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Matthew Henry",
+   "Robertson",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "range": "8",
+  "pericope_label": "That men pray everywhere, lifting up holy hands",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: Paul was ordained or appointed to be a preacher of the gospel from all eternity, separated or set apart to it in time, and put into the ministry by Christ himself — not a common or ordinary preacher of the word but an apostle, an extraordinary officer in the gospel church; Paul declaring that he was ordained a preacher and apostle, and a teacher of the Gentiles in faith and verity, affirming with an oath that he speaks the truth — Paul's commission to proclaim the ransom to the Gentiles (Paul, having named the universal ransom 'to be testified,' pointing to his own office as the very channel of that testimony: 'ordained a preacher,' a herald of the good news, 'an apostle,' a sent one of Christ, and specifically 'a teacher of the Gentiles,' the great instance of God's saving will reaching beyond the Jews, teaching them 'in faith and verity,' the true faith and truth, and so weighty his claim that he seals it with a solemn asseveration, 'I speak the truth in Christ, and lie not')."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I am ordained a preacher, and an apostle",
-   "I speak the truth in Christ, and lie not",
-   "a teacher of the Gentiles in faith and verity",
-   "the channel of the universal testimony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Note the change of verb: this is the milder word, a willingness rather than the active volition used of God's will above, and yet it carries apostolic authority. Explain \"in every place\" against the assumption it displaces, that prayer had a privileged address at the temple, and let the words to the woman of Samaria stand behind it. On the lifted hands, give the evidence from Jewish practice and from the early Christians, note that they stood to pray, and take \"holy\" as hands undefiled. Reserve the weight for the last two words. The one rendered doubting runs from reckoning through reasoning to debate; take it of clamorous contention, and make the application to those who dispute for victory and then cannot pray together."
+   },
    {
     "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "The congregation will hear a contradiction here, so answer it first: Christ said to shut the door and pray in secret, and this says pray everywhere. The command was against ostentation, not about geography &mdash; the same Lord who said let not the left hand know what the right does was regulating vainglory, not hands. Then draw the contrast the apostle intends, between Christian prayer and a worship confined to one temple in one city. Having freed the place, tighten the manner. Ask what holy hands are, and answer that they are not hands washed with water but hands free from covetousness and rapacity, hands employed in almsgiving. Take the last word as misgiving, and press the promise that what is asked believing is received."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Chrysostom: Christ said the hypocrites love to pray standing to be seen of men, and bade the believer enter his closet and shut the door; yet here Paul speaks of public prayer, requiring not the place only but inward purity, 'holy hands, without wrath and doubting'; Paul willing that men pray everywhere, lifting up holy hands, without wrath and doubting — the manner of acceptable prayer, purity, peace, and faith (Paul, returning to the duty of prayer, directing how and where it is offered: 'every where,' no longer confined as under the law to the temple but in all places, by 'men,' the public leading of prayer in the assembly belonging to them, and with the right disposition: 'lifting up holy hands,' the hands a symbol of a pure life, the worshipper clean from defiling sin, 'without wrath,' free from anger and malice toward others, and 'without doubting,' in the confidence of faith not wavering, so acceptable prayer requires a holy life, a loving heart, and a believing trust)."
+    "summary": "Make the authority plain at the outset: he speaks nothing but what he received, so his \"I will\" is a command. Then keep \"everywhere\" from becoming an abstraction. Trace how the Jews narrowed prayer to the temple, then to the land, then to the oratories built by rivers and the sea, and answer that all places belong to God's dominion; give them the maxim to carry home, that a praying heart will always find a praying place. On the lifted hands, take the gesture back to the laying of hands on the offering, so that the worshipper comes to the altar and lays his hand on the Lamb. Define wrath widely &mdash; against any creature, and every motion of the soul that is not according to love &mdash; and name the three hindrances: wrath, unholy action, and want of faith."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Keep this short and let it be a list the hearers can use. Under the gospel prayer is not confined to any one house of prayer: pray in the closet, in the family, at meals, on journeys, and in the assemblies, whether more public or private. Then the two conditions, and no more than two. Pray in charity, without wrath or malice or anger at any person; and pray in faith, without doubting and without disputing. The doctrine is that the extent of the duty matches the extent of the places &mdash; wherever men are, there prayer should be."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Explain why only men are named without letting the hearers draw more from the silence than it holds. It is public prayer in the church that is in view, and leading it belongs to the men; prayer in the house and the closet is as much the duty and the privilege of women. Set the phrase \"in every place\" against the rule that prayer offered away from Jerusalem had still to be directed toward it, and say that the hour the Lord spoke of has now come. Then carry the conditions over from the previous verse rather than inventing new ones: purity of heart and hand, without murmuring toward God, without wrath toward others, and in faith without distrust."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the word rendered doubting mean?",
+    "sides": [
+     {
+      "position": "Not doubt of one's own piety but clamorous disputing; the word runs from reckoning through reasoning to debate, and men heated for victory are unfit to pray together",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Disputing: the religious contentions among the believers themselves",
+      "holders": [
+       "Charles Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Reasonings, the controversy of faith and unbelief in the bosom of a distressed penitent or timid believer, in which unbelief ordinarily triumphs",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "That which is contrary to faith, one of the three grand hindrances to God's hearing our petitions",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Misgiving as to whether we shall be heard at all",
+      "holders": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How does praying everywhere agree with the command to pray in secret?",
+    "sides": [
+     {
+      "position": "The command in the Gospel was against ostentation, not about place; the apostle's object is to distinguish Christian from Jewish prayer, which was bound to one temple",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "The Jews supposed special efficacy at the temple and the heathen at their shrines; Christianity teaches that God may be worshipped in any place",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "It answers a Jewish rule that narrowed prayer to Jerusalem, then to the land, then to the oratories; all places belong to God's dominion, and a praying heart will find a praying place",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "It fulfils the word spoken to the woman of Samaria, that worship would be bound neither to that mountain nor to Jerusalem",
+      "holders": [
+       "Charles Ellicott",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone quotes at length the passage on anger as a hindrance to prayer -- the lark beaten back by the loud sighings of an eastern wind until the storm is over -- and alone applies the verse to theologians so heated by debate that they are in no state of mind to pray together."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone refers the lifted hands to the laying of hands on the head of a sin offering, so that the worshipper comes to the altar, lays his hand on the Lamb, and by faith offers it in his own behalf, and alone cites the rabbinic permission of ejaculatory prayer standing, sitting, leaning, lying, walking and at labour."
+   },
+   {
+    "voice": "Chrysostom",
+    "note": "Alone harmonises the command to pray everywhere with the command to enter the closet and shut the door, holding that the latter regulated ostentation and not location, since the same Lord who said let not the left hand know what the right does was not speaking of hands."
+   }
+  ],
   "themes": [
-   "I will therefore that men pray every where",
-   "lifting up holy hands",
-   "without wrath and doubting",
-   "acceptable prayer requiring purity, peace, and faith"
+   "I will therefore that men pray every where, lifting up holy hands, without wrath and doubting"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "9": {
   "voices": [
+   "Albert Barnes",
+   "Adam Clarke",
+   "Matthew Henry",
+   "Charles Ellicott",
+   "Robertson",
    "John Gill",
-   "Albert Barnes"
+   "John Wesley"
   ],
+  "range": "9-10",
+  "pericope_label": "Women in modest apparel, adorned with good works",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: in like manner as the men, the women are to join in public prayer (though not to lead or be the mouth of the church, which would be indecent), with purity of heart and hand, without murmuring and impatience toward God, without wrath and anger toward others, and in faith without doubting; and the apostle proceeds to direct their adorning; Paul directing that women adorn themselves in modest apparel, with shamefacedness and sobriety, not with elaborate hair, gold, pearls, or costly array — the modesty and sobriety that should mark Christian women's dress (Paul, turning from the men's prayer to the women, directing the manner of their adorning: clothed 'in modest apparel,' decent and becoming dress, and inwardly with 'shamefacedness,' a chaste modesty and reverence, and 'sobriety,' sound self-restraint, and not to glory in outward show, 'broided hair, or gold, or pearls, or costly array,' the extravagant ornament that betrays vanity, so the Christian woman's true ornament is inward and moral, not a gaudy display)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that women adorn themselves in modest apparel",
-   "with shamefacedness and sobriety",
-   "not with broided hair, or gold, or pearls, or costly array",
-   "the true ornament inward and moral, not gaudy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
+    "summary": "Establish the setting before the application, because everything turns on it: the verb of willing carries over from the previous verse and the subject is still the conduct of public worship. Then refuse to quarantine the principle there &mdash; if a manner of dress is fitting in the sanctuary it is fitting anywhere. Use the verb \"adorn\" to keep the sermon honest: ornament as such is not condemned, since the world God made is full of beauty and every flower shows he is not against decoration; the quarrel is over what true ornament is. Give the rule that can actually be applied: the line is crossed when the outward decoration occupies the mind more than the virtues of the heart. Add that negligence offends as truly as excess, and end where the text ends, on good works."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Gill: by what becometh women professing godliness is meant not any particular grace only (was it, the fear of God might be designed, as the Syriac renders it), nor the whole of internal religion only, nor the form of godliness or scheme of gospel truth, nor only outward holiness of life, but the whole of all this, all religion internal and external; and their true ornament is good works; Paul declaring that women professing godliness should adorn themselves with good works — the inward and moral ornament fitting for godly women (Paul, having forbidden the gaudy outward ornament, naming the true adorning that 'becometh women professing godliness,' those who make profession of the fear and worship of God: not jewels and costly array but 'good works,' deeds of piety, charity, and holiness, which are the fitting and beautiful ornament of a Christian woman, an adorning that answers to her profession and pleases God)."
+    "summary": "Read the list as a list and do not soften it: braided hair, gold, pearls, costly array are named expressly to women professing godliness, with no exception offered, and no art of man reconciles the wilful breach of an express command with the profession. Then give the reason underneath the rule, that where much time and cost go on decorating the person it is painful evidence of little within. Furnish the historical picture &mdash; the plain long garment and the mantle over it, modest as any dress ever devised, and the extravagance that overlaid them with gold and precious stones. Close with the Jewish matrons calling to the bride that she needed no paint, no antimony, no braided hair, being most beautiful herself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Preach it as a matter of the heart read off the habit: you may read the vanity of a person's mind in the gaudiness of the dress. Say that those who profess godliness should dress as becomes their profession, and put the alternative in terms of money &mdash; what is laid out on fine clothes could be laid out in works of piety and charity. Make good works the best ornament, and add that they are in the sight of God of great price. Two observations are worth drawing: that the rules of this religion reach not only to the person but to the dress and the deportment, and that women profess godliness as well as men, being baptized and thereby engaged to it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Set the order first: let the women pray likewise, not leading and not serving as the mouth of the church, which would be indecent, but joining in the public prayer with the same purity of heart and hand required of the men, without murmuring toward God and without distrust. Then take the dress as the subject it is, the clothing proper to the hour of prayer and to any part of public worship. On the profession named at the close, do not narrow it: it is not merely the fear of God, nor internal religion alone, nor the form of godliness, nor outward holiness of life, but the whole of religion inward and outward, professed at baptism and still held."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How strictly are the four ornaments forbidden?",
+    "sides": [
+     {
+      "position": "Expressly and by name to all women professing godliness, with no exception; no art of man can reconcile the wilful violation of an express command with the Christian profession",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Mere braiding is not forbidden, nor all use of gold or pearls; no exact rule can be given, since much depends on age, rank and means, and the line is passed when the outward occupies the mind more than the heart",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "What is forbidden is the conspicuous dress or showy ornament likely to draw attention and distract fellow worshippers at divine service",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Not the custom or costume of the country, which may be followed, but the extravagance of those who deck themselves to attract admiration and flattery",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the word rendered modest apparel denote?",
+    "sides": [
+     {
+      "position": "That which is well-ordered, decorous and becoming, rather than the opposite of immodest",
+      "holders": [
+       "Albert Barnes",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The outer garment itself, the mantle worn loose over the long robe of Greece and Rome; though a contrary opinion is reported, that no article of dress is meant at all but the government of the mind over dress and demeanour alike",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Neatness of apparel joined to modesty of demeanour, the inward shrinking from anything unbecoming",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone argues from the verb adorn that ornament as such is not condemned, since the world as God made it is full of beauty and every flower shows he is not opposed to decoration, and alone warns that a negligent appearance violates the precept as truly as excess does."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone reconstructs the garments themselves, the long robe girded beneath the breast and the mantle gathered at the shoulder, notes which openings marked an immodest wearer, and alone brings in Homer's Euphorbus, whose ringlets bound about with twine of gold and silver swept the dust."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone points beyond this passage to the graver reason for modest demeanour alleged elsewhere, because of the angels."
+   }
+  ],
   "themes": [
-   "which becometh women professing godliness",
-   "with good works",
-   "the true adorning of godly women",
-   "good works fitting her profession"
+   "In like manner also, that women adorn themselves in modest apparel, with shamefacedness and sobriety",
+   "But (which becometh women professing godliness) with good works"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "11": {
   "voices": [
-   "John Chrysostom",
-   "John Gill"
+   "Albert Barnes",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Gill",
+   "Robertson",
+   "Chrysostom",
+   "John Wesley"
   ],
+  "range": "11-15",
+  "pericope_label": "Let the woman learn in silence; Adam first formed; saved in childbearing",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Handle the two grounds separately, since they are two. On the first, deny that bare priority of existence is the argument &mdash; that would give every older person authority over a younger &mdash; and put the weight on the account itself, the woman formed from the man's side and given as a companion. On the second, be candid that the readings differ: whether the compounded verb marks Eve as thoroughly deceived over against the simple verb used of Adam is disputed, and the philology will not settle it. On the closing promise, lay the options out by name before choosing, and if you reject the reading that finds the Incarnation in \"the childbearing,\" say why; if you keep it, say what it does and does not prove. It is fair to admit, as one of this school does, that something here seems left unexpressed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Do not preach beyond the text into a general theory. The prohibition is of public teaching; say that, and refer the hearers to the fuller treatment elsewhere rather than settling the whole question here. Where a reason is wanted, give the sources their own words: the frame fitted for public exertion, the sentence of Genesis, and the ancient line that nature does not grant a woman rule &mdash; and let the hearer weigh them. On the last verse, take the promise as spoken to the sex generally, carried safe through the pain and danger the sentence entails and finally saved if they continue in loving faith and holy wisdom. Then shut a door: the act of bearing children entitles no one to anything, for pain neither purifies nor makes atonement, and faith, love and holiness are as needful for every daughter of Eve as for every son of Adam."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Divide the ban exactly where the text divides it. Teaching in the church is an act of authority and is withheld; teaching in the house is commanded, and the mother's doctrine is no more to be forsaken than the father's &mdash; Timothy himself is the standing example, taught by his mother and his grandmother. Then take the second reason at full strength and without the usual softenings: the man was not deceived at all, neither by the serpent, with whom he never spoke, nor by his wife; he knew what he took and what would follow, and ate out of fondness for her, that she might not die alone. Draw the conclusion that follows &mdash; sinning knowingly and against light, his sin was the greater &mdash; and let the last verse be comfort, not condition."
+   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: great modesty and great propriety the blessed Paul requires of women, and that not only with respect to their dress and appearance but even in their speech, saying 'let the woman learn in silence' — that is, let her not speak at all in the church, a rule he also gave the Corinthians, 'it is a shame for women to speak in the church'; Paul charging that the woman learn in silence with all subjection — the quiet, submissive learning enjoined upon women in the assembly (Paul, regulating order in public worship, directing that 'the woman' is to 'learn,' a positive thing, taught and growing, but 'in silence,' quietly, not taking the public teaching role in the assembly, and 'with all subjection,' in due submission to the order God has set and to those who teach, so her place in the gathered church is that of a quiet, teachable learner, not a public instructor)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let the woman learn in silence",
-   "with all subjection",
-   "quiet, submissive learning in the assembly",
-   "taught and growing, not a public instructor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: women may teach in private, in their own houses and families — they are to be teachers of good things, to bring up their children in the nurture and admonition of the Lord, and the law or doctrine of a mother is not to be forsaken any more than a father's instruction (Timothy himself profited much from the private teaching of his mother Eunice and grandmother Lois) — but Paul forbids the public teaching of and authority over men; Paul declaring that he suffers not a woman to teach nor to usurp authority over the man, but to be in silence — the restriction of public teaching and authority, with its sphere defined (Paul, defining the woman's role in the assembly, 'suffers not,' does not permit, a woman publicly 'to teach' the men in the church 'nor to usurp authority over the man,' to exercise rule and dominion over him, but bids her 'be in silence' in that public sphere; not a forbidding of all teaching whatever, women rightly teaching children and other women and in their own households, but specifically the public teaching of and ruling over men in the church)."
+    "prevalence": "single",
+    "summary": "Preach the silence as order rather than as a penalty, and preach it to the room you are standing in. The regulation runs on from dress to speech because both are about the same thing. Say plainly what the rule requires, and then say what has become of it: they talk here more than in the market or at the bath, as though they had come for recreation, and while our discourse strains against the noise nobody learns anything useful. Put the promise at the end where it belongs &mdash; that this quiet will adorn her more than any garments, and that so clothed she will be able to offer her prayers in the manner most becoming."
    }
   ],
   "debates": [
    {
-    "question": "What teaching by women does Paul forbid?",
+    "question": "How far does the prohibition of teaching reach?",
     "sides": [
      {
-      "position": "Specifically the public teaching of and exercise of authority over men in the gathered church — not all teaching whatever, since women rightly teach children and other women and instruct in their own households",
+      "position": "To public ministration and to questioning in the assembly; teaching those of one's own sex privately was afterwards expressly allowed and required of deaconesses",
       "holders": [
-       "Gill",
-       "the witnesses"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "To the church only; women may and should teach in their own houses and families, as Timothy was taught by his mother and grandmother",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "To anything, public or private, that belongs to man as his peculiar function, as the Roman law also removed women from every public office",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "To public teaching",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "To speaking at all in the church, even about spiritual things; this is order, this is modesty, and it adorns more than any garment",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Clearly to the public meeting; and yet all modern Christians allow women to teach classes, so something seems not to be expressed here that would make it clear",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense was Adam not deceived?",
+    "sides": [
+     {
+      "position": "Both sinned, but only Eve was deluded; the compounded verb conveys thoroughness, and weakness in the understanding is the very sinew of the argument",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "It is not certain that the compound means completely deceived in contrast to the simple verb used of Adam",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Not merely that he was not deceived first: he was never deceived at all, having never conversed with the serpent, and ate knowingly out of fondness for his wife, so that his sin was the greater",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "He was not deceived by the serpent nor first in the transgression; the woman opposed a feebler resistance, though in many traits she is the superior",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "The serpent deceived Eve; Eve did not deceive Adam but persuaded him. She is more easily deceived and more easily deceives",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Satan did not attempt the man; Adam took the fruit from his wife's hand knowing he transgressed, but she led the way, and in consequence was subjected to his rule",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by being saved in childbearing?",
+    "sides": [
+     {
+      "position": "That the way of salvation stands open to her on the same terms as to man even under the sentence of sorrow; the messianic reading is too refined, is not the plain sense of the word, and would not save her in any case",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Through the bringing forth of the Saviour: the sex is saved by the childbearing of a woman, since safety in travail plainly does not follow faith and holiness",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The article gives the clue: through THE childbearing, the Incarnation, by the relation in which woman stood to the Messiah",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "That translation is true, but the emphasis falls on childbearing as the peculiar function of woman with a dignity of its own; she is saved in it, not by means of it",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Women in general are carried safe through the pain and danger the sentence entails, and finally saved if they continue in loving faith and holy wisdom",
+      "holders": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone follows the rule forward into church history, noting that when the prohibition was renewed at Carthage the same council expressly permitted women to teach others of their own sex in private, and that the ability to instruct ignorant and rustic women was required as a qualification in deaconesses."
+   },
+   {
+    "voice": "Robertson",
+    "note": "Alone admits the difficulty out loud, observing that modern Christians allow women to teach classes and that something seems not to be expressed here that would make it all clear, and alone traces the disputed verb to a vernacular word for playing the master that survives in the modern Greek title of respect."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone sets the injunction beside Roman law, quoting the Pandects to the effect that women were precluded from all public offices and could not be judges, execute the function of magistrates, sue, plead or act as proxies."
+   },
+   {
+    "voice": "Albert Barnes",
+    "note": "Alone catalogues the competing readings of the closing promise by name -- the whole of the maternal calling, the training of children, preservation from the impostors and luxury of the age, and the messianic sense -- before choosing among them."
+   }
+  ],
   "themes": [
-   "I suffer not a woman to teach",
-   "nor to usurp authority over the man",
-   "but to be in silence",
-   "the public teaching of men restricted, household teaching affirmed"
+   "Let the woman learn in silence with all subjection",
+   "For Adam was first formed, then Eve",
+   "Notwithstanding she shall be saved in childbearing, if they continue in faith and charity and holiness with sobriety"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-24",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: Adam was first formed immediately by God, out of the dust of the earth, and the breath of life was breathed into him and he became a living soul (so wonderfully and fearfully was he made); after this he was put into the garden of Eden to dress it, and all the creatures were brought to him to give them names, and still a help meet or companion was not found for him — all this while Eve was not as yet formed, but afterward, and out of him; Paul grounding the order of the sexes in the fact that Adam was first formed, then Eve — the priority of Adam in creation as the ground of order (Paul giving the first reason for the woman's place: the order of creation itself, 'for Adam was first formed, then Eve,' Adam made first and Eve afterward and, as elsewhere, out of him and for him, so the headship belongs to the man not by mere custom but by God's own ordering in the creation, a priority that grounds the submission Paul has enjoined)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "for Adam was first formed",
-   "then Eve",
-   "the priority of Adam in creation",
-   "headship grounded in God's creation order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: there is no need to say with interpreters that Adam was not deceived first, or not immediately but by Eve, or that he is never said in Scripture to be deceived (as Melchizedek is never said to have father or mother); the apostle's positive assertion is to be taken without such limitations or qualifications — Adam was not deceived by the serpent, but the woman was; Paul observing that Adam was not deceived but the woman, being deceived, was in the transgression — the second reason drawn from Eve's being deceived in the fall (Paul giving a second ground for the order he enjoins, from the history of the fall: 'Adam was not deceived,' not the one the serpent beguiled, 'but the woman being deceived was in the transgression,' Eve being the one deceived by the serpent and first fell into the transgression; not to make the woman the worse sinner, for Adam sinned knowingly and bore the greater guilt as head, but to note that in the matter of being led astray the woman was deceived, a fact bearing on the order of teaching and rule)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "and Adam was not deceived",
-   "but the woman being deceived was in the transgression",
-   "the argument from Eve's deception in the fall",
-   "bearing on the order of teaching and rule"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: this is not meant of Eve (though she is doubtless saved, having a sense of her sin and shame for it, a revelation of the Messiah, and faith in him), but rather of any woman, particularly such as profess godliness, who shall be saved; Barnes: the promise is designed to alleviate the apparent severity of the preceding remarks; Paul declaring that she shall be saved in childbearing, if they continue in faith, charity, and holiness with sobriety — the comfort to women amid the curse, the much-debated 'saved in childbearing' (Paul, having spoken of the woman's part in the transgression, adding a word of comfort and hope); the debate on its meaning: whether the woman shall be brought safely through the perils of childbirth (a temporal preservation), or shall be saved eternally notwithstanding the sorrow of childbearing laid on her in the curse, or 'saved through THE childbearing,' the bringing forth of the Messiah the seed of the woman; and Paul adding the condition marking the truly saved, 'if they continue in faith and charity and holiness with sobriety,' so the woman's hope, like every believer's, is bound up with persevering faith and a holy life."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does 'she shall be saved in childbearing' mean?",
-    "sides": [
-     {
-      "position": "The godly woman shall be brought safely through the perils of childbirth — a temporal preservation",
-      "holders": [
-       "some"
-      ]
-     },
-     {
-      "position": "She shall be saved (eternally) notwithstanding the sorrow of childbearing laid on her in the curse",
-      "holders": [
-       "Gill",
-       "others"
-      ]
-     },
-     {
-      "position": "Saved through THE Childbearing — the bringing forth of the Messiah, the promised seed of the woman",
-      "holders": [
-       "others"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "notwithstanding she shall be saved in childbearing",
-   "if they continue in faith and charity and holiness with sobriety",
-   "the much-debated comfort amid the curse",
-   "the woman's hope bound up with persevering faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  }
 }

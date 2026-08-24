@@ -23297,6 +23297,114 @@
       "book": "mark",
       "chapter": "11",
       "note": "FIDELITY SELF-GRADE A, all five entries. Every clause traced to a named block in data/commentary/cow/mark/11.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at keys 4, 10 and 16. Word counts: 1-10 650, 11-14 649, 15-18 648, 19-26 650, 27-33 649 (window 350-650). Source total 21,867 usable words across 33 keys and 20 head forms, of which 19 are real voices. Pericopes were aligned to the CATENA HEADS at keys 1, 11, 15, 19 and 27 rather than to the narrative breaks I first chose: the patristic blocks sit only at those keys and often comment forward across the following verses, so a span that split them would have left those voices unsourced in the span their content belongs to. Schools across the chapter: latin-fathers, eastern-antiochene, reformed, puritan-evangelical, grammatical-historical, wesleyan-arminian. One care point: Bede's mountain-moving miracle is credited to Gregory of Neocaesarea, but Gregory has no block in this chapter, so he is described as a bishop of Pontus rather than named, to avoid a false NAMED BUT NOT SOURCED HERE."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "8",
+        "9",
+        "11"
+      ],
+      "note": "Self-graded A on all six entries. Every attribution traced to the named commentator's own block in data/commentary/cow/1timothy/2.json before writing. One correction made during checking: the block labelled Origen at key 2 is not Origen (see the source-defect note); its material is attributed to Clarke, whose it is."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "NEW DEFECT CLASS -- SPURIOUS VOICE manufactured by the splitter. At key 2 the voice order runs Clarke [157 words] -> 'Origen' [228] -> Ellicott. Clarke's block terminates mid-sentence on the dangling word 'So'; the 'Origen' block opens with the Greek of Contra Celsum viii on praying for kings and its English rendering, then continues in Clarke's own prose ('Indeed they prayed even for those by whom they were persecuted... If the state be not in safety, the individual cannot be secure...'). Clarke wrote 'So Origen: Euchometha...' and the splitter read the name as a new speaker, truncating Clarke and inventing a voice. This is more dangerous than donor residue: it produces a fidelity error in the OTHER direction -- one commentator's words attributed to another -- and it passes every gate, since the name is plausible and the text is on topic. Handled by listing 'Origen' in excluded_voices at entry 1 and attributing the material to Clarke."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson donor residue, TENTH consecutive chapter. Keys 6 (97 words) and 12 (23 words) both carry commentary on 1 CORINTHIANS 12 -- the body and its members, the eye as sole member -- with nothing on 1 Timothy 2. Jamieson's contribution to this chapter is zero, as in all nine previous instances. Excluded at entries 5 and 11."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "15"
+      ],
+      "note": "Scrape chrome, FIFTEENTH consecutive chapter. Ellicott at key 15 carries 493 real words out of 1,408; the remainder is site navigation, cross-reference stubs, footnote and copyright boilerplate. Key 15 is the last key of Ellicott's stream in this chapter, consistent with the corrected rule (last key of that VOICE's stream, not chapter-final key)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "6",
+        "14"
+      ],
+      "note": "200-word source truncation: Gill is cut at exactly 200 words in four keys. At key 4 the cut lands mid-argument, before he states what he takes 'all men' to mean, so his positive account of the extent of the term is unavailable and was not supplied by inference."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "note": "The most sharply divided passage handled so far. On 'who will have all men to be saved' the corpus splits four ways with no middle ground: Barnes (the verb denotes desire, not decree, else it would certainly take effect), Ellicott (not a will to save all but a will that all should be saved -- redemption universal yet conditional), Gill (an absolute and unconditional will securing a real and actual salvation, and 'all' therefore not every individual), and Clarke with Wesley (he wills it seriously for every man, and unconditional reprobation is unthinkable). Robertson stands slightly apart with a narrow gloss, 'God's wish and will in so far as he can influence men'. Handled as at revelation 17: every contested position attributed by name, no adjudication, the split carried in the debates field."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "note": "The second contested block. Two precise named disagreements worth keeping: (1) Ellicott holds the compounded verb at v14 conveys thoroughness -- Eve completely deceived over against the simple verb used of Adam, citing Bengel that weakness of understanding is the very sinew of the argument -- and Robertson answers directly that it is 'not certain' the compound carries that force. (2) On v15 Ellicott finds the Incarnation in the article, 'through THE childbearing'; Robertson allows the reading is true but holds the emphasis falls on childbearing as woman's own function, 'she will be saved in this function, not by means of it'. Barnes independently catalogues four readings by name and rejects the messianic one on three grounds -- too refined, not the plain sense of the word, and untrue in fact -- while Clarke holds precisely that rejected reading, following Macknight. Gill outruns everyone in the other direction, refusing the usual softening that Adam was merely not deceived FIRST and holding that he was never deceived at all."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "12"
+      ],
+      "note": "Robertson breaks frame in a way no other voice in the corpus has done so far: having explained the disputed verb, he writes that 'all modern Christians allow women to teach Sunday school classes' and that 'one feels somehow that something is not expressed here to make it all clear'. An admission of unresolved difficulty from inside a commentary, rather than a resolution -- recorded because the debates field can hold a position but not a confession of uncertainty."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "2",
+        "8"
+      ],
+      "note": "Convergences the debates field cannot express. Ellicott and Clarke independently quote the same passage of Tertullian's Apology on prayer for the emperors, Ellicott in English and Clarke in the Latin, each apparently from his own source; Clarke adds Cyprian before the proconsul and Ellicott adds Polycarp, so between them the practice is documented from three second- and third-century witnesses without either citing the other. Separately, Barnes and Chrysostom arrive at the same reading of 'without wrath' eleven centuries apart and by different routes -- Chrysostom from the pastoral side (let no one approach God in enmity), Barnes from the lexical (the word runs from reckoning through reasoning to debate), and both land on the man too heated by contention to pray."
     }
   ]
 }
