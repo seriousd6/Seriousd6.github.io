@@ -23587,6 +23587,13 @@
         "9"
       ],
       "note": "Robertson breaks frame at v9, as he did at 1 Corinthians 13:12 -- the second instance now recorded in this corpus of a commentator stepping out of exposition into personal anecdote. Having explained the rare verb for loving preeminence, he writes: 'Some forty years ago I wrote an article on Diotrephes for a denominational paper. The editor told me that twenty-five deacons stopped the paper to show their resentment against being personally attacked in the paper.' It is not exposition and was not used in the prose, but it is the sort of thing a reader of the tags might want to find, and it confirms that this voice's asides are a consistent feature rather than a one-off."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "2",
+      "note": "NOT STARTED -- third consecutive declined pick, and a size datum worth the owner's attention in its own right. 1peter 2 measures 70,426 usable source words across 25 keys: 1.76x the loop's ~40,000 whole-batch threshold and nearly double titus 1 (38,959), at roughly 2,800 words per key. That is severe for a FRESH worker, not merely for this one, and it suggests the repair queue's tail now holds chapters the current batch budget does not really describe -- 'over ~40,000 is the whole batch' gives no guidance at 70k, where even a full context window may not be enough for five or six grounded 650-word entries. Worth an explicit policy: either a hard ceiling above which a chapter is split across workers, or a documented multi-session procedure, since the current rule silently assumes one worker can always finish one chapter. THE LAST THREE PICKS OFFERED THIS WORKER: romans 13 (36,030), luke 14 (41,042), 1peter 2 (70,426) -- all still unstarted and unclaimed, since --spread rotates the offer rather than holding the head. This worker is stalled; rotation, not another poke, is what moves the queue."
     }
   ]
 }
