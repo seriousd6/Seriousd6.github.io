@@ -23244,6 +23244,59 @@
         "26"
       ],
       "note": "Two things worth recording from the reckoning. (1) FOUR different money values for the same gold, none of them agreeing: Ellicott reports three estimates from other scholars, nearly 320,000 pounds, 175,000 and 132,000; Keil computes 131,595 independently; Henry and Wesley both give a round 150,000; and Clarke refuses to name any figure until the whole system of talents, minas, drachms and shekels has been laid out, since authorities value the shekel at three shillings, two and sixpence, or two and fourpence. A good demonstration of how wide the uncertainty was and how differently the schools handle it. (2) Ellicott and Wesley independently draw a public-finance conclusion from the same contrast between freely given gold and assessed silver -- Wesley that either way may be taken for defraying public expenses provided nothing be done with partiality, Ellicott that compulsory payment toward the sanctuary was sanctioned at the very moment voluntary offering was most praised, so church rates are defensible in principle from both Testaments. Neither cites the other. Also note that Keil extracts an arithmetical proof from the text itself, that 603,550 men at half a shekel each, set against a hundred talents and 1,775 shekels, shows incidentally that a talent contained three thousand shekels -- and that Clarke reaches the same proof by the same route independently."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "11",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "JAMIESON RESIDUE: FIRST SAME-BOOK DONOR, and a second truncated fragment. 3 blocks at keys 4, 10, 16 -- offset 4 mod 6, the usual stride of 6. Donor is MARK 5: k4 = Mk 5:29 (the issue of blood stanched), k10 = Mk 5:34 (Go in peace, and the heading 'Jairus' Daughter Raised to Life'), k16 = Mk 5:39 (so brief her state of death as to be more like a short sleep). TWO NEW DATA. (1) Donor and host are in the SAME BOOK for the first time on record -- Mark 5 feeding Mark 11. That rules out any per-book pointer and is strong evidence for one global pointer across a concatenated tree, since a book-scoped mechanism could not produce it and a coincidence of this kind across six identified cases is implausible. The donor is still EARLIER than the host, six for six. (2) k16 begins mid-sentence with a lowercase 'so' -- the second truncated fragment after titus 1 k5. Two independent mid-block starts now support the byte-offset model over a block-index model. Donor stride here is 5 verses per 6 host keys (29, 34, 39), the same ratio observed in judges 17."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "11",
+      "verses": [
+        "9",
+        "10",
+        "14",
+        "23",
+        "24",
+        "26"
+      ],
+      "note": "PATRISTIC TILING, mixed result -- the most informative case so far because it contains both hits and misses in one chapter. Cyril of Jerusalem has 6 blocks here. ON TARGET: k14 quotes the cursing verse itself ('No more let any man eat fruit of thee') in his Eden typology -- an exact citation match, like the 1peter 5 kiss. k24 is about asking and the Father giving the Holy Spirit to them that ask, matching 'what things soever ye desire, when ye pray' -- a citation-adjacent match. k9/k10 take 'the name of the Lord' back to the proclamation before Moses, matching the Hosanna verse's 'he that cometh in the name of the Lord' -- a phrase match. OFF TARGET: k23 (proofs of life eternal) and k26 (how angels behold God) have no discernible link to the mountain-moving or forgiveness verses. So roughly four hits and two misses in a single chapter. This is the cleanest evidence yet that the matcher is keyed on SCRIPTURE PHRASES rather than topic: every hit shares a quoted phrase with its host verse, and both misses share only a general subject."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "11",
+      "note": "TWO NEW VOICES added to the build map for this chapter: 'Pseudo-Jerome' (5 blocks, at the catena heads 1, 11, 15, 19, 27) and 'Gloss' (1 block at k15, the Glossa Ordinaria). Both assigned to latin-fathers. Loop workers hitting a catena-style chapter should expect UNKNOWN HEAD on these until they are added to ORDER, LAST and SCH in build.py and to the separate NAMES list in dump.py. Also note a naming hazard resolved here: this chapter's head is the bare 'Chrysostom', not 'John Chrysostom'. Both map to the surname 'Chrysostom' and so TIE on length in the longest-label-first scan, and a tie is resolved by ORDER position, not by which form is actually present -- so one of them can silently steal the match and produce a false NAMED BUT NOT SOURCED HERE. I dropped the unused form from ORDER. A durable fix would be to prefer, among equal-length labels, the one whose full name appears in the chapter's heads."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "11",
+      "verses": [
+        "15",
+        "19",
+        "28"
+      ],
+      "note": "Three disagreements worth keeping. (1) HOW MANY CLEANSINGS: Augustine at v15 argues from John's different order that the temple was cleansed TWICE, John reporting the first and the other three the last; Calvin at v11 rejects that route and holds Mark simply inserted the one cleansing out of its proper place. Two harmonisations of the same data, incompatible, twelve centuries apart. (2) WAS THE QUESTION FAIR: at v28 Robertson says flatly that 'this question in all three Gospels was a perfectly legitimate one', against Theophylact, Bede and Henry, who all read it as a snare designed to force Jesus either to self-incriminate or to lose the people. (3) HOW FAR THE MOUNTAIN PROMISE REACHES: Bede reports the pagan objection that Christians have never moved a mountain and answers with a miracle story, where Chrysostom bounds the promise by the purpose of the sign (that Jerusalem should be destroyed) and Henry spiritualises it entirely into mountains of guilt and corruption."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "11",
+      "note": "FIDELITY SELF-GRADE A, all five entries. Every clause traced to a named block in data/commentary/cow/mark/11.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at keys 4, 10 and 16. Word counts: 1-10 650, 11-14 649, 15-18 648, 19-26 650, 27-33 649 (window 350-650). Source total 21,867 usable words across 33 keys and 20 head forms, of which 19 are real voices. Pericopes were aligned to the CATENA HEADS at keys 1, 11, 15, 19 and 27 rather than to the narrative breaks I first chose: the patristic blocks sit only at those keys and often comment forward across the following verses, so a span that split them would have left those voices unsourced in the span their content belongs to. Schools across the chapter: latin-fathers, eastern-antiochene, reformed, puritan-evangelical, grammatical-historical, wesleyan-arminian. One care point: Bede's mountain-moving miracle is credited to Gregory of Neocaesarea, but Gregory has no block in this chapter, so he is described as a bishop of Pontus rather than named, to avoid a false NAMED BUT NOT SOURCED HERE."
     }
   ]
 }
