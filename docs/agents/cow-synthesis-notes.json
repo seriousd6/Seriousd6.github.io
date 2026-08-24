@@ -22562,6 +22562,83 @@
         "13"
       ],
       "note": "Ellicott twice does something none of the other voices in this chapter attempt: he computes. At v12 he reckons the manna's whole span from Exodus 16 to Joshua 5 at thirty-nine years and eleven months, notes that it never fell on a Sabbath, and observes that it ceased on the weekday later marked by the resurrection, drawing the conclusion that the risen Christ takes the place of the bread from heaven. At v13 he compares and then contrasts the appearance with the bush at Horeb, resting the comparison on the shared command about the shoe and the contrast on bush-unconsumed against sword-drawn. Both are arguments from structure rather than from doctrine, and both are unique to him here."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "JAMIESON RESIDUE, offset 3 mod 6. Three blocks at keys 3, 9, 15. Source is 1 THESSALONIANS 5: k3 = 1Th 5:12 (know them which labour among you, and are over you, and admonish you), k9 = 1Th 5:16-18 (rejoice evermore, pray without ceasing), k15 = 1Th 5:21-22 (prove all things, hold fast that which is good). THE STRONGEST EVIDENCE YET FOR THE SINGLE-POINTER MODEL: revelation 11's residue was 1 Thess 4-5 and revelation 12's is 1 Thess 5:12-22, so CONSECUTIVE Revelation chapters draw CONSECUTIVE Thessalonians material -- the pointer is walking one stream forward while the Revelation chapter number advances. Note the in-chapter offset CHANGED between the two (revelation 6, 7 and 11 were offset 5 with keys 5/11/17; revelation 12 is offset 3 with keys 3/9/15), which is exactly what a global pointer advancing at a rate unrelated to the chapter key count produces. The backward rule still holds (Revelation served from Thessalonians, earlier in canon). Combined with the galatians 2 finding (Romans 7-8) and the earlier table, the offset classes 0-5 are now all attested and at least three of them are traceable to a continuous walk. Recommend modelling the whole defect as ONE negative global offset into a concatenated tree, and testing that model by predicting revelation 13's residue: it should be 1 Thessalonians 5 near its end, or the opening of 2 Thessalonians."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "12",
+      "verses": [
+        "6",
+        "14"
+      ],
+      "note": "CROSS-KEY DUPLICATE, and the first WITHIN a single chapter. Cyril of Jerusalem's Lecture 15.16 block (For this cause the Lord knowing the greatness of the adversary grants indulgence to the godly... let them which be in Judaea flee to the mountains... I do not despair of the Church's nerves) appears BYTE-IDENTICALLY at BOTH k6 and k14. This is the third instance of duplicated patristic blocks in this corpus -- Cyril's firmament lecture at revelation 6 k6 and revelation 7 k17 was cross-CHAPTER, Jamieson's acts 25 k4 and k10 was cross-key within a chapter, and this is cross-key within a chapter for a father. The pattern is now well enough attested to justify a cheap whole-tree pass: hash every voice block and report every hash occurring more than once, then decide per duplicate whether to drop the second copy or re-key it. It is excluded here at the entry covering k14 and drawn on at k6, where it is on target for the woman's flight into the wilderness."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "5",
+        "6",
+        "11"
+      ],
+      "note": "PATRISTIC TILING -- eighth confirmation, and the cleanest split so far between on-target and off-target blocks in ONE chapter. Victorinus of Pettau (k1) and Bede (k1) are both ON TARGET, each expounding Rev 12:1 directly; both wrote commentaries on the Apocalypse, and both land at the verse they expound. Cyril of Jerusalem, who did NOT write on Revelation, is mixed exactly as the citation-match hypothesis predicts: k5 is ON TARGET because his Lecture 12.18 argues from 'Thou shalt rule them with a rod of iron', the phrase in Rev 12:5; k6 is ON TARGET because Lecture 15.16 is about fleeing to the mountains in the great tribulation, matching the woman's flight in Rev 12:6; k11 is OFF TARGET, being Lecture 12.10 on the King coming to daughter Sion, with nothing of Rev 12:11 (overcame by the blood of the Lamb) -- though note it does mention sun and moon, which may be what the citation-matcher latched onto, since sun and moon are in Rev 12:1. That near-miss is instructive: a naive citation matcher keyed on shared imagery rather than verse reference will produce exactly this error. Recommend the matcher key on explicit scripture references and quoted phrases, not on shared vocabulary."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "5",
+        "7",
+        "9",
+        "14"
+      ],
+      "note": "The chapter's substantive disagreements, all carried in the prose. (1) WHO IS THE WOMAN: all agree she is the Church, but Victorinus makes her the ancient Church of fathers and prophets, Robertson the Church of the Old Testament without a sharp dividing line from the Christian society, Henry the Church simply, and Wesley reads the lights politically -- the sun the Christian world, the moon the Mahometans who carry it in their ensigns, the twelve stars the tribes. Robertson rules out the Virgin Mary outright from verse 17. (2) WHO IS THE MAN CHILD -- a five-way split: Christ himself (Ellicott, no doubt possible); Christ born of Mary (Robertson); Christ considered in his kingdom not his person (Wesley); Christ mystically in his members, NOT personally (Gill); and the dynasty of Christian emperors from Constantine's acknowledgment in 312 (Clarke). Barnes objects to the whole personal reading on the ground that it makes the Saviour the SON of the church where Scripture makes him her HUSBAND. (3) WHO IS MICHAEL -- four ways: Christ (Henry); a created angel, proved from Jude, since he durst not bring a railing accusation but said The Lord rebuke thee (Wesley); a name for whoever represents the cause of God, since Daniel calls him one of the chief princes (Ellicott); and the dynasty of Christian emperors again (Clarke). Barnes reports the Christ identification and rejects it: if Christ had been meant, it is inconceivable why he was not called by his own name. (4) ARE THE FOUR NAMES IN v9 LITERAL: Clarke says they cannot be, since the thing named has seven heads, ten horns and a tail; Barnes and Robertson read them of a person. (5) CAN THE PERIOD BE DATED: Ellicott says it is not to be sought by any effort to find a historical period; Wesley gives 947-1836 and a scheme of four periods; Clarke dates the empire's division to 17 January 395. (6) WHEN IS THE DRAGON CAST DOWN: already accomplished (Ellicott), about 395 (Clarke), still future (Robertson: it has not come yet, but it is coming)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "4",
+        "9",
+        "16"
+      ],
+      "note": "CONVERGENCES and singular finds. (a) PHARAOH AND HEROD: Ellicott arrives at the pair by typology (our minds go back to Pharaoh setting a watch for the offspring of Israel, and even more to Herod seeking the life of the infant Christ) and Robertson by grammar (a graphic imperfect, the dragon's challenge to a woman about to give birth: this is what Pharaoh did to Israel, and precisely so the devil tried to destroy the child Jesus) -- the same two tyrants reached from opposite disciplines. (b) CONSTANTINE'S EFFIGY: Gill and Clarke independently cite the same primary source, Constantine's own letter saying the dragon was removed from the government of the commonwealth by the providence of God and by my ministry, and the picture set over the palace gate with the cross above his head and a dragon transfixed beneath his feet. That is a rare case of two commentators reaching the same fourth-century document. (c) THE ABSORPTION OF THE BARBARIANS: Clarke quotes the reversal (the barbarians were rather swallowed up by the Romans than the Romans by the barbarians; the conquerors submitted to the religion of the conquered and affected even the laws, manners, language and very name of Romans, so the victors were lost among the vanquished) and Ellicott independently generalises it into a law (every devil-born flood of opinion sinks beneath the surface; the finest epic of the world might have for its motto, The earth helped the woman). (d) SINGULAR FINDS worth keeping: Clarke's derivation of the dragon from the Roman legionary standard, with ten draconarii to one aquilifer since a legion had ten cohorts, and the note that before Marius minotaurs, wolves, leopards, horses and boars were used indifferently at the commander's humour; Robertson's aside wondering whether dragon legends and the Chinese dragons are race memories of conflicts with the diplodocus; Robertson illustrating battles in the sky by modern airplanes rather than storm-clouds; Robertson finding the rare form of 'accuser' in a fourth-century magical papyrus free of Jewish or Christian influence; and Ellicott's reading of the flood as hostile PUBLIC OPINION -- the woman that cannot be destroyed by open persecution may be swept away by the temper of the mob, which occasioned as much suffering in early Christian days as the political authorities did."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "12",
+      "note": "FIDELITY SELF-GRADE, revelation 12, eight entries, all A. Each entry re-read against the union of its source keys after the final trim; every claim traces to a named witness in this chapter's catena and the expansion is framing only. Word counts: 1-2 650 (9 voices, five schools), 3-4 649 (6), 5-6 648 (7), 7-8 650 (7), 9 650 (6), 10-12 647 (7), 13-14 649 (6), 15-17 648 (5). All eight inside the 350-650 window; no thin exemptions. 41,798 usable source words across 17 keys, so every entry is a heavy compression. Pericope plan: 1-2 the woman, 3-4 the dragon, 5-6 the man child and the flight, 7-8 the war in heaven, 9 the naming of the dragon (kept alone because the four names are the chapter's crux), 10-12 the song and the woe, 13-14 the eagle's wings, 15-17 the flood and the remnant. Voice census: Barnes 17 blocks/14,068w, Clarke 17/7,456, Ellicott 17/6,458, Robertson 17/4,024, Henry 3/2,751 (keys 1, 7, 12), Wesley 14/2,698, Gill 17/2,407, Cyril of Jerusalem 4/769, Jamieson 3/563 (residue), Victorinus 1/303 (k1), Bede 1/301 (k1). Two exclusions declared: Cyril of Jerusalem at the entries covering k11 (off target) and k14 (byte-identical duplicate of k6). NAMED-BUT-NOT-SOURCED avoidance was needed once: the bare surname Cyril in the 5-6 entry tripped the lint against the separate 'Cyril' map entry for Cyril of Alexandria, and had to be written out in full. That is the thirteenth-plus consecutive chapter in which this lint has shaped the prose; the owner decision on the rule remains open."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "2",
+      "note": "INCIDENT, MASTER IS RED, and the loop tool cannot land the fix. Galatians 2 (commit 4f99661d) landed WITHOUT the scripts/synthesis_qa.py change it depends on, so the full-corpus validate-synthesis.py has been failing on master since 12:49 UTC on 2026-08-24 with: FAIL A galatians 2: pericopes tile the chapter (verses covered by no entry: 29). CI validate.yml runs the full validator on every push, so master CI is red; three later chapters (exodus 17, numbers 2, joshua 5) landed on top of it. WHY IT WAS LOST: synthesis-loop.py finish does git reset --hard origin/master and then git add of only the chapter blobs plus the notebook, so a working-tree change under scripts/ is discarded, not committed. I compounded this by running my own git reset --hard origin/master between chapters as the loop instructions require. WHY THE FIX IS NEEDED: galatians 2 has 21 verses but the source carries a key 29 (a Luther fragment that overflowed his verse-20 block). The loop doc says to OMIT out-of-range scrape keys, but coverage_problems demanded an entry for every source key, and that rule only applies to chapters declaring pericope ranges -- so a ranged chapter with a phantom key has no legal output. THE FIX, in scripts/synthesis_qa.py, function coverage_problems: after the line 'want = {int(k) for k in source_keys}', insert 'required = want' followed by 'if want:' / 'body, n = set(), min(want)' / 'while n in want: body.add(n); n += 1' / 'required = body'; and change 'missing = sorted(want - set(seen))' to 'missing = sorted(required - set(seen))'. The extra check must keep measuring against the FULL want, or ten chapters that legitimately span an interior gap start failing -- that was verified by a full-corpus run. Verses run contiguously, so a source key past a gap cannot be a verse of the chapter. I did not push this by hand because the loop instructions forbid it. Someone with commit rights should apply it; until then master CI stays red."
     }
   ]
 }
