@@ -23412,6 +23412,95 @@
       "book": "romans",
       "chapter": "13",
       "note": "NOT STARTED -- worker context exhausted, chapter left untouched at the queue head. romans 13 sizes at 36,030 usable source words across 14 keys, which is a whole-batch chapter (comparable to titus 1 at 38,959, which consumed an entire fresh context window). This worker has run ten batches in one session and has just completed mark 11, the heaviest chapter of the run (33 keys, 19 voices, five entries). Starting a 36k chapter in this state risks the one failure mode the loop cannot detect: degraded prose landing under a self-graded A, which is worse than no chapter at all, because the fidelity grade is the only quality signal downstream and a bad chapter passes every automated gate. The loop instruction says never start a chapter you cannot finish; the binding constraint here is worker context rather than the chapter's size, but the rule is the same. NOTHING IS LOST: the picker holds no state, so romans 13 remains at the queue head for the next worker, and no partial work exists to clean up. Recorded so the gap in the run is explained rather than silent."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "4",
+        "6",
+        "8",
+        "11",
+        "13"
+      ],
+      "note": "Self-graded A on all six entries. Every attribution traced to the named commentator's own block in data/commentary/cow/1corinthians/13.json before writing. One attribution deliberately NOT made: Barnes at v13 lists Clarke among the commentators who hold that faith and hope belong to this life only, but Clarke's own block at that verse rejects that position outright ('does the apostle say so? Or does any man inspired by God say so? I believe not'). The prose records both, and does not repeat Barnes's classification as though it were Clarke's view."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "1"
+      ],
+      "note": "BYLINE SPLIT -- a further sub-case of the splitter defect recorded at 1timothy 2. Gill's block at key 1 is cut off at 63 words, ending on the orphan word 'John'; the next block is labelled 'Lightfoot' and runs exactly 200 words. The source page carried the byline 'John Lightfoot'; the splitter read 'Lightfoot' as a new speaker and left 'John' glued to the tail of Gill's text. UNLIKE the 1timothy 2 'Origen' case, the voice here is REAL and correctly filed: the content is authentic Lightfoot on this very verse (Horae Hebraicae on the tongues of angels and on the cymbal). The damage is to GILL, whose block is truncated at 63 words where his blocks elsewhere in this chapter run to the usual 200 cap. So the two cases need different handling -- at 1 Timothy 2 the invented voice had to be excluded and its text reattributed; here the voice is declarable and it is the PRECEDING voice that must not be leaned on."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "Jamieson donor residue, ELEVENTH consecutive chapter, and the 'several non-duplicate blocks from one donor region' shape. Three blocks, all on Acts and its neighbourhood: key 1 (39 words) on Paul's nephew and the conspiracy, keys 7 (20 words) on the Roman and Greek names and the honorary title, and key 13 (21 words) on Antipatris, 'nearly forty miles from Jerusalem, on the way to Caesarea'. Contribution to 1 Corinthians 13: zero. Declared as excluded_voices at entries 1, 6 and 13, which are the entries whose spans carry the blocks."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "13"
+      ],
+      "note": "Scrape chrome, SIXTEENTH consecutive chapter, and a heavier flavour than usual. Ellicott's block at key 13 carries roughly 370 words of real comment followed by about 930 words of StudyLight page furniture -- copyright and terms lines, then a large block of raw CSS, then inline JavaScript. Key 13 is the last key of Ellicott's stream in this chapter, consistent with the corrected rule (last key of that VOICE's stream, not chapter-final key). Gill is additionally truncated at the 200-word cap in six keys (5, 6, 8, 9, 12, 13)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "1"
+      ],
+      "note": "SCHOOL MAPPING DECISION -- Lightfoot declared for the first time in this corpus. The acts 5 survey note of 2026-08-16 flagged the school mapping for John Lightfoot (with Barnes, Robertson, Chrysostom and Cyril of Jerusalem) as an open question that must be settled before writing, since the tags enum is fixed. A scan of all stamped tag files confirms Lightfoot has never appeared in a tags 'voices' list; the fifteen entries that name him at all put him in excluded_voices, because in every previous chapter his block was misfiled residue (romans 11 v10 is a Proverbs 27 note with running page headers; 1corinthians 14 v1 is his note on 1 Corinthians 13:2, filed one chapter late). Here the block is on this chapter's own first verse and is usable, so a slug had to be chosen. I mapped him to GRAMMATICAL-HISTORICAL rather than puritan-evangelical. Reason: the corpus slugs mix tradition with method, and what Lightfoot contributes is philological and historical background of exactly the kind Ellicott, Barnes and Robertson supply, so a reader following the school label gets what the label promises. The competing case is real and should be recorded -- Lightfoot was a Westminster divine and a contemporary of Henry's tradition, so puritan-evangelical is defensible on tradition; I rejected it because it would have merged his rabbinic notes into Henry's devotional summary, where they belong to a different kind of work. Reversible: one slug in one entry."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "11"
+      ],
+      "note": "The sharpest single split in the chapter, and Barnes is alone on one side of it. On 'through a glass, darkly' he argues the figure is looking THROUGH an imperfect transparent medium rather than at a reflection -- since reflection, he says, does not suit the obscurity Paul means -- and proposes the thin plates of transparent stone or mica the ancients set in windows, supporting it with Pliny and a long account of the accidental discovery of glass. Every other voice in the entry contradicts him, and two of them do so in terms that read as direct refutations: Clarke states that the word means a mirror and 'not a glass to look through; nor would such an image have suited with the apostle's design', and Ellicott says a pane of transparent stone or horn, 'such as was then used', would have required 'a quite different word'. Robertson adds that ancient mirrors were polished metal, those at Corinth being famous, and Wesley that the glass reflects only imperfect forms. Recorded in the debates field with Barnes's position stated at full strength rather than smoothed away."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "13"
+      ],
+      "note": "Whether faith and hope survive into the next state divides the chapter's close three ways, and the interest is that one commentator is misfiled by another. Calvin holds they do not: faith is set against sight elsewhere by the same apostle and lasts only while we are absent from the Lord, hope is nothing but perseverance in faith, so both belong to imperfection while love remains in perfection. Wesley states the same conclusion in twenty words. Barnes argues the contrary at length and lists Bloomfield, Doddridge, Macknight, Rosenmueller and CLARKE as holding the view he opposes -- but Clarke's own comment rejects that view as explicitly as Barnes does, asking whether the apostle or any inspired man says faith is lost in sight and hope in fruition and answering that faith and hope will enter eternal glory as necessarily as love. Ellicott is on the same side and adds that popular hymnody has taught almost the opposite of what was written. So the real division is Calvin and Wesley against Barnes, Clarke and Ellicott, and Barnes's own tally of the parties is wrong."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1corinthians",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "4",
+        "8"
+      ],
+      "note": "Convergences the debates field cannot express. (1) FIVE voices independently attack the word 'charity' -- Ellicott on the Greek being absent from the heathen writers, Clarke on the self-contradiction the rendering produces at v3, Calvin quoting the English translation history and blaming the last revisers, Robertson calling the Latin wholly inadequate, and Henry warning that most men hear almsgiving. That is the widest agreement against the received text found anywhere in this corpus so far. (2) Wesley's note at v4 and Clarke's are nearly word for word -- 'suffers all the weakness, ignorance, errors, and infirmities of the children of God; all the malice and wickedness of the children of the world' -- another instance of the Wesley-to-Clarke dependence already logged in other chapters, here running so close that the prose attributes the phrasing to Clarke and reports Wesley as agreeing in almost the same terms. (3) Wesley and Barnes reach independently for the identical figure at v8, starlight lost in the light of noon, from different starting points."
     }
   ]
 }
