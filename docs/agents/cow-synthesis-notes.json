@@ -21979,6 +21979,68 @@
         "60"
       ],
       "note": "BLOCKED, not attempted — same defect class as numbers 31, and an owner decision on the source file would unblock both. Offered by the picker at the 09:14Z poke; rejected after mechanical verification, tree left untouched.\n\nThe chapter has 22 source keys falling into nine contiguous runs: 1-8, 12, 19, 24, 33-34, 48, 54, 60, 68-73. Four of those runs (12, 24, 48, 60) are single keys whose ONLY voice is Jamieson residue. Because QA.coverage_problems forbids an entry from covering a verse absent from the source, the tiling must align to the runs, so those four keys must each become their own entry. I tested three tilings rather than asserting it: omitting the four keys fails with 'verses covered by no entry: [12, 24, 48, 60]'; absorbing k12 into the run before it fails with 'entries cover verses absent from the source: [9, 10, 11]'; only the shape that gives every run its own entry passes. So there is no legal tiling that avoids four content-free entries.\n\nWhat is in those four keys is commentary on 1 Chronicles 3 and 4 — David's sons born after the removal to Jerusalem, the dislocated genealogy from Jeconiah through Zerubbabel, Caleb called a Kenezite, and the potters of Netaim and Gedera — pasted into the register of the returned exiles. Writing 350-650 words on Nehemiah 7:12, 24, 48 and 60 from that material would be fabrication, and it is fabrication the pipeline cannot catch: the fidelity check only asks whether a declared voice appears somewhere in the chapter's catena, so declaring Jamieson on k12 and writing Chronicles genealogy onto a verse about the children of Elam would pass every gate while being entirely invented. I did not do it.\n\nRecorded so the chapter is not silently retried by the next worker. The corpus pre-flight I ran earlier this rotation lists sixteen chapters with this defect; a single decision on the Jamieson source file clears all of them."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "JAMIESON RESIDUE, offset-2 class, source identified. 3 blocks at keys 2, 8, 14 -- offset 2 mod 6, the genesis 16 class. Source here is 1 CORINTHIANS 14: k2 = 1Co 14:15-16 (prophesying, tongues, interpretation), k8 = 1Co 14:31 (ye can all prophesy one by one), k14 = 1Co 14:36 (came the word of God out from you?). Backward within canon again -- 1 Corinthians precedes 1 Timothy. THE BACKWARD RULE NOW HOLDS FOR EVERY IDENTIFIED CASE: revelation 6 and 7 served from Colossians and 1 Thessalonians; acts 25 served from acts 4; 1timothy 6 served from 1 Corinthians 14; genesis 16 served from Genesis 13; colossians 3 from 1 Cor 6; 2peter 2 from Ephesians 5; exodus 38 and revelation 11 from 1 Thess 4-5. Not one identified case points forward. That is exactly what a single NEGATIVE global offset into a canonically ordered concatenated tree produces, and it should be the working model for the owner's re-indexing decision. Only offset 1 (genesis 2, exodus 24, romans 12, colossians 4) still lacks an identified source; every other offset class 0-5 now has one."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "6",
+      "note": "PATRISTIC TILING HYPOTHESIS: fifth data point, and the first case that REFINES rather than merely confirms it. Chrysostom has 2 blocks (k2, k13) and both are ON TARGET -- he wrote Homilies on 1 Timothy and quotes the verses. Cyril of Jerusalem has 6 blocks but only THREE distinct texts: k3 == k14 byte-identical, and k13 == k15 == k16 byte-identical. Of the three distinct texts, the k13/15/16 one is squarely ON this pericope -- it quotes 1Tim 6:13-16 verbatim in a Catechetical Lecture and expounds the doxology -- so Cyril was allowed into entry 13-16 rather than silenced. The k20 text (on the endless kingdom of Christ) belongs to v15, not v20: displaced by five verses within the chapter. The k3/k14 text (a lecture on 2Cor 4:4) is off target entirely. REFINEMENT: where a father cites the chapter, his blocks land in the right CHAPTER but at SCRAMBLED KEYS; where he does not cite it, an arbitrary block is attached. The remedy is therefore two-stage, not one: (1) drop patristic blocks that cite nothing in the chapter, (2) re-key the survivors by which verse they actually quote. Stage 2 is new and was not visible in the four earlier chapters."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "21"
+      ],
+      "note": "CALVIN TREE TRUNCATED, and front matter at BOTH ends confirmed again. (1) Calvin has exactly ONE block in this chapter, at k1, 506 words, and it is on target (slaves and masters, opening 'CHAPTER 6'). Calvin wrote a full commentary on 1 Timothy, so twenty of the twenty-one keys are simply missing. This is a different defect shape from the residue and the patristic scrambling: a wholesale truncation of a major voice's tree, leaving one chapter-opening block. Worth a coverage audit -- for any voice with a known complete commentary on a book, flag chapters where the block count is 1 or 2 against a key count above 10. (2) Front matter at both ends: Clarke's chapter argument at k1 (7th consecutive chapter) AND at k21 a 1,840-word block that runs past the verse into a full list of manuscript subscriptions (Laodicea, Ladikia, Athens, Macedonia, Nicopolis, with variants Pacatiana/Pancatiana/Capatiana) and then into a 'Review of 1 Timothy' covering the whole epistle. Barnes's chapter analysis at k1 is the 9th consecutive. The standing recommendation that the front-matter detector run against the LAST key as well as the first is confirmed a second time; add a 'Review of <book>' heading and a run of manuscript-subscription lines to the patterns it strips."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "6",
+        "9",
+        "12",
+        "20"
+      ],
+      "note": "Live disagreements in 1timothy 6. (1) What the second noun of v6 means: Barnes and Robertson take it as contentment, a state of mind, from a Greek word meaning self-sufficiency; Clarke takes it as a competency, a bare sufficiency of goods, and defines it as food, raiment and lodging; Henry reports both readings without choosing. (2) How far v8 limits lawful desire: Wesley says food and covering are all a Christian needs and all his religion allows him to desire; Barnes refuses to let the verse forbid a comfortable habitation, the means of knowledge, or conveniences for worship; Ellicott guards it from the other side, against the ascetic error the same letter attacks in chapter 4. (3) Who is rich: Clarke says whoever has more than food and raiment is rich in the apostle's sense -- a far harder line than Gill, who names Abraham and Joseph of Arimathea as rich and good, or Ellicott, who says the term would include many who would hesitate to apply it to themselves. (4) The root of all evil: Clarke would render 'of all these evils' and protests at the popular misquotation; Barnes calls it a popular saying not literally true; Ellicott defends the strong rendering on the grammar of the article; Robertson calls it a proverb of two ancient philosophers. (5) When Timothy made the good confession: Barnes says at his profession or ordination, Wesley and Robertson at his baptism, Clarke at an imprisonment inferred from Hebrews 13:23, Ellicott finds the persecution reading most probable but rejects it on chronology. (6) Whether the falsely named knowledge of v20 is the Gnostic system: Clarke rejects it because the sect may not yet have existed."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "6",
+      "verses": [
+        "16",
+        "19"
+      ],
+      "note": "Two cross-references between voices worth recording, both of a kind a synthesis surfaces and a single-commentary reading cannot. (1) At v19 Clarke quotes WESLEY BY NAME and adopts his paraphrase of the verse as authoritative -- one voice in this corpus citing another voice in this corpus, approvingly, inside his own commentary. It is the first instance of that I have met in the loop. (2) At v16 Clarke asks whether the apostle, who demonstrably quotes three Greek poets, may also have had the tragedians in his eye when writing the doxology, saying the similarity is so complete that we are almost persuaded of it -- but that if so, he extends the thought infinitely higher by language incomparably more exalted. Alongside these, Robertson at v16 suspects emperor worship behind the word 'alone', one emperor having demanded to be addressed as lord and god, and at v13 he had already noted the same word-field: the Christians claimed 'Lord' for Christ, and it became the test in the Roman persecutions when a martyr refused to say Lord Caesar and insisted on Lord Jesus at the cost of his life."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "6",
+      "note": "FIDELITY SELF-GRADE, 1timothy 6, eight entries, 21 keys, 39381 usable source words, 11 voices. Every claim traced to a named block before writing; span voice rosters checked against the source heads BEFORE drafting; no ghost, no unsourced name, no unknown head, no school mismatch. Word counts: 1-2 650w (9 voices), 3-5 650w (6), 6-8 646w (7), 9-10 650w (6), 11-12 649w (7), 13-16 650w (9), 17-19 650w (7), 20-21 650w (6). All eight in the 350-650 window, none thin; tiling complete over keys 1-21 with no gaps, duplicates or extras. Exclusions: Jamieson residue at k2/k8/k14 (wrong epistle entirely); Cyril of Jerusalem silenced in entries 3-5 and 20-21 only, and allowed in 13-16 where his block genuinely expounds the passage. Grade: high confidence on all eight. Barnes, Ellicott, Clarke, Robertson and Gill each have a block at every one of the 21 keys, so no entry rests on a thin base; the weakest support is 9-10 and 20-21, where only six voices survive and Henry is absent. Note for the record that entry 13-16 carries nine voices across four schools including two patristic ones, the widest spread of the chapter."
     }
   ]
 }
