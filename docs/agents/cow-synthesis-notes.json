@@ -23140,6 +23140,53 @@
         "6"
       ],
       "note": "Clarke devotes 818 words at 12:6 -- by far the largest single block in the chapter -- to arguing that the difference between the two Hebrew sibilants was genuinely audible, against those who find it imperceptible. His argument is not from Hebrew but from Arabic: a native speaker distinguishes seen from saad instantly where a European never can, and since both letters are radical in both languages the distinction must be perceivable or roots could not be determined by ear. He then argues from orthography, that the second letter would not have been written in sibboleth at all if the Masoretic point were the only thing separating the sounds. Recording it because it is the only place in the corpus so far where a commentator settles a Hebrew phonological question by appeal to a living cognate language rather than to tradition or to the versions."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "1",
+      "verses": [
+        "5"
+      ],
+      "note": "JAMIESON RESIDUE, NEW SHAPE: a TRUNCATED FRAGMENT. titus 1 carries exactly one Jamieson block, at key 5, and it is nine words long: 'He therefore dictated all the rest of the Epistle.' That is not a block, it is the tail of one -- the closing sentence of a JFB note about an epistle written partly in the author's own hand (the Galatians 6:11 / 2 Thess 3:17 / Romans 16:22 family). Every previously recorded residue has been a whole block. This one was cut off at the start, which means the emission can begin mid-block, not only at a block boundary. Combined with the judges 17 finding that the donor pointer advances one BLOCK per emission, this suggests the pointer is a byte or character offset into a concatenated tree rather than a block index -- a byte pointer would naturally land mid-block, a block index never would. Testable: look for other single-fragment residues and check whether they begin mid-sentence."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "titus",
+      "chapter": "1",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "EARLIEST RECORDED TREATMENT OF THE EPIMENIDES PARADOX, and it is in the catena. Chrysostom at v12 raises three questions -- who said this, why Paul quoted it, and 'why he brings forward a testimony that is not correct' -- and then states the puzzle exactly: the Cretans have a tomb of Jupiter inscribed 'Here lieth Zan, whom they call Jove'; the poet called them liars for saying Jupiter could die; Paul says 'this witness is true'; therefore by Paul's own endorsement Jupiter is immortal, which is 'a fearful thing'. 'Attend, beloved, with much exactness.' His solution is that Paul endorsed the line only as applied to their habit of falsehood, not the whole poem -- else he would have quoted the next line about the tomb. Gill at v13 reaches the same limit independently and by a different route ('he does not say that all that Epimenides had said... was true'), and draws a general rule from it: 'what is truth, let it come from whom, or by what means it will, ought to be received.' A patristic and a reformed voice converging on the same textual boundary, twelve centuries apart, is worth flagging."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "titus",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "15",
+        "16"
+      ],
+      "note": "Three clean disagreements in titus 1. (1) v3, 'God our Saviour': Clarke argues the commission was given by Christ alone, so the title must mean Christ only, and calls it 'another proof that St. Paul believed Jesus Christ to be God'; Ellicott holds it must be the Father, since the very next verse gives the same epithet to the Son; Robertson notes the shift without settling it. (2) v15, 'unto the pure all things are pure': Barnes alone sets a guard, that the passage 'should not be interpreted as proving that all things are right and lawful for a Christian', confining it primarily to distinctions of food, where Ellicott deliberately widens it to 'all acts connected with every-day life'. (3) v16: Clarke reads the closing charge as a national and continuing Jewish fault; Barnes turns the identical verse against the church -- 'Yet, is this character confined to them?... taking the church at large, there are many such'. The Clarke/Barnes pair at v16 is the sharpest, because they comment on the same clause with the same lexical data and arrive at opposite targets."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "titus",
+      "chapter": "1",
+      "note": "FIDELITY SELF-GRADE A, all five entries. Every clause traced to a named block in data/commentary/cow/titus/1.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at key 5. Word counts: 1-4 650, 5-6 650, 7-9 650, 10-12 650, 13-16 650 (window 350-650). Source total 38,959 usable words across 16 keys, 9 real voices plus the Jamieson fragment -- a whole-batch chapter under the source-word budget. Schools: grammatical-historical, reformed, puritan-evangelical, wesleyan-arminian, eastern-antiochene. Two care points handled: (a) bare 'Chrysostom' was removed from the build ORDER list so it could not tie with 'John Chrysostom' on surname length and steal the match; (b) Calvin has a block only at key 1, so Ellicott's citation of him at v12 was written around rather than attributed, to avoid a false NAMED BUT NOT SOURCED HERE."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "titus",
+      "chapter": "1",
+      "note": "LANDING HISTORY for this chapter, for the record. The first finish attempt failed at the push step ('rejected four times') because git had NO CREDENTIALS in the session -- a direct push returned 'could not read Username for https://github.com'. That was an environment failure, not a history conflict: local master was then a clean fast-forward. Credentials were restored before the next poke, by which time origin had advanced (judges 12), making the local commit non-fast-forward. Rather than merge, rebase or force -- all forbidden by the loop instruction -- the unpushed commits were preserved on a local branch, master was reset to origin/master as the instruction directs, and the chapter was REBUILT FROM SOURCE with the scratchpad build and re-landed through finish. The rebuilt prose blob hashed byte-identical to the original commit, which is a useful incidental confirmation that the build is deterministic. SUGGESTION: finish --push reports an auth failure as 'push rejected', which reads like a non-fast-forward race and cost a detour through git history; distinguishing the two would let the loop fail fast instead of retrying four times against a wall."
     }
   ]
 }
