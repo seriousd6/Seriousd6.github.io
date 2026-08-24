@@ -21671,6 +21671,79 @@
       "book": "genesis",
       "chapter": "6",
       "note": "genesis 6 is the largest chapter attempted this rotation (31,927 usable source words, 22 keys). Tiling 1-2 | 3-4 | 5-8 | 9-12 | 13-16 | 17-22, source budgets 4393 / 5583 / 6186 / 3314 / 7211 / 5022. All six entries graded A on first grading pass after the usual trim cycles (QA 640-649, ttr 0.640-0.681, zip 0.458-0.466). Narrative genre held to the pattern noted earlier: entries 1 and 9 came close to the window on first assembly, where legal chapters routinely overshoot and hit the ttr floor. pericope_label written as short descriptive phrases (14-16 words) to match the corpus median of 12 rather than the full-verse-text minority pattern used in my earlier chapters this rotation."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "12",
+        "14",
+        "17"
+      ],
+      "note": "All six entries fidelity-self-graded A. Every declared voice is used by name in its own entry and every attribution is traceable to that voice's block in the catena; audit-synthesis-quality reports 0 ungroundable attributions. Jamieson, Fausset and Brown is declared in excluded_voices at entries 1, 9 and 14 rather than in voices, because its material there is not commentary on this chapter (see the source-defect note)."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson donor-stream residue. The Jamieson, Fausset and Brown blocks at k4 (88 words), k10 (22) and k16 (76) are commentary on Acts 27-28 - the shipwreck, the keepers' proposal to kill the prisoners, and the Malta 'barbarians' - pasted into 2 Corinthians 2. The stream is strictly monotone across the three keys. Benign rather than blocking: every residue key sits inside a run of keys that carry real voices, so the tiling is unaffected. NOTE FOR THE DONOR MODEL: this donor is NARRATIVE. Five Pentateuchal donors observed earlier this rotation (Exodus 22-23, Exodus 27-28, Numbers 3-4, Numbers 7) were all long legal or ceremonial catalogues, and I had generalised that donors are never narrative. Acts 27-28 refutes that; the catalogue pattern was an artefact of the Pentateuchal sample."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "15"
+      ],
+      "note": "Foreign-author text inside a voice block. The John Wesley block at k15 (262 words) begins with about 35 words of genuine Wesley and then continues with a long passage of Cyril of Jerusalem's Catechetical Lectures on the baptismal chrism (forehead, ears, nostrils, breast). This is a different defect class from the Jamieson donor stream: not another chapter's commentary under the right author, but another author's work under the wrong name. Only the opening Wesley material was used."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "14",
+        "17"
+      ],
+      "note": "Two more contamination cases in the same chapter. (a) The John Calvin block at k14 carries, mid-paragraph, a verbatim slab of Adam Clarke's description of a Roman triumph, including the Lucius Mummius / Achaicus detail, evidently an editorial footnote flattened into the body text; the same sentences appear in Clarke's own k14 block. (b) The Charles Ellicott block at k17 (1281 words) contains roughly 250 words of real commentary followed by StudyLight site chrome - copyright text, CSS rules, and navigation menus. Combined with the Cyril-inside-Wesley case, this chapter shows that cross-voice contamination is not confined to the Jamieson stream, and that a duplication scan comparing voices only within a key would miss (a) entirely, since Clarke's k14 and Calvin's k14 do sit in the same key but the scan's 12-word shingle would flag them as a genuine agreement rather than as an editorial artefact."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "14"
+      ],
+      "note": "The sharpest split in the chapter is grammatical, not theological. On thriambeuo, Ellicott and Robertson both hold that there is no attested causative use of the verb, so the sense must be 'always leads us in his triumph' and the apostle figures as a captive in the procession; Ellicott adds that it would be out of character for him to cast himself as the victorious commander. Calvin and Barnes take it as causative on the analogy of the Hebrew hiphil, 'maketh us to triumph', Calvin softening the captive image by making him a lieutenant riding beside the general's chariot as a sharer in the honour. Clarke assumes the causative without arguing it. Recorded as a debate on entry 14; the prose gives both readings without adjudicating."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "2corinthians",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "12",
+        "14",
+        "17"
+      ],
+      "note": "Self-reported style divergence, flagged rather than fixed. Under the current standard (cow-prose-rules-2026-08-09) the corpus median school-summary is 109 words; mine in this chapter run 365-782. That is well inside the observed range (max 3166) and matches the chapters I landed earlier this rotation, but it is a consistent divergence from the corpus centre and a later worker may want a ruling on the intended length. Same posture as the pericope_label note from the previous batch: I have not retro-fitted landed chapters."
     }
   ]
 }
