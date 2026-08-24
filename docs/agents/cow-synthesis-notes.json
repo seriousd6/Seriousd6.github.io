@@ -22754,6 +22754,60 @@
       "book": "james",
       "chapter": "3",
       "note": "FIDELITY SELF-GRADE, james 3, seven entries, all A. Each entry re-read against the union of its source keys after the final trim; every claim traces to a named witness in this chapter's catena and the expansion is framing only. Word counts: 1-2 650 (8 voices), 3-5 650 (7), 6 650 (7), 7-8 650 (7), 9-12 649 (7), 13-16 649 (8), 17-18 649 (7). All seven inside the 350-650 window; no thin exemptions. 31,496 usable source words across 18 keys. Pericope plan: 1-2 the many masters and the perfect man, 3-5 the bit and the helm, 6 the world of iniquity (kept alone: it is the chapter's hardest verse and carries 3,686 words), 7-8 taming the beasts, 9-12 blessing and cursing, 13-16 the two wisdoms, 17-18 the wisdom from above. Voice census: Barnes 18 blocks/7,919w, Clarke 17/5,036, Ellicott 18/4,406, Henry 2/4,312 (keys 1 and 13 only, but very long), Calvin 15/3,884, Robertson 18/3,378, Gill 18/1,810, Wesley 11/503, Jamieson 2/248 (residue). No exclusions beyond the residue. TWO GHOST LINTS were caught and fixed during the build, both by adding a sourced clause rather than silencing: Gill dropped out of the 9-12 entry and both Gill and Ellicott dropped out of 17-18, in each case because the entry was dominated by Barnes, Clarke and Calvin. That is the same failure mode logged for 1john 2 -- a quiet voice with short blocks gets squeezed out during trimming -- and it is now frequent enough to be worth a build-time guard rather than a lint at the end."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "4",
+        "10",
+        "14"
+      ],
+      "note": "All four entries self-graded A for fidelity. Every attribution traced to the named voice's own block. Three deliberate exclusions of PRESENT voices, each because the block holds nothing about the verses the entry covers: (a) Keil at entry 4 -- his only block in vv4-9 (k5, 200w) is reprinted verse text with no comment, his substantive remarks on the summons sitting at k3 inside entry 1's range, where they were used; (b) Calvin at entry 14 -- his only block in vv14-16 (k16, 818w) is commentary on NUMBERS 13:1-2, discussing whether the spies were sent at God's command or at the people's request against Deuteronomy 1:22, with nothing on the seven days or the march; (c) Jamieson at entries 4 and 10, donor residue (see separate note). Keil IS used at entry 10, where his k12 block carries a real philological defence of the construction of Moses' prayer against the emendation proposed by Michaelis and Knobel."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "12",
+      "verses": [
+        "16"
+      ],
+      "note": "Calvin k16 (818 words) is commentary on NUMBERS 13:1-2, not on 12:16 -- it argues that the apparent conflict between the spies being sent at God's command and Deuteronomy's account of the people's request is only apparent, citing Hengstenberg against Vater and De Wette. This is CHAPTER-BOUNDARY OVERFLOW, not donor residue: the material is adjacent and follows the target rather than preceding it from elsewhere. Worth distinguishing from the Jamieson pattern, since the two defects need different fixes -- overflow is a chunking error at the chapter split, donor residue is a wrong-stream assignment. Compare galatians 2 key 29, which the loop doc records as a Luther fragment that overflowed his verse-20 block: same class of defect, and that one had no legal output until coverage_problems was relaxed."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "12",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson is ENTIRELY donor residue for the FOURTH chapter running: k6 (49w) is on LEVITICUS 22:14, the unwitting use of tithes and first-fruits with restitution plus a fifth, and k12 (233w) is on LEVITICUS 22:19-21 and 1:3, the selection of unblemished animals for sacrifice. Nothing about Miriam. Excluded at entries 4 and 10. Fifteenth chapter with the defect overall. This CONFIRMS the prediction I recorded at 2corinthians 9, that with three chapters running showing Jamieson wholly replaced, treating any Jamieson block as suspect until checked had become the cheaper default. It is now four running -- Leviticus 13, Deuteronomy 2, Romans 3, Leviticus 22 -- and in every one of the four he contributed nothing whatever to the target chapter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "12",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott k16 carries StudyLight chrome, ninth consecutive chapter. This key is both chapter-final and Ellicott-stream-final, so like 2corinthians 9 it does not discriminate between the chapter-final rule I wrongly generalised at numbers 2 and the stream-final rule that replaced it. Joshua 5 (chrome at k13 of a 15-verse chapter, where Ellicott's stream ends at k13) remains the only case that settles it."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "12",
+      "verses": [
+        "3"
+      ],
+      "note": "A four-way split on a single interpretive question that the debates field captures well but which is worth flagging as a pattern: at 12:3 every voice that comments has a different route out of the difficulty that Moses appears to praise himself. Ellicott defends the verse as compatible with humility whoever wrote it; Gill and Wesley both concede a later hand (Joshua or Ezra; some succeeding prophet) but for different reasons, Wesley adding the further problem that Moses is elsewhere angry and concluding only that the law made nothing perfect; and Clarke denies the premise by retranslating, taking the root to mean depressed or afflicted rather than meek, so that the verse reports Moses' burden rather than his virtue. Clarke's is the only solution that removes the difficulty instead of accommodating it."
     }
   ]
 }
