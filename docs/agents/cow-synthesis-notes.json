@@ -21891,6 +21891,81 @@
         "17"
       ],
       "note": "A convergence worth recording rather than a defect. At v18 Clarke and Calvin independently reach for the same line of the Aeneid, non ignara mali miseris succurrere disco, to illustrate that a state of suffering disposes men to be compassionate. Clarke gives it with Dryden's rendering and builds his exposition on the maxim; Calvin quotes it as a saying no doubt derived from daily examples among men, and then immediately guards it, since the Son of God needed no experience in order to know the emotions of mercy. Two commentators three centuries and one confession apart reaching for the same pagan poet on the same verse is the kind of agreement the debates field cannot express, so it is noted here."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "25",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JAMIESON RESIDUE, offset-4 class, and the source is identified for the first time. acts 25 carries 4 Jamieson blocks at keys 4, 10, 16, 22 -- offset 4 mod 6, the class previously known only from genesis 20, where a single block left the source unidentified. Here the source is ACTS 4: k4 = Ac 4:1-2 (the Sadducees vexed at the preaching of the resurrection), k10 = Ac 4:1-2 AGAIN, byte-identical to k4, k16 = Ac 4:13 (unlearned and ignorant men, they had been with Jesus), k22 = Ac 4:19 (whether it be right to hearken unto you more than unto God). That closes offset 4 in the table; only offset 1 (genesis 2, exodus 24, romans 12, colossians 4) now lacks an identified source. TWO NEW FACTS. (1) The walk here runs BACKWARD within the same book: acts 25 is served from acts 4, twenty-one chapters earlier. Revelation 6 and 7 were likewise served from Colossians and 1 Thessalonians, both earlier in canon than Revelation. Every identified case so far points earlier in a canonically ordered corpus, which is what a single negative global offset into a concatenated tree would produce. (2) The k4/k10 duplicate breaks the monotonic stride seen in revelation 6-7: the pointer emitted the same block twice before advancing. If the pointer model is right, that is a repeat rather than a step, and the re-indexing fix has to tolerate it."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "25",
+      "verses": [
+        "9"
+      ],
+      "note": "Cyril of Jerusalem off target again (k9): a Catechetical Lecture on Christ going willingly to his passion, attached to Festus asking Paul whether he will go up to Jerusalem. The only visible hook is the phrase 'go up to Jerusalem', which appears in both -- consistent with a crude string match rather than a citation match. Silenced chapter-wide. Cyril has now been off target in revelation 6, revelation 7, galatians 6 and acts 25, and on target only in 1corinthians 2, which his Lectures quote heavily. Also note the duplicate-block pattern recurs here in a different tree: Jamieson's k4 and k10 blocks are byte-identical, as Cyril's galatians 6 k14 and k18 were. A whole-tree duplicate-block detector would catch all of these at once."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "25",
+      "note": "PATRISTIC TILING HYPOTHESIS: fourth data point, and the strongest yet. acts 25 has exactly one patristic block, Chrysostom at k23, and it is fully ON TARGET -- a homily on Acts 25:23ff that quotes verses 24-27 verbatim and expounds them. Chrysostom wrote Homilies on Acts and cites the verse; Cyril of Jerusalem, whose Lectures barely touch Acts, gets an arbitrary block at k9. Same chapter, same tree-building process, opposite outcomes, and citation is the only variable that separates them. Combined with revelation 7 (Victorinus and Bede, both actual Revelation commentators, landed correctly; Cyril did not) the hypothesis now has four independent confirmations and no counter-example. Recommend the owner run a citation-match pass over the patristic trees -- drop any patristic block that does not cite its own verse or an adjacent one -- before commissioning any whole-tree re-fetch. Note also that Chrysostom's k23 block runs on past the chapter into Acts 26:27-29, so the citation-match pass should trim at the chapter boundary rather than accept the whole block."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "25",
+        "26"
+      ],
+      "note": "Clarke chapter argument at k1 again -- 6th consecutive chapter. Barnes front matter at k1 is milder here than usual, only the heading 'CHAPTER 25 Verse 1', but present -- 8th consecutive. Two more defect shapes worth a detector each. (1) STUB BLOCKS THAT ARE PURE CROSS-REFERENCE APPARATUS: Barnes at k25 is nothing but the marginal reference string, and several other Barnes blocks in this chapter end in a tail of reference codes in parentheses with letters and symbols. (2) CHROME AT THE TAIL: Ellicott's k26 block ends with the navigation strip 'Acts Act 24 Acts Act Acts Act 26'. Both are already handled by the dump filter in the working scratchpad, but they are in the stored data and will mislead any downstream consumer that does not strip them."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "25",
+      "verses": [
+        "5",
+        "6",
+        "9",
+        "11",
+        "12",
+        "19"
+      ],
+      "note": "Live disagreements in acts 25. (1) The text of v6: Clarke and Barnes both hold the best manuscripts read 'not more than eight or ten days' against the received 'more than ten days', and Clarke reports a scholar of his day calling the shorter reading indubitably genuine; Gill keeps the longer and explains it as the historian being imprecise. (2) What 'those among you who are able' means at v5: Gill, Calvin and Wesley read it as capacity -- who can spare the time and bear the expense -- while Clarke, Ellicott and Robertson read it as authority, men in office whose character vouches for their testimony. (3) Whether the appeal at v11 was absolute or conditional: Clarke argues it must have been conditional, since Festus could not otherwise have deliberated with his council over granting what he had no power to refuse; Robertson answers that some discretion did exist, an appeal being refusable for a notorious robber or pirate. (4) How to hear Festus's 'unto Caesar shalt thou go': Barnes and Clarke read relief at escaping an impossible trial, Ellicott hears a sneer from a man who knew what kind of judge Paul was appealing to, Calvin suspects indignation and then withdraws the guess as mere conjecture. (5) Whether 'their own superstition' at v19 is an insult: Barnes, Clarke, Ellicott and Robertson all defend the governor, arguing the word was his own term for religion and that he would not insult a Jewish king to his face; Gill alone lets the harsh rendering stand."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "25",
+      "verses": [
+        "16",
+        "26"
+      ],
+      "note": "Two convergences worth recording as evidence that the corpus rewards cross-reading. (1) At v16 Barnes and Clarke, working independently, both quote the SAME two ancient authorities for the Roman rule against condemning a man unheard, and then both turn the verse into a patriotic tribute to their own country's courts -- Barnes to American jurisprudence as surpassing all that Rome ever enjoyed, Clarke to English law, twelve honest men, and 'no Bastiles, no lettres de cachet'. Two commentators, one verse, two national anthems. (2) At v23 Clarke and Ellicott independently make the same observation, that the Herodian pair paraded their pomp in the very city where their father had been struck down for his pride and eaten of worms; Clarke draws the moral that the living seldom lay God's judgments to heart, Ellicott that the vice was inherited and the lesson unlearnt. Neither cites the other. These are the kind of agreements that a synthesis surfaces and a single-commentary reading cannot."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "25",
+      "note": "FIDELITY SELF-GRADE, acts 25, seven entries, 27 keys, 34057 usable source words, 11 voices. Every claim traced to a named block before writing; the voice roster for each span was checked against the source heads BEFORE drafting, per the procedure fix adopted after the ghost lints in 1corinthians 2, and no ghost or unsourced name appeared in any entry. Word counts: 1-5 649w (8 voices), 6-9 645w (7), 10-12 645w (7), 13-14 647w (8), 15-18 644w (7), 19-22 649w (7), 23-27 650w (8). All seven in the 350-650 window, none thin. Exclusions: Jamieson residue at k4/k10/k16/k22 (wrong chapter entirely, see the residue note); Cyril of Jerusalem silenced chapter-wide (single off-target block at k9). No school mismatch, no unknown heads, tiling complete over keys 1-27 with no gaps, duplicates or extras. Grade: high confidence on all seven. The chapter is unusually well served -- Barnes, Robertson and Gill all have blocks at every one of the 27 keys, Calvin at 13, and the one patristic block is on target -- so no entry rests on a thin base. The weakest is 15-18, where Gill's four blocks are bare connectives and the substance rests on Barnes, Clarke, Ellicott, Robertson and Calvin."
     }
   ]
 }
