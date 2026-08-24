@@ -22808,6 +22808,67 @@
         "3"
       ],
       "note": "A four-way split on a single interpretive question that the debates field captures well but which is worth flagging as a pattern: at 12:3 every voice that comments has a different route out of the difficulty that Moses appears to praise himself. Ellicott defends the verse as compatible with humility whoever wrote it; Gill and Wesley both concede a later hand (Joshua or Ezra; some succeeding prophet) but for different reasons, Wesley adding the further problem that Moses is elsewhere angry and concluding only that the law made nothing perfect; and Clarke denies the premise by retranslating, taking the root to mean depressed or afflicted rather than meek, so that the verse reports Moses' burden rather than his virtue. Clarke's is the only solution that removes the difficulty instead of accommodating it."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "3",
+        "5",
+        "17"
+      ],
+      "note": "RE-OFFERED BY THE PICKER AND RE-REJECTED, with the argument narrowed. Two rejection notes for this chapter already exist; the queue has no memory of them, because synthesis-loop.py next has no skip list and nothing consults scratchpad/rejected, so a blocked chapter returns to the head of --worst-first every time it is picked. That is a queue defect worth fixing on its own: a rejected chapter should be skipped, or at least flagged at pick time. RE-VERIFIED THE NUMBERS: keys are 1, 3, 5, 8, 9, 17, 21-31, and per-key usable words after removing Jamieson residue are k1=1909 (6 voices), k3=39 (Ellicott ALONE), k5=0 (its only block is 37 words of Jamieson residue), k8=1316, k9=444, k17=103 (Clarke and Ellicott). THE ARGUMENT HAS CHANGED SHAPE since c55d2989 relaxed coverage_problems, and the earlier rejection overstated one half of it. Coverage is no longer the blocker: required is now only the contiguous run from the lowest key, so omitting the dead k5 is legal, and omitting a residue-only key is exactly what the loop doc's omit rule prescribes. THE REAL AND REMAINING BLOCKER IS KEY 3. The runs are forced at [1], [3], [5], [8-9], [17], [21-31] because no span may cover an absent verse, so key 3 must be its own entry; it carries 39 usable words from a single voice, a one-sentence gloss on the word for pots; and the thin exemption floor is 120 prose words. 120 words built on 39 from one witness is padding, which is the precise defect this whole repair effort exists to remove. Key 17 at 103 words and two voices is thin but arguably writable; key 3 is not. So the chapter stays blocked, on a narrower and better-founded ground than before, and the decision that would unblock it is editorial rather than mechanical: whether a chapter may be landed with a genuine key deliberately left uncovered because its source is too thin to distil honestly. That is the same question exodus 36 and nehemiah 7 are waiting on, and it is the owner's."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "14"
+      ],
+      "note": "JAMIESON RESIDUE, single-pointer evidence (4th case this window). 1peter 5 carries 2 Jamieson blocks, at keys 8 and 14, offset 2 mod 6. Both are Ephesians 4: k8 is Eph 4:4 (one body and one Spirit), k14 is Eph 4:9 (he ascended, what is it but that he also descended first). The donor is EARLIER in canonical order than the host, as in every identified case: galatians 2 was served Romans 7-8, revelation 12 was served 1 Thess 5:12-22, james 3 was served Galatians 4. Recommended model remains a single negative global pointer into a concatenated tree, not per-chapter corruption. Standing owner decision on re-indexing is now very well evidenced."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "9",
+        "14"
+      ],
+      "note": "PATRISTIC TILING, ninth confirmation. Cyril of Jerusalem has 3 blocks here (k8, k9, k14). k14 is an EXACT CITATION MATCH: his catechetical passage on the liturgical kiss ends by quoting this very verse, 'and Peter, with a kiss of charity'. k8 is on target (tares and wolves against the adversary as a roaring lion). k9 is a near-miss, sharing theme but not citation. The k14 case is the cleanest citation match observed so far and supports a matcher keyed on scripture citations rather than shared vocabulary -- compare revelation 12 k11, which shared only the sun/moon imagery and was off target."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "5",
+      "note": "TOOLING DEFECT in scripts/synthesis_qa.py: QA.split_voices / VOICE_LABELS matches voice names by substring, with no word boundaries in _LABEL_RE. On this chapter that produced a WRONG voice survey: the head 'A.T. Robertson:' was reported as 'Robertson', and Cyril of Jerusalem was hidden entirely behind another label. I acted on the bad survey before re-deriving it from the raw <strong>...:</strong> heads and reverting. Loop workers should survey voices from the raw heads, not from QA helpers, until this is fixed. Suggested fix: anchor _LABEL_RE with \\\\b and prefer the longest matching label."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "1peter",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "3"
+      ],
+      "note": "ANTI-PAPAL CONVERGENCE at the elders' charge, with one dissent. Henry, Clarke and Barnes all read Peter's self-description as a fellow elder against any primacy; Calvin at v13 turns the Babylon question into the same polemic, that the Papists gladly lay hold on the Rome reading so Peter may appear to have presided there. Ellicott dissents on method rather than conclusion, arguing a fortiori from the same text and calling Rome the established interpretation of Babylon on historical grounds while denying that anything doctrinal follows."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "1peter",
+      "chapter": "5",
+      "note": "FIDELITY SELF-GRADE A, all six entries. Every clause traced to a named block in data/commentary/cow/1peter/5.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at k8 and k14. Word counts: 1-2 649, 3-4 649, 5-7 649, 8-9 649, 10-11 650, 12-14 649 (window 350-650). Source total 32,060 usable words across 14 keys, 10 voices. Schools represented across the chapter: grammatical-historical, reformed, puritan-evangelical, wesleyan-arminian, eastern-antiochene. Checked: no bare surname collisions (Cyril of Jerusalem written in full throughout, never bare Cyril), no GHOST blocks, tiling exact against the source keys."
     }
   ]
 }
