@@ -23405,6 +23405,13 @@
         "8"
       ],
       "note": "Convergences the debates field cannot express. Ellicott and Clarke independently quote the same passage of Tertullian's Apology on prayer for the emperors, Ellicott in English and Clarke in the Latin, each apparently from his own source; Clarke adds Cyprian before the proconsul and Ellicott adds Polycarp, so between them the practice is documented from three second- and third-century witnesses without either citing the other. Separately, Barnes and Chrysostom arrive at the same reading of 'without wrath' eleven centuries apart and by different routes -- Chrysostom from the pastoral side (let no one approach God in enmity), Barnes from the lexical (the word runs from reckoning through reasoning to debate), and both land on the man too heated by contention to pray."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "13",
+      "note": "NOT STARTED -- worker context exhausted, chapter left untouched at the queue head. romans 13 sizes at 36,030 usable source words across 14 keys, which is a whole-batch chapter (comparable to titus 1 at 38,959, which consumed an entire fresh context window). This worker has run ten batches in one session and has just completed mark 11, the heaviest chapter of the run (33 keys, 19 voices, five entries). Starting a 36k chapter in this state risks the one failure mode the loop cannot detect: degraded prose landing under a self-graded A, which is worse than no chapter at all, because the fidelity grade is the only quality signal downstream and a bad chapter passes every automated gate. The loop instruction says never start a chapter you cannot finish; the binding constraint here is worker context rather than the chapter's size, but the rule is the same. NOTHING IS LOST: the picker holds no state, so romans 13 remains at the queue head for the next worker, and no partial work exists to clean up. Recorded so the gap in the run is explained rather than silent."
     }
   ]
 }
