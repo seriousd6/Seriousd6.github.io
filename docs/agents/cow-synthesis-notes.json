@@ -22869,6 +22869,59 @@
       "book": "1peter",
       "chapter": "5",
       "note": "FIDELITY SELF-GRADE A, all six entries. Every clause traced to a named block in data/commentary/cow/1peter/5.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at k8 and k14. Word counts: 1-2 649, 3-4 649, 5-7 649, 8-9 649, 10-11 650, 12-14 649 (window 350-650). Source total 32,060 usable words across 14 keys, 10 voices. Schools represented across the chapter: grammatical-historical, reformed, puritan-evangelical, wesleyan-arminian, eastern-antiochene. Checked: no bare surname collisions (Cyril of Jerusalem written in full throughout, never bare Cyril), no GHOST blocks, tiling exact against the source keys."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "leviticus",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "6",
+        "16"
+      ],
+      "note": "All three entries self-graded A for fidelity. Every attribution traced to the named voice's own block. Two limits worth recording: (a) Henry's k6 block runs past its own verses and expounds vv16-17 as well -- the whole fat-and-blood argument, including the reasons the blood was withheld -- but he has no block at k16 or k17, so entry 16 does not carry any of it; his exposition of the chapter's closing statute is stranded at k6 and unusable where it belongs. Same source-packing pattern as joshua 5, where Henry's entire treatment of vv1-9 sat in his k1 block; there I could retile to recover it, here the k15 gap makes that impossible. (b) Keil's reason for excluding pigeons (the accompanying sacrificial meal) sits at k1 and was used at entry 1; Henry's different reason (they carry no fat worth burning and would be next to nothing once divided) sits at k6 and was used at entry 6. The two are a genuine disagreement that the debates field cannot show as one, because the positions live in different entries."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "3",
+      "verses": [
+        "15"
+      ],
+      "note": "Verse 15 is MISSING FROM THE SOURCE ENTIRELY -- no block from any of the eight voices. The source runs are (1-14) and (16-17), and Leviticus 3 has 17 verses, so this is a hole in a real chapter rather than an out-of-range key. It matters because of c55d2989: under the relaxed coverage rule only the run 1-14 is REQUIRED, so a tiling of {'1':'1-5','6':'6-14'} passes while silently dropping vv16-17 -- two genuine verses carrying 2,806 words of commentary, including the chapter's closing statute about eating neither fat nor blood. I verified that omission passes and did not take it. Covering 16-17 as its own entry also passes and is the honest maximum; v15 is left uncovered because nothing exists for it. This is the first LIVE instance of the loophole I flagged in the exodus 36 follow-up note, and it argues for the checker distinguishing an interior gap in a real chapter from a stray key beyond the verse count."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "10"
+      ],
+      "note": "Jamieson is ENTIRELY donor residue for the FIFTH chapter running: k4 (123w) is on EXODUS 28, the breastplate of brocade with its twelve stones, and k10 (149w) on EXODUS 28:30 with Leviticus 8:8, the Urim and Thummim. Nothing about the peace offering. Excluded at entries 1 and 6. Sixteenth chapter with the defect. Five consecutive chapters now in which his contribution to the target was zero -- Leviticus 13, Deuteronomy 2, Romans 3, Leviticus 22, Exodus 28. Note that in three of those five the donor is in the SAME book as the target or its immediate neighbour, which keeps fitting the one surviving property (donor precedes and lies near in canonical order) and keeps ruling out any fixed offset."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "3",
+      "verses": [
+        "17"
+      ],
+      "note": "Chrome at k17 in TWO voices at once, which is new: Ellicott (199 real words of 1,113) and Gill (146 of 177) both carry scrape furniture on the same key, and from two different sources -- StudyLight in Ellicott, the Sacred Texts navigation block in Gill. Tenth consecutive chapter with chrome. Both are chapter-final AND stream-final here, so like 2corinthians 9 and numbers 12 this case does not discriminate between the two rules; joshua 5 remains the only case that settles it in favour of stream-final. What is new is that a single key can be contaminated in parallel from two scrape sources, so a screen that stops at the first hit per key would under-report."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "3",
+      "verses": [
+        "9"
+      ],
+      "note": "Three voices independently supply natural history about the fat-tailed sheep at 3:9, each on a different authority and with different figures: Ellicott (broad-tailed species of Syria and Palestine, broad part fifteen pounds and upwards, a wheeled truck fastened under the tail), Keil (same practice, citing Sonnini and Bochart, extending the range to Northern Africa, Egypt and Arabia, and noting all modern Palestinian sheep are of this kind), and Clarke (citing Dr Russel on the sheep at Aleppo, with a fuller weight table -- carcass sixty to seventy pounds with a fifteen-pound tail, the largest breed a hundred and fifty with tails of fifty). None cites another. This is the same shape as the Robertson/Ellicott/Clarke convergence on the chorus-leader etymology at 2corinthians 9:10: one datum, three independent authorities, three slightly different uses, which the tags record only as separate positions."
     }
   ]
 }
