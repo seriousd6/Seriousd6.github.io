@@ -21446,6 +21446,91 @@
       "book": "revelation",
       "chapter": "6",
       "note": "FIDELITY SELF-GRADE, revelation 6. 8 entries over 17 contiguous keys, 38,613 usable source words, 11 voices (Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Wesley, Jamieson, Cyril of Jerusalem, Victorinus of Pettau, Bede). Spans and counts: k1 alone 637w/9 voices; 2-4 650w/7; 5-6 650w/5; 7-8 649w/5; 9 alone 650w/7; 10-11 650w/6; 12-14 650w/6; 15-17 650w/6. Every entry in window, no thin exemptions, tiling exact. Every claim traced to a named block before writing; no voice named that is not sourced in its own span; no block silently dropped except the Jamieson residue at 5/11/17 and the Cyril of Jerusalem tree, both recorded as source defects above. Two voices carried forward into the maps from earlier chapters (Victorinus of Pettau -> latin-fathers, Keil and Delitzsch -> grammatical-historical); Cyril of Jerusalem silenced chapter-wide. COMPRESSION COST: seven of the eight entries needed trimming from first draft -- 739, 776, 751, 775, 806, 875 and 827 words respectively against the 650 ceiling, a mean overshoot of about 22 percent and the highest of any chapter worked so far. Only k1 landed in window unaided. Two entries (12-14 and 15-17) needed a full paragraph-level rewrite rather than clause-level trimming, and in both cases the material cut was Clarke's Constantine identification list and Ellicott's closing meditation, which survive in full in the school-voice tags. Running total across the loop: 71 of 81 entries have needed compression. The cause here is diagnosable: eleven voices and a chapter where every voice disagrees with every other means the prose has to name and distinguish more positions per entry than usual, and 650 words is tight for six or seven mutually contradictory readings of the same verse."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JAMIESON RESIDUE, offset 0 mod 6 -- second confirmed offset-0 chapter after 2peter 2. Two blocks, at keys 6 and 12 (91 words total), neither discussing its verse. Source identified as ROMANS 9-10: the k6 block comments on Romans 9:33 (Isaiah 28:16, 'shall not make haste' rendered by the Septuagint 'shall not be put to shame', a glorious Messianic passage); the k12 block comments on Romans 10:16 (Isaiah 53:1, 'Lord, who hath believed our report' -- 'the prophet speaks as if next to none would believe: the apostle softens this into They have not all believed'). Note the walk: Rom 9:33 -> Rom 10:16 is a forward step of 18 verses for a key gap of 6, so within this chapter the residue advances through the source stream faster than the target keys advance -- UNLIKE revelation 6, where the walk was Col 4:12 -> Col 4:17 -> 1Th 1:2, roughly 3-5 verses per 6-key step. This is the first chapter where the residue stride is measurably different, and the owner should note it: a single flat global offset predicts a CONSTANT stride, so a variable stride means either the source stream is not a simple concatenation, or the emitter samples rather than walks. Recommend the owner treat the revelation 6 note (monotonic canon walk) and this one together: the direction is consistent, the step size is not. Offset table now: 0 (2peter 2 / Ephesians 5, galatians 6 / Romans 9-10), 1, 2 (genesis 16 / Genesis 13), 3 (colossians 3 / 1 Cor 6), 4 (genesis 20), 5 (exodus 38, revelation 11 / 1 Thess 4-5, revelation 6 / Colossians 4 + 1 Thess 1). Eleven source books now."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "14",
+        "18"
+      ],
+      "note": "CYRIL OF JERUSALEM: OFF-TARGET AND DUPLICATED. Two Cyril of Jerusalem blocks in this chapter, at keys 14 and 18, and they are the IDENTICAL TEXT byte for byte -- a Catechetical Lecture passage on 2 Corinthians 4:4 ('if he blinded the thoughts of them that believe not, he blinded them for a good purpose'), with no bearing on Galatians 6:14 or 6:18. This is the SECOND consecutive chapter in which the whole Cyril of Jerusalem tree is off-target (revelation 6 had three, all Catechetical Lectures, none touching a verse). Two distinct defects are now visible in this voice: (a) the tree is tiled onto verse keys by position rather than by reference, and (b) at least in this chapter the SAME block is emitted at two different keys, which no positional tiling alone would produce. Silenced chapter-wide in the build. Recommend the owner re-fetch the entire Cyril of Jerusalem tree, as was recommended for Tertullian, and add a duplicate-block detector -- an exact-text match across two keys in one chapter is cheap to test for and would have caught this without a human reading either block."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "3",
+        "12",
+        "13",
+        "18"
+      ],
+      "note": "SCANNED-BOOK CORRUPTION IN THE MARTIN LUTHER TREE, AND A PUBLISHER'S CATALOGUE IN THE TEXT. This is the largest single voice in the chapter (17 blocks, 19,576 words -- more than twice the next largest) and it is the dirtiest text encountered in the corpus so far. Three distinct defects. (1) HYPHENATION ARTIFACTS from an uncorrected page scan, throughout: 'doc- trine', 'wil- fully', 'ex- cuse', 'affec- tion', 'cor- rupteth', 'commit- ted', 'main- taining', 'per- fection', 'excommunicate'/'ex- communicate'. (2) RUNNING PAGE HEADERS AND FOLIOS embedded mid-sentence: '644 COMMENTARY ON GALATIANS.', '048 COMMENTARY ON GALATIANS.', 'COMMENTARY ON GALATIANS. 555', '664 COMMENTARY ON GALATIANS.', '574 COMMENTARY ON GALATIANS.', '72 570 COMMENTARY ON GALATIANS.', 'COMMENTARY ON GALATIANS. 563', 'COMMENTARY ON GALATIANS. 573', '71 662 COMMENTARY ON GALATIANS.', '70 664 COMMENTARY ON GALATIANS.' -- at least ten instances. (3) WORST: the k18 block runs 6,159 words, and after Luther's closing doxology it continues into the BACK MATTER OF THE PRINTED VOLUME -- 'THE END. VALUABLE BOOKS RECENTLY ISSUED BY ROBERT CARTER, 58 CANAL STREET, NEW YORK, AND THOMAS CARTER, MARKET ST., PITTSBURG. THE HISTORY OF THE CHURCH OF SCOTLAND... LECTURES ON THE ACTS OF THE APOSTLES; By the Rev. John Dick...' -- a nineteenth-century publisher's advertising catalogue, tiled onto Galatians 6:18 as if it were commentary. Also 'through»the', 'such-Hke', 'offTences', 'sorowful', 'fSared', 'i»eaning', 'agamst', 'boitiful', 'mgratitude', 'crJture', 'hohness', 'qne', 'int5', 'monaeteries'. Recommend: (a) re-fetch or re-OCR the whole Luther tree; (b) add a dehyphenation pass keyed on '- ' at a line end followed by a lowercase continuation; (c) add a detector for running headers of the form '<digits> COMMENTARY ON <BOOK>'; (d) add a hard cut at 'THE END.' followed by all-caps publisher matter, which is the same class of defect as the Christian Classics trailer on Tertullian and the Ellicott copyright strip, but larger by an order of magnitude."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "11",
+        "18"
+      ],
+      "note": "CHAPTER FRONT MATTER AND APPENDED ESSAYS -- both ends of the chapter. (1) Barnes chapter front matter, SIXTH consecutive chapter (colossians 3, 2corinthians 6, 2peter 2, revelation 11, revelation 6, now galatians 6): his key-1 block opens 'GALATIANS Chapter 6 This chapter is composed entirely of affectionate exhortation...' and runs a full verse-by-verse chapter summary before any comment on verse 1. (2) Clarke chapter argument, FOURTH instance (2peter 2, revelation 11, revelation 6, galatians 6): his key-1 block opens with the whole chapter argument, 'The apostle teaches them to be tender and affectionate towards any who...Gal 6:1, Gal 6:2', ahead of the verse notes. (3) NEW SHAPE, at the other end: Barnes's key-18 block is 782 words of which only the first six are comment on the verse ('Brethren, the grace, etc. Rom 16:20'); the remaining 776 are an APPENDED ESSAY, headed 'INGENIOUS CONJECTURE ON PAUL'S THORN IN THE FLESH', which belongs to 2 Corinthians 12 and has been tiled onto the last verse of Galatians. Clarke's key-18 block is 2,548 words and is almost entirely subscription criticism plus a whole-epistle retrospect. So the same two voices carry chapter-level apparatus at BOTH the first and the last verse key, and a detector that only looks at key 1 will miss half of it. Recommend the front-matter/back-matter detector be run against the LAST key of every chapter as well as the first."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "galatians",
+      "chapter": "6",
+      "note": "NEW VOICE ADDED TO THE MAPS: MARTIN LUTHER, school 'lutheran'. This is the first chapter in the loop to carry Luther, and he is the dominant voice in it -- 17 blocks across 18 keys, 19,576 words, more than Barnes (8,376) and Henry (7,833) and Calvin (7,576) put together. Added to ORDER, LAST ('Luther') and SCH ('lutheran'); the lutheran slot in the school enum had never been used before now. The addition matters beyond this chapter: 'lutheran' was the only school in the enum with no voice mapped to it, so any chapter carrying Luther would previously have failed the school-mismatch lint with no way to satisfy it. Recommend the owner check which other chapters carry a Martin Luther tree -- his commentary is on Galatians only, so the exposure is bounded to galatians 1-6, but five of those six chapters are presumably still unsynthesised and will hit the same map. Note also that dump.py's own NAMES list had to be extended separately from build.py's ORDER: two lists, one omission, and the voice silently vanished from the survey until noticed. Worth collapsing them into one shared list in the scratchpad template."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "11"
+      ],
+      "note": "WHAT 'HOW LARGE A LETTER' MEANS -- the sharpest philological split in the chapter, and the voices divide 5 to 3 with the moderns on the minority side. FOR LARGE CHARACTERS: Robertson ('Certainly not how large a letter') and Ellicott ('Rather, in what large letters: i.e., characters'), both insisting the Greek governs characters of handwriting, not an epistle. Robertson canvasses defective eyesight, ill-formed letters 'like the print letters of children', and Ramsay's placarding theory, preferring the last, and cites Milligan on the papyrus contrast between the scribe's neat hand and the big sprawling hand of the signature; Ellicott prefers emphasis and authority, 'a few bold incisive strokes in his own hand'. FOR LENGTH: Gill ('the length of the epistle, the prolixity of his writing'), Calvin ('this long Epistle'), Wesley ('St Paul had not yet wrote a larger to any church'), Luther ('I never wrote so long an epistle with mine own hand to any other church... he hath respect to the length of the Epistle'), and Clarke, who argues it at length and with heat. REPORTED BUT NOT HELD: Barnes reports the crude-characters reading with its authorities (Doddridge, Whitby, Theodoret, Jerome, Theophylact) and Doddridge's suggestion that it was 'owing to the infirmity or weakness of his nerves'. Clarke's rebuttal is the strongest single argument on either side: to say Paul was unskilled in Greek 'is in my opinion absurd', he being born in Tarsus, 'a city which, according to Strabo, rivaled both Athens and Alexandria'; and as to the writing, 'the uncial character was that which was alone in use in those days, and this character is as easily made as the capitals in the Roman alphabet, which have been taken from it'. Recorded because the split runs cleanly along the line between the two nineteenth-century grammarians and everyone earlier, and because Barnes's own k18 appendix -- that Paul suffered a chronic ophthalmia which made writing painful -- supplies, from inside the same chapter, the physical explanation the large-character reading needs."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "galatians",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "5",
+        "8",
+        "13"
+      ],
+      "note": "THREE FURTHER DISAGREEMENTS WORTH KEEPING. (1) VERSE 2 AGAINST VERSE 5. Bear ye one another's burdens, then every man shall bear his own burden. Ellicott resolves it lexically and contextually at once: the two Greek words differ, 'the distinction would be sufficiently represented if we were to translate in the one case burden, in the other load', but 'the context, however, is quite different' -- there sympathy, here direct answerability to God. Robertson checks the lexical half and weakens it: the second word is 'old word for ship's cargo', and 'Christ calls his phortion light, though he terms those of the Pharisees heavy... The terms are thus not always kept distinct, though Paul does make a distinction here.' A clean case of a grammarian conceding that the distinction is contextual rather than lexical. (2) VERSE 8, WHETHER ETERNAL LIFE IS EARNED. Luther raises it head-on -- 'Here riseth a question, whether we deserve eternal life by good works? For so Paul seemeth to avouch in this place' -- and answers pastorally, that works must follow faith or the faith is no true faith. Calvin meets the same text pre-emptively against the Papists: 'though eternal life is a reward, it does not follow either that we are justified by works, or that works are meritorious of salvation... the undeserved kindness of God appears in the very act of honouring the works which his grace has enabled us to perform.' The two Reformers arrive at the same place from opposite directions, one from the pastoral side and one from the polemical. (3) VERSE 13, WHO 'THEY THEMSELVES WHO ARE CIRCUMCISED' ARE. Calvin restricts it to the teachers and says so against the received text: 'The old version and Erasmus translate thus... But Paul appears to me to refer to teachers only, and for this reason I would prefer to render the words, which would not include all circumcised persons, and thus would avoid ambiguity.' Ellicott takes the Greek to include both those circumcised and those circumcising others; Barnes leaves it open ('the Jewish teachers, or perhaps all Jews'); Robertson notes an actual variant, some manuscripts reading the perfect passive 'they who have been circumcised', and prefers the present as the harder reading. Four positions on one participle."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "galatians",
+      "chapter": "6",
+      "note": "FIDELITY SELF-GRADE, galatians 6. 9 entries over 18 contiguous keys, 58,969 usable source words -- the largest chapter worked in this loop, 24 percent larger than 2peter 2 (47,448) and 53 percent larger than revelation 6 (38,613). 12 voices: Luther, Barnes, Henry, Calvin, Clarke, Ellicott, Gill, Robertson, Wesley, Cyril of Jerusalem, John Chrysostom, Jamieson. Spans and counts: k1 alone 649w/10 voices; 2-3 650w/8; 4-5 649w/8; 6-7 648w/9; 8-10 650w/8; 11-13 650w/9; 14-16 648w/9; 17 alone 649w/8; 18 alone 650w/7. Every entry in window, no thin exemptions, tiling exact, all validators pass. Martin Luther added to ORDER/LAST/SCH as 'lutheran' -- first use of that school slot in the corpus. Jamieson residue at k6/k12 excluded; Cyril of Jerusalem silenced chapter-wide as off-target and duplicated; both recorded as source defects. LINT COST: one NAMED-BUT-NOT-SOURCED at entry 11-13 -- 'Theophylact', quoted by name inside Barnes's block among the authorities for the crude-characters reading, replaced with 'others'. That is the SIXTH consecutive instance of this same systematic cost (John Lightfoot at 2peter 2, Augustine at 2peter 2, bare Cyril at colossians 3, Archbishop Trench at revelation 11, St Chrysostom at genesis 16, now Theophylact here), and every one has been a father or a named authority QUOTED INSIDE another voice's block. The rule is doing its job -- it prevents the prose implying a source that is not present -- but the cost is now regular enough to be worth a design decision from the owner: either accept the paraphrase cost permanently, or let the lint carry a per-entry allowlist of names that may be mentioned as quoted-within rather than sourced. COMPRESSION COST: all nine entries needed trimming, first drafts running 779, 914, 827, 865, 966, 922, 958, 862 and 760 words against the 650 ceiling -- a mean overshoot of 34 percent, by far the worst of any chapter in the loop (revelation 6 was 22 percent). Four entries needed a full rewrite rather than clause-level trimming. The cause is straightforward and worth recording for whoever tunes the window: this chapter carries nine or ten voices per entry where the corpus norm is five or six, and 650 words cannot name ten positions and give each a substantive claim. Running total across the loop: 80 of 90 entries have needed compression."
     }
   ]
 }
