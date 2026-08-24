@@ -20880,6 +20880,56 @@
         "18"
       ],
       "note": "FIDELITY SELF-GRADE, revelation 11, nine entries, 19 contiguous keys, 39906 usable source words, 11 voices including three patristic (Victorinus of Pettau, Bede, Cyril of Jerusalem). Word counts as landed: key 1 alone 636w 8 voices; key 2 alone 581w 6 voices; key 3 alone 639w 8 voices; 4-6 621w 6 voices (Jamieson residue excluded); 7-9 615w 6 voices; 10-12 562w 6 voices (Jamieson excluded); 13-14 634w 7 voices; 15-17 632w 6 voices (Jamieson excluded); 18-19 644w 6 voices. Nine entries rather than the usual eight, because keys 1, 2 and 3 each carry between four and five thousand source words and would have been badly compressed if paired. Every claim in every entry is traceable to a named block in data/commentary/cow/revelation/11.json. Accuracy costs, both from the NAMED BUT NOT SOURCED HERE lint and both handled as before: at 15-17 Ellicott quotes Archbishop Trench through Professor Lightfoot, and since a Lightfoot is a voice in ORDER the attribution had to become an archbishop, losing both names; at key 1 and elsewhere Barnes cites Professor Stuart, Griesbach, Hahn and Tittmann, and Robertson cites Charles, Swete, Hort, Wellhausen, Beckwith, Bigg and Mayor, none of whom are voices, so those passed. This is the fifth chapter running in which the lint has cost an attribution. COMPRESSION: this is the first chapter of the rotation where the drafts did NOT systematically overshoot. Six of nine first drafts came in under 650 unaided (636, 581, 639, 621, 615, 562, 634, 632, 644) and NOT ONE required a trim pass. I attribute this to drafting against a 630 target and to the habit, now settled, of writing five paragraphs of roughly 125 words each rather than writing freely and cutting. Running total across the rotation: 47 of 56 entries have needed compression, and the last nine did not."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "Jamieson residue at keys 1, 7, 13, 19, 25 — class 1 mod 6, FIVE members at constant step 6, the most complete class observed. Twenty-first chapter characterised and the twenty-first mod-6 hit. Donor is John 6, the bread-of-life discourse: k1 gives Joh 6:37 (all that the Father giveth me shall come to me), k7 gives Joh 6:41-42 (the murmuring, do we not know all about him), k13 gives a bare cross-reference on Joh 3:36 and 5:24, k19 gives Joh 6:53 (except ye eat his flesh). NEW FINDING: k25 is BYTE-IDENTICAL to k19 — same 418 words, md5 aab26b3863f2 for both. The donor advanced 6:37, 6:41, 6:47ish, 6:53 and then REPEATED rather than advancing. Set beside 2corinthians 4, where the last member of the class ran off the end of Acts onto the commentary's closing byline, this gives two distinct tail failure modes for the donor stream: exhaustion (runs past the end of the donor book) and stall (repeats the last block). Both occur at the FINAL member of a class, which is consistent with a linear read-through that has run out of material. Also note: this refutes any general form of the continuous-stream-across-target-chapters hypothesis floated at 2corinthians 4, since acts 1 draws from John 6 and not from anywhere near Acts; the 2corinthians 3/4 pairing may be local or the stream may reset per target book. Declared excluded_voices on five of the six entries."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "15",
+        "26"
+      ],
+      "note": "Two smaller defects. (1) Book-preface chrome at k1, the same class first noted at revelation 1: Barnes opens with a 3,530-word introduction to Acts and Clarke with 2,535 words on the book's titles, authorship and place in the canon, before any verse comment — roughly 6,000 words of book-level matter at the first key of a book's first chapter. Much of Clarke's is usable and I used it, but it must be budgeted separately. (2) Cross-voice duplication detected by the per-key shingling scan built at 2corinthians 4: only one hit here, Henry into Clarke at k1 (7 shared 12-grams), far milder than the three Calvin contaminations in that chapter. The scan is cheap and worth running on every chapter from now on. (3) The Cyril of Jerusalem stream behaves exactly as documented: on point at k5 and k7 (the baptism with the Spirit, and 'it is not for you to know times or seasons'), and off-topic filler at k15 (the firmament, the same passage that appeared at revelation 1 k13 and 1john 4 k5) and k26 (the two robbers, a keyword match on 'numbered with'). Declared on entries 1 and 6 only."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "1",
+      "verses": [
+        "12",
+        "13",
+        "18"
+      ],
+      "note": "Three good disputes in the second half. (1) v12, the sabbath day's journey: Chrysostom infers the DAY OF THE WEEK from it, reasoning the distance would not be stated that way unless they were then walking a sabbath's allowance; Ellicott builds an entire alternative CHRONOLOGY on it, that the forty days had already expired and this meeting fell on the following sabbath, eight days before Pentecost, finding a fitness in the Lord entering his rest on the day of rest; Robertson refuses the whole inference, since the text says only that the mount is that far from the city, not that Jesus was at that distance; Clarke solves the geography instead, placing the ascent where the tracts of Bethany and Bethphage touch. Four voices, four different uses of one measurement. (2) v13, the upper room: Gill argues it was not a private house at all but the temple, and Clarke leans the same way from Luke 24:53; Barnes says there is no evidence for the temple and it is not very probable, and Robertson says flatly it was a private house, taking 'continually' to mean on proper occasions. (3) v14: Barnes calls prayer and supplication 'nearly synonymous'; Clarke reports the manuscripts that omit the second word and Griesbach's dropping of it, then explicitly refuses the inference that they mean the same thing — 'prayer asks, supplication expostulates, entreats, urges and re-urges the petition'."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "1",
+      "verses": [
+        "18",
+        "21",
+        "24"
+      ],
+      "note": "Three things worth keeping. (1) Lightfoot at v18 is the most extraordinary outlier I have met in this corpus: he proposes that the devil caught Judas into the air immediately after the money was flung back, strangled him, threw him headlong and dashed him in pieces on the ground, and questions whether the Greek need mean 'he hanged himself' rather than 'he was hanged'. Carried as his. (2) Robertson at v21-22 draws a consequence none of the others reach: the qualification demanded of a successor — personal eyewitness of the ministry, resurrection and ascension — 'will soon put an end to those who bear such personal testimony', i.e. the apostolate as defined here is self-terminating. (3) v24 divides on who is being prayed to: Barnes assembles reasons for the Lord Jesus, from the title and from the heart-searching claimed for him elsewhere; Ellicott raises the same question and inclines to the Father on the analogy of Acts 4:29, while granting that Stephen's dying prayer shows address to the Son was familiar. Also worth noting for the pattern file: Calvin's anti-papal aside recurs twice in this chapter, at v13 (Peter named first proves nothing, else Mary would be least of the women, being named last) and at v16 (Peter speaking in the assembly does not make him Pope) — the same polemical reflex documented at 2corinthians 4 v4 in Clarke's anti-reprobation aside, each voice reaching for its standing controversy wherever the text gives a handle."
     }
   ]
 }
