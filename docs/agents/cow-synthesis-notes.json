@@ -20771,6 +20771,115 @@
         "13"
       ],
       "note": "Two more. (1) v8, where the four antitheses get their imagery: Clarke refers them wholesale to the Isthmian games and divides them three to wrestling and one to the footrace, glossing each by technical usage from Aristotle and Hesychius; Ellicott makes them military throughout, the soldier hemmed in, pursued, struck down by a javelin, and compares 'faint yet pursuing'; Barnes hedges between wrestlers and gladiators; Robertson takes the first verb from the pressing of grapes. Alongside that, Wesley assigns the first four terms to inward affliction and the next four to outward, while Calvin insists the trouble is external and argues it from the word, 'as the beating and allision of the waves against a rock make no trouble in the rock'. (2) v13, the spirit of faith: Gill makes it the Holy Spirit outright, since the faith is God's gift and operation; Barnes denies the identification and makes the phrase mean faith itself; Ellicott takes a middle position, the human spirit in fellowship with the Divine. And on whose faith is 'the same', Wesley refers it to the saints of old and David in particular — the very reading Calvin knows, grants to be true in itself, and rejects as not answering to the argument, since the fellowship in view is with the Corinthians."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "3",
+        "5",
+        "17"
+      ],
+      "note": "EXODUS 38 IS BLOCKED BY THE EXODUS 36 TILING DEFECT, AND WORSE. Picked by the worst-first queue, surveyed, and NOT started. 17 source keys, 10720 usable source words, but the keys are NON-CONTIGUOUS: 1, 3, 5, 8, 9, 17, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31. synthesis_qa.coverage_problems rejects both verses covered by no entry and entries cover verses absent from the source, so every span must be a run of consecutive integers all present in the key set. The only legal runs here are the singletons 1, 3, 5, 17, the pair 8-9, and the block 21-31. That forces four singleton entries, and three of them cannot be written honestly: key 3 has 39 source words (Ellicott alone, a one-sentence gloss on the word for pots); key 17 has 103 usable words (Clarke 24, Ellicott 79) after the residue block is removed; and KEY 5 HAS NO USABLE SOURCE AT ALL -- its only block is 33 words of Jamieson, which is mod-6 residue and does not even discuss Exodus 38:5 (it is the framing sentence about Moses receiving directions on the mount). The thin exemption floor is 120 prose words, so keys 3 and 17 would be padding and key 5 would be invention. Stopping before writing anything, per the standing rule that an abandoned pick costs the run everything and the queue nothing. THIS IS THE SECOND CHAPTER BLOCKED ON THE SAME DEFECT (exodus 36 was the first) and it now has a sharper edge than the original note recorded: the remedy of letting coverage_problems ignore covered-but-absent verses would be enough for exodus 36, but exodus 38 ALSO needs residue-only keys to be omissible, because key 5's entire content is another book's residue. Recommend both halves of the remedy, and expect more OT chapters in the to-generate queue to hit this. A cheap detector: flag any chapter where some source key's blocks are all in RESIDUE, or where a maximal contiguous run of source keys carries under about 300 usable words."
+    },
+    {
+      "at": "2026-08-23",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "5",
+        "17",
+        "23"
+      ],
+      "note": "JAMIESON RESIDUE AT OFFSET 5 -- THE LAST UNSEEN OFFSET, TABLE NOW COMPLETE. Three Jamieson blocks at keys 5, 17 and 23. 5 mod 6 = 5, 17 mod 6 = 5, 23 mod 6 = 5. Offset 5 had never been observed before; with 2peter 2 supplying offset 0 in the previous batch, the residue emitter is now attested at EVERY offset 0 through 5. Full table: 2peter 2=0, genesis 2=1, exodus 24=1, romans 12=1, colossians 4=1, deuteronomy 26=2, deuteronomy 17=3, colossians 3=3, romans 6=4, romans 7=4, luke 16=4, 2corinthians 6=4, exodus 38=5. That the offsets are uniformly distributed across 0-5 is consistent with the stride being computed per chapter on the verse number, with the offset effectively arbitrary per target chapter -- which is what the byte-identical romans 6/romans 7 seam and the continuous source pointer across the colossians 3 / colossians 4 boundary already implied. The blocks here are short (33, 4 and about 139 words) and the key 5 block is the framing sentence about Moses receiving tabernacle directions on the mount, so the source book looks like the Exodus 25-31 stretch rather than a distant epistle; worth confirming when a neighbouring Exodus chapter is worked. SEPARATE ITEM: this tree carries a voice not previously seen in any chapter I have worked -- KEIL AND DELITZSCH, 5 blocks, 867 words, at keys 22, 23, 25, 26 and 30. It is absent from the build ORDER/LAST/SCH maps I have been carrying forward, and would have raised UNKNOWN HEAD. It belongs under grammatical-historical. Anyone picking an OT chapter should add it before building."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JAMIESON RESIDUE AT OFFSET 5, SECOND CHAPTER RUNNING, AND A NEW SOURCE BOOK. Three Jamieson blocks at keys 5, 11 and 17; 5 mod 6 = 5, 11 mod 6 = 5, 17 mod 6 = 5. This is the second offset-5 chapter in a single batch, immediately after exodus 38, having never been seen before. Source book is 1 THESSALONIANS 4-5, an eighth source book after Acts 10, Acts 13, Luke 7, 1 Cor 7, Romans 1, 1 Cor 6 and Ephesians 5. Content: k5 = 1 Thess 4:16 (the shout, the archangel's voice, the trump of God, the dead in Christ rise first, with Bengel and Michael cited); k11 = 1 Thess 5:2 (the thief in the night, the night is wherever there is quiet unconcern); k17 = 1 Thess 5:7 (they that sleep sleep in the night, the day-people and night-people contrast). Rate about 4 source verses per 6 target keys, and the pointer moves forward across the chapter division from 1 Thess 4 into 1 Thess 5 without a break -- another instance of the continuity noted at the colossians 3 / colossians 4 seam, this time within the source rather than the target. NOTE A COINCIDENCE WORTH CHECKING, NOT ASSUMING: at revelation 11:12 Robertson himself compares the witnesses' ascent to the rapture of 1 Thess 4:17, and at 11:15 Wesley says the seventh trumpet may once be heard on earth also, citing 1 Thess 4:16 -- the very verse the residue block at key 5 carries. If the residue emitter were content-driven this would be evidence for it, but the mod-6 stride and the offsets observed elsewhere argue it is positional, so I record this as a coincidence and not as a finding. It is however the first chapter where the residue source book and the chapter's own subject matter overlap, and it would be worth one deliberate check by the owner."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "3",
+        "4",
+        "7",
+        "8",
+        "19"
+      ],
+      "note": "ADAM CLARKE ABDICATES FOUR TIMES IN ONE CHAPTER, AND SAYS SO IN PRINT. This is the most sustained example of a commentator refusing his own task that I have met in this corpus, and it shapes the whole chapter. (1) 11:3 on the two witnesses: This is extremely obscure; the conjectures of interpreters are as unsatisfactory as they are endless, with a Latin tag that they build conjectures upon conjectures with little likelihood, whose opinions it is not my business to relate -- and the parting shot that those who wish to be amused or bewildered may have recourse both to ancients and moderns. (2) 11:4 on the olive trees: Whether the prophet and the apostle mean the same things by these emblems, we know not. (3) 11:8 on the great city: he gives the Rome reading and the Jerusalem reading and then writes, All these things I must leave to others. (4) 11:19, the fullest: I now come to a part of this book that is deemed of the greatest importance by the Protestant Church, but is peculiarly difficult and obscure. I have often acknowledged my own incapacity to illustrate these prophecies. I might have availed myself of the labors of others, but I know not who is right; or whether any of the writers on this book have hit the sense is more than I can assert -- followed by his announcement that he will insert another man's exposition and leave that author responsible for his own views. Robertson twice arrives at the same place independently (11:3, there is no possible way to determine who they are, all sorts of identifications have been attempted; 11:1, modern scholars do not know how to interpret this interlude), and Barnes at 11:14 declines to enumerate the opinions held, calling the attempt unprofitable, humiliating and discouraging. Three of the four fullest voices in the chapter thus decline the central question on the record. Worth keeping for whoever writes revelation 12, 13 and 17, where Clarke has promised to hand the work to someone else."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "1"
+      ],
+      "note": "TWO STRUCTURAL ITEMS FOR THE BUILD MAPS, AND A NEW VOICE. (1) NEW VOICE: VICTORINUS OF PETTAU, one block of 300 words at key 1, the earliest Latin commentator on the Apocalypse. He is absent from the ORDER/LAST/SCH maps carried forward through this rotation and would have raised UNKNOWN HEAD. He belongs under latin-fathers. I set LAST to the bare Victorinus rather than the full display name, since no other Victorinus is in ORDER and the prose needs to be able to name him briefly; anyone reusing these maps should keep that. Together with Keil and Delitzsch, found in the exodus 38 tree this same batch, that is two voices in one batch that the maps did not know. The maps are drifting behind the data tree and should be regenerated from the tree rather than hand-maintained. (2) BARNES CHAPTER FRONT MATTER FOR THE FOURTH CONSECUTIVE CHAPTER: the Barnes block at key 1 opens with CHAPTER XI ANALYSIS OF THE CHAPTER and runs roughly 1100 words of outline before the comment on verse 1 begins. Clarke likewise opens key 1 with a 145-word verse-by-verse chapter argument -- his second consecutive chapter doing so. Four chapters running for Barnes (colossians 3, 2corinthians 6, 2peter 2, revelation 11) is no longer a defect worth logging case by case; it is a property of the Barnes tree and needs a stripping rule. (3) OCR CORRUPTION IN THE BEDE BLOCK, key 1, which I have not seen before in this corpus. The block carries scanning artefacts inline: page headers (7a ExpUmatian of the Apocalypse. [bk. ii.), footnote sigla and marginal references (Ezck. iii. 14. Ps. xliv. 7 (xlv. A. V. 6). St. Matt. X. 33), broken words (fisuthey for how far they, sa3rs for says), and HTML-escaped smart quotes left unresolved. The Bede tree appears to be a raw OCR of a printed edition with no cleanup pass. Worth a targeted check of every Bede block in the corpus before more OT and Revelation chapters are worked."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "6",
+        "8",
+        "11",
+        "13",
+        "15",
+        "19"
+      ],
+      "note": "THE CHAPTER IS ONE LONG DISAGREEMENT ABOUT REFERENCE, AND THE LINES ARE NOT THE USUAL ONES. (1) 11:8 and 11:13 THE GREAT CITY. Gill denies it can be Jerusalem -- destroyed before the vision, never called the great city in this book -- and makes it Rome and the whole Romish jurisdiction. Robertson calls it clearly Jerusalem on the strength of where also our Lord was crucified, while admitting that everywhere else in the book the great city is Babylon. Clarke gives both and leaves it to others. Wesley not only says Jerusalem but calls 11:13 an unanswerable proof of it, arguing that Babylon must be wholly burned whereas this city loses a tenth to an earthquake and has the other nine parts converted; he then computes the population at seventy thousand from the seven thousand slain and has sixty-three thousand converted, such a conversion as we nowhere else read of. (2) 11:2 THE OUTER COURT. Gill refuses to read it of Rome, since the Gentiles who receive it are the Papists, and identifies it instead with carnal Protestants, the bulk of the reformed churches -- a Baptist turning the verse on the state churches. Ellicott makes it nominal Christendom at large. Barnes and Robertson keep it architectural. Clarke and Wesley take the treading literally, Wesley listing Romans, Persians, Saracens and Turks. (3) 11:6 WHETHER THE WITNESSES ARE PERSONS. Wesley argues from to smite the earth with all plagues as often as they will that this is not said of Moses, nor of Elijah, nor of any mere man besides, and asks how it is possible to understand this otherwise than of two individual persons -- against Gill (the ministers and churches, particularly Piedmont), Henry (eminent faithful ministers) and Ellicott (the vision is age-long and no single pair can exhaust it). (4) 11:2 and 11:9 THE PERIODS. Ellicott and Robertson set out the three equivalent forms; Clarke calls the period symbolical; Wesley insists on common months and common days and reckons the three days and a half to cover the weekly festivals of Turk, Jew and Christian at once. Robertson explicitly denies the day-for-a-year correspondence that Barnes allows and Henry builds a dating scheme on. (5) 11:15 WHEN THE SEVENTH TRUMPET SOUNDS. Gill rejects Constantine, the German Reformation, and Brightman's 1558 by name, and concludes it has not sounded yet. Barnes fixes it at the end of the 1260 years of the papacy. Clarke reports a preterist and a millennial school without joining either. Wesley argues from silence at the seventh seal against great voices at the seventh trumpet that the seals and trumpets are not parallel series -- a structural argument nobody else makes. (6) 11:19 WHERE THE CHAPTER ENDS. Barnes says the chapter is very improperly separated from the preceding and improperly ended, should have closed at verse 18, and that verse 19 opens a new series answering to the door opened in heaven at 4:1. Wesley instead matches the five signs of 11:19 with the same five in the same order at the seventh vial, making one the announcement and the other the execution."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "11",
+        "12",
+        "16"
+      ],
+      "note": "NOTABLE MATERIAL WORTH KEEPING. (1) 11:1 Victorinus of Pettau reports a third-century tradition about the origin of the Fourth Gospel: when Valentinus and Cerinthus and Ebion and others of the school of Satan were scattered abroad throughout the world, there assembled to John from the neighbouring provinces all the bishops, and compelled him himself also to draw up his testimony. He then makes the measure of the temple a creed, and says no one worships the holy altar save he who confesses this faith. (2) 11:1 Bede reads the command Rise as addressed to the reader rather than to John -- not that John was seated, but that the hearts of all are aroused by this word to measure their writings and actions by the divine rule. (3) 11:3 Ellicott gives up identifying the witnesses and asks instead why messengers are always sent in pairs, answering that beyond mutual support a world-wide work needs two different characters together: the energy and the sympathy, the elucidator of doctrines and the messenger to the conscience, the apologist and the evangelist, the man of thought and the man of action, the Son of Thunder and the Son of Consolation. The best thing in the chapter. (4) 11:7 Ellicott turns the beast's inability to touch the witnesses before their work is done into a general law: to every one there are the symbolical twelve hours in which his life's work must be achieved, and then, but not till then, cometh the night when none can work. (5) 11:11 Ellicott dates a fulfilment to the month: the orator of the Lateran Council cried in 1514 that there was an end of resistance to the papal rule and religion and that opposers existed no more, and within three years and a half the hand of Luther nailed up his theses at Wittenberg. Whether or not one accepts the reading, the precision of the interval is deliberate and striking. (6) 11:12 Ellicott quotes two lines of verse -- Persecution dragged them into fame, And chased them up to heaven. (7) 11:16 Ellicott argues, quoting an archbishop, that rendering one Greek word as throne of Christ and seat of Satan obliterates two ideas running through the whole book: that the servants of Christ are crowned with him and share his sovereignty, and that the antagonism of the prince of darkness develops as a parody of the heavenly kingdom. (8) 11:15 Robertson: Satan offered Christ the kingdom of the world on the mountain for one act of worship, but Jesus scorned partnership with Satan in the rule of the world and chose war, war up to the hilt and to the end -- and he calls this the crowning lesson of the Apocalypse. (9) 11:19 Gill reads the opened temple as a programme of church reform, with the ordinances purged of corruptions introduced by Papists OR RETAINED BY PROTESTANTS, the supper freed from transubstantiation and consubstantiation alike, and baptism administered as at first: a Baptist finding his own polity in the vision."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "7",
+        "10",
+        "13",
+        "15",
+        "18"
+      ],
+      "note": "FIDELITY SELF-GRADE, revelation 11, nine entries, 19 contiguous keys, 39906 usable source words, 11 voices including three patristic (Victorinus of Pettau, Bede, Cyril of Jerusalem). Word counts as landed: key 1 alone 636w 8 voices; key 2 alone 581w 6 voices; key 3 alone 639w 8 voices; 4-6 621w 6 voices (Jamieson residue excluded); 7-9 615w 6 voices; 10-12 562w 6 voices (Jamieson excluded); 13-14 634w 7 voices; 15-17 632w 6 voices (Jamieson excluded); 18-19 644w 6 voices. Nine entries rather than the usual eight, because keys 1, 2 and 3 each carry between four and five thousand source words and would have been badly compressed if paired. Every claim in every entry is traceable to a named block in data/commentary/cow/revelation/11.json. Accuracy costs, both from the NAMED BUT NOT SOURCED HERE lint and both handled as before: at 15-17 Ellicott quotes Archbishop Trench through Professor Lightfoot, and since a Lightfoot is a voice in ORDER the attribution had to become an archbishop, losing both names; at key 1 and elsewhere Barnes cites Professor Stuart, Griesbach, Hahn and Tittmann, and Robertson cites Charles, Swete, Hort, Wellhausen, Beckwith, Bigg and Mayor, none of whom are voices, so those passed. This is the fifth chapter running in which the lint has cost an attribution. COMPRESSION: this is the first chapter of the rotation where the drafts did NOT systematically overshoot. Six of nine first drafts came in under 650 unaided (636, 581, 639, 621, 615, 562, 634, 632, 644) and NOT ONE required a trim pass. I attribute this to drafting against a 630 target and to the habit, now settled, of writing five paragraphs of roughly 125 words each rather than writing freely and cutting. Running total across the rotation: 47 of 56 entries have needed compression, and the last nine did not."
     }
   ]
 }
