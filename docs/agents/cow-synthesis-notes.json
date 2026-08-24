@@ -23508,6 +23508,85 @@
       "book": "luke",
       "chapter": "14",
       "note": "NOT STARTED -- worker context exhausted; second consecutive declined pick. luke 14 sizes at 41,042 usable source words across 35 keys, which is OVER the loop's own ~40,000 whole-batch threshold: larger than titus 1 (38,959) and with more keys than mark 11 (33), the heaviest chapter this worker has completed. This is batch eleven for this session. The reasoning is the same as for romans 13 an hour ago: the risk is not a slow chapter but a degraded one landing under a self-graded A, which passes every automated gate and is the single failure mode the loop cannot detect downstream. Nothing is lost -- the picker holds no state and no partial work exists. NOTE FOR THE OWNER: this worker has now declined two consecutive picks and is effectively stalled; the queue is not moving on this side and rotation, not another poke, is what unblocks it. Also worth recording: --spread 40 rotated the offer from romans 13 to luke 14 rather than re-offering the head, so romans 13 remains unstarted and unclaimed as well."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "9",
+        "12"
+      ],
+      "note": "Self-graded A on all five entries. Every attribution traced to the named commentator's own block in data/commentary/cow/3john/1.json before writing. Two places where the sources report each other and the prose keeps the layers distinct: Clarke and Barnes both set out the manuscript case for reading 'I would have written' at v9, but Clarke adopts it while Barnes states it in order to refute it, and the prose says so rather than merging them; and Gill reports the Vulgate and Syriac readings there without endorsing either, which is recorded as a fourth position rather than folded into Clarke's."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "Jamieson donor residue, TWELFTH consecutive chapter. Two blocks, both on PHILIPPIANS: key 5 (175 words) on perdition set against Saviour and on 'our body' (Php 3:19-21), and key 11 (57 words) on Euodia and Syntyche, 'probably deaconesses of the church' (Php 4:2). Contribution to 3 John: zero. Declared as excluded_voices at entries 5 and 9, the entries whose spans carry the blocks. Twelve chapters running with the same defect and a contribution of zero in every one."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "13"
+      ],
+      "note": "Scrape chrome, SEVENTEENTH consecutive chapter, and a useful confirmation of the corrected rule. Ellicott's block at key 13 carries roughly 290 real words out of 1,186; the rest is StudyLight footer, CSS and inline JavaScript. The point worth recording is that key 13 is NOT the chapter-final key -- key 14 is -- and yet the chrome sits at 13. It sits there because Ellicott's block at 13 covers verses 13 and 14 together, so key 13 is where HIS STREAM ENDS. This is the third independent confirmation that the rule is 'last key of that voice's stream', not 'chapter-final key', and the first case where the two differ because a voice's own block spans the final verses. Gill is additionally truncated at the 200-word cap at key 1."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "4",
+        "12"
+      ],
+      "note": "The identity of Gaius is the letter's running question and the corpus splits SIX ways on it, with the split reopening twice. At v1 Gill argues from chronology that he cannot be Paul's Corinthian host (different city, different decade, different spiritual father); Ellicott says the date alone settles it; Wesley holds he probably IS the Corinthian, either removed to Asia or written to at Corinth; Clarke enumerates five men of the name and reports that some critics separate this one from all of them; Henry declines to decide, saying that if this is not he it is his brother in name, estate and disposition; Barnes says nothing more is known. At v4 the question reopens on the word 'children' -- Barnes and Robertson take it to imply conversion under John, Clarke and Wesley deny the inference. At v14 Clarke reopens it a third time from the other end, arguing that a farewell assuming personal acquaintance with a whole circle to be greeted one by one cannot have been sent to Corinth. Recorded because the debates field holds each split separately and cannot show that they are one question asked three times."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "5"
+      ],
+      "note": "Robertson uses this chapter to settle a question raised by another book of the corpus, which is worth flagging because the debates field is scoped to one chapter and cannot carry it. Commenting on the praise of hospitality at v5 he writes that it 'shows that in 2 John 1:10 John has a peculiar case in mind' -- that is, the warmth of the commendation here is his evidence that the refusal of hospitality commanded in the second epistle was aimed at a particular situation rather than laid down as a general rule. Anyone repairing 2john 1 should have this: it is a cross-book argument, made by a voice that appears in both, and it bears directly on the hardest verse in that letter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "12"
+      ],
+      "note": "Convergences the debates field cannot express. (1) Gill and Robertson arrive at the same textual variant at v4 from opposite directions -- Robertson from a Greek manuscript that reads grace where the text has joy, Gill from the Vulgate reading grace or thanks -- neither citing the other, and Gill draws a sense from it that Robertson does not, that the apostle had nothing to be more thankful for. (2) Henry and Barnes independently reach the same uncomfortable observation at v2, that for most professing Christians the apostle's wish would have to be reversed before it could honestly be prayed, Henry from the pastoral side and Barnes from the exegetical. (3) Ellicott and Robertson independently reach for the same passage at v14, the shepherd who calls his own sheep by name, as the background to greeting the friends individually; Robertson adds that the phrase occurs nowhere else in the New Testament though it is common in the papyrus letters."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "3john",
+      "chapter": "1",
+      "verses": [
+        "9"
+      ],
+      "note": "Robertson breaks frame at v9, as he did at 1 Corinthians 13:12 -- the second instance now recorded in this corpus of a commentator stepping out of exposition into personal anecdote. Having explained the rare verb for loving preeminence, he writes: 'Some forty years ago I wrote an article on Diotrephes for a denominational paper. The editor told me that twenty-five deacons stopped the paper to show their resentment against being personally attacked in the paper.' It is not exposition and was not used in the prose, but it is the sort of thing a reader of the tags might want to find, and it confirms that this voice's asides are a consistent feature rather than a one-off."
     }
   ]
 }
