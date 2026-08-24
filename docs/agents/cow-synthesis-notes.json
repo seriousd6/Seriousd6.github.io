@@ -21744,6 +21744,83 @@
         "17"
       ],
       "note": "Self-reported style divergence, flagged rather than fixed. Under the current standard (cow-prose-rules-2026-08-09) the corpus median school-summary is 109 words; mine in this chapter run 365-782. That is well inside the observed range (max 3166) and matches the chapters I landed earlier this rotation, but it is a consistent divergence from the corpus centre and a later worker may want a ruling on the intended length. Same posture as the pericope_label note from the previous batch: I have not retro-fitted landed chapters."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JAMIESON RESIDUE: the walk CONTINUES ACROSS THE CHAPTER BOUNDARY -- the single most decisive datum yet for the re-indexing decision. revelation 7 carries 3 Jamieson blocks at keys 5, 11, 17 (offset 5 mod 6, same class as revelation 6, revelation 11, exodus 38), and the source is 1 Thessalonians: k5 = 1Th 1:7-8, k11 = 1Th 2:1, k17 = 1Th 2:6. revelation 6's three blocks were Col 4:12, Col 4:17, 1Th 1:2. Laid end to end the full sequence is Col 4:12 -> Col 4:17 -> 1Th 1:2 -> 1Th 1:7 -> 1Th 2:1 -> 1Th 2:6: one continuous monotonic walk with a stride of ~4-5 source verses per 6-key step, crossing a chapter boundary AND a book boundary without a break. That is not a per-chapter misalignment; it is a single flat global offset into a concatenated Jamieson corpus, read straight through. The offset table is now complete 0-5 with identified source books for every class except offsets 1 and 4. Recommendation to the owner: the re-indexing fix should be modelled as one global pointer, not as per-chapter repair."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "7",
+      "verses": [
+        "17"
+      ],
+      "note": "CROSS-CHAPTER DUPLICATE BLOCK: Cyril of Jerusalem's single block here (k17, 197 words) is byte-identical to the block that appeared at revelation 6 k6 -- the Catechetical Lecture on the firmament of Genesis 1 ('Let there be a firmament in the midst of the water'). It is off target in both places, and it is now the same text emitted at two keys in two different chapters. This extends the duplication defect already logged at galatians 6, where Cyril's block was emitted twice WITHIN one chapter (k14 and k18). Recommendation stands and widens: the duplicate-block detector should key on block hash across the WHOLE tree, not just within a chapter file. Silenced chapter-wide here."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "6",
+        "7",
+        "8"
+      ],
+      "note": "BARNES DEFECTS, three kinds in one chapter. (1) Chapter front matter at k1 -- 7th consecutive chapter. (2) Clarke chapter argument at k1 -- 5th consecutive. (3) Stub blocks: k7 and k8 are the bare two-word string 'Rev 7:5', a cross-reference with no content, and k6 opens 'Continuation of Note from Revelation 7:5'. The standing recommendation for a 'Continuation of Notes on' detector now has a companion case: blocks under ~5 words that consist only of a scripture reference should be dropped as stubs, not carried as content."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "9",
+        "13",
+        "14",
+        "16"
+      ],
+      "note": "Five live disagreements in revelation 7. (1) The four angels: good or evil? Wesley alone says evil -- 'the angels to whom the four winds are committed' are ministers of vengeance -- against Barnes, Gill and Ellicott, who take them as good angels restraining judgement. (2) Angels or kingdoms? Bede reads the four as the four kingdoms, Assyria, Persia, Greece and Rome, against every modern voice. (3) Is the great multitude the same company as the 144,000? Ellicott says yes and reads the two visions as the Passover and the Feast of Tabernacles of one Church; Barnes keeps them distinct, the sealed being a numbered remnant and the multitude the whole assembled host. (4) Where is the scene? Gill refuses heaven and sets the vision in the millennial reign on earth; Barnes takes it as transferred from earth to heaven. (5) Are these martyrs? Barnes says the eye is fixed on the martyrs standing among the host; Wesley denies it flatly, since martyrs are not a multitude no man can number. Add the tribe-list anomaly at k4: Dan is omitted and Manasseh substituted, noticed by Gill, Barnes, Clarke and Ellicott, with no agreed explanation."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "7",
+      "verses": [
+        "14",
+        "16"
+      ],
+      "note": "Clarke's two outlier readings in revelation 7, both worth preserving because they cut against his own tradition's neighbours. (1) On the white robes at v14 he argues against imputation: the robes cannot be the righteousness of Christ, 'for this cannot be washed and made white in his own blood', but are a righteousness wrought in them by the merit of his blood and the power of his Spirit. Every other voice here reads the washing as cleansing by imputed merit. (2) On 'neither shall the sun light on them' at v16 he alone reads historically rather than heavenly: the sun is the secular rulers, who 'being converted to God, became nursing fathers to the Church', and the heat is persecution. Barnes, Ellicott, Robertson and Wesley all take the clause as a description of the heavenly state."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "7",
+      "note": "FIDELITY SELF-GRADE, revelation 7, six entries, 17 keys, 33945 usable source words, 11 voices (no Calvin -- he did not write on Revelation). Every claim in every entry traced to a named block before writing; every voice named in prose is sourced in that entry. Word counts: 1-2 649w (9 voices), 3-4 647w (6), 5-8 641w (4, Jamieson residue at k5 excluded), 9-12 650w (7, Jamieson at k11 excluded), 13-14 647w (7), 15-17 649w (6, Jamieson at k17 excluded). All six in the 350-650 window, none thin. Exclusions: Jamieson residue at k5/k11/k17 (wrong book entirely, see the residue note); Cyril of Jerusalem silenced chapter-wide (his one block is a duplicated off-target firmament lecture). No school mismatch, no ghost blocks, no unknown heads, tiling complete over keys 1-17 with no gaps, duplicates or extras. Grade: high confidence on all six. The weakest ground is 5-8, where only four voices survive after the residue exclusion and where Barnes's k7/k8 are content-free stubs, so the tribe-list treatment leans on Gill, Clarke and Wesley more heavily than I would like."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "7",
+      "note": "PATRISTIC TILING HYPOTHESIS -- third data point, and it holds. The hypothesis formed at 1corinthians 2 was that the patristic trees are tiled by SCRIPTURE CITATION rather than by position: where a father quotes the verse the block lands correctly, where he does not an arbitrary block is attached. revelation 7 confirms it from both sides. Victorinus of Pettau, who wrote an actual commentary on Revelation and cites 7:1-2 directly, lands correctly at k1 and was usable. Bede, likewise a commentator on Revelation, lands correctly at k1. Cyril of Jerusalem, whose Catechetical Lectures barely touch Revelation, gets an arbitrary Genesis-firmament block -- the same one twice, in two chapters. If the hypothesis holds, the remedy is far cheaper than the whole-tree re-fetch recommended earlier for Tertullian: drop any patristic block that does not cite its own verse or an adjacent one. Recommend the owner test this with a citation-match pass over the patristic trees before commissioning any re-fetch."
     }
   ]
 }
