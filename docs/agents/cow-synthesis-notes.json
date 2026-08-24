@@ -23187,6 +23187,63 @@
       "book": "titus",
       "chapter": "1",
       "note": "LANDING HISTORY for this chapter, for the record. The first finish attempt failed at the push step ('rejected four times') because git had NO CREDENTIALS in the session -- a direct push returned 'could not read Username for https://github.com'. That was an environment failure, not a history conflict: local master was then a clean fast-forward. Credentials were restored before the next poke, by which time origin had advanced (judges 12), making the local commit non-fast-forward. Rather than merge, rebase or force -- all forbidden by the loop instruction -- the unpushed commits were preserved on a local branch, master was reset to origin/master as the instruction directs, and the chapter was REBUILT FROM SOURCE with the scratchpad build and re-landed through finish. The rebuilt prose blob hashed byte-identical to the original commit, which is a useful incidental confirmation that the build is deterministic. SUGGESTION: finish --push reports an auth failure as 'push rejected', which reads like a non-fast-forward race and cost a detour through git history; distinguishing the two would let the loop fail fast instead of retrying four times against a wall."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "1",
+        "8",
+        "21"
+      ],
+      "note": "All three entries self-graded A for fidelity. Every attribution traced to the named voice's own block. Three limits: (a) Ellicott's k31 block is 1,027 words of which 113 are commentary and Gill's k31 is 89 of which 58 are; nothing was carried into entry 21 from the chrome in either. (b) Entry 1 covers verse 1 alone and is the shortest entry I have written, 374 words. Henry's and Calvin's k1 blocks both run past verse 1 into the laver of verse 8, and that material was NOT used at entry 1, since it belongs to the next entry's range; Henry has his own k8 block so his mirror material survives there, but Calvin has no block at k8 or k9, so his discussion of the mirrors -- the Egyptian metal mirrors, and his two conjectures about why the laver was ornamented with them -- is stranded at k1 and appears nowhere. It is the richest single treatment of verse 8 in the chapter and the tiling cannot reach it. (c) Entry 1 first came out at 349 words and graded B on the diversity floor; it was rewritten rather than padded, and the added material is Clarke's chapter outline, which is genuinely about verse 1's place in the chapter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "3",
+        "5",
+        "17"
+      ],
+      "note": "SECOND live instance of the coverage question, and it resolves the OPPOSITE way from leviticus 3. Exodus 38 is sparse like exodus 36: runs are (1) (3) (5) (8-9) (17) (21-31), with a dead run at k5. Under c55d2989 only the run from the lowest key is required, which here is k1 ALONE -- so a tiling of {'1':'1'} covering one verse of a thirty-one-verse chapter passes the checker. I verified that and did not take it. What I did take covers the three runs that hold material and omits the three that do not, and what is omitted is 179 words of scraps: k3 is 39 words, one voice, a single lexical note on 'pots' versus 'pans'; k5 is 33 words, Jamieson only and donor residue, a genuinely content-free dead run; k17 is 107 words of which Clarke's 24 are a bare cross-reference and Jamieson's 4 are a gloss, leaving about 79 real words in Ellicott. None can carry a 350-word entry without invention. Set this beside leviticus 3, where the same rule would have let me drop 2,806 words including the chapter's closing statute and I covered them instead. The rule permits both outcomes; what decides is how much real material sits behind the gap, and that is a judgement the checker cannot make. Two live cases now point the same way: the checker should distinguish a key beyond the chapter's verse count from an interior gap in a real chapter, and leave the interior-gap case to the writer."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "5",
+        "17",
+        "23"
+      ],
+      "note": "Jamieson donor residue for the NINTH chapter running. k5 (33w) is a general remark that the business occupying Moses on the mount was receiving directions about the tabernacle -- Exodus 25 material, not the rings for the staves of the altar at 38:5 -- and it is the ONLY voice at that key, making k5 a dead run. k23 (139w) is on the two tables of stone called the testimony, Exodus 25 and 31 material, not Aholiab the artificer. k17 is a four-word gloss, 'a rim or cornice', too slight to classify. Excluded at entry 21. Twentieth chapter with the defect."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "31"
+      ],
+      "note": "Chrome at k31 in TWO voices at once: Ellicott (113 real words of 1,027, StudyLight) and Gill (58 of 89, the Sacred Texts navigation block). This is the SECOND occurrence of the two-voice pattern, the first being leviticus 3 k17, and again the two sources differ, which confirms that a screen stopping at the first hit per key would under-report. FOURTEENTH consecutive chapter with chrome."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "38",
+      "verses": [
+        "24",
+        "26"
+      ],
+      "note": "Two things worth recording from the reckoning. (1) FOUR different money values for the same gold, none of them agreeing: Ellicott reports three estimates from other scholars, nearly 320,000 pounds, 175,000 and 132,000; Keil computes 131,595 independently; Henry and Wesley both give a round 150,000; and Clarke refuses to name any figure until the whole system of talents, minas, drachms and shekels has been laid out, since authorities value the shekel at three shillings, two and sixpence, or two and fourpence. A good demonstration of how wide the uncertainty was and how differently the schools handle it. (2) Ellicott and Wesley independently draw a public-finance conclusion from the same contrast between freely given gold and assessed silver -- Wesley that either way may be taken for defraying public expenses provided nothing be done with partiality, Ellicott that compulsory payment toward the sanctuary was sanctioned at the very moment voluntary offering was most praised, so church rates are defensible in principle from both Testaments. Neither cites the other. Also note that Keil extracts an arithmetical proof from the text itself, that 603,550 men at half a shekel each, set against a hundred talents and 1,775 shekels, shows incidentally that a talent contained three thousand shekels -- and that Clarke reaches the same proof by the same route independently."
     }
   ]
 }
