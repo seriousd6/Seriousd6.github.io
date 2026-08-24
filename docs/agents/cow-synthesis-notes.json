@@ -21821,6 +21821,76 @@
       "book": "revelation",
       "chapter": "7",
       "note": "PATRISTIC TILING HYPOTHESIS -- third data point, and it holds. The hypothesis formed at 1corinthians 2 was that the patristic trees are tiled by SCRIPTURE CITATION rather than by position: where a father quotes the verse the block lands correctly, where he does not an arbitrary block is attached. revelation 7 confirms it from both sides. Victorinus of Pettau, who wrote an actual commentary on Revelation and cites 7:1-2 directly, lands correctly at k1 and was usable. Bede, likewise a commentator on Revelation, lands correctly at k1. Cyril of Jerusalem, whose Catechetical Lectures barely touch Revelation, gets an arbitrary Genesis-firmament block -- the same one twice, in two chapters. If the hypothesis holds, the remedy is far cheaper than the whole-tree re-fetch recommended earlier for Tertullian: drop any patristic block that does not cite its own verse or an adjacent one. Recommend the owner test this with a citation-match pass over the patristic trees before commissioning any re-fetch."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "10",
+        "12",
+        "14",
+        "17"
+      ],
+      "note": "All seven entries fidelity-self-graded A. Every declared voice is named in its own entry and every attribution traces to that voice's block in the catena; audit-synthesis-quality reports 0 ungroundable attributions across 7/7 verses. Jamieson, Fausset and Brown is in excluded_voices at entries 1, 9 and 14 rather than in voices, for the reason given in the source-defect note. Chrysostom is declared only at entries 5 and 14, the two entries containing k5 and k16."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson donor-stream residue, third consecutive chapter. The Jamieson blocks at k3 (98 words), k9 (138) and k15 (85) are commentary on 2 Corinthians 4 (vv 8, 13 and 18 - the treasure in earthen vessels, the spirit of faith, the things not seen), pasted into Hebrews 2. Strictly monotone across the three keys. Benign, not blocking: each residue key sits inside a run carrying real voices, so the tiling is unaffected. DONOR MODEL UPDATE: leviticus 1 / numbers 25 / numbers 30 / exodus 36 all drew on Pentateuchal legal or ceremonial catalogues; 2corinthians 2 (landed 1203456c) drew on Acts 27-28; this one draws on 2 Corinthians 4. The catalogue generalisation is now dead twice over. What the last two share is proximity in canonical order - each donor sits roughly two books earlier than its target - which is a better predictor than genre and is worth testing against the remaining flagged chapters."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "10",
+        "12",
+        "13"
+      ],
+      "note": "Cyril of Jerusalem inside John Wesley blocks - now confirmed as systematic, not a one-off. The Wesley blocks at k10, k12 and k13 each open with genuine Wesley and then continue with passages of Cyril of Jerusalem's Catechetical Lectures (on the Lordship of Christ, on the firmament and the waters, on forgiving before receiving grace, on baptism). The same defect was recorded at 2corinthians 2 k15. Four instances across two books in different testaments means the contamination is in the Wesley source file rather than in any one chapter. Only the genuine Wesley material was used; none of the Cyril text was attributed to Wesley. Note that Chrysostom IS a legitimate declared voice in this chapter at k5 and k16, so a naive de-duplication pass keyed on patristic vocabulary would risk stripping real content along with the injected material."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "18"
+      ],
+      "note": "Chapter-final site chrome, matching 2corinthians 2 k17. The Charles Ellicott block at k18 (1163 words) carries roughly 250 words of real commentary followed by StudyLight boilerplate - copyright text, CSS rules and navigation menus. This is the second chapter in a row where the defect lands on the LAST key of the chapter in the Ellicott stream, which suggests it is an artefact of how the Ellicott pages were scraped at chapter boundaries rather than random noise. A cheap guard would be to check the final Ellicott block of every chapter for a CSS or menu signature."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "10"
+      ],
+      "note": "A clean doctrinal split on whether the verse licenses a doctrine of sanctification by suffering. Wesley enters an explicit caution that what is said of the Lord's being made perfect through sufferings has NO relation to our being saved or sanctified by ours: he was perfect as God and as man before ever he suffered, and by suffering was made a complete sin-offering, which is as far out of our sphere as his ascension; afflictions help only indirectly, as they wean us from sin. Calvin draws the opposite comfort from the same words, that it was necessary for the firstbegotten to be inaugurated into his supremacy by the cross since that is the common lot of the members, and that the faithful may therefore lovingly kiss the cross rather than dread it. Robertson stands aside from both, holding the scruple misplaced because it is the humanity that is under discussion. Recorded as a debate on entry 10; the prose gives Wesley's caution and Calvin's comfort side by side without adjudicating."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "2",
+      "verses": [
+        "17"
+      ],
+      "note": "A convergence worth recording rather than a defect. At v18 Clarke and Calvin independently reach for the same line of the Aeneid, non ignara mali miseris succurrere disco, to illustrate that a state of suffering disposes men to be compassionate. Clarke gives it with Dryden's rendering and builds his exposition on the maxim; Calvin quotes it as a saying no doubt derived from daily examples among men, and then immediately guards it, since the Son of God needed no experience in order to know the emotions of mercy. Two commentators three centuries and one confession apart reaching for the same pagan poet on the same verse is the kind of agreement the debates field cannot express, so it is noted here."
     }
   ]
 }
