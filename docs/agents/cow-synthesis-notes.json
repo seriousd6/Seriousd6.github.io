@@ -21339,6 +21339,113 @@
         "14"
       ],
       "note": "FIDELITY SELF-GRADE, numbers 25, FOUR entries, 18 contiguous keys, 13771 usable source words (13613 after voice-splitting, about 12480 after discounting Ellicott's ~1130 words of chrome), 8 voices. Word counts as landed: 1-5 635w 7 voices (Jamieson excluded); 6-9 647w 7 voices; 10-13 591w 6 voices (Jamieson excluded); 14-18 640w 7 voices. All four grade A on the recomputed metrics (MATTR-200 0.617-0.662, zip 0.452-0.466); the audit reports 0 defects of every category and 0 fidelity failures. TILING: 1-5 | 6-9 | 10-13 | 14-18, source budgets 4145 / 4177 / 2350 / 1811 usable. Four entries rather than five: the obvious fifth seam is at 14-15 (the two names) but that pair carries only 482 source words, so it was folded into the closing entry with the war order. The tiling follows the chapter's own four movements -- the apostasy, Phinehas, the covenant, the named dead and the command against Midian -- and no entry needed a strained seam. COMPRESSION WAS THE EASIEST OF THE ROTATION: TWO OF FOUR ENTRIES CAME IN INSIDE THE WINDOW ON THE FIRST ASSEMBLY (1-5 at 635, 10-13 at 591), which has not happened before in a single chapter. Entry 6-9 needed four passes (711 down to 647) and 14-18 one. The cause of the easy fit is identifiable and worth generalising: THIS IS A NARRATIVE CHAPTER, and narrative distributes claims across a sequence of events, so each paragraph has a natural stopping point. The legal chapters worked earlier in this rotation (leviticus 1, leviticus 2, numbers 30) all overshot because every witness comments on the SAME clause and the paragraph has to hold four or five competing glosses on one word. Expect first-draft overshoot in legal material and first-draft fit in narrative. LEXICAL DIVERSITY WAS NOT A CONSTRAINT HERE, unlike numbers 30 where entry 1-2 graded B at ttr 0.577 and needed a substitution pass. The lowest ttr in this chapter is 0.617. Same reason: a narrative supplies proper names, places and varied verbs, where a legal chapter supplies vow, bond, bind, father, husband over and over. GHOST CHECK CLEAN ON FIRST RUN -- fifth consecutive chapter. CROSS-VOICE DUPLICATION SCAN: zero pairs at the 12-word window, but see the source-defect note for a sub-threshold Gill/Ellicott echo at k13 that the scan misses and that the prose flags explicitly. VOICE COUNTS: entry 10-13 has six voices because Henry has no block there; Keil's blocks throughout are hard-capped at 200 words and open by reprinting KJV text, the same cap recorded at leviticus 1, leviticus 2 and numbers 30, so his real contribution is well under his block lengths."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "JAMIESON RESIDUE, offset 5 mod 6 -- third confirmed offset-5 chapter, second in Revelation. Three Jamieson blocks at keys 5, 11 and 17 (329 words total) discuss none of the verses they sit under. Source book identified: Colossians. The k5 block is on Colossians 1:29 / 2:1 (striving as in the agony of a contest, fully assured, perfect implying full maturity, Bengel joining 'in all the will of God' with 'stand'); the k11 block is on Colossians 4:17 (Speak ye to Archippus, Scripture belongs to the laity as well as the clergy, Bengel on Archippus prevented by weak health or age); the k17 block is on 1 Thessalonians 1:2-3 (Paul, Silvanus and Timotheus, making mention of you in our prayers without ceasing). Note that k5 and k11 are Colossians while k17 is 1 Thessalonians -- the residue for a single chapter is NOT drawn from one contiguous source passage here, which is new. Offset table now: 0 (2peter 2 / Ephesians 5), 1, 2 (genesis 16 / Genesis 13), 3 (colossians 3 / 1 Cor 6), 4 (genesis 20), 5 (exodus 38, revelation 11 / 1 Thess 4-5, revelation 6 / Colossians + 1 Thess). Ten source books now: Acts 10, Acts 13, Luke 7, 1 Cor 7, Romans 1, 1 Cor 6, Ephesians 5, 1 Thess 4-5, Genesis 13, Colossians 1-4. Still queued for the owner's re-indexing decision."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "SHARPER READ ON THE RESIDUE SOURCE (follows the source-defect note above). The three Jamieson blocks are not merely 'from Colossians' -- they are a MONOTONIC WALK THROUGH THE CANON, crossing a book boundary mid-chapter. k5 comments on Colossians 4:12 (Epaphras labouring fervently in prayers -- 'striving as in the agony of a contest'); k11 comments on Colossians 4:17 (Speak ye to Archippus); k17 comments on 1 Thessalonians 1:2 (Paul, Silvanus and Timotheus, making mention of you in our prayers without ceasing). Colossians 4 has 18 verses, so the walk runs Col 4:12 -> Col 4:17 -> (Col 4:18) -> 1 Thess 1:1 -> 1 Thess 1:2. The residue emitter therefore does NOT re-index within a single chapter or book; it advances through a flat verse stream and steps into the next book when it runs off the end of the current one. That is exactly the behaviour of an off-by-N index into a globally concatenated verse list, and it rules out any explanation local to one book. Compare genesis 16, whose residue came from Genesis 13 (same book, earlier chapter) -- consistent with the same flat-stream model, since Genesis 13 precedes Genesis 16 in the same stream. Recommend the owner treat this as the decisive datum for the re-indexing decision: the fix is a global offset into the source verse list, not a per-book or per-chapter correction."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "6",
+        "7",
+        "15"
+      ],
+      "note": "CYRIL OF JERUSALEM: WHOLE-VOICE OFF-TARGET TREE FOR THIS CHAPTER. All three Cyril of Jerusalem blocks in revelation 6 are Catechetical Lectures text with no bearing on the verses they sit under. k6 (197 words) is Lecture 9 on the firmament of Genesis 1 -- 'God said, Let there be a firmament in the midst of the water... the heaven is water, and the orbs therein, sun, moon, and stars are of fire'. k7 (301 words) is on the Jews' refusal to hear, the Incarnation, and Sinai. k15 (979 words) is on the Jews confessing One God but denying the Father of our Lord Jesus Christ. None of the three touches a seal, a horse, a rider, the martyrs or the day of wrath. Silenced chapter-wide in the build rather than excluded per entry, since the defect is the voice's whole tree here, not a stray block. This is the THIRD tree-level off-target defect after Tertullian (three consecutive chapters) and the Bede OCR corruption at revelation 11 key 1. Recommend the same remedy as for Tertullian: re-fetch the whole Cyril of Jerusalem tree, and check whether the Catechetical Lectures are being tiled onto Revelation verse keys by position rather than by reference."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "10",
+        "11",
+        "12"
+      ],
+      "note": "CHAPTER FRONT MATTER AND STUB BLOCKS, recurring. (1) Barnes chapter front matter -- FIFTH consecutive chapter (colossians 3, 2corinthians 6, 2peter 2, revelation 11, now revelation 6): his key-1 block opens with the whole-chapter overview 'This chapter contains the opening of six of the seven seals' before any verse comment. (2) Clarke chapter argument -- THIRD instance (2peter 2, revelation 11, revelation 6): Wesley's key-1 block carries the full chapter argument, 'The opening of the first seal and the white horse; of the second and the red horse...', ahead of the verse notes. (3) Gill 200-word truncation -- key 12 is cut mid-sentence at exactly two hundred words, at 'and it was after the seventh seal, and at the sounding of', losing the third of his three objections to the received readings of the sixth seal. This is the same exact-cap truncation catalogued five times in 2peter 2; add revelation 6:12 to the re-fetch list. (4) Barnes stub blocks -- keys 10 and 11 carry only marginal cross-reference strings (13 and 15 words: 'Rev 6:9 (d) \"how long\" Zech 1:12 (e) \"avenge\" Rev 11:18, De 32:41-43'), with no exposition at all. Same shape as the colossians 3 household-code stubs. His notes on those two verses exist in the printed commentary and are simply absent here. (5) Ellicott chrome -- the key-17 block ends with a nav strip ('Revelation Rev 5 Revelation Rev Revelation Rev 7') ahead of the copyright cut, the standing Ellicott chrome item."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2",
+        "12"
+      ],
+      "note": "THE CHAPTER WHERE INTERPRETATION DIVIDES, AND THE COMMENTATORS SAY SO. Barnes opens by declaring that all agreement ends here: up to this point there may be unimportant diversities in the exposition of words, but no material difference as to the writer's meaning; from here begins the divergence toward theories various, discordant, and many of them wild and fantastic. He gives four reasons -- the scene opens into the future, there is no designation of places, no designation of time that is necessarily unambiguous, and nothing in the symbols making it certain they apply to only one class of events. Robertson answers by refusing the whole enterprise: he will make no effort to refer the seals to persons or events past, present or future, but only relate the symbolism to the other symbols of the book. The chapter then proves Barnes right. On the first rider alone the sources give: the gospel (Clarke, Gill), Christ himself (Victorinus, Bede, Henry), victory personified and the reflex of early Christian hope (Ellicott), the emperor Trajan (Wesley), and no identification whatever (Robertson). On the sixth seal: the fall of Jerusalem (rejected by Gill), the barbarian destruction of the empire (rejected by Gill), the conversion of Constantine (Clarke, Gill, Henry), the day of judgment (rejected by Clarke), and God's judgment shown to the wicked departed and perceived by nobody on earth (Wesley, alone). Recorded because it is unusually well documented from inside the sources themselves rather than inferred."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "note": "WESLEY'S COMPASS KEY vs BARNES'S EXPLICIT DENIAL, repeated at all four seals. Wesley assigns a quarter of the world to each living creature -- the first looks east (k1), the second west (k3), the third south (k5), the fourth north (k7) -- and gives the rule: at each seal it was necessary to turn toward that quarter of the world which it more immediately concerned. Barnes denies any such significance three separate times, once per seal after the first: at k3, 'it cannot be supposed that there is any special significancy in the fact that the second beast addressed the seer... nor was there any reason in the symbol why this creature rather than another should speak'; at k5, 'it is not apparent why the third beast is represented as taking a particular interest in the opening of this seal, nor is it necessary to show why it was so... the order in which they did this does not seem to be a matter of importance'; at k7, 'there does not appear to have been any particular reason why the fourth of the living creatures should have made this proclamation rather than either of the others... it was poetic and appropriate to represent each one in his turn'. Clarke takes a third position and identifies the creatures by face rather than by compass point (the third is 'that which had the face of a man'). At k9 the disagreement resolves itself: no living creature speaks at the fifth seal, and Barnes, Henry and Clarke all pause to explain the silence, Barnes with the same argument he has used four times -- having shown each in turn, there was no propriety in showing them again."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "9",
+        "10",
+        "11"
+      ],
+      "note": "THE INTERMEDIATE STATE: ELLICOTT AGAINST BARNES AND GILL, ON THE SAME TWO WORDS. At k9 Barnes takes 'the souls of them that were slain' as one of the incidental proofs in the Bible that the soul does not cease to exist at death, and also that it does not cease to be conscious or sleep till the resurrection -- these souls being represented as still in existence, as remembering what had occurred on the earth, as interested in what was taking place, as engaged in prayer. Ellicott, in the same verse, refuses the inference by name: 'The word souls has been made a resting-place for an argument respecting the intermediate state. There is no ground for this: it is quite beside the object of the seal.' He reads souls as the equivalent of lives -- the vision tells that their lives had been sacrificed -- and Robertson's philology backs him ('the lives, for the life is in the blood'). Then at k10 Gill makes the identical inference Ellicott has just refused, and makes it from a different feature: the LOUDNESS of the cry. 'They cried with great ardour and fervency, being very pressing and importunate; and which shows that they were awake, and not asleep, and that the soul does not sleep with the body in the grave.' He repeats it at k11 from the white robe. So the same doctrinal point is drawn three times from three different features of the passage, and denied once as beside the point -- a clean case of the reformed and grammatical-historical schools converging on a doctrine that a grammatical-historical voice rejects on exegetical grounds."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "15",
+        "17"
+      ],
+      "note": "THREE METHODOLOGICAL REMARKS WORTH KEEPING. (1) Barnes at k2 asks what mode of representation the seer experienced -- pictures drawn on successive portions of the volume, a written description he read or heard read, or a scenic representation for which the seal was merely the occasion -- and argues for the pictorial on four grounds, the sharpest being that on the scenic view the breaking of each seal would disclose nothing but a succession of blank portions, so what would be the use of a sealed volume, or of the writing within and without? He returns to it at k12, saying every item of the sixth seal could be painted. This is the clearest statement of his panorama theory anywhere in the chapters worked so far. (2) Robertson at k12 supplies a general warning that applies far beyond this chapter: Peter interpreted Joel's sun-turned-to-darkness and moon-to-blood of the day of Pentecost, and 'Peter's interpretation of Joel should make us cautious about too literal an exegesis of these grand symbols'. (3) Barnes at k15 interrupts his own exposition to say that because this passage does not refer to the end of the world or the day of judgment, the word 'bondman' 'determines nothing as to the question whether slavery is to continue on the earth' -- a nineteenth-century American aside on the text's use in a live controversy, and the only such aside encountered in the corpus so far."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "6",
+      "note": "FIDELITY SELF-GRADE, revelation 6. 8 entries over 17 contiguous keys, 38,613 usable source words, 11 voices (Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Wesley, Jamieson, Cyril of Jerusalem, Victorinus of Pettau, Bede). Spans and counts: k1 alone 637w/9 voices; 2-4 650w/7; 5-6 650w/5; 7-8 649w/5; 9 alone 650w/7; 10-11 650w/6; 12-14 650w/6; 15-17 650w/6. Every entry in window, no thin exemptions, tiling exact. Every claim traced to a named block before writing; no voice named that is not sourced in its own span; no block silently dropped except the Jamieson residue at 5/11/17 and the Cyril of Jerusalem tree, both recorded as source defects above. Two voices carried forward into the maps from earlier chapters (Victorinus of Pettau -> latin-fathers, Keil and Delitzsch -> grammatical-historical); Cyril of Jerusalem silenced chapter-wide. COMPRESSION COST: seven of the eight entries needed trimming from first draft -- 739, 776, 751, 775, 806, 875 and 827 words respectively against the 650 ceiling, a mean overshoot of about 22 percent and the highest of any chapter worked so far. Only k1 landed in window unaided. Two entries (12-14 and 15-17) needed a full paragraph-level rewrite rather than clause-level trimming, and in both cases the material cut was Clarke's Constantine identification list and Ellicott's closing meditation, which survive in full in the school-voice tags. Running total across the loop: 71 of 81 entries have needed compression. The cause here is diagnosable: eleven voices and a chapter where every voice disagrees with every other means the prose has to name and distinguish more positions per entry than usual, and 650 words is tight for six or seven mutually contradictory readings of the same verse."
     }
   ]
 }
