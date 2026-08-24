@@ -22390,6 +22390,103 @@
         "14"
       ],
       "note": "School summaries this chapter run 148-246 words (median ~215), deliberately shorter than my earlier run of 240-800, moving toward the corpus median of 109 for the current standard. Not a retro-fix of the earlier chapters, just a correction of my own drift going forward."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "19",
+        "20",
+        "26",
+        "30",
+        "31",
+        "32",
+        "37"
+      ],
+      "note": "REJECTED, not written. The source has 19 keys in seven contiguous runs (1-9, 14, 19-20, 26, 30-32, 35, 37-38), and coverage_problems forces every run to be its own entry: omitting k26 fails 'verses covered by no entry: [26]'; absorbing it backwards into 19-20 fails 'entries cover verses absent from the source: [21,22,23,24,25]'; absorbing it forwards into 30-32 fails on [27,28,29]; merging 35 with 37-38 fails on [36]; merging 30-32 with 35 fails on [33,34]. So seven entries are forced, each needing 350-650 words. Only the first run (k1-9, ~4,800 words) has the material for one. k19-20 is 29 words and BOTH are bare cross-references ('This verse corresponds exactly to Exodus 26:14'; 'See Clarke's note on Exo 26:15'). k26 is a dead run: its sole voice is Jamieson, and that block is commentary on the festival laws of Exodus 23 -- passover, pentecost, ingathering -- with nothing whatever about the sockets under the boards. k30-32 has ~65 words of real textual notes plus another Jamieson donor block (the kid seethed in its mother's milk, Exodus 23:19). Six of the seven entries would therefore have to be invented. Same shape as the nehemiah 7 rejection, and worse in degree. Note as before that the invention would pass every gate: the fidelity check only asks whether a declared voice appears somewhere in the chapter's catena, not whether it says anything about the verses the entry claims to cover. Needs an owner decision on the source file, like numbers 31."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "26",
+        "32",
+        "38"
+      ],
+      "note": "Jamieson donor-stream residue at three separate keys in one chapter, the densest occurrence yet: k26 (151w, the three annual feasts), k32 (51w, seething a kid in its mother's milk) and k38 (43w, the promises and warnings closing the laws) are all commentary on Exodus 23, thirteen chapters earlier in the same book. Eleventh chapter with this defect. Donor and target in the same book for the second consecutive chapter (exodus 17 drew on Exodus 6), which continues to fit the only surviving property -- the donor precedes the target and lies near it in canonical order -- and continues to falsify the 'about two books earlier' guess."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "galatians",
+      "chapter": "2",
+      "verses": [
+        "29"
+      ],
+      "note": "NOT MY CHAPTER -- reporting only, no repair attempted. As of commit 4f99661d, 'python3 scripts/validate-synthesis.py' fails corpus-wide on galatians 2: 'pericopes tile the chapter (verses covered by no entry: [29])'. Cause is in the source, not the tiling: data/commentary/cow/galatians/2.json carries a spurious key 29, and Galatians 2 has only 21 verses. The eleven entries correctly tile 1-21, so there is no tiling that both covers key 29 and stays inside the real chapter -- the fix has to be to the source file, which is an owner decision of the same kind as numbers 31. Flagging because the chapter-scoped validator run by 'finish' passes per-verse checks while the chapter tiling check fails corpus-wide, so this landed on master and CI (validate.yml) runs the full validator on every push. Any worker pushing after this will see red CI it did not cause."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "3",
+        "10",
+        "18",
+        "25"
+      ],
+      "note": "All five entries self-graded A for fidelity. Every attribution traced to the named voice's own block. Two deliberate narrowings: (a) Keil's blocks at k4, k5, k11, k18, k19 and k26 are cut at exactly 200 words and consist almost entirely of reprinted verse text, so he is credited only with the substantive remarks that survive -- Judah leading as champion of his brethren, the descent of each standard's tribes, the gloss on 'his host and those that were numbered of them', the equivalence of 'according to their standards' with 'according to their hosts', and the reading of v34 as an anticipatory notice; (b) Keil's note at k5 flags a discrepancy in the name of the father of Gad's captain between 2:14 and 1:14/7:42, but the block is truncated mid-sentence and the two forms print identically in the source, so the entry records that he registers a discrepancy without claiming which form he judged to be the error."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "2",
+      "verses": [
+        "15",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "Jamieson is ENTIRELY donor residue in this chapter: all four of his blocks (k15, k21, k27, k33) are commentary on LEVITICUS 13, the diagnosis of leprosy, with nothing about the camp or the standards. Worse, k21, k27 and k33 are three byte-identical copies of the same 328-word block, so the same wrong text is stamped at three separate keys. Excluded at entries 10, 18 and 25. Twelfth chapter with donor residue; the donor again precedes the target and lies near it in canonical order (Leviticus 13 to Numbers 2 is one book), which continues to fit the only surviving property of the defect. The duplication is new: previous cases put one donor block at one key, not one block replicated across a chapter."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "2",
+      "verses": [
+        "25",
+        "34"
+      ],
+      "note": "Two further source faults. (1) Gill k34 carries ~30 words of navigation chrome ('Next: Numbers Chapter 3 / Sacred Texts / Previous / Index'). This is the SIXTH consecutive chapter with chrome on the chapter-final key, and the first from a different scrape source (Sacred Texts, not StudyLight) in a different voice (Gill, not Ellicott). The pattern is therefore chapter-final, not voice-specific and not source-specific -- a real refinement of what the previous five notes claimed, and it means the automated pre-flight screen should not be keyed to StudyLight markers alone. It already caught this one because the screen tests for 'Next:' as well. (2) Keil's k19 block reads 'towards the north was the standard of Gad, with Asher and Naphtali': Gad is wrong, the north standard is Dan's, and Gad was in the south camp. The rest of that clause (the handmaids' descent, 157,600, the rearguard) is correct, so this reads as a corruption of a single word rather than an error of Keil's. Not repeated in the entry."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "3"
+      ],
+      "note": "The Henry-to-Wesley dependence has a clear exception here, which is worth recording because the previous six chapters made it look unbroken. At k3 Wesley condenses Henry almost word for word on why Judah led (numbers, but chiefly the Lion of the tribe of Judah descending through Nahshon). But at k2 Wesley's kinship analysis of the four standards -- the three youngest sons of Leah under Judah, Gad added to Reuben in Levi's room, Rachel's posterity forming the third, Bilhah's eldest leading the fourth -- runs parallel to Henry's without being a condensation of it, and Wesley closes with a remark of his own about the wisdom of God in these smaller circumstances. So the dependence is real but not total: where Henry supplies a finished argument Wesley abridges it, and where the material is a list Wesley works it himself."
+    },
+    {
+      "at": "2026-08-24",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "Clarke's entry on v2 is the largest single block in the chapter (4,358 words) and almost all of it is a translated quotation of Scheuchzer's reconstruction of the camp, down to Reyher's square-cubit allotments per tribe and a total of twelve square miles. What makes it worth recording is the ending: having printed the whole apparatus Clarke withdraws its authority himself, saying the text gives the quarters and no more, that how they were arranged individually cannot be pretended to, and that to claim minute exactness would be absurd. Compare Clarke at revelation 17:1, where he likewise printed the fullest exposition he had met with and told readers they were at liberty to reject it. Same habit in two very different books: print the best available reconstruction in full, then disclaim it in his own voice."
     }
   ]
 }
