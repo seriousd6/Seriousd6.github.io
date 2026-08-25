@@ -24096,6 +24096,193 @@
         "34"
       ],
       "note": "Chapter shape: 38 keys, one contiguous run 1-38, tiled into seven pericopes 1-4 | 5-7 | 8-19 | 20-24 | 25-28 | 29-33 | 34-38. 32,537 usable source words against 4,379 prose words, an overall 7.4:1 compression, squarely inside the 5-8:1 norm. Sixteen voice labels present in the split data; nine declared at most in any single entry. The gap between those two numbers is almost entirely the Catena Aurea material, which the splitter collapses - see the class-defect note."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "WORST SCRAPE-CHROME INSTANCE FOUND SO FAR, and it is not a trailing stub. Ellicott's block at key 16 contains roughly 250 words of real commentary, ending at 'In striving to save others, the minister is really caring for his own salvation.' Everything after that is a verbatim dump of the source website's page furniture: copyright footer, navigation menus, several kilobytes of CSS, the full JavaScript of the reference-popup and accordion widgets, the site's complete book_data array listing every book of the Bible with chapter counts, a Cloudflare challenge-platform snippet, and a live Stripe publishable key. That is close to 1,000 words of pure boilerplate sitting inside what the tooling counts as usable source. TWO CONSEQUENCES. (1) 'synthesis-loop.py size 1timothy 4' reported 35,357 usable source words; the real figure is about 34,372, so the batch-budget meter over-reports by ~3 percent on this chapter and would over-report far worse on any chapter where this happens at several keys. (2) A worker who dumped that block without trimming could paste CSS into prose. Recommend the scrape be checked for the marker 'Copyright Statement These files are public domain' which is where the real text ends in every instance seen here."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott chrome, TWENTY-SECOND consecutive chapter. Key 16 IS the chapter-final key, so this instance again does NOT discriminate between the two candidate rules ('last key of that voice's stream' vs 'chapter-final key'). The running tally stands: only 3john 1 has separated them, favouring the stream rule. Recording the non-discrimination so the evidence is not overcounted -- but note that the MAGNITUDE here is new. Every prior instance was a stub of a few dozen words; this is a whole-page dump. If chrome volume scales with anything, it is worth finding out with what."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson donor residue, EIGHTEENTH consecutive chapter, and the first one where the donor is identifiable at more than one key AND the donors are adjacent chapters of a single book. Key 3 carries 1 Corinthians 13:5 ('is not uncourteous... imputeth not evil [Alford]... Love makes allowances for the falls of others'). Key 9 carries 1 Corinthians 13:9-12 ('partially and imperfectly. Compare a similar contrast to the perfect man'). Key 15 carries the section heading and opening of 1 Corinthians 14:1-25 verbatim, including the heading text 'Superiority of Prophecy over Tongues'. So this chapter's JFB residue comes entirely from the 1 Corinthians 13-14 region. Combined with the six previous chapters that each drew from ONE donor chapter, the pattern now looks like contiguous-span bleed at scrape time rather than random scatter -- the pointer walks forward through the donor file. Worth noting that 1 Corinthians 13 is itself a chapter this worker landed two chapters ago (c5a94080), so the donor text is available for a byte-level diff if anyone wants to confirm the mechanism. JFB excluded from all eight entries; contribution zero."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "MISFILED KEY, not misattributed voice -- the same class first recorded at luke 21 with Tertullian. Cyril of Jerusalem's block at key 8 is genuine Cyril and correctly labelled, but its content is his catechetical lecture on the Holy Ghost ('Believe thou also in the Holy Ghost... Who is One, indivisible, of manifold power'). It has nothing to do with bodily exercise or godliness. It appears to have been filed here by keyword match on the phrase 'neither in this world, nor in that which is to come', which occurs in Cyril's sentence about blasphemy against the Spirit and also in this verse's 'the life that now is, and of that which is to come'. Cyril was therefore EXCLUDED from entry 8-10. His blocks at keys 1 and 3 are on-topic and he is declared at both. This is now the second confirmed instance of the class; both were caught only by reading the block, never by any validator."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Internal splice inside a single voice's block. Ellicott at key 1, mid-sentence, reads: 'The seducing spirits are none other than created to be received with thanksgiving of them which believe and know the truth. (4) For every creature of God is good, and nothing to be refused, if it be evil powers and spirits subject to Satan'. The intended sentence is 'The seducing spirits are none other than evil powers and spirits subject to Satan'; roughly thirty words of text belonging to verses 3-4 have been dropped into the middle of it, and the tail of the real sentence resumes after them. Distinct from the chrome defect: this is text from the RIGHT commentator and the RIGHT chapter inserted at the WRONG point, splitting one sentence in two. A worker quoting the sentence as it stands would attribute nonsense to Ellicott. Nothing in the validators can see it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "12",
+        "14"
+      ],
+      "note": "The scraper truncates at exactly 200 words. Gill's blocks land at precisely 200 words at keys 1, 6, 8, 12 and 14, and Cyril of Jerusalem's at precisely 200 at keys 1, 3 and 8; every one of them ends mid-sentence ('and moreover, the apostle does not say the Spirit hath spoken,' / 'In abstaining then from these...'). This is a hard cap, not natural block length. Consequence for the compression meter: for these two voices the source is systematically shorter than the commentator actually wrote, so their real contribution to any chapter is understated, and a worker weighing 'who says most here' will consistently under-weight them. Gill is the second-largest voice in this chapter by key count and the cap bites on five of his sixteen blocks."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "note": "Henry's filing is a special case worth recording because it cost real material. His block at key 6 is his whole Complete Commentary section on verses 6-16, filed under the first verse of the section. His comment on the profit of godliness, on labour and reproach, on the presbytery and on taking heed to oneself therefore lives at key 6 and nowhere else, so he could not be declared at entries 8-10, 13-14 or 15-16 and his material on those verses could not be used there. A separate Henry block at key 11 is the Concise Commentary, a different work. And at key 1 the two works are CONCATENATED into one block: the Complete runs to 'God's good creatures are then good... when they are received with thanksgiving', and the Concise then begins without any marker at 'The Holy Spirit, both in the Old and the New Testament, spoke of a general turning from the faith'. That join is invisible to the splitter and would read as one continuous argument."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "Four-way on what 'bodily exercise' means, and the split is unusually clean because each voice canvasses the others' options before choosing. Wesley takes it literally -- physical exercise, which really does increase the health and strength of the body, and that is the little profit conceded. Barnes and Ellicott take it as the ascetic mortifications of verse 3, abstinence and penance as a means of religion. Clarke hears the gymnasium still echoing from verse 7 and makes it the Greek games. Gill lists all of these, rejects each in turn, and settles on mere formal external worship as opposed to spiritual worship, which is the contrast the verse itself draws. A secondary dispute rides on top: Robertson prefers to read the qualifier as extent ('for little') rather than duration ('for a little while'), because the answering clause is 'for all things'; Barnes concedes the Greek admits either and says the sense is true both ways."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "14"
+      ],
+      "note": "The ordination dispute, and the most interesting thing about it is that the grammatical observation quietly settles it against the strongest advocate. Barnes reads the verse as decisive proof of presbyterian ordination: more than one man laid on hands, the gift is said to come by the laying on of the hands of the presbytery as a body, and no ordination anywhere in the New Testament was performed by one man alone -- concluding that a Presbyterian would describe an ordination in exactly these words and an Episcopalian would not. Wesley reads the same clause as Paul's own act with the elders joining in the solemnity, on the strength of 2 Timothy 1:6 where Paul names only his own hands. Robertson agrees with Wesley on the facts but supplies the decisive point neither of the others uses: the preposition governing the laying on of hands does not express instrument or means but merely accompaniment. If that is right, the verse does not say the presbytery conferred anything, and Barnes's argument loses its premise. Ellicott stays out, addressing only where the ordination happened -- probably Lystra, though an old tradition names Ephesus."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "2"
+      ],
+      "note": "Whether the conscience is seared or branded -- a split on one word with a real consequence. Barnes and Wesley take the image as cauterisation, which destroys sensation: the burnt part becomes rigid and dead to feeling, and the conscience answering to it will practise fraud without wincing. Clarke, Ellicott and Robertson take it as branding, which leaves a mark: better rendered branded in their own conscience as with a hot iron, from the mark burnt into slaves and criminals, so that these men carry the brand of Satan as Paul carried the marks of Christ. The consequence is not merely picturesque. On the first reading the men are numb and no longer know they are lying; on the second they are marked and know it perfectly well, which is what the surrounding clause about deliberate hypocrisy actually requires."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "15"
+      ],
+      "note": "A visible instance of Wesley's dependence on Bengel, with both sides of it present in the same key. Clarke quotes Bengel by name and in Latin against the minister who consumes a principal part of his life 'in sodalitatibus mundanis, in studiis alienis, in colligendis libris, conchis, nummis' -- in worldly company, foreign studies, and collecting books, shells and coins. Wesley, a few blocks later, writes as his own note: 'He that is wholly in these will be little in worldly company, in other studies, in collecting books, medals, or butterflies: wherein many pastors drone away so considerable a part of their lives.' Same four items in the same order, one substitution, no citation. Wesley's Notes are known to be drawn largely from Bengel's Gnomon, but it is unusual to have the attributed and unattributed versions of one sentence sitting in the same catena key where a reader can compare them."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "Clarke ends the chapter by refusing the conclusion the rest of the room has reached. Gill, Barnes, Henry and Wesley all identify the prophecy of verses 1-5 with Rome, flatly and repeatedly, and Clarke's own notes have pointed the same way throughout. But at key 16 he prefaces Bishop Newton's dissertation with an admission -- 'Not being fully persuaded in my own mind to what Church this... should be applied, I produce an accredited author' -- reproduces the whole of Newton's seven-part argument, and then declines to adjudicate: 'Which mode of interpretation is best, I shall not attempt to say: to determine the meaning of prophecies is a difficult task; and, in a case of this kind, I rather choose to trust to the judgment of others than to my own... whether God had this Church alone in view, I dare not affirm.' Newton's own argument is materially different from Barnes's, incidentally: Newton takes the genitive in 'doctrines of demons' as PASSIVE, demons being the subject rather than the author, and identifies Paul's demons with Daniel's mauzzim."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "8",
+        "11",
+        "13",
+        "15"
+      ],
+      "note": "Chapter shape: 16 keys, one contiguous run 1-16, tiled into eight pericopes 1 | 2 | 3-5 | 6-7 | 8-10 | 11-12 | 13-14 | 15-16. Eleven voice labels present, ten of them usable (JFB is donor residue at three keys and contributes nothing). Zero embedded speaker tags of either convention -- this is a clean split, unlike the catena chapters, because the source marks every voice with an explicit HTML heading. Compression by entry: 11.4:1, 3.7:1, 6.5:1, 7.6:1, 6.6:1, 4.6:1, 5.8:1, 7.6:1. Two entries sit below the 5:1 norm. Entry 2 at 3.7:1 is low because key 2 is dominated by a single 1,084-word Barnes excursus on the sincerity of the Catholic clergy, most of which is one argument stated at length rather than distinct material; entry 11 at 4.6:1 because verses 11-12 carry six separate graces that each had to be handled individually. Both were checked by the audit gate and returned PAD 0.0%."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "8",
+        "11",
+        "13",
+        "15"
+      ],
+      "note": "Self-graded A on all eight entries. This chapter's source uses explicit HTML voice headings rather than the catena's inline speaker tags, so the split is reliable and a scan for embedded tags of both conventions returned zero hits across all sixteen keys -- the failure mode that dominated luke 21 is absent here. Three exclusions were made deliberately and none of them is a judgement about the voice's value: Jamieson at keys 3, 9 and 15, which is donor residue from 1 Corinthians 13-14 and contains no comment on this chapter at all; Cyril of Jerusalem at key 8, whose block is genuine but is filed there by keyword match and comments on the Holy Spirit rather than on this verse; and roughly 1,000 words of website boilerplate at the tail of Ellicott's key 16 block, which was cut at 'Copyright Statement These files are public domain' and never read into the prose. Cyril IS declared at entries 1 and 3-5, where his material is on-topic. Henry is declared at 1, 6-7 and 11-12 only, because his section commentary on verses 6-16 is filed entirely at key 6 and could not be used at the later entries."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1timothy",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Cyril of Jerusalem mapped to eastern-antiochene, following the corpus convention rather than deciding afresh. A sweep of the existing tags shows him declared as a voice in 790 entries, and where a school summary names him the split is 271 eastern-antiochene against 34 eastern-alexandrian -- so the convention is already settled and this chapter follows it. The reasoning behind that convention holds up independently: Jerusalem sat in Antioch's orbit, and Cyril's catechetical method is plain and literal-typological rather than Alexandrian-allegorical, so of the two eastern buckets the validator allows, antiochene is the better fit. Recorded because this is the first time in this worker's run that Cyril of Jerusalem has been an explicitly declared voice rather than hidden text -- at luke 21 he existed only as 1,053 words buried inside other men's blocks and could not be declared at all."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "1timothy",
+      "chapter": "4",
+      "note": "failed fidelity (self-graded); reverted, attempt kept at scratchpad/rejected/1timothy-4-20260825-041505"
     }
   ]
 }
