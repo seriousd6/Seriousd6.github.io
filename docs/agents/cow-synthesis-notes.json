@@ -26021,6 +26021,51 @@
         "5"
       ],
       "note": "Chapter-shaped observation worth keeping: this chapter carries an unusual number of sharp four-way divisions, all explicit in the sources rather than constructed. v.5 -- whether names are blotted out of the book of life (Barnes: security, since none but the keeper has access; Ellicott via Vaughan: a process of erasure is ever going on; Wesley: not blotted out like that of the angel of Sardis, i.e. his was; Henry: divides the enrolment, nominal names erased, overcomers' never). v.10 -- the hour of temptation (Clarke and Wesley: Trajan; Barnes: undeterminable; Gill: still future, on the reformed churches). v.12 -- whether the pillar supports the temple (Ellicott yes; Henry no, heaven needs no props, it is a monument; Robertson both). v.15 -- Wesley draws free will from the wish 'I would thou wert cold or hot', exactly as Clarke did from Deuteronomy 5:29."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "29",
+      "verses": [
+        "4",
+        "10",
+        "22",
+        "28",
+        "34",
+        "40"
+      ],
+      "note": "Jamieson stride, fourth measurement, and the first where donor and host share a book. Every Jamieson block in numbers 29 is displaced from Numbers 6-7: host 4 carries the completion of the Nazarite vow (Num 6:18-20), host 10 the priestly benediction (6:23-27), host 22 the princes freewill wagons given to the Levites (7:5-9), host 28 the dedication of the altar (7:10-11), host 34 Judah offering first with the platter, bowl and spoon (7:12-14), host 40 Issachar and Zebulun following in order (7:18ff). Six hosts on a perfect 6-periodic grid: 4, 10, 22, 28, 34, 40, with one double period skipped between 10 and 22. Donors strictly monotonic. This is the strongest evidence yet that the defect is a fixed-stride indexing fault in the JFB source file rather than a cross-book mixup, because here the donor text is from the SAME BOOK as the host: nothing was pulled in from elsewhere, the stream was simply re-keyed. Host period 6 now measured on mark 14, acts 10 and numbers 29. Five of the six hosts here are Jamieson-ONLY keys, so declaring the residue emptied them: keys 22 and 28 had no other voice and were omitted entirely."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "29",
+      "verses": [
+        "2",
+        "8",
+        "13",
+        "36"
+      ],
+      "note": "Keil and Delitzsch is hard-truncated at exactly 200 words in this chapter, and the truncation lands mid-sentence every time. Key 2 stops at 'in addition to the sin-offering of'; key 8 at 'the first of which was to be celebrated with sabbatical'; key 13 stops mid-list of the third day's animals; key 36 mid-quotation of verse 40. Only key 40, whose block is 32 words, is complete. Because each Keil block opens with the bare KJV text of several verses before any comment, a 200-word cap consumes most or all of the verse text and leaves either a fragment of comment or none at all: key 13 is 200 words of pure verse text with no commentary whatsoever. Compounding it, the comment that survives usually addresses the LAST verse the block quotes, not the key it is filed under, so it falls outside the pericope span containing that key. Keil's remark filed at key 2 is about verse 7; the one at key 8 is about verse 12; the one at key 36 is about verse 39. All three were therefore unusable: naming them in the entry that contains the key would attribute the wrong verse, and naming them in the entry that contains the subject would attribute content the fidelity checker cannot find in that span's blob. Keil is consequently silent in three of five entries here and speaks only at key 40."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "29",
+      "verses": [
+        "40"
+      ],
+      "note": "Ellicott chrome, tenth confirmation, plus a new chrome sighting in Gill and a limit in the residue mechanism. Ellicott's block at key 40 reports 1016 words of which roughly 985 are StudyLight furniture; the real comment is 31 words, that in the Hebrew Bible this verse begins chapter 30. Key 40 is again both Ellicott's last block and the chapter's last key, consistent with the placement rule 2john 1 settled. NEW: Gill's block at the same key ends with navigation chrome of its own, about 35 words of 'Next: Numbers Chapter 30 Sacred Texts Bible Previous: John Gill's Exposition...'. So Ellicott is not the only voice carrying scrape furniture, and a Gill block at a chapter's last key should be read with the same suspicion. The important consequence is structural: excluded_voices operates at BLOCK granularity, so it cannot subtract chrome that sits inside a block whose voice is otherwise genuine. Ellicott's chrome is always appended to a real Ellicott comment, so it is never excludable. Here that inflated the measured source for span 39-40 to roughly 1,276 words against 241 words of real content, which refuses the thin exemption (over 200) while the real content sits below the 350-word floor. That is the same no-legal-output trap the 2026-08-10 residue amendment was written to close, reached by a route the amendment does not cover. This span was writable at 357 words only because the eight surviving claims are genuinely distinct; a chapter with the same chrome and fewer claims would have no legal output at all."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "29",
+      "note": "Fidelity self-grade for numbers 29, all five entries A. Reported ratios 0.36x, 0.59x, 0.28x, 0.43x, 0.24x, but those are measured against the raw span source and understate the real compression, because the raw figure includes Jamieson residue, Keil verse text and the Ellicott chrome. Measured against the content I could actually use, the ratios are 0.43x for 1-4, 0.87x for 6-11, 0.31x for 12-13, 0.98x for 34-36 and 1.48x for 39-40. Entry 34-36 and entry 39-40 are therefore the tightest work in the chapter and the two the audit flags as floor-hugging, though it records no padding in either. I let 39-40 stand above 1x because the surviving material carries eight distinct claims, including a real disagreement over where the last verse belongs, Keil closing chapters 28-29 with it against Ellicott reporting that the Hebrew Bible opens chapter 30 with it. Nothing in either entry is invented; the framing is mine and the claims are the witnesses'. One process correction during the writing: I drafted Gill's note that the day's offering did not displace the new moon's into the 1-4 entry, but that note is filed at key 6 and belongs to the 6-11 span. Caught it before the build and moved it. The failure mode is worth naming because it is easy: two adjacent spans discussing the same sacrifices make cross-span attribution feel harmless when it is exactly the error the pericope rules exist to prevent."
     }
   ]
 }
