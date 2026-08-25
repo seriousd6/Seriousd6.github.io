@@ -25354,6 +25354,69 @@
       "book": "numbers",
       "chapter": "17",
       "note": "Self-graded A on all three entries. vv.1-7, 4248 source words to 647 (0.15x); vv.8-11, 3741 to 647 (0.17x); vv.12-13, 816 to 504 (0.62x). All thirteen verses were graded D, the worst band, and the whole chapter was rewritten from the catena. The 12-13 entry was written to 504 rather than filled to the cap because only four voices say anything about those verses, and padding to 650 from 816 usable source words would have been exactly the defect the repair exists to remove. Adam Clarke's block at key 1 is a bare chapter outline with nothing distinctive in it, so he is named from his key-5 comment instead, on why a further sign was needed at all; that keeps him in the entry honestly rather than by reciting his summary. Names quoted inside a witness are credited as reported and not named: Josephus inside Gill, the commentator Calvin names and rejects on the count of the rods, and the traveller Ellicott cites on the almond."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "THE CALVIN BLOCKS CARRY A SECOND VOICE THAT IS NOT CALVIN, and here it contradicts him outright. His block at key 1 runs: '...it certainly did not become the people to be idle in guarding the land from stain and taint.' and then, in the same block with no marker of any kind, 'Calvin is somewhat singular in holding that the message communicated to Joshua was an indirect censure of the Israelites, for not having previously of their own accord appointed cities of refuge. Other expositors think that till now the proper time of appointing them had not arrived...' That is the Calvin Translation Society editor's footnote, printed inline. The same block carries a second editorial aside comparing the Mosaic cities with 'the manifold abuses and abominations to which the numerous asylums and sanctuaries of Popish countries have led', and a third giving the Latin and French of a phrase. I met the same thing at hebrews 4, where a note in the Calvin block listed which fathers and divines took each side of the Word-or-Scripture question -- a list Calvin could not have written about himself, since it names him in the third person as one of the parties. THE RISK IS SPECIFIC AND NOT HYPOTHETICAL: a writer who treats the whole block as Calvin will attribute to him a position he is being criticised FOR HOLDING. Here the editor's view happens to coincide with Matthew Henry's, so the chapter's real debate is Calvin against Henry with the editor as referee -- which is how I carried it. Detection is cheap: the notes refer to 'Calvin' in the third person, and a regex for that inside a block whose host voice IS Calvin would find them in one pass. Recommend adding it to the pre-flight screen."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Henry's Concise commentary appended to his Exposition -- SECOND BOOK, confirming this is not an Exodus artefact. At key 1 the 848-word block ends with a compressed restatement beginning 'When the Israelites were settled in their promised inheritance, they were reminded to set apart the cities of refuge, whose use and typical meaning have been explained'; at key 7 the 813-word block ends with 'These cities, as those also on the other side Jordan, stood so that a man might in half a day reach one of them from any part of the country. God is ever a Refuge at hand...' followed by the whole six-name typology repeated. Roughly a quarter to a third of each Henry block is his own second work restating the first. Recorded at exodus 11 as a newly observed class; two books now, so a corpus-wide check is warranted. The practical effect is unchanged: the sizer overstates Henry's contribution, and a writer skimming sees the same claim twice and may read repetition as emphasis."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "20",
+      "verses": [
+        "2"
+      ],
+      "note": "Wesley depending on Henry, SECOND BOOK. At key 2 Wesley reads 'Cities of refuge - Designed to typify the relief which the gospel provides for poor, penitent sinners, and their protection from the curse of the law and the wrath of God, in our Lord Jesus, to whom believers fly for refuge.' Henry at key 1 reads '...designed to typify the relief which the gospel provides for poor penitent sinners, and their protection from the curse of the law and the wrath of God, in our Lord Jesus, to whom believers flee for refuge.' Identical but for one letter. I recorded this dependency at exodus 11 (Wesley's key 8 block being near-verbatim Henry on Moses' anger) and excluded Wesley there entirely. HERE THE HANDLING HAD TO BE DIFFERENT, and the difference is the useful part: Wesley's blocks at keys 3, 4, 6 and 7 are genuinely his own -- the doubled 'unwittingly' and the attack on Christian sanctuaries, the gate where judges sat, the distinction between the council of the city of refuge and the council of the city where the fact was committed, and the twofold reason the cities were Levitical. So Wesley WAS declared here, but only on that independent material, and the typology was attributed to Henry alone. The rule this suggests: the dependency is per-block, not per-chapter, so Wesley must be checked block by block rather than excluded wholesale."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "Jamieson stride artefact, NINTH confirmation. One block, 45 words at key 1, on the dedication of a tenth part of the year's produce and its conversion into money where distance prevented bringing it in kind -- tithing material, nothing to do with the cities of refuge. As at exodus 11, it is a single block under the 60-word usability threshold, so it yields no within-file gap and would never surface in a voice survey. That is now two consecutive chapters where the defect is present but invisible to any measurement keyed on usable blocks."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "20",
+      "note": "Pre-flight screen results, second run, with a new false-positive sub-class. Two hits over 9 keys. Clarke at key 7, 'Origen' at word 330 of 441 -- a false positive, but NOT the citation class recorded at hebrews 4: Clarke is not quoting Origen or citing a work, he is referring to the man's turn of mind ('A person of the spirit and turn of Origen could preach the whole Gospel from these particulars'). So the screen's noise includes bare allusions to a father as a TYPE OF INTERPRETER, which no citation-verb filter would catch. Calvin at key 7, 'CHAPTER 21' at word 177 of 179 -- the harmless chapter-boundary overflow already seen at hebrews 4 key 16, two words at the end of a block. Both benign; zero real hits, as at exodus 11. The screen has now run clean on three chapters in a row, which is worth recording as evidence about its base rate rather than only reporting it when it fires."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "20",
+      "note": "Chapter shape and voice thinness. 9 keys, 4,939 usable source words by the sizer and about 4,871 net -- one of the smallest chapters handled in this run. The word count is concentrated almost entirely at keys 1 (1,569) and 7 (1,883); keys 3, 4, 5, 6, 8 and 9 total under 1,000 between them, and key 5 carries 21 words. Tiled 1-6 | 7-9, two entries, each drawing on about 2,470 source words. A three-entry tiling was rejected because any split of 1-6 leaves a middle entry of roughly 250 source words, far below the compression floor. NOTE THE VOICE SET: no Albert Barnes, no Charles Ellicott and no A.T. Robertson appear anywhere in this chapter, which leaves grammatical-historical represented by Keil alone -- and Keil's blocks at keys 2 and 7 are capped at exactly 200 words, key 2 being bare scripture text with no comment at all. He was therefore declared only at entry 7-9, where the geography and the philological point about 'cities of appointment' are genuinely his."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "20",
+      "note": "Both entries fidelity self-graded A, zero ungroundable-entity signals on the first read-back. One hand-correction was needed but not of a source spelling: a stray non-Latin word ('двойной') slipped into a Wesley outlier note during drafting and was caught by an explicit character sweep of the tags file before stamping, not by any validator -- none of them check for it. Recording that because it is a failure mode of the WRITER rather than the source, and the pipeline would have shipped it: validate-synthesis, the chapter lint and the fidelity read-back all passed with it in place. A cheap guard would be a non-Latin character check over the tags and prose files in the pre-flight or the validator."
     }
   ]
 }
