@@ -25312,6 +25312,48 @@
       "book": "exodus",
       "chapter": "11",
       "note": "All three entries fidelity self-graded A, zero ungroundable-entity signals on the first read-back, no hand-correction of spellings -- the third consecutive chapter clean on the first pass. Worker B's embedded-speaker pre-flight screen was run over all 10 keys and returned ZERO hits, the first chapter where it has come back empty; combined with zero splitter loss on every key, the source here is structurally sound apart from the Henry duplication and the single stray JFB block. Two care points on voices. John Wesley was excluded entirely because his key 8 block is near-verbatim Henry (recorded separately). Keil and Delitzsch is capped at exactly 200 words at keys 2, 3 and 5, and his blocks are largely bare scripture text rather than comment -- he was declared only at entry 1-3, where the note about Jehovah making the Egyptians willing to give is genuinely his. Adam Clarke quotes a traveller by name on the mill and Calmet on the pluperfect; both were attributed as quotations, not declared as voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "note": "CORPUS-WIDE PARSER DEFECT, and I have twice under-reported it. At 1timothy 3 and again at 2thessalonians 3 I recorded that 'Cyril of Jerusalem' cannot be named in excluded_voices because synthesis_qa.VOICE_LABELS carries the bare label 'Cyril' and _LABEL_RE requires a colon straight after the label. That description was too narrow. The real behaviour is that split_voices does not merely fail to NAME such a head - it fails to SPLIT there at all, so the unrecognised block is silently absorbed into the preceding voice's segment. Every consumer of split_voices is therefore reading text attributed to the wrong witness. I scanned all 1,189 chapters of cow/. 422 of them, over a third of the corpus, contain at least one head that split_voices cannot see. The worst offenders by chapter count: Cyril of Jerusalem 241, Augustine of Hippo 174, C.H. Spurgeon 150, Gloss 59, Theophylact 54, Ambrose 37, Hilary 36, Jerome 35, Remigius 34, Gregory the Great 26, Cyril of Alexandria 20, Raban 20, Victorinus of Pettau 19, Eusebius 16, Pseudo-Jerome 16, Theodoret of Cyrrhus 16. Two distinct causes. (a) PREFIX MISMATCH: the label list holds a short form that is a prefix of the head rather than a suffix - Cyril before 'of Jerusalem' or 'of Alexandria', Gregory before 'the Great' or 'of Nyssa', Charles Spurgeon against the head 'C.H. Spurgeon', Augustine against 'Augustine of Hippo', Theodoret against 'Theodoret of Cyrrhus', Victorinus against 'Victorinus of Pettau'. Note that suffix cases work by luck: 'Robertson' matches inside 'A.T. Robertson:' and 'Lightfoot' inside 'John Lightfoot:'. (b) MISSING ENTIRELY: Theophylact, Ambrose, Hilary, Jerome, Remigius, Raban, Gloss, Eusebius, Titus Bost and Greek Ex are absent from VOICE_LABELS altogether. These are precisely the catena-aurea fathers, so the damage concentrates in the Gospels. CONSEQUENCES, in order of seriousness: usable_source_words subtracts the wrong span when excluded_voices is declared on such a key; the thin exemption's 200-word test is therefore computed on wrong text; undeclarable_voices rejects declarations that are in fact correct; and any future tool that reasons about who said what from split_voices will be wrong in a third of the corpus. THE FIX is small: match the full head names, or anchor the label at a head boundary rather than requiring an immediate colon, and add the missing patristic labels. Per the loop doc a scripts fix cannot ride along with a chapter, so this needs landing on its own."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "luke",
+      "chapter": "8",
+      "note": "Declined, and I want the reversal on record because I announced the opposite before looking properly. luke 8 measures 44,304 usable source words across 56 keys, over the 40,000 whole-batch threshold but well short of the 60-73k chapters already declined, so on size alone I judged it takeable and said so. Examining it changed that. Three things, in rising order of weight. (1) The chapter carries 25 distinct voice labels, and each of its six natural pericopes - 1-3, 4-15, 16-21, 22-25, 26-39, 40-56 - has between 13 and 18 voices present. Six entries capped at 650 words each would give roughly forty words per voice, which is not prose but the parenthesised slot-list the quality audit banned outright; the alternative is to drop six to ten sourced voices per entry, which is a great deal of silent omission. (2) Several heads are truncated or anonymous as stored - 'Greek Ex', 'Titus Bost', a bare 'Cyril' and a bare 'Gregory' standing alongside 'Cyril of Alexandria', 'Cyril of Jerusalem' and 'Gregory of Nyssa'. The schools field is required for every voice named, and I cannot honestly assign a school slug to an anonymous Greek expositor or tell the bare Cyril from the two named ones. (3) Decisively, this is the chapter where the parser defect described in the accompanying source-defect note bites hardest: eight distinct heads are invisible to split_voices across twenty keys, so roughly nine thousand of the chapter's words are attributed to the wrong witness by the measuring tools. A chapter I cannot measure correctly is one I cannot honestly stamp. None of this makes luke 8 unwritable - it is not in the acts 20 category - but it needs a fresh worker with a full context, and it would be much better attempted after the VOICE_LABELS fix lands, since that fix is what makes its measurements trustworthy."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "17",
+      "verses": [
+        "8"
+      ],
+      "note": "A RESIDUE MECHANISM I HAVE NOT SEEN BEFORE: book collision on an identical chapter-and-verse reference. The John Calvin block filed under Numbers 17:8 is not about Aaron's rod at all. It discusses the law extended to strangers, God not having his sanctuary defiled by foreigners, and the word kill in verse 3 referring only to animals killed in sacrifice, with permission given elsewhere to eat meat in the cities provided blood is abstained from. That is LEVITICUS 17:8-9 beyond doubt, and the reference to the word kill in verse 3 fixes it, Leviticus 17:3 being the man who killeth an ox or lamb or goat in the camp. So Leviticus 17:8 has landed at Numbers 17:8 - same chapter number, same verse number, different book. Every other residue population I have recorded works by a periodic offset within the host chapter (the five-donor-verses-per-six-host-keys pattern) or by phrase collision in the patristic tiler. This is neither: it is a reference collision that ignores the book. And it displaces rather than duplicates, exactly as at nehemiah 7: I checked, and the passage is ABSENT from cow-sources/calvin/leviticus.json while PRESENT in cow-sources/calvin/numbers.json. The donor chapter is correspondingly impoverished. Worth a corpus scan for Calvin blocks whose content belongs to the same chapter and verse of a different book, since a collision rule of this shape would fire wherever two books share a chapter number. Note the practical consequence for this chapter: Calvin could not simply be declared residue, because his block at key 10 on preserving the rod as a token IS genuine. Only the key-8 block is foreign, so he is named in the prose from key 10 and his key-8 material is silently omitted."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "Jamieson, Fausset and Brown residue at keys 2 and 8, both congruent to 2 modulo 6, host stride 6. Donor is LEVITICUS 26, advancing: key 2 carries 26:10 (the stock of old corn still unexhausted when the next harvest brings a new supply) and key 8 carries the passage on privilege proportioned to punishment from the blessings and curses later in the same chapter. Donor earlier than host in canonical order: sixteen for sixteen. Both blocks begin on a complete sentence, so neither is a truncated fragment. Note that this chapter carries TWO residue populations with two different donors and two different mechanisms - Jamieson from Leviticus 26 by the usual periodic offset, Calvin from Leviticus 17 by the reference collision described in the accompanying note. Both donors are Leviticus, which may be coincidence in a single chapter but would be worth checking across the Pentateuch."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "17",
+      "note": "Self-graded A on all three entries. vv.1-7, 4248 source words to 647 (0.15x); vv.8-11, 3741 to 647 (0.17x); vv.12-13, 816 to 504 (0.62x). All thirteen verses were graded D, the worst band, and the whole chapter was rewritten from the catena. The 12-13 entry was written to 504 rather than filled to the cap because only four voices say anything about those verses, and padding to 650 from 816 usable source words would have been exactly the defect the repair exists to remove. Adam Clarke's block at key 1 is a bare chapter outline with nothing distinctive in it, so he is named from his key-5 comment instead, on why a further sign was needed at all; that keeps him in the entry honestly rather than by reciting his summary. Names quoted inside a witness are credited as reported and not named: Josephus inside Gill, the commentator Calvin names and rejects on the count of the rods, and the traveller Ellicott cites on the almond."
     }
   ]
 }
