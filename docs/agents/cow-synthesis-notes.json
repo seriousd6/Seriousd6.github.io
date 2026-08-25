@@ -25833,6 +25833,66 @@
       "book": "acts",
       "chapter": "10",
       "note": "Fidelity self-grade A on all 10 entries; lint 10/10 A with zero UNSOURCED, NOISE, META or SLOT flags. Ratios: vv.1-4 13825w->646w (0.05x); 5-8 1876->635 (0.34x); 9-12 6640->649 (0.10x); 13-16 3411->645 (0.19x); 17-22 7103->640 (0.09x); 23-29 6935->649 (0.09x); 30-33 2358->650 (0.28x); 34-38 14270->648 (0.05x); 39-43 5293->649 (0.12x); 44-48 8377->643 (0.08x). 48 keys, 11 voice heads, 70,088 words reported by the sizer; ~983 of those are Ellicott chrome at key 48 and ~330 are Jamieson residue, so real usable content is near 68,800. ELLICOTT CHROME, eighth confirmation, and the constant is now firmly established: the chrome block measures ~983 words in every chapter where I have counted it (2john 1, luke 11, acts 10, exodus 37), which means it is a fixed page-furniture payload appended once per chapter rather than anything proportional to the commentary. ONE FABRICATION CAUGHT BEFORE LANDING, and it is a subtler kind than the last two: I wrote 'Judaea' where the source spells the name 'Judea' or 'Judaea' with the ae ligature, and synthesis-fidelity.py flagged it as an ungroundable entity. Nothing was misattributed and no claim changed -- the check is matching orthography, not identity -- but the fix is still the right one, since a reader searching the source for the form I used would not find it. Worth recording that the entity check catches three distinct classes now: a name imported from my own knowledge (Marcion at 1thessalonians 1), an expanded abbreviation the source never spells out (Athanasius at luke 11), and now a spelling variant. Only the first was a real fabrication; the other two are the check being stricter than the fidelity rule requires, and a future worker should not assume every ENTITIES flag means invention."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "10"
+      ],
+      "note": "NEW DEFECT CLASS -- volume-final scripture-index dump inside a commentary block. At k10 the John Calvin block is 752 words, of which 485 (64%) are bare scripture-reference tokens: the entire back-of-book index of his Harmony, appended to the commentary. Corpus sweep (1,189 files, 57,091 blocks of 150+ words): 12 blocks flagged at >=100 ref-tokens and >=30% density, ALL of them John Calvin -- 2corinthians 13, ezekiel 12, acts 13, john 21, john 11, numbers 10, deuteronomy 34, acts 28, leviticus 12, 2thessalonians 3, genesis 50, isaiah 16. 6,162 of 11,232 words in those blocks are index tokens. These sit at Calvin's VOLUME boundaries, not only at book ends. Consequence: synthesis-loop.py size overstates those chapters by up to ~1,000 words, which now matters since batches are budgeted by source words."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "3"
+      ],
+      "note": "Jamieson fixed-stride donor bug, TWELFTH independent confirmation, and the clearest evidence yet that the donor tracks position. Two JFB blocks in this chapter, both alien to their host verse and both drawn from the cities-of-refuge law: k3 (host text: 'and the south, and the plain of the valley of Jericho') carries the manslayer abiding in the city until the death of the high priest; k9 (host text: 'Joshua was full of the spirit of wisdom') carries the law of the blood-avenger as an improvement on Goelism. Six host keys apart, and the donor advances FORWARD through one continuous passage of source. Both excluded from the declared voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "12"
+      ],
+      "note": "Chapter-final navigation chrome inside commentary blocks, three voices in one chapter. Gill at k12 ends with 'Next: Joshua Introduction Sacred Texts | Bible << Previous: John Gill's Exposition of the Entire Bible: Deuteronomy: ... Index Next: ...'; Ellicott at k10 ends with 'Deuteronomy Deu 33 Deuteronomy Deu Joshua Jos 1 Footnotes:'; Calvin at k10 ends with the index dump noted separately. All three are book-final artefacts of the scrape, counted as usable source words."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "5"
+      ],
+      "note": "Wesley depending near-verbatim on Henry, FOURTH confirmed book (after exodus 11, joshua 20, deuteronomy 5), and here in three separate blocks: k1 ('When he knew the place of his death he chearfully mounted a steep hill'), k4 ('if his sight had not been miraculously assisted and enlarged'), k5 ('not only as a good man... but as a man eminently useful, who had served God's counsels in bringing Israel out of Egypt') and k12. But at k5 he DIVERGES from his source on the one point that matters: Henry reports the rabbinic kiss and declines it, while Wesley takes it -- 'The Jews say, God sucked his soul out of his body with a kiss. No doubt he died in the embraces of his love.' The dependency is verbal, not doctrinal, and he was declared here on that divergence."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "2"
+      ],
+      "note": "Keil and Delitzsch truncated at exactly 200 words three times in one chapter (k2, k6, k8), and Gill at exactly 200 twice (k5, k10). The Keil blocks are pure verse-quotation overflow: each opens by reprinting the KJV text of the next several verses, so the 200-word cap consumes most of the block before any comment begins. Same cap previously recorded for Keil, Gill and Cyril of Jerusalem across six books."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "34",
+      "verses": [
+        "4"
+      ],
+      "note": "Ellicott at k4 cites Rashi as 'Raehi' -- an OCR corruption. Avoided naming him in the prose ('One Jewish comment') rather than reproduce a corrupted spelling or silently correct one. Worth a corpus check if anyone wants it: the entity check would flag a corrected spelling as ungrounded, so the corruption is self-enforcing."
     }
   ]
 }

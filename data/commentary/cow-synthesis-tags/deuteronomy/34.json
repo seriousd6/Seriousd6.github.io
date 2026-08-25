@@ -1,410 +1,366 @@
 {
  "1": {
   "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Moses went up from the plains of Moab, where he had repeated the law, sung the song, and blessed the tribes, at the command of God; the LORD showed him all the land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses went up... unto the mountain of Nebo... And the LORD shewed him all the land",
-   "God showing the dying servant the land",
-   "seen the promises afar off (Heb. 11:13)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Naphtali, in the north, where was Galilee of the Gentiles, most frequented by the Messiah when come."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: the lands of Ephraim, Manasseh, and Judah unto the utmost sea."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And all Naphtali, and the land of Ephraim, and Manasseh, and all the land of Judah, unto the utmost sea",
-   "the whole land of promise shown",
-   "Galilee of the Gentiles, where the Messiah would walk"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
    "Charles Ellicott"
   ],
+  "range": "1-4",
+  "pericope_label": "Moses goes up from the plains of Moab and is shown all the land",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the southern part of the land, all of it, then the view directed eastward."
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Weigh what God says while he shows it. One Jewish comment makes the purpose of the sight to be that Moses might tell Abraham, Isaac and Jacob that the oath sworn to them was performed; but in Paradise they scarcely needed Moses to tell them of it."
    },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Raise the authorship question and refuse to spend anything on it: it is not certain who wrote the chapter, unless we admit the conjecture of the ancients that Joshua did; but since Eleazar the priest might have done it, better to leave a matter of no great importance undecided. Spend the strength of the comment on the ascent instead, as equivalent to a voluntary going forth to death, since being called by God to die Moses went to meet death of his own accord; such willing submission proceeded from no other source than faith in God's grace. Naturally it must have been an awful thing to him as to anyone else, but the testimony of grace being interposed he offers himself without alarm. On the sight of the land, grant that some have been endued with incredible powers of vision, but find the peculiarity elsewhere: Moses distinctly examined every portion as if he had been really on the spot, the vision being otherwise useless unless he beheld the future habitation of the people."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Ellicott: the south (Negeb), the plain of Jordan, and the valley of Jericho, the city of palm trees."
+    "summary": "Refuse to begin until the authorship is settled, and settle it against Moses. This chapter could not have been written by him, for a man certainly cannot give an account of his own death and burial; to suppose that these circumstances were shown him by especial revelation is departing far from propriety, since God gives no prophetic intimations but such as are absolutely necessary. Conclude that the twelve verses should be the first chapter of Joshua, of which they are an evident continuation, and support the conclusion with a note from an intelligent Jew: most commentators think Ezra the author, some Joshua, others the seventy elders; sections and divisions, points and pauses were invented long after these books were written, and in those early ages books were connected together on the same roll, so the beginning of one might be transferred to the end of another and in time be taken for its conclusion. On the panorama, read it as a compass, the quarters named standing for all the rest, and the utmost sea being the midland sea, the western bound of the land of promise. Stop over the city of palm trees, which is Jericho, so called from the multitude of palm trees in those parts, as Josephus and Strabo write, and named from the balm growing there, a word signifying odoriferous or sweet smelling."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Notice what nobody else notices, that he went up alone and without help, a sign that his natural force was not abated, since he could walk up a high hill without the supporters he had once needed when his hands were heavy; and alone without company, for having taken leave of Joshua and Eleazar at the foot of the hill he gave them such a charge as Abraham gave his servants at the foot of another &mdash; tarry you here while I go yonder and die. They must not see him die, because they must not know his sepulchre. Reckon Canaan at fifty or sixty miles from end to end and conclude that his sight, good as it was, could not have reached it unless miraculously assisted and enlarged; all the prospects we have of the better country we are beholden to grace for, since God gives the eye as well as the object. Then suspect an imitation, that the devil designed to mimic this sight and to out-do it when he showed our Saviour all the kingdoms of the world from an exceeding high mountain, not gradually as here, first one country and then another, but all in a moment of time."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who wrote this chapter, and does the question matter?",
+    "sides": [
+     {
+      "position": "Not Moses &mdash; a man cannot give an account of his own death and burial; the twelve verses belong at the head of Joshua, and Ezra, Joshua or the seventy elders are the candidates",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Probably Joshua, by the conjecture of the ancients &mdash; but Eleazar might have done it, and the matter is of no great importance, so leave it undecided",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense was the sight of the land miraculous?",
+    "sides": [
+     {
+      "position": "In its reach: Canaan is fifty or sixty miles end to end, and no natural sight could have taken it in unless miraculously assisted and enlarged",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Not in reach only, since some have been endued with incredible powers of vision, but in distinctness &mdash; Moses examined every portion as if he had been really on the spot",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone suspects a counterfeit of this scene, taking the devil's showing our Saviour all the kingdoms of the world from an exceeding high mountain as an attempt to mimic and out-do it, all in a moment of time where this was gradual."
+   },
+   {
+    "voice": "John Wesley",
+    "note": "Alone stops over the etymology of the city of palm trees, deriving Jericho from the multitude of palm trees in those parts, on the authority of Josephus and Strabo, and from the balm growing there, a word signifying odoriferous or sweet smelling."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone answers a Jewish comment that made the purpose of the sight to be that Moses might carry word to Abraham, Isaac and Jacob that the oath was performed, replying that in Paradise they scarcely needed Moses to tell them of it."
+   }
+  ],
   "themes": [
-   "And the south, and the plain of the valley of Jericho, the city of palm trees",
-   "the whole land surveyed to the south",
-   "the gateway of the conquest shown"
+   "And Moses went up from the plains of Moab unto the mountain of Nebo, to the top of Pisgah, that is over against Jericho. And the Lord shewed him all the land of Gilead, unto Dan,",
+   "And all Naphtali, and the land of Ephraim, and Manasseh, and all the land of Judah, unto the utmost sea,",
+   "And the south, and the plain of the valley of Jericho, the city of palm trees, unto Zoar.",
+   "And the Lord said unto him, This is the land which I sware unto Abraham, unto Isaac, and unto Jacob, saying, I will give it unto thy seed: I have caused thee to see it with thine eyes, but thou shalt not go over thither."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Word of the Lord, as the Jerusalem Targum, having shown him all the land."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the oath to Abraham, Isaac, and Jacob now shown fulfilled to Moses' eyes."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the land which I sware unto Abraham... I have caused thee to see it... but thou shalt not go over",
-   "God's faithfulness and his sentence together",
-   "the law sees the rest, yet brings not in (Heb. 4:8)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
-   "John Gill"
+   "Matthew Henry",
+   "John Calvin",
+   "John Gill",
+   "Charles Ellicott",
+   "John Wesley",
+   "Adam Clarke"
   ],
+  "range": "5-8",
+  "pericope_label": "So Moses the servant of the LORD died there, and no man knoweth of his sepulchre",
   "schools": [
    {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Be sharper than the rest with the kiss: hence the interpretation that he died by a kiss, but the language of the narrative is too simple to need even that, since it had been the habit of Moses for years to do everything at the mouth of the Lord, and this was one last act of obedience. On the contention of Michael with the devil, hold what few hold, that it was a struggle for the body itself, Moses being about to be raised and Satan resisting his resurrection, since he and Elijah both appeared in glory on the holy mount and the New Testament makes no difference between them."
+   },
+   {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: he died on a mountain in Moab, contrary to some Jewish writers who deny he died; he died according to the word of the LORD, honoured as the servant of the LORD."
+    "prevalence": "several",
+    "summary": "Defend first that Moses died at all, since some Jewish writers affirm, against the express words of the text, that he died not but was translated, being an angel and unable to die: he did die, for the servants of the Lord die as well as others, and their own saying answers them &mdash; Moses died, and who shall not die? On the burial, reject both the rendering that he was buried and the rendering that he buried himself, since those who shrink from assigning the office to God are avoiding an absurdity which does not exist; and having assigned it to God, refuse the usual softening too, for there was no need to call in angels, since the earth would instantly have obeyed its Creator. Lay out the range of opinion without settling it, and guess at Michael, who is no other than our Lord Jesus Christ. Say why the grave was hidden: it was usual with the Jews, and a custom for which Christ reproves them, to kill the prophets and then reverence their tombs. On the unimpaired old age, treat it as a public mercy rather than a personal one, since by then the vigour of the race had so diminished that after seventy men dragged out their life in labour and sorrow; had the powers of Moses failed before the entrance into the land his debility would have been inconvenient to the people, so that in not suffering him to fail God consulted their welfare. On the thirty days, note that the ancients were particular in their funeral rites because their faith was not yet elevated enough to forego such aids &mdash; a ceremony ended with the shadows of the Law, our dead being now buried so that grief may be restrained by the hope of the resurrection."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the rabbinic reading of at the mouth of the Lord without hesitation: the Jews say God sucked his soul out of his body with a kiss, and no doubt he died in the embraces of his love. But allow also a possibility nobody else raises, that the words may refer only to the sentence of exclusion passed at Meribah. On the concealment of the grave, say it was lest the Israelites, prone to idolatry, should pay him divine honours."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Report the saying about the kiss and then decline it: Moses no doubt died very easily, a delightful death with no bands in it, but at the mouth of the Lord means no more than that he died in compliance with the will of God. Assign the burial to God by the ministry of angels, which made the funeral, though very private, yet very magnificent. On the contention of Michael with the devil, hold that the devil would have made the place known that it might be a snare, and that those who give divine honours to relics side with the devil against Michael our prince. Divide the hundred and twenty years into three forties &mdash; a courtier at ease in Pharaoh's court, a poor desolate shepherd in Midian, a king in Jeshurun encumbered with care &mdash; and turn the undimmed eye upon the law itself, whose eye is not waxen dim nor its force abated."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does it mean that Moses died 'at the mouth of the LORD'?",
+    "sides": [
+     {
+      "position": "The rabbinic reading, taken straight: God sucked his soul out of his body with a kiss, and he died in the embraces of his love",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "It means no more than that he died in compliance with the will of God &mdash; though he no doubt died very easily, a delightful death with no bands in it",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "The language is too simple to need the kiss at all: it had long been his habit to do everything at the mouth of the Lord, and this was one last act of obedience",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The words may refer only to the sentence of exclusion passed at Meribah",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who buried Moses, and was angelic ministry involved?",
+    "sides": [
+     {
+      "position": "God, by the ministry of angels &mdash; a funeral very private and yet very magnificent",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "God, but with no need of angels: the earth would instantly have obeyed its Creator, and the renderings 'he was buried' and 'he buried himself' both avoid an absurdity which does not exist",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Probably Michael, who is no other than our Lord Jesus Christ",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone reads the contention of Michael with the devil as a struggle for the body itself, holding that Moses was about to be raised from the dead and Satan resisted his resurrection, since Moses and Elijah both appeared in glory on the holy mount."
+   },
+   {
+    "voice": "John Gill",
+    "note": "Alone has to argue that Moses died at all, against Jewish writers who held that he was translated rather than buried and that being an angel he could not die."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone treats the thirty days of mourning as a ceremony belonging to the shadows of the Law, arguing that the ancients needed such external aids because their faith was not yet elevated enough to forego them, and that our grief is now restrained by the hope of the resurrection."
+   }
+  ],
   "themes": [
-   "So Moses the servant of the LORD died there in the land of Moab, according to the word of the LORD",
-   "the crowning title, servant of the LORD",
-   "well done, thou good and faithful servant (Matt. 25:21)"
+   "So Moses the servant of the Lord died there in the land of Moab, according to the word of the Lord.",
+   "And he buried him in a valley in the land of Moab, over against Beth–peor: but no man knoweth of his sepulchre unto this day.",
+   "And Moses was an hundred and twenty years old when he died: his eye was not dim, nor his natural force abated.",
+   "And the children of Israel wept for Moses in the plains of Moab thirty days: so the days of weeping and mourning for Moses were ended."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: Jarchi and other Jewish writers say the Lord buried him, perhaps by angels; though he died on the mount, he was buried in a valley; no man knows his sepulchre."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he buried him in a valley... but no man knoweth of his sepulchre unto this day",
-   "God himself burying his servant in a hidden grave",
-   "Michael disputed about the body of Moses (Jude 9)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: his age divided into three equal periods — forty years in Pharaoh's court, forty in Midian, forty in the government of Israel; his eye not dim nor his force abated."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Moses was an hundred and twenty years old when he died: his eye was not dim, nor his natural force abated",
-   "God sustaining his servant in full vigour",
-   "fruitful in old age, fat and flourishing (Ps. 92:14)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill, with Josephus and the Samaritan Chronicle: they wept vehemently when he signified his death and took his leave, and mourned publicly thirty days."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children of Israel wept for Moses in the plains of Moab thirty days",
-   "a fitting tribute of grief to their leader",
-   "great lamentation made over the faithful (Acts 8:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
+   "Matthew Henry",
+   "John Calvin",
+   "Charles Ellicott",
    "John Gill",
-   "Matthew Henry"
+   "Adam Clarke",
+   "Keil and Delitzsch"
   ],
+  "range": "9-12",
+  "pericope_label": "Joshua full of the spirit of wisdom, and there arose not a prophet since like unto Moses",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Notice two things nobody else does: that this is the first example of ordination in Holy Scripture, and that the people did as the Lord commanded Moses, not as he commanded Joshua &mdash; Joshua would not separate himself from the law given by his master. Read the closing verse as evidence about the writer rather than about Christ, judging the words later than the time of Joshua, when longer experience had shown men how far inferior the prophets were to their great predecessor. And be exact about the direction of the knowing: whom Jehovah knew, not who knew him."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: Joshua was abundantly qualified by the spirit of wisdom for the government of Israel, a type of Christ, on whom the spirit of wisdom rests."
+    "summary": "On the succession, add that Joshua had been previously endowed with excellent gifts but was now more splendidly adorned with the ensigns of dignity, in order that his calling by God might be more certainly proved, the imposition of hands being no empty symbol of grace. On the eulogy, say it seems added that the children of Abraham might depend on Moses until the manifestation of Christ, the superiority remaining with him lest they decline in the smallest degree from the rule of the Law; and name two signs of the excellency, the familiar acquaintance with God and the glory of the miracles, holding that Moses beheld that glory not in its perfection but beyond all others. Alongside this, run the same line through the candidates for the authorship: no such prophet arose in the times of Joshua, who the Jews say wrote at least the last eight verses, nor of Samuel, whom others take for the writer, nor of Ezra, nor in the whole Old Testament dispensation; and grant that the Jews themselves own the Messiah equal to Moses or above him, though of all other prophets they call Moses the prince and father."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Say that all this continued true till the advent of Jesus Christ, of whom Moses said that a prophet should be raised up like unto him &mdash; but how great was this person compared with Moses, who desired to see God's glory and could not bear the sight, seeing only his back parts, whereas Jesus, in whom dwells all the fullness of the Godhead, has declared God to man."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the succession and the people hearkening to him."
+    "prevalence": "single",
+    "summary": "Open with a caution about how to praise the dead: it is ungrateful so to magnify our living friends as to forget the merits of those that are gone, and unjust so to cry up those that are gone as to despise the benefit we have in those that survive. Then list three things that cleared Joshua's call. God fitted him, for he was full of the spirit of wisdom, and he had need who had such a peevish people to rule and such a politic people to conquer, conduct being as requisite in a general as courage. Moses ordained him by laying on hands, which is why God gave him a more than ordinary spirit of wisdom. And the people cheerfully owned him, so that when Moses died they were not as sheep having no shepherd. On the closing eulogy, take the knowing to run both ways: God knew him face to face, and so he knew God; and where other prophets were struck with terror when God appeared, Moses preserved his tranquillity whenever he received a revelation. End on the comparison with Christ: as far as the other prophets came short of Moses, our Lord went beyond him, his doctrine more excellent and his communion with the Father more intimate, for he had lain in his bosom from eternity; Moses was faithful as a servant, but Christ as a Son; and the history of Moses leaves him buried in the plains of Moab, where that of our Saviour leaves him at the right hand of the Majesty on high, of whose government there shall be no end."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joshua the son of Nun was full of the spirit of wisdom... and the children of Israel hearkened unto him",
-   "God's care continuing beyond the leader",
-   "Joshua a type of Christ, the spirit of wisdom on him (Isa. 11:2)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: there arose not a prophet like Moses in all the Old Testament — not Joshua, Samuel, or any to the time of Ezra; the LORD knew him face to face."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "there arose not a prophet since in Israel like unto Moses, whom the LORD knew face to face",
-   "Moses unequalled among the prophets of the law",
-   "Moses a servant, but Christ a son (Heb. 3:5-6)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "question": "Is 'there arose not a prophet since in Israel like unto Moses' an absolute verdict or a bounded one?",
+    "sides": [
+     {
+      "position": "Bounded by the manifestation of Christ: the eulogy was added that the children of Abraham might depend on Moses until then",
+      "holders": [
+       "John Calvin",
+       "Adam Clarke",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "A statement about the writer's vantage: the words are later than the time of Joshua, when longer experience had shown how far inferior the prophets were",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Targums read 'which the Word of the Lord sent him to do' — he who appeared in the bush and sent him to Egypt to work miracles, to Pharaoh, his servants, and his land."
+    "question": "Which way does 'whom the LORD knew face to face' run?",
+    "sides": [
+     {
+      "position": "Both ways &mdash; God knew him face to face, and so he knew God",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "One way only &mdash; whom Jehovah knew, not who knew him",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "In all the signs and the wonders, which the LORD sent him to do in the land of Egypt",
-   "the works confirming Moses' singular commission",
-   "a shadow of the greater works of Christ (John 15:24)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the mighty hand, in all done by his hand — stretched over the sea to divide it, smiting the rocks; and the great terror shown in the sight of all Israel; this closes the book."
+    "voice": "Charles Ellicott",
+    "note": "Alone calls the laying on of hands the first example of ordination in Holy Scripture, and alone presses that the people did as the Lord commanded Moses rather than as he commanded Joshua."
+   },
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone opens the succession with a rule for praising the dead without wronging the living, and alone contrasts the terror of the other prophets at a divine appearance with the tranquillity Moses preserved whenever he received a revelation."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone sets the two sights of God against each other, that Moses desired to see the glory and could not bear it, seeing only the back parts, whereas Jesus, in whom dwells all the fullness of the Godhead, has declared God to man."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "And in all that mighty hand, and in all the great terror which Moses shewed in the sight of all Israel",
-   "the Pentateuch sealed with Moses' unequalled greatness",
-   "the law by Moses, grace and truth by Christ (John 1:17)"
+   "And Joshua the son of Nun was full of the spirit of wisdom; for Moses had laid his hands upon him: and the children of Israel hearkened unto him, and did as the Lord commanded Moses.",
+   "And there arose not a prophet since in Israel like unto Moses, whom the Lord knew face to face,",
+   "In all the signs and the wonders, which the Lord sent him to do in the land of Egypt to Pharaoh, and to all his servants, and to all his land,",
+   "And in all that mighty hand, and in all the great terror which Moses shewed in the sight of all Israel."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  }
 }
