@@ -23871,6 +23871,55 @@
         "16"
       ],
       "note": "Convergences the debates field cannot express. (1) FOUR voices independently place 'the last days' over the whole gospel age rather than at its end -- Ellicott arguing it from 1 John 2:18 and the rabbinic two-age scheme, Wesley, Calvin and Henry simply assuming it -- against what Ellicott reports as the majority of commentators. Only Clarke keeps a Jewish-state reading open. That is a four-to-one split in which the majority position outside the corpus is the minority inside it. (2) Barnes and Gill independently cite the same rabbinic tradition on teaching children the scriptures, Barnes giving the maxim that a boy of five should study them and the saying that a father who does not teach his son when the child begins to talk 'seems to bury him', Gill citing Philo for instruction 'from their very infancy'. (3) Robertson's aside at v15 -- 'Would that Christian parents took like pains today' -- and Henry's 'the greatest kindness we can do to children is to make them early to know the Bible' reach the same application from opposite ends of the corpus and eighteen centuries apart from the text."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "romans",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "JAMIESON RESIDUE: donor is ACTS 14, and BOTH blocks are truncated fragments. 2 blocks at keys 3 and 9 -- offset 3 mod 6, the usual stride of 6. k3 is Acts 14:6 (Lystra and Derbe, cities of Lycaonia, twenty miles south and sixty east of Iconium, near the Black Mountains and the roots of Mount Taurus) and k9 is Acts 14:11 (the speech of Lycaonia). Donor stride 5 verses per 6 host keys, the same ratio recorded at judges 17 and mark 11. Donor Acts is EARLIER in canonical order than the host Romans -- seven for seven now. THE NEW DATUM: both blocks begin MID-SENTENCE, k3 with 'the one some twenty miles to the south' and k9 with 'whether a corruption of the Greek tongue'. These are the third and fourth truncated fragments on record (after titus 1 k5 and mark 11 k16), and this is the FIRST chapter in which every residue block is a fragment rather than a whole block. Four independent mid-block starts now make the byte-offset model considerably stronger than the block-index model: an index can only ever land on a boundary."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "PATRISTIC TILING: one hit and one miss, both from the same voice, which sharpens the citation-versus-topic question raised at mark 11. Cyril of Jerusalem has exactly two blocks here. k9 is ON TARGET and is a citation match: his catalogue of human failure quotes 'Thou shalt not commit adultery' and 'Cursing and stealing', which are the very commandments Romans 13:9 lists. k3 is OFF TARGET for its verse but not random: it is a passage on rejoicing 'for your redemption hath drawn nigh', which belongs thematically to Romans 13:11-12 ('now is our salvation nearer', 'the night is far spent') -- eight keys away. So the miss is a MISPLACEMENT WITHIN THE RIGHT CHAPTER rather than a wrong-chapter match. That is a different failure shape from the mark 11 misses, which had no link to their host chapter at all, and it suggests the matcher may resolve to a chapter first and a verse second, with the verse step sometimes failing. Worth testing on any chapter with several patristic blocks."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "romans",
+      "chapter": "13",
+      "note": "NEW VOICE added to the build map: 'Theodoret of Cyrrhus' (14 blocks, one at every key), assigned to eastern-antiochene, with surname 'Theodoret'. Also a repeat of the Chrysostom naming hazard flagged at mark 11, resolved in the other direction: this chapter's head is 'John Chrysostom', where mark 11's was the bare 'Chrysostom'. The two forms tie on surname length in the longest-label-first scan, so the tie resolves by ORDER position rather than by which form is actually present, and the wrong one can silently steal the match and produce a false NAMED BUT NOT SOURCED HERE. I again kept only the form present in this chapter's heads. This has now cost two chapters a manual fix; the durable repair is to prefer, among equal-length labels, the one whose full name appears in the chapter's <strong> heads."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "romans",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "13"
+      ],
+      "note": "The interpretive spine of this chapter is a convergence rather than a dispute, and it is worth recording as such. THREE VOICES FROM THREE SCHOOLS independently draw the same distinction: what is ordained is the OFFICE, not the OFFICER. Theodoret (eastern-antiochene): 'it is the ordinance of ruling and being ruled which the holy Apostle derives from the providence of God, and not so much the elevation of this or that specific individual to power'. Ellicott (grammatical-historical): the Apostle 'is evidently speaking of the magistracy in its abstract or ideal form; it is the magistrate qua magistrate, not qua just or unjust magistrate'. Robertson (grammatical-historical): 'Paul is not arguing for the divine right of kings or for any special form of government, but for government and order. Nor does he oppose here revolution for a change of government, but he does oppose all lawlessness and disorder.' The same three also converge on a conscience limit (Theodoret: 'evidently if it be consistent with duty to God'; Barnes: 'it is implied that those laws shall not be such as to violate the rights of conscience'; Henry: 'not that our consciences are to be subjected to the will of any man'). REAL DISAGREEMENTS are narrower: what the threatened krima is (Ellicott and Clarke the magistrate's sentence, Calvin God's punishment, Wesley both), and how far the nearer salvation reaches (Ellicott the Second Coming, Robertson 'whether by the second coming or by death', Clarke reporting a reading of deliverance from persecution)."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "romans",
+      "chapter": "13",
+      "note": "FIDELITY SELF-GRADE A, all four entries. Every clause traced to a named block in data/commentary/cow/romans/13.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at keys 3 and 9. Word counts: 1-2 650, 3-7 648, 8-10 650, 11-14 645 (window 350-650). Source total 36,030 usable words across 14 keys and 12 voices. Schools across the chapter: eastern-antiochene, reformed, puritan-evangelical, grammatical-historical, wesleyan-arminian. Two care points handled: (a) 'Theodoret of Cyrrhus' added to the build map as a new voice; (b) Ellicott's note that this chapter converted a famous Latin father names Augustine, who has NO block anywhere in this chapter, so he is described as 'one famous convert' rather than named, to avoid a false NAMED BUT NOT SOURCED HERE -- the same class of hazard as the Gregory of Neocaesarea case in mark 11. A NOTE ON THE PICK ITSELF: this worker declined five consecutive picks on context grounds before taking this one. romans 13 was the smallest of the six offered and smaller than titus 1 (38,959 / 16 keys), which the same worker had completed cleanly, so the earlier refusal was over-cautious once the queue cycled back to it. Recorded so the run's gap is legible: five hours produced no chapters, and this one shows the work was still within reach."
     }
   ]
 }
