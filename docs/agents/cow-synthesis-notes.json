@@ -25516,6 +25516,77 @@
       "book": "exodus",
       "chapter": "37",
       "note": "Fidelity self-grade A on both entries. vv.1-2: 1898w raw source -> 636w (0.34x). v.10: 494w raw -> 371w (0.75x). The 0.75x on v.10 deserves the explanation. Its raw source is Henry 385 + Wesley 96 + an 11-word Clarke cross-reference, but Wesley's block is a near-verbatim condensation of Henry's own paragraph on the table, down to the quotation 'Eat, O friends, come eat of my bread' -- so DISTINCT source is about 385 words, and 371 words of prose against that is 0.96x, effectively a tight paraphrase rather than a synthesis. I first drafted it at 416 words, which would have been outright expansion against the distinct content, and cut it back. Even at 371 this is the weakest ratio I have landed. I kept it rather than dropping the key because every claim traces to Henry, the lint grades it A, and the alternative was to lose the chapter's only substantive treatment of the table and candlestick. The duplication itself is recorded in the entry: the wesleyan-arminian school summary and the debates list both state plainly that Wesley reproduces Henry here rather than supplementing him, so a reader is not shown two witnesses where there is one. Two voices at key 10 were left silent by declaration rather than named -- Clarke's nine-word cross-reference at 10, and at keys 1-2 both Clarke's chapter outline and the Keil and Delitzsch block that is pure verse text."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "numbers",
+      "chapter": "31",
+      "note": "OFFERED AGAIN AND NOT ATTEMPTED, per the standing instruction that this chapter is blocked pending an owner decision on its source file. Recording the offer itself because it is the actionable part: the block is enforced only by each worker remembering the instruction, so numbers 31 remains in live circulation and consumes a draw every time it comes up. It measures 19,991 usable source words across 42 keys, which puts it in the tractable middle of the queue -- exactly the band that is scarcest right now -- so each offer of it costs a worker a pick that could have gone to work they could actually land. If the owner decision is going to take a while, it would be worth suppressing the chapter in the picker rather than in the instructions."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "14"
+      ],
+      "note": "Jamieson stride artefact, TENTH confirmation, and this one advances the donor hypothesis I filed at hebrews 4. Blocks at keys 2 and 14 -- gap 12, a multiple of six -- and the donor for both is 2 CORINTHIANS: key 2 carries 2 Cor 1:20 on the yea and the Amen, key 14 carries 2 Cor 2:5 on the incestuous person and being grieved in part. So within this one file the donor advances as the filing key advances, 2 Cor 1 at key 2 and 2 Cor 2 at key 14. At hebrews 4 I recorded that its donors (2 Cor 6 at keys 6 and 12) matched the region worker B found in hebrews 5, and suggested donors track position rather than scattering at random. This is a second, independent data point of the same shape, and a stronger one because the advance is visible INSIDE a single file rather than across two. I am deliberately not asserting the general rule from two instances: what I can say is that in both files examined this way the donor did not jump about, and that a repair pass could test the hypothesis cheaply by extracting the donor reference from every stride block in one book and checking whether it increases monotonically with the filing key. Both blocks excluded from the tiling."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "6",
+        "7"
+      ],
+      "note": "Cyril of Jerusalem appears three times, and the three blocks need three different decisions -- which is the point worth recording. Keys 5 and 6 carry the SAME 200-word block, byte-identical, the peroration of a catechetical lecture beginning 'Sing, O heavens, and be joyful, O earth'; it is phrase-matched, presumably on the blotting out of transgressions, and loosely apposite to the washing of regeneration at verse 5. Key 7 is a DIFFERENT block of 94 words, and it is genuinely on the verse: it quotes Titus 3:7 nearly verbatim ('justified by His grace, we might be made heirs, according to hope, of eternal life') and continues into a prayer. So of three blocks, two are one duplicate and one is real. This is the third book in which his blocks are phrase-matched rather than filed by pericope (luke 9, titus 2, here), and taken with hebrews 4 -- where both his blocks were off-topic and useless -- the pattern is now: Cyril of Jerusalem's filing carries no information, and each block must be read before it is trusted or discarded. He was declared once, at entry 5-7, on the key 7 material only."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "titus",
+      "chapter": "3",
+      "note": "Pre-flight screen, third clean run, and a new false-positive sub-class again. Three hits over 15 keys, all benign: Barnes at key 1 ('CHAPTER 3' at word 1, his own chapter heading, which the offset-0 rule just misses); Ellicott at key 1 ('Augustine' at word 365, quoting Professor Reynolds on Augustine's boast about Julian); Ellicott at key 13 ('Origen' at word 255, dating the dispute over the authorship of Hebrews). The Ellicott hits are the ordinary citation class. The Barnes hit suggests one more refinement to the recipe worker B proposed: the offset-0 filter should be a small window rather than an exact zero, since a chapter heading can sit at word 1 rather than word 0. Screen has now run clean on four consecutive chapters (exodus 11, joshua 20, titus 3, and hebrews 4 before them), which is the useful base-rate datum: it is cheap, it has never yet produced a false negative that I could detect by other means, and its noise is confined to two or three well-defined classes."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "titus",
+      "chapter": "3",
+      "note": "Chapter shape. 15 keys, one contiguous run, 29,490 usable source words by the sizer and about 28,306 net after the two stride blocks are removed. Zero splitter loss on every key. Tiled 1-2 | 3-4 | 5-7 | 8-9 | 10-11 | 12-15, six entries. The distribution is very uneven because Matthew Henry's block at key 1 is a 6,181-word section exposition covering roughly verses 1 through 8 -- the same structure as his key-1 block in titus 2 -- so key 1 alone holds 8,116 of the chapter's words while keys 6, 7 and 11 hold under 900 each. His material was distributed to the entries it actually covers. A four-entry tiling along the obvious pericope lines (1-2, 3-7, 8-11, 12-15) was rejected because it would have put three entries above 11:1 compression, where most of the source cannot be represented."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "titus",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "Verse 5 carries the chapter's central dispute and it is a genuine three-way, not a two-way with a fence-sitter. Barnes: baptism is the EMBLEM and not the means; it is nowhere taught in the New Testament that baptism is regeneration; the word occurs only here and in one place where it indubitably does not refer to baptism; and the usage is dangerous, since 'on almost no point has so much injury been done in the church'. He reads the following clause about the renewing of the Holy Ghost as Paul's own guard against the error. Clarke: 'undoubtedly the apostle here means baptism' -- and then holds both ends at once, that it is only a sign and should never be separated from the thing signified, but is a rite commanded by God and the thing signified should never be expected without it; 'baptism changes nothing', and 'they who think baptism to be regeneration neither know the Scriptures nor the power of God'. Ellicott: the laver can only signify the baptismal font, and 'baptism is the means through which we receive the saving grace of Christ; in its laver we are born again' -- qualified by taking baptism always in its completion, outward sign with inward grace, and provided for infants through sureties. Three positions on one clause, each holder aware he is contradicting the others. A smaller and flatter contradiction sits at verse 6: Robertson refers the outpouring to 'the great Pentecost' as foretold by Joel, and Barnes says there is 'no particular allusion here to the day of Pentecost'."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "titus",
+      "chapter": "3",
+      "verses": [
+        "10"
+      ],
+      "note": "Verse 10 divides the commentators four ways on what a heretic is, and the division is not merely verbal -- each answer licenses a different practice. Barnes and Ellicott both reach the same conclusion from the same evidence, that the word means a factious party-maker and not a man of unorthodox opinion: Barnes rests it on the cognate noun being rendered 'sect' elsewhere, Ellicott on the two other Pauline uses not signifying doctrinal error, that sense belonging to later times. Gill gives two senses without choosing, one procedural (preferring one's own opinion and forming a party) and one doctrinal (removing a fundamental doctrine touching the Trinity or the person of Christ), and adds the useful distinction that every heretic is a schismatic though not every schismatic a heretic. Clarke identifies the man historically as one maintaining Judaism against Christianity. WHAT MAKES THIS WORTH RECORDING is the convergence at the other end: having disagreed about the definition, Barnes, Clarke and Ellicott agree exactly on what 'reject' permits, and two of them raise the stakes to say so. Barnes enumerates the limits -- no injury, no opposition for private opinion, no delivery to the secular arm, no rack, no stake. Clarke asks it as a question: 'burn him alive? No... God gives no man any other authority over him but to shun him.' Ellicott renders the verb shun or avoid and leaves the man to his own devices. Four definitions, one practice."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "titus",
+      "chapter": "3",
+      "note": "All six entries fidelity self-graded A. ONE SIGNAL ON THE FIRST READ-BACK, and it was mine rather than the source's: I wrote 'the Epirot city' where every source says 'Epirus', and the entity check flagged Epirot as ungroundable. Corrected to the source's own form and the re-run came back clean. Recording it because it is the second consecutive chapter in which the defect found at the end was introduced by the writer, not inherited from the scrape -- at joshua 20 it was a stray non-Latin word that no validator checks for, here an adjectival coinage that the fidelity checker did catch. The lesson is that the entity check earns its place precisely on coinages: it cannot see a stray foreign word, but it does see an invented English form of a real proper noun. Two care points on voices. John Wesley was declared only at entries 5-7 and 12-15, where his material is his own; his blocks elsewhere in Titus have shown the Henry dependency recorded at exodus 11 and joshua 20, so each was read before use. Where Ellicott quotes other writers at length -- Reynolds on Augustine and Julian, Luther on the authorship of Hebrews, Hippolytus on Zenas -- those were attributed as quotations and never declared as voices."
     }
   ]
 }
