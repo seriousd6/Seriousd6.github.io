@@ -25468,6 +25468,54 @@
       "book": "1thessalonians",
       "chapter": "1",
       "note": "Fidelity self-grade A on all three entries. Ratios: vv.1-3 14342w source -> 649w (0.05x); vv.4-7 8372w -> 645w (0.08x); vv.8-10 8353w -> 650w (0.08x). Chapter total 31067 usable source words across 10 keys, 12 voices, 9 grade D + 1 grade C before this pass. Tiling 1-3 / 4-7 / 8-10 chosen so the 9059-word key 1 and the 4578-word key 10 sit in different spans. Every non-residue voice present in each span is named in its prose; residue kept out (Jamieson declared in excluded_voices at 4-7, Cyril of Jerusalem kept out but undeclarable because of the VOICE_LABELS prefix bug). One error was caught by synthesis-fidelity.py and fixed before landing: the entry for vv.1-3 named Marcion, which appears nowhere in the source -- Tertullian's block says 'the apostle of the rival god' and 'the heretics'. The name came from my own knowledge of Against Marcion, not from the catena. That is precisely the failure mode the entity check exists for, and it is the first time this session the checker has caught a live fabrication rather than a false positive; the same re-read then overturned my classification of the block (see note 2306)."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "exodus",
+      "chapter": "37",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "16",
+        "17",
+        "19",
+        "23",
+        "25",
+        "29"
+      ],
+      "note": "Nine of twelve keys DROPPED rather than rewritten, and the legacy entries they replace are the clearest fabrication I have measured in this loop. Legacy prose length against USABLE source words per key: key 6, 448 words built on an eleven-word bare cross-reference ('He made the mercy-seat - See this described Exo 25:17') = 40x; key 29, 619 words on about 30 usable words = 20x; key 19, 478 words on a 28-word note about 'another branch' = 17x; key 7, 472 words on a 17-word clause; key 5, 444 words on a 48-word JFB block that is not about this chapter at all; key 23, 408 words on a 102-word JFB block likewise foreign; key 2, 470 words on a block containing NO commentary whatever -- Keil and Delitzsch at key 2 is the bare KJV text of vv.2-9, verse text and nothing else. Coverage requires only the contiguous run from the lowest key, which here is 1-2, so dropping the rest is legal; and the loop doc's own rule is to drop rather than launder an ungrounded attribution. What lands is two entries, vv.1-2 (636w from 1898 raw, 0.34x) and v.10 (371w from 494 raw, 0.75x), both grading A. Net effect on the site: this chapter goes from twelve entries totalling ~6,000 words, most of it invented, to two grounded ones. That is a large visible reduction and it is the correct outcome, but it is a bigger content drop than any repair I have landed so far and an owner may want to see it before it becomes routine."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "37",
+      "verses": [
+        "25"
+      ],
+      "note": "A CONTRACT GAP the 2026-08-10 residue amendment does not cover: a verse can have real, groundable content and still have no legal output length. Key 25 carries 268 raw words -- Matthew Henry 226 on the golden altar (incense signifying the prayers of saints and the intercession of Christ, to which their acceptableness is owing), Wesley 28 saying the same, Clarke 14 as a cross-reference. None of it is residue, so nothing can be declared away. 268 is OVER the thin cap of 200, so the exemption is barred; and 350 words from 268 is 1.3x expansion, which is padding by definition. Key 16-17 is the same shape: 262 raw, and even after declaring the 32-word JFB residue at key 17 it is 230, still over the cap. So both keys are unwritable and were dropped. The 2026-08-10 note fixed the case where RESIDUE left no legal output; this is the case where SIZE alone does, for any verse whose usable source falls in the 200-350 word band. That band is not narrow -- it is exactly where a single mid-length Henry or Gill block lands. Suggest either raising the thin cap to ~350 or letting the thin window start wherever the source ends, so that a verse with 268 words of genuine witness can be answered with 200 words of genuine summary instead of being dropped. Worth counting corpus-wide how many verses sit in the 200-350 usable band; if it is large, this gap is silently deleting groundable content every time a worker follows the rules."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "37",
+      "verses": [
+        "5",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "Two source defects here, both already-known shapes with a new instance. (1) RESIDUE, and all three Jamieson blocks in the chapter come from the SAME donor region -- Exodus 19-24, i.e. earlier in this same book. Key 5 (48w) is the gradual extirpation of the Canaanites lest wild beasts multiply, Exodus 23:29-30. Key 17 (32w) is the priests of Exodus 19:22, the oldest sons of families, with Hebrews 9:18-20. Key 23 (102w) is Exodus 24:10-11, the elders seeing the God of Israel, with Deuteronomy 4:15 on there being no visible form of the divine nature. Same WITHIN-BOOK displacement as Tertullian at 1thessalonians 1:1 (note 2306) -- which now has two independent instances on the same day, from different commentators and different testaments, so it is not a one-off. (2) ELLICOTT CHROME at key 29, and this is the fifth confirmation of the placement rule: the chrome attaches to Ellicott's LAST block in the chapter, not to the chapter's last key. Here they coincide (key 29 is both). The block measures 1,021 words of which about 27 are commentary -- 'In this verse we have the composition by Bezaleel of the holy oil and the incense, described in Exodus 30:22-25, related with the utmost brevity' -- and the remaining ~994 words are scraped StudyLight CSS rules, nav menus, a list of 144 commentaries, and copyright boilerplate. NB this corrupts the sizer: synthesis-loop.py size reported 4,222 usable words for this chapter, of which roughly 1,000 are that chrome and another 180 are residue. Real usable content is nearer 2,900. Any batch budgeting that trusts the size number is over-estimating chapters whose Ellicott block was scraped this way."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "37",
+      "note": "Fidelity self-grade A on both entries. vv.1-2: 1898w raw source -> 636w (0.34x). v.10: 494w raw -> 371w (0.75x). The 0.75x on v.10 deserves the explanation. Its raw source is Henry 385 + Wesley 96 + an 11-word Clarke cross-reference, but Wesley's block is a near-verbatim condensation of Henry's own paragraph on the table, down to the quotation 'Eat, O friends, come eat of my bread' -- so DISTINCT source is about 385 words, and 371 words of prose against that is 0.96x, effectively a tight paraphrase rather than a synthesis. I first drafted it at 416 words, which would have been outright expansion against the distinct content, and cut it back. Even at 371 this is the weakest ratio I have landed. I kept it rather than dropping the key because every claim traces to Henry, the lint grades it A, and the alternative was to lose the chapter's only substantive treatment of the table and candlestick. The duplication itself is recorded in the entry: the wesleyan-arminian school summary and the debates list both state plainly that Wesley reproduces Henry here rather than supplementing him, so a reader is not shown two witnesses where there is one. Two voices at key 10 were left silent by declaration rather than named -- Clarke's nine-word cross-reference at 10, and at keys 1-2 both Clarke's chapter outline and the Keil and Delitzsch block that is pure verse text."
     }
   ]
 }
