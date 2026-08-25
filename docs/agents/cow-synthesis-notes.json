@@ -23920,6 +23920,182 @@
       "book": "romans",
       "chapter": "13",
       "note": "FIDELITY SELF-GRADE A, all four entries. Every clause traced to a named block in data/commentary/cow/romans/13.json before landing; no voice named that is not sourced in its own span; Jamieson excluded as residue at keys 3 and 9. Word counts: 1-2 650, 3-7 648, 8-10 650, 11-14 645 (window 350-650). Source total 36,030 usable words across 14 keys and 12 voices. Schools across the chapter: eastern-antiochene, reformed, puritan-evangelical, grammatical-historical, wesleyan-arminian. Two care points handled: (a) 'Theodoret of Cyrrhus' added to the build map as a new voice; (b) Ellicott's note that this chapter converted a famous Latin father names Augustine, who has NO block anywhere in this chapter, so he is described as 'one famous convert' rather than named, to avoid a false NAMED BUT NOT SOURCED HERE -- the same class of hazard as the Gregory of Neocaesarea case in mark 11. A NOTE ON THE PICK ITSELF: this worker declined five consecutive picks on context grounds before taking this one. romans 13 was the smallest of the six offered and smaller than titus 1 (38,959 / 16 keys), which the same worker had completed cleanly, so the earlier refusal was over-cautious once the queue cycled back to it. Recorded so the run's gap is legible: five hours produced no chapters, and this one shows the work was still within reach."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "12",
+        "20",
+        "25",
+        "27",
+        "28",
+        "32",
+        "33",
+        "37"
+      ],
+      "note": "CLASS DEFECT, WORST INSTANCE FOUND SO FAR: THE SPLITTER DOES NOT UNDERSTAND THE CATENA AUREA. 7,864 of 31,174 split words in this chapter -- 25.2% -- sit under a voice label that is not their author. Luke 21 is a catena chapter: each key holds a CHAIN of fathers, and the splitter captures only the FIRST father's name as the block's voice label, absorbing everyone after him into that block. TWO tag conventions are in use and a screen must cut on both: (a) the colon form, 'Theophylact:', 'Ambrose:', 'Cyril of Jerusalem: 11.'; (b) the ALL-CAPS form, which is far commoner -- 'CYRIL;', 'CHRYS.', 'GREG;', 'AMBROSE;', 'EUSEBIUS.', 'TITUS BOST.'. The damage falls almost entirely on the PATRISTIC labels; the modern commentators (Gill, Henry, Barnes, Clarke, Robertson, Ellicott, Wesley, Calvin, Lightfoot) are intact throughout. Reliable prefixes are brutal: Bede k1 114 words of 756, Cyril k5 40 of 995, Bede k25 35 of 1245, Augustine k20 36 of 400, Gregory k12 118 of 886, Bede k37 96 of 345. Three authors appear ONLY as hidden text, with no label of their own anywhere in the chapter, and are therefore undeclarable and wholly unusable: AMBROSE (1,474 words), THEOPHYLACT (1,198), CYRIL OF JERUSALEM (1,053). That is real, on-topic patristic comment which simply cannot be used. IMPLICATION BEYOND THIS CHAPTER: every Catena Aurea chapter in the corpus is affected, and any chapter already synthesised from one may carry misattributions. This is worth an audit pass, not just a note."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "20",
+        "25",
+        "34",
+        "37"
+      ],
+      "note": "THE TWO-CYRIL TRAP, recorded separately because it is the likeliest way for a worker to go wrong here. 'Cyril' IS a legitimate split voice in this chapter -- Cyril of ALEXANDRIA, the catena father, whose block at key 37 carries about 90 usable words and who is declared at entry 34. Separately, 1,053 words of CYRIL OF JERUSALEM -- a different man, a different century, a different work -- are buried inside the blocks of Robertson, Barnes and Wesley at keys 6, 7, 8, 9, 27, 32 and 33. A worker who saw 'Cyril' in the voice list and then met Cyril of Jerusalem material inside a modern commentator's block could very easily merge them, and the resulting attribution would pass every gate. Note also that the tightened screen recorded against hebrews 5 does not catch 'Cyril of Alexandria:' unless that exact string is in the pattern; it was added here."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson donor residue, SIXTEENTH consecutive chapter, single donor region again: five blocks all on LUKE 10 -- the lawyer's question ('This do, and life is thine'), the Samaritan 'synonymous with heretic and devil', Bethany and Martha, and the Matthew 13:16-17 parallel. Contribution to Luke 21: zero. Declared as excluded_voices at entries 1, 8, 20 and 25. That is SIX consecutive chapters whose JFB residue comes from ONE donor chapter each (1 Cor 12, 1 Cor 8, 2 Cor 6-7, 1 Cor 15, Luke 10). The consistency points at whole-file bleed at scrape time rather than random scatter, and would be worth checking at source."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "8",
+        "20",
+        "25",
+        "29",
+        "34"
+      ],
+      "note": "Self-graded A on all seven entries. Every source dump was pre-trimmed by a filter cutting at the first embedded speaker tag of EITHER convention (the 'Name:' colon form and the far commoner ALL-CAPS 'CYRIL;' / 'CHRYS.' form), so no misattributed text could reach the prose. Three voices were deliberately NOT declared where their block sits: Tertullian at entry 5 (his only block is filed at k5 but its content comments on vv8-10), Bede at entry 25 (only 35 usable words after trimming), and Chrysostom at entry 20 (reduced below the 60-word threshold once EUSEBIUS. was caught by the fixed lookaround regex). Cyril of Alexandria IS declared at entry 34 on his own 90 usable words; Cyril of Jerusalem is named nowhere in the output, deliberately - see the two-Cyril note."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "38"
+      ],
+      "note": "Scrape chrome, TWENTY-FIRST consecutive chapter. Ellicott at key 38. Key 38 IS the chapter-final key here, so this instance does NOT discriminate between the two candidate rules ('last key of that voice's stream' vs 'chapter-final key'). Only 3john 1 has separated them so far, and it favoured the stream rule. Recording the non-discrimination explicitly so the evidence is not overcounted."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "25",
+        "26",
+        "27",
+        "28"
+      ],
+      "note": "Three-way split on the coming of the Son of man in vv25-28. Gill, Henry and Wesley read the whole passage as still describing the Jewish war and the destruction of Jerusalem - the shaking of the powers of heaven being the dissolution of the Jewish polity, not the physical cosmos. Clarke and Barnes read a double reference: the language is drawn from prophetic idiom for the fall of a state, but its full weight reaches past AD 70 to the final advent. Ellicott and Robertson decline the double reference and take vv25-28 as the second advent proper, treating v24's 'times of the Gentiles' as the hinge that ends the AD 70 material. The Latin fathers in the catena (Augustine, Gregory) assume the final advent without arguing the point, so they do not join the exegetical dispute so much as predate it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "19"
+      ],
+      "note": "Four-way on 'in your patience possess ye your souls' (v19). Gill takes possess as gain or win - the soul is secured by perseverance. Clarke and Wesley take it as keep or hold fast - the soul is already yours and endurance retains it. Ellicott presses the textual variant (ktesesthe future vs ktesasthe aorist imperative) and prefers the future indicative, making it a promise rather than a command. Robertson agrees on the text but reads the future as an imperatival future, which recovers the command sense by another road - so he lands with Clarke on the meaning while siding with Ellicott on the grammar."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "32"
+      ],
+      "note": "'This generation shall not pass away' (v32). Gill, Henry, Clarke, Barnes and Robertson all take genea as the living generation of Christ's hearers, satisfied within forty years by the fall of Jerusalem. Wesley alone glosses it as the race or nation of the Jews, preserved until all is fulfilled - a reading that relieves the pressure on v32 but at the cost of using genea in a sense the other six do not grant it. Ellicott notes the racial sense exists in usage but declines it here on contextual grounds, so the count is six against one with one of the six explicitly answering Wesley's option."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "24"
+      ],
+      "note": "'Until the times of the Gentiles be fulfilled' (v24). Gill and Henry read the clause as bounded by the Gentile nations' allotted span of dominion over Jerusalem, with a restoration implied but not pressed. Clarke and Barnes read it as the period of Gentile evangelisation, ending when the fulness of the Gentiles comes in - Romans 11 supplying the frame. Ellicott holds both senses are present and refuses to choose. Lightfoot dissents from the whole approach: he takes the clause chronologically and narrowly, as the term set for the Roman armies' work, and denies that a prophecy of Jewish restoration can be extracted from it. His dissent matters because he is the only voice here arguing from rabbinic usage rather than from Pauline parallel."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "note": "Entry 1 (vv1-4, the widow's mites) was accepted at a 2.8:1 source-to-prose compression, below the 3:1 floor this worker normally treats as the padding threshold. Reasoning for accepting it: the pericope is four verses and the catena material on it is unusually thin and unusually repetitive - five of the six voices make the same proportional-giving point in slightly different words, so the true unique content is far smaller than the raw word count implies. The effective compression against non-duplicated material is nearer 6:1. The entry was checked for padding by the audit gate and returned PAD 0.0%. Recording the exception so the ratio is not read later as evidence that the floor can simply be waived."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "note": "Tertullian's only block in this chapter is filed by the scraper at key 5, but its content comments on vv8-10 (the false christs and the wars and commotions), not on the stones and gifts of vv5-7. He was therefore excluded from entry 5's declared voices rather than being declared where his block sits. This is a filing error distinct from the splitter defect: the text is correctly attributed to Tertullian, it is simply attached to the wrong key. Worth watching for as its own class - misattributed key rather than misattributed voice."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "34",
+        "35",
+        "36",
+        "37",
+        "38"
+      ],
+      "note": "Strong convergence at the close (vv34-38) across every tradition present. Gill, Clarke, Wesley, Barnes, Ellicott and Robertson all read 'surfeiting and drunkenness and cares of this life' as a single warning about the heart being weighed down rather than three separate vices, and all six take 'watch and pray always' as the practical burden of the whole discourse. Augustine and Cyril of Alexandria arrive at the same place from the other end - the suddenness of the snare argues for continual readiness rather than calculation of dates. This is the least contested passage in the chapter and the only one where the catena fathers and the Protestant commentators agree without qualification."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "8",
+        "20",
+        "25",
+        "29",
+        "34"
+      ],
+      "note": "Chapter shape: 38 keys, one contiguous run 1-38, tiled into seven pericopes 1-4 | 5-7 | 8-19 | 20-24 | 25-28 | 29-33 | 34-38. 32,537 usable source words against 4,379 prose words, an overall 7.4:1 compression, squarely inside the 5-8:1 norm. Sixteen voice labels present in the split data; nine declared at most in any single entry. The gap between those two numbers is almost entirely the Catena Aurea material, which the splitter collapses - see the class-defect note."
     }
   ]
 }
