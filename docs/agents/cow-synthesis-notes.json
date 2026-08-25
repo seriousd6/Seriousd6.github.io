@@ -25798,6 +25798,41 @@
         "29"
       ],
       "note": "Sharpest doctrinal collision of the run: Clarke uses 'O that there were such an heart in them' to prove free will ('had man no free will he could neither be punished nor rewarded, being a mere machine'), while Calvin says the verse 'has been ignorantly abused by some, to establish man's free will'. Gill takes a third position through the grammar. Both principals know they are contradicting somebody, so the debate is explicit in the sources rather than constructed."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "10",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "34",
+        "40",
+        "46"
+      ],
+      "note": "ALL SIX JAMIESON BLOCKS IN THIS CHAPTER COME FROM ONE DONOR REGION, and that region is not Acts at all: they are John 11-12 and the passion week. Key 4 (23w): 'from any legal uncleanness which would have disqualified them from keeping the feast' -- John 11:55. Key 10 (29w): 'See on Mt 26:6-13... on the sixth day before it; probably after sunset on Friday evening' -- the anointing at Bethany, John 12:1. Key 16 (34w): 'to such a pitch had these chief priests come of diabolical determination to shut out the light... See on Mt 21:1-9 and Lu 19:29-36' -- John 12:10 and the triumphal entry. Key 34 (146w): 'They would see Jesus, would they? ... the middle wall of partition... I, if I be lifted up from the earth, shall draw all men unto Me' -- John 12:21,32. Key 40 (13w): 'some hearing only a sound, others an articulate, but to them unintelligible voice' -- John 12:29. Key 46 (85w): 'the Christ endureth for ever. How can that consist with this uplifting?' -- John 12:34. So the donor advances 11:55 -> 12:1 -> 12:10 -> 12:21 -> 12:29 -> 12:34 while the host advances 4 -> 10 -> 16 -> 34 -> 40 -> 46. Six data points, strictly monotonic on BOTH sides, and the cleanest instance of the donor/host stride relation I have recorded. Donor-earlier-than-host now holds twenty-six for twenty-six. Note the host gaps are 6, 6, 18, 6, 6 -- a period of 6 with one triple skip, which matches the 6-key period measured at judges 17, mark 11, romans 13, deuteronomy 11, numbers 36, 1timothy 3 and 2thessalonians 3. This is the first time I have been able to show the period and the donor advance together from a single chapter with six points."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "10",
+      "verses": [
+        "20",
+        "44",
+        "45",
+        "48"
+      ],
+      "note": "CYRIL OF JERUSALEM: one block stamped at THREE host keys in a single chapter, the strongest instance yet of the mechanism in note 2305. The block beginning '27. In the power of the same Holy Spirit Peter also, the chief of the Apostles and the bearer of the keys...' appears byte-identical at keys 20, 44 and 45. It is genuinely about Acts -- Aeneas at Lydda, Tabitha at Joppa, and Peter on the housetop in a trance -- so unlike the usual phrase-collision residue it is topically at home in this chapter; but it is still stamped three times, and at keys where it says nothing about the verse. At luke 11 I found the same block at two host keys (13 and 20); here it is three. I used it once, in the entry covering verses 17-22 where the housetop trance is in view, and declared it residue at 44 and 45. His other two blocks in the chapter are genuine and were used: key 36 quotes Acts 10:36 verbatim to establish the lordship of the Son, and key 48 argues from the twofold nature of man that purification must be twofold, water for the body and the Spirit for the soul -- which is exactly to the point at a verse about being commanded to be baptized. So this chapter contains, from one voice, both a genuine placement and a triple mis-stamp, which makes it a good single-file demonstration for anyone deciding whether to repair the tiler."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "10",
+      "note": "Fidelity self-grade A on all 10 entries; lint 10/10 A with zero UNSOURCED, NOISE, META or SLOT flags. Ratios: vv.1-4 13825w->646w (0.05x); 5-8 1876->635 (0.34x); 9-12 6640->649 (0.10x); 13-16 3411->645 (0.19x); 17-22 7103->640 (0.09x); 23-29 6935->649 (0.09x); 30-33 2358->650 (0.28x); 34-38 14270->648 (0.05x); 39-43 5293->649 (0.12x); 44-48 8377->643 (0.08x). 48 keys, 11 voice heads, 70,088 words reported by the sizer; ~983 of those are Ellicott chrome at key 48 and ~330 are Jamieson residue, so real usable content is near 68,800. ELLICOTT CHROME, eighth confirmation, and the constant is now firmly established: the chrome block measures ~983 words in every chapter where I have counted it (2john 1, luke 11, acts 10, exodus 37), which means it is a fixed page-furniture payload appended once per chapter rather than anything proportional to the commentary. ONE FABRICATION CAUGHT BEFORE LANDING, and it is a subtler kind than the last two: I wrote 'Judaea' where the source spells the name 'Judea' or 'Judaea' with the ae ligature, and synthesis-fidelity.py flagged it as an ungroundable entity. Nothing was misattributed and no claim changed -- the check is matching orthography, not identity -- but the fix is still the right one, since a reader searching the source for the form I used would not find it. Worth recording that the entity check catches three distinct classes now: a name imported from my own knowledge (Marcion at 1thessalonians 1), an expanded abbreviation the source never spells out (Athanasius at luke 11), and now a spelling variant. Only the first was a real fabrication; the other two are the check being stricter than the fidelity rule requires, and a future worker should not assume every ENTITIES flag means invention."
     }
   ]
 }
