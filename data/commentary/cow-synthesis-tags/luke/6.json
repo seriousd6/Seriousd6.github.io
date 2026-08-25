@@ -1,1893 +1,865 @@
 {
  "1": {
   "voices": [
-   "Ambrose",
-   "Theophylact",
-   "Bede",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Adam Clarke",
+   "Albert Barnes",
    "John Calvin",
-   "John Wesley",
-   "Tertullian"
+   "John Gill",
+   "A.T. Robertson",
+   "Matthew Henry",
+   "Cyril of Alexandria",
+   "Theophylact",
+   "Tertullian",
+   "John Lightfoot"
   ],
+  "range": "1-5",
+  "pericope_label": "Plucking the ears of corn: the Son of man is Lord also of the sabbath",
   "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The Sabbath grainfield the loosing of the old law's bonds in the true Sabbath, Christ (Ambrose, Epiphanius, Bede); the bruised ears read mystically of mortifying the old man."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'second-first sabbath' (deuteroproton) obscure — variously the feast after unleavened bread or the reckoning toward Pentecost (Gill, Lightfoot, Henry); need not detain faith."
+    "summary": "Ellicott calls the meaning of the double-numbered sabbath largely conjectural, lists six proposals without choosing, and prefers the one that would explain how so peculiar a term arose; Barnes follows Scaliger to the first sabbath after the second day of unleavened bread; Robertson cuts the knot, calling the reading undoubtedly spurious and reconstructing the scribal accident that produced it, since if it were genuine we should not know what it means."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the day the second of the great annual sabbaths; Gill canvasses four theories before preferring much the same result."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke concludes with Lightfoot for the first sabbath after the second day of unleavened bread, adds the practical argument that no Jew might eat green ears before then nor find any standing after Pentecost, reports the manuscripts and versions that omit the word, and preserves the saying about the man working on the sabbath that one old copy inserts here."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: works of necessity lawful on the Sabbath; ceremonial appointments (the showbread) yield to need — much more the traditions of men."
+    "summary": "Henry declines the enquiry outright, blessed be God we need not be critical in this matter, and takes from David's example that ceremonial appointments may be dispensed with in cases of necessity."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact makes Christ speak as legislator, Lord of the sabbath because he ordained it and therefore able to loose it."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril of Alexandria answers the objectors in the second person, asking whether they do not themselves break bread when they set out their own sabbath meal."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Tertullian argues against Marcion that in interfering with the sabbath Christ acted after the Creator's own example, the ark having been carried round Jericho for eight days running and so on a sabbath."
    }
   ],
   "debates": [
    {
-    "question": "What does the 'second-first sabbath' (deuteroproton) mean?",
-    "sides": [
+    "question": "What is the second-first sabbath?",
+    "positions": [
      {
-      "position": "The first sabbath after the second day of unleavened bread (reckoning toward Pentecost)",
-      "holders": [
-       "Henry",
-       "Whitby"
+      "view": "a real day in the calendar, variously identified",
+      "held_by": [
+       "Charles Ellicott",
+       "Adam Clarke",
+       "Albert Barnes",
+       "John Calvin",
+       "John Gill",
+       "John Lightfoot"
       ]
      },
      {
-      "position": "Uncertain — various festal explanations, but not material to faith",
-      "holders": [
-       "Gill",
-       "Lightfoot"
+      "view": "the reading is spurious and means nothing",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "the question need not be pressed at all",
+      "held_by": [
+       "Matthew Henry"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the second sabbath after the first",
-   "plucked the ears of corn",
-   "David and the showbread",
-   "Lord of the sabbath"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Cyril of Alexandria: the dispute the old covenant (the old skin) unable to hold the new wine; the Pharisees, ignorant of Scripture, sought only to find fault."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees charge the disciples (or Jesus — the Gospels differ; likely both, Gill, Wesley) with what was 'not lawful' by their traditional fence around the Sabbath, not the law itself."
+    "voice": "Tertullian",
+    "claim": "the sabbath was interfered with after the Creator's own example, since the ark was carried round Jericho for eight days running"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the Pharisees said",
-   "not lawful on the sabbath",
-   "the carping spirit",
-   "old covenant and new"
+   "And it came to pass on the second sabbath after the first, that he went through the corn fields; and his disciples plucked the ears of corn, and did eat, rubbing them in their hands.",
+   "And certain of the Pharisees said unto them, Why do ye that which is not lawful to do on the sabbath days?",
+   "And Jesus answering them said, Have ye not read so much as this, what David did, when himself was an hungred, and they which were with him;",
+   "How he went into the house of God, and did take and eat the shewbread, and gave also to them that were with him; which it is not lawful to eat but for the priests alone?",
+   "And he said unto them, That the Son of man is Lord also of the sabbath."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ defends the disciples by David's example (1 Samuel 21:6) — the showbread lawful only for priests eaten in need; 'Have ye not read so much as this?' rebukes the Pharisees' professed learning (Robertson), exposing their inconsistency in honouring David yet blaming the disciples."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "have ye not read",
-   "what David did",
-   "the showbread",
-   "the law of necessity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The showbread (lawful only for priests, Leviticus 24:9) eaten by David in need — one of five defences showing ceremonial law yields to necessity (Robertson); the Codex Bezae addition (the man working on the Sabbath) a textual curiosity, not the received text (Clarke, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the shewbread",
-   "not lawful but for the priests",
-   "the Codex Bezae addition",
-   "ceremonial law yields to need"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Cyril of Jerusalem",
-   "Theophylact",
-   "Chrysostom"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Christ Lord of the Sabbath as its ordainer and Legislator (Theophylact); the Sabbath made for man, not man for the Sabbath — its servant, not its master (Chrysostom)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Christ as Lord of the Sabbath transforms it into the Lord's Day, observed in honour of the Redeemer as it had been of the Creator."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Son of man is Lord of the sabbath",
-   "the Lawgiver's authority",
-   "the sabbath made for man",
-   "foundation of the Lord's Day"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Ambrose",
-   "Bede",
-   "Augustine of Hippo",
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Christ heals on the Sabbath to convey the spiritual Sabbath (Bede); the withered hand figures humanity unfruitful since the fall, healed by the hand on the cross (Bede); stretch the hand in charity (Ambrose)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Luke alone, with the physician's eye, notes the 'right hand' (Robertson, Ellicott); Clarke rebuts the rationalist who would deny the miracle."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Cyril of Alexandria: the Sabbath law given for mercy — if mercy to the ox, how much more to the diseased man."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "another sabbath",
-   "the withered right hand",
-   "healing and the Sabbath",
-   "the physician's eye"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The scribes 'watched' (maliciously, insidiously, Clarke, Robertson) for an accusation — a snare in which, healing or not, they hoped to entrap Christ (cruelty if he refused, Sabbath-breaking if he healed)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede/Cyril: the envious watching makes the good an occasion for accusation; they lay in wait rather than learn."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "watched him",
-   "whether he would heal",
-   "an accusation against him",
-   "the envious snare"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
- "8": {
+ "6": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "Bede",
+   "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin"
+   "Augustine",
+   "John Calvin",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "Matthew Henry",
+   "Cyril of Alexandria"
   ],
+  "range": "6-11",
+  "pericope_label": "The man whose right hand was withered: is it lawful on the sabbath to do good?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ's omniscience read their malicious thoughts like an open book (Robertson, Barnes); he commands the man to 'stand forth in the midst,' working openly before all."
+    "summary": "Robertson claims the specified right hand and the double compound verb for the physician's eye and wonders whether Luke alone notes the day from professional experience; Ellicott finds this narrative and Mark's agreeing more closely with each other than either does with Matthew; Barnes lists four causes of the fury that followed."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin harmonizes: whether they spoke their malice aloud (Matthew) or not, Christ discerned their secret design (Luke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he knew their thoughts",
-   "stand forth in the midst",
-   "Christ's omniscience",
-   "the open miracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ's counter-question brings the issue into the open (Robertson); to omit good is to do evil (Barnes); 'save or destroy' cuts to the quick — he purposes to save while they plot to destroy him that very day."
+    "prevalence": "single",
+    "summary": "Calvin lets both reports stand without a sequence, since the Pharisees may have spoken plainly and Christ still have discerned the design behind their words."
    },
    {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Cyril: if it is lawful to do good, cease accusing Christ; if not, you accuse the law itself, given for mercy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "is it lawful to do good",
-   "save life or destroy it",
-   "the penetrating question",
-   "mercy on the Sabbath"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ looks round (grieved, Mark adds 'with anger,' Robertson), commands 'Stretch forth thy hand,' and it is restored complete and whole — the man's obedience to the impossible command the means of cure; Clarke rebuts the rationalist."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "looking round about",
-   "stretch forth thy hand",
-   "restored whole",
-   "the complete miracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees filled with 'madness' (rage kin to insanity, Robertson) and conspire (with the Herodians, Mark) to destroy Jesus; the miracle that should have convinced only enraged — pride, malice, and disappointed self-confidence combined (Barnes, Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "filled with madness",
-   "what they might do to Jesus",
-   "hardness of heart",
-   "the conspiracy to destroy him"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Gloss",
-   "Cyril",
-   "Ambrose",
-   "Augustine of Hippo",
-   "Bede",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Christ prays all night not from weakness but as example (Ambrose, the Author of power); the choice of apostles prefaced by prayer (Gloss); nightly prayer destroys the rust of sin (Chrysostom)."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke prosecutes a running quarrel with a rationalising critic who made the withered hand a dislocated arm, first refusing refutation and four verses later granting the premise to answer it, and closes with the question why all this learned labour to leave God out."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: a whole night in secret prayer before the solemn choice; ministers to be ordained with prayer 'more than ordinarily solemn.'"
+    "summary": "Henry draws the moral that Christ was neither ashamed nor afraid to own the purposes of his grace though he knew his enemies would take advantage of it."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "'In prayer to God' (possibly 'the prayer of God') — Lightfoot notes the rabbinic notion but leaves it undetermined; most take it as Christ's prayer to God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he went out to pray",
-   "continued all night in prayer",
-   "example not need",
-   "before choosing the Twelve"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ chose twelve from the larger body of disciples, naming them 'apostles' (those sent); he chose them himself, even Judas (Robertson); they stand apart as personal witnesses to his resurrection (Acts 1:22), without successors in that office."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the name 'apostles' given with a view to their future rank, marking their separation and destined office."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he chose twelve",
-   "named them apostles",
-   "chosen by Christ himself",
-   "the apostolic college"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The catalogue begins with Simon (named Peter, the rock, for steadfastness, Gill), Andrew, James, John, Philip, Bartholomew; the surname Peter given at John 1:42, marked here."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Ambrose: humble fishermen chosen, not the wise or noble, that truth not oratory might prevail; each named (Cyril) to fix the apostolic foundation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simon whom he named Peter",
-   "Andrew, James, John",
-   "Philip and Bartholomew",
-   "the apostolic roll"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Matthew (the publican/Levi), Thomas (Didymus, the doubter), James of Alphaeus, Simon Zelotes (the zealous, of Cana — not the later murderous party, Clarke); Matthew places himself after Thomas in humility (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Matthew and Thomas",
-   "James the son of Alphaeus",
-   "Simon called Zelotes",
-   "the variety of the chosen"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jude (the brother of James, writer of the epistle) and Judas Iscariot, who 'became' traitor, giving no sign of treachery when chosen (Robertson)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: Christ chose Judas knowingly, not deceived, willing to be betrayed by his own apostle, that the betrayed might bear it patiently — the false apostle a warning that office is no guarantee of grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judas the brother of James",
-   "Judas Iscariot the traitor",
-   "chosen knowingly",
-   "office no guarantee of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Cyril",
-   "Ambrose",
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ stands on a 'level place' (Robertson: on the mountain side); the Sermon on the Plain is the same as the Sermon on the Mount — no real difference of place, audience, or topic; Luke's medical interest in 'to be healed.'"
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril of Alexandria supplies the envious man's motive, that he makes the praises of others food for his own disease, and suggests the man was set in the midst to shame the unpitying into compassion."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Christ descends to the lowly, where the sick are found and healed by his touch (faith, Bede); the Gentiles of Tyre and Sidon present, the apostles appointed publicly for all (Cyril)."
+    "summary": "Bede states the dilemma the watchers set, cruelty if he did not heal and sabbath-breaking if he did; Augustine reconciles the two reports in sequence, the Pharisees asking first and Christ, perceiving they wanted a charge, setting the man in the midst and asking in turn."
    }
   ],
   "debates": [
    {
-    "question": "Is the Sermon on the Plain the same as the Sermon on the Mount?",
-    "sides": [
+    "question": "Who put the question about healing on the sabbath, and in what order?",
+    "positions": [
      {
-      "position": "Yes — one sermon; the 'level place' is on the mountain side, no real difference",
-      "holders": [
-       "Robertson",
-       "Clarke",
+      "view": "the Pharisees asked first and Christ answered by asking in turn",
+      "held_by": [
        "Augustine"
       ]
      },
      {
-      "position": "Possibly distinct, or a repeated/abridged discourse",
-      "holders": [
-       "Barnes",
-       "Henry"
+      "view": "no sequence is needed; Luke records only that Christ saw through a design the words did not express",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "he stood in the plain",
-   "a great multitude",
-   "Tyre and Sidon",
-   "setting of the Sermon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Those 'vexed' (tormented) by unclean spirits were healed; two verbs for healing used without distinction (Robertson); the cures continual; Christ's authority over the demonic, continued through the apostles (Cyril of Jerusalem)."
+    "voice": "Charles Ellicott",
+    "claim": "Luke's omission of the Herodians may be due to his own acquaintance with people connected with the Herods, which made him reluctant to give them prominence"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "vexed with unclean spirits",
-   "they were healed",
-   "authority over the demonic",
-   "continual cures"
+   "And it came to pass also on another sabbath, that he entered into the synagogue and taught: and there was a man whose right hand was withered.",
+   "And the scribes and Pharisees watched him, whether he would heal on the sabbath day; that they might find an accusation against him.",
+   "But he knew their thoughts, and said to the man which had the withered hand, Rise up, and stand forth in the midst. And he arose and stood forth.",
+   "Then said Jesus unto them, I will ask you one thing; Is it lawful on the sabbath days to do good, or to do evil? to save life, or to destroy it?",
+   "And looking round about upon them all, he said unto the man, Stretch forth thy hand. And he did so: and his hand was restored whole as the other.",
+   "And they were filled with madness; and communed one with another what they might do to Jesus."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
- "19": {
+ "12": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Healing 'virtue' (power, Luke's medical term, Ellicott) went continually out from Christ and healed all who touched him (Robertson); the power his own as God, not borrowed (Cyril of Alexandria)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sought to touch him",
-   "virtue went out of him",
-   "healed them all",
-   "the divine healing power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "Cyril",
-   "Ambrose",
-   "Basil",
-   "Gregory of Nyssa",
-   "Chrysostom",
-   "Eusebius",
-   "John Gill",
+   "A.T. Robertson",
    "Matthew Henry",
-   "Albert Barnes",
+   "John Lightfoot",
+   "Cyril",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Tertullian"
+   "Ambrose",
+   "Augustine"
   ],
+  "range": "12-16",
+  "pericope_label": "He continued all night in prayer, and chose twelve, whom also he named apostles",
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Luke's 'poor' (not 'poor in spirit') the actual poor who despise riches (Cyril), yet only the willingly poor joined to Christ's love (Basil); Luke's four blessings contained in Matthew's eight, poverty first as purest virtue (Ambrose)."
+    "summary": "Ellicott takes the phrase as the oratory of God, a place of prayer by running water, and gathers instances from Philippi to Tiberias, while admitting that a precisely harmonised arrangement of the choosing seems impossible and calling the difficulty happily unimportant; Robertson denies that sense flatly and insists on the actual night-long prayer of Jesus, noting the verb for passing the whole night occurs only here; Lightfoot brings the rabbinic tradition that God himself prays by authority and confesses he cannot but laugh at their triflings."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke lists three things that unite in a genuine apostle: knowledge of God himself, commission from the Head of the Church, and preaching accompanied by the Spirit."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the blessing applied directly to the disciples who left all — 'yours is the kingdom of God'; believers may take the gospel promises to themselves."
+    "summary": "Henry decides against the oratory because Christ sought privacy, makes the night an example of secret prayer against our half-hours in the closet, and notes that the order of the twelve differs in each of the three lists."
    },
    {
-    "school": "grammatical-historical",
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril draws the lesson of going apart in secret with worldly cares laid aside, the mind raised to divine contemplation."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Christ blesses the poor directly; the great reversal of the gospel — the world's wretched are heirs of the kingdom."
+    "summary": "Ambrose finds the significance in who was passed over, fishermen and publicans rather than the wise, the rich or the noble, so that the force of truth rather than the graces of oratory might prevail; Augustine allows a man two or three names and presses that Judas was chosen knowingly, Christ refusing not even this share of human infirmity."
    }
   ],
   "debates": [
    {
-    "question": "Does Luke's 'blessed are ye poor' mean the literally poor or the 'poor in spirit'?",
-    "sides": [
+    "question": "Does the phrase mean prayer to God or a house of prayer?",
+    "positions": [
      {
-      "position": "The literally poor who despise riches — yet willingly, for Christ's sake",
-      "holders": [
-       "Cyril",
-       "Basil",
-       "Ambrose"
+      "view": "a place set apart for prayer, the oratory of God",
+      "held_by": [
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "The same as Matthew's 'poor in spirit,' the humble",
-      "holders": [
+      "view": "the actual prayer of Jesus to the Father, all night long",
+      "held_by": [
+       "A.T. Robertson",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "declines to say whether the rabbinic sense applies here",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Christ was willing to be betrayed by his own apostle so that a man betrayed by his friend might bear calmly his mistaken judgment and his kindness thrown away"
+   }
+  ],
+  "themes": [
+   "And it came to pass in those days, that he went out into a mountain to pray, and continued all night in prayer to God.",
+   "And when it was day, he called unto him his disciples: and of them he chose twelve, whom also he named apostles;",
+   "Simon, (whom he also named Peter,) and Andrew his brother, James and John, Philip and Bartholomew,",
+   "Matthew and Thomas, James the son of Alpheus, and Simon called Zelotes,",
+   "And Judas the brother of James, and Judas Iscariot, which also was the traitor."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Albert Barnes",
+   "Adam Clarke",
+   "A.T. Robertson",
+   "Charles Ellicott",
+   "Cyril of Alexandria",
+   "Cyril",
+   "Ambrose"
+  ],
+  "range": "17-19",
+  "pericope_label": "The whole multitude sought to touch him: virtue went out of him, and healed them all",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes gives three reasons for identity with the other sermon and answers the objections by observing that only the healing is placed on the plain; Robertson denies there is the slightest reason for putting one sermon on the mountain and the other in the valley, and defends the reports against the charge of being assembled from isolated sayings; Ellicott is least willing to settle it, since events these two place before the choice are placed by Matthew after the mission."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke agrees with the identification and calls the whole sequence striking, the ascent, the night of prayer, the separating of the twelve, the descent, and the healing of the diseased in the plain."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Cyril of Alexandria stresses that the election was not made in a corner but before a vast concourse that included idolaters from the sea coast, teachers appointed in sight of all; and he reads the outgoing power as proof that Christ borrowed strength from no one but healed by the putting forth of his own."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Ambrose finds the antithesis in the movement, Christ ascending with the apostles and descending to the multitude, since the crowd neither follows him to the heights nor climbs them, and in high places there are no sick."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is this discourse the Sermon on the Mount?",
+    "positions": [
+     {
+      "view": "yes, one discourse; the level place lies on the mountain side",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "the resemblances are many, but the order of events resists harmonising",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "a preacher who is no vehicle of power from Christ may well ask himself why"
+   }
+  ],
+  "themes": [
+   "And he came down with them, and stood in the plain, and the company of his disciples, and a great multitude of people out of all Judea and Jerusalem, and from the sea coast of Tyre and Sidon, which came to hear him, and to be healed of their diseases;",
+   "And they that were vexed with unclean spirits: and they were healed.",
+   "And the whole multitude sought to touch him: for there went virtue out of him, and healed them all."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
+  }
+ },
+ "20": {
+  "voices": [
+   "Charles Ellicott",
+   "Cyril of Alexandria",
+   "Cyril",
+   "Basil",
+   "Chrysostom",
+   "John Calvin",
+   "Albert Barnes",
+   "A.T. Robertson",
+   "Tertullian"
+  ],
+  "range": "20-26",
+  "pericope_label": "Blessed be ye poor: but woe unto you that are rich, for ye have received your consolation",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott makes the missing words decisive for two separate occasions, corrects blessed be to blessed are and the kingdom to God's, and hears pity rather than denunciation in the woes; Barnes fills in the psychology of the rich, too proud to ask and too satisfied to want; Robertson notes the lifted eyes peculiar to this opening."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin finds four blessings answered by four curses and restricts the curse to those so occupied with possessions that they forget the life to come."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Basil cautions that nothing involuntary deserves a blessing, since all virtue is characterised by freedom of the will, and that many are poor in possessions and most covetous in disposition; Chrysostom expounds godly sorrow and ends that we often find the Lord sorrowing, never laughing."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Cyril of Alexandria harmonises instead, holding that the evangelists do not contradict but divide the narrative between them and often recapitulate, and distinguishes the two senses of poor."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Tertullian turns the woe against Marcion, since a god who condescends to curse proves himself capable of anger and is no impassible deity."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Are these beatitudes the same discourse as the other report?",
+    "positions": [
+     {
+      "view": "no; dropping in spirit would be too great a difficulty, so the occasions differ",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "yes; the evangelists divide one narrative between them and recapitulate",
+      "held_by": [
        "Cyril of Alexandria"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "blessed be ye poor",
-   "yours is the kingdom of God",
-   "poor vs poor in spirit",
-   "the gospel reversal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ blesses those who hunger and weep 'now' — Luke's adverb sharpening present suffering against future blessing (Robertson); 'laugh' the only NT symbol of spiritual joy (Ellicott)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Both literal and spiritual — hunger after righteousness filled with the joy of virtue (Gregory of Nyssa); godly sorrow the source of pure gladness (Chrysostom, Basil)."
+    "voice": "Tertullian",
+    "claim": "pronouncing a woe is evidence that the speaker is capable of offence and anger, and so not the impassible deity Marcion describes"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "ye that hunger now",
-   "ye that weep now",
-   "ye shall be filled and laugh",
-   "present suffering, future joy"
+   "And he lifted up his eyes on his disciples, and said, Blessed be ye poor: for yours is the kingdom of God.",
+   "Blessed are ye that hunger now: for ye shall be filled. Blessed are ye that weep now: for ye shall laugh.",
+   "Blessed are ye, when men shall hate you, and when they shall separate you from their company, and shall reproach you, and cast out your name as evil, for the Son of man’s sake.",
+   "Rejoice ye in that day, and leap for joy: for, behold, your reward is great in heaven: for in the like manner did their fathers unto the prophets.",
+   "But woe unto you that are rich! for ye have received your consolation.",
+   "Woe unto you that are full! for ye shall hunger. Woe unto you that laugh now! for ye shall mourn and weep.",
+   "Woe unto you, when all men shall speak well of you! for so did their fathers to the false prophets."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The persecution Beatitude: hated, excommunicated ('separate from their company' = synagogue exclusion, John 16:2, Ellicott), name cast out as evil (the contempt on 'Christian,' Clarke, Robertson) — blessed only 'for the Son of man's sake.'"
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: what men cast out (the name of the Crucified), Christ takes up and raises with himself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when men shall hate you",
-   "separate you, cast out your name",
-   "for the Son of man's sake",
-   "blessed in persecution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Rejoice and 'leap for joy' (Luke's vivid word, also of the unborn John, Ellicott) in persecution, for the reward is great in heaven; the disciples stand in the prophets' persecuted succession (Eusebius)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom/Basil: the reward 'great' because promised by the Lord of eternal treasures, and great in itself because given by God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rejoice and leap for joy",
-   "your reward is great in heaven",
-   "as their fathers did to the prophets",
-   "exult in persecution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Cyril",
-   "Bede",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the woe falls not on all the rich but on those who fix their hope on earth and forget the life to come; 'received your consolation' = drawn the full reward already (Robertson), nothing remaining."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Ambrose: not the money but the heart of the possessor is at fault — those who know not how to use riches are condemned; the Woes balance the Beatitudes (peculiar to Luke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "woe unto you that are rich",
-   "ye have received your consolation",
-   "not all the rich but the worldly",
-   "the peril of wealth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The full and the laughing shall hunger, mourn, weep — the joys/sorrows of v.21 reversed measure for measure (Robertson), as in Dives and Lazarus (Luke 16); cf. James 4:9 (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the woe on the carnally satisfied and those given to Epicurean mirth, lifted up by confidence in present blessings; Basil: no house of laughter for the faithful while multitudes die in sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "woe to you that are full",
-   "woe to you that laugh now",
-   "ye shall hunger and weep",
-   "the reversal of carnal satisfaction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Universal praise (including the wicked's applause) an ill sign — the false prophets were praised, the true persecuted (v.23); truth often lies with the persecuted minority, against 'Vox populi, vox Dei' (Ellicott, Gill)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a warning against ambition, especially for teachers, who corrupt doctrine to please men (Galatians 1:10); yet faithful ministers enjoy the applause of good men."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when all men speak well of you",
-   "as their fathers did to false prophets",
-   "the peril of popularity",
-   "ambition and the teacher"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
-   "Bede",
-   "Chrysostom",
-   "Basil",
-   "Cyril",
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "A.T. Robertson",
    "John Wesley",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Enemy-love the greatest virtue, the perfection of charity (Ambrose); not merely not to hate but to do good (Chrysostom), regarding persecutors as the physician the mad — fitting for apostles who would call persecutors to salvation (Cyril)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Which hear' — addressed to all (Henry) or opposed to the Pharisees' traditions (Gill); the command extends love beyond the natural 'hate thine enemy.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "love your enemies",
-   "do good to them that hate you",
-   "the perfection of charity",
-   "the distinctive Christian ethic"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
    "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Enemy-love extends to blessing cursers and praying for abusers — the positive returning of good for evil in word and prayer (Gill)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the mouth given to heal, not bite; praying against enemies defeats one's own prayer — a time for forgiveness, not rage; imitate Christ who prayed for his crucifiers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bless them that curse you",
-   "pray for them that abuse you",
-   "good for evil",
-   "imitating Christ's prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: not rigorous in revenge — offer the other cheek, yield the cloak, leave vengeance to God ('Vengeance is mine'); not forbidding justice but the retaliatory spirit."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Despise property for the soul's sake (Cyril); patient endurance overcomes the wrongdoer's insolence and shames him by meekness (Chrysostom)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "offer also the other cheek",
-   "forbid not to take thy coat",
-   "non-retaliation",
-   "leave vengeance to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: free, generous giving to the needy — out of superfluities ordinarily, beyond one's power extraordinarily; ready to distribute and communicate."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Give what is just and honest, sometimes correcting the unworthy seeker (Augustine), yet not using idleness as an excuse for hardness (Chrysostom); all we have is God's, held as stewards."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give to every man that asketh",
-   "ask not again",
-   "free giving",
-   "stewardship not ownership"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the golden rule the summary of love — put your soul in the other's place and do as you would be done by, in justice and charity."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: its positive form (do good, not merely abstain) surpasses the rabbis' negative rule; it appeals to the natural law in the conscience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as ye would that men should do",
-   "do ye also to them",
-   "the golden rule",
-   "the summary of love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "Chrysostom",
    "Bede",
-   "Gregory of Nyssa",
+   "Chrysostom",
    "Basil",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Cyril",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Reciprocal love is common to all, even sinners; spiritual love descends from heaven and embraces enemies (Chrysostom — Paul, Moses loving persecutors)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Sinners' = Luke's wider term (for Gentiles) for Matthew's 'publicans' (Ellicott); reciprocal love deserves no 'thank' or reward (Robertson); Wesley: returning love for love is no mark of Christianity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye love them which love you",
-   "what thank have ye",
-   "sinners also love their own",
-   "natural vs heavenly love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Doing good to those who do good is no more than sinners do (the whole class of outcasts, Robertson); Luke makes it concrete in deeds (where Matthew has salutations, Ellicott) — reciprocal good-doing no mark of the kingdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye do good to them that do good",
-   "sinners do even the same",
-   "reciprocal good-doing",
-   "beyond natural reciprocity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Tertullian"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lending in hope of return (with or without interest, Robertson) is what sinners do; interest not contemplated among Jewish hearers (Ellicott) — the third instance of reciprocal virtue, no mark of the kingdom."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Tertullian: the law forbade usury as preparatory to the gospel, which goes further to lending without hope of return."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye lend to them of whom ye hope",
-   "sinners lend to sinners",
-   "lending for return",
-   "beyond calculated lending"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "27-31",
+  "pericope_label": "Love your enemies: as ye would that men should do to you, do ye also to them likewise",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Love enemies, do good, lend 'never despairing' (the better reading — not losing heart at the absence of return, Ellicott, Robertson); the Vulgate's misreading wrongly led to condemning all interest; children of the Highest who imitate God's kindness to the unthankful."
+    "summary": "Robertson puts the weight on the contrastive particle, calls the blow violence rather than contempt, and admits the difficulty that Jesus himself protested when struck; Ellicott observes that this report inverts the garments and points to direct violence where the other points to legal process, and ends the section by arguing from the different arrangement of the precepts against the identity of the two discourses."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: not about usury but disinterested liberality — believers exceed heathens, lending freely; mercenary acts of no account before God; the great reward is God himself."
+    "summary": "Gill restricts the hearers to those who had received the traditions of the elders, which the rules that follow oppose; Calvin denies the clause concerns a request for assistance at all, referring it to actions at law, and guards it so that a good man may still recover his own by lawful means."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: 'the most sublime precept ever delivered to man,' impracticable without supernatural grace."
+    "prevalence": "several",
+    "summary": "Wesley reads a change of audience from particular sorts of persons to all in general, and treats the cheek and the cloak as proverbial for an invasion of the tenderest points of honour and property; Clarke distinguishes the garments after Bishop Pearce and refers the clause about asking back to extortion by tax-gatherers and soldiers."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the address widely, to all that hear and not to disciples only, states the golden rule as putting our souls into their souls' stead, and following Hammond reads the goods as borrowed rather than stolen."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom compares the persecutor to a madman attacking his physician and argues that the golden rule lies within nature, Christ having ordained nothing beyond what was long before implanted in the conscience; Basil turns the command on the powerful, for whom readiness to take revenge is a great dishonour."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril reads the passage as a schooling in contempt of property, the merciful man conferring on his persecutors the benefits by which he assists his friends."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede marks the hinge, from what they might suffer at their enemies' hands to how they ought to behave towards them."
    }
   ],
   "debates": [
    {
-    "question": "Does 'hoping for nothing again' mean expecting no repayment, or 'never despairing'?",
-    "sides": [
+    "question": "What does the clause about not asking back forbid?",
+    "positions": [
      {
-      "position": "'Never despairing' — not losing heart at the absence of return (the better Greek reading)",
-      "holders": [
-       "Ellicott",
-       "Robertson"
+      "view": "actions at law by which bad men carry off the property of others",
+      "held_by": [
+       "John Calvin"
       ]
      },
      {
-      "position": "Expecting no repayment — disinterested liberality, not a rule about usury",
-      "holders": [
-       "Calvin"
+      "view": "begging off goods seized by extortion, which should be borne quietly",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "demanding repayment from an insolvent borrower",
+      "held_by": [
+       "Matthew Henry",
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "the prohibition means do not hinder him in his robbing, though it is usually useless anyhow with modern armed bandits"
+   }
+  ],
   "themes": [
-   "love your enemies, do good, lend",
-   "hoping for nothing again",
-   "children of the Highest",
-   "God kind to the unthankful"
+   "But I say unto you which hear, Love your enemies, do good to them which hate you,",
+   "Bless them that curse you, and pray for them which despitefully use you.",
+   "And unto him that smiteth thee on the one cheek offer also the other; and him that taketh away thy cloke forbid not to take thy coat also.",
+   "Give to every man that asketh of thee; and of him that taketh away thy goods ask them not again.",
+   "And as ye would that men should do to you, do ye also to them likewise."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
- "36": {
+ "32": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Wesley",
+   "Chrysostom",
+   "Gregory of Nyssa",
+   "Basil",
+   "Tertullian",
+   "John Calvin",
+   "A.T. Robertson",
+   "Cyril"
   ],
+  "range": "32-36",
+  "pericope_label": "Lend, hoping for nothing again: be ye therefore merciful, as your Father also is merciful",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Be merciful as your Father is merciful' — Luke's form of Matthew's 'be perfect'; mercy the noblest divine attribute, in which all others are completed (Ellicott); the goal set before the children, not yet attained (Robertson)."
+    "summary": "Ellicott refers the wider term to the writer's Gentile audience and distinguishes what thank from what reward; Robertson blames the Latin rendering for centuries of European prohibition of interest and defends never despairing of repayment as the sense."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin denies the application to usury altogether, since the preceding verses have a wider reference and Christ exhorts only to duties performed freely."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the merciful man, like God, helps the miserable, forgets injuries, pardons unsolicited, and does good to the unthankful."
+    "prevalence": "several",
+    "summary": "Clarke takes the word for heathens, where the other report has tax-gatherers, and warns against a life containing nothing that a Turk's would not; Wesley presses that the returning of love for love does not even deserve thanks, since a man may do it who has not taken a step in Christianity."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom explains that nothing earthly engenders spiritual love, which is not even overcome of malice; Gregory of Nyssa says a man will not err who calls the harsh calculation of interest theft or homicide; Basil elaborates the breeding metaphor latent in the Greek name for interest and turns the precept into God's own suretyship for the poor."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril closes on mercy as the virtue that makes us like to God and imprints on the soul signs of a heavenly nature."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Tertullian reads the older prohibitions of usury as a graduated preparation for the gospel, the law first eradicating the fruit of the money lent to accustom a man to losing the money itself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is lend, hoping for nothing again a prohibition of usury?",
+    "positions": [
+     {
+      "view": "yes; interest is theft, and the older law forbade it by stages",
+      "held_by": [
+       "Gregory of Nyssa",
+       "Basil",
+       "Tertullian"
+      ]
+     },
+     {
+      "view": "no; it is a mistake to confine the statement to usury",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "the received rendering is wrong; the sense is never despairing of repayment",
+      "held_by": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "the Latin rendering hoping for nothing thence drove money-lending into Jewish hands and added greatly to the detestation in which Jews were held"
+   }
+  ],
   "themes": [
-   "be ye merciful",
-   "as your Father is merciful",
-   "mercy the family likeness",
-   "the summary command"
+   "For if ye love them which love you, what thank have ye? for sinners also love those that love them.",
+   "And if ye do good to them which do good to you, what thank have ye? for sinners also do even the same.",
+   "And if ye lend to them of whom ye hope to receive, what thank have ye? for sinners also lend to sinners, to receive as much again.",
+   "But love ye your enemies, and do good, and lend, hoping for nothing again; and your reward shall be great, and ye shall be the children of the Highest: for he is kind unto the unthankful and to the evil.",
+   "Be ye therefore merciful, as your Father also is merciful."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "37": {
   "voices": [
-   "Ambrose",
-   "Cyril",
-   "Theophylact",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "'Judge not' forbids the censorious spirit (judging while guilty, judging superiors and the innocent, Ambrose, Chrysostom), not judgment with pardon (Gregory of Nyssa) or loving correction; forgive, and be forgiven (Bede)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The threefold escalation (judge, condemn, forgive) with reciprocal promise — as we deal, so shall we be dealt with; flowing from the mercy of v.36."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "judge not",
-   "condemn not",
-   "forgive and be forgiven",
-   "not all discernment but censoriousness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
+   "Cyril",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Generous giving met with overflowing recompense — good measure pressed down, running over, into the bosom (the garment's fold, Robertson); rabbinic background on Temple measures (Lightfoot); God repays charity with 'excessive interest' (Clarke)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'Amazing goodness' — we determine our own recompense by our generosity; give to man what you would receive of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give and it shall be given",
-   "good measure running over",
-   "into your bosom",
-   "the same measure measured back"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "Cyril",
+   "Matthew Henry",
+   "John Calvin",
    "Theophylact",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Albert Barnes"
   ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "The blind guide warns teachers (who must be illuminated, Cyril) and the censorious (who judge while sinning, Theophylact, Bede) — both blind and blind will fall."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A 'parable' in the wider sense of proverb, opening the Sermon's latter half (Robertson); connects to the mote-and-beam — self-correction must precede guiding others."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "can the blind lead the blind",
-   "both fall into the ditch",
-   "the blind guide",
-   "self-correction before guiding"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "37-42",
+  "pericope_label": "Judge not: cast out first the beam out of thine own eye",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The disciple becomes like his master when 'perfected' (thoroughly instructed, formed into resemblance, Clarke, Robertson); the blind guide produces blind followers (Barnes); the disciple of Christ models himself on the Master who did not judge (Ellicott)."
+    "summary": "Ellicott finds a climax in the three prohibitions and reads the third as release or acquittal, a quasi-judicial act rather than the forgiveness of a private wrong; Robertson takes the present imperatives as forbidding the habit of criticism rather than the forming of opinions; Lightfoot supplies the temple's heaped and struck measures; Barnes takes the saying about the disciple of attainment, blind guides breeding blind followers."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the sense is resemblance, not perfection — the disciple formed after his master's example."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the disciple is not above his master",
-   "perfected as his master",
-   "imitation of the master",
-   "the choice of master decisive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The mote (speck) and beam (rafter) expose the absurdity of censorious hypocrisy — scrutinizing the brother's small fault while blind to one's own great sin; the disproportion deliberately exaggerated (Robertson)."
+    "summary": "Calvin presses that concession much further, since the children of God frequently receive the very worst reward, and adds that believers provoke severity by their own excessive severity; Gill holds these sayings were gathered rather than spoken at one time."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Theophylact: applies especially to teachers who punish small sins in others while leaving their own unpunished."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the mote in thy brother's eye",
-   "the beam in thine own",
-   "censorious hypocrisy",
-   "self-judgment first"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The hypocrite offers to remove the brother's mote while blind to his own beam — feigned 'Brother' against rebuking 'Thou hypocrite' (Robertson); the remedy is to cast out one's own beam first, then help the brother."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke illustrates the bosom from Herodotus' story of Alcmaeon loading himself with Croesus' gold, and notes that the closing maxim already stood in the Jerusalem Targum, a rule the hearers allowed."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Theophylact: the hypocrisy is judging others to seem just oneself; the fathers: first be cleansed of great sins, then counsel a brother's slight ones."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the reciprocity flatly, with Adoni-bezek for a warning, while conceding that providence does not always go by this rule."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact answers how a running-over return can still be the same measure, since the promise says the same measure and not just as great a one."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril traces judging to its root, that men look into the things of others and forget their own passions."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the promise of like treatment hold in this life?",
+    "positions": [
+     {
+      "view": "ordinarily yes, though the exact retributions are reserved for another world",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "frequently not; promises relating to the present life are not without exceptions",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "the connection of thought at the disciple is not above his master is obscure, and some links may have been omitted"
+   }
+  ],
   "themes": [
-   "let me pull out the mote",
-   "cast out first the beam",
-   "thou hypocrite",
-   "self-correction qualifies to help"
+   "Judge not, and ye shall not be judged: condemn not, and ye shall not be condemned: forgive, and ye shall be forgiven:",
+   "Give, and it shall be given unto you; good measure, pressed down, and shaken together, and running over, shall men give into your bosom. For with the same measure that ye mete withal it shall be measured to you again.",
+   "And he spake a parable unto them, Can the blind lead the blind? shall they not both fall into the ditch?",
+   "The disciple is not above his master: but every one that is perfect shall be as his master.",
+   "And why beholdest thou the mote that is in thy brother’s eye, but perceivest not the beam that is in thine own eye?",
+   "Either how canst thou say to thy brother, Brother, let me pull out the mote that is in thine eye, when thou thyself beholdest not the beam that is in thine own eye? Thou hypocrite, cast out first the beam out of thine own eye, and then shalt thou see clearly to pull out the mote that is in thy brother’s eye."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "43": {
@@ -1895,294 +867,108 @@
    "Bede",
    "Isidore Peleus",
    "Chrysostom",
+   "John Gill",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "Ambrose",
    "Cyril",
-   "John Gill",
-   "Albert Barnes",
+   "John Calvin",
    "Adam Clarke",
-   "John Calvin"
+   "Augustine"
   ],
+  "range": "43-49",
+  "pericope_label": "The tree is known by his own fruit: he digged deep, and laid the foundation on a rock",
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Character tested by conduct — the hypocrite's evil works belie his fair words (Bede); but the evil tree may yet be converted by repentance (Isidore), and man has free will, unlike the tree (Titus Bostrensis)."
+    "summary": "Ellicott compares the differing pairings of thorns, figs and thistles, notes the bramble is the Greek Old Testament's word for the burning bush, and reports that the better copies read because it had been well built; Robertson makes the digging down to rock the whole point and notes that the word for the ruin is a medical term for a laceration."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Gill: by the fruit our opinion of every man (and teacher) is to be formed; the heart's character determines the conduct."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a good tree, corrupt fruit",
-   "character tested by conduct",
-   "against hypocrisy",
-   "fruit not profession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The tree known by its fruit — thorns yield no figs, brambles no grapes; so a corrupt heart yields no good works, false doctrine no good fruit (Gill); Luke's form differs slightly from Matthew's (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every tree known by its fruit",
-   "of thorns no figs",
-   "character and doctrine discerned",
-   "the fruit reveals the tree"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The heart the treasure/root from which conduct and speech flow (Bede); wicked words reveal an even more copious fountain of wickedness within (Chrysostom)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The mouth speaks from the heart's abundance — speech the index of the mind (Calvin), the stream revealing the fountain, though hypocrites may mask their hearts (Robertson); good treasure brings forth compassion, evil bitterness (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the good treasure of the heart",
-   "of the abundance of the heart",
-   "the heart the source",
-   "the tongue reveals the man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "Bede",
-   "Cyril",
-   "Chrysostom",
-   "Augustine of Hippo",
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Christ rebukes the leaves of confession without the fruit of works (Bede); to call him 'Lord' confesses his deity (Athanasius), but the confession is empty without obedience."
+    "summary": "Gill notes that in the other report the saying is aimed at false teachers where here it falls on men busy censuring their brethren; Calvin narrows the test to doctrine and answers the objection that the worst hearts are often the best speakers."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke/Wesley: God judges by works, not words; fair professions avail nothing without a life to match — the tongue empties but neither fills nor cleanses the heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "why call ye me Lord, Lord",
-   "and do not what I say",
-   "empty profession",
-   "obedience the proof"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The true disciple marked by three joined acts — coming (faith), hearing (instruction), doing (obedience, present participles of continual practice, Robertson); Christ promises a plain illustration (the parable)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whosoever cometh to me",
-   "heareth and doeth",
-   "the three marks of discipleship",
-   "doing proves the disciple"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The rock is Christ (Cyril) / the faith of Christ (Basil) / obedience to his precepts (Ambrose); the house so founded is unshaken by the floods of pleasure, spiritual wickedness, worldly storms, and heresy."
+    "prevalence": "single",
+    "summary": "Clarke has the tongue for a pump that empties the heart but neither fills nor cleanses it, and closes with a rigid predestinarian's warning against the Calvinian assurance of predestination."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Digged and went deep' Luke's distinctive detail — the wise builder struck the rock first (Robertson); the house not even shaken 'because it had been well built' (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "built and digged deep",
-   "founded on a rock",
-   "could not shake it",
-   "the doer's secure foundation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom states the logic, that the tree causes the fruit but the fruit is what gives us knowledge of the tree."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "eastern-alexandrian",
     "prevalence": "several",
-    "summary": "The mere hearer is the foolish builder 'without a foundation' (Luke's specific phrase, Ellicott) on the earth, whose house falls at once in the flood — great is the ruin (Clarke: all ruinous without a holy heart in the day of wrath)."
+    "summary": "Isidore of Pelusium guards the figure from fatalism, since what is excluded is continuance in evil and not repentance, and asks how a corrupt heart shall bring forth good fruit; Cyril sees the treasure of the heart as the same doctrine set out under another figure."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: sin has no foundation; the flood is the last judgment, in which the foundationless house collapses; faith profits nothing if the life is corrupt (Chrysostom)."
+    "prevalence": "several",
+    "summary": "Bede keeps the tree against the hypocrites, works making up what words set forth; Ambrose allegorises the grape that rots near the ground and ripens on the higher branches, none escaping the condemnation of the flesh but he whom Christ redeemed; Augustine uses the shared ending to argue that the mountain and the plain are one occasion, Christ descending from the summit to level ground on the mountain side."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the tree and its fruit test?",
+    "positions": [
+     {
+      "view": "the doctrine of those who profess to be servants of God",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "the censurer who condemns his brother while his own fruit is corrupt",
+      "held_by": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "neither astrological speculation nor the Calvinian assurance of predestination shows a man his eternal state; only examination of the heart and of the life does"
+   }
+  ],
   "themes": [
-   "heareth and doeth not",
-   "without a foundation",
-   "immediately it fell",
-   "the ruin of the mere hearer"
+   "For a good tree bringeth not forth corrupt fruit; neither doth a corrupt tree bring forth good fruit.",
+   "For every tree is known by his own fruit. For of thorns men do not gather figs, nor of a bramble bush gather they grapes.",
+   "A good man out of the good treasure of his heart bringeth forth that which is good; and an evil man out of the evil treasure of his heart bringeth forth that which is evil: for of the abundance of the heart his mouth speaketh.",
+   "And why call ye me, Lord, Lord, and do not the things which I say?",
+   "Whosoever cometh to me, and heareth my sayings, and doeth them, I will shew you to whom he is like:",
+   "He is like a man which built an house, and digged deep, and laid the foundation on a rock: and when the flood arose, the stream beat vehemently upon that house, and could not shake it: for it was founded upon a rock.",
+   "But he that heareth, and doeth not, is like a man that without a foundation built an house upon the earth; against which the stream did beat vehemently, and immediately it fell; and the ruin of that house was great."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }
