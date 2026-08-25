@@ -26533,6 +26533,96 @@
       "book": "colossians",
       "chapter": "2",
       "note": "Fidelity self-grade, colossians 2, all thirteen spans graded A with no ENTITIES, NUMBER or WATCH signals on the final read-back. Chapter total 55036 usable source words to 8404 prose, 0.15x, far under the corpus median of 0.84x, as a 23-key chapter tiled into thirteen spans must be. Ratios ran from 0.09x at vv.22-23 (7259 source words, of which roughly 983 are Ellicott chrome) to 0.25x at vv.6-7. One flag was raised and cleared during drafting: I wrote Mishnah at vv.20-21 where Gill's text prints Misna. That is not an OCR corruption but Gill's own eighteenth-century transliteration, so unlike the Grottos case at hebrews 8 the right fix was to reproduce the source spelling rather than write around the word; the checker accepted Misna. One informational WATCH remained throughout on Maimonides at verse 8, verified as genuinely present in Clarke's block, where he calls him Rabbi Maymon, or Maimonides."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "12"
+      ],
+      "note": "JAMIESON DONOR BUG, 18th and 19th confirmations, and the FIRST chapter to carry TWO donor blocks with the SAME donor chapter. Matthew 9 has exactly two Jamieson blocks and both are donor-corrupted, both donating from Matthew 8. (a) k12 (449w, the chapter's only substantial Jamieson block) is not about 9:12 at all: it comments on Matthew 8:1-4 (the leper, 'shew thyself to the priest', the charge to keep silent, Mr 1:45) and then on Matthew 8:18-22 ('The Rash or Precipitate Disciple (Mt 8:19,20)'), ending mid-argument about the order of the three incidents in Luke. (b) k30 (18w) is the bare verse text of Matthew 8:19: 'And a certain scribe came, and said unto him, Master, I will follow thee whithersoever thou goest.' Both donors land in the IMMEDIATELY PRECEDING chapter, i.e. the donor here runs BEHIND the host, where revelation 3 and 2peter 3 had the donor running about five verses AHEAD of a fixed host stride of six. Combined with the same-book donors seen at luke 8 (k51 to Luke 1) and genesis 47 (k6/k18/k30 to Genesis 40-41), the pattern is best explained not by a fixed verse offset but by a donor pointer walking the corpus in scrape order, which can land before or after the host. Practical rule unchanged: NEVER use a Jamieson block without checking that its content matches its key. Both were excluded from matthew 9."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "38"
+      ],
+      "note": "CHAPTER-END CHROME PILE-UP at the final key. matthew 9's last key collects chapter-closing apparatus from FOUR different voices at once, and a writer taking the key at face value imports material about other chapters entirely. (a) Albert Barnes k37 (804w) runs from two sentences on the harvest straight into 'REMARKS ON MATTHEW CHAPTER NINE', eight numbered reflections covering vv.1-38 and ending on world missions: roughly 700 of its 804 words are the chapter summary, not the verse. (b) Adam Clarke k38 (919w) gives about 200 words on 'thrust forth labourers' and then appends a chapter-end excursus on fasting: twelve numbered kinds of Hindu fast quoted from a gazetteer with volume and page, then the Muslim classification and the month of Ramadhan, about 700 words with no connection to Matthew 9:38. (c) John Calvin k38 ends with the harmony's next lection heading 'MATTHEW 8:23-27; MARK 4:35-41; LUKE 8:22-25', pointing BACKWARD to Matthew 8. (d) Charles Ellicott k38 ends with raw site navigation, 'Matthew Mat 8 Matthew Mat Matthew Mat 10 Footnotes:'. This is the fourth Calvin lection-heading overflow in this single chapter (also k8, k13, k34), so the overflow is systematic at every lection boundary, not only at book ends. Rule: at the LAST key of any chapter, read the tail of every long block and stop at the first chapter-summary heading, lection heading, or navigation string."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "6"
+      ],
+      "note": "CYRIL OF JERUSALEM BLOCKS ARE KEYED BY PROOF-TEXT, NOT BY LECTION, so a matching key is no guarantee of relevant comment. matthew 9 carries three Cyril of Jerusalem blocks and they behave differently from one another. k6 (exactly 200w, so truncated by the corpus-wide cap) is a passage of the Catechetical Lectures on the willing Passion: 'Behold, the Son of man is betrayed to be crucified', Judas at the table, the heel lifted up. It is filed at 9:6 because 9:6 contains the phrase 'the Son of man', and it has nothing whatever to say about the paralytic or the forgiveness of sins. k27 (also exactly 200w) is the same shape. By contrast k15 (64w) is genuinely usable: it is the Mystagogical passage on the water made wine at Cana, and it quotes 'the children of the bride-chamber' as its own proof-text, so it really does bear on 9:15. The rule that follows is narrower than the luke 8 rule for Cyril of Alexandria (which was 'read Cyril one pericope back'): for Cyril of Jerusalem, check whether the host verse supplies a PHRASE the lecture quotes. If the block's argument is about the quoted phrase, it is usable; if the phrase is merely present in the host verse and the lecture is about something else, the block is unusable. I used k15 and excluded k6 and k27."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "24"
+      ],
+      "note": "ORIGEN BLOCK MISFILED BY A WHOLE DISCOURSE. k24 (exactly 200w, truncated) opens 'Now, to this point we have come in our discourse, because of the Pharisees and Sadducees coming together unto Jesus... and asking Him to show them a sign from heaven', and goes on about Beelzebub and 'approved money-changers'. That is the Commentary on Matthew at 16:1-4, filed at Matthew 9:24, where the text is 'the maid is not dead, but sleepeth'. It is the chapter's only Origen block and it is unusable. Note the compounding: Origen's corpus-wide truncation rate at the 200-word cap is 32 percent (91 of 279 blocks), so an Origen block is both likely to be cut off mid-argument AND, as here, capable of being filed against a verse it never discusses. Excluded from matthew 9."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "10"
+      ],
+      "note": "MATTHEW HENRY CONCISE-ONLY VARIANT, further confirmations. The long-running finding is that Henry's Concise is appended to his Exposition in the same block; matthew 9 shows BOTH forms in one chapter. Appended form: k1 (2495w), k9 (2810w), k14 (2437w), k18 (3604w), k27 (2807w), k35 (2205w) each run the full Exposition and then repeat the material in Concise form (k1's Concise tail begins 'The faith of the friends of the paralytic in bringing him to Christ, was a strong faith'). Concise-only form: k10 (215w) and k32 (73w) yield the Concise alone with no Exposition at all. This is the eighth book in which the appended form is confirmed and the second and third instances of the Concise-only variant after luke 8 k5 and genesis 47 k7. Practical effect on budgeting: Henry's six pericope-head blocks in this chapter total 16,358 words, about a quarter of the chapter's 66,271, and roughly half of that is duplicated text, so the effective source mass of a Henry-heavy chapter is materially smaller than the word count suggests."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "13"
+      ],
+      "note": "CLARKE MISATTRIBUTES THE PROPHETIC QUOTATION, and the error is the kind a synthesis writer propagates silently. At 9:13 Adam Clarke opens 'I will have mercy, and not sacrifice - Quoted from 1Sam 15:22'. It is Hosea 6:6, as Barnes, Ellicott, Calvin and Wesley all say explicitly in the same key, and as the verse's own context ('go ye and learn what that meaneth') requires. 1 Samuel 15:22 is 'to obey is better than sacrifice', a different saying which Clarke himself correctly cites at 9:31 twenty verses later. The two are easy to conflate and the misattribution is confined to Clarke. I represented it in the prose as an open disagreement with the majority named, rather than silently following either side, and recorded it as an outlier on the entry. General rule: where one voice gives a scripture reference the other voices in the same key contradict, the reference is the thing to check, not the doctrine."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "36"
+      ],
+      "note": "A TEXTUAL VARIANT THAT SPLITS THE COMMENTATORS INTO TWO INCOMPATIBLE PICTURES, worth flagging because the split is invisible in an English text. At 9:36 the received reading is 'they fainted' and the better-attested reading is a participle meaning flayed, harried, worried. Barnes builds his whole exposition on the first: a people weary under a burden of rites and traditions, and a pastoral scene of sheep straying, meeting wild beasts, and panting in the sun for want of shade and water. Clarke, Ellicott and Robertson all take the second and get a different picture entirely: not sheep grown faint but sheep torn by the wolf and preyed on by thieves, men thrown down prostrate, a crowd in mental dejection. Ellicott says there is an immense preponderance of authority for the second and Clarke says all the best manuscripts carry it. Neither picture is wrong as commentary, but they are not the same pericope, and a synthesis that blends them without naming the variant would be reporting a consensus that does not exist. I named the variant and attributed both readings."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "31"
+      ],
+      "note": "A COMMENTATOR PREDICTS HIS OWN SOURCE SET, and the chapter confirms him exactly. At 9:31 Ellicott notes that the question whether the healed men were right to disobey the charge of silence 'has been answered by most patristic and Roman Catholic commentators in the affirmative, some even maintaining that the command was not meant seriously; and by most Protestant commentators in the negative'. The chapter's own voices split precisely along that line and add nobody to either side: approving, Chrysostom (we should stop those who praise us for ourselves but promote what is said to the Lord's glory), Gregory (good deeds should be hid by design and published of compulsion, for others' profit), Jerome (gratitude could not be silent); disapproving, Clarke ('they should have held their peace; for to obey is better than sacrifice'), Calvin ('their conduct in immediately proclaiming it every where is worthy of blame', explicitly rejecting the reading that the ban was meant to provoke), and Ellicott himself. This is the cleanest instance I have met of a source correctly describing the shape of the disagreement it belongs to, and it is a useful pattern for the loop: where a commentator characterises a scholarly division, that characterisation is testable against the other voices in the same key, and when it holds it is worth surfacing as the entry's outlier rather than flattening the two sides into one summary."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "TILING A 66k CHAPTER WHOSE PATRISTIC MATERIAL IS CONCENTRATED IN EIGHT HEAD KEYS. matthew 9 is 38 keys and 66,271 usable words, the largest chapter this worker has taken, and its fathers appear ONLY at the eight Catena lection heads (k1, k9, k14, k18, k23, k27, k32, k36), each head carrying comment on its whole pericope. Tiling on those eight boundaries alone gives 8 entries and 12.4:1 compression, right at the stated ceiling; splitting inside pericopes gives 12 entries and 9.3:1, but orphans the head key's remarks on the later verses of its pericope. I checked the validator before deciding: synthesis_qa.ungrounded_voices pools the WHOLE chapter, not the entry's key range, so a father whose comment on vv.5-8 lives in k1 can be cited and declared in an entry ranged 3-8 without tripping the voices-sourced check, and coverage_problems only cares that the declared ranges tile the source keys. That freed the finer tiling: 1-2 | 3-8 | 9-10 | 11-13 | 14-15 | 16-17 | 18-19 | 20-22 | 23-26 | 27-31 | 32-34 | 35-38, twelve entries averaging 652 words. Worth reusing on the remaining tail chapters: pericope-head concentration does not force coarse tiling, because the groundability checks are chapter-scoped."
     }
   ]
 }
