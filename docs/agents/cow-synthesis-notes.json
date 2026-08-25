@@ -26229,6 +26229,76 @@
       "book": "1corinthians",
       "chapter": "8",
       "note": "Fidelity self-grade for 1corinthians 8, all five entries A after the Damascus correction. Ratios 0.07x, 0.09x, 0.13x, 0.16x and 0.11x against the raw span source; 31,573 words over thirteen verses reduced to five pericope entries. As at 1corinthians 5, the compression is severe enough that the real risk is omission rather than invention, so the disagreements set the shape of every entry and the tags carry the full account of each voice. The chapter is unusually rich in explicit disagreement between named commentators, which is what made it writable at this ratio: Clarke reports Lightfoot's rendering of an idol is nothing and rejects it, Calvin rejects Erasmus's rendering of the same clause, Ellicott reports and rejects Stanley's sense for not yet, Ellicott prefers a variant reading familiarity against the received conscience while Henry, Barnes, Gill, Clarke and Wesley all expound the received word, Ellicott says the last verse of the 9-11 span is NOT a question while Calvin says expressly that he reads it interrogatively, Clarke says a man for whom Christ died may perish and admits no quibble while Barnes answers that a tendency may be arrested, and Calvin alone calls the closing vow a hyperbole. Two convergences also worth recording as convergences rather than repetition: Clarke names Lightfoot as his authority for the rabbinic material on entering idol temples, and Lightfoot in the same span supplies that material himself, so the two are one witness and a source rather than two witnesses; and Ellicott and Robertson independently adopt the same variant at verse 7."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "4"
+      ],
+      "note": "NEW DEFECT, measured corpus-wide: 'Cyril of Alexandria' blocks in LUKE are not commentary at all but the LECTION TEXT of the sermon -- the Scripture passage reprinted as a heading -- and it is filed one pericope LATE. In this chapter all six of his blocks are pure text: k4 carries the text of Luke 7:36-50, k19 carries 8:4-8, k22 carries 8:19-21, k26 carries 8:22-25, k40 carries 8:26-36, k49 carries 8:40-48. Each is the lection of the pericope that ends shortly BEFORE its host key, so the heading has been attached to the following section. Corpus sweep: 84 of the 108 Cyril of Alexandria blocks in the whole corpus open with a lection reference of the form '8:4-8.', totalling 28,819 words, and ALL 84 are in Luke, spread over 20 chapters (worst: luke 11 with 4,110 words, luke 9 with 3,856, luke 7 with 2,661). Two consequences. (1) A worker weighting voices by word count reads Cyril as a major Lukan voice when he contributes no exposition whatever in those blocks. (2) synthesis-loop.py size counts all 28,819 words as usable source, overstating every affected Luke chapter -- luke 8 by 1,874 words. Worse, the misfiled text is READABLE and apposite-looking: at k4 the block is the story of the woman who was a sinner, which is exactly the passage that fuels the Magdalene confusion discussed at vv.1-3, so a skimming writer would produce a plausible falsehood. All six excluded here."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "39"
+      ],
+      "note": "Calvin editorial-interpolation defect, most extreme instance yet: at k39 the block contains the EDITOR'S ENCOMIUM OF CALVIN, in the third person, inside Calvin's own block. 'Never did those men encounter a more zealous or more formidable opponent than Calvin... He lays down as a general principle, which he endeavors to support by the word of God, that the cures of bodily diseases... It is to this meaning that Calvin, under the word anagoge, borrowing the language, but disavowing the principles, of an ancient school, now proceeds to draw the attention of his reader.' Roughly 180 words of a translator's preface presented as commentary. A writer summarising the block would have Calvin praising himself. The Calvin-in-Calvin screen caught it at two offsets (words 185 and 319 of 515)."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "4"
+      ],
+      "note": "GAP IN THE EMBEDDED-SPEAKER TRIM, small but exact and cheap to fix. The catena speaker-tag pattern used by the pre-flight screen and by my dump tool accepts an ALL-CAPS father name followed by a semicolon or a period (CHRYS. / AUG;) but not one followed by a COMMA. At luke 8 k4 the Bede block runs 'the Son of God, Who going forth from His Father's bosom... CHRYS, Now His going, Who is every where, was not local' -- so roughly three quarters of that block is Chrysostom filed under Bede and survives the trim. Corpus sweep over all 141,039 blocks in 1,189 files: exactly 4 blocks contain a CAPS father-name followed by a comma ahead of any current cut point, carrying about 2,764 words of embedded-speaker material that currently survives. Hosts: Bede three times (all in luke), John Calvin once (genesis). Adding a comma to the character class -- [;.] becomes [;.,] -- closes it. Patched in my own tooling; flagging so the same change can be made wherever the shared screen lives."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "4"
+      ],
+      "note": "CORRECTION to the earlier Cyril of Alexandria note in this chapter: I said all six blocks were pure Scripture text, and that is wrong for three of them. Examined end to end, the six blocks are the OPENINGS of Cyril's sermons -- the lection heading followed by however much of the sermon fits before the truncation. k4, k40 and k49 are indeed pure text (their tails are still Scripture); k19, k22 and k26 carry the lection text and then real commentary (k19 ends on Jerusalem killing the prophets, k22 on obedience being better than sacrifice, k26 opening the praise of Christ before the storm). The filing displacement stands and is the operative point: each block belongs to the pericope BEFORE its host key, so Cyril's genuine comment on 8:4-8 sits at k19, his comment on 8:19-21 sits at k22, and his comment on 8:22-25 sits at k26. The usable rule is therefore not 'exclude Cyril' but 'read Cyril one pericope back'. The corpus figure of 84 lection-opening blocks across 20 Luke chapters, 28,819 words, is unaffected, but those words are a mix of duplicated text and displaced commentary rather than text alone."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "51"
+      ],
+      "note": "Jamieson donor bug, FIFTEENTH confirmation, and a new donor relation: the block at k51 is about Elisabeth blessing Mary (Luke 1:42-44), filed at Luke 8:51. Until now every measured donor came from a DIFFERENT book -- Colossians into revelation 3, Ephesians into 2peter 3, the cities-of-refuge law into deuteronomy 34. Here the donor is an earlier chapter of the SAME book. Excluded (it is also below the usable threshold at 99 words)."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "Cyril of Jerusalem, SIXTH book: the misfiling remains uninformative but is not uniformly so, which is the point worth keeping. Six blocks here, all capped at exactly 200 words except k1 (183). k1 is Catechetical material on the fruits of repentance and John's preaching, k11 on the subsistence of the Holy Ghost, k28 and k40 on Antioch and Barnabas -- none of them about their host verses. But k10 is genuinely apposite: the Archelaus-and-Manes dispute over what sort of God causes blindness, which bears directly on 'that seeing they might not see', and it earned a place in the prose and a debate side. The standing rule holds -- every Cyril block must be read before it is trusted or discarded, and roughly one in six repays the reading."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "8",
+      "verses": [
+        "2"
+      ],
+      "note": "Chapter-shaped observation. This chapter carries an unusual number of disputes in which the commentators name each other or name a position they are refusing, so the debates are documented rather than constructed. v.2: Clarke's sustained protest that making Mary Magdalene a prostitute is 'a vile slander', with Barnes agreeing and Lightfoot supplying the Talmudic material the tradition feeds on. v.3: Lightfoot derives Chuza from Haman's genealogy as an Idumean name; Gill contests it on the manuscripts, his edition reading Ciza. v.18: Clarke argues from classical usage that 'that which he seemeth to have' is self-contradictory and means simply what he hath, against Ellicott and Robertson who keep the appearance and make self-deception the point. v.20: Calvin names Ambrose and Chrysostom and rejects their charge that Mary acted from ambition. v.33: Clarke calls the rationalising reading -- that the maniac himself drove the swine over the cliff -- 'solemn trifling', warning that on such a plan there is nothing certain in the word of God."
     }
   ]
 }
