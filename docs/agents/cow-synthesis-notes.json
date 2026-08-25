@@ -24345,6 +24345,138 @@
       "book": "joshua",
       "chapter": "14",
       "note": "Operational hazard, not a text finding. This session's container was reclaimed mid-chapter and the entire scratchpad went with it, losing three of four finished entries for 2corinthians 13 plus the whole per-chapter build harness. Nothing was recoverable and the chapter went back to the queue untouched, which is the intended failure mode but a full batch of work wasted. The cause is that the harness a worker builds for a chapter, the build script, the dumper and the trimmer, lives only in gitignored scratchpad and is reinvented from scratch every chapter. It took a substantial part of this run to rebuild it. A tracked scaffold under scripts or tools would make a container loss cost one chapter's prose instead of the prose plus the tooling. Note that synthesis-loop.py finish commits only chapter blobs and the notebook, so such a scaffold has to be landed on its own."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "18"
+      ],
+      "note": "MEASURED CORPUS-WIDE: THE ELLICOTT CHROME IS ONE MILLION WORDS AND IT IS SYSTEMATIC. Having found a whole-page website dump at the tail of Ellicott's chapter-final block in 1timothy 4 last cycle, and the identical thing at key 18 here (1,706 words of which only 723 are real Ellicott; 983 are boilerplate), I scanned the entire catena tree instead of recording a twenty-third anecdote. Result: of 1,189 cow files, 1,100 carry the dump. There are exactly 1,100 dumped blocks -- ONE PER AFFECTED FILE, never two -- and every single one is attributed to Charles Ellicott. 870 of them sit at the chapter-final key. Total catena corpus 31,874,602 source words, of which 1,081,300 are website boilerplate: 3.4 percent of everything. The content is copyright footers, navigation menus, CSS, the reference-popup and accordion JavaScript, the site's full book_data array listing every book and its chapter counts, a Cloudflare challenge snippet, and a live Stripe publishable key. THE MECHANISM IS NOW OBVIOUS: Ellicott is the last commentator on the scraped source page, and the scraper never learned where his text ends, so it swallowed the rest of the HTML document. It is one bug, fired once per file. THE CLEAN FIX: every instance terminates the real text at the literal marker 'Copyright Statement These files are public domain' -- truncating each Ellicott block there removes all 1,081,300 words and touches nothing else. TWO CONSEQUENCES FOR THE LOOP. (1) 'synthesis-loop.py size' over-reports usable source words by ~3 percent on average and by much more on short chapters, so the owner's batch budget of ~40,000 words is measuring partly boilerplate; this chapter reports 34,575 and is really 33,357. (2) Any worker who dumps an Ellicott chapter-final block without trimming can paste CSS or JavaScript into prose. Recommend this be fixed at the source rather than worked around by each worker."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "THE JAMIESON RESIDUE IS A FIXED-STRIDE BUG, MEASURED CORPUS-WIDE. I have recorded 'JFB donor residue' as an anecdote for eighteen consecutive chapters, each time noting which donor chapter the text came from. That framing was wrong and the truth is far simpler. In this chapter JFB blocks sit at keys 3, 9 and 15 -- the same three keys as in 1timothy 4, which I landed in the previous cycle. That is positional, not content-driven, so I scanned the whole tree. RESULT: 3,863 JFB blocks across 1,121 of 1,189 files, totalling 364,270 words. Taking the set of gaps between JFB key positions within each file, 715 files give exactly {6}, another 154 give {6,12}, 37 give {12}, 33 give {6,18}, 9 give {6,24} -- every one a multiple of six, the larger gaps being what you get when an intermediate key is absent. The starting offset is spread almost perfectly evenly over 1 to 6 (153, 143, 151, 148, 153, 133 files respectively). THE STRIDE IS SIX AND THE PHASE IS ARBITRARY. That is the signature of a round-robin over a fixed roster of six commentators in which every sixth slot is mislabelled Jamieson and filled from an unrelated position in another book. CONFIRMATION FROM CONTENT: here key 3 carries 1 Corinthians 15:5, key 9 carries 1 Corinthians 15:10, key 15 carries 1 Corinthians 15:15; in 1timothy 4 the same three keys carried 1 Corinthians 13:5, 13:9-12 and 14:1. The donor advances with the key, which is what a shared index does. CONSEQUENCES. (1) No JFB block anywhere in this corpus should be trusted as commentary on the verse it is filed under, and this worker has correctly excluded every one it met. (2) 364,270 words -- about 1.1 percent of the tree -- are counted as usable source by 'synthesis-loop.py size' and are not usable at all. Together with the 1,081,300 words of Ellicott page-dump measured last cycle, roughly 1.45 million words, 4.5 percent of the corpus, is not commentary. (3) Jamieson is effectively ABSENT from this corpus as a voice; wherever a synthesis has declared him, the attribution is almost certainly to another man's text. That is worth an audit of already-landed chapters."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "SCOPE OF THE JAMIESON BUG IN WORK ALREADY LANDED, measured rather than guessed. Following the stride-of-six finding recorded above, I counted how far the bad attribution has already propagated into the synthesis tree: 306 landed entries across 94 chapter files declare 'Jamieson, Fausset and Brown' as a voice. Since no JFB block in the catena is commentary on the verse it is filed under, every one of those 306 declarations is presumptively wrong -- either the entry credits JFB with an argument actually made by another commentator on another book, or it credits him with material that is genuinely his but belongs to a different passage. Both are fidelity failures that no validator can currently see, because the voice IS present in the source blob and 'voices-sourced' therefore passes. This is the one part of the finding that needs an owner decision rather than a worker's judgement, because fixing it means revisiting landed chapters. Recommended order: fix the scrape so the sixth slot is filled correctly or dropped, then re-run the fidelity audit over those 94 files. Until that happens, workers should continue to exclude every JFB block on sight -- which is what this worker has done in all twenty chapters where one appeared."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "8",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "note": "Self-graded A on all eight entries. The source marks every voice with an explicit HTML heading rather than inline speaker tags, and a scan for embedded tags of both conventions returned zero hits across all eighteen keys, so the split is reliable and the luke 21 failure mode is absent. Two bodies of text were excluded and neither exclusion is a judgement about the commentator: the Jamieson blocks at keys 3, 9 and 15, which are the fixed-stride artefact documented separately and contain 1 Corinthians 15 rather than any comment on this chapter; and roughly 983 words of website boilerplate at the tail of Ellicott's key 18 block, cut at the marker 'Copyright Statement These files are public domain' and never read. Ellicott IS declared at every entry on his genuine 723 words at key 18 and his substantial blocks elsewhere. Cyril of Jerusalem is declared only at entry 13-14, where his single block quotes this very verse; he appears nowhere else in the chapter. Henry is declared at entries 1-2, 6-7 and 15-16, the three keys where he actually has blocks."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Henry's section-commentary filing, third chapter running, and here it is benign. His block at key 1 covers verses 1-5, at key 6 verses 6-14, and at key 15 verses 15-18 -- so between them the three blocks cover the chapter and he was declarable at three of the eight entries without any material being stranded. That is better than 1timothy 4, where a single key-6 block covered verses 6-16 and his comment on the later verses could not be used at all. The concatenation defect recurs though: at key 1 and again at key 15 the Complete Commentary runs to its end and the Concise Commentary then begins with no marker at all, so each block contains two distinct works joined mid-flow. At key 15 the join is easy to see because the Concise simply restates the Complete in miniature ('The apostle mentions the constancy of Onesiphorus; he oft refreshed him with his letters, and counsels, and comforts'), which would read to an unwary worker as Henry repeating himself for emphasis rather than as two documents."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "6"
+      ],
+      "note": "The ordination problem returns, and this chapter supplies the third position that 1timothy 4:14 lacked. There the first letter said the gift came with the laying on of the hands of the presbytery; here Paul says by the putting on of MY hands. Barnes and Ellicott treat it as one act in which the presbytery were joined with the apostle, Barnes arguing at length that the possessive is exactly what any member of an ordaining body would say to a younger man -- an aged minister reminding him that his own hands had been laid on him, a tender and solemn appeal rather than a claim of sole authority. Matthew Henry splits the two into distinct occasions: the presbytery ordained Timothy, while Paul's hands did something earlier and different, conferring the extraordinary gifts of the Holy Ghost, on the ground that none but apostles had the power of giving the Spirit. Robertson declines the question and reads the possessive as feeling rather than polity. Worth noting against the 1timothy 4:14 note: there Barnes used the presbytery clause as decisive proof of presbyterian ordination and Robertson quietly undercut him by observing that the preposition marks accompaniment rather than instrument. Here Barnes is arguing the other way round -- that a singular possessive does NOT prove sole authority -- and the two arguments are consistent with each other only because in both cases he is defending the same conclusion."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "3"
+      ],
+      "note": "Whose forefathers, and the answer changes the theology. Barnes takes them to be the patriarchs and holy men of former times, Paul's forefathers as a member of the same nation, and draws from it the conclusion he wants: Paul's religion was not different from theirs but the same carried out and perfected, the Old Testament and the New being essentially one. Ellicott denies precisely that -- not Abraham and Isaac and the patriarchs, but the members of Paul's own family, whose devotion he had inherited as a family tradition. Clarke and Wesley take the middle and least loaded reading, that he and his ancestors alike served God, Clarke adding that Paul was born a Jew and carefully educated in the knowledge of the true God. The disagreement matters because Barnes is using the verse to argue continuity of religion across the covenants, and on Ellicott's reading the verse says nothing about the covenants at all."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "10"
+      ],
+      "note": "Whether the gospel disclosed eternal life or only demonstrated it -- a sharper split than the verse usually receives. Barnes proves the novelty from the heathen, gathering Cicero calling the hope of a future state a conjecture of ages, Seneca saying it is what our wise men promise but do not prove, Pliny denying that soul or body has more sense after death than before birth, and Socrates at his own death hoping to go to good men but declining to be positive, since which of us is in the better state, the living or the dead, God only knows; and of the resurrection of the BODY, he adds, they had no conception at all. Clarke denies the premise: eternal life, even implying the resurrection of the body, was not unknown among the Jews, who found it in their prophets and certainly borrowed no notion of it from Christians, so the gospel cannot be stated as bringing to light what was already in the light. What was new, on his reading, is that the doctrine had existed in promise but had never been practically exhibited until Christ died, rose, and carried the same body into heaven. Ellicott occupies a third position, that Christ brought them to light chiefly by displaying them in his own resurrection body before eye-witnesses many of whom were still alive when Paul wrote."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "16",
+        "18"
+      ],
+      "note": "Whether Onesiphorus was alive, and why the answer is not a historical question. Ellicott and Robertson judge him recently dead, Ellicott because mercy is asked for his HOUSE rather than for him and because of the phrase about that day, Robertson adding that if he lost his life for visiting Paul it had probably just happened. Barnes and Henry hold he was living, and both say outright what is at stake: Barnes that Paul would not have offered prayer for him if he were dead and that the Roman argument for praying for the dead rests on an assumption for which there is no evidence; Henry more pointedly still -- who told them Onesiphorus was dead, and can it be safe to ground a doctrine and practice of such importance on a mere supposition and very great uncertainty? What makes this pericope unusually instructive is Ellicott's handling. He concedes the premise the other two deny, siding with Roman Catholic interpreters AND the majority of later Reformed expositors that the man was dead, then notes that Theodoret and Chrysostom held him living and were writing many centuries before any doctrinal controversy on the subject arose, and concludes that the words ask no more than that an act of unrequited love be remembered when the books are opened -- so that pressing the single New Testament text that touches the question, and whose sense is not agreed, in support of a controverted doctrine is extremely precarious. That is a commentator conceding the exegetical point and denying the polemical use of it, which is rarer in this corpus than either of the flat positions."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "8",
+        "18"
+      ],
+      "note": "Two convergences worth recording because they cross traditions. First, at verse 8 Ellicott asks what power of God is meant and answers against the obvious reading -- not the strength we receive for suffering but the power God has already displayed towards us in calling and salvation -- and cites Chrysostom for it; Chrysostom's own block at the same key is present in this chapter and says the same thing from the other end, so the citation can be checked against the text rather than taken on trust. Second, at verses 15 and 16 Barnes and Robertson reach the same verdict on Phygellus and Hermogenes from opposite temperaments: Robertson notes drily that nothing else is known of them except this shameful item, and Barnes turns it into a warning that it is a sad thing when the only record of a man, the only evidence he ever lived at all, is that he turned away from a friend."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "8",
+        "11",
+        "13",
+        "15",
+        "17"
+      ],
+      "note": "Chapter shape: 18 keys, one contiguous run 1-18, tiled into eight pericopes 1-2 | 3-5 | 6-7 | 8-10 | 11-12 | 13-14 | 15-16 | 17-18. Nine voice labels present, eight usable. Reported usable source 34,575 words; real figure 33,357 after removing 983 words of Ellicott page-dump and the Jamieson stride artefact. Compression by entry: 13.8:1, 5.1:1, 9.1:1, 8.5:1, 3.9:1, 3.9:1, 4.5:1, 3.9:1. Entry 1 sits well above the norm and entries 11, 13 and 17 well below, and in both directions the cause is filing rather than content. Key 1 carries Barnes's whole introduction to the epistle and Clarke's whole preface on the date question -- roughly 5,900 words of material about the LETTER rather than about verse 1 -- which inflates that entry's nominal ratio; the low ratios at the end of the chapter are simply thin keys, verse 17 having only 404 words across five voices. All eight entries returned PAD 0.0 percent from the audit gate."
     }
   ]
 }
