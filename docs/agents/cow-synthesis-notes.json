@@ -25947,6 +25947,80 @@
       "book": "mark",
       "chapter": "14",
       "note": "Fidelity self-grade for mark 14, all twelve entries A. Compression ratios prose-to-source: 1-2 0.19x, 3-9 0.15x, 10-11 0.60x, 12-16 0.10x, 17-21 0.35x, 22-25 0.18x, 26-31 0.27x, 32-42 0.09x, 43-52 0.11x, 53-59 0.18x, 60-65 0.27x, 66-72 0.15x. The 10-11 entry at 0.60x is the highest and the only one where the prose approaches the source in bulk, because the betrayal bargain draws only 874 words of catena across two keys; nothing there is invented, the span is simply short. The 32-42 entry at 0.09x is the lowest, 6,947 source words to 648, and it is the entry where selection did the most work: Gethsemane carries nine voices with substantial blocks and the choice of what to omit mattered more than the choice of what to say. Every span was tiled on the catena's own head boundaries rather than on a fixed verse count, which is why the entries range from two verses to eleven. Two entity flags were raised by the checker and both were spelling variants rather than imports: Melchizedek where the source writes Melchizedec, and Galileans where Bede writes Galilaeans. Both corrected to the source's forms. That makes the running tally of ENTITIES classes three, as recorded at acts 10: imported name (real fabrication), expanded abbreviation, spelling variant, of which only the first is invention."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "9",
+      "note": "Picked by --worst-first and DECLINED on size: 66,271 usable source words over 38 keys, and it is a catena chapter (Chrysostom, Jerome, Augustine, Gloss, Rabanus, Remigius, Hilary, Origen alongside the moderns). The natural pericopes are 1-8 (12,493), 9-13 (11,131), 14-17 (9,847), 18-26 (14,602), 27-31 (6,336), 32-34 (2,407), 35-38 (7,926). Seven entries would run 14.6:1 average compression, above the ~13:1 point at which most material cannot be represented, so honest tiling needs ~13 entries -- roughly twice the largest chapter landed in this run (hebrews 4, 42,600 words, 8 entries). Deferred rather than started half-finished."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "9",
+      "note": "STRUCTURAL, and an owner decision rather than a worker one. Measured the whole remaining frontier: 793 chapters are not yet at the current standard, of which 109 (13%) exceed 40,000 usable source words, totalling 7,141,749 words. The median remaining chapter is 17,323 words, but the head of the tail runs john 1 at 150,785, matthew 26 at 144,865, matthew 5 at 133,177, matthew 27 at 123,014, john 8 at 120,600. At the 5-8:1 compression norm a 150k chapter needs 25-30 entries. Because --worst-first is longest-first, the picker offers exactly these chapters first, so both workers keep drawing from a tail that no single batch can complete: acts 20, 1peter 2, jude 1, 2peter 3, 1john 5 and now matthew 9 have all been declined on size. Deferral cannot clear 109 chapters. The loop needs either a chapter that may span pokes with committed intermediate state, or a --max-words filter on the picker so batches draw from the workable band, or an explicit multi-batch protocol for the tail. Flagging rather than choosing."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Jamieson fixed-stride donor bug, THIRTEENTH independent confirmation and the strongest positional evidence yet: all three JFB blocks in this chapter come from one continuous donor passage in Colossians, and the donor advances monotonically with the host key. k7 carries Col 2:20-22 (touch not, taste not, handle not); k13 carries Col 3:3-4 (ye have died once for all; your life is hid with Christ in God); k19 carries Col 3:7-8 (put away, evil-speaking, foul language). Host keys 7, 13, 19 -- a stride of six -- map to donor verses Col 2:22, 3:3, 3:7. All three excluded from the declared voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Pre-flight embedded-speaker screen: one hit, at k13, 'Augustin' at word 85 of a 312-word JFB block. False positive of the known class (host author citing a father mid-argument) -- it is JFB's own bracketed [Augustine] attribution, and it sits inside a donor block from Colossians rather than in Revelation material at all. Screen base rate remains good; this is the sixth consecutive chapter with no genuine embedded-speaker contamination."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Two of the 200-word truncation cap in this chapter, both Gill (k1, k4, k7, k10, k16, k19 -- six blocks at exactly 200). At k1 the truncated block contains no exposition whatever: it is entirely the ecclesiastical succession of Sardis, from Melito in the second century through the councils of Nice and Chalcedon to the eighth-century Nicene synod, cut off mid-sentence. The cap therefore removes the exposition and keeps the antiquarian list."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "22"
+      ],
+      "note": "Long external documents quoted inside commentary blocks, two voices in one chapter. Clarke's k22 block (1,657 words) quotes Wesley's note on the arrangement of the seven letters and then reproduces an entire 1816 letter from a British embassy chaplain at Constantinople on the present state of the seven Asiatic churches. Barnes's k1 block (1,611 words) gives most of its length to travellers' descriptions of the ruins of Sardis, quoting three separate travel writers at length. Both inflate the voice's apparent contribution to a chapter without adding exposition; a writer working from word counts would over-weight them."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry's Concise commentary appended to his Exposition again -- SIXTH confirmed book (exodus 11, joshua 20, joshua 3, deuteronomy 5, deuteronomy 34, revelation 3). Here at k1 the last ~330 words of a 2,238-word block repeat the Exposition above them, and the same pattern holds at k7 and k14. Consistent enough now to be treated as a property of the Henry scrape rather than a per-book accident."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "Chapter-shaped observation worth keeping: this chapter carries an unusual number of sharp four-way divisions, all explicit in the sources rather than constructed. v.5 -- whether names are blotted out of the book of life (Barnes: security, since none but the keeper has access; Ellicott via Vaughan: a process of erasure is ever going on; Wesley: not blotted out like that of the angel of Sardis, i.e. his was; Henry: divides the enrolment, nominal names erased, overcomers' never). v.10 -- the hour of temptation (Clarke and Wesley: Trajan; Barnes: undeterminable; Gill: still future, on the reformed churches). v.12 -- whether the pillar supports the temple (Ellicott yes; Henry no, heaven needs no props, it is a monument; Robertson both). v.15 -- Wesley draws free will from the wish 'I would thou wert cold or hot', exactly as Clarke did from Deuteronomy 5:29."
     }
   ]
 }
