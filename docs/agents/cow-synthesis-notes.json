@@ -25118,6 +25118,91 @@
       "book": "acts",
       "chapter": "20",
       "note": "Declined again, and the re-offer is itself the datum. acts 20 was noted earlier today at 73,251 usable source words across 38 keys with a recommendation that the loop needs an explicit policy above 40,000; that note stands and I am not repeating its analysis. What is new is the shape of the queue around it. Of the rising series recorded then - romans 13 at 36,030, luke 14 at 41,042, 1peter 2 at 70,426, acts 20 at 73,251 - the small end has since been worked off, romans 13 among others, while the 70k pair remains untouched. The queue is therefore draining from below, which means the oversized tail does not merely persist, it CONCENTRATES: as the tractable chapters land, a worker's chance of drawing one of the giants rises, and --spread rotating the offer spreads the refusals around rather than resolving them. jude 1 at 60,425 was declined by this worker two hours ago and is in the same position. So there are now at least three chapters - acts 20, 1peter 2, jude 1 - that no worker can take under the current budget rule and that no mechanism removes from circulation. Declining costs the queue nothing each time, but it costs every worker who draws one a pick, and the cost is rising. This is the second time I have asked for a policy; the first asked on the grounds of size, this one asks on the grounds that the problem is getting worse on its own."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson stride artefact, SEVENTH independent confirmation, and it lands on a finding worker B recorded for hebrews 5. Blocks at keys 6 and 12 -- gap exactly 6 -- and neither belongs to Hebrews: the donor for both is 2 CORINTHIANS 6 (key 6 on the accepted time and the day of salvation, 2 Cor 6:1-2; key 12 on the armour of righteousness, 2 Cor 6:7). Worker B recorded the hebrews 5 blocks as coming from ONE passage region, 2 Corinthians 6-7. So the two adjacent chapters of Hebrews draw their stride residue from the same donor region. That is a structural fact the corpus-wide gap measurement does not capture: donors are not scattered at random per file but appear to track position, so a repair pass could predict the donor for a whole run of chapters rather than identifying each by hand. Both blocks excluded from the tiling."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "16"
+      ],
+      "note": "Cyril of Jerusalem appears at keys 3 and 16 and NEITHER block belongs to Hebrews 4. Key 3 (capped at 200 words) is Catechetical Lecture material on the eternal generation of the Son -- Micah on Bethlehem, 'before all ages' -- phrase-matched, presumably on 'from the foundation of the world'. Key 16 (130 words) is his digression on who Manes was and what he taught, which has no connection to the throne of grace whatever. Both were excluded. This is the third chapter in which his blocks are phrase-matched rather than filed by pericope (luke 9, titus 2, here), but it is the first where the material is USELESS rather than merely misplaced: at titus 2 the two-comings block was genuinely apposite to the verse it landed near and was usable. The lesson is that a worker cannot assume a Cyril of Jerusalem block is relevant just because previous ones were."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "4",
+      "note": "PRE-FLIGHT SCREEN RUN, AND IT CAME BACK CLEAN -- reporting the negative result because a detection recipe is only worth keeping if its false-positive rate is known. Worker B recommended (at hebrews 5) scanning block TEXT for embedded speaker or section headers, since the buried-father defect is invisible to the split-voice list. I implemented it over all 16 keys of hebrews 4, ignoring matches at word offset 0. Eight hits, and every one is a false positive of a single well-defined class: the HOST AUTHOR CITING A FATHER BY NAME MID-ARGUMENT. Clarke at k3 ('omitted by Chrysostom, and some few MSS'), Clarke at k8 ('Theodoret has the same in his comment'), Calvin at k12 (a list of interpreters -- Augustin, Ambrose, Chrysostom, Theophylact -- four hits within seventeen words of each other), Barnes at k13 ('following, as he says, the interpretation of Chrysostom, Grotius'), and Calvin at k16 ('CHAPTER 5' at word 1017 of 1019, harmless chapter-boundary overflow). So the recipe works and costs nothing, but the offset-0 rule is not sufficient on its own. Two cheap refinements would cut nearly all of this noise: ignore a name immediately preceded by a citation verb or preposition (by/of/following/omitted by), and ignore CLUSTERS of three or more names within a short span, which are lists of authorities rather than block boundaries. Recommend keeping the screen in the pre-flight step with those refinements."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "4",
+      "note": "The 200-word truncation cap appears again, and the count is now worth acting on. In this chapter John Gill is capped at exactly 200 words at keys 2, 8, 9, 11, 12, 13 and 16 -- SEVEN blocks in one chapter -- and Cyril of Jerusalem at key 3. Running total across the chapters I have handled in this window: Keil and Delitzsch 8 blocks (1samuel 5), Gill 4 and Cyril 2 (titus 2), Gill 7 and Cyril 1 (hebrews 4); worker B independently recorded Gill capped at two keys in hebrews 5. Five voices across four books, always at exactly 200, always mid-sentence. This is now well past coincidence. A single corpus-wide count of blocks whose length is exactly 200 words would size the problem in one pass, and if the cap is real it means every capped block's argument is cut off before its conclusion -- the material that survives is honest but systematically truncated, and coverage for the affected voices is shallower than block counts suggest."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "9"
+      ],
+      "note": "Gill's block at key 9 is 42 words of PURE CITATION CHROME and no commentary at all: a bare list of rabbinic references (Tamid, Sanhedrin, Shirhashirim Rabba, Massecheth Sopherim, Tzeror Hammor, Zohar, Shaare Orn, Caphtor) with no text around them. It is the orphaned footnote apparatus of a block whose body is filed elsewhere. It falls below the 60-word usability threshold and so was never a risk here, but it is a distinct chrome class from both the website page-dump and the printed-page furniture already recorded -- this is a citation tail severed from its own commentary."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "The chapter contains a genuine methodological disagreement between two commentators about what the writer of Hebrews is doing with Psalm 95, and it is worth flagging because it crosses keys and neither voice names the other. At verse 3 Calvin says the writer has moved from taking the psalm 'according to the letter' to amplifying and decorating it, so that he 'rather alludes to than explains' David's words, and calls this a legitimate accommodating of Scripture to the subject in hand -- comparing Paul's handling of a saying of Moses. At verse 10 Ellicott, reviewing the whole argument, says flatly that 'we have no right to look on the argument of this section as an accommodation or a mere application of Scripture', resting it on the psalmist's pointed change of the historian's words about the land into words about God's rest. That is the same question answered opposite ways, one at the start of the argument and one at its close. Carried as a debate on entry 9-11."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "12",
+        "14"
+      ],
+      "note": "Verse 12 carries the chapter's central dispute -- whether 'the word of God' is Christ or the Scripture -- and it is unusual in that the commentators name their sides rather than merely taking one. A note in Calvin's text gives the roll: Augustin, Ambrose, Owen and Doddridge for Christ; Chrysostom, Theophylact and Beza for Scripture. Gill takes it of Christ on the ground that the Word of God was a known messianic name among the Jews and that a person, not a thing, is described. Clarke argues against on Pauline usage alone -- Paul never so denominates our Lord in his thirteen acknowledged epistles -- and quotes Calmet conceding that every property named belongs to the Son while still denying the Logos is meant. Ellicott grants the personification is real and that outside John no passage invests the word so clearly with personal attributes, but cannot believe 'sharper than a two-edged sword' would be applied directly to the Son. Barnes declines the question entirely. Note that Gill alone carries his answer forward, identifying the great high priest of verse 14 with the Word of verse 12 -- so his reading is the only one that makes the chapter's two halves one argument."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "hebrews",
+      "chapter": "4",
+      "verses": [
+        "13"
+      ],
+      "note": "Verse 13 produces a SIX-WAY disagreement over one participle, the widest single-word division I have met in this corpus. Wesley: sacrificial, the victim flayed and laid open. Clarke: reports the sacrificial reading in full detail then rejects it for a criminal whose head is drawn back so the face may be recognised, supported from Pliny's panegyric on Trajan. Barnes: rejects both as forced, reports a third view (cutting the animal down the back-bone, which Bloomfield adopted claiming Chrysostom and Grotius -- Barnes notes it is not in fact Grotius's view), and settles on an animal's neck bent back for the knife, connecting it to the sword of verse 12. Ellicott: undeterminable; usually applied to a WRESTLER dragging back an adversary's neck, with 'prostrate' suggested, and no good reason for any sacrificial allusion at all. Robertson: the neck bent back AS THE SURGEON DOES FOR OPERATING. Six pictures, one word, and the commentators cite each other by name while disagreeing -- which is why this entry was tiled as a single verse rather than folded into 12."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "4",
+      "note": "All eight entries fidelity self-graded A with zero ungroundable-entity signals on the first read-back and no hand-correction of spellings -- the second consecutive chapter to come through the fidelity check clean on the first pass. The source is epistle-format with explicit HTML voice headings and ZERO splitter loss across all 16 keys. Two care points on voices. First, Matthew Henry's blocks at keys 1 and 11 are whole-section expositions filed at the section head (1,983 words covering verses 1-3 and 3,016 covering 11-15), which is the source's normal structure for him and not a mis-filing; his material was distributed to the entries it actually covers and he was declared only there. Second, where a commentator quotes another author at length -- Calvin's text listing Augustin and Ambrose and Owen, Clarke quoting Calmet and citing Owen, Barnes citing Erasmus and Bloomfield and Grotius and Passow, Ellicott quoting Philo and Hofmann -- those were attributed as quotations and never declared as voices, since no blocks of theirs exist in the file. Barnes was initially declared at entry 1-2 and then removed when the finished prose did not use him."
     }
   ]
 }
