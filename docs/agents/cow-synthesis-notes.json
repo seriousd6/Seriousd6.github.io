@@ -25649,6 +25649,69 @@
         "54"
       ],
       "note": "ELLICOTT CHROME, sixth confirmation, and it corrupts the batch sizer. The block at key 54 measures 1,046 words of which about 63 are commentary; the remaining ~983 are scraped StudyLight page furniture -- CSS rules, nav menus, a list of 144 commentaries, copyright boilerplate. Key 54 is Ellicott's LAST block in the chapter, which is now 6-for-6 on the rule that the chrome attaches to his final block rather than to the chapter's final key (joshua 14 k15, deuteronomy 11 k31 of 32, numbers 36 k11 of 13, joshua 16 k10, exodus 37 k29, luke 11 k54 -- the last two happen to coincide with the chapter end, the first four do not). The operational consequence is the one I flagged at exodus 37 and it matters more here: synthesis-loop.py size reported 63,139 usable words for this chapter, of which ~983 are chrome and a further ~2,000 are Cyril of Jerusalem and Jamieson residue. Real usable content is nearer 60,000. That is a small proportional error here, but on a short chapter it is decisive -- at exodus 37 the same defect inflated a 2,900-word chapter to 4,222. Any batch budgeting that trusts the size number is systematically over-estimating, and the error is largest exactly where it does most harm, on the small chapters where a 1,000-word chrome block can be a quarter of the reported total. Suggest the sizer strip the chrome markers before counting; the markers are stable and easy to match."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "THE CALVIN EDITORIAL-INTERPOLATION DEFECT, NOW MEASURED CORPUS-WIDE. I recorded this at hebrews 4 and joshua 20 as an observation; this chapter gave two instances severe enough to justify counting it, so I counted it. METHOD: split every cow file on its HTML voice headings, take the blocks whose host voice is 'John Calvin', and flag those whose body contains the string 'Calvin' -- which Calvin does not write of himself. RESULT: 1,189 files scanned; 11,063 John Calvin blocks totalling 5,803,190 words; 670 blocks flagged, in 288 distinct files, those blocks totalling 611,699 words, or 10.5% of the Calvin corpus by block words. Heaviest books: genesis 90 blocks, romans 82, 2corinthians 63, 1corinthians 57, hebrews 49, jeremiah 43, exodus 31, isaiah 26, ezekiel 22, psalms 21, joshua 19, matthew 18. IMPORTANT CAVEAT, stated because the number invites misreading: 611,699 words is the size of the AFFECTED BLOCKS, not of the editorial matter inside them. The editorial share varies and I have not measured it. In this chapter it was very high -- at key 1, a 1,028-word block whose Calvin content is about 240 words split around an ~830-word editorial excursus on the geography of the Jordan; at key 15, a 911-word block carrying perhaps 250 words of editorial matter. Elsewhere the note may be a single trailing sentence. So 670 blocks and 288 files are the firm numbers; the word figure is an upper bound on exposure, not a measurement of contamination."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "15"
+      ],
+      "note": "The two instances in this chapter are worth describing because they show the defect at its most dangerous, and in two different shapes. AT KEY 1 the insertion is a middle interpolation: Calvin's own text runs about sixty words, then the editor breaks in -- 'This becomes necessary, because Calvin had altogether omitted it, partly... from having unfortunately attached little comparative importance to geographical details' -- and delivers roughly 830 words on the Jordan, including measurements Calvin could not possibly have written: the Sea of Galilee 84 feet below ocean level, the Dead Sea 1,337 feet, a direct course of 175 miles, a stream length of about 200 miles against a direct distance of 65. Calvin then resumes for a further 180 words. A writer treating the block as one voice would attribute nineteenth-century survey data to a sixteenth-century commentator. AT KEY 15 the insertion CORRECTS Calvin: the note observes that the concluding clause of verse 15 'does not literally bear the meaning which Calvin and our English translators have assigned to it', gives his Latin rendering, sets the Hebrew, the Septuagint and Luther against it, and warns that such slight differences have furnished the infidel with grounds for assailing the narrative. That material is genuinely valuable -- it is carried in this chapter as a debate side -- but it must be attributed to the note and not to Calvin, who is the party being corrected. Both were handled that way here."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "3",
+      "note": "DETECTION RECIPE FOR THE CALVIN DEFECT, cheap and precise, offered because the measurement above is only useful if a worker can act on it. Within a block whose host voice is John Calvin, search the body for the bare string 'Calvin'. Every hit is either the editor writing about him in the third person or, occasionally, a French or Latin gloss keyed to his rendering; in neither case is it Calvin's own words. Ignore nothing by offset -- unlike the embedded-speaker screen, there is no offset-0 false-positive class here, since Calvin never opens by naming himself. The screen has no false positives that I have found in three chapters of use (hebrews 4, joshua 20, joshua 3). What it does NOT find is editorial matter that never names him, of which there is certainly some -- the geographical excursus here would have been caught, but a note that simply began 'The Jordan, then, by far the most important river of Palestine...' would not. So treat the 670 blocks as a floor, not a ceiling. Recommend folding this into the pre-flight step alongside the embedded-speaker screen."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "3",
+      "verses": [
+        "14"
+      ],
+      "note": "Henry's Concise commentary appended to his Exposition, THIRD BOOK. At key 14 the 1,151-word block ends with a compressed restatement beginning 'Jordan overflowed all its banks. This magnified the power of God, and his kindness to Israel', repeating in a few sentences what the Exposition has just said at length. Recorded first at exodus 11, confirmed at joshua 20, and now here -- three books, and in every case the tail is the Concise. Also present in this chapter: the 200-word truncation cap on Keil and Delitzsch at keys 1, 2, 6, 8, 10, 12, 13 and 15, EIGHT blocks in a seventeen-key chapter, which equals the highest single-chapter count I have seen (Keil at 1samuel 5). Several of those blocks are bare scripture text with the comment cut off, so Keil's usable contribution here is far smaller than eight blocks suggests; he was declared on the structural note at entry 1-6 and the two genuinely exegetical points at entries 7-13 and 14-17."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "Jamieson stride artefact, ELEVENTH confirmation. One block, 52 words at key 5, on the sending of the spies at Moses' assent -- Numbers 13 material, unrelated to the crossing. As at exodus 11 and joshua 20 it is a single block below the 60-word usability threshold, so it yields no within-file gap and never appears in a voice survey. That is now three consecutive Old Testament chapters where the defect is present but invisible to any measurement keyed on usable blocks, which is the point I flagged at exodus 11: the true count of affected FILES must be higher than any survey-based figure."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "3",
+      "note": "Chapter shape and screen result. 17 keys, one contiguous run, 16,718 usable source words by the sizer and about 15,575 net. Zero splitter loss on every key. Tiled 1-6 | 7-13 | 14-17, three entries at roughly 5,100 to 6,100 source words each. A four-entry tiling was considered and rejected: the natural break points leave a middle entry near 2,400 words, and the three pericopes here (the preparations, Joshua's speech and the sign, the crossing itself) are self-contained. NO Albert Barnes and NO Jamieson usable blocks anywhere in the chapter, so grammatical-historical rests on Keil with a little Ellicott. The embedded-speaker screen returned ONE hit over 17 keys -- Calvin at key 15, 'CHAPTER 4' at word 909 of 911, the harmless chapter-boundary overflow now seen three times (hebrews 4 key 16, joshua 20 key 7, here). Fourth consecutive clean run."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "3",
+      "note": "All three entries fidelity self-graded A. ONE SIGNAL ON THE FIRST READ-BACK AND IT WAS MINE AGAIN: I wrote 'Luther's German' where the source says only 'Luther, whose version is...', and the entity check flagged German as ungroundable. Corrected to 'Luther's' and the re-run came back clean. THIS IS THE THIRD CONSECUTIVE CHAPTER in which the only defect found at the end was introduced by the writer rather than inherited from the scrape -- joshua 20 a stray non-Latin word, titus 3 the coinage 'Epirot', here the unwarranted nationality 'German'. All three are the same failure: supplying a plausible detail the source does not contain. Two of the three were caught by the entity check and one was not (the non-Latin word, which no validator examines). I am recording the pattern rather than the individual slips because three in a row is a trend and not an accident, and because it says something specific about where a tiring writer errs: not in the substance of the attributions, which have held up, but in small ornamental additions around them."
     }
   ]
 }
