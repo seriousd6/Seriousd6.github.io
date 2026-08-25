@@ -26340,6 +26340,57 @@
       "book": "hebrews",
       "chapter": "8",
       "note": "Fidelity self-grade for hebrews 8, all six entries A after the Grottos correction. Ratios 0.12x, 0.13x, 0.14x, 0.15x, 0.13x and 0.12x against the raw span source, the most even distribution of any chapter this worker has written, which reflects a chapter whose thirteen verses carry roughly equal weight rather than clustering. Six entries rather than five because the closing quotation from Jeremiah divides naturally at the promises, and running verses 10 to 13 as one entry would have buried the argument about the word new under the covenant promises. The chapter is carried by Calvin more than by anyone else, and in a specific way worth recording: three times he states an objection against the argument he is expounding and then answers it. At verse 7 he asks how blame lying in the people can be transferred to God's covenant; at verse 8 he asks whether the apostle has not turned a prophecy about the whole Law to a question about ceremonies; at verse 2 he asks whether calling the heavenly tabernacle true implies that Moses's was false. That habit gave three of the six entries their centre, and it is the reason the prose names him so often. The other structural feature is that this chapter's commentators disagree by counting rather than by contradicting: the promise of pardon is Ellicott's third, Barnes's fourth, and Wesley's first, each numbering the same clause within a different scheme. I have let those stand side by side rather than harmonising them, since the disagreement is real and the schemes are stated openly in each source."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "15",
+      "verses": [
+        "5"
+      ],
+      "note": "Jamieson block at key 5 (106 usable words) is the introduction to 2 Thessalonians 3 and has nothing to do with Revelation 15:5. Declared as residue and excluded from the span. This is the seventh chapter in this stretch showing the fixed-stride Jamieson displacement (mark 14, acts 10, numbers 29, 1corinthians 8, hebrews 8, revelation 15): host keys sit on a period-6 grid and the donor stream is monotonic. Here only one host key falls inside the chapter because the chapter has just 8 verses."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "15",
+      "verses": [
+        "8"
+      ],
+      "note": "Cyril of Jerusalem at key 8 (200 words, truncated) is the catechetical passage on the seven Deacons and Stephen, not on Revelation 15:8. It is placed here by a shared TOKEN rather than a shared subject: the host verse speaks of the seven angels and the seven plagues, the block of the seven Deacons. This is the second token-matched placement observed, after hebrews 8 key 10 where Cyril's exhortation to chastity was placed by its closing quotation of 'I will dwell in them and I will be their God'. Standing rule confirmed: a block whose surface tokens fit the verse must be read from its FIRST sentence before it is trusted. Cyril is undeclarable in excluded_voices (VOICE_LABELS gap), so the residue was handled by RESIDUE_BY_KEY."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "15",
+      "verses": [
+        "1"
+      ],
+      "note": "Victorinus of Pettau and Bede both appear at key 1 and both are GENUINE Apocalypse commentary, not residue - Victorinus 112 usable words, Bede 300. They are worth noting together because Bede's sentence on the number seven reproduces Victorinus almost verbatim: Victorinus writes that the wrath of God always strikes the obstinate people with seven plagues, that is perfectly, as it is said in Leviticus; Bede writes that the wrath of God ever smites the rebellious people with seven plagues, quoting Leviticus in the same breath. The dependence of Bede on Victorinus is visible in the text itself, which is why the synthesis attributes the reason for the number to the two of them jointly rather than to either alone."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "15",
+      "note": "Cross-tradition convergence on the identity of the seven angels, reached independently and from opposite ends of the corpus. Bede at key 1 makes the seven the Church, replete with sevenfold grace. Gill at key 6 makes the angels ministers or members of the Gospel churches, and at key 7 makes the four living creatures ministers of the Gospel as well. A patristic Latin allegorical reading and an eighteenth-century Reformed one arrive at the same corporate ecclesial identification while every other voice on the chapter (Barnes, Ellicott, Robertson, Clarke, Wesley) keeps the angels literal. Recorded because the convergence is a real feature of the catena and not an artefact of the tiling."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "15",
+      "note": "Two harvest defects, both previously catalogued, confirmed again here. (1) Ellicott chrome: Ellicott's block at key 8, the chapter's last key, measures 1317 words of which roughly 403 are real commentary and roughly 914 are StudyLight page furniture (sub-menu, font-size, Bible Commentaries, Copyright Statement). This is the FOURTEENTH confirmation, and the payload is again in the 914-985 band and again on Ellicott's LAST block. (2) 200-word truncation: Gill at keys 1, 2 and 3 and Cyril at key 8 all stop at exactly 200 words mid-sentence, while blocks at 196/202/203 end cleanly. The defect is in the harvest, not in any one voice."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "15",
+      "note": "Fidelity self-grade, revelation 15, all four spans graded A with no ENTITIES, NUMBER or WATCH signals on the final read-back. Expansion ratios: vv.1-2 4627 source words to 649 prose (0.14x), vv.3-4 2382 to 650 (0.27x), vv.5-6 2445 to 634 (0.26x), vv.7-8 3266 to 649 (0.20x). Chapter total 12720 usable source words to 2582 prose, 0.20x, well under the corpus median of 0.84x and nowhere near the 6x alarm. One flag was raised and cleared during drafting: the word Mosaic at vv.3-4, an adjective derived from Moses that appears nowhere in the source; rewritten as 'two songs of Moses'. It was not a fabricated fact, but the vocabulary rule holds regardless."
     }
   ]
 }
