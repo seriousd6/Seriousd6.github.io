@@ -25748,6 +25748,56 @@
       "book": "2peter",
       "chapter": "3",
       "note": "PICKED AND DEFERRED, not abandoned -- no work started, chapter untouched. The picker offered 2peter 3 as the second chapter of a batch that had already landed 2john 1 (24,261 words). It sizes at 49,946 usable words over 18 keys, over the ~40,000 line, and the standing rule is that such a chapter is the WHOLE batch. Adding it to a batch already carrying 24k would put the batch near 74k, roughly double what the rule contemplates for a single-chapter batch, so I stopped instead and am recording the shape here so the next run can start immediately rather than re-profiling. Profile: 18 keys, per-key words 1:3124 2:1129 3:4589 4:2341 5:3331 6:1443 7:1705 8:2028 9:3651 10:3965 11:4834 12:1277 13:2678 14:1022 15:2660 16:4829 17:1029 18:4044 -- unusually EVEN for a chapter this size, with no single key dominating the way luke 11 key 1 (9,347w) did, so the natural pericope tiling should work without the special handling luke 11 needed. Ten voices: Barnes 14,265w across all 18 keys; Henry 9,145 across 6; Ellicott 7,671 across 18; Calvin 5,611 across 17; Clarke 5,227 across 16; Robertson 3,114; Wesley 1,895; Gill 1,856; Jamieson 695 across 3 keys (expect residue); Cyril of Jerusalem 200 at a single key (expect residue, and expect him to be undeclarable -- note 2328). ELLICOTT CHROME at key 18, which is both his last block and the chapter's last key: 1,617 raw words of which about 634 are commentary, so ~983 words of the reported total are StudyLight furniture and real usable content is nearer 48,100 -- still comfortably a whole-batch chapter. NB this note was recorded once already and lost: I wrote it before resetting to origin/master, and since the notebook is tracked but uncommitted changes do not survive a hard reset, the reset discarded it. Notebook entries made outside a finish run need committing before any reset."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "5",
+      "verses": [
+        "9"
+      ],
+      "note": "Calvin editorial-interpolation defect, third shape: a citation footnote spliced mid-sentence inside a John Calvin block at k9 (word 60 of 2560), breaking his clause in half. Alongside it, dropped italicised words leave syntactic holes in the same block -- 'the honor of to pictures', 'means properly Hence', 'which the . renders'. Caught by the Calvin-in-Calvin screen, not by any validator."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "5",
+      "verses": [
+        "13"
+      ],
+      "note": "The cow scrape has NO key 13 for this chapter (32 keys, 1-12 and 14-33). Verse 13 exists in the KJV. A pericope spanning 11-21 therefore fails coverage with 'entries cover verses absent from the source: [13]'. Retiled as 1-5 | 6-12 | 14-21 | 22-27 | 28-33; the 11-12 material (Ellicott on the name, Gill on keep-vs-remember, Wesley's questions) is only 299 usable words and cannot carry an entry of its own, so it was folded into the 6- entry."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "5",
+      "verses": [
+        "6"
+      ],
+      "note": "Keil and Delitzsch truncated at exactly 200 words at k6 -- the same 200-word cap previously recorded for Keil (1samuel 5, joshua 3), Gill (titus 2, hebrews 4) and Cyril of Jerusalem (titus 2, hebrews 4, titus 3). Fifth voice, sixth book."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "5",
+      "verses": [
+        "29"
+      ],
+      "note": "Wesley depending near-verbatim on Henry, third confirmed book (after exodus 11 k8 and joshua 20 k2). Dependency is per-block, not per-chapter: Wesley's own catechetical questions at k11-k21 are genuinely his, and he was declared on those. The voices-sourced gate cannot see this."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "5",
+      "verses": [
+        "29"
+      ],
+      "note": "Sharpest doctrinal collision of the run: Clarke uses 'O that there were such an heart in them' to prove free will ('had man no free will he could neither be punished nor rewarded, being a mere machine'), while Calvin says the verse 'has been ignorantly abused by some, to establish man's free will'. Gill takes a third position through the grammar. Both principals know they are contradicting somebody, so the debate is explicit in the sources rather than constructed."
     }
   ]
 }
