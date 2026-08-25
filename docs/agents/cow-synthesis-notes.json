@@ -24557,6 +24557,181 @@
       "book": "deuteronomy",
       "chapter": "11",
       "note": "Self-graded A on all seven pericope entries, read back span by span against the source blocks. vv.1-7, 2832 source words to 649 (0.23x); vv.8-12, 3392 to 643 (0.19x); vv.13-17, 1771 to 647 (0.37x); v.18 alone, 1438 to 641 (0.45x); vv.21-25, 822 to 647 (0.79x); vv.26-28, 1881 to 634 (0.34x); vv.29-32, 2765 to 646 (0.23x). All seven are distillations and all fall under the 0.84x corpus median, so there is no expansion pressure anywhere. The tightest is 21-25 at 0.79x, which has only four sourced voices, and it was written to what those four actually say rather than padded toward the others. Matthew Henry is named in the 13-17 and 26-28 entries although his heads are at keys 1, 8, 18 and 26; his blocks run across whole sections, which is the documented spill-across-keys case, and the material used is in them. Three polemical passages were rendered by their argument rather than their invective - Calvin against those who lull themselves into security, Gill and Wesley against a wider application of the promise about the sole of the foot - and no critic quoted inside a witness is named in the prose."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "7",
+        "10",
+        "18",
+        "23",
+        "28",
+        "32",
+        "37",
+        "43",
+        "46",
+        "51",
+        "57"
+      ],
+      "note": "CATENA SPLITTER DEFECT, second confirmed instance after luke 21, and the largest chapter it has been measured on. Same mechanism: each key holds a chain of fathers and only the FIRST is captured as the block label, so every subsequent voice in the chain is swallowed into the preceding one's text. Measured before writing a word: of 63,088 stripped source words, 13,256 are unattributable, exactly 21.0 percent, across 34 affected blocks on 12 keys -- 1, 7, 10, 18, 23, 28, 32, 37, 43, 46, 51 and 57. Compare luke 21, where the figure was 25.2 percent. The affected keys are precisely the ones carrying patristic chains; the keys whose voices are all modern commentators are clean. Both tag conventions documented at luke 21 are present again and both had to be cut on: the 'Name:' colon form, and the far commoner ALL-CAPS form ('CYRIL;' 'CHRYS.' 'AMBROSE;'). The ALL-CAPS regex must use lookarounds rather than word boundaries, since \\bEUSEB\\b cannot match EUSEBIUS. -- that error cost real material at luke 21 and is re-fixed here. Every dump taken for this chapter was pre-trimmed, so no misattributed text could reach the prose."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "12",
+        "18",
+        "23",
+        "27",
+        "37",
+        "43",
+        "46",
+        "49",
+        "51",
+        "59",
+        "61"
+      ],
+      "note": "THE CYRIL PROBLEM IS WORSE HERE THAN AT LUKE 21: THERE ARE THREE LABELS, NOT TWO. This chapter's blocks carry 'Cyril of Alexandria' (11 blocks), 'Cyril of Jerusalem' (10 blocks) AND a bare 'Cyril' (8 blocks). At luke 21 there were two labels and the trap was that hidden Cyril-of-Jerusalem text sat inside other men's blocks while Cyril of Alexandria was a legitimate declared voice. Here the bare label is a third thing again and has to be resolved before any of the three can be declared. Resolution adopted: bare 'Cyril' is Cyril of ALEXANDRIA. The reasons are (a) this is a Catena Aurea chapter and Aquinas's catena refers to Cyril of Alexandria simply as Cyril throughout, (b) the bare-Cyril blocks sit on exactly the keys that carry the other catena fathers -- Ambrose, Bede, Theophylact, Titus Bostrensis -- which is the catena stream, and (c) the Cyril-of-Jerusalem blocks are uniformly numbered-section extracts from the Catechetical Lectures, a separate source stream with a different textual signature, and several are truncated at exactly 200 words by the scraper's cap. Consequence for declaration: bare-Cyril and Cyril-of-Alexandria blocks on the same key are the SAME man and must not be declared as two voices; Cyril of Jerusalem is a different man of a different century and is declared separately where his own block is on-topic."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "12",
+        "18",
+        "23",
+        "27",
+        "37",
+        "43",
+        "46",
+        "49",
+        "51",
+        "59",
+        "61"
+      ],
+      "note": "CYRIL OF ALEXANDRIA IS FILED ONE PERICOPE LATE, AND THIS IS THE MOST DANGEROUS DEFECT FOUND SO FAR BECAUSE THE TEXT IS GENUINE. Cyril's blocks are extracts from his Commentary on Luke and each one opens with its own pericope header, so the block states which verses it treats. In this chapter the eleven headers are 1-5, 12-17, 18-22, 23-26, 27-36, 37-43, 43-45, 46-48, 49-50, 57-58, 59-60, and they are filed under keys 12, 18, 23, 27, 37, 43, 46, 49, 51, 59 and 61. Ten of the eleven sit exactly one verse past the end of the range they comment on, and the pattern is exact: THE FILING KEY OF EACH BLOCK IS THE FIRST VERSE OF THE NEXT BLOCK. The block on 1-5 is filed at 12, which is where the 12-17 block begins; the block on 12-17 is filed at 18, where 18-22 begins; and so on down the chapter. That is an off-by-one in the iteration, writing block N's text under block N+1's key. MEASURED CORPUS-WIDE: 72 self-headed blocks across 20 files, every one of them Cyril of Alexandria; 64 of the 72 are filed outside their own stated range, 51 of those at exactly +1 past the range end; 21,366 words misfiled. WHY THIS MATTERS MORE THAN THE OTHER TWO DEFECTS. The Ellicott page-dump is obvious rubbish and the Jamieson stride blocks are visibly about another book, so a careful worker throws both out on sight. This one is real Cyril, on the right book and the right chapter, discussing a passage a few verses away -- so it reads as plausible commentary, and a worker who does not check the header will attribute to Cyril an opinion about a pericope he was not discussing. It is caught here only because Cyril's own text carries the range. CAVEAT, STATED AS A HYPOTHESIS AND NOT A MEASUREMENT: only 20 files contain self-headed blocks, while Cyril of Alexandria appears in many more. If the same off-by-one governs his unheaded blocks, it is undetectable by this method and the true figure is larger. HANDLING IN THIS CHAPTER: every Cyril of Alexandria block was matched to its own header and used only for the verses the header names, never for the key it was filed under."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "23",
+        "27"
+      ],
+      "note": "PROOF THAT BARE 'CYRIL' IS CYRIL OF ALEXANDRIA, not an inference. The block labelled 'Cyril' at key 23 and the block labelled 'Cyril of Alexandria' at key 27 carry the same argument in the same order: great or mighty generals encourage their soldiers to courage not only by promising the honours of victory but by declaring that the suffering is itself glorious; Christ uses the same argument, having just told the disciples he must suffer, be slain and rise, lest they should suppose he would suffer for the life of the world while they lived softly. The catena block at key 23 is 121 usable words and the Commentary block at key 27 is 387, and the second is plainly the fuller original of which the first is an abridgement. So the corpus carries the same father under two labels drawn from two different source streams -- Aquinas's Catena Aurea, which prints him as 'Cyril', and his own Commentary on Luke, which the scraper labels 'Cyril of Alexandria'. A worker who declared both on one entry would be counting one man as two voices and could manufacture a spurious agreement between them. This chapter declares only one label per entry. A SECOND POINT WORTH RECORDING: the off-by-one that misfiles the Commentary blocks is INVISIBLE wherever the tiling is coarser than the offset. The block at key 27 is headed 9:23-26 and this entry spans 23-27, so both the header range and the filing key fall inside the same pericope and no harm results. That is luck, not correctness -- at keys 12, 18, 43, 46, 49, 51, 59 and 61 the header range falls in a DIFFERENT pericope from the filing key, and there the misattribution is real."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "10",
+        "18",
+        "23",
+        "28",
+        "37",
+        "43",
+        "46",
+        "51",
+        "54",
+        "57",
+        "61"
+      ],
+      "note": "Self-graded A on all twelve entries. Every dump was pre-trimmed at the first embedded speaker tag of either convention, so no misattributed catena text reached the prose; 13,558 words, 21.5 percent of the chapter, were discarded that way and are recorded separately as the splitter defect. FOUR CLASSES OF MATERIAL WERE DELIBERATELY EXCLUDED. (1) Jamieson at keys 6, 30, 36, 48, 54 and 60 -- the fixed-stride artefact, containing 1 Samuel 2, Luke 1 and Luke 2 material rather than any comment on this chapter. (2) Roughly 983 words of website boilerplate at the tail of an Ellicott block, cut at the marker 'Copyright Statement These files are public domain'. (3) Cyril of Alexandria's Commentary blocks, which are misfiled one pericope late; he is declared ONLY at entry 23-27, where the block filed at key 27 is headed 9:23-26 and both the header range and the filing key fall inside the same pericope. He is excluded everywhere else, since declaring him at his filing key would attribute to him an opinion about a passage he was not discussing, and declaring him at his true range would fail the voices-sourced check because the block is not in those keys. (4) Cyril of Jerusalem's Catechetical Lecture extracts wherever they are keyword-matched rather than on topic -- notably the identical 183-word passage on two coats duplicated at keys 2 and 11. A FILTER GAP WAS FOUND AND FIXED MID-CHAPTER: the ALL-CAPS name list did not contain DAMASCENE, so 'DAMASCENE;' at key 28 was not cut and 374 words of John Damascene were briefly attributed to Eusebius. This is the same failure as the EUSEB-versus-EUSEBIUS bug recorded at luke 21: the list of father-names is open-ended and every omission silently produces a misattribution. Entries 1, 10, 18 and 23 were checked after the fix and were unaffected, all the affected keys being 28 and later."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "10",
+        "18",
+        "23",
+        "28",
+        "37",
+        "43",
+        "46",
+        "51",
+        "54",
+        "57",
+        "61"
+      ],
+      "note": "Chapter shape: 62 keys, one contiguous run 1-62, tiled into twelve pericopes 1-9 | 10-17 | 18-22 | 23-27 | 28-36 | 37-42 | 43-45 | 46-50 | 51-53 | 54-56 | 57-60 | 61-62. Twenty-one distinct voice labels appear in the source, of which nineteen are usable. Reported usable source 63,783 words; net after trimming the splitter damage, the page dump and the stride artefact, 48,547. Compression by entry ranges from 3.7:1 at verses 54-56 to 10.9:1 at 51-53, with a chapter mean near 6.5:1. The two extremes have the same cause in opposite directions -- filing. The low ratio at 54-56 is because the catena blocks of Ambrose and Titus Bostrensis that comment on those verses are physically filed at key 51 and could not be declared there without failing the voices-sourced check, so that entry draws only on the modern commentators; the high ratio at 51-53 is because key 51 alone carries 4,664 usable words, including a 2,472-word Matthew Henry section commentary covering the whole rest of the chapter. All twelve entries returned PAD 0.0 percent, and the chapter returned zero categorical defects and zero fidelity failures."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "51"
+      ],
+      "note": "Whether the receiving up means the Ascension or simply his withdrawal from Galilee, and the argument is grammatical rather than theological. Barnes and Robertson take it of the Ascension: the word denotes a removal from a lower place to a higher, is derived from the verb used of that event elsewhere, and stands here alone in the New Testament though old enough to be found in Hippocrates. Barnes draws from it that the sacrifice was voluntary, since humanly speaking Christ would have been safe had he stayed in Galilee. Clarke reports Bishop Pearce against this on a point of tense: the verb immediately before denotes a time completed, which the ascension then was not, so the word must mean his withdrawing, and the sense is that the time was past for retiring from Judea as he had hitherto done. Calvin refuses to choose and keeps both, calling the death an anelepsis not only because Christ was then withdrawn from the midst of men but because, leaving the mean prison of the flesh, he ascended on high."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "55",
+        "56"
+      ],
+      "note": "The textual question that shadows the best-known words in the chapter. Three commentators raise it independently and none of them agrees on what to do. Ellicott notes that the clause about not knowing what spirit ye are of is wanting in the best manuscripts, and that the sentence about the Son of man not coming to destroy is absent from many good ones too, conjecturing that it may have entered from an oral tradition preserving what the Evangelist did not write. Clarke goes further, lists the manuscripts, reports that Griesbach removes the latter clause from the text altogether, and reconstructs what the most ancient copies probably read: he turned and rebuked them, and they went to another village. Barnes, apparently untroubled, treats the disputed words as the point of the whole story and builds his application on them, charging the reader to imitate the Son of man in spirit and temper zeal like his. The disagreement is worth recording because the passage is one that preachers lean on heavily, and two of the three voices who address it think the words they would be preaching are probably not Luke's."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "23"
+      ],
+      "note": "Whether 'daily' belongs in the text. Clarke reports the word missing from many reputable manuscripts, versions and fathers, and notes it has no counterpart in either parallel, in Matthew or Mark. Robertson keeps it and makes it the point of the verse, observing that it is peculiar to Luke in this incident and that the tenses divide the labour -- the taking up an aorist and the following a present, so that a man takes up his cross once and keeps on following. The two are not simply opposed: Clarke gives the evidence against and Robertson the reason for caring, and a reader is better served by having both than by either alone."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "28",
+        "31"
+      ],
+      "note": "A convergence across roughly seventeen centuries, and one that can be checked rather than merely admired. Luke does not use the verb the other two Evangelists use for the change on the mountain, and two commentators explain the omission the same way and name the same book: Ellicott says the Evangelist with the most classical culture avoided a word whose associations Ovid's Metamorphoses had fastened on the legends of Greek mythology, and Robertson says he may have avoided it because of the pagan associations, citing Ovid by name. Neither cites the other. A second and smaller convergence sits a few verses later, where Ellicott and Robertson and Barnes all independently hear the Exodus behind the word for Christ's departure -- Robertson turning it into the figure that Moses led the exodus out of Egypt and Jesus was about to accomplish the exodus of God's people into the promised land on high, and Barnes calling a saint's death a going forth from captivity to the Canaan in the skies."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "9",
+      "verses": [
+        "2",
+        "11",
+        "24",
+        "26",
+        "35",
+        "44",
+        "51",
+        "56",
+        "57"
+      ],
+      "note": "The Cyril of Jerusalem blocks are duplicated and are usually keyword-matched rather than filed on topic. The identical 183-word extract about the fruits of repentance and the man with two coats appears in full at BOTH key 2 and key 11, matched apparently on the phrase two coats which occurs in verse 3. Similar extracts appear at keys 24, 26, 35, 44, 51, 56 and 57, several of them truncated at exactly 200 words by the scraper's cap, and most of them keyed to a shared phrase rather than to the argument of the verse -- the extract at key 24 is about the high priest and the smiting and the spitting, matched to a verse about losing one's life. He was therefore declared nowhere in this chapter. This is the same class as the misfiled Cyril of Jerusalem block recorded at 2timothy 1:8, and it now looks systematic rather than incidental: his Catechetical Lectures appear to be indexed into the corpus by phrase-matching rather than by pericope, which makes every one of his placements suspect until checked."
     }
   ]
 }
