@@ -24732,6 +24732,72 @@
         "57"
       ],
       "note": "The Cyril of Jerusalem blocks are duplicated and are usually keyword-matched rather than filed on topic. The identical 183-word extract about the fruits of repentance and the man with two coats appears in full at BOTH key 2 and key 11, matched apparently on the phrase two coats which occurs in verse 3. Similar extracts appear at keys 24, 26, 35, 44, 51, 56 and 57, several of them truncated at exactly 200 words by the scraper's cap, and most of them keyed to a shared phrase rather than to the argument of the verse -- the extract at key 24 is about the high priest and the smiting and the spitting, matched to a verse about losing one's life. He was therefore declared nowhere in this chapter. This is the same class as the misfiled Cyril of Jerusalem block recorded at 2timothy 1:8, and it now looks systematic rather than incidental: his Catechetical Lectures appear to be indexed into the corpus by phrase-matching rather than by pericope, which makes every one of his placements suspect until checked."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "12",
+        "24",
+        "48",
+        "54",
+        "60",
+        "72"
+      ],
+      "note": "RESIDUE IS DISPLACEMENT, NOT DUPLICATION - the most useful thing this chapter shows. All seven Jamieson, Fausset and Brown blocks here are residue, and all seven come from 1 Chronicles 3-4, advancing monotonically: key 6 is 1Ch 3:1 (sons of David), key 12 is 3:9 (the line to Zedekiah), key 24 is 3:17 (Jeconiah's descendants), key 48 is 4:15 (Kenaz, Caleb's grandfather), key 54 is 4:17 (Bithiah and Mered), key 60 is 4:23 (the potters of Netaim and Gedera), key 72 is 4:31 (the Simeonite cities). Every host key is divisible by 6, so this is period 6 phase 0, the same phase as joshua 14. Donor earlier than host again: eleven for eleven. Key 48 begins mid-sentence with a bare 'the grandfather of Caleb', the eighth truncated fragment on record. Now the new part: I checked all five of those passages against cow-sources/jfb/1chronicles.json and NONE of them is there. 1 Chronicles 3 is missing from that corpus outright, and the 1 Chronicles 4 passages are absent even though chapter 4 is present. So the residue was not copied into Nehemiah 7, it was MOVED here, and the donor chapter is correspondingly impoverished. That means residue blocks are recoverable source material rather than junk, and every residue note in this notebook now doubles as a pointer to a gap in some commentator's own corpus."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "7",
+      "note": "The defect repaired here is the Joshua 12 fabrication pattern, second confirmed instance, same commentator. The old prose named Charles Ellicott at eleven keys of this chapter. He has no block anywhere in cow/nehemiah/7.json, and cow-sources/ellicott/nehemiah.json covers chapters 1-6 and 8-13 with chapter 7 as its ONLY gap. That is exactly what the quality audit documented for Joshua: Ellicott's corpus runs 1-11 and 13, and the fabrication is in chapter 12. The generator filled the slot it expected rather than leaving it empty. So I scanned every corpus under cow-sources for interior chapter gaps and found 57 of them - among others ellicott joshua is missing 12, 17, 20 and 21, ellicott deuteronomy is missing 21, 25 and 26, ellicott numbers is missing 2, 5 and 7. Each interior gap is a slot where the same failure could have occurred. This is a cheap, mechanical audit list: for every corpus gap, check whether the synthesis of that chapter names that commentator. I would rather someone ran it than rediscovered the shape a third time."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "24",
+        "48",
+        "54",
+        "60"
+      ],
+      "note": "Five source keys are OMITTED from this synthesis entirely, and the reason should be on record because it goes beyond the documented cases. Keys 12, 24, 48, 54 and 60 each carry exactly one block, and in every case that block is the Jamieson residue described in the accompanying source-defect note. Excluding the residue therefore leaves nothing at all - not a thin source, but no source. The thin exemption cannot help, since its floor of 120 words would have to come from zero. The 2 Chronicles 27 rule covers out-of-range scrape keys; this is a different shape, an in-range key whose entire content is foreign. Omitting is the only honest option: there is no verse-level comment to synthesize. Coverage is unaffected because all five lie past the first gap in the source key sequence, so they are advisory rather than required, and the declared spans (1-4, 5-8, 19, 33-34, 68-73) cover exactly the keys that were kept."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "6",
+        "7"
+      ],
+      "note": "Why this register differs from the one in Ezra 2, three answers and no arbiter. Gill offers a mechanism: the earlier list was compiled in Babylon from those who gave in their names to travel with Zerubbabel, this one after arrival, so dropouts and deaths on the road lower some figures while late joiners raise others. Henry canvasses the field and explicitly rejects the theory that the two lists are separated by forty years of natural increase, since so many households could not have stayed almost unchanged that long; he prefers copyists' errors or divergent copies, allows Gill's account as a third possibility, and notes that the totals agree everywhere except the singers, 200 against 245. Clarke takes a fourth line, that the register Nehemiah found predates Zerubbabel altogether and was revised only in part. All three stand in the prose. Related and separate: Clarke reports a Septuagint reading at verse 70 by which the sum was given TO the Tirshatha rather than by him, which reverses the transaction, and Wesley holds the offerings here to be a different collection from Ezra's while Henry argues at length against that and then concludes it probably was the same from a different copy."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "7",
+      "verses": [
+        "5"
+      ],
+      "note": "Wesley abridging Henry again, second chapter in two days. His note on God putting the plan into Nehemiah's heart - that whatever good motion is in our minds we must acknowledge to come from God, and that what is done by human prudence is to be ascribed to the direction of divine Providence - is Henry's sentences with a few words dropped. The same thing happened at deuteronomy 11:18, where Wesley reproduces Henry's three rules almost verbatim. The prose says so both times rather than presenting them as two agreeing witnesses. Anyone weighing consensus in this corpus should treat a Wesley note that echoes Henry as one voice, not two, and should check Henry before counting it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "7",
+      "note": "Self-graded A on all five entries, read back against the source blocks. vv.1-4, 2085 source words to 640 (0.31x); vv.5-8, 2209 to 639 (0.29x); v.19, 24 to 131 (5.46x); vv.33-34, 65 to 145 (2.23x); vv.68-73, 578 to 610 (1.06x). The 5.46x on verse 19 is structural and I want it on the record rather than buried. Clarke's whole note there is twenty-two words - the number of the children of Bigvai, a manuscript variant reading one lower, and the observation that the lower figure matches the parallel register. The thin floor is 120 words, so any legal entry on that verse is at least five times its source. Every clause in the 131 words traces: the figure, the variant, the agreement with the parallel, Clarke's refusal to adjudicate, and Henry's own statement that most numbers agree exactly and a few differ by one or two through copyists' errors. Nothing is asserted that no witness says. But a reader of the ratio alone would suspect invention, and the honest answer is that a 120-word floor over a 22-word source manufactures the ratio. The alternative was to omit a genuine textual note, which would be worse. vv.33-34 at 2.23x is comfortable. Charles Ellicott is named nowhere in this chapter, which is the point of the repair."
     }
   ]
 }
