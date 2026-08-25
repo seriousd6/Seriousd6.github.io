@@ -25587,6 +25587,68 @@
       "book": "titus",
       "chapter": "3",
       "note": "All six entries fidelity self-graded A. ONE SIGNAL ON THE FIRST READ-BACK, and it was mine rather than the source's: I wrote 'the Epirot city' where every source says 'Epirus', and the entity check flagged Epirot as ungroundable. Corrected to the source's own form and the re-run came back clean. Recording it because it is the second consecutive chapter in which the defect found at the end was introduced by the writer, not inherited from the scrape -- at joshua 20 it was a stray non-Latin word that no validator checks for, here an adjectival coinage that the fidelity checker did catch. The lesson is that the entity check earns its place precisely on coinages: it cannot see a stray foreign word, but it does see an invented English form of a real proper noun. Two care points on voices. John Wesley was declared only at entries 5-7 and 12-15, where his material is his own; his blocks elsewhere in Titus have shown the Henry dependency recorded at exodus 11 and joshua 20, so each was read before use. Where Ellicott quotes other writers at length -- Reynolds on Augustine and Julian, Luther on the authorship of Hebrews, Hippolytus on Zenas -- those were attributed as quotations and never declared as voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "11",
+        "14",
+        "29",
+        "37",
+        "42",
+        "45",
+        "52"
+      ],
+      "note": "CYRIL OF ALEXANDRIA IS TILED ONE BLOCK LATE THROUGH THIS ENTIRE CHAPTER, and because his blocks are self-labelled with the verses they treat, this chapter measures the drift exactly -- the first clean measurement of host-vs-donor advance I have had where the donor announces its own address. Host key -> the verse range his block declares: 1 -> Luke 10:38-42 (Martha and Mary, the PREVIOUS chapter); 2 -> 11:1-4; 3 -> 11:2; 4 -> 11:3; 5 -> 11:4; 11 -> 11:5-10; 14 -> 11:11-13; 29 -> 11:19-26; 37 -> 11:29-36; 42 -> 11:37-41; 45 -> 11:42-44; 52 -> 11:45-48. Two things follow. (a) The offset is never zero and never constant: it starts at one key and widens, because the host keys are drawn from the full 54-verse chapter while the donor blocks are drawn from his own coarser pericope division, so the host advances faster than the donor. This is the same host-stride/donor-stride relation I measured on judges 17, mark 11, romans 13, deuteronomy 11, numbers 36, 1timothy 3 and 2thessalonians 3 -- but every one of those was a foreign-book donor inferred from content. Here the donor names itself, and the pattern holds. (b) Donor-earlier-than-host holds again, now nineteen for nineteen. Practical effect for the writer: Cyril of Alexandria had to be declared residue at keys 1, 5, 11, 14, 29, 37, 42 and 45 and used only at 2, 3, 4 and 52, where his declared range actually falls inside the span being written."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "13",
+        "20",
+        "30",
+        "42",
+        "50",
+        "51",
+        "53"
+      ],
+      "note": "CYRIL OF JERUSALEM: eight blocks in this chapter, and the contamination mechanism from note 2305 is visible in a single chapter for the first time. Two are GENUINE, in the weak sense that the lecture quoted really is about the verse it sits under: key 13 (the Holy Ghost given to them that ask, quoting v.13 itself) and key 4 (lead us not into temptation). Two more are topically apt: key 2 on saying the Lord's Prayer with a pure conscience. The remaining four are pure phrase-collision residue with no relation to their host: key 1 (Barnabas sent to Antioch, the disciples first called Christians -- Acts 11:26, evidently collided on 'it came to pass'); key 30 (the Only Son begotten before all ages, Micah on Bethlehem); key 51 (proofs concerning life eternal); key 53 (of what family the Virgin was, the oath sworn to David). And note the decisive one: the block at key 20 is the SAME BLOCK as the block at key 13, stamped twice in one chapter. At 13 it is apt; at 20 it is a duplicate that says nothing about the finger of God. That is note 2305's mechanism -- one patristic block stamped at multiple host keys wherever a phrase recurs -- caught inside a single chapter rather than across a corpus scan, which makes it much easier to demonstrate to anyone who has to decide whether to repair the tiler."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "11",
+      "note": "CATENA MIS-SEGMENTATION RUNS THE OPPOSITE WAY FROM WHAT I HAVE BEEN REPORTING, and this chapter shows both directions at once. Until now I have described the VOICE_LABELS defect as heads being ABSORBED -- split_voices fails at an unrecognised head, so a block gets filed under the preceding voice and the absorbed father disappears. That is real. But in a Catena Aurea chapter the same failure also produces the reverse: a block carries a head like 'Gregory of Nyssa' and then, one sentence in, switches to 'BASIL;' inline and never switches back, so the HEAD UNDER-REPORTS its own contents. Instances in this chapter: the 804-word Gregory of Nyssa block at key 1 is one sentence of Gregory followed by Basil; the Gloss block at key 5 turns into Ambrose; the Augustine block at key 5 turns into Gregory of Nyssa; the Cyril blocks at keys 9, 17 and 21 each turn into Chrysostom or Bede; the Theophylact block at 21 contains both Bede and Cyril. Consequence for any writer or any automated grader: the head name on a catena block is a lower bound on its contents, not a description of them, and attributing the whole block to the head is a fabrication even though the head is correct. I attributed by the INLINE all-caps names throughout this chapter, which is why entries here name voices (Basil, Ambrose, Origen, Chrysostom, Bede) at keys where those voices are not heads at all. Anything that audits attribution by comparing prose names against block heads will score that as ungrounded when it is the most grounded reading available. Worth checking whether audit-synthesis-quality's voice-grounding test is head-based; if so, catena chapters are being graded against the wrong index."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "11",
+      "note": "Fidelity self-grade A on all 14 entries; lint grades 14/14 A with zero UNSOURCED, NOISE, META or SLOT flags. Ratios by span: v.1 9347w->650w (0.07x); 2-4 3504->649 (0.19x); 5-8 3953->649 (0.16x); 9-13 3880->650 (0.17x); 14-16 4911->613 (0.12x); 17-23 3311->647 (0.20x); 24-26 1939->643 (0.33x); 27-28 2729->635 (0.23x); 29-32 4668->624 (0.13x); 33-36 2807->647 (0.23x); 37-41 10712->647 (0.06x); 42-44 1670->494 (0.30x); 45-52 7009->649 (0.09x); 53-54 2699->610 (0.23x). Chapter total 63,139 reported source words across 54 keys and 29 distinct voice heads. TILING: v.1 was given an entry of its own because 20 voices are present at that single key -- 18 after residue -- and no larger span could have named them honestly inside 650 words. Spans 45-48 and 49-52 were merged into 45-52 for the opposite reason: the long catena blocks at key 45 (Athan on the prophets' blood, the Greek Exposition on the death of Zacharias) address vv.49-51, so splitting there would have forced me either to leave them unused or to attribute vv.49-51 material to vv.45-48. ONE FABRICATION CAUGHT AND CORRECTED BEFORE LANDING: I wrote 'Athanasius' where the catena only ever writes 'Athan', and synthesis-fidelity.py flagged it as an ungroundable entity. The expansion is almost certainly right, but it is an identification the source does not make, so the prose now uses the source's own form. This is the second consecutive chapter where the entity check caught me importing a name from my own knowledge rather than from the page -- at 1thessalonians 1 it was Marcion. NB at Luke 11:29 Tertullian's block DOES name the Marcionites, and I used the name there; the check is discriminating correctly in both directions."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "11",
+      "verses": [
+        "54"
+      ],
+      "note": "ELLICOTT CHROME, sixth confirmation, and it corrupts the batch sizer. The block at key 54 measures 1,046 words of which about 63 are commentary; the remaining ~983 are scraped StudyLight page furniture -- CSS rules, nav menus, a list of 144 commentaries, copyright boilerplate. Key 54 is Ellicott's LAST block in the chapter, which is now 6-for-6 on the rule that the chrome attaches to his final block rather than to the chapter's final key (joshua 14 k15, deuteronomy 11 k31 of 32, numbers 36 k11 of 13, joshua 16 k10, exodus 37 k29, luke 11 k54 -- the last two happen to coincide with the chapter end, the first four do not). The operational consequence is the one I flagged at exodus 37 and it matters more here: synthesis-loop.py size reported 63,139 usable words for this chapter, of which ~983 are chrome and a further ~2,000 are Cyril of Jerusalem and Jamieson residue. Real usable content is nearer 60,000. That is a small proportional error here, but on a short chapter it is decisive -- at exodus 37 the same defect inflated a 2,900-word chapter to 4,222. Any batch budgeting that trusts the size number is systematically over-estimating, and the error is largest exactly where it does most harm, on the small chapters where a 1,000-word chrome block can be a quarter of the reported total. Suggest the sizer strip the chrome markers before counting; the markers are stable and easy to match."
     }
   ]
 }
