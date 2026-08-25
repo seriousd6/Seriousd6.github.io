@@ -26763,6 +26763,66 @@
         "6"
       ],
       "note": "AN EPISTLE CHAPTER TILES DIFFERENTLY FROM A GOSPEL ONE, and a single verse can earn its own entry. 1peter 4 has NO patristic voices at all -- the whole 46,451 words come from seven modern and reformation commentators, every one of whom comments on nearly every verse. That removes the constraint that governed matthew 9, where the fathers sat only in eight lection-head keys, and it makes the source mass almost uniform across the chapter: no key is a pericope head and none is a thin tail. Two consequences. First, the tiling can follow the argument rather than the scrape: 1-2, 3-5, 6, 7-8, 9-11, 12-13, 14-16, 17-19, eight entries at 8.7:1. Second, verse 6 alone carries 4,605 words, more than several whole pericopes elsewhere, because it is the crux about the gospel preached to the dead and every commentator writes at length; giving it a one-verse entry produced 7:1 compression and let all six competing readings be named with their holders, which a merged 6-8 entry could not have done. Rule worth carrying forward: in the epistles, size each key before choosing boundaries, and do not assume a pericope is the right unit -- a single contested verse can deserve an entry to itself."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "5"
+      ],
+      "note": "JAMIESON DONOR BUG, 23rd and 24th confirmations, and the THIRD CONSECUTIVE CHAPTER in which every Jamieson block is corrupt and all donors sit in ONE donor chapter. revelation 10 has two Jamieson blocks and both are unusable: k5 (100w) is 1 Thessalonians 4:6 on defrauding a brother in the matter of conjugal honour, citing 1Th 4:4,7 and Pr 6:27-33; k11 (128w) is 1 Thessalonians 4:11 on studying to be quiet and doing your own business, citing 2Th 3:11-12 and discussing the Thessalonian converts who neglected daily work through expecting Christ's immediate coming. Note the arithmetic across the three chapters: matthew 9 hosts 12 and 30 drew Matthew 8; 1peter 4 hosts 4 and 16 drew Ephesians 3:6 and 3:16; revelation 10 hosts 5 and 11 draw 1 Thessalonians 4:6 and 4:11. In both of the latter two chapters the HIGHER-numbered host draws the donor verse of the same number (16->16, 11->11) while the lower host draws donor verse 6 in both cases. I do not want to over-model this on three chapters, so the defensible statement is the one that holds across all three: every Jamieson block in a host chapter donates from a single donor chapter, that donor chapter is not adjacent in canonical order and may be in another book entirely, and no Jamieson block in any of the three was about its host verse. Both excluded here. Standing rule unchanged: never use a Jamieson block without reading it against its key."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "5"
+      ],
+      "note": "NEW DEFECT CLASS: BARNES' MULTI-PART NOTES ARE SPLIT ACROSS PAGES AND THE PARTS LAND IN THE WRONG VERSE KEYS, carrying their own pagination chrome. Barnes' k5 block in revelation 10 is 4,198 words, the largest single block in the chapter, but only its first sixty words comment on 10:5. It then contains the literal string 'This is part 3 of 4 parts of Notes for Revelation 9.20 Part 1 Rev 9:20 Part 2 Rev 9:21 Part 4 Rev 10:10', followed by roughly two thousand words of Barnes' notes on REVELATION 9:20 -- his chronological computation of the 'hour, and day, and month, and year' of 9:15, working from Gibbon's dates for the death of Basil, the investiture of Togrul as the caliph's lieutenant on the 25th of Dzoulcad A.H. 449, and the fall of Constantinople on 29 May 1453. None of that is comment on 10:5. This is distinct from the chapter-analysis and chapter-remarks brackets I recorded at 1peter 4: those are Barnes' own apparatus landing inside the first and last verse keys of the RIGHT chapter, whereas this is material from a DIFFERENT chapter spliced into the middle of a verse block, announced by a page-navigation string the scraper preserved verbatim. Practical rule: search every long Barnes block for the substring 'This is part' before using it, and treat everything after that marker as belonging to whatever verse the marker names. I used only the opening lines and the on-topic tail about the Reformers' expectations."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "6"
+      ],
+      "note": "CYRIL OF JERUSALEM, PROOF-TEXT KEYING CONFIRMED AGAIN, and the matthew 9 test works. At matthew 9 I recorded that Cyril of Jerusalem's blocks are filed against whatever verse supplies a phrase his catechetical lecture quotes, and proposed a test: the block is usable only if the lecture's ARGUMENT is about the quoted phrase, not merely if the phrase occurs in the host verse. revelation 10 k6 is a clean instance. The host verse says 'there should be time no longer'. The block (exactly 200 words, so truncated at the cap as well) is the lecture on Antichrist: flee to the mountains, great tribulation such as has not been from the beginning of the world, those days shortened for the elect's sake, Antichrist reigning three years and a half, and Daniel's 'a time and times and half a time'. The phrase Cyril is arguing about is Daniel's, not the one in the host verse; the only link is the bare word 'time'. By the test, unusable, and I excluded it. Two data points now support the rule that Cyril of Jerusalem is keyed by lexical proof-text rather than by lection, which distinguishes his behaviour from the Cyril of Alexandria displacement recorded at luke 8, where the fix was to read him one pericope back."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "11"
+      ],
+      "note": "A COMMENTATOR PUBLICLY REFUTES HIS OWN FOUNDER'S CHRONOLOGY WITHIN THE SAME CHAPTER. At 10:6 Wesley reads 'there should be time no longer' as denying a technical period: a chronos of some 1,111 years, from which he derives a 'non-chronos' running from the year 800, when Charles the Great instituted a new line of western emperors, to the year 1836, and into which he fits the short time of the third woe, the three times and a half of the woman in the wilderness, and the duration of the beast. Five verses later Adam Clarke, a Methodist commentator, rejects that reading by description and names its source: 'I cannot admit the interpretation that is given of the word chronos ... which some have construed into an artificial period of 1,111 years, which they term chronos; hence we have the chronos, half-chronos, and non-chronos. Bengel has said much on these points, but to very little purpose.' Bengel is precisely where Wesley took the scheme from. Clarke's own reading is that the word means delay simply. The same key carries his broader refusal: 'I do not understand these prophecies, therefore I do not take upon me to explain them ... Commentators, and even some of the most modern, have strangely trifled in these solemn things.' This is worth recording as a caution against the loop's habit of grouping voices by school: the wesleyan-arminian pair are not merely nuanced against one another here, they are in open contradiction, and a synthesis that summarised 'the wesleyan reading' as one position would assert something neither man holds. I named both and marked Clarke's refusal as the entry's outlier."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "SINGLE-VOICE CONCENTRATION AT 70 PERCENT, the highest this worker has met, and what it does to tiling. Of revelation 10's 31,851 usable source words, Albert Barnes supplies 22,290, just over seventy percent, spread across all eleven keys and running to 4,198 words in one of them. No other chapter in this run comes close; matthew 9's largest voice was Matthew Henry at about a quarter, and that was inflated by his Concise being appended to his Exposition. Three consequences worth recording. First, the compression figure lies: once Barnes' misfiled Revelation 9:20 material is removed from k5 the chapter's genuinely usable mass drops by roughly two thousand words, so the effective ratio for a six-entry tiling is nearer 9:1 than the 12:1 the raw size suggests. Second, a chapter this lopsided cannot be written by sampling the long blocks alone, because doing so would produce six entries that are all Barnes with garnish; the short voices carry the disagreement, and in this chapter they carry nearly all of it -- Wesley against Robertson on the angel's identity, Bede against Ellicott on the thunders, Clarke against Wesley on the chronology. Third, Barnes' Revelation commentary is thoroughgoing historicist, so his length is spent on a scheme the other voices do not share; treating length as weight would have produced a synthesis reporting his Reformation reading as the consensus of the chapter, which it is not. Rule: when one voice exceeds about half a chapter, budget reading time by DISAGREEMENT rather than by word count."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "AN APOCALYPSE CHAPTER HAS NO REFORMED HEAVYWEIGHT, and the school map needs to know it. revelation 10 carries Victorinus, Bede, Gill, Henry, Barnes, Clarke, Ellicott, Robertson and Wesley, but no Calvin -- he wrote no commentary on the Apocalypse, so the reformed school is represented here by Gill alone, and Gill is truncated at the 200-word cap in three of the chapter's eleven keys. This matters for two of the loop's habits. The emit step wants a summary per school, and in this book the reformed summary will often rest on a single truncated voice, which is thin ground for the 'prevalence' field; where Gill's block is cut off at 200 words the honest thing is to leave the school out of an entry rather than build a summary on half an argument, as I did at the last entry here. It also changes which voices carry the patristic side: revelation is one of the few books where Victorinus of Pettau appears at all, and his blocks are short but genuinely early, so they are worth reading in full even when the survey shows them near the MIN threshold. Worth checking the other Apocalypse chapters in the repair queue for the same shape before budgeting them."
     }
   ]
 }
