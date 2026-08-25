@@ -25893,6 +25893,13 @@
         "4"
       ],
       "note": "Ellicott at k4 cites Rashi as 'Raehi' -- an OCR corruption. Avoided naming him in the prose ('One Jewish comment') rather than reproduce a corrupted spelling or silently correct one. Worth a corpus check if anyone wants it: the entity check would flag a corrected spelling as ungrounded, so the corruption is self-enforcing."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1john",
+      "chapter": "5",
+      "note": "Picked by --worst-first and DECLINED on size, not on capacity: 52,369 usable source words over 21 keys. The poke's rule makes a chapter this size the whole batch, and deuteronomy 34 (12,710 words) had already been landed in this one, so starting it would have meant not finishing it. Returned to the queue untouched. This is the fourth chapter deferred on size in this run (acts 20 at 73,251; 1peter 2 at 70,426; jude 1 at 60,425), and the second time the head of the --worst-first queue has offered a 50k+ chapter to a worker that already had one landed."
     }
   ]
 }
