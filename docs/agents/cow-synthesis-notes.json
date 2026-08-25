@@ -26623,6 +26623,66 @@
         "1"
       ],
       "note": "TILING A 66k CHAPTER WHOSE PATRISTIC MATERIAL IS CONCENTRATED IN EIGHT HEAD KEYS. matthew 9 is 38 keys and 66,271 usable words, the largest chapter this worker has taken, and its fathers appear ONLY at the eight Catena lection heads (k1, k9, k14, k18, k23, k27, k32, k36), each head carrying comment on its whole pericope. Tiling on those eight boundaries alone gives 8 entries and 12.4:1 compression, right at the stated ceiling; splitting inside pericopes gives 12 entries and 9.3:1, but orphans the head key's remarks on the later verses of its pericope. I checked the validator before deciding: synthesis_qa.ungrounded_voices pools the WHOLE chapter, not the entry's key range, so a father whose comment on vv.5-8 lives in k1 can be cited and declared in an entry ranged 3-8 without tripping the voices-sourced check, and coverage_problems only cares that the declared ranges tile the source keys. That freed the finer tiling: 1-2 | 3-8 | 9-10 | 11-13 | 14-15 | 16-17 | 18-19 | 20-22 | 23-26 | 27-31 | 32-34 | 35-38, twelve entries averaging 652 words. Worth reusing on the remaining tail chapters: pericope-head concentration does not force coarse tiling, because the groundability checks are chapter-scoped."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "Jamieson blocks at keys 4, 10 and 16 are all from EPHESIANS 3 and none of them touch 1 Peter. Key 4 expounds Ephesians 3:6 (that the Gentiles are fellow heirs and of the same body); key 10 is a nine-word fragment, Greek made, Ellicott translates wrought, from around Ephesians 3:11; key 16 expounds Ephesians 3:16 (strengthened with might by his Spirit in the inner man). The host keys sit on a period-6 grid, 4-10-16, and the donor verses run 6, 11, 16 - monotonic and on a stride of five against the host stride of six. This is the NINTH chapter in this stretch to show the fixed-stride Jamieson displacement, after mark 14, acts 10, numbers 29, 1corinthians 8, hebrews 8, revelation 15, luke 8 and colossians 2, and it is the tightest grid yet: three hosts, three donors, both sequences strictly increasing with a constant step. All three declared as residue."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "4",
+      "verses": [
+        "19"
+      ],
+      "note": "Ellicott chrome at key 19, the chapter's last key: the block measures 1532 words of which roughly 549 are real commentary and roughly 983 are StudyLight page furniture, the marker being Copyright Statement. This is the SIXTEENTH confirmation. The payload is 983 words, EXACTLY the figure measured at colossians 2 key 23 in the previous batch, which is the first time two chapters have returned an identical chrome length; taken with the fourteen earlier measurements clustering in the 914-985 band, this makes it near-certain that the chrome is a fixed template appended once per page rather than anything that varies with the commentary. As at colossians 2 it sits INSIDE a genuine voice's block and so cannot be subtracted at block granularity, inflating the measured source for vv.19 from about 1859 real words to 2842. Harmless here, since the span was written at 633 words, but it is the same structural limit of excluded_voices recorded at numbers 29."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1peter",
+      "chapter": "4",
+      "note": "The 200-word truncation appears again, on Gill at keys 1, 7, 8, 9, 10, 11, 12, 17 and 18, nine keys in one chapter, every one stopping at exactly 200 words mid-sentence, while Gill's blocks at keys 2, 3, 4, 5, 6, 13, 14, 15, 16 and 19 run to 83, 95, 82, 78, 134, 145, 97, 20, 51 and 141 words and end cleanly. Two batches running have now shown the same signature on the same voice - seventeen truncated keys at colossians 2, nine here - and in both chapters the untruncated Gill blocks are all naturally short. No other voice is truncated in this chapter."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1peter",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "Verse 6, the gospel preached to the dead, is the largest crux in the chapter and the catena preserves an unusually complete map of it. Two families. (1) The dead are the spiritually dead, that is the Gentiles: Barnes reports Doddridge and Whitby for it, Clarke gives two translations built on it (Wakefield and Macknight), and Robertson traces the reading to Augustine and Luther, reports the objection that the apostle could not use one word in two senses so close together, and answers that Christ did exactly that with the word for life inside a single sentence of Matthew 16:25. (2) The dead are dead in body, and the family divides again: Barnes prefers those then dead who had heard the gospel while living and become Christians, on three grounds; Ellicott refers the verse to Christ's descent and to 1 Peter 3:19, saying no one with an unpreoccupied mind could doubt that those preached to were dead at the time; Clarke prefers the antediluvians preached to by Noah; Barnes also reports the martyrs (unattributed) and the sinners of the old world (Saurin); Robertson reports the view that all who did not hear in this life will hear in the next before the judgment. Calvin stands apart from both families, holding simply that Christ was made known as a redeemer to the dead and drawing the consequence that we shall partake of that grace when dead, since we set limits much too narrow to it if we confine it to the present life."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1peter",
+      "chapter": "4",
+      "note": "Three places in this chapter where the commentators divide along lines worth keeping. (1) Verse 3: Gill reports the word OUR absent from the Alexandrian copy and from the Latin and Syriac and prefers the Arabic reading, the time of YOUR past life; Ellicott strikes out both of our life and us as a scribe's addition and a filler, arguing that otherwise the apostle identifies himself with a life he never led; Barnes defends the received text and explains the pronoun as the ordinary way of speaking of a body of people without charging each with all. The same verse carries a four-way dispute over whether the readers were Jews or Gentiles, Clarke and Ellicott reading the abominable idolatries as proof of a Gentile readership while Gill and Calvin keep the Jewish one and explain the sins by mixture. (2) Verse 5: Barnes denies that ready to judge means the day was near at hand, whatever the apostle may have supposed, and takes it of preparedness only; Ellicott sets the clause in the order of the Creed and quotes Bengel that the Apostles set the advent before their longing as close at hand, so that Peter reckons the slanderers of his own day among the living about to be judged. (3) Verse 7: Clarke and Henry refer the end of all things to the destruction of Jerusalem, Gill allows three senses at once, and Calvin refuses the national reading outright as having no ground, calling it strange that such a notion should be entertained."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "4",
+      "note": "Two observations worth carrying forward. (1) Barnes and Robertson, writing about eighty years apart, both turn aside from 1 Peter 4:3 to the temperance question of their own day and both enter a caution: Barnes grants that touch not, taste not is a good motto for the friends of total abstinence but denies the apostle meant anything of the kind, and Robertson remarks that the prohibition law needs enlightened instruction to make it effective. The identical pairing occurred at colossians 2:21 in the previous batch, where Barnes refused the verse to a cause he supported and Robertson made the same aside about prohibition. Two chapters in two different books, the same two voices, the same reflex. (2) Ellicott's reading of this chapter is unusually self-consistent across its length: at verse 16 he argues that the oldest manuscripts point to the barbarous form CHRESTIAN, and at verse 17 he uses that very reading to join the two halves of the chapter, taking the mark of Ezekiel's vision for the Christian name borne without shame, so that those who wear it are the men the destroyer is forbidden to touch. The two notes were written to separate verses but only work together."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1peter",
+      "chapter": "4",
+      "note": "Fidelity self-grade, 1peter 4, all twelve spans graded A with no ENTITIES, NUMBER or WATCH signals, and clean on the FIRST read-back, which has not happened before in this stretch - every earlier chapter needed at least one correction. Chapter total 46451 usable source words to 7759 prose, 0.17x. Ratios ran from 0.11x at vv.17-18 (5844 source words) to 0.34x at vv.8 (1897). Two informational WATCH notices stood through the build and both were verified in the source: Bengel and Cicero at vv.4-5, the first quoted by Ellicott on the nearness of the advent and the second cited by Calvin for the sense of feeling a stranger in one's own city; Luther at vv.6, named by Robertson with Augustine as holding the spiritual sense of the dead. Nineteen source keys were tiled into twelve spans: 1-2, 3, 4-5, 6, 7, 8, 9-10, 11, 12-13, 14-16, 17-18, 19, keeping verse 6 and verse 7 each to themselves because each carries a distinct crux."
     }
   ]
 }
