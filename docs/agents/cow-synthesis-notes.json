@@ -25900,6 +25900,53 @@
       "book": "1john",
       "chapter": "5",
       "note": "Picked by --worst-first and DECLINED on size, not on capacity: 52,369 usable source words over 21 keys. The poke's rule makes a chapter this size the whole batch, and deuteronomy 34 (12,710 words) had already been landed in this one, so starting it would have meant not finishing it. Returned to the queue untouched. This is the fourth chapter deferred on size in this run (acts 20 at 73,251; 1peter 2 at 70,426; jude 1 at 60,425), and the second time the head of the --worst-first queue has offered a 50k+ chapter to a worker that already had one landed."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "14",
+      "verses": [
+        "7",
+        "13",
+        "25",
+        "31",
+        "37",
+        "49"
+      ],
+      "note": "Jamieson stride, third clean measurement and the one that fixes the ratio. Every Jamieson block in mark 14 is displaced from Mark 7-8: hosts 7, 13, 25, 31, 37, 49 carry donors Mk 7:28, 7:33, 8:5, 8:10, 8:15, 8:24. Monotonic on both sides. Host gaps are 6, 12, 6, 6, 12 (all multiples of 6); donor advances are +5, ~+10, +5, +5, +9. That is five donor verses consumed per six host keys, doubling cleanly where the host skips a period. acts 10 measured the same period 6 on the host side (gaps 6, 6, 18, 6, 6) against John 11-12. Two chapters, two different donor books, same host period: the displacement is a fixed-stride tiling artefact in the JFB source file, not a per-chapter accident. Donor-earlier-than-host now holds 32 for 32."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "14",
+      "verses": [
+        "9",
+        "18",
+        "21",
+        "30",
+        "41",
+        "46"
+      ],
+      "note": "Cyril of Jerusalem in mark 14 is two separate defects in one voice. (1) Residue: his blocks at keys 9, 18, 30 and 46 are catechetical lecture material with no bearing on the verse they sit under. Key 46 (the arrest) carries an anti-Manichaean passage on Manes claiming to be the Paraclete. All four are excluded from the prose. (2) Duplication inside the chapter: one and the same block, on Christ coming to his passion willingly, is tiled at BOTH key 21 and key 41. I treated 21 as the genuine placement and 41 as displaced. This is the fourth chapter this window where a single block appears at more than one key in the same chapter (luke 11 keys 13 and 20; acts 10 keys 20, 44, 45; mark 14 keys 21 and 41), so intra-chapter duplication is not rare. As at 2john 1, none of this can be declared in excluded_voices: the VOICE_LABELS bug rejects Cyril of Jerusalem there, so the tags file is silent about an exclusion the prose actually makes."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "14",
+      "verses": [
+        "72"
+      ],
+      "note": "Ellicott chrome, ninth confirmation, and the placement rule holds again. Ellicott's block at key 72 reports 1079 words of which roughly 983 are StudyLight page furniture (sub-menu, copyright statement, BibleSupport credit, contact boilerplate); the real comment is about 96 words on the participle in the last clause. Key 72 is both Ellicott's last block and the chapter's last key, so mark 14 does not discriminate between the two candidate rules the way 2john 1 did, but it is consistent with the rule 2john settled: the chrome rides Ellicott's LAST BLOCK, not the chapter's last verse. Confirmed now at joshua 14, deuteronomy 11, numbers 36, joshua 16, exodus 37, luke 11, 2john 1, acts 10, mark 14. The payload is a fixed constant, so the sizer overstates a chapter by roughly 983 words regardless of length: 2.2 percent here on 44,986 reported words, against 45 percent at exodus 37."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "14",
+      "note": "Fidelity self-grade for mark 14, all twelve entries A. Compression ratios prose-to-source: 1-2 0.19x, 3-9 0.15x, 10-11 0.60x, 12-16 0.10x, 17-21 0.35x, 22-25 0.18x, 26-31 0.27x, 32-42 0.09x, 43-52 0.11x, 53-59 0.18x, 60-65 0.27x, 66-72 0.15x. The 10-11 entry at 0.60x is the highest and the only one where the prose approaches the source in bulk, because the betrayal bargain draws only 874 words of catena across two keys; nothing there is invented, the span is simply short. The 32-42 entry at 0.09x is the lowest, 6,947 source words to 648, and it is the entry where selection did the most work: Gethsemane carries nine voices with substantial blocks and the choice of what to omit mattered more than the choice of what to say. Every span was tiled on the catena's own head boundaries rather than on a fixed verse count, which is why the entries range from two verses to eleven. Two entity flags were raised by the checker and both were spelling variants rather than imports: Melchizedek where the source writes Melchizedec, and Galileans where Bede writes Galilaeans. Both corrected to the source's forms. That makes the running tally of ENTITIES classes three, as recorded at acts 10: imported name (real fabrication), expanded abbreviation, spelling variant, of which only the first is invention."
     }
   ]
 }
