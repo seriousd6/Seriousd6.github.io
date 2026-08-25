@@ -26299,6 +26299,47 @@
         "2"
       ],
       "note": "Chapter-shaped observation. This chapter carries an unusual number of disputes in which the commentators name each other or name a position they are refusing, so the debates are documented rather than constructed. v.2: Clarke's sustained protest that making Mary Magdalene a prostitute is 'a vile slander', with Barnes agreeing and Lightfoot supplying the Talmudic material the tradition feeds on. v.3: Lightfoot derives Chuza from Haman's genealogy as an Idumean name; Gill contests it on the manuscripts, his edition reading Ciza. v.18: Clarke argues from classical usage that 'that which he seemeth to have' is self-contradictory and means simply what he hath, against Ellicott and Robertson who keep the appearance and make self-deception the point. v.20: Calvin names Ambrose and Chrysostom and rejects their charge that Mary acted from ambition. v.33: Clarke calls the rationalising reading -- that the maniac himself drove the swine over the cliff -- 'solemn trifling', warning that on such a plan there is nothing certain in the word of God."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "8",
+      "verses": [
+        "8"
+      ],
+      "note": "A FOURTH class of ENTITIES flag: silently correcting a corrupt source reading. Barnes at key 8 lists the interpreters who take the fault to lie with the covenant rather than the people, and the source prints the first name as Grottos. That is plainly an OCR corruption of Grotius, and I wrote Grotius without thinking about it. synthesis-fidelity.py flagged it, correctly, because the chapter's sources nowhere contain that string. The three classes recorded so far were imported name (real fabrication, as with Marcion at 1thessalonians 1 and Damascus at 1corinthians 8), expanded abbreviation (Athanasius for Athan at luke 11), and spelling variant (Judaea for Judea at acts 10, Melchizedek for Melchizedec at mark 14). This is none of those. The name I wrote is almost certainly the right one, and writing what the source actually says would put an obvious scanno into published prose. I resolved it by dropping the name and keeping the three that are grounded, which loses nothing of substance since the point is that Barnes names a party of interpreters, not which four they are. Worth stating as a rule: where the source has visibly corrupted a proper name, neither reproduce the corruption nor silently repair it, but write around it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "2",
+        "8",
+        "9",
+        "10"
+      ],
+      "note": "Residue in hebrews 8, including a placement made by a shared quotation rather than a shared subject. Jamieson is residue at keys 2 and 8, sixty-one and thirty-one words from 2 Corinthians 9 on sowing and reaping and on single-minded liberality; the two host keys are six apart, the same period measured at mark 14, acts 10 and numbers 29. Cyril of Jerusalem appears three times and only one is genuine. At key 1 his lecture on the Son's sitting at the right hand of the Father belongs exactly where the verse puts it, and it is the SAME block that stands at mark 14 key 62, which is also a session text: that is cross-chapter reuse of a relevant patristic block, not a defect, and should be distinguished from the intra-chapter duplication seen at mark 14, luke 11, acts 10, 1corinthians 5 and 1corinthians 8. At key 9 his passage on Paradise, the Fall and the Tree has nothing to do with the covenant made when God took the fathers by the hand. Key 10 is the interesting one. The block is an exhortation to chastity, and nothing in it concerns a law written on the heart; but it ENDS by quoting the promise, I will dwell in them and walk in them and I will be their God, which is also the substance of the host verse. So the block was almost certainly placed here because a phrase at its tail matches a phrase in the verse, not because its subject matches. That is a mechanism for how residue arrives, and it means a block whose last sentence fits the verse should be read from the beginning before it is trusted. Both keys 9 and 10 declared residue; the declaration is silent as usual, since VOICE_LABELS still refuses Cyril in excluded_voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "hebrews",
+      "chapter": "8",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott chrome, thirteenth confirmation, and the 200-word truncation strikes four more blocks. The Ellicott block at key 13 reports 1061 words of which about 147 are real comment and about 914 are StudyLight furniture; key 13 is again both Ellicott's last block and the chapter's last key, consistent at every one of joshua 14, deuteronomy 11, numbers 36, joshua 16, exodus 37, luke 11, 2john 1, acts 10, mark 14, numbers 29, 1corinthians 5, 1corinthians 8 and hebrews 8. The chrome payload has now been measured between about 914 and about 985 words in every instance, which is consistent with a single fixed page template. The 200-word cap hits Cyril at keys 1 and 10 and Gill at keys 4 and 7, all four ending mid-sentence, while Calvin at 202 and 203 end cleanly and are natural lengths; that is the same signature as 1corinthians 5 and 1corinthians 8, and the third consecutive chapter in which the cap lands on more than one voice. Cyril's truncation at key 1 costs something real here, since the block breaks off in the middle of quoting Hebrews 1:3, the last of the testimonies he is assembling."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "hebrews",
+      "chapter": "8",
+      "note": "Fidelity self-grade for hebrews 8, all six entries A after the Grottos correction. Ratios 0.12x, 0.13x, 0.14x, 0.15x, 0.13x and 0.12x against the raw span source, the most even distribution of any chapter this worker has written, which reflects a chapter whose thirteen verses carry roughly equal weight rather than clustering. Six entries rather than five because the closing quotation from Jeremiah divides naturally at the promises, and running verses 10 to 13 as one entry would have buried the argument about the word new under the covenant promises. The chapter is carried by Calvin more than by anyone else, and in a specific way worth recording: three times he states an objection against the argument he is expounding and then answers it. At verse 7 he asks how blame lying in the people can be transferred to God's covenant; at verse 8 he asks whether the apostle has not turned a prophecy about the whole Law to a question about ceremonies; at verse 2 he asks whether calling the heavenly tabernacle true implies that Moses's was false. That habit gave three of the six entries their centre, and it is the reason the prose names him so often. The other structural feature is that this chapter's commentators disagree by counting rather than by contradicting: the promise of pardon is Ellicott's third, Barnes's fourth, and Wesley's first, each numbering the same clause within a different scheme. I have let those stand side by side rather than harmonising them, since the disagreement is real and the schemes are stated openly in each source."
     }
   ]
 }
