@@ -24283,6 +24283,68 @@
       "book": "1timothy",
       "chapter": "4",
       "note": "failed fidelity (self-graded); reverted, attempt kept at scratchpad/rejected/1timothy-4-20260825-041505"
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "14",
+      "verses": [
+        "12"
+      ],
+      "note": "Jamieson, Fausset and Brown residue at key 12: 83 words of JFB on Moses rehearsing the golden calf to humble Israel (Deuteronomy 9), filed under Joshua 14:12. Declared in excluded_voices on the 10-12 entry and omitted silently from the prose. NEW SHAPE, and it corrects the single-pointer model I have been building: the identical 83-word block, byte for byte, also appears at joshua 15 keys 2, 8 and 14 in cow-sources/jfb/joshua.json. Four host keys, one donor block, no advance in the donor text at all. Contrast romans 13 and 2corinthians 13, where consecutive residue keys drew consecutive donor verses. So residue placement is not always a pointer that walks the donor; here one block is stamped repeatedly. Within a chapter the stride is 6 host keys (joshua 15: 2, 8, 14) but the phase differs by chapter (joshua 14: 12 alone). The block ends on a complete sentence, so this is not one of the truncated-fragment cases."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "14",
+      "verses": [
+        "15"
+      ],
+      "note": "Charles Ellicott block at key 15 is about 1,240 words of which only the first ~250 are commentary; the rest is scrape chrome, site navigation, a stylesheet and a commentary index. Omitted silently. The usable part is the argument that Arba is a personal name and the note that the rest-from-war clause sits more naturally at Joshua 11:23."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "14",
+      "note": "Keil and Delitzsch blocks in this chapter are capped at exactly 200 words at seven keys (2, 4, 7, 9, 10, 13, 14), each cut off mid-sentence. This is a scrape truncation, not an authorial habit, and it means the K and D material available for any given key understates what he actually wrote. Worth checking whether the 200-word cap is global to the keil-delitzsch corpus before anyone treats a short K and D block as thin evidence."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "joshua",
+      "chapter": "14",
+      "verses": [
+        "7",
+        "10"
+      ],
+      "note": "How long the conquest ran. Ellicott derives seven years from the two ages in Caleb's speech: the spies went out in the second year of the Exodus, about 38 and a half years before the crossing, so Caleb was 78 at the Jordan and 85 at the division. Calvin, without showing his working, calls this the fifth year since they entered the land. Both stand in the prose; neither is corrected, since the chapter gives no basis for choosing and Ellicott himself calls his the only direct evidence there is."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "14",
+      "verses": [
+        "13"
+      ],
+      "note": "Calvin does something in this chapter worth preserving: he offers a solution to the problem that Hebron is Caleb's and also a Levitical city and city of refuge, namely that the Levites received only a right of residence, and then argues himself out of it from Joshua 20:7 and Joshua 21:9-13, concluding their title was as absolute as anywhere else and that a distribution by lot wronged nobody. The retraction is in the prose because a witness abandoning his own answer is a fact about the witness."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "14",
+      "note": "Self-graded A on all four pericope entries, read back against the source blocks span by span. vv.1-5, 3812 source words to 650 (0.17x); vv.6-9, 6042 to 642 (0.11x); vv.10-12, 1092 to 648 (0.59x); vv.13-15, 3167 to 650 (0.21x). All four are distillations, well under the 0.84x corpus median, so there is no expansion pressure anywhere in the chapter. Every attribution was checked against the block it came from. Matthew Henry is named in the 10-12 and 13-15 entries although his only head in the chapter is at key 6; his block runs the whole Caleb narrative through verse 15, which is the documented spill-across-keys case, and the material used is genuinely in it. Two voices were kept off ground I could not source: no critic quoted inside a witness is named in the prose, so the tradition Gill takes from a father is attributed to Gill reporting it rather than to the father."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "14",
+      "note": "Operational hazard, not a text finding. This session's container was reclaimed mid-chapter and the entire scratchpad went with it, losing three of four finished entries for 2corinthians 13 plus the whole per-chapter build harness. Nothing was recoverable and the chapter went back to the queue untouched, which is the intended failure mode but a full batch of work wasted. The cause is that the harness a worker builds for a chapter, the build script, the dumper and the trimmer, lives only in gitignored scratchpad and is reinvented from scratch every chapter. It took a substantial part of this run to rebuild it. A tracked scaffold under scripts or tools would make a container loss cost one chapter's prose instead of the prose plus the tooling. Note that synthesis-loop.py finish commits only chapter blobs and the notebook, so such a scaffold has to be landed on its own."
     }
   ]
 }
