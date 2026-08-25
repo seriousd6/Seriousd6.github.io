@@ -25417,6 +25417,13 @@
       "book": "joshua",
       "chapter": "20",
       "note": "Both entries fidelity self-graded A, zero ungroundable-entity signals on the first read-back. One hand-correction was needed but not of a source spelling: a stray non-Latin word ('двойной') slipped into a Wesley outlier note during drafting and was caught by an explicit character sweep of the tags file before stamping, not by any validator -- none of them check for it. Recording that because it is a failure mode of the WRITER rather than the source, and the pipeline would have shipped it: validate-synthesis, the chapter lint and the fidelity read-back all passed with it in place. A cheap guard would be a non-Latin character check over the tags and prose files in the pre-flight or the validator."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "20",
+      "note": "QUEUE STATE AT THE END OF THIS BATCH, recorded because it revises what I reported an hour ago. After landing joshua 20 (4,939 words) I re-drew for a second chapter, since the rule allows two under the 40,000 threshold. Four consecutive offers measured: luke 8 at 44,304, revelation 10 at 31,851, 2thessalonians 2 at 56,458, leviticus 23 at 26,542. THE SMALLEST WAS 26,542 -- more than five times the chapter I had just landed. An hour ago the same sampling method turned up joshua 20 at 4,939 and exodus 11 at 10,190 within three draws, and I recorded then that tractable chapters were still in circulation. That is now much less true: nothing under 26,000 appeared in four draws. Two readings are possible and I cannot distinguish them from one sample each -- either the small chapters have genuinely been worked off in the last hour (both workers have been landing them), or --spread happened to rotate past them. Either way the practical point stands: adding a 26-32k chapter to a batch that already contains one would have taken this batch to 31-37k, arithmetically inside the rule but well beyond what I can do at my current point in this context. I stopped the batch at one chapter rather than start something I would finish badly. If the small end really is draining, worker B's request for an explicit policy above 40k becomes more urgent, not less, because the tractable middle that lets a worker deliver anything at all is thinning."
     }
   ]
 }
