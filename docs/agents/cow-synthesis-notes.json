@@ -26187,6 +26187,48 @@
         "1"
       ],
       "note": "Henry's Concise appended to his Exposition again -- SEVENTH confirmed book. Also a new variant here: at k5 the Henry block is ENTIRELY Concise (414 words covering vv.5-14 in summary), with no Exposition at all, while k1, k3, k9 and k11 carry Exposition with Concise appended. So the defect is not uniform within a chapter, and a key can yield summary-only Henry."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "8",
+      "verses": [
+        "12"
+      ],
+      "note": "FABRICATION CAUGHT: Damascus. Writing the 12-13 entry I had Robertson supply the proof that injuring a brother injures Christ from the words spoken to Saul on the road to Damascus. Robertson's block says only that Jesus had said to Saul that he was persecuting him when he persecuted his disciples, citing Acts 9:5. The road, and the city, are mine. Nothing in the chapter's sources names Damascus, and synthesis-fidelity.py flagged it as an ungroundable entity. Removed from both prose and tags. This is the second true import I have made in this stretch of work, after Marcion at 1thessalonians 1, and the two have the same shape: a familiar scene supplied around a bare source reference, in each case a detail so well known that it did not feel like invention while I was writing it. That is precisely why the check is worth more than my confidence. The other flag in this chapter, Athenaeus, was only a spelling variant, since Henry writes Athenaeus with the ligature; the running tally of ENTITIES classes therefore stands at three, imported name, expanded abbreviation and spelling variant, and this chapter produced one of the first class and one of the third in the same run."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "4",
+        "5",
+        "6",
+        "10",
+        "12"
+      ],
+      "note": "Residue and truncation in 1corinthians 8, and a full-block displacement that 1corinthians 5 only half showed. Tertullian at key 1 is 352 words wholly on 1 Corinthians 11:3-10, the head of every man and the woman's power on her head because of the angels, with nothing whatever on this chapter; declared and excluded. That is the clean case of what 1corinthians 5 showed in mixed form, where his block there was two thirds chapter 4 and one third genuine. So Tertullian blocks in this epistle are displaced by a whole chapter or more, sometimes wholly and sometimes partly, and the partial case is the dangerous one because the genuine tail is easy to miss. Cyril of Jerusalem appears at keys 5 and 6 as the SAME 200-word block, his tenth catechetical lecture on the Lordship of the Son. I took key 6 as the genuine placement, since the verse there reads one Lord Jesus Christ, and declared key 5 residue; that is the fifth chapter in which one block sits at two keys. Jamieson is residue at keys 6 and 12, seventeen and thirty-four words from Acts 20 and its neighbourhood, and the host keys are again six apart. The 200-word harvest truncation strikes six blocks here as it did in 1corinthians 5: Gill at 1 and 6, Lightfoot at 4 and 10, Cyril at 5 and 6, every one ending mid-sentence, while Calvin at 203 and Ellicott at 196 end cleanly and are natural lengths."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "8",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott chrome, twelfth confirmation, and the second consecutive chapter where my dump helper nearly hid the real comment. His block at key 13 reports 1219 words, of which about 305 are real and about 914 are StudyLight furniture. Key 13 is again both Ellicott's last block and the chapter's last key, consistent every time since 2john 1 settled the placement rule. Confirmed now at joshua 14, deuteronomy 11, numbers 36, joshua 16, exodus 37, luke 11, 2john 1, acts 10, mark 14, numbers 29, 1corinthians 5 and 1corinthians 8. As at 1corinthians 5, the per-block word cap in my dump tool truncates before the chrome begins and so displays nothing at all for the block, which reads as an absent voice rather than a buried one. I now grep the raw JSON for the chrome marker and slice the block at it before writing any entry that covers a chapter's last key. Worth stating as a standing rule for the loop rather than a note about one chapter: a block whose dump output is empty is not necessarily a silent voice, and a block whose reported length is far above its neighbours should be sliced at the marker before it is judged."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "8",
+      "note": "Fidelity self-grade for 1corinthians 8, all five entries A after the Damascus correction. Ratios 0.07x, 0.09x, 0.13x, 0.16x and 0.11x against the raw span source; 31,573 words over thirteen verses reduced to five pericope entries. As at 1corinthians 5, the compression is severe enough that the real risk is omission rather than invention, so the disagreements set the shape of every entry and the tags carry the full account of each voice. The chapter is unusually rich in explicit disagreement between named commentators, which is what made it writable at this ratio: Clarke reports Lightfoot's rendering of an idol is nothing and rejects it, Calvin rejects Erasmus's rendering of the same clause, Ellicott reports and rejects Stanley's sense for not yet, Ellicott prefers a variant reading familiarity against the received conscience while Henry, Barnes, Gill, Clarke and Wesley all expound the received word, Ellicott says the last verse of the 9-11 span is NOT a question while Calvin says expressly that he reads it interrogatively, Clarke says a man for whom Christ died may perish and admits no quibble while Barnes answers that a tendency may be arrested, and Calvin alone calls the closing vow a hyperbole. Two convergences also worth recording as convergences rather than repetition: Clarke names Lightfoot as his authority for the rabbinic material on entering idol temples, and Lightfoot in the same span supplies that material himself, so the two are one witness and a source rather than two witnesses; and Ellicott and Robertson independently adopt the same variant at verse 7."
     }
   ]
 }
