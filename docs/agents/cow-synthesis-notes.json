@@ -23779,6 +23779,98 @@
         "11"
       ],
       "note": "Convergences the debates field cannot express. (1) Robertson and Calvin independently recover the philosophical background of the verb at v2, both explaining that the Stoics held the wise man should be without passion while the opposing school required a measured feeling, and both placing this word with the second; neither cites the other, and Calvin then doubts the philosophical sense is what is wanted while Robertson keeps it. (2) THREE voices independently make the same defensive move on 'the days of his flesh' -- Calvin, Gill and Barnes each go out of their way to deny that the phrase implies the flesh has since been laid aside, Calvin calling those who so conclude 'fanatical men who dream', Gill noting the flesh after the resurrection, Barnes saying the human nature remains but is glorified. Three independent refutations of one inference suggests the inference was actually being drawn somewhere. (3) Calvin and Barnes reach the same application of v8 by different routes, both observing that prosperity leaves men self-confident and ungoverned -- Calvin's 'in prosperity we exult as with loose reins', Barnes's 'in prosperity we forget it; we become self-confident and rebellious' -- and both concluding that affliction is what teaches submission."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "hebrews",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "6"
+      ],
+      "note": "CORRECTION to the detection recipe recorded in the previous note on this chapter. The loose regex proposed there -- matching a bare father's name anywhere in a block -- produces FALSE POSITIVES on citation lists, and the very next chapter demonstrated it. Run against 2timothy 3 it fired twice, both times inside Charles Ellicott's own prose where he was naming authorities: at key 14 on 'Augustine, and the Vulgate' in a list of textual witnesses, and at key 16 on 'such teachers as Origen, Theodoret, Grotius, Luther, Meyer, Ellicott, and Alford'. The second is the dangerous one: it sits 58 words into a 2,668-word block, so a worker trusting the screen would have concluded that Ellicott contributed 58 words to the most important verse in the chapter and discarded 2,610 words of genuine Ellicott on the inspiration of scripture. Note the irony -- this is the same error the SPLITTER made at 1timothy 2, mistaking a name inside a citation for a new speaker. THE FIX: a real embedded block announces itself, whereas a citation name sits mid-sentence between commas. Require the name to be followed by a colon and optionally a section number, or to be preceded by a CHAPTER header: /(?:CHAPTER\\s+[0-9]+\\s+)?(?:Cyril of Jerusalem|Chrysostom|Augustine|Theodoret|Origen|Athanasius|Ambrose|Jerome|Bede|Theophylact|Basil|Gregory)\\s*:\\s*(?:[0-9]+\\s*\\.)?/ plus a separate /CHAPTER\\s+[0-9]+/ pass, ignoring matches at or near offset 0 (a commentator's own chapter heading). Verified: this tightened form returns ZERO hits on 2timothy 3, and still catches every true case -- both Wesley/Cyril blocks at hebrews 5 and the Calvin/Cyril block at 1thessalonians 3:13. Use the tightened form, not the one in the earlier note."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "Jamieson donor residue, FIFTEENTH consecutive chapter, and again from a single donor chapter: all three blocks are on 1 CORINTHIANS 15. Key 5 (205 words) on the natural or animal-souled body against the spiritual body, quoting Gen 2:7 (1 Cor 15:44-45); key 11 (223 words) on 'flesh and blood' of the same corruptible nature (15:50); key 17 (187 words) on Hosea 13:14 as freely quoted at 15:55. Contribution to 2 Timothy 3: zero. Declared as excluded_voices at entries 3, 10 and 16. The single-donor pattern now holds in four consecutive chapters (1 Cor 12, 1 Cor 8, 2 Cor 6-7, 1 Cor 15), which suggests the residue is being pulled from whole neighbouring files rather than scattered at random."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "17"
+      ],
+      "note": "Scrape chrome, TWENTIETH consecutive chapter. Ellicott at key 17 carries roughly 150 real words of 1,111; the rest is StudyLight footer, CSS, inline JavaScript and a commentary index. Key 17 IS the chapter-final key here, so like 1thessalonians 3 and hebrews 5 this instance does NOT discriminate between 'last key of the voice's stream' and 'chapter-final key'; only 3john 1 has so far separated the two, and it favoured the stream rule. Gill is separately truncated at the 200-word cap at keys 2, 13 and 16."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "14",
+        "16"
+      ],
+      "note": "The tightened embedded-voice screen was run on this chapter as a pre-flight step and returned ZERO hits, which is the correct answer -- but the LOOSE version proposed in the first hebrews 5 note returned two, both false positives inside Charles Ellicott's own prose where he names authorities. At key 14 it fired on 'Augustine, and the Vulgate' in a list of textual witnesses; at key 16 on 'such teachers as Origen, Theodoret, Grotius, Luther, Meyer, Ellicott, and Alford'. The second sits 58 words into a 2,668-word block, so a worker trusting the loose screen would have concluded Ellicott contributed 58 words to the chapter's most important verse and discarded 2,610 words of genuine exposition on the inspiration of scripture. A correction note with the tightened regex has been filed against hebrews 5; use that form. Recording the case here too because this is where the false positive actually occurred and where a reader of THIS chapter's tags would want to know that Ellicott's very large block at key 16 is entirely his own."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "10",
+        "14",
+        "16"
+      ],
+      "note": "Self-graded A on all six entries. Every attribution traced to the named commentator's own block before writing. Two places where care was needed, both arising from citation lists rather than from source defects: (1) Ellicott's block at key 14 names Chrysostom and Augustine as witnesses for the singular reading, and Chrysostom is a real corpus voice who is NOT declared at entry 14; the prose therefore says 'the Latin and Syriac versions' and does not name him, since naming him would attribute to him a position drawn from Ellicott's report rather than from his own block. (2) Ellicott's block at key 16 names Origen among the expositors preferring the predicative rendering; Origen is likewise a corpus voice name, and after the spurious-Origen defect recorded at 1timothy 2 the risk of echoing such a name is not hypothetical, so the prose refers to 'a line of expositors' instead."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "16"
+      ],
+      "note": "The chapter's central verse divides the corpus three ways over two separate questions. ON THE RENDERING: Ellicott and Clarke both prefer 'every scripture inspired by God is also profitable', Ellicott on the authority of the Syriac and Vulgate plus a line of expositors and on an exegetical ground of his own -- that a declaration of the inspiration of the Jewish scriptures would have been uncalled for, since a trained Jew of that century would never have dreamt of doubting it and nothing preceding provokes the assertion -- and Clarke because the conjunction is dropped by almost all versions and many fathers. Barnes keeps the received reading and treats the verse as the apostle's solemn testimony to the inspiration of the whole older canon. Robertson refuses to decide, laying out the absent article, the examples running both ways, and the missing copula which may be inserted before the conjunction or after it, and concluding that grammatical usage permits either. ON THE EXTENT: Clarke, Barnes and Ellicott all restrict 'all scripture' to the Old Testament, since the New was neither collected nor complete; GILL ALONE extends it to the New as well, holding that most of it was written by then and that the principle covers what remained to be written. Ellicott alone occupies a middle position, restricting the subject while noting that his preferred rendering does not exclude the recent compositions whose divine origin the writer knew."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "14",
+        "17"
+      ],
+      "note": "Two further splits worth keeping. (1) At v14, 'knowing of whom thou hast learned them' turns on whether the Greek pronoun is singular or plural, the older authorities being nearly balanced. Ellicott adopts the singular, refers it to the apostle, and explicitly REJECTS the reading that finds Lois and Eunice here, on the grounds that such a reminiscence is too slight for so solemn an exhortation and is covered by the next verse anyway. Barnes adopts precisely the rejected reading and builds a doctrine on it -- that receiving truth from a parent's lips is a strong reason for adhering to it, since a parent has no motive to deceive and better opportunity to examine what is true -- while carefully adding that this is not the highest motive and does not bind a man to what he later finds erroneous. Robertson widens the list further to the Old Testament prophets, the apostle, Eunice and Lois together. Wesley keeps the singular. (2) At v17, 'the man of God' is taken by Ellicott as no official designation at all but the Christian generally, and by Clarke as the preacher who derives his commission from God; Gill splits the difference, allowing anyone in special relation to God while holding the title passed over from the Old Testament prophet and belongs especially to a minister."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2timothy",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "10",
+        "16"
+      ],
+      "note": "Convergences the debates field cannot express. (1) FOUR voices independently place 'the last days' over the whole gospel age rather than at its end -- Ellicott arguing it from 1 John 2:18 and the rabbinic two-age scheme, Wesley, Calvin and Henry simply assuming it -- against what Ellicott reports as the majority of commentators. Only Clarke keeps a Jewish-state reading open. That is a four-to-one split in which the majority position outside the corpus is the minority inside it. (2) Barnes and Gill independently cite the same rabbinic tradition on teaching children the scriptures, Barnes giving the maxim that a boy of five should study them and the saying that a father who does not teach his son when the child begins to talk 'seems to bury him', Gill citing Philo for instruction 'from their very infancy'. (3) Robertson's aside at v15 -- 'Would that Christian parents took like pains today' -- and Henry's 'the greatest kindness we can do to children is to make them early to know the Bible' reach the same application from opposite ends of the corpus and eighteen centuries apart from the text."
     }
   ]
 }
