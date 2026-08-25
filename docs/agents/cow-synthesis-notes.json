@@ -24477,6 +24477,86 @@
         "17"
       ],
       "note": "Chapter shape: 18 keys, one contiguous run 1-18, tiled into eight pericopes 1-2 | 3-5 | 6-7 | 8-10 | 11-12 | 13-14 | 15-16 | 17-18. Nine voice labels present, eight usable. Reported usable source 34,575 words; real figure 33,357 after removing 983 words of Ellicott page-dump and the Jamieson stride artefact. Compression by entry: 13.8:1, 5.1:1, 9.1:1, 8.5:1, 3.9:1, 3.9:1, 4.5:1, 3.9:1. Entry 1 sits well above the norm and entries 11, 13 and 17 well below, and in both directions the cause is filing rather than content. Key 1 carries Barnes's whole introduction to the epistle and Clarke's whole preface on the date question -- roughly 5,900 words of material about the LETTER rather than about verse 1 -- which inflates that entry's nominal ratio; the low ratios at the end of the chapter are simply thin keys, verse 17 having only 404 words across five voices. All eight entries returned PAD 0.0 percent from the audit gate."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "3",
+        "9",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson, Fausset and Brown residue at four keys, and this is the cleanest confirmation yet of the advancing-pointer model. Donor is NUMBERS 21 throughout, and it advances monotonically: key 3 holds JFB on 21:1 (the Canaanite king of Arad and the way of the spies), key 9 on 21:6 (the fiery serpents), key 21 on 21:16 (Beer, that is a well), key 27 on 21:21-24 (Sihon's refusal and the Amorite conquest). Host keys are 3, 9, 21, 27 - all congruent to 3 modulo 6. Host strides are 6, 12, 6; donor strides are 5, 10, 5. That is exactly five donor verses per six host keys, the same ratio recorded for judges 17, mark 11 and romans 13, and the double gap on the host side (key 15 empty) is matched by a double gap on the donor side (verse 11 skipped). Donor earlier than host again: ten for ten. Two of the four blocks begin mid-sentence, key 3 with a bare 'rather,' and key 21 with 'that is, a well' - the sixth and seventh truncated fragments on record, both consistent with a byte offset rather than a block index."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "note": "Reconciling this chapter with joshua 14, recorded yesterday: there are TWO residue regimes, not one. Here the donor text advances five verses per six host keys. In joshua 14 and 15 the same 83-word Deuteronomy 9 block is stamped byte-identically at four host keys with no advance at all. Both chapters show the period-6 host stride; what differs is whether the donor pointer moves. Anyone modelling this should treat advance and period as separate parameters, and should not generalise from a single chapter."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "31",
+        "32"
+      ],
+      "note": "Scrape chrome again, and in the same slot as joshua 14. The Charles Ellicott block at key 31 runs about 1,240 words of which only the first 230 are commentary; the remainder is site navigation, a stylesheet and a commentary index. John Gill's block at key 32 also trails off into 'Next: Deuteronomy Chapter 12 Sacred Texts' and index links. Both omitted silently. This is the second consecutive chapter where the chrome attaches to Ellicott's block under the LAST key of the chapter, which suggests the corruption is positional in the scrape rather than random; worth a corpus scan of final-key Ellicott blocks before anyone trusts their word counts."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "19",
+        "20"
+      ],
+      "note": "The source omits keys 19 and 20 entirely - the catena runs 1 to 18 and then 21 to 32, though Deuteronomy 11 has 32 verses and 19 and 20 are ordinary text (teaching the words to the children, writing them on the door posts). This constrains the pericope tiling in a way that is not obvious: synthesis_qa.coverage_problems flags any entry covering a verse absent from the source, so a natural 18-21 span is illegal. The chapter is therefore tiled 1-7, 8-12, 13-17, 18 alone, 21-25, 26-28, 29-32, with verse 18 standing by itself. It has ample material for that (1,438 source words), so nothing was lost, but a chapter with an interior gap over a thin verse would have no legal tiling at all. Worth knowing before someone hits that case."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "18"
+      ],
+      "note": "John Wesley's note on verse 18 is an almost verbatim abridgement of Matthew Henry's three rules - the store-house image, the hand always in view, the frontlets that cannot be avoided, and the priority of teaching children over the rules of decency or the calling they are to live by. The prose says so rather than presenting the two as independent agreement, because counting them as two witnesses would inflate the apparent consensus. Anyone reading Wesley elsewhere in this book should expect the same dependence and check Henry before treating a Wesley note as a second opinion."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "26"
+      ],
+      "note": "Adam Clarke turns verse 26 into an explicit argument for a free, self-determining will: precepts backed by promise and threat presuppose a power to obey or refuse, since an agent that is not free can neither be punished nor rewarded, as a falling stone is neither. He holds that such a will is declared throughout Scripture, cannot be overridden by anything short of omnipotence, and is never overridden by God even so. Calvin and Gill are in the same pericope on the same verse and do not engage it - Calvin reads the blessing and curse as the seal of hope and fear, Gill as the law under two aspects. The prose records the argument and says plainly that the other witnesses do not answer it, rather than manufacturing a debate the sources did not have."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "verses": [
+        "27",
+        "32"
+      ],
+      "note": "Two Keil and Delitzsch blocks in this chapter carry no comment at all on the span they sit in: the block under key 27 is verse text for 27 through 31 plus one sentence about verses 31-32, and the block under key 32 is the bare text of verse 32. Keil is therefore left unnamed in the 26-28 and 29-32 entries although he heads a block in each. This is a declared omission, not an oversight - naming him would have meant inventing a view he did not state there - and it is the same division of labour as excluded_voices: the writer judges, the tooling records. Note this is distinct from residue: the blocks are genuinely his and genuinely on this chapter, they simply say nothing."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "deuteronomy",
+      "chapter": "11",
+      "note": "Self-graded A on all seven pericope entries, read back span by span against the source blocks. vv.1-7, 2832 source words to 649 (0.23x); vv.8-12, 3392 to 643 (0.19x); vv.13-17, 1771 to 647 (0.37x); v.18 alone, 1438 to 641 (0.45x); vv.21-25, 822 to 647 (0.79x); vv.26-28, 1881 to 634 (0.34x); vv.29-32, 2765 to 646 (0.23x). All seven are distillations and all fall under the 0.84x corpus median, so there is no expansion pressure anywhere. The tightest is 21-25 at 0.79x, which has only four sourced voices, and it was written to what those four actually say rather than padded toward the others. Matthew Henry is named in the 13-17 and 26-28 entries although his heads are at keys 1, 8, 18 and 26; his blocks run across whole sections, which is the documented spill-across-keys case, and the material used is in them. Three polemical passages were rendered by their argument rather than their invective - Calvin against those who lull themselves into security, Gill and Wesley against a wider application of the promise about the sole of the foot - and no critic quoted inside a witness is named in the prose."
     }
   ]
 }
