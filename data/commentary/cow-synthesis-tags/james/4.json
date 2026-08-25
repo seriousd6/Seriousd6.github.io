@@ -10,111 +10,98 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "From whence come wars and fightings among you? ye lust, and have not: ye kill, and desire to have",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Strife traced to its inward root — not national wars but quarrels within the community ('wars,' polemoi, the settled hostility; 'fightings,' machai, the outbreaks); 'come they not hence, even of your lusts that war in your members?' — disordered cravings for pleasure and gain warring in body and soul; the pleasures first warring against the soul, the heart the battlefield before the assembly (Wesley); contrasted with the peaceable heavenly wisdom of ch3 (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whence come wars and fightings",
-   "of your lusts",
-   "that war in your members",
-   "strife from within"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes prefers domestic broils and party strifes, traces the same spirit from a brawl in the street to the conquests of Alexander and Napoleon, and turns the comparison into an indictment of the illustrious conqueror; Ellicott quotes Bishop Moberly's figure of desires posted and picketed all over us like soldiers in the devil's army; Robertson distinguishes the chronic campaign from the separate battles and remarks that modern church disturbances are old enough in practice."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The fruitless cycle of ungoverned desire — 'ye lust, and have not' (craving never satisfied); 'ye kill, and desire to have, and cannot obtain' (desire so violent it is murderous, in the heart by hatred, Wesley, yet failing); 'ye fight and war, yet ye have not'; wicked lust insatiable (Calvin); the diagnosis 'because ye ask not' — grasping by force replaces asking God, and a man full of evil desire cannot pray (Wesley); the failure self-inflicted."
+    "summary": "Gill canvasses national wars, theological disputes and oppressive lawsuits before settling on quarrels about honours and riches; Calvin denies the literal sense altogether, since the language is metaphorical and the military terms stand for lusts mustered in the heart, and holds that the soul indulging wicked lust is insatiable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the wars literally, citing Josephus for the insurrections raised against the Romans and the factions that massacred each other, and notes that the Christians of the time had neither power nor political consequence enough to raise contentions; Wesley marks the members as the first seat of the war, whence proceeds the war of man with man, king with king, nation with nation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry agrees the Jews were a seditious people whom the corrupt Christians addressed here had joined, draws the moral that what is sheltered under a pretence of zeal for God often comes from pride and revenge, and warns that when we speed not in prayer it is because we ask amiss."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the second verse read ye kill or ye envy?",
+    "positions": [
+     {
+      "view": "ye kill; the substitution has no manuscript authority and was conjecture",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "ye envy; to kill does in no way suit the context",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "ye kill stands, but a full stop after it removes the difficulty",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "ye kill, understood of the heart, since he that hateth his brother is a murderer",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "the partition of Poland by Austria, Prussia and Russia is a stain upon their justice and policy which no lapse of time can wash out"
+   }
+  ],
   "themes": [
-   "ye lust, and have not",
-   "ye kill, and desire to have",
-   "ye have not because ye ask not",
-   "craving without prayer"
+   "From whence come wars and fightings among you? come they not hence, even of your lusts that war in your members?",
+   "Ye lust, and have not: ye kill, and desire to have, and cannot obtain: ye fight and war, yet ye have not, because ye ask not."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The failure of selfish prayer — 'ye ask' (some do pray) yet 'receive not, because ye ask amiss' (kakos, evilly, with a corrupt aim) 'that ye may consume it upon your lusts' (squander God's gifts on their pleasures); such would make God the minister of their own lusts (Calvin); not enough to ask, one must ask rightly, for God will not lend his bounty to feed sin."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye ask, and receive not",
-   "ye ask amiss",
-   "consume it upon your lusts",
-   "selfish prayer refused"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -124,48 +111,88 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "Ye ask, and receive not, because ye ask amiss: the friendship of the world is enmity with God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Worldliness as spiritual adultery — 'ye adulteresses' (the better text, feminine; not literal but the prophets' figure, as Israel was espoused to God, loving the world is unfaithfulness to one's divine husband); 'the friendship of the world is enmity with God' (courting the world's favour, pleasures, and approval is war with God, the two loves cannot coexist); not coolness but active 'enmity,' the worldling an enemy of God."
+    "summary": "Barnes observes that men who go to war pray, and that the covetous keep a form of worship while asking success in engagements founded on covetousness, so that unanswered prayer proves the motive wrong rather than the promise false; Ellicott says the received reading of the address is wrong and only the feminine should stand, and denies any middle ground between God and the world; Robertson agrees the masculine is spurious and Syrian, and thinks the literal sense of the charge more in harmony with the preceding verses."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the address figuratively, of those who set their affections on the world instead of God, and reports versions that omit the feminine; Calvin says they wished to make God the minister of their own lusts, recalls that Pliny ridiculed men who so abuse the ears of God, and insists that those who take the words literally do not sufficiently observe the context."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses the phrase as asking evilly, calls the idiom Jewish, and reports a suggestion that the prayer meant was for the conversion of the heathen, on whose failure the petitioners thought it lawful to extirpate them; he leans to the figurative reading of the address but allows that perhaps something more than spiritual adultery is intended, and ends that when the world gets into the church, the church becomes a painted sepulchre; Wesley reads it of those who have broken faith with their rightful spouse."
    }
   ],
   "debates": [
    {
-    "question": "Are 'adulterers and adulteresses' literal or figurative?",
-    "sides": [
+    "question": "Is the charge of adultery literal or figurative?",
+    "positions": [
      {
-      "position": "figurative — spiritual unfaithfulness to God (the prophets' image of Israel's idolatry); the true text reads 'adulteresses' only",
-      "holders": [
-       "Ellicott",
-       "Robertson",
-       "Calvin",
-       "most"
+      "view": "figurative, of a covenant with God broken by love of the world",
+      "held_by": [
+       "John Calvin",
+       "John Gill",
+       "Albert Barnes",
+       "Charles Ellicott",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "probably literal, and so may take in more than Christians",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "figurative, but perhaps something more is intended",
+      "held_by": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "renunciation of the world is the earliest severance from it, not a forsaking of it when tired and clogged with its delights"
+   }
+  ],
   "themes": [
-   "ye adulteresses",
-   "friendship of the world",
-   "enmity with God",
-   "spiritual adultery"
+   "Ye ask, and receive not, because ye ask amiss, that ye may consume it upon your lusts.",
+   "Ye adulterers and adulteresses, know ye not that the friendship of the world is enmity with God? whosoever therefore will be a friend of the world is the enemy of God."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "5": {
@@ -174,96 +201,89 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "5-6",
+  "pericope_label": "The spirit that dwelleth in us lusteth to envy: but he giveth more grace",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "One of the hardest verses — no O.T. text reads exactly thus, most taking it as a free poetic summary of Scripture's teaching (Ex 20:5; Gen 6:5) that God is jealous and man prone to envy; the debated question whose 'spirit': the human spirit (man's natural bent 'lusteth to envy,' grasping desire) or the Holy Spirit 'that dwelleth in us' who 'jealously yearns' over us for undivided love (Ellicott); both readings pressing the readers from the world to God."
+    "summary": "Barnes reports that few passages have given expositors more perplexity, rejects the escapes offered, and concludes the writer condensed into his own words a truth taught everywhere rather than citing a particular place; he also refuses to make the spirit the Holy Spirit, since the Greek will not well bear it. Ellicott is unbothered by the missing text, since the substance sufficed without a slavish adherence to the form, and offers the jealous sense of the Spirit regarding us as his own; Robertson finds no passage precisely like it, floats the possibility that the citation points forward to the proverb quoted next, and says there is no way to decide positively."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin cuts the knot by referring the citation to what has already been said, that the friendship of the world is adverse to God, and reads the clause as a question arguing from the contrary, since envy proves malignity while the Spirit proves himself bountiful; Gill records only that some have looked in the New Testament and some in an apocryphal book."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the verse exceedingly obscure, lists four candidate texts, and observes that there is not a critic in Europe who has considered the passage and not been puzzled by it; he reads the sense contrary to the received translation, since the Spirit dwelling in a genuine Christian excites strong desires against envy."
    }
   ],
   "debates": [
    {
-    "question": "Whose 'spirit' lusts to envy in 4:5?",
-    "sides": [
+    "question": "Whose spirit lusts to envy?",
+    "positions": [
      {
-      "position": "the Holy Spirit who dwells in us and jealously yearns over us for our undivided love (rebuking spiritual adultery)",
-      "holders": [
-       "Ellicott",
-       "many moderns"
+      "view": "man's own spirit, our disposition as we are by nature",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "the human spirit, man's natural bent, which tends toward envious, grasping desire",
-      "holders": [
-       "the AV rendering",
-       "Calvin (worldliness)"
+      "view": "the Holy Spirit, and the sense is the opposite of the received rendering",
+      "held_by": [
+       "Adam Clarke",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "the Holy Spirit, yearning after us jealously in a good sense",
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "he prints his paraphrase while refusing to claim it is right, since no critic in Europe has escaped being puzzled by the verse"
+   }
+  ],
   "themes": [
-   "the scripture saith",
-   "the spirit that dwelleth in us",
-   "lusteth to envy",
-   "a disputed text"
+   "Do ye think that the scripture saith in vain, The spirit that dwelleth in us lusteth to envy?",
+   "But he giveth more grace. Wherefore he saith, God resisteth the proud, but giveth grace unto the humble."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "From rebuke to grace — 'he giveth more grace' (meizona, greater grace for the greater need, God's supply outstripping the demand); quoting Prov 3:34, 'God resisteth the proud' (antitassetai, sets himself in battle array against the haughty, the spirit of worldly striving) 'but giveth grace unto the humble' (the lowly who own their need); pride the root of the envious affections rebuked (Wesley); the hinge grounding the commands that follow."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he giveth more grace",
-   "God resisteth the proud",
-   "grace unto the humble",
-   "humility the channel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
@@ -273,152 +293,88 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The double command — 'submit yourselves to God' (hypotagete, a military word, to range oneself under God's command, the submission of the humble heart on which grace rests) and 'resist the devil' (stand firm against the tempter, instigator of the pride condemned); the promise 'he will flee from you' (Satan retreats from steadfast resistance, God never letting him conquer the man who keeps resisting, Clarke); submission first, empowering the resistance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "submit yourselves to God",
-   "resist the devil",
-   "he will flee from you",
-   "yield and stand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The gracious invitation with cleansing — 'draw nigh to God, and he will draw nigh to you' (God meets the seeking soul, like the father running to the prodigal, Luke 15:20; ready, not reluctant); priestly washings — 'cleanse your hands, ye sinners' (the outward deeds purged from evil) and 'purify your hearts, ye double minded' (the inward man purged of divided allegiance, trying to love both God and the world); a thoroughgoing repentance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "draw nigh to God",
-   "he will draw nigh to you",
-   "cleanse your hands",
-   "purify your hearts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The call to godly sorrow — 'be afflicted, and mourn, and weep' (not outward show but real inward grief over sin in tears; wretchedness, sorrow, tears the three steps of the homeward way, Ellicott); 'let your laughter be turned to mourning' (the carnal mirth of those who lived in pleasure exchanged for penitent sadness; the allusion to Christ's woe on those who laugh, Luke 6:25, Calvin); the godly sorrow that works repentance, not gloom for its own sake."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be afflicted, and mourn, and weep",
-   "laughter to mourning",
-   "joy to heaviness",
-   "godly sorrow"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "7-10",
+  "pericope_label": "Submit yourselves therefore to God. Resist the devil, and he will flee from you",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The commands gathered into a promise — 'humble yourselves in the sight of the Lord' (take the lowly place before God, owning one's sin in real contrition, not show before men; the root of submit/draw near/cleanse/mourn); 'and he shall lift you up' (God exalts the humble, the way down the way up; his peculiar work to raise the lowly, Calvin, fulfilling v6); echoing Christ (Mt 18:4) and Peter (1 Pet 5:6); the gospel paradox against worldly striving for eminence."
+    "summary": "Robertson counts ten aorist imperatives in the four verses and hears urgency in each, glossing the first two as military terms; Ellicott calls submission the hardest advice of all to a man reliant on himself and then finds the one place where pride may be a stimulant for good, quotes the Shepherd of Hermas that the devil can fight but cannot conquer, and takes the verse as proof of the personality of Satan; Barnes prefers direct resistance to argument, since none who yield are safe and none who refuse are unsafe, and takes the hands for the instruments by which we execute what the heart devises."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains the connecting particle from the bounty of the Spirit, requires humility rather than obedience in general, raises against himself the objection that daily experience refutes the promise that Satan flees, and answers that fleeing means being routed, since however often he returns he departs vanquished; he also distinguishes the salutary sorrow that leads to repentance from the mourning denounced as a curse. Gill applies the submission to worldly things and lists the acknowledgments of unworthiness that Abraham, Job and the publican made."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke notes the delicacy of the expression that when a soul sets out to seek God, God sets out to meet it, divides cleansing and sanctification between the hands and the heart, thinks the address to sinners begins a new appeal that should have started a new verse, and doubts such charges of dissolute living could have been addressed to a church few in number, without wealth, and persecuted."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the devil in fact flee from those who resist him?",
+    "positions": [
+     {
+      "view": "the promise seems refuted by experience, so fleeing must mean being routed and returning vanquished",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "he flees beaten and ashamed; he can fight but cannot conquer",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "resistance is safe because no one who yields in the least is safe",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "the vocabulary of laughter and pleasure shows a dissolute life is meant, which he doubts could describe a small, poor and persecuted Christian body"
+   }
+  ],
   "themes": [
-   "humble yourselves",
-   "in the sight of the Lord",
-   "he shall lift you up",
-   "abasement to exaltation"
+   "Submit yourselves therefore to God. Resist the devil, and he will flee from you.",
+   "Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",
+   "Be afflicted, and mourn, and weep: let your laughter be turned to mourning, and your joy to heaviness.",
+   "Humble yourselves in the sight of the Lord, and he shall lift you up."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "11": {
@@ -432,72 +388,90 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "11-12",
+  "pericope_label": "Speak not evil one of another, brethren: there is one lawgiver, who is able to save and to destroy",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sin of evil-speaking — 'speak not evil one of another' (me katalaleite, do not slander or backbite a fellow-Christian, the wrong sharpened by 'brethren'); springing from proud hypocrisy that exalts self by disparaging others (Calvin); the argument — 'he that speaketh evil of his brother... speaketh evil of the law, and judgeth the law' (the law commands love of neighbour; the slanderer condemns and sets himself above it, not its doer but its judge), a usurpation affronting the Lawgiver."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "speak not evil one of another",
-   "speaketh evil of the law",
-   "judgeth the law",
-   "slander a usurpation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes takes the law for the law of Christ and reads the whole against the quarrel over the binding force of the Mosaic ceremonies, drawing from it the principle that no laws bind the conscience but those Christ ordained; Ellicott defines the fault as setting up our own tribunals, in which we are at once prosecutor, witness, law, lawgiver and judge, and quotes Bengel that it is not our part to judge since we cannot carry out our sentence; Robertson condemns the tone of superiority to law and notes the emphatic pronoun in the closing question."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The sole Lawgiver and Judge — 'there is one lawgiver' (heis, excluding all others; many texts add 'and judge'; God alone the source of law and rightful judge) 'who is able to save and to destroy' (holding every soul's eternal destiny, Mt 10:28); the withering 'who art thou that judgest another?' (what right has a creature — a poor, weak, dying worm, Wesley — to usurp God's seat?); the ground of the prohibition of slander."
+    "summary": "Calvin finds beneath the fault a disease innate in human nature, that every one would have all others live according to his own fancy, and holds that so much is taken from the law as a man claims of authority over his brethren; Gill lists the forms slander takes and applies the title of lawgiver to the Father and to the Son alike."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the rabbinic maxim that no one speaks evil of his brother without denying God, traces detraction to the devil's calumny in Eden, and dissents from the majority reading, holding that the law meant is the Jewish law and the lawgiver God Almighty, since he finds but few references to Christ or his gospel in the epistle; Wesley answers the closing question with a poor, dying worm."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the verb to cover anything that may hurt another, so that evil things must not be spoken even when true unless there is necessary occasion, and reads the offence against the law as censuring a brother over things the law has left indifferent."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What law is judged, and who is the one lawgiver?",
+    "positions": [
+     {
+      "view": "the law of Christ, and the lawgiver is Christ, the legislator of the church",
+      "held_by": [
+       "Albert Barnes",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "the Jewish law, and the lawgiver is God Almighty as the Jews acknowledged him",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "the title belongs to the Father and to the Son alike",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "from the closest examination of the epistle he finds but few references to Jesus Christ or his gospel, the writer keeping his Jewish creed and maxims constantly in view"
+   }
+  ],
   "themes": [
-   "one lawgiver",
-   "able to save and to destroy",
-   "who art thou that judgest",
-   "God alone judges"
+   "Speak not evil one of another, brethren. He that speaketh evil of his brother, and judgeth his brother, speaketh evil of the law, and judgeth the law: but if thou judge the law, thou art not a doer of the law, but a judge.",
+   "There is one lawgiver, who is able to save and to destroy: who art thou that judgest another?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "13": {
@@ -507,74 +481,82 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The presumption of the self-confident planner — 'go to now' (age nyn, a call to attention); 'ye that say, To day or to morrow we will go... and buy and sell, and get gain' (mapping the future in confident detail — time, place, duration, business, profit — as if all lay in one's control); the fault not in trade itself but in planning 'as if' one had many years at one's disposal (Calvin), leaving God out of the reckoning (Barnes)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "go to now, ye that say",
-   "we will go... and get gain",
-   "presumptuous planning",
-   "the future as one's own"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "13-14",
+  "pericope_label": "Go to now, ye that say, To day or to morrow we will go into such a city: ye know not what shall be on the morrow",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The planner's frailty exposed by two facts — 'ye know not what shall be on the morrow' (the schemer cannot foresee the next day while planning a year ahead); and 'what is your life? It is even a vapour' (atmis, a mist or puff of breath, visible a moment then gone; frail, fleeting, uncertain, life utterly precarious, Clarke); how absurd to dispose of years when one cannot command the next hour; meant not to paralyse but to humble."
+    "summary": "Barnes calls the opening a phrase designed to arrest notice, quotes a description of the eastern trader who repeats his circuit for years until he can return home prosperous, gathers the classical writers on the uncertainty of the future, and presses that no solid hope can be built on a mist; Ellicott sharpens the figure so that the vapour is not merely life but the men themselves and all belonging to them; Robertson finds the merchant in the verb and adds the touch that the speaker would be pointing at the city on a map."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin insists that the form of speaking is not what is reproved but the arrogance of mind behind it, since the servants of God everywhere speak unconditionally of the future, and locates the fault in men who claimed a whole year while having no moment in their own power; Gill puts it plainly, that no man can secure a day, an hour, or a moment."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke matches the opening to the Hebrew word for come, describes the Jewish traffic carried on camels from Tyre to Rome, tells the rabbinic story of the man warned by the angel of death that he would die within thirty days, and sets Pliny, the son of Sirach and Homer's generations of leaves side by side, asking which borrowed from which."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is it the life or the man that is called a vapour?",
+    "positions": [
+     {
+      "view": "the life, on which no solid hope can be built",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "the men themselves and all belonging to them, which is the sharper thrust",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "no scruple ought to be entertained as though it were a sin to omit the qualifying clause, since Scripture's holy servants speak unconditionally of future things"
+   }
+  ],
   "themes": [
-   "ye know not the morrow",
-   "what is your life?",
-   "a vapour that vanisheth",
-   "the brevity of life"
+   "Go to now, ye that say, To day or to morrow we will go into such a city, and continue there a year, and buy and sell, and get gain:",
+   "Whereas ye know not what shall be on the morrow. For what is your life? It is even a vapour, that appeareth for a little time, and then vanisheth away."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "15": {
@@ -586,110 +568,87 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "15-17",
+  "pericope_label": "For that ye ought to say, If the Lord will, we shall live, and do this, or that",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The cure for presumption — 'ye ought to say, If the Lord will, we shall live, and do this' (the language proper to a creature, replacing the confident boasting); a twofold acknowledgment (Calvin): 'if we live' (our continuance depends on God) and 'if the Lord will' (the success of all we undertake lies in his hand); not a mere formula but a genuine recognition of absolute dependence (Barnes); not forbidding planning but sanctifying it under God's will."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye ought to say",
-   "if the Lord will",
-   "we shall live, and do this",
-   "plans under God's will"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Barnes denies that the words must always be said in so many words, since that might become a mere ostentatious form offensive by constant unmeaning repetition, locates the boasting in reliance on one's own skill and sagacity, and quotes Cotton Mather's principle that the ability to do good imposes an obligation to do it; Ellicott presses the tense of the condition, if the Lord have willed it, distinguishes the doctrine from fatalism in even its best form, and identifies the boasting with the pride of life rather than the innocent gladness of living; Robertson calls the formula the proper attitude of mind and not a charm to be uttered always in words, and notes the word for vaunting is common in Aristophanes."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The evil of self-confident boasting — 'ye rejoice in your boastings' (alazoniais, braggart talk, the same word as 'the pride of life,' 1 John 2:16; taking pride in confident self-reliant schemes as if the future were secured by their own wisdom); the absolute verdict 'all such rejoicing is evil' (not merely imprudent but impious, robbing God of his government, Calvin; the boast of independence from God, Clarke); the sin in the object of the joy, glorying in self-sufficiency."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye rejoice in your boastings",
-   "all such rejoicing is evil",
-   "proud self-reliance",
-   "glorying in self"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Calvin finds a twofold condition, if we live and if the Lord will, and specifies that the will meant is God's governing counsel rather than the will expressed in the law; he holds that more than a passing speech is condemned, since their minds were inebriated with vanity so as to disregard God, and answers the contemptuous reply that such warnings tell men only what they know by charging that they sinned through contempt and not ignorance. Gill extends the closing maxim to all the good the epistle has urged."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sin of known duty left undone — 'to him that knoweth to do good, and doeth it not, to him it is sin' (the one who knows the right yet fails to do it is guilty; knowledge of duty making the omission culpable); sin not only doing the forbidden but failing the good one ought (the sin of omission); 'the ability to do good imposes an obligation to do it' (Cotton Mather, Barnes); knowledge increasing, not excusing, the condemnation (Wesley)."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke brings two illustrations, the rabbinic bridegroom who answered the bystanders that he would do it whether the Lord willed or not and died that night, and the man in Lucian killed by a falling tile while promising to come to supper; he hears in the boasting men exulting that they are free of superstition and can live independently of God, and quotes an old English book on those who thank God for their unholiness."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Must the qualifying clause actually be spoken?",
+    "positions": [
+     {
+      "view": "no; saying it always would become an ostentatious and unmeaning form",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "the practice deserves careful attention, though omitting it is no sin",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "the words themselves are what ought to be said in place of the boast",
+      "held_by": [
+       "Charles Ellicott",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "a heathen satirist's joke about a man killed by a falling tile should shame the Christian who presumes on tomorrow"
+   }
+  ],
   "themes": [
-   "him that knoweth to do good",
-   "doeth it not",
-   "to him it is sin",
-   "the sin of omission"
+   "For that ye ought to say, If the Lord will, we shall live, and do this, or that.",
+   "But now ye rejoice in your boastings: all such rejoicing is evil.",
+   "Therefore to him that knoweth to do good, and doeth it not, to him it is sin."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  }
 }
