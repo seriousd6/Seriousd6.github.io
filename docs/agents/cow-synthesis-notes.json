@@ -25712,6 +25712,35 @@
       "book": "joshua",
       "chapter": "3",
       "note": "All three entries fidelity self-graded A. ONE SIGNAL ON THE FIRST READ-BACK AND IT WAS MINE AGAIN: I wrote 'Luther's German' where the source says only 'Luther, whose version is...', and the entity check flagged German as ungroundable. Corrected to 'Luther's' and the re-run came back clean. THIS IS THE THIRD CONSECUTIVE CHAPTER in which the only defect found at the end was introduced by the writer rather than inherited from the scrape -- joshua 20 a stray non-Latin word, titus 3 the coinage 'Epirot', here the unwarranted nationality 'German'. All three are the same failure: supplying a plausible detail the source does not contain. Two of the three were caught by the entity check and one was not (the non-Latin word, which no validator examines). I am recording the pattern rather than the individual slips because three in a row is a trend and not an accident, and because it says something specific about where a tiring writer errs: not in the substance of the attributions, which have held up, but in small ornamental additions around them."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2john",
+      "chapter": "1",
+      "verses": [
+        "2",
+        "3",
+        "8"
+      ],
+      "note": "Three residue blocks, and all three are the small-fragment shape rather than whole displaced comments. (a) Jamieson at key 2, 31 words: 'Although I might have confidence even in the flesh... I having, but not using, confidence in the flesh' -- that is PHILIPPIANS 3:4, and it begins mid-sentence with a bare enumerator '4.'. (b) Jamieson at key 8, 276 words: 'be found at His coming again... the righteousness of faith... Paul was transported from legal bondage into Christian freedom at once' -- PHILIPPIANS 3:6-9. So both Jamieson blocks in this two-page epistle come from the SAME donor chapter, Philippians 3, and they advance within it (3:4 then 3:6-9) while the host advances 2 -> 8. Donor-earlier-than-host holds again, twenty for twenty, and the donor-advance-with-host-advance pattern holds in miniature. (c) Cyril of Jerusalem at key 3, 140 words, on 'the book of the generation of Jesus Christ, the Son of David' and the two fatherhoods -- a catechetical lecture on MATTHEW 1:1, collided onto this verse almost certainly by the phrase 'the Son of the Father' in 2 John 3. That is the phrase-collision mechanism of note 2305 operating on a three-word overlap. Worth noting that this is a 13-verse epistle with 9 voice heads and it still carries three foreign blocks; the contamination rate does not fall with chapter size."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2john",
+      "chapter": "1",
+      "verses": [
+        "3"
+      ],
+      "note": "VOICE_LABELS prefix bug, hit again and now costing real declarations. The validator rejected excluded_voices naming 'Cyril of Jerusalem' at 2john 1:1 with 'names a block absent from this entry's source', exactly as at 1timothy 3 and 2thessalonians 3. Cause unchanged: synthesis_qa.VOICE_LABELS carries the bare label 'Cyril' and its regex wants the label followed by a colon, so the head 'Cyril of Jerusalem:' is never split out and the declaration cannot be matched. The practical cost is now clear and it is not cosmetic. In this chapter the block IS residue and IS correctly kept out of the prose, but the tags file cannot say so -- a reader of the data has no way to learn that a Cyril of Jerusalem block sits under verse 3 and was deliberately excluded. Every chapter where he appears has the same silent gap, and by the earlier corpus scan that is 241 chapters for Cyril of Jerusalem alone, plus Augustine of Hippo at 174 and C.H. Spurgeon at 150. The fix is small: VOICE_LABELS needs the full head strings, or the matcher needs to accept a label that is a prefix of the head. I have not made it, because synthesis-loop.py finish resets hard to origin/master and commits only chapter blobs plus the notebook, so a scripts/ change cannot ride along with a chapter -- it has to be landed separately by someone who can push a non-chapter commit."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "2john",
+      "chapter": "1",
+      "note": "Fidelity self-grade A on all 5 entries; lint 5/5 A with zero UNSOURCED, NOISE, META or SLOT flags. Ratios: vv.1-3 9940w->649w (0.07x); 4-6 3828->650 (0.17x); 7-9 4229->648 (0.15x); 10-11 1907->573 (0.30x); 12-13 4357->588 (0.13x). 13 keys, 9 voice heads, 24,261 words reported by the sizer. ELLICOTT CHROME, seventh confirmation, and this one settles the placement rule cleanly: Ellicott appears at keys 1, 4 and 12 only, and the chrome is on key 12 -- his LAST block -- while the chapter's last key is 13. Every earlier instance either coincided with the chapter end or was ambiguous; here the two come apart and the rule holds unambiguously. The chrome is ~983 words of StudyLight CSS and nav furniture out of a 1,548-word block, so Ellicott's real contribution at that verse is about 565 words. Deducting it plus the ~450 words of residue puts genuine usable content near 22,800 rather than the reported 24,261 -- a 6% overstatement, consistent with what I measured at luke 11 and far smaller than the 45% overstatement at exodus 37. The pattern across the three: the sizer's error is roughly a fixed ~1,000 words per chapter wherever Ellicott's last block was scraped this way, so it is negligible on long chapters and severe on short ones. No fabrications caught this time; the entity check was silent on all five entries."
     }
   ]
 }
