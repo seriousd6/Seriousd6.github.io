@@ -7,520 +7,442 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Tertullian"
+   "John Calvin"
   ],
+  "range": "1-2",
+  "pericope_label": "That ye be not soon shaken in mind, as that the day of Christ is at hand",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul introduces his correction of their error with a tender, solemn appeal: 'we beseech (entreat) you, brethren, by (hyper — concerning, and by the authority of) the coming (parousia) of our Lord Jesus Christ' — the very subject of their confusion made the ground of his appeal; 'and by our gathering together (episynagoge — the assembling, the being gathered) unto him' — the great reunion of all the saints to Christ at his coming (cf. 1 Thessalonians 4:17), the longed-for ingathering of the redeemed (Barnes, Robertson, Calvin)."
+    "summary": "Barnes denies the opening is an adjuration at all, since Scripture does not adjure in view of an event, and gives three reasons for thinking a letter had been forged in the apostles' name; he illustrates the alarm from a year in which seventeen people were committed to one asylum expecting the Lord's appearing. Ellicott reads the preposition as the stronger for the sake of, distinguishes the tenses of shaken and troubled, and would insert a so before soon, since the readers had been shaken already in an unconscionably short time. Robertson notes the rare noun for the gathering, found in the Maccabees and on a stone at Syme, and takes it of the rapture."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Tertullian (with Cyril): the coming and the gathering belong together — Christ's appearing and the assembling of his people to him are the one great event on which the believer's hope is fixed, the hope Paul makes the ground of his entreaty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we beseech you, brethren, by the coming of our Lord Jesus Christ",
-   "and by our gathering together unto him",
-   "the appeal by the coming and the gathering",
-   "the great reunion of the saints to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul's caution against their agitation: 'be not soon (quickly, hastily) shaken (saleuthenai — shaken as by a wave or earthquake, unsettled) in mind, or be troubled (thrown into alarm)' — they had been unsettled and frightened by a false notion; the three channels by which the error came or was claimed to come: 'by spirit (a pretended prophecy or revelation), nor by word (a spoken report or sermon), nor by letter as from us (a forged letter purporting to be Paul's)' — each falsely appealing to apostolic authority; the error itself being 'that the day of Christ is at hand (enesteken — is present, has actually arrived, is now upon us),' not merely near but already come (Barnes, Robertson, Calvin)."
+    "summary": "Gill keeps to a misunderstanding of the earlier letter; Calvin treats the words as an earnest entreaty, since it is customary to adjure by what we revere, and looks behind the error to its use, that Satan, unable to overturn the hope of a resurrection openly, undermined it by promising a near day, as in the dreams of Lactantius and the old Chiliasts."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke joins both senses of the disputed clause, the former letter misconceived and any other letter pretending to be from the apostles, and raises the question that governs the rest of the chapter, whether the coming meant is the judgment on the Jewish polity or the end of the world, answering that the prophecy has both in view."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the opening as an oath and an appeal to what the readers themselves hope for, gathers all the saints of both testaments into the promised meeting, and allows that some may have pretended a private revelation."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the opening phrase a solemn adjuration?",
+    "positions": [
+     {
+      "view": "yes, an oath by what the readers hope for",
+      "held_by": [
+       "Matthew Henry",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "yes, and stronger than the simple by: for the sake of",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "no; it means simply concerning his coming",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "in a single year seventeen people were admitted to one asylum whose minds had given way under the expectation that the Lord was about to appear"
+   }
+  ],
   "themes": [
-   "that ye be not soon shaken in mind, or be troubled",
-   "neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand",
-   "the warning not to be shaken",
-   "the false claim that the day had come"
+   "Now we beseech you, brethren, by the coming of our Lord Jesus Christ, and by our gathering together unto him,",
+   "That ye be not soon shaken in mind, or be troubled, neither by spirit, nor by word, nor by letter as from us, as that the day of Christ is at hand."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "3": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "3",
+  "pericope_label": "Except there come a falling away first, and that man of sin be revealed, the son of perdition",
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin, Gill, and (with them) Henry and Barnes hold the 'man of sin... son of perdition' to be not a single individual but a kingdom or succession extending through many ages — the papal power, the Roman Antichrist, which Calvin argues from 1 John 2:18 (Antichrist already at work in many) and from the 'mystery of iniquity' working secretly then to be revealed openly. Henry: he is the 'man of sin' for his egregious wickedness and promotion of sin, the 'son of perdition' as devoted to destruction and the destroyer of many; the names and characters (v.4) 'very exactly agree' to the papal state. The 'falling away (apostasia)' is a great spiritual defection from sound doctrine, worship, and holy life, gradual but general, out of which the man of sin arises."
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Barnes surveys and rejects the escapes offered for the missing antecedent, adopts Erasmus's judgment that the article marks the great and before-predicted apostasy, and argues from Daniel and the Apocalypse that a succession rather than a single man is meant; Ellicott says the article changes the purpose of the sentence from new prophecy to reminder, insists the apostates must once have held the faith since men cannot fall from ground they never occupied, and reads the figure as a rival Christ rather than a mere opponent; Robertson widens the warning past conversation and letter to tricks of any kind."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke defines the word as a dereliction of the essential principles of religious truth and concedes that what the apostasy means has not yet, and perhaps never will be, answered to general satisfaction; his survey of the identifications runs from Caligula and Simon Magus to Mohammed, Napoleon and the papacy, and he reports Calmet's protest against the want of candour in Protestant writers."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Cyril of Jerusalem and the fathers hold the man of sin to be a single future personal Antichrist, who comes after the falling away — the hatred and divisions among Christians making room for him — and who, as the abomination of desolation (Daniel; Matthew 24:15), sits in the temple shewing himself to be God; the apostasy precedes his personal manifestation in the last days."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "A third reading (Warfield, noted by Robertson) takes the man of lawlessness as the Roman imperial line with its rage for deification (the emperor-cult), the Jewish state being the restraining power; Robertson and Ellicott stress that the figure, though described in personal terms, may be embodied in a succession (Ellicott on v.7: the prophecy is satisfied if 'he that withholdeth' is a whole succession of persons)."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem supplies the mechanism rather than the identification: hatred of the brethren makes room for Antichrist, since the devil prepares the divisions beforehand so that he who is to come may be acceptable."
    }
   ],
   "debates": [
    {
-    "question": "Who is 'the man of sin, the son of perdition'?",
-    "sides": [
+    "question": "Does the man of sin mean one man or a succession?",
+    "positions": [
      {
-      "position": "The papal power — a kingdom/succession extending through many ages (the historicist Protestant view)",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Henry",
-       "Barnes",
-       "Wesley"
+      "view": "a succession, as king and beast stand for lines and empires in the prophets",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "A single future personal Antichrist, revealed after the apostasy in the last days",
-      "holders": [
-       "Cyril of Jerusalem",
-       "the Fathers"
-      ]
-     },
-     {
-      "position": "The Roman imperial line with its rage for deification (the emperor-cult)",
-      "holders": [
-       "Warfield (via Robertson)"
+      "view": "probably an actual individual impersonating the movement",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "he reports Calmet asking whether Protestant writers would be willing that Catholics should credit all the aspersions cast on Protestantism"
+   }
+  ],
   "themes": [
-   "except there come a falling away first, and that man of sin be revealed, the son of perdition",
-   "let no man deceive you by any means",
-   "the falling away and the man of sin",
-   "the crux of the man of sin's identity"
+   "Let no man deceive you by any means: for that day shall not come, except there come a falling away first, and that man of sin be revealed, the son of perdition;"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
+   "John Calvin"
   ],
+  "range": "4",
+  "pericope_label": "Who opposeth and exalteth himself above all that is called God, so that he sitteth in the temple of God",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The character of the man of sin: he 'opposeth (sets himself against, is the adversary) and exalteth himself above all that is called God, or that is worshipped (every object of worship)' — claiming a supremacy belonging to God alone; 'so that he as God sitteth in the temple of God, shewing himself that he is God' — the crowning impiety of arrogating divine honours. On 'the temple of God,' the grammatical-historical note both readings — figuratively the Christian church, or a literal temple — without forcing one (Barnes, Robertson)."
+    "prevalence": "majority",
+    "summary": "Barnes reads the temple as the Christian church as a society and applies the description to the papacy in detail, listing its claims over priesthood, kings and conscience and quoting the titles given the pope by Catholic writers without rebuke; Ellicott presses the word for temple to mean the sacred house itself, probably the Mercy Seat, yet denies a literal session was expected, and concludes that the great apostasy will not be atheistic but internal to the church; Robertson brings in Caligula's attempt to set his statue in the temple at Jerusalem."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin, Gill, and Henry take 'the temple of God' figuratively as the Christian church: the man of sin (the Papacy) usurps divine authority within the church, claiming honours due to God alone, the bishops of Rome having exalted themselves above God and earthly governors and received blasphemous titles ('Our Lord God the pope'). The seat 'in the temple of God' is thus the usurpation of God's authority in the church, not a literal building."
+    "prevalence": "single",
+    "summary": "Calvin uses the epithets structurally, since they set this kingdom in direct opposition to Christ's, which being spiritual makes the rival tyranny a tyranny over souls; he lists what Scripture reserves to God and finds the pope claiming every item of it, and raises a further variant turning on a single mistaken letter."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril and the fathers take 'the temple of God' literally — the personal Antichrist will sit in a rebuilt temple at Jerusalem (linked to the abomination of desolation, Daniel; Matthew 24:15), shewing himself to be God in the last days."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports the words as God wanting in the chief uncials and most versions, quotes an editor that they should most certainly be erased, and thinks the text reads better without them."
    }
   ],
   "debates": [
    {
-    "question": "What is 'the temple of God' in which the man of sin sits?",
-    "sides": [
+    "question": "Are the words as God part of the text?",
+    "positions": [
      {
-      "position": "Figuratively the Christian church — the Papacy usurping divine authority within it",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Henry",
-       "Barnes"
+      "view": "no; they should be erased",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "A literal rebuilt temple at Jerusalem, where the personal Antichrist sits",
-      "holders": [
-       "Cyril of Jerusalem",
-       "the Fathers"
+      "view": "doubtful, but the sense is not materially affected",
+      "held_by": [
+       "Albert Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "the great apostasy will most probably not become avowedly atheistic but will be an apostasy within the church, its head claiming the honours she pays to the living God"
+   }
+  ],
   "themes": [
-   "who opposeth and exalteth himself above all that is called God, or that is worshipped",
-   "so that he as God sitteth in the temple of God, shewing himself that he is God",
-   "the man of sin's blasphemous self-exaltation",
-   "the crux of the temple of God"
+   "Who opposeth and exalteth himself above all that is called God, or that is worshipped; so that he as God sitteth in the temple of God, shewing himself that he is God."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill",
+   "John Chrysostom",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem",
    "Matthew Henry"
   ],
+  "range": "5-7",
+  "pericope_label": "Now ye know what withholdeth: for the mystery of iniquity doth already work",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul recalls his earlier oral teaching: 'remember ye not, that, when I was yet with you, I told you these things?' — he had already, during his ministry at Thessalonica, instructed them about the apostasy and the man of sin; this was no new doctrine, and the brevity and allusiveness of his written words here are explained by the fuller teaching they had already received orally; the design being that, forewarned, they should not be stumbled or shaken when these things came (Barnes, Robertson, Calvin, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Remember ye not, that, when I was yet with you, I told you these things?",
-   "Paul's reminder of his prior teaching",
-   "the apostasy and man of sin no new doctrine",
-   "forewarned, not to be stumbled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The phrase 'what withholdeth (to katechon)' is neuter here, masculine in v.7 ('he that letteth, ho katechon') — a restraining principle or power, capable of being embodied in a person, then operating to hold back the man of sin's revealing 'that he might be revealed in his time (his appointed season),' only at the moment God has set. Barnes (with Chrysostom, Wesley) holds the restraint to be the civil power of Rome, whose removal (Constantine's transfer of the seat to Constantinople) would let the papal power rise; the early Christians so understood it and prayed for the empire's peace, knowing the man of sin would rise on its ruins."
+    "summary": "Barnes says much of the obscurity comes from an allusion to teaching now lost, argues the restraint must be outside the church and so takes it of civil power, reports that the primitive Christians prayed for the peace of the empire knowing the man of sin would rise on its ruins, and treats the word mystery as hidden rather than unintelligible; Ellicott notes the imperfect tense and the singular pronoun and suggests the writer may shrink from naming the withholder for fear the power should discover his prophecies; Robertson says plainly that we do not know what is meant."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin differs from Chrysostom: the restrainer is not the Roman Empire but the necessary diffusion of the gospel through all the world — the universal call of the Gentiles must run its course, grace being offered to all, before God gives loose rein to Antichrist and ripens the world's malice for vengeance; this is the delay until the career of the gospel is completed. (Gill notes and rejects two further views: the apostle Paul himself, and the grace/gifts of the Spirit.)"
+    "prevalence": "single",
+    "summary": "Calvin notes the mildness of the reproof, that it is fatherly to say only that they had let forgetfulness steal in upon a matter so useful."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that the writer speaks with great caution and does not wish to publish in writing what he had said in private, the hints dropped being enough to recall the whole."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the identification in a sentence, that the power supposed is the Roman empire, not named more plainly at the time, and holds that corruption of doctrine and worship came in by degrees while the apostles were still living."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom states the alternatives and decides for the Roman empire against the grace of the Spirit, on the grounds that the Spirit would have been named plainly and that the gifts have long since ceased; and he explains the obscurity as prudence, since to say openly that the empire would be dissolved would have got the writer overwhelmed as a pestilent person and all the faithful with him."
    }
   ],
   "debates": [
    {
-    "question": "What is the restraining power ('what withholdeth')?",
-    "sides": [
+    "question": "What is it that withholds the man of sin?",
+    "positions": [
      {
-      "position": "The Roman Empire / civil power, whose removal lets the man of sin rise",
-      "holders": [
-       "Chrysostom",
-       "Wesley",
-       "Barnes",
-       "Henry"
+      "view": "the Roman empire, named obscurely for prudence",
+      "held_by": [
+       "John Chrysostom",
+       "Matthew Henry",
+       "Albert Barnes"
       ]
      },
      {
-      "position": "The worldwide preaching of the gospel, which must run its course first",
-      "holders": [
-       "Calvin"
+      "view": "some present and tangible power the writer will not name in writing",
+      "held_by": [
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "The grace/gifts of the Spirit, or the apostle Paul himself (noted and rejected)",
-      "holders": [
-       "rejected by Chrysostom",
-       "Gill"
+      "view": "unknown; the clue is lost with the oral teaching",
+      "held_by": [
+       "A.T. Robertson",
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "And now ye know what withholdeth that he might be revealed in his time",
-   "the restraining power that holds back the man of sin",
-   "the crux of the restrainer",
-   "revealed only in his appointed time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The evil was already secretly at work: 'the mystery of iniquity (mysterion tes anomias — the secret of lawlessness, the hidden working of the apostate principle) doth already work (energeitai — is operative)' — even in Paul's day the seeds of the coming apostasy were silently growing; the restraining power ('he who now letteth,' masculine ho katechon) will continue to restrain 'until he be taken out of the way (removed from the midst),' and the prophecy is satisfied if 'he that withholdeth' proves to be a whole succession of persons, not one man (Barnes, Robertson, Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin and Henry: it is a 'mystery' because the wicked designs were concealed under fair shows and pretences of devotion; the corruption (Henry: of the Romish church) came in by degrees, secretly, the usurpation gradual not all at once — already begun in the apostles' day in the pride, ambition, and false teaching of men (the Nicolaitans, Diotrephes), shooting up in the sects that would choke God's field."
+    "voice": "John Chrysostom",
+    "claim": "the obscurity is deliberate: naming the Roman empire would have brought superfluous enmities and useless dangers on the writer and on all the faithful"
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "For the mystery of iniquity doth already work",
-   "only he who now letteth will let, until he be taken out of the way",
-   "the mystery of iniquity already working",
-   "secret growth until the restrainer is removed"
+   "Remember ye not, that, when I was yet with you, I told you these things?",
+   "And now ye know what withholdeth that he might be revealed in his time.",
+   "For the mystery of iniquity doth already work: only he who now letteth will let, until he be taken out of the way."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "8": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin"
   ],
+  "range": "8-10",
+  "pericope_label": "Whom the Lord shall consume with the spirit of his mouth: whose coming is after the working of Satan",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "When the restraint is removed, 'then shall that Wicked (the lawless one, ho anomos) be revealed' — fully manifested in his open lawlessness, no longer secret but disclosed; 'whom the Lord shall consume (analoi — destroy, do away with) with the spirit (breath) of his mouth' — by the mere breath of his mouth (cf. Isaiah 11:4), the word and Spirit of Christ; 'and shall destroy (katargesei — bring to nought, abolish) with the brightness (epiphaneia — the manifestation, the bright shining) of his coming' — the splendour of Christ's appearing utterly abolishing the lawless one (Barnes, Robertson)."
+    "prevalence": "majority",
+    "summary": "Barnes offers two readings of the breath of the mouth, the word spoken at the coming or the truth already spoken, granting that the most obvious interpretation refers both clauses to the same period, and insists the word rendered brightness means merely an appearing with no necessary idea of splendour; Ellicott restores the title the Lawless One, finds the point of the borrowed phrase in the perfect ease of the destruction, and says that when the true and the false Christ stand face to face there will be no possibility of delusion any more; Robertson calls the whole a grand fiasco and notes that the rival has his own presence and epiphany."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Cyril): the preaching of the gospel itself, the breath of Christ's mouth, begins even now to consume Antichrist's power, and the brightness of Christ's coming will at last abolish him entirely — a comfort to believers that the reign of the man of sin is temporary, its limits set by God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "and then shall that Wicked be revealed",
-   "whom the Lord shall consume with the spirit of his mouth, and shall destroy with the brightness of his coming",
-   "the revealing and destruction of the Wicked one",
-   "consumed by Christ's word and coming"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dark parody: 'whose coming (parousia — a coming that mimics Christ's own) is after (according to) the working (energeian — the energy, operation) of Satan' — the man of sin's manifestation empowered by Satan, an infernal counterfeit of the true Christ's coming; 'with all power and signs and lying wonders (terasin pseudous — wonders of falsehood, miracles that serve and confirm a lie)' — apparent miracles, whether real wonders wrought by Satan or deceptive shows, all in the service of falsehood (Barnes, Robertson, Calvin)."
+    "prevalence": "single",
+    "summary": "Calvin argues from contraries, that a power standing only by Satan's impostures must vanish as soon as Christ shines forth, since it reigns only in darkness; and holds Satan so limited that he cannot injure the elect at all, which he offers as a necessary consolation."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the wonders are 'lying' both in their source and their end — they deceive, leading men away from the truth; the Antichrist works signs to seduce, that even the elect, were it possible, might be deceived."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke will have only the gradual sense, since it is by the preaching of the truth that this power is exposed, so its death will not be sudden; and he keeps the distinction that these miracles are only appearances of what was real, while God sent real ones such as Satan cannot produce."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "even him, whose coming is after the working of Satan",
-   "with all power and signs and lying wonders",
-   "the man of sin's coming with satanic power",
-   "lying wonders that serve a lie"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The means and the objects: 'all deceivableness (every deceit, the whole art of deception) of unrighteousness in them that perish (the perishing)' — the man of sin's lies have full effect only on those who are perishing, the deception working on hearts already turned from truth; 'because they received not the love of the truth' — not merely the truth, but the love of it; they had no heart for the truth, did not welcome and cherish it, and so were left open to the lie; 'that they might be saved' — the love of the truth being the very means of salvation they refused, their ruin self-incurred (Barnes, Robertson, Calvin, Wesley)."
+    "question": "Why are the deceived deceived?",
+    "positions": [
+     {
+      "view": "the truth was offered and refused; the phrase implies nothing about predestination",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "the elect cannot be injured, this power having no strength except by God's permission",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "to be too indolent to examine whether a thing be true is already to reject the love of the truth, which is worse than not accepting the truth itself"
+   }
+  ],
   "themes": [
-   "and with all deceivableness of unrighteousness in them that perish",
-   "because they received not the love of the truth, that they might be saved",
-   "the deception of those who perish",
-   "ruin for refusing the love of the truth"
+   "And then shall that Wicked be revealed, whom the Lord shall consume with the spirit of his mouth, and shall destroy with the brightness of his coming:",
+   "Even him, whose coming is after the working of Satan with all power and signs and lying wonders,",
+   "And with all deceivableness of unrighteousness in them that perish; because they received not the love of the truth, that they might be saved."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "11": {
@@ -529,222 +451,174 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin"
   ],
+  "range": "11-12",
+  "pericope_label": "God shall send them strong delusion, that they should believe a lie",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The solemn statement: 'for this cause (because they refused the love of the truth) God shall send (pempei — sends) them strong delusion (energeian planes — a working of error, a powerful deceiving influence)' — God himself, in righteous judgment, gives them over to be deceived; not creating the lie or tempting to evil, but, in just retribution for their willful rejection of truth, withdrawing his restraining grace and giving them up to the delusion they chose — a judicial hardening (cf. Romans 1:24-28), permitting and ordering the deception as punishment (Barnes, Robertson)."
+    "summary": "Barnes admits the divine agency is distinctly recognised but argues that no positive influence need be supposed, since the force of the language is met by God withdrawing all restraint; he denies that the particle in the following verse must carry purpose, since it may mark result only, and holds it cannot be proved that God sends delusions in order that men may be damned. Ellicott describes the mechanism, that God takes away by his natural law the power of discerning true from false, cites Ahab and the lying spirit, corrects the tense and the rendering, and reads the following particle as purpose outright; Robertson calls it the definite judicial act of God."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the delusion is sent 'that they should believe a lie (the falsehood)' — having rejected the truth, they are justly left to embrace the lie; the punishment fits the sin, error being the righteous recompense for the despisers of truth, God ordering even their deception to his just ends."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "And for this cause God shall send them strong delusion, that they should believe a lie",
-   "God's judicial sending of strong delusion",
-   "judicial hardening, not authoring sin",
-   "error the recompense for despising truth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The purpose of the judicial delusion: 'that they all might be damned (krithosin — judged, condemned) who believed not the truth' — the end of God's giving them over is their just condemnation, judged for refusing to believe the truth set before them, their unbelief willful not innocent ignorance; 'but had pleasure (eudokesantes — took delight, found satisfaction) in unrighteousness' — the reason they refused the truth was that they loved sin, the will (not the intellect) the seat of their ruin, preferring iniquity and so rejecting the truth that condemned it (Barnes, Robertson, Calvin)."
+    "summary": "Gill will not have it a bare permission but a voluntary one, distinguishing the efficacy of error as a punishment for sin rather than a sin of which God could be the author; Calvin is the most positive, holding that God delivers over to a reprobate mind those he has appointed to destruction, and points to a specimen he takes to be already visible."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: they perish not from ignorance but from love of sin; having taken pleasure in unrighteousness, they would not receive the truth, and so are justly condemned — the moral root of unbelief laid bare."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke keeps the milder verb throughout, that God permits the delusion to occupy their minds, so that they are ever ready to receive any false Christ while rejecting the true, and makes their condemnation the effect of a refusal to believe grounded in love of their sins."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the particle in verse twelve express purpose or result?",
+    "positions": [
+     {
+      "view": "purpose: this is God's design in making them believe the lie",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "result only; it cannot be proved that God sends delusion in order that men be damned",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "a terrible combination when God and Satan are agreed to deceive a man, and yet an encouragement to see God using Satan for his own purposes"
+   }
+  ],
   "themes": [
-   "That they all might be damned who believed not the truth, but had pleasure in unrighteousness",
-   "the condemnation of those who loved unrighteousness",
-   "willful unbelief judged",
-   "pleasure in sin the root of unbelief"
+   "And for this cause God shall send them strong delusion, that they should believe a lie:",
+   "That they all might be damned who believed not the truth, but had pleasure in unrighteousness."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Charles Ellicott"
   ],
+  "range": "13-15",
+  "pericope_label": "God hath from the beginning chosen you to salvation: stand fast, and hold the traditions",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The turn from the perishing to the saved: 'but we are bound (owe it as a debt) to give thanks alway to God for you, brethren beloved of the Lord'; 'because God hath from the beginning (ap' arches — from eternity, or from the first) chosen (heilato — selected) you to salvation' — their salvation resting on God's choice; 'through sanctification of the Spirit and belief of the truth' — the election unto salvation by means of the Spirit's setting-apart and renewing work and the believing of the truth, the end salvation and the means the Spirit and faith (Barnes, Robertson)."
+    "summary": "Barnes draws four propositions from the one clause, that election, eternal election and personal election are all true and all proper grounds of thanksgiving, guarding it by the rule that no one has evidence of being chosen except as he has evidence of being sanctified; and he gives five reasons why the verse furnishes no authority for later traditions. Ellicott presses the tenses of beloved and chose, and argues that the exhortation to stand fast is in itself conclusive against irreversible predestination, while quoting Chrysostom with approval that the tradition of the church is worthy of belief without further question."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Gill): God's choosing 'from the beginning' is gracious, unconditional, eternal election to salvation — the security of the saved set in sharp contrast with the perishing of v.12; salvation flows from God's free choice, accomplished through the Spirit's sanctification and faith, not from foreseen merit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God hath from the beginning chosen you to salvation",
-   "through sanctification of the Spirit and belief of the truth",
-   "thanksgiving for their election to salvation",
-   "chosen through the Spirit and faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Election issues in calling: 'whereunto (to which salvation) he called you by our gospel' — God's eternal choice is carried out in time through the call of the gospel, Paul's preaching being the means by which God summoned them to the salvation he had chosen; 'by our gospel' the appointed instrument of the effectual call, election and calling joined (the one the eternal purpose, the other its execution); 'to the obtaining (peripoiesin — acquiring, gaining possession) of the glory of our Lord Jesus Christ' — the end being that believers should share in Christ's own glory (Barnes, Robertson, Calvin)."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke sets the order of grace out as six stages and argues from the sequence that the calling did not necessarily and irresistibly lead to faith, nor faith to sanctification, nor sanctification to glory, since a man might halt at any stage; he denies the verse can support traditions taken from neither Testament and spoken by neither prophet nor apostle."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the calling is unto a participation in the glory of the Lord Jesus Christ — believers are summoned by the gospel not merely to escape judgment but to obtain and share his glory, the high end of their election."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds the consolation in the remnant according to the election of grace, joins the end and the means so that we are not chosen because we were holy but that we might be holy, and refuses to let the doctrine excuse carelessness, since grace in election is so far from superseding our care that it should quicken us to the greatest resolution; on the traditions he allows the verse its force for its own time, the canon not yet being complete, and denies any argument from it now."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Whereunto he called you by our gospel",
-   "to the obtaining of the glory of our Lord Jesus Christ",
-   "the calling by the gospel",
-   "the goal of sharing Christ's glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's practical conclusion ('therefore,' from their election and calling): 'stand fast (steko — stand firm, hold your ground)' — being chosen and called, they are to be steadfast, not shaken by the false alarms or errors that troubled them; 'and hold (krateite — hold firmly, grasp, retain) the traditions (paradoseis — the teachings handed down, the body of apostolic instruction) which ye have been taught, whether by word (Paul's oral teaching when present) or our epistle (his letters)' — clinging to the apostolic doctrine itself, delivered both by speech and by writing, equally to be held (Barnes, Robertson, Calvin)."
+    "question": "Does the exhortation to stand fast tell against irreversible predestination?",
+    "positions": [
+     {
+      "view": "yes; it would be needless if they could not quit their ground",
+      "held_by": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "the doctrine stands, but should quicken diligence rather than excuse it",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "election, eternal and personal, is simply true and a ground of praise",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "he quotes Chrysostom with approval that not all tradition was delivered by letter and that both kinds are equally worthy of belief: it is tradition, ask no further questions"
+   }
+  ],
   "themes": [
-   "Therefore, brethren, stand fast, and hold the traditions which ye have been taught",
-   "whether by word, or our epistle",
-   "the charge to stand fast and hold the apostolic traditions",
-   "the apostolic teaching by word and letter"
+   "But we are bound to give thanks alway to God for you, brethren beloved of the Lord, because God hath from the beginning chosen you to salvation through sanctification of the Spirit and belief of the truth:",
+   "Whereunto he called you by our gospel, to the obtaining of the glory of our Lord Jesus Christ.",
+   "Therefore, brethren, stand fast, and hold the traditions which ye have been taught, whether by word, or our epistle."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -752,71 +626,84 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "16-17",
+  "pericope_label": "Now our Lord Jesus Christ himself, and God, even our Father, comfort your hearts",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul prays to both: 'now our Lord Jesus Christ himself, and God, even our Father' — Christ named first, then the Father, with (in the Greek) a singular verb following; the joint address with a singular verb a witness to the unity and equal dignity of the Son with the Father; God 'hath loved us, and hath given us everlasting consolation (aionian paraklesin — eternal comfort, comfort that does not fail) and good hope through grace' — the believer's comfort everlasting, resting on God's unchanging love, and the hope a well-grounded hope of glory given not by merit but freely through grace (Barnes, Robertson, Calvin, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "now our Lord Jesus Christ himself, and God, even our Father, which hath loved us",
-   "hath given us everlasting consolation and good hope through grace",
-   "the prayer to Christ and the Father",
-   "everlasting consolation and good hope by grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Barnes calls the prayer one really offered to the Saviour, language possible only to one who thought him divine, and turns the conjunction back on those who would use it to separate the Persons; he contrasts the joys of religion with every other kind, which fade and terminate at death; and he closes the chapter defending the apostles against the charge of having expected an imminent end. Ellicott denies the unusual order of names was designed to prove equality and suggests a climax instead, and joins hope to grace so closely that the prospect belongs to us only in grace; Robertson notes the singular participle and the remark that these letters never use a plural verb of two Persons together."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The content of Paul's prayer (the singular verb governing both Christ and the Father, v.16): 'comfort (parakalesai — console, encourage) your hearts, and stablish (sterixai — make firm, strengthen, confirm) you' — that God would both console them inwardly and steady them firmly; the first petition answering their troubled state (2:2), calming and comforting the hearts the false alarms and persecutions had shaken; 'in every good word and work' — establishing them in all right doctrine ('word') and right conduct ('work'), the establishing issuing in steadfast truth and holy living (Barnes, Robertson, Calvin)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin takes the ascription of a divine work as clear proof of Christ's divinity and infers that we obtain nothing from God unless we seek it in him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke sets the gospel's threefold testimony, believe, love, obey, against the maxim that believing the doctrines makes a man safe, since the faith of a devil may exist without loving obedience; and he closes by refusing to fix any specific meaning to the apostasy, the man of sin or the restrainer, having found it too difficult to satisfy himself."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes comfort and establishment reciprocal, since pleasure in the ways of God helps us persevere and steadiness is what makes the joys of religion possible, and asks what lies at the bottom of all our uneasiness but our unsteadiness; he grounds the hope on the love and promise of God and on experience, not on merit."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the prayer being addressed to Christ prove?",
+    "positions": [
+     {
+      "view": "his divinity, since such language is possible only of a divine person",
+      "held_by": [
+       "Albert Barnes",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "nothing by design; equality is established only incidentally, the order forming a climax",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "having gone through the chapter word by word he declines to fix any meaning at all, since the variety of explanations by wise and learned men only proves the difficulty of the place"
+   }
+  ],
   "themes": [
-   "Comfort your hearts, and stablish you in every good word and work",
-   "the prayer that God comfort and stablish them",
-   "consoling the troubled and confirming them",
-   "established in right doctrine and conduct"
+   "Now our Lord Jesus Christ himself, and God, even our Father, which hath loved us, and hath given us everlasting consolation and good hope through grace,",
+   "Comfort your hearts, and stablish you in every good word and work."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
   }
  }
 }
