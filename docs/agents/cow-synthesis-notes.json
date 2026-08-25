@@ -23594,6 +23594,92 @@
       "book": "1peter",
       "chapter": "2",
       "note": "NOT STARTED -- third consecutive declined pick, and a size datum worth the owner's attention in its own right. 1peter 2 measures 70,426 usable source words across 25 keys: 1.76x the loop's ~40,000 whole-batch threshold and nearly double titus 1 (38,959), at roughly 2,800 words per key. That is severe for a FRESH worker, not merely for this one, and it suggests the repair queue's tail now holds chapters the current batch budget does not really describe -- 'over ~40,000 is the whole batch' gives no guidance at 70k, where even a full context window may not be enough for five or six grounded 650-word entries. Worth an explicit policy: either a hard ceiling above which a chapter is split across workers, or a documented multi-session procedure, since the current rule silently assumes one worker can always finish one chapter. THE LAST THREE PICKS OFFERED THIS WORKER: romans 13 (36,030), luke 14 (41,042), 1peter 2 (70,426) -- all still unstarted and unclaimed, since --spread rotates the offer rather than holding the head. This worker is stalled; rotation, not another poke, is what moves the queue."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "THIRD VARIANT OF THE SPLITTER DEFECT, and the most dangerous of the three, because no automated check can see it. Calvin's block at key 13 runs 492 words, of which only the first 287 are Calvin. The remainder is a 'CHAPTER 4' header followed by 205 words of CYRIL OF JERUSALEM -- and not on 1 Thessalonians at all, but on 2 CORINTHIANS 4:4 ('he blinded the thoughts of them that believe not... the light of the glory of the Gospel'). The splitter FAILED TO SPLIT: 'Cyril of Jerusalem' does not appear in QA.split_voices output for this chapter at all, so a foreign voice on a foreign passage is sitting inside another voice's block, invisible to ghost checks and to the voices-sourced check, both of which operate on the split output. Compare the two variants already recorded: at 1timothy 2 the splitter INVENTED a voice from a quotation ('Origen'), a false positive; at 3john 1 it read a real byline as a speaker and truncated the preceding voice, a boundary error; here it produced a FALSE NEGATIVE. This one is worse than either, because the other two are visible in the voice list once you look, whereas this is only findable by reading the block to its end. Any material drawn from that tail would have been attributed to Calvin and would have passed every gate. Nothing from it was used; the prose draws only on Calvin's first 287 words."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "Jamieson donor residue, THIRTEENTH consecutive chapter. Two blocks, both on 1 CORINTHIANS 8: key 3 (69 words) on 'neither if we eat are we the better' with a Lachmann variant, key 9 (40 words) on meat as a stumbling-block and abstaining from flesh offered to idols. Contribution to 1 Thessalonians 3: zero. Declared as excluded_voices at entries 3 and 6."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Scrape chrome, EIGHTEENTH consecutive chapter. Ellicott at key 13 carries roughly 340 real words of 1,265; the rest is StudyLight footer and page furniture. NOTE for the rule-tracking: here key 13 IS the chapter-final key, so unlike 3john 1 this case does NOT discriminate between 'last key of the voice's stream' and 'chapter-final key'. Recorded so the evidence for the corrected rule is not overcounted. Gill is separately truncated at the 200-word cap at key 11."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Wesley has exactly ONE block in this entire chapter: key 1, sixteen words ('We -- Paul and Silvanus. Could bear no longer -- Our desire and fear for you.'). It is genuine and on point, so he is declared at entry 1 and nowhere else. This is worth recording because it is a shape the voices-sourced check cannot catch in the wrong direction: had he been declared at entries 3, 6 or 11 the check would have passed -- it verifies that a declared voice has a block somewhere in the entry's span, and Wesley has none there -- but the prose would have had nothing of his to say. Chrysostom is the same shape: one block, key 5, 269 words, declared at entry 3 only."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "3",
+        "6",
+        "11"
+      ],
+      "note": "Self-graded A on all four entries. Every attribution traced to the named commentator's own block before writing. One place where that mattered concretely: Calvin's block at key 13 has 205 words of Cyril of Jerusalem on 2 Corinthians 4 appended inside it (see the source-defect note), and the prose draws only on the first 287 words, which are Calvin's. Nothing from the foreign tail is used and Cyril is named nowhere -- had the tail been used it would have been attributed to Calvin and would have passed every automated check, since the splitter never separated it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "11",
+        "12"
+      ],
+      "note": "Three named splits in the closing prayer, the middle one unusually clean. (1) On the singular verb governing two subjects, five voices converge rather than divide -- Robertson ('unity in the Godhead'), Henry ('therefore Jesus Christ our Lord is God, even as God our Father is God'), Barnes (would he have prayed to an angel?), Calvin (the same office assigned to both) -- while Ellicott alone enters a caution, that the argument from the singular for substantial unity must not be pressed so far as to imply a unity of PERSON, though he grants it implies equality. (2) On who 'the Lord' is at v12 the corpus genuinely splits three ways: Gill says the SPIRIT, and says it in order to establish that all three persons are addressed across these verses; Barnes and Robertson say the Lord Jesus; Ellicott says the word here stands for the name of God generally rather than for the Son alone. (3) On the saints who come with him, Barnes includes angels and redeemed together while Ellicott, allowing the word could stretch to angels, thinks the writer anticipates 4:14 and reads the Greek as hinting they will sit as assessors in the judgment."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "3"
+      ],
+      "note": "Two precise contradictions at v3 that the prose keeps rather than smooths. (1) WHOSE afflictions: Ellicott corrects the preposition to 'in' or 'in the midst of' rather than 'by', and concludes the afflictions are chiefly the READERS' own; Gill takes them for the WRITER's, endured in preaching among them and feared to be what might shake young converts. The two cannot both be right and neither is hedged. (2) In what sense 'appointed': Calvin makes it the condition on which men are Christians at all, assigned by the Lord, and Ellicott makes election into the church an election to suffering ('no cross, no crown'); Clarke refuses the construction outright -- 'God appoints nothing of this kind, but he permits it: for he has made man a free agent' -- and renders the clause as meaning only that we lie open to such things. Barnes declines to fix the pronoun's reference at all. Recorded because the doctrinal distance between Calvin and Clarke here is as wide as anything in the chapter and is stated by both in their own words."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "11"
+      ],
+      "note": "Convergences the debates field cannot express. (1) Gill, Barnes and Clarke independently conclude that the letter was written from CORINTH, against the subscription attached to the letter itself, all three reasoning from where Timothy arrived; Gill states the contradiction with the subscription explicitly, the other two simply assume Corinth. (2) Ellicott and Barnes independently give the same reading of 'now we live' -- new life set against a prior deadly sinking -- Ellicott from the contrast of tenses and Barnes by way of a Latin epigram that living consists not in existence but in health. (3) Robertson's gloss on the piled-up adverb of praying at v10 is the most vivid thing in the chapter's philology: one word abundantly, a second out of bounds, a third more than out of bounds, so that all bounds overflow."
     }
   ]
 }
