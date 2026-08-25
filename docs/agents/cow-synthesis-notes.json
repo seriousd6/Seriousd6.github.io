@@ -25012,6 +25012,70 @@
       "book": "1samuel",
       "chapter": "5",
       "note": "Chapter shape: 12 keys in one contiguous run 1-12; 9,889 reported / 8,796 net usable source words after chrome and stride removal. The tail is thin -- keys 8 through 12 carry little beyond Gill's verse glosses -- which forces a two-entry tiling (1-5 | 6-12) rather than the three or four a 12-key chapter would normally take."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson stride artefact, SIXTH independent confirmation and the first in this book. JFB blocks sit at keys 6 and 12 -- gap exactly 6, matching the corpus-wide measurement -- and neither belongs to Titus: the donor is 2 Corinthians 1, the passage about Paul's change of travel plan through Macedonia and the insinuation that he would not come at all. Both blocks were excluded from the tiling. Titus 2 is a good demonstration case for a future sweep because the chapter is otherwise clean: zero splitter loss across all 15 keys, so the JFB blocks are the only foreign material in the file."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "2",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "Cyril of Jerusalem appears at keys 12 and 13 as the SAME 200-word block, byte-identical, filed twice. This is the duplication pattern already recorded at luke 9, where an identical 183-word Catechetical Lecture extract sat at keys 2 and 11: his material is phrase-matched into the file rather than filed by pericope, so it lands wherever a phrase resembles the lecture. Here the material -- Malachi on the two comings, the refiner's fire -- is genuinely apposite to verse 13, so it was used once, at entry 13-14, and declared once. A worker who trusted the filing would have declared him twice and counted one father as two voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "titus",
+      "chapter": "2",
+      "note": "Truncation caps are visible in three voices in this chapter, all at exactly 200 words and all mid-sentence: John Gill at keys 1, 11, 13 and 14, and Cyril of Jerusalem at keys 12 and 13. This is the same hard 200-word cap recorded at 1samuel 5 for Keil and Delitzsch (eight blocks). It now looks like a property of the scrape rather than of any one commentator -- worth a corpus-wide count of blocks whose length is exactly 200 words, which would separate a genuine coincidence from a systematic ceiling."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "titus",
+      "chapter": "2",
+      "note": "Chapter shape: 15 keys, one contiguous run, 31,022 usable source words by the sizer and about 29,833 net after the JFB stride blocks are removed. Two keys carry Matthew Henry's whole-section expositions filed at the section head -- 5,423 words at key 1 covering verses 1-10, and 3,728 at key 11 covering 11-15 -- which is the source's normal structure for Henry and not a mis-filing, but it means the word counts per key are wildly uneven (7,114 and 6,096 against a median near 1,100). Budgeting a tiling by per-key word count alone would badly misjudge this chapter. Tiled 1-2 | 3-5 | 6-8 | 9-10 | 11-12 | 13-14 | 15, seven entries, with Henry's section material distributed across the entries it actually covers."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "titus",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "6"
+      ],
+      "note": "Two textual disagreements in the chapter run the same way and are worth reading together. At verse 5 the older copies read 'workers at home' rather than 'keepers at home': Clarke and Robertson adopt it and Clarke makes it do work (a woman may keep the house very closely and yet do little in it), while Ellicott grants the reading and holds the sense little changed, and Barnes does not notice the variant. At verse 8 the older authorities read 'no evil thing to say of us' rather than 'of you': Clarke calls that reading undoubtedly genuine, and Ellicott agrees and draws the consequence that what might have been said against Titus would in reality be spoken against Paul and the elder Apostles. In both cases Barnes is the voice that keeps the received text without remark."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "titus",
+      "chapter": "2",
+      "verses": [
+        "11"
+      ],
+      "note": "At verse 11 the four voices divide four ways on what 'appeared to all men' can mean, and the division is doctrinal rather than textual. Gill redefines the subject -- it must be the doctrine of grace, since neither God's favour in his own heart nor the grace wrought in believers has ever appeared to all men. Ellicott guards the phrase against universalism explicitly, calling it one of those hard sayings pressed into the service of a kindly but erring school of expositors, and reads it as saying grace is the only means by which salvation is possible, not that all will be saved. Clarke goes the other way and builds an extended solar analogy in which no soul is reprobated from these influences any more than from the natural sun, the nations coming into the light successively. Barnes reports both constructions and declines to let the sense turn on either. Carried as the debate on entry 11-12."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "titus",
+      "chapter": "2",
+      "note": "All seven entries fidelity self-graded A, zero ungroundable-entity signals on the first read-back and no hand-correction of spellings needed -- the first chapter in this run to come through the fidelity check clean on the first pass with no entity work at all. The source is epistle-format throughout, with explicit HTML voice headings and zero splitter loss across all 15 keys, which is why. Two care points. Bare 'Cyril' does not occur here, so the three-Cyril trap does not bite; the only patristic voices are Chrysostom (genuine Titus homilies, keys 2 and 11) and Cyril of Jerusalem (the duplicated phrase-matched block). And where Ellicott quotes other authors at length -- Calvin on slaves as adornment, Theodoret and Chrysostom on the great God, Hofmann, Beza, Reynolds -- those were attributed to Ellicott as quoting them and never declared as voices in their own right, since no blocks of theirs exist in the file."
     }
   ]
 }
