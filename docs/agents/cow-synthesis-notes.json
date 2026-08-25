@@ -26117,6 +26117,76 @@
       "book": "1corinthians",
       "chapter": "5",
       "note": "Fidelity self-grade for 1corinthians 5, all five entries A. Ratios 0.09x, 0.13x, 0.11x, 0.08x and 0.13x against the raw span source, the most compressed chapter this worker has written; 31,201 source words over thirteen verses reduced to five pericope entries of about 650 words each. At this compression the risk is not invention but silent omission, so the tags carry the full account of each voice and the prose carries the disagreements. The chapter is unusually well supplied with real disputes, and I let those set the shape of every entry: whether the father was living (five distinct positions at verses 1-2), whether delivering to Satan is excommunication or an apostolic bodily punishment (Calvin explicitly reversing the older reading, Clarke and Gill denying the excommunication sense outright), whether the letter of verse 9 is lost (Clarke standing almost alone against Calvin, Robertson, Wesley, Gill, Ellicott, Barnes and Henry), whether the command to purge is aimed at the man or at the church's own temper (Ellicott flatly denying what Clarke asserts), and whether verse 12 disclaims a jurisdiction or asks after one (Lightfoot alone rejecting the received rendering because it contradicts the apostle's treatment of Elymas and of Hymeneus and Alexander). One thing I deliberately did not do: Calvin at verse 10 and Robertson at verse 11 both name Chrysostom, who is a declared voice of this chapter at keys 1 and 9, and I let those namings stand in the prose of the 9-11 entry because Chrysostom is sourced within that very span. Where a named third party was NOT a chapter voice, as with Ambrose, Erasmus, Beza, Augustine, Whitby and Selden, I named them as the reporting witness reports them, which the entity check accepted."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Jamieson fixed-stride donor bug, FOURTEENTH confirmation, and the second chapter running in which the stride is exactly six host keys. All three JFB blocks here come from one continuous passage of Ephesians 5, advancing monotonically with the host key: k1 carries Eph 5:16 (redeeming the time), k7 carries Eph 5:21 (submitting in the fear of Christ), k13 carries Eph 5:26 (cleansing with the washing of water by the word). Compare revelation 3, where the same stride of six mapped k7/k13/k19 to Col 2:22, 3:3, 3:7. In both chapters the donor pointer advances about five verses for every six host keys. All three excluded from the declared voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "6"
+      ],
+      "note": "Calvin editorial-interpolation defect, TWICE in one chapter, and both times with the authority names dropped. At k6 an editor supplies a reconstructed translation of vv.5-7, canvasses rival views ('according to _ and others', 'as justly stated by _', '_ solves the difficulty by saying'), and proposes a conjectural emendation of the Greek relative -- none of it Calvin's. At k12 the same hand qualifies Calvin by name inside his own block: 'the secondary meaning of earnestly desiring a thing. It is so taken here by , , and ' -- three authorities dropped -- against 'as proposed by Calvin'. This is the correcting shape first recorded at joshua 3 k15, now with the dropped-italics defect on top of it. A writer summarising the block without the screen would attribute the editor's conjectures to Calvin."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "18"
+      ],
+      "note": "BOOK-BOUNDARY OVERFLOW, a new shape. Calvin's k18 block runs past the end of 2 Peter and into the ARGUMENT of Jude: 'END OF THE SECOND EPISTLE OF PETER / THE ARGUMENT / Though there was a dispute among the ancients respecting this Epistle... Jude first shews...' -- roughly 230 words of the next book's preface filed inside 2 Peter 3:18. The trap is specific: the sentence about a dispute among the ancients refers to JUDE, not to 2 Peter, and a writer skimming the block would attribute it to this chapter and produce a plausible falsehood. Related to the chapter-final navigation chrome recorded at deuteronomy 34, but worse, because the overflow is readable commentary rather than obvious junk."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "4"
+      ],
+      "note": "Cyril of Jerusalem filed at k4 (200 words, truncated mid-sentence at 'A time is the one year in...'). The block is Catechetical material on Antichrist and the great tribulation -- thematically adjacent to the last things but not a comment on 'Where is the promise of his coming?' at all. Fifth book in which Cyril's filing has proved to carry no information about the verse it is filed under (luke 9, titus 2, hebrews 4, titus 3, now 2peter 3). Excluded."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "15"
+      ],
+      "note": "The authorship of the epistle is argued INSIDE the chapter, and the alignment is not what a modern reader expects. Ellicott offers four separate notes of genuineness: 'your apostles' as apostolic humility (v.2), three reminiscences of one discourse of Christ that only Peter and three others heard (v.10), 'our beloved brother Paul' as a freedom no second-century imitator could reach (v.15), and the abrupt greetingless ending (v.18). Robertson reports and rejects the 'the forger here allows the mask to slip' inference (v.2). Against them, CALVIN doubts Petrine authorship outright at v.15: 'when I examine all things more narrowly, it seems to me more probable that this Epistle was composed by another according to what Peter communicated, than that it was written by himself, for Peter himself would have never spoken thus.' Captured as a debate at v.14."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "10"
+      ],
+      "note": "Sharpest methodological collision of the run, and it is about method rather than doctrine. At v.10 Calvin refuses to investigate the conflagration at all -- 'it was not his purpose to speak refinedly of fire and storm... Mischievous, then, are those interpreters who consume much labor on refined speculations' -- while Clarke gives the composition of water by weight and volume and an anvil experiment, and Wesley lists three physical provisions for the burning ending with a comet 'two thousand times hotter than a red-hot cannonball'. Both eighteenth-century writers do precisely what the sixteenth-century one calls mischievous, on the same verse."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "2peter",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Henry's Concise appended to his Exposition again -- SEVENTH confirmed book. Also a new variant here: at k5 the Henry block is ENTIRELY Concise (414 words covering vv.5-14 in summary), with no Exposition at all, while k1, k3, k9 and k11 carry Exposition with Concise appended. So the defect is not uniform within a chapter, and a key can yield summary-only Henry."
     }
   ]
 }
