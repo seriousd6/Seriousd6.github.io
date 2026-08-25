@@ -24845,6 +24845,89 @@
         "8"
       ],
       "note": "Three live disagreements in this chapter, all left standing in the prose. First, what the jubilee does: the petitioners treat it as the moment their loss becomes final and Ellicott agrees, explaining that until then the land might still revert by purchase or a childless marriage; Gill turns the institution against itself, arguing that restoring inheritances to original proprietors would in this case fix the daughters' portions in the tribes they married into and so make matters worse; and Keil corrects the premise of the whole complaint, holding that the property would strictly pass at the marriage rather than at the jubilee, so the danger is real but misdated. Second, how narrow the marriage restriction is: Keil reads it as the father's tribe, so any Manassite; Henry and Wesley narrow it to the family within the tribe. Third, how far the law reaches: Gill reports and rejects a Jewish limitation confining it to Zelophehad's daughters or to the period before the division of the land, while Clarke and Wesley limit it from the opposite direction to heiresses only, exempting priests and Levites who held no inheritance. Calvin supplies the interpretive principle that governs the third dispute - the words look wider than the case, but a law is to be read from the occasion that produced it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "Jamieson stride bug, THIRD independent confirmation and the first in a book outside the Gospels and Epistles I have checked. JFB blocks appear at keys 5 and 11 of this chapter and nowhere else -- a gap of exactly six, matching the stride measured corpus-wide last cycle (715 files giving a gap set of exactly {6}, another 154 giving {6,12}, with the starting offset spread evenly across 1 to 6). The content confirms it: the block at key 5 is on the genealogy of Christ and the block at key 11 is from the nativity narrative in Luke 1-2, neither having anything to do with the trumpets. Both excluded. Recording the confirmation because the earlier measurement was taken across the whole tree at once; seeing the same stride and the same foreign-donor signature in a chapter of the Apocalypse, where the surrounding voices are entirely different, is independent evidence that the bug is in the scraper's iteration and not in anything about a particular book."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "7",
+        "9",
+        "11",
+        "12"
+      ],
+      "note": "Albert Barnes is more than half this chapter by himself. His blocks run 2,869 words at key 1, 4,297 at key 7, 2,401 at key 9, 2,354 at key 11 and 1,963 at key 12, totalling about 16,990 of the 32,205 usable words in the chapter. The reason is the genre: Revelation invites the historicist expositions Barnes wrote at length, and he identifies each of the first four trumpets with a specific stage in the fall of the western empire -- Alaric at the first, Genseric and the Vandals at the second, Attila at the third -- quoting Gibbon throughout. CONSEQUENCE FOR THE COMPRESSION METER: a chapter whose reported source total is dominated by one voice's long-form argument is not as rich as the number suggests, because a great deal of that volume is one thesis stated and defended rather than distinct material. This chapter's nominal ratios run from 4.4:1 to 12.1:1, but the effective ratio against non-duplicated content is flatter than that spread implies. Worth remembering when the batch budget is set by source words alone, as the current poke sets it: 33,000 words of Barnes on Revelation is a smaller job than 33,000 words spread over ten voices."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "7",
+        "8",
+        "10"
+      ],
+      "note": "THE METHODOLOGICAL FIGHT THAT RUNS THROUGH THE WHOLE CHAPTER, and it is more interesting than any single identification. Four positions recur at every trumpet. Barnes identifies each with a stage in the fall of the western empire -- Alaric at the first, Genseric and the Vandals at the second, Attila at the third -- working through the fitness of every element of the symbol and citing Gibbon; at the second trumpet he defends himself against the charge of forcing the text by remarking that he had finished interpreting the symbol's language before he looked into Gibbon with any reference to the application. Wesley identifies differently but with the same confidence, finding the Jewish calamities under Trajan and Adrian at the first trumpet, the barbarian irruptions collectively at the second, and Arius at the third, with dates and casualty figures throughout. Clarke refuses both and does it with ridicule: fruitful imaginations might find gunpowder and cannon balls and canister shot and bombs in the hail and fire, it is easy to find coincidences when fancy runs riot, and later writers might as well find the Austrians and Prussians and Russians falling on the French empire; of the second trumpet he says only that great commotions may be intended, but to whom, where and when we do not know; of the third, that it certainly cannot mean all the proposed candidates and probably none of them. Ellicott refuses on principle rather than by mockery, holding that the visions show the general kind of event marking the decay of the kingdom of wrong -- landing stages in an advancing progress rather than dated occurrences -- and arguing from the ADDITION OF BLOOD to the Egyptian plague of hail that the vision is carried out of the possibility of literal interpretation altogether. That last is the strongest argument on the field, because it is drawn from the text rather than from a distaste for the method."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "13"
+      ],
+      "note": "Angel or eagle, and the manuscript evidence is not really in dispute -- only what to do with it. Clarke reports that almost every manuscript and version of note reads eagle, calls the reading undoubtedly genuine, and notes that Griesbach admitted it to the text; Ellicott says the best authority is against angel and translates a single eagle flying in mid-heaven. Gill lists the same witnesses, the Alexandrian copy, the Complutensian edition, the Vulgate, Syriac and Ethiopic, and then declines to care, since flying suits either word and the sense is the same read which way you please. Barnes keeps angel and does not mention the variant at all. What makes the disagreement worth recording is that the two who adopt the reading also make it do work: Clarke observes that the eagle was the Roman ensign and infers that the three woes were to be executed by that people, and Ellicott dwells on the solitude and the height of a lone bird crossing the meridian sky and therefore visible to the horizon. Gill's shrug is only defensible if the word carries no freight, and both of them show that it does."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "3"
+      ],
+      "note": "Whether the angel with the censer is acting as a priest. Clarke says he is about to perform the office of priest, and supports it from the day of expiation, when the high priest took fire from the great altar in a golden censer rather than a silver one while the people prayed outside in silence -- which Clarke also uses to explain the half hour of silence in verse 1, so the two readings stand or fall together. Wesley denies it on the wording: the text does not say he offered the incense but that he should give it, so he was discharging the office of an angel and not a priest; and the incense goes up WITH the prayers of the saints but not FOR them, since angels are fellow servants with the saints and not mediators for them. Clarke reaches the same second conclusion from the smoke, that it is not said the angel presents the prayers, only the incense -- so the two agree that no mediation is in view while disagreeing about whether the office is priestly. A subsidiary question divides them the same way: Ellicott and Robertson take the altar to be the golden altar of incense, Wesley says flatly it is the altar of burnt offerings, and Robertson adds the honest caveat that it is not clear apocalyptic preserves the distinction between the two altars at all."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "note": "Self-graded A on all seven entries. This is a clean chapter by the standards of the last three: the source marks every voice with an explicit HTML heading, a scan for embedded speaker tags of both conventions returned zero hits across all thirteen keys, and no Cyril of Alexandria blocks are present, so none of the three systematic defects measured in earlier cycles bites here except the Jamieson stride, which appears at keys 5 and 11 and was excluded. Roughly 1,150 words of website page-dump were also removed at the usual marker, which accounts for the gap between the reported 33,356 usable source words and the 32,205 actually available. TWO VOICES WERE HANDLED WITH CARE. Victorinus of Pettau and Bede both carry blocks at key 1 that run past verse 1 into later verses -- Victorinus comments on verses 1 and 13 in one block, Bede's runs on through verses 6 and 7 -- so each was used only for the verse 1 material and neither was declared outside entry 1. Bede's block also contains an OCR artefact from a printed page, a running header and a fragment of an unrelated sentence dropped mid-text ('S8 Explanatum of the Apocalypse' followed by words from another context), which is a chrome class distinct from the website dump: page furniture from the scanned edition rather than from the website wrapper. It was trimmed by hand and is recorded separately."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "A CHROME CLASS NOT PREVIOUSLY RECORDED: printed-page furniture from the scanned edition, as distinct from the website page-dump. Bede's block at key 1 contains, in the middle of continuous prose, the string 'S8 Explanatum of the Apocalypse. [bk. in a good man,' and the former, 'Nay, but He deceiveth the people.' That is a running page header from the printed volume ('Explanatum of the Apocalypse', with a mangled page number and signature mark) followed by a fragment of text from a different page that the OCR or the scrape carried across. It is not caught by the 'Copyright Statement These files are public domain' marker that terminates the website dumps, because it is not website furniture at all -- it comes from the book that was digitised. This matters for two reasons. First, it is invisible to any filter keyed on the website marker, so a worker who trims only for that will still have it. Second, it is mid-block rather than trailing, so it cannot be removed by truncating at a marker; it has to be excised. I have no measurement of how widespread this is and am not claiming one -- it is recorded here as a newly observed class so that a later sweep can look for running-header patterns of the form '<page number> <book title>' inside patristic blocks."
     }
   ]
 }
