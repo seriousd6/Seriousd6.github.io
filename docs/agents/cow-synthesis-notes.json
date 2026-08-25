@@ -25249,6 +25249,69 @@
         "16"
       ],
       "note": "Chrysostom is argued with twice in this chapter by name, which is unusual and worth flagging for anyone tracking how the witnesses engage each other. At verse 2 Calvin reports Chrysostom as confining the unreasonable men to those who opposed the gospel by false doctrine rather than by violence, and deliberately widens the term to every kind of danger. At verse 6 Ellicott reports Chrysostom as making the tradition the Thessalonians received consist of apostolic example without accompanying precept, and rejects it, holding that they recollect both a rule and a model. Yet at verse 1 Ellicott quotes the same father approvingly twice, on the mutuality of the request for prayer. So within one chapter Chrysostom is cited as an authority, corrected on the scope of a term, and overruled on a construction - by two different witnesses of two different schools. Other live divisions left standing in the prose: whether the disputed adjective in verse 2 means misplaced (Barnes), undisciplined (Clarke) or monstrous (Ellicott); whether the faith not all men have is belief or trustworthiness (Clarke alone for the latter, resting it on the wordplay with verse 3); whether acting in the Lord's name means by his authority (Robertson) or with his name pronounced aloud (Ellicott); whether the tradition of verse 6 is the written epistle only (Clarke, emphatically) or includes the spoken admonition (Wesley); whether by this epistle in verse 14 attaches to the disobedience or to the marking; and whether eating one's own bread excludes a common purse, which Ellicott raises and does not settle."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "2peter",
+      "chapter": "3",
+      "note": "NOT STARTED, and the reason is the WORKER not the chapter -- which is a different datum from worker B's declines and should not be filed with them. 2peter 3 measures 49,946 usable source words across 18 keys, 1.25x the whole-batch threshold. That is well inside what a fresh worker should take: I landed hebrews 4 at 42,600 across 16 keys in this same window, clean, eight entries all A on the first fidelity pass. Worker B's declines (acts 20 at 73,251, 1peter 2 at 70,426, jude 1 at 60,425) are declines on SIZE -- chapters no worker can take under the current budget rule. This one is a decline on CAPACITY: it is my thirty-second cycle, roughly 247,000 source words landed this window, and I have twice told the owner I would take a rotation before the next 40k-plus pick rather than after it. Starting an 18-key chapter now risks the outcome the batch instruction names as worst, an abandoned pick that costs the run everything and the queue nothing. Two things follow. First, 2peter 3 should go back to the head of the queue for a fresh worker, not into the oversized-tail bucket with the 60-70k chapters. Second, the queue sampling I did while deciding is itself useful: three consecutive offers measured revelation 20 at 38,005, james 5 at 52,857 and exodus 11 at 10,190. So the tail is not uniformly oversized -- tractable chapters are still in circulation and --spread surfaces them within a few draws. A worker who declines one giant should re-draw rather than stop, and I did: I took exodus 11 instead and landed it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "4"
+      ],
+      "note": "A DUPLICATION DEFECT NOT PREVIOUSLY RECORDED, and it inflates word counts rather than corrupting them. Matthew Henry's blocks here carry TWO of his works concatenated: the full Exposition runs, and then his Concise commentary on the same verses is appended verbatim after it, restating the same points in compressed form. At key 1 the block is 813 words of which roughly the last 250 are the Concise restating the Exposition ('The death of the first-born threatened. (4-10) A secret revelation was made to Moses...'); at key 4 the block is 1,246 words with a similar tail beginning 'The death of all the first-born in Egypt at once: this plague had been the first threatened, but is last executed. See how slow God is to wrath.' This matters for two reasons. First, the sizer counts the duplicate, so Henry's apparent contribution to a chapter is overstated by roughly a third wherever this occurs. Second and worse, a writer skimming for emphasis would see the same claim twice and read it as Henry pressing a point hard, when it is one work quoted after another. Distinct from every chrome class recorded so far: this is not foreign material, not website furniture and not page furniture -- it is the SAME AUTHOR duplicated from a second edition."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "11",
+      "verses": [
+        "8"
+      ],
+      "note": "John Wesley's block at key 8 is not independent testimony: it is Henry, near-verbatim. Wesley (136 words) reads 'When Moses had thus delivered his message, he went out from Pharaoh in great anger, though he was the meekest of all the men of the earth. Probably he expected that the very threatening of the death of the first-born should have wrought upon Pharaoh to comply; especially he having complied so far already, and having seen how exactly all Moses's predictions were fulfilled... Moses hereupon was provoked to a holy indignation, being grieved, as our Saviour afterwards, for the hardness of his heart, Mark 3:5.' Henry at key 4 reads the same sentences with trivial variation. This is a known dependency of Wesley's Notes on Henry, but it has a direct consequence for this pipeline: declaring both as voices on that point would count one witness twice and inflate the prevalence of a reading. Wesley was therefore NOT declared anywhere in this chapter, and the 'great anger' material was attributed to Henry as the earlier and fuller source. Recommend a corpus-wide check for Wesley blocks that are substantially Henry -- the voices-sourced gate cannot see this, since both names are genuinely present in the file."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "11",
+      "verses": [
+        "1"
+      ],
+      "note": "Jamieson stride artefact, EIGHTH confirmation, and this instance is instructive precisely because it is small. Only one JFB block appears in the whole chapter, 29 words at key 1, and it is about closing a parent's eyes and the farewell kiss -- Genesis 46 material, nothing to do with Exodus 11. Being under the 60-word usability threshold it never reached the tiling and would not have appeared in a voice survey at all. Two points follow. A single-block instance gives no within-file gap to measure, so chapters like this one contribute nothing to the stride statistic even though they carry the defect; and a worker filtering only on usable-length blocks will never see these, so the true count of AFFECTED FILES is higher than any measurement based on declared voices or on usable blocks can show."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "11",
+      "note": "Chapter shape and a note on the batch rule. 10 keys, one contiguous run, 10,190 usable source words by the sizer and about 10,098 net. This chapter was NOT the first pick: the picker offered 2peter 3 at 49,946 words, which I declined on capacity grounds (see the note filed there), and sampling three further offers gave revelation 20 at 38,005, james 5 at 52,857 and exodus 11 at 10,190. Tiled 1-3 | 4-6 | 7-10 in three entries. Two keys are very thin -- key 6 at 186 words and key 10 at 132 -- which is why a four-entry tiling was rejected: splitting 7-10 would have put an entry below the 3:1 compression floor and invited padding. Matthew Henry's block at key 4 is a section exposition covering verses 4-10, so his material was distributed across entries 4-6 and 7-10 rather than confined to the key it sits at."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Two doctrinally loaded disagreements sit at the two ends of the chapter, and both turn on a single English word. At verse 2 the question is whether the spoiling of the Egyptians needs a justification and what kind. Henry supplies one: it was unpaid wages, the labourers should not lose their hire, and God ordered them to demand it at their departure. Calvin states that same argument in order to REJECT it -- 'there is no necessity for having recourse to these subtleties' -- and rests the case instead on God's authority being above all laws, on what God transfers ceasing to be another's property, and on a victor's right to spoil after ten illustrious battles. At verse 9 the question is whether 'Pharaoh SHALL not hearken' means he could not. Clarke attacks the translators' choice: shall 'strongly intimates that it was impossible for Pharaoh to hearken, and that God had placed him under that impossibility', where WILL not hearken agrees with the earlier chapters in which Pharaoh hardened his own heart. Henry takes the opposite view from the same verse, that Moses did all these wonders before an eye-witness and could not prevail, 'which was a certain sign that God himself had, in a way of righteous judgment, hardened his heart.' Both pairs are carried as debates."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "11",
+      "note": "All three entries fidelity self-graded A, zero ungroundable-entity signals on the first read-back, no hand-correction of spellings -- the third consecutive chapter clean on the first pass. Worker B's embedded-speaker pre-flight screen was run over all 10 keys and returned ZERO hits, the first chapter where it has come back empty; combined with zero splitter loss on every key, the source here is structurally sound apart from the Henry duplication and the single stray JFB block. Two care points on voices. John Wesley was excluded entirely because his key 8 block is near-verbatim Henry (recorded separately). Keil and Delitzsch is capped at exactly 200 words at keys 2, 3 and 5, and his blocks are largely bare scripture text rather than comment -- he was declared only at entry 1-3, where the note about Jehovah making the Egyptians willing to give is genuinely his. Adam Clarke quotes a traveller by name on the mill and Calmet on the pluperfect; both were attributed as quotations, not declared as voices."
     }
   ]
 }
