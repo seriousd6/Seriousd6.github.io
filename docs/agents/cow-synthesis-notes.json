@@ -23680,6 +23680,13 @@
         "11"
       ],
       "note": "Convergences the debates field cannot express. (1) Gill, Barnes and Clarke independently conclude that the letter was written from CORINTH, against the subscription attached to the letter itself, all three reasoning from where Timothy arrived; Gill states the contradiction with the subscription explicitly, the other two simply assume Corinth. (2) Ellicott and Barnes independently give the same reading of 'now we live' -- new life set against a prior deadly sinking -- Ellicott from the contrast of tenses and Barnes by way of a Latin epigram that living consists not in existence but in health. (3) Robertson's gloss on the piled-up adverb of praying at v10 is the most vivid thing in the chapter's philology: one word abundantly, a second out of bounds, a third more than out of bounds, so that all bounds overflow."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "20",
+      "note": "NOT STARTED. acts 20 measures 73,251 usable source words across 38 keys -- larger than 1peter 2 (70,426) offered the hour before, and 1.83x the loop's ~40,000 whole-batch threshold. TWO CONSECUTIVE 70k+ PICKS IS A PATTERN, not a fluke, and it is the useful finding here: the repair queue's tail is not merely 'severe' as the batch instruction warns, it contains chapters at nearly twice the largest size the budget rule contemplates. The four picks offered this worker in a row were romans 13 (36,030), luke 14 (41,042), 1peter 2 (70,426), acts 20 (73,251) -- a rising series, all still unstarted and unclaimed, since --spread rotates the offer rather than holding the head. RECOMMENDATION, restated because it now has four data points behind it: the loop needs an explicit policy above ~40k. At 70-73k a single worker plausibly cannot produce five or six grounded 650-word entries within one context, so the choice is a documented split across workers, a per-entry checkpoint that lets a second worker resume, or an owner decision to defer these chapters. Without one, each such chapter will either stall a worker or, worse, land degraded prose under a self-graded A."
     }
   ]
 }
