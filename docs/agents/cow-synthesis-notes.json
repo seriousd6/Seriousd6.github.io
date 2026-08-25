@@ -24928,6 +24928,48 @@
         "1"
       ],
       "note": "A CHROME CLASS NOT PREVIOUSLY RECORDED: printed-page furniture from the scanned edition, as distinct from the website page-dump. Bede's block at key 1 contains, in the middle of continuous prose, the string 'S8 Explanatum of the Apocalypse. [bk. in a good man,' and the former, 'Nay, but He deceiveth the people.' That is a running page header from the printed volume ('Explanatum of the Apocalypse', with a mangled page number and signature mark) followed by a fragment of text from a different page that the OCR or the scrape carried across. It is not caught by the 'Copyright Statement These files are public domain' marker that terminates the website dumps, because it is not website furniture at all -- it comes from the book that was digitised. This matters for two reasons. First, it is invisible to any filter keyed on the website marker, so a worker who trims only for that will still have it. Second, it is mid-block rather than trailing, so it cannot be removed by truncating at a marker; it has to be excised. I have no measurement of how widespread this is and am not claiming one -- it is recorded here as a newly observed class so that a later sweep can look for running-header patterns of the form '<page number> <book title>' inside patristic blocks."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "3",
+      "note": "TOOLING DEFECT, worth fixing in scripts and therefore recorded rather than patched here. synthesis_qa.VOICE_LABELS lists the bare label 'Cyril', and _LABEL_RE requires the label to be followed by a colon. The head in this chapter is 'Cyril of Jerusalem:', so split_voices never recognises it, and validate-synthesis.py consequently rejects a correct excluded_voices declaration as naming a block absent from the entry's source. The bug bites any head whose canonical short label is a PREFIX of the head rather than a suffix. 'Chrysostom' and 'Robertson' are safe because they sit at the end of 'John Chrysostom:' and 'A.T. Robertson:', but 'Cyril' before 'of Jerusalem', and by the same logic 'Gregory', 'Basil', 'Bede', 'Leo' and 'Theodoret' before any epithet, are not. Two consequences: a residue block by such a voice cannot be declared at all, and usable_source_words silently fails to subtract it wherever it is declared elsewhere, which would inflate a thin measurement. I did not declare Cyril here; he is simply kept out of the prose, and since this entry is not thin nothing measured depends on the declaration. A fix would be to match the full head names, or to anchor the label at a head boundary rather than requiring an immediate colon. Per the loop doc a scripts fix cannot ride along with a chapter, so this needs landing separately."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1timothy",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "8",
+        "15"
+      ],
+      "note": "Two kinds of residue in one chapter. First, Jamieson, Fausset and Brown at keys 2 and 8, both congruent to 2 modulo 6, donor 1 CORINTHIANS 12 advancing from 12:22-23 (the feebler members, the brain, the belly, the eye) to 12:27 (members in particular). Host stride 6, donor stride 5, the same five-per-six ratio recorded for judges 17, mark 11, romans 13, deuteronomy 11 and numbers 36. Donor earlier than host: thirteen for thirteen. BOTH blocks begin mid-sentence, key 2 with 'more susceptible of injury' and key 8 with 'that is, severally members of it' - the ninth and tenth truncated fragments on record, and the second chapter after romans 13 where every residue block is a fragment. Second, and a different shape: CYRIL OF JERUSALEM at key 15 is a catechetical lecture on baptism, on receiving a new name and passing from catechumen to believer. It is tiled here because it quotes 'I am like a fruitful olive-tree in the house of God', and the phrase 'the house of God' is the catchword of 1 Timothy 3:15 - but Cyril is expounding Psalm 52, not 1 Timothy. This is the patristic tiling engine matching on a quoted phrase and landing on the wrong passage, the clearest phrase-collision miss I have seen. Excluded from the prose."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1timothy",
+      "chapter": "3",
+      "note": "Self-graded A on all five entries. v.1, 6791 source words to 650 (0.10x); vv.2-3, 5661 to 648 (0.11x); vv.4-7, 4968 to 650 (0.13x); vv.8-13, 8017 to 649 (0.08x); vv.14-16, 13585 to 647 (0.05x). At 39,022 usable source words this is by far the deepest chapter I have written, and the ratios show it: every entry is a severe distillation and 14-16 is the most compressed work in this run at one word in twenty. That direction carries no invention risk, but it does carry a selection risk, so I want the principle on record. Where the material exceeded the cap I kept the DISAGREEMENTS and dropped the expansions, on the view that a reader is better served by knowing the witnesses divide over the husband of one wife, the women of verse 11, the good degree, the pillar and ground, and the reading of verse 16, than by a fuller account of any one of them. Every claim traces to the block it came from. Names quoted inside a witness are credited as reported and not as witnesses: Theodoret inside Ellicott, the critical editors inside Robertson, and the several expositors Barnes lists on the deaconess question, except Chrysostom, who is himself a witness here and is named as one."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "1timothy",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "2",
+        "8",
+        "11",
+        "13",
+        "15",
+        "16"
+      ],
+      "note": "This chapter is the most divided I have written, and the prose reports the divisions rather than resolving them. (1) Bishop and presbyter: Chrysostom says the orders differ only in the power of ordination and that is why presbyters are passed over; Wesley asks the same question from silence; Ellicott and Robertson say the two words are used indifferently of the same men at this date, Robertson adding that the word lacks the monarchical sense it has in Ignatius; Clarke argues for episcopacy of divine appointment on the analogy of a monarchy, then at verse 6 concedes that presbyter and bishop seem two names for one office while insisting not every presbyter was a bishop; and Barnes at verse 14 uses Paul's promised visit as proof that Timothy held no permanent diocesan charge. (2) Husband of one wife: Ellicott gathers the ancient writers, the councils and the Greek Church for a prohibition of remarriage; Robertson, Chrysostom and Wesley read it of simultaneous plurality only, Wesley calling a second marriage as lawful as a first and sometimes a duty; Barnes denies it requires marriage at all, then at verse 4 argues that a minister ought to be married, which is a tension in Barnes rather than between him and others. (3) The women of verse 11: Ellicott and Robertson for deaconesses, Gill and Wesley and Barnes for the deacons' wives, Clarke for Christian women generally. (4) A good degree: Clarke and Wesley read promotion to higher office, Barnes and Robertson deny a rank can be inferred. (5) The pillar and ground of the truth: Clarke re-punctuates so that it describes the mystery rather than the Church, Wesley and Robertson agree, Ellicott keeps the older division. (6) Verse 16: Ellicott and Robertson report that the oldest authorities read he who rather than God, Robertson taking the clause as a hymn fragment in six strophes, while Gill, Clarke and Wesley expound the received text. (7) Whether mystery means hidden or incomprehensible: Barnes says the passage must not be used to prove anything surpasses comprehension, Gill says the union of the two natures cannot be accounted for by reason. None of these is adjudicated in the prose."
     }
   ]
 }

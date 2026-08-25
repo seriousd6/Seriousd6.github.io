@@ -1,7 +1,6 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -9,35 +8,82 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "1",
+  "pericope_label": "This is a true saying, If a man desire the office of a bishop, he desireth a good work.",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin uses the verse to explain the sequence of the letter, giving three reasons why the office is introduced immediately after women are forbidden to teach, and concluding that if women are unfit for so arduous a work, men are not therefore admissible without distinction. He names Chrysostom as reading the opening formula backwards and rejects that reading, on the ground that Paul uses the phrase to introduce weighty matter rather than to conclude light. He also hears in the word for good an allusion to the proverb that excellent things are difficult. Gill reports the same dispute about the formula, decides that it looks forward, and makes the same transition as Calvin more briefly: the work belongs to men, but not to every man."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets the apostolic estimate against the later one: the office may now be thought a good preferment, but it was then thought a good work, and a minister should look more to the work than to its honour or advantage. He grounds the office in divine appointment rather than human invention, notes that it existed in the church before any magistrate countenanced Christianity, and adds that the minister should never be made the tool of the state."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'A true saying' (pistos ho logos, pointing forward) introduces the church officers; 'if a man desire the office of a bishop' (the overseer's office/eldership, to 'reach out after,' oregetai) is a commendable longing; 'he desireth a good work' — a 'work,' laborious and demanding, yet 'good,' excellent and useful (Wesley: excellent but laborious); the desire honourable, the requirements searching."
+    "summary": "Robertson attaches the faithful saying to what precedes rather than to what follows, and supplies the grammar of the verse: a first-class condition assumed as true, a verb of reaching out after a thing that occurs only three times in the New Testament, and a rare noun meaning over-seership. Ellicott reads the formula forwards and suggests the saying was already current among the churches, possibly liturgical, perhaps part of a prayer for volunteers to come forward for a dangerous office. Barnes treats the verse as a general commendation of the office set before the qualifications that follow, establishing that what is sought is itself worth seeking."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke insists on the force of the verbs, which denote eager and even passionate desire, and finds it strange that an office carrying labour, want, persecution and death without income should have been coveted at all; from that he concludes the words were meant more for later ages than for the apostolic one. He also refuses to let the office become a dignity without duty, remarking that there were no unpreaching prelates then and should be none now. Wesley compresses the whole verse into a phrase, an excellent but laborious employment."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom draws the distinction the chapter turns on. The desire is not blamed, because the office is a work of protection; what is blamed is coveting dominion and authority rather than wanting to guard the Church. He instances Moses, who desired the office without the power and was taunted for it, and he treats blamelessness as covering every virtue, so that a man conscious of sin does not do well to seek a charge his own actions have disqualified him for."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the faithful saying closes the previous chapter or introduces this one.",
+   "Whether the desire for the office is legitimate, and what distinguishes a lawful from an unlawful wanting of it.",
+   "Why the qualifications of a bishop follow immediately on the prohibition of women teaching.",
+   "Whether the passage was written more for the apostolic age or for later ones."
+  ],
+  "outliers": [
+   "Calvin names Chrysostom as holding the reading he rejects, so the disagreement is explicit rather than inferred.",
+   "Clarke infers from the danger of the office in that century that the words were aimed chiefly at later ages.",
+   "Ellicott suggests the saying may have been liturgical, and even part of a public prayer for candidates.",
+   "Chrysostom distinguishes desiring the work of protection from coveting dominion, and acquits only the first.",
+   "Henry uses the verse to deny that the ministry is a creature of the state."
+  ],
   "themes": [
-   "if a man desire the office of a bishop",
-   "a good work",
-   "the worthy office",
-   "aspiration and labor"
+   "A faithful saying",
+   "If a man desire the office of a bishop",
+   "He desireth a good work",
+   "The office as protection rather than dominion",
+   "Divine appointment, not human invention"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "2": {
@@ -46,87 +92,84 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "2-3",
+  "pericope_label": "A bishop then must be blameless, the husband of one wife, vigilant, sober, of good behaviour, given to hospitality, apt to teach; Not given to wine, no striker, not greedy of filthy lucre; but patient, not a brawler, not covetous.",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill fixes blamelessness at the human level, since no man is blameless before God, and finds an allusion to the unblemished priests of the law. On wine he takes the middle position that the witnesses divide over: what is condemned is sitting at it and drinking continually, while the thing itself remains lawful for a minister and is sometimes necessary; and he records versions that read the term of insolence rather than of drink."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The overseer's (episkopos, used for elders, Acts 20:28; Titus 1:7) qualifications — 'blameless' (unblemished reputation, not sinless), 'husband of one wife' (marital fidelity, excluding polygamy; neither requiring marriage nor forbidding a second lawful one, Wesley), 'vigilant' (watchful), 'sober' (prudent), 'of good behaviour' (orderly), 'given to hospitality,' 'apt to teach' (the one gift, able to instruct in sound doctrine); character weighed more than gift."
+    "summary": "Barnes distinguishes the word for blameless from its commoner synonym and limits it to irreproachability rather than perfection; on the marriage clause he denies that it requires a bishop to be married and lays the disputed alternatives out without settling them; on wine he concedes that the word does not prohibit the thing, then argues from the apostle&rsquo;s manner that abstinence is the safer course for ministers. Ellicott supplies the historical evidence for reading the marriage clause against second marriages, from the oldest writers, conciliar decisions, and the practice of the Greek Church; he minimises drunkenness in the wine clause, taking it of the banqueting company rather than the drink, and extends the prohibition of striking to wounding words. Robertson answers the marriage question in three words, denies the word bishop the monarchical sense it later acquired, and glosses the vices as rare compounds."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works the etymology of bishop back through the Septuagint to a Hebrew word for a personal inspector, reads blamelessness through the figure of a boxer who cannot be hit, and is fiercest on the man who strikes, extending it from blows to the persecution of those who differ and citing a bishop who beat those he examined. On the clause about base gain he expounds it and then reports that the words may not be authentic. Wesley resists the ancient reading of the marriage clause as firmly as Ellicott supports it, holding a second marriage as lawful as a first and sometimes a duty, and confining the prohibition to the polygamy and easy divorce of the surrounding cultures."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom reads the marriage clause as forbidding plurality rather than requiring a wife, noting that Jewish practice allowed both remarriage and simultaneous wives, and honestly records that others read it as requiring the one wife. He treats blamelessness as containing every virtue, so that a man aware of his own sins should not seek the office."
    }
   ],
   "debates": [
-   {
-    "question": "What does 'the husband of one wife' require?",
-    "sides": [
-     {
-      "position": "marital fidelity, a man of one wife at a time, excluding polygamy; not requiring marriage nor forbidding a second lawful marriage",
-      "holders": [
-       "Wesley",
-       "most"
-      ]
-     }
-    ]
-   }
+   "Whether the husband of one wife forbids remarriage or only simultaneous plurality.",
+   "Whether it requires a bishop to be married at all.",
+   "Whether the wine clause condemns the drink, the company, or an insolent temper.",
+   "Whether bishop and presbyter denote the same office at this date.",
+   "Whether the clause about filthy lucre belongs to the text here."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott rests the case against second marriages on the practice of the Greek Church as well as on ancient writers and councils.",
+   "Wesley holds a second marriage to be as lawful as a first and in some cases a bounden duty.",
+   "Robertson denies that the word bishop carries in the New Testament the sense it has in Ignatius.",
+   "Barnes argues for ministerial abstinence from a word he admits does not require it.",
+   "Ellicott reads the wine clause as a warning about banquets and imprudent talk rather than about drunkenness.",
+   "Clarke and Ellicott independently report that the clause on base gain is missing from the older manuscripts."
+  ],
   "themes": [
-   "a bishop must be blameless",
-   "husband of one wife",
-   "vigilant, sober, hospitable",
-   "apt to teach"
+   "A bishop must be blameless",
+   "The husband of one wife",
+   "Given to hospitality, apt to teach",
+   "Not given to wine",
+   "No striker, not a brawler",
+   "Not greedy of filthy lucre"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The negative virtues — 'not given to wine' (me paroinon, not a tippler, nor made imperious by it, Clarke), 'no striker' (not violent), 'not greedy of filthy lucre' (not in ministry for sordid gain); the answering graces 'patient/gentle' (epieike, forbearing), 'not a brawler' (not quarrelsome), 'not covetous'; self-control and freedom from avarice adorning the office."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not given to wine",
-   "no striker",
-   "not greedy of filthy lucre",
-   "patient, not covetous"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
@@ -138,407 +181,162 @@
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "4-7",
+  "pericope_label": "One that ruleth well his own house, having his children in subjection with all gravity; (For if a man know not how to rule his own house, how shall he take care of the church of God?) Not a novice, lest being lifted up with pride he fall into the condemnation of the devil. Moreover he must have a good report of them which are without; lest he fall into reproach and the snare of the devil.",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill limits the house to the household and refuses the ascetic reading that would make it the man&rsquo;s own body. He glosses novice as one lately come to the truth and newly a church member, and closes the section by observing that outsiders who dislike a minister&rsquo;s principles and despise his office are still obliged to speak well of a becoming life, which is what draws them to hear him."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The domestic test — 'ruleth well his own house' (proistamenon, governing the family wisely, not by tyranny but with authority and dignity, Clarke); 'having his children in subjection with all gravity' (respectful, orderly children, with a dignity that commands respect; levity undermines domestic authority, Wesley); the well-ordered home the visible proof of fitness to govern the church."
+    "summary": "Barnes reads the household test as implying that a minister ought to be married, then concedes it cannot be insisted on and binds only the man who has a family, which sits awkwardly beside his earlier refusal to require marriage. His analogy between church and family is worked in both directions, granting that the church is larger and its government less absolute, and resting the argument on both being paternal. On novice he takes the botanical root seriously, a plant not yet deep enough to stand a storm. Ellicott insists the example set must be imitable, quotes Theodoret on the small community as the test of fitness for a larger, and points to Timothy as proof that inexperience rather than youth is meant. Robertson calls the parenthesis what it is, notes the anarthrous church of God as a Pauline description, glosses the pride as a smoke-screen, and reads the devil&rsquo;s condemnation as the judgment passed on him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes the household government wanted as method rather than severity, each member in his place and each task in its time, and concludes that a man whose domestic arrangements are bad should be trusted with no government at all, in church or state. On novice he concedes that presbyter and bishop appear to be two names for one office, while insisting that not every presbyter was a bishop, since not all met these conditions. Wesley reads the requirement of gravity as a caution that levity destroys domestic authority and extends it to all parents, and takes the condemnation as the very one the devil fell into, brought on by the new honour and its applause."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether ruling a house well implies that a minister ought to be married.",
+   "Whether novice excludes the young in years or only the young in faith.",
+   "Whether presbyter and bishop are two names for one office.",
+   "Whether the condemnation of the devil is the judgment passed on him or one he brings."
+  ],
+  "outliers": [
+   "Barnes argues here that a minister ought to be married after declining to require it two verses earlier.",
+   "Clarke concedes the identity of presbyter and bishop and then qualifies it, holding that not all presbyters met these conditions.",
+   "Ellicott cites Timothy&rsquo;s own youth as evidence that experience rather than age is in question.",
+   "Robertson notes that the following verse uses the same genitive construction in the opposite sense.",
+   "Clarke makes orderly method, rather than temper, the diagnostic of a man fit to govern."
+  ],
   "themes": [
-   "ruleth well his own house",
-   "children in subjection",
-   "with all gravity",
-   "home a test for the church"
+   "Ruling his own house well",
+   "Children in subjection with all gravity",
+   "How shall he take care of the church of God",
+   "Not a novice",
+   "The condemnation of the devil",
+   "A good report of them which are without"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The argument from lesser to greater — the home a small, simpler charge, the church of God a weightier one; if a man 'know not how to rule' (prostenai, know how) his own house, how shall he 'take care of the church of God'? A church resembles a family, only larger (Barnes); the rhetorical question expects 'he cannot' — failure at home disqualifies for the church."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if a man rule not his own house",
-   "how take care of the church?",
-   "lesser to greater",
-   "the home the proof"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Not a novice' (neophyton, newly-planted, our 'neophyte,' a convert whose roots have not struck deep, lacking experience and stability); 'lest being lifted up with pride' (typhotheis, swollen with conceit, sudden elevation turning the head) 'he fall into the condemnation of the devil' — the very condemnation through pride into which the devil fell (Wesley); the office a snare to the unproven."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not a novice",
-   "lifted up with pride",
-   "the condemnation of the devil",
-   "maturity required"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'A good report of them which are without' (outsiders, the heathen and the world, who can respect an upright life though rejecting the faith; Paul's concern for the witness before outsiders, 1 Thess 4:12; Col 4:5); 'lest he fall into reproach' (exposing him and the gospel to scorn) 'and the snare of the devil' (the trap by which Satan, through disgrace, overthrows him)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "good report of them without",
-   "reproach",
-   "the snare of the devil",
-   "a stainless reputation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "8-13",
+  "pericope_label": "Likewise must the deacons be grave, not doubletongued, not given to much wine, not greedy of filthy lucre; Holding the mystery of the faith in a pure conscience. And let these also first be proved; then let them use the office of a deacon, being found blameless. Even so must their wives be grave, not slanderers, sober, faithful in all things. Let the deacons be the husbands of one wife, ruling their children and their own houses well. For they that have used the office of a deacon well purchase to themselves a good degree, and great boldness in the faith which is in Christ Jesus.",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill describes the deacon&rsquo;s work in detail, from the Lord&rsquo;s table to the minister&rsquo;s maintenance to the relief of the poor, and adds the pastoral duties that went with it. On the mystery of the faith he notes that the phrase itself was in use among the ancient Jews. On the disputed verse about women he records the deaconess reading and prefers to understand the deacons&rsquo; wives. On the trial he denies that candidates were tested in the duties themselves, holding that their character was what was examined."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry defines the office from its institution &mdash; the temporal concerns of the church, the maintenance of ministers and the relief of the poor, serving tables so that others might give themselves to the word and prayer &mdash; and argues that their character mattered because they acted publicly and held a great trust. He traces a double tongue back to a double heart and classes flatterers with slanderers under it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The deacons (diakonous, the second office, Phil 1:1) — whose work (Acts 6) was the church's temporal affairs, relieving the poor and serving tables; though not preachers, men of tested character — 'grave' (dignified), 'not doubletongued' (not deceitful or inconsistent in speech), 'not given to much wine,' 'not greedy of filthy lucre' (vital in those handling the church's money and charity)."
+    "summary": "Barnes insists that orthodoxy without a pure heart disqualifies even an officer who does not preach, reports the deaconess interpretation with its supporters and retains the common one, and refuses to infer promotion from the good degree, since the word means a step and may equally denote dignity or influence. Ellicott traces the order&rsquo;s growth from its first appointment, argues from the placing of the charge about women that deaconesses rather than wives are meant, and proposes a working probation rather than a formal examination. Robertson supports the deaconess reading, glosses the vices from the papyri and inscriptions, records that Paul never says how the testing was done, and doubts that a grade of office is meant by the good standing."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley asks where the presbyters have gone and treats the silence as evidence that the order is not essentially distinct from that of bishops. His remark on gain is the sharpest in the chapter, that anything got beyond food and raiment by ministering in holy things is filthier than what is honestly earned in the meanest trade. He reads the good degree as a step toward higher office. Clarke agrees on the promotion, describing deacons raised from ministering bread that perishes to ministering the bread of life, and takes the boldness that follows as liberty of speech in preaching; on the women he differs from everyone, reading Christian women in general while allowing that deaconesses would suit the words. He also reports a lone manuscript reading the mystery of the resurrection."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: passing from bishops to deacons, omitting presbyters as no great difference from bishops."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "deacons must be grave",
-   "not doubletongued",
-   "not given to much wine",
-   "not greedy of filthy lucre"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The mystery of the faith' (the revealed gospel truth, once hidden, now in Christ, 1 Cor 2:7) — the deacon, though not a preacher, firmly holding the great doctrines; 'in a pure conscience' (held with a clean conscience, a holy heart and life); the pure conscience the casket keeping the jewel of the faith; mere orthodoxy without the Christ-life empty (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the mystery of the faith",
-   "in a pure conscience",
-   "sound doctrine and clean life",
-   "the casket of the jewel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'First be proved' (dokimazesthosan, tested as metals, 1 Thess 2:4) — character and fitness examined before appointment, not a formal public investigation but a trial over time (Ellicott); 'then let them use the office... being found blameless' — office the reward of proven fitness, not given to the untried; no man in church office till he has given full proof (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "first be proved",
-   "then let them serve",
-   "being found blameless",
-   "probation before office"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Qualifications for these 'women' — 'grave' (dignified), 'not slanderers' (no malicious gossip), 'sober' (temperate), 'faithful in all things' (trustworthy toward God, husband, and the poor); the reference long debated."
+    "prevalence": "single",
+    "summary": "Chrysostom explains the gap in the list: presbyters are passed over because they differ little from bishops, both being teachers and presidents in the church, the bishop&rsquo;s advantage lying only in the power of ordination. He reads the word likewise as importing that deacons must have the bishop&rsquo;s qualities, and identifies the double tongue with hollowness and deceit, than which nothing is more pernicious in the church."
    }
   ],
   "debates": [
-   {
-    "question": "Who are the 'women' of v11?",
-    "sides": [
-     {
-      "position": "women serving as deaconesses (like Phoebe, Rom 16:1), the placement amid the deacon-rules favouring this",
-      "holders": [
-       "Chrysostom",
-       "Robertson",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "Christian women in general",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the wives of the deacons (the older rendering)",
-      "holders": [
-       "the AV"
-      ]
-     }
-    ]
-   }
+   "Why the order of presbyters is passed over between bishops and deacons.",
+   "Whether the women of verse 11 are deaconesses, the wives of deacons, or Christian women generally.",
+   "Whether a good degree means promotion to higher office or only standing and influence.",
+   "What form the proving of a candidate took.",
+   "Whether the mystery of the faith is doctrine held, or doctrine held in a certain manner."
   ],
-  "outliers": [],
+  "outliers": [
+   "Chrysostom and Wesley independently argue from the silence about presbyters that the office is not distinct from the episcopate.",
+   "Barnes names Chrysostom among the supporters of the deaconess reading he himself declines.",
+   "Clarke reports a manuscript that reads the mystery of the resurrection, and values it only as evidence of what one copyist understood.",
+   "Wesley calls ministerial gain above food and raiment filthier than what is earned emptying sewers.",
+   "Ellicott and Robertson independently describe the pure conscience as the casket in which the jewel is kept.",
+   "Robertson notes that the inscriptions use the word for a foothold rather than a rank."
+  ],
   "themes": [
-   "their wives / women be grave",
-   "not slanderers",
-   "sober, faithful",
-   "deaconesses or wives?"
+   "Likewise must the deacons be grave",
+   "Not doubletongued",
+   "Holding the mystery of the faith",
+   "Let these first be proved",
+   "Even so must their wives be grave",
+   "A good degree and great boldness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The deacons' domestic qualification, the same as the overseer's — 'the husbands of one wife' (mias gynaikos, marital fidelity, one wife at a time, as v2) and 'ruling their children and their own houses well' (proistamenoi kalos, as v4); the same orderly home required of the deacon as of the presiding elder (Ellicott), the household the proof of character for both."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "deacons husbands of one wife",
-   "ruling children and houses well",
-   "the same domestic test",
-   "proven in the home"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The reward of faithful deacons — those who 'use the office well' (with diligence and sincerity) 'gain to themselves' (peripoiountai, lay up) a twofold reward: 'a good degree' (bathmon, a good standing/esteem, or a step toward higher office, Clarke/Wesley) and 'great boldness in the faith' (a holy confidence and assurance springing from a good conscience); diligent service rewarded with honour and inward boldness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "used the office well",
-   "a good degree",
-   "great boldness in the faith",
-   "the reward of service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
@@ -546,125 +344,82 @@
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The occasion — 'these things write I' (the directions on overseers and deacons) 'hoping to come unto thee shortly' (en tachei); Paul intending to return to Ephesus in person, writing more briefly in that hope (Henry); the undesigned detail of a soon-return not realized bearing the mark of authentic correspondence a forger would not invent (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "these things write I",
-   "hoping to come shortly",
-   "the letter a stopgap",
-   "authentic occasional detail"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The letter's aim — if Paul is delayed, Timothy must 'know how to behave' (order the church); three titles exalt it — 'the house of God' (his household and temple, ordered with reverence), 'the church of the living God' (belonging to the true, living God, not a dead idol), 'the pillar and ground of the truth' (the support and bulwark holding the truth up before the world); the church's glory motivating the careful ordering."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how to behave in the house of God",
-   "the church of the living God",
-   "the pillar and ground of the truth",
-   "the church upholds the truth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "14-16",
+  "pericope_label": "These things write I unto thee, hoping to come unto thee shortly: But if I tarry long, that thou mayest know how thou oughtest to behave thyself in the house of God, which is the church of the living God, the pillar and ground of the truth. And without controversy great is the mystery of godliness: God was manifest in the flesh, justified in the Spirit, seen of angels, preached unto the Gentiles, believed on in the world, received up into glory.",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill limits these things to the qualifications just given, and stands against Barnes on the meaning of mystery: though the doctrine is revealed and to be believed, the union of the two natures cannot be discerned or accounted for, and its manner is beyond reason. He expounds the received reading of the last verse as the incarnation, the birth of a virgin, and the union of the divine and human in one person."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the practical point of the passage to be conduct rather than doctrine: those employed in God&rsquo;s house must watch their behaviour and not their preaching only, since the office itself binds a man to good conduct and no other behaviour will serve."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The great confession — 'without controversy' (homologoumenos, confessedly) 'great is the mystery of godliness,' the truth the church upholds; a six-fold hymn/creed summing Christ's whole economy — 'manifest in the flesh' (incarnation; textual question 'God' or 'who,' the incarnate Christ either way), 'justified in the Spirit' (vindicated, esp. in resurrection), 'seen of angels,' 'preached unto the Gentiles,' 'believed on in the world,' 'received up into glory' (ascension); incarnation to glorification, the sum of the gospel."
+    "summary": "Barnes uses the announced visit as evidence that Timothy was not the permanent bishop of Ephesus, on the ground that no bishop writes so to another; he takes the house of God as the body of believers rather than any building, and refuses to let the word mystery mean unintelligible, since what it names is disclosed rather than incomprehensible. Ellicott reads the same clause as a concession, thinks the pressing danger made Paul doubt the visit, extends the instruction past Timothy to his colleagues, keeps the pillar with the Church, and reports fully that the oldest authorities read he who rather than God, attributing the change to well-meant scribal correction. Robertson observes that a forger would not have written a hope that failed, prefers household to house, supplies Timothy rather than men as the subject, rejects both the received and a neuter reading, and follows the critical editors in taking the last verse as a hymn fragment in six strophes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that no passage in Scripture has drawn a greater variety of opinions, and offers a reconstruction that attaches the pillar and ground of the truth to the mystery rather than to the Church, so that the mystery is what is confessedly great. He derives the house of God from the tabernacle and makes every believer a habitation of God through the Spirit. He expounds the received text of the last verse in six particulars. Wesley divides the sentence the same way, calling the mystery the foundation and support of all the truth taught in the church, and works through the six articles from the form of a servant to the ascension."
    }
   ],
   "debates": [
-   {
-    "question": "Did the text read 'God' or 'who' was manifest in the flesh?",
-    "sides": [
-     {
-      "position": "a textual question between 'God' (theos) and 'who/which' (hos/ho); the sense of the incarnate Christ stands either way",
-      "holders": [
-       "Clarke",
-       "most"
-      ]
-     }
-    ]
-   }
+   "Whether Timothy held a permanent episcopal charge at Ephesus.",
+   "Whether the pillar and ground of the truth describes the Church or the mystery.",
+   "Whether the house of God means a building, the congregation, or the household.",
+   "Whether the ancient reading of the last verse is God or he who.",
+   "Whether mystery here means what was hidden or what cannot be understood."
   ],
-  "outliers": [],
+  "outliers": [
+   "Barnes reads the announced visit as disproof of a diocesan episcopate at Ephesus.",
+   "Robertson argues that the unfulfilled hope of coming shortly is evidence against pseudonymous authorship.",
+   "Clarke re-punctuates the two verses so that the mystery, not the Church, is called the pillar and ground of the truth.",
+   "Ellicott attributes the reading God to a well-meant correction by early scribes rather than to doctrinal motive.",
+   "Robertson follows the critical editors in treating the closing verse as a fragment of a Christian hymn in six strophes.",
+   "Barnes and Gill take opposite views of whether the doctrine surpasses comprehension."
+  ],
   "themes": [
-   "the mystery of godliness",
-   "God manifest in the flesh",
-   "justified, seen, preached",
-   "received up into glory"
+   "These things write I unto thee",
+   "The house of God",
+   "The church of the living God",
+   "The pillar and ground of the truth",
+   "The mystery of godliness",
+   "Manifest in the flesh, received up into glory"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.05
+   }
   }
  }
 }
