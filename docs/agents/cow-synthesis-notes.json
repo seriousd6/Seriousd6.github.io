@@ -26391,6 +26391,56 @@
       "book": "revelation",
       "chapter": "15",
       "note": "Fidelity self-grade, revelation 15, all four spans graded A with no ENTITIES, NUMBER or WATCH signals on the final read-back. Expansion ratios: vv.1-2 4627 source words to 649 prose (0.14x), vv.3-4 2382 to 650 (0.27x), vv.5-6 2445 to 634 (0.26x), vv.7-8 3266 to 649 (0.20x). Chapter total 12720 usable source words to 2582 prose, 0.20x, well under the corpus median of 0.84x and nowhere near the 6x alarm. One flag was raised and cleared during drafting: the word Mosaic at vv.3-4, an adjective derived from Moses that appears nowhere in the source; rewritten as 'two songs of Moses'. It was not a fabricated fact, but the vocabulary rule holds regardless."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "47",
+      "verses": [
+        "2"
+      ],
+      "note": "THE 200-WORD TRUNCATION CAP, MEASURED CORPUS-WIDE AT LAST. I have reported this anecdotally for a dozen chapters (Keil, Gill, Cyril of Jerusalem, five voices, six books); here is the whole picture. Of 141,039 blocks in 1,189 files, 13,799 are exactly 200 words. It is not spread evenly -- it is a property of particular voices: Keil and Delitzsch 9,727 of 10,472 blocks (92%); Cyril of Jerusalem 790 of 1,273 (62%); Leo 18 of 42 (42%); Origen 91 of 279 (32%); John Lightfoot 132 of 1,056 (12%); Theodoret of Cyrrhus 42 of 379 (11%); John Gill 2,894 of 29,682 (9%). Every other voice is at or below 0.1% -- Ellicott 25 of 22,299, Clarke 15 of 20,823, Calvin 14 of 11,063, Barnes 12 of 7,347 -- which fixes the coincidence rate and means roughly ten of Keil's 9,727 are genuine. Heaviest books: psalms 1,029, proverbs 868, isaiah 777, job 620, jeremiah 599, genesis 528. The consequence for this loop: KEIL IS EFFECTIVELY TRUNCATED EVERYWHERE. In nine blocks out of ten his exposition is cut mid-sentence at 200 words, so a synthesis that declares him is quoting an opening paragraph, never an argument, and any voice-weighting by word count silently caps him at 200 per key. In this chapter alone 13 of his blocks are at the cap."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "47",
+      "verses": [
+        "31"
+      ],
+      "note": "Calvin editorial interpolation, two more instances in one chapter, both of the correcting shape and one of them brutal. At k1 an editor supplies Calvin's Latin, compares the English version and other interpreters, and prefers a different rendering of the Hebrew -- with the authorities' names dropped to bare commas, the familiar dropped-italics defect. At k31 the editor writes, inside Calvin's own block: 'The reasoning of Calvin, besides being in every respect unsatisfactory, is founded on a misquotation of the original. He appears to have put down the words from memory, or else his transcriber has made the mistake for him.' That is the strongest instance of the correcting shape yet found, and it bears directly on the live exegetical question at v.31 -- whether Jacob bowed on the bed's head or leaned on the top of his staff, the Hebrew consonants admitting both under different Masoretic points. A writer summarising the block would attribute the editor's demolition of Calvin to Calvin. The k1 block also carries Hebrew characters, which the non-Latin sweep would flag if copied into prose."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "genesis",
+      "chapter": "47",
+      "verses": [
+        "6"
+      ],
+      "note": "Jamieson donor bug, SIXTEENTH and SEVENTEENTH confirmations, three donor blocks in one chapter and all from the same neighbourhood. k6 carries Genesis 40:12-14 (Joseph interpreting for the butler), k18 carries Genesis 40-41 (the imprisonment and Pharaoh's dreams, with the note on the name Pharaoh and Aphophis), k30 carries Genesis 40:23 / 41:9 (the butler's belated confession). As at luke 8 the donor is an earlier part of the SAME book, and here all three donors sit within two chapters of each other while the host keys are 6, 18 and 30 -- a stride of twelve. Two chapters running with same-book donors after fifteen cross-book ones; the pattern may be that the donor pointer runs over the whole corpus in scrape order, so a host early in a book draws from earlier in that same book. All three excluded."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "47",
+      "verses": [
+        "22"
+      ],
+      "note": "A fourth Calvin editorial interpolation in this chapter, of the citation kind rather than the correcting kind: at k22 the block carries a long quotation from a nineteenth-century work on the manners and customs of the ancient Egyptians, complete with volume and page reference, and at k5 a Greek quotation of Sophocles is followed by an editor's note discussing which lost play it comes from, citing an 1826 Oxford edition and Langhorne's Plutarch. Publication dates two and a half centuries after Calvin's death, sitting inside his commentary blocks as though he wrote them, are the clearest internal proof of the editorial hand that the corpus offers. Counting k1, k5, k22 and k31, this one chapter carries four."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "genesis",
+      "chapter": "47",
+      "verses": [
+        "31"
+      ],
+      "note": "Chapter-shaped observation: genesis 47 is unusually argumentative, and the arguments are about Joseph's ETHICS rather than the text. Ellicott opens v.20 with 'Joseph has been accused of reducing a free people to slavery by his policy' and all three moderns present feel obliged to answer the charge -- Calvin at length and twice over (vv.16, 20), Clarke with 'for this part of Joseph's conduct he certainly deserves high praise and no censure' (v.16) and then a balanced verdict at v.26 that the conduct 'has been as strongly censured by some as applauded by others' and that a sober reader will 'adore God, applaud the man, and perhaps in some cases censure the minister'. Calvin's defence is notable for conceding the general principle against himself: a man who exploits severe necessity is not excused merely because the sufferer offered the terms. He then turns it on his own readers -- 'let those who are too intent on wealth beware lest they should falsely employ Joseph's example as a pretext' -- and quotes Tiberius on shearing the flock without tearing off the skin against the kings of his own day."
     }
   ]
 }

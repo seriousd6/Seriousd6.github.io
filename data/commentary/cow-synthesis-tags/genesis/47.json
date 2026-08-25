@@ -1,1140 +1,618 @@
 {
  "1": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Joseph's respectful report — though favourite and prime minister, and though Pharaoh had invited the family, Joseph would not settle them till he gave the king notice and obtained leave (Henry, the great man not presuming on his power); 'they are in the land of Goshen' (announcing their arrival and halt in the region he wished for them); much as he desired Goshen, the grant lay with Pharaoh, so he mentions only that they stopped there (Ellicott); indirectly intimating his wish with a modesty free from cunning (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph told Pharaoh",
-   "my father and my brethren are come",
-   "they are in Goshen",
-   "deference to the king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The five brothers presented — the curious Hebrew 'from the extremity of his brethren he took five men,' understood several ways (Clarke), some taking it of the meanest or least imposing (lest Pharaoh enlist the most capable as soldiers, per Jewish tradition); Joseph chose five as representatives for the royal audience; the recurring number five in the narrative (Gen 43:34; 45:22) perhaps of special significance among the Egyptians as seven among the Hebrews (Ellicott); a chosen few suiting the formality of a royal audience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "some of his brethren",
-   "even five men",
-   "presented them unto Pharaoh",
-   "the royal audience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The question and confession of calling — Pharaoh's 'What is your occupation?' (the question Joseph foretold; all who have a place should have an employment, Wesley); 'Thy servants are shepherds, both we, and also our fathers' (owning their trade frankly, adding 'our fathers' by Joseph's instruction since callings were hereditary in Egypt, so no change of life was expected, disposing Pharaoh to grant separate pasture, Ellicott); the confession humiliating, for the Egyptians held shepherding base and infamous (Calvin); the providence — Egyptian contempt keeping the Hebrews apart in Goshen, preserving the holy seed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What is your occupation?",
-   "thy servants are shepherds",
-   "both we and our fathers",
-   "a despised calling owned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Charles Ellicott",
    "John Wesley"
   ],
+  "range": "1-6",
+  "pericope_label": "Joseph presents his brethren to Pharaoh: thy servants are shepherds",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The request to sojourn in Goshen — 'to sojourn in the land are we come' (only a temporary stay, not permanent possession; keeping in mind that Canaan, not Egypt, was promised to them, Gill); the reason 'no pasture for their flocks; the famine is sore in Canaan' (the dearth leaving their cattle without grazing in scorched Canaan, while Goshen, watered by the Nile, still afforded pasture); 'let thy servants dwell in Goshen' (the region Joseph wished, a border pasture-land fit for shepherds, set apart from the Egyptians); not to settle for ever but while the famine prevailed (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to sojourn in the land are we come",
-   "no pasture for their flocks",
-   "let thy servants dwell in Goshen",
-   "a temporary refuge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Count the number instead of the men, noting that five recurs in this narrative and may have had special importance among the Egyptians, as seven had among the Jews. Explain why they were told to add that their fathers were shepherds too, since occupations were hereditary among the Egyptians and Pharaoh would conclude no change of life was possible for them. And explain why Goshen could still keep flocks in a famine, since the river, though it did not overflow, probably lost itself in delta swamps which produced much marsh grass."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Pharaoh's gracious turning to Joseph — Joseph stood present throughout the audience, hearing all (Gill); the king speaks now to Joseph, 'thy father and thy brethren are come unto thee,' committing the settlement to his trusted minister; the providence (Calvin) — it is to be ascribed to God's special favour that Pharaoh took no offence at their desire to dwell apart in Goshen, for kings bear nothing more indignantly than to have their favours restricted, yet he freely grants their wish; God inclining the king's heart to allow the separateness the Hebrews needed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pharaoh spake unto Joseph",
-   "thy father and thy brethren are come",
-   "committed to the minister",
-   "God inclines the king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Run through the same list of readings and conclude that he made no choice at all but took some that offered next. Suppose the question about their occupation a usual one to those coming to settle, that the king might have no idle vagrants. Read the request as asking to sojourn and not to settle for ever, since Canaan was their inheritance. Alongside this, make the smallness of what they asked the point: Pharaoh offers a perpetual home and they rather wish to depart, and it is to be ascribed to the favour of God that he was not offended, since nothing is more indignantly borne by kings than that their favours should be rejected. Reject the plausible explanation that this was modesty, since it would have been proud to ask for the rights of citizens: the suggestion is fallacious, for in asking to be admitted as guests and strangers they took timely precaution that Pharaoh should not hold them in the chains of servitude."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Pharaoh's generous grant — 'the land of Egypt is before thee' (the whole land at Joseph's disposal); 'in the best of the land... in Goshen' (assigning the region they desired, Goshen thereby the choicest part, Clarke); 'men of activity... make them rulers over my cattle' (anshey chayil, robust able men entrusted with the royal herds); all given at the king's command, not Joseph's private disposal — the higher his power, the more scrupulous not to be liberal with the king's goods without warrant (Calvin); the king's liberality exceeding the request, the fruit of his regard for Joseph and God's favour."
+    "summary": "Lay out the six ways the obscure phrase has been understood. Literally the words say that from the end or extremity of his brethren he took five men, which has been read as five at random; or five of the meanest-looking, lest Pharaoh detain the sightlier for his own service and their religion be corrupted; or five of the best made, to impress the king with the family just brought into Egypt; or five of the youngest; or five of the eldest; or, on a rabbi's authority, some from each end. Allow that it may also mean simply some out of the whole. On the offer to make them rulers over the king's cattle, argue that the word means possessions of any kind, and ask whether Pharaoh would set the brethren of his prime minister to the meanest offices in the land; take the king to mean that they should oversee his domestic concerns while Joseph superintended those of the state."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Mark the respect Joseph showed as a subject, since though he was the favourite and prime minister, and had the king's own orders to send for his father, he would not suffer him to settle until he had given notice of it; and the respect he showed as a brother, since though he was a great man and they comparatively mean, he owned them. Draw the rule that the rich and great should not despise their poor relations, asking whether, because a branch is a lower branch, it is therefore not of the tree; and turn the presentation into a figure, that our Lord, like Joseph, is not ashamed to call us brethren and presents them in the court of heaven though in themselves unworthy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does it mean that Joseph took five men 'from the extremity of his brethren'?",
+    "sides": [
+     {
+      "position": "It is genuinely open: six readings are possible, from the meanest-looking to the best made, from the youngest to the eldest, or some from each end",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "He made no choice at all, but took some that offered next",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The men matter less than the number: five recurs in this narrative and may have had special importance among the Egyptians",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did they ask only to sojourn when a perpetual home was offered?",
+    "sides": [
+     {
+      "position": "Not from modesty but from prudence: asking to be guests and strangers was a timely precaution against being held in the chains of servitude",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Because Canaan was their inheritance and they meant to return to it",
+      "holders": [
+       "John Wesley",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone assembles six rival interpretations of a single Hebrew phrase before declining to choose, and alone objects that Pharaoh would hardly set the brethren of his prime minister to the meanest offices in the land."
+   },
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone draws a rule about poor relations from the presentation, asking whether a branch is not of the tree because it is a lower branch, and turns the scene into a figure of Christ presenting his brethren in the court of heaven."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone explains how Goshen could still feed flocks in a famine, supposing the river to have lost itself in delta swamps that produced marsh grass even when it did not overflow."
+   }
+  ],
   "themes": [
-   "the land of Egypt is before thee",
-   "the best of the land",
-   "rulers over my cattle",
-   "bounty exceeds the request"
+   "Then Joseph came and told Pharaoh, and said, My father and my brethren, and their flocks, and their herds, and all that they have, are come out of the land of Canaan; and, behold, they are in the land of Goshen.",
+   "And he took some of his brethren, even five men, and presented them unto Pharaoh.",
+   "And Pharaoh said unto his brethren, What is your occupation? And they said unto Pharaoh, Thy servants are shepherds, both we, and also our fathers.",
+   "They said moreover unto Pharaoh, For to sojourn in the land are we come; for thy servants have no pasture for their flocks; for the famine is sore in the land of Canaan: now therefore, we pray thee, let thy servants dwell in the land of Goshen.",
+   "And Pharaoh spake unto Joseph, saying, Thy father and thy brethren are come unto thee:",
+   "The land of Egypt is before thee; in the best of the land make thy father and brethren to dwell; in the land of Goshen let them dwell: and if thou knowest any men of activity among them, then make them rulers over my cattle."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "7": {
   "voices": [
-   "John Gill",
+   "Matthew Henry",
+   "John Calvin",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The patriarch's blessing of the king — the presentation of Jacob a more solemn matter than the brethren's (Ellicott), Pharaoh receiving the venerable father; 'Jacob blessed Pharaoh' (on entering, pronouncing a blessing); in part a courteous salutation, 'peace be unto thee' (Clarke), but more an act of piety — with the gravity of age, the faith of a believer, and the authority of a patriarch and prophet, beseeching God to bless Pharaoh (Henry); the dignity — a poor aged sojourning shepherd blessing the mighty king, the lesser in estate conferring the greater spiritual gift, as heir of the promises."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph brought in Jacob",
-   "set him before Pharaoh",
-   "Jacob blessed Pharaoh",
-   "the patriarch blesses the king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The king's question about Jacob's age — 'How old art thou?' (Heb. 'how many are the days of the years of thy life?', a phrasing Jacob takes up in his answer, Gill); the wonder behind it — Pharaoh perhaps never saw so aged a man, for in Egypt life was shorter and such age rare (Lightfoot via Gill); Jacob's countenance, worn by labour and sorrow, bespeaking an extraordinary span; the question naturally put to the old, for it is native to admire and reverence age (Wesley); even mighty Pharaoh moved to wonder before the aged saint."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How old art thou?",
-   "the days of the years of thy life",
-   "Jacob's great age",
-   "the king's wonder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob's confession of a pilgrim life — 'my pilgrimage' (megurai, sojournings, wandering; he lived a migratory life in Canaan, Mesopotamia, Egypt, scarcely at rest, Clarke; a stranger settled in a land not his own, 1 Pet 2:11, Ellicott); the deeper sense — Jacob a stranger and pilgrim in the world itself, a traveller toward a heavenly country, the believer not at home on earth (Wesley, Gill); 'an hundred and thirty years... few and evil,' short and full of trouble, not reaching his fathers' span; not murmuring but owning the brevity and hardship, his hope resting beyond (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the days of my pilgrimage",
-   "an hundred and thirty years",
-   "few and evil",
-   "a stranger on the earth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
    "John Gill",
    "John Wesley"
   ],
+  "range": "7-12",
+  "pericope_label": "Few and evil have the days of the years of my life been",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Explain why the interview was more solemn than that of the brethren, whom Pharaoh had received as the kinsmen of his vizier: to an Egyptian a hundred and twenty was the utmost limit of longevity, and Jacob was a hundred and thirty, so the king probably bowed before him as a saintly personage and twice received a formal benediction rather than the usual prayer for the royal life. Then deny the word pilgrimage outright: the idea of a pilgrimage is a modern one, and Jacob was no traveller bound by religious motives to some distant shrine but a sojourner, because Canaan was not the native land of his race. Take evil as plain biography and list what made it so: the deceiving of his father, the toil and injustice at Haran, a pursuit behind and a menacing brother in front, the long illness at Succoth, his daughter's dishonour and his sons' fierce conduct, the loss of Rachel within sight of home, and ten years of mourning for Joseph."
+   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The parting blessing — as on entering (v7), so departing, 'he blessed Pharaoh, and went out' (the audience framed in benediction); wishing the king all happiness and acknowledging the honour shown his house (Gill); more than courtesy, an act of piety — Jacob praying for Pharaoh as one bearing the authority of a prophet and patriarch, a blessing not to be despised even by a potent prince (Wesley); the heir of the covenant, though a poor sojourner, in a place to bless the king of Egypt, the lesser conferring the greater gift."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jacob blessed Pharaoh",
-   "went out from before Pharaoh",
-   "an act of piety",
-   "the parting blessing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Deny that the blessing is a mere greeting: the term does not mean a common and profane salutation but the pious prayer of a servant of God, since the children of this world salute kings for the sake of honour and by no means raise their thoughts to God, whereas Jacob adjoins to civil reverence that affection which commends the king's safety to God; and draw the duty from it, that if captives were commanded to pray for the peace of the city of their exile, Jacob owed as much to a king so humane, and we are commanded to pray for whatever rulers we have. On the answer, raise the objection against Jacob and then answer it: he might seem to complain of the shortness of life, and the complaint would be unworthy of him, for why should a century and a third not suffice? But if the words are rightly weighed he is expressing gratitude, extolling the vigour divinely afforded to his fathers rather than deploring his own decrepitude, so that the comparison was made only to ascribe glory to God; and in naming the days evil he shows he was consumed not by years but by labours. Nothing was less in the holy man's mind than to expostulate with God. Alongside this, take pilgrimage as the mark of every good man, who is not at home in his own country but seeking a better, and note that Jacob's was one literally, running through Canaan, Padanaram, Succoth, Shechem, Hebron and now Egypt."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The settlement in the best of the land — 'Joseph placed his father and brethren, and gave them a possession' (a fixed dwelling and holding — houses, land to till, pasture for flocks and herds, Gill); 'in the best of the land, in the land of Rameses' (the choicest district of Goshen, named for one of its cities, the fertile border-land suited to shepherds); 'as Pharaoh had commanded' (Joseph acting strictly by the king's order, not his own authority); the providence — the family established in a rich, separate region to grow apart from the Egyptians, secure through the famine."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph placed his father and brethren",
-   "a possession in the best of the land",
-   "in the land of Rameses",
-   "as Pharaoh had commanded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Take the blessing for a salutation, peace be unto thee or the like. Then trace the English word pilgrim through the French to a Latin term for a stranger, one abroad and not at home, and define a pilgrim as a person who took a journey on some religious account, submitting to many hardships: a more appropriate term could not be conceived for the life of Jacob, since apart from the journey to Mesopotamia the principal part of his travels were pilgrimages undertaken in the course of God's providence."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Joseph's provision for his kin — 'Joseph nourished his father, and brethren, and all his father's household, with bread' (though Goshen afforded pasture, it could not feed them with corn while the famine continued, so he supplied bread for all, Gill); 'according to their families' (the Hebrew taph, according to the number of children and dependants in each household, the provision apportioned to need, so even the brother with one child and the brother with many were each supplied, none starved, Ellicott); the idiom 'to the mouth of the little one,' feeding them tenderly (Calvin); the brother once sold now the sustainer."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Turn the reckoning by days into the lesson: even by days life is soon reckoned, and we are not sure of it for a day; the hoary head is only a crown of glory when found in the way of righteousness."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is 'pilgrimage' the right word for the life Jacob describes?",
+    "sides": [
+     {
+      "position": "Yes, and no more appropriate term could be conceived: the word means a stranger abroad, and his travels were undertaken in the course of God's providence",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "No: the idea of a pilgrimage is a modern one, and Jacob was a sojourner rather than a traveller bound to a distant shrine",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Yes, and it describes every good man, who is not at home in his own country but seeking a better",
+      "holders": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is Jacob's answer to Pharaoh a complaint?",
+    "sides": [
+     {
+      "position": "No &mdash; rightly weighed it is gratitude, extolling the vigour God gave his fathers, and nothing was less in his mind than to expostulate with God",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "It is plain biography: his days had in fact been evil, and the catalogue of his troubles explains the word",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone explains Pharaoh's deference from Egyptian expectation of life, a hundred and twenty being the utmost limit, so that a man of a hundred and thirty was received as a saintly personage."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone refuses to let the blessing be a court formality, making it the prayer of a servant of God and deriving from it the duty of praying for whatever rulers we have."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone works the etymology of the English word pilgrim through the French and Latin in order to defend the translation against the charge of anachronism."
+   }
+  ],
   "themes": [
-   "Joseph nourished his father and brethren",
-   "with bread",
-   "according to their families",
-   "provision for every family"
+   "And Joseph brought in Jacob his father, and set him before Pharaoh: and Jacob blessed Pharaoh.",
+   "And Pharaoh said unto Jacob, How old art thou?",
+   "And Jacob said unto Pharaoh, The days of the years of my pilgrimage are an hundred and thirty years: few and evil have the days of the years of my life been, and have not attained unto the days of the years of the life of my fathers in the days of their pilgrimage.",
+   "And Jacob blessed Pharaoh, and went out from before Pharaoh.",
+   "And Joseph placed his father and his brethren, and gave them a possession in the land of Egypt, in the best of the land, in the land of Rameses, as Pharaoh had commanded.",
+   "And Joseph nourished his father, and his brethren, and all his father’s household, with bread, according to their families."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The severity of the famine — 'there was no bread in all the land' (private stores exhausted, bread only from Pharaoh's granaries Joseph had filled); 'the famine was very sore, so that Egypt and Canaan fainted' (tilah, to languish, be utterly exhausted, both countries drained by hunger); a memorable judgment of God that the most fertile regions, wont to supply distant nations, were reduced nearly to be consumed (Calvin); the chapter recording God's saving of Egypt from ruin, for he is King of nations as well as of saints (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no bread in all the land",
-   "the famine was very sore",
-   "Egypt and Canaan fainted",
-   "the land near ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The gathering of the money — 'Joseph gathered up all the money... for the corn which they bought' (not by exaction but selling corn from the royal stores to starving Egypt and Canaan, till all the money in both lands was paid in, Clarke); 'brought the money into Pharaoh's house' (the whole proceeds to the king's treasury); the fidelity Moses commends (Calvin) — Joseph, with sole charge of the corn and handling vast sums, kept nothing back for himself, incorruptibly honest where few could resist enriching themselves; the perishing fed and the crown enriched together, conducted with order and justice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gathered up all the money",
-   "for the corn which they bought",
-   "into Pharaoh's house",
-   "faithful administration"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The failing of the money and the people's cry — 'when money failed in Egypt and Canaan' (the silver of both lands exhausted after years of buying corn, spent through the earlier famine years, Gill); not that every coin was in the treasury — some nobles still had means — but nearly all gone, the common people destitute (Calvin); 'all the Egyptians came... Give us bread' (the starving thronging to him who alone has corn); 'why should we die in thy presence? for the money faileth' (perishing before his eyes with nothing to pay, casting themselves on his mercy); the famine driving them from one extremity to the next."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when money failed",
-   "Give us bread",
-   "why should we die in thy presence?",
-   "the next extremity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "John Calvin",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Gill"
   ],
+  "range": "13-19",
+  "pericope_label": "Money, cattle and land given for bread in the famine",
   "schools": [
    {
     "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Call it a merciful arrangement by which the owners were delivered from a burden while some cattle were saved against the time they would be needed, and find in the difficulty of keeping so many beasts in a dearth the reason why the ablest of Joseph's brethren had been wanted over the royal herds. On the second year, insist that it is not the second of the famine but the year after the cattle were given up."
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The exchange of cattle for bread — 'Give your cattle... if money fail' (the silver gone, Joseph accepting livestock as the price of grain); the wisest measure for preserving both people and cattle, since the people had no grain to feed their beasts, which must else have starved — surrendering them, the owners were fed and the cattle kept alive in Pharaoh's keeping (Clarke); a merciful arrangement relieving the owners of a burden, a portion saved (Ellicott); not extortion but a prudent stewardship dispensing the stores justly (Calvin)."
+    "summary": "Call the famine a memorable judgment of God, that the most fertile regions, accustomed to supply distant nations, were reduced almost to nothing, and draw the moral for those who cultivate rich lands: not to trust their abundance, but to acknowledge that provision does not so much spring from the earth as flow down from heaven by the secret blessing of God, since no luxuriance is so great that it is not soon exchanged for barrenness when God sprinkles it with salt instead of rain. Then state the charge against Joseph before answering it. It was a miserable spectacle, one which might have softened hearts of iron, to see rich farmers who had stored provision for others now begging food; so he might be deemed cruel in not giving bread freely to the exhausted but robbing them of their cattle. But seeing that he is transacting the business of another, dare not charge his strictness with cruelty. Had he extorted corn by force during the fruitful years he would now have acted tyrannically; but the people had been free to store what they sold to the king, and now pay the just penalty of their negligence. Since it was lawful to sell corn it was lawful to exchange it for cattle, the corn belonging to the king; and if the objection is that the poor should be helped, then were that rule to prevail the greater part of sales would be unlawful, since no one freely parts with what he possesses. Add that Joseph was not dealing with his own property but had been appointed over the corn to gain for the king, and that since we stand or fall by God's judgment alone it is not for us to condemn what his law has left undecided."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Defend the taking of the cattle on practical grounds, as the wisest measure that could have been adopted for the preservation of both people and beasts, since the people had no grain and must else have divided their own portion with the cattle, which they wished to keep for tillage; bought by Joseph, the beasts were maintained at the royal expense and very likely returned at the end of the famine, for how else could the ground be cultivated? For this part of his conduct Joseph deserves high praise and no censure."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Make the famine a lesson in dependence: if the usual favours of providence are suspended but for a while we all perish, and our wealth would not keep us from starving if the rain of heaven were withheld two or three years; but see also how much we smart by our own improvidence, for if the Egyptians had done for themselves in the seven years of plenty as Joseph did for Pharaoh they had not now been in these straits. Observe too that Joseph, who might have gone to live with his father in Goshen, kept as closely as ever to his office, since even natural affection must give way to necessary business."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was Joseph's taking of the cattle for bread a cruelty?",
+    "sides": [
+     {
+      "position": "No, though the charge must be stated: he used no force, the people had been free to store what they sold, and he was transacting another man's business",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "No &mdash; it was the wisest measure for preserving people and beasts alike, and for it Joseph deserves high praise and no censure",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "No &mdash; it was a merciful arrangement, delivering the owners from a burden while saving some cattle for the return of agriculture",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the blame for the extremity lie?",
+    "sides": [
+     {
+      "position": "With providence withheld, to teach dependence &mdash; but also with the people's own improvidence, who did not do for themselves what Joseph did for Pharaoh",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "With the people's negligence: they had been free to lay up in their private stores and now pay the just penalty",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone states the case against Joseph at its full strength before answering it, and alone closes the defence by refusing to condemn what God's law has left undecided."
+   },
+   {
+    "voice": "Matthew Henry",
+    "note": "Alone reads Joseph's staying at his post rather than joining his father in Goshen as a rule, that even natural affection must give way to necessary business."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone argues that the cattle bought by Joseph were kept at the royal expense and probably returned when the famine ended, since otherwise the land could not have been cultivated again."
+   }
+  ],
   "themes": [
-   "Give your cattle",
-   "I will give you for your cattle",
-   "if money fail",
-   "the exchange relieves man and beast"
+   "And there was no bread in all the land; for the famine was very sore, so that the land of Egypt and all the land of Canaan fainted by reason of the famine.",
+   "And Joseph gathered up all the money that was found in the land of Egypt, and in the land of Canaan, for the corn which they bought: and Joseph brought the money into Pharaoh’s house.",
+   "And when money failed in the land of Egypt, and in the land of Canaan, all the Egyptians came unto Joseph, and said, Give us bread: for why should we die in thy presence? for the money faileth.",
+   "And Joseph said, Give your cattle; and I will give you for your cattle, if money fail.",
+   "And they brought their cattle unto Joseph: and Joseph gave them bread in exchange for horses, and for the flocks, and for the cattle of the herds, and for the asses: and he fed them with bread for all their cattle for that year.",
+   "When that year was ended, they came unto him the second year, and said unto him, We will not hide it from my lord, how that our money is spent; my lord also hath our herds of cattle; there is not ought left in the sight of my lord, but our bodies, and our lands:",
+   "Wherefore shall we die before thine eyes, both we and our land? buy us and our land for bread, and we and our land will be servants unto Pharaoh: and give us seed, that we may live, and not die, that the land be not desolate."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The year sustained by cattle — 'they brought their cattle unto Joseph' (the more readily since there was scarce any grass left to feed them, to surrender them no great loss but a relief, Gill); the full list exchanged — 'horses... flocks... herds... asses'; the mention of horses a significant fact for dating the period, the horse a late arrival in Egypt not known in Abraham's time, pointing to the dynasty Joseph served (Ellicott); 'he fed them with bread for all their cattle for that year' (the surrender buying a whole further year of sustenance, the nation carried through a second stage of want)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they brought their cattle",
-   "bread in exchange for horses and flocks",
-   "fed them for that year",
-   "another season bought"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The last extremity — 'when that year was ended, they came the second year' (not the second year of the famine but the year after surrendering the cattle, the seventh and last of the dearth, when the land must be sown for a future crop, Clarke/Ellicott); the confession 'our money is spent; my lord hath our cattle; there is not ought left but our bodies and our lands' (stripped by stages — silver, livestock, now only persons and fields remain); knowing from Joseph's prophecy the end was near, they sought seed as well as food, that the land might yield again (Calvin); the whole nation at its last possession."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when that year was ended",
-   "our money is spent",
-   "nothing left but our bodies and lands",
-   "the last extremity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people's offer of themselves — the desperate proposal made by the people, not imposed: 'buy us and our land for bread, and we and our land will be servants unto Pharaoh' (reduced to extremity, freely offering to become bondservants and give up their fields for bread to live); 'give us seed, that we may live... that the land be not desolate' (asking seed-corn for sowing, looking to a future crop near the famine's end); without bread they must die and without seed their land too (Gill); in such straits men have even sold children and families to escape starvation (Clarke); prizing life above freedom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "buy us and our land for bread",
-   "servants unto Pharaoh",
-   "give us seed",
-   "survival bought with freedom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "20-26",
+  "pericope_label": "Joseph bought all the land of Egypt for Pharaoh, save the land of the priests",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The purchase of the land — 'Joseph bought all the land of Egypt for Pharaoh... so the land became Pharaoh's' (the Egyptians selling their fields for bread, the king made sole owner); bought for Pharaoh, not for himself nor entailed on his family, his integrity preserved (Gill); the gain wholly to the crown."
+    "prevalence": "single",
+    "summary": "Meet the accusation that Joseph reduced a free people to slavery by conceding that he vastly increased the royal power, and arguing that this was to the people's advantage, since they had lived in vassalage to a multitude of petty sovereigns, and to their wives and priests besides; add that the Greek historians confirm that all the land belonged to the crown, as it still does in India and Burmah. On the priests, confirm the exemption from the historians, who report a daily allowance of cooked food to them and name the king, the priests and the warriors as the only landholders, and note that the text ascribes it to the king, not to Joseph."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Answer the same accusation from the conduct of the transaction: no wiles, no force and no threats had reduced the Egyptians to this necessity, and Joseph extorted nothing but treated with them at their own request. Do not rest there, conceding that a man who exploits necessity is not excused merely because the sufferer offered the terms; argue that Joseph acted with equity in the terms themselves, conceding personal liberty, covenanting only for the fields, and restoring not only the lands but the implements he had bought. Then turn the case on your own readers: let those too intent on wealth beware of employing Joseph's example as a pretext, since all contracts not formed by the rule of charity are vicious in God's sight. Think the fifth part light, since kings elsewhere demanded tithes and doubled them in war; and hold that a fifth of the produce rather than of the land was chosen to induce the Egyptians to cultivate with more alacrity, convinced they were treated with clemency. Quote an emperor otherwise reckoned a tyrant, that it is a shepherd's part to shear the flock and not to tear off the skin, and complain that in your own day kings think they do not rule freely unless they not only flay their subjects but devour them. On the priests, make the exemption evidence about human nature, that a heathen king so attended to divine worship as to support them gratuitously, which shows that a sentiment of piety is implanted in men and cannot be wholly effaced; call the object of it foolish superstition and the design in itself worthy of commendation, and turn it against Christian princes who neglect ministers they know to be approved by God. Then ask whether Joseph could lawfully feed such priests, and answer that you dare not absolutely condemn the act, nor deny that he may have erred in not resisting the superstition more boldly, since no law required him to destroy them by hunger."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Reconstruct the constitution. Before Joseph, Egypt was a limited monarchy: the king had his estates, the priests their lands, the people their patrimony independent of both, so Pharaoh had no power to levy taxes until he had bought the right each man had in his possessions. Cite the historian's threefold division, one part to the priests for the sacrifices, a second to the king for his court and wars, so that there were no taxes, and the rest to the subjects, who served as a standing militia. This was a constitution something like the British, the government mixed and the monarchy properly limited, until Joseph by buying the land made the king in some sort despotic; though no improper use appears to have been made of it. On the priests, take the exemption as constitutional history, their portion being assigned by Pharaoh, and call this the earliest account we have of an established religion supported by the state."
    }
   ],
   "debates": [
    {
-    "question": "Was Joseph's land policy oppressive, reducing a free people to slavery?",
+    "question": "Did Joseph reduce a free people to slavery?",
     "sides": [
      {
-      "position": "no — though it greatly increased royal power, it broke the yoke of the petty lords and was a just, necessary administration in a public emergency, the people themselves consenting and offering it",
+      "position": "He increased the royal power vastly, but to the people's advantage, since they had been in vassalage to a crowd of petty masters",
       "holders": [
-       "Ellicott",
-       "Calvin",
-       "Gill"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "the accusation that Joseph reduced a free people to slavery and concentrated all power in the king",
+      "position": "No: he used no force and extorted nothing, conceded personal liberty, and restored both the lands and the implements",
       "holders": [
-       "some critics (noted and rejected by the expositors)"
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "He changed the constitution, making a properly limited monarchy in some sort despotic &mdash; though no improper use appears to have been made of it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is to be made of the exemption of the priests?",
+    "sides": [
+     {
+      "position": "It is constitutional history: the earliest account of an established religion supported by the state",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "It is evidence about human nature: a heathen king supported false priests rather than let worship fail, which shames Christian princes who neglect true ministers",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "It is a custom the historians confirm, and the text ascribes the allowance to the king rather than to Joseph",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Joseph bought all the land of Egypt",
-   "for Pharaoh",
-   "the land became Pharaoh's",
-   "a debated policy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The removal of the people — 'he removed them to cities from one end of the borders of Egypt to the other' (the whole population shifted near the cities); read mercifully — Joseph moved not by political design but humanity and prudence, the corn being stored in the cities so the people could be surely fed near it (Clarke, Ellicott); a second purpose — displaying Pharaoh's sovereign right over the purchased land and helping them forget their old titles (Wesley); the removal severe yet better that they remain free cultivators than serfs bound to the old soil (Calvin); generally defended as wise and humane."
+    "voice": "Adam Clarke",
+    "note": "Alone reconstructs the pre-Joseph constitution of Egypt from the historians, comparing its mixed government and limited monarchy to the British, and dates the change to despotism from the purchase of the land."
+   },
+   {
+    "voice": "John Calvin",
+    "note": "Alone turns the defence of Joseph into a warning to his own readers, that those too intent on wealth must not use his example as a pretext, since contracts not formed by the rule of charity are vicious in God's sight."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone weighs the change against what the Egyptians already endured, arguing that men held in vassalage to petty sovereigns, wives, priests and embalmers gained by having one master instead."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "he removed them to cities",
-   "from one end of Egypt to the other",
-   "merciful provision",
-   "near the stored corn"
+   "And Joseph bought all the land of Egypt for Pharaoh; for the Egyptians sold every man his field, because the famine prevailed over them: so the land became Pharaoh’s.",
+   "And as for the people, he removed them to cities from one end of the borders of Egypt even to the other end thereof.",
+   "Only the land of the priests bought he not; for the priests had a portion assigned them of Pharaoh, and did eat their portion which Pharaoh gave them: wherefore they sold not their lands.",
+   "Then Joseph said unto the people, Behold, I have bought you this day and your land for Pharaoh: lo, here is seed for you, and ye shall sow the land.",
+   "And it shall come to pass in the increase, that ye shall give the fifth part unto Pharaoh, and four parts shall be your own, for seed of the field, and for your food, and for them of your households, and for food for your little ones.",
+   "And they said, Thou hast saved our lives: let us find grace in the sight of my lord, and we will be Pharaoh’s servants.",
+   "And Joseph made it a law over the land of Egypt unto this day, that Pharaoh should have the fifth part; except the land of the priests only, which became not Pharaoh’s."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The exemption of the priests — 'only the land of the priests bought he not' (their estate not taken amid the universal sale); the reason the text gives — 'the priests had a portion assigned them of Pharaoh, and did eat their portion... wherefore they sold not their lands'; not from any affection or superstitious reverence Joseph bore the heathen priests, which could never be thought of so good a man, but because they had no need to sell, the king allowing them a fixed maintenance (Gill, Calvin); the religion of Egypt established and state-supported, the priests long receiving a daily allowance (Clarke, Ellicott, Herodotus)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the land of the priests bought he not",
-   "a portion assigned of Pharaoh",
-   "they sold not their lands",
-   "the priests exempted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The giving of seed — 'I have bought you this day and your land for Pharaoh' (stating the new state, people and land now the crown's); 'lo, here is seed for you, and ye shall sow the land' (the famine closing, Joseph furnishing the seed-corn they asked, that they plant and reap again; the timing showing the arrangement completed near the seventh year's end when sowing could resume, Ellicott); Joseph's singular humanity reinstating the destitute, exiles on their own soil, setting them to work again as Pharaoh's tenants (Calvin); Egypt before Joseph a limited monarchy, now the people holding their land of Pharaoh but tilling it still."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have bought you and your land",
-   "here is seed for you",
-   "ye shall sow the land",
-   "reinstated as cultivators"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The moderate rent — 'ye shall give the fifth part unto Pharaoh, and four parts shall be your own' (of each future harvest, a fifth to the crown as rent, four fifths to the people); the four parts 'for seed... for your food... for your households... for your little ones' (enough for sowing, sustenance, and families, an ample tenant's portion); the rent light and even generous — a fifth to the sovereign who bought the land and saved their lives, the cultivators keeping four fifths; the fifth a recognized, not oppressive tax, as in India (Clarke); the moderation answering the charge of cruelty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the fifth part unto Pharaoh",
-   "four parts shall be your own",
-   "for seed and food and little ones",
-   "a light rent"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people's gratitude — 'Thou hast saved our lives' (owning that Joseph by his foresight and administration preserved them from death by famine, thankfully confessing the favour, Gill); 'let us find grace... and we will be Pharaoh's servants' (accepting their new condition gladly, content as the king's tenants, asking only continued favour); the people more than satisfied — if made dependent on Pharaoh, they were freed from the yoke of the petty lords, their lot bettered (Ellicott); their grateful response the strongest answer to the charge that Joseph reduced them cruelly to slavery — the saved blessing their deliverer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Thou hast saved our lives",
-   "let us find grace",
-   "we will be Pharaoh's servants",
-   "gratitude, not grievance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The lasting statute — 'Joseph made it a law over the land of Egypt unto this day, that Pharaoh should have the fifth part' (the emergency measure become a fixed law, enacted with the consent of Pharaoh and people, a fundamental law of the constitution still in force in Moses's day and after, Gill); the moderation — the people held their land of the king and rendered a fifth as yearly tax, the crown demanding no more, the burden light and the holdings secure (Clarke); the standing exception 'except the land of the priests' (free of tax and sale); the permanence showing the wisdom and acceptability of the policy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joseph made it a law",
-   "Pharaoh should have the fifth part",
-   "unto this day",
-   "except the land of the priests"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The prospering of Israel — 'Israel dwelt in Goshen; and they had possessions therein' (fixed in the granted region, holding lands and houses), yet dwelling not as outright owners in perpetuity but as sojourners granted a dwelling-place, their true inheritance still Canaan (Calvin); 'grew, and multiplied exceedingly' (the household of seventy beginning to multiply into the promised nation, the famine become the occasion of Israel's growth); the contrast — while the Egyptians were impoverished in their own land, the sojourning Israelites were replenished and prospered (Henry); the removal to Egypt the means of preservation and increase."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Israel dwelt in Goshen",
-   "had possessions therein",
-   "grew, and multiplied exceedingly",
-   "prospering amid Egypt's want"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob's years in Egypt — 'Jacob lived in Egypt seventeen years' (granted, beyond his expectation of soon dying, to see his family established and Joseph's prosperity); the symmetry — as Jacob nourished and reared Joseph the first seventeen years before losing him, so Joseph nourished his father seventeen years in his old age, Providence ordering a fitting return (Wesley); the same number of years with Joseph in Egypt as Joseph had with him before (Gill); 'the whole age... an hundred forty and seven,' a long pilgrimage yet short of his fathers'; no small trial to live so long an exile, yet faith holding its hope in Canaan (Calvin)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jacob lived in Egypt seventeen years",
-   "an hundred forty and seven years",
-   "Providence's symmetry",
-   "the pilgrimage near its close"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin",
+   "John Gill",
    "John Wesley"
   ],
+  "range": "27-31",
+  "pericope_label": "Bury me not in Egypt: and Israel bowed himself upon the bed",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jacob's charge concerning his burial — 'the time drew nigh that Israel must die' (he who prevailed with the angel must yet yield to death, his candle gradually burning down, Wesley); 'put thy hand under my thigh' (the ancient form of solemn oath, as Abraham's servant, Gen 24:2, Clarke); 'deal kindly and truly... bury me not in Egypt' (asking the last kindness, his body not left in the land of sojourning); the faith and magnanimity (Calvin) — no wealth of Egypt where his son ruled could allure him to rest there, his heart sighing for Canaan; the charge an act of faith that the promised land, not Egypt, is his seed's true inheritance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the time drew nigh that Israel must die",
-   "put thy hand under my thigh",
-   "bury me not in Egypt",
-   "his heart on Canaan"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Seek no remote reason for the request, since Jacob's nature was loving and strongly domestic, and at the cave his nearest relatives lay &mdash; the grandfather he had known as a boy, his father and mother, and Leah, who had at last won his affections &mdash; so he wished to lie among his own; against which set the grief that Rachel was buried apart. On the last clause, explain that the Hebrew without vowels may mean either bed or staff, that the Greek version and the epistle following it read the top of his staff, and that the vowel points were added later and are not of final authority; still prefer the received rendering, since it was scarcely worth mentioning that Jacob bowed leaning on a staff, whereas the patriarch leaning back upon his bed, content in his son's promise, is a picture full of pathos."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The request to rest with his fathers — 'I will lie with my fathers... carry me out of Egypt, and bury me in their buryingplace' (the cave of Machpelah near Hebron, where Abraham, Sarah, and Isaac lay); a twofold purpose (Gill) — to express Jacob's faith in the promised land, owning Canaan as his seed's inheritance, and to draw his posterity's hearts from Egypt to Canaan lest they forget the promise; Canaan and the patriarchs' grave a consecrated place under God's blessing (Clarke); 'I will sleep' — the word 'sleep' for death referring to the body, not the soul which lives (Calvin); Joseph's ready 'I will do as thou hast said.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I will lie with my fathers",
-   "carry me out of Egypt",
-   "bury me in their buryingplace",
-   "faith in the promise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Infer from the oath not only the old man's anxiety but his invincible magnanimity, since none of the wealth of Egypt could prevent him from sighing after a land in which he had passed a laborious life; and let his faith appear more excellent still in this, that by commanding his body to be carried back he encouraged his sons to hope for deliverance, so that being dead he animated the living as with the sound of a trumpet. Add a political reason the others miss: this choice of burial would not gratify the Egyptians, looking like a reproach on their kingdom, as though the stranger could find no fit place in that splendid country; so Jacob bound Joseph by an oath that he might more freely dare to ask the favour. Note why the office fell on Joseph rather than the brothers, who as strangers had neither favour nor authority, and that Joseph most needed guarding lest, ensnared by Egypt, he should forsake his own kindred. On the phrase about lying with his fathers, observe that the word sleep, when put for dying, refers to the body and not the soul. On the last clause take the bed, holding that Jacob, unable to rise, composed himself in the attitude of prayer, and explain the Greek rendering as an error of similar words which the apostle followed as commonly used. Alongside this, read the burial as faith in the promise and as a means of drawing his sons' minds off from continuing in Egypt."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The oath and Jacob's worship — 'Swear unto me. And he sware unto him' (Jacob binding the promise with an oath, not from distrust of faithful Joseph but to show how intensely his mind was set, making the obligation sure that nothing prevent burial in Canaan, Gill); 'Israel bowed himself upon the bed's head' (the aged patriarch bowing in reverence, content his wish was secured); the textual variation — the Hebrew without vowels reads 'bed' or 'staff,' the LXX and Heb 11:21 'leaning upon the top of his staff,' both agreeing in the act of worship; Jacob exerting his failing body to give thanks and worship God who kept his covenant; his last act one of faith and adoration."
+    "summary": "Make the burial a matter of faith rather than affection: he would be buried there not because it was the land of his nativity but because it was the land of promise, which he desired thus to keep possession of until his posterity were masters of it, and a type of that better country he expected. On the last clause give both readings and let the reader choose, offering the plain sense that the exhausted old man, having sat up to take the oath, reclined again upon his bed; report that some have supposed a carved image on the staff's head, or that Jacob bowed to Joseph's sceptre and so fulfilled the dreams, and prefer, on the other reading, that leaning on his staff he bowed in adoration to God."
    }
   ],
   "debates": [
    {
-    "question": "Did Israel bow 'upon the bed's head' or 'upon the top of his staff'?",
+    "question": "Did Israel bow upon the bed's head or upon the top of his staff?",
     "sides": [
      {
-      "position": "a textual variation — the unpointed Hebrew may read 'bed' or 'staff'; the LXX and Hebrews 11:21 read 'leaning on the top of his staff,' both agreeing in the act of worship",
+      "position": "The bed: it was scarcely worth mentioning that he bowed leaning on a staff, and the unpointed Hebrew leaves the choice open",
       "holders": [
-       "Ellicott",
-       "most"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The bed, the Greek rendering being an error of similar words which the apostle followed as commonly used &mdash; a reasoning an editor's note in the same block calls unsatisfactory",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Either: the plain sense is that the exhausted old man reclined again, but on the other reading he bowed in adoration leaning on his staff",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did Jacob want to be buried in Canaan?",
+    "sides": [
+     {
+      "position": "To confirm the promise to his posterity: being dead he animated the living as with the sound of a trumpet",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "From domestic affection: his nearest relatives lay in the cave, and he wished to lie among his own",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "By faith in the land of promise, as a type of the better country he expected",
+      "holders": [
+       "John Wesley",
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "note": "Alone supplies a political motive for the oath, that a foreigner's choice of burial abroad looked like a reproach on the whole kingdom, so the oath armed Joseph to ask the favour and to answer objections."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "note": "Alone reads the request as domestic feeling rather than doctrine, naming the relatives already in the cave and setting against it the grief that Rachel lay apart."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Alone reports the stranger conjectures the passage has attracted, that Jacob adored a carved image on his staff's head, or bowed to Joseph's sceptre and so fulfilled the dreams."
+   }
+  ],
   "themes": [
-   "Swear unto me",
-   "he sware unto him",
-   "Israel bowed upon the bed's head",
-   "worship and faith"
+   "And Israel dwelt in the land of Egypt, in the country of Goshen; and they had possessions therein, and grew, and multiplied exceedingly.",
+   "And Jacob lived in the land of Egypt seventeen years: so the whole age of Jacob was an hundred forty and seven years.",
+   "And the time drew nigh that Israel must die: and he called his son Joseph, and said unto him, If now I have found grace in thy sight, put, I pray thee, thy hand under my thigh, and deal kindly and truly with me; bury me not, I pray thee, in Egypt:",
+   "But I will lie with my fathers, and thou shalt carry me out of Egypt, and bury me in their buryingplace. And he said, I will do as thou hast said.",
+   "And he said, Swear unto me. And he sware unto him. And Israel bowed himself upon the bed’s head."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }
