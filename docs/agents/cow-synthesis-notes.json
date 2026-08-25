@@ -26066,6 +26066,57 @@
       "book": "numbers",
       "chapter": "29",
       "note": "Fidelity self-grade for numbers 29, all five entries A. Reported ratios 0.36x, 0.59x, 0.28x, 0.43x, 0.24x, but those are measured against the raw span source and understate the real compression, because the raw figure includes Jamieson residue, Keil verse text and the Ellicott chrome. Measured against the content I could actually use, the ratios are 0.43x for 1-4, 0.87x for 6-11, 0.31x for 12-13, 0.98x for 34-36 and 1.48x for 39-40. Entry 34-36 and entry 39-40 are therefore the tightest work in the chapter and the two the audit flags as floor-hugging, though it records no padding in either. I let 39-40 stand above 1x because the surviving material carries eight distinct claims, including a real disagreement over where the last verse belongs, Keil closing chapters 28-29 with it against Ellicott reporting that the Hebrew Bible opens chapter 30 with it. Nothing in either entry is invented; the framing is mine and the claims are the witnesses'. One process correction during the writing: I drafted Gill's note that the day's offering did not displace the new moon's into the 1-4 entry, but that note is filed at key 6 and belongs to the 6-11 span. Caught it before the build and moved it. The failure mode is worth naming because it is easy: two adjacent spans discussing the same sacrifices make cross-span attribution feel harmless when it is exactly the error the pericope rules exist to prevent."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "observation",
+      "book": "1peter",
+      "chapter": "2",
+      "note": "Picked and deferred, not attempted. python3 scripts/synthesis-loop.py size 1peter 2 reports 25 source keys and 70,426 usable source words, which is over the ~40,000-word whole-batch threshold and by a wide margin the largest chapter this worker has measured, ahead of 1john 5 at 52,369 and mark 14 at 44,986. The batch had already landed numbers 29, so taking this one would have blown the source-word budget rather than filling it. Leaving it at the queue head for a fresh batch to take as its only unit, which is exactly the case the size rule was written for. Recording the measurement so the next worker does not have to rediscover it: at 25 keys and 70k words the per-key average is about 2,800 words, so the pericope tiling will matter more here than the writing does."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "9",
+        "10"
+      ],
+      "note": "The 200-word truncation is not a Keil defect, it is a harvest defect. numbers 29 showed every Keil block in that chapter cut at exactly 200 words mid-sentence. 1corinthians 5 shows the same cut hitting SIX blocks across THREE different voices: Gill at keys 1, 5, 9 and 10, Lightfoot at key 2, and Cyril of Jerusalem at key 4. Every one ends mid-sentence, and the two blocks near 200 that end cleanly (Calvin at 205, Ellicott at 196 and 198) are natural lengths rather than cuts, which is what makes the pattern legible. So the cap follows the block, not the commentator and not the book: any block that would have run past 200 words is truncated wherever it appears. The practical cost here was moderate because the truncated blocks were Gill's, and Gill is verbose enough that 200 words usually carries his point; at numbers 29 the same cap destroyed Keil entirely, because his blocks open with several verses of bare KJV text and the cap consumed all of it. The rule for a writer is that a block reporting exactly 200 words should be read as incomplete and its final clause discounted."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "4",
+        "5"
+      ],
+      "note": "A block can be PART residue, which excluded_voices cannot express. Two clean cases here first: Jamieson at key 4 is 94 words on Apollos and Alexandria, that is Acts 18:24, and Cyril of Jerusalem at keys 4 and 5 is catechetical lecture material on 2 Corinthians 4:4 and on the word Ecclesia. Both were declared and excluded, Cyril silently because the VOICE_LABELS bug still refuses him in excluded_voices. The new case is Tertullian at key 1. His 347-word block opens with roughly 230 words on 1 Corinthians 4:5 and 4:9, the hidden things of darkness and the spectacle to angels and men, and only then reaches this chapter: the man was an offender who had his father's wife, the sentence to be delivered unto Satan, the destruction of the flesh, and the putting away of the wicked person. So the block is displaced from the previous chapter for two thirds of its length and genuine for the last third. excluded_voices operates on whole blocks by voice name, so it can neither exclude this one nor mark what part of it is sound. Compounding it, the genuine third addresses verses 1, 5 and 13, which fall in three different pericopes, while the block sits at key 1: only the verse 1 material could be used without attributing content the fidelity checker cannot find in the span it would appear in. This is the same block-offset problem recorded at numbers 29 for Keil, now seen in a father rather than a modern and in the New Testament rather than the Old, so it is a property of the harvest and not of any one source."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "1corinthians",
+      "chapter": "5",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott chrome, eleventh confirmation, and the placement rule holds a second time in a row. His block at key 13 reports 1067 words, of which about 103 are real comment (that the best manuscripts read the future, God will judge; that the word therefore is better omitted; that Paul adopts the form in which sentence was pronounced on great criminals, familiar to Jewish converts from Deuteronomy) and about 964 are StudyLight furniture. Key 13 is again both Ellicott's last block and the chapter's last key. Confirmed now at joshua 14, deuteronomy 11, numbers 36, joshua 16, exodus 37, luke 11, 2john 1, acts 10, mark 14, numbers 29 and 1corinthians 5. A practical warning for the writer: my dump helper filters by per-block word cap, and at a cap below the chrome length the real 103 words at the head of the block were invisible, so the block looked like pure chrome. I nearly wrote the entry with Ellicott silent at the last verse. Read the head of a chrome-bearing block directly from the JSON before concluding the voice says nothing."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "1corinthians",
+      "chapter": "5",
+      "note": "Fidelity self-grade for 1corinthians 5, all five entries A. Ratios 0.09x, 0.13x, 0.11x, 0.08x and 0.13x against the raw span source, the most compressed chapter this worker has written; 31,201 source words over thirteen verses reduced to five pericope entries of about 650 words each. At this compression the risk is not invention but silent omission, so the tags carry the full account of each voice and the prose carries the disagreements. The chapter is unusually well supplied with real disputes, and I let those set the shape of every entry: whether the father was living (five distinct positions at verses 1-2), whether delivering to Satan is excommunication or an apostolic bodily punishment (Calvin explicitly reversing the older reading, Clarke and Gill denying the excommunication sense outright), whether the letter of verse 9 is lost (Clarke standing almost alone against Calvin, Robertson, Wesley, Gill, Ellicott, Barnes and Henry), whether the command to purge is aimed at the man or at the church's own temper (Ellicott flatly denying what Clarke asserts), and whether verse 12 disclaims a jurisdiction or asks after one (Lightfoot alone rejecting the received rendering because it contradicts the apostle's treatment of Elymas and of Hymeneus and Alexander). One thing I deliberately did not do: Calvin at verse 10 and Robertson at verse 11 both name Chrysostom, who is a declared voice of this chapter at keys 1 and 9, and I let those namings stand in the prose of the 9-11 entry because Chrysostom is sourced within that very span. Where a named third party was NOT a chapter voice, as with Ambrose, Erasmus, Beza, Augustine, Whitby and Selden, I named them as the reporting witness reports them, which the entity check accepted."
     }
   ]
 }
