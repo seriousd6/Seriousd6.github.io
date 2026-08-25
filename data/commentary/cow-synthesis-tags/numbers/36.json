@@ -2,441 +2,246 @@
  "1": {
   "voices": [
    "John Gill",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin"
   ],
+  "range": "1-4",
+  "pericope_label": "And the chief fathers of the families of the children of Gilead, the son of Machir, the son of Manasseh, of the families of the sons of Joseph, came near, and spake before Moses, and before the princes, the chief fathers of the children of Israel: And they said, The LORD commanded my lord to give the land for an inheritance by lot to the children of Israel: and my lord was commanded by the LORD to give the inheritance of Zelophehad our brother unto his daughters. And if they be married to any of the sons of the other tribes of the children of Israel, then shall their inheritance be taken from the inheritance of our fathers, and shall be put to the inheritance of the tribe whereunto they are received: so shall it be taken from the lot of our inheritance. And when the jubile of the children of Israel shall be, then shall their inheritance be put unto the inheritance of the tribe whereunto they are received: so shall their inheritance be taken away from the inheritance of the tribe of our fathers.",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: these were the princes of the families of Gilead, of the tribe of Manasseh, whose grandson Gilead was."
+    "summary": "Calvin takes up the charge that the law was made piecemeal and answers that God deliberately ruled only when asked, settling individual right in the earlier case and common right in this one, so that neither party is in the wrong and both asked what was just. He then restates the petition as an apparent conflict between two divine laws, the distribution by lot and the daughters&rsquo; right of succession, and notes that the petitioners assume God cannot contradict himself and therefore seek an interpretation rather than a repeal. Gill identifies the deputation as the princes of Manasseh, suspects a real courtship lies behind the hypothetical, and argues that the jubilee would aggravate rather than relieve the loss, citing Jewish readings that take the clause concessively."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the humble address the heads of Manasseh made to Moses and the princes, on occasion of the late order concerning the daughters."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief fathers of the families of the children of Gilead... came near, and spake before Moses",
-   "the heads of Manasseh's humble appeal",
-   "seeking redress by lawful petition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry admires the manner of the appeal: men who have not yet received their own lot speak of it with entire assurance, and they recite the ruling they are worried about without asking to have it reversed, partly because any of them might need it for his own daughters one day. He thinks the case was not hypothetical but prompted by suitors from other tribes courting the heiresses for their land, and turns that into a complaint about marriage generally, that the convenience of the estate weighs more than the fitness of the person."
+   },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: one spoke in the name of the rest."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke treats the chapter as displaced. It belongs with the opening verses of the earlier chapter on Zelophehad&rsquo;s daughters, and he would have one moved to stand beside the other, since the two are parts of a single subject. He states the resulting rule compactly: heiresses marry within their own tribe so that no part of the ancient inheritance passes out of the family that held it."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil & Delitzsch: the LORD commanded the land given by lot, and the inheritance of Zelophehad given to his daughters."
+    "summary": "Ellicott explains why the jubilee matters to the petitioners: before it, the land might still come back to Manasseh by purchase or through a childless marriage, and the jubilee is what makes the transfer irreversible. Keil disputes the timing on which the petition rests, holding that the property would strictly pass to the husband&rsquo;s tribe at the marriage rather than waiting for the jubilee year, so that the danger they describe is real but misdated."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the law of succession was incomplete, and why the ruling comes only in answer to a petition.",
+   "Whether the loss falls at the marriage or at the jubilee.",
+   "Whether the jubilee would remedy the transfer or make it permanent.",
+   "Whether this chapter stands in its right place in the book."
+  ],
+  "outliers": [
+   "Calvin insists that both the daughters and the tribal heads asked only what was just, so the chapter records no real conflict of rights.",
+   "Henry and Gill independently suspect that suitors from other tribes were already courting the heiresses.",
+   "Henry uses the occasion to complain that marriages are commonly arranged for the estate rather than for the person.",
+   "Clarke proposes rearranging the book so that this chapter adjoins the earlier ruling it depends on.",
+   "Keil corrects the petitioners&rsquo; own reasoning about when the inheritance would change hands."
+  ],
   "themes": [
-   "The LORD commanded my lord to give the land... by lot... and... the inheritance of Zelophehad... unto his daughters",
-   "owning both former commands reverently",
-   "seeking how the grant might stand"
+   "The chief fathers of Gilead come near",
+   "The inheritance given to Zelophehad&rsquo;s daughters",
+   "Marriage into another tribe",
+   "Taken from the lot of our inheritance",
+   "When the jubile shall be"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the supposition was not unreasonable, and perhaps likely, from the application of young men of other tribes to them; the inheritance would be added to the tribe into which they married, and taken from their own."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if they be married to any of the sons of the other tribes... their inheritance be taken from... our fathers",
-   "the heiresses' marriage moving the land",
-   "a real question of the tribal division"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the jubilee, when inheritances returned to their original owners, would here be of no service but rather the contrary, fixing the daughters' land in another tribe."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the jubilee... shall be, then shall their inheritance be put unto... the tribe whereunto they are received",
-   "the jubilee failing to restore land passed by marriage",
-   "a special remedy needed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "5-9",
+  "pericope_label": "And Moses commanded the children of Israel according to the word of the LORD, saying, The tribe of the sons of Joseph hath said well. This is the thing which the LORD doth command concerning the daughters of Zelophehad, saying, Let them marry to whom they think best; only to the family of the tribe of their father shall they marry. So shall not the inheritance of the children of Israel remove from tribe to tribe: for every one of the children of Israel shall keep himself to the inheritance of the tribe of his fathers. And every daughter, that possesseth an inheritance in any tribe of the children of Israel, shall be wife unto one of the family of the tribe of her father, that the children of Israel may enjoy every man the inheritance of his fathers. Neither shall the inheritance remove from one tribe to another tribe; but every one of the tribes of the children of Israel shall keep himself to his own inheritance.",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the law concerned all the tribes of Israel, not Manasseh only."
+    "summary": "Calvin infers from the phrasing that Moses consulted God here as he had before, though the text does not say so, and stresses that God approves the petition as well as granting it. His main contribution is a rule of interpretation: the words could be read as forbidding anyone to marry outside his kindred, but a law is to be understood from the occasion that produced it, so this one bars mixed marriage only where hereditary right is confounded, and a woman who renounced her inheritance was free to marry as she chose. Gill argues that the law binds all the tribes and continues after the division of the land, against a Jewish reading that confines it to Zelophehad&rsquo;s daughters, and observes that the jubilee alone could not have secured what this law secures."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil & Delitzsch: Moses declared that what they had affirmed was right."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "The tribe of the sons of Joseph hath said well",
-   "God owning the justice of the appeal",
-   "a just law given to bind all the tribes"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the Targum limits this order to the daughters of Zelophehad, or to what might happen before the land was divided; they might marry to whom they thought best, only within the tribe of their father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Let them marry to whom they think best; only to the family of the tribe of their father shall they marry",
-   "liberty of choice joined with order",
-   "the inheritance secured without robbing consent"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: this shows the law concerned all the tribes, that none's inheritance should remove to another; every Israelite was to keep to the inheritance of his fathers' tribe."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "So shall not the inheritance of the children of Israel remove from tribe to tribe",
-   "each keeping his fathers' portion",
-   "the unchanging inheritance pointing beyond (1 Pet. 1:4)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the same law that gave Zelophehad's daughters their right gave every daughter where there were no sons a right to inherit, and every such heiress was bound by this rule."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the divine endorsement as encouragement to enquire, since God gives the petitioners a well said as well as an answer. He then holds the two halves of the ruling in balance: the liberty to choose within the family yields a rule about marriage generally, that parents must consult their children&rsquo;s affections as children must respect their parents&rsquo; authority, forced marriages being unlikely to prove blessings; and the restriction is justified because the lot was God&rsquo;s own disposal, which men cannot improve and should not alter. He explains the concern for tribal boundaries by the confusion that would follow, entangled estates, perplexed genealogies, and one tribe enriched at another&rsquo;s cost."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: every daughter possessing an inheritance was so bound."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every daughter, that possesseth an inheritance... shall be wife unto one of the family of the tribe of her father",
-   "the case made a general statute",
-   "daughters' right established, every tribe secured"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Clarke praises the ruling as latitude with a salutary restraint that prevents a vexatious mixture of property, and limits its scope firmly: it bound heiresses only, left every other woman free, and exempted priests and Levites who had no inheritance, which is why the record shows them marrying outside their tribe. Wesley draws the restriction tighter than the tribe, to the family within it, on the ground that God meant to keep families as well as tribes unmixed; but he limits the law&rsquo;s reach as firmly as Clarke, noting that daughters with brothers were unaffected, and gives a reason for the whole policy, that the line from which the Messiah would come had to remain unquestionable."
+   },
    {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the jubilee alone did not sufficiently secure this without this law, as the case showed; every tribe was to keep to its own inheritance."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil sets out the ruling plainly &mdash; the husband must belong to the father&rsquo;s tribe, no Israelite passing into another tribe&rsquo;s possession by marrying its heiress &mdash; and notes that the case is generalised in the verses following into a standing law for every heiress. Ellicott supplies the missing procedural step, arguing from the parallel in the earlier chapter that the phrases used here imply Moses laid this case too before the LORD and answered out of what he received."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the law binds every woman or only heiresses.",
+   "Whether the confinement is to the father&rsquo;s tribe or to the narrower family within it.",
+   "Whether the ruling applied only to Zelophehad&rsquo;s daughters, or only until the land was divided.",
+   "Whether Moses consulted God here, given that the text does not say he did.",
+   "Why the tribal boundaries mattered enough to restrict marriage at all."
+  ],
+  "outliers": [
+   "Henry turns the liberty of choice into a rule against forced marriage on either side.",
+   "Clarke notes that priests and Levites were exempt because they held no inheritance, and cites their recorded marriages outside the tribe.",
+   "A commentator Clarke quotes builds a possible kinship between Elisabeth and Mary on such marriages.",
+   "Wesley grounds the whole policy in the need for the Messiah&rsquo;s descent to be traceable.",
+   "Gill rejects the Jewish limitation of the law to the period before the division of the land, on the ground that its reason outlasts that date.",
+   "Calvin allows that a woman who renounced her paternal inheritance was free to marry outside her tribe."
+  ],
   "themes": [
-   "Neither shall the inheritance remove from one tribe to another tribe... keep himself to his own inheritance",
-   "the great principle sealed",
-   "order and stability through the generations"
+   "The tribe of the sons of Joseph hath said well",
+   "Let them marry to whom they think best",
+   "Only to the family of the tribe of their father",
+   "The inheritance shall not remove from tribe to tribe",
+   "Every daughter that possesseth an inheritance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
   }
  },
  "10": {
   "voices": [
-   "John Gill"
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "10-13",
+  "pericope_label": "Even as the LORD commanded Moses, so did the daughters of Zelophehad: For Mahlah, Tirzah, and Hoglah, and Milcah, and Noah, the daughters of Zelophehad, were married unto their father's brothers' sons: And they were married into the families of the sons of Manasseh the son of Joseph, and their inheritance remained in the tribe of the family of their father. These are the commandments and the judgments, which the LORD commanded by the hand of Moses unto the children of Israel in the plains of Moab by Jordan near Jericho.",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they married into the family of their father's tribe, according to the account that follows; their obedience was exact to the command."
+    "prevalence": "single",
+    "summary": "Gill works the small textual details. He observes that the order of the five names differs from the earlier lists and reports two Jewish explanations, birth order against marriage order, and a deliberate variation to show the sisters equal, without deciding. He notes that the plural families suggests the husbands were sons of several uncles rather than one. On the closing formula he keeps to content, identifying the commandments as the judicial laws about the division of the land, inheritances, and the cities of refuge, and placing the whole in the plains of Moab where Israel had lain since Balak first observed them."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that most of the laws gathered under this formula concern the settlement the people were about to enter, and draws from that a rule for any change of circumstances: ask God to teach the duties of the new condition and to enable their performance, doing the work of the day in its day and the duty of a place in its place."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke passes over the names, referring back to his earlier treatment of them, and takes the outcome typologically through a commentator he quotes: the law of inheritance in the land teaches God&rsquo;s people to hold fast their inheritance in the promises and their right in Christ, kept by faith to the end. On the closing verse he writes a peroration for the whole book, finding in every transaction of it God&rsquo;s holiness and justice joined to his benevolence and mercy, and addressing the reader as standing where Israel stood, with only Jordan between him and the inheritance."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott presses the phrase describing the husbands. It would ordinarily mean first cousins, but he prefers the sons of their near kinsmen, since the Hebrew word usually denotes a paternal uncle and probably does so here, while elsewhere in Scripture it can mean a cousin &mdash; a difference that decides whether the marriages were within one set of cousins or across a wider kindred. Keil takes the closing formula to cover the whole body of law given in the plains of Moab and so to end the book, matching the formula that closes the Sinai legislation, and adds a caution that such a close implies nothing against the Mosaic origin of what follows in the next book."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the husbands were first cousins strictly or kinsmen more widely.",
+   "Why the order of the five sisters&rsquo; names differs between the lists.",
+   "Whether the plural families implies husbands from more than one uncle&rsquo;s household.",
+   "How much the closing formula covers: this section, the laws given in Moab, or the whole book."
+  ],
+  "outliers": [
+   "Gill reports two rival Jewish explanations of the changed name order and adopts neither.",
+   "Ellicott prefers a looser rendering of the kinship term on the strength of its use elsewhere in Scripture.",
+   "Keil guards the closing formula against being used as an argument about the authorship of the following book.",
+   "Clarke reads the whole law of inheritance as teaching believers to hold fast an inheritance held by faith.",
+   "Henry turns the colophon into a rule for entering any new condition of life."
+  ],
   "themes": [
-   "Even as the LORD commanded Moses, so did the daughters of Zelophehad",
-   "the daughters' ready, exact obedience",
-   "the right use of a granted right"
+   "So did the daughters of Zelophehad",
+   "Married unto their father&rsquo;s brothers&rsquo; sons",
+   "The inheritance remained in the tribe",
+   "These are the commandments and the judgments",
+   "In the plains of Moab by Jordan near Jericho"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-25",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: the names are the same as before, the order a little varied — according to their marriage (Aben Ezra), or to show they were equal to one another (Jarchi); they married their father's brothers' sons."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Mahlah, Tirzah, and Hoglah, and Milcah, and Noah... were married unto their father's brothers' sons",
-   "the five daughters married within the family",
-   "the faithful women remembered by name"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: they married into the family of the Hepherites, of which they were; their marrying into families (not one family) shows their cousins were not all sons of one man; their inheritance remained in the tribe of their father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they were married into the families of the sons of Manasseh... their inheritance remained in the tribe of... their father",
-   "the design of the law fulfilled",
-   "every claim met, the portion kept whole"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Gill: these are the judicial laws concerning the division of the land, inheritances, and the cities of refuge, commanded by the hand of Moses in the plains of Moab by Jordan near Jericho, closing the book."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "These are the commandments and the judgments, which the LORD commanded by the hand of Moses... in the plains of Moab",
-   "the close of the book of Numbers",
-   "the people poised at the edge of the inheritance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

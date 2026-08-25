@@ -24798,6 +24798,53 @@
       "book": "nehemiah",
       "chapter": "7",
       "note": "Self-graded A on all five entries, read back against the source blocks. vv.1-4, 2085 source words to 640 (0.31x); vv.5-8, 2209 to 639 (0.29x); v.19, 24 to 131 (5.46x); vv.33-34, 65 to 145 (2.23x); vv.68-73, 578 to 610 (1.06x). The 5.46x on verse 19 is structural and I want it on the record rather than buried. Clarke's whole note there is twenty-two words - the number of the children of Bigvai, a manuscript variant reading one lower, and the observation that the lower figure matches the parallel register. The thin floor is 120 words, so any legal entry on that verse is at least five times its source. Every clause in the 131 words traces: the figure, the variant, the agreement with the parallel, Clarke's refusal to adjudicate, and Henry's own statement that most numbers agree exactly and a few differ by one or two through copyists' errors. Nothing is asserted that no witness says. But a reader of the ratio alone would suspect invention, and the honest answer is that a 120-word floor over a 22-word source manufactures the ratio. The alternative was to omit a genuine textual note, which would be worse. vv.33-34 at 2.23x is comfortable. Charles Ellicott is named nowhere in this chapter, which is the point of the repair."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "rejected",
+      "book": "jude",
+      "chapter": "1",
+      "note": "Declined on size, not on merit. jude 1 measures 60,425 usable source words across 25 keys, half again over the 40,000 threshold at which the batch rule says a chapter is the whole batch. This batch had already landed nehemiah 7, so taking jude 1 as a second chapter would breach that rule, and its 19 C-grade verses make it a full rewrite rather than a touch-up. Starting it with my context already three chapters deep is exactly the abandoned-pick failure the instructions warn against, which costs the run everything and the queue nothing. Left for a fresh worker with a clean context, where it should be taken as the sole chapter of its batch. Note this is the largest chapter I have measured in this run; the queue head being longest-first, whoever draws it should check the size before writing a word."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "36",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "Jamieson, Fausset and Brown residue at keys 2 and 8. Donor is NUMBERS 12, the SAME BOOK as the host and an earlier chapter of it: key 2 carries JFB on 12:6-8 (Moses set over all God's house and so above Miriam and Aaron), key 8 on 12:11-13 (Aaron's submission, Moses interceding, Miriam restored after being made a public example). Both host keys are congruent to 2 modulo 6, the same phase as joshua 15 and 2corinthians 13. Host stride 6, donor stride 5, which is the five-donor-verses-per-six-host-keys ratio already recorded for judges 17, mark 11, romans 13 and deuteronomy 11. Donor earlier than host: twelve for twelve. This is the second same-book donor on record after mark 11 drawing on mark 5, which rules out any theory that the misfiling crosses book boundaries by construction. Both keys keep their other voices, so nothing had to be omitted here."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "36",
+      "verses": [
+        "11"
+      ],
+      "note": "Charles Ellicott chrome again, third chapter running, and it refines the pattern I recorded for joshua 14 and deuteronomy 11. His block at key 11 measures 1,036 words of which about fifty are commentary - a note that the husbands are better described as the sons of their near kinsmen, since the Hebrew dod usually means a paternal uncle but can mean a cousin - and the remaining thousand words are site navigation, a stylesheet and an advertisement panel. I previously guessed the chrome attaches to the block under the chapter's LAST key. That is wrong. Here the chapter runs to key 13 and the chrome is at key 11, which is the last key at which ELLICOTT has a block (his are 4, 5 and 11). Rechecking the earlier two: deuteronomy 11 had chrome at key 31, Ellicott's last block though the chapter runs to 32; joshua 14 had it at key 15, which was both. So the rule is the last Ellicott block in the chapter, not the last key of the chapter. That is a cheap scan to run across the corpus, and it means the usable length of those blocks is being overstated wherever anyone counts raw words."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "fidelity",
+      "book": "numbers",
+      "chapter": "36",
+      "note": "Self-graded A on all three entries, read back against the source spans. vv.1-4, 2286 source words to 647 (0.28x); vv.5-9, 2282 to 650 (0.28x); vv.10-13, 2310 to 637 (0.28x). All three are distillations well under the corpus median, and the uniformity is a property of the chapter rather than of the writing - the material divides almost exactly in thirds at the natural seams, the petition, the ruling, and the execution with the book's colophon. Note that the 10-13 ratio is flattering: about a thousand of its 2,310 source words are the Ellicott chrome described in the accompanying source-defect note, so the real ratio against usable material is nearer 0.48x. Jewish authorities quoted inside Gill, and the commentator quoted inside Clarke, are credited as reported rather than named, since none of them is a witness in this corpus."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "disagreement",
+      "book": "numbers",
+      "chapter": "36",
+      "verses": [
+        "4",
+        "6",
+        "8"
+      ],
+      "note": "Three live disagreements in this chapter, all left standing in the prose. First, what the jubilee does: the petitioners treat it as the moment their loss becomes final and Ellicott agrees, explaining that until then the land might still revert by purchase or a childless marriage; Gill turns the institution against itself, arguing that restoring inheritances to original proprietors would in this case fix the daughters' portions in the tribes they married into and so make matters worse; and Keil corrects the premise of the whole complaint, holding that the property would strictly pass at the marriage rather than at the jubilee, so the danger is real but misdated. Second, how narrow the marriage restriction is: Keil reads it as the father's tribe, so any Manassite; Henry and Wesley narrow it to the family within the tribe. Third, how far the law reaches: Gill reports and rejects a Jewish limitation confining it to Zelophehad's daughters or to the period before the division of the land, while Clarke and Wesley limit it from the opposite direction to heiresses only, exempting priests and Levites who held no inheritance. Calvin supplies the interpretive principle that governs the third dispute - the words look wider than the case, but a law is to be read from the occasion that produced it."
     }
   ]
 }
