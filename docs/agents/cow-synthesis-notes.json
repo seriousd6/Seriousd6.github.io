@@ -28348,6 +28348,109 @@
         "36"
       ],
       "note": "Truncation profile: Gill is cut at exactly 200 words at keys 33 and 36 only, and Keil and Delitzsch at exactly 200 at all ten of their placements. The Keil cap is now attested at 200 in three consecutive chapters - exodus 36, numbers 22 and exodus 16 - and always with the KJV lemma quoted first, so the amount of commentary that survives depends entirely on how much Scripture the harvester scooped ahead of the limit. Here that ranges from a block at key 2 which is pure commentary on the encampment with no quotation at all, to key 3 where the lemma of four verses consumes most of the allowance. No other voice shows a floor: Clarke runs to 2230 at key 13 and 723 at key 36, Henry to 2003 at key 1, Ellicott to 1059 at key 36 before the chrome."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "5",
+        "23",
+        "47"
+      ],
+      "note": "Jamieson donor bug, ninth consecutive chapter. All three Jamieson blocks in this chapter are text on Luke 23, not John 11: k5 is the note on Lk 23:49 ('not the precious Galilean women, but part of the crowd'), k23 is on the penitent thief and 'to day shalt thou be with me in paradise' (Lk 23:43), k47 is on Lk 23:55. Donor is a single foreign chapter, breaking the three-chapter run of same-book donors (mark 12 to Mark 6, matthew 11 to Matthew 10, matthew 6 to Matthew 5). All three unusable and excluded from the synthesis."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "34",
+        "39",
+        "40"
+      ],
+      "note": "Cyril of Jerusalem duplication: the identical 203-word block (Catechetical Lecture section 9, 'some are saved by others' faith') is filed under keys 34, 39 and 40. It is genuine commentary on this chapter, so it was used once, in the 38-40 entry. Key 37 carries a different Cyril block (section 12) on Isaiah's messianic signs, keyed to v.37 by the proof-text 'eyes of the blind shall be opened' rather than by exposition of the verse."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "28",
+        "41",
+        "49"
+      ],
+      "note": "Two voice labels for one author, as in matthew 11: 'Chrysostom' (Catena Aurea extracts) and 'John Chrysostom' (the Homilies on John) both appear with distinct text at keys 1, 30, 41 and 49. A blind dedupe by author name would lose the Homilies material, which is the longer and more distinctive of the two."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "17",
+        "33",
+        "41",
+        "45"
+      ],
+      "note": "Matthew Henry contributes 21,000+ words of section-level commentary in four keys (k1 5545w on vv.1-16, k17 6319w on vv.17-27, k33 10152w on vv.33-45, k45 6205w on vv.45-53). Each block covers a whole pericope and repeats across the verses it spans, so nominal per-key source-word counts for this chapter overstate the distinct material by roughly a quarter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "41",
+        "45"
+      ],
+      "note": "Key 41 carries Catena material for verses well past its own: the Origen block at k41 expounds vv.45-46 (who the informers to the Pharisees were), and the Gregory block at k41 is a 671-word allegorical appendix on the whole chapter (the maiden in the house, the young man at the gate, Lazarus in the grave as degrees of sin). Both are genuine commentary, used in the 41-44 and 45-48 entries respectively, but neither is keyed to v.41."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "25",
+        "55"
+      ],
+      "note": "Chapter-level chrome in two keys. The Origen block at k25 is a paragraph on the nature of the Gospel ('transform the sensible Gospel into a spiritual one') with no bearing on v.25; the Augustine of Hippo block at k55 is a homily preamble ('yesterday's lesson in the holy Gospel... some passages require a hearer rather than an expounder'). Neither was used."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "1-57"
+      ],
+      "note": "Tiled at 12 pericopes over 57 verses and 90,479 usable source words: 1-4, 5-10, 11-16, 17-22, 23-27, 28-32, 33-37, 38-40, 41-44, 45-48, 49-53, 54-57. Every entry landed 648-650 QA words, grade A. Every first draft overshot the 650 cap, by 78 to 243 words; the 41-44 entry overshot worst at 893 and needed two full compression passes."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "23-27"
+      ],
+      "note": "The 23-27 entry has the lowest TTR of the twelve at 0.629. The cause is inherent to the pericope: a treatment of 'I am the resurrection and the life' cannot avoid repeating resurrection, life, believe and die. It clears the A threshold (0.58) but by the narrowest margin in the chapter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "11",
+      "verses": [
+        "45",
+        "49"
+      ],
+      "note": "Foregrounded a genuine split on the loosing of Lazarus: Calvin reads 'loose him and let him go' as purely evidential, Christ employing the spectators' hands as witnesses, and attacks the sacramental reading by name; Augustine, Gregory and Alcuin read exactly that reading, the bands as sins and the loosing as the ministry's absolution. Both are given in the 41-44 entry without adjudication."
     }
   ]
 }

@@ -3,8 +3,9 @@
   "voices": [
    "Bede",
    "Chrysostom",
+   "Augustine",
+   "John Chrysostom",
    "Augustine of Hippo",
-   "John Gill",
    "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
@@ -12,474 +13,238 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact"
   ],
+  "range": "1-4",
+  "pericope_label": "A certain man was sick, named Lazarus: this sickness is not unto death, but for the glory of God",
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: rejoice rather than wonder — it is greater to create than to raise; Bede: Lazarus (‘helped’) was most helped, four days dead."
-   },
-   {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Bethany ~2 miles east of Jerusalem (now El Azariyeh); John alone records it, probably because Lazarus still lived and could be persecuted (12:10); link to the parable (Lk 16:20)."
+    "prevalence": "several",
+    "summary": "Barnes and Clarke explain John’s sole record by the danger to a living Lazarus, and date the interval from the dedication; Robertson derives Lazarus from Eleazar and, with Ellicott and Lightfoot, resists merging Mary of Bethany with the sinner of Luke 7 or with Magdalene."
    },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin sets the miracle at the close of Christ’s life as a lively image of our own resurrection, power displayed on a rotting corpse, and rejects the legend that made Bethany a castle."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: the raising is ‘a lively image of our future resurrection,’ the concluding act of his ministry, his power shown on a rotting corpse."
+    "summary": "Clarke declines to fix the chronology beyond the evidence; Wesley reads “not unto death” as denying not death but its permanence."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears the sisters’ plea resting wholly on Christ’s love and not their own: not he who loveth thee, but he whom thou lovest."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: those dearest to God endure such trials — Lazarus, Christ’s friend, fell sick."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "raising of Lazarus",
-   "image of our resurrection",
-   "why John alone records it",
-   "friends of God suffer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A parenthesis identifying Mary by the well-known anointing; most read it as a proleptic allusion to 12:3 (the aorist timeless), though Lightfoot takes it of a past event; not the ‘sinner’ of Lk 7 nor Mary Magdalene."
+    "prevalence": "several",
+    "summary": "Chrysostom distinguishes this Mary from the harlot of Luke and explains the sending rather than coming by confidence and grief; Theophylact adds that women should not leave the house."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: it is ignorance to confuse this Mary with the sinner of Lk 7 — Christ was anointed on different occasions; the past tense refers to the time of writing."
+    "summary": "Augustine hears restraint in a message that neither asks a cure nor prescribes one; Bede reads the name Lazarus as “helped”; Augustine of Hippo bids us rejoice rather than wonder, creation being the greater work."
    }
   ],
   "debates": [
    {
-    "question": "Does ‘anointed’ refer to the (future) anointing of John 12 told proleptically, or an earlier one?",
-    "sides": [
+    "question": "Is the anointing that identifies Mary a past act or a forward reference to chapter 12?",
+    "positions": [
      {
-      "position": "proleptic allusion to John 12:3 (aorist timeless)",
-      "holders": [
-       "A.T. Robertson",
-       "Charles Ellicott",
-       "John Calvin"
+      "view": "A former anointing, which explains the family’s confidence in sending",
+      "held_by": [
+       "John Lightfoot",
+       "Adam Clarke"
       ]
      },
      {
-      "position": "a past anointing already known to the reader",
-      "holders": [
-       "John Lightfoot"
+      "view": "A proleptic reference to the anointing John narrates later",
+      "held_by": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How far does “for the glory of God” reach?",
+    "positions": [
+     {
+      "view": "To the raising of Lazarus and the Son’s glory in it",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Forward as well, the illness being the immediate cause of the Son of Man’s own death",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Guards the clause from proving too much: God is glorified in the ruin of the reprobate also, so Christ speaks here only of what belongs to his saving office."
+   },
+   {
+    "voice": "John Lightfoot",
+    "claim": "Illustrates the name Martha from the Talmud’s Martha daughter of Boethus, who had tapestry laid to the Temple and was later dragged behind Arabian horses."
+   }
+  ],
   "themes": [
-   "Mary identified by the anointing",
-   "proleptic reference to John 12",
-   "not the ‘sinner’ of Luke 7",
-   "guarding Mary’s identity"
+   "Now a certain man was sick, named Lazarus, of Bethany, the town of Mary and her sister Martha.",
+   "(It was that Mary which anointed the Lord with ointment, and wiped his feet with her hair, whose brother Lazarus was sick.)",
+   "Therefore his sisters sent unto him, saying, Lord, behold, he whom thou lovest is sick.",
+   "When Jesus heard that, he said, This sickness is not unto death, but for the glory of God, that the Son of God might be glorified thereby."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The sisters ‘send’ a message of touching simplicity — not dictating a cure but stating the need with the forcible plea ‘he whom thou lovest is sick’; a model of believing prayer and lawful Christian friendship."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: like the centurion they ‘sent, not went,’ from faith and sorrow, surprised that one Christ loved could fall sick."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘he whom thou lovest is sick’",
-   "believing prayer",
-   "not dictating to Christ",
-   "Christian friendship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "Augustine",
-   "Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Not unto death’ = death is not the final issue but the occasion of a greater miracle; ‘that’ marks the event, not the cause; the double end is the Father’s and the Son’s glory, inseparable."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: ‘that the Son of God might be glorified’ has Christ calling himself God by implication — confounding those who deny the Son is God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the afflictions of God’s people are ordered not to destruction but to the manifesting of God’s glory and their good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘not unto death’",
-   "for the glory of God",
-   "the Son of God glorified",
-   "affliction ordered to glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
   "voices": [
+   "Alcuin",
+   "Chrysostom",
+   "Augustine",
+   "Theophylact",
    "John Gill",
+   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley",
+   "Matthew Henry"
   ],
+  "range": "5-10",
+  "pericope_label": "He abode two days still in the same place: are there not twelve hours in the day?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A real, particular love (agapaō) for each of the three, who were among Christ’s intimate friends (Lk 10:38); Martha named first as the elder of the household."
+    "prevalence": "several",
+    "summary": "Ellicott makes the Evangelist’s word for love a matter of who is speaking rather than who is loved, refuses the usual explanations of the delay in favour of the appointed hour, and with Barnes reckons the four days from the journey; Robertson reads the imperfect as continued love."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the love is recorded just here so we do not stumble at the coming delay — Christ’s love is not measured by haste and may withhold help for a greater good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus loved this family",
-   "love and the delay",
-   "love not measured by haste",
-   "key to the narrative"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Alcuin",
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Calvin warns against judging God’s love by the condition before our eyes, since delay increases ardour and exercises patience, and makes the calling of God the daylight in which a man walks safely; Gill separates everlasting love from the particular human affection."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The two-day delay let Lazarus truly die and lie four days (v.39), so the death was beyond doubt; it shows he meant to raise him; Ellicott grounds it in his Father-marked ‘hours’ (2:4), not in testing faith."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rules that Christ never denies a lesser favour but to confer a greater, and puts the twelve hours into Christ’s own mouth: I am immortal till my work is done; Wesley reports the Jewish reckoning of the day."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry compresses the figure: light in us is to moral actions what light about us is to natural."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom/Alcuin: he waited for death and burial — ‘he stinks’ — so none could call it a trance; the miracle thereby more wonderful."
+    "summary": "Chrysostom and Alcuin explain the delay as allowing death and burial, that none might call it a trance; Theophylact alone reads day and night as the time before the Passion and the Passion itself."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: Christ’s love does not always answer at once and may withhold help for a greater end — the delay is design, not coldness."
+    "summary": "Augustine notes he returned to the place he had just escaped — leaving as man, in weakness, returning in power — and allegorises the twelve hours of the appointed disciples."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did Christ delay two days?",
+    "positions": [
+     {
+      "view": "To allow death and burial beyond dispute",
+      "held_by": [
+       "Alcuin",
+       "Chrysostom",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Because every hour has its own appointed work, not to test a faith already shown",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "To exercise the patience of those who prayed",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Reads the disciples’ concern for their Master as a plausible cover for fear of their own danger, as men still dread the cross and hide indolence behind excuses."
+   }
+  ],
   "themes": [
-   "the two-day delay",
-   "certainty of death",
-   "love and delay",
-   "Father-marked hours"
+   "Now Jesus loved Martha, and her sister, and Lazarus.",
+   "When he had heard therefore that he was sick, he abode two days still in the same place where he was.",
+   "Then after that saith he to his disciples, Let us go into Judea again.",
+   "His disciples say unto him, Master, the Jews of late sought to stone thee; and goest thou thither again?",
+   "Jesus answered, Are there not twelve hours in the day? If any man walk in the day, he stumbleth not, because he seeth the light of this world.",
+   "But if a man walk in the night, he stumbleth, because there is no light in him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "After the two days he resolves ‘let us go into Judea again’ — ‘again’ recalling the recent escape from stoning (10:39-40); a deliberate return toward danger for Lazarus’ sake."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the summons answers the fear that Christ had forgotten Lazarus; he shows he cared. Henry: Christ goes with his people into danger, and their day lasts till their work is done."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘let us go into Judea again’",
-   "return toward danger",
-   "Christ shares the peril",
-   "day lasts till work done"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The recent stoning attempt (10:31, weeks before) made return seem ‘suicidal madness’; the disciples fear for Christ and for themselves (cf. 11:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they dissuade him from fear for themselves, dressing cowardice as concern for their Master — as men daily disguise dread of the cross as prudence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘goest thou thither again?’",
-   "fear of the Jews",
-   "cowardice disguised as care",
-   "danger shared"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The day’s twelve hours figure the appointed span of his life; walking by daylight (the Father’s purpose) one ‘stumbleth not’ (cf. 9:4) — not fatalism but the opposite of cowardice; his enemies cannot shorten his day."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the plain sense — safe travel by sunlight; Wesley: a determined time God has allotted, within which no snare can prevail."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘twelve hours in the day’",
-   "appointed span of life",
-   "not fatalism but courage",
-   "safety in the Father’s will"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "From natural night (Eccl 2:14) the verse passes to spiritual darkness: ‘no light in him’ shifts the lamp within — man has the capacity for light but is not its source (Mt 6:23; 8:12)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Wesley: to ‘walk in the night’ is to lack God’s light and protecting providence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "walking in the night",
-   "spiritual darkness",
-   "the light within",
-   "safety in God’s light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
@@ -487,8 +252,8 @@
    "Chrysostom",
    "Augustine",
    "Theophylact",
+   "Bede",
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -497,267 +262,122 @@
    "John Wesley",
    "Matthew Henry"
   ],
+  "range": "11-16",
+  "pericope_label": "Our friend Lazarus sleepeth: Lazarus is dead, and I am glad for your sakes that I was not there",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Sleepeth’ (koimaomai) is the NT euphemism for a believer’s death, so gentle the disciples mistake it for rest; for the believer death is but a sleep from which Christ will wake him."
+    "prevalence": "several",
+    "summary": "Robertson notes the perfect of the verb behind “cemetery”; Barnes takes sleep as tender by design, holding out a resurrection; Ellicott traces the twin figures of sleep and death to Homer and explains the disciples’ mistake from the rabbinic list of favourable symptoms."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Augustine: sleeping to the Lord, dead only to men who cannot raise him; he awoke him as easily as one wakes a sleeper; ‘that ye may believe’ = believe more deeply."
+    "summary": "Calvin denies the pious etymology of sleep, since profane writers use it as freely, and acquits the disciples of craft while noting they seized gladly on a reason not to go; he generalises that works near the ordinary course of nature are less valued, so deliverance had to be delayed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the idiom as common among the Jews and answers the charge of peevishness in Thomas with a rule of charitable construction; Wesley calls sleep the language of heaven for the death of good men."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the figure to comfort, death being better than sleep as the end of earthly cares rather than a pause in them."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: ‘our friend’ shows how bound they were to go; the errand is to awaken, not to dispute with the Jews."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "death as sleep",
-   "‘awake him out of sleep’",
-   "‘our friend Lazarus’",
-   "faith deepened"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Sleep was a Jewish (and general) sign of recovery (Lightfoot; Menander’s proverb), so they reason ‘if he be fallen asleep he shall be saved’ — no need to risk Judea."
+    "summary": "Chrysostom hears a second consolation in the errand to Bethany, meets the objection that the disciples must have understood, marks the miracle left unannounced, and looks past Thomas’s weakness to the man who later crossed the earth; Theophylact reduces the gladness to a line."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: not a crafty pretence but a genuine misunderstanding they gladly seize as an excuse to avoid the danger."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘if he sleep, he shall do well’",
-   "sleep a sign of recovery",
-   "misunderstanding seized as excuse",
-   "fear of Judea"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "John’s aside confirms the disciples genuinely misunderstood — taking ‘sleep’ (koimēsis, only here in NT) literally, the surface sense that naturally suggested itself, though three had heard the metaphor before (Mt 9:24)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "death as sleep misunderstood",
-   "honest incomprehension",
-   "surface meaning",
-   "foil for the plain word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Seeing the figure missed, Christ speaks ‘plainly’ (parrēsia, without metaphor) — ‘Lazarus died’ — words that fall short of the deeper truth but are the only ones they can grasp."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: astonishing patience with their gross ignorance; he delayed the Spirit’s fuller grace so that their later renewal in a moment might be the greater."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Lazarus is dead’",
-   "plain speech for slow minds",
-   "Christ’s patience",
-   "pedagogy toward Pentecost"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "His gladness is not at the death but that he was absent — present, he would have been entreated to heal; raising after four days is the greater, more faith-confirming wonder (‘that ye may come to believe’)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: his absence served their faith, for works nearer the course of nature are less valued; the resurrection had to be delayed to be known as truly divine."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘glad… that I was not there’",
-   "faith confirmed by the greater miracle",
-   "delay magnifies the work",
-   "‘let us go unto him’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Thomas/Didymus (‘twin’) rallies the disciples to ‘die with him’ — with Lazarus (Barnes, ironically) or with Jesus (Wesley); a loyalty ready to follow Christ to death."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he follows without confidence — ‘the language of despair,’ expecting defeat rather than resting on Christ’s promise; brave love without faith (cf. 20:24)."
+    "summary": "Augustine refuses to treat sleep as euphemism — asleep to the Lord, dead to men who could not raise him; Bede sees in Thomas an appearance of firmness in one unmindful, like Peter, of his frailty."
    }
   ],
   "debates": [
    {
-    "question": "‘That we may die with him’ — with whom?",
-    "sides": [
+    "question": "Why is death called sleep?",
+    "positions": [
      {
-      "position": "with Lazarus (we too shall die)",
-      "holders": [
-       "Albert Barnes"
+      "view": "Because raising the dead is as easy to God as waking a sleeper is to us",
+      "held_by": [
+       "Augustine"
       ]
      },
      {
-      "position": "with Jesus, whom the Jews will kill",
-      "holders": [
-       "John Wesley"
+      "view": "Because a corpse lies without feeling, as profane writers also use the word",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "To intimate that death is not final and remove what is dreadful in it",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "With whom did Thomas propose to die?",
+    "positions": [
+     {
+      "view": "With Christ, whose danger he foresaw",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "With Lazarus, the words then being ironical",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Lays down a rule of interpretation for another man’s words — where a saying touching character will bear both senses, take the favourable one, though most men feed like flies, passing over the whole man to light on his sores."
+   }
+  ],
   "themes": [
-   "Thomas / Didymus",
-   "‘let us die with him’",
-   "loyal courage",
-   "despair without faith"
+   "These things said he: and after that he saith unto them, Our friend Lazarus sleepeth; but I go, that I may awake him out of sleep.",
+   "Then said his disciples, Lord, if he sleep, he shall do well.",
+   "Howbeit Jesus spake of his death: but they thought that he had spoken of taking of rest in sleep.",
+   "Then said Jesus unto them plainly, Lazarus is dead.",
+   "And I am glad for your sakes that I was not there, to the intent ye may believe; nevertheless let us go unto him.",
+   "Then said Thomas, which is called Didymus, unto his fellowdisciples, Let us also go, that we may die with him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "17": {
@@ -765,704 +385,331 @@
    "Alcuin",
    "Augustine",
    "Chrysostom",
-   "John Gill",
+   "Theophylact",
+   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "17-22",
+  "pericope_label": "He had lain in the grave four days already: Lord, if thou hadst been here, my brother had not died",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The chronology (messenger + two days’ wait + journey) yields four days; Lazarus was unembalmed (v.39) so the corruption was real and the death undoubted; the journey itself included good works (Jericho, Zacchaeus)."
+    "prevalence": "several",
+    "summary": "Lightfoot measures the Jewish mile and reckons the furlong from the numeral value of its letters, and describes the seven standings and sittings of the mourners; Barnes quotes a traveller on the reputed sepulchre; Ellicott hears in John’s past tense a writer whose Jerusalem no longer stood, and Robertson catches the imperfect that leaves Mary sitting."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin turns the visitors’ kindness into providence — assembled by a secret decree so the miracle should not rest on the household’s testimony — and judges Martha’s confidence to rest on no promise of Christ, so that only a few sparks of faith shine through."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets out the thirty days of mourning and concludes the sisters thought Christ could cure at hand but not at a distance, taking him for no more than a prophet; Wesley finds in Martha’s next words a hope she dare not speak."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry dates the death to the moment Christ said “our friend sleepeth”, draws from it that promised salvations come surely but slowly, and reads the sisters’ different conduct as the advantage and the snare of their natural tempers."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom does the arithmetic of the four days, asks how these Jews could console the friends of one they had resolved to expel, and says Martha went alone to speak with Christ by herself; Theophylact adds her fear that the visitors would follow."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine/Alcuin read the four days as four deaths/stages of sin (or the deepening of sin from elation to habit), all of which Christ can awaken; the delay made the miracle more glorious."
+    "summary": "Augustine turns the four days into four deaths — the law of birth, natural law transgressed, written law despised, the Gospel transgressed — and defends Martha’s reticence as leaving the matter to Christ’s judgment; Alcuin says the delay made the raising more glorious."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How much faith is in “if thou hadst been here”?",
+    "positions": [
+     {
+      "view": "A faith that ties saving power to bodily presence, taking Christ for a prophet",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "Presumption resting on no promise, only sparks of faith",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Modesty that leaves the outcome to his judgment",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Augustine",
-    "note": "Allegorises the four days as four kinds of spiritual death Christ is able to raise."
+    "voice": "John Lightfoot",
+    "claim": "Reports that the seven standings and sittings on the way back from the grave were ordained, on one account he has seen, because evil spirits followed from the tomb and needed that time to leave."
    }
   ],
   "themes": [
-   "four days in the grave",
-   "death beyond doubt",
-   "unembalmed corruption",
-   "allegory of the four days"
+   "Then when Jesus came, he found that he had lain in the grave four days already.",
+   "Now Bethany was nigh unto Jerusalem, about fifteen furlongs off:",
+   "And many of the Jews came to Martha and Mary, to comfort them concerning their brother.",
+   "Then Martha, as soon as she heard that Jesus was coming, went and met him: but Mary sat still in the house.",
+   "Then said Martha unto Jesus, Lord, if thou hadst been here, my brother had not died.",
+   "But I know, that even now, whatsoever thou wilt ask of God, God will give it thee."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Fifteen furlongs’ = about two miles; the nearness to Jerusalem meant many Jews could come and the news reach the Sanhedrin; the past tense ‘was’ hints John wrote after the city’s fall."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the detail serves the narrative’s certainty — by a secret decree of God the Jerusalem mourners are gathered as witnesses, so the miracle could not remain unknown."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Bethany near Jerusalem",
-   "providential witnesses",
-   "distance and the Sanhedrin",
-   "certainty of the narrative"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Jewish mourning (seven days of lamentation within thirty) brought many Jerusalem friends — a sign of the family’s prominence; the comforters were probably not hostile."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their aim was consolation, but God’s aim was to gather witnesses; grief itself is no sin unless corrupted by excess."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jewish mourning customs",
-   "comforting the sisters",
-   "prominence of the family",
-   "witnesses gathered by providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The sisters’ characters show even in grief: active Martha (the household manager, Lk 10:40) hurries out; Mary sits in the posture of mourning (Job 2:8). Martha goes out to speak apart and to spare Christ the watching crowd."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Martha goes beyond the village to meet him more secretly, his danger being fresh; Wesley: Mary, sitting within, likely did not hear."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Martha and Mary contrasted",
-   "active vs. contemplative",
-   "posture of grief",
-   "meeting Christ apart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘If thou hadst been here’ (a saying the sisters had repeated, cf. v.3, 32) mingles real faith with wistful longing and a hint of reproach; their faith was incomplete — power thought near at hand, not at a distance."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a modest complaint, partly from faith but mixed with disorderly passions — she gives way to feeling instead of restraining it under faith’s rule."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘if thou hadst been here’",
-   "faith mixed with reproach",
-   "limited expectations",
-   "grief and complaint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A half-formed hope she dare not utter — that even now God would grant Christ her brother’s life (recalling Jairus’ daughter, the widow’s son); she speaks indirectly, intimating without asking."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘even now I know’",
-   "half-formed hope",
-   "Christ as suppliant to God",
-   "faith short of his Godhead"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Thy brother shall rise again’ (anastēsetai) is designedly ambiguous — Martha takes it of the last-day resurrection; Christ meets her on the ground she confesses before lifting her higher."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a promise she can grasp, framed to draw out her faith — her retreat to ‘the last day’ (v.24) gives occasion for the great self-disclosure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘thy brother shall rise again’",
-   "deliberate ambiguity",
-   "meeting faith where it is",
-   "doorway to the self-disclosure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Martha falls back on the orthodox Pharisaic hope of a general resurrection ‘at the last day’ (Dan 12:2; Jn 5:28) — real faith, but pushed off to the far future, missing the nearer hope."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: she ‘restricts’ grace to the last day, her faith creeping on the ground — sound in doctrine but too small a grasp of Christ, whom he will now enlarge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘resurrection at the last day’",
-   "orthodox but distant faith",
-   "doctrine vs. the Person",
-   "faith to be enlarged"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
+   "Augustine",
+   "Chrysostom",
+   "Alcuin",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "23-27",
+  "pericope_label": "I am the resurrection, and the life: believest thou this?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘I am the resurrection and the life’ shifts hope from a future doctrine to Christ’s present person — he is the author and embodiment of resurrection (1 Cor 1:30), ‘I and none beside me,’ present not merely at the last day."
+    "prevalence": "several",
+    "summary": "Ellicott reads Martha’s retreat as the most human moment in the chapter, dwells on the emphatic pronoun that makes resurrection a present person rather than a distant date, and guards “never die” as denying not the fact of death but its sting; Robertson takes from Westcott that resurrection is one manifestation of the Life, and ranks Martha’s confession above Peter’s; Barnes and Lightfoot supply the doctrine and the rabbinic foil."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: resurrection comes first (the race is plunged in death) then life (he preserves it to the end); both the spiritual raising from sin and the bodily pledge are lodged in Christ."
-   },
-   {
-    "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Origen frames the move from the ‘sensible’ to the ‘spiritual’ Gospel — the bodily sign pointing to the spiritual resurrection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I am the resurrection and the life’",
-   "resurrection as a Person",
-   "present not merely future",
-   "spiritual and bodily raising"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The living believer ‘shall never die’ — physical death not denied but made the passage to higher life; the death excluded is eternal/spiritual death (8:51; 6:50)."
+    "summary": "Calvin forgives Martha the fault of fabricating hope and then the opposite fault of stopping short when Christ stretches out his hand, makes faith a spiritual resurrection of the soul against those who think nature prepares men for grace, and grounds perpetual life on Christ’s power to finish what he began."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: the deathlessness rests on Christ’s power to preserve the life he gives (1 Pet 1:23); ‘Believest thou this?’ presses the doctrine home as a personal demand for trust."
+    "summary": "Clarke reads the promise flatly as immediate, and turns the claim into a question — by whom shall he rise, if not by me, and is it not as easy now as then?; Wesley reduces the saying to the resurrection of the dead and the life of the living."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom finds a middle course between asking God and disclaiming help, argues that one needing help could not be the resurrection, and doubts Martha understood, being asked one thing and answering another."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine marks the deliberate ambiguity, that he does not say now; Alcuin gives the logic in a line, that he is the resurrection because he is the life."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does Martha’s confession show understanding or its lack?",
+    "positions": [
+     {
+      "view": "Heroic faith, outranking Peter’s because made with her brother four days buried",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Assent without comprehension — asked one thing, she answers another",
+      "held_by": [
+       "Chrysostom",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Answers the rabbis on their own ground with the bone luz that water would not steep nor fire burn, which Hadrian was shown as the seed of resurrection, and asks why they never mauled the Sadducees with the argument."
+   }
+  ],
   "themes": [
-   "‘shall never die’",
-   "death as passage to life",
-   "perpetuity of life in Christ",
-   "‘Believest thou this?’"
+   "Jesus saith unto her, Thy brother shall rise again.",
+   "Martha saith unto him, I know that he shall rise again in the resurrection at the last day.",
+   "Jesus said unto her, I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live:",
+   "And whosoever liveth and believeth in me shall never die. Believest thou this?",
+   "She saith unto him, Yea, Lord: I believe that thou art the Christ, the Son of God, which should come into the world."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A noble confession (the perfect ‘I have believed’ = settled faith) that, made with her brother four days dead, ‘outranks’ Peter’s (Mt 16:16; cf. 6:69) — though she runs off before grasping every depth."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: confessing him ‘the Christ, the Son of God’ includes the sum of all blessings — strengthened by the prophets, she may expect from him the full restoration of all things."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Martha’s great confession",
-   "‘the Christ, the Son of God’",
-   "faith at the graveside",
-   "parallel to Peter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
   "voices": [
    "Chrysostom",
    "Augustine",
+   "Theophylact",
    "Alcuin",
    "Bede",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Martha calls Mary ‘secretly’ to avoid the hostile Jews (v.46); ‘the Master calleth for thee’ shows Christ asked for Mary by name (to strengthen her faith); ‘Master’ = the family’s name for him."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: Christ’s words stopped Martha’s grief; Augustine: she spoke low; Bede: Mary, overwhelmed, will say less for weeping."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "secret summons",
-   "‘the Master calleth for thee’",
-   "Christ seeks Mary by name",
-   "grief turned to errand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "Mary ‘arose quickly’ (ēgerthē tachy) — the summons of Christ lifts her at once from the sitting posture of grief (v.20); her swiftness measures the love of one who had sat at his feet (Lk 10:39)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Mary’s eager response",
-   "‘arose quickly’",
-   "love answering the call",
-   "raised from grief to seek Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
    "John Chrysostom",
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Jesus stayed outside the village near the (extramural) burying-place; he tarried where he met Martha, perhaps (Westcott) to meet the sisters away from the crowd of mourners."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he stays by another design than Martha’s — that the Jews might be gathered as witnesses of the miracle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus outside the village",
-   "near the grave",
-   "meeting apart from the crowd",
-   "staging the witnesses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
    "John Gill",
    "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The comforters, supposing Mary went to weep at the grave (a mourning custom), follow her — kindly meant but defeating Martha’s secrecy (v.28); kind notions often do the wrong thing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the frustrated secrecy is God’s secret providence — the mourners are led, unintending, to become witnesses of the miracle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the mourners follow",
-   "secrecy undone",
-   "providence overruling",
-   "witnesses escorted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "28-32",
+  "pericope_label": "The Master is come, and calleth for thee: Mary fell down at his feet",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mary falls impulsively at his feet and speaks Martha’s very words (v.21) but no more, only weeping — her emotion too deep for speech; she ‘makes amends’ for her slowness (Wesley)."
+    "prevalence": "several",
+    "summary": "Barnes, Ellicott and Robertson take the household title to be Teacher rather than Rabbi, note that Martha reports only what she herself heard, and judge the crowd of consolers to have meant kindly and done the one wrong thing; Lightfoot cites the rule against following a woman on the road and then withdraws it."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: her prostration shows she owned him as the Son of God, beyond ordinary honour — yet she shares Martha’s fault of limiting his power to his bodily presence."
+    "summary": "Calvin thinks Christ stayed outside the village at Martha’s request, since his escape from stoning was fresh, and turns the mourners’ kindness against them: the bereaved are eager to increase their grief by every method, and friends who indulge that excess do them little good; Gill supplies the topography."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke assumes Christ did ask for Mary, to strengthen her faith beforehand, and reports the custom of visiting the grave during the three days of weeping; Wesley notes that Martha had not fallen at his feet."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom explains the secrecy and the slow approach, finds Mary the more fervent for forgetting the crowd, and in his homilies observes that mourning women wish to be made much of on account of their case; Theophylact adds her fear the visitors would follow."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine glosses “secretly” as in a low voice and infers from Mary’s haste that she would not have let Martha go alone had she known; Bede says she could not bring out what she wanted for weeping; Alcuin turns her words into a compliment."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the crowd’s following Mary a defeat of the plan or a providence?",
+    "positions": [
+     {
+      "view": "A well-meant blunder that undid Martha’s secrecy",
+      "held_by": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A providence securing witnesses to the miracle",
+      "held_by": [
+       "Augustine",
+       "Chrysostom",
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Reads Mary’s prostration as an implicit confession, since nothing about Christ after the flesh was royal enough to draw such honour, while still charging her with tying an infinite power to a bodily presence."
+   }
+  ],
   "themes": [
-   "Mary falls at his feet",
-   "the same words, no more",
-   "deeper love than words",
-   "reverence with limited faith"
+   "And when she had so said, she went her way, and called Mary her sister secretly, saying, The Master is come, and calleth for thee.",
+   "As soon as she heard that, she arose quickly, and came unto him.",
+   "Now Jesus was not yet come into the town, but was in that place where Martha met him.",
+   "The Jews then which were with her in the house, and comforted her, when they saw Mary, that she rose up hastily and went out, followed her, saying, She goeth unto the grave to weep there.",
+   "Then when Mary was come where Jesus was, and saw him, she fell down at his feet, saying unto him, Lord, if thou hadst been here, my brother had not died."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "33": {
   "voices": [
-   "Chrysostom",
    "Augustine",
-   "John Gill",
+   "Theophylact",
+   "Alcuin",
+   "Chrysostom",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -1471,389 +718,236 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "33-37",
+  "pericope_label": "He groaned in the spirit, and was troubled: Jesus wept",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Groaned’ (enebrimēsato, ‘to snort’) = vehement agitation; Barnes reads grief not anger, while the Jews’ ‘perfunctory’ wailing may add indignation; Christ is shown truly man, weeping with those who weep."
+    "prevalence": "several",
+    "summary": "Ellicott distinguishes the calm shedding of tears from the cry of lamentation and turns the verse into an apology — a God in tears has drawn the stoic’s smile, yet humanity has never seen the divinity of the Son of Man more clearly; he also separates the two parties among the bystanders, the second inferring that this failure discredits the healing of the blind man. Robertson reads an ingressive aorist of a verb that never means to wail, and notes they say could not rather than cannot. Barnes concludes that religion neither forbids nor condemns such grief."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin weighs the two parties, finding the first more modest for allowing Christ nothing beyond a man than the second who praise his power to reproach him with withholding it, and diagnoses a twofold disease in men who complain the moment God declines a wish."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke is indignant that certain ancients thought weeping a degradation and struck from Luke the place where Christ wept over Jerusalem, and calls the sceptics’ reasoning madness; Wesley marvels that men who thought he might have prevented death never dreamed he could undo it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry fastens on the idiom “he troubled himself”, concluding he was never troubled but voluntarily, and observes that we never read he laughed but more than once find him in tears."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact says he gave his nature vent or restrained it as suited the lesson, since absence of sympathy is brutal and excess of it unmanly; Chrysostom says his enemies turned against him the very works that should have proved his power."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: ‘who but Himself could trouble Him?’ — he was troubled because it pleased him; his affections are free, the Word having fitted soul and flesh to himself."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: real sympathy weeping with the mourners, yet contemplating something higher — the general misery of the human race under death."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: ‘he troubled himself’ — his affections were not passions but voluntary emotions wholly in his own power."
+    "summary": "Augustine answers that he was troubled because it pleased him, as he hungered because it pleased him, and asks why Christ wept if not to teach men to weep; Alcuin says he wept in the nature by which he could not raise."
    }
   ],
   "debates": [
    {
-    "question": "Is the ‘groaning’ grief or indignation?",
-    "sides": [
+    "question": "What caused the groaning?",
+    "positions": [
      {
-      "position": "grief and sympathy (moved by the mourners’ sorrow)",
-      "holders": [
-       "Albert Barnes",
-       "Adam Clarke",
-       "John Calvin"
+      "view": "Condescension to the bystanders, that they might be witnesses",
+      "held_by": [
+       "Chrysostom"
       ]
      },
      {
-      "position": "indignation (at the perfunctory wailing, or at death/unbelief)",
-      "holders": [
-       "A.T. Robertson",
-       "Charles Ellicott"
+      "view": "A voluntary self-troubling proper to the higher nature",
+      "held_by": [
+       "Augustine",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Instruction in the due measure of grief",
+      "held_by": [
+       "Theophylact"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "‘groaned in the spirit’",
-   "Christ’s real humanity",
-   "voluntary emotions",
-   "sympathy and the misery of death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The omniscient Lord asks ‘as man’ (cf. 6:6) — to avoid any suspicion of collusion, raise expectation, and draw the Jews to the tomb as witnesses; ‘come and see’ echoes 1:46."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: he asked to try their faith and make them seek the miracle, with an allusion to our hidden calling; Cyril: some are saved by others’ faith (the sisters’ for Lazarus)."
+    "voice": "Adam Clarke",
+    "claim": "Reports on Epiphanius that ancients improperly styled fathers of the Church excised Christ’s weeping over Jerusalem from Luke as a degradation of his character."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "‘where have ye laid him?’",
-   "question of the omniscient Lord",
-   "no collusion",
-   "drawing the witnesses"
+   "When Jesus therefore saw her weeping, and the Jews also weeping which came with her, he groaned in the spirit, and was troubled,",
+   "And said, Where have ye laid him? They said unto him, Lord, come and see.",
+   "Jesus wept.",
+   "Then said the Jews, Behold how he loved him!",
+   "And some of them said, Could not this man, which opened the eyes of the blind, have caused that even this man should not have died?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The shortest verse proves Christ truly man and a tender friend; ‘wept’ (edakrysen, silent tears, unlike the wailing klaiō) — grief over Lazarus, the sisters, and the unbelieving Jews; tears at the grave are no sin (Rom 12:15)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Jesus wept’",
-   "true and tender humanity",
-   "silent tears",
-   "sympathy hallowed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The first party reads his tears as genuine love (ephilei, ‘used to love,’ as in v.3) — ‘how he must have loved him’; Clarke applies it to the cross: ‘behold how he hath loved us.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: of the two opinions, these speak more candidly though they ascribe to him only what is human, unlike the cavillers of v.37."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘behold how he loved him’",
-   "reality of Christ’s love",
-   "the love shown at the cross",
-   "two responses to his tears"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A second, hostile party turns his tears into a cavil, appealing to the blind-man miracle (ch.9) to insinuate he could not (ouk edynato) have prevented the death — a strange mixture of half-faith and unbelief."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril cites the prophecy of opened eyes and raised dead (Isa 35:5), pointing past their doubt to the sign Christ will give."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cavil",
-   "tears turned against him",
-   "the blind man of ch.9",
-   "half-faith more culpable"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "38": {
   "voices": [
+   "Chrysostom",
+   "Augustine",
+   "Theophylact",
+   "Bede",
+   "Origen",
    "John Gill",
-   "Albert Barnes",
+   "John Lightfoot",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Cyril of Jerusalem"
   ],
+  "range": "38-40",
+  "pericope_label": "Take ye away the stone: if thou wouldest believe, thou shouldest see the glory of God",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The renewed groaning (embrimōmenos, as v.33) is stirred by the cavil of v.37 — holy indignation at their malice; the tomb is a rock cave closed with a great stone (cf. Machpelah, Gen 49)."
+    "prevalence": "several",
+    "summary": "Robertson renders the idiom as “he is a fourth-day man”, an ordinal Herodotus uses of one four days dead, and notes the verb means only to give out an odour; Ellicott alone questions the inference, since the text never says decomposition had begun and the sepulchre stood open while Jesus prayed; Lightfoot supplies the three-day belief about the hovering spirit and the changed face."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: he comes ‘as a champion preparing for a contest,’ groaning at the tyranny of death before his eyes — contemplating the thing itself rather than the men."
+    "summary": "Calvin sees a champion preparing for a contest rather than an idle spectator, judges Martha to measure an incomprehensible power by the perception of her flesh, and makes faith the condition under which the glory is displayed, unbelief keeping God’s hands shut; Gill notes the opened grave broke a rabbinic rule."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke asks how, on the vertical arrangement of the tomb, Lazarus could have come forth at all; Wesley says in six words that reason and faith struggled together."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the line exactly: men may prepare the way and take away the stone, and Christ alone gives life."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom answers why the stone was not moved by a word — that the miracle should happen in full sight and none say, as of the blind man, that this was not the same person; Theophylact hears weakness of faith in Martha’s protest; Cyril of Jerusalem draws out that some are saved by others’ faith, the sisters supplying what the dead man lacked."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen draws the rule that nothing should come between Jesus’ commands and the doing of them."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine also hears weakness of faith, while Bede takes her words for wonder rather than despair."
    }
   ],
   "debates": [
    {
-    "question": "What causes the second groaning?",
-    "sides": [
+    "question": "Had the body actually begun to decay?",
+    "positions": [
      {
-      "position": "indignation at the Jews’ unbelief/cavil",
-      "holders": [
-       "Charles Ellicott",
-       "John Gill"
+      "view": "Assumed by the expositors generally from the fourth day",
+      "held_by": [
+       "A.T. Robertson",
+       "John Lightfoot",
+       "Adam Clarke"
       ]
      },
      {
-      "position": "agitation at death itself, which he comes to conquer",
-      "holders": [
+      "view": "Not stated in the text, and told against by the interval when the sepulchre stood open",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Do Martha’s words express despair or wonder?",
+    "positions": [
+     {
+      "view": "Weakness of faith",
+      "held_by": [
+       "Theophylact",
+       "Augustine",
        "John Calvin"
+      ]
+     },
+     {
+      "view": "Wonder rather than despair",
+      "held_by": [
+       "Bede"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "second groaning",
-   "the cave and the stone",
-   "champion against death",
-   "indignation at unbelief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The stone is removed so the corpse may be seen and smelt — no fallacy; the four days and corruption (‘he is a fourth-day man,’ stinketh) prove a real, undeniable death, ‘marks of truth.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Martha’s ‘he stinketh’ is distrust — measuring God’s infinite power by the flesh, inferring no remedy from putrefaction; reason and faith struggle (Wesley)."
+    "voice": "Cyril of Jerusalem",
+    "claim": "Makes the sisters’ faith supply the dead man’s own, so that faith exercised on another’s behalf recalled him from the gates of hell."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "‘take ye away the stone’",
-   "‘by this time he stinketh’",
-   "death beyond doubt",
-   "Martha’s relapse into doubt"
+   "Jesus therefore again groaning in himself cometh to the grave. It was a cave, and a stone lay upon it.",
+   "Jesus said, Take ye away the stone. Martha, the sister of him that was dead, saith unto him, Lord, by this time he stinketh: for he hath been dead four days.",
+   "Jesus saith unto her, Said I not unto thee, that, if thou wouldest believe, thou shouldest see the glory of God?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ recalls his promise (substance of vv.4, 23-26) and reproves Martha’s decline from her earlier faith (v.22); faith alone ‘interests the saving power of God.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: faith both opens the eyes to see God’s power and ‘prepares the way’ for it — first believing, then seeing the glory of God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘if thou wouldest believe’",
-   "faith before sight",
-   "the glory of God",
-   "reproof of distrust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "41": {
@@ -1861,212 +955,134 @@
    "Alcuin",
    "Origen",
    "Gregory",
-   "John Chrysostom",
+   "Chrysostom",
+   "Hilary",
    "Augustine",
-   "John Gill",
-   "Albert Barnes",
+   "Theophylact",
+   "John Lightfoot",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "41-44",
+  "pericope_label": "Father, I thank thee that thou hast heard me: Lazarus, come forth",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The lifted eyes and thanksgiving are spoken before the unbelieving crowd, that they may know the work is by God’s power (not the devil’s); Christ has the answer before he acts."
+    "prevalence": "several",
+    "summary": "Robertson infers a prayer already offered and answered before the act, quoting Dods that there is no pomp of incantation but simple thanksgiving, and notes the command is two adverbs without a verb; Ellicott corrects the tense, presses the emphatic pronoun as the law of Christ’s human life, and refuses to make the bound man’s walking a second miracle, since the order to loose him tells against it; Lightfoot takes the opposite view."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory/Augustine: the three raisings figure three depths of sin (heart, act, habit), all of which grace reaches; Alcuin: as man, inferior, he prays."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin makes the lifted eyes posture and not rule, since the publican pierced heaven with his face to the ground, and reads the last command as evidential — Christ could have loosed the bands himself but employed the spectators’ hands as witnesses — turning sharply on those who draw auricular confession from the words."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke explains the audible prayer by the current belief that great wonders might be worked by the devil’s power, so that the supreme God was invoked openly."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: the lowly words aim not at sublimity but at drawing us; Origen: lift the mind in prayer after Christ’s pattern."
+    "summary": "Chrysostom denies that “thou hast heard me” confesses any lack of power, calling it the language of friends and equals, and marks that Christ says neither arise nor in my Father’s name; Theophylact takes the loud voice for the trumpet of the general resurrection, raised against the fable that the soul stayed in the tomb."
    },
    {
-    "school": "reformed",
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the lifted eyes as the lifting of the mind, and makes Christ’s prayer the pattern of our own."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: a mind truly prepared for prayer, yet the thanks show he is heard always; Wesley: he acts with absolute sovereignty, thanking only for the opportunity."
+    "summary": "Augustine says the calling by name was necessary lest all the dead come out, and with Gregory reads the loosing as confession and absolution; Hilary states the case exactly, that he prayed not from need but for our instruction; Alcuin divides the labour between Christ who wakes and the ministry that absolves."
    }
   ],
   "debates": [
    {
-    "question": "Does the prayer mark dependence or sovereignty?",
-    "sides": [
+    "question": "What does the last command mean?",
+    "positions": [
      {
-      "position": "true prayer of the Son, dependent as man (Alcuin) yet always heard",
-      "holders": [
-       "Alcuin",
-       "John Calvin"
+      "view": "An evidential act, employing the spectators as witnesses, and addressed to the Jews rather than the disciples",
+      "held_by": [
+       "John Calvin",
+       "Chrysostom"
       ]
      },
      {
-      "position": "an act of absolute sovereignty, not a petition for aid",
-      "holders": [
-       "John Wesley"
+      "view": "A word to the ministers, the loosing of sins figured in the loosing of the bands",
+      "held_by": [
+       "Augustine",
+       "Gregory",
+       "Alcuin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was the bound man’s walking itself a miracle?",
+    "positions": [
+     {
+      "view": "Yes, a wonder within a wonder",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "view": "No, and the order to loose him tells against it",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "‘Father, I thank thee’",
-   "prayer for the crowd’s sake",
-   "sovereignty and dependence",
-   "three raisings / depths of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The audible prayer was for the bystanders, not for himself — ‘I knew that thou hearest me always’ (a settled certainty rooted in the union of wills, 10:30), that they may believe he was sent."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: an anticipation lest any doubt his favour with the Father — he needed not pray, executing only the Father’s will, yet called on the Name to assure men it is a divine work."
+    "voice": "Hilary",
+    "claim": "He did not need to pray but prayed for our sakes: the prayer benefited not himself but our faith — he wanted no help, we wanted instruction."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "‘thou hearest me always’",
-   "prayer for the people",
-   "union of Father and Son",
-   "prayer as attestation"
+   "Then they took away the stone from the place where the dead was laid. And Jesus lifted up his eyes, and said, Father, I thank thee that thou hast heard me.",
+   "And I knew that thou hearest me always: but because of the people which stand by I said it, that they may believe that thou hast sent me.",
+   "And when he thus had spoken, he cried with a loud voice, Lazarus, come forth.",
+   "And he that was dead came forth, bound hand and foot with graveclothes: and his face was bound about with a napkin. Jesus saith unto them, Loose him, and let him go."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The ‘loud voice’ (unlike magicians’ muttering, Isa 8:19) is for the crowd, that they see Lazarus come forth simultaneously with the command — fulfilling 5:25; he names him as one waking a sleeping friend (cf. 20:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: by word, not touch, his divine power and the efficacy of his word are shown — the same voice that gives spiritual life daily and will raise all the dead."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Lazarus, come forth’",
-   "the loud voice",
-   "power of the word (5:25)",
-   "death obeys his voice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Lazarus comes forth still wound in graveclothes (keiriai) and napkin (soudarion) — Lightfoot’s ‘second miracle’ of walking out so bound; ‘Loose him’ gives the bystanders what they can do, making them witnesses of a real raising."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: a picture of the gospel — Christ raises by his word, then would have the freed soul loosed from the grave-clothes of its old bondage to walk; a pledge of the resurrection of all his own."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "came forth bound",
-   "a second miracle",
-   "‘loose him, and let him go’",
-   "pledge of resurrection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "45": {
   "voices": [
-   "John Gill",
+   "Theophylact",
+   "Origen",
+   "Chrysostom",
+   "Augustine",
+   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -2075,209 +1091,131 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "45-48",
+  "pericope_label": "Many believed on him; but some went to the Pharisees: what do we? for this man doeth many miracles",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Many eye-witnesses (not hearsay) believe — the miracle an incontestable proof; their visit of consolation became their conversion (Eccl 7:2); the usual double effect of Christ’s works."
+    "prevalence": "several",
+    "summary": "Robertson observes that the Sadducean priesthood now takes the lead, supported by its own opponents, and that Lazarus is never named in the debate though plainly included in the many signs; Ellicott hears in the present tense the confession of men who feel they have delayed too long, and marks the contradiction in a sentence granting many signs while calling him only this Man; Barnes supplies the theory that let them grant the works and refuse the claim; Lightfoot believes the council knew whom it condemned."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: miracles prepare for or confirm faith — here they prepare, drawing reverence, though the bare sign needs the word and Spirit to produce faith; Wesley: the Son thereby glorified (v.4)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many believed",
-   "eye-witnesses",
-   "savour of life and death",
-   "fruit of the miracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The same clear miracle hardens some, who report to the Pharisees — whether as informers (Gill, Clarke) or, more charitably, as convinced witnesses demanding a verdict (Ellicott, Robertson)."
+    "prevalence": "single",
+    "summary": "Calvin says they assemble deliberately to bury a glory that astonishes them, setting their own industry as a shield against divine power as if perseverance could vanquish God."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: detestable ingratitude — hearts must be purified to profit by miracles; Wesley: proof that those who hear not Moses are unmoved though one rise from the dead (Lk 16:31)."
+    "summary": "Clarke observes that Pharisees as such could not convene a council, and that the miracle was so incontestable they were at their wit’s end, their own spies having borne the testimony; Wesley answers their question in four words — what do we? believe."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the informers witnesses against themselves, acknowledging his credentials and denying his commission, and holds that perverting what is true is as bad as forging what is false."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom asks what evidence there was of an usurper in one who chose desert places, and says they declared the state in danger lest they seem to consult their own interest; Theophylact notes that a miracle which should have drawn wonder became the occasion of a plot."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen judges the informers to be of the unbelieving party, since the believers are the larger group, and finds both audacity and blindness in men who own the miracles yet expect to prevail."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine says the wretched men considered only how to kill him, not how to be saved, and that fearing to lose temporal things they lost both."
    }
   ],
   "debates": [
    {
-    "question": "In what spirit did these go to the Pharisees?",
-    "sides": [
+    "question": "Who were the men who reported to the Pharisees?",
+    "positions": [
      {
-      "position": "as hostile informers, hardened against the miracle",
-      "holders": [
-       "John Gill",
-       "Adam Clarke",
-       "John Calvin"
+      "view": "Unbelievers meaning to inflame the authorities",
+      "held_by": [
+       "Origen",
+       "Matthew Henry"
       ]
      },
      {
-      "position": "as convinced witnesses reporting it as proof / demanding a judgment",
-      "holders": [
-       "Charles Ellicott",
-       "A.T. Robertson"
+      "view": "Possibly believers hoping to conciliate them — a reading Origen states and rejects",
+      "held_by": [
+       "Origen"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was the fear of Rome sincere?",
+    "positions": [
+     {
+      "view": "A pretext colouring malice, the gospel being no threat to kings or provinces",
+      "held_by": [
+       "Matthew Henry",
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "A real dread of losing temporal things, which cost them both",
+      "held_by": [
+       "Augustine"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "hardening at the miracle",
-   "report to the Pharisees",
-   "Moses and the prophets (Lk 16:31)",
-   "the sign divides"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "Theophylact",
-   "Origen",
-   "Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Sanhedrin (chief-priest Sadducees and Pharisees combined) meets; their own question ‘this man doeth many miracles’ concedes the fact they should have believed, yet they plot instead."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact/Chrysostom: a miracle that should draw praise becomes a reason to plot; with his divinity proved, they call him ‘only a man’; Augustine: they consult how to kill, not how to be saved."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin/Henry: monstrous blindness — they assemble to bury the glory of God, a clear discovery of the heart’s enmity against God."
+    "voice": "John Lightfoot",
+    "claim": "Believes the Sanhedrin knew or strongly suspected whom they condemned, since the vinedressers say “this is the heir” and the council knew Daniel’s weeks were accomplished."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the Sanhedrin’s plot",
-   "‘this man doeth many miracles’",
-   "unbelief that admits the fact",
-   "enmity against God"
+   "Then many of the Jews which came to Mary, and had seen the things which Jesus did, believed on him.",
+   "But some of them went their ways to the Pharisees, and told them what things Jesus had done.",
+   "Then gathered the chief priests and the Pharisees a council, and said, What do we? for this man doeth many miracles.",
+   "If we let him thus alone, all men will believe on him: and the Romans shall come and take away both our place and nation."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Political fear: ‘all’ will believe and Rome will destroy ‘place and nation’ (temple and city, held at Rome’s will); Lightfoot: they half-knew the truth (cf. the heir, Mk 12:7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: under pretext of the public good they set themselves against God; the very ruin they schemed to prevent they brought on themselves by killing the Messiah."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fear of the Romans",
-   "political calculation",
-   "tragic irony of the plot",
-   "they half-knew the heir"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "49": {
   "voices": [
-   "Origen",
    "Chrysostom",
    "John Chrysostom",
+   "Augustine",
+   "Origen",
+   "Gregory",
    "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -2285,212 +1223,109 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "49-53",
+  "pericope_label": "It is expedient that one man should die for the people: he prophesied that Jesus should die for that nation",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘High priest that same year’ marks the office made near-annual under Rome and the fateful year; Caiaphas cuts through the council with a hardened politician’s scorn, proposing one man’s death."
+    "prevalence": "several",
+    "summary": "Barnes explains the office as originally for life and cautions that prophecy here is not used strictly; Ellicott derives Caiaphas from Cephas and hears in the thrice-repeated phrase a solemnity marking that fatal and decisive year; Robertson allows him the point that no solution had been offered, notes the preposition will bear “instead of”, and remarks drily that politicians are often willing to sacrifice the other fellow; Lightfoot asks bluntly whether Caiaphas is among the prophets."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin denies that the phrase means an annual office, the dignity having become purchasable contrary to a Law that meant it to end only with the holder’s death; he restates the maxim as a resolve to provoke God’s wrath in order to prosper, and gives Caiaphas two tongues, one vomiting his own design while God turned the other to a prediction."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke concedes the maxim is sound politics but answers that we may not do evil that good may come and that none of the premises were certain; he compares Virgil’s line that one life shall fall that many may be saved; Wesley reads the reproof as aimed at slow deliberation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the dying both attraction and centre, gathering those far from Christ and uniting those far from each other."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: the Spirit drew a prophecy from a wicked man — the office, not his corrupt heart, made him prophesy unconsciously."
+    "summary": "Chrysostom says divine grace used the high priest’s mouth but never touched his corrupt heart; in his homilies he notes that what the others put forward doubtfully this man cried aloud, shamelessly and audaciously."
    },
    {
     "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Origen: not all who prophesy are prophets — Caiaphas prophesied like Balaam, meaning only to incite his death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Caiaphas",
-   "‘high priest that year’",
-   "unconscious prophecy",
-   "the office vs. the man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "On the surface a cold raison d’état — sacrifice one man to spare the nation from Rome; ‘expedient’ and ‘die for the people’ (hyper) carry, unintended, the gospel sense of the one dying for all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘one man should die for the people’",
-   "cynical statecraft",
-   "unwitting prophecy of atonement",
-   "substitution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Caiaphas meant only his cruel design, yet God overruled his tongue to utter, ‘not of himself,’ a true (unconscious) prophecy of the atonement — like Balaam, ‘the oracle of God in spite of himself.’"
+    "summary": "Origen separates the act from the character — not everyone who prophesies is a prophet — and denies that the resolve to kill came from the same Spirit as the prophecy."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: a higher impulse guided his tongue — he had ‘two tongues,’ one voicing his murderous design, the other proclaiming the death’s saving purpose."
+    "summary": "Augustine reads the Evangelist’s enlargement as a correction, since there were other sheep not of that fold; Gregory observes that killing him to extinguish his followers’ devotion made faith grow from the very thing meant to destroy it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "In what sense did Caiaphas prophesy?",
+    "positions": [
+     {
+      "view": "By the virtue of the office, grace using his mouth without touching his heart",
+      "held_by": [
+       "Chrysostom",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "By the year rather than the office, some drops of that outpouring falling on a wicked man",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "view": "Not in the strict sense of prophecy at all",
+      "held_by": [
+       "Albert Barnes",
+       "Origen"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Cites Virgil’s Neptune — one life shall fall that many may be saved — as an episode neither historical nor ornamental, introduced purely to state the poet’s creed on vicarious atonement."
+   }
+  ],
   "themes": [
-   "unconscious prophecy",
-   "‘not of himself’",
-   "Caiaphas as Balaam",
-   "God overruling the wicked"
+   "And one of them, named Caiaphas, being the high priest that same year, said unto them, Ye know nothing at all,",
+   "Nor consider that it is expedient for us, that one man should die for the people, and that the whole nation perish not.",
+   "And this spake he not of himself: but being high priest that year, he prophesied that Jesus should die for that nation;",
+   "And not for that nation only, but that also he should gather together in one the children of God that were scattered abroad.",
+   "Then from that day forth they took counsel together for to put him to death."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "John widens the prophecy: not for the nation only but to gather the scattered ‘children of God’ — the ‘other sheep’ (10:16) into one flock, Jew and Gentile (1 John 2:2; Eph 2:14)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: reconciliation extends to the Gentiles; the scattered are called ‘children of God’ by election, before their calling, though yet wandering enemies."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "death for the world",
-   "gathering the scattered",
-   "one flock (10:16)",
-   "election and the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "53": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "On that day the Sanhedrin officially decreed Christ’s death (only the manner remaining, to avoid tumult, Mt 26:4); the raising of Lazarus ‘brought matters to a head,’ a month before the end."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they had already resolved on his death; only the method remained — the sign of life becomes the trigger of the death-warrant."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the official death-decree",
-   "the sign hardens the rulers",
-   "road to the cross",
-   "atonement foretold"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "54": {
@@ -2498,176 +1333,107 @@
    "Origen",
    "Chrysostom",
    "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He withdraws to Ephraim (hill country near Bethel) — prudence, not fear; he never exposed his life needlessly, and would not force the end before his hour (the Passover, a month off)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: not that his power failed, but to teach by example that believers may lawfully retire from danger; Chrysostom: the troubled disciples ‘continued with him’ (Lk 22:28)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he fled not to escape the Father’s calling but to present himself for voluntary death at the appointed time; Henry: no devices of man alter God’s purposes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "withdrawal to Ephraim",
-   "prudence not fear",
-   "master of his hour",
-   "example for believers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "55": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
+   "Theophylact",
+   "Alcuin",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The last Passover of the ministry draws near; pilgrims go up early to purify themselves by the rabbinic rule (cf. Num 9:10) — the feast at which the true Passover Lamb will be slain."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: as they purified before the feast, so before our gospel passover we must renew repentance and solemnly prepare to meet God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Passover nigh",
-   "purification for the feast",
-   "the last Passover",
-   "outward cleansing vs. inward plotting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "56": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "54-57",
+  "pericope_label": "He went unto a city called Ephraim: what think ye, that he will not come to the feast?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The festival crowds, knowing both his fame and the rulers’ hostility, seek and debate in the temple whether he will dare come to the feast (expecting ‘no,’ given the decree of v.57)."
+    "prevalence": "several",
+    "summary": "Ellicott sets out the uncertainty about Ephraim, the manuscripts spelling it four ways and Eusebius and Jerome differing by twelve miles, and points out that the Law ordained no special purification before the passover; Robertson notes the manhunt is now in earnest and finds in a perfect participle the knots of people about the temple precincts; Lightfoot reports the graduated times of purifying; Barnes sets danger against duty."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: devotion and danger mingle — the purified pilgrims speculate about the condemned man; the hush before the last great act."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seeking Jesus at the feast",
-   "‘will he come?’",
-   "Jerusalem’s expectation",
-   "hush before the storm"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "57": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Calvin declines the topographical search, since language and landscape both changed after the captivity, restricts “his disciples” to the constant companions who lived under one roof, and agrees the sanctification was voluntary, the Evangelist writing many and not all."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "The Sanhedrin issues an open order that any who know his whereabouts must inform, to seize him — explaining his withdrawal to Ephraim (v.54) and setting the stage for the betrayal."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke places the town near Bethel and reports that Christ stayed there two months."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom looks at the disciples, troubled to see him save himself by merely human means while the nation kept the feast; Theophylact lays the Passion at the door of the Pharisees rather than the people’s ignorance."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the retreat as figure — the Word ceasing to walk openly among that people and going to Ephraim, whose name means fruitfulness, when Manasseh, the forgotten elder, was passed over — and notes the Evangelist calls the feast the Jews’ passover and not the Lord’s."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine defends the withdrawal as example, since whoever causes another’s sin is answerable for it, and contrasts a passover kept in the dark with doorposts stained by a slain animal against one kept in the light; Alcuin turns the search around, that they sought him with bad intent while we seek him in God’s temple."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was any purification actually required before the passover?",
+    "positions": [
+     {
+      "view": "Yes, with graduated times set by the nature of the defilement",
+      "held_by": [
+       "John Lightfoot",
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "No special rite, only the general requirement of cleanness, and this undertaken voluntarily",
+      "held_by": [
+       "Charles Ellicott",
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Makes the retirement a lesson in not multiplying another man’s guilt: it is praiseworthy to confess when the struggle comes, and no less praiseworthy to avoid giving occasion for it."
+   }
+  ],
   "themes": [
-   "the warrant for arrest",
-   "a hunted Saviour",
-   "prelude to the betrayal",
-   "taken only at his chosen hour"
+   "Jesus therefore walked no more openly among the Jews; but went thence unto a country near to the wilderness, into a city called Ephraim, and there continued with his disciples.",
+   "And the Jews’ passover was nigh at hand: and many went out of the country up to Jerusalem before the passover, to purify themselves.",
+   "Then sought they for Jesus, and spake among themselves, as they stood in the temple, What think ye, that he will not come to the feast?",
+   "Now both the chief priests and the Pharisees had given a commandment, that, if any man knew where he were, he should shew it, that they might take him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  }
 }
