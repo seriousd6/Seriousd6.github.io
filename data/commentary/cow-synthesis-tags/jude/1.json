@@ -5,88 +5,120 @@
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1",
+  "pericope_label": "Jude, servant of Jesus Christ and brother of James, to the called",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill identifies the writer with the apostle Lebbaeus Thaddaeus and explains the name; Calvin takes servant as an apostolic title carrying both commission and fidelity, reads calling as the effect of election, and rejects the variant reading of the second participle."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry contrasts the two men who bore the name, prefers servanthood to kinship after the flesh, and turns the title against clerical dominion."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Jude calls himself 'servant of Jesus Christ' and 'brother of James' (the Jerusalem leader), not 'apostle' nor 'Judas of James' (Luke 6:16); the readers sanctified by the Father, preserved in Christ, and called — the threefold keeping grounding the letter."
+    "summary": "Barnes reconstructs the identification from the apostolic catalogues, settles which James is meant, and notes the single question preserved from Jude in the Gospels; Robertson leaves three grammatical points open, including whether the readers are kept for Christ or by him."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'servant of Christ' here with respect to his apostleship; Wesley: the highest glory any can aspire to."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues from the writer&rsquo;s silence that he was probably not an apostle; Wesley traces the word servant across the two covenants and notes that the epistle&rsquo;s close answers its opening."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Was the writer one of the twelve?",
+    "sides": [
+     {
+      "position": "Yes; he is the apostle called Lebbaeus and Thaddaeus",
+      "holders": [
+       "Gill",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Yes; servant is used here precisely as an apostolic title",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Probably not; an apostle writing to Christians would have said so",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What do the closing participles say of the readers?",
+    "sides": [
+     {
+      "position": "Sanctified by the Father and preserved by Christ; the reading beloved is corrupt",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Beloved in God the Father, with no parallel for the construction, and kept either for or by Jesus Christ",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Both the spring and the accomplishment of salvation, set down to forestall discouragement",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Jude, servant of Christ",
-   "brother of James",
-   "sanctified, preserved, called",
-   "God's keeping"
+   "authorship of Jude",
+   "servanthood",
+   "effectual calling",
+   "preservation of the saints"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.05
+   }
   }
  },
  "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Be multiplied' (plethyntheie, optative; cf 1 Pet 1:2; 2 Pet 1:2) — mercy (pardon to the unmeriting), peace (with God and conscience), love (God's and ours), asking not a bare measure but an overflowing increase."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: mercy nearly the same as grace — grace the effect of mercy, God embracing us because he pities our misery."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mercy, peace, love",
-   "be multiplied",
-   "the choicest blessings",
-   "grace at the outset"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -96,38 +128,109 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "2-3",
+  "pericope_label": "Mercy, peace and love multiplied, and the charge to contend for the faith once delivered",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "He meant to write of the 'common salvation' (Titus 1:4) but 'had necessity' to urge contending for 'the faith once delivered' — given once for all, a fixed deposit, entrusted to the whole church to guard; the contending vigorous yet (Wesley) humble and loving."
+    "summary": "Calvin distinguishes grace as the effect of mercy, refers peace and love to God rather than to men, separates inclination from compelling necessity in the writer, and refuses the copies that narrow the salvation to the readers; Gill assigns mercy to the Father and peace to Christ and reads multiplication as fresh application in desertion and affliction."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the design to establish them in the faith, especially in times of notorious opposition."
+    "prevalence": "single",
+    "summary": "Henry makes the salvation common by sincere offer to all, sets God&rsquo;s plain covenants against his dark decrees, and warns that the faith contended for must not be party badges or anything later than the inspired writings."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes reads the three nouns as the sum of blessing and reconstructs the reasoning that led to the epistle&rsquo;s particular subject, restricting the contending to argument; Robertson glosses the optative and the athletic compound behind contend earnestly."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke grounds the greeting in the absence of all merit and thinks the writer changed his intended subject on seeing the danger; Wesley adds that the contending must be humble, meek and loving or it will hurt the cause."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How did the epistle come to have this subject?",
+    "sides": [
+     {
+      "position": "He had purposed a general account of the Gospel and changed his mind on seeing the danger",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Affection prompted the letter, and reflection on their dangers settled its particular topic",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "The clauses are separate: he was willing to write, and a necessity compelled him",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the faith to be contended for?",
+    "sides": [
+     {
+      "position": "By argument, reasoning and holding fast, not otherwise",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Humbly, meekly and lovingly, or the contention destroys the contender",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "For the faith itself, never for party badges or later additions",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "'contend earnestly for the faith'",
-   "once delivered to the saints",
-   "the change of plan",
-   "defending the gospel"
+   "the common salvation",
+   "contending for the faith",
+   "the faith once delivered",
+   "apostolic greeting"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
   }
  },
  "4": {
@@ -139,169 +242,225 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "4",
+  "pericope_label": "Certain men crept in unawares, turning grace into lasciviousness and denying the only Master",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the passage a lesson in pastoral timing, treats the intrusion as an inward evil raised up out of the flock, and alone keeps God&rsquo;s eternal counsel in view while still locating the reference in prophecy; Gill lists the doors the intruders used and explains the withholding of their names."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "They 'crept in' (pareisedysan, slipped in by a side door) under fair pretences; 'before of old ordained/written of' for condemnation; turning grace into 'lasciviousness' (licence) and 'denying the Lord' by doctrine or life (cf 2 Pet 2:1)."
+    "summary": "Robertson glosses the side-door verb and names ungodly as the keynote; Barnes reads the stealth as concealed denial and argues at length that the adverb of old cannot prove an eternal ordination; both take the phrase about the only Master as denying one person, not two."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a peculiar assault of Satan, demanding the church take up arms."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the verb as public proscription and rejects any decree of reprobation here outright; Wesley dates the of old to Enoch and reads the abuse of grace as an occasion of wickedness."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does of old ordained to this condemnation mean?",
+    "sides": [
+     {
+      "position": "Long ago publicly proscribed; no decree of eternal reprobation is in view",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Any remote period will satisfy the word; eternity cannot be proved from it",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "As far back as Enoch, whose prophecy stands later in this chapter",
+      "holders": [
+       "Wesley",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The metaphor is of God&rsquo;s eternal counsel as a book, though the reference itself is to prophecy",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How many persons are denied in the closing clause?",
+    "sides": [
+     {
+      "position": "One; the word for God is a gloss, and the single article carries the title to Christ",
+      "holders": [
+       "Clarke",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The denial is of the Lord Jesus Christ as sole Sovereign and Ruler of the Church",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "crept in unawares",
-   "turning grace into lasciviousness",
-   "denying the Lord",
-   "ordained to condemnation"
+   "false teachers",
+   "reprobation",
+   "antinomianism",
+   "the lordship of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "5-7",
+  "pericope_label": "Israel in the wilderness, the angels who left their habitation, and the cities of the plain",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Reminding 'though ye know all things once for all' (hapax); the Lord saved Israel from Egypt yet 'destroyed them that believed not' — deliverance no security for the unbelieving; textual variant 'the Lord'/'Jesus.'"
+    "summary": "Calvin prefers the bolder account of why old knowledge is rehearsed, makes unbelief the fountain of all Israel&rsquo;s sins, argues from angels to men, denies that the devils are shut in any one place, and refers the disputed phrase to the men of the cities; Gill describes the angels&rsquo; first estate and their fall through one of their number."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: outward privilege cannot secure those who fall into unbelief; none may presume on past mercies."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Israel saved then destroyed",
-   "unbelief judged",
-   "no presuming on privilege",
-   "the first warning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry makes the wilderness generation proof that privilege and profession secure no one."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The angels 'kept not their first estate' (arche, principality/rank), forsook their habitation, and are 'reserved in everlasting chains under darkness' for judgment (cf 2 Pet 2:4) — the highest creatures not escaping rebellion's doom."
+    "summary": "Barnes glosses the second time, denies that the everlasting chains prove eternal punishment, and canvasses four readings of in like manner before settling on the neighbouring cities; Robertson notes the missing parallel in Peter and takes the disputed phrase of the fallen angels."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: an argument from greater to less — if God spared not angels, he will not forgive men who depart from his grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "angels who kept not their estate",
-   "everlasting chains",
-   "reserved unto judgment",
-   "greater to less"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Sodom, Gomorrah, and the cities of the plain (Admah, Zeboiim; Zoar spared, Deut 29:23) 'set forth for an example,' their fiery overthrow a 'type of eternal fire' (cf 2 Pet 2:6) — the third historic judgment on ungodliness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God punishes all the ungodly without distinction; the fire a type of the eternal."
+    "summary": "Clarke reads once as thoroughly, refuses to guess at the angels&rsquo; crime while insisting they were on probation as Adam was, and allows eternal fire in two senses; Wesley warns against presuming on past mercies and argues from the angels to the immutability of God&rsquo;s love and displeasure."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "To whom does in like manner refer?",
+    "sides": [
+     {
+      "position": "To the cities round about Sodom; not to the angels, and not to the false teachers",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "To the fallen angels just named",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "To the inhabitants of Sodom and Gomorrha themselves",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is eternal about the eternal fire?",
+    "sides": [
+     {
+      "position": "Either the endless punishment of the inhabitants or the irreversible ruin of the cities; the word is proper in both",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The visible burning was only an image of a much heavier punishment",
+      "holders": [
+       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "The parallel clause about the angels proves only a prison lasting until the final trial",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "Sodom and Gomorrah",
-   "vengeance of eternal fire",
-   "set forth for an example",
-   "a type of judgment"
+   "unbelief",
+   "the fallen angels",
+   "Sodom and Gomorrha",
+   "eternal punishment"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "8": {
@@ -314,33 +473,110 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "8",
+  "pericope_label": "These dreamers defile the flesh, despise dominion, and speak evil of dignities",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows the dreaming to be literal, professional or figurative and lists the doctrines he counts as dreams; Calvin reads it as shameless stupor and possibly as pretended revelation, matches the three charges to the three examples in order, and turns the sedition against the anarchists of his own day."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers three readings of the dignities &mdash; magistrates, the dominion of conscience with the word that rules it, and the people of God."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'filthy dreamers' (enypniazomenoi) of v4, in spite of the warnings, commit a threefold sin answering the three examples — 'defile the flesh' (like Sodom), 'despise dominion' (like the angels), 'speak evil of dignities'; sin as filthiness and delusion (Henry)."
+    "summary": "Barnes strikes out the added word filthy and reads the dreaming of doctrines built from imagination; Robertson refers the comparison back only to the cities of the plain."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke defends the translators&rsquo; supplement from the next clause, maps the three charges onto the three earlier examples as persons, and takes the reviling of all government at its widest; Wesley denies the civil reference altogether and makes the dignities faithful ministers."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What are the dignities that are reviled?",
+    "sides": [
+     {
+      "position": "Civil magistrates, and to blaspheme them is to blaspheme God",
+      "holders": [
+       "Calvin",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Magistrates, or the dominion of conscience, or the people of God &mdash; the passage bears all three",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "Not worldly dignities at all, but faithful ministers honourable before God",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the dreaming?",
+    "sides": [
+     {
+      "position": "Doctrines that stand to truth as dreams stand to good sense; the word filthy is no part of the text",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Bodily defilement, as the following clause confirms",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "A metaphor of stupor, perhaps with allusion to prophets who claimed dreams",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "'filthy dreamers'",
-   "defile the flesh",
-   "despise dominion",
-   "rail at dignities"
+   "false teachers",
+   "civil authority",
+   "antinomianism",
+   "false prophecy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  },
  "9": {
@@ -352,35 +588,69 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "9",
+  "pericope_label": "Michael the archangel disputing with the devil about the body of Moses",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin grants the source is not Scripture and defends unwritten Jewish tradition as capable of carrying historical fact, keeps the body literal, and reads the episode as an argument from the greater to the less; Gill identifies Michael with Christ from the name, the title and the offices."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Michael (Dan 10:13; Rev 12:7), even disputing with the devil over Moses' body, 'durst not bring a railing accusation' but said 'The Lord rebuke thee' (Zech 3:2); the dispute likely from tradition/the Assumption of Moses, cited as true; the highest angel's restraint shaming the railers."
+    "summary": "Barnes sets out the difficulty at length, refutes the appeal to the prophet&rsquo;s vision point by point, and objects to the apocryphal explanation that the writer seems to treat the story as fact; Robertson adds a third proposal and finds none of them adequate."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill identifies Michael as Christ himself ('who is as God'); most take him as the created archangel."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke confesses he cannot tell the source, argues that archangel is never plural so there can be but one, and prefers the reading that makes the body of Moses the Jewish Church; Wesley leaves both the source and the number of archangels undetermined and keeps the body literal."
    }
   ],
   "debates": [
    {
-    "question": "Who is Michael, and whence the dispute over Moses' body?",
+    "question": "Who is Michael?",
     "sides": [
      {
-      "position": "the created archangel of Daniel and Revelation; the story from tradition or the Assumption of Moses, cited as true",
+      "position": "Not a created angel but Christ himself, as the name, the title and the offices show",
       "holders": [
-       "Robertson",
-       "Calvin",
-       "Wesley",
-       "most"
+       "Gill"
       ]
      },
      {
-      "position": "Michael is Christ himself, 'who is as God'",
+      "position": "The one archangel, head of all the angelic orders, whom many take for the Lord Jesus",
       "holders": [
-       "Gill"
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Undeterminable; the word occurs too seldom to settle whether there is one or many",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "One angel among myriads, chosen for this business as God pleased",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the body of Moses?",
+    "sides": [
+     {
+      "position": "His actual corpse, hidden by God against the idolatry Satan would have promoted",
+      "holders": [
+       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "The Jewish Church and state, as the Christian Church is called the body of Christ",
+      "holders": [
+       "Clarke"
       ]
      }
     ]
@@ -389,63 +659,37 @@
   "outliers": [],
   "themes": [
    "Michael the archangel",
+   "apocryphal tradition",
    "the body of Moses",
-   "'the Lord rebuke thee'",
-   "angelic reverence vs railing"
+   "railing accusation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A double folly — they 'speak evil of what they know not' (heavenly things beyond them), and what they know 'naturally, as brute beasts' (aloga zoa, by instinct) they use to corrupt themselves (cf 2 Pet 2:12); creatures of instinct, not spiritual men."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "speak evil of what they know not",
-   "brute beasts",
-   "corrupt themselves",
-   "irrational depravity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -455,33 +699,110 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "10-11",
+  "pericope_label": "Railing at what they know not, and the way of Cain, the error of Balaam, the gainsaying of Core",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill lists four things the railers do not know and three senses of the woe; Calvin stresses their audacity in condemning what is above them and their want of all moderation, and makes the woe a warning rather than an imprecation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The one 'woe' in Jude, with three parallels — 'the way of Cain' (envy, hatred, false worship, Gen 4), 'the error of Balaam for reward' (covetous corruption, Num 22), 'the gainsaying of Korah' (rebellion against God's leaders, Num 16); exposing their envy, greed, and insubordination and forecasting their doom."
+    "summary": "Barnes confines their knowledge to what they share with the brutes and reads the way of Cain as pride, envy and hatred ending in a murderous spirit; Ellicott hears the woe as an echo of the Gospels, dismisses the elaborate readings of Cain as far-fetched, and alone matches the three names to the three earlier examples in order."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke applies the railing to civil order and reads the way of Cain as fratricidal hatred compounded by soul-destroying doctrine; Wesley notes that Jude alone among the apostles denounces a woe, and that spiritual things cannot be known where there are no spiritual senses."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the way of Cain?",
+    "sides": [
+     {
+      "position": "Hatred of the brethren, which is murder, and the destroying of souls by false doctrine",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Pride, envy and hatred of religion, tending to the spirit that produced the murder",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Ingratitude to God and the perverting of his worship, forfeiting the birthright",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Simply the first great criminal, the first to outrage the laws of nature; the other readings are far-fetched",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the force of the woe?",
+    "sides": [
+     {
+      "position": "Not an imprecation but a warning of the end awaiting them",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Commiseration, or denunciation of desert, or prediction &mdash; it will bear all three",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "An echo of the Gospel denunciations, with the past tenses standing where the punishment is already reaped",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "'woe unto them'",
    "the way of Cain",
    "the error of Balaam",
-   "the gainsaying of Korah"
+   "the gainsaying of Korah",
+   "spiritual ignorance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
   }
  },
  "12": {
@@ -493,72 +814,109 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-13",
+  "pericope_label": "Spots in the feasts of charity: clouds without water, trees twice dead, raging waves, wandering stars",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill keeps the sense of spots or blemishes and describes the love-feasts and their abuses; Calvin makes the whole series a rebuke of vain ostentation, gives two accounts of twice dead, and turns the wandering stars against the sects of his own day, closing with a plea for the simplicity of Scripture."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Hidden rocks' (spilades, submerged reefs) at the 'love-feasts' (agapais), feeding without fear; 'clouds without water' (promise, no rain), 'trees twice dead, plucked up by the roots' (dead by nature and by apostasy, beyond reviving) — deceptive show and inner emptiness."
+    "summary": "Barnes reads the first word as hidden rocks rather than spots, argues at length that the feasts are the Lord&rsquo;s Supper and not a separate love-feast, and treats the wandering stars as bodies too irregular to steer by; Robertson supplies the same lexical gloss, notes the variant reading, and compares the parallel figures in Peter."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the love-feasts to their prohibition and revival, expounds the waterless clouds from the arid countries, and rejects the planets on astronomical grounds in favour of uncertain meteors; Wesley reads twice dead as nature and apostasy and takes the stars as planets shining with no light of their own."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What are the feasts of charity?",
+    "sides": [
+     {
+      "position": "The love-feasts of the primitive church, kept for brotherly unity and quickly abused",
+      "holders": [
+       "Gill",
+       "Clarke",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The Lord&rsquo;s Supper itself; no separate festival has apostolic sanction, and none is needed to explain the words",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the wandering stars?",
+    "sides": [
+     {
+      "position": "Not the planets, whose motion is perfectly regular, but uncertain meteors and wandering fires",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The planets, which shine for a time but have no light of their own",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Planets, comets or meteors indifferently; the point is that they cannot be steered by",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Comets or shooting stars, as commonly suggested",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "spots in the love-feasts",
-   "clouds without water",
-   "twice dead, plucked up",
-   "barrenness and danger"
+   "love-feasts",
+   "false teachers",
+   "vain ostentation",
+   "apostasy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Wild waves' (kymata agria) 'foaming out' (epaphrizonta) their shame (Isa 57:20), casting up mire; 'wandering stars' (erratic, not the fixed lights that guide) for whom is 'reserved the blackness of darkness for ever' — images from sea and sky sealing their doom."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "raging waves, foaming shame",
-   "wandering stars",
-   "blackness of darkness for ever",
-   "the doom sealed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
@@ -570,33 +928,80 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "14-15",
+  "pericope_label": "The prophecy of Enoch, the seventh from Adam: the Lord cometh with ten thousands of his saints",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin holds the prophecy unwritten and the book a later forgery, explains the appeal to the oldest antiquity, includes angels and the faithful in the ten thousands, and defends the order of the fifteenth verse as Scripture&rsquo;s habit of naming the final action first; Gill enumerates the all who come to judgment."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Enoch, 'the seventh from Adam' (Gen 5; Heb 11:5), 'prophesied of these' — the Lord coming with myriads of his saints; the doom of the ungodly announced from the earliest age, the inspired citation guaranteeing the saying's truth."
+    "summary": "Barnes argues that a true prophecy may have reached the writer by tradition and that quoting it is no argument against his inspiration, and corrects the modern sense of convince; Robertson alone allows that the ordinary meaning of the verb would make the apocryphal book an inspired one, and counts the fourfold refrain of ungodliness."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: more likely an unwritten prophecy preserved by tradition than taken from an apocryphal book; Clarke notes the Book of Enoch."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rejects the book as of no authority, suggests the verb may mean only preached, and reports the textual disorder of the verse while correcting a mistaken claim about its opening words; Wesley leaves the source open between book, tradition and revelation and grades the terms for sinner and ungodly."
    }
   ],
   "debates": [
    {
-    "question": "Did Jude cite the apocryphal Book of Enoch?",
+    "question": "Where did the prophecy come from?",
     "sides": [
      {
-      "position": "an unwritten prophecy preserved by tradition, confirmed true by the Spirit through Jude",
+      "position": "From tradition, not necessarily from any book then extant; selecting a true prophecy from tradition is no bar to inspiration",
       "holders": [
-       "Calvin",
-       "most"
+       "Barnes"
       ]
      },
      {
-      "position": "drawn from the Book of Enoch, the inspired use guaranteeing its truth",
+      "position": "Unwritten and handed down; the book bearing the name is probably a forgery prompted by this very passage",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The book is apocryphal and of no authority, and the verb may mean no more than that he preached",
       "holders": [
        "Clarke"
+      ]
+     },
+     {
+      "position": "From an ancient book, or a tradition, or immediate revelation &mdash; it does not appear which",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "On the ordinary sense of the verb, the writer is calling the Book of Enoch inspired",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is the fifteenth verse so difficult?",
+    "sides": [
+     {
+      "position": "Because the text is unsettled; several words are doubtful or supplied",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Because judgment is named before conviction, as Scripture often names the final action first",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Because convince here means to pass sentence on evidence, not to persuade",
+      "holders": [
+       "Barnes"
       ]
      }
     ]
@@ -604,61 +1009,35 @@
   ],
   "outliers": [],
   "themes": [
-   "Enoch the seventh from Adam",
-   "prophesied of these",
-   "the Lord cometh with his saints",
-   "prophecy from the first age"
+   "the prophecy of Enoch",
+   "apocryphal tradition",
+   "the last judgment",
+   "ungodliness"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The drumbeat of 'ungodly' — the Lord comes 'to execute judgment' on all and 'convict' the ungodly of both their ungodly deeds and their 'hard speeches' against him (cf Rom 1:18); an exhaustive arraignment of ungodliness in act and word."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "execute judgment upon all",
-   "convict the ungodly",
-   "ungodly deeds and hard speeches",
-   "comprehensive arraignment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
@@ -671,152 +1050,232 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "16",
+  "pericope_label": "Murmurers, complainers, walking after their own lusts, having men in admiration for advantage",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "'Murmurers' (gongystai, like wilderness Israel) and 'complainers' (mempsimoiroi, fault-finders with their lot), ruled by lust, with 'great swelling words' (hyperonka), yet flattering the influential 'because of advantage' — discontent, pride, and mercenary self-interest."
+    "summary": "Gill fills out both sides of the murmuring at length, against God&rsquo;s being, providence and free grace, and against magistrates, ministers and neighbours; Calvin roots the discontent in indulged lust and sets the intolerable pride beside the servile flattery as one habitual inconsistency."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: a murmuring, complaining temper betokens a heart at odds with God."
+    "prevalence": "single",
+    "summary": "Henry reads the temper as settled character and links indulged appetite to ungovernable passion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes glosses complaining as fault-finding with one&rsquo;s own lot, catalogues its forms and names contentment as its cure, and treats the admiration of persons as a failure to esteem men at their real worth; Robertson supplies the philology of all three terms."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley divides murmuring against men from complaining against God and reduces the flattery to admiring men for what can be got from them; Clarke makes them impossible to please, then turns the charge of time-serving flattery against ministers who soothe the rich in their sins for the sake of a better living."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Against whom is the murmuring directed?",
+    "sides": [
+     {
+      "position": "Murmuring against men, complaining against God &mdash; the two words divide",
+      "holders": [
+       "Wesley",
+       "Gill"
+      ]
+     },
+     {
+      "position": "Against God and his whole providential order; such men neither God nor man can please",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Against their own lot, which is the commonest fault in the world and answered only by contentment",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Against everyone, out of a discontent bred by the lusts they indulge",
+      "holders": [
+       "Calvin",
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What accounts for the flattery?",
+    "sides": [
+     {
+      "position": "The habitual inconsistency of proud men: insolent where unchecked, servile where they hope for gain",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "A refusal to esteem men at their worth, and a courting of the rich for selfish ends",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Time-serving, of which ministers who flatter wealthy patrons are the worst instance",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "murmurers and complainers",
-   "walking after their lusts",
-   "great swelling words",
-   "flattery for advantage"
+   "discontent",
+   "flattery",
+   "partiality",
+   "the character of false teachers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
+   }
   }
  },
  "17": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "17-19",
+  "pericope_label": "Remember the apostles&rsquo; words of mockers in the last time, and of those who separate themselves",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin sets the ancient prophecy beside the recent apostolic warning, dates the last time from the first advent, and rejects the common reading of separation as inconsistent with the earlier account of men who crept in and feasted with the church; Gill specifies what the separatists withdrew from and what they did not."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs separation from Christ by sinful practice against separation from a branch of the visible church over forms, and calls the first infinitely worse."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'But, beloved' turns from the intruders to the faithful; 'remember' (mnesthete) the apostles' foretelling (close to 2 Pet 3:2) — the most recent prophecy added to Enoch's most ancient, so warnings from first and last ages confirm such deceivers were expected; Jude distinguishes himself among the apostles (Wesley)."
+    "summary": "Barnes denies that the appeal to the apostles excludes the writer from their number and takes the separation as a withdrawal from the brethren; Robertson compares the verb forms with the parallel epistle and supplies the rare compound that supports reading the word as causing divisions."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke dates the last time to the close of the Jewish polity and makes the separatists leavers of the true Church out of an affectation of superior wisdom; Wesley finds proof of the writer&rsquo;s apostleship in the next verse and warns against calling every withdrawal schism."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did these men separate from the church or divide it from within?",
+    "sides": [
+     {
+      "position": "They withdrew from the saints, the pure worship and the ministers, out of pride",
+      "holders": [
+       "Gill",
+       "Clarke",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "They caused divisions within it; withdrawal is inconsistent with their creeping in and feasting there",
+      "holders": [
+       "Calvin",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Separation deserves the name only where all religious intercourse is renounced, and even then not the name of schism",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the last time?",
+    "sides": [
+     {
+      "position": "The conclusion of the Jewish polity",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The whole settled state of the renewed Church, running from the first advent to the end of the world",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "'but, beloved, remember'",
-   "the apostles' words",
-   "foretold beforehand",
-   "steadied not shaken"
+   "schism",
+   "apostolic warning",
+   "the last times",
+   "the natural man"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The apostles foretold 'mockers in the last time' walking after 'ungodly lusts' (close to 2 Pet 3:3; cf 1 Tim 4:1; 2 Tim 3:1); the 'last time' the gospel age from Christ's first coming; the intruders precisely the predicted men, their rise vindicating the apostolic word."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'mockers in the last time'",
-   "walking after ungodly lusts",
-   "the apostolic prediction fulfilled",
-   "forewarned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Three traits mounting to the root — 'they who make separations' (apodiorizontes, dividers, often under pretence of superior wisdom), 'sensual' (psychikoi, soulish/animal), and decisively 'having not the Spirit'; the fatal lack from which their schisms and fleshly lives flow."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "separating themselves",
-   "sensual",
-   "'having not the Spirit'",
-   "the fatal lack"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
@@ -828,71 +1287,104 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "20-21",
+  "pericope_label": "Building up yourselves on your most holy faith, praying in the Holy Ghost, keeping yourselves in the love of God",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin raises the difficulty of building on a faith already complete, offers three solutions and prefers taking faith for the doctrine believed, proposes reading the pronoun as one another throughout, grounds perseverance in prayer roused by the Spirit, and grounds hope wholly in the mercy of the Judge; Gill offers two senses of keeping in the love of God, including preserving oneself by it as a stronghold."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'But ye, beloved' — over against the Spirit-less intruders, 'building up yourselves' (epoikodomountes, the temple metaphor, 1 Cor 3:9; Eph 2:20) on the 'most holy faith' (the faith once delivered) and 'praying in the Holy Ghost' (by the Spirit they lacked) — faith the foundation, prayer the breath."
+    "summary": "Barnes reads the building as a call to responsible agency and settles the love of God as ours to him by arguing from the imperative; Robertson notes the true superlative and sets the command to keep oneself beside the opening statement that the readers are kept."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke names the Gospel and apostolic writings as the foundation, denies that prayer offered without the Spirit reaches heaven, and insists that none of this can merit heaven; Wesley praises the faith and observes that the two verses name the three Persons together with faith, love and hope."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is built, and on what?",
+    "sides": [
+     {
+      "position": "Yourselves, by your own agency, on the system of religion founded on faith",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Yourselves, on the Gospel and the apostolic writings, with Christ as their substance",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "One another, on the doctrine believed &mdash; faith standing here for the gospel itself",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Whose love is meant in keep yourselves in the love of God?",
+    "sides": [
+     {
+      "position": "Ours toward him; his toward us could not be the subject of a command",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "His toward us, to be believed and meditated on &mdash; or else the stronghold by which we preserve ourselves",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Love as the guardian and ruler of life, not opposed to grace but the right course of our calling",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "building up on your most holy faith",
-   "praying in the Holy Ghost",
-   "the faithful's positive duty",
-   "contrast with the Spirit-less"
+   "perseverance",
+   "prayer in the Spirit",
+   "the love of God",
+   "divine mercy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Keep yourselves' (teresate, urgent) 'in the love of God' (chiefly our love to him) — balancing v1's 'kept' (divine preservation and human responsibility, cf Phil 2:12); 'looking for the mercy of Christ unto eternal life' — perseverance resting at last on mercy, not merit."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "keep yourselves in the love of God",
-   "looking for the mercy of Christ",
-   "kept yet keeping",
-   "unto eternal life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
@@ -904,156 +1396,217 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "22-23",
+  "pericope_label": "Of some have compassion; others save with fear, hating the garment spotted by the flesh",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill lists a variant reading and names the severities that saving with fear involves; Calvin defends the received reading against the older Latin, distinguishes the meek from the perverse, dissents from the majority on what the fear means, and extends the loathing from the vice to everything that borders on it."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "On some 'have compassion, making a difference' — the wavering and weak, led astray but tractable, met with tender mercy to win them back; treating the erring according to each one's case (Calvin); textual variation 'have mercy'/'convict' (eleate/elegchete)."
+    "summary": "Robertson reports the variants and the two senses they yield, and glosses the fear as fear of contagion; Barnes takes the fear as the argument used on the hardened, calls discrimination among those to be saved a chief qualification for the work, and canvasses plague, ceremonial defilement and leprosy behind the garment."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke declares the two verses textually confused and adopts Wesley&rsquo;s threefold rule as the probable sense; Wesley builds a pastoral practice on the fear, loving the sinner while abhorring the least approach to his sin."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Whose fear is meant?",
+    "sides": [
+     {
+      "position": "The sinner&rsquo;s: appeals drawn from his danger and the dread of wrath",
+      "holders": [
+       "Barnes",
+       "Gill"
+      ]
+     },
+     {
+      "position": "The rescuer&rsquo;s: caution lest he catch the contagion he is treating",
+      "holders": [
+       "Calvin",
+       "Robertson",
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Can the original text be recovered?",
+    "sides": [
+     {
+      "position": "No; the verses are all confusion, and the received reading is as likely as any",
+      "holders": [
+       "Clarke",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Yes; the received sense is the older and genuine reading against the old Latin",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The variant reproves is worth recording alongside",
+      "holders": [
+       "Gill"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "compassion on some",
-   "making a difference",
-   "rescuing the erring",
-   "graduated pastoral care"
+   "pastoral discrimination",
+   "church discipline",
+   "contagion of sin",
+   "textual variants"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Others 'save with fear, pulling them out of the fire' (ek pyros harpazontes, a brand from the burning, Zech 3:2; Amos 4:11) by alarming appeals; yet 'hating even the garment spotted by the flesh' — shunning sin's contagion like a plague-garment; courageous yet self-guarding love."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "save with fear",
-   "pulling out of the fire",
-   "hating the spotted garment",
-   "bold yet careful love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "24-25",
+  "pericope_label": "Now unto him that is able to keep you from falling: to the only wise God our Saviour be glory",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the doxology the acknowledgement that all exhortation works only by God&rsquo;s power, weighs a variant in the pronoun, and analyses the four ascriptions in order, glory being the result of the rest; Gill argues human inability from Adam and the angels, and reads the Saviour as Christ."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry qualifies the faultlessness as belonging to those who but for mercy would justly have been condemned, and pairs the perfection of holiness with the perfection of joy."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "God 'able to keep you from falling' (aptaistous, sure-footed, not stumbling into the intruders' ruin) and to 'present you faultless' (spotless) before his glory 'with exceeding joy' (Rom 16:25); the answer to the letter's anxiety — those who keep themselves are kept by God."
+    "summary": "Barnes glosses the rare word for not stumbling and argues that God alone can keep us, and holds the closing title most naturally applies to God as the Author of salvation, neither denying nor demonstrating a reference to Christ; Robertson supplies the sure-footed horse behind the word and calls the closing clause as complete a statement of eternity as language allows."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: human labours avail nothing but through the power of God; Henry: God as willing as able to keep us, through mercy."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke links the word for faultless back to the spotted garment, and reports the manuscript additions received into the text; Wesley reads the presence of his glory as Christ&rsquo;s own presence at his revealing."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Who is the only wise God our Saviour?",
+    "sides": [
+     {
+      "position": "The Lord Jesus Christ, truly God, though not excluding the Father and the Spirit",
+      "holders": [
+       "Gill",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "God as such, the great Author of salvation; the reference to Christ can be neither denied nor demonstrated",
+      "holders": [
+       "Barnes",
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense are the saints presented faultless?",
+    "sides": [
+     {
+      "position": "Not as those who were never faulty, but as those who but for mercy and merit would have been condemned",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "Without spot, in an allusion back to the garment spotted by the flesh",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "By the power of God alone, since neither Adam nor the angels could keep themselves",
+      "holders": [
+       "Gill",
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "able to keep you from falling",
-   "present you faultless",
-   "before his glory with joy",
-   "God's keeping power"
+   "preservation of the saints",
+   "doxology",
+   "human inability",
+   "the glory of God"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'To the only wise God our Saviour' (mono theo sotheri, Rom 16:27; 1 Tim 1:17) be 'glory, majesty, dominion, power' now and ever — against the false teachers' corrupt wisdom, God alone truly wise and the Author of salvation; the better text adds 'through Jesus Christ our Lord'; sealed with 'Amen.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill applies 'Saviour' to Christ, the wisdom of God; Calvin: all our labours avail only through the power of God, to whom the glory."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the only wise God our Saviour'",
-   "glory, majesty, dominion, power",
-   "now and ever",
-   "the closing doxology"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
