@@ -29779,6 +29779,78 @@
         "1-10"
       ],
       "note": "Self-graded A on all seven tiles. Voice pool is unusually thin for a COW chapter — ten distinct voices, of which Jamieson and Cyril of Jerusalem are both defective (see source-defect notes), leaving eight usable: Augustine of Hippo, Gill, Henry, Barnes, Clarke, Robertson, Calvin, Wesley. Grounding pre-check over the whole candidate set returned UNGROUNDED: []. 33,875 usable source words to 4,020 prose words, 8.4:1."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "3",
+        "9",
+        "15"
+      ],
+      "note": "Jamieson donor bug, 17th consecutive chapter — and a new failure mode. All three Jamieson, Fausset and Brown blocks in this chapter are 1 Chronicles 5 material: the settlement of Reuben east of Jordan and the multiplication of their cattle in Gilead (key 3, ending with the section heading '1Ch 5:11-26. The Line of Gad'), the genealogy of the Gadites and half-Manasseh at 1 Chr 5:24 (key 9), and the war with the Hagarites and the colonising of Ituraea (key 15). Unlike luke 14 (identity mapping into Luke 6) and matthew 6 (a clean 5/6 slope), the donor here is a different BOOK entirely and the mapping is not monotonic. All three excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "1-36"
+      ],
+      "note": "Keil and Delitzsch appear at 22 of the 38 keys as blocks truncated to exactly 203 words each, and each is a sliding window that opens with the KJV text of its own verse and the next one or two before reaching commentary, then breaks off mid-sentence. Adjacent blocks overlap heavily (key 2's block is key 3's block shifted by one verse). No two are byte-identical, so a hash dedup finds nothing, but the unique commentary content is a small fraction of the 4,569 words the voice contributes on paper. The usable K&D material for this chapter amounts to a handful of observations."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "4"
+      ],
+      "note": "Matthew Henry section-block inflation, as at matthew 6. Henry contributes 5,172 words to this chapter, of which 4,480 sit in a single block at key 4 that is his exposition of the entire chapter, vv.4-38. Key 1 carries a further 692 covering vv.1-3. Nothing is filed against any of the other 36 keys. The block was read whole and drawn on for all four tiles, since its content genuinely belongs across the chapter, but per-key word counts badly misrepresent where Henry's material actually applies."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "38"
+      ],
+      "note": "Charles Ellicott's key-38 block is 1,055 words, of which roughly 70 are commentary (on 'because of all this', on sealing clay, and on the plural of 'those who sealed') and the remaining ~985 are StudyLight page chrome: a copyright footer, an inline CSS stylesheet, the site's full navigation menu of commentaries, dictionaries, reading plans and devotionals, and a DOMContentLoaded script. Same defect class as the Ellicott block at luke 14 key 35."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "32"
+      ],
+      "note": "Authorship of the prayer is disputed inside the chapter. Gill argues from the divine titles at v.32 — the great, the mighty and the terrible God, which are Nehemiah's own words at 1:5 — that 'the whole prayer is his composure, which was delivered by him to the Levites'. Ellicott at v.5 reports that the Septuagint omits every name after Kadmiel and inserts 'and Ezra said' before v.6, and thinks the psalm perhaps Ezra's composition though uttered by the Levites for the congregation. Both readings carried, in the tiles for keys 32 and 1 respectively."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "37"
+      ],
+      "note": "Sharp split on what 'we are in great distress' names. Clarke reads it politically and at length — tribute and forced service exacted 'at their pleasure', 'so that we can neither call our persons, our time, our land, nor our cattle, our own' — and turns it into an address to his English readers ('Think of this, ye Britons!'). Wesley keeps the same complaint agricultural. Ellicott denies the political reading outright: the distress is 'not so much under the Persian yoke as in the remembrance of God's judgments'. Foregrounded as a debate rather than harmonised."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "9",
+      "verses": [
+        "1-38"
+      ],
+      "note": "Self-graded A on all four tiles. Seven voices in the chapter, of which Jamieson is wholly defective (see source-defect note), leaving six: Gill, Keil and Delitzsch, Matthew Henry, Adam Clarke, Charles Ellicott, John Wesley. No patristic or reformed-continental voice appears — no Calvin, no Barnes, no Robertson — so the school coverage is narrower than a New Testament chapter's, four schools at most per tile. Grounding pre-check over the whole candidate set returned UNGROUNDED: []. 15,630 usable source words to 2,595 prose words, 6.0:1; four pericopes rather than five, since a 26-31 tile would have run near the 3:1 padding floor."
     }
   ]
 }

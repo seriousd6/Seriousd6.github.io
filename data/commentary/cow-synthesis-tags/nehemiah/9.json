@@ -1,1990 +1,486 @@
 {
  "1": {
   "voices": [
-   "Adam Clarke",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke lays out the crowded month (trumpets, tabernacles, the separation, this fast of confession); Wesley explains the grief comes only now, the festival joy past."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch describe the sackcloth (Joel 1:8) and earth on the head (1 Sam. 4:12; 2 Sam. 1:2; Job 2:12); Ellicott: the external signs and the inner spirit were one."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads the fast God chose (Isa. 58:5-6) — a day to afflict the soul and loose the bands of wickedness, and above all a day of communion, for fasting without prayer is a body without a soul."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill anchors the date in the seventh month, Tisri, two days after the feast was ended."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the twenty-fourth of Tishri",
-   "fasting, sackcloth, and earth",
-   "the fast God has chosen",
-   "grief deferred from the feast"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the separation of the putting away of heathen wives, a proof of the truth of their repentance."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley and Clarke read it of the strange women again put away (cf. Ezra 10:3), whether new delinquents or old ones undiscovered, forsaking beloved sins."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch deny it specially concerns the marriages — a voluntary renunciation of all heathen fellowship and customs; Ellicott hears deep propriety in 'seed,' the praise itself filled with confession."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a holy seed must separate from sin and sinners, for what communion hath light with darkness (2 Cor. 6:14)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What was the separation 'from all strangers'?",
-    "sides": [
-     {
-      "position": "A putting away of the heathen wives, a resumed dissolution of mixed marriages proving their repentance",
-      "holders": [
-       "John Gill",
-       "John Wesley",
-       "Adam Clarke"
-      ]
-     },
-     {
-      "position": "A voluntary renunciation of all fellowship with the heathen and of heathen customs, not specially the marriages",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "separation from strangers",
-   "confession of the fathers' sins",
-   "repentance proved by parting",
-   "the holy seed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
    "Matthew Henry",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley"
   ],
+  "range": "1-5",
+  "pericope_label": "Now in the twenty and fourth day of this month the children of Israel were assembled with fasting, and with sackclothes, and earth upon them",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch parse the two quarters — three hours reading, three confessing and worshipping (Neh. 8:7); Ellicott divides day and night into four, reading in the morning, worship in the afternoon."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reckons six hours of solemn exercise, the word furnishing matter for prayer, but records Bishop Patrick's view that the whole twelve hours were spent in devotion."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke gives Calmet's fuller scheme of four successive parts filling the day; Wesley keeps to three hours a quarter in a twelve-hour day."
+    "summary": "Keil and Delitzsch date the assembly two days after the closing gathering of tabernacles and deny that the separation from strangers concerns heathen marriages at all — against Bertheau, it is neither that nor a rule of admission but \"a voluntary renunciation of connection with the heathen, and of heathen customs.\" Ellicott marks only one day of rest before the fast, finds a deep propriety in the change of word to \"seed\", divides both day and night into four parts with reading in the morning and worship in the afternoon, and locates the seam between the two lists of Levites in the pronoun — \"their God\" at verse 4, \"your God\" at verse 5 — concluding that these eight offered a prayer which is not inserted."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill sets the people standing in the outer court to read and know the will of God."
+    "summary": "Gill dates the fast two days after tabernacles ended, takes the separation of Israelites from Gentile wives as \"a proof of the truth of their repentance\", places the standing in the outward court where men prayed and confessed, and identifies the Levites' platform as the elevated place from which they sang at the time of sacrifice."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reconstructs the whole month day by day, putting the separation on the twenty-third and the fast on the twenty-fourth, follows Calmet in dividing the daylight into four stretches and the exercises into three, and turns the summons to stand into a rebuke of his own century's \"shameless custom of many congregations of people to sit still while they profess to bless and praise God.\" Wesley supplies the motive — a grief the season of public joy had not allowed them to express — and takes the several pulpits to mean the congregation divided between the Levites."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the day against Isaiah 58: a fast that men appointed but such a fast as God had chosen, both a day to afflict the soul and a day to loose the bands of wickedness, \"without this, spreading sackcloth and ashes under us is but a jest.\" He widens the separation to the strange children as well as the strange wives, reports Bishop Patrick's twelve-hour reckoning beside his own six, and insists on the reciprocity of word and prayer — \"fasting without prayer is a body without a soul, a worthless carcase.\""
    }
   ],
   "debates": [
    {
-    "question": "How was the day of reading and worship divided?",
-    "sides": [
+    "question": "What did the separation from strangers in verse 2 consist of?",
+    "positions": [
      {
-      "position": "Two quarters of the day — about three hours reading, three confessing and worshipping",
-      "holders": [
-       "Matthew Henry",
-       "Keil and Delitzsch",
+      "view": "The putting away of Gentile wives married before or since Ezra's reformation, proving the reality of their repentance",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke",
        "John Wesley"
       ]
      },
      {
-      "position": "The whole day in four successive parts, filled from morning to evening with reading, confession, and praise",
-      "holders": [
-       "Adam Clarke"
+      "view": "That and more — the strange children as well as the strange wives, since those who join themselves to God by covenant must separate themselves from sin and sinners",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Not the marriages at all, nor a rule of admission to the assembly, but a voluntary renunciation of connection with the heathen and of heathen customs",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How long did the fourth parts of the day run?",
+    "positions": [
+     {
+      "view": "About three hours each, six hours in all",
+      "held_by": [
+       "Keil and Delitzsch",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "The whole twelve hours of daylight, in four equal stretches",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why are the Levites named twice, in verses 4 and 5?",
+    "positions": [
+     {
+      "view": "Either they prayed successively, one by one, or there were eight congregations each with a Levite presiding",
+      "held_by": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Two distinct acts by the same men: first crying to God themselves, then calling the congregation to worship",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "The pronoun shifts from \"their God\" to \"your God\", so the eight offered a prayer which the text does not record",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "reading a fourth part",
-   "confession a fourth part",
-   "the shape of the fast-day",
-   "word and prayer paired"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch set the Levites on the scaffold (Neh. 8:4), the two name-lists marking distinct acts; Ellicott ties it to Ezra's pulpit (Neh. 8:2), notes 'their God' vs 'your God,' and an uninserted prayer."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the ministers prayed successively (1 Cor. 14:31) or in eight congregations, and cried aloud not that God might hear like Baal's worshippers but to excite the people's fervency."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley pictures several pulpits, each Levite teaching his portion, the loud voice testifying their deep sense of sin and importunate desire of mercy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets them on an elevated place to be seen and heard by the people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levites on the stairs",
-   "crying with a loud voice",
-   "prayer and praise together",
-   "the two lists of names"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch give the doxology summoning the people, the theme of the whole confession; Ellicott notes the singular 'thy glorious name' (Ps. 72:19) and the address gliding into adoration."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke turns the summons 'stand up and bless' into a rebuke of congregations that sit while they profess to praise."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the name blessed is exalted above all blessing and praise — not the thousandth part is said of God's glory, for our goodness extendeth not to him."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the roll of Levites who led the blessing."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Suggests the psalm was composed by Ezra though uttered by the Levites, noting the Septuagint omits the later names and inserts 'and Ezra said' before the doxology."
+    "claim": "Reports that the Septuagint drops every name after Kadmiel and inserts \"and Ezra said\" before verse 6, and thinks the psalm may be Ezra's composition though uttered by the Levites for the congregation."
    }
   ],
   "themes": [
-   "stand up and bless the LORD",
-   "the glorious name above all praise",
-   "the posture of worship",
-   "the doxology that opens the prayer"
+   "Now in the twenty and fourth day of this month the children of Israel were assembled with fasting, and with sackclothes, and earth upon them.",
+   "And the seed of Israel separated themselves from all strangers, and stood and confessed their sins, and the iniquities of their fathers.",
+   "And they stood up in their place, and read in the book of the law of the Lord their God one fourth part of the day; and another fourth part they confessed, and worshipped the Lord their God.",
+   "Then stood up upon the stairs, of the Levites, Jeshua, and Bani, Kadmiel, Shebaniah, Bunni, Sherebiah, Bani, and Chenani, and cried with a loud voice unto the Lord their God.",
+   "Then the Levites, Jeshua, and Kadmiel, Bani, Hashabniah, Sherebiah, Hodijah, Shebaniah, and Pethahiah, said, Stand up and bless the Lord your God for ever and ever: and blessed be thy glorious name, which is exalted above all blessing and praise."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "6": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "6-15",
+  "pericope_label": "Thou, even thou, art LORD alone; thou hast made heaven, the heaven of heavens, with all their host",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch expound Jahve alone as Creator — 'heaven of heavens' (Deut. 10:14; 1 Kings 8:27), the sea (Ps. 146:6), the host (Gen. 2:1); Ellicott: the upholding reproduced only in Heb. 1:3, the host here angels (Ps. 103:21)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke renders 'thou givest life to them all,' toys with Kepler's living heavens, then settles that 'preserve in being' need not imply vitality."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry adores God as the only living and true God, Creator, Protector, and object of the creatures' praise, exalted above all blessing."
+    "summary": "Keil and Delitzsch show the verse enlarging its terms deliberately — heaven by \"heaven of heavens\", earth by \"the sea and all therein\" — with \"all their host\" belonging only to the heaven clause. Ellicott takes the worshipping host for angels rather than stars, finds the comprehensiveness of the verse reproduced only at Hebrews 1:3, notes that the Hivites are omitted from the covenant grant, observes that five of the names given to the law in Psalm 119 are gathered at Sinai though the weight rests on the adjectives, and reads the sabbath clause forward to the covenant of the next chapter."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill fixes the incommunicable name — Jehovah alone, the one only true and living God."
+    "summary": "Gill locates the life in the divine nature, reads the choice of Abram as a calling out from among the Chaldeans and out of his father's family, takes the faithful heart as proved in the offering of Isaac, and insists that God was \"not a mere spectator\" of the affliction in Egypt but looked upon it with pity and sent a deliverer. The sabbath he treats as Israel's peculiar privilege, rest both corporeal and spiritual, typical of the rest in Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the Hebrew strictly — \"thou givest life to them all\" — and entertains Kepler's notion that the heavenly host are instinct with life before withdrawing it, since to preserve in being does not necessarily imply vitality. He supposes the sabbath had been forgotten during the sojourn in Egypt and so had to be made known again. Wesley grounds the moral and judicial precepts in natural equity and reads the ceremonial ones as tokens of goodness and types of gospel grace."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out the adoration in four articles — the only living and true God, the Creator, the Protector, and the object of the creatures' praises — and refuses to let \"foundest his heart faithful\" be a discovery: God found it so \"because he made it so (for faith is not of ourselves, it is the gift of God).\" He reads the pillar as settling the timetable and not the route only, and sums the wilderness provision as food convenient in the way with the good land at journey's end."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Who is the host of heaven that worships?",
+    "positions": [
+     {
+      "view": "Possibly the stars themselves, if Kepler was right that they are instinct with life — though the verb need not imply vitality",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The angels, not the stars",
+      "held_by": [
+       "Charles Ellicott",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does it mean that God \"madest known\" the sabbath?",
+    "positions": [
+     {
+      "view": "A privilege peculiar to Israel, typical of the rest in Christ",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "A restoration: they had forgotten this first of all the commandments during the sojourn in Egypt",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A forward pointer, its prominence here marking its weight in the covenant of chapter 10 and throughout the book",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Adam Clarke",
-    "note": "Muses on Kepler's notion that the heavenly host are instinct with life, before allowing that 'preserve in being' is a good meaning that need not imply vitality."
+    "voice": "Matthew Henry",
+    "claim": "Measures every doxology against its object: \"put all the praises of heaven and earth together, and the thousandth part is not said of what might and should be said of the glory of God.\""
    }
   ],
   "themes": [
-   "thou art LORD alone",
-   "Creator of heaven and earth",
-   "preserver of all things",
-   "the host of heaven worships"
+   "Thou, even thou, art Lord alone; thou hast made heaven, the heaven of heavens, with all their host, the earth, and all things that are therein, the seas, and all that is therein, and thou preservest them all; and the host of heaven worshippeth thee.",
+   "Thou art the Lord the God, who didst choose Abram, and broughtest him forth out of Ur of the Chaldees, and gavest him the name of Abraham;",
+   "And foundest his heart faithful before thee, and madest a covenant with him to give the land of the Canaanites, the Hittites, the Amorites, and the Perizzites, and the Jebusites, and the Girgashites, to give it, I say, to his seed, and hast performed thy words; for thou art righteous:",
+   "And didst see the affliction of our fathers in Egypt, and heardest their cry by the Red sea;",
+   "And shewedst signs and wonders upon Pharaoh, and on all his servants, and on all the people of his land: for thou knewest that they dealt proudly against them. So didst thou get thee a name, as it is this day.",
+   "And thou didst divide the sea before them, so that they went through the midst of the sea on the dry land; and their persecutors thou threwest into the deeps, as a stone into the mighty waters.",
+   "Moreover thou leddest them in the day by a cloudy pillar; and in the night by a pillar of fire, to give them light in the way wherein they should go.",
+   "Thou camest down also upon mount Sinai, and spakest with them from heaven, and gavest them right judgments, and true laws, good statutes and commandments:",
+   "And madest known unto them thy holy sabbath, and commandedst them precepts, statutes, and laws, by the hand of Moses thy servant:",
+   "And gavest them bread from heaven for their hunger, and broughtest forth water for them out of the rock for their thirst, and promisedst them that they should go in to possess the land which thou hadst sworn to give them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch carry the recital — God chose Abram, brought him from Ur, gave him the name Abraham — as the opening of the long history of grace."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke points for the calling and the new name to Exodus 13:21 and Genesis 17:5, where Abram becomes father of a multitude."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a distinguishing favour and a powerful grace that plucked one man from Chaldean idolatry — 'look unto Abraham your father' (Isa. 51:2)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks the sovereignty of the choice, from among the Chaldeans and out of his father's family."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the choosing of Abram",
-   "brought out of Ur",
-   "the new name Abraham",
-   "free grace at the root"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch set out the covenant to give the land of the six nations, performed because God is righteous (cf. Deut. 32:4; Neh. 9:33); Ellicott notes the Hivites are omitted from the list."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the covenant was sure, God finding Abraham's heart faithful because he made it so — faith being God's gift — and performing his words, upright with the upright (Ps. 18:25)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill glosses the faithful heart of a true believer, proved when he offered up his son (Gen. 22:2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a faithful heart, God's own gift",
-   "the covenant to give the land",
-   "God performs because he is righteous",
-   "the doomed nations named"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch unfold the two things compressed here — the affliction God saw (Exod. 3:7) and the cry at the Red Sea (Exod. 14:10) — answered by plagues and the parted waters."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: God was no mere spectator of the bondage but looked on it with pity and sent a deliverer."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: seasonable to recall the exodus while pleading for deliverance from Babylon — God saw the affliction and heard the cry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God saw the affliction",
-   "God heard the cry",
-   "seeing and hearing as mercy",
-   "exodus recalled in prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch (leaning on Deut. 6:22): the signs were wrought because the Egyptians dealt proudly, and God made himself a name, as this day."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the signs and wonders of the ten plagues inflicted on Pharaoh and his people."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: where they dealt proudly God showed himself above them (Exod. 18:11) and got himself a name (Exod. 14:17), glorified to this day."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "signs and wonders on Pharaoh",
-   "the pride of the oppressor",
-   "God got himself a name",
-   "judgment as vindication"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch frame the crying answered by the parted sea and the pursuers cast in; Ellicott bids compare the Song of Moses (Exod. 15:5), marking identity and variation in the Hebrew."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: one act both saved and destroyed — the people led through, the persecutors thrown into the deeps as a stone into mighty waters."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the plain wonder of a path opened through the midst of the sea on dry land."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sea divided",
-   "persecutors cast into the deep",
-   "echo of the Song of Moses",
-   "salvation and destruction in one act"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke distinguishes the cloud's three offices — a pillar guiding by day, a fire lighting and rallying by night, an extended cloud refreshing with dew and shade."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch keep the plain office of the cloud and fire leading them in the way, the next stage of the recital."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the pillar directed all their stages and steps, and was named again (Neh. 9:19) as a forfeited mercy still continued — cause for double thankfulness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the day-pillar as a shelter from the sun in a barren wilderness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the pillar of cloud and fire",
-   "guidance day and night",
-   "the presence that guards",
-   "forfeited mercy continued"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch carry the recital of God coming down and giving right judgments and true laws; Ellicott hears five names of the law from Psalm 119, the emphasis on 'right, true, good' as the Decalogue's eternal principles."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the moral and judicial precepts founded on natural equity, the ceremonial statutes tokens of goodness and types of gospel grace."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the greatest favour of all — the Lawgiver glorious in coming down (Deut. 4:33), no nation with such laws (Deut. 4:8), the ceremonies types of gospel grace."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill guards the condescension of the descent, consistent with God's omnipresence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God came down on Sinai",
-   "right judgments and true laws",
-   "the goodness of the whole law",
-   "the glorious Lawgiver"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott bids note every word and the prominence of the sabbath, foreshadowing its weight in the sworn covenant (Neh. 10:31)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke hears in 'madest known' a hint they had forgotten the ordinance during their sojourn in Egypt."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a token of special favour distinguishing them from the revolted nations and a means of communion, given with the law and the good Spirit."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: a rest corporeal and spiritual, peculiar to the nation and typical of the rest in Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the holy sabbath made known",
-   "a badge of separation",
-   "gift and obligation",
-   "forgotten in Egypt, revealed at Sinai"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch keep the three gifts together — bread, water, the sworn land; Ellicott: 'bread from heaven' a phrase our Lord consecrated for ever (John 6:32)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: meat and drink for the way and the good land at the journey's end — what would they more? — a provision repeated through forty years."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the bread from heaven of the manna given to satisfy their hunger."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bread from heaven",
-   "water from the rock",
-   "the promise of the land",
-   "supply for the way and the rest"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch mark the emphatic 'they, even our fathers,' the hardened neck glancing back to the calf (Exod. 32:9; 33:3); Ellicott: 'dealt proudly,' the same word used of the Egyptians (Exod. 18:11)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: pride is at the bottom of disobedience — they heard the word but hearkened not, saw the works but were not mindful of the wonders as miracles or as mercies."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they behaved haughtily toward God their kind benefactor."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the great 'but' of the prayer",
-   "they dealt proudly",
-   "hardened necks",
-   "the pride beneath disobedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch gather the refusal against the great confession of a God ready to pardon; Ellicott prefers the reading 'in Egypt' and notes 'a God of pardons' occurs only here, Dan. 9:9, and Ps. 130:4."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke judges 'in their rebellion' an error for 'in Egypt' (MSS, LXX, Num. 14:4); Wesley reads 'made' as 'designed,' as Abraham is said to have offered Isaac (Heb. 11:17)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry names the two sins — the meditated return to slavery and the calf — yet crowns them with the pardon, a God forgiving iniquity (Exod. 34:6)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: sheer obstinacy — though exhorted and threatened, they refused to obey."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Did the fathers actually appoint a captain to return to Egypt, or only resolve to?",
-    "sides": [
-     {
-      "position": "An accomplished act of rebellion — they set up a captain to return",
-      "holders": [
-       "Matthew Henry",
-       "John Gill"
-      ]
-     },
-     {
-      "position": "Only designed or resolved, never carried out, as the proposal of Numbers 14:4",
-      "holders": [
-       "John Wesley",
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "refused to obey",
-   "a captain to return to bondage",
-   "a God of pardons",
-   "the textual reading 'in Egypt'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch mark the emphatic 'yea, they even made a molten calf,' the blasphemous ascription of the exodus to an image, and the refrain of 'great provocations.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: a calf in imitation of the Apis, the sacred ox of the Egyptians."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the second great sin — Egyptian idolatry, so sottish as to say 'This is thy God,' changing their glory into the likeness of an ox (Ps. 106:20)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the molten calf",
-   "idolatry borrowed from Egypt",
-   "robbing the Deliverer of glory",
-   "the darkest sin before the greatest mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch carry the continued gifts — the pillar not departing, the good Spirit, manna, water — as grace outlasting the calf; Clarke sharpens 'from over them' and recalls the cloud's three offices."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the pillar named again on purpose — though they provoked God to withdraw, he took it not away (Neh. 9:12); forfeited mercies continued call for double thankfulness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: God forsook them not where no supply could be had, and to be forsaken was to be lost."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the great 'yet' of mercy",
-   "the pillar that stayed",
-   "manifold mercies",
-   "grace outlasting sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott ties the good Spirit to the elders (Num. 11:17, 25) and Psalm 143:10, marking the teaching Spirit as here only, a striking anticipation of the New Testament."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the good Spirit of the spirit of prophecy, and, with Aben Ezra, of the Spirit put upon the seventy elders (Num. 11:17)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sets the instructing Spirit beside the law and the books of Moses, seen in Bezaleel (Exod. 31:3), Joshua (Num. 27:18), and Caleb (Num. 14:24)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy good Spirit to instruct",
-   "manna and water not withheld",
-   "the inward gift with the outward",
-   "an anticipation of the New Testament"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch keep the summation of the wilderness mercies — sustained forty years, lacking nothing, clothes not worn, feet not swollen."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke fixes on the clothes that waxed not old, pointing to the parallel of Deuteronomy 8:4."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: never a people so long and tenderly nursed, carried as upon eagles' wings (Deut. 32:11)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they wanted neither for food nor raiment through forty years."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forty years sustained",
-   "lacking nothing",
-   "clothes that waxed not old",
-   "carried as on eagles' wings"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
    "John Wesley"
   ],
+  "range": "16-31",
+  "pericope_label": "But they and our fathers dealt proudly, and hardened their necks, and hearkened not to thy commandments",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott read the trans-Jordan conquests of Sihon and Og as the earnest of Canaan, taking 'divide into corners' of the land portioned by boundaries, with a double reference to the one Sihon of Heshbon."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke presses the textual difficulty that Sihon was king of Heshbon, so one land is meant, not two; Wesley reads 'corners' of the heathen driven and cooped into corners while Israel dwelt at large."
+    "summary": "Ellicott notes that \"dealt proudly\" is the very word used of the Egyptians six verses earlier, corrects \"divide them into corners\" to a division of the nations unto Israel within their boundaries, observes that the Spirit's teaching function occurs only here in the Old Testament and anticipates the New, and finds the phraseology of Judges carefully remembered in the prayer. Keil and Delitzsch supply the limit asserted at verse 31: God did not suffer his people to become extinct in exile but preserved a remnant."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the two kingdoms of Sihon and Og and the seven nations of Canaan."
+    "summary": "Gill reads the rebellion as haughtiness towards a kind benefactor, traces the molten calf to the Apis of Egypt, reports the Jewish readings of the good Spirit as the spirit of prophecy or that put upon the seventy elders, and offers an alternative rendering of the forbearance — \"thou didst draw upon them\" — which Jarchi takes of mercy drawn out of God's own heart."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works by textual repair and historical parallel: <em>bemiryam</em> is a copyist's error for <em>bemitsrayim</em>, so the captain was appointed to return to bondage in Egypt; the conjunction at verse 22 should be read \"even\", since only one king of Heshbon can be meant; the cloud took three distinct postures; and the prosperity of verse 25 follows an old maxim he matches from Sallust. Wesley closes the gap between resolving and doing by intention, as Abraham is said to have offered Isaac because he intended to."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes pride the root rather than the symptom of disobedience and names two failures of attention behind it — hearing without hearkening, seeing without being mindful. He insists deliverance was never a verdict on the delivered, God giving them saviours \"not for any merit of theirs\", and testifying against their sins in the very act of rescue lest they misconstrue deliverance as connivance. From the prophets' testimony he draws a rule for ministry: bring people to God by bringing them to his law, \"not to bring them to ourselves by bringing them under any law of ours.\""
    }
   ],
   "debates": [
    {
-    "question": "What does 'thou didst divide them into corners' mean?",
-    "sides": [
+    "question": "Did they appoint a captain \"in their rebellion\" or \"to return to Egypt\"?",
+    "positions": [
      {
-      "position": "The heathen nations were destroyed and their remnants cooped up into corners of the land",
-      "holders": [
-       "John Wesley"
+      "view": "To Egypt — <em>bemiryam</em> is a scribal error for <em>bemitsrayim</em>, as several manuscripts, the Septuagint and Numbers 14:4 read",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "God divided the conquered land unto Israel by its boundaries",
-      "holders": [
-       "Charles Ellicott",
-       "Keil and Delitzsch"
+      "view": "The difficulty is not textual but moral: at Numbers the return was only resolved on, and they are said to have done what they intended",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "kingdoms and nations given",
-   "Sihon and Og",
-   "the land divided by boundaries",
-   "the earnest of Canaan"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch join the increase to the entrance — multiplied as the stars and brought into the promised land, two halves of one kept word."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the fulfilment of the promise to Abraham, six hundred thousand men besides women and children (cf. Gen. 15:5)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: made numerous to replenish the land and victorious to master it — the oath of the stars made good (Gen. 22:17; Deut. 10:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "multiplied as the stars",
-   "brought into the land",
-   "the oath to Abraham fulfilled",
-   "from one man a nation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch: the children went in and possessed it, God subduing the Canaanites and giving them with their kings into Israel's hands."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the word 'children' — not the fathers, who died in the wilderness (Num. 14:29), but their children inherited the promise."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the conquest was pure gift, the natives given up and the necks of kings under their feet (Josh. 10:24)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the children possessed the land",
-   "the fathers' unbelief shut them out",
-   "the Canaanites subdued",
-   "conquest as gift"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: strong cities said to be walled up to heaven (Deut. 1:28), a fat land and houses full of good things found ready to hand."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch keep the catalogue — cities, fat land, full houses — culminating in delight in God's great goodness, the summit before the fall."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reads a warning in the fatness — they grew effeminate and luxurious and corrupt, then were destroyed, a law of nations he backs from a Roman historian."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Turns Israel's fatness into a general law of nations — war begets poverty, peace affluence, affluence luxury and corruption — citing a Roman historian."
+    "claim": "Sets an old English saying beside a sentence of Sallust to explain the collapse after the conquest: \"war begets poverty, poverty begets peace, peace begets affluence, affluence begets luxury and corruption of manners; and hence civil broils, foreign wars, and desolations.\""
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Holds the ruin to have been wholly gratuitous — Canaan could not have made them happier, \"had it not been their own fault.\""
    }
   ],
   "themes": [
-   "strong cities and a fat land",
-   "houses they did not fill",
-   "delight in God's goodness",
-   "plenty as peril"
+   "But they and our fathers dealt proudly, and hardened their necks, and hearkened not to thy commandments,",
+   "And refused to obey, neither were mindful of thy wonders that thou didst among them; but hardened their necks, and in their rebellion appointed a captain to return to their bondage: but thou art a God ready to pardon, gracious and merciful, slow to anger, and of great kindness, and forsookest them not.",
+   "Yea, when they had made them a molten calf, and said, This is thy God that brought thee up out of Egypt, and had wrought great provocations;",
+   "Yet thou in thy manifold mercies forsookest them not in the wilderness: the pillar of the cloud departed not from them by day, to lead them in the way; neither the pillar of fire by night, to shew them light, and the way wherein they should go.",
+   "Thou gavest also thy good spirit to instruct them, and withheldest not thy manna from their mouth, and gavest them water for their thirst.",
+   "Yea, forty years didst thou sustain them in the wilderness, so that they lacked nothing; their clothes waxed not old, and their feet swelled not.",
+   "Moreover thou gavest them kingdoms and nations, and didst divide them into corners: so they possessed the land of Sihon, and the land of the king of Heshbon, and the land of Og king of Bashan.",
+   "Their children also multipliedst thou as the stars of heaven, and broughtest them into the land, concerning which thou hadst promised to their fathers, that they should go in to possess it.",
+   "So the children went in and possessed the land, and thou subduedst before them the inhabitants of the land, the Canaanites, and gavest them into their hands, with their kings, and the people of the land, that they might do with them as they would.",
+   "And they took strong cities, and a fat land, and possessed houses full of all goods, wells digged, vineyards, and oliveyards, and fruit trees in abundance: so they did eat, and were filled, and became fat, and delighted themselves in thy great goodness.",
+   "Nevertheless they were disobedient, and rebelled against thee, and cast thy law behind their backs, and slew thy prophets which testified against them to turn them to thee, and they wrought great provocations.",
+   "Therefore thou deliveredst them into the hand of their enemies, who vexed them: and in the time of their trouble, when they cried unto thee, thou heardest them from heaven; and according to thy manifold mercies thou gavest them saviours, who saved them out of the hand of their enemies.",
+   "But after they had rest, they did evil again before thee: therefore leftest thou them in the hand of their enemies, so that they had the dominion over them: yet when they returned, and cried unto thee, thou heardest them from heaven; and many times didst thou deliver them according to thy mercies;",
+   "And testifiedst against them, that thou mightest bring them again unto thy law: yet they dealt proudly, and hearkened not unto thy commandments, but sinned against thy judgments, (which if a man do, he shall live in them;) and withdrew the shoulder, and hardened their neck, and would not hear.",
+   "Yet many years didst thou forbear them, and testifiedst against them by thy spirit in thy prophets: yet would they not give ear: therefore gavest thou them into the hand of the people of the lands.",
+   "Nevertheless for thy great mercies’ sake thou didst not utterly consume them, nor forsake them; for thou art a gracious and merciful God."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch: a general condemnation — they cast God's law behind their backs (1 Kings 14:9; Ezek. 23:35) and slew the prophets (2 Chron. 24:21; 1 Kings 19:10) who testified against them (2 Kings 17:13)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: great ingratitude — after all these mercies they were disobedient and rebelled."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they slew the prophets who testified to turn them to God, returning the greatest injury for the greatest kindness (cf. Matt. 23:37)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the law cast behind their backs",
-   "the prophets slain",
-   "injury for kindness",
-   "rebellion in the good land"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch refer the verse to the judges (Judg. 2:11), the 'saviours' being the judges (Judg. 3:9), the cycle turning many times; Ellicott: the phraseology shows the Book of Judges remembered."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the whole book of Judges is a history of God's mercies and their rebellions."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: upon their humble request God gave them saviours, not for merit but according to his manifold mercies."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill names the oppressors — kings of Mesopotamia, Moab, Canaan — into whose hand a rebellious people was given."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "delivered to their enemies",
-   "they cried and were heard",
-   "God gave them saviours",
-   "the pattern of the judges"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch set out the revolving pattern — rest, evil again, the enemy's hand, the cry, deliverance according to God's mercies, many times over."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: in the ease of rest and prosperity they did evil again."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they were wrought upon neither by trouble nor by deliverance — neither fear nor love would hold them to their duty (Judg. 3:12; 4:1)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "after rest, evil again",
-   "the turning wheel of sin and rescue",
-   "neither fear nor love held them",
-   "mercy that still met the cry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch: the law is the way of life (Lev. 18:5; Ezek. 20:11), but they gave a resisting shoulder (Zech. 7:11) like an ox rearing against the yoke (Hos. 4:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: God testified against them by sending prophets to admonish and remind them of their duty."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: refusing to do what would make them live, they forsook their own mercies — a withdrawing shoulder, the law not of faith (Gal. 3:12)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "testified to bring them back",
-   "which if a man do he shall live",
-   "the resisting shoulder",
-   "forsaking their own mercies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch read 'thou didst draw out' favour (Jer. 31:3) across the kingly rule from Solomon to the Assyrians, the giving up to the peoples (Ps. 106:41) beginning with Assyria."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reckons some 254 years of forbearance with the ten tribes, and finds in 'by thy Spirit in thy prophets' the true notion of divine inspiration."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: God forbore many years, loath to punish; the prophets' testimony was the Spirit of Christ in them (1 Pet. 1:11), sent in compassion lest he send judgments (2 Chron. 36:15)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: longsuffering through many reigns — 'thou didst draw out' mercy from God's very heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Reads 'by thy Spirit in thy prophets' as the true notion of divine inspiration — the Spirit given to the prophets, who testify as they are moved."
-   }
-  ],
-  "themes": [
-   "many years God forbore",
-   "the Spirit in the prophets",
-   "warning before judgment",
-   "given at last to the peoples"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch ground the sparing in God's promise not to make a full end (Jer. 4:27; 30:11) — a remnant preserved and delivered from exile."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: for the displaying of his great and abundant mercy they were not consumed."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: he did not stir up all his wrath, designing their reformation and not their destruction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not utterly consumed",
-   "a remnant preserved",
-   "wrath restrained",
-   "mercy as the ground of survival"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "32": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
+  "range": "32-38",
+  "pericope_label": "Now therefore, our God, the great, the mighty, and the terrible God, who keepest covenant and mercy",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: may the covenant-keeping God now look on the affliction of his bondmen; Ellicott marks the prayer proper beginning, the kings of Assyria the rod of God's anger (Isa. 10:5)."
+    "summary": "Ellicott marks verse 32 as the beginning of the prayer proper, identifies the kings of Assyria as the rod of God's anger, flags the omission of the prophets from the list of transgressors, and relocates the distress: it lies \"not so much under the Persian yoke as in the remembrance of God's judgments\", the passage turning almost word by word on the contrast between what the land was given for and what it has become. Keil and Delitzsch reduce the plea to a sentence, keep the received \"in their kingdom\" of the days of independence, and trace the description of the land to Exodus 3:8."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill hears Nehemiah's own titles for God in the opening words and concludes the whole prayer is his composition, delivered by him to the Levites; he grants the justice of the sentence without reserve, notes that leave to return did not end subjection to Persia, and reads the closing formula with Jarchi as \"in all this distress\" rather than \"because of all this.\""
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke reads the whole frame of society in the roll of sufferers; Wesley: 'mercy' is added because the broken covenant is no sufficient ground of hope, so they fly to God's free mercy."
+    "summary": "Clarke reads the roll of sufferers as a social ladder and the bondage as political oppression — tribute exacted at the sovereign's pleasure, \"so that we can neither call our persons, our time, our land, nor our cattle, our own\" — before turning on his own readers, and he takes the sealed covenant as evidence of a mixed aristocracy in which church and state were separate but mutually supporting. Wesley explains the joining of mercy to covenant, since the covenant alone \"was not a sufficient ground of hope\", and makes the confession of God's justice a rule for all sufferers."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the one petition of the prayer — that the universal, long-borne trouble not seem little — pleading God as feared (Deut. 7:21) and trusted (Dan. 9:4), who came down when he saw Egypt's affliction (Exod. 3:7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the divine titles are Nehemiah's own, so the prayer is likely his composure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the one petition",
-   "let not the trouble seem little",
-   "the great, mighty, terrible God",
-   "covenant and mercy pleaded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch: God is just concerning all, only fulfilling his word upon sinners (Deut. 32:4; Ezra 9:15); the prophets are omitted next as his witnesses."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: under the sharpest rebukes we must still justify God and own we are punished less than our iniquities deserve."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they justify God and judge themselves — he will be clear when he judgeth (Ps. 51:4)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they could complain of no wrong, and unmixed judgment would have been but their desert."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou art just",
-   "done right, we done wickedly",
-   "justify God, judge ourselves",
-   "penitence clears the Judge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch and Ellicott note the prophets are deliberately omitted from the roll of the guilty, as God's witnesses, though they shared the suffering."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: kings, princes, priests, and fathers broke the law, but the prophets remained faithful, testifying by the Spirit even at the risk of their lives."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: all ranks, from highest to lowest, showed no obedience to the holy law."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "kings, princes, priests, fathers guilty",
-   "the prophets omitted",
-   "total national guilt",
-   "the one faithful order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch take 'in their kingdom' of the independent realm, amid the great goodness and the wide land (Exod. 3:8), yet they turned not from their wicked works."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke prefers the reading 'in thy kingdom' (MSS, LXX, Syriac, Arabic), that all their dominion was in truth the LORD's."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a contempt of the good land — those who would not serve God in their own land were made to serve enemies in a strange one (Deut. 28:47; 32:15)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they served not God even in their most flourishing circumstances, of Israel or of Judah."
+    "summary": "Henry spreads the guilt across kings, princes, priests and fathers, \"and we in them\", and finds the sentence fitted to the offence: those who would not serve God in their own land were made to serve their enemies in a strange one, exactly as Deuteronomy had threatened."
    }
   ],
   "debates": [
    {
-    "question": "Should the text read 'in their kingdom' or 'in thy kingdom'?",
-    "sides": [
+    "question": "Should verse 35 read \"in their kingdom\" or \"in thy kingdom\"?",
+    "positions": [
      {
-      "position": "'In their kingdom' — the independent realm God had given them",
-      "holders": [
-       "Keil and Delitzsch",
-       "John Gill"
+      "view": "\"In thy kingdom\" — the reading of Kennicott's manuscripts and of the Septuagint, Syriac and Arabic, and most likely the true one",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "'In thy kingdom' — the reading of manuscripts and versions, that all their dominion was the LORD's",
-      "holders": [
-       "Adam Clarke"
+      "view": "\"In their kingdom\", that is, while the kingdom was still independent",
+      "held_by": [
+       "Keil and Delitzsch"
       ]
      }
     ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "they served thee not",
-   "in the great goodness given",
-   "the disputed 'their'/'thy' kingdom",
-   "contempt of the good land"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch support the petition by the present state — bondmen of the Persian kings in the land God gave the fathers as a free people, its increase belonging to their rulers."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: leave to return, yet still in subjection to the kings of Persia in the land God gave."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: no king of their own, under Persia, paying a regular tribute."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: free-born Israelites enslaved, holding by base tenure the land once given by the crown of heaven — poverty and slavery the fruits of sin (cf. Ezra 9:9)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "servants this day",
-   "bondmen in the land of the fathers",
-   "freedom sunk to vassalage",
-   "sin's bitter fruit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch complete the plea — the increase belongs to the kings, who rule bodies and cattle at their pleasure; Ellicott adds the tribute sent to Persia and hears in the distress a grief at remembering God's judgments."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: personal and feudal services exacted at the ruler's pleasure, nothing their own; Wesley: they labour and God blesses, yet the increase goes to the kings in heavy tribute."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: a fruitful land, yet its profit lessened by the toll, tribute, and custom of foreign kings."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Where does the sting of 'great distress' chiefly lie?",
-    "sides": [
+    "question": "What is the great distress of verse 37?",
+    "positions": [
      {
-      "position": "In the outward Persian oppression — tribute and forced service draining a fruitful land",
-      "holders": [
+      "view": "Political subjection: tribute and forced service exacted at the sovereign's pleasure, so that nothing can be called their own",
+      "held_by": [
        "Adam Clarke",
-       "John Wesley",
-       "John Gill"
+       "John Wesley"
       ]
      },
      {
-      "position": "Less in the Persian yoke than in the grief of remembering God's judgments upon a covenant people",
-      "holders": [
+      "view": "Not the Persian yoke so much as the remembrance of God's judgments",
+      "held_by": [
        "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "increase to foreign kings",
-   "dominion over bodies and cattle",
-   "in great distress",
-   "the bondage Moses foretold (Deut. 28:33)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: on the ground of the confession they make a sure covenant and seal it, each impressing his seal on hardened clay or by a string (cf. Neh. 11:1)."
+    "voice": "John Gill",
+    "claim": "Ascribes the whole prayer to Nehemiah himself on the evidence of its divine titles, delivered by him to the Levites to utter — against the suggestion elsewhere in the chapter that Ezra composed it."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the signatories as a mixed government, nobles civil and priests ecclesiastical, each supporting the other (Matt. 22:21); Wesley: sealed and left on record as a witness against them if they dealt deceitfully."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a sure covenant made with serious consideration, solemnity, joint consent, and fixed resolution, fulfilling the perpetual covenant (Jer. 50:5) and the subscribing hand (Isa. 44:5)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'because of all this,' or 'in the midst of all this evil,' they bind themselves anew to God."
+    "voice": "Adam Clarke",
+    "claim": "Reads the omission of the prophets from the list of transgressors as deliberate tribute: they alone \"continued faithful to God, testifying by his Spirit against the crimes of all, even at the risk of their lives.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "a sure covenant made and sealed",
-   "written for a memorial",
-   "princes, Levites, and priests seal",
-   "the confession issues in a bond"
+   "Now therefore, our God, the great, the mighty, and the terrible God, who keepest covenant and mercy, let not all the trouble seem little before thee, that hath come upon us, on our kings, on our princes, and on our priests, and on our prophets, and on our fathers, and on all thy people, since the time of the kings of Assyria unto this day.",
+   "Howbeit thou art just in all that is brought upon us; for thou hast done right, but we have done wickedly:",
+   "Neither have our kings, our princes, our priests, nor our fathers, kept thy law, nor hearkened unto thy commandments and thy testimonies, wherewith thou didst testify against them.",
+   "For they have not served thee in their kingdom, and in thy great goodness that thou gavest them, and in the large and fat land which thou gavest before them, neither turned they from their wicked works.",
+   "Behold, we are servants this day, and for the land that thou gavest unto our fathers to eat the fruit thereof and the good thereof, behold, we are servants in it:",
+   "And it yieldeth much increase unto the kings whom thou hast set over us because of our sins: also they have dominion over our bodies, and over our cattle, at their pleasure, and we are in great distress.",
+   "And because of all this we make a sure covenant, and write it; and our princes, Levites, and priests, seal unto it."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  }
 }
