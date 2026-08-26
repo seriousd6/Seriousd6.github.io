@@ -1,554 +1,114 @@
 {
  "1": {
   "voices": [
-   "Gloss",
    "Pseudo-Jerome",
    "Bede",
    "Theophylact",
-   "Augustine of Hippo",
+   "Augustine",
    "John Gill",
    "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The allegory: man = God the Father, vineyard = house of Israel, hedge = Law/angels, winefat = Law/altar, tower = the temple, husbandmen = the priests, the 'far country' = God leaving them to free will (Pseudo-Jerome, Bede)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The parable follows the silencing of the tempters, aimed at the chief priests who knew it (Matt 21:33); Lightfoot's rabbinic detail of the vineyard the Jews boasted to be."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Christ now shows he will lay aside the Jewish church; church members are God's tenants with a good Landlord, the richly furnished vineyard leaving them without excuse."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the wicked husbandmen",
-   "vineyard = house of Israel (allegory)",
-   "laying aside the Jewish church",
-   "the well-furnished vineyard"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The 'servant' = the prophets (a set, not one; Matthew has the plural); Mark's vivid 'one and then another' vs Matthew's two groups; 'at the season' = the fourth-year holy fruit (Lev 19:23-25); the rent is the fruit of obedience (Isa 5:2)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: God was not hasty or high in his demand, sending only at the season for the fruit that was his due."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the prophets sent for fruit",
-   "Mark's vivid sequence",
-   "the fourth-year holy fruit",
-   "God's patient just demand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: 'they caught him' marks the rudeness with which Israel used the prophets — seized, beaten, sent back empty without the fruit."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede/Theophylact: the first servant figures Moses, or the prophets of Elijah's time (Micaiah beaten by Zedekiah)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the base usage God's ministers met in all ages — the prophets persecuted by the very church that bore no fruit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the beaten servant",
-   "violence to the prophets",
-   "sent away empty",
-   "the rising record of guilt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Bede"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Another company of prophets, worse used — stoned and shamefully handled; the crux 'wounded in the head' (ekephaliōsan, lit. 'sum up', so some render 'made short work of him'); 'cast stones' textually doubtful (Ellicott)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: the second servant figures David and the Psalmists, despised and rejected ('What portion have we in David?')."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second servant",
-   "stoned and shamed",
-   "the crux 'wounded in the head'",
-   "escalating contempt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry"
-  ],
+  "range": "1-12",
+  "pericope_label": "A certain man planted a vineyard and let it out to husbandmen: the stone which the builders rejected",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The third servant and 'many others' = the whole band of prophets, now killed; the distributive 'beating some, killing some' (Robertson); the slain prophets attested (Matt 23:37; Neh 9:30; Jer 7:25)."
+    "summary": "Lightfoot observes that the hearers knew the parable was against them, since the Jews boasted of being the Lord's vineyard, and supplies the marking of a fourth-year vineyard with coloured clods; Ellicott notes that this report sends the servants singly where the other groups them, seizing on the most vivid presentation; Robertson glosses the rare verb for wounding in the head."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Bede/Theophylact: the band of the prophets (of Daniel and Ezekiel's time), none of whom escaped persecution."
+    "summary": "Gill insists that no single person is meant by any of the servants but a set of men, the other report having the plural."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the progression — beaten, wounded, at last killed — traces the husbandmen's hardening, met by the Owner's marvellous patience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the murdered prophets",
-   "beating some, killing some",
-   "the hardening husbandmen",
-   "God's marvellous patience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "Pseudo-Jerome",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
+    "summary": "Henry keeps the parable at the level of tenancy, members of the church being God's tenants with a good landlord and a good bargain, and notes that the demand was neither hasty nor high."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The beloved Son, the householder's last resort; 'beloved son' echoes the baptism (Mark 1:11); 'wellbeloved' and 'last' are Mark's additions; the Son and heir, not a servant (Heb 1:1-2)."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact makes the hedge the law that forbade mingling with strangers, spaces the servants by period from Elias to Daniel, takes the casting out of the vineyard as the crucifixion outside the city, and reads the corner as joining Jews and Gentiles."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Theophylact/Pseudo-Jerome/Bede: 'they will reverence my son' implies no ignorance in God but what they ought to have done — spoken in irony, leaving free will to man."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the summit of grace, the Father sending his beloved as Jacob sent Joseph (Gen 37:14) — the greater kindness, the greater coming crime."
+    "summary": "Pseudo-Jerome supplies the fullest key to the allegory, the vineyard Israel, the hedge the guardianship of angels, the winefat the law, the tower the temple, the husbandmen the priests, and reads the hope of reverence as irony; Bede offers rival identifications for hedge and winefat, reads the three servants as Moses, the Psalmists and the prophets, denies that the chiefs killed through ignorance rather than envy, and turns the whole into a moral about the vineyard each of the faithful receives on hire at baptism; Augustine reconciles the reports over who answered the closing question."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the hedge about the vineyard?",
+    "positions": [
+     {
+      "view": "the guardianship of angels",
+      "held_by": [
+       "Pseudo-Jerome"
+      ]
+     },
+     {
+      "view": "the wall of the city",
+      "held_by": [
+       "Bede"
+      ]
+     },
+     {
+      "view": "the law, which forbade mingling with strangers",
+      "held_by": [
+       "Theophylact"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "the going into a far country was no change of place: he seemed to go away so as to leave the husbandmen to their own free will, and God is said to doubt for the same reason"
+   }
+  ],
   "themes": [
-   "the beloved Son sent last",
-   "echo of the baptism",
-   "'they will reverence' not ignorance",
-   "the climax of grace"
+   "And he began to speak unto them by parables. A certain man planted a vineyard, and set an hedge about it, and digged a place for the winefat, and built a tower, and let it out to husbandmen, and went into a far country.",
+   "And at the season he sent to the husbandmen a servant, that he might receive from the husbandmen of the fruit of the vineyard.",
+   "And they caught him, and beat him, and sent him away empty.",
+   "And again he sent unto them another servant; and at him they cast stones, and wounded him in the head, and sent him away shamefully handled.",
+   "And again he sent another; and him they killed, and many others; beating some, and killing some.",
+   "Having yet therefore one son, his wellbeloved, he sent him also last unto them, saying, They will reverence my son.",
+   "But those husbandmen said among themselves, This is the heir; come, let us kill him, and the inheritance shall be ours.",
+   "And they took him, and killed him, and cast him out of the vineyard.",
+   "What shall therefore the lord of the vineyard do? he will come and destroy the husbandmen, and will give the vineyard unto others.",
+   "And have ye not read this scripture; The stone which the builders rejected is become the head of the corner:",
+   "This was the Lord’s doing, and it is marvellous in our eyes?",
+   "And they sought to lay hold on him, but feared the people: for they knew that he had spoken the parable against them: and they left him, and went their way."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rulers plot in conscious guilt, acknowledging him the heir/Messiah; Mark's reflexive 'among themselves' (cf. Matt 21:38); the motive to keep their power and revenues."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: they crucified the Son not through ignorance but envy, knowing he was the heir of Psalm 2:8."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they killed him to engross all church power, preferring the world's inheritance to the heavenly."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the heir",
-   "knowing malice not ignorance",
-   "the inheritance shall be ours",
-   "grasping after dominion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Theophylact",
-   "Bede"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The arrest, delivery to the Gentiles, and crucifixion; Mark's order 'killed then cast out' (Matthew/Luke reverse); 'cast out of the vineyard' = crucified without the gate (Heb 13:12), the deed the Jews' own though by Roman hands."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "arrest and crucifixion of the Son",
-   "cast out of the vineyard",
-   "crucified without the gate",
-   "the parable's grim centre"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Lord comes to reckon; in Mark the destruction is part of the parable (in Matthew, the bystanders' answer); fulfilled in Jerusalem's fall by the Romans; the vineyard given to the Gentiles/apostles (Acts; Col 1:6; Jer 17:3)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: nothing more provoking; God will have the rent from another people, being no loser by any."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Lord comes to destroy",
-   "Jerusalem's fall",
-   "the vineyard given to the Gentiles",
-   "judgment and hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Bede",
-   "Theophylact"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The citation of Psalm 118:22 to teachers who ought to have read it (cf. Matt 21:42); Lightfoot notes the Targum read it of 'the child'."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: the husbandmen are now 'builders', the rulers who should have built God's house but rejected the stone; Theophylact: the corner-stone is Christ joining Jews and Gentiles into one Church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the rejected stone (Ps 118:22)",
-   "builders = the rulers",
-   "the head of the corner",
-   "Christ uniting Jew and Gentile"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The continued citation: the exaltation of the once-rejected Messiah is wholly God's doing ('from the Lord', the feminine agreeing with the corner-stone, a Hebraism)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Theophylact: 'marvellous in our eyes' = in the eyes of the faithful; the Church rests on wonders, while the faithless detract."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: it is the Lord's doing to exalt Christ, and his doing to set up Christ's throne in our hearts — a marvel to faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Lord's doing",
-   "Christ's exaltation",
-   "marvellous to faith",
-   "Christ enthroned in the heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rulers (Mark 11:18) knew the parable was against them (Matt 21:45) and sought to seize him, restrained only by fear of the people (John 7:30); they left and went their way."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: a wonderful providence — usually the people are restrained by fear of rulers, here the rulers by fear of the people."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they withdrew lest they be converted and healed; prejudice unconquered by truth is only confirmed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they sought to seize him",
-   "restrained by fear of the people",
-   "providence restraining the rulers",
-   "hardened retreat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
@@ -556,228 +116,97 @@
    "Bede",
    "Theophylact",
    "Pseudo-Jerome",
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The chief priests send Pharisees and Herodians (opposite parties united against Christ, cf. Mark 3:6) to 'catch' (agreuō, hunt/snare) him in his words (Matt 22:15)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: they work through earthly powers to seem guiltless; the question aims to make him deny the tribute so the Herodians can charge sedition; Theophylact: a dilemma with a precipice on both sides."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Pharisees and Herodians allied",
-   "to catch him in his words",
-   "the two-edged trap",
-   "enemies combining against Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry",
-   "Theophylact",
-   "Pseudo-Jerome"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The honeyed flattery ('Master... thou art true... regardest not the person of men', a Hebrew idiom) meant to commit him to fearless speech; the question framed to ensnare whichever way answered."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Pseudo-Jerome/Theophylact: bees with honey in the mouth and a sting in the tail, seeking to deceive Christ by flattery."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: their praise condemns them — if true, they sinned against knowledge; if false, they lied and flattered with the tongue."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "honeyed flattery",
-   "self-condemning praise",
-   "Is it lawful to give tribute?",
-   "malice masked as submission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mark's sharp repeated question ('shall we give or not give?'); 'knowing their hypocrisy' (Mark's specific word vs Matthew's 'wickedness', Luke's 'craftiness') — they did not deceive Jesus; 'why tempt ye me?' and the call for a penny turn the trap."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: hypocrisy cannot be hid from Christ; he ensnares them by their own words, obliging them to own the Roman coin they questioned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "shall we give or not?",
-   "knowing their hypocrisy",
-   "Why tempt ye me?",
-   "the trap turned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
    "John Lightfoot",
    "Charles Ellicott",
-   "Bede"
+   "A.T. Robertson"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Roman denarius (~7.5d), bearing Caesar's image and inscription; Lightfoot distinguishes the Caesarean from Jerusalem money, silver from gold; using such coin confessed Caesar's authority."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: Christ asked whose the image was not from ignorance but 'by an economy', to return a fitting answer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Roman penny",
-   "image and inscription",
-   "drawing out 'Caesar's'",
-   "the questioners' own admission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley",
-   "Bede",
-   "Theophylact",
-   "Pseudo-Jerome",
-   "Matthew Henry"
-  ],
+  "range": "13-17",
+  "pericope_label": "Render to Caesar the things that are Caesar’s, and to God the things that are God’s",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Render to Caesar what bears his image (the coin) and to God what is his (Rom 13:7; 1 Pet 2:17); Caesar may command the money, not the conscience; they marvelled (Mark's imperfect)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: 'things that are God's' = tithes and offerings; Pseudo-Jerome: render yourselves to God, whose image (Ps 4:6), not Caesar's, is stamped on us."
+    "summary": "Lightfoot makes three points about the coin, that it was Caesarean, silver rather than gold, and Roman rather than of Jerusalem, with a rabbinic story of a penny to be dropped down a well; Ellicott notes that this report uses the specific word for the questioners' sin but omits the name hypocrites; Robertson lays the three accounts of their fault side by side and observes that only here is the question doubled in the sharp form, shall we give or shall we not give."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: our hearts and best affections are due to God as rent to a landlord; many admire the wit of the answer but render God nothing."
+    "summary": "Henry explains the pairing of the two parties by their opposite interests, so that either answer could be turned against him, and observes that it is no new thing for those at variance in everything else to join in a confederacy against Christ; he turns their compliment into evidence, since if they meant it their killing him was a sin against knowledge."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact reports two accounts of who the Herodians were, a sect holding Herod to be the Christ or else Herod's soldiers brought as witnesses; says the plot had a precipice on both sides and that the Fountain of wisdom escaped their snares; reduces the answer to the rule that what bears an image goes to him whose image it bears, and extends it so that the body's inevitable wants are as Caesar to each of us."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede thinks the question framed to draw the answer that tribute should not be paid, so the Herodians might hold him an author of sedition, describes the coin as worth ten smaller ones, and answers those who suppose the question about the image was asked from ignorance; he takes the things that are God's as tithes, first-fruits and oblations. Pseudo-Jerome compares the questioners to bees, honey in the mouth and a sting in the tail, and makes the second half the point, that we render ourselves to God since it is his countenance that is stamped on us."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who were the Herodians?",
+    "positions": [
+     {
+      "view": "a sect who held Herod to be the Christ",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "view": "Herod's soldiers, brought as witnesses",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "view": "a party that stickled for the Roman power, opposite to the Pharisees",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Theophylact",
+    "claim": "the inevitable wants of our bodies are as Caesar to each of us, so the body is to be given its own, food and raiment, and God the things that are God's"
+   }
+  ],
   "themes": [
-   "render to Caesar and to God",
-   "subjection and devotion",
-   "God's image stamped on us",
-   "admiring wisdom unobeyed"
+   "And they send unto him certain of the Pharisees and of the Herodians, to catch him in his words.",
+   "And when they were come, they say unto him, Master, we know that thou art true, and carest for no man: for thou regardest not the person of men, but teachest the way of God in truth: Is it lawful to give tribute to Cesar, or not?",
+   "Shall we give, or shall we not give? But he, knowing their hypocrisy, said unto them, Why tempt ye me? bring me a penny, that I may see it.",
+   "And they brought it. And he saith unto them, Whose is this image and superscription? And they said unto him, Cesar’s.",
+   "And Jesus answering said unto them, Render to Cesar the things that are Cesar’s, and to God the things that are God’s. And they marvelled at him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "18": {
@@ -786,430 +215,96 @@
    "Theophylact",
    "Bede",
    "Pseudo-Jerome",
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "18-27",
+  "pericope_label": "When they shall rise from the dead they neither marry: he is not the God of the dead, but of the living",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Sadducees deny resurrection, angel, and spirit (Acts 23:8), contradicting Scripture and God's power; after the others' failure they come to display their scepticism and score against Jesus (Robertson)."
+    "summary": "Robertson notes the reproach is put here as a question expecting assent where the other report asserts it flatly, and remarks that the Sadducees posed as men of superior intelligence and were ignorant of the Scriptures on this very point, as much error still is among the educated; Barnes limits the conclusion, that the peculiar relation of marriage will not exist but that no recollection or recognition is thereby denied, and explains the citation by chapter subject; Ellicott adds that the reference to the bush names the section rather than the place."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the 'deists' of the age — sceptics, not persecutors — attacking his doctrine of the resurrection and the world of spirits."
+    "summary": "Henry calls them the sceptics of that age rather than persecutors, whose design was on the doctrine, and thinks the case was meant to ridicule the law of the brother's widow, noting their subtlety in appearing to own the truth they meant to overthrow."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact names the two ignorances, that they supposed a restoration of bodies such as they are now and that they thought scattered limbs hard to rejoin; explains that marriage exists on account of our decay, for succession, and ceases where there is no decay; and rests the proof on the present tense, I am and not I have been."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Pseudo-Jerome allegorises the seven-husbanded woman as the synagogue, deserted by the sevenfold Spirit, leaving no seed of Abraham (Christ given to the Gentiles)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Sadducees deny the resurrection",
-   "the sceptics of the age",
-   "attack on his doctrine",
-   "the third assault"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The levirate law (Deut 25:5; Gen 38:8) to raise up seed for a childless brother; the Sadducees accept the Scriptures, especially Moses, adhering to the literal sense and rejecting rabbinic tradition."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they quote the ancient law to build a case, turning a good statute into a weapon against the resurrection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the levirate law",
-   "Moses wrote (Deut 25:5)",
-   "the Sadducees' use of Scripture",
-   "common ground turned to a snare"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson",
-   "Matthew Henry",
-   "Bede"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: the seven brethren are supposed of one father's family, such as the law bound; a constructed case, not impossible (Bede), pressing the levirate law to an extreme."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the number seven multiplies the difficulty, designed both to ridicule the Mosaic law and chiefly to expose the resurrection as absurd."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the seven brethren",
-   "a constructed hypothetical",
-   "ridiculing the law",
-   "the snare built brick by brick"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: each brother in turn was bound by the levirate law (Deut 25:5) to take the widow; the rabbinic canons regulated such succession, so the tale ran along recognisably lawful lines."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the accumulation of husbands is essential to the Sadducees' aim — to make the woman's place in a risen life appear an insoluble absurdity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chain of marriages",
-   "obedience to the levirate law",
-   "the knot drawn tighter",
-   "faithfulness to Moses building the difficulty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The case completed — seven husbands, no seed, the woman dead last (eschaton pantōn); every detail set for the question."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the Sadducees feign to accept the resurrection while framing a case meant to give it 'a fatal stab' — seven husbands and no heir making the risen woman's place seem absurd."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the case completed",
-   "seven husbands, no seed",
-   "the snare fully set",
-   "feigned acceptance, real malice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The question 'whose wife shall she be?'; 'when they shall rise' textually doubtful (Gill, Clarke); the snare assumes a risen life merely continuing this one's relations."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the Sadducees feign acceptance to give the truth a 'fatal stab' — a baited question whose false assumption Christ will expose."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whose wife shall she be?",
-   "the baited question",
-   "false assumption of earthly relations",
-   "artifice of the sceptics"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ's double charge: they err (planaomai, wander astray) from ignorance of the Scriptures and of God's power; the posing sceptics ignorant on this very point (1 Cor 15:34); the two ignorances go together."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they misread Scripture and would not apply God's omnipotence — the power that made soul and body can raise them (Rom 4:21); right knowledge of Scripture is the best preservative against error."
+    "summary": "The Gloss states the fault of the questioners, that they contradicted the Scriptures and derogated from the power of God; Bede grants the tale is fitly framed to prove the madness of those who assert the resurrection of the body, though such a thing might really have happened, and infers the rising of the body from the survival of the soul, since the body did good and evil along with it; Pseudo-Jerome reads the whole mystically, the woman as the synagogue deserted by the sevenfold Spirit, the bush as an image of hearers whose thorns the fire does not burn off, and finds the Trinity in the threefold naming of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How does the argument from the bush prove the resurrection?",
+    "positions": [
+     {
+      "view": "from the present tense, I am, as though the patriarchs were present",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "view": "by inference: the soul survives, and the body rose and fell with it",
+      "held_by": [
+       "Bede"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "the passage denies the relation of marriage in the resurrection but does not deny that there will be recollection of it, or recognition of each other as having stood in it"
+   }
+  ],
   "themes": [
-   "do ye not err?",
-   "ignorance of the Scriptures",
-   "ignorance of God's power",
-   "the root of error"
+   "Then come unto him the Sadducees, which say there is no resurrection; and they asked him, saying,",
+   "Master, Moses wrote unto us, If a man’s brother die, and leave his wife behind him, and leave no children, that his brother should take his wife, and raise up seed unto his brother.",
+   "Now there were seven brethren: and the first took a wife, and dying left no seed.",
+   "And the second took her, and died, neither left he any seed: and the third likewise.",
+   "And the seven had her, and left no seed: last of all the woman died also.",
+   "In the resurrection therefore, when they shall rise, whose wife shall she be of them? for the seven had her to wife.",
+   "And Jesus answering said unto them, Do ye not therefore err, because ye know not the scriptures, neither the power of God?",
+   "For when they shall rise from the dead, they neither marry, nor are given in marriage; but are as the angels which are in heaven.",
+   "And as touching the dead, that they rise: have ye not read in the book of Moses, how in the bush God spake unto him, saying, I am the God of Abraham, and the God of Isaac, and the God of Jacob?",
+   "He is not the God of the dead, but the God of the living: ye therefore do greatly err."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The risen neither marry nor are given in marriage but are 'as the angels' (Luke: equal to angels, cannot die) — the relation made for a dying world ceases; flesh and blood inherit not the kingdom (1 Cor 15:50; Ps 17:15; Luke 20:36)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Theophylact: a heavenly, angelic restoration without decay, so marriage (now for succession against decay) ceases."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the Sadducees measured the world of spirits by the world of sense; the marriage bond of the earthly paradise is not known in the heavenly."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no marriage in the resurrection",
-   "as the angels in heaven",
-   "the bond for a dying world ceases",
-   "measuring heaven by sense"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ proves the resurrection from Moses, whom the Sadducees prized; 'at the bush' = citation by section-heading (Exod 3:6); the force lies in the present tense 'I am' the God of the patriarchs."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril of Jerusalem: to those who allow only the Law, the proof is 'I am the God of Abraham' — of those who have being and subsistence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "proof from the book of Moses",
-   "at the bush (Exod 3:6)",
-   "'I am' the God of the patriarchs",
-   "meeting the Sadducees on their ground"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "God of the living, not the dead: the patriarchs live in soul and must rise in body, or God is not the God of their whole persons (Wesley's full argument); 'ye greatly err' (Mark only), a solemn yet kindly close."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: God's covenant relation to Abraham proves the soul lives and the body must rise — the Sadducees who deny it greatly err and ought to be told so."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the God of the living",
-   "covenant the pledge of life",
-   "soul lives, body must rise",
-   "ye greatly err"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "28": {
@@ -1218,354 +313,102 @@
    "Pseudo-Jerome",
    "Theophylact",
    "Bede",
-   "Augustine of Hippo",
-   "John Gill",
+   "Augustine",
    "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
    "A.T. Robertson",
-   "John Wesley"
+   "Charles Ellicott",
+   "John Calvin"
   ],
+  "range": "28-34",
+  "pericope_label": "Which is the first commandment of all? Thou art not far from the kingdom of God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A scribe, hearing Christ answer the Sadducees well, asks the first (chief, not first-in-order) commandment; Matthew says 'tempting', Mark puts him favourably; a standing rabbinic debate over the greatest precept (Lightfoot, Bede)."
+    "summary": "Lightfoot explains the rabbinic distinction between the law and the precept, so that the question is whether the ceremonial precepts stand first; Barnes calls this one of the very few candid inquiries made of him, and takes the verdict as evidence that the older law prepares the mind for the gospel; Ellicott hears in the scribe's reply the sincerity of admiration rather than the covert sneer, and calls the passage an addition of singular interest; Robertson notes that this report puts the man in a favourable light where the other says he was tempting."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin allows the malice and still credits the change, since the man openly assents and so is not of the class whose obstinacy is incurable; and he answers the objection that sacrifices, belonging to the first table, should not rank below charity, by distinguishing naked and empty sacrifice from the thing itself."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact divides the commandment by the powers of the soul, the living, the natural and the rational, argues that the two commandments mutually contain each other, and insists the verdict shows the man was not yet perfect, since it is not said he is within the kingdom."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: though he came as a tempter he was corrected, or the 'temptation' was honest caution to try an unknown thing."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: his civil application became him — desiring instruction, not tempting; 'first' = first in weight, the foundation of all obedience."
+    "prevalence": "several",
+    "summary": "The Gloss refers the strength to the bodily powers; Pseudo-Jerome traces the question to the differing forms of the commandments in Exodus, Leviticus and Deuteronomy, and says two are brought forward as two paps on the breast of the bride, adding that he is not far who comes with knowledge, since ignorance is farther from the kingdom; Bede reports the standing debate between those who praised sacrifices and those who preferred faith working by love, and closes on the silence that follows, that the venom of envy may be overcome but can hardly lie quiet; Augustine reconciles the reports on whether the questioner tempted him."
    }
   ],
   "debates": [
    {
-    "question": "Did the scribe come sincerely or to tempt Christ?",
-    "sides": [
+    "question": "Did the scribe come sincerely or as a tempter?",
+    "positions": [
      {
-      "position": "Sincerely seeking instruction (Mark's favourable light)",
-      "holders": [
-       "A.T. Robertson",
-       "Matthew Henry",
-       "John Gill"
+      "view": "sincerely; one of the few candid inquiries made of him",
+      "held_by": [
+       "Albert Barnes",
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "As a tempter, but corrected by the answer",
-      "holders": [
-       "Augustine of Hippo"
+      "view": "as a tempter, but corrected by the answer he received",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "with malice, yet openly assenting afterwards",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "being confuted in argument they ask no further questions but hand him to the Roman power: the venom of envy may be overcome, but can hardly lie quiet"
+   }
+  ],
   "themes": [
-   "the scribe's better spirit",
-   "which is the first commandment?",
-   "first in weight not order",
-   "the rabbinic debate"
+   "And one of the scribes came, and having heard them reasoning together, and perceiving that he had answered them well, asked him, Which is the first commandment of all?",
+   "And Jesus answered him, The first of all the commandments is, Hear, O Israel; The Lord our God is one Lord:",
+   "And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength: this is the first commandment.",
+   "And the second is like, namely this, Thou shalt love thy neighbour as thyself. There is none other commandment greater than these.",
+   "And the scribe said unto him, Well, Master, thou hast said the truth: for there is one God; and there is none other but he:",
+   "And to love him with all the heart, and with all the understanding, and with all the soul, and with all the strength, and to love his neighbour as himself, is more than all whole burnt offerings and sacrifices.",
+   "And when Jesus saw that he answered discreetly, he said unto him, Thou art not far from the kingdom of God. And no man after that durst ask him any question."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ prefixes the doctrinal foundation — the Shema (Deut 6:4), Israel's daily confession of God's unity ('the Lord our God is one Lord'), which Mark gives more fully than Matthew."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: from the unity of God (one essence, three persons) it follows we owe all our love to him alone."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: belief that he is one Lord grounds whole-hearted love — he has sole right to us, and so should have sole possession."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Hear, O Israel (the Shema)",
-   "the Lord our God is one",
-   "unity grounds whole-hearted love",
-   "the foundation before the duty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Love God with the whole man (Deut 6:5); 'with all thy strength' = the whole capacity of understanding, will, and affections."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Theophylact: the clauses inventory the soul's powers — the living (soul), natural (heart), and rational (mind) — all given whole to God."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: love is the leading affection, the commanding principle that disposes to every duty; Gill: the command stands though nature is fallen, and love is produced in regeneration."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "love God with the whole man",
-   "the powers of the soul",
-   "love the commanding principle",
-   "the command stands, grace fulfils"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The second 'like' the first: love neighbour as self (Lev 19:18; Rom 13:9), comprising the whole duty to man; the two together fulfil all the law (Matt 22:40); 'like' omitted in better MSS."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Theophylact: the two are harmonious and mutually contain each other — he who loves God loves his chief creature, man."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: love the neighbour as truly as oneself, on the ground of shared nature; obedience to these two carries all other duties of course."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "love thy neighbour as thyself",
-   "the second like the first",
-   "shared nature the ground",
-   "the two comprehend the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The scribe's reply is peculiar to Mark (against the 'abridgment' theory); 'Well, Master, thou hast said truly' (echoing v.14 but now sincere), with real reverence ('Rabbi'), confessing one God and none beside (Deut 4:39)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: he alone of the questioners was softened, candidly assenting — not of the incurably obstinate; the seed of knowledge choked in his heart drawn out by Christ's word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the scribe's assent (Mark only)",
-   "sincere admiration",
-   "one God and none beside",
-   "the choked seed drawn out"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The scribe ranks love (intelligent, with the understanding) above all sacrifices — the prophetic truth of 1 Sam 15:22; Hos 6:6; Micah 6:6 — with the fervour of conviction."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: worship of God is preferable, but its outward exercises must not swallow brotherly kindness; it is 'naked and empty' sacrifices, hypocritical piety, that are ranked below love."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: love must be intelligent; the sacrifices only represented atonement and led to obedience — love is the substance they shadowed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "love above sacrifice",
-   "intelligent love of God",
-   "empty sacrifice vs sincere uprightness",
-   "the rite serving the heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The scribe answered 'discreetly' (nounechōs, with his wits); 'not far from the kingdom' brings him to its threshold (contrast the lawyer of Luke 10:27); the debate closed — no man durst ask more (Matt 22:46), Christ complete victor."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Theophylact/Bede: not 'within' but 'not far' — near because he favoured the gospel perfection of the two commandments."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: Christ assists every beginning of docility, encouraging us to proceed; yet the silenced foes only 'groaned within', their obstinacy unbroken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "answered discreetly",
-   "not far from the kingdom",
-   "encouragement to go on",
-   "the foes silenced"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "35": {
@@ -1574,296 +417,93 @@
    "Pseudo-Jerome",
    "Bede",
    "Gloss",
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "35-40",
+  "pericope_label": "How say the scribes that Christ is the son of David? Beware of the scribes, which devour widows’ houses",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The silenced foes now questioned; not a puzzle but the key to his person — the scribes rightly taught Messiah = Son of David (Luke 1:32; John 7:42) but missed that David in Ps 110:1 calls him Lord; both deity and humanity involved."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Theophylact/Bede: they call him Son of David but not Lord, a mere man descended from David; reproved not for 'son of David' but for not believing him the Son of God."
+    "summary": "Barnes takes the gladly hearing crowd as the poorer sort, the rich being too proud to listen, though the fault is not the gospel's; Ellicott corrects the rendering to the great body of the people and denies that social condition is in view; Robertson agrees it is the huge crowd and reads the moment strategically, the morning's attack having been a colossal failure."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the scribes taught his royal descent but not his divinity; unworthy of Moses' seat are those who can preach truth but not defend it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "How is Christ David's son?",
-   "the key to his person",
-   "Son of David and David's Lord",
-   "the scribes' half-truth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Psalm 110:1, which Mark emphatically ascribes to the Holy Ghost (more than Matthew/Luke; 2 Pet 1:21; 2 Sam 23:2); 'The Lord said to my Lord' — David owns the Messiah as Lord, exalted to the right hand till his enemies be subdued."
+    "summary": "Henry turns the passage into a charge against the teachers, who could say the Messiah was David's son but not explain how David called him Lord, and draws from it that truths should be quoted from our Bibles rather than our ministers, the waters being sweetest at the source; he is less confident of the crowd's gladness, since none is found wrought upon to follow, and guards long prayers from being discredited by those who abused them."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Theophylact: David called him Lord in the Holy Spirit; the enemies made his footstool prove his Lordship."
+    "summary": "Theophylact says the false opinion is corrected because the Passion is near, and rests the correction on the source of the words, that David cannot have spoken without the grace of the Holy Spirit."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Cyril of Jerusalem gathers the apostolic witness to Christ's session at God's right hand (Peter, Paul, the Gospel)."
+    "prevalence": "several",
+    "summary": "Pseudo-Jerome says he speaks openly of himself so that they may be inexcusable; the Gloss sets the two propositions side by side, David's Lord by the psalm and David's son by the scribes' teaching; Bede takes the subjection of the enemies as showing the unity of nature rather than the Son's weakness, keeps the argument in use against those who make the Christ a mere man of David's line, and bounds the warning about long clothing, since the intention and not the office is blamed, while describing men who take money from troubled consciences as though they would be advocates at the judgment."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the crowd that heard him gladly?",
+    "positions": [
+     {
+      "view": "the poorer sort, the rich being too proud to listen",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "the great body of the people; the stress is on number, not condition",
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "he was to them a lovely song of one who plays well on an instrument, and some of them may have cried crucify him afterwards, as Herod heard the Baptist gladly and yet cut off his head"
+   }
+  ],
   "themes": [
-   "David spoke by the Holy Ghost",
-   "Psalm 110:1",
-   "the Lord said to my Lord",
-   "session at God's right hand"
+   "And Jesus answered and said, while he taught in the temple, How say the scribes that Christ is the Son of David?",
+   "For David himself said by the Holy Ghost, The Lord said to my Lord, Sit thou on my right hand, till I make thine enemies thy footstool.",
+   "David therefore himself calleth him Lord; and whence is he then his son? And the common people heard him gladly.",
+   "And he said unto them in his doctrine, Beware of the scribes, which love to go in long clothing, and love salutations in the marketplaces,",
+   "And the chief seats in the synagogues, and the uppermost rooms at feasts:",
+   "Which devour widows’ houses, and for a pretence make long prayers: these shall receive greater damnation."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Bede",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The dilemma — David calls him Lord, how is he his son? — answered only by his divine sonship; 'the common people heard him gladly' (Mark only): the Sanhedrin's attack a colossal failure, the crowds drawn closer."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: the Jews reproved not for 'son of David' but for not believing him Son of God — he is David's son by flesh, David's Lord by deity."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they heard gladly as a lovely song (Ezek 33:32) yet did not believe — gladness is not faith; some may have later cried 'Crucify him'."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "David calls him Lord",
-   "resolved by divine sonship",
-   "the common people heard gladly",
-   "hearing gladly is not believing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "Pseudo-Jerome",
-   "Bede",
-   "Theophylact",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Beware of the scribes' (blepete apo, vernacular idiom) — Mark's summary of the long indictment of Matthew 23; the marks of pride: love of long robes and of salutations in the marketplaces."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: it is the intention, not the office, that is blamed; the faithful must neither be seduced by their hypocrisy nor moved to imitate their love of praise."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the warning was needful and pointed, but no precedent for us, who lack the same authority."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Beware of the scribes",
-   "love of long robes",
-   "love of salutations",
-   "the intention, not the office"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The chief seats in the synagogues (prōtokathedrias, marks of piety; Luke 11:43) and the uppermost rooms at feasts (prōtoklisias, places of honour) — the craving for precedence; even the disciples fell to it (Luke 22:24)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: the seats were lawful and might rightly fall to men of station; the sin is loving and seeking them to feed pride — the intention, not the office."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they coveted applause, the best seats pleasing a vain fancy as tokens of the value others set on them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "chief seats in the synagogues",
-   "uppermost rooms at feasts",
-   "craving for precedence",
-   "recognition above lowliness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Bede",
-   "Theophylact",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They devour widows' houses, exploiting the helpless under pretence of counsel, with long prayers as the mask (prophasei, pretext); a new sentence ('they that devour... these shall receive'); the greater/more abundant damnation (2 Tim 3:6)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: they take money from the conscience-troubled as feigned advocates — passing the night in prayer to rob the poor; Theophylact: posing as protectors of widows, their doom greater than other sinners'."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: iniquity disguised with piety is double iniquity, doubly doomed — the hypocrite's the greatest damnation; yet sincere long prayers are not discredited by the abuse."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "devouring widows' houses",
-   "long prayers as a pretence",
-   "greater damnation",
-   "piety abused, doubly doomed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "41": {
@@ -1871,172 +511,97 @@
    "Bede",
    "Theophylact",
    "Pseudo-Jerome",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ sits over against the treasury (gazophylacium, the temple chests; John 8:20; 2 Kings 12:9) to watch the giving; the rich cast in much; a custom for priests, poor, and widows."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede allegorises: the rich = Jews puffed with law-righteousness presuming on themselves; the widow = the Church, poor in casting off pride, widowed because Christ died for her, giving her whole living as of grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus watches the treasury",
-   "the rich cast in much",
-   "the searcher of hearts",
-   "the heart weighed, not the sum"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A destitute widow (ptōchē, pauper) gives two mites (lepta, 'thin', ~2/5 cent), explained by the Latin 'farthing' (quadrans, one of Mark's Latinisms); the pointed contrast with the scribes who devoured widows' houses (vv.38-40)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a destitute widow",
-   "two mites, a farthing",
-   "Mark's Latin 'quadrans'",
-   "the robbed widow gives all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin"
   ],
+  "range": "41-44",
+  "pericope_label": "This poor widow hath cast more in, than all they which have cast into the treasury",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "He calls the disciples to teach a non-quantitative standard; 'more than all' = more than all the rich together — not in amount but in love, self-denial, and sincerity, the rule of God's reward (2 Cor 8:12)."
+    "summary": "Barnes is careful that her gift is not called greater in value but greater in love and self-denial; Ellicott finds the point in the placing of the story, since a widow whose house had been devoured shows that she keeps the two commandments the scribes had just set above sacrifice; Robertson glosses the word for mite as peeled or thin and notes that what she gave was her livelihood, adding that it is a tragedy to see a stingy saint pose as giving the widow's mite."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Calvin: offerings are estimated by the heart's feeling, not apparent value; the poor are encouraged to give cheerfully, the rich reminded that self-denial, not amount, is the chief sacrifice."
+    "summary": "Calvin estimates offerings by the feeling of the heart rather than the apparent value, encouraging the poor and rebuking the rich in the same breath, and refuses to let the probable misuse of the treasury spoil the act, since men's abuses cannot prevent sincere worshippers from doing what is holy."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley: the Judge of all so judges specious outward actions — the smallest gift from self-denying love is most acceptable."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he called his disciples",
-   "more than all the rich",
-   "measured by love not amount",
-   "self-denial the chief sacrifice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Bede",
-   "Matthew Henry"
-  ],
-  "schools": [
+    "summary": "Clarke observes that even the rich gave brass money, produces the rabbinic canon that none might put in less than two of these coins, so that the widow could not have given less and her poverty prevented more, and asks what we should think of a rich man throwing a handful of halfpence into a public collection."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rich gave of superfluity, sparing what they kept; she of her deficiency cast all her living (bios, livelihood; Deut 24:6), trusting God (cf. 2 Cor 8:2); the lesson — love is measured by proportion, self-denial, and motive, not amount."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact supplies the custom of giving for the priests, the poor and the widows, and reads the widow as the soul, which leaves the Satan it was joined to and casts in flesh and mind, the flesh by abstinence and the mind by humility."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: the Church gives her whole living, knowing even her life is of divine grace, not her own desert."
+    "prevalence": "several",
+    "summary": "Bede explains the word for treasury from its Greek and Persian parts and its double use for chest and porch, states the principle that God weighs the conscience and not the property, and allegorises the rich as Jews puffed up with the righteousness of the law and the widow as the simplicity of the Church, whose two mites are the love of God and of neighbour; Pseudo-Jerome puts himself in the parable, asking who the poor woman is if not himself and those like him, who cast in what they can and have the will to explain where they lack the power."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "In what sense did she cast in more than all?",
+    "positions": [
+     {
+      "view": "in proportion to means, and so in love and self-denial, not in value",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "because God weighs the conscience and the store it came from, not the property",
+      "held_by": [
+       "Bede",
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "the rabbinic canon forbidding an offering of less than two of these coins means she gave the smallest sum the law allowed, and could give no less"
+   }
+  ],
   "themes": [
-   "abundance versus want",
-   "all her living",
-   "self-denial the measure",
-   "rebuke and comfort in the mites"
+   "And Jesus sat over against the treasury, and beheld how the people cast money into the treasury: and many that were rich cast in much.",
+   "And there came a certain poor widow, and she threw in two mites, which make a farthing.",
+   "And he called unto him his disciples, and saith unto them, Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury:",
+   "For all they did cast in of their abundance; but she of her want did cast in all that she had, even all her living."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  }
 }
