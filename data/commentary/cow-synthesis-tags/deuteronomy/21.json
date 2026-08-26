@@ -2,500 +2,423 @@
  "1": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "Adam Clarke",
+   "Keil and Delitzsch",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "One found slain in the field, and the elders and judges measure to the cities round about",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The law of the unsolved murder — 'if one be found slain in the land... and it be not known who hath slain him'; a man found murdered in the open field, the murderer not discoverable, the expiation by the sacrifice of a heifer in an uncultivated valley (Clarke, Keil); the law having already provided for the wilful murderer when known (Deut 19:11), here providing for the case where he could not be found, that the land be not left defiled (Henry); 'the field' named as the place where such murders are most commonly done in secret, but the law taking in any place (Wesley); the very existence of such a law teaching how precious to God is the life of man, for even a murder by an unknown hand God would not pass over but required a solemn expiation (Calvin); innocent blood crying to God (Gen 4:10) and the land held polluted by unavenged blood."
+    "summary": "Gill places the law after the laws of war as a case of private violence and reports without deciding the dispute over whether the elders and judges are local or come from the great council at Jerusalem; Calvin grounds the whole rite in the preciousness of human life and argues that leaving murder unpunished implicates a community in the guilt."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry contrasts this case with the wilful murderer already provided for and warns that the land is not safe from pollution merely because the failure to punish was nobody&rsquo;s fault, granting that providence often brings such deeds to light but not always, so that secrecy is made good only for a while."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil identifies the elders as representatives of the communities and the judges as administrators of right, explains that what is measured is the distance from the body to each surrounding town, and gives two reasons why the nearest bears the expiation, the direction of suspicion and the burden of the guilt itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley explains that the field is named only because such murders most commonly happen there, reads the phrase as a single class of elders who are judges, and notes that measuring was superfluous where the nearest city was already evident."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who goes out to measure: Aben Ezra and Wesley keep it local, the elder-judges of the neighbouring cities, while the Targum and the rabbinic rulings Gill cites send a delegation from the great council at Jerusalem and argue over its size."
+  ],
+  "outliers": [
+   "Calvin turns the law forward into an argument against impunity, reasoning that if an undiscoverable murder still defiles a community, a discoverable one left unpunished defiles it far worse."
+  ],
   "themes": [
-   "if one be found slain",
-   "it be not known who hath slain him",
-   "the life of man precious to God",
-   "innocent blood must be answered"
+   "unpunished bloodshed",
+   "the land polluted by blood",
+   "elders and judges",
+   "secret crime brought to light"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The measuring to find the nearest city — 'thy elders and thy judges shall come forth, and they shall measure unto the cities which are round about him that is slain'; the rulers and judges of the neighbouring cities coming out to the place where the body lay and measuring the distance to each surrounding city to determine which was nearest, the elders who were judges, the rulers of the cities round about (Wesley); the measuring needful only where it was not already evident which city was nearest (Wesley); the responsibility for the expiation fixed upon the city nearest the murder, on whom by its nearness the suspicion and duty fell; the matter not left to guess or general neglect but committed to the proper authorities, the guilt of unavenged blood brought home to the place most concerned, that none shrug it off; God having responsibility owned, not evaded."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy elders and thy judges shall come forth",
-   "measure unto the cities round about",
-   "responsibility fixed by nearness",
-   "guilt not to be evaded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "The elders take an unyoked heifer down to a rough valley and break its neck",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains the unyoked animal as making satisfaction by innocent blood the more vivid and the desert place as carrying the pollution away from cultivated ground; Gill reads the valley as an emblem of the low estate into which Christ came."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Gill: the city next, and so suspected, or the murderer in it, was to take the heifer; an animal not yet put to common labour chosen for the holy purpose."
+    "summary": "Henry denies outright that the heifer was a sacrifice, since it was never brought to the altar, calling it a solemn protestation of what they would have done to the murderer had they held him, and passes on the tradition that the valley was never afterwards tilled or sown unless the murderer was found."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "The unworked heifer — 'an heifer, which hath not been wrought with, and which hath not drawn in the yoke'; a fit representative of the murderer, in whose stead it was killed, who would not bear the yoke of God's laws, the unyoked beast standing for the lawless man; and a type of Christ, who was indeed under the yoke — bearing the burden of the law and of our sin — but a yoke he had voluntarily taken upon himself, not laid on him by force, the heifer that had never been compelled to the yoke pointing to the willing obedience of Christ (Wesley); even this strange rite pointing in shadow to the true expiation of innocent blood by Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the city which is next",
-   "an heifer that hath not drawn in the yoke",
-   "representative of the murderer",
-   "a type of Christ under the yoke willingly"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Clarke reads the Hebrew for the place as possibly a rapid stream through uncultivated ground, treats the rite as a sacrifice of atonement which would therefore pollute tilled land, and notes that the law was framed to keep murder in abhorrence and magistrates alert so that offenders might be found and public expense saved; Wesley reads the desert place as begetting horror of murder and the unyoked heifer both as the murderer who would not bear God&rsquo;s yoke and as a type of Christ, who bore one voluntarily."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The heifer slain in the rough valley — 'the elders of that city shall bring down the heifer unto a rough valley, which is neither eared nor sown, and shall strike off the heifer's neck there'; an uncultivated, desolate place, the Hebrew nachal eythan perhaps a valley with a rapid stream through uncultivated ground, or simply a rough barren spot (Clarke, Gill, Keil); such a desolate spot chosen that it might beget in the people a horror of murder and of the murderer, the very ground never sown nor reaped fitting the waste that bloodshed brings (Wesley); 'strike off the heifer's neck' showing what the people would and should have done to the murderer had he been found, the heifer suffering in his stead the violent death he deserved, the rite enacting the justice that could not be done on the unknown criminal; an acted judgment declaring that murder is worthy of death and the land must be cleansed of blood."
+    "prevalence": "single",
+    "summary": "Keil specifies an animal never worked and never yoked, whose vital force had not been diminished by labour, brought down to a valley of constantly flowing water and killed by breaking the neck."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the heifer was a sacrifice: Clarke calls it a sacrifice made to atone for the murder and explains the untilled ground by that, Henry denies it was a sacrifice at all since it never came to the altar, and Calvin allows that it represented satisfaction by innocent blood while stopping short of calling it a price paid to God."
+  ],
+  "outliers": [
+   "Wesley makes the same animal stand for two opposite figures at once, the murderer who refused the yoke of the law and the Christ who took a yoke upon himself."
+  ],
   "themes": [
-   "a rough valley, neither eared nor sown",
-   "strike off the heifer's neck",
-   "horror of murder begotten",
-   "the murderer's due enacted"
+   "the unyoked heifer",
+   "protestation or sacrifice",
+   "the untilled valley",
+   "a type of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.6
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "5-6",
+  "pericope_label": "The priests come near, and the elders wash their hands over the heifer",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The priests presiding over the rite — 'the priests the sons of Levi shall come near... by their word shall every controversy and every stroke be tried'; the priests plainly of the tribe of Levi, men about whose office there could be no dispute, called to attend and give the rite its sacred character, the cleansing of blood a holy matter not done without the ministers of God (Gill); 'every controversy' concerning every dispute arising about a stroke or wound, whether the mortal stroke here or any other injury one man might do another, the priests the appointed judges in such cases, their word settling the matter (Wesley); the priests, as guardians of God's law and mediators of his people, presiding over the expiation of blood and the trying of controversies, the rite both a legal and a religious act requiring both the elders (civil) and the priests (sacred); the law of blood kept under the eye of the sanctuary."
+    "summary": "Gill notes that the sons of Levi marks men whose descent was beyond question, and places these at the court in Jerusalem to direct the rite and settle difficulties; Calvin explains the washing as a check against protesting inconsiderately, since it was as though they had set the corpse before God and stood opposite it to purge away the crime."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry infers from the priests trying every controversy that God being Israel&rsquo;s King his ministers must be their magistrates, presses that the elders swore to more than a bare denial, and judges that Pilate wretchedly misapplied the rite if he had it in view, since protestations are worth nothing against the fact."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the hand-washing as an ancient sign of innocence and conjectures that Pilate learned it from the Jews; Wesley extends every controversy beyond a mortal stroke to any wound one man gives another."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil limits the priests to attending witnesses who receive the declaration and authorise the act rather than conducting it, and reads the hand-washing as a symbolic clearing of the town from any suspicion of part in the murder."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What Pilate was doing: Clarke reads his hand-washing as the same rite borrowed from Jewish practice, while Henry allows the allusion only to condemn it, since a protestation is worth nothing against the sentence he had just passed."
+  ],
+  "outliers": [
+   "Henry alone spells out how far the oath reached, covering not only the shedding of blood but any concealment of the murderer or help in his escape."
+  ],
   "themes": [
-   "the priests the sons of Levi shall come near",
-   "by their word every controversy tried",
-   "the rite under priestly authority",
-   "before God, not men only"
+   "priests as magistrates",
+   "washing the hands in innocency",
+   "the scope of the oath",
+   "clearing a town of suspicion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The washing of hands to declare innocence — 'all the elders of that city... shall wash their hands over the heifer that is beheaded in the valley'; a symbolic cleansing, the elders declaring themselves free from the guilt of the blood (Keil and Delitzsch); washing the hands an ancient and widely used rite signifying innocence of the crime, probably borrowed by the heathen from the Jews — as Pilate washed his hands, professing himself innocent of the blood of Christ (Mt 27:24, Clarke); no empty form but a rite to stir up the elders that they should not lightly or falsely protest they were guiltless, the ceremony binding them to truth as if they had sworn their innocence over the corpse before God (Calvin); those who could not avenge the blood must at least clear themselves of it; to wash the hands while harbouring guilt, as Pilate did, being to add hypocrisy to sin, the sign availing only with a true conscience."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.72
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wash their hands over the heifer",
-   "a rite of innocence",
-   "as Pilate washed his hands",
-   "the sign avails with a true conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The elders' protestation of innocence — 'our hands have not shed this blood, neither have our eyes seen it'; the elders solemnly affirming that neither did they commit the murder nor so much as witness it and let it pass, their hands clean of the deed and their eyes clear of all connivance; the answer made to the priests who examined them, 'this blood' meaning the blood about which the inquiry was made, or the very blood there present, the corpse thought brought to the same place (Wesley); the elders clearing themselves not only of the act but of all knowledge and neglect, the city wholly free of the guilt so far as men could know; the heads of the city, on behalf of all, openly and before God disowning the blood, lest the unavenged murder be laid to their charge; the law requiring not only the cleansing rite but the spoken truth, the hands washed and the word given together."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "our hands have not shed this blood",
-   "neither have our eyes seen it",
-   "the city disowns the blood",
-   "truth before God, not a mere form"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The prayer for forgiveness of the blood — 'be merciful, O LORD, unto thy people Israel, whom thou hast redeemed, and lay not innocent blood unto thy people's charge. And the blood shall be forgiven them'; the prayer grounding its appeal on God's own act of redemption, pleading that, being redeemed out of Egyptian bondage and claimed as God's own, they might find favour and not be punished for a sin they had no hand in (Gill); begging that the guilt of the unavenged murder be not reckoned against the nation nor the land bear the stain; upon the rite and the prayer, God forgiving the blood, the land cleansed and the people held guiltless; no mortal guilt in the people who had not done the deed, but a ceremonial uncleanness upon the land from the unexpiated blood, expiated and forgiven (Wesley); innocent blood defiling a land and needing cleansing by atonement and prayer; the appeal to redemption the ground of all forgiveness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be merciful, O LORD, unto thy people",
-   "whom thou hast redeemed",
-   "lay not innocent blood to their charge",
-   "the blood shall be forgiven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "7-9",
+  "pericope_label": "Our hands have not shed this blood: the prayer, and the blood forgiven",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill records that the prayer is assigned by some to the elders continuing their declaration and by the Targums and rabbinic sources to the priests; Calvin gives two motives for it, their own possible carelessness and the fear that vengeance might spread as it once did through the sacrilege of one man, and denies that the heifer was a price of satisfaction, grounding forgiveness in humble reconciliation and the shutting of the door against future murders."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "The putting away of bloodguilt — 'so shalt thou put away the guilt of innocent blood from among you, when thou shalt do that which is right in the sight of the LORD'; the guilt which, the murderer not being found, would otherwise have devolved upon the whole people and land, by this rite removed, the nation cleared of the stain an unavenged murder would have left (Gill); the cleansing following only when the people did as God appointed, the rite availing not as a mere ceremony but as an act of obedience to God's command, done in his sight; innocent blood a serious defilement which God will not have lie upon his people, but which must be put away by the means he ordains, the guilt of blood, though the shedder be unknown, not nothing in God's eyes; God providing a way for the land to be cleansed even of a hidden murder, yet requiring his people to do what is right; the typology — the true putting away of bloodguilt by the blood of Christ, the innocent slain for the guilty."
+    "summary": "Henry assumes the priests speak, explains that the murderer might well be of that city or harboured in it so that they must ask not to fare the worse for him, and turns the petition outward into a duty of interceding for a guilty land, emptying by prayer the measure that others fill by their sins."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil follows the case past its close, noting that the death inflicted vicariously on the animal was a substitute only for an absent criminal, so that a murderer discovered afterwards would still suffer it himself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley distinguishes the two kinds of guilt at issue, no mortal guilt in the people but a ceremonial uncleanness in the land, and it is that which had to be expiated and forgiven."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who speaks the prayer: the words read as the elders continuing, but Gill reports the Targums and the rabbinic tradition assigning them to the priests, and Henry writes as though the priests were the speakers throughout."
+  ],
+  "outliers": [
+   "Keil alone follows the case past its close, noting that the heifer&rsquo;s death would not shield a murderer later found."
+  ],
   "themes": [
-   "put away the guilt of innocent blood",
-   "when thou shalt do that which is right",
-   "the land cleared before God",
-   "obedience the way of cleansing"
+   "intercession for a guilty land",
+   "ceremonial uncleanness",
+   "vicarious substitution",
+   "guilt that spreads"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.77
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
    "Matthew Henry",
+   "Adam Clarke",
+   "Keil and Delitzsch",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "10-11",
+  "pericope_label": "A beautiful woman among the captives, desired for a wife",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The law of the captive woman — 'when thou goest forth to war against thine enemies... and thou hast taken them captive'; concerning an arbitrary war against the nations at large, not the war against the Canaanites, who were devoted to destruction and whose women Israel was forbidden to marry lest drawn into idolatry, the captive here from some other and more distant nation (Gill, Calvin, Wesley); a soldier allowed to marry his captive if he pleased, and (as of divorce) for the hardness of their hearts Moses giving this permission, lest, having no lawful way to marry such, they should take liberty to defile them, the law restraining a worse evil by regulating a lesser (Henry); the humanity in the regulation that follows — the captive not to be used at the soldier's lust and cast off, but made his wife with due forms and treated with consideration; the law taking man as he was in the rough circumstances of war and laying a curb of decency and mercy on his desire; what is permitted for hardness of heart not thereby approved."
+    "summary": "Gill restricts the law to a war of Israel&rsquo;s own choosing, since the wars God commanded left no captives, and reports the rabbinic view that the woman might be virgin, wife or widow; Calvin reads the law as parallel to the rules on food, judges that abstaining altogether would have been better, observes how much licence conquerors allow themselves, and says God tempers his indulgence so that men in the fervour of lust retain some religious affection."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the permission an indulgence granted for hardness of heart, given lest men denied it defile themselves and trouble the camp, and measures it against the gospel on three counts before concluding that here the law of Christ far exceeds in glory the law of Moses."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke insists that no forcible possession was allowed even here, where ancient usage counted the woman part of the spoil, and that the man might not use her in any inferior character; Wesley suggests the phrase about desire may cover more than intention and reads the passage as treating two cases, the captor who marries her and the one who does not."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil argues from the opening formula that the law concerns wars with surrounding nations after the conquest and not the Canaanites who were to be cut off."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What kind of concession this is: Henry calls it an indulgence to hardness of heart and openly ranks the gospel above it, while Calvin, reaching much the same verdict on the conduct, presents the law as God restraining a licence conquerors would otherwise take entirely unchecked."
+  ],
+  "outliers": [
+   "Clarke alone reads the law chiefly as a protection, stressing what the captor was forbidden rather than what he was permitted."
+  ],
   "themes": [
-   "when thou goest forth to war",
-   "taken them captive",
-   "not the Canaanites",
-   "permitted for hardness of heart, not approved"
+   "captives and lawful war",
+   "concession to hardness of heart",
+   "protection of the powerless",
+   "lust restrained by rite"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The desire toward the captive — 'seest among the captives a beautiful woman, and hast a desire unto her, that thou wouldest have her to thy wife'; the soldier's eye caught by a captive's beauty, desiring her to wife; no forcible possession allowed even here, though by the custom of nations the captive was adjudged part of the spoils, she was not to be seized and abused at will but, if desired, taken to wife with the forms the law appoints, the law forbidding the brutal use of the captive that war commonly licensed (Clarke); 'hast a desire unto her' a modest expression, the passage supposing the soldier's purpose to be marriage not mere lust (Wesley); the captive perhaps a virgin, wife, or widow, yet to be dealt with not as a slave to be ravished but as a woman to be married (Gill); the law restoring dignity to the captive, even an enemy's daughter protected from outrage; God's law curbing the lusts of the conqueror."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a beautiful woman among the captives",
-   "hast a desire unto her",
-   "to thy wife, not by force",
-   "the law curbs the conqueror's lust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rites of separation from her former life — 'thou shalt bring her home to thine house; and she shall shave her head, and pare her nails'; the bringing-home in order to make her his wife, after certain things were done, not to defile her at once (Gill); the shaving of the head especially a sign of renouncing her former religion and idolatry and becoming a proselyte to the true faith, a custom still used in the East when one changes religion, the shaving and paring marking her putting off of her old self and old gods (Clarke, Wesley); she to lay aside all that belonged to her heathen life — its religion, adornments, very appearance — and become a new woman, embracing the true religion and entering Israel, the rites a kind of mourning and a kind of cleansing; no Israelite to marry an idolatress while she remained such, the captive first to renounce her gods and be received into the covenant people; the change outward and inward both."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bring her home to thine house",
-   "shave her head, and pare her nails",
-   "renouncing her former religion",
-   "conversion before marriage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The month of mourning before the marriage — 'she shall put the raiment of her captivity from off her... and bewail her father and her mother a full month: and after that thou shalt go in unto her, and be her husband'; the raiment of captivity either the fine garments she wore when taken, which stirred desire (Gill), or the sordid raiment captives were clad in (Wesley), either way laid aside; she to remain in the house and mourn her parents, whether their death in the war or her separation from them, a whole month, only after that the man to be her husband; the month of mourning giving the captive time to grieve her losses, to be weaned from her former life, and to compose herself to her new estate, and tempering the soldier's hasty desire, putting a space between the heat of war and the marriage that his love might be proved more than passing lust; the law, even in a hard case, breathing mercy and order, restraining passion and honouring sorrow."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "put the raiment of her captivity off",
-   "bewail her father and mother a full month",
-   "then be her husband",
-   "desire waits on decency and grief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-14",
+  "pericope_label": "Her head shaven, a month of mourning, and her release if he has no delight in her",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The captive's protection if rejected — 'if thou have no delight in her, then thou shalt let her go whither she will; but thou shalt not sell her at all for money... because thou hast humbled her'; the case of a time after the marriage when the man no longer cared for her (Gill, Calvin); she not held against her will nor kept in misery but set at liberty to go where she would, free to return to her own people; the strict protection — the man might not sell her for gain, nor use her as a servile slave, nor prostitute her, having taken her as a wife he could not degrade her to a chattel (Wesley); 'because thou hast humbled her' — having taken her and then put her away he had brought her low, and so was bound to deal honourably and not add insult to the wrong, her very humiliation the ground of her protection; even a foreign captive, taken in war and afterward unwanted, shielded by God's law from being sold, enslaved, or shamed; God's law protecting the weak and the wronged."
+    "summary": "Gill preserves a rabbinic rationale opposite to the others, that her finery was taken away to abate her captor&rsquo;s ardour, and takes the raiment of captivity for the fine garments she was captured in; Calvin detaches the release from the marriage law, assigning it to the commandment against defrauding rather than that against adultery, and weighs liberty against chastity in reckoning what the woman is left with."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the shaving a renunciation of her old religion and her reception as a proselyte, notes the custom surviving in the East, and doubts the usual rendering of the nails, suspecting the staining of them with henna rather than paring or growing; Wesley agrees on the shaving, reads the raiment of captivity as the sordid clothes put on her when taken, and spells out that making merchandise of her covers both servile work and prostitution."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil takes the shaving and the cutting of the nails as customary signs of purification, symbols of her passing out of slavery into the fellowship of the covenant nation, and explains the month as time to console herself for the loss of her parents so that she might give herself henceforth to her husband."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why her head is shaved: Keil makes it purification and adoption into the covenant people, Clarke and Wesley make it renunciation of heathen religion, and Gill preserves a rabbinic explanation that it was meant to cool the desire of the man who wanted her.",
+   "What the raiment of her captivity is: Gill takes it for the finery she was captured in and had to exchange for worn clothes, while Wesley and Keil take it for the prisoner&rsquo;s clothing she had been put into."
+  ],
+  "outliers": [
+   "Calvin alone reclassifies the release under a different commandment, treating it as a question of property and restitution rather than of chastity, so that the penalty of lust is the loss of the booty."
+  ],
   "themes": [
-   "if thou have no delight in her",
-   "let her go whither she will",
-   "thou shalt not sell her",
-   "her dignity guarded in dismissal"
+   "purification or renunciation",
+   "the raiment of captivity",
+   "a month of mourning",
+   "restitution and liberty"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.54
+   }
   }
  },
  "15": {
@@ -503,103 +426,119 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "15",
+  "pericope_label": "If a man have two wives, one beloved and another hated",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill treats two wives as supposed but not approved, permitted for hardness of heart against the order of creation, the law being made only to prevent confusion once the custom had taken hold."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the verse as an exhibit against having more than one wife, listing the strife, jealousy and vexation it must produce, and suggests the law left it unrestrained in hope that experience of its inconvenience would end it; he also finds in the framing of the case a rule of providence, that God sides with the weakest and gives more abundant honour to the part that lacked."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The law of the firstborn's right, against favouritism — 'if a man have two wives, one beloved, and another hated... and if the firstborn son be hers that was hated'; 'hated' meaning loved less, not loathed, as Jacob 'hated' Leah, loving her less than Rachel (Gen 29:31), and 'Esau have I hated' meaning loved less than Jacob (Mal 1:3, Clarke); the firstborn son the child of the less-loved wife, the danger that the father out of affection would set the beloved wife's younger son above the true firstborn; the law showing the mischief of having more wives than one, tolerated for the hardness of men's hearts but not approved nor so from the beginning, polygamy breeding such rivalries and injustices (Henry, Wesley); a part and supplement of the Eighth Commandment, that every one's rights be preserved, the firstborn's right his property not to be taken by caprice (Calvin); God guarding the rights even of the unloved."
+    "summary": "Clarke establishes that hated means loved less throughout Scripture, illustrating from Jacob and Leah and from Jacob loved and Esau hated, and holds that Moses suffered polygamy under regulation without ever enjoining it; Wesley states that the practice is tolerated rather than made lawful and that the law provides only for the children."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Henry alone turns the case into a providential rule rather than a legal one, reading the mother of the firstborn as compensated for being the less loved wife."
+  ],
   "themes": [
-   "two wives, one beloved, one hated",
-   "'hated' means loved less",
-   "the firstborn of the hated",
-   "the mischief of polygamy"
+   "polygamy tolerated, not approved",
+   "hated as loved less",
+   "providence favouring the slighted",
+   "strife in a divided house"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.36
+   }
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
+   "Keil and Delitzsch",
+   "John Calvin"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The forbidding of preferring the younger — 'he may not make the son of the beloved firstborn before the son of the hated, which is indeed the firstborn'; when the father came to divide his goods and make his sons his heirs, he was not permitted to set the younger son of the beloved wife in the place of the firstborn when the firstborn was in truth the son of the less-loved wife, the true firstborn's right not to be given to another (Keil and Delitzsch); birthright a matter of fact and of right, not of the father's pleasure, the eldest son the firstborn whether his mother were loved or unloved, his right belonging to him by birth not by favour; however much the father loved the one wife and her son, he could not rob the true firstborn of his due, affection not to overturn justice; the law securing the rights of the elder son against a father's natural bias, a bias that bred bitter strife in families; God's law subjecting even a father's love to the rule of justice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "may not make the beloved's son firstborn",
-   "before the son of the hated",
-   "birthright by fact, not favour",
-   "affection not to overturn justice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "16-17",
+  "pericope_label": "He shall acknowledge the son of the hated for the firstborn, giving him a double portion",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "majority",
+    "summary": "Calvin classifies the law as a part and supplement of the commandment against stealing, since substituting one son for another is a kind of theft, explains why polygamy in particular made the safeguard necessary, calls the reassignment of a birthright a near claim to the power of creating, and yet allows a substitution where there is just cause; Gill describes the mechanics, the division by will, word of mouth or deed of gift, and the acknowledgment that separates the firstborn and makes him known to all."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "The firstborn's double portion — 'he shall acknowledge the son of the hated for the firstborn, by giving him a double portion of all that he hath... the right of the firstborn is his'; the father to own and declare him the firstborn, both in his will and in the actual division of his goods, the Targum 'separate' him, distinguish and set him apart from the other sons (Gill); the firstborn to receive twice the share of any other son, the recognized right of primogeniture, his by law not by the father's gift or grace; 'for he is the beginning of his strength' — the firstborn, the first fruit of his father's vigour, holding a right his own, founded in his birth, the father unable to deny it without injustice; the right of the firstborn not the father's to bestow or withhold at pleasure but the son's by the order God set; the typology — the firstborn's double portion foreshadowing the rights of Christ, the Firstborn, and of the church of the firstborn (Heb 12:23)."
+    "summary": "Keil states the substance of the right, a double portion of everything the father has, on the ground that this son is the beginning of his strength."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether a firstborn may ever be passed over: the prohibition reads flatly, but Calvin allows that where there is just cause for disinheriting him another may be substituted, and cites Jacob for it."
+  ],
+  "outliers": [
+   "Calvin grounds the law in a psychological claim the text does not make, that a man who takes a second wife thereby shows he never truly loved the first."
+  ],
   "themes": [
-   "acknowledge the son of the hated for firstborn",
+   "the right of the firstborn",
    "a double portion",
-   "the beginning of his strength",
-   "the right of the firstborn is his"
+   "theft within a family",
+   "the beginning of his strength"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.12
+   }
   }
  },
  "18": {
@@ -607,211 +546,265 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The law of the rebellious son — 'if a man have a stubborn and rebellious son, which will not obey the voice of his father, or the voice of his mother'; having provided that parents not wrong their children by disinheriting the firstborn, it being fit the law next provide that children not withhold the honour and duty they owe their parents, the two laws guarding the rights of both (Henry); by 'rebellious children' designated all who are abusive, insolent, or insulting to their parents, hardened against all correction, no ordinary disobedient youth but one obstinate and incorrigible who despises both father and mother (Calvin); the dishonouring of parents, persisted in, treated as a capital crime, so sacred the bond of family and the authority God set in it; the law, hard as it seems, a powerful preventive of crime, restraining children from the rebellion that ruins them, how many disorders prevented were such a law in force and duly executed (Clarke); rebellion against parents the seed of rebellion against God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a stubborn and rebellious son",
-   "will not obey his father or mother",
-   "the honour of parents guarded",
-   "rebellion against parents the seed of worse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "18-19",
+  "pericope_label": "A stubborn and rebellious son, brought by both his parents to the elders",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The son brought to public judgment — 'his father and his mother shall lay hold on him, and bring him out unto the elders of his city, and unto the gate of his place'; the parents themselves to lay hold of the son and bring him before the elders at the city gate, the place of public judgment, the matter not dealt with in private rage but openly and lawfully; the great safeguard — the agreement of both father and mother needed to prevent the abuse of this law to cruelty, for it could not be supposed both parents would agree to bring their own son to death without his abominable and incorrigible wickedness, a father's or mother's anger alone unable to condemn him, only the concurrence of both against all natural tenderness (Wesley); the parents not made executioners of their own son nor judges in their own cause but bringing him to the public authority who alone could try and condemn; the law guarding against private vengeance and rash passion."
+    "summary": "Gill reports a rabbinic reason for the sequence, that captive marriages often produced refractory children, describes the offender as stubborn in nature and rebellious in action, and records the rule that neither parent acting alone makes a son liable; Calvin generalises the law to all who insult father or mother, derives from it what honouring them means, and praises the procedure as a moderation of the severity, setting it against a Roman father&rsquo;s private power of life and death."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the order of the two laws as deliberate, since impartiality requires that children owe their parents what parents owe their children, and excludes weakness of capacity from the charge, confining it to wilfulness before listing the conduct meant."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the law a powerful preventive of crime and wishes it in force and duly executed today; Wesley explains the requirement of both parents as a guard against cruelty, judges the law righteous once such consent is given, and treats the bringing of the son to the elders as a second caution against hard-hearted parents."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil states the double aim of these laws, that they defend parental authority and at the same time limit it."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone treats the law as a live proposal rather than an antiquity, regretting that no such statute is enforced now."
+  ],
   "themes": [
-   "father and mother lay hold on him",
-   "bring him to the elders at the gate",
-   "both parents must consent",
-   "public judgment, not private rage"
+   "honour owed to parents",
+   "wilfulness, not weakness",
+   "parental authority limited",
+   "both parents must agree"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
   }
  },
  "20": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "20-21",
+  "pericope_label": "This our son is stubborn and rebellious: the men of his city shall stone him",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "The parents' charge against the son — 'this our son is stubborn and rebellious, he will not obey our voice; he is a glutton, and a drunkard'; the parents charging him in open court with obstinate disobedience and with the riotous vices of gluttony and drunkenness, and (according to the Targum) also acknowledging their own sins, owning that some fault of theirs might have helped to bring this calamity (Gill); under the two offences of gluttony and drunkenness others of a like or worse nature comprehended, the glutton and drunkard standing for the whole riotous, dissolute, ungoverned course of life into which the rebellious son had fallen (Wesley); the son who would not obey his parents given over to fleshly excess, contempt of authority and bondage to appetite going together, the one feeding the other; only his abominable and incorrigible wickedness moving the parents to accuse their own son; the riot of the appetites the fruit of a rebellious heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "this our son is stubborn and rebellious",
-   "a glutton, and a drunkard",
-   "the riot of the appetites",
-   "contempt of authority and bondage to appetite"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
+    "summary": "Gill records the Targum that has the parents confess their own sin before accusing, describes a graduated procedure of admonition and beating before three judges prior to any stoning, preserves a tradition allowing the son to be spared on repentance, and reports that the Jews held the law never to have been executed; Calvin argues that a trial must be inferred, since judges who pronounced nothing would be sitting like ciphers, lists the abuses a hearing was meant to catch, and reads the closing clause as purging the land and making an example."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sentence and its warning to all — 'all the men of his city shall stone him with stones, that he die... so shalt thou put evil away from among you; and all Israel shall hear, and fear'; the execution done only after his trial was finished and he was condemned, and (by Jewish tradition) after due admonition and the presence of the appointed judges, not in haste or passion but by lawful sentence, the whole city sharing as the public putting-away of a great evil (Gill); 'put evil away' — the execution purging the community of the wickedness lest it spread or provoke God; 'all Israel shall hear, and fear' — the punishment meant not only to deal with the one offender but to strike fear into all, that children learn to honour their parents and dread rebellion, the severity a deterrent to the whole nation; under so many safeguards this extreme sentence rarely or never actually carried out, the law standing chiefly as a solemn warning, yet the honour of parents deeply impressed."
+    "prevalence": "single",
+    "summary": "Keil takes gluttony and drunkenness as the explanation of the son&rsquo;s refractoriness, and holds that no evidence or judicial inquiry is contemplated at all, the elders not being judges in the strict sense, since the willingness of parents to give up their own child was itself the proof; what the law does is transfer the power of execution from the parents to the town while leaving their authority intact."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley reads the two named vices as standing for others of like or worse nature, and states that the elders were first to examine the cause with all exactness and only then pronounce sentence."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the son was tried: Keil holds that no inquiry is contemplated and the parents&rsquo; charge was proof in itself, while Calvin infers a full hearing from the presence of judges and insists the son must have been allowed to plead, listing the parental malice, stepmother&rsquo;s instigation and fits of passion such a hearing would expose; Wesley and Gill both describe examination and a graduated procedure."
+  ],
+  "outliers": [
+   "Gill alone reports that the law was held never to have been carried out, which puts the whole dispute over its procedure at one remove from practice."
+  ],
   "themes": [
-   "all the men of his city shall stone him",
-   "put evil away from among you",
-   "all Israel shall hear, and fear",
-   "the law a solemn warning"
+   "accusation and proof",
+   "trial before execution",
+   "profligacy as a capital threshold",
+   "a law never executed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.57
+   }
   }
  },
  "22": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Matthew Henry",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "22",
+  "pericope_label": "If a man have committed a sin worthy of death, and thou hang him on a tree",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The hanging of the condemned upon a tree — 'if a man have committed a sin worthy of death, and he be to be put to death, and thou hang him on a tree'; the hanging not the means of death (the man first put to death some other way, by stoning or the sword) but a public exposure added after, the body hung up for shame and warning, marking the peculiar infamy of the crime (Wesley); the law's object to banish inhumanity and barbarism from God's people, and to impress a horror even of a just execution, for the body of a man suspended on a tree a sad and hideous spectacle (Calvin); a word with reference to Christ — 'he that is hanged is accursed of God' (v23), the hanged man bearing in his shameful death a token of the curse of God upon sin (Henry); the typology fulfilled — Christ, made sin for us, hanged upon the tree of the cross and so made a curse for us, that he might redeem us from the curse of the law, 'Cursed is every one that hangeth on a tree' (Gal 3:13), the very mode of his death bearing away the curse."
+    "summary": "Gill takes the opening clause as covering any capital offence and reports the rabbinic restriction of it to the recognised modes of execution; Calvin explains the precept as aimed at the living, to banish barbarism and impress a horror of even a just execution, grounds the rights of burial in the resurrection and in sparing the eyes of the living, insists that God sanctions the mode of punishment while abhorring atrocity, and denies that accursed passes any verdict on the man&rsquo;s salvation."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil holds that the hanging is not the means of execution but a further exposure of a man already put to death with the sword, an intensification of the penalty, and glosses the phrase for a capital offence as literally a right of death."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley agrees that the hanging followed a death inflicted some other way, the public shame being added to the punishment already suffered."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Calvin alone distinguishes between God sanctioning a mode of execution and God abominating what is done with the body afterwards, so that the same law both permits the gallows and forbids leaving a man on it."
+  ],
   "themes": [
-   "a sin worthy of death",
-   "hang him on a tree",
-   "he that is hanged is accursed of God",
-   "Christ made a curse for us, Gal 3:13"
+   "hanging as added shame",
+   "the rights of burial",
+   "the land defiled",
+   "a mark of the curse"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.61
+   }
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
+   "Keil and Delitzsch",
+   "John Calvin",
    "John Wesley"
   ],
+  "range": "23",
+  "pericope_label": "His body shall not remain all night upon the tree, for he that is hanged is accursed of God",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The same-day burial of the hanged — 'his body shall not remain all night upon the tree, but thou shalt in any wise bury him that day; (for he that is hanged is accursed of God;) that thy land be not defiled'; holding of everyone hanged, not the rebellious son only, the exposure to last but a day and the body buried before nightfall (Gill); the exposure for one day sufficing to answer the ends of justice, marking the shame and infamy of the crime, but the law not outraging humanity by leaving the body to rot, even the accursed criminal to be buried (Clarke); the hanged man in a singular manner cursed and punished by God's appointment with a most shameful death, that shame sufficing for him (Wesley); the very word 'accursed of God' applied by the apostle to Christ, hanged on the tree and made a curse for us (Gal 3:13), the same-day burial fulfilled when the body of Jesus was taken down before the sabbath and buried that day (John 19:31); 'that thy land be not defiled' — even in judgment the land kept clean."
+    "summary": "Gill applies the rule to everyone hanged, fixes the removal at sunset from the Targum and the rabbis, and extends the principle to any unburied body kept overnight unless it is kept for its own honour; Calvin allows the phrase real force as a mark of God&rsquo;s curse while denying that it despairs of the man&rsquo;s salvation, and names Paul as the one who applies the passage to Christ."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes accursed of God to signify no more than the highest disgrace and reproach, a man hanging between heaven and earth being reckoned abandoned by both, and holds that the Spirit chose the phrase in this weaker sense precisely so that it might afterwards be applied to the death of Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the single day of exposure as measured to serve public justice without a permanent exhibition of a decaying body, turns the verse against the spiking of heads and the gibbeting of criminals in his own day as barbarism that never prevented the crimes it punished, explains the curse as a forfeiture to the law alighting on the body, and finds mercy walking hand in hand with judgment in the Mosaic penalties; Wesley reads the curse at its strongest, as a singular punishment by God&rsquo;s appointment which is therefore sufficient without the added shame of lying unburied."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil gives the clause and its reason without expounding either, letting the prohibition and the defilement of the land stand as written."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What accursed of God means: Henry reduces it to extreme disgrace and reproach, Wesley raises it to a singular punishment inflicted by God&rsquo;s own appointment, Clarke makes it a legal forfeiture whose curse alights on the body, and Calvin grants it as a mark of the curse while refusing to read it as a verdict on the man&rsquo;s soul."
+  ],
+  "outliers": [
+   "Clarke alone turns the verse into an argument against contemporary penal practice, condemning gibbeting on the ground that it never deterred the crimes it displayed."
+  ],
   "themes": [
-   "his body shall not remain all night",
-   "bury him that day",
-   "he that is hanged is accursed of God",
-   "Christ taken down and buried, John 19:31"
+   "burial before nightfall",
+   "accursed of God",
+   "made a curse for us",
+   "mercy within judgment"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.94
+   }
   }
  }
 }
