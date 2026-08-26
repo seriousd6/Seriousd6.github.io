@@ -10,76 +10,173 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1",
+  "pericope_label": "That which was from the beginning, which we have heard, which we have seen with our eyes, of the Word of life",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The apostolic eyewitness to the incarnate Word — 'that which was from the beginning' (the eternal, pre-existent Word, as the Gospel's prologue, John 1:1); the accumulation of verbs 'heard... seen with our eyes... hands have handled' (fullest sensory certainty, not hearsay); 'the Word of life' joining the titles Word and Life; against any who would make Christ a phantom."
+    "summary": "Press the grammar: the relative is neuter, so it stands for the message concerning the Word rather than for the Son directly, since John would have written the masculine had he meant the person. Robertson takes the anarthrous phrase back past the Incarnation to the eternal purpose of God in Christ; Barnes limits it to the commencement of the manifestation. Both read the catalogue of the senses as proof against Docetism."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Divide on the reach of the phrase — Gill carries it past the prophets, Abraham and Adam to everlasting, Calvin confines it to the beginning of the Gospel and of the Saviour's ministry — but agree that the heaping of testimony serves certainty, since to believe is to hold a firm and undoubting conviction and not lightly to form an opinion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Take the phrase of eternity and of the glorious personage who was from eternity, and press the tenses of seeing and handling: the apostles looked on him not transiently but frequently, and frequently touched his person."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Observes that the epistle conjoins the two titles the Gospel disjoins — he is the vital Word, a living word and not a bare uttered one — and enumerates four senses engaged: the ear over three years of ministry, the eye at the transfiguration and the resurrection, the inward eye of what was rationally collected from sight, and the hand at the proof given to Thomas. Resolving the whole into hearing the gospel loses both the variety of the sensations and the propriety of the words."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: that hands could handle the Word means the Word was made flesh and dwelt in us — the incarnation the ground of the whole testimony."
+    "prevalence": "single",
+    "summary": "Reads the relative personally and answers by the Incarnation: the flesh began of the Virgin Mary though the Word did not then begin. It was from the beginning but manifested only to the angels, who fed on it as their bread; the Life was manifested in flesh so that what can be seen only by the heart should be seen by the eyes also, for we had wherewith to see the flesh but not wherewith to see the Word."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does 'that which was from the beginning' reach back to eternity, or only to the beginning of the Gospel?",
+    "positions": [
+     {
+      "view": "To eternity — past the prophets, Abraham and Adam to everlasting, and beyond the Incarnation to the eternal purpose of God",
+      "held_by": [
+       "John Gill",
+       "John Wesley",
+       "Adam Clarke",
+       "A.T. Robertson",
+       "Augustine of Hippo"
+      ]
+     },
+     {
+      "view": "To the beginning of the Gospel and of the manifestation, since what was from the beginning is precisely what the apostles heard and saw; the eternal reading was adopted through an over-anxiety, especially in the Fathers, to establish a divinity the next verse establishes well enough by itself",
+      "held_by": [
+       "John Calvin",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the neuter relative personal — the Son himself — or the message concerning him?",
+    "positions": [
+     {
+      "view": "Not personal: it stands for whatever about the incarnate Saviour could be submitted to the senses, and the masculine would have been written had the term been applied directly to the Son",
+      "held_by": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Personal — who handles the Word with hands, unless because the Word was made flesh?",
+      "held_by": [
+       "Augustine of Hippo"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Begins from the apostle's omission of his own name, taking it either for humility or for a willingness that the reader be swayed by the weight of the things written rather than by the name attached to them."
+   }
+  ],
   "themes": [
-   "that which was from the beginning",
-   "heard, seen, handled",
-   "the Word of life",
-   "apostolic eyewitness"
+   "That which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, of the Word of life;"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "2",
+  "pericope_label": "The life was manifested, and we have seen it, and bear witness, and shew unto you that eternal life",
   "schools": [
    {
     "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Treats the verse as an important parenthesis, a mark of John's style, heaping reassurance on the reality of the Incarnation: the verb for manifesting makes known what already exists, the witnessing and the announcing are both present indicatives, the relative is qualitative — 'which very life' — and the clause about the Father uses not the verb of becoming but the verb of being, with a preposition of intimate fellowship, exactly as at the Gospel's opening."
+   },
+   {
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The manifestation of eternal life (a parenthesis explaining 'the Word of life') — 'the life was manifested' (ephanerothe, making visible what already existed eternal and unseen; the Life is Christ, the fountain of life); 'we have seen it, and bear witness' (sight grounding witness, witness issuing in preaching); 'that eternal life, which was with the Father' (the Life dwelling from eternity in communion with the Father, the language of personal pre-existence), now made known to men."
+    "summary": "Locate the life in the divine nature. Gill: the Word has life as God in and of himself, underived and independent of another, and this living God, invisible from all eternity, was manifested in human nature in the fulness of time. Calvin: the power of giving life belonged always to the eternal wisdom of God but was not actually exercised before creation, so that the whole object is to remove any suspicion of novelty — life had not now begun to be, though it had lately appeared."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Make him creator and fountain of life to all sentient and intellectual beings, and read the verse as the apostle's own cross-reference: he preached this doctrine of eternal life in the Gospel and now confirms it by the epistle, preaching laying the foundation and writing building on it."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Holds that the fathers under the law shared the same life yet were shut up under a hope not yet revealed, seeking life from a death and resurrection remote from their eyes and hidden from their minds, whereas we hold already revealed the one whom they had only in types."
+   }
+  ],
   "themes": [
-   "the life was manifested",
-   "we bear witness",
-   "eternal life with the Father",
-   "manifested unto us"
+   "(For the life was manifested, and we have seen it, and bear witness, and shew unto you that eternal life, which was with the Father, and was manifested unto us;)"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "3": {
@@ -91,71 +188,82 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "That ye also may have fellowship with us: and truly our fellowship is with the Father, and with his Son",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The goal of the testimony — 'that which we have seen and heard' (the third assertion, hammering home certainty, nothing by hearsay); 'declare we unto you, that ye also may have fellowship with us' (the gospel gathering believers into shared partnership); rising to its height 'our fellowship is with the Father, and with his Son Jesus Christ' (communion not merely human but divine — to be joined to the apostles is to be brought into fellowship with God himself); fellowship, not mere information, the goal."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "declare we unto you",
-   "that ye may have fellowship",
-   "with the Father and the Son",
-   "communion the goal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Define fellowship as having something in common. Barnes guards the clause about the Father: it cannot mean that the apostle's nature was the same as God's or that in anything he was equal with God, only that he partook in some measure of the same feelings, views, aims and joys. Robertson derives the noun from the word for partner, notes that the preposition stresses mutual relationship, reports the manuscripts divided between 'your joy' and 'our joy', and takes the periphrastic perfect to stress a state of completion."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The aim of fullness of joy — echoing Christ's words to the disciples (John 15:11; 16:24), John taking up his Master's language; 'that your joy may be full' (pepleromene, perfect, the settled state of brimming completeness, not partial or fleeting); flowing from the fellowship just described — communion with the Father and Son the spring of the deepest happiness (Calvin: the perfect blessedness through the gospel); the joy of faith (Wesley); John writing to gladden, not burden."
+    "summary": "Read the repetition as serving certainty — the heralds Christ chose were men fit to be witnesses of the very things they had to declare — and the writer's motive as pure invitation. Calvin adds that the ungodly have a mutual union of their own, but it is without God and serves to alienate them further, which is the extreme of all evils. Gill lists what the things written are: the deity and eternity of the Word, the truth of his humanity, and the fellowship of the saints with the Father and the Son."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Insist that nothing here comes by hearsay, tradition or conjecture, expand fellowship into a real participation in the grace, peace, love and life of God, and distinguish a joy of hope, a joy of faith and a joy of love, taking the joy of faith to be directly meant."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the closing clause read 'your joy' or 'our joy'?",
+    "positions": [
+     {
+      "view": "The best editions now read 'your', where the common text had 'our'",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The manuscripts differ here, as they often do between the two",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Makes the fulness a test of proficiency: whoever really perceives what fellowship with God is will be satisfied with that alone and burn no more for other things, counting himself happy in communion with God and preferring it to the whole world."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Hears almost the words our Lord used before leaving his disciples at John 15:11, and thinks John had them in mind."
+   }
+  ],
   "themes": [
-   "these things write we",
-   "that your joy may be full",
-   "joy from fellowship",
-   "fullness of joy"
+   "That which we have seen and heard declare we unto you, that ye also may have fellowship with us: and truly our fellowship is with the Father, and with his Son Jesus Christ.",
+   "And these things write we unto you, that your joy may be full."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "5": {
@@ -164,38 +272,96 @@
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "5",
+  "pericope_label": "This then is the message which we have heard of him: God is light, and in him is no darkness at all",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The central message from Christ — 'God is light' (a comprehensive figure: God's wisdom, holiness, purity, glory, and love; what light is to the natural eye, God is to the spiritual, Wesley); 'in him is no darkness at all' (no admixture of ignorance, sin, error, or evil, no contrary principle); the foundation for the moral argument — because God is light, fellowship with him demands walking in light; 'light' speaking at once of holiness and self-revealing glory."
+    "summary": "Fix the preposition — the message is from him, not concerning him, the sum of what was received out of all that he said — and insist on the absence of the article: not the light nor a light but light itself, the source and fountain of light in all worlds, all knowledge with no ignorance, infinitely true and never countenancing error. Barnes reads the negative half as John's habit of guarding an affirmation so that no mistake can be made, asserting a perfection not even the smallest spot could dim."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Weigh the word for what is delivered. Calvin will not disapprove the old rendering 'annunciation', the noun most often meaning a promise though the context seems to want the wider sense, and draws the consequence that God so hates an evil conscience and all that belongs to darkness that as long as we walk in darkness there is a separation between us and him. Gill reports the Syriac giving simply 'this is the Gospel', others 'this is the promise'."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Argue from the properties of the creature: light is the purest, most subtile, most useful and most diffusive of God's works and so a fit emblem, God being to the human soul what light is to the world — without his indwelling brightness religion is an empty science and a dead letter, the soul a trackless wilderness and a howling waste."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Settles the pronoun by position, the Son being both the immediate sender of the apostles and the nearest antecedent, and adds the dignity of the errand: apostolic ministers are the messengers of the Lord Jesus and can pretend to nothing higher. Takes the report to concern the moral perfection we are to imitate — God's holiness, his penetrative knowledge of hearts, and his justice, which burns as a most bright and vehement flame."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How should the noun rendered 'message' be taken?",
+    "positions": [
+     {
+      "view": "The old rendering 'annunciation' is defensible; the noun most often means a promise, and if that sense is kept the promise has a condition annexed to it",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Rendered variously — the Syriac simply 'this is the Gospel', others 'this is the promise', that those who walk in the light shall have communion and others shall not",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The noun is rare, occurring only here and once later in the epistle",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Presses the from-him sense into a comparison of dispensations: neither Moses nor the prophets gave the full instruction about God and communion with him which Christ has given."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Suspects the negative half aimed at a specific error, that of charging God with the authorship of the sin and misery in the world."
+   }
+  ],
   "themes": [
-   "this is the message",
-   "God is light",
-   "no darkness at all",
-   "God's holiness"
+   "This then is the message which we have heard of him, and declare unto you, that God is light, and in him is no darkness at all."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "6": {
@@ -205,74 +371,109 @@
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The first false profession tested — 'if we say that we have fellowship with him' (professing communion with God) 'and walk in darkness' (yet living in sin, the life flatly contradicting the claim); the verdict 'we lie, and do not the truth' (false in word and deed, neither speaking nor practising truth); Calvin's logic of inconsistency — since God is light and sanctifies his own, claiming fellowship while in darkness is self-contradiction; striking at religion of mere profession divorced from holiness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if we say we have fellowship",
-   "walk in darkness",
-   "we lie",
-   "profession without holiness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "6-7",
+  "pericope_label": "If we walk in the light, as he is in the light, the blood of Jesus Christ his Son cleanseth us from all sin",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The true reality — 'if we walk in the light, as he is in the light' (a life of holiness, truth, and openness, conformed to the God who is light, 1 Tim 6:16); the first fruit 'we have fellowship one with another' (communion with God and among believers, the thing the false professor only claimed); the second 'the blood of Jesus Christ his Son cleanseth us from all sin' (present tense, ongoing purification even as we walk in light); light and atonement joined, guarding against both the lawless and the perfectionist."
+    "summary": "Barnes insists the contradiction is objective rather than psychological — the false professor need not have meant to deceive — and blocks the softer contemporary reading that walking in darkness means only doubt about one's religious state. He unpacks walking in light as a holy life, embracing truth, and enjoying religion's comforts, the measure differing in degree but the light being of the same kind. Robertson supplies the syntax and reverses the order of dependence: we cannot have fellowship with one another unless we have it with God in Christ; the blood is real blood, no mere phantom, and not the mere example of Jesus."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin classifies the argument formally as one from what is inconsistent, but rests it on a higher principle, that God sanctifies all who are his: the grace of Christ serves to dissipate darkness, and what God communicates is no vain fiction. Facing the objection that no man exhibits God's light purely, he answers that such expressions are accommodated to the capacities of men — he is like God who aspires to his likeness however distant, and integrity of conscience alone distinguishes light from darkness. Gill reads the claim as the profession of any who claim to partake of the divine nature."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies a historical target in the Gnostics, great pretenders to the highest degrees of divine illumination whose manners were excessively corrupt, and reads the cleansing verb as continuous — it keeps clean what it has made clean. Wesley presses the saying inward: it may be made with the tongue or in the heart, and the darkness may be inward or outward."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the fellowship of verse 7 with one another, or with God?",
+    "positions": [
+     {
+      "view": "With him — versions and manuscripts read the singular, and God and a holy heart are in continual correspondence",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "With one another, and grounded in resemblance: sharing God's views and ends, believers resemble each other",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "With one another, but only derivatively — there is no fellowship with one another apart from fellowship with God in Christ",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does it mean that the blood cleanses from all sin?",
+    "positions": [
+     {
+      "view": "Continuous cleansing now, keeping clean what it has made clean, and complete: Christ is not a partial Saviour",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Either that all past sin is forgiven or that the blood will ultimately purify us, and available only on the conditions of repentance and faith",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "A benefit perpetually residing in the Church and daily offered to the faithful, the whole and not the half assigned to the blood of Christ",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Turns the clause against Rome twice over: pardon is not confined to baptism with satisfactions after, and the treasury of the merits of martyrs makes the blood of Christ a partial aid rather than the whole cleansing."
+   }
+  ],
   "themes": [
-   "if we walk in the light",
-   "fellowship one with another",
-   "the blood cleanseth from all sin",
-   "holiness and atonement"
+   "If we say that we have fellowship with him, and walk in darkness, we lie, and do not the truth:",
+   "But if we walk in the light, as he is in the light, we have fellowship one with another, and the blood of Jesus Christ his Son cleanseth us from all sin."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "8": {
@@ -283,74 +484,132 @@
    "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "8-9",
+  "pericope_label": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The denial of sin condemned — 'if we say that we have no sin' (professing no inward principle or taint of sin, to be already perfect; a real error, perhaps the Gnostics who held matter evil but the soul untainted and so denied guilt, Robertson); 'we deceive ourselves, and the truth is not in us' (self-deceived, the saving truth absent); commending grace from its necessity — since no one is free from sin, all need pardon, and to deny sin spurns the grace that saves (Calvin); guarding the cleansing blood of v7."
+    "summary": "Barnes declines to pin the error on the Nicolaitanes but turns the verse against perfectionism, holding that it condemns not only the denial of past sin but the profession of present entire sanctification, and objects that 'just' cannot bear its strict sense since forgiveness is an act of mercy — preferring that God is just to his Son in the covenant of redemption. Robertson defines the claim as no personal guilt and no principle of sin, traces it to the Gnostic axiom that matter is evil and the soul uncontaminated, and reads the confessing as continuous."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin commends grace from its necessity and recalls that Augustine refuted the Pelagians from this verse, wisely judging that confession of guilt is required not for humility's sake but lest we by lying deceive ourselves. On 'just' he presses further than the others: God might have been just dealing with us in all the rigour of justice, but having bound himself by his word he would not have himself deemed just except he forgives. Gill lists the evidence that believers still sin and restricts the direction of confession to God alone."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the heretics as denying that they had any sin or needed a Saviour, rehearses the Gnostic doctrine that the Aeon left Jesus at his arrest, divides sin into guilt requiring pardon and pollution requiring cleansing, and holds it the birthright of every child of God to be cleansed from all sin in this life. Wesley reads the just-then-he-will-punish objection as a feint: when the debt is paid, equity cancels the bond."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "States the principle flatly — the Christian religion is the religion of sinners, of such as have sinned and in whom sin in some measure still dwells, and the Christian life is a life of continued repentance — and separates the two consequences of denial: it deceives us, and it dishonours God by challenging the veracity of one who testified to the world's sin by providing a sacrifice needed in all ages."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the verse exclude a claim to be entirely cleansed from sin in this life?",
+    "positions": [
+     {
+      "view": "Yes: it applies to those who profess to have become perfectly sanctified as much as to those who deny past sin, and such a man must know little of his own heart",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "No: to plead for the continuance of sin through life is ungrateful, wicked and even blasphemous, and it is the birthright of every child of God to be cleansed from all sin",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Neither: the cleansing is real but unfinished, not today or tomorrow but daily carried on until God at length completes it",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense is God 'just' to forgive?",
+    "positions": [
+     {
+      "view": "Not in the strict sense, since forgiveness is never an act of justice but of mercy; rather he is just to his Son in the covenant of redemption",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Justice depends here on fidelity: having bound himself by his word, he would not be deemed just except he forgives",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Just because the atonement has been made, so that equity now cancels the bond and consigns the purchased possession",
+      "held_by": [
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "To whom is confession to be made?",
+    "positions": [
+     {
+      "view": "To God alone, against whom sin is committed and who only can pardon; faults against neighbours may be owned to them, but that is another matter",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "To God and to one another, as urged throughout the New Testament from John the Baptist on",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Closes with a challenge rather than an argument: who would go out at midnight under the open heaven, lift up his hands towards the stars, and say he had no sin to confess — that he was as pure as the God who made them?"
+   }
+  ],
   "themes": [
-   "if we say we have no sin",
-   "we deceive ourselves",
-   "the truth is not in us",
-   "denying sin"
+   "If we say that we have no sin, we deceive ourselves, and the truth is not in us.",
+   "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The promise to confession — 'if we confess our sins' (homologomen, present, continual honest acknowledgment to God, not hiding or excusing); the ground in God's character 'he is faithful and just' — faithful because he promised, and (strikingly) just, not merely merciful; God's very justice securing pardon because Christ's blood satisfied justice, so to forgive the confessing sinner is now the righteous thing (Wesley); the twofold blessing 'forgive... and cleanse from all unrighteousness' (pardon of guilt and purging of pollution)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if we confess our sins",
-   "faithful and just",
-   "to forgive and to cleanse",
-   "confession meets pardon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
@@ -358,36 +617,56 @@
    "John Gill",
    "Albert Barnes",
    "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
+   "John Calvin"
   ],
+  "range": "10",
+  "pericope_label": "If we say that we have not sinned, we make him a liar, and his word is not in us",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The gravest denial — distinguished from v8: there the principle of sin denied ('we have no sin'), here actual sins committed ('we have not sinned,' a claim to an innocent past); 'we make him a liar' (since God throughout Scripture declares all guilty, claiming never to have sinned charges God with falsehood); Calvin: such a one blasphemes God and accuses him of untruth; 'his word is not in us' (the word that convicts of sin having no place); the climax — denying sin impugns God's truthfulness."
+    "summary": "Barnes reads verses 8 and 10 as a pair covering present and past, so that no claim to perfection can be laid in either direction, and grounds the charge of making God a liar in the sheer uniformity of Scripture on the sinfulness of man; 'his word is not in us' therefore means no true religion, since the whole system rests on man being fallen and needing a Saviour. Robertson marks the perfect active as a denial of specific acts where verse 8 denied the principle, and relays David Smith's two causes of the claim to personal perfection: the stifling of conscience and ignorance of God's word."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin escalates the charge from self-deception to blasphemy — whoever tries to escape it carries on war with God and accuses him of falsehood, as though he condemned the undeserving — and turns 'his word is not in us' toward progress: we make due progress in the knowledge of the word only when we become really humbled, so as to groan under the burden of our sins and flee to the mercy of God. Gill spells out what the denial must include: that men come into the world pure and holy, and that concupiscence is not sin."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Closes the chapter with sixteen numbered reflections rather than a comment, among them that all meanness was in doing the wrong and not in confessing it, that the terms of pardon require no penance, pilgrimage or voluntary scourging, and that a cloud between us and the sun leaves it shining undimmed, midnight being no evidence of the sun shorn of his beams."
+   }
+  ],
   "themes": [
-   "if we say we have not sinned",
-   "we make him a liar",
-   "his word is not in us",
-   "the worst denial"
+   "If we say that we have not sinned, we make him a liar, and his word is not in us."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  }
 }

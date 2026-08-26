@@ -29709,6 +29709,76 @@
       "book": "1john",
       "chapter": "5",
       "note": "Self-graded A across all 21 entries, one per verse. Every claim traced to a named block in data/commentary/cow/1john/5.json and attributed to the voice that makes it. Jamieson excluded as residue at the four stride-6 keys 1, 7, 13 and 19, donor Philippians 2 read sequentially, and declared in excluded_voices on the entries covering them. Cyril of Jerusalem treated per key: the block at key 1 is correctly keyed and was used live, the block at key 10 is the displaced duplicate that also appears three times in mark 10 and was declared residue; he is invisible to the validator label regex, so his words never count toward usable source totals either way. The editorial footnote merged into the Calvin block at key 7 was not attributed to Calvin, and the entry states explicitly that it reverses his conclusion. Nothing was drawn from the truncated tails of the five 200-word Gill blocks. Where Clarke quotes Wesley by name at keys 8 and 19, the material is credited to both as the source itself credits it. On the disputed verse at 7 no position is presented as settled: each voice is reported with the grounds it actually gives."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "5"
+      ],
+      "note": "Jamieson donor bug, 16th consecutive chapter. The single Jamieson, Fausset and Brown block filed at key 5 is Ephesians 6:2 material — commentary on 'Honour thy father and mother' — with no bearing on 'God is light'. Only one Jamieson block exists in this chapter, so no drift slope can be established (contrast matthew 6, where six blocks gave a clean 5/6 slope, and luke 14, where the mapping was identity into Luke 6). Block excluded from the synthesis."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "6-10"
+      ],
+      "note": "Cyril of Jerusalem: the SAME Catechetical Lecture block on 'forgive us our debts' — the block used correctly at matthew 6 key 12 — is triplicated verbatim at keys 6, 8 and 10 of this chapter. The misfiling mechanism here is keyword match, not index drift: the block quotes 1 John 1:8 ('If we say that we have no sin, we deceive ourselves'), and the matcher has evidently filed it against every key in the neighbourhood of that quotation. Distinct from the Jamieson defect, which is a verse-index slope. All three copies excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Book-introduction bleed at key 1. Adam Clarke's key-1 block runs 6,515 words and Albert Barnes's 4,191, and both are almost entirely introduction to the epistle rather than comment on verse 1 — authorship, date, the Gnostic background, canonicity. Clarke's also carries a long excursus on the Johannine Comma at 1 John 5:7, four chapters away. Separately, Barnes has NO verse-1 comment at key 1 at all: his verse-1 material sits at key 2 under the heading 'and 2 of 1st John Chapter 1 Verse 1', and was used in the key-1 tile where its content belongs."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "10"
+      ],
+      "note": "Barnes's key-10 block is 1,584 words, of which roughly 300 comment on verse 10; the remaining ~1,280 are the chapter's closing REMARKS, sixteen numbered reflections on 1 John 1 as a whole, filed against the last verse key. Legitimate material but not verse comment — drawn on for the closing tile and recorded as an outlier rather than treated as key-10 exegesis."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Genuine three-way split on 'that which was from the beginning'. Gill, Wesley, Clarke, Robertson and Augustine take it of eternity; Calvin and Barnes confine it to the beginning of the Gospel and of the manifestation. Calvin does not merely differ, he charges the opposing reading with motivated exegesis: it was adopted through 'an over-anxiety, in many and especially in the Fathers, to establish a divinity' which verse 2 establishes well enough on its own. Foregrounded rather than smoothed."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "8-9"
+      ],
+      "note": "Direct clash on entire sanctification across adjacent verses. Barnes turns verse 8 explicitly against 'those who profess to have become perfectly sanctified, and to live without sin' — such a man 'must know little of his own heart'. Clarke, commenting on verse 9, asserts the contrary in as many words: pleading for the continuance of sin through life is 'ungrateful, wicked, and even blasphemous', and cleansing from all sin is 'the birthright of every child of God' in this life. Calvin occupies neither position, reading the cleansing as real but progressive — 'not today or tomorrow'. Recorded as a debate on key 8 with all three positions."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "1john",
+      "chapter": "1",
+      "verses": [
+        "1-10"
+      ],
+      "note": "Self-graded A on all seven tiles. Voice pool is unusually thin for a COW chapter — ten distinct voices, of which Jamieson and Cyril of Jerusalem are both defective (see source-defect notes), leaving eight usable: Augustine of Hippo, Gill, Henry, Barnes, Clarke, Robertson, Calvin, Wesley. Grounding pre-check over the whole candidate set returned UNGROUNDED: []. 33,875 usable source words to 4,020 prose words, 8.4:1."
     }
   ]
 }
