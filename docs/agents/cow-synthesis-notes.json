@@ -30237,6 +30237,111 @@
         "16"
       ],
       "note": "If the land was to be divided by lot, why appoint commissioners at all? Calvin raises the question directly and answers that the distribution had to take account of the numbers in each tribe, so that the lot fixed only which district fell to whom while the judges fixed the dimensions; and the lot was still needed because men would have refused the sea-coast, or the mountains, or the extremities, and contended beyond measure. Ellicott reaches the same result independently, that position and not dimension was determined by lot. Henry and Gill answer more simply, that the commissioners presided at the casting, settled disputes and guarded against fraud."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "11",
+        "17"
+      ],
+      "note": "Jamieson donor bug, 19th consecutive chapter, cross-book donor as at 1thessalonians 4. All three Jamieson, Fausset and Brown blocks are Galatians 5-6 material: key 5 is Gal 5:19-23 (the works of the flesh against the fruit of the Spirit), key 11 is Gal 5:25 ('if we live by the Spirit, let us also walk by the Spirit'), key 17 is Gal 6:3 (self-conceit, 'nothing is a fitter hindrance to forbearance'). Keys advance by 6 each time; the donor advances 5:19 to 5:25 to 6:3, so the mapping is near-monotonic but not a clean constant slope. Second consecutive chapter whose Jamieson donor is a different BOOK rather than a neighbouring chapter. All three excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "10",
+        "14"
+      ],
+      "note": "Cyril of Jerusalem: the SAME 190-word block appears at keys 10 and 14, and is chrome at both. It is Catechetical Lecture 10 on the Lord proclaiming the name of the Lord to Moses at Exodus 33-34, argued to prove that the Son was with the Father. The misfiling mechanism is keyword match on the phrase 'the name of the Lord': James 5:10 has 'the prophets, who have spoken in the name of the Lord' and 5:14 has 'anointing him with oil in the name of the Lord'. Same mechanism as the 1john 1 Cyril case (keyword match on a quoted verse), and distinct from the Jamieson index drift. Both copies excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "20"
+      ],
+      "note": "NEXT-BOOK BLEED. Calvin's key-20 block runs 1,204 words, of which roughly 700 comment on James 5:20 and the remainder continue, without any break in the markup, into 'END OF THE EPISTLE OF JAMES / THE ARGUMENT' — the opening of Calvin's introduction to 1 PETER, discussing Eusebius's doubts about the epistle, Jerome on the difference of style, and whether Peter was its author. A commentary block attributed to James 5:20 therefore contains argument about the authorship of a different book. Distinct from the chapter-analysis bleed seen at 1thessalonians 4 key 1, which stayed inside its own book. Excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "20"
+      ],
+      "note": "Charles Ellicott's key-20 block is 1,194 words, of which roughly 250 are commentary and the remaining ~950 are StudyLight page chrome: copyright footer, inline CSS stylesheet, the site's navigation menu, and a DOMContentLoaded script. Fourth instance of this exact defect in the corpus (luke 14 key 35, nehemiah 9 key 38, 1thessalonians 4 key 18) — all four in the final key of a chapter, which suggests the scraper appends the page footer to whatever block it is on when the verse list ends."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Matthew Henry section-block inflation again. Henry contributes 8,411 words to this chapter in only four blocks: 3,473 at key 1 (covering vv.1-6), 4,515 at key 12 (covering vv.12-20), 200 at key 7 and 223 at key 19. Nothing is filed against the other sixteen keys. Same pattern as nehemiah 9 and 1thessalonians 4; blocks read whole and drawn on across the tiles their content actually covers."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "14"
+      ],
+      "note": "Four-way split on the anointing oil, the sharpest in the chapter. Clarke holds it purely medicinal, arguing in seven numbered points that 'if a miracle was intended, it could have been as well wrought without the oil' and that the text says the prayer of faith saves the sick, not the unction. Calvin refuses that reading in as many words — 'I cannot agree with those who think that it was medicine' — and makes it a sacrament tied to a gift of healing that has ceased, so that those who continue it 'are not the true followers, but the apes of the Apostles'. Wesley takes the opposite view of duration from Calvin: the gift 'seems to have been designed to remain always', and was 'the whole process of physic in the Christian church, till it was lost through unbelief'. Robertson holds medicine and prayer together — 'at bottom in James we have God and medicine, God and the doctor'. Recorded as a debate on key 13."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "3",
+        "7"
+      ],
+      "note": "Clarke and Calvin contradict each other twice over the timing of judgment. On 'the last days' (v.3) Clarke insists 'we are not to understand the day of judgment, but the last days of the Jewish commonwealth', while Calvin holds the phrase means the days of the gospel and points to the judgment, adding that the reference some make 'to the destruction of Jerusalem, has nothing in the passage to favor it'. On 'the coming of the Lord' (v.7) Clarke again takes the fall of Jerusalem, Christ being 'already on his way to destroy this wicked people', where Calvin prefers 'our final deliverance'. Barnes sides with Clarke at v.7 and with Calvin at v.3; Wesley holds both at once. Both recorded as debates."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "20"
+      ],
+      "note": "Whose sins the converter covers. Clarke attacks with unusual heat the view that they are the converter's own — 'this is a dangerous doctrine, and what the Holy Spirit never taught to man' — naming Bishop Atterbury and Scott for holding that the pious act 'engages God to look with greater indulgence on the character of the person that performs it', calling that 'completely antievangelical', and pressing the reductio 'if one pious act can procure pardon for a multitude of sins, what may not be expected from many?'. Robertson reports the same division without heat, noting the Roman Catholics with Mayor and Ropes on that side, and granting 'the language here will allow that, but not New Testament teaching in general'. Ellicott and Calvin take the penitent's sins."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "4"
+      ],
+      "note": "Barnes's key-4 block is 1,225 words, of which roughly 700 are a sustained abolitionist argument: the owner keeps what the slave produces beyond his maintenance, therefore 'the very essence of slavery is fraud'; were the wage fairly paid 'slavery could not live a day'; and the closing test, that slaveholders will not put the Bible into slaves' hands, so 'a system which cannot survive the most full and free circulation of the sacred Scriptures, must be founded in wrong.' NOT a defect — it is his comment on the withheld hire, and the fullest instance so far of a commentator applying a verse to a contemporary institution. Represented in the tile as his reading rather than trimmed away."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "james",
+      "chapter": "5",
+      "verses": [
+        "1-20"
+      ],
+      "note": "Self-graded A on all nine tiles. Ten voices in the chapter, of which Jamieson is wholly defective and Cyril of Jerusalem wholly defective (see source-defect notes), leaving eight usable: Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley. Four schools at the widest tile; no patristic voice survives, so eastern-antiochene and latin-fathers are absent throughout. Grounding pre-check over the whole candidate set returned UNGROUNDED: []. 52,857 usable source words to 5,851 prose words, 9.0:1; nine pericopes (1-2, 3-4, 5-6, 7-8, 9-11, 12, 13-15, 16-18, 19-20), the thinnest at 5.8:1 and the densest at 11.5:1 — deliberately split into nine rather than six so that no tile exceeded the 13:1 ceiling."
     }
   ]
 }

@@ -10,72 +10,115 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "Go to now, ye rich men, weep and howl for your miseries that shall come upon you",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A denunciation of the oppressive rich (not all rich, but the wicked who hoard and defraud) — 'go to now, ye rich men, weep and howl' (not the weeping of repentance but the loud howling of anguish, a prophetic picture of terror, Ellicott) 'for your miseries that shall come upon you' (God's judgments soon to fall); not an exhortation to repent but a denunciation meant to terrify (Calvin), spoken chiefly for the comfort of the oppressed poor (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye rich men",
-   "weep and howl",
-   "miseries that shall come",
-   "woe on the wicked rich"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes rejects both the unbelieving-Jew and the professing-Christian readings and makes the address rhetorical, written to comfort the poor rather than to reach the rich; he notes the denunciation applies wherever the mass are poor and the few rich. Ellicott answers Calvin by name, urging that all prophecy \"whether evil or good, is conditional\", so no irrevocable doom was pronounced by \"a Christian Jeremiah\"; he traces the howling word through the Greek of Isaiah as \"a picture word, imitating the cry of anguish\". Robertson takes the rich simply as a class and finds here \"a certain grim comfort in the hardships of poverty\", noting that the compound for moth-eaten occurs only here, at Job 13:28 and in the Sibylline Oracles."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The rotting of hoarded wealth — 'your riches are corrupted' (sesepen, perfect, already putrefied; the ancients' riches largely stores of grain, wine, oil that spoil when hoarded, Clarke) 'and your garments are motheaten' (costly wardrobes laid up in vain superfluity, eaten while the poor went unclothed); wealth heaped up and withheld decays, its accumulation beyond use its ruin; ridiculing their confidence in fading riches (Calvin)."
+    "summary": "Gill restricts the address to men within the church who were \"not rich towards God\". Calvin denies the unbelieving-Jew reading — \"there is nothing said that can lead to such an opinion\" — and denies too that repentance is in view: it is \"a simple denunciation of God's judgment... for all that he says tends only to despair\", the very verb proving it, since \"repentance has indeed its weeping, but being mixed with consolation, it does not proceed to howling\". Of the hoarding he prefers the harsher of two senses, that these men kept \"everything they could lay hold on, that it might rot uselessly in their chests\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke has James \"assume the very air and character of a prophet\", foretelling desolation \"not only in Judea, but in all the provinces where they sojourned\", and insists the word for riches cannot mean gold or silver, \"for these could not putrefy\", but the produce of fields and flocks. Wesley dates the letter shortly before the siege of Jerusalem and makes those calamities \"an awful prelude of that wrath which was to fall upon them in the world to come\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the rich for \"the worldly and unbelieving Jews\", since the epistle is addressed to the twelve tribes rather than to brethren in Christ, and since these are the men who condemn and kill the just, \"which the Christians had no power to do\": \"they would not hear the word, and therefore it is written, that they might read it.\" On the imperative he agrees with Calvin — \"it is not said, Weep and repent, for this the apostle does not expect from them.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the rich men addressed?",
+    "positions": [
+     {
+      "view": "Unbelieving Jews outside the church, addressed by apostrophe",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Professing Christians within it, since the preceding chapters address believers and these sins are no worse",
+      "held_by": [
+       "John Calvin",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Neither: the address is rhetorical, made for the ears of the oppressed poor rather than expecting the rich to read it",
+      "held_by": [
+       "Albert Barnes",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The rich as a class, believer or unbeliever alike",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is any door of repentance left open to them?",
+    "positions": [
+     {
+      "view": "None: this is denunciation, not exhortation, and \"all that he says tends only to despair\"",
+      "held_by": [
+       "John Calvin",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "All prophecy is conditional, so no irrevocable doom was pronounced",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Refuses to make the charge universal, since some rich men starve amid plenty: \"the poets have imagined Tantalus to be hungry near a table well furnished. There have ever been Tantalians in the world.\""
+   }
+  ],
   "themes": [
-   "your riches are corrupted",
-   "garments motheaten",
-   "hoarded wealth decays",
-   "fading riches"
+   "Go to now, ye rich men, weep and howl for your miseries that shall come upon you.",
+   "Your riches are corrupted, and your garments are motheaten."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "3": {
@@ -88,72 +131,118 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "Your gold and silver is cankered; and the rust of them shall be a witness against you",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The rust that testifies — 'your gold and silver is cankered' (katiotai, rusted through from disuse; though pure gold does not truly corrode, the figure for wealth so hoarded it might as well rust, Ellicott); 'the rust of them shall be a witness against you' (the corrosion bearing witness in God's court to selfish hoarding) and 'shall eat your flesh as fire' (the rust become a figure of consuming judgment); 'ye have heaped treasure for the last days' (amassing perishable wealth when they should lay up in heaven)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gold and silver cankered",
-   "rust a witness against you",
-   "eat your flesh as fire",
-   "heaped treasure for the last days"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes concedes that gold and silver do not properly oxidise but holds that damp gives them a rust-like colour, and that there is \"no reason to suppose that the word was then used in the strict chemical sense\"; he takes the last days of the judgment. On the withheld wages he devotes most of his comment to slavery, the case he takes the verse to fit best: since the owner keeps what the slave produces beyond his maintenance, \"the very essence of slavery is fraud\", and were the wage fairly paid \"slavery could not live a day\". Ellicott locates the corrosion in the base alloy rather than the metal, reads the rust as witness \"not merely against, but convincing yourselves\", takes the last days as \"the days of grace, given you for repentance\", and turns the remonstrance on his own century. Robertson denies the premise outright: \"silver does corrode and gold will tarnish.\""
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The defrauded labourer's cry — 'the hire of the labourers... kept back by fraud' (the rich withholding or delaying the wages of those who reaped their fields, breaking the law requiring payment the same day, Lev 19:13; Deut 24:15); the wages personified 'crieth' to heaven, and 'the cries of them which have reaped are entered into the ears of the Lord of sabaoth' (the Lord of hosts, of irresistible power, hearing the oppressed); sins human laws ignore crying louder to God (Wesley)."
+    "summary": "Gill grants that \"in length of time gold and silver will change, and contract a rustiness\". Calvin makes the rust itself the occasion of wrath, since God \"has not appointed gold for rust, nor garments for moths\" but designed them as helps to human life, so that \"even spending without benefit is a witness of inhumanity\"; and he places the last days at the judgment, denying that the destruction of Jerusalem has anything in the passage to favour it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the fire forward by a textual route, the Syriac dropping the comparative and yielding \"ye have treasured up Fire against the last days\" — not stores of corn and wine but \"a magazine of fire, that shall burn up your city\" — and insists that by the last days \"we are not to understand the day of judgment, but the last days of the Jewish commonwealth\". On the wages he cites the Mosaic laws and a rabbinic parallel catching the text's own image of the cry ascending. Wesley reads the treasuring as irony, laid up \"when it is too late\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are \"the last days\" in which the treasure was heaped?",
+    "positions": [
+     {
+      "view": "Not the judgment but the last days of the Jewish commonwealth",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The day of judgment; the reference to Jerusalem \"has nothing in the passage to favor it\"",
+      "held_by": [
+       "John Calvin",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The days of grace given for repentance, as God waited in the days of Noah",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Can gold and silver rust at all?",
+    "positions": [
+     {
+      "view": "Not properly, but damp gives them the appearance, and the word was not then used chemically",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Not the metal but the base alloy mixed with it for worldly use",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Yes: \"silver does corrode and gold will tarnish\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "In length of time they change and contract a rustiness",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Makes the withheld wage an argument against slavery and offers the Bible itself as the test: slaveholders will not put it into slaves' hands, and \"a system which cannot survive the most full and free circulation of the sacred Scriptures, must be founded in wrong.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Turns the remonstrance on his own contemporaries, \"a swift witness also against the like-minded of this generation, whose God is self, whose religion political economy, and whose one great object in life is to buy in the cheapest market and sell in the dearest.\""
+   }
+  ],
   "themes": [
-   "the hire of the labourers",
-   "kept back by fraud",
-   "crieth",
-   "the Lord of sabaoth"
+   "Your gold and silver is cankered; and the rust of them shall be a witness against you, and shall eat your flesh as it were fire. Ye have heaped treasure together for the last days.",
+   "Behold, the hire of the labourers who have reaped down your fields, which is of you kept back by fraud, crieth: and the cries of them which have reaped are entered into the ears of the Lord of sabaoth."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "5": {
@@ -162,143 +251,121 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "5-6",
+  "pericope_label": "Ye have lived in pleasure on the earth, and been wanton; ye have condemned and killed the just",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Wanton luxury — 'ye have lived in pleasure' (etryphesate, a soft, delicate, voluptuous life) 'and been wanton' (espatalesate, lived lasciviously without restraint), fed by the fraud just named; 'ye have nourished your hearts, as in a day of slaughter' (pampered and fattened themselves like cattle gorged before the kill, their rich living unknowingly fitting them for the slaughter of judgment); the grim irony — the day of feasting the day of slaughter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "lived in pleasure",
-   "been wanton",
-   "nourished your hearts",
-   "as in a day of slaughter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes rescues \"wanton\" from its modern sense, which is \"not in the original\", the word having once meant sportive or gay; on the day of slaughter he canvasses the beast without forethought and the sacrificial festival before preferring the stalled animal fattened for killing. Ellicott alone questions the text, taking the comparative \"as\" for an insertion, so that they nourished their hearts <em>in</em> a day of slaughter, feasting while others died. Robertson keeps the stall-fed image and calls it \"consummate sarcasm on the folly of sinful rich people\", takes the article of \"the just\" as generic, and reads the last clause either way, since \"there is no way to decide definitely\"."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The climax of guilt — 'ye have condemned and killed the just' (the rich, controlling the courts, procuring the legal condemnation and death of the righteous poor, by violence or perverted justice); 'and he doth not resist you' (the just one, powerless, offers no resistance, his helplessness aggravating their cruelty and leaving his cause to God)."
+    "summary": "Gill distributes the charges, since \"all that is here said is not to be understood of the same individuals\", and denies that the just one is Christ, James writing to professors of religion rather than to the Jerusalem council. Calvin denies it too, on a precise ground — \"the death of Christ is not ascribed to the rich, but to the elders and chief priests\" — and takes the just man's silence as duty and helplessness together, since \"he was unprotected and without any help from men\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the luxury at its worst, \"ye have lived lasciviously... and your lives have been scandalous\", agrees that the structure and connection require the righteous in general rather than Christ, and refuses the usual comparison with beasts, since the brute creation is \"regular and consistent\" here where the Gentiles are not. Wesley holds both senses of the just one at once, \"many just men; in particular, that Just One\", and notes that they afterwards killed James."
    }
   ],
   "debates": [
    {
-    "question": "Who is 'the just' that they killed?",
-    "sides": [
+    "question": "Who is \"the just\" whom they condemned and killed?",
+    "positions": [
      {
-      "position": "the righteous poor generally — the class of innocent victims the oppressive rich destroyed (singular used collectively)",
-      "holders": [
-       "Calvin",
-       "Robertson",
-       "most"
+      "view": "Not Christ but the poor believer, since the death of Christ is charged elsewhere to the priests and not the rich",
+      "held_by": [
+       "John Calvin",
+       "John Gill",
+       "Adam Clarke"
       ]
      },
      {
-      "position": "an allusion to 'that Just One,' Christ (Acts 3:14), and the righteous like James the Just",
-      "holders": [
-       "Wesley",
-       "some"
+      "view": "Christ, and by extension every martyr, since all wrong tends towards the murder of the Just One",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A generic singular with no direct reference to one individual, though it pictures the death of Christ and of James alike",
+      "held_by": [
+       "A.T. Robertson",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who does not resist?",
+    "positions": [
+     {
+      "view": "The just man, too feeble or too principled to oppose them",
+      "held_by": [
+       "Albert Barnes",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Undecidable: read as a statement it is the victim, read as a question it is God and the last judgment",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "The oppressors are secure for now, but \"the Lord cometh quickly\"",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Reads the feasting against its sequel: the Passover gathered the richest Jews from every quarter, and under Titus \"they themselves were the victims\"."
+   }
+  ],
   "themes": [
-   "condemned and killed the just",
-   "he doth not resist you",
-   "judicial murder",
-   "the gravest sin"
+   "Ye have lived in pleasure on the earth, and been wanton; ye have nourished your hearts, as in a day of slaughter.",
+   "Ye have condemned and killed the just; and he doth not resist you."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "7": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The call to patience — 'be patient therefore' (makrothymesate, a corollary from the coming judgment on the rich, the assurance of judgment the ground of patience) 'unto the coming of the Lord' (his advent to judge, the imminent judgment on Jerusalem and his final coming); the husbandman's illustration — he 'waiteth for the precious fruit... the early and latter rain' (waiting with long patience through the seasons, unable to hurry the crop); if the farmer waits for corn, will not the believer for a crown? (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be patient unto the coming of the Lord",
-   "the husbandman waiteth",
-   "precious fruit",
-   "the early and latter rain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -306,33 +373,96 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "7-8",
+  "pericope_label": "Be patient therefore, brethren, unto the coming of the Lord: behold, the husbandman waiteth for the precious fruit of the earth",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The call to steadfast hearts — 'be ye also patient' (as the husbandman waits, through the season of trial); 'stablish your hearts' (sterixate, make firm and resolute the inner man, not sinking under oppression; correcting the softness of heart that weakens perseverance, Calvin; take courage, Clarke); the motive 'for the coming of the Lord draweth nigh' (eggiken, his advent near, in judgment on the persecuting nation and his final coming, the ground of steadfastness)."
+    "summary": "Barnes canvasses judgment, the end of the Jewish system and death alike before settling on the destruction of Jerusalem as most natural, the letter falling some ten or twelve years before it; and he registers a difficulty honestly, that Palestine now has no distinct rainy seasons but one continuous wet period, so that \"unless there has been some change in the climate since the times of the New Testament\" the two rains must mean the first showers of autumn and the last of spring. Ellicott builds the section's argument into a paradox — all Christians \"are citizens of a patient kingdom\", whose King \"is patient, because He is strong. Impatience is a sign of weakness. God can afford to wait, for His time is eternity\". Robertson defines the imperative as being of long spirit and puts it as advice to a runner, then asks the awkward question himself: \"how near or nigh did James mean? Clearly, it could only be a hope, for Jesus had distinctly said that no one knew when he would return.\""
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the poor are called brethren, \"of whom he was not ashamed\", where the rich got no such title. Calvin reads the whole preceding denunciation as existing for this consolation, the world's present confusion being one that \"will not be perpetual\"; he presses the husbandman furthest, since the farmer \"suffers his life, so precious to him, to lie long deposited in the bosom of the earth\", and reads the first person as holding believers in suspense \"that they may not promise themselves some particular time\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the coming to be the fall of Jerusalem, Christ being \"already on his way to destroy this wicked people, to raze their city and temple\", dates the two rains to early November and late April, and reads the establishing of the heart as courage — \"do not sink under your trials\". Wesley holds both comings at once: it is \"to destroy Jerusalem\", and \"so is his last coming to the eye of a believer\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the husbandman into a question — \"consider him that waits for a crop of corn; and will not you wait for a crown of glory?\" — and answers the complaint of delay by scale: \"men count time long, because they measure it by their own lives; but all time is as nothing to God.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is \"the coming of the Lord\" they are to wait for?",
+    "positions": [
+     {
+      "view": "The destruction of Jerusalem, already in motion",
+      "held_by": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Our final deliverance, not any intermediate judgment",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The second coming, though how near James meant \"could only be a hope\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Both together — Jerusalem's fall, and the last coming to a believer's eye",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Notices that the two rainy seasons described by travellers no longer answer to the text, and concludes that either the climate has changed or the phrase means simply the first showers of autumn and the last of spring."
+   }
+  ],
   "themes": [
-   "be ye also patient",
-   "stablish your hearts",
-   "the coming of the Lord draweth nigh",
-   "steady the soul"
+   "Be patient therefore, brethren, unto the coming of the Lord. Behold, the husbandman waiteth for the precious fruit of the earth, and hath long patience for it, until he receive the early and latter rain.",
+   "Be ye also patient; stablish your hearts: for the coming of the Lord draweth nigh."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "9": {
@@ -345,113 +475,92 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "9-11",
+  "pericope_label": "Grudge not one against another, brethren: behold, the judge standeth before the door. Ye have heard of the patience of Job",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The warning against murmuring — 'grudge not one against another' (better 'murmur/groan not,' me stenazete; under shared affliction believers grow fretful and vent distress in complaints against their brethren, an inward groan of ill-humour breaking out); 'lest ye be condemned' (such censoriousness itself a fault God will judge); 'the judge standeth before the door' (the Lord at hand, hearing every word, his nearness a check on murmuring); leave wrongs in God's hands (Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "grudge not one against another",
-   "lest ye be condemned",
-   "the judge standeth before the door",
-   "murmuring under trial"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Barnes takes the forbidden thing to be grumbling, the temper of men \"sour, dissatisfied, discontented\" who complain not because they are injured but because others seem weak and foolish, and calls it \"the offspring of pride\"; on \"the end of the Lord\" he reports that Augustine, Luther and Wetstein took it for the death of Christ and refuses that on two grounds, that the Greek word never denotes death, and that it would not square with the clause about pity that follows. Ellicott notes that \"grudge\" has \"curiously changed its meaning from an outward murmur to an inward feeling\", corrects the next clause to \"lest ye be judged\", and closes by measuring the verse against Solon, who called no man happy on earth. Robertson supplies the same correction."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The prophets as patterns — 'take the prophets for an example' (hypodeigma, a copy to imitate, John 13:15; pointing the readers to those who trod the same path); their dignity 'who have spoken in the name of the Lord' (God's honoured spokesmen, yet not exempt from affliction); the double lesson 'suffering affliction, and of patience' (enduring grievous persecution and bearing it patiently); the very people who gloried in having prophets persecuted them (Wesley); the sufferer in noble company."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "take the prophets for an example",
-   "spoken in the name of the Lord",
-   "suffering affliction, and patience",
-   "honoured servants who suffered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Gill keeps the inward sense of repining at another's happiness. Calvin rejects that reading by name — \"but I take another view\" — and makes it an accusing groan, \"when one expostulates with the Lord against another\", so that universal complaint would mean universal condemnation. On the prophets he is careful what kind of comfort is offered: not the proverb that the miserable want companions, since Job's friends spoke with \"the voice of Satan\", but a fellowship \"with whom is blessed\", since in our own troubles we see nothing \"under a foggy sky\" and must \"cast our eyes to another quarter, where the sky is in a manner serene and bright\"."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Job's endurance and the Lord's merciful end — 'we count them happy which endure' (blessed those who hold out under suffering, echoing Christ's beatitude, Mt 5:11; trial the path to blessedness); 'the patience of Job' (no one overwhelmed with troubles so hard, yet he kept his integrity, Calvin); 'the end of the Lord' (the issue God gave, restoring and blessing his latter end); the lesson 'the Lord is very pitiful, and of tender mercy' (the merciful outcome revealing God's compassion)."
+    "summary": "Clarke takes it of audible murmuring and reads the end of the Lord as the issue to which God brought Job's trials, adding the counterpoint that \"this was God's end with respect to him; but the devil's end was to drive him to despair\", and observing that citing Job at all shows him \"to have been a real person\". Wesley has the judge \"hearing every word, marking every thought\", and notes the irony that men who gloried in having prophets could not bear their message."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does \"grudge not one against another\" forbid?",
+    "positions": [
+     {
+      "view": "Inward repining at another's happiness",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Audible grumbling and fretfulness",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "An accusing groan that calls down God's judgment on a brother",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Sets the judge at the door beside a detail of James's own death: among the mocking questions put to him was \"which is the door of Jesus?\", and failing of an answer they said, \"let us stone this James the Just.\""
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Reports that Augustine, Luther and Wetstein read \"the end of the Lord\" as the death of Christ, and refuses that on two grounds: the Greek word never denotes death but termination or issue, and it would not square with the clause about the Lord being very pitiful."
+   }
+  ],
   "themes": [
-   "we count them happy which endure",
-   "the patience of Job",
-   "the end of the Lord",
-   "very pitiful and of tender mercy"
+   "Grudge not one against another, brethren, lest ye be condemned: behold, the judge standeth before the door.",
+   "Take, my brethren, the prophets, who have spoken in the name of the Lord, for an example of suffering affliction, and of patience.",
+   "Behold, we count them happy which endure. Ye have heard of the patience of Job, and have seen the end of the Lord; that the Lord is very pitiful, and of tender mercy."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "12": {
@@ -465,196 +574,200 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12",
+  "pericope_label": "But above all things, my brethren, swear not; but let your yea be yea; and your nay, nay; lest ye fall into condemnation",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The warning against swearing — 'above all things... swear not' (drawn almost verbatim from Christ, Mt 5:34-37); 'neither by heaven... nor any other oath' (the rash profane swearing by creatures common among the Jews, who swore freely fancying such oaths less binding, Wesley); 'let your yea be yea' (plain truthfulness, a Christian's word as good as another's oath); 'lest ye fall into condemnation' (careless swearing profaning God's name)."
+    "summary": "Barnes wants \"a simple affirmation, unaccompanied by any oath or appeal to God or to any of his works\", since \"a man who makes that his common method of speech is the man who will be believed\". Ellicott states the confessional question most fully, granting that the text as it stands \"would support the views of the Essenes, and many of the Paulicians\", giving Huther's contrary argument in fairness, and concluding with the Articles that \"a man may swear, when the magistrate requireth\". Robertson finds no connection with what precedes but says \"it is not out of place here\", corrects condemnation to judgment, and observes that the Jews \"split hairs in their use of profanity... just as professing Christians today use 'pious oaths'\"."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supplies the link the others miss, that impatience should not break forth in rash oaths. Calvin names his opponents — \"the Anabaptists, building on this passage, condemn all oaths, but they only shew their ignorance\" — since neither Christ nor James speaks of oaths in general, and traces the whole vice to a source that is not irreverence but unreliability: \"whence is the wicked habit of swearing, except that such is the falsehood of men, that their words alone are not believed?\""
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke confesses he cannot see what relation the exhortation has to its context, supplies the rabbinic rule that \"a man might swear with his lips, and annul it in his heart\", and alone presses a variant that changes the penalty from judgment to hypocrisy. Wesley holds that James \"does not forbid the taking a solemn oath before a magistrate\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reports the narrower reading, that the prohibition is against swearing at persecutors in the heat of injury, and refuses to stop there."
    }
   ],
   "debates": [
    {
-    "question": "Does 'swear not' forbid all oaths or only profane swearing?",
-    "sides": [
+    "question": "Does the verse forbid all oaths?",
+    "positions": [
      {
-      "position": "chiefly rash, profane, conversational swearing by creatures, not the solemn judicial oath",
-      "holders": [
-       "most",
-       "Wesley",
-       "Henry"
+      "view": "No — it condemns the evasion of swearing by creatures, not oaths in themselves; a man may swear when the magistrate requires",
+      "held_by": [
+       "John Calvin",
+       "Charles Ellicott",
+       "John Gill",
+       "John Wesley"
       ]
      },
      {
-      "position": "all oaths whatever",
-      "holders": [
-       "the Essenes and some sectaries (noted by Ellicott)"
+      "view": "Taken as it stands the text would support those sects that refuse every oath, and Huther argues that the divine oath is nowhere mentioned here and so nowhere forbidden",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the penalty named at the end of the verse?",
+    "positions": [
+     {
+      "view": "Judgment, the act of judging rather than the sentence — not condemnation",
+      "held_by": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Hypocrisy: several manuscripts join the words and prefix a preposition, which names the disease of mental reservation",
+      "held_by": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Admits at the outset that he cannot place the verse: \"what relation this exhortation can have to the subject in question, I confess I cannot see.\""
+   }
+  ],
   "themes": [
-   "above all things, swear not",
-   "neither by heaven nor earth",
-   "let your yea be yea",
-   "plain truthfulness"
+   "But above all things, my brethren, swear not, neither by heaven, neither by the earth, neither by any other oath: but let your yea be yea; and your nay, nay; lest ye fall into condemnation."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Prayer and praise for every condition — 'is any afflicted? let him pray' (the one suffering turning to God for help, not to murmuring or rash oaths); 'is any merry? let him sing psalms' (cheerfulness expressed in praise, joy sanctified heavenward); no time in which God does not invite us — affliction stimulating prayer, prosperity supplying praise (Calvin); the whole life revolving around God's throne (Ellicott); the Christian in both sorrow and gladness remembering God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "is any afflicted? let him pray",
-   "is any merry? let him sing psalms",
-   "prayer and praise",
-   "every mood to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "13-15",
+  "pericope_label": "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The care of the sick — 'is any sick? let him call for the elders of the church' (the presbyters, the recognised officers; bishop and presbyter identical in the apostolic age, Ellicott); 'let them pray over him, anointing him with oil in the name of the Lord' (prayer the heart, anointing its accompaniment, in the Lord's authority); the oil connected with the gift of healing then in the church (Mark 6:13, Calvin/Wesley) or a medicinal use; the Reformed firmly rejecting the later sacramental 'extreme unction' for the dying — here the oil is for healing the living."
+    "summary": "Barnes rescues \"merry\" from its modern sense of light and noisy pleasure, denies that the elders can be the apostles since the instruction was meant to be permanent, and infers that the cure hoped for was therefore \"not miraculous, but... in the use of appropriate means accompanied by prayer\"; on the promise of verse 15 he insists on the restriction that recovery follows if it be God's will, while refusing to let that empty it. Ellicott identifies the elders as presbyters, follows Lightfoot on the identity of bishop and presbyter in the apostolic age, and offers Augustine's phrase for ejaculatory prayer, \"arrows of the Lord's deliverance, shot out with a sudden quickness\". Robertson holds medicine and prayer together: \"at bottom in James we have God and medicine, God and the doctor, and that is precisely where we are today.\""
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin takes the two clauses as covering the whole of life, since \"there is no time in which God does not invite us to himself\", widens the elders beyond pastors to those chosen \"to be as it were censors to protect discipline\", and refuses the medicinal reading outright — \"I cannot agree with those who think that it was medicine\" — making the anointing a sacrament tied to a temporary gift, so that those who continue it \"are not the true followers, but the apes of the Apostles\"."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: this single conspicuous gift remained in the church after the other miraculous gifts were withdrawn, and seems designed to remain always."
+    "prevalence": "several",
+    "summary": "Clarke argues the oil is purely medicinal in seven numbered reasons, chiefly that \"if a miracle was intended, it could have been as well wrought without the oil\", and that the text says the prayer of faith saves the sick and not the unction. Wesley takes the opposite view of duration from Calvin: the gift \"remained in the church long after the other miraculous gifts were withdrawn\", indeed \"seems to have been designed to remain always\", and was \"the whole process of physic in the Christian church, till it was lost through unbelief\"."
    }
   ],
   "debates": [
    {
-    "question": "What is the anointing with oil?",
-    "sides": [
+    "question": "What is the anointing oil?",
+    "positions": [
      {
-      "position": "a symbol attending the gift of miraculous healing then in the church (Mark 6:13), prayer being the heart of the act",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Robertson"
+      "view": "A natural remedy, medicinal and nothing more",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "NOT the sacrament of 'extreme unction' for the dying — the oil here is for healing the living",
-      "holders": [
-       "Ellicott",
-       "the Reformed",
-       "most Protestants"
+      "view": "A sacrament, but one belonging to a gift of healing that has ceased, so that the sign has ceased with it",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "A gift designed to remain always, and lost only through unbelief",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Both at once — medicinal value in the oil, and weight in the prayer",
+      "held_by": [
+       "A.T. Robertson",
+       "Albert Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "is any sick? call for the elders",
-   "let them pray over him",
-   "anointing him with oil",
-   "in the name of the Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The power of believing prayer — 'the prayer of faith' (marked by faith, by the elders and the sick man's trust; not the oil) 'shall save the sick' (sosei, make well, restore to health, no reference to the soul's salvation here, Robertson) 'and the Lord shall raise him up' (the Lord himself the healer); the qualification — not unconditional, faith and prayer sometimes not granted recovery when it would harm the soul (Clarke), submitting to God's will; 'if he have committed sins, they shall be forgiven' (pardon accompanying healing, body and soul)."
+    "voice": "Albert Barnes",
+    "claim": "Turns the instruction to call for the elders into a complaint about his own parishioners: \"why should they presume that their pastor will know of their illness any more than that their physician will?\""
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the prayer of faith",
-   "shall save the sick",
-   "the Lord shall raise him up",
-   "sins shall be forgiven"
+   "Is any among you afflicted? let him pray. Is any merry? let him sing psalms.",
+   "Is any sick among you? let him call for the elders of the church; and let them pray over him, anointing him with oil in the name of the Lord:",
+   "And the prayer of faith shall save the sick, and the Lord shall raise him up; and if he have committed sins, they shall be forgiven him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "16": {
@@ -667,168 +780,93 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "16-18",
+  "pericope_label": "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mutual confession and fervent prayer — 'confess your faults one to another' (chiefly sins against one another, openly acknowledged for reconciliation, and unburdening conscience); the Protestant expositors firm against the Roman auricular use — mutual confession among brethren, not to a priest, to any who can pray in faith (Wesley), the sacramental sense unprovable from the Greek (Ellicott); 'pray one for another, that ye may be healed'; 'the effectual fervent prayer of a righteous man availeth much' (earnest prayer mighty with God)."
+    "summary": "Barnes ties the confession to the sick man of the preceding verse, since the clause adds \"that ye may be healed\", and explains that \"subject to like passions\" means not that Elijah was irritable but that \"he was a mere man\", without which the example could not encourage \"the ignorant, and the weak, and children and servants\". Ellicott treats the confessional controversy historically and evenhandedly, quoting Alford against the Roman reading but noting that some of the ablest Catholic divines have admitted \"that we cannot certainly affirm sacramental confession to have been meant\", and narrating how public confession became private and then compulsory. Robertson commends public confession in the meetings, warning that \"one may confess to the pastor without confessing to God or to the church, with little benefit to anybody\"."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill confines the confession to \"sins committed against one another\". Calvin turns the verse against auricular confession by a reductio — a reciprocal confession being demanded, \"no others are bidden to confess their own sins, but those who in their turn are fit to hear the confession of others\" — and gives his own positive reason for it: \"they who know our necessities, are stimulated to pray that they may assist us; but they to whom our diseases are unknown are more tardy to bring us help.\""
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke uses the same reductio, that the reading \"would require the priest to confess his sins to the people, as well as the people to the priest\", finds the moral effect of social confession in humbling the soul, presses the participle for fervency as \"a prayer as is suggested to the soul and wrought in it by a Divine energy\", and states the difficulty Elijah's case raises: \"there was some reason to apprehend that because Elijah was translated, therefore he was more than human, and if so, his example could be no pattern for us.\" Wesley notes what the text does not say: \"he does not say, to the elders... We may confess them to any who can pray in faith.\""
    }
   ],
   "debates": [
    {
-    "question": "Does 'confess your faults one to another' support auricular confession to a priest?",
-    "sides": [
+    "question": "Does the verse support confession to a priest?",
+    "positions": [
      {
-      "position": "no — it enjoins mutual confession among brethren, to any who can pray in faith, not to a priest; the sacramental meaning cannot be established from the text",
-      "holders": [
-       "Wesley",
-       "Ellicott",
-       "the Reformed",
-       "most Protestants"
+      "view": "No, and the reciprocity refutes it: the priest would then have to confess to the people as well",
+      "held_by": [
+       "Adam Clarke",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "No — it is confession between brethren, or to any who can pray in faith, not to the elders alone",
+      "held_by": [
+       "John Gill",
+       "John Wesley",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "No, though some of the ablest Catholic divines have themselves granted that sacramental confession cannot certainly be affirmed here",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "confess your faults one to another",
-   "pray one for another",
-   "that ye may be healed",
-   "the fervent prayer of a righteous man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Elijah as proof of prayer's power — 'a man subject to like passions as we are' (homoiopathes, of the same nature and weaknesses, not a superhuman saint, so none think such prayer beyond ordinary believers); 'he prayed earnestly' (the Hebrew idiom 'with prayer he prayed,' marking intensity) 'that it might not rain: and it rained not... three years and six months' (heaven shut at the prophet's request; James supplying the detail behind 1 Kings); God making heaven subject to Elijah's prayer (Calvin)."
+    "voice": "Charles Ellicott",
+    "claim": "Traces how the practice drifted: open confession before the congregation was moved to a private hearing for the sake of \"the young and innocent\", a change \"hardly suspected of being a step in a completely new doctrine\", which needed centuries \"to develop into the hard system of compulsory individual bondage\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Elias a man of like passions",
-   "he prayed earnestly",
-   "it rained not three years and six months",
-   "prayer's power"
+   "Confess your faults one to another, and pray one for another, that ye may be healed. The effectual fervent prayer of a righteous man availeth much.",
+   "Elias was a man subject to like passions as we are, and he prayed earnestly that it might not rain: and it rained not on the earth by the space of three years and six months.",
+   "And he prayed again, and the heaven gave rain, and the earth brought forth her fruit."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second prayer restoring the rain — 'he prayed again' (the same prophet who shut heaven now opens it; the praying found where Elijah cast himself down on Carmel, face between his knees, 1 Kings 18:42); 'the heaven gave rain, and the earth brought forth her fruit' (the drought broken, the barren land revived to harvest); the two prayers together — one shutting, one opening heaven — the full demonstration that prayer is mighty in both directions; crowning v16."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he prayed again",
-   "the heaven gave rain",
-   "the earth brought forth her fruit",
-   "prayer restored blessing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The closing concern for the wanderer — 'if any of you do err from the truth' (planethe, stray, whether by doctrinal error or sinful practice; the truth at once a creed to believe and a way to walk; some doctrinal mistake usually at the bottom of every practical error, Henry); 'and one convert him' (another in love turning the wanderer back, the work of restoration belonging to the brethren); the last and dearest of the apostle's remarks (Ellicott), ending not in condemnation but in hope of restoration."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if any err from the truth",
-   "and one convert him",
-   "the wandering brother",
-   "recovery of the straying"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -836,33 +874,85 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "19-20",
+  "pericope_label": "Brethren, if any of you do err from the truth, and one convert him; let him know, that he which converteth the sinner shall save a soul from death",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The blessedness of saving a soul — 'let him know' (be absolutely sure, for encouragement); 'he which converteth the sinner from the error of his way shall save a soul from death' (the soul, of more value than the body, rescued from eternal death); 'shall hide a multitude of sins' (the convert's many sins covered, blotted out, forgiven in his conversion; the proverb 'love covereth a multitude of sins,' Prov 10:12; 1 Pet 4:8, fulfilled); the recovery of a soul among the greatest works, the gracious close of a practical epistle."
+    "summary": "Barnes insists that \"convert\" here \"does not mean convert him as a sinner, or regenerate him, but turn him from the error of his way\", so that the man \"may have been a true Christian before\"; against the manuscripts reading \"his soul\" he takes the soul saved to be the convert's, \"since it is nowhere else taught that the method of saving our souls is by converting others\". Ellicott shifts the emphasis from the erring man's will to his company and refuses to let the rescue finish the story — the friend turns him round, \"but, observe, the wanderer is still far from home\". Robertson reports the division over whose sins are covered without heat, granting that \"the language here will allow\" the converter's but that New Testament teaching in general does not."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin states the responsibility with care: \"we must take heed lest souls perish through our sloth, whose salvation God puts in a manner in our hands. Not that we can bestow salvation on them; but that God by our ministry delivers those who seem otherwise nigh destruction.\" On the covering he claims more for James than for Solomon, whose love buries sins as to men: \"James teaches here something higher, that is, that sins are blotted out before God.\""
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke attacks with heat the reading that makes the covered sins the converter's own — \"this is a dangerous doctrine, and what the Holy Spirit never taught to man\" — naming Bishop Atterbury and Scott for holding that the pious act wins God's indulgence, calling it \"completely antievangelical\", and pressing the reductio: \"if one pious act can procure pardon for a multitude of sins, what may not be expected from many?\" Wesley says the same in a line, of how much more value the soul is."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry roots the practical fault in a theoretical one — \"there is some doctrinal mistake at the bottom of every practical mistake. There is no one habitually bad, but upon some bad principle\" — holds that \"there is no way effectually and finally to hide sin, but forsaking it\", and closes on the supply: \"for six thousand years He has been multiplying pardons, and yet his free grace is not tired.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whose sins does the converter hide?",
+    "positions": [
+     {
+      "view": "The penitent's, not his own — the contrary doctrine is \"dangerous\" and \"completely antievangelical\"",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The Roman Catholics, with Mayor and Ropes, take it of the converter's own; the language allows it, but New Testament usage elsewhere does not",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Ends the letter on its writer, who prayed for the men who killed him: \"'Hold,' said some of the by-standers, when the martyr sank upon the stones, 'the Just is praying for you!'\""
+   }
+  ],
   "themes": [
-   "he which converteth the sinner",
-   "save a soul from death",
-   "hide a multitude of sins",
-   "the blessed close"
+   "Brethren, if any of you do err from the truth, and one convert him;",
+   "Let him know, that he which converteth the sinner from the error of his way shall save a soul from death, and shall hide a multitude of sins."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  }
 }
