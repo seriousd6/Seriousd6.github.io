@@ -30057,6 +30057,106 @@
         "18"
       ],
       "note": "Followed up the typist's-note interpolation with a corpus-wide check: grep -rl 'Typist' over data/commentary/cow/ matches exactly ONE file, 1thessalonians/4.json, and zero files under data/commentary/cow-synthesis/. The interpolation is therefore isolated, not systemic, and has not leaked into any prose already written. No cleanup needed beyond excluding it here."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "1-47"
+      ],
+      "note": "Cyril of Jerusalem occupies sixteen keys in john 5. Nine are genuine comment on their own verse and were used live (6, 9, 19, 22, 23, 24, 26, 34, 43); nine carry displaced Catechetical Lecture material and were treated as residue (8, 10, 11, 12, 17, 20, 25, 27, 37). NB the block at key 25 is the SAME block that appeared at john 14 key 25 in the previous batch, which confirms that the stuck donor cursor crosses books and repeats across chapters. Two duplicated pairs occur here (8 with 12, and 23 with 26); the first pair is displaced and the second is genuine at both keys, so duplication again fails as a test and only content decides."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "6"
+      ],
+      "note": "Jamieson, Fausset and Brown occupies keys 6, 12, 18, 24 and 36 in john 5 and every one is displaced material on the rich young ruler, the little children and blind Bartimaeus. The donor is mark 10 and matthew 19. This is notable because mark 10 was itself repaired earlier in this same run, so the same corpus supplies both a repaired chapter and the residue lattice of a later one."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "47"
+      ],
+      "note": "The Charles Ellicott block at john 5:47 runs 1087 words, of which 983 are StudyLight page chrome beginning at the Copyright Statement line, leaving 104 words of real comment. The 983-word chrome constant now holds at sixteen of the last seventeen chapters measured."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "39"
+      ],
+      "note": "The Origen block at john 5:39 is comment on john 1:23, the voice crying in the wilderness, including a reply to Heracleon on the Word, the voice and the sound. It has no bearing on searching the Scriptures and was treated as residue."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "10"
+      ],
+      "note": "Matthew Henry appears in john 5 in two quite different shapes: three very large blocks at keys 1, 17 and 31 (5949, 6822 and 6312 words) and five short Concise-commentary paragraphs at keys 10, 24, 30, 39 and 45 (74 to 332 words). The fragment at key 10 is verse-14 material on sinning no more and was set aside for that reason; the other four are on their own passage and were used. Gill is separately truncated at exactly 200 words at keys 4, 22, 30, 35, 39, 40 and 45."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "1"
+      ],
+      "note": "The unnamed feast of john 5:1 drew five distinct identifications from this catena. Henry, Clarke, Gill and Lightfoot say the passover; Calvin and Wesley say Pentecost, and the Latin catena assumes it; Ellicott argues from an intercalary year with a doubled month of Adar that the only feast falling in the interval is Purim, and reports that the best modern opinion agrees; Barnes and Robertson hold the question undecidable and of no consequence; and Ellicott reports one scholar confidently proclaiming the Day of Atonement."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "39"
+      ],
+      "note": "Whether the opening verb of john 5:39 is imperative or indicative is, as Ellicott says, a question argued through the whole history of New Testament exposition with opinion almost equally divided, and this catena divides on it too. Ellicott, Lightfoot, Clarke and Robertson all read the indicative, ye search the Scriptures, Clarke arguing that the imperative cannot accord with the verse that follows and Robertson resting on the indicative that supplies the reason. Wesley calls it a plain command to all men. Gill and Henry give both moods without deciding."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "3"
+      ],
+      "note": "The clause about waiting for the moving of the water and the whole of john 5:4 divided the witnesses sharply. Ellicott and Robertson judge them a second-century gloss absent from the oldest manuscripts and rejected by the modern editors, Robertson adding that it is a relief to many to know the verse is spurious. Clarke holds that the manuscript evidence against them is not sufficient and notes that the leading critic of his day, though marking the passage doubtful, left it standing in the text."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "27"
+      ],
+      "note": "The clause because he is the Son of man at john 5:27 is a punctuation dispute with doctrine attached. Theophylact rejects the common reading that attaches it to the grant of judicial power, on the ground that Christ does not receive power to judge because he is man, and reports that reading as the invention of Paul of Samosata; Clarke follows Theophylact and carries the clause forward into the next verse, citing the Syriac and Armenian and several Greek fathers. Ellicott, Robertson and Wesley keep it where it stands and explain it by the incarnation, Ellicott pressing the absence of the articles so that it reads a son of man rather than the messianic title."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "5",
+      "verses": [
+        "1-47"
+      ],
+      "note": "john 5 was tiled as 31 pericopes over 47 verses from 101890 usable source words, the largest chapter offered by the picker in this run and the largest handled in either batch. The chapter carries the full patristic set plus Gloss and Theophylact, and the two distinct Augustine labels and the two Chrysostom labels were again kept as separate voices throughout."
     }
   ]
 }
