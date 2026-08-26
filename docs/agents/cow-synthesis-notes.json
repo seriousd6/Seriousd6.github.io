@@ -29496,6 +29496,103 @@
       "book": "mark",
       "chapter": "10",
       "note": "Self-graded A across all 23 entries, verses 1 to 52. Every claim traced to a named block in data/commentary/cow/mark/10.json and attributed to the voice that makes it. Jamieson excluded as residue at the eight stride-6 keys and declared in excluded_voices on the entries covering them. Cyril of Jerusalem treated per key rather than globally: the fourteen duplicated or plainly displaced blocks were declared residue, while the three that quote the verse they sit on, at 21, 27 and 33, were used as live voices; he is invisible to the validator label regex, so his words never count toward usable source totals either way. Nothing was drawn from the 983 words of StudyLight furniture in Ellicott at key 52. The Origen material embedded inside the Chrysostom block at key 13 is attributed to Origen, and the Catena editor bracketed apparatus at key 46 was not used. Gill inverted lemma at key 40 was not reproduced; his exposition, which states the opposite, was used instead. Catena fathers whose blocks sit at the section-opening keys 1, 13, 17, 28, 32, 35, 41 and 46 but comment on later verses were carried forward and named on the entry their material actually belongs to."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34"
+      ],
+      "note": "Jamieson, Fausset and Brown donor bug, 15th consecutive chapter, and the first case with a slope other than 1. The donor is Matthew 5 and the mapping is linear but not identity: k4 = Mt 5:28 (the look with intent, on the seventh commandment), k10 = 5:33 (false swearing, Ex 20:7), k16 = 5:38 (eye for eye, Ex 21:23-25), k22 = 5:43 (love thy neighbour, with Bengel's 'detestable gloss'), k28 = 5:48 ('ye shall therefore be perfect'), k34 = 6:4 with a trailing pointer to 'Prayer (Mt 6:5,6)'. Keys advance by 6 while the donor advances by 5, i.e. donor_verse = 5/6 x key + c, wrapping past the end of Matthew 5 (48 verses) into Matthew 6. This is the strongest mechanical evidence yet: JFB's commentary is section-based rather than verse-based, so a verse-indexed slicer drifts at the ratio of sections to verses and eventually crosses a chapter boundary. Contrast luke 14 (donor Luke 6, slope 1, wrong chapter) and luke 19 / genesis 42 (monotonic, same book, fixed chapter offset). No JFB material was usable; the voice is declared in no pericope."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "9",
+        "11",
+        "12",
+        "13"
+      ],
+      "note": "Cyril of Jerusalem is CORRECTLY placed in this chapter, reversing the pattern of the last three (john 9, luke 19, luke 14, where every block was catechetical chrome). Mystagogical Catechesis V comments on the Lord's Prayer clause by clause, and the slicer lands it right: k9 = 'Our Father which art in heaven', k11 = 'give us this day our substantial bread', k12 = 'forgive us our debts', k13 = 'lead us not into temptation'. All four were used. His other nine blocks in the chapter (k1, k2, k5, k16, k24, k25, k26, k30, k33) are the usual chrome from unrelated catecheses — on the angels' vision of God, on eternal life, on the doctrine of God, on Cerinthus and Marcion, on the fruits of repentance — and k2, k5 and k16 are the identical 145-word block repeated three times. Several chrome blocks are exactly 203 words, suggesting a fixed truncation length."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "5",
+        "9",
+        "19",
+        "25"
+      ],
+      "note": "Matthew Henry section-block inflation, the worst instance recorded: five blocks totalling ~15,000 words, of which k9 (5,307 words, on the Lord's Prayer) and k25 (5,977 words, on 'take no thought') are the two largest single blocks in the whole chapter. k9 alone is 46% of its pericope's source words and k25 is 61% of its own. Because the prose rules cap an entry at 650 words, Henry could not be represented in the 9 or 25 entries at all without crowding out the fifteen other voices at those keys; he is carried in tiles 1-2, 5-6 and 19-21 instead, and the puritan-evangelical school is absent from three of the sixteen entries as a result. This is a structural consequence of the block sizes, not of the tiling: no verse-range split can help, since v.9 and v.25 are single verses."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "7",
+        "9",
+        "12",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "Catena chain-labelling throughout, as in luke 14 but denser: the Catena aurea blocks carry one patristic header while the body runs through several fathers marked inline. Named inside other men's blocks in this chapter: CHRYS., AUG., ORIGEN, GREG., THEOPHYL., JEROME, CYPRIAN, ISID. (Isidore's Etymologies via Augustine), CASSIAN (twice, in Augustine at k7 and in Pseudo-Chrysostom at k5), AMBROSIASTER (in Pseudo-Chrysostom at k2), PSEUDO-BASIL, GREG. NYSS., REMIG., RABANUS, HILARY, LEO and NEMESIUS. Every attribution in this chapter's prose was taken from the inline marker rather than the block header. Cassian and Ambrosiaster were left uncited, being quotations inside quotations with no separable block of their own."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "11",
+        "13",
+        "23",
+        "28"
+      ],
+      "note": "Four exceptional splits, richer than any chapter so far. (1) v.11, the meaning of epiousios — Ellicott and Jerome for 'supersubstantial' (Ellicott declaring it truest with explicit hesitation against general authority), Robertson for 'of the coming day' on the strength of Debrunner's discovery of the word in an ancient housekeeping book, Lightfoot and Gill for 'tomorrow's bread today' from the Arabic and the Gospel according to the Hebrews, Clarke for Theophylact's 'sufficient for our substance', and Cyprian, Cyril of Jerusalem and Augustine for the Eucharist — Augustine then raising the practical objection that many in the East do not communicate daily. (2) v.13, the doxology: Clarke reports it rejected by Wetstein and Griesbach, Robertson says it is wanting in the oldest manuscripts and arose from liturgical chanting, while Pseudo-Chrysostom, Chrysostom, Wesley and Barnes expound it as text. (3) vv.28-30, whether to allegorise: Augustine forbids it in terms, and Hilary and Remigius, in the same catena, immediately do it — Hilary making the lilies angels and the grass the Gentiles, Remigius making the birds the baptised and the oven damnation. (4) v.30, oven or still: Wesley argues for a still against Clarke, who calls that reading contrary to the argument — two Methodist commentators flatly contradicting each other."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "9",
+        "25"
+      ],
+      "note": "Tiling and density. matthew 6 is 100,242 usable source words over 34 verses, the largest chapter attempted in this loop (john 11 was 90,479). Split into sixteen pericopes: 1-2 / 3-4 / 5-6 / 7-8 / 9 / 10-11 / 12-13 / 14-15 / 16-18 / 19-21 / 22-24 / 25 / 26-27 / 28-30 / 31-32 / 33-34, at 10514 / 1588 / 7621 / 4041 / 11576 / 9404 / 8748 / 1567 / 5962 / 7726 / 6242 / 9800 / 3904 / 3645 / 4235 / 3651 words. Mean compression is 9.6:1, but the spread is extreme: v.9 alone runs at 17.7:1 and v.25 at 15.3:1, both above the ~13:1 ceiling at which most material cannot be represented, while 3-4 and 14-15 fall to 3.1:1 and 3.2:1 and were deliberately written short (508 and 495 words) to stay above the padding floor. Two single verses carrying more than 9,000 source words each cannot be tiled around."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "7",
+        "31"
+      ],
+      "note": "Three voices unique to this chapter in the loop so far and worth flagging for the corpus: Nemesius (k31, 351 words) gives a formal philosophical argument for particular providence, refusing in turn the suppositions that God is ignorant of particulars, unwilling to attend to them, or unable — the only sustained piece of philosophical theology encountered in any chapter to date. Leo (k2, k16, k17) and Cyprian (k5, k9, k11, k12, k13, k14) are both substantial and correctly placed, Cyprian's De Dominica Oratione running clause by clause through the Lord's Prayer beside Cyril of Jerusalem's catechesis. All three needed new entries in the school map (Cyprian and Leo to latin-fathers, Nemesius to eastern-antiochene)."
     }
   ]
 }

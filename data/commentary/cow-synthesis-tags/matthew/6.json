@@ -3,10 +3,150 @@
   "voices": [
    "Gloss",
    "Chrysostom",
+   "John Chrysostom",
    "Pseudo-Chrysostom",
    "Augustine",
    "Gregory",
-   "John Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "1-2",
+  "pericope_label": "Take heed that ye do not your alms before men: do not sound a trumpet before thee",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot argues that Christ certainly said righteousness but that common people could understand the word only of alms, the traditions having taught that alms conferred much toward justification, and that Matthew could not change in Greek where the Saviour had not changed in Syriac; Ellicott says the better manuscripts give righteousness, the wider word branching into alms, fasting and prayer, insists that it is the motive and not the fact of publicity that vitiates the action since the disciple must let his light shine and yet be indifferent to praise, and rejects both conjectures about the trumpet; Robertson agrees on the text and finds in the closing verb the papyrus term for a receipt in full; Barnes fences the precedent for giving before men, holding that we are forbidden not to give publicly but to give in order to be seen."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows the reading righteousness and then narrows it again, nothing being commoner among the Jews than to call alms righteousness; Calvin alone dismisses the textual question as of little moment, and says from history that no trace of a literal trumpet is to be found, treating the phrase as the figure many languages use for ostentation carried beyond bounds."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke will not give up the literal trumpet, citing Harmer on dervishes who blow horns when anything is given them and the rabbinic name for the alms-chest holes into which an ostentatious man might fling his money with a jingle."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that the Jews called the poor's box the box of righteousness, cites Hammond that it violates every law of hospitality to seek advantage against a guest taken under one's protection, calls vainglory the dead fly that spoils the whole box of ointment, and turns the closing words into a threat — it is a reward, but their own, and a present one."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom calls the desire of fame near akin to virtue, a beast hard to discern which enters secretly and carries off all within; John Chrysostom explains why the warning comes here and not earlier, the disease arising precisely when many commandments have been kept; Pseudo-Chrysostom sets the three duties against the three temptations, notices that the addition matters — not do not before men but to be seen of them — and observes that you deceive the very man whose good word you seek."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "The Gloss observes that Christ, having fulfilled the law in its commandments, now fulfils it in its promises, forbidding the two things the law held out; Augustine says none knows the strength of the love of glory but the man who has declared war on it, and defends Paul, who both refuses to please men and pleases all men, as a traveller seeking a ship seeks not the ship but his country; Gregory allows only the perfect to let their deeds be seen without secret exultation."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did the verse originally read 'alms' or 'righteousness'?",
+    "positions": [
+     {
+      "view": "Righteousness — the wider word, of which alms, prayer and fasting are the three branches; the narrower reading arose from a misconception",
+      "held_by": [
+       "John Lightfoot",
+       "Charles Ellicott",
+       "A.T. Robertson",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Righteousness is a good reading, but it means alms here and nothing else",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The difference is of little moment either way",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was a trumpet literally sounded before almsgiving?",
+    "positions": [
+     {
+      "view": "No trace of the practice can be found; the phrase is the ordinary figure for ostentation",
+      "held_by": [
+       "John Lightfoot",
+       "John Calvin",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Very likely literal — dervishes still blow horns for donors, and the alms-chest holes were themselves called trumpets",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A missionary reports Hindu priests doing precisely this, so the rabbis could have done it too",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Refuses to let Christ's example license public giving generally, allowing the precedent only where a man is away from home, goes to do good, and uses the occasion for religious discourse."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Holds that vainglory alone among the vices comes out of good, and so torments the servants of God more than the servants of the Devil are tormented by all their vices together."
+   }
+  ],
+  "themes": [
+   "Take heed that ye do not your alms before men, to be seen of them: otherwise ye have no reward of your Father which is in heaven.",
+   "Therefore when thou doest thine alms, do not sound a trumpet before thee, as the hypocrites do in the synagogues and in the streets, that they may have glory of men. Verily I say unto you, They have their reward."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "Augustine",
+   "Chrysostom",
    "John Gill",
    "John Lightfoot",
    "Matthew Henry",
@@ -15,204 +155,106 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "Let not thy left hand know what thy right hand doeth: thy Father which seeth in secret shall reward thee openly",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The better reading is ‘righteousness’ (covering all religious duty); ‘take heed’ (prosechete) warns against the motive of being ‘seen of men,’ which forfeits the Father’s reward (cf. 5:16 — not forbidding being seen, but doing to be seen)."
+    "prevalence": "several",
+    "summary": "Barnes, with Ellicott, takes the saying as proverbial for extremest secrecy; Ellicott adds a symbolic afterthought, that the right hand is the higher element which prompts true charity and the left the baser and self-seeking, between which a barrier should be set to exclude that mingling of motives which is at least the beginning of evil; Lightfoot recalls that in certain religious acts the left hand was not allowed to meet the right, the sabbath cup being taken with the right alone and Shammai feeding himself with one hand only; Robertson says flatly that <em>openly</em> was added by the received text here and at the sixth verse and is not genuine, since Jesus does not promise a reward for private piety."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Augustine: the love of human glory is felt only by him who wars against it; Gregory: seeking our own glory casts our deeds out of God’s sight; the Gloss: doing the commandments for heavenly, not earthly, wages."
+    "summary": "Calvin makes the reward wait for the last day, when what is now buried in darkness shall be revealed, and guards the passage against the objection that Scripture elsewhere commands us to edify by example, since Christ condemned ostentation and not doing good before men; Gill notes that the allusion is to the secret chamber where money was brought privately for the poor."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke keeps a modest version of the enemy-reading, that charity must sometimes be hidden from relatives who would hinder it and then from ourselves by our not eyeing it with complacency, and expounds <em>openly</em> as it stands, of substance increased and the witness of the Spirit in the heart; Wesley takes the phrase as proverbial for doing a thing as secretly as is consistent with doing it at all."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry suspects an allusion to the poor man's chest standing at the right of the temple passage, and says the left hand is part of ourselves, so that adoring our own shadow is a branch of pride as dangerous as ostentation, citing Cicero that we should be moved by the object and not the observer."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: vainglory is ‘near akin to virtue,’ a beast hard to discern that steals upon the doer of good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘to be seen of men’",
-   "purity of intention",
-   "vainglory the danger",
-   "no reward of the Father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "Augustine",
-   "Pseudo-Chrysostom",
-   "Jerome",
-   "Gloss",
-   "Gregory",
-   "Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Hypocrite’ = stage-player acting a part; ‘sound a trumpet’ likely a vivid metaphor for public show (no literal Jewish custom documented); ‘they have their reward’ — the glory of men, paid in full."
+    "prevalence": "single",
+    "summary": "Chrysostom presses the words further than any of the others: if it were possible you should not know yourself, and your very hands be hidden from your sight, that is what you should strive after — and if you want spectators you have angels and the God of the universe."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome/Augustine: the trumpeter courts applause; Gregory distinguishes those who do good openly without seeking glory; Pseudo-Chrysostom: alms, prayer, fasting the three chief virtues."
+    "prevalence": "single",
+    "summary": "Augustine clears away two readings before offering his own, asking why the Lord healed with the Jews standing round if the left hand means our enemy, and calling ridiculous the interpretation that makes it the wife, since the command is addressed to women too and no theft is to be committed to do God service."
    }
   ],
   "debates": [
    {
-    "question": "Is ‘sound a trumpet’ literal or metaphorical?",
-    "sides": [
+    "question": "Is the adverb 'openly' part of the text?",
+    "positions": [
      {
-      "position": "metaphorical — a vivid figure for ostentation",
-      "holders": [
+      "view": "No — an interpolation of the received text, and one that lowers the truth, since the reward may be immediate and secret",
+      "held_by": [
        "A.T. Robertson",
-       "John Lightfoot"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "possibly literal — summoning the poor / the alms-chest trumpets",
-      "holders": [
-       "John Wesley"
+      "view": "It stands, and means substance increased and the witness of the Spirit in the heart",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Whatever the word, the reward waits for the last day, when what is buried in darkness shall be revealed",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Reviews and rejects the readings that make the left hand our enemy or our wife, dismissing the second as ridiculous because the command is addressed to women as well as men."
+   },
+   {
+    "voice": "John Lightfoot",
+    "claim": "Sets the saying beside Jewish ritual usage in which the left hand was not allowed to assist the right — the sabbath cup, the blood of the sacrifice, and Shammai eating with one hand."
+   }
+  ],
   "themes": [
-   "‘sound not a trumpet’",
-   "the hypocrite (stage-player)",
-   "‘they have their reward’",
-   "glory of men the whole wage"
+   "But when thou doest alms, let not thy left hand know what thy right hand doeth:",
+   "That thine alms may be in secret: and thy Father which seeth in secret himself shall reward thee openly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A proverbial hyperbole for extremest secrecy — give so privately you scarcely know it yourself; ‘as secretly as is consistent with doing it at all’ (Wesley)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: be satisfied with God as the only witness, not carried away by vanity — the death of self-regard, forgetting one’s own gift."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘let not thy left hand know’",
-   "extreme secrecy",
-   "God the only witness",
-   "death of self-regard"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Openly’ is likely not genuine; the reward is the Father’s, ‘which seeth in secret’ — he sees the act and every motive; a principle (private charity hidden), not an absolute rule (public work may require publicity)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: reconciled with ‘let your light shine’ (5:16) — Christ forbids not being seen but doing in order to be seen; the seeing Father is sufficient audience and sure rewarder."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘in secret’",
-   "the Father who seeth in secret",
-   "sufficient audience",
-   "the cure of ostentation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
@@ -224,7 +266,6 @@
    "Jerome",
    "Cyprian",
    "Remigius",
-   "John Gill",
    "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
@@ -232,87 +273,130 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Leo"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The hypocrites contrive to be praying (standing, at the appointed hours) in synagogues and street-corners ‘to be seen of men’ — looking round to men while feigning to address God; ‘they have their reward.’"
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: not the being seen but the praying in order to be seen condemns; Cyprian: pray secretly, assured God hears everywhere; Calvin: a shameful profanation of God’s name."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "prayer not for show",
-   "the hypocrites looking to men",
-   "prayer as performance",
-   "‘they have their reward’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Cyprian",
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley"
   ],
+  "range": "5-6",
+  "pericope_label": "Enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The ‘closet’ (tameion) with the shut door images withdrawn, private prayer directed to God alone; the reward is the Father’s ‘which seeth in secret’ (‘openly’ doubtful, as v.4)."
+    "prevalence": "several",
+    "summary": "Lightfoot documents the posture from the rabbis, Maimonides requiring that a man stand, turn toward Jerusalem, cover his head and fix his eyes downward; Ellicott insists there was nothing ostentatious in the attitude itself and locates the fault in going into the synagogue for private devotion, standing apart as if absorbed while secretly watching the impression made; Barnes describes the actual closet, a chamber raised a storey over the porch of every Jewish house, the upper room of the New Testament; Robertson gives the word as a store-house or private apartment."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin refuses the allegorical reading of the closet outright — expositors give it such a turn, but there is no necessity for such trifling — since we are commanded in many places to pray in the public assembly and Christ does not withdraw us from it; he speaks comparatively, and whether a man prays alone or in company he ought to feel as if shut in his closet with no witness but God. Calvin also denies the inference drawn from the promise of reward: all that Scripture holds out is given freely and not paid as a debt."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke opens the word for prayer from a root meaning a vow, since a man who prays rightly binds himself to God as by a vow, and makes prayer the language of dependence, the man who does not pray attempting to live independently of God, which was the first curse; he then breaks off to print a hymn of Montgomery's; Wesley notes that the synagogues were places of public prayer with service thrice a day on three days in the week, but that the word here means any place of concourse."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry allows the standing posture but thinks kneeling humbler, so that standing savoured of self-confidence, notes that the broad streets were chosen where two ways met so that every passer-by would see and hear, and lays down the rule that secret prayer should be unobserved, undisturbed and unheard."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom holds that it is the motive and not the place that is in question, since whoever prays to be seen prays in the synagogue so far as his purpose goes wherever he stands, and gives three reasons for praying silently — God is a hearer of the heart, none but a man and God should be privy to his petitions, and aloud he hinders whoever prays beside him; Chrysostom presses the wording, that Christ said not <em>shall freely give thee</em> but <em>shall reward thee</em>, so constituting himself our debtor."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Cyprian: pray in withdrawn places; yet the command strikes at the motive, not the place (Christ and the apostles prayed publicly, Acts 1:14) — the surest guard against praying to be seen is to pray unseen."
+    "summary": "Augustine takes the chamber for our hearts and the door for the bodily senses, to be shut against the worldly things and vain imaginings that beset us in prayer; Cyprian asks how a man can claim God's attention when he does not attend to himself; Remigius is content that he alone should know our petitions who knows all hearts; Jerome says the plain sense teaches us to shun vain honour; the Gloss identifies the corners as the four cross-ways."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the closet a room or a figure?",
+    "positions": [
+     {
+      "view": "A figure: the chamber is the heart and the door the bodily senses, to be shut against distraction",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "No necessity for such trifling — the command is comparative, and public prayer is elsewhere enjoined",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "A real chamber, raised over the porch of every Jewish house and kept for retirement",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "A rule stated as paradox, naming the place men would think it irreverent to connect with prayer",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does God reward prayer as a debt or as a gift?",
+    "positions": [
+     {
+      "view": "He said not 'shall freely give' but 'shall reward', and so constitutes himself our debtor",
+      "held_by": [
+       "Chrysostom",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "All the reward promised anywhere in Scripture is not paid as a debt but given freely",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Interrupts the exposition to print a hymn of James Montgomery's on what prayer is, in place of further comment on the verse."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Argues that a man praying to be seen prays in the synagogue wherever he happens to stand, and one whose mind is fixed on God prays in secret even in a crowded congregation."
+   }
+  ],
   "themes": [
-   "‘enter into thy closet’",
-   "secret prayer",
-   "the motive, not the place",
-   "alone with the Father"
+   "And when thou prayest, thou shalt not be as the hypocrites are: for they love to pray standing in the synagogues and in the corners of the streets, that they may be seen of men. Verily I say unto you, They have their reward.",
+   "But thou, when thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret; and thy Father which seeth in secret shall reward thee openly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "7": {
@@ -331,81 +415,135 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "7-8",
+  "pericope_label": "Use not vain repetitions, as the heathen do: your Father knoweth what things ye have need of",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Vain repetitions’ (battalogēsēte) = babbling, empty repetition (the stammerer, or the poet Battus); the fault is not length but meaningless words, the heathen hoping to be ‘heard for their much speaking.’"
+    "prevalence": "several",
+    "summary": "Barnes derives the verb from Battus, the poet who spun out long weary verses, and thinks our Lord probably meant to condemn long prayers as well; Ellicott takes it instead from the stammerer and would render it <em>do not stutter out your prayers</em>, grants that the law of Christ does not exclude the iteration of intense emotion since our Lord prayed thrice in the same words, and leaves open how far the Lord's Prayer or the Kyrie falls under the charge; Robertson calls the etymology uncertain but probably onomatopoetic and makes the same reservation from Gethsemane; Lightfoot supplies the Roman acclamations and then turns the charge home, since Jewish liturgies heap up different words importing the same thing."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin allows Rome no such latitude, holding that there the efficacy of prayer is thought to lie chiefly in talkativeness and long chanting resounds in the cathedrals as if to soothe the ears of God; and he answers the harder question by saying that believers pray not to inform God or urge him as though reluctant but to arouse themselves, exercise faith on his promises and relieve their anxieties by pouring them into his bosom. Gill adds that it would be shameful in those who have revelation to imitate men guided only by the dim light of nature."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the word to Battus with Suidas, adds a Muslim parallel from the Hedayah, which condemns praying by the glory of the heavens and yet comes from a people given to such iteration, and says prayer is designed not to inform God but to give a man sight of his misery; Wesley holds that the chief thing wanting is a fit disposition on our part, which prayer exists to produce."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom says the prayers are forbidden to be long not in time but in multitude of words, since those who ask should persevere, and that we pray not to teach God our wants but to move him, becoming his friend by importunity."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine/Gloss: the Gentiles think much speaking informs and wins their gods; Gregory: true prayer is the groans of repentance, not set forms; Chrysostom: nor asking improper things."
+    "summary": "Augustine distinguishes much speaking from enduring fervency, the Lord having continued a whole night in prayer while the brethren in Egypt use frequent but very short prayers lest fervency be broken off; much speaking is to use more words than necessary, whereas to entreat much is to importune with enduring warmth, often done better by groans than words. Jerome states the objection as a heresy of certain philosophers — if God knows before we ask, prayer is needless — and answers that in prayer we do not instruct but entreat. The Gloss makes the pagan assumption explicit, that the demons could not know what was petitioned until told; Gregory puts it shortest, that true prayer is the bitter groans of repentance rather than the repetition of set forms."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "If God knows our wants before we ask, why pray at all?",
+    "positions": [
+     {
+      "view": "In prayer we do not instruct but entreat; it is one thing to inform the ignorant, another to beg of the understanding",
+      "held_by": [
+       "Jerome"
+      ]
+     },
+     {
+      "view": "To arouse ourselves to seek him, exercise faith on his promises, and relieve our anxieties by pouring them into his bosom",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Not to teach God our wants but to move him, that we may become his friend by importunity",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "To give a man sight of his own misery, and to produce in us the disposition which is the thing chiefly wanting",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The question can never be answered logically, as with foreknowledge and free will; only partial solutions can be offered",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the rule forbid all repetition in prayer?",
+    "positions": [
+     {
+      "view": "No — our Lord himself prayed thrice in the same words, and devout souls find repetition sustains rather than deadens feeling",
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Much speaking is forbidden, enduring fervency is not; the Lord prayed a whole night",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "It condemns outright the belief that efficacy lies in talkativeness, as in the chanting of the cathedrals",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Turns the charge from the heathen onto the Jews, arguing that heaping up different words for the same thing is the same sin as repeating the same words, where the heart is equally absent."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Cites the Hedayah's condemnation of praying by the glory of the heavens, and observes that the Muslims who preserve that rule are themselves peculiarly given to iterated formulas."
+   }
+  ],
   "themes": [
-   "‘use not vain repetitions’",
-   "the heathen view of prayer",
-   "babbling vs. meaning",
-   "God not worn by many words"
+   "But when ye pray, use not vain repetitions, as the heathen do: for they think that they shall be heard for their much speaking.",
+   "Be not ye therefore like unto them: for your Father knoweth what things ye have need of, before ye ask him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Prayer is not to inform God (who knows our needs before we ask, Lk 12:30) but to humble us, stir desire, and exercise faith; the remedy against superstitious wordiness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the Father’s foreknowledge is the sufficient cure for the superstition of many words; we come to a Father, not an aloof deity to be informed and pressed."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘your Father knoweth’",
-   "prayer not to inform God",
-   "prayer for our good",
-   "the Father’s readiness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
@@ -415,49 +553,113 @@
    "Augustine",
    "Chrysostom",
    "Pseudo-Chrysostom",
+   "Cyril of Jerusalem",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "9",
+  "pericope_label": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘After this manner’ (houtōs) sanctions both the words and the pattern (the ‘Model Prayer’); not a binding fixed form (Calvin from Luke); ‘Our Father in heaven’ — confident yet reverent; ‘hallowed’ = reverenced, glorified by us."
+    "prevalence": "several",
+    "summary": "Robertson would rather call it the Model Prayer than the Lord's Prayer, since Jesus did not use it as a liturgy and there is no evidence he designed a set formula — though there is no harm in one, and good in children learning it; he answers the objection that none may call God Father who is not born again, since that would mean a sinner cannot pray until converted; and he notes that the petitions are aorist imperatives, punctiliar and urgent. Barnes explains the guest's mistake historically and grants that some petitions were current among the Jews but never in this combination; Ellicott reads the opening adverb as simply <em>thus</em>, sanctioning both these words and others framed after the same pattern, and observes that the plural does not forbid <em>my Father</em> in private but witnesses that the right is nobody's peculiar privilege."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill calls it a directory as to brevity, order and matter, noting that the disciples are never found using it and that the other Evangelist does not give it in the selfsame words; Calvin holds that the rule relates not to the words but to the things, and sets out the architecture — six petitions, the first three for God's glory without regard to ourselves and the last three for what our salvation needs, answering to the two tables of the law."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets the prayer among the Jewish forms, every public teacher giving one to his disciples, and takes this for the abridged kind, reporting also the Jewish maxim that none should pray the short prayer, meaning the prayer in the singular; Wesley notes that God is in heaven eminently but not alone, filling heaven and earth."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom finds forgiveness, adoption, heirship, brotherhood with the Only-begotten and the gift of the Spirit confessed in the one title Father, and says the phrase about heaven does not confine God's presence but withdraws the petitioner's thoughts from earth; Pseudo-Chrysostom adds that we should blush to bury ourselves in earthly things while our Father is in heaven; Cyril of Jerusalem marvels that men who had revolted should be given leave to say the word at all."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Cyprian/Chrysostom: ‘Father’ confesses adoption, forgiveness, brotherhood with the Only-begotten; ‘Our’ embraces all the brethren; ‘in heaven’ lifts the heart."
+    "summary": "Cyprian says the teacher of peace and master of unity would not have men pray singly and severally, our prayer being general because we are all one, and guards the next petition — we do not ask that God be made holy by our prayers but that his name be kept holy in us, since those sanctified in baptism need a daily sanctification. Augustine observes that Israel was never taught to call God Father but was set before a Lord over slaves, and is most original on the clause about heaven: God is not contained in space, and were he in the upper parts of the universe the birds would deserve better than men, so heaven means the saints, as the sinner is called earth — which is why we turn east in prayer. The Gloss adds that <em>my Father</em> belongs to Christ alone, who is Son by nature."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is this a form of words or a pattern?",
+    "positions": [
+     {
+      "view": "A pattern only — it should be called the Model Prayer, and there is no evidence Jesus designed a liturgy",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "A directory as to brevity, order and matter; the disciples are never found using the words",
+      "held_by": [
+       "John Gill",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The rule relates not to the words but to the things — Christ restrains our wishes rather than dictating a text",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The adverb sanctions both these words themselves and other prayers framed after the same pattern",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Argues that 'in heaven' cannot be local, since on that reckoning the birds would have more desert than men by living nearer, and takes heaven for the saints as the sinner is called earth."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Rejects the claim that only the regenerate may say 'Our Father', on the ground that it would mean an unconverted sinner cannot pray until he is already converted."
+   }
+  ],
   "themes": [
-   "the Model Prayer",
-   "‘Our Father in heaven’",
-   "adoption and confidence",
-   "‘hallowed be thy name’"
+   "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
   }
  },
  "10": {
@@ -467,56 +669,8 @@
    "Jerome",
    "Cyprian",
    "Pseudo-Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Thy kingdom come’ = that God reign everywhere and his laws be obeyed (the Messianic hope, Isa 11); ‘thy will be done… as in heaven’ governs the petitions — earth to mirror heaven’s obedience."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Cyprian: we ask to be enabled to do God’s will, done ‘in us’; Chrysostom: before we reach heaven, we pray to make earth into heaven; Jerome: the heavenly will is done without fail."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘thy kingdom come’",
-   "‘thy will be done… as in heaven’",
-   "God’s glory before our supply",
-   "earth to mirror heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Augustine",
-   "Jerome",
-   "Cyprian",
-   "Pseudo-Chrysostom",
    "Gregory",
-   "Chrysostom",
+   "Cyril of Jerusalem",
    "John Gill",
    "John Lightfoot",
    "Albert Barnes",
@@ -524,62 +678,116 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "10-11",
+  "pericope_label": "Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The rare word epiousion (30+ explanations) read as ‘daily,’ ‘for the morrow,’ or ‘supersubstantial’; ‘bread’ = all needful to sustain life (Mt 4:4; Deut 8:3); a sufficiency, for the day only — daily dependence on God."
+    "prevalence": "several",
+    "summary": "Ellicott traces the kingdom-petition to the Messianic hope of Isaiah and Daniel and holds that this kingdom rests not on might but on the acknowledgment of righteousness, ever growing toward a completeness it has never reached; on the bread he sets out four possible senses — enough for the day now coming, for the morrow, for existence, or over and above material substance — grants that the first two are commonly received, and then, against so general a concurrence, declares the last the truest. Robertson derives the disputed adjective from the participle for the coming day and reports that the papyri shed no light until Debrunner found the word in an ancient housekeeping book, so that it is not a coinage at all but ordinary trade Greek. Barnes quotes the rabbinic maxim that a prayer with no mention of the kingdom is no prayer, and finds in the plural <em>give us</em> a standing command for daily family prayer; Lightfoot paraphrases the petition as, provide tomorrow's bread and give it us today."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the Jewish form ran <em>let the kingdom of thy Messiah come</em> and that Christ drops the word Messiah to signify he was already come; Calvin defines the reign as men voluntarily submitting, brought about partly by the preaching of the word and partly by the secret power of the Spirit, and explains the order of the petitions, that though forgiveness far outweighs food our Lord began with the supports of this life so that we might climb by steps."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke counts upwards of thirty explanations of the word for daily, notes that it occurs in no Greek writer before the Evangelists with Origen saying they coined it, and prefers Theophylact's sense of bread sufficient for our substance; he also draws from the petition about the will that salvation is the result of two wills conjoined. Wesley asks that men do God's will as willingly and as perfectly as the angels, and takes the bread to include both the meat that perisheth and the sacramental bread."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom hears in the third petition a prayer for the whole world and says that before we come to heaven we are bidden make this earth into heaven, and sees Christ in the fourth descending to the needs of the body and restricting even that by <em>this day</em>; Pseudo-Chrysostom takes the clause about heaven as common to all three foregoing petitions, admires the middle impersonal wording, and explains <em>our</em> twice over, since what God gives he gives through us to others; Cyril of Jerusalem reads the bread of the Eucharist, the Holy Bread being appointed for the substance of the soul."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Cyprian/Cyril: the spiritual/eucharistic ‘bread of life,’ Christ himself; Gregory: ‘our’ bread, yet God’s to give."
+    "summary": "Augustine offers several readings of the will — as by angels so by men, heaven and earth as spirit and flesh, or as in Christ so in his Church, heaven and earth being husband and wife — finds the Pelagians refuted since the Church prays for unbelievers that they may begin to have faith, and, taking the bread sacramentally, asks how the prayer can be said by the many in the East who do not communicate daily. Cyprian says we ask not that God may do his own will but that we may be enabled to do it; Jerome renders the bread supersubstantial and reports that the Gospel according to the Hebrews has <em>mohar</em>, tomorrow's; Gregory puts it shortest, that we call it ours and yet pray it be given, since it is God's to give."
    }
   ],
   "debates": [
    {
-    "question": "What is the ‘daily bread’?",
-    "sides": [
+    "question": "What does the disputed adjective in 'daily bread' mean?",
+    "positions": [
      {
-      "position": "the body’s daily provision",
-      "holders": [
-       "Albert Barnes",
+      "view": "Supersubstantial — over and above material substance, the true sense despite general concurrence the other way",
+      "held_by": [
+       "Charles Ellicott",
+       "Jerome"
+      ]
+     },
+     {
+      "view": "For the coming day — ordinary trade Greek, as an ancient housekeeping book shows, not a coinage at all",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Tomorrow's bread, given today, as the Gospel according to the Hebrews and the Arabic read it",
+      "held_by": [
+       "John Lightfoot",
        "John Gill"
       ]
      },
      {
-      "position": "spiritual / eucharistic bread (supersubstantial)",
-      "holders": [
-       "Jerome",
+      "view": "Bread sufficient for our substance and support, following Theophylact",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The Eucharist, the Holy Bread appointed for the substance of the soul",
+      "held_by": [
        "Cyprian",
-       "Cyril of Jerusalem"
+       "Cyril of Jerusalem",
+       "Augustine"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Presses a practical difficulty against the eucharistic reading: many in the East do not communicate daily, and after communion a man cannot ask for what he has already received."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Reads the plural 'give us' as a standing implied command for daily family prayer, no other body meeting daily for worship."
+   }
+  ],
   "themes": [
-   "‘daily bread’",
-   "the obscure epiousion",
-   "daily dependence on God",
-   "temporal or spiritual bread"
+   "Thy kingdom come. Thy will be done in earth, as it is in heaven.",
+   "Give us this day our daily bread."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "12": {
@@ -589,53 +797,10 @@
    "Chrysostom",
    "Gregory",
    "Pseudo-Chrysostom",
+   "Jerome",
+   "Cyril of Jerusalem",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Debts’ = sins (Jewish idiom; Luke ‘sins,’ 11:4), a debt to God’s justice we cannot pay; ‘as we forgive’ is not the merit but the necessary evidence — the forgiven heart forgives."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: against the Pelagians — even the righteous must daily pray ‘forgive us’; Chrysostom: for the faithful; Pseudo-Chrysostom: the unforgiving who say ‘I forgive’ pray with a lie."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘forgive us our debts’",
-   "sins as debts",
-   "daily need of pardon",
-   "forgiving as the evidence of being forgiven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Augustine",
-   "Cyprian",
-   "Chrysostom",
-   "John Gill",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -643,57 +808,126 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-13",
+  "pericope_label": "Forgive us our debts. And lead us not into temptation, but deliver us from evil",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Lead us not into temptation’ (God tempts none, Jas 1:13) = suffer us not to be led/overcome, a prayer of self-distrust; ‘deliver us from evil’ / ‘the evil one’; the doxology absent from the oldest MSS (most judge it added, though ancient and fitting, cf. 1 Chr 29:11)."
+    "prevalence": "several",
+    "summary": "Ellicott derives duty and debt from the same word, a duty unfulfilled being a debt unpaid, takes the plural of sins of omission while trespasses are sins of commission, notes that the better reading has <em>we have forgiven</em> as a completed act before the prayer begins, and distinguishes trials that test from allurements that entice, hearing in the petition the cry of a weakness that fears to fail. Robertson calls <em>trespasses</em> a mistranslation made common by the English Prayer Book, right in the argument that follows but wrong in the Model Prayer, names the next petition a permissive imperative, and answers that the case obscures the gender of the last word. Barnes says God tempts no man, so the word must mean permitting; Lightfoot supplies what may lie behind the doxology, that in the Temple the people answered not <em>Amen</em> but <em>Blessed be the name of the glory of his kingdom for ever</em>."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin sets the petition for pardon first in importance whatever its place in order, sins being a wall hindering our approach and a cloud hiding us from God, and insists that the two clauses about temptation and evil are a single petition, as Augustine judiciously explains; Gill notes that nothing is commoner in Jewish writing than to call sins debts."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the Jewish maxim that no man should lie down without forgiving, calls the phrase about temptation a Hebraism since God is said to do what he only suffers, derives the noun from a verb meaning to pierce so that sore trial is the sense — whence some fathers added <em>which we cannot bear</em> — and reports the doxology rejected by Wetstein, Griesbach and the most eminent critics; Wesley takes the threefold doxology as answering to Father, Son and Spirit."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom uses the clause against the Novatians, since bidding the faithful pray for forgiveness shows sin can be remitted after baptism, and finds the doxology restoring the confidence the mention of our enemy had shaken; Pseudo-Chrysostom turns on those who will not use the prayer because they will not forgive, since the Father does not readily hear what the Son has not dictated, and maps kingdom, power and glory back onto the three first petitions; Cyril of Jerusalem weighs the accounts, offences against us being slight while ours against God need such mercy as his only is, and explains that to enter into temptation is to be overwhelmed by it, a winter torrent which Judas entered on the love of money and drowned in while Peter swam through the denial."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The petition owns our weakness and casts us on God’s keeping; the doxology fitly ends the prayer with God — kingdom, power, and glory his, as it began with the Father."
+    "summary": "Cyprian calls the condition a fixed rule and adds that a man commanded to pray daily for sins is taught thereby that he sins daily; Augustine finds in it the deathblow of the Pelagians and softens the demand only so far that one who cannot love an enemy still meets the terms if he forgives the man who asks him, and ends the whole prayer with the largest claim of all, that whatever words we use we say nothing not contained here, matching petition after petition with a verse of the Psalms; Gregory adds that the good we beg in penitence we should first bestow on a neighbour; Jerome calls the Amen its seal."
    }
   ],
   "debates": [
    {
-    "question": "Is the closing doxology original to Matthew?",
-    "sides": [
+    "question": "Is the doxology part of the text?",
+    "positions": [
      {
-      "position": "no — absent from the oldest MSS, a liturgical addition",
-      "holders": [
-       "A.T. Robertson",
-       "most"
+      "view": "No — rejected by the most eminent critics, wanting in the oldest manuscripts, and arising when the prayer began to be chanted in public worship",
+      "held_by": [
+       "Adam Clarke",
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "ancient and fitting, retained in worship",
-      "holders": [
-       "the received text"
+      "view": "It stands and is to be expounded: kingdom, power and glory answer to the three first petitions",
+      "held_by": [
+       "Pseudo-Chrysostom",
+       "Chrysostom",
+       "John Wesley",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How can God be asked not to lead us into temptation?",
+    "positions": [
+     {
+      "view": "A Hebraism: God is said to do what he only permits, and the word means sore trial",
+      "held_by": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "A permissive imperative — do not allow us to be led",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "To enter into temptation is to be overwhelmed by it, as Judas was and Peter was not",
+      "held_by": [
+       "Cyril of Jerusalem"
+      ]
+     },
+     {
+      "view": "The two clauses are one petition, and it concerns inward temptation, the scourge of the devil",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Claims that every rightly-framed prayer is already contained in this one, matching its petitions one by one with verses of the Psalms, and calls prayer for increased riches carnal."
+   },
+   {
+    "voice": "John Lightfoot",
+    "claim": "Supplies a possible origin for the doxology in the Temple response, where the people answered not 'Amen' but 'Blessed be the name of the glory of his kingdom for ever'."
+   }
+  ],
   "themes": [
-   "‘lead us not into temptation’",
-   "‘deliver us from evil/the evil one’",
-   "the doxology",
-   "God first and last"
+   "And forgive us our debts, as we forgive our debtors.",
+   "And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "14": {
@@ -708,76 +942,100 @@
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "14-15",
+  "pericope_label": "If ye forgive men their trespasses, your heavenly Father will also forgive you",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ enforces the forgiveness-clause of the prayer (v.12): God will not hear us unless we forgive; not the price but the necessary mark of received pardon (cf. Mt 18:23-35)."
+    "prevalence": "several",
+    "summary": "Robertson says <em>trespasses</em> is no part of the Model Prayer at all, the noun meaning literally a falling to one side while the other word denotes a positive stepping across; Barnes stops short of requiring forgiveness before it is asked, holding that where a man asks we are to pardon cordially and for ever, and where he does not we are still to treat him kindly, harbour no malice and be always ready to declare him forgiven when he asks."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin says the verses only explain why the condition was added, God not being ready to hear us unless we show ourselves ready to pardon, and that those who refuse to forget injuries devote themselves deliberately to destruction; Gill explains why the point is pressed on this audience, the Jews being subject to revenge and hardly brought to forgive, and demands a forgiveness that is full and from the heart, forgetting as well as forgiving, and given even where the offender neither asks pardon nor appears to repent."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke measures the bargain, that for a king to forgive a hundred millions of treasons on the single condition that his subjects live peaceably would never be seen among men, marks the difference between this word and the <em>debts</em> of the prayer — what men do against us is only their stumbling, while ours are debts to God's justice we can never discharge — and adds the story of Athenodorus, who advised Augustus to say nothing in anger before repeating the alphabet, though a Christian may repeat the fifth petition instead."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom observes the order carefully, since it is not said that God will forgive first and we after, God knowing how treacherous the heart is and that men who have received pardon still withhold it; Chrysostom thinks heaven and the Father are named to claim our attention, nothing so likening a man to God as forgiving one who has injured him."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Chrysostom: nothing so likens us to God as forgiving an injurer; Cyprian: we shall be judged by our own sentence; Augustine: this petition singled out for enforcement."
+    "summary": "Augustine notes that of all the petitions the Lord judged this most worthy of further enforcement, and warns that whoever will not forgive a man seeking it in true sorrow should not suppose himself forgiven; Cyprian adds that no excuse will stand in the day of judgment, when a man is judged by his own sentence; Rabanus ties the promise back to the Amen; Jerome finds an oddity in the word <em>men</em>, since those to whom sins are forgiven are rightly so called."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘if ye forgive men’",
-   "the condition of mercy",
-   "forgiving likens us to God",
-   "judged by our own measure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "The reverse stated without qualification: the unforgiving will not be forgiven (Eph 4:31; Jas 2:13) — not that forgiving earns pardon, but that an unforgiving spirit proves the heart never truly received it."
+    "question": "Must we forgive one who has not asked pardon?",
+    "positions": [
+     {
+      "view": "Yes — fully and from the heart, forgetting as well as forgiving, even where the offender neither asks nor appears to repent",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Where a man asks, pardon him for ever; where he does not, treat him kindly and harbour no malice, standing ready to forgive when he asks",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The terms are met if a man forgives from the heart the one who seeks it in true sorrow",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Contrasts the two words for sin: what men do against us is a mere stumbling or falling short of duty, while ours against God are debts we can never discharge — which is why forgiving should cost us little."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Explains the order of the clauses from the treachery of the human heart, since men who have already been pardoned still withhold pardon, and so are told to forgive first."
+   }
+  ],
   "themes": [
-   "‘if ye forgive not’",
-   "the unforgiving unforgiven",
-   "a sign of an unrenewed heart",
-   "self-pronounced condemnation"
+   "For if ye forgive men their trespasses, your heavenly Father will also forgive you:",
+   "But if ye forgive not men their trespasses, neither will your Father forgive your trespasses."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "16": {
@@ -787,136 +1045,117 @@
    "Gregory",
    "Leo",
    "Augustine",
-   "Remigius",
    "John Chrysostom",
+   "Chrysostom",
+   "Gloss",
    "John Gill",
    "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "16-18",
+  "pericope_label": "When ye fast, be not, as the hypocrites, of a sad countenance: anoint thine head, and wash thy face",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The hypocrites ‘disfigure’ their faces with a studied gloom (skythrōpoi) to ‘appear to fast’; Christ corrects the manner, not enjoining fasting itself (an established duty); ‘they have their reward’ — men’s notice."
+    "prevalence": "several",
+    "summary": "Ellicott supplies the history, only the Day of Atonement being a fixed fast under the Law, and adds that the Pharisees fixed the twice-weekly fasts on the second and fifth days with some notion that Moses went up Sinai on one and came down on the other, our Lord blaming neither the principle nor the rule but only the pride that apes humility; Robertson notes a play in the Greek, the hypocrites concealing their looks in order to appear; Lightfoot explains the disfiguring literally, faces being disguised with the ashes taken on the head in public fasts, and sets Seneca against it, that to hate easy cleanliness and affect nastiness is against nature; Barnes reduces the command about anointing to appearing as on any other day."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin calls the language hyperbolical, since Christ does not draw us out of one hypocrisy into another but requires only that our fasting make no change in our accustomed way of living, and is most guarded on the practice itself: fasting is a doubtful operation and does not stand with prayer among the actions God requires, pleasing him only as directed to something further — subduing the flesh, quickening prayer, testifying repentance. Gill makes Christ's fast a different thing, lying in abstinence from sin rather than food."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke is severe on the word itself: a fast is total abstinence from food, and to abstain from flesh while living on fish is a burlesque of one; nor is there any such thing in Scripture as fasting from sin. He derives the word for their look from a root meaning sour, or from the name of the Scythians, a morose face like a Tartar's."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom joins fasting to prayer as its aid, since a man sunk in self-indulgence cannot have a contrite heart, and gives the rule: better that fasting should show you than that you should show your fasting. He agrees the anointing is hyperbole and then reads it spiritually, the face being the conscience and the head Christ, who is anointed when the hungry are fed, so that we should wash the face but anoint the head, our conscience being foul while Christ our head has done no sin. John Chrysostom says we have outdone the hypocrites, since many neglect to fast yet wear the mask of fasting, excusing it lest they offend the many; Chrysostom observes that with alms the Lord added <em>to be seen of them</em> but with fasting and prayer added nothing of the sort, because alms cannot be wholly hidden and these can."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Gregory/Leo: a fast that seeks the esteem of men, or comes of ‘the arts of deceit,’ is not pure; Chrysostom: some surpass the hypocrites in vanity."
+    "summary": "Jerome complains that the Latin word here is a translators' blunder, properly said of men exiled beyond a boundary where the sense wanted is to destroy; Augustine warns that display lurks in the dress of mourning as much as in splendour, the more dangerous because it deceives under the name of God's service, and says plainly that none would enjoin the anointing literally, understanding the head as the reason and the anointing as joy; Leo requires fasting fulfilled not in abstinence from food only but in the cutting off of vices, a work from which the sick are not excluded; Gregory approves the fasting that opens the hand to alms; the Gloss draws the lesson that everything in the New Testament is not to be taken literally."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the command to anoint the head and wash the face to be obeyed literally?",
+    "positions": [
+     {
+      "view": "No — none would enjoin it literally, all allowing it disgraceful; the head is the reason and the anointing joy",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "Hyperbole, since Christ does not draw us from one hypocrisy into another; the point is that fasting change nothing in our usual way of living",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Hyperbole, and then to be read spiritually — the face is the conscience and the head is Christ",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "view": "It follows the Palestinian custom of anointing on festivals, and means simply that we wear the look of gladness",
+      "held_by": [
+       "Jerome",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Denies that any Scriptural sense attaches to 'fasting from sin', calling the idea absurd, and dismisses abstaining from flesh while eating fish as a burlesque of fasting."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Ranks fasting below prayer as a 'doubtful operation' which God neither requires nor approves in itself, pleasing him only so far as it serves some further end."
+   }
+  ],
   "themes": [
-   "fasting not for show",
-   "the disfigured face",
-   "self-denial made self-display",
-   "‘they have their reward’"
+   "Moreover when ye fast, be not, as the hypocrites, of a sad countenance: for they disfigure their faces, that they may appear unto men to fast. Verily I say unto you, They have their reward.",
+   "But thou, when thou fastest, anoint thine head, and wash thy face;",
+   "That thou appear not unto men to fast, but unto thy Father which is in secret: and thy Father, which seeth in secret, shall reward thee openly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Gloss",
-   "Augustine",
-   "Pseudo-Chrysostom",
-   "Jerome",
-   "Chrysostom",
-   "Remigius",
-   "Leo",
-   "Gregory",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "To ‘anoint and wash’ (against the fasting custom of neglecting both) = appear as on any ordinary day, concealing the fast; not a literal command but a figure for hiding it (Augustine)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory/Leo: true fasting opens the hand to alms and cuts off vices, not abstinence from food only; the anointing/washing the inward gladness of a fast unto God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘anoint thine head, wash thy face’",
-   "keep the fast hidden",
-   "fasting as more than abstinence",
-   "glad, secret fasting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "The reverse of the hypocrites: fast ‘unto thy Father which is in secret,’ not to ‘appear unto men’; the reward is the Father’s who ‘seeth in secret’ (‘openly’ not genuine, as vv.4,6) — the refrain sealing the threefold teaching on alms, prayer, fasting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘unto thy Father in secret’",
-   "the threefold lesson sealed",
-   "one audience, one aim",
-   "the seeing Father rewards"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
@@ -928,7 +1167,6 @@
    "Hilary",
    "Jerome",
    "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -936,118 +1174,99 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "19-21",
+  "pericope_label": "Lay not up for yourselves treasures upon earth: for where your treasure is, there will your heart be also",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Treasure not up your treasures’ (present imperative, the habit of hoarding); moth, rust, and thieves cover all earthly wealth (clothes, metals, valuables) — perishing and insecure; not forbidding use but treasuring as one’s hope."
+    "prevalence": "several",
+    "summary": "Ellicott renders the opening words <em>treasure not up your treasures</em> and says of the divided mind that men may persuade themselves they will hold a treasure in both places, but one or the other will claim an undivided allegiance; Robertson notes that the verb for breaking in is literally to dig through, easy in walls of sun-dried brick, so the Greeks called a burglar a mud-digger; Barnes explains the moth historically, treasure among the ancients consisting largely of changes of raiment, as with Achan's goodly Babylonish garment, and concludes that to regulate the heart the treasure must first be right."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin charges the covetous with folly rather than crime, since they lock their riches in well-secured chests and cannot keep them from moth or thief when God invites them to riches that never perish; he guards the command to sell against literal reading, yet will not let us be satisfied with bestowing what we can easily spare, liberality going so far as to lessen the patrimony; and he states the governing principle, that wherever men imagine the greatest happiness to lie, there they are confined. Gill directs that earthly treasure be put into God's hands by communicating liberally to the poor."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke asks whether treasure may be laid up innocently and answers yes on two conditions, that a man can do it without setting his heart on it, which is almost impossible, and that there are no widows or destitute persons where he lives; he adds that a portion belonging to your children is not yours, that a man should keep his principal and give away the product, and — quoting Quesnel on charity as a bill of exchange that cannot fail — turns on the idea of merit, since a man who thinks to purchase heaven with the meat left at his table has a base and ignorant soul. Wesley marks the passage from religious to common actions, the love of money being as inconsistent with purity of intention as love of praise."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom explains the transition, that having driven off vanity Christ turns to contempt of riches since nothing breeds the desire of money like the love of praise, and adds that even if none of the losses come a man loses much by fastening his affections below; Pseudo-Chrysostom counts a threefold destruction awaiting the goods of this life and calls all men thieves who by unlawful means make another's goods their own, asking why a man should look up to heaven where he has nothing laid up."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Chrysostom: vanity gone, contempt of riches follows (love of money springs from love of praise); Augustine: the heart cannot be pure while working for earthly gain; Jerome: every man serves what he is in bondage to."
+    "summary": "Augustine explains the pollution, that whatever is mingled with a lower nature is defiled by it as gold is alloyed by silver though silver is pure in its kind, and understands heaven as the spiritual firmament since whatever has a body is earthly; Jerome widens the saying beyond money to all possessions, the glutton's god being his belly and the lover's his lust; Rabanus divides the sentence by kinds of wealth, a common damage being named because precious stones fear neither rust nor moth; Hilary observes that the praise of heaven can be carried off by no thief and eaten by no rust of envy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "May a Christian lay up any treasure at all?",
+    "positions": [
+     {
+      "view": "Only on two conditions — that he not set his heart on it, which is almost impossible, and that no destitute persons live near him",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The command to sell is not literal, yet liberality must go so far as to lessen the patrimony, not merely to give what can be spared",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Earthly treasure is to be laid up in heaven by communicating liberally to the poor",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Attacks the notion of merit in almsgiving, saying that a man who expects heaven for his leftover food and cast-off clothes will be given precisely what those are worth."
+   },
+   {
+    "voice": "Augustine",
+    "claim": "Argues that the mingling of a higher nature with a lower defiles it even where the lower is pure in its own kind, as silver alloys gold."
+   }
+  ],
   "themes": [
-   "‘lay not up treasures on earth’",
-   "moth, rust, and thieves",
-   "the hoarding heart",
-   "perishing wealth"
+   "Lay not up for yourselves treasures upon earth, where moth and rust doth corrupt, and where thieves break through and steal:",
+   "But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:",
+   "For where your treasure is, there will your heart be also."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "To ‘lay up treasure in heaven’ = provide for eternal felicity, the good works and character that follow us (Lk 12:33), safe from moth, rust, and thief — an imperishable store."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they lay up in heaven who, not entangled in the world’s snares, make it their care to meditate on the heavenly life; the means are faith, good works, and charity (1 Tim 6:18-19)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘treasures in heaven’",
-   "the secure store",
-   "heavenly prudence",
-   "rich toward God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "A self-evident law of the soul: the heart (love, thoughts, desires) follows the treasure; so where one lays up treasure determines where the heart dwells — earthbound or heavenly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘where your treasure is, there your heart’",
-   "the heart follows the treasure",
-   "the captivity or freedom of the heart",
-   "a test of the soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
@@ -1057,136 +1276,124 @@
    "Pseudo-Chrysostom",
    "Hilary",
    "Augustine",
-   "Gregory",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "As the eye is the body’s lamp, so the inner purpose/affection lights the whole life; a ‘single’ (sound, undivided) eye = a heart fixed on God alone, filling the life with light."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the eye = our purpose, which if pure makes all our works good; Hilary: the light of the heart; Chrysostom: a sensible illustration of singleness toward God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the light of the body is the eye’",
-   "the single eye",
-   "singleness of purpose",
-   "a life full of light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Augustine",
-   "Gregory"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The ‘evil eye’ = a corrupt, covetous, divided purpose (a Hebrew idiom for avarice); it fills the whole life with darkness; if the inner light (conscience, purpose) is itself dark, ‘how great is that darkness!’"
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine/Gregory: a purpose overclouded with evil makes even good works darkness; the terror that the very faculty meant to give light is itself dark."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘if thine eye be evil’",
-   "covetousness darkens all",
-   "corrupted conscience",
-   "‘how great is that darkness!’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Pseudo-Chrysostom",
+   "Remigius",
    "Gloss",
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
    "John Chrysostom",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "22-24",
+  "pericope_label": "The light of the body is the eye: ye cannot serve God and mammon",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Mammon’ (Syriac for riches) is a rival master; a slave cannot give two masters the undivided service each demands — the love of money is incompatible with the service of God, not merely dangerous."
+    "prevalence": "several",
+    "summary": "Robertson finds the adjective used of a dowry repaid pure and simple, its root sense being without folds like unfolded cloth, and observes that a diseased eye may even be cross-eyed so that we see double, keeping one eye on hoarded treasure and rolling the other proudly up to heaven; Ellicott renders the noun the lamp of the body and identifies it with conscience, the connection lying on the surface since singleness of intention preserves us from a double treasure and a divided heart; Barnes keeps the physical illustration, a rope-dancer steadying himself by fixing his eye on the wall and a man crossing a stream on a log falling when he looks down."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the eye reason, given to guide affections blind in themselves, and holds that men pervert their own judgment until not a spark remains, light turning to darkness both when lust overwhelms reason and when men give their minds to craft; Gill and Barnes both find in the two masters that where orders agree both might be served and that obedience would otherwise be divided."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke glosses the adjective as simple and uncompounded, an eye so perfect as to see distinctly and not double, and reports that an evil eye was a Jewish phrase for the covetous man who repines at his neighbour's prosperity; Wesley calls the eye the intention, and observes with what propriety our Lord sets it between worldly desires and worldly cares."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom says the eye meant is not the outward but the inward, the light being the understanding through which the soul sees God, and insists that the masters must be of contrary orders since concord makes many one, thinking two are named to show change is easy; Pseudo-Chrysostom argues from the words chosen that the bodily eye cannot be meant, since he would have said sound or weak and not single and evil, and ties the two masters back to the spiritual mind that can keep the body free from sin; John Chrysostom sees the argument built like a physician's, pressing the hearer by both the disease that follows neglect and the health of obedience."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: to serve mammon is to serve the prince of this world; Jerome: the covetous Christian cannot serve both Christ and riches — the great either/or."
+    "summary": "Augustine takes the eye for our purpose, the works being the body, so we should ask not what a man does but with what mind — adding the limit that only acts indifferent in themselves take their colour from the motive, since nobody may say, let us rob the rich that we may give the poor; he also notices that the verb is <em>despise</em> and not <em>hate</em>, since none with a right conscience can hate God. Hilary makes the eye the light of the heart, which if single will pour the splendour of its origin back into the flesh at the resurrection; Remigius offers faith, and also the ruler of a church, well called the eye since if he errs how much more the people; Jerome says mammon is riches in Syriac and marks the wording, not he who has riches but he who is their servant; the Gloss supposes a man saying he will do good works from worldly and heavenly motives at once, and finds the saying aimed at him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the single eye stand for?",
+    "positions": [
+     {
+      "view": "The purpose or intention, the works being the body it lights",
+      "held_by": [
+       "Augustine",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The understanding, the inward eye through which the soul sees God",
+      "held_by": [
+       "Chrysostom",
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "view": "Reason, given to guide affections which are blind in themselves",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Conscience, the moral sense which discerns spiritual realities",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Faith, or else the ruler of a church, on whose seeing the people depend",
+      "held_by": [
+       "Remigius"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Limits the doctrine that motive determines the act, insisting that deeds sinful in themselves cannot be redeemed by good intention — nobody may rob the rich in order to give the poor."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Presses the physical figure into a picture of double-mindedness: the diseased eye is cross-eyed, one eye on the hoarded treasure and the other rolled proudly up to heaven."
+   }
+  ],
   "themes": [
-   "‘no man can serve two masters’",
-   "God and mammon",
-   "divided allegiance impossible",
-   "the great either/or"
+   "The light of the body is the eye: if therefore thine eye be single, thy whole body shall be full of light.",
+   "But if thine eye be evil, thy whole body shall be full of darkness. If therefore the light that is in thee be darkness, how great is that darkness!",
+   "No man can serve two masters: for either he will hate the one, and love the other; or else he will hold to the one, and despise the other. Ye cannot serve God and mammon."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "25": {
@@ -1199,42 +1406,111 @@
    "Hilary",
    "John Gill",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "25",
+  "pericope_label": "Take no thought for your life, what ye shall eat: is not the life more than meat?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Take no thought’ (merimnate) forbids not foresight or labour but anxious, distrustful care; Christ argues from greater to less — God who gave life and body will give food and raiment."
+    "prevalence": "several",
+    "summary": "Barnes explains that <em>thought</em> meant anxiety when the Bible was translated, quoting Bacon on a man who died with thought and anguish, and counts this the first of four arguments in the paragraph — he who gave life, which is more than meat, will not withhold the smaller gift; Ellicott adds Shakespeare's <em>take thought and die for Caesar</em> and reconstructs the translators' choice, the phrase having been stronger in 1611 than the <em>be not careful</em> of earlier versions, and draws the distinction that what is forbidden is not the foresight which provides for the future but the being harassed by its uncertainties; Robertson notes that the verse is now quoted as an objection to the morality of the Sermon, as though it commanded a reckless neglect of the future."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin gives two grounds for condemning immoderate care — that men vex themselves by carrying anxiety further than their calling demands, and that they rely on their own industry until they neglect to call on God — and places lawful care midway between indolent carelessness and the torments by which unbelievers kill themselves; Gill excludes labour and ordinary forethought from the prohibition and includes only what arises from diffidence and tends to despair."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says prudent care is never forbidden, only the solicitude that draws the mind different ways, and balances it, since to rely so far on providence as not to use the faculties God gave is to tempt him; he quotes his old manuscript Bible, <em>be not bysy to your liif</em>, and reports the clause <em>nor what ye shall drink</em> as missing from many versions and fathers. Wesley puts the argument in a line: if God gives the greater gift, will he deny the smaller?"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom guards the wording, that the spirit does not need food being incorporeal, though the soul cannot remain in a body unfed, and links the verse to what precedes as answering the man who asks how he is to live once he has given up all; Pseudo-Chrysostom argues from creation, that had God not willed what he made to be preserved he would not have made it, and having made it to be kept by food he must give food as long as he wills it to continue."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: he who would not serve mammon must not be enslaved by bodily cares; the anxiety is the root and fruit of the love of money."
+    "summary": "Jerome puts the rule in a phrase, that toil is enjoined and carking forbidden, since in the sweat of our face we earn our bread, and notes the disputed clause about drink; Augustine turns aside to the Euchites, who held that a monk need not work and read the Apostle's rule against the idle as meaning spiritual labour only, proving against them from Paul's example that bodily work was meant; Hilary alone reads the verse forward, to unbelievers who cavilled about what our bodies would look like at the resurrection; the Gloss compresses the whole into a sentence, be not withdrawn by temporal cares from things eternal."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How much care does the command actually forbid?",
+    "positions": [
+     {
+      "view": "Not foresight but anxiety; taking thought in the modern sense is often the best safeguard against taking thought in the older",
+      "held_by": [
+       "Charles Ellicott",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Toil is enjoined and carking forbidden, since bread is earned in the sweat of the face",
+      "held_by": [
+       "Jerome"
+      ]
+     },
+     {
+      "view": "Lawful care stands midway between indolent carelessness and the torments by which unbelievers kill themselves",
+      "held_by": [
+       "John Calvin",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Prudent care is never forbidden, and to rely on providence so far as not to use one's faculties is to tempt God",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Uses the verse against the Euchites, who cited it to justify monks refusing manual labour, and argues from Paul's own tent-making that bodily work was what the Apostle required."
+   },
+   {
+    "voice": "Hilary",
+    "claim": "Reads the verse as aimed forward at unbelievers who cavilled about the appearance of risen bodies and the food of eternal life, rather than back at present anxiety."
+   }
+  ],
   "themes": [
-   "‘take no thought’ = anxious care",
-   "greater to less",
-   "trust the Father who gave life",
-   "cure for worldly anxiety"
+   "Therefore I say unto you, Take no thought for your life, what ye shall eat, or what ye shall drink; nor yet for your body, what ye shall put on. Is not the life more than meat, and the body than raiment?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "26": {
@@ -1245,83 +1521,123 @@
    "Hilary",
    "Gloss",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The wild birds, neither sowing nor storing, are fed by the Father; how much more his children, ‘much better than they’ — an argument from the lesser creatures to the greater."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine/Gloss: the birds’ being fed is no warrant for idleness — the lesson is trust in providence, not sloth (the birds gather, but do not fret)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘behold the fowls of the air’",
-   "the Father feeds them",
-   "providence, not sloth",
-   "children better than birds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "26-27",
+  "pericope_label": "Behold the fowls of the air: which of you by taking thought can add one cubit unto his stature?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘A cubit to his stature’ (height) or ‘a span to his age’ (lifespan) — the Greek allows either; the argument is the futility of anxiety, which cannot add the least to body or days, all being in God’s hand alone."
+    "prevalence": "several",
+    "summary": "Ellicott prefers <em>birds</em> to <em>fowls</em>, our use having narrowed a word which in Chaucer covered the lark and the linnet, and thinks the words were spoken with a gesture toward the turtle-doves of a Galilean landscape; on the cubit he allows either sense but prefers age, men being seldom anxious about their height and often about their length of days. Barnes lets himself go on the birds, filling the air in flocks and meeting the morning with their songs, and observes that terms of length are commonly applied to life, the word oftener meaning age. Robertson dissents from the others, thinking stature probably suits the context best, and adds that this is no plea for idleness since even the birds are diligent. Lightfoot supplies the rabbinic saying about beasts and fowls that have no workshop and yet are fed."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes unbelief the mother of every care that goes beyond bounds, notes that Luke has ravens instead with some thinking them named because their parents desert them at birth, and finds a second fault reproved beside distrust — scarcely one man in a hundred does not promise himself what he likes from his own industry, so that Christ reproves pride as well as fear; Gill adds that Christ argues here not from the needlessness of anxious care but from its unprofitableness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supplies the rabbinic saying at length — have you ever seen a beast or fowl with a workshop, or a lion carrying burdens, a fox trading, a wolf selling oil? — with its conclusion that the reason man must labour for bread is sin; and he argues for age against stature outright, since place and time are alike quantities whose terms every tongue borrows for the other, and adding a cubit is proverbial for something minute, which suits a small portion of time but not a man's height."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom turns the argument from less to greater: if birds find food without toil, shall a man not find it who has been given both the knowledge of labour and the hope of a harvest?"
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Hilary suggests that under the name of birds we are exhorted by the example of the unclean spirits, to whom provision is given without trouble of their own; Jerome had no patience with such readings, saying that some who seek to soar beyond the limits of their fathers sink into the deep and drown, and that those who make the birds angels cannot explain how the comparison is put to men at all. Augustine turns on those who argue from the verse that they need not work, asking why they do not attend to <em>neither gather into barns</em> and why they want idle hands with full storehouses; the Gloss states plainly that our own care is not enough even for our being and life."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are the birds to be allegorised?",
+    "positions": [
+     {
+      "view": "Yes — they figure the unclean spirits, to whom provision is given without any trouble of their own",
+      "held_by": [
+       "Hilary"
+      ]
+     },
+     {
+      "view": "No — such readings drown those who attempt them, and if the birds were angels the comparison with men would not follow",
+      "held_by": [
+       "Jerome"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the cubit measure stature or length of life?",
+    "positions": [
+     {
+      "view": "Age — men are seldom anxious about their height and often about their days, and a cubit is proverbial for something minute",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Probably age, since terms of length are commonly applied to life",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Stature probably suits the context best",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Answers those who cite the birds to excuse idleness by pressing the rest of the verse — the birds gather nothing into barns, grind no corn and draw no water, so the comparison cannot license full storehouses and idle hands."
+   },
+   {
+    "voice": "Jerome",
+    "claim": "Attacks the allegorical reading of the birds as a case of men soaring beyond the limits of their fathers and drowning, insisting the plain sense must stand."
+   }
+  ],
   "themes": [
-   "‘add one cubit’",
-   "the futility of anxiety",
-   "beyond our power",
-   "care profits nothing"
+   "Behold the fowls of the air: for they sow not, neither do they reap, nor gather into barns; yet your heavenly Father feedeth them. Are ye not much better than they?",
+   "Which of you by taking thought can add one cubit unto his stature?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "28": {
@@ -1332,120 +1648,128 @@
    "Gloss",
    "Jerome",
    "Hilary",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Passing from food to raiment, Christ bids us ‘consider the lilies,’ which toil not nor spin yet are clothed by God; not to be over-allegorised (Augustine) — plain examples of providence."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome: no royal purple or silk can vie with the flowers; the Gloss: God’s providence in what is beyond human industry — if God so clothes the lilies, how much more his children."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘consider the lilies’",
-   "they toil not nor spin",
-   "God clothes the flowers",
-   "trust over raiment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The emphatic ‘I say unto you’: the wild flower outshines Solomon at his most magnificent (1 Kgs 10:4-7); God’s clothing of the lilies exceeds all human wealth and art can achieve."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘even Solomon… not arrayed like one of these’",
-   "God outdoes royal splendour",
-   "rebuke to vanity",
-   "God will clothe his children"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
+   "Remigius",
+   "John Chrysostom",
    "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "28-30",
+  "pericope_label": "Consider the lilies of the field, how they grow: shall he not much more clothe you, O ye of little faith?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Lesser-to-greater: God clothes the perishing ‘grass of the field’ (dried for the oven) though it lasts a day — how much more his children; ‘O ye of little faith’ (oligopistoi, a Talmudic phrase) gently rebukes anxiety as a failure of faith."
+    "prevalence": "several",
+    "summary": "Ellicott fills in what was in view, the hillsides of Galilee in spring with crown imperial, crimson tulips and anemones of every shade all roughly classed as lilies, presses the verb which asks not a passing glance but study, supports the oven with detail — the portable earthen vessel the poor baked in, with coarse hay heaped round it and the flame short-lived enough to make the crackling of thorns proverbial — sets against the flower the tradition that Solomon's attendants went in purple with gold-dust in their hair, and observes that <em>of little faith</em> occurs only in our Lord's teaching and never means unbelief; Robertson agrees the word for lilies may cover anemones, poppies and irises; Barnes describes the ovens from Niebuhr; Lightfoot shows the closing phrase common in the Talmudists, who reckoned among the little of faith the man who prays with a loud voice."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin draws the doctrine that the kindness of God displayed in herbs exceeds all men can accomplish by wealth, and that many who seem to have faith in prosperity tremble at the first danger of poverty."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley calls the still the natural sense, since grass and flowers can hardly be thrown into an oven the day after cutting, nor is it the custom anywhere to heat ovens with them, and ends as a naturalist would, that every microscope in which a flower is viewed gives a lively comment on this text; Clarke says that reading is contrary to the scope of the argument and reports that easterners heat their ovens with dry straw and stubble to this day."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Both Chrysostoms ask why the birds are dropped for flowers when the peacock or the swan lay ready to hand, and answer that the argument had to run two ways at once, the richness of the clothing and the meanness of the thing clothed — which is why the lilies are called grass of the field at the end, and why it is not said that tomorrow they are not but that they are cast into the oven; Pseudo-Chrysostom notices the division of labour, <em>they toil not</em> spoken for men and <em>neither do they spin</em> for the women."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine forbids allegory outright: these instances are not to be allegorised, and we are not to ask what the birds or lilies denote, since they are examples and nothing more. Hilary does exactly what Augustine forbids, making the lilies the eminences of the heavenly angels and the grass the Gentiles, granted eternal existence only to be handed to the judgment fires; Remigius goes further, making the birds the saints reborn in baptism, the lilies those who pleased God by faith alone or holy Church for the whiteness of its faith, the grass the unbelievers and the oven eternal damnation. Jerome puts it rhetorically: what regal purple may vie with flowers, and how the Tyrian dye yields to the violet is a thing sight can tell and words cannot. The Gloss notes that some copies read <em>into the fire</em>."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are the birds and lilies to be read allegorically?",
+    "positions": [
+     {
+      "view": "No — they are examples and nothing more, proving God's care for the greater from his care for the less",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "The lilies are the heavenly angels and the grass the Gentiles",
+      "held_by": [
+       "Hilary"
+      ]
+     },
+     {
+      "view": "The birds are the baptised saints, the lilies the saints or holy Church, the grass unbelievers and the oven damnation",
+      "held_by": [
+       "Remigius"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is it an oven or a still?",
+    "positions": [
+     {
+      "view": "A still — grass cannot be thrown into an oven the day after cutting, nor is it the custom to heat ovens with it",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "An oven — that reading is contrary to the argument, and easterners still heat ovens with dry straw and stubble",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Issues a general prohibition against allegorising the natural illustrations of this passage, which the other Latin fathers in the same catena immediately disregard."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Reads the vessel as a still rather than an oven, against his fellow Methodist commentator, on the ground that cut flowers would not serve as oven fuel the day after cutting."
+   }
+  ],
   "themes": [
-   "‘if God so clothe the grass’",
-   "lesser to greater",
-   "‘O ye of little faith’",
-   "anxiety a failure of faith"
+   "And why take ye thought for raiment? Consider the lilies of the field, how they grow; they toil not, neither do they spin:",
+   "And yet I say unto you, That even Solomon in all his glory was not arrayed like one of these.",
+   "Wherefore, if God so clothe the grass of the field, which to day is, and to morrow is cast into the oven, shall he not much more clothe you, O ye of little faith?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "31": {
@@ -1456,173 +1780,221 @@
    "Pseudo-Chrysostom",
    "Chrysostom",
    "Augustine",
+   "Nemesius",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The command repeated for emphasis: Christ forbids not seeking food, drink, raiment but the anxious ‘saying, What shall we eat?’ — the fretful, doubting care, summing up all the foregoing arguments."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘take no thought, saying…’",
-   "the anxious question",
-   "confidence, not carelessness",
-   "the summary prohibition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "Chrysostom",
-   "Augustine"
+   "John Wesley"
   ],
+  "range": "31-32",
+  "pericope_label": "Take no thought, saying, What shall we eat? your heavenly Father knoweth that ye have need of all these things",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Anxious seeking marks the Gentiles, who know no fatherly care (a tone of pity); the remedy is that ‘your heavenly Father knoweth’ your needs — Chrysostom: ‘Father,’ not ‘God,’ to raise their hope."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: God foreknew our needs before all time; to fret is to forget our adoption and act as if fatherless."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the Gentiles seek’",
-   "anxiety is heathenish",
-   "‘your Father knoweth’",
-   "comfort of adoption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Seek first the kingdom of God and his righteousness’ — God’s reign and the holiness he requires, before all earthly concern; ‘all these things shall be added’ as a free addition (1 Tim 4:8; Ps 37:25); Jesus centres the kingdom, not mere ethics."
+    "prevalence": "single",
+    "summary": "Ellicott notes that what stood before as a general rule is now enforced as the conclusion of an argument, and that a change of tense which English cannot render makes it personal — do not be over-anxious now; he also hears in the reference to the Gentiles pity rather than censure, with a touch of rebuke to national pride: you look down on the heathen and think yourselves God's people, yet wherein do you excel them if you seek only what they seek?"
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: anxious care betrays a gross neglect of the soul; the remedy for worry is to seek first the kingdom, and the lesser things fall into place."
+    "summary": "Calvin says unbelievers never remain tranquil because they imagine God unemployed or asleep in heaven, and adds the sting, that those who are anxious about food give his fatherly goodness no more honour than unbelievers do; Gill explains that most of the Gentiles held the soul to perish with the body, so that it is no wonder they sought these things, this being all the happiness they expected — but for those who have revelation to act the same part is absurd and wicked."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the three questions engross the whole attention of men living without God, whose belly and back are a compound god, and states the rule as a balance: not to expect necessaries offends God's goodness, and to expect superfluities is injurious to his wisdom; Wesley calls the precepts kind, their whole substance being <em>do thyself no harm</em>, and refuses to borrow the anxieties of the morrow to aggravate those of the present day."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom puts the Gentile error as a doctrine of Fortune against Providence, since men who believe their lives directed by chance fear and despair as having none to guide them; Chrysostom prefers the pastoral note, that he said not <em>God knoweth</em> but <em>your Father knoweth</em> to raise their hope, and named the things as necessary precisely so that we should be the less anxious, since a father who denies his son bare necessaries is no father. Nemesius argues the case for a particular providence at length, refusing in turn the three suppositions that God is ignorant of particulars, unwilling to attend to them, or unable."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine meets the objection from number, that God did not gain his knowledge at any time but foreknew before all time, and that those who say the things are too many to be compassed must equally say he cannot know all numbers, which are infinite — whereas infinity is not beyond the compass of one who is himself infinite. Remigius takes the repetition as deliberate, to show how necessary the precept is; Rabanus draws a fine distinction from the wording, since it is not <em>seek not food and raiment</em> but <em>what ye shall eat</em>, which convicts those who use the ordinary fare themselves and require of their companions either more sumptuousness or more austerity; the Gloss finds a further needless solicitude condemned, that of laying by more than necessity requires."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does God's providence extend to particulars, or only to the general order?",
+    "positions": [
+     {
+      "view": "To particulars: the three grounds for denying it — ignorance, unwillingness, inability — are each impossible in God",
+      "held_by": [
+       "Nemesius"
+      ]
+     },
+     {
+      "view": "To particulars, and the objection from their number fails, since infinity is not beyond the compass of one who is himself infinite",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "Those who deny it imagine God unemployed or asleep in heaven, and honour his fatherly goodness no more than unbelievers do",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Nemesius",
+    "claim": "Mounts a formal philosophical argument for particular providence, disposing in turn of ignorance, unwillingness and inability, and comparing God to a workman who leaves no part of his machine unregarded."
+   },
+   {
+    "voice": "Rabanus",
+    "claim": "Reads the wording strictly — the prohibition falls on 'what shall we eat', not on food itself — and applies it against those who impose either luxury or austerity on the people they live with."
+   }
+  ],
   "themes": [
-   "‘seek ye first the kingdom’",
-   "God’s righteousness first",
-   "‘all these things shall be added’",
-   "holy ambition the cure for care"
+   "Therefore take no thought, saying, What shall we eat? or, What shall we drink? or, Wherewithal shall we be clothed?",
+   "(For after all these things do the Gentiles seek:) for your heavenly Father knoweth that ye have need of all these things."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
- "34": {
+ "33": {
   "voices": [
    "Gloss",
    "Jerome",
    "Chrysostom",
    "Pseudo-Chrysostom",
-   "Augustine",
-   "Hilary",
    "John Gill",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "33-34",
+  "pericope_label": "Seek ye first the kingdom of God: take therefore no thought for the morrow",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Anxiety for the future forbidden as ‘fruitless care… of distrust’; each day brings its own concerns, met in their season; ‘sufficient unto the day is the evil thereof’ — live one day at a time."
+    "prevalence": "several",
+    "summary": "Ellicott says the context points to the seeking of prayer rather than of act, notes the significance of <em>the kingdom of God</em> where the less personal <em>kingdom of heaven</em> might have stood, takes the righteousness to be that which, exceeding the Pharisees', must be God's gift, and quotes a saying of our Lord's preserved outside the Gospels by Origen and Clement of Alexandria: ask great things and little things shall be added to you. Robertson turns the verse against those who find in the Sermon nothing but ethical comment, since here the kingdom is set before food and clothing; Barnes states the plain doctrine that God has control over all things and will give what he deems best, and turns the last verse on the uncertainty of life, since it is wholly uncertain whether you will see that day."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes it an argument against excessive anxiety, since it argues a gross neglect of the soul that men born to a better life should be wholly employed about earthly objects, and nothing restrains the wantonness of the flesh like meditation on the life of heaven; Gill allows two senses for the kingdom, the Gospel and its ministration or the kingdom of glory, and keeps the closing distinction practical, that it is lawful to take proper thought for present food and raiment but not to be anxiously concerned for futurity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls this the seventh reason against worldly cares, that the business of salvation ought to engross us entirely — grace being the way to glory and holiness the way to happiness — reports the rabbinic parable of the man who asked a king for his daughter knowing that all the dignities of the kingdom went with her, and quotes Trapp's blunt gloss that these things are cast in as an overplus, like the paper and pack-thread given with spice; Wesley adds that whoever seeks this first will soon come to seek it only."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom notices the figure by which the day itself is made to complain of its too heavy cares, a device used by those who speak to a rude populace, and asks whether every day has not burden enough of its own; Pseudo-Chrysostom reads the two days differently, taking today for what is needful in this present life and tomorrow for what is superfluous."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Chrysostom: nothing pains the spirit like anxiety, and worry for the morrow needlessly multiplies the day’s burden; the future left in God’s hand."
+    "summary": "Jerome shows that <em>tomorrow</em> in Scripture means time future in general, citing Jacob and the Pythoness to Saul, and concedes what the verse allows — our Lord yields that men should care for things present while forbidding thought for things to come — adding that by evil is meant not what is contrary to virtue but toil, affliction and the hardships of life; the Gloss makes the last verse a distinct prohibition, of the fruitless care that proceeds from the fault of men."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is forbidden by 'take no thought for the morrow'?",
+    "positions": [
+     {
+      "view": "Thought for things to come only; care for things present is yielded to us, and the uncertain future is left to God",
+      "held_by": [
+       "Jerome",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The fruitless care that proceeds from the fault of men, a prohibition distinct from what precedes",
+      "held_by": [
+       "Gloss"
+      ]
+     },
+     {
+      "view": "Adding tomorrow's burden to today's, since every day has enough of its own",
+      "held_by": [
+       "Chrysostom",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Not the needful things of this life at all, but the superfluous ones",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Cites an extra-canonical saying of Christ preserved by Origen and Clement of Alexandria — ask great things and little things shall be added — as an authentic parallel to this promise."
+   },
+   {
+    "voice": "Jerome",
+    "claim": "Glosses the closing word for evil as meaning not moral wrong but toil, affliction and the ordinary hardships of life."
+   }
+  ],
   "themes": [
-   "‘take no thought for the morrow’",
-   "one day at a time",
-   "‘sufficient unto the day’",
-   "daily trust in the Father"
+   "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+   "Take therefore no thought for the morrow: for the morrow shall take thought for the things of itself. Sufficient unto the day is the evil thereof."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  }
 }
