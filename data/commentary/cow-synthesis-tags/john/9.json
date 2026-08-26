@@ -1,316 +1,122 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "Augustine of Hippo",
+   "Chrysostom",
+   "Augustine",
    "Bede",
-   "Gregory",
    "Theophylact",
-   "John Gill",
+   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "1-5",
+  "pericope_label": "Who did sin, this man or his parents? I must work the works of him that sent me",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The scene follows directly on the flight from the temple (John 8:59) on the sabbath; Robertson dates it before the feast of dedication and notes the only NT case of congenital blindness healed (a Messianic sign, Mt 11:5)."
+    "summary": "Robertson settles the text at “we must work the works of him that sent me”, joining the disciples to Christ’s commission and dismissing Bernard’s defence of the singular; Ellicott reads the disciples’ question as a mystery of life brought in all its darkness rather than a subject for debate, and warns that its form leaves both alternatives open; Lightfoot dismantles transmigration on Josephus’s own terms; Barnes makes the night death."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin names three errors in judging the afflicted — censuring others while sparing ourselves, reading any stroke as deadly hatred, and condemning all whom God visits, when Job was more wretched than any man not for sin but that his piety might be proved — and answers the objection that God’s power shone brighter after Christ’s death by making the bodily presence the true day whose lustre reaches every age."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke surveys transmigration through Pythagoras, Josephus, Philo and a Hindu schedule of punishments, and concludes the blindness fell in the ordinary course of providence; Wesley presses that no man can work toward his salvation once this life is ended, though Christ can work always."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds it noble and Christ-like to serve a public that has slighted us, and warns that we make more haste than good speed when we outrun opportunities of doing good; he also cautions against accusing those whom God has justified."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: Christ, rejected in the temple, goes out and heals the blind man so His absence may cool their fury and the miracle soften them; He seeks the beggar out."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Evangelist mingles doctrine with the miracle to show its fruit; congenital, humanly incurable blindness magnifies Christ's power."
+    "summary": "Chrysostom makes the exit from the temple deliberate, so that absence might cool their fury and the miracle soften them, notes that Christ saw the man and not the man Christ, and refuses to allow that the blindness was unjust, since it brought him to see with the inward eye; Theophylact finds the disciples’ question improper and hard to account for."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: the narrative is so rich that a day would not suffice to expound it."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Christ takes notice of the piteous case of one who could not see Him."
+    "prevalence": "several",
+    "summary": "Augustine holds that both the man and his parents had sinned, though that sin was not the cause of his blindness, and that beyond the night is neither faith nor labour nor repentance, while the day of Christ’s presence lasts to the end of the world; Bede reads the passing by as the descent from heaven."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whose sin, if any, lay behind the blindness?",
+    "positions": [
+     {
+      "view": "Neither, as the question is bounded — the affliction fell in the ordinary course of providence",
+      "held_by": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Both had sinned, but that sin was not the cause of this blindness",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "The blindness was itself a benefit, bringing him to inward sight",
+      "held_by": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Refutes transmigration from Josephus: only good souls were held to pass into other bodies, so unless one will say a good man’s soul produced this blindness, the principle says nothing to the case."
+   }
+  ],
   "themes": [
-   "blind from birth",
-   "sabbath setting",
-   "Christ seeks the sufferer",
-   "congenital blindness as Messianic sign",
-   "doctrine mingled with miracle"
+   "And as Jesus passed by, he saw a man which was blind from his birth.",
+   "And his disciples asked him, saying, Master, who did sin, this man, or his parents, that he was born blind?",
+   "Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.",
+   "I must work the works of him that sent me, while it is day: the night cometh, when no man can work.",
+   "As long as I am in the world, I am the light of the world."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
    "lint": "audit-synthesis-quality/1",
-   "ungrounded_voices": [
-    "Gregory"
-   ]
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lightfoot/Barnes give the rabbinic axiom that calamity is the wage of sin (Luke 13:1-4); Robertson notes the disciples are merely puzzled, not expecting a cure."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley find behind the question the Pharisaic notion of transmigration / a pre-existent sin, held 'without any ground from Scripture.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: though all suffering proceeds from sin, we err in three ways — bitterly censuring, condemning all the afflicted, and missing that God may chasten the guiltless."
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [
-   {
-    "question": "What assumption lies behind 'who did sin?'",
-    "sides": [
-     {
-      "position": "the rabbinic link of calamity to a definite sin",
-      "holders": [
-       "Lightfoot",
-       "Barnes",
-       "Calvin"
-      ]
-     },
-     {
-      "position": "a pre-existent sin / transmigration of souls",
-      "holders": [
-       "Clarke",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "sin and suffering",
-   "born blind",
-   "transmigration of souls",
-   "errors in reading affliction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The denial is bounded by the question — neither's special sin caused the blindness; Robertson: disease is sometimes from sin (John 5:14) but this case is blame-free, and there is comfort in it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ does not call them sinless but forbids seeking the cause in sin; God may have another object than punishment, so restrain curiosity when causes are hidden."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the blindness becomes the instrument of his salvation and God's glory; Wesley: not for his or his parents' sins, but that God's power be displayed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "works of God made manifest",
-   "suffering not always punitive",
-   "purpose over blame",
-   "restraining curiosity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson and Ellicott prefer 'we must work' — Christ associating the disciples with Himself in the Father's task; the 'day' is the appointed season, 'night' its close."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the figure is drawn from daily labour (Ps 104:22-23); the 'day' is the time the Father fixed for Christ's working."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: night = after this life, when no man can work out salvation, though Christ can work always; Clarke dates it about six months before the cross."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the reading 'I must work' or 'we must work'?",
-    "sides": [
-     {
-      "position": "'we must work' — Christ joining the disciples to His mission",
-      "holders": [
-       "Robertson",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the Syrian 'I must work'",
-      "holders": [
-       "the Received Text"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "working while it is day",
-   "the appointed time",
-   "night is coming",
-   "disciples joined to the mission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'When I am in the world' — the true Light cannot be present without shining (John 1:5); Robertson distinguishes the Incarnation here from the Son as ever the Light (John 1:4); Barnes' sublime sun-image."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke/Wesley keep it practical: like the sun, Christ dispenses light everywhere, teaching by Spirit, preaching, and example (John 8:12)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: spoken by anticipation — though His working time is bounded, He is the sun illuminating the whole earth; the coming cure is the sign of that light."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "light of the world",
-   "light must shine in darkness",
-   "the sun image",
-   "sign of the coming cure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
-   "John Chrysostom",
+   "Chrysostom",
    "Augustine",
-   "Bede",
-   "Theophylact",
-   "John Gill",
    "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
@@ -319,329 +125,206 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "6-7",
+  "pericope_label": "He made clay of the spittle: go, wash in the pool of Siloam",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Jews held saliva medicinal for the eyes but forbade medicine on the sabbath, deepening the offense; the clay had no natural power over congenital blindness, so it is sign, not surgery."
+    "summary": "Robertson cites Dods against any virtue in the clay, since Christ used none in other cures; Ellicott takes the opposite view and lets the means be means, citing Pliny, Tacitus and Suetonius on fasting saliva as a recognised eye remedy, and records the reading, as old as Irenaeus, that the clay recalls the creation of man from dust; Lightfoot supplies the rabbinic tale behind the sabbath prohibition; Barnes builds the deliberate offence into a lesson on their keeping of the day."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the seemingly absurd means 'doubles' the blindness to try the man's faith and obedience, who obeys on a bare word."
+    "prevalence": "single",
+    "summary": "Calvin makes the sending to Siloam a trial of faith, the cure beginning so absurdly that it seems to double the blindness, yet the man goes on a bare word, his faith the more commendable for resting on so small a knowledge."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the clay could sooner blind than cure, teaching that God is no farther from the event whether He works with means or without."
+    "prevalence": "several",
+    "summary": "Clarke doubts any medical tendency and concludes God works in his own way, hiding pride from man by means contrary to the end proposed; Wesley presses that the treatment might almost have blinded a man who could see."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the spittle rather than water so that nothing be ascribed to the fountain, and the delay before washing so that the Jews’ obstinacy might be overcome by the sight of him walking with clay on his eyes, no glory accruing to a pool where many had washed without benefit."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine reads the sequence sacramentally, the man anointed but not yet seeing as one made a catechumen, enlightened only when sent and washed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the name Siloam point to the Shiloh of Jacob’s blessing?",
+    "positions": [
+     {
+      "view": "Yes, the fountain typifying the Sent of God",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "No — the words come from different roots, and there is no evidence John had the prophecy in mind",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The gloss distinguishes the upper pool Siloah from the lower Shelah",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Publicly withdraws the identification of Siloam with Shiloh that he had printed in his own first edition, on the ground that the two words come from different roots."
+   }
+  ],
   "themes": [
-   "clay and spittle",
-   "sign not surgery",
-   "sabbath offense compounded",
-   "trial of faith and obedience"
+   "When he had thus spoken, he spat on the ground, and made clay of the spittle, and he anointed the eyes of the blind man with the clay,",
+   "And said unto him, Go, wash in the pool of Siloam, (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lightfoot/Barnes on Siloam = 'Sent' (Neh 3:15); the waters had no efficacy, the sending tested obedience; Robertson denies the cure lay in clay or washing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: no power in clay or pool, but Christ uses outward symbols to accustom believers to signs and to show all things at His disposal; 'Sent' points to Christ the Sent One."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the errand across the city made the miracle widely noticed; the man's ready obedience to a bare word is the point."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "pool of Siloam",
-   "Sent",
-   "obedience to a bare word",
-   "signs without inherent power",
-   "publicity of the miracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "John Chrysostom",
+   "Chrysostom",
    "Augustine",
    "Bede",
-   "Theophylact",
-   "John Gill",
    "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "8-12",
+  "pericope_label": "Is not this he that sat and begged? A man that is called Jesus made clay",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The better reading is 'beggar' for 'blind'; the man was widely known, so the cure could be no imposture; Lightfoot adds the beggar's customary cry."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: God's condescension in healing the poorest and meanest, stopping the Jews' mouths, for He came for the salvation of all."
+    "summary": "Ellicott corrects the reading from “saw he was blind” to “saw he was a beggar”, and finds in the whole scene the form natural to a narrative taken from an eyewitness, possibly the man himself; Robertson notes his regular pitch as a familiar figure; Lightfoot and Clarke give the formulas Jewish beggars used, which were offers rather than requests."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the well-known beggar spread the miracle's fame, yet impiety obscures God's works, so some denied his identity."
+    "prevalence": "single",
+    "summary": "Calvin observes that impiety is ingenious in obscuring God’s works, so the brighter the display the less credit it wins, yet the doubting served the miracle by drawing a fuller testimony from the man."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls the man’s account simple and artless in the highest degree, noting he says only that clay was made, not that it was made of spittle, since he could not see the spitting."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the street-debate is providential confirmation — what was first doubted is later admitted without scruple."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the known beggar",
-   "publicity of the miracle",
-   "God's condescension to the poor",
-   "testimony hard to break"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry reads it as providence that the subject was a common beggar and therefore widely known, so the miracle was better attested; he finds a lesson in the posture — if we cannot work for God we must sit still quietly for him — and makes the reporting of mercies a duty, since God’s favours are lost upon us when they go no further."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom turns the poverty into an argument, that God heals even beggars and chooses the meanest so as to stop his critics’ mouths, marks the exactness of the man’s account, and judges the question where is he to have come from men already meditating Christ’s death."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Ellicott prefers 'No, but he is like him'; Robertson hears a vigorous denial and a divided crowd, with the emphatic 'that one spake up' (vv.11,25,36); the man's 'I am he' settles it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the miracle was public and not lightly credited; the division was only over the man's identity, not the fact of blindness or of present sight."
+    "summary": "Augustine says the opened eyes had altered his look, hears gratitude in the two words I am he, and makes him one anointed but not yet seeing, who preaches and knows not what he preaches; Bede makes him the catechumen, believing but not yet washed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did Christ withdraw immediately after the cure?",
+    "positions": [
+     {
+      "view": "So that no suspicion might attach to the miracle, the healed man having no chance to publish a false cure to oblige him",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "So that in the work of grace we should see the change without the hand that makes it",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Records the beggars’ own formulas — deserve something by me, do yourselves good by me, and, for those come down in the world, look back and see what I have been."
+   }
+  ],
   "themes": [
-   "divided crowd",
-   "I am he",
-   "eyewitness narrative",
-   "public, credited miracle"
+   "The neighbours therefore, and they which before had seen him that he was blind, said, Is not this he that sat and begged?",
+   "Some said, This is he: others said, He is like him: but he said, I am he.",
+   "Therefore said they unto him, How were thine eyes opened?",
+   "He answered and said, A man that is called Jesus made clay, and anointed mine eyes, and said unto me, Go to the pool of Siloam, and wash: and I went and washed, and I received sight.",
+   "Then said they unto him, Where is he? He said, I know not."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A natural, logical question: the fact conceded, only the 'how' is sought; the question presupposes they knew him as the blind beggar (v.8), and begins the pattern repeated by the Pharisees (vv.15,26)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how were thine eyes opened",
-   "fact conceded, manner probed",
-   "the work stands as plain fact"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The man knows only 'the man called Jesus,' not yet the Messiah (v.36); 'received sight' literally 'see again'; his artless account omits what he could not have watched."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the happy result of obedience urges us to surmount every obstacle and proceed courageously where the Lord calls."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: he was before totally ignorant of Jesus — the small starting-point of a growing confession."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man called Jesus",
-   "artless testimony",
-   "received sight / see again",
-   "obedience rewarded",
-   "growing knowledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the same hostile question as John 7:11; Ellicott: the man's honest ignorance, since Jesus had not returned after sending him to the pool (v.7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the question aimed to seize Christ for sabbath-work; He had withdrawn to avoid both their rage and popular applause."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: they designed to deliver Jesus to the Sanhedrin as a law-breaker."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Where is he?",
-   "Christ's withdrawal",
-   "designs to seize Jesus",
-   "the man left to witness alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "13": {
   "voices": [
-   "John Gill",
+   "Chrysostom",
+   "John Chrysostom",
+   "Augustine",
+   "Theophylact",
    "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
@@ -650,801 +333,313 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "13-17",
+  "pericope_label": "It was the sabbath day when Jesus made the clay: he is a prophet",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Pharisees here = the Sanhedrin (Lightfoot); the professional teachers (Robertson); the man was brought to accuse Jesus of sabbath-breaking, in a spirit of opposition, not to weigh the evidence."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the miracle that should have settled Christ's reputation instead has Him prosecuted as a criminal."
+    "summary": "Ellicott sets the day at the last great day of the feast and names the two offences, kneading clay and anointing eyes with spittle, no healing being allowed except in immediate danger; Robertson says this mattered to them more than whether the thing was done; Barnes turns their procedure into a lasting reproach, that the proper question was whether it had happened, not how; Lightfoot explains that John’s Pharisees generally mean the Sanhedrin."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: wicked men do not profit from God's works but pour out venom; the cure that should soften hearts of stone only hardens them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "brought to the Sanhedrin",
-   "prosecuted not embraced",
-   "spirit of opposition",
-   "hardened by the miracle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "For the rabbis the sabbath fact outweighed the cure; making clay and anointing with saliva were both forbidden on the day under the minute sabbath rules; Ellicott ties it to the great feast-day."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ purposely chose the sabbath (as in John 5), since the malicious defense would magnify God's power — the offense a whetstone sharpening their inquiry."
+    "prevalence": "single",
+    "summary": "Calvin says they leave the fact aside and argue only the law, assuming an error refuted a hundred times, and warns that the argument from miracles is not conclusive by itself, since Satan counterfeits God’s works like an ape."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley/Clarke: anointing the eyes with medicine on the sabbath was particularly forbidden by the tradition of the elders."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sabbath cure",
-   "making clay as servile work",
-   "day eclipses the deed",
-   "Christ purposely chose the sabbath"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The right question was whether, not how (as with conversion); the man answers briefly, against his will, now consciously possessing sight; only interest in the 'how,' no denial of the fact."
+    "prevalence": "single",
+    "summary": "Clarke holds that magicians might do things apparently miraculous but nothing really good, and would safely defy all Egypt’s magicians to open one blind man’s eyes."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Pharisees drop the question of fact and dispute only the law, finding a crime in the sabbath circumstance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how, not whether",
-   "answering against his will",
-   "disputing the law not the fact"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "One party: sabbath-breaker, so 'not of God' (John 5:10,16); the other repeats Nicodemus (John 3:2); Barnes/Clarke expose the false premise — they assumed their sabbath interpretation infallible, though the day was made for man."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives three reasons why Christ healed on that day and in a manner certain to offend — he would not yield to a usurped authority whose zeal for rituals had consumed the substance of religion, he meant to expound the fourth commandment and clear it of their glosses, and he chose the day to dignify it."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'sinner' means an immoral despiser of God (Mark 2:16); Wesley: one living in wilful sin. The miracle divides the very tribunal assembled to condemn."
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom notes they pass over the miracle to press the supposed transgression, and that none dared say openly what he thought; in the homilies he infers from the new form of the question that the speakers are the seceding party; Theophylact reads the same good intent in it."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine observes it was some and not all, since some were already anointed, and turns the charge round — to keep the sabbath spiritually is to have no sin, so they kept it carnally and transgressed it spiritually; he also allows that they may have sought a handle to cast the man out."
    }
   ],
   "debates": [
    {
-    "question": "Could Jesus be 'of God' given the sabbath-breach?",
-    "sides": [
+    "question": "Do miracles by themselves prove a divine mission?",
+    "positions": [
      {
-      "position": "no — a sabbath-breaker is not from God",
-      "holders": [
-       "some Pharisees"
+      "view": "Yes — no sinner could do such signs, and the early opponents never denied the facts",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson",
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "a sinner could not do such signs",
-      "holders": [
-       "the better party (cf. Nicodemus, John 3:2)"
+      "view": "Not by themselves, since God permits false prophets some wonders and Satan counterfeits his works",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "division in the council",
-   "sabbath made for man",
-   "false premise of infallible interpretation",
-   "miracle divides the judges"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees quietly shift from the sabbath to 'who opened your eyes'; the man reasons that such a work proves Christ sent from God; the doctors disagree, so they ask the patient."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom notes they abandon the sabbath charge they cannot hold and ask instead about the opening of his eyes."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the more they inquire, the brighter truth burns — like trying to blow out a strong flame; the man's confession advances to 'a prophet.'"
+    "voice": "John Calvin",
+    "claim": "Cites Suetonius on the blind man at Alexandria whose eyes Vespasian opened with spittle at the direction of Serapis in a dream, asking who would reckon Vespasian among the servants of God, and ascribing the case to a righteous vengeance on those who despise true miracles."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "He is a prophet",
-   "advancing confession",
-   "shifting interrogation",
-   "truth burns brighter under attack"
+   "They brought to the Pharisees him that aforetime was blind.",
+   "And it was the sabbath day when Jesus made the clay, and opened his eyes.",
+   "Then again the Pharisees also asked him how he had received his sight. He said unto them, He put clay upon mine eyes, and I washed, and do see.",
+   "Therefore said some of the Pharisees, This man is not of God, because he keepeth not the sabbath day. Others said, How can a man that is a sinner do such miracles? And there was a division among them.",
+   "They say unto the blind man again, What sayest thou of him, that he hath opened thine eyes? He said, He is a prophet."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
+   }
   }
  },
  "18": {
   "voices": [
-   "John Chrysostom",
-   "Alcuin",
+   "Chrysostom",
    "Augustine",
    "Theophylact",
-   "John Gill",
+   "Alcuin",
+   "Matthew Henry",
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
+   "John Calvin"
   ],
+  "range": "18-23",
+  "pericope_label": "They called the parents: he is of age, ask him, for they feared the Jews",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The cure conflicted with their theology, so 'the Jews' (the term of opposition) disbelieve the fact itself and summon the parents with three intimidating questions."
+    "summary": "Ellicott says they hoped fear would draw from the parents a denial of either the identity or the congenital blindness; Robertson calls the compound question shrewd and says plainly they summoned the parents to cover their own stupidity, the two admissions then cutting the ground from under the denial; Barnes sets out the two grades of Jewish excommunication and judges it was dread of the heavier that silenced them."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin holds their unbelief voluntary, nothing hindering them from seeing an obvious work of God but the malice that keeps the eyes shut, and finds in the multiplied questions a design to prevent any reply."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the parents’ frank avowal into a reproof of those ashamed of a child’s infirmity, judges their evasion cowardly since in a day of trial the man not apparently for Christ is reckoned against him, and finds in the phrase they hid behind a rule about children speaking for themselves once of age; he closes on the contrast that the simple-hearted poor draw the proper inference while others are ever learning and never come to the knowledge of the truth."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom says it is the nature of truth to be strengthened by the snares laid against it, notes that producing the parents cuts off the plea of mere resemblance, and asks what gratitude conceals what it knows from fear; Theophylact sets out the dilemma they intended and contrasts the fainthearted parents with their intrepid son."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The Catena: truth is strengthened by the snares laid against it, while a lie betrays itself."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: their blindness was voluntary, nothing hindering them but perverse hatred of Christ; Henry: the fear of man is a snare (Prov 29:25)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "disbelieving the fact",
-   "'the Jews' as opposition",
-   "truth strengthened by snares",
-   "voluntary blindness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A calculated triple question (your son? born blind? how then see?) with emphatic 'ye,' meant to confuse the parents and give the Pharisees a handle."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Lord defeats the craft and turns it to the opposite purpose, the parents answering only the half they safely can."
+    "summary": "Augustine glosses the referral wittily, that we might justly be compelled to speak for an infant who cannot speak, but this man was never dumb, and dismisses the threat in a sentence — whom they cast out, Christ took in; Alcuin notes the Evangelist is careful to show the answer came from fear and not ignorance."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was calling the parents a wise move?",
+    "positions": [
+     {
+      "view": "Self-defeating, since it removed the plea of resemblance and threw the case on the man’s own confession",
+      "held_by": [
+       "Chrysostom",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "A calculated attempt to use fear to obtain a denial",
+      "held_by": [
+       "Charles Ellicott",
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Details the heavier excommunication, called the curse, which excluded a man perpetually with maledictions and forbade anyone to sell him even the necessaries of life."
+   }
+  ],
   "themes": [
-   "triple entrapping question",
-   "emphatic 'ye say'",
-   "the trap overruled"
+   "But the Jews did not believe concerning him, that he had been blind, and received his sight, until they called the parents of him that had received his sight.",
+   "And they asked them, saying, Is this your son, who ye say was born blind? how then doth he now see?",
+   "His parents answered them and said, We know that this is our son, and that he was born blind:",
+   "But by what means he now seeth, we know not; or who hath opened his eyes, we know not: he is of age; ask him: he shall speak for himself.",
+   "These words spake his parents, because they feared the Jews: for the Jews had agreed already, that if any man did confess that he was Christ, he should be put out of the synagogue.",
+   "Therefore said his parents, He is of age; ask him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The parents clearly affirm sonship and congenital blindness, cutting the ground from the Pharisees' disbelief; the third they cannot answer, not being eyewitnesses and afraid."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they pass over the cure to avoid offense, and by their silence show ingratitude, burying God's grace through terror."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "facts conceded",
-   "fear withholds the cure",
-   "not legal eyewitnesses",
-   "ingratitude through fear"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They profess ignorance of the 'how' and 'who,' answering in the question's exact words, refusing to be entangled in the real point; 'of age' = full-grown, reckoned at thirty."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: fear of excommunication drives them to push the witness onto their son — 'ask him' true yet cowardly, throwing the testimony back on the bold beggar."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "retreat into bare fact",
-   "he is of age",
-   "fear of excommunication",
-   "testimony thrown on the son"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A continuing fear (John 7:13) and a settled compact of the leaders (not a formal decree); the penalty was the lesser excommunication (nidui), the anathema (cherem) coming only after the resurrection."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: excommunication is an ancient, legitimate discipline against apostates, here wickedly turned against Christ's disciples."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: to be put out of the synagogue is to be excommunicated — the fear silencing the parents."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fear of the Jews",
-   "excommunication (nidui vs cherem)",
-   "compact against confessors",
-   "discipline abused"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'For this reason' — fear of the synagogue-ban is caution enough; the parents cling to the safe formula 'ask him,' setting the son alone before the council."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fear repeated",
-   "ask him",
-   "parents' caution vs the son's coming boldness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
   "voices": [
-   "John Chrysostom",
+   "Chrysostom",
    "Augustine",
-   "Bede",
-   "Theophylact",
    "Alcuin",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Give God the praise' is an adjuration to tell the truth (Josh 7:19; 1 Sam 6:5), not thanks (unlike Luke 17:18); a demand pointless unless implying his story was false."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "The Catena: under a show of religion they want him to confess Christ had nothing to do with the work — which Augustine calls blasphemy, not glory to God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: shame constrains them to recall the firm man; the more they struggle against God, the more cords they put about their own neck."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: lasting love for Christ arises from actual knowledge — comfort in 'whereas I was blind, now I see.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "adjuration formula",
-   "give God the praise",
-   "religion as a mask",
-   "whereas I was blind now I see"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "24-29",
+  "pericope_label": "Give God the praise: one thing I know, that, whereas I was blind, now I see",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The keen man refuses the trap, passing by the 'sinner' quibble and clinging to the one fact of his experience, confining himself to certain knowledge they cannot gainsay."
+    "summary": "Barnes, Ellicott and Robertson agree that give glory to God is an adjuration, the words Joshua used to Achan, and not a call to gratitude — Ellicott adding that the common reading is impossible since they assume no cure occurred, and Robertson that they wished to settle a question of fact by authority, as persecutors have in every age; Ellicott also shows how one thing marks the chief matter to the exclusion of all else."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he speaks ironically to wound them, suspending judgment on the person and letting the undeniable fact argue for itself."
+    "prevalence": "single",
+    "summary": "Calvin exposes the double move, a plausible exhortation to honour God followed by a prohibition against answering according to conviction, and turns aside to the oath itself, since men who forget they deny God when they invoke him to uphold a falsehood have filled every place with perjuries."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke notes they put the man on his solemn oath while trying to put their own words in his mouth."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the man’s one certainty the pattern of testimony, since we may take the comfort of a change whose steps we cannot trace if we can say that whereas I was blind, now I see, and adds that the unbelief of those who enjoy every means of conviction is the thing truly to be marvelled at."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom explains the guarded reply as judgment and not fear, the defence lying better in the fact than in the man’s own pleading, and generalises that truth is strength and falsehood weakness, so truth ennobles whomever it takes up however mean before."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine says denying the benefit received is not to give God glory but to blaspheme him, reads the retort as it stands — I am his disciple already, do you wish to be? — and refuses to let the abuse stand as abuse, since thou art his disciple is a curse only in the speakers’ intention; Alcuin says the man answered so as neither to invite calumny nor conceal the truth, and marks how his tone hardened once the victory was won."
    }
   ],
   "debates": [
    {
-    "question": "What is the tone of 'whether he be a sinner I know not'?",
-    "sides": [
+    "question": "Why does the man say he does not know whether Christ is a sinner, having called him a prophet?",
+    "positions": [
      {
-      "position": "plain simplicity, sticking to fact",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Robertson"
+      "view": "Judgment rather than fear — the fact was a stronger defence than his own pleading",
+      "held_by": [
+       "Chrysostom"
       ]
      },
      {
-      "position": "deliberate irony to wound them",
-      "holders": [
-       "Calvin"
+      "view": "Irony, meant to wound them the more deeply",
+      "held_by": [
+       "John Calvin",
+       "Albert Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "one thing I know",
-   "refusing the trap",
-   "fact over disputation",
-   "irony or simplicity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Repeated questioning aimed to draw him into contradiction or intimidate him, but grace gave him strength to confound his examiners; another cross-examination pressing only the 'how' (vv.15,17)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the wicked are zealous in baseness while believers are cool in Christ's cause; the Lord defeats them by the man's unshaken firmness."
+    "voice": "Alcuin",
+    "claim": "Compares the repeated questioning to hounds following wherever the scent takes them, and notes they ask not how he came to see but how his eyes were opened, hoping he might detract from the operation."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "repeated questioning",
-   "trap for contradiction",
-   "grace gives boldness",
-   "firmness confounds craft"
+   "Then again called they the man that was blind, and said unto him, Give God the praise: we know that this man is a sinner.",
+   "He answered and said, Whether he be a sinner or no, I know not: one thing I know, that, whereas I was blind, now I see.",
+   "Then said they to him again, What did he to thee? how opened he thine eyes?",
+   "He answered them, I have told you already, and ye did not hear: wherefore would ye hear it again? will ye also be his disciples?",
+   "Then they reviled him, and said, Thou art his disciple; but we are Moses’ disciples.",
+   "We know that God spake unto Moses: as for this fellow, we know not from whence he is."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The negative question 'will ye also become his disciples?' is the keenest irony, the 'also' implying Jesus already has disciples the Pharisees know of (John 7:45-52); the weary man turns examiner."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley hears a gentler note — as if the man half-wished they too would be convinced and follow."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "will ye also be his disciples",
-   "irony turned on the judges",
-   "the examined becomes examiner"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rare verb 'reviled' (Acts 23:4; 1 Pet 2:23) marks their angry outburst and scornful 'that fellow'; they set discipleship to Jesus against loyalty to Moses; 'Moses' disciples' a known boast."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: under the plausible pretence of fearing to revolt from the Law, they make following Christ and following Moses inconsistent — though Moses wrote of Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "reviling the man",
-   "Moses' disciples vs Christ's",
-   "false antithesis of Moses and Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Whence' = His prophetic calling/authority, not birthplace; the perfect 'God hath spoken' to Moses stands on record (Ex 33:11; Heb 1:1); 'this fellow' is contemptuous; some did claim to know whence Jesus was (John 7:27)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Wesley: they plead ignorance of His calling to avoid receiving Him as from God; Barnes: they assumed their interpretation of the law infallible."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we know not whence he is",
-   "Moses' certainty vs Christ's authority",
-   "feigned ignorance",
-   "infallible self-interpretation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
   "voices": [
-   "John Gill",
+   "Chrysostom",
+   "John Chrysostom",
+   "Augustine",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -1452,611 +647,305 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "30-34",
+  "pericope_label": "Since the world began was it not heard that any man opened the eyes of one born blind",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The man, now bold and quick, seizes the contradiction — you who know everything confess ignorance of one who opened my eyes; only divine power could do it."
+    "summary": "Ellicott prefers the reading the marvellous thing, hears the sting in the pronoun addressed to men whose business it was to know, lays the man’s argument out as a syllogism, and warns that the premise has been lifted from its context to bear a darkness it cannot carry; Robertson finds him angry at last and says he has scored with terrific power in his use of Scripture and logic; Barnes hedges the premise with qualifications, denying it any bearing on the prayers sinners make for salvation."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he indirectly reproves them for being unmoved by so illustrious a miracle, magnifying the wonder to expose their malice."
+    "prevalence": "single",
+    "summary": "Calvin refuses the softening: those who think the man merely echoed popular opinion are mistaken, since it is the uniform doctrine of Scripture that God listens to none but such as call on him in truth, the prayer of the wicked being an abomination."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the illiterate man reasons with such clearness because God opened the eyes of his understanding as well as his body."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a marvellous thing",
-   "layman confounds the learned",
-   "spiritual sight passes to the beggar",
-   "eyes of the understanding opened"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A syllogism from their own premise (v.16) and the OT (Job 27:9; Ps 66:18; Isa 1:15): God hears not sinners but worshippers; God hears this Man; therefore He is from God."
+    "summary": "Clarke offers a middle course, taking the word for heathen — those not proselyted, set against a worshipper of the true God — and joins Barnes in reporting that sight was never restored to one born blind by natural means until Cheselden couched a young man’s eyes in 1728; Wesley limits the saying to the impenitent and marvels that a man utterly illiterate should argue with such strength and clearness."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill/Calvin/Wesley bound the maxim — 'sinners' means the notorious/impenitent, not all who sin, for God hears every penitent; He hears only the sincere."
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom observes that so long as they expected a denial they were willing to believe him, and that in making his blindness the fruit of his sins they reason most unreasonably; in the homilies he turns the expulsion into a promise, the Jews casting him out of the Temple and the Lord of the Temple finding him."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: 'sinners' may mean heathen/unproselytised, set against the 'worshipper'; Wesley calls the man a confessor for his honest courage (v.22)."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine notes the ingratitude precisely, that they had made him their teacher by questioning him so often and now expel him for teaching, and reads altogether to mean he was wholly blind, yet he who opened his eyes saves him altogether too."
    }
   ],
   "debates": [
    {
-    "question": "Who are the 'sinners' God does not hear?",
-    "sides": [
+    "question": "In what sense does God not hear sinners?",
+    "positions": [
      {
-      "position": "the notorious/impenitent ungodly, not all who sin",
-      "holders": [
-       "Gill",
-       "Calvin",
-       "Wesley"
+      "view": "An uninspired man’s opinion, with no bearing on prayers for salvation",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "heathen / non-worshippers",
-      "holders": [
-       "Clarke"
+      "view": "True as Scripture teaches it — God hears none but those who call on him in truth",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The word means heathen, or the impenitent, not sinners as such",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Answers the modern objection in advance: that surgery can now cure congenital blindness is beside the question, unless it is pretended human skill could do it under the same conditions and by the same means."
+   }
+  ],
   "themes": [
-   "God heareth not sinners",
-   "syllogism from their premise",
-   "the maxim bounded",
-   "the beggar as confessor"
+   "The man answered and said unto them, Why herein is a marvellous thing, that ye know not from whence he is, and yet he hath opened mine eyes.",
+   "Now we know that God heareth not sinners: but if any man be a worshipper of God, and doeth his will, him he heareth.",
+   "Since the world began was it not heard that any man opened the eyes of one that was born blind.",
+   "If this man were not of God, he could do nothing.",
+   "They answered and said unto him, Thou wast altogether born in sins, and dost thou teach us? And they cast him out."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The cure is unprecedented and congenital — no such case in Moses or the prophets; 'since the world began' echoes Isaiah 64:4; the man rubs in the perfect 'born blind' as the decisive point."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "since the world began",
-   "unique congenital cure",
-   "no precedent in Moses or prophets",
-   "Isaiah 64:4 echo"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A second-class condition: granting their premise that He is not from God yields 'he could do nothing' — so the man scores; one such miracle is full proof He is from God; the argument meets each of their assertions."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: God is the fountain of all good, so such beneficent miracles prove a divine commission; Wesley: nothing miraculous, of this kind."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he could do nothing",
-   "one miracle proves from God",
-   "the layman out-reasons the council"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Altogether born in sins' is contemptuous; 'and dost thou teach us?' is insufferable audacity after he routed them; when arguments fail they revile, reverting to the view Christ rejected (v.3)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: those who suffer for confessing Christ are especially honoured; Lightfoot makes him the first confessor, as John the Baptist the first martyr."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they taunt his blindness, the scribes holding that souls bear in new bodies the punishment of former crimes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "reviling for lack of argument",
-   "cast out of the synagogue",
-   "the first confessor",
-   "born in sins taunt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "35": {
   "voices": [
-   "John Chrysostom",
+   "Chrysostom",
    "Augustine",
+   "Theophylact",
    "Bede",
    "Hilary",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "35-38",
+  "pericope_label": "Dost thou believe on the Son of God? Lord, I believe. And he worshipped him",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes, Ellicott and Robertson agree that the word rendered Lord here means no more than Sir, the ordinary address to a prophet or teacher."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin cautions that what the man reaches at this point is a very small and cold portion of faith, a beginning from which Christ meant to lead him further."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes it a rule that earthly princes cannot notice everyone who defends them while Christ observes every faithful testimony, and that persecutors who shut a good man out of their communion cannot shut him out of communion with Christ; he finds the chief comfort of bodily sight in its usefulness to faith, notes that Christ revealed himself so plainly to almost no one else, and observes that the man was asking where the Saviour was at the moment he spoke with him."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom makes the finding deliberate, Christ receiving the man as a judge receives the wrestler after his labours, and reads his counter-question as the speech of a longing mind that does not yet know the one for whom it has contended; Theophylact hears in thou hast seen him a reminder of the cure, and adds a caution against Nestorius."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine marks the sequence, the face of the heart washed first and the Son of God then acknowledged, and says that I believe is a small thing beside the falling down and worshipping; Bede takes the posture for a lesson in prayer; Hilary presses the exact form of the question, that faith is asked not for Christ, a name heretics have readily in their mouths, but for the Son of God, and not for a Son who is a creature."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did the man already know who had healed him?",
+    "positions": [
+     {
+      "view": "No — he was blind before the cure and seized immediately after, so had never seen his benefactor",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "view": "He knew the voice and half expected this speaker to be the Messiah himself",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Hilary",
+    "claim": "Insists the question is framed as the Son of God and not as Christ, since heretics confess Christ while denying the Son, and that believing on the Son as a creature profits nothing."
+   }
+  ],
+  "themes": [
+   "Jesus heard that they had cast him out; and when he had found him, he said unto him, Dost thou believe on the Son of God?",
+   "He answered and said, Who is he, Lord, that I might believe on him?",
+   "And Jesus said unto him, Thou hast both seen him, and it is he that talketh with thee.",
+   "And he said, Lord, I believe. And he worshipped him."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  }
+ },
+ "39": {
+  "voices": [
+   "Chrysostom",
+   "Augustine",
    "Theophylact",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Charles Ellicott"
   ],
+  "range": "39-41",
+  "pericope_label": "For judgment I am come into this world: if ye were blind, ye should have no sin",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The older MSS read 'Son of Man' (Robertson, almost certainly correct) against 'Son of God'; either way a Messianic claim beyond the man's knowledge; he believes according to his light, ready to believe all Christ says."
+    "summary": "Barnes denies that judgment can mean condemnation, since Christ elsewhere disclaims coming to condemn, and reads the effect rather than the design; Ellicott notes the word John uses only here means the sentence pronounced rather than the act of judging, so that the light judged no man and yet by it every man was judged, and insists both phrases are read from the speakers’ own point of view."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill finds the doubling in the word itself, a judgment inflicting judicial blindness on some while in mercy illuminating others."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke states it flatly, that salvation is taken from those who reject it and the kingdom given to the Gentiles."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry applies the saying to nations and then to persons, catches what stung in the Pharisees’ retort — the rabbis, the doctors, the learned in the law — and remarks that those who most need reproof have wit enough to detect a tacit one and not grace enough to bear a just one; he presses the medical figure, that no patients are so hard to manage as those in a frenzy who say nothing ails them."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "The Catena: the temple's Lord finds the man the Jews cast out, crowning him like a victorious wrestler."
+    "summary": "Chrysostom distinguishes a twofold sight and a twofold blindness, of sense and of understanding, these men being ashamed only of the first, and reaches for Paul’s formulation about the Gentiles who attained a righteousness Israel missed; Theophylact allows that ignorance of the Scriptures would have made the offence lighter."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the enemies' excommunications are trivial, for the one they cast out is sought and owned by the Son of God; Henry: Christ seeks him to comfort and reward his boldness."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine identifies the judgment as this act of division and not the judgment of the last day, and states the diagnosis plainly: if you called yourselves blind and ran to the physician you would have no sin, but saying we see, you seek no physician and remain in your blindness."
    }
   ],
   "debates": [
    {
-    "question": "Is the reading 'Son of God' or 'Son of Man'?",
-    "sides": [
+    "question": "What kind of judgment is meant?",
+    "positions": [
      {
-      "position": "'Son of Man' (older MSS, almost certainly correct)",
-      "holders": [
-       "Robertson"
+      "view": "The sentence men pronounce on themselves by accepting or rejecting the light",
+      "held_by": [
+       "Charles Ellicott",
+       "Augustine"
       ]
      },
      {
-      "position": "'Son of God' (A L Theta, most versions)",
-      "holders": [
-       "the Received Text",
-       "Clarke"
+      "view": "Not a design but an effect, some being reformed and some hardened",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "A judicial blinding of some alongside the illumination of others",
+      "held_by": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Calls the Pharisees’ protest a libel on the great, and holds that nothing fortifies a corrupt heart against the word so effectually as the high opinion others have of it."
+   }
+  ],
   "themes": [
-   "Son of God / Son of Man",
-   "Christ seeks the outcast",
-   "the Lord crowns the confessor",
-   "excommunication trivial"
+   "And Jesus said, For judgment I am come into this world, that they which see not might see; and that they which see might be made blind.",
+   "And some of the Pharisees which were with him heard these words, and said unto him, Are we blind also?",
+   "Jesus said unto them, If ye were blind, ye should have no sin: but now ye say, We see; therefore your sin remaineth."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He does not yet know it is Jesus (not having seen Him, v.7); 'Lord' means 'Sir'; he recognises the voice and catches up Christ's words, ready to believe."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: obedient and ready — 'as soon as he is pointed out, I am ready to embrace him'; Wesley: the request already implies some faith."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who is he, Lord",
-   "readiness to believe",
-   "'Lord' = 'Sir'",
-   "the last step of ascent"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Thou hast seen him' (perfect, since his eyes opened); compared to John 4:26 to the Samaritan woman, revealing Himself here as the Son of Man; a special fitness in appealing to the sight He restored."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the disclosure carries only a small, cold portion of faith, since Christ does not yet name His death and atonement — real but seminal."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley marvels at the man's deep understanding joined to a teachable temper."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is he that talketh with thee",
-   "Son of Man revealed",
-   "sight as witness to the Messiah",
-   "seminal faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The climactic short creed and act of worship; Ellicott traces the ascent from 'the man called Jesus' to prophet, to 'of God,' to Messiah adored; Robertson: 'worshipped' in John always means divine worship."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: cautiously, the homage is rare and uncommon — far more than to a prophet — true worship, whether or not his knowledge of Christ's Godhead was yet full."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lord, I believe",
-   "worship of Christ",
-   "the ascent of faith",
-   "physical sight to faith's sight"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Judgment' is not condemnation (John 3:17; 12:47) but a judicial sifting/separation the Father gave the Son (John 5:22), at work in this very miracle."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'judgment' includes the grace of illumination — Christ restores order by a wonderful purpose contrary to human opinion."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley/Clarke: the double effect — the blind in body and soul see, while the self-styled seers are given to greater blindness; sight to the Gentiles, blindness to abusers of mercy."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does 'for judgment I am come' mean?",
-    "sides": [
-     {
-      "position": "a judicial sifting/separation, not condemnation",
-      "holders": [
-       "Barnes",
-       "Robertson",
-       "Gill"
-      ]
-     },
-     {
-      "position": "a restoring of order that includes the grace of illumination",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "for judgment I am come",
-   "sifting not condemnation",
-   "the blind see and seers blinded",
-   "grace of illumination"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The question expects 'no,' yet they vaguely suspect Jesus means them, recalling 'blind guides' (Mt 15:14); their proud self-confidence is the very condition that calls forth the saying."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: smitten, yet not of the worst class (they at least listen), but unprofited, since none can be Christ's disciple until divested of self."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "are we blind also?",
-   "conscience pricked",
-   "blind guides",
-   "self-confidence that blinds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Sin is measured by ability and opportunity; a second-class condition ('if ye were blind' — but ye are not) means real blindness would excuse, but their boast 'we see' fixes the guilt of an ignorance unwilling to be cured."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin offers two readings: ignorance would lessen guilt were they not fighting the truth (John 15:22), or their ignorance might be cured would they confess it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: invincible ignorance would excuse, but claiming sight leaves their sin without excuse or remedy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if ye were blind",
-   "willful blindness condemns",
-   "sin measured by opportunity",
-   "the great reversal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

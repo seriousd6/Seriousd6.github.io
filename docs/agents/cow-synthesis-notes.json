@@ -28682,6 +28682,16 @@
       "book": "john",
       "chapter": "9",
       "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/john-9-20260826-043909"
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "6"
+      ],
+      "note": "Gregory cannot be declared as a voice for this chapter. The Catena at k1 carries two blocks headed 'GREG.' (the four kinds of stroke, and the spittle as the savour of inward contemplation), but the grounding index in synthesis_qa.SourceIndex searches data/commentary/cow-sources/, where no spelled-out Gregory occurs for john 9, so the chapter gate flags the attribution UNSOURCED. Declaring 'Gregory the Great' would pass the check only because _hit matches the common word 'great', which is gaming it. The attribution and its sentence were removed from the 6-7 entry instead; the material is genuinely in the catena but cannot be verified by the gate."
     }
   ]
 }
