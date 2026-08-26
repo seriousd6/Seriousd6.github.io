@@ -1,7 +1,6 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -10,85 +9,79 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "1-2",
+  "pericope_label": "The third coming and the rule of witnesses",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul states 'this is the third time I am coming to you' — his third intended visit — and cites the legal rule (Deuteronomy 19:15): 'in the mouth of two or three witnesses shall every word be established'; applying the Mosaic principle to church discipline, he will proceed against offenders not rashly but by due process, on the testimony of two or three witnesses — every charge duly established, his discipline orderly and just (Barnes, Robertson)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Chrysostom, Henry): by citing this rule, Paul signals that on his coming he will hold a formal inquiry and act judicially against the impenitent — not arbitrarily, but with the justice the law requires."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "This is the third time I am coming to you",
-   "In the mouth of two or three witnesses shall every word be established",
-   "the third coming and the rule of witnesses",
-   "just and orderly discipline"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill offers two reckonings of the visits and counts the admonitions as the witnesses; Calvin makes the three approaches stand in the place of three witnesses by accommodation, and defends naming notorious offenders in public."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the two epistles for the witnesses and refers the rule to Christ’s directions rather than to the law of Moses, adding that the account Paul kept is also kept in heaven."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul 'told them before' (on his second visit) and now 'foretells (forewarns)' again, 'as if present' though absent, addressing 'them which heretofore have sinned, and to all other' — giving plain warning to the guilty; the solemn declaration 'if I come again, I will not spare' — he will no longer be lenient with the impenitent, but will exercise his apostolic authority in discipline; his forbearance has a limit (Barnes, Robertson)."
+    "summary": "Barnes argues from \"the second time\" that Paul had been at Corinth only once; Ellicott weighs three visits against one visit, one abandoned purpose and one intention, prefers the latter, and attacks the reading that makes Paul’s comings themselves the witnesses; Robertson leaves the grammar undecided."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): Paul gives this forewarning precisely so that they may repent and he may not have to act; the threat is meant to bring them to amendment before he comes."
+    "prevalence": "several",
+    "summary": "Clarke reports and rejects the case for an unrecorded second visit and takes the threatened punishment as a real power to inflict bodily harm; Wesley holds that the earlier comings were intended rather than made."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom sees Paul joining the unwritten to the written, putting his comings and warnings in the place of witnesses, and praises a discipline that warns often and punishes late in imitation of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "How many times Paul had actually visited Corinth, where Barnes, Clarke and Ellicott argue for one previous visit, an earlier authority Clarke quotes argues for two, and Robertson holds the grammar to be indecisive.",
+   "Whether the two or three witnesses are Paul’s own comings and warnings (Chrysostom, Calvin, Henry, Gill) or the ordinary legal rule applied to the inquiry he will hold (Ellicott, Barnes, Robertson)."
+  ],
+  "outliers": [
+   "Ellicott calls the accommodated reading of the witnesses strained and almost fantastic and raises a fatal objection to it, without acknowledging that Chrysostom and Calvin hold it in the same collection.",
+   "Calvin turns the passage into a rule for pastoral discipline, permitting public reproof only where the offence is already notorious."
+  ],
   "themes": [
-   "I told you before, and foretell you... that, if I come again, I will not spare",
-   "Paul's solemn warning that he will not spare the impenitent",
-   "the limit of forbearance",
-   "the warning meant to bring repentance"
+   "apostolic authority",
+   "church discipline",
+   "excommunication",
+   "witnesses",
+   "pastoral severity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "3": {
@@ -98,84 +91,68 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul takes up the Corinthians' own demand: 'since ye seek a proof of Christ speaking in me' — they wanted evidence that Christ truly spoke and acted through him — he will give it, in his coming discipline; for Christ, speaking in Paul, is 'not weak toward you, but mighty in you' — far from the weakness his critics alleged, Christ's power had been displayed among them (in their conversion, the miracles, the gifts) and would be displayed again in discipline (Barnes, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: if they demand proof of Christ's power in Paul, they will find it — but in a way they may not wish, in the exercise of judgment against the impenitent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye seek a proof of Christ speaking in me, which to you-ward is not weak, but is mighty in you",
-   "the proof of Christ speaking in Paul",
-   "Christ's power not weak but mighty",
-   "proof to be shown in discipline"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "The proof of Christ speaking in Paul, and the weakness of the cross",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill makes the Corinthians themselves the seal of Paul’s apostleship and holds that Christ could have prevented the crucifixion as God; Calvin reads the challenge as an injury to Christ, lays down that any teacher’s doctrine may be examined until Christ has manifested Himself in him, and warns against extending Christ’s voluntary suffering into a denial that his humanity was truly mortal."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul grounds his argument in Christ: Christ 'was crucified through (in) weakness' — submitting to the apparent weakness of the cross — 'yet he liveth by the power of God,' raised and reigning in divine power; and Paul applies it to himself — like his Master, he too is 'weak in him' (sharing Christ's weakness, appearing lowly and suffering) 'but shall live with him by the power of God toward you,' manifesting Christ's power in dealing with them (Barnes, Robertson)."
+    "summary": "Barnes finds the proof in the punishment itself and refers Christ’s power toward them to calamities already suffered, explaining the weakness as a real human sensibility to suffering; Ellicott prefers the shorter reading of the verse and refers \"we shall live with him\" to present spiritual power rather than to the resurrection; Robertson simply expects the proof to be given."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): as Christ's weakness was followed by resurrection power, so Paul's apparent weakness will be followed by a powerful exercise of authority among the Corinthians; the servant follows the Master's pattern."
+    "prevalence": "several",
+    "summary": "Clarke points to their conversion as the proof and stresses that none could take Christ’s life from him; Wesley refers the promised life to being raised from the dead and the power of God to the energy now at work in believers."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Christ’s death followed from a nature genuinely liable to death or only from a voluntary permission over a nature not properly mortal, Calvin arguing the first against a version of the second that Gill and Clarke both press.",
+   "Whether \"we shall live with him\" means present spiritual power (Ellicott) or the future resurrection (Wesley).",
+   "What \"not weak toward you\" refers to: miracles and the force of the gospel, or the punitive calamities Barnes prefers."
+  ],
+  "outliers": [
+   "Calvin uses the verse to defend the examination of every teacher’s doctrine, including one who claims to speak with Christ’s authority.",
+   "Ellicott notes that the better manuscripts omit the concessive clause, giving \"for even He was crucified\"."
+  ],
   "themes": [
-   "though he was crucified through weakness, yet he liveth by the power of God",
-   "we also are weak in him, but we shall live with him by the power of God toward you",
-   "the pattern of Christ crucified in weakness yet living by God's power",
-   "the servant following the Master"
+   "apostolic authority",
+   "the crucifixion",
+   "weakness and power",
+   "christology",
+   "discernment of teachers"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  },
  "5": {
@@ -188,82 +165,64 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "5-6",
+  "pericope_label": "Examine yourselves, whether ye be in the faith",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul turns the demand for proof back on them: instead of testing him, 'examine yourselves, whether ye be in the faith; prove your own selves' — test and prove your own genuineness as believers; the criterion being that they should know 'Jesus Christ is in you' (by his Spirit, by faith, by the new life), the indwelling Christ being the proof of true Christianity; 'except ye be reprobates (adokimoi, disapproved, counterfeit, those that fail the test)' — unless false professors, Christ dwells in them (Barnes, Robertson, Wesley)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the true proof of faith is the indwelling Christ, known by his Spirit and the new life; believers are to examine themselves by this mark, and only the reprobate (counterfeit) lack it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Examine yourselves, whether ye be in the faith; prove your own selves",
-   "how that Jesus Christ is in you, except ye be reprobates",
-   "the call to self-examination",
-   "the indwelling Christ the proof of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill distinguishes standing in the doctrine of faith from possessing the grace of faith; Calvin argues that the one Christ dwelling in the people cannot be denied in the minister, draws from this the dependence of faith on preaching, and uses the verse to defend the assurance of faith against those who allow only a moral conjecture."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul expresses his 'trust (hope, confidence)' that the Corinthians 'shall know that we are not reprobates (disapproved, counterfeit)' — that he will not fail the test, but will be proved a true and approved apostle; the link to v.5 being that if Christ is in them (as their conversion proves), then Paul, through whom they were converted, is no reprobate but a true minister; their genuineness vindicates his (Barnes, Robertson)."
+    "summary": "Ellicott places the emphasis on \"yourselves\" and turns the demand for proof back on the Corinthians, defining \"reprobate\" as failing the scrutiny and denying that later Calvinist senses belong to it; Barnes distinguishes the two verbs and insists proof is made in living rather than in reflection; Robertson notes that this is the word Paul feared for himself."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): Paul hopes they will recognize his approval not by his exercising severe discipline but by the evident fruit of his ministry among them."
+    "prevalence": "several",
+    "summary": "Clarke reads the whole passage through the assaying of adulterated coin and holds that the only reprobation in view is self-incurred; Wesley defines the word as inability to bear the test and reports a rendering that puts Christ among the church rather than within each believer."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What \"reprobate\" means here: failure to pass a test, with Clarke, Wesley and Ellicott all excluding any doctrine of decreed rejection, and Ellicott naming Calvinist theology as the source of the intrusion, while Calvin on the same verse is defending assurance and does not engage the question.",
+   "Whether \"Christ is in you\" is said of each believer or of the church corporately, a rendering Wesley reports without adopting."
+  ],
+  "outliers": [
+   "Barnes proves the point with an axe: its quality is learned in the woods, not by inspection or reading.",
+   "Calvin makes the congregation’s own faith the minister’s only well grounded credential."
+  ],
   "themes": [
-   "I trust that ye shall know that we are not reprobates",
-   "Paul's trust that he is not a reprobate",
-   "their conversion vindicating his apostleship",
-   "recognized by his fruit"
+   "self-examination",
+   "assurance",
+   "reprobation",
+   "faith and preaching",
+   "apostolic credentials"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "7": {
@@ -277,171 +236,145 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "7-9",
+  "pericope_label": "The prayer that they do no evil, and the wish for their restoration",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul 'prays to God that ye do no evil' — his desire is for their holiness — 'not that we should appear approved' (not to vindicate his own reputation by their obedience) 'but that ye should do that which is honest (good, honourable)'; his remarkable selflessness being that he would rather they do right even if it meant he 'be as a reprobate' (appear without proof of his power, having no occasion to display authority in discipline) — their good matters more to him than his own vindication (Barnes, Robertson)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): a true minister cares more for his people's holiness than for his own credit; Paul would forgo the very proof of his authority if only they would do well."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I pray to God that ye do no evil; not that we should appear approved",
-   "that ye should do that which is honest, though we be as reprobates",
-   "Paul's prayer for their goodness, not his own reputation",
-   "valuing their holiness above his credit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's maxim: 'we can do nothing against the truth, but for the truth' — his apostolic power is given to support and advance the truth, not to oppose it; he can act only in its service; the link to v.7 being that if the Corinthians do well (live in the truth), Paul has no occasion and indeed no power to act against them in discipline, his authority operating only on behalf of the truth, against error and sin, never against righteousness (Barnes, Robertson)."
+    "summary": "Gill notes the better reading \"we pray\" and holds that apostolic authority was never meant for those who walk in the truth; Calvin makes the pastor’s indifference to his own reputation a rule of ministry, limits the power of church officers to the service of the truth against those who claim unbounded dominion, and reads the closing word as the sound proportion of all the members."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the minister's power is entirely subordinate to the truth; it can never be used to crush the obedient, but only to defend the truth and correct what opposes it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we can do nothing against the truth, but for the truth",
-   "Paul's power serves the truth, not against it",
-   "authority subordinate to the truth",
-   "the obedient safe from his power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the petition a model of intercession and insists that power given for edification cannot be turned to destruction."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul 'is glad, when we are weak, and ye are strong' — he rejoices if he appears weak (has no occasion to use stern authority) provided the Corinthians 'are strong' (in faith and holiness); their strength is his joy, even at the cost of his own seeming weakness; and his earnest wish is 'your perfection (katartisis, complete restoration, full setting-right, maturity)' — that they may be thoroughly mended, restored to soundness and complete in every grace (Barnes, Robertson)."
+    "summary": "Barnes reads the verse as softening the previous threat and takes the maxim about the truth as a guarantee of apostolic integrity; Ellicott finds under it the condition on which the power is held, and renders the closing word \"restoration\"; Robertson takes the maxim generally, that the truth wins in the long run."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley (with Calvin): Paul's whole desire is their spiritual completeness; he would gladly be thought weak if only they were perfected in Christ."
+    "prevalence": "several",
+    "summary": "Clarke records an alternative construal in which Paul prays not to be forced to use the rod, and expounds the closing word as the setting of a dislocated limb and the ordering of a building; Wesley keeps to the plain sense and defines perfection as the faith that works by love."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What \"we can do nothing against the truth\" asserts: the integrity of apostolic teaching and discipline (Barnes, Clarke), the condition limiting the exercise of apostolic power (Ellicott, Gill), the bounds set to all church authority (Calvin, Henry), or a general maxim that truth prevails in the end (Robertson).",
+   "Whether the prayer asks that the Corinthians do no evil or that Paul be spared having to do them harm, an alternative Clarke reports."
+  ],
+  "outliers": [
+   "Calvin turns the verse against those who cite Christ’s \"he that heareth you heareth me\" to claim unlimited authority, answering that rulers in the Church are themselves subject to the truth.",
+   "Ellicott compares Paul’s willingness to seem a failure with the wish to be accursed for his brethren and with the Baptist’s consent to decrease."
+  ],
   "themes": [
-   "we are glad, when we are weak, and ye are strong",
-   "this also we wish, even your perfection",
-   "gladness in weakness if they are strong",
-   "the wish for their perfection"
+   "intercession",
+   "pastoral authority",
+   "truth",
+   "restoration of the church",
+   "self-denial"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
   }
  },
  "10": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Chrysostom"
   ],
+  "range": "10",
+  "pericope_label": "Written while absent, that he need not be sharp when present",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the verse as summarising Paul’s whole purpose in writing; Calvin holds that the threat is armed with God’s authority rather than personal passion, distinguishes this use of edification from the earlier one, and argues that authority turning to a hearer’s condemnation acts against its own nature."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul explains why he writes this severe warning 'being absent': it is 'lest being present I should use sharpness (severity)' — he writes ahead so that they may amend, and he need not deal harshly when he comes; the power the Lord gave him being 'to edification (building up), and not to destruction (tearing down)' — even his sharpness, if used, would aim to save and build, not to ruin (Barnes, Robertson)."
+    "summary": "Barnes treats the verse as an apology meant to forestall severe measures; Ellicott hears love winning an inner conflict and insists that even action would have aimed at restoration rather than display; Robertson glosses the rare adverb for sharpness as a cutting off."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke renders the word as a cutting off and stresses that the power was given for edification rather than destruction."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (with Calvin): Paul prefers to warn by letter and win their repentance, rather than wound by severe discipline in person; his authority is reluctant to strike."
+    "prevalence": "single",
+    "summary": "Chrysostom collects the severe passages of the letter and has Paul wish the sharpness to stay in the writing and never pass into deeds, while noting that the threat is armed with the Lord’s authority and that punishing the unamended would itself be a building up."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether punishment can itself be edification: Chrysostom concludes that chastising the unrepentant is a building up, while Calvin holds that any turn toward destruction is contrary to the nature of the power given."
+  ],
+  "outliers": [
+   "Chrysostom states the apostle’s wish as a preference that his threats remain threats and never be carried out.",
+   "Calvin takes the verse as fixing the limit of pastoral power for all ministers, not only for Paul."
+  ],
   "themes": [
-   "I write these things being absent, lest being present I should use sharpness",
-   "the power which the Lord hath given me to edification, and not to destruction",
-   "writing beforehand to avoid sharpness",
-   "authority for edification"
+   "pastoral discipline",
+   "edification",
+   "apostolic authority",
+   "severity and forbearance"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.47
+   }
   }
  },
  "11": {
@@ -454,38 +387,69 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "11",
+  "pericope_label": "Finally, brethren, farewell: the closing exhortations",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the farewell as a call to spiritual joy in Christ; Calvin distinguishes unity of sentiment from union of hearts, warns that where strife reigns the devil reigns, and observes that Paul softens the ending so as not to leave the church exasperated."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry urges one mind where it can be had and peace where it cannot, so that difference of judgment need not alienate affection, and rests the exhortation on the promise that the God of love and peace dwells with the peaceable."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul's affectionate close: 'farewell (chairete — rejoice, or farewell). Be perfect (katartizesthe — be perfected, mended, restored); be of good comfort (be comforted, exhorted); be of one mind (think the same, agree); live in peace' — a string of brief, earnest charges, with special stress, to a faction-torn church, on harmony and the healing of their divisions; and the promise that 'the God of love and peace shall be with you' — his presence following where love and peace are pursued (Barnes, Robertson)."
+    "summary": "Barnes and Ellicott both explain the greeting as the ordinary word for rejoicing, Ellicott making consolation the keynote of the epistle and referring the call to unity back to the Corinthian schisms, while Barnes uses \"be perfect\" to challenge the doctrine of sinless perfection to produce a single instance."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin (with Henry): if they live in love and peace, the God who is the author and giver of both will be with them; unity and peace are the chief needs of this divided church, and God's presence is the promised reward."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the English word its etymology, reads \"be perfect\" as getting back into joint, and takes the next command as admonition received in order that comfort may follow; Wesley reads the same word as aspiring to the highest degree of holiness."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What \"be perfect\" requires: restoration of a dislocated body to order (Clarke, Ellicott, Barnes) or the pursuit of the highest holiness (Wesley) — with Barnes in the same chapter demanding that any claim of sinless perfection produce one example, and Wesley making no answer.",
+   "Whether the following command means to be comforted, to comfort one another, or to receive admonition, where Barnes, Ellicott and Clarke each take a different option."
+  ],
+  "outliers": [
+   "Barnes and Clarke independently close their comment on the farewell with the same remark about the dying words of Cyrus.",
+   "Clarke concludes that where neither peace nor love is present God is absent and the assembly consists of the congregation and the devil."
+  ],
   "themes": [
-   "Be perfect, be of good comfort, be of one mind, live in peace",
-   "the God of love and peace shall be with you",
-   "the closing exhortation",
-   "the promise of the God of love and peace"
+   "unity",
+   "peace",
+   "christian perfection",
+   "consolation",
+   "farewell"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
+   }
   }
  },
  "12": {
@@ -496,115 +460,145 @@
    "Charles Ellicott",
    "A.T. Robertson"
   ],
+  "range": "12-13",
+  "pericope_label": "The holy kiss and the greeting of the saints",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill grounds the mutual greeting in what all the saints share: the same favour, the same redeeming blood and the same sanctifying grace."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's familiar parting charge: 'greet one another with an holy kiss' — the customary token of Christian love and fellowship in the early church (as in Romans 16:16; 1 Corinthians 16:20), a kiss of peace; the kiss 'holy' (hagios — pure, chaste, sacred), expressing genuine brotherly affection and unity among believers, distinguished from any worldly or impure greeting; coming after the call to be of one mind (v.11), it was the visible sign of the reconciliation and mutual love Paul urged on the divided Corinthians (Barnes, Robertson, Ellicott)."
+    "prevalence": "majority",
+    "summary": "Ellicott reads the command as directing a single act at the close of the reading and traces the kiss through the Eastern and Western liturgies to its suppression and replacement by a kissing tablet; Robertson gives the same history from the synagogue practice forward, noting its survival in the Coptic and Russian churches and its abandonment under pagan slander; Barnes places the writing of the letter in Macedonia."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the kiss as practical counsel toward a good understanding and observes that in the primitive church a saint and a Christian were one and the same."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Ellicott and Robertson independently trace the same later history of the kiss, including its replacement by a tablet passed from hand to hand, Robertson dating the English innovation to the middle of the thirteenth century.",
+   "Ellicott draws from the greeting Paul’s habit of telling one church that he was writing to another."
+  ],
   "themes": [
-   "Greet one another with an holy kiss",
-   "the charge to greet with a holy kiss",
-   "the token of Christian fellowship",
-   "the sign of reconciliation"
+   "christian fellowship",
+   "liturgical practice",
+   "greeting",
+   "sainthood"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul conveys the greeting of 'all the saints' — all the believers where he was (probably Macedonia) — who 'salute (greet) you'; a token of the universal fellowship of the church; not a few individuals but 'all the saints' join in the greeting, the whole company of believers sending their love to the Corinthians, expressing the bond uniting the churches and reminding the divided and troubled Corinthians that they belong to the wider family of God (Barnes, Robertson, Ellicott)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.5
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "All the saints salute you",
-   "the greeting of all the saints",
-   "the universal fellowship of the church",
-   "the wider family of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "A.T. Robertson",
    "John Calvin",
+   "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "14",
+  "pericope_label": "The apostolic benediction",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin answers the objection that the love of God should have preceded the grace of Christ by distinguishing what is true when we look at God from what is true when we look at ourselves; Gill takes the grace of Christ either for his eternal love or for the fulness lodged in him as Mediator."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the verse as an acknowledgment of three distinct persons in one God and as the proper dismissal of a worshipping assembly."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "This famous benediction names the three Persons of the Godhead — 'the Lord Jesus Christ,' 'God' (the Father), and 'the Holy Ghost' — and invokes a distinct blessing from each: 'the grace (free favour) of the Lord Jesus Christ' (our access to the Father through Christ's grace), 'the love of God' (the Father's love, the fountain of all), and 'the communion (fellowship, koinonia) of the Holy Ghost' (our partaking of the Spirit and his fellowship); one of the clearest scriptural witnesses to the Trinity and a model of Christian blessing (Barnes, Robertson)."
+    "summary": "Ellicott traces the benediction into the Eastern liturgies and the English Prayer Book and explains the inverted order of the divine names by the sequence of Paul’s thought; Barnes argues from the prayer that worship may be offered to the Son and the Spirit, that the divine nature admits a real distinction, and that the Spirit is a person rather than an attribute; Robertson calls it the fullest of the benedictions and reports that the letter achieved its purpose."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke expounds each divine title, then turns the word for fellowship into an argument that a believer may be as sure of his acceptance as of his own existence, and calls any teaching that allows endless doubt a spurious gospel; Wesley glosses the three clauses and rebukes those who leave before the blessing is finished."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the equal invocation of the three Persons together attests their distinct personhood and unity of Godhead; the benediction is a standing proof of the Trinity, the grace of Christ leading to the love of the Father and sealed in the communion of the Spirit."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem cites the benediction at the close of a catalogue of texts marshalled to prove that the Holy Spirit subsists, lives, speaks and foretells."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Why the Son is named before the Father, where Ellicott finds the order settled by the sequence of thought and Calvin by the difference between viewing salvation from God’s side and from ours.",
+   "How far assurance extends, Clarke holding that a believer may know his acceptance as certainly as his own existence and condemning any doctrine that leaves it uncertain."
+  ],
+  "outliers": [
+   "Ellicott dismisses the subscription naming Philippi as the addition of an unknown transcriber, while allowing that it is probably a fair inference.",
+   "Wesley turns the benediction into a rebuke of congregations that disperse before it is pronounced."
+  ],
   "themes": [
-   "The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost, be with you all",
-   "the trinitarian benediction",
-   "the three Persons invoked in one blessing",
-   "a witness to the Trinity"
+   "the Trinity",
+   "grace",
+   "assurance",
+   "benediction",
+   "public worship"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  }
 }
