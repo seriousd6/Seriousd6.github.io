@@ -1,1238 +1,1496 @@
 {
  "1": {
   "voices": [
-   "Chrysostom",
-   "Bede",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+   "John Chrysostom",
    "A.T. Robertson",
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Albert Barnes",
+   "Hilary",
+   "Matthew Henry",
+   "John Gill",
+   "Bede"
   ],
+  "range": "1",
+  "pericope_label": "Father, the hour is come; glorify thy Son, that thy Son also may glorify thee",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The opening of the longest, most sublime recorded prayer, offered toward Gethsemane; the lifted eyes and vocative ‘Father’ (an eyewitness memory, not free composition); ‘the hour is come’ for the mutual glorifying of Son and Father."
-   },
-   {
-    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: after foretelling tribulation he turns to prayer, teaching us to flee to God in trouble."
+    "summary": "Locate the prayer and describe its architecture: Barnes calls it the longest prayer in the New Testament and 'perhaps the most sublime composition to be found anywhere', offered in the open air on the road; Ellicott keeps it in the upper room, since 'to heaven' need not imply the open sky, and names it the High Priest's Prayer; Robertson notes that 'glorify thy Son' is its only personal petition and rejects the idea that a disciple composed it."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: he mingles prayer with teaching, for doctrine has no power without efficacy from above; Wesley: the ‘simplicity’ of ‘Father’ and the appointed ‘hour.’"
+    "summary": "Calvin makes the turn to prayer a rule for teachers — 'doctrine has no power, if efficacy be not imparted to it from above' — and denies that the lifted eyes localise God, the attitude meaning only that Christ 'was rather in heaven than in earth'; Gill refers the opening words back to the chapters of comfort just ended."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke lays the chapter over the Day of Atonement, matching the high priest's washing and threefold prayer to Christ's; Wesley hears the bare address as decisive — 'this simplicity of appellation highly became the only-begotten Son of God' — and notes that in prayer Christ never calls himself the Son of man."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry counts four things the prayer was at once: after a sermon ('those we preach to we must pray for'), after sacrament, a family prayer, a parting prayer."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom reads it as a pattern for the tempted — Christ 'betaketh Himself to prayer, teaching us in our temptations to leave all things, and flee to God' — and notes that the evangelist calls it not prayer but a discoursing with the Father, the lifted eyes teaching intentness 'not of the body only, but of the mind'."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine holds that Christ could have prayed in silence 'but He remembered that He had not only to pray, but to teach', and reads the hour as God's ordering rather than fate — 'away with the notion, that the stars could doom to death the Creator of the stars'; Hilary presses that it is the hour and not the day; Bede fixes the seam between sitting discourse and standing hymn."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Where was the prayer spoken?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "On the road to Gethsemane, in the open air — 'still moving on towards Gethsemane, not having yet passed the brook Cedron'."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "In the chamber, 'as they were preparing to leave' — 'the upward look is naturally expressive of feeling, and irrespective of place'."
+     }
+    ]
+   },
+   {
+    "question": "Why does Christ pray aloud rather than in silence?",
+    "positions": [
+     {
+      "held_by": [
+       "Augustine of Hippo"
+      ],
+      "view": "Because the prayer was itself instruction, 'for His disciples' edification, yes and for ours who read the same'."
+     },
+     {
+      "held_by": [
+       "John Chrysostom"
+      ],
+      "view": "To raise disciples shaken by the promise of tribulation, teaching them to flee to God."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "To seal the doctrine, since preaching without prayer has no efficacy."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine of Hippo",
+    "view": "The only voice to turn 'the hour is come' against astrological fatalism."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Alone in mapping the whole chapter onto the high priest's Day of Atonement liturgy."
+   }
+  ],
   "themes": [
-   "‘Father, the hour is come’",
-   "glorify the Son",
-   "mutual glory of Father and Son",
-   "the High Priestly Prayer"
+   "These words spake Jesus, and lifted up his eyes to heaven, and said, Father, the hour is come; glorify thy Son, that thy Son also may glorify thee:"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Albert Barnes",
+   "Origen",
+   "John Gill"
   ],
+  "range": "2-3",
+  "pericope_label": "That he should give eternal life to as many as thou hast given him... this is life eternal, that they might know thee the only true God",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Power over all flesh’ (exousia, the Messianic dominion — a claim no mere man could make, Mt 11:27; 28:18) given to Christ for the saving end: ‘that he should give eternal life.’"
+    "prevalence": "several",
+    "summary": "Read the two clauses as deliberately unequal: Barnes marks 'an important distinction between all flesh and those who were given him'; Ellicott finds the asymmetry in the grammar, a neuter singular for the collective gift and a masculine plural for individual reception; Robertson calls the claim to authority over all flesh 'stupendous... impossible for a mere man to make'."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin/Gill: ‘as many as thou hast given him’ = the elect; his authority is held for our salvation, to give life to his people."
+    "summary": "Calvin insists authority is universal but the gift is not — 'he limits this grace to those who' were given, since 'it is only the elect who belong to his peculiar flock' — and Calvin makes the knowledge itself the life, 'that knowledge which forms us anew into the image of God'; Gill takes the power as delegated rather than native, Christ's 'as Mediator'."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: since given power over ‘all flesh,’ he gave himself a ransom for all — his sacrifice designed to avail for all."
+    "summary": "Clarke reads the grant as universal in intent, 'that by one sacrifice of himself, he might reconcile them all to God', and guards the order of repentance and faith; Wesley agrees flatly that the verse is 'a clear proof that Christ designed his sacrifice should avail for all'."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen presses John's careful use of the article, added when the name of God 'refers to the uncreated cause of all things' and omitted when the Logos is named God — offered to those 'afraid that they may be proclaiming two Gods'."
    }
   ],
   "debates": [
    {
-    "question": "To whom does Christ give eternal life — a definite elect, or all?",
-    "sides": [
+    "question": "Is the gift of eternal life intended for all, or for the given only?",
+    "positions": [
      {
-      "position": "the elect given him by the Father",
-      "holders": [
-       "John Calvin",
-       "John Gill"
-      ]
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ],
+      "view": "For all: 'all flesh, every man, should partake of everlasting life. For as the Father had given him power over all flesh, so he gave himself a ransom for all.'"
      },
      {
-      "position": "all flesh, by a ransom for all",
-      "holders": [
-       "John Wesley"
-      ]
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "For the given only: the kingdom extends to all, but 'it is only the elect who belong to his peculiar flock, which he has undertaken to guard as a Shepherd'."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Charles Ellicott"
+      ],
+      "view": "Mark the distinction without Calvin's vocabulary — a dominion that restrains over all, a purpose that saves for those given."
+     }
+    ]
+   },
+   {
+    "question": "Why does Christ name himself 'Jesus Christ' in his own prayer?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Probably a predicate accusative, 'Jesus as the Christ'; else the words look like the evangelist's parenthesis."
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "‘power over all flesh’",
-   "authority unto life",
-   "‘as many as thou hast given him’",
-   "extent of redemption"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Eternal life defined as the saving, growing knowledge (not speculative, but love and reverence) of ‘the only true God’ and ‘Jesus Christ’ — ‘the only true God’ excludes the heathen idols, not the Son/Spirit (1 Cor 8:6)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the knowledge is saving because we are in death till God enlightens us; Origen: the article distinguishes the persons (God the source, the Word named God), not their nature."
+    "voice": "Origen",
+    "view": "The only voice to approach 'the only true God' through the Greek article rather than through the doctrine of election or atonement."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "‘this is life eternal’",
-   "knowing God and Christ",
-   "‘the only true God’",
-   "life as communion with God"
+   "As thou hast given him power over all flesh, that he should give eternal life to as many as thou hast given him.",
+   "And this is life eternal, that they might know thee the only true God, and Jesus Christ, whom thou hast sent."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+   "Cyril of Jerusalem",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He glorified the Father by completing his Messianic work — personally, verbally, and in deed; ‘I have finished’ includes his death as virtually accomplished (19:30); his whole life manifested God (5:36)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: the pattern of a finished obedience — the ground on which he asks to be glorified (v.5), a claim no other could make without reserve."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I have glorified thee on the earth’",
-   "the finished work",
-   "obedience completed",
-   "ground of the petition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Adam Clarke",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A clear assertion of eternal pre-existence: he asks to be glorified with ‘the glory I had with thee before the world was’ — not a new glory but the pre-incarnate glory veiled in his humiliation, now to shine forth."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the divine glory of the Son, hidden in his abasement, restored to open display now his work is done — not a creature honoured but the eternal Son returning to his glory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the glory I had with thee before the world was’",
-   "eternal pre-existence",
-   "deity of the Son",
-   "glory veiled and restored"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Gill"
   ],
+  "range": "4-5",
+  "pericope_label": "I have glorified thee on the earth... glorify thou me with thine own self with the glory which I had with thee before the world was",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Manifested thy name’ = made known God’s character/attributes (the full revelation through Christ); the apostles are the Father’s gift to him, given ‘out of the world’ and keeping his word — the ground of the intercession."
-   },
-   {
-    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Chrysostom: this detail explains the finished work — to announce the Father; Augustine: the manifestation reaches all the Father gives, not the eleven only."
+    "summary": "Take the perfect tense and the pre-existence claim at full strength: Barnes reads 'I have finished' as including the death still to come and calls verse 5 the most distinct declaration of pre-existence possible; Ellicott allows the words one sense only, Christ claiming divine glory 'in personality distinct from, but in essence one with God'; Robertson turns the verb against critics who find failure in the cross — Christ 'does not die as a disappointed man, but as the successful messenger'."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the first plea is their embracing the doctrine that makes men God’s children; the ‘given’ are the elect, given by the Father to the Son."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I have manifested thy name’",
-   "the disciples given out of the world",
-   "kept thy word",
-   "ground of the intercession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The disciples ‘have come to know’ (real if not yet full, 16:30) that all Christ’s teaching, works, and authority are ‘of’ the Father — laid before God as evidence of their faith."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the chief part of faith — not resting in the flesh but perceiving Christ’s divine power; to know all in Christ is ‘from God’ is to perceive God in him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘now they have known’",
-   "all in Christ is of the Father",
-   "ripening faith",
-   "perceiving God in Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The steps of faith: Christ gave the Father’s words (ta rhēmata); they received them, knew surely he came from God, and believed the Father sent him — a pure teaching from heaven (12:49)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God is the Author of the doctrine, Christ teaching as Mediator only what he received; faith rests on the received word, not human reasoning."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the words which thou gavest me’",
-   "received, known, believed",
-   "the anatomy of faith",
-   "divine origin and mission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The strict present ‘I am praying for them’ — Christ intercedes specifically for his own; ‘not for the world’ is limited to this petition (he prays for the world in v.21; God loves the world, 3:16; he prayed for sinners, Lk 23:34)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he prays not for the world because his solicitude is for his own flock, pleading only for those the Father loves; Augustine: ‘the world’ = those living by lust, not in the gracious lot."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Why does Christ ‘pray not for the world’?",
-    "sides": [
-     {
-      "position": "limited to this petition — he prays for the world (future believers) in v.21",
-      "holders": [
-       "A.T. Robertson",
-       "John Wesley",
-       "Adam Clarke"
-      ]
-     },
-     {
-      "position": "he intercedes only for his own flock/the elect, not the world",
-      "holders": [
-       "John Calvin",
-       "Augustine of Hippo"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "‘I pray for them’",
-   "‘not for the world’",
-   "priestly intercession",
-   "for those the Father gave"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A fresh plea (the disciples are the Father’s and Christ’s, so the Father’s care is for Christ’s own) and a claim of deity — ‘I am glorified in them’ in their future service (Gal 1:24; 1 Pet 2:9)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: ‘thine are mine’ is a claim no creature could make — the perfect community of possession asserting the Son’s equality with the Father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘all mine are thine, and thine are mine’",
-   "mutual possession",
-   "claim of deity",
-   "‘I am glorified in them’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "As Christ departs, the disciples remain exposed (esp. between his death and Pentecost); he asks the ‘Holy Father’ to ‘keep’ them by his name and make them ‘one, as we are’ — petitions for spiritual, not worldly, blessing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he prays earnestly because they lose his bodily shelter (cf. the hen, Mt 23:37); Wesley: kept through the Father’s power, made one by resemblance to the divine unity, not equality."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘Holy Father, keep them’",
-   "kept in the world, not from it",
-   "‘that they may be one’",
-   "union modelled on Father and Son"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ ‘kept’ and ‘guarded’ his own as a sentinel; none lost but ‘the son of perdition’ (Judas; the antichrist phrase, 2 Thess 2:3) — a Hebraism for one who deservedly perishes, fulfilling Scripture."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ kept all the Father gave; Judas, never truly of the kept elect, perished as foretold — no failure of the keeping."
+    "summary": "Calvin holds the sacrifice of death still remained, 'yet, as the hour of his death was already at hand, he speaks as if he had already endured it', and confines the request to what belongs to Christ, the majesty 'which he had always possessed' now displayed in the Mediator; Gill spreads the glorifying across ministry, miracles and conduct."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley: one whom God had given him is lost — ‘so far was even that decree from being unchangeable.’"
+    "summary": "Clarke has Christ speak 'as already sacrificed for the sin of the world' and paraphrases the petition as the eternal divinity penetrating the humanity at the right hand; Wesley makes the point with one verb — 'he does not say received — he always had it, till he emptied himself of it in the days of his flesh.'"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem uses the verse for a distinction no one else raises: God is Father of men 'in an improper sense', by care rather than begetting, 'but of Christ alone He is the Father by nature, not by adoption'."
    }
   ],
   "debates": [
    {
-    "question": "What does the loss of Judas prove about perseverance?",
-    "sides": [
+    "question": "In what sense is the work 'finished' before the cross?",
+    "positions": [
      {
-      "position": "Judas was never of the kept elect; his loss is no breach of the promise",
-      "holders": [
-       "John Calvin"
-      ]
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "The perfect reaches forward: 'he probably means to include also his death'."
      },
      {
-      "position": "one truly given to Christ fell away",
-      "holders": [
-       "John Wesley"
-      ]
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The sacrifice still remained, but the hour being at hand 'he speaks as if he had already endured it'."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "The two clauses explain each other: 'God was glorified in the completion of the Messianic work of Christ.'"
+     }
+    ]
+   },
+   {
+    "question": "What glory is asked for in v.5?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Actual pre-incarnate glory: 'not just ideal... but actual and conscious existence at the Father's side'."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The same majesty, now 'illustriously displayed in the person of the Mediator, and in the human flesh with which he was clothed'."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "view": "Alone in using the verse to distinguish natural from adoptive fatherhood rather than to argue pre-existence."
+   }
+  ],
   "themes": [
-   "Christ keeps his own",
-   "‘the son of perdition’ (Judas)",
-   "fulfilment of Scripture",
-   "perseverance debated"
+   "I have glorified thee on the earth: I have finished the work which thou gavest me to do.",
+   "And now, O Father, glorify thou me with thine own self with the glory which I had with thee before the world was."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "John Chrysostom",
+   "A.T. Robertson",
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "John Gill"
+  ],
+  "range": "6-8",
+  "pericope_label": "I have manifested thy name unto the men which thou gavest me out of the world... they have received them, and have known surely that I came out from thee",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Attend to tense and reception: Ellicott renders 'now they do know', the fruit of a training still future in its fulness, balances 'I have given' against 'they received', and reads 'thine they were' as prior moral preparation; Robertson keeps the plain historical sense, Christ claiming 'loyalty and fidelity in these men with the one exception of Judas' without claiming perfection; Barnes takes the possession from creation and providence."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin confronts the tension that Christ's preaching 'was common to all' yet the name was manifested to few, answering that 'the elect alone profit by the grace of the Spirit, who teaches inwardly', and finds here the chief part of faith, which 'does not rest satisfied with beholding the flesh, but perceives his Divine power'; Gill lists the titles the doctrine bears in Scripture."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke restricts 'out of the world' nationally, to 'the Jewish people', and stresses the deposit's purity — 'neither Jewish fables nor fictions of men have been mingled with it'; Wesley reads the possession by creation and descent from Abraham."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom takes the verse as explaining 'I have finished Thy work', and notes the name was known before only to Jews, the manifestation going further than monotheism: 'it is not the same thing to learn that He is Creator, and that He hath a Son.'"
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine raises the difficulty that if only the eleven are meant there is no glory in it — 'what great glory... was it to become known to twelve, or rather eleven mortal creatures?' — leans to the wider reading, then concedes that the context speaks of those already disciples."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Whom does 'the men which thou gavest me out of the world' cover?",
+    "positions": [
+     {
+      "held_by": [
+       "Augustine of Hippo"
+      ],
+      "view": "Weighs all future believers against the eleven and leaves the question open."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "The apostles specifically, taken 'from among the Jewish people'."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The elect, who alone profit inwardly by a preaching common to all."
+     }
+    ]
+   },
+   {
+    "question": "In what sense were they God's before they were given?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "By creation and preservation."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "By creation and descent from Abraham."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "By moral preparation: 'they were morally prepared by the earlier manifestation of God for the fuller manifestation in Christ.'"
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "By election — 'objects of thy choice'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine of Hippo",
+    "view": "The only voice to press the arithmetic of the glorifying, and to leave his own question unresolved."
+   }
+  ],
+  "themes": [
+   "I have manifested thy name unto the men which thou gavest me out of the world: thine they were, and thou gavest them me; and they have kept thy word.",
+   "Now they have known that all things whatsoever thou hast given me are of thee.",
+   "For I have given unto them the words which thou gavest me; and they have received them, and have known surely that I came out from thee, and they have believed that thou didst send me."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "Cyril of Jerusalem",
+   "John Chrysostom",
+   "A.T. Robertson",
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "Matthew Henry",
+   "John Gill"
+  ],
+  "range": "9-10",
+  "pericope_label": "I pray for them: I pray not for the world... and all mine are thine, and thine are mine; and I am glorified in them",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Narrow the exclusion so it does not bind Christ's whole intercession: Ellicott insists on the strict present, 'I am not praying for the world', not a statement of general practice; Robertson agrees — 'now at this point in the prayer Christ means' — and notes the singular Greek verb of v.10 'emphasizing the unity of the whole'; Barnes takes the world morally and concludes the passage 'settles nothing about the question whether Christ prayed for sinners'; Ellicott also corrects the pronouns of v.10, which are not masculine."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin alone answers the objection from the command to pray for all: 'the prayers which we offer for all are still limited to the elect of God', since we cannot tell one from another; and he draws the assurance that Christ pleads for none but those the Father owns, 'therefore I shall not meet with a refusal'; Gill insists that in v.10 'Christ is speaking not of things but of persons'."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke narrows the exclusion historically, to the rebellious Jews whose judgment 'slumbered not', while Christ is 'wholly employed for my disciples'; Wesley argues from parity that this no more proves Christ did not pray for the world than praying for the apostles alone proves he did not pray for later believers, and calls v.10 'very high and strong expressions, too grand for any mere creature to use'."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry works the distinction through a farming image: take the world for 'a heap of unwinnowed corn in the floor, and God loves it, Christ prays for it, and dies for it', but the Lord 'eyes particularly those that were given him out of the world, extracts them'."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom finds love rather than limit — Christ 'not only gives them what He has of His own, but entreats another for them, as a still further proof of His love'; Cyril of Jerusalem cites v.10 creedally, to show 'no opposition in those who work'."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine reads a definition of the world rather than a limit on the prayer: Christ means 'those who live according to the lust of the world', and the given 'have ceased to belong to that world'."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does 'I pray not for the world' limit Christ's intercession?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson",
+       "John Wesley"
+      ],
+      "view": "No — only this petition at this point; Christ prayed for his crucifiers and intercedes for sinners still."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "Yes, and consistently: our own prayers for all 'are still limited to the elect of God'."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "The world here is the rebellious Jews, for whom he does not pray because their iniquity was full."
+     },
+     {
+      "held_by": [
+       "Augustine of Hippo",
+       "Matthew Henry"
+      ],
+      "view": "The word 'world' is being defined, not the prayer restricted: the given have already ceased to belong to it."
+     }
+    ]
+   },
+   {
+    "question": "Are 'all mine are thine' persons or things?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "All-inclusive: the words 'assert absolute community in all things between the Father and the Son'."
+     },
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "Persons — the elect, whose mutual interest arises 'from an union in nature, an agreement in covenant, and a conjunction in operation'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "The only voice to figure the distinction agriculturally, as a floor of unwinnowed corn from which the given are extracted."
+   }
+  ],
+  "themes": [
+   "I pray for them: I pray not for the world, but for them which thou hast given me; for they are thine.",
+   "And all mine are thine, and thine are mine; and I am glorified in them."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "A.T. Robertson",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "Matthew Henry",
+   "John Gill"
+  ],
+  "range": "11-12",
+  "pericope_label": "Holy Father, keep through thine own name those whom thou hast given me... and none of them is lost, but the son of perdition",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Prefer the harder reading and read the keeping modestly: Barnes resists 'keep by thy power' for the literal 'keep in thy name', and holds the oneness to be 'not a union of nature, but of feeling, plan, purpose'; Ellicott dates the danger to the interval between the death and Pentecost, and distinguishes the two verbs of v.12 as feeding and guarding; Robertson notes 'Holy Father' occurs nowhere else in the New Testament, calls Christ the flock's sentinel, and takes 'son of perdition' as marking 'final loss, not annihilation'."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains that Christ prays because the disciples 'will very soon be deprived of his bodily presence', and answers the objection that he surrenders the office of keeping — 'he speaks here of visible guardianship only which ended at the death of Christ'; Gill adds that the leaving is bodily, not spiritual."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the manuscript evidence for 'thy own name which thou hast given me' as of 'the most ample evidence and indisputable authority', the name meaning 'the doctrine or knowledge of the true God'; Wesley keeps the instrumental sense, 'thy power, mercy, wisdom', and reads Judas as decisive against unconditional decree."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes what the petitions are not — not 'that they might be rich and great in the world' but that they be 'kept from sin, and furnished for their duty' — since 'Christ's intercession is always pertinent'."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the true text and sense of 'keep through thine own name'?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "The relative agrees with 'name': keep them in the name which Thou hast given Me."
+     },
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "On the older text, still 'keep in thy name', that is 'keep in the knowledge of thyself'."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "Instrumental — 'thy power, mercy, wisdom'."
+     }
+    ]
+   },
+   {
+    "question": "What does the loss of Judas prove?",
+    "positions": [
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "That the decree was not unchangeable: 'so one even of them whom God had given him is lost.'"
+     },
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "Nothing of the kind — the giving was 'in the sense of giving as apostles', and does 'not of necessity prove that they were true believers'."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "That he would not be saved, and might even after the betrayal 'have returned to God and have found mercy'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "The only voice to explain the handing over of the keeping as the end of a merely visible guardianship belonging to the Mediator's earthly state."
+   }
+  ],
+  "themes": [
+   "And now I am no more in the world, but these are in the world, and I come to thee. Holy Father, keep through thine own name those whom thou hast given me, that they may be one, as we are.",
+   "While I was with them in the world, I kept them in thy name: those that thou gavest me I have kept, and none of them is lost, but the son of perdition; that the scripture might be fulfilled."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "13": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+   "John Chrysostom",
    "A.T. Robertson",
-   "John Calvin"
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "John Gill"
   ],
+  "range": "13-16",
+  "pericope_label": "That they might have my joy fulfilled in themselves... I pray not that thou shouldest take them out of the world, but that thou shouldest keep them from the evil",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He prays aloud in their hearing (11:42) — the prayer a ‘lesson’ — that they might have ‘my joy fulfilled in themselves’ (15:11; 16:24), Christ’s own joy brought to fullness."
+    "prevalence": "several",
+    "summary": "Define the joy and press the double preposition: Barnes takes the joy prospectively, of the resurrection and ascension; Ellicott takes it of Christ's own, 'that which supported Him in all the sorrow and loneliness of His work on earth', and sets out the Christian ideal as 'not freedom from work, but strength to do it; not freedom from temptation, but power to overcome it'; Robertson turns the grammar into indictment, since the disciples 'must not be like the world nor get their spirit, standards, and message out of the world, else they can do the world no good'."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: he prays earnestly not from anxiety but to remedy theirs — praying in their presence that, hearing themselves committed to God, they might be at peace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘that they might have my joy fulfilled’",
-   "prayer spoken aloud",
-   "joy as comfort",
-   "committed to the Father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Calvin explains the prayer is spoken aloud 'to remove from them all doubt', rules out the wish for exemption — safety is not being 'free from every annoyance' but continuing safe 'in the midst of dangers' — and reads the repetition of v.16 as arguing the hatred is not their fault 'but because the world hates God and Christ'; Gill states that 'Christians are not Stoics'."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The word given separates the disciples from the world, drawing its hatred (15:18); they are ‘in’ and sent ‘into’ the world (vv.13,18) yet ‘not of’ it — not to share its spirit or message."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke localises the hostility to the Jewish rulers and closes on human nature — 'men despise that which they should esteem, and endeavor to destroy that without which they must be destroyed themselves!' — and denies that Christ wishes his apostles secluded in desert or cloister; Wesley takes 'the evil' personally, of 'the evil one, who reigns therein'."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom turns from exegesis to counsel: 'when having become virtuous we are persecuted by the wicked... let us not be distracted or angry. For this is the natural course of things', hatred being a mark of virtue."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Chrysostom: virtue naturally engenders the wicked’s hatred; Augustine: he foretells future sufferings in the past tense; Calvin: those hated for the word are the Father’s to protect."
+    "prevalence": "single",
+    "summary": "Augustine explains the past tense as prophecy — Christ 'foretelling the future in words of the past tense' — and grounds their separation in regeneration, 'for by generation they were of the world', with the asymmetry that Christ 'was never of the world'."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whose joy is meant, and in what sense fulfilled?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "The disciples' future joy at the resurrection, ascension and heavenly intercession."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Christ's own joy, sourced in the Father's presence, with which he would fill them."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "A continuing state: 'that they may keep on having Christ's joy... realized in themselves'."
+     }
+    ]
+   },
+   {
+    "question": "Is 'the evil' a person or a thing?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Undecidable: it 'can mean the evil man, Satan, or the evil deed', the same ambiguity as in the Lord's Prayer."
+     },
+     {
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ],
+      "view": "Personal — 'the evil one, who reigns therein'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Alone in reading these verses as diagnosing the Church's failure to win the world, not merely describing the disciples' position."
+   }
+  ],
   "themes": [
-   "‘the world hath hated them’",
-   "word given, world’s hatred",
-   "‘not of the world’",
-   "in but not of the world"
+   "And now come I to thee; and these things I speak in the world, that they might have my joy fulfilled in themselves.",
+   "I have given them thy word; and the world hath hated them, because they are not of the world, even as I am not of the world.",
+   "I pray not that thou shouldest take them out of the world, but that thou shouldest keep them from the evil.",
+   "They are not of the world, even as I am not of the world."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "He prays not for their removal (they have a work in the world, v.18, to spread his name) but to be kept ‘from the evil’ — the evil one (Satan, 1 John 5:18) or evil deed (the ambiguity of Mt 6:13)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the believer’s safety is not freedom from every evil but preservation through it — kept, not exempted."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘not… take them out of the world’",
-   "‘keep them from the evil’",
-   "preservation, not escape",
-   "a work in the world"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A deliberate repetition of v.14 for emphasis, used as a plea for the Father’s preservation and a hinge turning the prayer from preservation toward sanctification and mission."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: another plea — the world’s hatred is no fault of theirs but enmity against God and Christ, moving the Father to favour them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘not of the world’ repeated",
-   "plea for preservation",
-   "hinge to sanctification",
-   "likeness to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Gill"
   ],
+  "range": "17-19",
+  "pericope_label": "Sanctify them through thy truth: thy word is truth... and for their sakes I sanctify myself",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘Sanctify’ (hagiazō) means both to consecrate/set apart and to make holy (progressive); the sphere and instrument is ‘thy truth’ — God’s word, not human speculation (1 Thess 5:23)."
+    "prevalence": "several",
+    "summary": "Insist that the root idea is separation, not purity: Ellicott states it flatly — the word 'is opposed not to what is impure, but to what is common' — and makes truth 'the sphere in which their sanctification was to take place'; Robertson defines it 'to consecrate or set apart persons or things to God' and enters the one caution, that Christ's act 'by no means takes the place of personal consecration on the part of the believer'; Barnes takes both senses and connects them, ministers being devoted to God 'just in proportion as they are personally pure'."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: God sanctifies by renewing us by the Spirit and continuing the grace to the end, by means of the truth; Wesley: consecration by the Spirit and perfecting in holiness by the word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘sanctify them through thy truth’",
-   "consecration and holiness",
-   "‘thy word is truth’",
-   "the word the instrument"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The two sendings parallel: ‘I sent them’ (apesteila, the word of their commission, Mk 3:14; Jn 20:21) as the Father ‘sent’ Christ (10:36) — the Father’s sending of the Son no inequality but the manifestation of the eternal Son."
+    "summary": "Calvin takes it as renewal by the Spirit and turns polemical against both the fanatics who neglect the word and those who chatter about the word while disregarding Christ; on v.19 he traces the transfer — 'as the blessing on the first-fruits is spread over the whole harvest, so the Spirit of God cleanses us by the holiness of Christ' — and not 'by imputation only'; Gill hears both office and degree."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: the calling of Christ and the apostles is one and common — he appoints them to the office he held, so they need the Spirit’s power for it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘as thou hast sent me… so… I sent them’",
-   "the mission modelled on Christ’s",
-   "ground of sanctification",
-   "the apostolic calling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "‘I sanctify myself’ is not personal holiness (he had no sin) but consecration as a sacrifice — the High Priest who is also the victim, devoting himself to death (10:36; Rom 15:16), that they might be sanctified."
+    "summary": "Clarke distinguishes the two senses of the verb and applies each to the ministry, and reads 'I sanctify myself' as devotion to death, Christ entering 'into the holiest of all by his own blood'; Wesley holds office and holiness together, and makes the self-consecration a sacrifice: 'I devote myself as a victim, to be sacrificed.'"
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he consecrated himself that his holiness might come to us — as the first-fruits’ blessing spreads over the harvest, the Spirit cleanses us by the holiness of Christ."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry unfolds the petition into three requests — that God confirm the work, 'strengthen their faith, inflame their good affections, rivet their good resolutions'; that he carry it on; that he 'crown it with the perfection of holiness'."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does 'sanctify' mean consecrate or make holy?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Consecrate: the root idea 'is not holiness, but separation'."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Wesley",
+       "John Gill"
+      ],
+      "view": "Both at once — set apart to office, and made personally pure."
+     },
+     {
+      "held_by": [
+       "John Calvin",
+       "Matthew Henry"
+      ],
+      "view": "Renewal by the Spirit, confirmed and carried to perfection."
+     }
+    ]
+   },
+   {
+    "question": "How can the sinless Christ sanctify himself?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "Not personal sanctification, 'for he had no sin, but... setting himself apart entirely to the work of redemption'."
+     },
+     {
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley",
+       "Charles Ellicott"
+      ],
+      "view": "Devotion to death as sacrifice, the verb being used of devoting to death in the prophets."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "So that 'his holiness might come to us', the first-fruits blessing spread over the harvest."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "The only voice to turn the verse against professional religion, on those who use 'the livery of heaven to serve the devil in'."
+   }
+  ],
   "themes": [
-   "‘I sanctify myself’",
-   "consecration as sacrifice",
-   "High Priest and victim",
-   "source of the disciples’ holiness"
+   "Sanctify them through thy truth: thy word is truth.",
+   "As thou hast sent me into the world, even so have I also sent them into the world.",
+   "And for their sakes I sanctify myself, that they also might be sanctified through the truth."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "20": {
   "voices": [
-   "Augustine",
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+   "John Chrysostom",
    "A.T. Robertson",
-   "John Calvin"
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "Matthew Henry",
+   "John Gill"
   ],
+  "range": "20-21",
+  "pericope_label": "Neither pray I for these alone, but for them also which shall believe on me through their word; that they all may be one",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The prayer widens to the whole future church — ‘all who believe through their word’ — across all ages; the means is preaching (dia tou logou), and the comfort is that each later believer was remembered in this prayer."
+    "prevalence": "several",
+    "summary": "Register the textual and grammatical detail and draw the practical consequence: Ellicott notes the best manuscripts read a present, 'them also which believe', and presses hardest on v.21, where 'art' is not in the text and the second 'one' 'has the appearance of a gloss', so the Church's union is 'of the same essential nature as that between the Father and the Son'; Robertson holds that 'the only possible way to have unity among believers is for all of them to find unity first with God in Christ'; Barnes turns the clause into consolation for the obscure Christian."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin makes the widened prayer a ground of assurance — 'this prayer of Christ is a safe harbour, and whoever retreats into it is safe from all danger of shipwreck' — and frames unity against the ruin of the race, 'broken and scattered in itself'; Gill looks to 'the latter day, when saints shall see eye to eye'."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes the prayer 'was literally answered to the first believers', asks why believers are not in the same spirit now, and restricts the unity to spirit and privilege rather than outward form; Wesley summarises the whole prayer in four clauses and notes, against his own earlier reading, that 'here Christ prays for the world'."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the limiting principle — 'those, and those only, are interested in the mediation of Christ, that do, or shall, believe in him' — and gives the sequence its logic: purity first, 'for the wisdom from above is first pure, then peaceable'."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom finds a comfort for the eleven in the widening, 'that they were to be the cause of the salvation of others'."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: he conjoined all later believers to the apostles; Chrysostom: the disciples are to be the cause of others’ salvation; Calvin: a ground of confidence that we are gathered with the apostles."
+    "prevalence": "single",
+    "summary": "Augustine extends the 'all' to every later believer, then notices that on a strict reading some are left out — those who believed already without the apostles' word — and asks whether Nathanael or Joseph of Arimathea were of that number; he also fixes the limit of the comparison: Christ 'did not say that we all may be one, but, that they all may be one'."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far does the comparison 'as thou, Father, art in me' reach?",
+    "positions": [
+     {
+      "held_by": [
+       "Augustine of Hippo",
+       "John Wesley"
+      ],
+      "view": "To manner, not measure: the words are 'to be understood in a way of similitude, and not of sameness or equality'."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "To essential nature: the Church's union is of the same kind as the Father's with the Son, resulting from each member's union with the Father through the Son."
+     }
+    ]
+   },
+   {
+    "question": "What kind of unity is prayed for?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "Of spirit, rights and privileges — realised once among the first believers, and lost since through inattention to Christ."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Union with God first, from which alone union among believers follows."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The restoration of a race 'broken and scattered in itself' into one body."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine of Hippo",
+    "view": "The only voice to notice that a strict reading of 'through their word' excludes those who had believed before the apostles preached."
+   }
+  ],
   "themes": [
-   "‘not for these alone’",
-   "the whole future church",
-   "through the apostolic word",
-   "every believer remembered"
+   "Neither pray I for these alone, but for them also which shall believe on me through their word;",
+   "That they all may be one; as thou, Father, art in me, and I in thee, that they also may be one in us: that the world may believe that thou hast sent me."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The unity of the whole church, patterned on the Father-Son union (‘as thou… in me, and I in thee’), grounded in union with God in Christ (‘one in us’), aimed at the world’s faith — literally seen first in Acts 4:32."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the church’s union is patterned on the ineffable union of Father and Son; Calvin: its great end is ‘that the world may believe.’"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘that they all may be one’",
-   "patterned on Father and Son",
-   "‘one in us’",
-   "‘that the world may believe’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The glory Christ received from the Father he imparts to his people (sonship, the Spirit, grace and coming glory) ‘that they may be one’ — the union of Father and Son the unfailing pattern."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: the gift secures the unity prayed for in v.21 — a shared participation in Christ’s glory makes believers one, as the Father and Son are one."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘the glory… I have given them’",
-   "shared glory unto unity",
-   "participation in Christ",
-   "‘as we are one’"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The mutual indwelling (‘I in them, thou in me’) perfects the church’s unity (‘made perfect in one’); its witness to the world: that the Father sent the Son and loves believers ‘as thou hast loved me.’"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and others: the wonder that the Father loves the members with the very love he bears the Head — the summit of the believer’s assurance."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘I in them, and thou in me’",
-   "made perfect in one",
-   "the world may know",
-   "loved as the Father loved Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Albert Barnes",
+   "John Gill"
   ],
+  "range": "22-23",
+  "pericope_label": "And the glory which thou gavest me I have given them... that they may be made perfect in one",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The prayer for final glorification: ‘I will’ (an earnest desire, yet the Son’s will one with the Father’s) that his own ‘be with me where I am’ (heaven, 14:3) to ‘behold my glory’ (1 John 3:2), given in eternal love ‘before the foundation of the world.’"
+    "prevalence": "several",
+    "summary": "Read the given glory as the coming heavenly glory and the unity as functional: Ellicott takes 'the fulness of the glory which awaits Him at His Father's right hand' as already given and shared, treats 'I in them' as parenthesis, and states a rule for the whole discourse, that its words 'were spoken as a whole, and should be read as a whole'; Barnes denies union 'in nature, or in the mode of existence' and glosses perfection mechanically, a machine complete 'when there is no portion of it wanting'; Robertson distinguishes this from the Eternal Word's glory of v.24."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Augustine: the co-eternal Son raises our hope to its height — to be with him beholding his glory; Chrysostom: the crowns in store; Henry: grace prayed for first, then glory (Ps 84:11)."
+    "summary": "Calvin makes the glory a defaced likeness restored — happiness 'lies in having the image of God restored and formed anew in us' — and derives a test: 'no one ought to be reckoned among the disciples of Christ, unless we perceive impressed on him, as with a seal, the likeness of Christ'; Gill eliminates the deity's glory, the mediatorial glory and the power of miracles before settling on the Gospel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke offers the privilege of adoption — 'that, being all adopted children of the same Father, they may abide in peace, love, and unity' — or else heaven's glory; Wesley draws the inference the others leave implicit: 'the glory of the only begotten shines in all the sons of God.'"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is 'the glory which thou gavest me'?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "The Gospel, after eliminating the divine, mediatorial and miraculous glories."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "The privilege of adoption as sons of God — or else, taking the past for the future, heaven's glory."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "The glory awaiting Christ at the Father's right hand, already reckoned as given and shared."
+     },
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "The honour of being admitted to union."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "The glory of the Incarnate Word, distinct from the Eternal Word's glory named in v.24."
+     }
+    ]
+   },
+   {
+    "question": "What makes the world know?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Conduct — the love 'illustrated and proven by the way Christians love one another'."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The visible mark of adoption, which the world is 'compelled to feel, whether it will or not'."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "Acknowledgement of Messiah, 'the Jewish people first, and secondly the Gentiles'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Alone in stopping to lay down a hermeneutic for the discourse, that its hardest phrases were spoken as prayer and must be read whole."
+   }
+  ],
   "themes": [
-   "‘be with me where I am’",
-   "behold my glory",
-   "final glorification",
-   "loved before the world’s foundation"
+   "And the glory which thou gavest me I have given them; that they may be one, even as we are one:",
+   "I in them, and thou in me, that they may be made perfect in one; and that the world may know that thou hast sent me, and hast loved them, as thou hast loved me."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
+  }
+ },
+ "24": {
+  "voices": [
+   "Cyril of Jerusalem",
+   "John Chrysostom",
+   "A.T. Robertson",
+   "Augustine of Hippo",
+   "Charles Ellicott",
+   "Adam Clarke",
+   "John Calvin",
+   "John Wesley",
+   "Albert Barnes",
+   "Matthew Henry",
+   "John Gill"
+  ],
+  "range": "24",
+  "pericope_label": "Father, I will that they also, whom thou hast given me, be with me where I am; that they may behold my glory",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Read 'I will' as desire grounded in identity of will, and the closing clause as pre-existence: Barnes says the expression, 'though it commonly denotes command, is here only expressive of desire', and calls the final clause proof that Christ 'existed before the creation of the world'; Ellicott finds in it 'the consciousness that His will was that of the Father' and distinguishes the beheld glory as 'the future glory of the divine-human nature'; Robertson calls it 'perfect identity of his will with that of the Father', though Gethsemane will distinguish the two, and keeps the present tense, 'that they may keep on beholding'."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin holds it 'expresses not a command but a prayer', canvasses four senses of beholding the glory and settles on 'the perfect happiness of believers', with the tile's finest image: at present they see it 'just as a man shut up in the dark obtains, through small chinks, a feeble and glimmering light'; Gill alone takes it as demand, Christ insisting 'on it as his right, upon the foot of his purchase'."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reduces beholding to enjoying, 'eternal felicity with me in thy kingdom'; Wesley says Christ 'prays, not as a servant, but a Son'."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the language untransferable — 'he speaks a language peculiar to himself, and such as does not become ordinary petitioners' — and reads the order of the petitions as a rule: 'first for grace, and then for glory; for in this method God gives.'"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom sets the verse in sequence, Christ speaking of 'the crowns in store for them' after the converts and the glory; Cyril of Jerusalem presses the pre-existence creedally, that the Son 'began not His being when He was born in Bethlehem, but Before All Ages'."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine builds the verse into an argument for hope, the present being 'not a life to be loved, but to be tolerated', and reasons from unity of will that the petition cannot fail: 'the Father and the Son have one will, which, if weakness prevent us from comprehending, piety must believe.'"
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is 'I will' a demand or a request?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "A demand: 'not so much by way of entreaty, as demand', claimed as a right of purchase and covenant."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "John Calvin"
+      ],
+      "view": "A request: 'it was not the custom of the Saviour to use language of command when addressing God'."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Neither tone settles it — the force lies in the identity of the Son's will with the Father's."
+     },
+     {
+      "held_by": [
+       "Matthew Henry",
+       "John Wesley"
+      ],
+      "view": "A form peculiar to the Son and not imitable by ordinary petitioners."
+     }
+    ]
+   },
+   {
+    "question": "What does 'behold my glory' promise?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "More than sight: 'to participate, to enjoy' eternal felicity."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The perfect happiness of believers, a present glimmer replaced by 'the full brightness of heaven'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "view": "The only voice to read 'I will' as a claim of right rather than a petition."
+   }
+  ],
+  "themes": [
+   "Father, I will that they also, whom thou hast given me, be with me where I am; that they may behold my glory, which thou hast given me: for thou lovedst me before the foundation of the world."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "25": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Albert Barnes",
+   "John Gill"
   ],
+  "range": "25-26",
+  "pericope_label": "O righteous Father, the world hath not known thee... that the love wherewith thou hast loved me may be in them, and I in them",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Appeal to the Father’s righteousness (as to his holiness in v.11), with the threefold contrast: the world knew thee not, but I knew thee, and these knew thou sentest me — the believing remnant set over against the world."
+    "prevalence": "several",
+    "summary": "Explain the epithet and the connective: Ellicott ties 'righteous' to the difficulty 'that sinful humanity cannot see God and live'; Robertson notes the parallel with the holiness invoked at v.11 and recovers a conjunction translators 'usually slur over', reading it concessively — 'though the world did not know thee, yet I knew thee, and these knew thee'; Ellicott also links the future declaring to the previous verse's verb, the teaching received 'in part only'; Barnes closes on the discourse as 'the most tender and sublime that was ever pronounced in our world'."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: he pleads warmly for those who, despite the world’s unbelief, acknowledged God; Wesley: their admission to God flows even from the justice of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "‘O righteous Father’",
-   "the world knew thee not",
-   "the believing remnant",
-   "appeal to God’s righteousness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Christ has declared and ‘will declare’ the Father’s name (by the Spirit, perpetually — 16:25; Mt 28:20), to the end that the Father’s love for the Son may dwell in believers, and Christ himself in them."
+    "summary": "Calvin turns the epithet into defiance of the world — 'however proudly the world may despise or reject God, still it takes nothing from him' — insists the teaching was never bare speech but used 'the secret revelation of the Spirit', and grounds the closing petition in union: 'apart from Christ, we are hated by God, and he only begins to love us, when we are united to the body of his beloved Son'; Gill grounds the epithet in the divine nature."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: he makes the Father known not by voice alone but by the secret revelation of the Spirit; the prayer closes with the Father’s love and Christ indwelling the church."
+    "summary": "Clarke names both channels of the future declaring, the forty days and Pentecost, and sets the discourse against the Sermon on the Mount — that one shows what to do, 'this sermon shows them how they are to do the things prescribed in the other'; Wesley draws the sharpest inference from the epithet, that admission to God through Christ 'flows even from the justice of God'."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why 'righteous Father' here?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Because the petition to behold divine glory raises the problem that sinful humanity cannot see God and live."
+     },
+     {
+      "held_by": [
+       "John Gill",
+       "John Wesley"
+      ],
+      "view": "Because righteousness is a perfection of the divine nature, so that admission of believers 'flows even from the justice of God'."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "As defiance: the world's rejection 'cannot hinder the honor of his righteousness from remaining unimpaired'."
+     }
+    ]
+   },
+   {
+    "question": "What is the future 'I will declare it'?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "The forty days after the resurrection and the outpouring at Pentecost."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Perpetual — 'the perpetual mission of Christ through the Spirit'."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "Efficacious teaching by 'the secret revelation of the Spirit, and not the sound of his voice alone'."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Alone in setting this discourse against the Sermon on the Mount as the how against the what."
+   }
+  ],
   "themes": [
-   "‘I have declared… thy name’",
-   "the Father’s love in them",
-   "Christ indwelling",
-   "the close of the prayer"
+   "O righteous Father, the world hath not known thee: but I have known thee, and these have known that thou hast sent me.",
+   "And I have declared unto them thy name, and will declare it: that the love wherewith thou hast loved me may be in them, and I in them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  }
 }
