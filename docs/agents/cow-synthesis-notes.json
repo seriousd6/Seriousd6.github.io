@@ -29024,6 +29024,141 @@
         "25"
       ],
       "note": "Three genuine splits foregrounded rather than smoothed. (1) Is 'By the life of Pharaoh' an oath? Clarke denies it is one at all and faults the translators; Ellicott says such oaths were ordinary in antiquity and only Gospel morality forbids them; Henry calls it the courtier's oath, of evil; Calvin distinguishes obtestation from oath yet still finds profane adulation in it. (2) Why Joseph dealt roughly: Henry's three ends, Calvin's two just causes plus a refusal to excuse the dissimulation, Ellicott's 'nothing they did not deserve'. (3) Why the money was returned: Ellicott (encouragement), Keil and Delitzsch (against his nature to trade with his own for bread), Calvin (his father could not buy again), Henry (a figure of Christ's free supplies). Calvin is also the only voice in the chapter to fault Joseph directly, for the grief the returned money caused."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "2"
+      ],
+      "note": "Calvin block at key 2 has whole italicised phrases stripped by the scraper, leaving ungrammatical sentences: that details many circumstances, while states the matter summarily. The names of the two evangelists being compared are gone throughout the block, so the Matthew-Luke comparison it makes is unrecoverable from the text as stored. Only this block in the chapter shows the pattern."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "5",
+        "11",
+        "14",
+        "21",
+        "25",
+        "36",
+        "39",
+        "40",
+        "44"
+      ],
+      "note": "Nine blocks in this chapter stop mid-clause at exactly 200 words: Gill at keys 5, 11, 21, 25, 36, 39, 40; Origen at 14; Cyril of Jerusalem at 44. Every one breaks mid-sentence, so a hard 200-word truncation is being applied per block somewhere upstream. Other blocks in the same chapter run far longer (Henry 5581 at key 1, Ellicott 1247 at key 43), so the cap is not global."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "43"
+      ],
+      "note": "StudyLight page furniture inside the Ellicott block at 22:43: of the 1247 words only the first 255 are commentary, the remaining 992 being chapter navigation, terms-of-use links, inline CSS and JavaScript. Split point is the chapter-nav line beginning Matthew Mat 21. This is the fifteenth consecutive chapter carrying this chrome; the payload has held at exactly 983 words for the previous fourteen and comes in here at 992."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "12",
+        "32",
+        "43",
+        "44"
+      ],
+      "note": "Cyril of Jerusalem appears at keys 12, 32, 43 and 44, and in every case the block is CORRECTLY keyed rather than displaced: at 12 the wedding garment, at 32 I am the God of Abraham, at 43 and 44 the Lord said unto my Lord. Each is an excerpt from the Catechetical Lectures that quotes the verse it is attached to. The earlier mat11 build treated Cyril blocks as residue on the strength of the stride pattern; that assumption does not hold here and the blocks were used as live voices."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "17",
+        "18"
+      ],
+      "note": "Gill block at key 17 comments on the text of verse 18 (But Jesus perceived their wickedness) rather than verse 17. Gill is correctly aligned at key 16 and again at key 19, and there is no Gill block at key 18, so exactly one block is shifted by one verse. Handled by treating the material as verse 18 within the 17-18 entry."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "28"
+      ],
+      "note": "Jamieson displacement here lands at keys 4, 10, 16 and 28, exact stride 6, matching the global lattice. The donor is Matthew 18-19 read sequentially: key 4 carries the forgiven debtor of Matthew 18:27, key 10 the lord reasoning with the unforgiving servant at 18:32-33, key 16 the farewell to Galilee at 19:1, key 28 the saying about the unmarried state at 19:11-12. Recipient and donor are therefore only one and two chapters apart, the closest donor-recipient pairing seen so far, where earlier chapters drew from wholly unrelated books."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "11",
+        "12"
+      ],
+      "note": "The wedding garment at 22:11-12 divides the corpus four ways on one question. Ellicott names the two standard answers, baptism and the imputed righteousness of Christ, and rejects both as too narrow and too technical, settling on holiness of heart and life. Clarke reaches the same conclusion independently and spells out both halves of righteousness of the saints. Wesley, in a single line, gives exactly the answer Ellicott has just set aside: the righteousness of Christ first imputed and then implanted. Barnes speaks in the same imputed idiom, a garment wrought by the Saviour and dyed in his blood against the filthy rags of our own righteousness. Calvin refuses the alternative outright, calling faith-or-holy-life a useless controversy since neither can be had without the other."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "16"
+      ],
+      "note": "Who the Herodians were, at 22:16, produces five incompatible accounts. Robertson rules out both Herod kinsmen and Herod soldiers and leaves partisans, noting the Latin termination of the name. Jerome says flatly that they were Herod soldiers, or else taxpayers whom the Pharisees nicknamed so in mockery. Clarke cites the Syriac for household servants. Lightfoot makes them Sadducean courtiers descended from the defection of Menahem. Ellicott records two flatly opposed theories of their politics, one making them pro-tribute partisans of the Herodian house and the other making them nationalists who agreed with the Pharisees against the tribute, which would turn an unlikely coalition into a natural one."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "31",
+        "32"
+      ],
+      "note": "Lightfoot and Cyril of Jerusalem independently record the same argument being pressed against Samaritans on the same ground. Lightfoot quotes the tractate Chelek, where R. Eliezer ben R. Josi charges the Samaritan scribes with falsehood for denying that the resurrection can be proved out of the law. Cyril turns to the Samaritans, who receive the law only and admit no prophets, and argues from I am the God of Abraham that God is God of those who have being. A rabbinic disputation and a fourth-century catechetical lecture reaching for the identical text against the identical opponents."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "Augustine and Calvin divide over whether the lawyer of 22:35 was sincere, and the division turns on which second Gospel is used as control. Augustine reconciles Matthew tempting him with Mark thou art not far from the kingdom of God, either by a correction wrought in the man by the answer, or by taking the word for the cautious approach of one making proof of a stranger. Calvin compares Luke instead, finds Luke enquirer obstinate and swelled with pride where Matthew and Mark show a teachable mind, and concludes the narratives are probably not the same event. Ellicott, Wesley and Barnes all side with Augustine on the word itself, Pseudo-Chrysostom against, saying the man who asked after the greatest commandment had not kept the least."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "22",
+      "verses": [
+        "37"
+      ],
+      "note": "Four different assignments of heart, soul and mind at 22:37, from voices that otherwise agree the command is total. Barnes and Clarke both read affection, life and intellect, Clarke adding the strength that Mark supplies. Augustine reads whole thought, whole life, whole understanding. Gloss reads understanding, will and memory, so that a man shall think and will and remember nothing contrary to God. Nobody argues against anybody; the divergence is silent and total."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "22",
+      "note": "Self-graded A across all 30 entries, verses 1-46. Every claim traced to a named block in data/commentary/cow/matthew/22.json and attributed to the voice that makes it. Jamieson excluded as residue at keys 4, 10, 16 and 28 and declared in excluded_voices on the four entries covering them. Cyril of Jerusalem used as a live voice at 12, 32, 43 and 44 after checking that each block comments on the verse it is keyed to; he is invisible to the validator label regex, so his words do not count toward usable source totals. Nothing was drawn from the 992 words of StudyLight furniture in Ellicott at key 43, from the truncated tails of the nine 200-word blocks, or from the damaged Calvin block at key 2 beyond the sentences that survive intact. Fathers whose Catena blocks sit at the section-opening keys 1, 15, 23, 34 and 41 but comment on later verses were carried forward and named on the entry their material actually belongs to."
     }
   ]
 }
