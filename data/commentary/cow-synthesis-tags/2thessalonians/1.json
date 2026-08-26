@@ -1,77 +1,81 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Chrysostom"
   ],
+  "range": "1-2",
+  "pericope_label": "The salutation of Paul, Silvanus and Timothy",
   "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that the introduction repeats the earlier one exactly and draws from it a warning against preferring novelty of phrase to soundness of doctrine."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul, as in the first epistle, joins 'Silvanus (Silas) and Timotheus (Timothy)' with himself — the three who had founded the church together; he writes again to the same beloved congregation without adding his apostolic title, on a footing of affectionate familiarity; the church is addressed as 'in God our Father and the Lord Jesus Christ' — its life and being rooted in God and Christ together, the Father and the Son named as the sphere of its existence (Barnes, Robertson, Calvin)."
+    "summary": "Barnes dates the letter to Corinth in late 53 or early 54 on three probabilities and identifies its occasion as the belief that the end was at hand; Ellicott dates it inside the second missionary journey because Silvanus is still present, and joins Robertson in judging that the clause naming the Father and the Lord Jesus belongs here rather than in the first epistle; Robertson adds that the two prepositions distinguish the sphere of the church from the source of its grace."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reconstructs the report brought back by the bearer of the first letter and then argues at length, against certain learned writers, that the apostles never believed the day of judgment would fall in their own lifetime, since to grant it would destroy their authority everywhere."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin takes the word church to mean not merely an assembly gathered in faith but the building of the Father as well as of Christ."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom makes the wish for grace the heart of the greeting and illustrates its power from Joseph, who passed through slavery, false accusation and prison as though untouched."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the apostles themselves expected the return of Christ within their lifetime, which Clarke reports as the opinion of respected writers and rejects as destroying the authority of their whole testimony.",
+   "Whether the clause naming God the Father and the Lord Jesus Christ belongs to the salutation of the first epistle, where Ellicott and Robertson both judge it an intrusion though it stands rightly here."
+  ],
+  "outliers": [
+   "Clarke argues from the delay implied by the man of sin and by the future ingathering of the Jews that no apostle can have thought the end was near."
+  ],
   "themes": [
-   "Paul, and Silvanus, and Timotheus, unto the church of the Thessalonians",
-   "in God our Father and the Lord Jesus Christ",
-   "the greeting from the three",
-   "the church rooted in God and Christ"
+   "apostolic greeting",
+   "grace and peace",
+   "the church",
+   "date and occasion",
+   "the second coming"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul's customary greeting: 'grace (free favour) unto you, and peace (its fruit)' — the twofold blessing that opens his letters, grace the source and peace the effect; 'from God our Father and the Lord Jesus Christ' — Father and Son named together as the one source of grace, a witness to the divine dignity of Christ; grace first, then peace, for there is no true peace apart from grace (Barnes, Robertson, Gill)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Grace unto you, and peace, from God our Father and the Lord Jesus Christ",
-   "the apostolic blessing of grace and peace",
-   "grace the source, peace the fruit",
-   "Father and Son the joint source"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
@@ -84,72 +88,64 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "Thanksgiving for growing faith, and glorying in the churches",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill grounds the constant thanks in God’s constant giving and distinguishes glorying about men from glorying in them; Calvin makes daily growth the true commendation of believers, argues that thanks for the increase proves the increase is God’s, and makes patience the fruit and evidence of faith."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The strong expression: Paul is 'bound (opheilomen — under obligation, owe it as a debt) to thank God always for you... as it is meet (fitting, right, due)' — his thanksgiving not a mere impulse but a debt owed, fitting given their growth; 'your faith groweth exceedingly (hyperauxanei — grows beyond measure, abundantly)' — their faith flourishing under trial; 'the charity (love) of every one of you all toward each other aboundeth (overflows)' — mutual love growing along with faith, and in every member (Barnes, Robertson, Henry)."
+    "summary": "Ellicott treats the thanksgiving as a debt incurred, calls the verb for growth an enthusiastic word outgrowing all bounds, and defines patience as heroic endurance and persecution as organised hostility distinct from general tribulation; Robertson analyses the compound verb, connects the abounding love to the earlier prayer, and notes a variant reading; Barnes takes the report as evidence that news had come from Thessalonica."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke likens the growth to a well planted tree bearing fruit, insists it was true of every member, and holds that persecution never essentially injured the genuine Church; Wesley observes that Paul wraps his praise of men inside praise of God."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the clause of reason attaches to the thanksgiving or to the words \"as it is meet\", Ellicott arguing for the latter.",
+   "Whether \"we glory in you\" can stand with the rule against glorying in men, which Gill resolves by referring the glorying to the grace of God in them."
+  ],
+  "outliers": [
+   "Robertson reports that the fulfilment here of a prayer made in the earlier letter has been used as evidence for the order of the two epistles.",
+   "Ellicott reads the emphatic pronoun as an admission that the writers had themselves harboured misgivings about this church."
+  ],
   "themes": [
-   "We are bound to thank God always for you, brethren, as it is meet",
-   "your faith groweth exceedingly, and the charity of every one of you all toward each other aboundeth",
-   "bound thanksgiving for their growing faith and love",
-   "faith and love increasing together"
+   "thanksgiving",
+   "growth in grace",
+   "persecution",
+   "patience",
+   "christian example"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Their growth was so marked that Paul 'ourselves glory (boast, take pride) in you in the churches of God' — holding the Thessalonians up before other churches as an example to be admired and imitated; the ground of his boast being 'your patience (hypomone — steadfast endurance) and faith' — their constancy and steadfast believing under trial, shown 'in all your persecutions and tribulations that ye endure,' amid present, ongoing sufferings, their graces shining the brighter against the dark background of affliction (Barnes, Robertson, Calvin, Wesley)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we ourselves glory in you in the churches of God",
-   "for your patience and faith in all your persecutions and tribulations that ye endure",
-   "Paul glorying in their patience and faith",
-   "steadfastness under persecution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
@@ -163,33 +159,69 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "5",
+  "pericope_label": "A manifest token of the righteous judgment of God",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill rejects the future-looking readings because the apostle speaks of present suffering and settles on the visible inequality of providence; Calvin makes the sufferings of the innocent a mirror of the coming judgment and sets this against the profane conclusion that the world runs by chance."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds a present advantage in the trials, which prove them Christians indeed, and allows a worthiness of congruity but not of condignity."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Their patient endurance is 'a manifest token (endeigma — evidence, proof) of the righteous judgment of God' — their suffering grace, and the persecution they bore, point forward to a coming just judgment in which God will set all things right; 'that ye may be counted worthy (kataxiothenai — accounted, reckoned worthy) of the kingdom of God' — their endurance preparing and fitting them for the kingdom, ripening them for glory (not earning it but being reckoned fit); 'for which ye also suffer' — their sufferings for the kingdom's sake, the path to the crown (Barnes, Robertson, Calvin, Henry)."
+    "summary": "Barnes supplies the relative from the whole preceding sentence and makes the manner of enduring an advance indication of the verdict; Ellicott locates the token in the bare fact of persecution, warns against pressing the epithet, and reads \"counted worthy\" as the sentence itself rather than a question of merit, adding that the saints are counted worthy of the kingdom itself and not merely of entry; Robertson keeps to the syntax and insists the judgment is the final one."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke weighs two readings and prefers the maxim that the sufferings of the just and the triumphs of the wicked prove a judgment to come, allowing a gospel sense of worthiness grounded in bearing the image of God; Wesley refers the token forward to the verses that follow."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the token is a token of: the whole course of their endurance (Barnes), the bare fact of persecution (Ellicott), the divine rightness of calling the Gentiles or the general maxim of a judgment to come (Clarke), or the present inequality of providence (Gill).",
+   "Whether \"counted worthy\" bears on merit at all, where Henry, Barnes and Clarke each qualify it carefully and Ellicott denies that the question arises."
+  ],
+  "outliers": [
+   "Calvin supports the argument with a pagan poet who said the misfortunes of the good tempt him to think there are no gods, and with a tyrant who robbed a temple and took a fair wind home as proof that heaven favours sacrilege.",
+   "Ellicott argues that believers are already in the kingdom as subjects and are to be declared worthy of the kingdom itself, to inherit and reign in it."
+  ],
   "themes": [
-   "which is a manifest token of the righteous judgment of God",
-   "that ye may be counted worthy of the kingdom of God, for which ye also suffer",
-   "endurance a token of God's righteous judgment",
-   "suffering the path to the kingdom"
+   "divine judgment",
+   "persecution",
+   "merit and grace",
+   "providence",
+   "the kingdom of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "6": {
@@ -198,81 +230,72 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "6-7",
+  "pericope_label": "Recompense to the persecutors and rest to the persecuted",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ground of the coming judgment: 'it is a righteous thing with God (just in his sight) to recompense (antapodounai — repay, requite) tribulation to them that trouble you' — divine justice requires that the persecutors be repaid with the very affliction they inflicted; the retribution fitting the crime, affliction repaid with affliction, those who troubled the saints themselves troubled (Barnes, Robertson)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the assurance that God will repay the persecutors is meant to comfort the afflicted — they need not avenge themselves, for God's justice will surely requite their oppressors in due time; vengeance may be left to him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is a righteous thing with God to recompense tribulation to them that trouble you",
-   "the justice of God in repaying the persecutors",
-   "affliction repaid with affliction",
-   "a comfort to the afflicted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Gill distinguishes what is righteous in itself from what men account righteous and weighs a temporary relief from persecution against the final rest, preferring the latter; Calvin argues that without a deferred judgment the government of the world would be unjust, refuses to speculate about the nature of the fire, and makes Paul’s sharing of the trials the credential of his teaching."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The other side of the recompense: 'to you who are troubled (afflicted, persecuted) rest (anesis — relief, relaxation, ease) with us' — God will repay the afflicted saints, not with more affliction, but with rest, relief from their sufferings, shared with Paul and all the faithful; 'when the Lord Jesus shall be revealed (apokalypsis — unveiled, disclosed) from heaven with his mighty angels (the angels of his power)' — at Christ's glorious second coming, unveiled in majesty and attended by the angelic host as ministers of his glory and judgment (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott renders the condition as an appeal to what the readers will grant and argues from the conscience that what is fair among men is fair with God, making the angels the executors of Christ’s power rather than his retinue; Barnes contends at length that future punishment is just and therefore certain, while noting that the reward of the righteous is of grace and not of desert; Robertson stresses that the phrase means right from God’s own standpoint and that the coming is described as an unveiling."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke holds that God gives particular proofs of displeasure against persecutors and describes the attending angels as the court of the judge; Wesley identifies a specific slaughter of Jews at a passover as the beginning of the recompense."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the attending angels form the retinue of the judge, as Clarke has it, or are the agents through whom his power is executed, as Ellicott and Calvin insist.",
+   "Whether the promised rest includes present relief from persecution, which Gill entertains before preferring the final rest and which Ellicott denies before the judgment day.",
+   "Whether the recompense to the persecutors had already begun in history, as Wesley argues from a contemporary massacre, or belongs wholly to the last day."
+  ],
+  "outliers": [
+   "Barnes marks an asymmetry the others pass over: the wicked will deserve all they suffer, but the righteous do not deserve what they receive.",
+   "Calvin declines to discuss the nature of the fire, leaving it to persons of foolish curiosity, and pictures Paul as a soldier who fights beside those he instructs rather than directing them from the shade."
+  ],
   "themes": [
-   "to you who are troubled rest with us",
-   "when the Lord Jesus shall be revealed from heaven with his mighty angels",
-   "the promise of rest to the troubled",
-   "at Christ's glorious revelation"
+   "divine justice",
+   "future punishment",
+   "rest",
+   "the second coming",
+   "angels"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
+   }
   }
  },
  "8": {
@@ -284,85 +307,72 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "8-9",
+  "pericope_label": "Flaming fire, vengeance, and everlasting destruction",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill leaves the fire between Christ and the angels and grounds the endlessness of the punishment in the endlessness of the sin; Calvin asks whether vengeance may lawfully be desired and answers that we must wish well to all while we cannot tell who the wicked are, and proves the perpetuity of the death from its being set opposite the unending glory of Christ."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The awful scene of Christ's coming: 'in flaming fire (the symbol of his glory and his consuming judgment) taking vengeance (didontos ekdikesin — rendering recompense, executing just retribution)' — Christ comes to judge, repaying the wicked; two classes named: 'them that know not God' — those who, having the means to know him, remained in willful ignorance, chiefly the heathen who rejected the light of nature and conscience; 'and that obey not (refuse to submit to) the gospel of our Lord Jesus Christ' — those who heard the gospel and would not obey it, the gospel demanding obedience (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott repunctuates so that the fire attends the presence rather than the punishment, denies that the word for vengeance can mean personal revenge, restricts the guilty Gentiles to those whose ignorance was voluntary, reads the destruction as banishment from an oriental court, and concedes that the passages on the last state cannot at present be reconciled; Barnes takes the fire for incessant lightning and argues that if this language does not teach eternal punishment no language could; Robertson traces the phrase to a Maccabean parallel and holds that \"age-long\" here means the coming age."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the fire as thunder and lightning, extends the disobedient to nominal Christians who will not take the gospel as a rule of life, and confesses he cannot say what the destruction consists in; Wesley grounds its endlessness, as Gill does, in the continuance of the enmity."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the gospel is not merely to be believed but obeyed; those who refuse submission to the Lord Jesus Christ fall, with the heathen who know not God, under the vengeance of his coming."
+    "prevalence": "single",
+    "summary": "Chrysostom answers those who comfort themselves that hell is milder and temporary by pointing to the word everlasting, and observes that the same coming is light to some and vengeance to others."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the flaming fire belongs to the attending angels or to the punishment, Ellicott repunctuating to make it an attribute of the divine presence.",
+   "Who the two classes are: Gentiles and Jews by the repeated article (Ellicott, Robertson, Wesley), with Clarke adding nominal Christians to the second.",
+   "How confidently the endlessness of the punishment can be asserted from this text, where Barnes says no clearer language is possible and Ellicott allows that two sets of passages resist reconciliation."
+  ],
+  "outliers": [
+   "Calvin raises and answers the question whether a Christian may lawfully desire the vengeance the verse promises.",
+   "Gill and Wesley, from opposite camps, give the same argument that unending sin requires unending punishment."
+  ],
   "themes": [
-   "in flaming fire taking vengeance on them that know not God",
-   "and that obey not the gospel of our Lord Jesus Christ",
-   "vengeance on the ignorant and disobedient",
-   "the judgment of Christ's coming"
+   "eternal punishment",
+   "the last judgment",
+   "annihilation",
+   "divine vengeance",
+   "knowledge of God"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The doom of the wicked: 'who shall be punished (pay the penalty, suffer justice) with everlasting destruction (olethron aionion — eternal ruin)' — a punishment everlasting in duration, not annihilation but eternal ruin, the loss of all good and the endurance of the penalty without end; 'from (away from, banished from) the presence of the Lord, and from the glory of his power' — the heart of the doom being exclusion from God's presence, to be banished from the face and glory of the Lord itself the deepest ruin (Barnes, Robertson, Calvin)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the essence of the punishment is to be cast away from the presence of the Lord; the loss of God himself, the source of all good and glory, is a more terrible thing than the fire — the deepest meaning of the everlasting destruction."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who shall be punished with everlasting destruction",
-   "from the presence of the Lord, and from the glory of his power",
-   "the sentence of everlasting destruction",
-   "banishment from the Lord's presence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
@@ -375,33 +385,64 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "10",
+  "pericope_label": "Glorified in his saints and admired in them that believe",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin reads the verse as a promise that the saints will share the glory rather than merely display it, sets it against their present condition of labour and contempt, takes \"saints\" to be explained by \"believers\" so that there is no holiness apart from faith, and concludes that God’s promises are ratified in us when they gain credit with us; Gill divides the glory into what Christ shows them and what he bestows on them."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The bright side of that day: Christ comes 'to be glorified in his saints' — his glory shining forth in the redeemed, the saints reflecting and displaying his glory as the trophies of his grace; 'and to be admired (thaumasthenai — marvelled at, wondered at) in all them that believe' — Christ the object of wondering admiration as his work in the believers is fully revealed, the glory of his grace in them exciting the wonder of all; the Thessalonians included 'because our testimony among you was believed... in that day' (Barnes, Robertson, Calvin)."
+    "summary": "Ellicott makes the glorifying the effect rather than the purpose of the coming, matches the two classes of the saved to the two classes of the punished, and explains the past tense as looking back from the judgment to the moment of decision; Barnes weighs whether Christ is admired by or in his people and settles on the latter, listing what will then be admired and observing that this honour has never yet been seen; Robertson reports both the suggested reason for the tense and another scholar’s verdict that the parenthesis is an anti-climax."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke contrasts the believer’s present admiration of the Redeemer with what he will feel on seeing the glory Christ had before the world was, endorses the past tense as undoubtedly genuine, and proposes that the clauses of the sentence have been transposed; Wesley says only that the glory of Christ shall shine in them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Christ is admired by those who believe or in them, Barnes weighing both and preferring the second, which Ellicott and Calvin also assume.",
+   "What to do with the closing parenthesis, which Clarke would rearrange as transposed, Ellicott explains as an assurance to the readers, and Robertson reports being dismissed as an anti-climax."
+  ],
+  "outliers": [
+   "Ellicott aligns the saints and the believers one for one against those who know not God and those who obey not the gospel.",
+   "Barnes holds that the chief honour of Christ at his coming will be the redeemed church rather than any outward splendour."
+  ],
   "themes": [
-   "when he shall come to be glorified in his saints",
-   "to be admired in all them that believe... in that day",
-   "Christ glorified and admired in his saints",
-   "the saints the trophies of his grace"
+   "the second coming",
+   "glory of Christ",
+   "the church",
+   "faith and holiness",
+   "textual variants"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  },
  "11": {
@@ -415,33 +456,69 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "11",
+  "pericope_label": "The prayer that God would count them worthy of the calling",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin refers the calling to the end that depends on perseverance and answers that God must confirm what He began, then presses the phrase about good pleasure into a denial that any merit of ours contributes at any stage; Gill notes that the apostles added prayer to counsel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the expectation of the coming a reason for prayer, insists we must be taught what to ask, and reads the petition as asking God to make us worthy since we have no worthiness of our own."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The prospect of that day moves Paul to pray: 'that our God would count you worthy (axiose — reckon you fit, account you worthy) of this calling' — that they may be found fit for the high calling to his kingdom and glory; 'and fulfil all the good pleasure of his goodness (plerose pasan eudokian agathosynes — fully accomplish every gracious purpose his goodness forms toward them)' — every good desire and resolve God works in them brought to full effect; 'and the work of faith with power' — the work faith produces, completed and made fruitful by divine power (Barnes, Robertson, Henry, Calvin)."
+    "summary": "Ellicott refers the calling to the summons of the last day and warns that the past call is no security of proving worthy of it, declines the common reading that makes the goodness the readers’ own, and assigns the work of faith wholly to God; Robertson allows the calling to mean both beginning and issue and turns the second phrase into a wish that they delight in goodness; Barnes takes the petition plainly and glosses the power as effectual."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the goodness through four stages and states that while the power must come from God the exercise of it must be the believer’s own; Wesley defines the good pleasure of God’s goodness as perfect holiness."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the calling in view is the one already obeyed or the final summons of the judgment day, where Ellicott argues for the last and warns that the earlier call is no security, Calvin refers it to the end but grounds security in God’s confirming, and Robertson allows both senses.",
+   "Whose goodness is meant in \"the good pleasure of his goodness\": God’s, taken almost as a personified beneficence (Ellicott, Calvin, Henry), or the readers’ own moral aspirations, which Ellicott reports as the common modern view and rejects.",
+   "How far the believer contributes: Calvin denies that grace is helped along by subsequent merits, while Clarke, on the same phrase, holds that the exercise of the God-given power must be the believer’s own."
+  ],
+  "outliers": [
+   "Ellicott, Calvin, Barnes and Robertson all refer the closing \"work of faith\" to God’s work in the readers rather than to their own activity."
+  ],
   "themes": [
-   "that our God would count you worthy of this calling",
-   "fulfil all the good pleasure of his goodness, and the work of faith with power",
-   "Paul's prayer that God fit them for glory",
-   "faith made fruitful by divine power"
+   "prayer",
+   "effectual calling",
+   "grace and merit",
+   "perseverance",
+   "the work of faith"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
   }
  },
  "12": {
@@ -450,44 +527,71 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "12",
+  "pericope_label": "That the name of our Lord Jesus Christ may be glorified in you",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin declines to explain how the glory belongs to God and Christ in common, calls the mutual glorifying a doubled miracle, and insists that nothing in it is ours; Gill observes that the name is dishonoured by unworthy professors and glorified by faith and patience."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ultimate aim of Paul's prayer: 'that the name of our Lord Jesus Christ may be glorified in you' — that Christ's name (his whole revealed person and character) may be honoured and displayed in the believers' lives, their fitness for glory existing for Christ's glory; 'and ye in him' — the mutual, reciprocal glory, the believers sharing in Christ's honour as he is honoured in them; 'according to the grace of our God and the Lord Jesus Christ' — the whole work flowing from grace, not merit (Barnes, Robertson, Calvin)."
+    "summary": "Robertson lays out the argument from the single article that would make the closing words call Jesus our God and Lord, then admits it is not decisive and leaves both renderings open; Ellicott attaches the clause about grace only to the glorifying of the readers and reads the verse as gathering up the preceding paragraph, where lost and saved alike must acknowledge Christ and those who followed Him; Barnes closes with three inferences about the certainty, the eternity and the justice of the punishment."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril (with Calvin): the mutual glory of Christ in the saints and the saints in Christ is wholly the gift of grace; from first to last it is grace, not human merit, that fits them for that day and unites them to his honour."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the magnifying of Christ’s passion the end of the calling, holds that God saves as it becomes God to save, argues that the bare existence of religious persecution disproves any denial of human depravity, and urges preachers to keep eternal destruction before their hearers; Wesley says the love and power of the Lord are to be displayed in them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the single article at the close makes \"our God and the Lord Jesus Christ\" one person or two, which Robertson argues both ways and leaves undecided and Calvin expressly declines to discuss here.",
+   "Whether the clause about grace governs the whole sentence or only the glorifying of believers in Christ, Ellicott restricting it to the latter."
+  ],
+  "outliers": [
+   "Clarke, arguing from the wesleyan side, treats the mere existence of religious persecution as an absolute empirical disproof of any denial of original sin.",
+   "Barnes holds that the aggravation of the lost will be their own conviction that the sentence is just, since suffering is bearable only while conscience says it is undeserved."
+  ],
   "themes": [
-   "that the name of our Lord Jesus Christ may be glorified in you, and ye in him",
-   "according to the grace of our God and the Lord Jesus Christ",
-   "the mutual glorifying of Christ in them and them in Christ",
-   "all of grace"
+   "glory of Christ",
+   "deity of Christ",
+   "preaching judgment",
+   "human depravity",
+   "grace"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "D",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  }
 }

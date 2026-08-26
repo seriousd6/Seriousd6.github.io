@@ -28692,6 +28692,53 @@
         "6"
       ],
       "note": "Gregory cannot be declared as a voice for this chapter. The Catena at k1 carries two blocks headed 'GREG.' (the four kinds of stroke, and the spittle as the savour of inward contemplation), but the grounding index in synthesis_qa.SourceIndex searches data/commentary/cow-sources/, where no spelled-out Gregory occurs for john 9, so the chapter gate flags the attribution UNSOURCED. Declaring 'Gregory the Great' would pass the check only because _hit matches the common word 'great', which is gaming it. The attribution and its sentence were removed from the 6-7 entry instead; the material is genuinely in the catena but cannot be verified by the gate."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "2thessalonians",
+      "chapter": "1",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson displacement, 20th confirmation, third consecutive cross-book donor -- and the lattice model now verifies across book boundaries. The two JFB blocks here sit at keys 6 and 12, exact stride 6, and neither is comment on 2 Thessalonians: key 6 is JFB on 1 Corinthians 10:21 (the cup of the Lord against the cup of demons, the Lords Supper a feast on a table and not a sacrifice on an altar) and key 12 is JFB on 1 Corinthians 10:26 (the earth is the Lords and the fulness thereof). Donor is 1 Corinthians 10, read forward. Surveying the surrounding books confirms and extends the model recorded at revelation 4. Landing sites: 1thess 4 (18 verses) at 1,7,13; 1thess 5 (28 verses) at 6,12,18,24; 2thess 1 (12 verses) at 6,12; 2thess 2 (17 verses) at 5,11,17; 2thess 3 (18 verses) at 5,11,17; galatians 1 (24 verses) at 4,10,16,22; galatians 2 at 3,9,15,21; 1timothy 1 (20 verses) at 3,9,15; revelation 9 (21) at 9,15,21; revelation 10 (11) at 5,11. The rule: next = prev + 6, and on overflow the next chapter begins at overflow minus (verses + 1), with ONE ADDITIONAL slot consumed at each BOOK boundary. Verified: 1thess4 -> 1thess5 (13+6=19 lands on the chapter slot, next 25-19=6 OK); 1thess5 -> 2thess1 (24+6=30 lands on the book slot, next 36-30=6 OK); 2thess1 -> 2thess2 (12+6=18, 18-13=5 OK); 2thess2 -> 2thess3 (17+6=23, 23-18=5 OK); 2thess3 -> 1timothy1 (17+6=23, 23-20=3 OK); 2corinthians13 -> galatians1 (14+6=20, 20-16=4 OK); galatians1 -> galatians2 (22+6=28, 28-25=3 OK); revelation9 -> revelation10 (21+6=27, 27-22=5 OK). Thirteen of fourteen boundaries tested now fit exactly; the sole exception remains revelation 8 -> revelation 9, which predicts key 3 and observes 9, i.e. exactly one lattice step skipped. The donor text is an entirely separate sequential cursor moving through an unrelated book: Colossians for the Revelation run, Romans 6 for 2corinthians 13, 1 Corinthians 10 for the Thessalonians run."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "2thessalonians",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "2",
+        "8",
+        "12"
+      ],
+      "note": "Three further defects. (1) Ellicott chrome for a twelfth consecutive chapter: the block at key 12 runs 1160 visible words of which only 177 are commentary, the other 983 being the StudyLight page template (navigation line, copyright boilerplate, the sub-menu stylesheet and the resource directory). The 983 figure has now been constant across colossians, 1peter, revelation 5, acts, hebrews, luke, matthew, numbers, exodus, revelation 4, 2corinthians and 2thessalonians. (2) Cyril of Jerusalem appears at keys 8 and 12 with BYTE-IDENTICAL blocks, both capped at exactly 200 words and both breaking off mid-sentence at the same point. The text is Catechetical Lecture 6 on 2 Corinthians 4:4, the god of this world blinding the minds of them that believe not -- foreign to both verses, presumably harvested on the word believe not. Duplicate-plus-foreign-plus-truncated in one block; declared residue and kept out of the prose, and handled through EXCL_UNDECLARABLE because the validator label list carries bare Cyril but not Cyril of Jerusalem. (3) Gill is reduced to bare lemma at keys 1 and 2, nine and ten words each, both ending in the broken cross-reference \"See Gill on .\" with the target stripped -- the same harvest failure recorded at 2corinthians 13:12-13. Gill was therefore suppressed from the opening entry. Also noted, not a defect: Clarke key 1 is a 3880-word preface to the whole epistle rather than comment on verse 1, carrying a long quoted argument against the view that the apostles expected the parousia in their lifetime."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "2thessalonians",
+      "chapter": "1",
+      "verses": [
+        "9",
+        "11"
+      ],
+      "note": "Two major doctrinal collisions in one chapter, both unacknowledged by the parties. (1) At 1:9, how confidently the endlessness of the punishment can be read out of this text. Every voice denies annihilation, but the grounds differ and the confidence differs sharply. Barnes: \"It seems difficult to conceive how any one can profess to hold that this passage is a part of the word of God, and yet deny the doctrine of future eternal punishment... if it be not true, it must be admitted that it would not have been possible to reveal the doctrine in human language.\" Ellicott, a few blocks away, concedes the opposite: the word for everlasting \"would certainly convey to St Pauls readers the notion of incessant duration\", and nothing in the relevant passages suggests any future alteration in the state of the lost, \"however... there seem to be two distinct sets of passages, the logical reconciliation of which in our present state seems almost impossible.\" Robertson takes a middle road, granting that the adjective by itself only means age-long and is weakened in the papyri, but holding that Paul means the coming age, \"as eternal as the New Testament knows how to make it.\" Gill and Wesley, from opposite camps, give the identical argument that unending sin requires unending punishment. Calvin argues instead from the antithesis: the death is perpetual because it is set opposite the glory of Christ, which has no end. (2) At 1:11, on \"all the good pleasure of his goodness\". Calvin: \"that contrivance of the Sophists is set aside, that we are, indeed, anticipated by the grace of God, but that it is helped by subsequent merits. Paul recognizes in the whole progress of our salvation nothing but the pure grace of God.\" Clarke, on the same phrase: \"if you be faithful to his grace, he will fulfil... the power of which must come from him, though the act or exercise of that power must be of yourselves.\" A textbook statement of each position, on one clause, with no cross-reference. A related third strand at 1:11: whether the calling is the one already obeyed or the final summons. Ellicott takes it as the last decisive call and warns that answering the first is \"no security that they would remain worthy\"; Calvin refers it to the same end but grounds the security in Gods confirming, since otherwise our calling \"would prove vain so far as we are concerned\"; Robertson allows both senses. The entries state all positions and leave the questions open."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "2thessalonians",
+      "chapter": "1",
+      "verses": [
+        "5",
+        "6",
+        "12"
+      ],
+      "note": "Three things worth keeping from this chapter. (1) At 1:12 Robertson works the Granville Sharp construction honestly and then refuses it: because one article governs both nouns, strict syntax makes \"our God and the Lord Jesus Christ\" a single person, as in Titus 2:13 and 2 Peter 1:1, but he notes the argument is weakened because Kurios, unlike soter, is freely used as a proper name without the article, and concludes that Paul \"may mean\" either. Calvin, on the same clause, says only that he deems it unnecessary to explain here in what sense the glory belongs to God and Christ in common. Two commentators three centuries apart both decline the same christological crux at the same words. (2) At 1:5 Calvin supports the argument that present injustice proves a coming judgment by marshalling a pagan poet who said the misfortunes of the good tempt him to think there are no gods, and the tyrant who robbed a temple and took a fair wind home as evidence that heaven favours sacrilege -- set beside Ecclesiastes and Psalm 73. (3) At 1:12 Clarke, an Arminian, treats the bare existence of religious persecution as an empirical disproof of any denial of original sin: men \"may amuse themselves by arguing against the doctrine of original sin, or the total depravity of the soul of man; but while there is religious persecution in the world, there is the most absolute disproof of all their arguments.\" The argument sits three verses after his own insistence at 1:11 that the exercise of grace must be the believers own act. Also: Ellicott at 1:10 aligns the two classes of the saved one for one against the two classes of the punished at 1:8 -- saints answering to them that know not God, believers answering to them that obey not the gospel -- a symmetry none of the other voices notices."
     }
   ]
 }
