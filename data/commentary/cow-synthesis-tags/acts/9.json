@@ -2,47 +2,116 @@
  "1": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "1",
+  "pericope_label": "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul pictured as 'breathing out threatenings and slaughter' — a man wholly given to the church's destruction, breathing murder as his very air; the persecutor at the height of his fury as the narrative opens."
+    "summary": "Barnes reads the participle as breathing out and explains it physiologically, violent anger being \"absorbing, agitating, exhausting\" and so demanding \"the increased action of the lungs\"; he also identifies the high priest as Theophilus son of Ananus, appointed by Vitellius in A.D. 37. Ellicott and Robertson both reverse the participle to breathing in — Ellicott glossing it \"somewhat more emphatic than the English\", Saul living \"in an atmosphere of threats and slaughter\", Robertson turning it into the chapter's best sentence, \"he breathed on the remaining disciples the murder that he had already breathed in from the death of the others. He exhaled what he inhaled.\" Both report the patristic reading of Jacob's blessing on Benjamin as fulfilled in this man. Ellicott alone reads the visit to the high priest politically: a Pharisee applies to a Sadducee, since \"the temper of the persecutor does not shrink from strange companionship\"."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the arrest of such a furious enemy, reclaimed against the whole bent of his mind, the most excellent mercy of God; the harder his rage, the greater the grace overcoming it."
+    "summary": "Gill calls the phrase a Hebraism and a window into the man — \"the rage, wrath, malice, envy, and blood thirstiness he was full of\" — recorded, he says, \"to illustrate the riches of divine grace in his conversion\", since the same mouth would afterwards \"publish and proclaim the Gospel of the grace of God\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the participle as breathing out and reaches for the same Greek poets as Barnes — Theocritus, Euripides, Aristophanes — who \"often express any vehement and hostile affection of the mind by the verb pneein, to breathe, to pant\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry, with no Greek in view, reaches Robertson's image independently: Saul \"even breathed in this as in his element\", and \"his very breath, like that of some venomous creatures, was pestilential\". He finds two senses in the word <em>yet</em> — that Saul persisted, \"not satisfied with the blood of those he had slain, he still cries, Give, give\", and that \"he should shortly be of another mind\". He supplies the biography the others assume: the name Saul means desired, though its bearer was \"as remarkably little in stature as his namesake king Saul was tall and stately\"; Tarsus was \"a little Athens for learning\"; tent-making was the trade of Jewish scholars \"for the earning of their maintenance, and the avoiding of idleness\". What makes the case worse and the mercy larger is the conscience: \"so ill informed was his conscience that he thought he ought to do what he did against the name of Christ.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the participle mean breathing out or breathing in?",
+    "positions": [
+     {
+      "view": "Breathing out — violent emotion driving the lungs, as in the Greek poets",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Breathing in: \"not breathing out, but breathing in (inhaling)\" — threat and slaughter had become the air he breathed",
+      "held_by": [
+       "A.T. Robertson",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who was the high priest Saul applied to?",
+    "positions": [
+     {
+      "view": "Theophilus son of Ananus, appointed at Pentecost in A.D. 37 by Vitellius",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Not determinable — \"whether we suppose Annas or Caiaphas to be meant\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Opens the chapter by making the conversion's difficulty the measure of the mercy: it was \"the more incredible that he could be so suddenly tamed\", and \"such a cruel wolf was not only turned into a sheep, but did also put on the nature of a shepherd\"."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Draws the pastoral consequence from the worst case: \"Let not us then despair of renewing grace for the conversion of the greatest sinners.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Takes the word <em>yet</em> to imply a long interval since Stephen's death, filled by Philip's mission in Samaria, with the persecution running through it."
+   }
+  ],
   "themes": [
-   "breathing out threatenings and slaughter",
-   "Saul the persecutor",
-   "grace overcoming fury",
-   "the persecutor to be converted"
+   "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest,"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "2": {
@@ -55,43 +124,90 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "2",
+  "pericope_label": "And desired of him letters to Damascus to the synagogues, that if he found any of this way he might bring them bound unto Jerusalem",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul sought letters to arrest disciples 'of this way' — the first use of 'the Way' as a name for Christians (perhaps from John 14:6, before 'Christian,' Ellicott, Robertson); the Sanhedrin claiming jurisdiction over Jews everywhere (Barnes)."
+    "summary": "Barnes writes a traveller's account of Damascus — the plain of cypress and palm, the Barrady divided by art into streams through the orchards, \"the paradise on earth\" as he says the Orientals call it — and cannot settle the population, setting Ali Bey's two hundred thousand beside Volney's eighty thousand; he notes that one hill on the Jerusalem road is called Cocab, the star, \"in memory of the dazzling light which is here said to have appeared to Saul\", and takes the Sanhedrin to have claimed \"jurisdiction over all synagogues everywhere\". Ellicott reconstructs the political situation: Aretas of Arabia Petræa, having beaten Herod Antipas in the war over the Tetrarch's divorce of his daughter, seems to have seized Damascus while Vitellius hurried to Rome on Tiberius's death. On <em>this way</em>, its first appearance in the book, he offers three origins without choosing and explains its usefulness as \"a convenient, neutral designation\" for those who wished to speak respectfully \"instead of the opprobrious epithet of the Nazarenes\". Robertson qualifies the jurisdiction claim — the authority \"was not always recognized in every local community outside of Judea\" — and catches the verb's indirect middle, Saul asking for himself."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the mention of women persecuted shows the special cruelty of Saul's zeal, sparing not even those whom war spares — a blot he later remembered with shame."
+    "prevalence": "several",
+    "summary": "Gill collects the etymologies of Damascus, among them a derivation from blood, \"a cup of blood, or one that drinks blood\", which Jerome joins to \"a true tradition, that the field in which Abel was killed by Cain, was in Damascus\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke counts the nine gates and notes the fifteen thousand Christians living there \"in a state of considerable degradation\", closing on the city's exports — the Damascene plum, the Damask rose, the damask silks. On the reach of the letters he turns to an analogy his readers would feel: the authority held wherever there were Jews, \"just as papists in all countries acknowledge the authority of the pope. And as there can be but one pope, and one conclave, so there could be but one high priest, and one Sanhedrin.\" Wesley notes only that the binding was done by the connivance of the governor under Aretas."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far did the Sanhedrin's warrant actually run?",
+    "positions": [
+     {
+      "view": "Everywhere: it \"claimed jurisdiction over all synagogues everywhere\", as the pope's authority is acknowledged in all countries",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Granted by Caesar and Augustus, but \"not always recognized in every local community outside of Judea\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Explains the name <em>the way</em> by an analogy from his own century: the term Methodists, \"those that follow a distinct method or way of life\"."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Offers an analogy from further afield for the same name: \"the North American Indians call Christianity the Jesus Road.\""
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Makes the women in the warrant the measure of the man: they are mentioned \"that it may the better appear how desirous he was to shed blood who had no respect of sex whom even armed enemies are wont to spare in the heat of war\" — a fierce beast, \"as if a madman had a sword put into his hand\"."
+   }
+  ],
   "themes": [
-   "letters to Damascus",
-   "any of this way",
-   "persecuting men and women",
-   "the persecutor's extended zeal"
+   "And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "3": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -99,106 +215,115 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-4",
+  "pericope_label": "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A sudden light from heaven like lightning (Robertson); Barnes argues strongly for a supernatural appearance of the glorified Christ in the Shekinah glory (the personal appearance of the Lord, 1 Corinthians 15:8); the three accounts (chs. 9, 22, 26) agree in essentials."
+    "summary": "Barnes refuses the lightning explanation on several grounds — the appearance is elsewhere called seeing the Lord, the companions saw the light but not the words, and \"it was as easy for Jesus to appear in a supernatural manner, as to appear amidst thunder and lightning\" — putting in its place the Shechinah, the glory that shone at the transfiguration, appearing as \"the Son of God invested with appropriate glory\". Ellicott says flatly that \"nothing in the narrative suggests the thought of a sudden thunderstorm\", then licenses the hypothesis anyway, since it \"does not necessarily exclude the supernatural element\"; he reads the divergences among the three accounts as evidence rather than embarrassment, natural \"in the records of a manifestation which was partial to some, and complete to one only\", and refuses the whole distinction: \"it is not possible in such a history to draw a hard and fast line between the objective and the subjective.\" Robertson defends Luke against the charge that he should have harmonised Paul's speeches with his own narrative, and notes the light growing across the three tellings."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a manifestation of Christ's divine majesty, that Saul might know he had to do with God himself."
+    "prevalence": "single",
+    "summary": "Calvin assumes both a vision and a storm — Luke compared the light to lightning, \"though I do not doubt but that lightnings did fly in the air\" — and, contradicting Clarke without knowing it, puts Saul on the horse, Christ's voice reaching a man who had despised it \"so long as he sat haughtily upon his horse\". He asks why the arrest waited, and answers that God \"knoweth the very instants of times\", showing his mercy the better by tying \"the jaws of the greedy wolf, even when he was ready to enter the sheepfold\"."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke suggests a divinely-used flash of lightning and thunder; Ellicott entertains a near-instantaneous thunderstorm not excluding the supernatural."
+    "prevalence": "several",
+    "summary": "Clarke takes the light as natural and providential at once — \"an extraordinary flash of the electric fluid, accompanied with thunder\", but \"so modified it as to prevent it from striking them dead\" — and reserves his sharpest sentence for a habit rather than a commentator: many suppose Saul was on horseback, \"and painters thus represent him; but this is utterly without foundation. Painters are, in almost every case, wretched commentators.\" Wesley draws the consolation from the suddenness: \"when God suddenly and vehemently attacks a sinner, it is the highest act of mercy.\""
    }
   ],
   "debates": [
    {
-    "question": "Was the light a supernatural appearance of the glorified Christ or a divinely-used natural phenomenon?",
-    "sides": [
+    "question": "Was the light a natural phenomenon?",
+    "positions": [
      {
-      "position": "A supernatural appearance of the risen Christ in the Shekinah glory",
-      "holders": [
-       "Barnes",
-       "Calvin"
+      "view": "Yes, a modified flash of the electric fluid with thunder, out of which Christ spoke",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "A divinely-used flash of lightning/thunderstorm (not excluding the supernatural)",
-      "holders": [
-       "Clarke",
-       "Ellicott"
+      "view": "No: it was the reappearance of the Shechinah, the glory of the ascended Christ",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Nothing in the narrative suggests a thunderstorm, though the hypothesis may be legitimately entertained",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Both: the light is compared to lightning, and \"lightnings did fly in the air\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was Saul on horseback?",
+    "positions": [
+     {
+      "view": "No — painters represent him so, but \"this is utterly without foundation\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Yes: he had despised Christ's voice \"so long as he sat haughtily upon his horse\"",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "a light from heaven",
-   "suddenly there shined round about him",
-   "the appearance of the glorified Christ",
-   "the arrest of the persecutor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Saul fell overpowered; the doubled name (Hebrew form) fixed his attention and claimed him as a Hebrew called by God (Barnes, Ellicott); 'why persecutest thou me' reveals the mystic union — Christ and his people one, persecuting them is persecuting him."
+    "voice": "Charles Ellicott",
+    "claim": "Makes the accusation personal by way of Stephen: the martyr's cry about the Son of Man at God's right hand had sounded to the Pharisee like blasphemy, and now the same Son of Man stretches forth his hand \"not now, as He then had done, to receive the servant who was faithful even unto death, but, in answer to that servant's dying prayer, to transform the persecutor into the likeness of his victim\"."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the comfort that the Son of God is partner with his people in the cross, suffering with them, wounded through their side — and will avenge their wrongs."
+    "voice": "A.T. Robertson",
+    "claim": "Quotes Deissmann for the doubled Hebrew name as \"the historian's sense of liturgical rhythm\", and adds a small textual honesty, that the proverb about the goad is genuine at the third telling \"but not here\"."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Turns on a whole class of interpreters rather than an argument: \"Painters are, in almost every case, wretched commentators.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "he fell to the earth",
-   "Saul, Saul, why persecutest thou me",
-   "the mystic union of Christ and his church",
-   "Christ suffers with his people"
+   "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven:",
+   "And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "5": {
@@ -212,97 +337,121 @@
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "5-6",
+  "pericope_label": "And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Who art thou, Lord?' (Sir in dawning awe, Barnes, Robertson, or a higher sense, Clarke); 'I am Jesus' the despised Nazarene now revealed in glory (Barnes, Ellicott); 'kick against the pricks' absent from the best MSS here (inserted from 26:14), the proverb of resisting conscience's goads."
+    "summary": "Barnes and Ellicott both watch <em>Lord</em> change sense across the two verses, Barnes taking it at first to mean \"no more than Sir\" and Ellicott that it \"could not as yet have been used in all the fulness of its meaning\", while at the second it comes \"now, we must believe, with a new meaning\". Ellicott grants \"a decisive preponderance of MS. authority against\" the disputed clause, then expounds it anyway because it stands in the English text and \"belongs to this crisis in St. Paul's life\"; he alone asks what the goads had been, answering from the biography — Gamaliel's counsel, \"the angel-face of Stephen\", the martyr's dying prayer — and observing that \"in the frenzy of his zeal he had tried to crush these misgivings\". Robertson is blunter about the text: \"the Textus Receptus put these words in here without the authority of a Greek codex\"; he makes the surrender itself the conversion, one from which \"he never wavered for a moment to the end\". Barnes traces the change in the man: a moment before, Saul acted under the Sanhedrin's commission, and now renounces it."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the surrender of a man afraid and thrown down; the proverb applied to all who war against Christ, to their own double hurt — but the godly yield meekly to his goads."
+    "prevalence": "several",
+    "summary": "Gill supplies the psychology of the trembling — sins that \"rise up like so many ghosts, and stare them in the face\". Calvin will not concede so much so fast: \"We have Paul now somewhat tamed, but he is not yet Christ's disciple\" — still \"the question of a man that is afraid\". Paul submitted where Pharaoh did not, and not \"by any goodness of nature\": Pharaoh, \"being like to an anvil\", beat back the strokes, while \"the heart of Paul was suddenly made a fleshy heart of a stony heart\". Of the sending to Ananias he makes an argument for the ministry and then a rebuke, since \"all men could desire to have angels come flying unto them\" — a \"preposterous curiosity\" springing \"from pride and wicked contempt of the Word\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke counts the disputed words — twenty in the Greek, thirty in the English — and reports them \"found in no Greek MS. yet discovered\", wanting in the Itala, Syriac and Coptic, and dropped by Griesbach as \"probably borrowed from\" the later account; at the second verse he takes <em>Lord</em> \"in its proper sense, as expressing authority and dominion\". He gives two reasons why the convert is sent to a man: \"to show that God will help man by man, that they may learn to love and respect each other\", and that in Ananias's kindness Saul \"might see the spirit and tendency of that religion which he was persecuting\". Wesley alone calls the goad proverb Syriac, and says the condescension in eleven words: \"Admirable condescension! that the Lord deals with us by men, like ourselves.\""
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril finds the same principle in the canon, wondering that the Spirit gave \"to Paul the former persecutor the privilege of writing fourteen\" epistles, \"in order that the doctrine might be beyond question\"."
    }
   ],
   "debates": [
    {
-    "question": "Are the words 'it is hard to kick against the pricks' original here?",
-    "sides": [
+    "question": "Do the words about kicking against the pricks belong here?",
+    "positions": [
      {
-      "position": "No — absent from the best MSS, inserted from Acts 26:14",
-      "holders": [
-       "Robertson",
-       "Clarke",
-       "Ellicott"
+      "view": "No: they are found in no Greek MS., are wanting in most versions, and were borrowed from the later account",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "No: \"the Textus Receptus put these words in here without the authority of a Greek codex\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "The MS. authority is decisively against them, but they stand in the English text and belong to this crisis, so they may be expounded",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the proverb come from?",
+    "positions": [
+     {
+      "view": "The Greek poets — Euripides, Pindar, Terence, Ovid, Aeschylus",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "It appears in no collection of Hebrew proverbs",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "It is a Syriac proverb",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "who art thou, Lord",
-   "I am Jesus whom thou persecutest",
-   "kick against the pricks",
-   "the surrender of the will"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'What wilt thou have me to do?' (textually uncertain here, Robertson) the mark of true conversion — the prompt, entire surrender of the will to Christ (Barnes); even the most striking conversion needs the church's counsel."
+    "voice": "John Calvin",
+    "claim": "Turns the sending to Ananias into a rebuke of a religious appetite: \"all men could desire to have angels come flying unto them\", a \"preposterous curiosity\" springing \"from pride and wicked contempt of the Word\"."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ sends Saul to Ananias, a common disciple, to adorn the ministry of the church — if the chief apostle was taught by a humble disciple, none may grudge God's ministers."
+    "voice": "Charles Ellicott",
+    "claim": "Identifies the goads Saul had been kicking against as specific memories — Gamaliel's counsel, \"the angel-face of Stephen\", the martyr's dying prayer, and the daily spectacle of people ready to go to prison rather than renounce the name."
+   },
+   {
+    "voice": "Cyril of Jerusalem",
+    "claim": "Reads the whole call backwards from the canon: the Spirit gave \"to Paul the former persecutor the privilege of writing fourteen\" epistles, \"in order that the doctrine might be beyond question\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "Lord, what wilt thou have me to do",
-   "go into the city",
-   "the surrender of conversion",
-   "God honours human ministry"
+   "And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest: it is hard for thee to kick against the pricks.",
+   "And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord said unto him, Arise, and go into the city, and it shall be told thee what thou must do."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "7": {
@@ -315,125 +464,124 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "7-9",
+  "pericope_label": "And the men which journeyed with him stood speechless, hearing a voice, but seeing no man",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The apparent contradiction with 22:9 ('heard not the voice') resolved by the distinction between hearing a sound and understanding articulate words — they heard the sound but not the message (Barnes, Clarke, Robertson), as the crowd heard the voice as thunder (John 12:29)."
+    "summary": "Barnes answers the apparent contradiction by distinguishing sound from words — the companions heard a noise as the crowd did when God spoke to Christ and \"said that it thundered\" — and separates the standing from the falling by time, there being \"no improbability that they rose from the ground immediately\". On the blindness he says flatly that \"there is no reason to suppose that there was a miracle\", diagnosing amaurosis, sight lost with no apparent defect of the eye. Robertson offers the grammatical solution — the genitive for the thing specified, the accusative for the extent heard — and then declines to lean on it, the distinction being \"by no means a necessary one\" since Paul uses both cases of himself interchangeably; he makes the blindness evidential, \"proof that something had happened to him and that it was no hallucination\". Ellicott agrees it was dazzle rather than miracle and adds the traces it left — dictating rather than writing, the large characters, the failure to recognise the high priest, perhaps the thorn in the flesh — and places the visions of the third heaven in the three days, Saul living \"as one fallen into a trance\". He also notices what the arrival looked like from outside: \"now he came, and the mission fell to the ground. The letters to the synagogues were not delivered.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: they heard the sound but discerned neither speaker nor words; the companions witnesses to the reality, but the message was Saul's alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hearing a voice, but seeing no man",
-   "the apparent contradiction with 22:9",
-   "sound vs articulate words",
-   "the companions as witnesses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul's blindness the natural effect of the intense light (Barnes, 22:11), the cure miraculous (v.18); Ellicott traces possible permanent effects (large handwriting, the 'thorn in the flesh') and the spiritual significance — the guide of the blind made blind; led helpless by the hand (Robertson)."
+    "summary": "Gill has bodily sight fail while \"his spiritual sight was increasing\". Calvin reports a bolder proposal and refuses it — some hold the text faulty, the negative displaced \"through ignorance of the copyist\", but \"it is no hard matter to answer it\" — and reads the blindness as instruction rather than injury: Saul \"is deprived of the sight of his body three days, that he may begin to see with his mind\", since \"those must become fools, whosoever they be, which seem to themselves wise\". The fast he counts \"a part of the miracle\", since even in the east \"we do not read that any did fast three days, save only those who had want of victual\"."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the proud, learned persecutor blinded that he may see with his mind — the wise must become fools to attain true wisdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he saw no man",
-   "led him by the hand into Damascus",
-   "the blindness of Saul",
-   "the humbling of the persecutor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Three days blind and fasting — the time of the new birth (Wesley); Barnes attributes the fast to overwhelming conviction of sin without assurance; Ellicott reads it as spiritual communion, perhaps the visions of 2 Corinthians 12."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the fast part of the miracle and a sign of Saul's terror, as one dead tasting no food for three days."
+    "summary": "Clarke reaches the same result by a longer road, laying the scene beside Elijah at Horeb — wind, earthquake, fire, then the still small voice — and concluding that \"the thunder must have been heard by all; the small, still voice by Saul alone\"; he insists on the scales as physical fact, the cornea injured and its humour opaque. Wesley alone puts the scales there from the first, growing over the eyes \"to intimate to him the blindness of the state he had been in\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How is Luke's \"hearing a voice\" reconciled with Paul's \"they heard not the voice\"?",
+    "positions": [
+     {
+      "view": "They heard the sound but not the distinct words, as the crowd took God's voice for thunder",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "By the case of the noun — sound in the genitive, words in the accusative — though the distinction is \"by no means a necessary one\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "The text is faulty and the negative displaced by a copyist — reported and refused",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Were the scales literal?",
+    "positions": [
+     {
+      "view": "No: the word is \"as if\", and optic damage could not be cured by removing anything",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Yes: \"this was real\" — the cornea's humour turned opaque and separated \"in the form of thin laminae or scales\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "An incrustation from inflammation, like the whiteness that peeled from Tobit's eyes",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Scales grew over the eyes from the first, \"to intimate to him the blindness of the state he had been in\"",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Reads Luke's precision here as professional: the care with which the physical detail is recorded is \"one of the examples of the technical precision of his calling as a physician\"."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Reads the refusal to eat before baptism as a measure of appetite for instruction: \"he refreshed not his body with meat until his soul had received strength\"."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Finds the arrival pathetic rather than dramatic: \"the masterful Saul, victorious persecutor and conqueror of the disciples, now helpless as a child\"."
+   }
+  ],
   "themes": [
-   "three days without sight",
-   "neither did eat nor drink",
-   "the pangs of the new birth",
-   "conviction and suspense"
+   "And the men which journeyed with him stood speechless, hearing a voice, but seeing no man.",
+   "And Saul arose from the earth; and when his eyes were opened, he saw no man: but they led him by the hand, and brought him into Damascus.",
+   "And he was three days without sight, and neither did eat nor drink."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "10": {
@@ -447,38 +595,130 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "10",
+  "pericope_label": "And there was a certain disciple at Damascus, named Ananias; and to him said the Lord in a vision, Ananias",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Lord calls Ananias, a humble disciple (not an apostle), to restore Saul — his ready 'Behold, I am here, Lord' the obedience of a servant (like Samuel); the honour God puts on the ordinary ministry."
+    "summary": "Barnes reads the choice as tactical, a man \"devout according to the law\" being likeliest to \"conciliate the minds of the Jews towards him\". Ellicott hears the name, \"the Lord is gracious\", and finds the symmetry exact — Saul \"had come from one Annas, or Ananias, the Sadducean high priest, he was to be received by another\" — and ventures a conjecture nobody else offers, that this may be the Ananias in Josephus who converted Izates of Adiabene by teaching that a man might worship Israel's God uncircumcised. Robertson takes on the modern denial directly: Zeller rejects the vision's historicity and Furneaux treats it as \"a literary device\", content with \"this beautiful expression of the belief\"; Robertson answers that \"that is plain illusion, not to say delusion, and makes both Paul and Luke deceived\", and ends with a thrust at the evidence such readings rest on."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill lists the guesses about who Ananias was — one of the seventy, a deacon, a presbyter, bishop of Damascus, a martyr — and dismisses the lot: \"these are things not to be depended on.\" Calvin makes the choice a matter of who is humbled: Ananias was chosen \"that Paul, having laid away the swelling of his arrogancy, might learn to hear the least\", and of the hesitation says bluntly that \"though he know that the Lord calleth him, yet he slideth back, or, at least, he excuseth himself\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports the same identification as settled among the Greeks, who \"celebrate his martyrdom on the first of October\", and adds that his house became a church \"now occupied as a Turkish mosque\"; of the vision he offers a softer account, \"a strong impression made upon his mind, which left no doubt concerning its heavenly origin\", thinking \"the whole took place in a dream\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes it a matter of distribution — Christ \"would employ variety of hands in eminent services, that the honours might not be monopolized nor engrossed by a few\", putting honour \"upon the heads of those that were mean and obscure\" — and turns it on his readers: make much of \"the ministers that are where our lot is cast\". He frames the scene by what precedes it: \"as for God, his work is perfect; if he begin, he will make an end\" — \"he that hath torn will heal; that hath smitten will bind up; that hath convinced will comfort.\""
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: God prepares both men by vision — Ananias to go and minister, Saul to profit by the ministry; the converging providence."
+    "prevalence": "single",
+    "summary": "Chrysostom makes the choice of an obscure man a matter of credit: it was not fitting that Paul \"should be induced by men, but only by Christ Himself: as in fact this man taught him nothing, but merely baptized him\", and that Ananias was \"no very distinguished person\" he proves from the man's own hesitation. On that hesitation he is the most attentive of them all, noting how the fear is met — \"he is blind, saith He, and prayeth, and art thou afraid?\" — defending Ananias by precedent, \"in the same way Moses also is afraid\", and then catching what the Lord does <em>not</em> say: nothing of the success achieved, \"teaching us not to speak of our achievements\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why was an obscure disciple sent rather than an apostle?",
+    "positions": [
+     {
+      "view": "So that the credit should be Christ's alone: \"this man taught him nothing, but merely baptized him\"",
+      "held_by": [
+       "John Chrysostom"
+      ]
+     },
+     {
+      "view": "So that Paul \"might learn to hear the least\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "So that the honours \"might not be monopolized nor engrossed by a few\"",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Tactically: a man \"devout according to the law\" would conciliate the Jews of Damascus",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What kind of event was the vision?",
+    "positions": [
+     {
+      "view": "A real supernatural communication; denying it \"makes both Paul and Luke deceived\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "\"A strong impression made upon his mind\" — probably a dream",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Perhaps by a dream; the main idea is that God revealed his will",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Closes his answer to the sceptics with a thrust at their evidence: \"one MS. of the old Latin Version does omit the vision to Ananias, and that is basis enough for those who deny the supernatural aspects of Christianity.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Conjectures that this may be the Ananias of Josephus who converted Izates of Adiabene by teaching that a man might worship Israel's God uncircumcised — the Eleazar who followed and compelled circumcision being \"a striking parallel to the manner in which the Judaisers followed on the track of St. Paul\"."
+   },
+   {
+    "voice": "John Chrysostom",
+    "claim": "Catches an omission in what the Lord says to Ananias: nothing is said of the success already achieved, \"teaching us not to speak of our achievements\"."
+   }
+  ],
   "themes": [
-   "a certain disciple named Ananias",
-   "Behold, I am here, Lord",
-   "the humble instrument",
-   "converging visions"
+   "And there was a certain disciple at Damascus, named Ananias; and to him said the Lord in a vision, Ananias. And he said, Behold, I am here, Lord."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "11": {
@@ -490,79 +730,132 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "11-12",
+  "pericope_label": "Arise, and go into the street which is called Straight, and enquire in the house of Judas for one called Saul, of Tarsus: for, behold, he prayeth",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Lord's precise direction (street, house, name, city — that Ananias might know it divine, Clarke); 'behold, he prayeth' the great sign of conversion — not the Pharisee's proud prayers but the penitent's, depending on God's mercy; real prayer the surest mark of the converted soul (Barnes)."
+    "summary": "Barnes reports the local traditions as they stand — the house said to be Judas's with \"a very small closet\" where tradition puts the three days' fast and the vision of the third heaven. Ellicott has checked and finds the pieces do not fit: the street still runs to the Pacha's palace as the Street of Bazaars, but \"somewhat curiously, the house shown by guides as that of Judas is not in it\", and the burial-ground shown as the site of the conversion lies east of the city, though \"St. Paul must have approached from the south\". Robertson settles it: the street's line is probably genuine, the ancients having rebuilt on the same sites, but \"the identification of the house of Ananias and the house of Judas are very precarious\". On the prayer Barnes denies Saul never prayed but grades the difference — those \"were then the prayers of a Pharisee; now they were the prayers of a broken-hearted sinner\" — while Ellicott refuses the subject as belonging \"to the preacher rather than the commentator\" and then supplies it anyway, measuring the prayer by its answer. Ellicott also meets the objection that the two converging visions betray \"the skill of the artistic historian\", answering that in \"the work of the highest Designer\" one should expect \"the same unity of purpose and convergence of varied means which rouse our admiration in works of human skill\"."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Saul continued in prayer those three days, the Lord deferring his comfort to kindle in him an earnest desire to pray."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the street called Straight",
-   "behold, he prayeth",
-   "prayer the mark of conversion",
-   "the penitent persecutor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The parallel vision preparing Saul to receive Ananias — the coincidence of the two visions displaying providence (Clarke); Ellicott answers the skeptical objection that this betrays the 'artistic historian' — the unity of design no stranger in God's work than in human skill."
+    "summary": "Gill records that \"some read this verse in a parenthesis, and take them to be the words of Luke the historian\", and keeps it Christ's. Calvin gives the objection its due, answers it, then leaves it: \"yet may the reader choose.\" He makes the praying fill the whole three days — Christ \"doth assuredly speak of no short prayer in this place\" — and reads the delay as deliberate, the Lord making Saul wait \"that he might the more kindle in him an earnest desire to pray\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke attacks Barnes's kind of grading as overreach: \"some have laid needless stress on these words, as if they intimated that though Saul as a Pharisee had often said his prayers, yet he had never prayed them till now. This is not correct.\" He appeals to Paul's testimony of having \"lived in all good conscience towards God\", and so made \"many faithful and fervent prayers\"; what is new is the object — \"he was praying now for instruction\". On Tarsus he credits the Roman franchise to \"the time of Julius Caesar\", against Barnes's Augustus, and states the arrangement of the two visions without defending it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Can the traditional sites in Damascus be trusted?",
+    "positions": [
+     {
+      "view": "They are reported as they stand — the closet in Judas's house, the fountain of the baptism",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "They do not fit the topography: the house shown is not even in the street, and the conversion site lies on the wrong side",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The street's line is probably genuine, but the house identifications \"are very precarious\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is new about Saul's praying?",
+    "positions": [
+     {
+      "view": "Not that he prayed, but what the prayers were: Pharisee's prayers before, a broken-hearted sinner's now",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "That grading is \"needless stress\": he had already \"made many faithful and fervent prayers\"; only the object is new",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Its length: Christ \"doth assuredly speak of no short prayer in this place\", the exercise filling the three days",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Which emperor made Tarsus a free city?",
+    "positions": [
+     {
+      "view": "Augustus, \"in reward for its exertions during the civil wars of Rome\"",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "The inhabitants were enfranchised \"in the time of Julius Caesar\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Answers the critical objection that the two converging visions look like the work of \"the artistic historian\" not with evidence but with a formal argument: in \"the work of the highest Designer\" one should expect \"the same unity of purpose and convergence of varied means which rouse our admiration in works of human skill\"."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Notes that most ancient city lanes \"were crooked like the streets of Boston\", this one being the exception that earned its name."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Declines to settle whether verse 12 is still Christ speaking or Luke's aside, answering the objection and then leaving it open: \"yet may the reader choose.\""
+   }
+  ],
   "themes": [
-   "hath seen in a vision a man named Ananias",
-   "that he might receive his sight",
-   "the converging visions",
-   "the providence of God in conversion"
+   "And the Lord said unto him, Arise, and go into the street which is called Straight, and enquire in the house of Judas for one called Saul, of Tarsus: for, behold, he prayeth,",
+   "And hath seen in a vision a man named Ananias coming in, and putting his hand on him, that he might receive his sight."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
   }
  },
  "13": {
@@ -573,173 +866,137 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ananias's natural hesitation (the memory of Saul's fury, Barnes); the first use of 'saints' for the disciples — the consecrated, devout, a term passing from Ananias to Paul (Ellicott); Ananias saw the persecutor, Jesus the man transformed by grace (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the hesitation a weakness of faith mixed with obedience — a desire to obey tempered by fear, not withdrawing from Christ's command."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have heard by many of this man",
-   "how much evil he hath done to thy saints",
-   "Ananias's hesitation",
-   "the first use of 'saints'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ananias presses the danger (Saul armed to bind the disciples, warned by letters from Jerusalem, Robertson); 'all that call on thy name' another term for Christians, from Joel via Peter (2:21) and Paul (Romans 10:13), passing from Ananias to Paul (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: to call on Christ's name is to worship him as God, placing all hope of salvation in him — a proof of his divinity, for invocation rests on sure confidence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "authority to bind all that call on thy name",
-   "those who invoke Christ's name",
-   "the divinity of Christ",
-   "the church's worship of Jesus"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "13-16",
+  "pericope_label": "Then Ananias answered, Lord, I have heard by many of this man, how much evil he hath done to thy saints at Jerusalem",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Go thy way' overrules Ananias's fear; 'a chosen vessel' (vessel of election) the first NT use of 'election,' prominent later in Paul (Romans 9, 11) — Ananias's language influencing the apostle (Ellicott); the threefold scope (Gentiles, kings, Israel) all fulfilled (Barnes)."
+    "summary": "Barnes allows that Ananias's train of thought was natural, then withdraws the allowance — \"when Christ commands, we should suffer no suggestion of our own thoughts, and no apprehension of our own danger, to interfere\" — and offers a proverb for the disciples' slowness: \"confidence is a plant of slow growth.\" Ellicott traces two of Paul's characteristic words to this scene, <em>saints</em> back to the Chasidim who \"banded themselves together to resist the inroads of heathenism under Antiochus Epiphanes\", and <em>calling on the name</em> to Joel as cited at Pentecost; his point is transmission, both terms passing \"from Ananias to St. Paul\" as evidence of \"the influence exercised on the Apostle by the thoughts and language of the instructor\". On the chosen vessel he offers \"instrument\", notes the classical use \"of useful and trusty slaves\", and allows a second sense, the germ of the potter's vessel, the convert \"not only chosen, but moulded\". Robertson makes the hesitation universal and states the gap in one line: \"Ananias in his ignorance saw in Saul only the man with an evil reputation while Jesus saw in Saul the man transformed by grace to be a messenger of mercy.\""
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Robertson/Wesley: Jesus chose Saul before Saul chose Jesus — unconditional election to a work; Calvin: Saul chosen for great and excellent things, all dependent on God's favour."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a chosen vessel unto me",
-   "to bear my name before the Gentiles and kings",
-   "the election of Saul",
-   "the apostle to the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Suffering part of Saul's call — 'how great things he must suffer,' fully accomplished (Barnes, 2 Corinthians 11); the strange change — the persecutor who inflicted suffering now suffers for the doctrine he persecuted (Clarke); the prospect welcome to the penitent (Ellicott)."
+    "summary": "Gill calls the timidity \"the more inexcusable\" after the vision. Calvin diagnoses without excusing — the objection \"betrayeth his weakness of faith\" — but insists on what follows, that \"he yieldeth not so much to fear that he withdraweth himself from Christ's obedience\", so what we see is \"a desire to obey mixed with fear\"; his paraphrase is the sharpest thing here: \"Lord, what meaneth this, that thou sendest me to the hangman?\" On the vessel he takes the doctrine rather than the grammar: \"if we be instruments, he alone is the author.\""
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Calvin: Christ accustoms Saul to bear the cross; no man fit to preach the gospel, against which the world is set, save one armed to suffer — the minister needing constancy and strength."
+    "summary": "Clarke excuses Ananias by the medium — \"this was all done in a dream, else this sort of reasoning with his Maker would have been intolerable\" — derives <em>saints</em> from a privative and the word for earth, making them \"persons separated from all earthly uses\", and reads the promised suffering as the whole reversal: instead of inflicting sufferings, \"I will show him how many things he himself must suffer for preaching that very doctrine which he has been hitherto employed in persecuting. Strange change indeed!\" Wesley concedes the point furthest from his own system, fencing it: \"it is undeniable that some men are unconditionally chosen or elected, to do some works for God.\""
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril sees the seal that made \"the former persecutor an ambassador and good servant\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How culpable was Ananias's hesitation?",
+    "positions": [
+     {
+      "view": "\"The more inexcusable\" for coming after the vision",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Natural, but such thoughts should have been banished; when Christ commands, no apprehension of danger should interfere",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Excusable, since it happened in a dream — otherwise \"this sort of reasoning with his Maker would have been intolerable\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A weakness of faith, but a good man's: \"a desire to obey mixed with fear\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Universal rather than personal — \"a fine illustration of our own narrow ignorance in our rebellious moods\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the word <em>saints</em> come from?",
+    "positions": [
+     {
+      "view": "From the Maccabean Chasidim, whose Greek equivalent was revived for the new society",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "From a privative and the word for earth: \"persons separated from all earthly uses\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "From a noun meaning religious awe or reverence",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Argues that two of Paul's most characteristic terms, <em>saints</em> and <em>election</em>, reach him from Ananias — evidence of \"the influence exercised on the Apostle by the thoughts and language of the instructor\"."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Concedes unconditional election in the narrowest possible form: \"it is undeniable that some men are unconditionally chosen or elected, to do some works for God.\""
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Paraphrases Ananias's objection in one line: \"Lord, what meaneth this, that thou sendest me to the hangman?\""
+   }
+  ],
   "themes": [
-   "how great things he must suffer",
-   "for my name's sake",
-   "suffering part of the call",
-   "the persecutor becomes the sufferer"
+   "Then Ananias answered, Lord, I have heard by many of this man, how much evil he hath done to thy saints at Jerusalem:",
+   "And here he hath authority from the chief priests to bind all that call on thy name.",
+   "But the Lord said unto him, Go thy way: for he is a chosen vessel unto me, to bear my name before the Gentiles, and kings, and the children of Israel:",
+   "For I will shew him how great things he must suffer for my name’s sake."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "17": {
@@ -750,136 +1007,101 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "17-19",
+  "pericope_label": "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ananias obeyed cheerfully (Gill) and greeted the former persecutor as 'Brother Saul' — the church receiving its enemy with love; he names the Lord Jesus who appeared (confirming the vision) and declares the twofold purpose: sight and the filling with the Spirit."
+    "summary": "Robertson reads the greeting as the turn of the whole scene — \"all suspicion has vanished and Ananias takes Saul to his heart as a brother in Christ. It was a gracious word to Saul now under suspicion on both sides\" — agrees with Barnes that the scales were not literal, the word being <em>as if</em>, and notes that the verb for putting the crowd out is \"rather strong\". Barnes denies the scales outright, since with optic damage \"no literal removing of scales would restore the sight\", while insisting the cure was miraculous: no means were used, the recovery instantaneous. Ellicott catches that Ananias uses the Hebrew form Saul heard in the vision, draws from the laying on of hands \"a proof that that gift was not one which attached exclusively to the Apostles\", makes baptism the point on which nothing is waived — \"no visions and revelations of the Lord, no intensity of personal conversion, exempted him from it\" — and settles the Arabian journey between the days with the disciples and the preaching."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: the Spirit's mighty working changed Saul's blindness to newness of sight and sealed his soul, making him a chosen vessel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Brother Saul",
-   "the Lord, even Jesus, that appeared unto thee",
-   "receive thy sight and be filled with the Holy Ghost",
-   "the church receives its enemy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Sight restored, 'as it had been scales' falling — Barnes denies a literal removal (the cure miraculous though the blindness natural); Clarke/Ellicott read a literal incrustation peeling off, noting Luke's medical precision (cf. Tobit 11:13); baptism the indispensable condition of church admission (Ellicott)."
+    "summary": "Gill leaves the physiology for the emblem: scales of ignorance, of self, of sin, \"of pride, malice, and envy\". Calvin treats the laying on of hands as a Jewish custom taken from sacrifice, used by the apostles for conferring gifts and for ordaining alike, so Ananias does both — and then: \"seeing Paul received the Spirit by the hand of Ananias, the Papists are more than ridiculous, who will have the bishops alone to lay on their hands.\" He reads the three days as instruction, not injury: Saul \"is deprived of the sight of his body three days, that he may begin to see with his mind\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke defends a private disciple conveying the Spirit, the objection that this would degrade an apostle being \"a very flimsy argument\", and presses it into a challenge: \"Who baptized the apostles? Jesus Christ baptized no man. Who then baptized Peter? Can the Roman conclave answer this question? I trow not.\" None but Christ, he concludes, \"ever made an apostle\". Of the scales he says flatly, \"this was real\": the cornea had suffered and \"the opaque matter separated from the cornea, in the form of thin laminae or scales\". He draws the plainest lesson from the days with the disciples — the miraculous conversion \"did not imply a consummate knowledge of every Christian doctrine\" — and asks, \"without the communion of saints, who is likely to make a steady and consistent Christian?\" Wesley notes what is withheld: \"it was not expedient that he should know yet to how great a dignity he was called.\""
    }
   ],
   "debates": [
    {
-    "question": "Did literal scales fall from Saul's eyes, or only an effect 'as if' scales?",
-    "sides": [
+    "question": "May a man who is not an apostle convey the Spirit?",
+    "positions": [
      {
-      "position": "Only an effect 'as it had been' — no literal scales (the cure miraculous)",
-      "holders": [
-       "Barnes"
+      "view": "Yes; the contrary objection is \"a very flimsy argument\", and none but Christ ever made an apostle anyway",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "A literal incrustation/film peeling off (Luke's medical precision)",
-      "holders": [
-       "Clarke",
-       "Ellicott"
+      "view": "Yes, and the gesture is both consecration and ordination — which refutes those \"who will have the bishops alone to lay on their hands\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Yes: it is \"so far a proof that that gift was not one which attached exclusively to the Apostles\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The gesture is not ordination at all, \"but the usual mode of imparting blessings\"",
+      "held_by": [
+       "Albert Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "as it had been scales",
-   "received sight forthwith",
-   "was baptized",
-   "the washing of regeneration"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Saul strengthened by food after the fast, in fellowship with the Damascus disciples (the former persecutor now a brother); Luke omits the Arabian journey (Galatians 1:17), which Ellicott places here; Barnes draws the great evidential force of the conversion — Saul's unimpeachable testimony a strong proof of Christianity."
+    "voice": "Adam Clarke",
+    "claim": "Presses the question of who may confer the Spirit into a challenge to Rome: \"Who baptized the apostles? Jesus Christ baptized no man. Who then baptized Peter? Can the Roman conclave answer this question? I trow not.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Lets the geography carry the theology of the baptism: \"Abana and Pharpar, rivers of Damascus\", are now \"sanctified no less than those of Jordan\"."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Draws from the days with the disciples an argument for ordinary church life: the miraculous conversion \"did not imply a consummate knowledge of every Christian doctrine\" — \"without the communion of saints, who is likely to make a steady and consistent Christian?\""
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "he was strengthened",
-   "certain days with the disciples",
-   "the conversion as evidence",
-   "the persecutor in fellowship"
+   "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord, even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost.",
+   "And immediately there fell from his eyes as it had been scales: and he received sight forthwith, and arose, and was baptized.",
+   "And when he had received meat, he was strengthened. Then was Saul certain days with the disciples which were at Damascus."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "20": {
@@ -891,125 +1113,101 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "20-22",
+  "pericope_label": "And straightway he preached Christ in the synagogues, that he is the Son of God",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul straightway preached that Jesus (the better reading) is the Son of God — the immediate fruit and proof of his conversion (Barnes); the question being whether the crucified Jesus was that Christ and Son; Paul's lifelong platform of Jesus' full deity (Robertson)."
+    "summary": "Barnes reports that many manuscripts read <em>Jesus</em> rather than <em>Christ</em>, that Griesbach adopted it, and that \"this reading accords much better with the subject\"; on the word for confounding he notes it means confuted but sometimes to raise a tumult, and thinks both are meant. Ellicott dates the increase of strength by \"a comparison of dates\" with the answer given to the thorn in the flesh, catches the tense of <em>had come hither</em> as \"implying that the purpose of his coming had been abandoned\", and adds a guess that the Samaritans of Damascus had a synagogue of their own where Saul may also have preached. Robertson makes the confession Paul's whole career — \"this is Paul's platform as a Christian preacher, one that he always occupied to the very end\" — measures it against Peter's emphasis on the Resurrection and Thomas's slower arrival, explains the method of proof from a verb meaning to knit things together, and gives the scene its best image: \"it was the most powerful piece of artillery in the Jewish camp that was suddenly turned round upon them.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the swiftness of the fruit — the man who ran against Christ now fights as his standard-bearer to maintain his glory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "straightway he preached Christ",
-   "that he is the Son of God",
-   "the immediate fruit of conversion",
-   "the deity of Jesus"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "All amazed at Saul's change — 'destroyed' (made havoc, the threefold force: enemy, imprisoner, slayer, Clarke), the same verb Paul uses of himself (Galatians 1:13, Robertson); 'those who call on this name' again marking the worship of Christ."
+    "summary": "Gill marks the speed: no \"disputing and debating with himself and carnal reason\", but \"as soon as he knew Christ himself, he preached him to others\"; the increase of strength was \"not of body, but of mind\". Calvin adds what had to go first — Paul could not teach it \"unless he shake off those gross errors which he had conceived of the earthly kingdom of the Messiah\" — and, having praised the victory in argument, refuses to overstate it: Paul overthrew the Jews, \"and yet their stubbornness was not broken and tamed that they yielded to the truth, because their consciences rage nevertheless inwardly\"."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the amazement of those who knew his rage testifies that no cause but the hand of God could explain so sudden a change — the astonishment a proof of divine power."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke is blunt about the text: \"the word Christ should be changed for Jesus, as the latter is, without doubt, the genuine reading.\" He has Saul overwhelm his opponents \"so that they were obliged to blush for the weakness of their cause\", and notes that the first offers of the gospel were uniformly made to the Jews."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Did Saul preach <em>Christ</em> or <em>Jesus</em> in the synagogues?",
+    "positions": [
+     {
+      "view": "Jesus: many manuscripts read it, Griesbach adopted it, and it \"accords much better with the subject\"",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where do the Arabian years belong?",
+    "positions": [
+     {
+      "view": "Before this preaching, between the baptism and the first appearance in the synagogues",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Here, at this juncture: \"Luke makes no mention of this important event, but he leaves ample room for it\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Gives the disputations their best image: \"it was the most powerful piece of artillery in the Jewish camp that was suddenly turned round upon them.\""
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Refuses to let victory in argument stand for conversion: Paul overthrew the Jews, \"and yet their stubbornness was not broken and tamed that they yielded to the truth, because their consciences rage nevertheless inwardly\"."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Dates the growth in strength by \"a comparison of dates\" to the answer given to the thorn in the flesh, \"my strength is made perfect in weakness\"."
+   }
+  ],
   "themes": [
-   "all that heard him were amazed",
-   "is not this he that destroyed them",
-   "the evidential amazement",
-   "the divine power of conversion"
+   "And straightway he preached Christ in the synagogues, that he is the Son of God.",
+   "But all that heard him were amazed, and said; Is not this he that destroyed them which called on this name in Jerusalem, and came hither for that intent, that he might bring them bound unto the chief priests?",
+   "But Saul increased the more in strength, and confounded the Jews which dwelt at Damascus, proving that this is very Christ."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Saul increased in strength — the spiritual power of Christ poured into him (Ellicott, Robertson, cf. Philippians 4:13); 'confounded' = confuted, throwing the Jews into confusion (Barnes); proving from Scripture that Jesus is the Christ."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the victory came because Scripture was his sword; yet the Jews were confounded without being converted — overcome in argument but not yielding in heart."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "increased the more in strength",
-   "confounded the Jews",
-   "proving that this is very Christ",
-   "Scripture as the sword"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
@@ -1022,121 +1220,120 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "23-25",
+  "pericope_label": "And after that many days were fulfilled, the Jews took counsel to kill him",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Many days' covering the Arabian journey and about three years (Galatians 1, Henry); the Jews, confounded in argument (v.22), resort to violence — the pattern of those who cannot overcome truth by reason; the plot fulfilling Christ's word that Saul 'must suffer.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Jews took counsel to kill him",
-   "after many days",
-   "violence when argument fails",
-   "the persecutor now persecuted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plot known to Saul; the Jews with the ethnarch under Aretas (2 Corinthians 11:32, Ellicott) watched the gates day and night — the city sealed against the preacher, civil and Jewish authorities joined; the discovery the providence of God preserving Saul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "their laying await was known of Saul",
-   "watched the gates day and night",
-   "the ethnarch under Aretas",
-   "providence preserving Saul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples let Saul down by the wall in a basket (2 Corinthians 11:33), like Rahab's spies and David (Robertson); Paul later refers to this undignified escape as an 'infirmity' he was content to boast of, a humbling memory (Ellicott)."
+    "summary": "Barnes turns the three-year gap into an argument for the writers' honesty: had this been the only narrative \"we should be at a loss\", since \"it would be highly improbable that this interval would be passed quietly\"; Galatians supplies what Luke omits, and \"neither seems to be complete without the other\". Ellicott fills the same silence differently, with what must have grown in Damascus meanwhile — \"a Christian society, with an order of discipline and worship based on the outlines of that at Jerusalem\" — and ends on the sentence that measures the reversal: \"from the first it might almost seem as if Stephen had risen from the dead, and was living again in the spirit and power of his persecutor.\" He also argues the politics of the plot from coinage, Damascus coins surviving for Augustus, Tiberius and Nero \"but none of those of Caligula and Claudius\", so Caligula probably made a new ethnarchy for Aretas. Robertson generalises Barnes's principle: \"it cannot be argued from the frequent lacunae in the Acts that Luke tells all that was true or that he knew. He had his own methods and aims, as every historian has.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the escape lawful (avoiding the enemy, the law inclining to equity); the lesson of God's humbling — the apostle enforced to steal his life, acquainted betime with the cross."
+    "prevalence": "several",
+    "summary": "Gill fills the phrase from Elijah, where the same words mean a third year. Calvin alone asks whether the escape was lawful, and the objection is legal: \"the laws say that the walls of cities are holy, and that the gates are holy. Therefore, he ought rather to have suffered death, than to have suffered a public order to be broken for his sake.\" His answer works from the statute's purpose — walls are protected so cities \"may not be laid open to murders and robberies\", and \"that reason ceaseth when the question is concerning the delivery of an innocent man\" — with Cicero as witness, who allows a man to scale the wall to save the city, \"because the laws must always be inclined to equity\". He will not let the escape be heroic: \"we see how the Lord useth to humble those that be his.\""
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke refuses to speculate about Arabia and rebukes the asking: \"what he did in Arabia we know not... any assertion, at this distance of time, relative to his employment for those three years, must be both foolish and impertinent.\""
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry knows what Clarke will not guess: Saul \"went not up to Jerusalem, to receive instructions from the apostles\", but to Arabia, \"where there was new ground to break up, and where he would have opportunity of teaching, but not learning\". He puts the whole episode as a maxim: \"Saul was no sooner a Christian than a preacher, no sooner a preacher than a sufferer\"; \"where God gives great grace he commonly exercises it with great trials.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What was Paul doing in Arabia?",
+    "positions": [
+     {
+      "view": "Breaking new ground — \"teaching, but not learning\"",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "Unknowable, and guessing is \"both foolish and impertinent\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The question is less interesting than what grew in Damascus meanwhile",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was it lawful to break the city wall to save him?",
+    "positions": [
+     {
+      "view": "The laws make walls and gates holy, so he ought rather to have suffered death — an objection raised and then answered from the statute's purpose and from Cicero",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Not a legal question at all: Christ directed his people to flee from one city to another",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Argues the political background of the plot from numismatics: Damascus coins survive bearing Augustus, Tiberius and Nero, \"but none of those of Caligula and Claudius\", from which he infers a new ethnarchy created for Aretas."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Treats the escape as a question in Roman sacral law and calls Cicero as a witness, who allows a man to scale a city wall to save the city, \"because the laws must always be inclined to equity\"."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "States a general principle about the book's silences: \"it cannot be argued from the frequent lacunae in the Acts that Luke tells all that was true or that he knew. He had his own methods and aims, as every historian has.\""
+   }
+  ],
   "themes": [
-   "let him down by the wall in a basket",
-   "the escape from Damascus",
-   "an infirmity boasted of",
-   "deliverance by humbling"
+   "And after that many days were fulfilled, the Jews took counsel to kill him:",
+   "But their laying await was known of Saul. And they watched the gates day and night to kill him.",
+   "Then the disciples took him by night, and let him down by the wall in a basket."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "26": {
   "voices": [
    "John Chrysostom",
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -1144,121 +1341,121 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "26-28",
+  "pericope_label": "And when Saul was come to Jerusalem, he assayed to join himself to the disciples: but they were all afraid of him",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul (about three years after conversion, Galatians 1:18) tried to join the disciples, who feared and disbelieved him — natural, the memory of his violence, confidence a plant of slow growth (Barnes); Chrysostom harmonizes the apparent discrepancy with Galatians 1:17."
+    "summary": "Barnes gives the disciples two grounds for fear — the memory of his violence, and a suspicious three-year absence — then declines to endorse them, since \"the sacred writer does not justify the fears of the apostles. He simply records the fact\"; his verdict is a proverb, \"confidence is a plant of slow growth\". Ellicott puts the fear as a question — \"might he not be coming to spy out their weak places, and in time appear again as a persecutor?\" — and supposes Barnabas vouched for Saul because \"the Levite of Cyprus and the tent-maker had been friends in earlier years\". Robertson draws the return: \"he had left a conquering hero of Pharisaism. He returns distrusted by the disciples and regarded by the Pharisees as a renegade and a turncoat\"; he calls the friendship \"a pleasing hypothesis\" and gives Barnabas his due — \"it is to the credit of Barnabas that he had the insight and the courage to stand by Saul at the crucial moment when the evidence seemed to be against him.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Saul's hard entrance — rejected by his nation and distrusted by the church — borne patiently and humbly, desiring only to be numbered among Christ's disciples, the lowest place above all synagogue honors."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he assayed to join himself to the disciples",
-   "they were all afraid of him",
-   "the hard entrance of the convert",
-   "Saul's humility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Calvin charges the apostles and then acquits them: the flight \"was, peradventure, a point of too great fearfulness, and yet he speaketh of none of the common sort, but of the apostles themselves\" — yet \"they suspected him for just causes\". His rule follows: \"every fear is not to be condemned but such as causeth us to turn aside from our duty.\" He measures the isolation — \"all his own nation was set against him for Christ's cause. The Christians refuse him\" — and finds the lesson in what Saul wanted and could not get: \"that he may be numbered amongst the disciples of Christ. This can he not obtain.\""
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Barnabas took Saul to the apostles (chiefly Peter and James, Galatians 1:18-19), vouching by three proofs — he saw the Lord, the Lord spoke to him, he preached boldly; Barnabas's readiness perhaps from an earlier friendship (Ellicott), his insight and courage to his credit (Robertson)."
+    "summary": "Clarke locates the failure elsewhere than in fear: they \"did not suppose it possible that such a person could be converted\", \"the full power of Divine grace\" being \"not yet completely known\". With Barnes he explains the ignorance at Jerusalem by numbered causes — no posts, no public conveyances, few roads \"except those between military stations\", and the Herod-Aretas war — adding that \"it is not likely that all the Christians at Jerusalem had been personally acquainted with Saul\". Wesley will not be hurried: \"he who has been an enemy to the truth ought not to be trusted till he gives proof that he is changed.\""
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the 'son of consolation,' a kind man, made himself easy of access and became the bridge by which the church received its former persecutor."
+    "prevalence": "single",
+    "summary": "Chrysostom opens by admitting he is stuck. Paul writes that he went not to Jerusalem but to Arabia, and that of the apostles \"none saw I\"; Luke says Barnabas brought him to them. \"One may well be much at a loss here,\" he says, then lays out five reconciliations without choosing between them: that Paul means he did not go \"with intent to refer or attach myself to them\"; that the Damascus plot fell after the return from Arabia; that the Jerusalem visit did; that the order was different again; or that Paul simply \"does not speak of this visit, but passes it by\". His principle is stated without embarrassment: \"the Historian for conciseness often omits incidents, and condenses the times.\" What he will not concede is dependence: Saul came \"as being a teacher, not a disciple\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Barnabas took him",
-   "brought him to the apostles",
-   "the son of consolation vouches for Saul",
-   "a trusting friend to the convert"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Saul received into free fellowship — 'coming in and going out' a Hebraism for intimate association (Calvin); the doors opened by Barnabas, Peter, and James, the disciples' fear vanished (Robertson); the visit lasting fifteen days (Galatians 1:18)."
+    "question": "How is Luke's account reconciled with Galatians?",
+    "positions": [
+     {
+      "view": "Five ways are possible and none is chosen; \"the Historian for conciseness often omits incidents, and condenses the times\"",
+      "held_by": [
+       "John Chrysostom"
+      ]
+     },
+     {
+      "view": "By the politics: Aretas's occupation of Damascus stopped the traffic, so reports reached Jerusalem \"in uncertain and fluctuating forms\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Were the disciples right to fear Saul?",
+    "positions": [
+     {
+      "view": "The writer neither justifies nor blames them; he \"simply records the fact\"",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Perhaps too fearful, yet \"they suspected him for just causes\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "Their failure was of imagination, not courage: they \"did not suppose it possible that such a person could be converted\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Right in principle: \"he who has been an enemy to the truth ought not to be trusted till he gives proof that he is changed\"",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "claim": "Openly enumerates five candidate harmonisations of Acts with Galatians and declines to choose among them, resting on the principle that \"the Historian for conciseness often omits incidents, and condenses the times\"."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Draws the homecoming as a reversal of status: \"he had left a conquering hero of Pharisaism. He returns distrusted by the disciples and regarded by the Pharisees as a renegade and a turncoat.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Explains Barnabas's readiness to vouch for Saul by supposing that \"the Levite of Cyprus and the tent-maker had been friends in earlier years\", Tarsus attracting \"a student from the neighbouring island\"."
+   }
+  ],
   "themes": [
-   "coming in and going out at Jerusalem",
-   "received into fellowship",
-   "one of the flock",
-   "the church embraces its enemy"
+   "And when Saul was come to Jerusalem, he assayed to join himself to the disciples: but they were all afraid of him, and believed not that he was a disciple.",
+   "But Barnabas took him, and brought him to the apostles, and declared unto them how he had seen the Lord in the way, and that he had spoken to him, and how he had preached boldly at Damascus in the name of Jesus.",
+   "And he was with them coming in and going out at Jerusalem."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "29": {
@@ -1269,123 +1466,121 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "29-31",
+  "pericope_label": "And he spake boldly in the name of the Lord Jesus, and disputed against the Grecians: but they went about to slay him",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Saul disputed boldly against the Hellenists — the very synagogues (Acts 6:9) where he opposed Stephen — seeking to undo the evil he wrought, taking Stephen's place and arguments (Ellicott, Robertson); the Hellenists offered him the same answer they gave Stephen: death."
+    "summary": "Ellicott sees Saul returning to the scene of his first appearance in the history: as leader of that synagogue's party against Stephen he had wrought evil there, and now \"sought to undo the evil that he had then wrought\", presenting \"the very aspects of the truth that had been most prominent in Stephen's teaching, and which, now as then, roused them to a passionate frenzy\". At Caesarea he finds a quiet reunion, Saul meeting Philip, \"the friend and the accuser of the proto-martyr\" now \"face to face as brethren\"; he explains the early Cilician churches by Saul's work from Tarsus, and hears in the geography the book's first sign of \"organised religious communities, in the towns and villages of Galilee\". Robertson notes that Luke uses the same verb as for the disputes with Stephen — \"it was intolerable to these Hellenistic Jews now to hear Saul taking the place of Stephen and using the very arguments that Stephen had employed. They offer to Saul the same conclusive answer that he gave to Stephen, death\" — and takes the plain reading of the rest that followed: \"the obvious meaning is that the persecution ceased because the persecutor had been converted. The wolf no longer ravined the sheep.\" Barnes follows Lardner to politics instead."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the irony — the persecutor now persecuted by his former allies, can abide nowhere, yet finds this suffering a better estate than his former triumph."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he spake boldly in the name of the Lord Jesus",
-   "disputed against the Grecians",
-   "Saul in Stephen's place",
-   "the second plot against his life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The brethren brought Saul to Caesarea and sent him to Tarsus — a proof of friendship (Ellicott) and the providence of God preserving him, as at Damascus; the return serving both safety and ministry in Cilicia (Galatians 1:21; Acts 15:41)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "brought him down to Caesarea",
-   "sent him forth to Tarsus",
-   "the brethren's care",
-   "providence preserving the chosen vessel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Gill and Calvin find the cause of the peace in the departure rather than the conversion: \"why was there such peace made suddenly by his departure, save only because the very sight of him did provoke the fury of the enemies?\" Calvin explains the choice of audience by tactics, the natives \"would never have abidden him\", and turns his answer into a defence of men who provoke trouble — that Saul enraged the enemies \"is no reproach to him\"; Luke \"doth rather commend him for this, because he made the wicked run mad, only with the smell of him when he was near them\". The application is uncomfortable: \"we be sometimes angry with the best and most excellent servants of Christ, if we think that through their vehemency the wicked are pricked forward to do hurt.\" Gill argues alone for the plural reading, <em>churches</em>, \"the several countries hereafter mentioned\" showing \"that more are designed\"."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The churches had rest, edified, walking in the fear of the Lord and the comfort of the Spirit, multiplied; the rest from Saul's removal and especially the providential diversion of the Jews by Caligula's crisis (the statue in the temple, Barnes, Clarke, Lardner)."
+    "summary": "Clarke rejects the conversion explanation outright: Saul \"could not be a universal cause of persecution and distress, however active and virulent he might have been\", and his own narrow escape shows the opposition \"continued with considerable virulence three years after his conversion\". With Barnes he follows Lardner to Caligula's order to set his statue in the temple, \"to the Jews, a thunderstroke\". He reconciles the singular and plural readings of <em>church</em>: \"every assembly of God's people was a Church; the aggregate of these assemblies was The Church\" — adding that the word translated rest means \"prosperity\". Wesley agrees with Robertson in six words, the bitterest persecutor being converted."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did the persecution stop?",
+    "positions": [
+     {
+      "view": "Because the persecutor had been converted: \"the wolf no longer ravined the sheep\"",
+      "held_by": [
+       "A.T. Robertson",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Because he departed — \"the very sight of him did provoke the fury of the enemies\"",
+      "held_by": [
+       "John Calvin",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Not the conversion: the opposition \"continued with considerable virulence three years after\" it. The cause was Caligula's order to set his statue in the temple",
+      "held_by": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the reading <em>the church</em> or <em>the churches</em>?",
+    "positions": [
+     {
+      "view": "The singular, on the better manuscripts",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "The plural, since \"the several countries hereafter mentioned\" show \"that more are designed\"",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Defends men whose presence provokes persecution, and rebukes those who resent them: \"we be sometimes angry with the best and most excellent servants of Christ, if we think that through their vehemency the wicked are pricked forward to do hurt.\""
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Fills Luke's silence about the return to Tarsus with a question: \"it takes little imagination to picture the scene at home when this brilliant young rabbi, the pride of Gamaliel, returns a preacher of the despised Jesus of Nazareth. What will father, mother, sister think of him now?\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Finds a reunion Luke does not mention: at Caesarea Saul would have met Philip, so that \"the friend and the accuser of the proto-martyr\" met \"face to face as brethren\"."
+   }
+  ],
   "themes": [
-   "then had the churches rest",
-   "walking in the fear of the Lord",
-   "the comfort of the Holy Ghost",
-   "the season of peace and growth"
+   "And he spake boldly in the name of the Lord Jesus, and disputed against the Grecians: but they went about to slay him.",
+   "Which when the brethren knew, they brought him down to Cesarea, and sent him forth to Tarsus.",
+   "Then had the churches rest throughout all Judea and Galilee and Samaria, and were edified; and walking in the fear of the Lord, and in the comfort of the Holy Ghost, were multiplied."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "32": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -1393,161 +1588,110 @@
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "32-35",
+  "pericope_label": "And it came to pass, as Peter passed throughout all quarters, he came down also to the saints which dwelt at Lydda",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Peter, in a season of peace, went throughout the churches to the saints at Lydda — diligent, humble pastoral visitation (Henry); the peace (v.31) freeing him to strengthen the believers, opening the account of Lydda and Joppa that prepares for Cornelius (ch. 10)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Peter like a commander inspecting his ranks, going about to strengthen what needed his presence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "as Peter passed throughout all quarters",
-   "the saints at Lydda",
-   "Peter's pastoral visitation",
-   "the gospel advancing in peace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Aeneas, a Greek name (probably a Hellenistic Jew, Barnes, Robertson), bedridden eight years with palsy — a long, hopeless affliction noted by Luke the physician; the chronic disease magnifying the miracle to come, beyond natural cure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a certain man named Aeneas",
-   "kept his bed eight years",
-   "sick of the palsy",
-   "the hopeless affliction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter disclaims his own power — 'Jesus Christ maketh thee whole,' ascribing the cure wholly to Christ (Barnes, Clarke); the assonance (Iesus iatai se) testifying Jesus is the great Healer (Ellicott); 'make thy bed' the proof of the cure."
+    "summary": "Barnes gives Lydda's later history, the Greek Diospolis \"probably because a temple was at some period erected to Jupiter\", now \"so entirely ruined as to be a miserable village\", called St. George since the crusades. Ellicott calls this section \"the Acts of Peter\", though Luke does not \"follow the Apostle's course, as in a biography\", traces Lydda to the Lud of the Old Testament, and hears in the healing formula an assonance the others miss — <em>Iēsous iātai se</em> — in which \"we may, perhaps, trace a desire to impress the thought that the very name of Jesus testified that He was the great Healer\". Robertson reads the command to make the bed as a reversal: \"spread thy bed for thyself, what others for eight years have done for thee.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Peter spoke with certainty (knowing God's will) and as mere minister, extolling the name of Christ alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus Christ maketh thee whole",
-   "arise, and make thy bed",
-   "Peter disclaims his own power",
-   "the name of Jesus the Healer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "All at Lydda and Sharon (the fertile coastal plain, a district, Barnes, Robertson) saw the healed Aeneas and turned to the Lord — 'all' meaning a great part (Calvin); the miracle leading to wide conversion."
+    "prevalence": "single",
+    "summary": "Calvin sees an argument for the papacy built on Peter's circuit and dismantles it: the visitation refutes \"the foolishness of the Papists, who gather Peter's primacy by the authority which he had to visit; as if the rest of the apostles did live idly at Jerusalem like private men\". Granting Peter the chief place, \"doth it thereupon follow that he was the head of the world?\" — then the wish that stings: \"would to God the bishop of Rome, who will be counted Peter's successor, would travel as he did to animate the brethren.\" On the healing he makes a general limitation: the apostles \"had no such power of the Spirit given them that they could heal whatsoever sick persons they would\", but only what Christ \"knew were profitable\". And when Scripture says <em>all</em> turned, \"it doth not comprehend every one how many so ever it noteth; but it putteth all for the more part, or for many\"."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the proper end of miracles is to bring men to embrace Christ — those who look only at the wonder, not at conversion, corrupt the miracle."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke's remark cuts at Peter, who had stayed in Jerusalem through the whole persecution: \"great as he was, he never evidenced that steady determinate courage by which St. Paul was so eminently distinguished; nor did he ever suffer half so much for God and his truth.\" On the paralytic's Greek name he states a rule from Calmet, that since both Greek and Hebrew were spoken in Palestine \"most persons had two names, one Greek and the other Hebrew\". He fastens on Peter's disclaimer — \"not Peter, for he had no power but what was given him from above. And, as an instrument, any man could heal with this power as well as Peter\" — notes that being at home the man is told not to take up his bed but to make it, \"strew it afresh, that all might see that the cure was perfect\", and takes the conversions flat: \"the consequence of all this conviction was that all these people became Christians.\""
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry describes the office rather than the man: an apostle \"was not to be the resident pastor of any one church, but the itinerant visitor of many\", so Peter was \"always upon the remove\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does Peter's visitation prove his primacy?",
+    "positions": [
+     {
+      "view": "No: it would mean \"the rest of the apostles did live idly at Jerusalem like private men\", and chief place would not make him \"the head of the world\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "It shows only the office: an apostle was \"the itinerant visitor of many churches\"",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did all who saw the cure believe?",
+    "positions": [
+     {
+      "view": "Yes: \"the consequence of all this conviction was that all these people became Christians\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "No: when Scripture says all, \"it putteth all for the more part, or for many\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Turns the verse into an unfavourable comparison of Peter with Paul: \"great as he was, he never evidenced that steady determinate courage by which St. Paul was so eminently distinguished; nor did he ever suffer half so much for God and his truth.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Hears a paronomasia in the healing formula, <em>Iēsous iātai se</em>, in which \"we may, perhaps, trace a desire to impress the thought that the very name of Jesus testified that He was the great Healer\"."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Limits apostolic miracle-working in general: they \"had no such power of the Spirit given them that they could heal whatsoever sick persons they would\", but only what Christ \"knew were profitable\"."
+   }
+  ],
   "themes": [
-   "all at Lydda and Saron saw him",
-   "turned to the Lord",
-   "the fruit of the miracle",
-   "conversion the end of the sign"
+   "And it came to pass, as Peter passed throughout all quarters, he came down also to the saints which dwelt at Lydda.",
+   "And there he found a certain man named Eneas, which had kept his bed eight years, and was sick of the palsy.",
+   "And Peter said unto him, Eneas, Jesus Christ maketh thee whole: arise, and make thy bed. And he arose immediately.",
+   "And all that dwelt at Lydda and Saron saw him, and turned to the Lord."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "36": {
@@ -1557,178 +1701,141 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "36-38",
+  "pericope_label": "Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Dorcas (Tabitha, 'gazelle') 'full of good works and almsdeeds' — devoted to charity, especially the poor widows (Henry); at the head of a sisterhood of mercy, making garments with her own hands (Ellicott); the model of practical Christian charity."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the providence in her name — as active and watchful in good works as the swift gazelle she was named for."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a disciple named Tabitha, called Dorcas",
-   "full of good works and almsdeeds",
-   "the model of charity",
-   "a sisterhood of mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Dorcas died, her body washed (the ancient custom, Clarke) and laid in an upper chamber — the careful preparation establishing the reality of death; the upper chamber implying a delay and perhaps a hope, the news of Aeneas's healing nearby raising expectation (Ellicott)."
+    "summary": "Robertson notices that Luke calls her a <em>disciple</em> in the feminine, a late word \"only here in the N.T.\", that she is \"the second woman mentioned by name after Pentecost\", that nothing is said of a husband \"and so she was probably unmarried\", and that the deeds were her own: \"she did her beautiful deeds by herself. She did not have a Dorcas society.\" Ellicott reports the tradition that Jerusalem could be seen from Joppa and flatly appends \"though this is not in conformity with the fact\", adds that the port was \"notorious as a nest of pirates\", and takes the delay before burial as ground for hoping that Peter's power \"might extend even to the farther work of raising from the dead\". Barnes describes what a traveller finds — streets \"narrow, uneven, and dirty\" — and denies any expectation of a raising, since \"the apostles had as yet raised up no one from the dead\". Robertson dismisses a modern doubt briskly: \"W. M. Ramsay doubts if Dorcas was really dead, but why see legends in these supernatural events?\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the washing and upper chamber signs of some hope of recovery; the ancient washing of the dead a sign of the hope of the resurrection."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "she was sick, and died",
-   "laid her in an upper chamber",
-   "the reality of her death",
-   "the lingering hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The disciples, hearing Peter was nearby at Lydda (nine miles), sent two men urging him not to delay; their motive cautiously read — comfort or a modest hope (the apostles having raised no one yet, Barnes); possibly sent before she died (Clarke, Robertson)."
+    "summary": "Gill defends the visibility of Jerusalem from Joppa by arithmetic from Jerome's mileages, and computes eight miles between Lydda and Joppa where the others say six, nine, or four leagues. Calvin proposes an origin for the washing of the dead: the rite is \"most ancient\", so \"that in death itself some visible [token] of the resurrection might comfort the minds of the godly\", the bodies washed \"that they might stand before the judgment-seat of God, being clean\". He finds both ignorance and hope in the scene, and states the disciples' wish precisely: \"not that they will make Tabitha immortal, but their only desire is to have her life prolonged for a time, that she may yet profit the Church.\""
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: a humble hope — not that Dorcas be made immortal, but that her useful life be prolonged for the church's good."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke traces the Syriac name and adds the custom, that \"it is still customary in the east to give the names of beautiful animals to young women. The comparison of fine eyes to those of the antelope is continually occurring in the Arabic and Persian poets.\" He reaches for Homer and the bathing of Patroclus, notes that \"the waking or watching of the dead was also practised among the ancient Greeks\", draws the plainest moral — \"even her holiness and usefulness could not prevent her from sickness and death\" — and reasons like Barnes that \"if God did not choose to restore Stephen to life, this favor could not be reasonably expected in behalf of inferior persons\". Wesley supposes her a Hellenist Jew known by both names."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry's summary is the best sentence here: \"Many are full of good words, who are empty and barren in good works; but Tabitha was a great doer, no great talker.\" Her head \"was full of cares and contrivances which way she should do good\"; she \"made a business of doing good, was never idle\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Did the disciples expect a resurrection when they sent for Peter?",
+    "positions": [
+     {
+      "view": "No: \"the apostles had as yet raised up no one from the dead\"",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "No: \"if God did not choose to restore Stephen to life, this favor could not be reasonably expected in behalf of inferior persons\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Probably yes — the delay before burial suggests a hope that Peter's power \"might extend even to the farther work of raising from the dead\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Both: the washing shows they did not know, the upper chamber and the message are \"some token of hope\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How far is Lydda from Joppa?",
+    "positions": [
+     {
+      "view": "About six miles",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Eight, by subtracting the two distances from Jerusalem",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Nine",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "About four leagues",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Notes that the deeds were personal rather than institutional: \"she did her beautiful deeds by herself. She did not have a Dorcas society.\""
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Contradicts the standing tradition about the view from Joppa in a single clause — that Jerusalem could be seen from its summit is said, \"though this is not in conformity with the fact\"."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Derives the washing of the dead from a pre-Christian pedagogy: the rite is \"most ancient\", so \"that in death itself some visible [token] of the resurrection might comfort the minds of the godly\"."
+   }
+  ],
   "themes": [
-   "they sent unto him two men",
-   "that he would not delay to come",
-   "the resort to the apostle",
-   "the modest hope"
+   "Now there was at Joppa a certain disciple named Tabitha, which by interpretation is called Dorcas: this woman was full of good works and almsdeeds which she did.",
+   "And it came to pass in those days, that she was sick, and died: whom when they had washed, they laid her in an upper chamber.",
+   "And forasmuch as Lydda was nigh to Joppa, and the disciples had heard that Peter was there, they sent unto him two men, desiring him that he would not delay to come to them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "39": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter came to the upper chamber where the widows wept and showed the garments Dorcas made — a heart-breaking scene (Robertson); the widows, objects of the church's organized charity and fellow-workers with her (Ellicott), the garments the visible memorial of her good works."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God raised Dorcas because he pitied the poor and would, by relieving their need, establish their faith in the gospel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the widows stood by him weeping",
-   "the coats and garments which Dorcas made",
-   "the memorial of her good works",
-   "God pities the poor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -1736,81 +1843,122 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "39-41",
+  "pericope_label": "Then Peter arose and went with them. When he was come, they brought him into the upper chamber",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Peter put them out (as Christ with Jairus's daughter, Mark 5:40), kneeled, prayed, and said 'Tabitha, arise' — the raising by the prayer of faith, not the utterance of a name, in dependence on Christ (Barnes, Ellicott); the words almost the Talitha cumi of Christ (Mark 5:41); echoing Elijah and Elisha (Robertson)."
+    "summary": "Ellicott identifies the garments — the coats \"the close-fitting tunics worn next the body\", the others \"the looser outer cloaks\" — and reads the scene as an institution, the widows \"fellow-workers with her in making them\", Dorcas standing \"as it were, at the head of a Sisterhood of Mercy\"; he corrects the tense to <em>used to make</em>, finds in Peter's clearing of the room a memory of Jairus's house, and notices how nearly the words repeat what Peter had once heard: \"even the very words which were uttered, if he spoke in Aramaic, must have been, with the change of a single letter, the same as the <em>Talitha cumi</em>.\" Robertson catches the same imperfect and the posture, the women \"pointing with pride\" to garments she made \"from time to time\": \"it was a heart-breaking scene.\" Barnes offers two reasons for clearing the room and prefers neither, and notices that the grief is particular: \"each one would naturally dwell on the kindness which had been shown to herself.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Peter withdrew to pray, confessing the matter was not in his own hand but God's — unlike Christ who raised by his own authority."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter put them all forth, and prayed",
-   "Tabitha, arise",
-   "raising by the prayer of faith",
-   "the apostle dependent on Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Calvin admits the difficulty of shutting out those for whom \"it had been better to have seen it with their eyes\", but holds that Peter thereby \"preventeth superstition, lest any man ascribe to his power the work of God\". He alone asks why one addresses a corpse at all: it \"seemeth contrary to reason\", but the reason lies in the grammar, the second person \"doth more lively express the power of God in raising the dead than if it should be said in the third\" — and concludes that \"this was indeed the voice of Christ, which was uttered by the mouth of Peter\". Against those \"brain-sick fellows, who dream that the soul of man is only a blast which vanisheth away until the day of the resurrection\", he answers that it is as if it were \"not lawful for God to have respect of his glory as well in death as in life\"."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Peter gave Dorcas his hand, lifted her up, and presented her alive (as Christ with Jairus's daughter and Elijah with the widow's son, Chrysostom, Barnes) — life given by the word, strength by the hand; the joy of those who received back their benefactress."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: she was raised for others' sake and the glory of Christ — though called from blessed rest, made a more excellent instrument of God's goodness."
+    "summary": "Clarke keeps the reason for the empty room practical — that he might pray \"liable neither to distraction nor interruption\" — adding that \"it was not even known to Peter that God would work this miracle\". He then asks the question the scene invites and nobody else asks so directly: her soul had \"doubtless gone to the paradise of God\", so \"must she not be filled with regret to find herself thus called back to earth again?\" His answer is that a saint's will is her Maker's, and that \"God mercifully draws a veil over all they have seen or known\". Wesley agrees that to herself it was \"matter of resignation, not joy, to be called back to these scenes of vanity\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did Peter put everyone out of the room?",
+    "positions": [
+     {
+      "view": "Perhaps to avoid the look of ostentation, perhaps to pray more fervently than he would let them witness",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "To pray \"liable neither to distraction nor interruption\"",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "In memory of Christ at Jairus's house, the work requiring \"the prayer of faith\"",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "To prevent superstition, \"lest any man ascribe to his power the work of God\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was being raised a kindness to Dorcas?",
+    "positions": [
+     {
+      "view": "A saint's will is her Maker's, and a veil is drawn over what she had seen",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "To herself it was \"matter of resignation, not joy\"",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The question is a soul-sleep argument in disguise, and is answered by God's right to his glory in death as in life",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Turns the devotional question of whether Dorcas gained by being raised into a controversy about the intermediate state, against \"brain-sick fellows, who dream that the soul of man is only a blast which vanisheth away until the day of the resurrection\"."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Notes that Peter's words, in Aramaic, \"must have been, with the change of a single letter, the same as the <em>Talitha cumi</em>\" he had heard Christ use."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Asks directly whether the raised saint suffered by the recall, and answers with a limit on revelation: \"God mercifully draws a veil over all they have seen or known.\""
+   }
+  ],
   "themes": [
-   "he gave her his hand, and lifted her up",
-   "presented her alive",
-   "the joy of the saints and widows",
-   "raised for the glory of Christ"
+   "Then Peter arose and went with them. When he was come, they brought him into the upper chamber: and all the widows stood by him weeping, and shewing the coats and garments which Dorcas made, while she was with them.",
+   "But Peter put them all forth, and kneeled down, and prayed; and turning him to the body said, Tabitha, arise. And she opened her eyes: and when she saw Peter, she sat up.",
+   "And he gave her his hand, and lifted her up, and when he had called the saints and widows, presented her alive."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "42": {
@@ -1819,84 +1967,95 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "42-43",
+  "pericope_label": "And it was known throughout all Joppa; and many believed in the Lord",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The raising of Dorcas known throughout Joppa, leading many to believe — the first apostolic raising of the dead, like the raising of Lazarus (John 12:11, Barnes); the report of so great a wonder could not be hidden."
+    "summary": "Barnes notes this was \"the first miracle of this kind that was performed by the apostles\", and \"not merely a work of benevolence... but a means of extending and establishing the kingdom of the Saviour\". Ellicott adds that <em>the Lord</em> here means \"the Lord Jesus as the specific object of their faith\", and reaches the tanner by a rabbinic route: the Rabbis held that a tanner concealing his trade from his intended wife committed \"a fraud that invalidated the contract\", so in lodging with such a man \"Peter must have been taking one step in advance towards greater freedom\". Robertson collects the rabbinic estimate in two sentences needing no gloss — \"it is impossible for the world to do without tanners; but woe to him who is a tanner\", and \"a Jewess could sue for divorce if she discovered that her husband was a tanner\" — takes the lodging as evidence that Peter \"did not carry his prejudices to that extent\", notices the irony waiting in the next chapter, and borrows from Furneaux the sentence the episode turns on: \"the lodging with the tanner was a step on the road to eating with a Gentile.\""
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the manifold fruit — the poor comforted, the matron restored, the church's loss repaired, many called to faith; the faith terminating not on Peter but on the Lord, to whom Peter directed them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it was known throughout all Joppa",
-   "many believed in the Lord",
-   "the fruit of the miracle",
-   "Peter directs them to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Peter tarried at Joppa with Simon a tanner — a trade the Jews despised as unclean; his lodging there marking his humility and a providential preparation, for here the messengers from Cornelius would find him and the vision come (ch. 10)."
+    "summary": "Gill explains the report's spread, Joppa having \"villages and little towns round about it\". Calvin lists \"manifold fruits\" — the poor comforted, a matron restored, many called — then adds what he cares most about: \"although Peter were a minister of so great power, yet he keepeth not the men in himself; but doth rather direct them unto Christ.\" He reads the lodging sociologically and then partly withdraws it: had the city's leading men been converted one would have taken Peter in, so \"the Lord did gather together there, as every where, a church of the common sort of men, that he might throw down the pride of the flesh\" — but \"it seemeth that he was rather a merchant of some good estimation, than one of the basest sort of workmen\"."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Peter's unassuming conduct — lodging not with the distinguished but with a tanner, leading men to humility, neither shaming the lowly nor elating the great."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke counts three results — disciples strengthened, credit gained, converts brought in — \"the Church thereby both builded up and multiplied\". He will not settle whether the man tanned or curried hides, but infers from where he lived that the trade was unclean even in Joppa. He closes the chapter by closing an era: here \"terminates what has not been improperly called the first period of the Christian Church, which began at the day of pentecost and continued to the resurrection of Dorcas; a period of about eight years. During the whole of this time the Gospel was preached to the Jews only, no Gentile being called before Cornelius.\""
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does Peter's lodging with a tanner signify?",
+    "positions": [
+     {
+      "view": "\"One step in advance towards greater freedom\", the lesson about defilement partly learnt",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "That he \"did not carry his prejudices to that extent\" — and \"a step on the road to eating with a Gentile\"",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Chiefly the social composition of the church at Joppa, \"a church of the common sort of men\" — though Simon may have been \"a merchant of some good estimation\"",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Borrows from Furneaux the sentence the whole episode turns on: \"the lodging with the tanner was a step on the road to eating with a Gentile\" — noting the irony that Peter will nonetheless \"have scruples on the housetop in the tanner's house about eating food considered unclean\"."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Closes the chapter by closing an era, dating \"the first period of the Christian Church\" from Pentecost to the resurrection of Dorcas, \"a period of about eight years\", during which \"the Gospel was preached to the Jews only, no Gentile being called before Cornelius\"."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Turns the miracle's effect into a point about ministry: \"although Peter were a minister of so great power, yet he keepeth not the men in himself; but doth rather direct them unto Christ.\""
+   }
+  ],
   "themes": [
-   "he tarried many days in Joppa",
-   "with one Simon a tanner",
-   "Peter's humility",
-   "providential preparation for Cornelius"
+   "And it was known throughout all Joppa; and many believed in the Lord.",
+   "And it came to pass, that he tarried many days in Joppa with one Simon a tanner."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  }
 }

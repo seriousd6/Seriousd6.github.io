@@ -30568,6 +30568,216 @@
         "14"
       ],
       "note": "Jude twice cites material outside the Old Testament, and the witnesses divide five ways on what that means for the epistle. Barnes canvasses the proposals and concludes that selecting a true prophecy out of tradition is no bar to inspiration; Calvin holds both citations unwritten tradition and thinks the Book of Enoch a later forgery prompted by this very passage; Clarke calls the book apocryphal and of no authority and suggests the verb may mean only preached; Wesley leaves the source open between book, tradition and revelation; and Robertson alone allows that on the ordinary sense of the verb the writer is calling that book inspired. Barnes reports that the difficulty has led some to reject the epistle outright."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "1-43"
+      ],
+      "note": "Jamieson stride-6 donor bug, the widest instance seen so far: keys 6, 12, 18, 24, 30, 36, 42 — exactly stride 6 — all carry Luke/John material instead of Acts 9. Key 6 is Luke 10:38-42 (Martha and Mary); key 12 is 'purposely expressing Himself in general terms, to draw her out'; key 24 and key 30 are John 11 (Jesus groaned, Mary weeping; Lazarus's grave and the Talmudic rule on opening graves); keys 36 and 42 are BYTE-IDENTICAL duplicates of a John 11:47-48 block ('While we trifle, this man, by His many miracles, will carry all before Him'). All seven excluded. Jamieson contributes nothing to acts 9."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "1-7"
+      ],
+      "note": "John Lightfoot's key-1 block is misfiled v.7 material — it opens on the Greek of v.7 ('Mêdena de theôrountes: But seeing no man') under a v.1 key — and is additionally OCR-wrecked: 'FS Poow NR sy by', 'they heard the vowce', 'eall to mind'. The same Lightfoot text is also spliced mid-sentence into Gill's block at key 12 with no separator, so a reader of that key sees Gill's argument break off into Lightfoot's Greek without warning. Excluded from both keys."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "5-43"
+      ],
+      "note": "Cyril of Jerusalem shows a MIXED placement pattern, new in this corpus: correctly placed at key 5 (Catechesis on Paul's fourteen epistles, quoting the goad saying) and key 15 (Ananias's words, the 'chosen vessel'), but misfiled at key 17 (Peter and the 3,000 at Pentecost), key 27 (baptism, water and Spirit), key 29 (the Spirit's subsistence, 1 Tim 4:1), and key 43 (Antioch, Barnabas fetching Paul from Tarsus — Acts 11 material). Key 21 is a byte-identical duplicate of the key-5 block. Previous chapters showed a donor voice either wholly correct or wholly misfiled; here the same voice is both, so per-key inspection is required rather than a per-voice verdict."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "43"
+      ],
+      "note": "Ellicott's key-43 block runs 1,166 words of which roughly 600 are StudyLight CSS, menu and footer chrome — the established 'chrome tail on Ellicott's final block of the chapter' pattern. Usable text is the first ~560 words."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "1-43"
+      ],
+      "note": "Matthew Henry block inflation is severe in this chapter: 5,997 words at key 1 (his whole section commentary on vv.1-9 dumped on the first verse), 4,052 at key 10, 2,971 at key 36, 2,542 at key 23. Henry's material is genuine and on-chapter but is not verse-addressed, so it must be redistributed across the pericope it actually covers rather than read as comment on the key it sits under."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "10-31"
+      ],
+      "note": "Chrysostom enters acts 9 as a substantial and correctly-placed voice — 1,026 words at key 10, 2,175 at key 26, the latter an explicit five-way harmonisation of Acts 9 against Galatians 1. This is the first chapter in the repair sequence where his blocks are dense enough to carry a pericope on their own."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "Whether 'breathing out threatenings' is out or in: Barnes and Clarke take the participle at face value (Saul exhaled menace as his native air), while Robertson and Ellicott press the Greek toward inhaling — Saul breathing threat IN as the element he lived on. Both readings are defended from the same word; neither side concedes."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "3"
+      ],
+      "note": "What the light was: four positions. Barnes leaves it a supernatural glory; Clarke and Ellicott entertain a lightning-flash as the vehicle; Robertson insists on the noonday comparison to rule lightning out; Calvin declines the physics entirely and reads it as the majesty of Christ. Foregrounded because the choice governs whether Saul's companions' partial perception is a natural or a granted limit."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "3-4"
+      ],
+      "note": "Whether Saul was mounted. Clarke is scathing — 'Painters are, in almost every case, wretched commentators' — and finds no horse in the text; Calvin writes as though there is one, 'he sat haughtily upon his horse'. Preserved as a case where a devotional image has hardened into an assumed fact."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "5"
+      ],
+      "note": "Whether 'it is hard for thee to kick against the pricks' belongs at v.5 at all: three of the voices judge it a textual import from 26:14, and all three then expound it anyway. Recorded because the practice — deny the text, keep the sermon — recurs across this corpus."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "17-19"
+      ],
+      "note": "Whether the scales were literal: four ways. Barnes takes the 'as it had been' as a simile for a real incrustation; Clarke argues for actual matter; Robertson reads a medical term for a film; Calvin makes the whole thing a sign and declines to inspect it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "11-12"
+      ],
+      "note": "Who enfranchised Tarsus — Augustus (Barnes, Ellicott) or Julius Caesar (Clarke). A small point of Roman history carried as fact by both sides with no acknowledgement of the other."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "11-25"
+      ],
+      "note": "Whether the Damascus local traditions (the house of Judas, the Straight street site, the wall window) are worth anything: Barnes reports them credulously, Ellicott corrects him case by case, Robertson dismisses the lot. A clean three-step gradient on the same evidence."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "17-19"
+      ],
+      "note": "Who may lay on hands. Clarke and Calvin both use Ananias — a private disciple, not an apostle — against Rome, but from opposite directions: Clarke to prove the rite needs no episcopal hand, Calvin to deny it confers anything that would make the hand matter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "19-25"
+      ],
+      "note": "Where the Arabian years of Galatians 1:17 belong: Ellicott places them inside the 'many days' after the first Damascus preaching, Robertson places them before it. Both are explicit that the other reading exists and both reject it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "31"
+      ],
+      "note": "Why the persecution stopped: four explanations. Clarke names Saul's conversion as a cause and rejects it as insufficient; Robertson defends exactly that; Barnes credits the Caligula crisis diverting Jewish attention to Rome; Gill credits providence without mechanism."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "31"
+      ],
+      "note": "'Church' or 'churches' at v.31: Gill stands alone for the plural against the singular read by every other voice present, and rests an ecclesiology on it. Recorded because a lone dissent on a text-critical point is rare in this corpus."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "32-35"
+      ],
+      "note": "The distance from Lydda to Joppa is given four different ways in this chapter — six leagues, eight, nine, and four — by voices who each state it flatly. No voice notices the spread."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "35"
+      ],
+      "note": "Whether 'all that dwelt at Lydda and Saron' means all: Clarke takes it literally as a general conversion; Calvin qualifies it to the great part, on the ground that Scripture speaks popularly."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "39-41"
+      ],
+      "note": "Whether being raised was a kindness to Dorcas: Clarke and Wesley read it devotionally as mercy to her and to the widows; Calvin turns the episode into a refutation of soul-sleep and treats the question of her benefit as beside the point."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "9",
+      "verses": [
+        "1-43"
+      ],
+      "note": "Fidelity self-grade A for all 17 pericopes. Every quoted string was checked back against the cow catena block it came from; no voice is credited with a position it does not hold; held_by lists were reconciled against each key's voice list after trimming (Gill dropped from keys 3, 26, 32 and 39, Wesley from key 23, where the trim removed their last citation). Excluded throughout: all seven Jamieson stride-6 blocks, Lightfoot at keys 1 and 12, Cyril at keys 17, 21, 27, 29 and 43, and the CSS/menu chrome tail of Ellicott's key-43 block. Source corpus 81,104 words across 43 keys tiled into 17 pericopes at an overall 7.3:1 compression, inside the 5-8:1 norm; the tightest tile is vv.11-12 at 3.2:1, which was split out rather than merged to keep any tile from exceeding the upper bound."
     }
   ]
 }
