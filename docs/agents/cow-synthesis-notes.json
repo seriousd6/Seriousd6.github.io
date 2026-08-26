@@ -30778,6 +30778,76 @@
         "1-43"
       ],
       "note": "Fidelity self-grade A for all 17 pericopes. Every quoted string was checked back against the cow catena block it came from; no voice is credited with a position it does not hold; held_by lists were reconciled against each key's voice list after trimming (Gill dropped from keys 3, 26, 32 and 39, Wesley from key 23, where the trim removed their last citation). Excluded throughout: all seven Jamieson stride-6 blocks, Lightfoot at keys 1 and 12, Cyril at keys 17, 21, 27, 29 and 43, and the CSS/menu chrome tail of Ellicott's key-43 block. Source corpus 81,104 words across 43 keys tiled into 17 pericopes at an overall 7.3:1 compression, inside the 5-8:1 norm; the tightest tile is vv.11-12 at 3.2:1, which was split out rather than merged to keep any tile from exceeding the upper bound."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25",
+        "31",
+        "37"
+      ],
+      "note": "Jamieson lattice at keys 1, 7, 13, 19, 25, 31 and 37, stride 6 across seven keys, the longest instance seen in this run. The donor is John 7-8 throughout: Nicodemus reappearing in the council at key 1, the feast at key 7, the woman taken in adultery at key 13, I am the light of the world at key 19, self-praise is no praise at key 25, a cross-reference to John 7:33 at key 31, and a fragment on judging at key 37. All seven marked residue."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "4",
+      "verses": [
+        "8",
+        "26"
+      ],
+      "note": "First chapter in this run where displaced Cyril of Jerusalem blocks and genuinely on-verse ones coexist. Nine Cyril keys carry four distinct blocks. Catechetical Lecture 17.21, which recounts Pentecost, the healing at the Beautiful gate, the five thousand and the confuting of the rulers, is duplicated at keys 8, 13, 18, 31 and 32; it is on-verse only at key 8, where Peter filled with the Spirit confronts the rulers, and was taken live there and residue at the other four. A separate block quoting Psalm 2:2 verbatim is genuinely on verse 26 and was taken live. Lecture 3.4 on baptism at keys 10 and 18, and Lecture 17.27 on Aeneas and Cornelius at key 4, are displaced. Duplication again proved non-diagnostic: the same block was live at one key and residue at four."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "4",
+      "verses": [
+        "3",
+        "10",
+        "13",
+        "17",
+        "30",
+        "32"
+      ],
+      "note": "The QA voice roster in scripts/synthesis_qa.py lists Cyril bare, but every catena head in this chapter reads Cyril of Jerusalem, so the label regex requires a colon immediately after Cyril and never matches. split_voices therefore cannot see any Cyril block, and any declared exclusion naming him fails validate-synthesis as undeclarable, whichever label is used. Worked around with EXCL_UNDECLARABLE, as earlier chapters in this run did. The same latent mismatch applies to Victorinus, listed bare in the roster while revelation 20 heads read Victorinus of Pettau. Worth an owner decision on whether the roster should carry the long forms."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "4",
+      "verses": [
+        "37"
+      ],
+      "note": "The Ellicott block at key 37 runs past the end of its comment into scrape chrome: after the note on Barnabas the text continues with chapter navigation and then Footnotes, Copyright Statement, These files are public domain, terms of use, privacy policy, rights and permissions, contact and link lines. About 60 words of site furniture inside a 1,325 word block. A distinct pattern from the 983-word StudyLight constant recorded earlier in this run."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "4",
+      "note": "John Lightfoot is live at all seven of his keys here (1, 5, 6, 11, 17, 27, 36) and every block is on its verse, but the text is heavily OCR-damaged: Greek headwords are mangled, and Latin and Hebrew citations come through as noise. The substance is readable and was used. John Calvin covers 30 of the 37 keys and is complete throughout; Ellicott covers 34 and is the single most quotable voice in the chapter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "4",
+      "verses": [
+        "19",
+        "28"
+      ],
+      "note": "The chapter carries two of the sharpest doctrinal splits met in this run, and the same voices take opposite sides in each. On the right of conscience at verse 19, Barnes reads an early charter of private judgment, Calvin denies obedience to church authority that leads away from God, Robertson calls the defiance justified, and Ellicott alone qualifies at length, granting the axiom for witness to facts but narrowing it as one passes to doctrine, opinion and conjecture, and placing the burden of proof on whoever claims the higher authority. At verse 28 the decree and free agency divide them five ways: Clarke escapes by punctuation, making the clause a parenthesis about what Christ was to perform rather than about what the gatherers did, and calling the other reading impious and absurd; Calvin holds that God brings his purpose to pass by the wicked themselves; Gill separates intention from event; Wesley reduces it to permission; and Ellicott declares no solution possible and refuses to attempt one."
     }
   ]
 }

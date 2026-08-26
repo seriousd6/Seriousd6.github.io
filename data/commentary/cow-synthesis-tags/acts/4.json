@@ -1,51 +1,204 @@
 {
  "1": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "John Chrysostom"
   ],
+  "range": "1-2",
+  "pericope_label": "The priests, the captain of the temple and the Sadducees come upon them, grieved that they preached the resurrection",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The first organized opposition — priests, the captain of the temple (the Levite guard-commander, next to the high priest, Robertson, Lightfoot), and the Sadducees, foremost as persecutors and galled at the resurrection preaching (Ellicott)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin/Henry: the captain a Roman officer of the Antonia garrison; the Sadducees set themselves against the apostles most because the question was the resurrection."
+    "summary": "Calvin allows the arrest a show of law which only its outcome exposes, and reckons the infamy that private men incur in taking up a public charge; Gill supplies that John preached as well as Peter."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the opposition into a rule of resolution for Christ&rsquo;s servants."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson and Lightfoot identify the captain from Jewish and rabbinic sources; Ellicott describes his nightly rounds and traces the Sadducees&rsquo; vindictiveness to their earlier defeat, noting that in Acts they and not the Pharisees are the persecutors; Barnes takes the party for peace officers rather than a mob and locates the offence as much in the teachers as in the doctrine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke grounds the anger in the Sadducean denial of immortality and any future world; Wesley finds it in their own guilt for the crucifixion, and reads the arrest as God&rsquo;s ordering that they testify first in the temple and then before the council."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the rulers more shameless since the crucifixion; they sought to make the preaching a public crime."
+    "prevalence": "single",
+    "summary": "Chrysostom reads the choice of officer as a design to give a private grievance the colour of public criminality."
    }
   ],
   "debates": [
    {
-    "question": "Was the 'captain of the temple' a Levite officer or a Roman officer?",
+    "question": "Did the party come as magistrates or as a mob?",
     "sides": [
      {
-      "position": "The Levite commander of the temple guard",
+      "position": "As keepers of the peace expecting a tumult, though the verb still implies suddenness",
       "holders": [
-       "Robertson",
-       "Lightfoot",
+       "Barnes",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Of set purpose, with a genuine show of law that only the outcome exposes as wicked",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "By design, to dress a private grievance as a public crime",
+      "holders": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did the preaching grieve them?",
+    "sides": [
+     {
+      "position": "Because the Sadducean denial of immortality and a future world was at stake",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Because their authority was bypassed by unauthorised teachers, the miracle itself never being examined",
+      "holders": [
        "Barnes"
       ]
      },
      {
-      "position": "A Roman officer of the Antonia garrison",
+      "position": "Because the resurrection convicted them of the crucifixion",
       "holders": [
-       "Calvin",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Because old defeat had added vindictiveness to a calculating policy",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [],
+  "themes": [
+   "the Sadducees",
+   "the resurrection",
+   "persecution",
+   "apostolic preaching"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "3-4",
+  "pericope_label": "They are put in hold until the morrow, and the number of believers reaches about five thousand",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the version that has both apostles seized by force; Calvin takes the number for the whole church and marvels that unarmed men without garrisons show more power in their voice than the world does in raging, and that novices were not discouraged from taking up the cross at so hard a beginning."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states that the church&rsquo;s suffering days have sometimes been her growing days."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes explains the custody and the hour and reads the growth as the standing proof that persecution spreads what it means to destroy, taking the number as a running total; Robertson locates the ward and notes that the delay observed a rule broken at Christ&rsquo;s own trial; Ellicott fixes the times, renders the figure as a total made up to five thousand, and draws the parallel with the feeding of the five thousand."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke itemises the arithmetic of the five thousand, denies that all were converted that day, and calls the result a goodly flock as the church&rsquo;s commencement."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the five thousand count that day&rsquo;s converts or the whole body?",
+    "sides": [
+     {
+      "position": "The whole body to date, since so many could not have been converted at one portico",
+      "holders": [
+       "Barnes",
+       "Ellicott",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "The whole body, itemised: a hundred and twenty, three thousand, and one thousand eight hundred and eighty since",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why record the growth at the moment of the arrest?",
+    "sides": [
+     {
+      "position": "Because persecution is the very means by which doctrines spread",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Because the church&rsquo;s suffering days have sometimes been her growing days",
+      "holders": [
        "Henry"
       ]
      }
@@ -54,110 +207,149 @@
   ],
   "outliers": [],
   "themes": [
-   "the priests and the captain of the temple",
-   "the Sadducees",
-   "first opposition to the gospel",
-   "the resurrection preaching"
+   "persecution",
+   "church growth",
+   "the five thousand",
+   "custody"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.47
+   }
   }
  },
- "2": {
+ "5": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "5",
+  "pericope_label": "On the morrow the rulers, elders and scribes are gathered together at Jerusalem",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The rulers 'grieved' (indignant, vexed, unable to bear it, Barnes, Robertson) — the Sadducees at the resurrection doctrine they denied, the priests at the apostles' presumption and the honour given to Jesus."
+    "summary": "Calvin sees only tyranny restrained by fear of the people, and raises the chronological difficulty about which man held the high priesthood; Gill notes the overnight custody."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: miserable are they to whom Christ's kingdom is a grief — they sorrowed at what angels rejoice in; their everlasting grief at an everlasting glory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "being grieved",
-   "preached through Jesus the resurrection",
-   "envy of threatened authority",
-   "grief at the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Henry finds a slackening in the daylight sitting, weighs the learning and power ranged against the gospel, and counts Jerusalem itself an aggravation."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The apostles held in custody overnight, no trial possible at evening — the lawful procedure, contrasting with the unlawful night-trial of Christ (Robertson)."
+    "summary": "Robertson gives the three classes and numbers of the Sanhedrin; Barnes glosses the elders, catches the Gentile-facing their rulers, and infers from the council&rsquo;s wanderings why the trial was deferred; Ellicott repunctuates the verse and dates the sitting as the first formal one since Christ&rsquo;s trial; Lightfoot weighs both senses of at Jerusalem and doubts the arrest was made by a proper Sanhedrim at all."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: God trains his servants for suffering by degrees — first bonds, afterward blood."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the assembly as the grand council; Wesley marks the judges as eminent for power, wisdom and learning."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why were they gathered, and what does at Jerusalem indicate?",
+    "sides": [
+     {
+      "position": "Summoned expressly to meet the new facts, the first formal sitting since Christ&rsquo;s trial",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Probably in the city for a solemnity of the day rather than for this case",
+      "holders": [
+       "Lightfoot"
+      ]
+     },
+     {
+      "position": "Named because the council by then sometimes sat elsewhere; the members were absent the night before",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How eager was the court?",
+    "sides": [
+     {
+      "position": "Less hot than at Christ&rsquo;s trial, since they waited for daylight; it was well if they began to relent",
+      "holders": [
+       "Henry"
+      ]
+     },
+     {
+      "position": "As tyrannous as they dared be, and restrained only by fear of the people",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "laid hands on them",
-   "put them in hold",
-   "it was eventide",
-   "God's training by degrees"
+   "the Sanhedrin",
+   "ecclesiastical courts",
+   "persecution",
+   "Jerusalem"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
- "4": {
+ "6": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -166,35 +358,84 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot"
   ],
+  "range": "6-7",
+  "pericope_label": "Annas, Caiaphas, John and Alexander gathered; by what power or by what name have ye done this?",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Persecution spreads rather than crushes the faith ('the blood of the martyrs is the seed of the church,' Barnes); the men counted apart from women and children; 5000 the cumulative or aggregate total."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: '5000' the whole church (Ellicott agrees — the aggregate); the preachers bound yet the word spreading mightily, Christ proving himself alive by the efficacy of his doctrine."
+    "summary": "Gill allows the title either from past office or from the deputyship but denies the presidency, and describes the half-circle of the court; Calvin allows the judges a feigned zeal for God&rsquo;s glory while they labour to wring a denial out of the apostles by fear."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson separates the Roman legal title from the Jewish opinion and hears a magical formula behind the question; Ellicott supplies the dates, proposes the presidency as the reason for the title, gives the rabbi&rsquo;s death-bed words, and hears scorn in the refusal to call the cure a sign; Barnes knows nothing of the minor names and reads the question as intimidation that never examines the miracle; Lightfoot supplies the rabbinic identification and the tradition of the opening temple gates."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke accounts for the retained title from the length of the tenure and the five sons who succeeded, adopts the rabbinic identification of the third name, and reads the question as a legal trap for a capital charge of magic; Wesley states the bare succession and calls the question deliberately ambiguous."
    }
   ],
   "debates": [
    {
-    "question": "Is '5000' the aggregate church total or the new converts that day?",
+    "question": "Why is Annas called the high priest?",
     "sides": [
      {
-      "position": "The aggregate total of the whole church",
+      "position": "He had held the office eleven years and bore the title for life",
       "holders": [
-       "Calvin",
+       "Clarke",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Caiaphas held it by Roman law, Annas in the opinion of the Jews",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "He probably presided over this very council as its President",
+      "holders": [
        "Ellicott"
       ]
      },
      {
-      "position": "The cumulative total of converts (120 + 3000 + more)",
+      "position": "From past office or the deputyship, but not from any presidency, which Gamaliel then held",
       "holders": [
-       "Clarke"
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the force of the question put to them?",
+    "sides": [
+     {
+      "position": "A trap: a suspicion of magic that might carry a capital charge",
+      "holders": [
+       "Clarke",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Scorn: they concede the cure but refuse to name it a sign",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Intimidation, assuming imposture without ever examining the miracle",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "A feigned zeal for God&rsquo;s honour, meant to frighten them into a denial",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -202,152 +443,38 @@
   ],
   "outliers": [],
   "themes": [
-   "many believed",
-   "the number was five thousand",
-   "persecution spreads the faith",
-   "the power of the word"
+   "the high priesthood",
+   "the Sanhedrin",
+   "accusations of magic",
+   "apostolic authority"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The full Sanhedrin — rulers, elders, scribes — assembled to try the apostles; the same council and men who condemned Christ now arraign his apostles."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "The arrest providentially gives the apostles access to testify before the highest tribunal (Wesley) — a witness they could not otherwise have made."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rulers, elders, and scribes",
-   "the Sanhedrin assembled",
-   "the full religious authority",
-   "providential access to testify"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Annas (ex-high priest, dominant, still titled in Jewish eyes), Caiaphas (the actual high priest, his son-in-law), John (possibly Johanan ben Zaccai, uncertain), Alexander, and the high-priestly kindred — the same family that condemned Christ, named to show the formidable opposition (Clarke, Ellicott, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Annas the high priest, and Caiaphas",
-   "John and Alexander",
-   "the high-priestly kindred",
-   "the formidable opposition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Sanhedrin (in a semicircle, the accused central) demand 'by what power or name' in a tone of suspicion and contempt — implying magic or sorcery, refusing to call it a 'sign' (Ellicott, Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: feigned zeal for God's glory, designed to drive the apostles to denial by repeated questioning of a manifest matter; God brings their wiliness to nought."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by what power, or by what name",
-   "set them in the midst",
-   "suspicion of magic",
-   "feigned zeal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
@@ -361,81 +488,111 @@
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "8-9",
+  "pericope_label": "Peter, filled with the Holy Ghost, answers the rulers concerning the good deed done to the impotent man",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter filled with the Spirit — a sudden inspiration fulfilling Christ's promise (Matthew 10:19-20, Ellicott, Clarke); the man who quailed before a servant girl now stands fearless before the council, his boldness proof of genuine repentance (Barnes)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the boldness wholly the Spirit's — 'another manner of man here than he was before'; yet he gives the rulers the honour due their office (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter, filled with the Holy Ghost",
-   "ye rulers of the people",
-   "the transformed Peter",
-   "Spirit-filled boldness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Calvin grounds the boldness wholly in the Spirit, since the man who quailed before a servant girl would have fainted at their pomp, and hears a taunting preface in the appeal to a good deed; Gill dates the filling to the instant and marks the alteration in the man."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Peter skillfully frames the charge as a 'good deed' (euergesia), pointedly against the council's contemptuous 'this thing' (Ellicott, Robertson); 'made whole' (sozo) carrying a pregnant undertone of salvation."
+    "summary": "Barnes reads the boldness as proof of a genuine repentance seeking to repair the evil done in that very room, and finds the address wholly respectful; Ellicott makes the tense a sudden inspiration, notes the matching names on the two sides of the chamber, traces more deference here than in Paul&rsquo;s later address, and glosses the good deed and the pregnant verb for healing; Robertson calls the substitution of benefactor for malefactor a skilful turn."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Peter wittily girds the council for sitting as judges to condemn a benefit that deserved praise — arraigning the apostles as malefactors for a good deed."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sees the promise of unpremeditated speech fulfilled; Wesley makes the timing the point, that God moves his instruments when he sees it needful, and notes the honour paid to the office."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem sets the hour in a longer arc of one Spirit working from Pentecost through the healing at the Beautiful gate to the confuting of the rulers."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What accounts for Peter&rsquo;s boldness?",
+    "sides": [
+     {
+      "position": "The Spirit alone; of himself he would have fainted at their pomp",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "A genuine repentance seeking to undo the denial made before these very men",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "A sudden inspiration given at the moment it was needed",
+      "holders": [
+       "Ellicott",
+       "Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what tone does he begin?",
+    "sides": [
+     {
+      "position": "With perfect respect, not questioning the court&rsquo;s authority",
+      "holders": [
+       "Barnes",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "With more deference than Paul would later show the same court",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "With a taunting preface, girding judges who sit to condemn good deeds",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "examined of the good deed",
-   "by what means he is made whole",
-   "the act of beneficence",
-   "turning the charge"
+   "the fulness of the Spirit",
+   "boldness",
+   "repentance",
+   "trial before the Sanhedrin"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.35
+   }
   }
  },
  "10": {
@@ -447,85 +604,113 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot"
   ],
+  "range": "10-11",
+  "pericope_label": "By the name of Jesus Christ of Nazareth, whom ye crucified: this is the stone set at nought of you builders",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter boldly names the crucified Nazarene as the Christ and charges the Sanhedrin itself with his crucifixion, contrasting their act with God's answer in the resurrection (Robertson, Ellicott); the transformed coward now a fearless confessor (Barnes)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the miracle gives occasion to preach the resurrection — the proof Jesus is the Christ; Peter charges the crucifixion home not only to upbraid but to call to repentance and show they have striven against God in vain."
+    "summary": "Calvin explains why the subterfuges were refused, orders the argument from miracle to resurrection, and turns the rejected stone into a standing check on ecclesiastical office, the papacy included; Gill identifies the stone with the Messiah."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes calls the avowal the greatest instance of boldness and argues that only the truth of the religion accounts for the change in Peter; Robertson marks the emphatic pronoun and the play on words and leaves the corner stone&rsquo;s position open; Ellicott fixes the responsibility on the council rather than Pilate and reads the builders as their own official calling; Lightfoot sets out why the Jews would never apply the verse to their Messiah."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rests on the plain evidence of the cure and infers that the rest of the prophecy will be fulfilled as literally as the rejection was; Wesley observes that the council never dared plead before the apostles the tale they had paid the soldiers to tell."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "To whom did the Jews apply the stone?",
+    "sides": [
+     {
+      "position": "To Jacob, or David, or the congregation of Israel, but never to their Messiah",
+      "holders": [
+       "Lightfoot"
+      ]
+     },
+     {
+      "position": "To David, on the ancient reading; the apostles apply it without doubt to the Messiah",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "To David truly, but as a shadow of what God expressed perfectly in the Messiah",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "They had heard it applied already and thought in their blindness they could defy the warning",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who is charged with the crucifixion?",
+    "sides": [
+     {
+      "position": "The council itself, whatever the formal sentence Pilate gave",
+      "holders": [
+       "Ellicott",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "They are charged so that they may know they strove against God in vain, not merely to upbraid them",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "They knew it in conscience, and never dared plead their bought story",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "by the name of Jesus Christ of Nazareth",
-   "whom ye crucified, whom God raised",
-   "Christ crucified and risen",
-   "the living proof"
+   "the name of Jesus",
+   "the rejected stone",
+   "the resurrection",
+   "ecclesiastical authority"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter cites Psalm 118:22 — the rejected stone become the head of the corner — applied to the council, the 'builders' who rejected the stone God chose (Christ), fulfilling the prophecy they had heard (Ellicott, Robertson; echoed in 1 Peter 2:6-8)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the rejection of Christ by the official builders is no argument against him but the fulfillment of Scripture; mere title (Annas, Caiaphas, the Pope) is no guarantee of faithfulness; Christ exalted by God is the believer's comfort."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the stone set at nought",
-   "the head of the corner",
-   "Psalm 118:22 applied to Christ",
-   "title no guarantee of faithfulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
@@ -538,34 +723,69 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12",
+  "pericope_label": "Neither is there salvation in any other, for there is none other name whereby we must be saved",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Salvation in no other name — the exclusivity of Christ against all rival means (Gill); no second name in any land or age (Robertson); the heathen and infants saved, if at all, by the Name even where unknown (Barnes, Ellicott)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: against the Papists' multiplied ways of salvation, Peter places perfect and whole salvation in Christ alone, excluding all other means; Wesley: a beautiful gradation from bodily healing to soul-salvation."
+    "summary": "Calvin makes the miracle a token that Christ is the only author of life, hears a sting for the priests who tried to blot out the name, grounds the exclusiveness in the decree, and explains that God reached out his hand because men cannot ascend to him; Gill enumerates what salvation is not in."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes traces the word for salvation and gives two reasons for the turn from the cure to the doctrine; Ellicott finds the earlier verb reaching its highest sense and extends the Name to cover the heathen who never heard it; Robertson refuses any such extension and applies the exclusive clause to the modern mission field by name."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley calls the movement a beautiful gradation after the custom of Christ himself; Clarke allows no other person, no other name, and no other means, all earlier means being subordinate to the Lamb slain from the foundation of the world."
    }
   ],
   "debates": [
    {
-    "question": "Can the heathen who never hear the Name be saved by it?",
+    "question": "How far does the exclusive Name reach?",
     "sides": [
      {
-      "position": "Yes — saved by the Name even where unknown, as the symbol of divine saving energy",
+      "position": "Beyond those who hear it; the heathen who are saved are saved by a Name they never heard",
       "holders": [
-       "Barnes",
        "Ellicott"
       ]
      },
      {
-      "position": "Salvation is in Christ alone, excluding all other means (the strict exclusivity)",
+      "position": "Not at all beyond it; there is no second name to set beside it anywhere on earth",
       "holders": [
-       "Calvin",
-       "Gill"
+       "Robertson",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It is exclusive because God decreed it so, and will not make salvation common by any other means",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why does Peter turn from the cure to salvation?",
+    "sides": [
+     {
+      "position": "The temporal deliverance suggested the greater, and the occasion offered the council a doctrine they already professed",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "By a deliberate gradation, after his Master&rsquo;s habit of rising from earthly things to spiritual",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Because the miracle was given to show Christ the only author of life",
+      "holders": [
+       "Calvin"
       ]
      }
     ]
@@ -573,23 +793,35 @@
   ],
   "outliers": [],
   "themes": [
-   "neither is there salvation in any other",
-   "none other name under heaven",
    "salvation in Christ alone",
-   "the exclusivity of the gospel"
+   "the name of Jesus",
+   "the exclusiveness of the gospel",
+   "the Messiah"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
   }
  },
  "13": {
@@ -598,81 +830,119 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "13-14",
+  "pericope_label": "They marvel at the boldness of unlearned men, take knowledge that they had been with Jesus, and can say nothing against the healed man",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Unlearned and ignorant' = laymen without rabbinic training (not 'ignorant,' Robertson, Ellicott; the source of 'idiot'); their boldness astonished the council; Barnes guards against a charter for an unlearned ministry — Christ taught them and chose the learned Paul."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the council, knowing them unlearned, acknowledge something more than human in their boldness, yet break out into tyranny against an evil conscience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the boldness of Peter and John",
-   "unlearned and ignorant men",
-   "they had been with Jesus",
-   "conviction over learning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Calvin turns the recognition into self-conviction, since to confess the sign manifest is to condemn oneself, and asks whether the arm of God is broken when two simple men are silenced; Gill has the healed man appearing of his own accord as a witness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The healed man standing whole is living, irrefutable proof; the council could say nothing against it (Barnes, Robertson); the undeniable miracle proves the doctrine (Clarke) — the helplessness of unbelief before God's work."
+    "summary": "Robertson defines both words as marks of standing rather than capacity and notes that Peter had arraigned the court before God; Ellicott derives the first from the scribes&rsquo; own name and traces the second into the modern word idiot, and observes that John&rsquo;s bearing spoke though he did not; Barnes keeps the older sense, supposes the recognition came from the miracle and the boldness, and calls the healed man&rsquo;s presence unanswerable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke rejects the English rendering of ignorant outright and credits the apostles with strong common sense; Wesley draws the general rule that God has in all ages used such men to preach."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What do unlearned and ignorant mean?",
+    "sides": [
+     {
+      "position": "Not educated as a scribe, and a common man &mdash; the word that later became idiot",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Without rabbinical training, and a layman rather than an officer",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The English rendering is improper; in no sense were the apostles ignorant men",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Men without education or practice in public speaking, and Galileans besides",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How did the council know they had been with Jesus?",
+    "sides": [
+     {
+      "position": "They began to recognise their faces from the temple teaching",
+      "holders": [
+       "Ellicott",
+       "Robertson",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It is not said; probably from the miracle, the boldness, and what such boldness implied",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "By an unwilling wonder that convicted their own consciences",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the man which was healed standing with them",
-   "could say nothing against it",
-   "the irrefutable miracle",
-   "unbelief silenced"
+   "boldness",
+   "unlearned men",
+   "the healed man",
+   "conviction of conscience"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
   }
  },
  "15": {
@@ -680,160 +950,227 @@
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The council, unable to answer the miracle, put the apostles out and confer privately — turning from judicial inquiry to political calculation (Henry); Luke records the closed session, exposing the rulers' bad faith and helplessness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "commanded them to go aside",
-   "conferred among themselves",
-   "the private consultation",
-   "the council's bad faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson"
   ],
+  "range": "15-16",
+  "pericope_label": "The council confers apart: what shall we do to these men, for a notable miracle is manifest and we cannot deny it",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The council confesses the miracle ('manifest to all, we cannot deny it') yet debates expediency, not justice — abandoning their office as a court (Ellicott); the forced admission the involuntary testimony of enemies to the truth (Clarke, Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what shall we do to these men",
-   "a notable miracle, manifest to all",
-   "we cannot deny it",
-   "the self-condemnation of unbelief"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The council resorts to threats ('threaten them with threats,' a Hebraism indicating an Aramaic source, Ellicott), commanding silence 'in this name' (a contemptuous slur, Robertson); the motive to stop the gospel lest all Jerusalem be converted (Clarke)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: authority abused rages most boldly where reverence for God fails; the believer may lawfully refuse to obey commands that oppose God."
+    "prevalence": "single",
+    "summary": "Gill enumerates the penalties weighed and suggests the healed man withdrew with the apostles."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry answers their question with what they should have done, explains why the prisoners were sent out, and reads the trial as a graded schooling in suffering."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson has the court comparing notes on its predicament and reduces the admission to calculation; Barnes lists the penalties considered, explains why a threat was thought sufficient and notes that it failed; Ellicott objects that a court of justice had abandoned its office for a debate on expediency and hears a frustrated will in the confession."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke sets out the public evidence that made denial impossible."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What was the court actually deciding?",
+    "sides": [
+     {
+      "position": "Which penalty would stop the preaching, fear of the people ruling out the severer ones",
+      "holders": [
+       "Barnes",
+       "Gill"
+      ]
+     },
+     {
+      "position": "Nothing it had any business deciding; a court of justice had turned to a debate on policy",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "A question that answers itself, if they would receive the doctrine and be baptized",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does we cannot deny it reveal?",
+    "sides": [
+     {
+      "position": "A will to deny that lacks the power",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "A calculation that denial would do no good with the man standing there",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "A fact so public that no means of disproof existed",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "that it spread no further",
-   "straitly threaten them",
-   "speak in this name no more",
-   "authority abused"
+   "the Sanhedrin",
+   "expediency",
+   "undeniable miracle",
+   "training in suffering"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.2
+   }
   }
  },
- "18": {
+ "17": {
   "voices": [
    "John Gill",
+   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
+   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot"
   ],
+  "range": "17-18",
+  "pericope_label": "Let us straitly threaten them, and they command them not to speak at all nor teach in the name of Jesus",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill limits the fear to the country beyond Jerusalem; Calvin draws from the command a rule that pastoral authority has bounds it may not pass, beyond which obedience may lawfully be refused, and warns against preferring the wicked to church government."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A total prohibition — not to speak privately or teach publicly, the very name not to pass their lips (Ellicott, Wesley); the council's desperate resort to command, recognizing the power lay in the name they could not bear."
+    "summary": "Lightfoot contrasts their tolerance of the Baptist and infers that they knew or suspected Jesus was the Messiah; Ellicott identifies the reduplicated idiom and weighs whether it proves an Aramaic original; Barnes glosses the Hebraism; Robertson marks the contemptuous this name and the grammar of the command."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: men bear any doctrine but the gospel of Christ crucified — human nature at enmity with what comes from God."
+    "prevalence": "several",
+    "summary": "Clarke identifies what they feared, reckons the converts already made, traces the hatred to their own guilt as crucifiers, and makes the unpopularity of the doctrine an argument for its truth; Wesley calls their view of the gospel a gangrene, divides speaking from teaching, and tells the court it does nothing."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why so implacable against this name in particular?",
+    "sides": [
+     {
+      "position": "Because they knew, or suspected, that he was the Messiah; they had tolerated the Baptist",
+      "holders": [
+       "Lightfoot"
+      ]
+     },
+     {
+      "position": "Because they were his crucifiers and could not bear salvation preached through him",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Their recoil shows in the wording: they slur at this name rather than speak it",
+      "holders": [
+       "Robertson",
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the reduplicated threat point to an Aramaic original?",
+    "sides": [
+     {
+      "position": "So far as it goes yes, though a Greek speaker might have reproduced the old formula",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Yes; it proves the council&rsquo;s words were translated just as spoken",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "It is simply a Hebraism of intensity, and the grammar needs no more explanation",
+      "holders": [
+       "Barnes",
+       "Robertson"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "not to speak at all",
-   "nor teach in the name of Jesus",
-   "the total prohibition",
-   "enmity against the name"
+   "the name of Jesus",
+   "limits of church authority",
+   "persecution",
+   "Hebraisms in Acts"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.51
+   }
   }
  },
  "19": {
@@ -842,84 +1179,118 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
+   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "19-20",
+  "pericope_label": "Whether it be right to hearken unto you more than unto God, judge ye: we cannot but speak",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The great principle of liberty of conscience — one of the earliest, boldest appeals for the right of private judgment against dominion over the soul (Barnes); bounded by Ellicott: the right of a conscience recognizing divine authority to resist a human authority opposing it, the onus on the one claiming the higher authority."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: obedience to evil pastors who hold lawful office is contrary to God; all traditions examined by the Word; authorities obeyed only so far as they rob not God of his right; Wesley compares Socrates."
+    "summary": "Calvin denies obedience to pastors who abuse a real authority, subjects all their traditions to the rule of the Word, and yet cautions that much may rightly be concealed for peace, the gospel alone being exempt; Gill distinguishes moral from physical impossibility."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes reads the verse as an early charter of liberty of conscience and shows why the court could not resist the appeal; Ellicott grants the axiom but limits it by the difference between witnessing to facts and proclaiming opinions, and places the burden of proof on whoever claims the higher authority; Robertson calls the defiance justified and the courage that of martyrs in every age."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke opposes secular prudence to acting before God and calls suppression of the testimony treason; Wesley sets a pagan philosopher&rsquo;s answer to his judges beside the apostles&rsquo;."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How far does the right of conscience extend?",
+    "sides": [
+     {
+      "position": "Responsibility for religious opinion is direct to God, and no man may control it",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Even to lawful church authority, which forfeits obedience the moment it leads away from God",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Axiomatic for witness to facts, but narrowing as one passes to doctrine, opinion and conjecture",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "To justified defiance, where authority steps between the conscience and God",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why could they not be silent?",
+    "sides": [
+     {
+      "position": "A necessity was laid on them by the evidence and by the command to preach",
+      "holders": [
+       "Barnes",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Because it is the gospel that is in hand; other things may rightly be concealed for peace",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Because suppressing the testimony would be treason against God",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "whether it be right in the sight of God",
-   "to hearken unto you more than unto God",
    "liberty of conscience",
-   "obey God rather than men"
+   "obedience to God",
+   "limits of authority",
+   "witness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'We are not able not to speak' (the double negative, Robertson) — the necessity of commanded witnesses (Acts 1:8, Ellicott), the courage of martyrs; Barnes draws the long lesson of religious liberty from the spread of the Bible."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the necessity is specifically the gospel — to silence Christ's witnesses is to abolish the grace of God and the salvation of men; woe to the sluggishness that yields to so wicked a prohibition."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we cannot but speak",
-   "the things which we have seen and heard",
-   "the necessity of witness",
-   "loyalty over safety"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
@@ -932,120 +1303,239 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "21-22",
+  "pericope_label": "They threaten them further and let them go, for all men glorified God, the man being above forty years old",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The council, unable to punish for fear of the people who glorified God (Luke's characteristic note, Ellicott), let them go — their authority dependent on the multitude (Barnes); the people's praise mocked the Sanhedrin's helplessness (Robertson)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the council's restraint God's secret providence binding the wicked with invisible bonds, preserving his children; yet the victory is 'under the cross' — threatened and charged again."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "finding nothing how to punish them",
-   "because of the people",
-   "all glorified God",
-   "God's restraining providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Calvin looks past the human cause to the providence that binds the wicked without their knowledge, finds the adversaries confirming the gospel against their will, insists the victory is still under the cross, and doubts that all who praised God came the whole way to Christ; Gill supposes the threats were repeated or sharpened for want of an answer."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The man's age (over forty, lame from birth) magnifies the miracle — beyond natural cure, unmistakably divine, the testimony the more credible (Gill, Barnes); Luke's characteristic precision in noting duration (Ellicott)."
+    "summary": "Barnes traces the release to fear of a tumult and reads the popular praise as the highest evidence of the miracle; Robertson finds irony in the continued glorifying while the council still threatened; Ellicott notes the same tense and the writer&rsquo;s habit of recording the impression made on the people and the duration of infirmities."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke counts the converts that made an insurrection likely, reports a variant reading of the clause, and turns the man&rsquo;s forty years into an argument that no age is beyond conversion but none may presume on it; Wesley finds the people wiser than their rulers."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did the council stop at threats?",
+    "sides": [
+     {
+      "position": "It could punish no further without a tumult, its power depending on the people&rsquo;s caprice",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "The converts were by now numerous enough to make an insurrection likely",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Regard of the people restrained them, but it was God who bound them, unknown to themselves",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the people&rsquo;s glorifying prove?",
+    "sides": [
+     {
+      "position": "The reality of the miracle, since neither adversaries nor neighbours questioned it",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "The helplessness of the court, praised over while it was still threatening",
+      "holders": [
+       "Robertson",
+       "Wesley"
+      ]
+     },
+     {
+      "position": "Real fruit, but perhaps not saving fruit; to feel the power and not come to Christ is to stop midway",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "above forty years old",
-   "this miracle of healing",
-   "the greatness of the miracle",
-   "Luke's precision"
+   "providence",
+   "popular opinion",
+   "the reality of the miracle",
+   "conversion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.53
+   }
   }
  },
  "23": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "John Chrysostom"
   ],
+  "range": "23",
+  "pericope_label": "Being let go, they went to their own company and reported all that the chief priests and elders had said",
   "schools": [
    {
-    "school": "eastern-antiochene",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: the apostles tell the tale not for their own glory but to display Christ's grace, making the hearers courageous; the church flees to God, the invincible Ally, with earnest, ordered prayer."
+    "summary": "Calvin gives emboldening and prayer as the two ends and insists that the apostles never submitted servilely to the decree; Gill notes the dismissal from custody."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws two lessons from the return, that honour should not lift a man above the communion of saints and that a public station must seek the public good, and adds that the record was kept for posterity."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The released apostles go straight to 'their own company' to report — the unity and mutual encouragement of the persecuted church, the occasion of the united prayer (vv.24-30)."
+    "summary": "Ellicott infers a recognised place of meeting and widens the chief priests to the heads of the courses; Robertson takes the company as the whole brotherhood and finds real apprehension behind the report; Barnes reads the report as a consultation about whether to obey or to leave the city."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke identifies this as the first persecution since the resurrection and pictures the church already at prayer when the two arrived."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom denies any motive of glory in the telling, notes that they reported the adversaries&rsquo; words and omitted their own, and admires the fitness with which each apostolic prayer addresses the attribute the occasion needs."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did they report what was said?",
+    "sides": [
+     {
+      "position": "Not for their own glory but to display the proofs of Christ&rsquo;s grace, omitting their own part",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "To embolden the brethren and to arm them with prayer against the threatenings",
+      "holders": [
+       "Calvin",
+       "Henry"
+      ]
+     },
+     {
+      "position": "To take counsel about what they should now do, a proper example under persecution",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Because for all the defiance they had real apprehension of the outcome",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What was their own company?",
+    "sides": [
+     {
+      "position": "A recognised society meeting at fixed times in a known place",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "The whole body of disciples, not the apostles only",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The church already gathered in supplication for their safety",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "The fellowship whose duties and privileges no honour puts a man above",
+      "holders": [
+       "Henry"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "they went to their own company",
-   "reported all the chief priests said",
-   "fellowship under persecution",
-   "the occasion of prayer"
+   "the communion of saints",
+   "persecution",
+   "prayer",
+   "apostolic testimony"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
   }
  },
  "24": {
@@ -1058,83 +1548,119 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "24-25",
+  "pericope_label": "They lifted up their voice with one accord: Lord, thou art God, who by the mouth of thy servant David hast said",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The church's united prayer addresses God as 'Despotes,' the absolute Sovereign Master (Robertson, Ellicott) and Creator of all — the earliest recorded prayer of the church, beginning with God's sovereignty (Ellicott); 'with one accord' (Luke's phrase) marks perfect unity."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: they appeal to the Creator's almighty power as the ground of confidence against the threats of men — all things in his hand, every danger preventable."
+    "summary": "Gill reports the Jewish tradition of the Psalm&rsquo;s authorship and its messianic reading; Calvin insists that David speaks first of himself and his own hard-won kingdom, which was established to be a figure, so that he does not stay in the shadow but apprehends the body, and draws from the prayer the rule that God&rsquo;s power and promise are the two foundations of boldness."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott weighs three accounts of the joint utterance and prefers that the people followed Peter clause by clause, calls the prayer the church&rsquo;s earliest recorded praise, and treats the citation as a lesson in apostolic interpretation; Barnes glosses the Hebrew idiom, the unbroken union of the company and the force of the title, and holds the Psalm to speak solely of the Messiah; Robertson reports the suggestion that the company sang the Psalm and glosses the verb for raging."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke paraphrases the title as universal rule and unlimited power; Wesley compresses the whole prayer into a sentence."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Of whom does the second Psalm speak?",
+    "sides": [
+     {
+      "position": "Directly and solely of the Messiah; the apostles&rsquo; use settles it",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Of David first and truly, but as a figure whose body is Christ",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Of the Messiah, by the settled sense of the ancient doctors, though some read it of Gog and Magog",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Of Christ, predicting the vain attempts of Jewish and heathen powers against the gospel",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Uncited in the Gospels and unreferred to Christ until Hebrews; here is the apostles&rsquo; own school of interpretation",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How did the whole company speak one prayer?",
+    "sides": [
+     {
+      "position": "The people most likely followed Peter clause by clause",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Perhaps the company sang the Psalm and Peter then applied it",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "The phrase means only that they prayed, with one mind and purpose",
+      "holders": [
+       "Barnes"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "lifted up their voice with one accord",
-   "Lord, thou art God",
-   "which hast made heaven and earth",
-   "the Creator's sovereignty"
+   "prayer of the church",
+   "the second Psalm",
+   "prophetic interpretation",
+   "the sovereignty of God"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The church cites Psalm 2:1, ascribed to David by the Spirit (a testimony to inspiration, Barnes); the 'raging' the tumultuous opposition of the wicked, the 'vain things' their futile plans against God's purpose; the opposition foretold and foretold to be vain."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the Psalm's double reference — David's hard-won kingdom prefigured Christ's, against which the nations rage in vain; the Spirit spoke of this very hour."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by the mouth of thy servant David",
-   "why did the heathen rage",
-   "Psalm 2 as prophecy",
-   "the opposition foretold as vain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
@@ -1145,46 +1671,124 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
    "Cyril of Jerusalem"
   ],
+  "range": "26-27",
+  "pericope_label": "The kings of the earth against the Lord and his Christ: Herod and Pilate with the Gentiles and Israel gathered against thy holy child Jesus",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Psalm 2 continued — the kings and rulers (Herod, Pilate) gathered against the Lord and his Christ (Gill); opposition to Christ is opposition to God, for Christ is equal with the Father, appointed and dear to him (Barnes)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: all who refuse to submit to Christ make war against God, who reigns in his Son alone; the rebels find God their open enemy unless they embrace Christ and his gospel."
+    "summary": "Calvin holds that all who refuse to submit to Christ make war on God, and reads the double-sensed word as either fitting Christ better or alluding to David&rsquo;s resemblance to him, and explains the two peoples as one body drawn from many countries; Gill identifies the kings and presses the holiness of the one they rose against."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes makes opposition to the Messiah opposition to God, reads the paired nouns as parallelism, and prefers son to child; Ellicott renders the title Servant and notes the missing articles; Lightfoot explains why the Jews would resist the added words in this city; Robertson notes that only this writer records the two rulers&rsquo; reconciliation."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke would translate the word as Anointed and thinks the added in this city far more emphatic; Wesley refers the anointing to the kingship of Israel."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem applies the raging to those who would be friends of the Father apart from the Son, and asks how one who denies the Door can be thought worthy of entrance."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is the word child, son or servant?",
+    "sides": [
+     {
+      "position": "Not the usual word for the Lord Jesus and unrelated to age; son would be happier",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Servant, as the same word is used of David two verses before",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Child, from the union of the human nature with the Son &mdash; or else servant, as Mediator",
+      "holders": [
+       "Gill"
+      ]
+     },
+     {
+      "position": "Deliberately double, perhaps to mark the resemblance between David and Christ",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the Gentiles and the peoples?",
+    "sides": [
+     {
+      "position": "The Romans who crucified him, and the Jews stirred up by their rulers",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Both terms, on the Hebrew usage, denote Israel",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "One body drawn from many countries, gathered to the feast",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the kings of the earth stood up",
-   "against the Lord and against his Christ",
-   "opposition to Christ is opposition to God",
-   "Psalm 2 applied"
+   "opposition to Christ",
+   "the second Psalm",
+   "the servant of God",
+   "the crucifixion"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
+   }
   }
  },
- "27": {
+ "28": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -1192,75 +1796,87 @@
    "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The four parties of Psalm 2 fulfilled in Herod and Pilate (the kings), the Gentiles (Rome), and Israel — an undesigned coincidence with Herod's part (Luke 23:12, Robertson, Ellicott); 'child' better 'Servant' (Barnes), matching David in v.25."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the prophecy proved true by the event confirms faith; though the enemies seemed to triumph, their rage was vain, for they could do no more than God appointed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "against thy holy servant Jesus",
-   "Herod and Pontius Pilate",
-   "Gentiles and people of Israel",
-   "prophecy fulfilled in the passion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
+  "range": "28-29",
+  "pericope_label": "To do whatsoever thy hand and thy counsel determined before to be done; and now, Lord, behold their threatenings",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: God governs all things by his secret counsel, bringing to pass what he determined even through the wicked (who act freely from malice); the verse refutes those who admit only foreknowledge — God 'appointed before' what was done."
+    "summary": "Calvin holds that God brings to pass by the wicked what he determined, bridling them so far as is expedient to exercise us, and convicts those who own foreknowledge without ordination; Gill separates their intention from the event; both read the petition as seeking liberty to preach rather than quiet."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The providence/free-agency problem stated without philosophical solution — both facts held ('Man proposes, God disposes,' Ellicott); the wicked acted freely yet fulfilled God's counsel (Gill, Robertson)."
+    "summary": "Ellicott states the problem of purpose and free agency and denies that any solution is possible, holding both facts without a formula; Barnes collects the historical facts instead of the theory and notes what the petition does not ask; Robertson sees them rising above sight to the Hand that shapes men&rsquo;s ends, and finds a wholesome lesson in men who had defied the court still praying for courage."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the clause as a parenthesis belonging to Christ, not to the gatherers, since to make their rage the thing determined would be impious and absurd, and turns the threatenings outward as aimed at God; Wesley reduces the counsel to permission."
    }
   ],
   "debates": [
    {
-    "question": "How is divine sovereignty held with human free agency in the crucifixion?",
+    "question": "What was foreordained &mdash; their act, or what they opposed?",
     "sides": [
      {
-      "position": "God governs all by his secret counsel, determining the act through the wicked",
+      "position": "Not their act; the clause is a parenthesis about what Christ was to perform, which they gathered to hinder",
       "holders": [
-       "Calvin",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Their act itself; God brings to pass by the wicked what he has determined, turning their counsels backward",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Not their intention but the event, which providence disposed to God&rsquo;s decree",
+      "holders": [
        "Gill"
       ]
      },
      {
-      "position": "Both facts held without a philosophical solution",
+      "position": "Only what God permitted, according to his counsel to save mankind by his Son&rsquo;s sufferings",
       "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "The question admits no solution; both facts must be held without a formula of reconciliation",
+      "holders": [
+       "Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the church ask for?",
+    "sides": [
+     {
+      "position": "Not safety but freedom from being deterred, since they had resolved to persevere",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Liberty to preach rather than a quiet life, which would forsake their calling",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "That God notice threatenings aimed at himself, not at them",
+      "holders": [
+       "Clarke",
+       "Gill"
+      ]
+     },
+     {
+      "position": "Courage in deed to match brave words already spoken",
+      "holders": [
+       "Robertson",
        "Ellicott"
       ]
      }
@@ -1269,66 +1885,35 @@
   ],
   "outliers": [],
   "themes": [
-   "whatsoever thy hand and counsel determined",
-   "divine sovereignty and free agency",
-   "the crucifixion foreordained",
-   "what men meant for evil, God for good"
+   "providence and free agency",
+   "foreordination",
+   "boldness in preaching",
+   "persecution"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The church prays not for safety or vengeance but for boldness to speak — resolved to persevere, asking only not to be deterred (Barnes); they commit their danger to God ('behold their threatenings,' Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they seek not their own quiet but liberty to preach the gospel everywhere; Chrysostom marvels at the largeness of mind — not 'Crush them' but 'Grant us boldness.'"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "behold their threatenings",
-   "grant boldness to speak thy word",
-   "not safety but courage",
-   "the furtherance of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
@@ -1341,84 +1926,109 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "30-31",
+  "pericope_label": "Grant signs and wonders by the name of Jesus; and the place was shaken and they spake the word with boldness",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The church asks for healing and signs by the name of Jesus — to confirm and spread the gospel, not for their own safety (Barnes); the assonance of 'healing' (iasis) and 'Jesus' (Ellicott)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: they set light by all else for the glory of God, desiring above all that his power be declared by miracles confirming the word."
+    "summary": "Calvin asks why men who suffered for one miracle should want more daily, and answers from their preference of God&rsquo;s glory to their own safety; he refuses to rest on the shaking, since the sign was extraordinary while the answered prayer is the perpetual profit set before us; Gill lists what the healings would accomplish."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes notes that the prayer never asks for safety and gives four reasons why the shaking was taken as an answer; Ellicott hears an assonance between healing and the name of Jesus, and reads the sign as Pentecost renewed but deliberately without the tongues; Robertson takes it for an earthquake and notes the prayer&rsquo;s own words used of the answer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke frames the petition as an appeal to magnify the crucified Son, and draws from the fresh filling that grace is given for the time being and not in stock for the future; Wesley notes simply that the petition was granted."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why ask for further miracles?",
+    "sides": [
+     {
+      "position": "Because they valued the declaring of God&rsquo;s power above their own safety, whatever the adversaries did",
+      "holders": [
+       "Calvin"
+      ]
+     },
+     {
+      "position": "As evidence of the truth of their message; they never asked to be preserved from danger",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "To magnify the Son whom the council had crucified, and to animate the preachers",
+      "holders": [
+       "Clarke",
+       "Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What was the shaking?",
+    "sides": [
+     {
+      "position": "An earthquake, and by every mark an answer to the prayer",
+      "holders": [
+       "Barnes",
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Pentecost renewed, without the tongues that signified a gift given once for all",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "A mere token of God&rsquo;s presence; the fruit that follows is the thing to stand on",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "stretching forth thine hand to heal",
-   "signs and wonders by the name of Jesus",
-   "confirmation of the word",
-   "zeal for God's glory"
+   "answered prayer",
+   "signs and wonders",
+   "the fulness of the Spirit",
+   "boldness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The prayer answered at once — the place shaken (an earthquake, a token of God's presence, Barnes, Robertson), all filled afresh with the Spirit and speaking boldly; a fresh communication beyond Pentecost, the Christian needing frequent influences from on high (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the twofold answer — the visible sign of God's presence (the shaking) and the substance (greater boldness), the fruit on which we should rather dwell."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the place was shaken",
-   "filled with the Holy Ghost",
-   "spake the word with boldness",
-   "the prayer answered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "32": {
@@ -1430,31 +2040,83 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "32-33",
+  "pericope_label": "Of one heart and of one soul, having all things common, and with great power the apostles gave witness",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the believers of one heart and soul — the blessed fruit of Christ's command to love and his prayer that they be one; the many made intimately one in Christ."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: 'all things common' was voluntary, springing from love, not a binding law — refuting the Anabaptists; not all sold all (cf. Ananias 5:4, Barnabas v.36); the unity of heart the root, the liberality the fruit."
+    "summary": "Calvin makes faith the thing that knits hearts, notes that wicked men also conspire so that only the faithful&rsquo;s concord is holy, orders love before beneficence and denies value to a beneficence not rising from the heart, and says they were beloved because beneficent; Gill numbers the believers and glosses the power three ways."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marvels that strangers of different sects and old civil quarrels became intimate, and calls the church&rsquo;s increase its glory."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott separates heart from soul on Hebrew usage, insists the community of goods was voluntary and its owners stewards rather than possessors, and refuses to decide whether the grace is God&rsquo;s or the people&rsquo;s; Robertson corrects the English construction, limits the community to use rather than possession, and notes the witness continued on the very point for which they were arrested; Barnes rests the power on the preaching of the resurrection and reads the grace as favour won by kindness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke matches the ancient definition of a friend against one soul in five thousand bodies and holds the grace to be both God&rsquo;s favour and the people&rsquo;s; Wesley grounds the community of goods wholly in the love that made it inevitable."
    }
   ],
   "debates": [
    {
-    "question": "Does 'all things common' mandate communism or abolish private property?",
+    "question": "What was the community of goods?",
     "sides": [
      {
-      "position": "No — voluntary, springing from love, not a binding law (against the Anabaptists)",
+      "position": "Voluntary; property was not abolished but held as stewardship under the law of love",
       "holders": [
-       "Calvin",
-       "Barnes",
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Common in use, not in possession",
+      "holders": [
+       "Robertson",
+       "Barnes"
+      ]
+     },
+     {
+      "position": "An inevitable consequence of one soul; while the love lasted it could not be otherwise",
+      "holders": [
        "Wesley"
+      ]
+     },
+     {
+      "position": "The outward fruit whose root is inward love, worthless if it does not rise from the heart",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Whose grace was upon them all?",
+    "sides": [
+     {
+      "position": "The people&rsquo;s favour, won largely by their union and liberality",
+      "holders": [
+       "Barnes",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "Both at once, since God&rsquo;s benevolence is never exerted without his beneficence",
+      "holders": [
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Undecidable; there are no sufficient data and the question must be left open",
+      "holders": [
+       "Ellicott"
       ]
      }
     ]
@@ -1462,68 +2124,35 @@
   ],
   "outliers": [],
   "themes": [
-   "of one heart and of one soul",
-   "all things common",
-   "voluntary not forced",
-   "love the root of liberality"
+   "the primitive church",
+   "community of goods",
+   "the resurrection",
+   "grace"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The apostles witness the resurrection with 'great power' (efficacy and courage in preaching, Barnes, Henry) — the heart of the gospel and the point of the Sadducees' attack (Robertson); 'great grace' either God's favour or the people's (left open, Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the resurrection alone named as the fulfilling of the gospel; 'great grace' connected to liberality — 'beloved, because they were beneficial,' the bounty opening the people's hearts (Barnes)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "great power gave the apostles witness",
-   "the resurrection of the Lord Jesus",
-   "great grace upon them all",
-   "witness and liberality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
@@ -1536,168 +2165,231 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "34-35",
+  "pericope_label": "No man lacked, for possessors of lands sold them and laid the prices at the apostles&rsquo; feet",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "None lacked, for possessors sold lands and houses for the poor — but 'as many' not pressed (not all sold all), no obligation (cf. Ananias 5:4, Barnes); the selling continuous, as need arose (Robertson); perhaps also faith in the coming desolation (Ellicott)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: they sold only so much as need required, distributed wisely as each had need, not equally divided; no command but the fruit of grace and love (Wesley)."
+    "summary": "Calvin holds the universal speech indefinite, restricts the selling to what need required, praises the discretion of an unequal distribution, and turns the passage into a rebuke of his own generation; Gill notes the favour such care of the poor won."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes denies that all sold everything and points to Ananias and to the one man named as proof, and notes the office soon grew burdensome; Ellicott marks the repeated action, suggests the sales were an act of faith in the desolation Christ foretold, and pictures the Eastern manner of giving at the feet; Robertson keeps the tenses of selling and distributing in view."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the need from the loss of the poor&rsquo;s share in the sacrifices and calls the provision temporary; Wesley makes the absence of want the proof of the grace, and holds that the same grace would produce the same effect in any age."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did every believer sell all?",
+    "sides": [
+     {
+      "position": "No; the phrase is indefinite, and Ananias and the man named prove it was not obligatory",
+      "holders": [
+       "Barnes",
+       "Calvin"
+      ]
+     },
+     {
+      "position": "There was no command, but the same grace anywhere would bear the same fruit",
+      "holders": [
+       "Wesley"
+      ]
+     },
+     {
+      "position": "It met a temporary need created by the poor&rsquo;s exclusion from the sacrifices",
+      "holders": [
+       "Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why sell land in particular?",
+    "sides": [
+     {
+      "position": "Faith in the coming desolation their Master had foretold, land being then a source of anxiety",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "They were preparing to leave their native country and preach elsewhere",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "Because need required it, and the distribution was measured to each case",
+      "holders": [
+       "Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "neither was there any that lacked",
-   "sold lands and houses",
-   "voluntary and need-based",
-   "love supplies every need"
+   "community of goods",
+   "care of the poor",
+   "liberality",
+   "the apostles&rsquo; oversight"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The proceeds laid at the apostles' feet (the Eastern gesture of entrusting an offering, Ellicott), showing cordial detachment (Clarke); distribution to each according to need; the office soon led to the seven (Acts 6:1, Barnes)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: distribution by need, not equality — a discreet supply of want, the principle of Christian charity governed by wisdom."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.35
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "laid them at the apostles' feet",
-   "distribution according to need",
-   "love governed by wisdom",
-   "not equality but need"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "36": {
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "John Chrysostom"
   ],
+  "range": "36-37",
+  "pericope_label": "Joses, surnamed Barnabas by the apostles, a Levite of Cyprus, having land, sold it and laid the money at the apostles&rsquo; feet",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill leaves open where the land lay and how it was got, rehearsing the Levitical rule and the rabbinic reading of it, and notes the name is a contraction."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnabas (Joseph the Levite of Cyprus) surnamed 'son of consolation/exhortation' — the name marking his gift of encouragement and persuasive speech, the work of the Paraclete (Barnes, Robertson, Ellicott); singled out as the eminent example, the foil to Ananias."
+    "summary": "Barnes gives three reasons for the naming and traces the man&rsquo;s later career with Paul; Robertson infers from the singling out that not all actually sold, and alone doubts that the apostles coined the name; Ellicott derives it as son of prophecy or counsel, reads it as the gift of paraclesis, and supposes an earlier acquaintance behind the later friendship; Lightfoot takes the surname as distinguishing two noted men of one name."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke allows individual Levites to purchase land anywhere, argues the name means son of exhortation, and observes that both apostles to the Gentiles were born in Gentile countries; Wesley refers the title to the fortune given and the gifts exercised."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: Luke mentions Barnabas's virtuous deed first to set the contrast with Ananias's worst-described sin."
+    "prevalence": "single",
+    "summary": "Chrysostom explains the naming as a deliberate foil: the virtuous deed is set down first so that the sin about to be related may appear at its worst."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Joses surnamed Barnabas",
-   "the son of consolation",
-   "a Levite of Cyprus",
-   "the model of liberality"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnabas sold his land (a Levite might own land by purchase/inheritance, as Jeremiah, Ellicott) and laid the money at the apostles' feet — the named illustration of v.34, arguing not all sold all but were ready to (Robertson); the foil to Ananias."
+    "question": "Why is this man named?",
+    "sides": [
+     {
+      "position": "As a foil, so that the sin about to be told may show at its worst",
+      "holders": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Because he was a foreigner, remarkably liberal, and afterwards eminent in the ministry",
+      "holders": [
+       "Barnes"
+      ]
+     },
+     {
+      "position": "As one illustration only &mdash; which argues that not all in fact sold",
+      "holders": [
+       "Robertson"
+      ]
+     }
+    ]
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: perhaps named because he sold his only possession, surpassing the rest; his self-chosen poverty later led him, like Paul, to work for his living (Ellicott)."
+    "question": "What does the new name mean?",
+    "sides": [
+     {
+      "position": "Son of prophecy, rendered by a Greek word for exhortation",
+      "holders": [
+       "Barnes",
+       "Clarke"
+      ]
+     },
+     {
+      "position": "Son of prophecy or counsel, marking the gift of persuasive utterance the apostles traced to the Spirit",
+      "holders": [
+       "Ellicott"
+      ]
+     },
+     {
+      "position": "Encouragement is the chief idea, but the apostles may not have coined the name at all",
+      "holders": [
+       "Robertson"
+      ]
+     },
+     {
+      "position": "Both his liberality and his gifts of comfort and exhortation",
+      "holders": [
+       "Wesley"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [],
   "themes": [
-   "having land, sold it",
-   "laid it at the apostles' feet",
-   "the concrete example of liberality",
-   "the true giver vs the false"
+   "Barnabas",
+   "the Levites",
+   "liberality",
+   "spiritual gifts"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
   }
  }
 }
