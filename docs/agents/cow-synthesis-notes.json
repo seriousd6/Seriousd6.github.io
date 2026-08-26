@@ -29951,6 +29951,112 @@
         "1-31"
       ],
       "note": "john 14 was tiled as 21 pericopes over 31 verses, from 73926 usable source words, the largest chapter the picker has offered in this run. The catena carries two distinct Augustine labels, Augustine (Catena Aurea chains, with embedded AUG, GREG, THEOPHYL and HILARY markers) and Augustine of Hippo (the Tractates on John), which were kept as separate voices throughout; likewise Chrysostom and John Chrysostom."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "Jamieson donor bug, 18th consecutive chapter, and the cleanest slope yet observed with a cross-book donor. All three Jamieson, Fausset and Brown blocks are 1 Corinthians 9 material: key 1 is 1 Cor 9:4-6 (the apostolic right to forbear working, and the insinuation of Paul's opponents), key 7 is 1 Cor 9:9-10 (Deut 25:4 and the treading ox, 'Is it for the oxen that God careth?'), key 13 is 1 Cor 9:13-14 (they which minister about holy things, and the support of the clergy). Keys advance by 6 while the donor advances by about 5 — the same ratio found at matthew 6, but with the donor in a different book entirely rather than the neighbouring chapter. All three excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "13",
+        "15",
+        "16",
+        "17"
+      ],
+      "note": "Cyril of Jerusalem is mixed here, as at matthew 6 rather than at 1john 1. Key 16 is CORRECTLY placed and was used: Catechetical Lecture 15 quotes 1 Thess 4:16 directly and expounds it ('The Archangel shall make proclamation and say to all, Arise to meet the Lord'). The other three are chrome: key 13 is Lecture 18 on the apostles raising Tabitha and Eutychus, key 15 is the closing exhortation of Lecture 18 to the newly baptised ('rejoice in the Lord alway'), key 17 is Lecture 14 on the session at the right hand — none of which bear on the verses they are filed against. Only the key-16 block used."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "13"
+      ],
+      "note": "Chapter-level material filed against key 1, from three voices at once. Barnes opens his key-1 block with roughly 420 words of chapter ANALYSIS outlining vv.1-18 before reaching any comment on verse 1; Clarke opens his with a 130-word chapter summary of the same kind; and Matthew Henry's 1,828-word block at key 1 is a section exposition covering vv.1-8, with a further 1,064 at key 9 covering vv.9-12 and 1,760 at key 13 covering vv.13-18. Henry has no material filed against any other key. Per-key word counts therefore overstate what is available at key 1 and understate Henry's relevance elsewhere; his blocks were read whole and drawn on across the tiles their content actually covers."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "18"
+      ],
+      "note": "Charles Ellicott's key-18 block is 1,041 words, of which roughly 90 are commentary (on 'in these words' rather than 'with') and the remaining ~950 are StudyLight page chrome: copyright footer, an inline CSS stylesheet, the site navigation menu of commentaries, dictionaries and reading plans, and a DOMContentLoaded script. Third instance of this exact defect in the corpus (luke 14 key 35, nehemiah 9 key 38)."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "18"
+      ],
+      "note": "NEW DEFECT CLASS: modern editorial interpolation inside an attributed block. Barnes's key-18 block contains, mid-paragraph and in the same undifferentiated prose, a bracketed note beginning '(Typist's note: Barnes assumes a GENERAL judgment. Others believe that the Christian, whose eternal destination has already been determined, will be judged at THE BEMA seat with regard to REWARDS. The WICKED will not be raised until the end of the Millenial Reign...)'. This is a twentieth- or twenty-first-century dispensationalist gloss sitting inside a block attributed wholly to a nineteenth-century commentator, and nothing in the markup separates it. Excluded from the synthesis and NOT attributed to Barnes. Worth a corpus-wide grep for 'Typist' before other Barnes chapters are written."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "17"
+      ],
+      "note": "Barnes and Ellicott contradict each other flatly on where the judgment happens. Barnes infers from 'in the air' that Christ 'would not descend to the earth, but would remain at a distance from it in the air, where the great transactions of the judgment will occur', supporting it with the argument that 'the world would not be spacious enough to contain all the assembled living and dead'. Ellicott takes the same phrase to mean 'on the way from Heaven whence He comes, of course not to dwell there, but to accompany Him to His Judgment-seat on the earth'. Recorded as a debate on key 17 rather than harmonised."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "13"
+      ],
+      "note": "Two methodological clashes in the same pericope. (1) On the metaphor of sleep, Ellicott holds that 'no doctrine can be deduced with precision from it' — one cannot say that only the body sleeps, nor that the soul sleeps — while Calvin draws exactly that inference, that the word 'refers not to the soul, but to the body', and says those who conclude that souls sleep 'act a foolish part'. (2) On grief, Ellicott takes the prohibition absolutely, Paul wanting them 'not to sorrow at all over the dead', while Calvin, Barnes and Wesley all read it as requiring moderation, Calvin explicitly refusing to let the text establish 'Stoical indifference, that is, an iron hardness'. Both recorded as debates on key 13."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "Textual disagreement with a doctrinal payload at v.8. Clarke assembles manuscripts, versions and fathers for reading that God gave his Spirit 'unto you' rather than 'unto us', and builds on it a distinction between receiving a revelation from the Spirit (the apostles alone) and receiving the Spirit to live by that revelation (all Christians). Ellicott agrees on the reading and presses it further to 'into you'. Barnes keeps 'unto us' and takes the verse as 'a claim to inspiration'. Calvin notes the variant and declines to choose. The variant decides whether the verse is about apostolic authority or about the readers' own endowment."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Self-graded A on all seven tiles. Eleven voices in the chapter, of which Jamieson is wholly defective and Cyril of Jerusalem three-quarters defective (see source-defect notes), leaving nine usable: Chrysostom, Gill, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, plus the one sound Cyril block at key 16. Five schools represented at the widest tile. Grounding pre-check over the whole candidate set returned UNGROUNDED: []. 35,818 usable source words to 4,542 prose words, 7.9:1; seven pericopes (1-2, 3-5, 6-8, 9-12, 13-14, 15-16, 17-18), the thinnest at 5.0:1 and the densest at 12.4:1."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "1thessalonians",
+      "chapter": "4",
+      "verses": [
+        "18"
+      ],
+      "note": "Followed up the typist's-note interpolation with a corpus-wide check: grep -rl 'Typist' over data/commentary/cow/ matches exactly ONE file, 1thessalonians/4.json, and zero files under data/commentary/cow-synthesis/. The interpolation is therefore isolated, not systemic, and has not leaked into any prose already written. No cleanup needed beyond excluding it here."
     }
   ]
 }
