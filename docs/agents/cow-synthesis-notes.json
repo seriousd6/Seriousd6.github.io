@@ -28003,6 +28003,113 @@
         "30"
       ],
       "note": "Truncation profile for this chapter: Gill is cut at exactly 200 words at keys 27, 28 and 30, and Cyril of Jerusalem at exactly 200 at keys 11, 13, 15, 27 and 28 - two sources sharing one cap, unlike hebrews 1 where Gill was cut at 200 and Chrysostom at 302. No other source shows a floor: Henry runs to 4790 at key 25, Barnes to 1044 at key 30, Clarke to 1518-equivalent lengths, Calvin to 1423 at key 25. The cap therefore remains per-source rather than global, and the value 200 now appears in three separate chapters."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "8",
+        "20",
+        "26"
+      ],
+      "note": "Jamieson donor bug, EIGHTH consecutive chapter, and the second same-book case in a row. All three Jamieson, Fausset and Brown blocks in matthew 11 are donor text and all three come from Matthew 10 — the immediately preceding chapter. The block at 11:8 is on Mt 10:1-5 (the mission of the Twelve, and the calumny about the prince of the demons); the block at 11:20 is on Mt 10:5 (the prohibition about the Samaritans and their intermediate place between Jews and Gentiles); the block at 11:26 is on Mt 10:9-10 (scrip, coats, the reading staff versus staves, the workman worthy of his meat). Prior hosts: matthew 9 from Matthew 8; 1peter 4 from Ephesians 3; revelation 10 from 1 Thessalonians 4; luke 6 from Mark 14; james 4 from Galatians 5; 2thessalonians 2 from 1 Corinthians 10-11; mark 12 from Mark 6. Two same-book cases running, and here the donor is ADJACENT, which is the hardest variant yet to catch by subject. All three excluded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "2",
+        "25"
+      ],
+      "note": "The same father is filed under two voice names in this chapter. 'Chrysostom' (Catena Aurea extracts) appears at 11:2, 11:7, 11:11, 11:12, 11:16, 11:20, 11:25, 11:27 and 11:28; 'John Chrysostom' (the Homilies on Matthew) appears separately at 11:1 and 11:25, with different text. At 11:25 both are present in the same key with distinct material, which is why both are declared as voices for the entry covering verses 25-26 — they are two source labels for one author, not two authors. Recorded so that a later dedupe pass does not merge them blindly and lose the Homilies text, and so that the double count is not read as unusual patristic breadth."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "7",
+        "16",
+        "25"
+      ],
+      "note": "Matthew Henry's blocks in this chapter are section commentaries of extreme length filed at single keys: 2,919 words at 11:1, 4,502 at 11:7, 4,594 at 11:16 and 4,790 at 11:25 — 16,805 words, better than a quarter of the chapter's 61,947 usable source words, all of it chapter-level rather than verse-level. The nominal compression ratios for this chapter are therefore badly misleading: the effective source, after removing Henry's four blocks, is about 45,000 words. He was used only within the entries whose ranges his sections actually cover."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1"
+      ],
+      "note": "Chapter-level chrome in the first key again, as in the last five chapters: Barnes opens 11:1 with a bare heading and Clarke opens the same key with a verse-by-verse argument covering all thirty verses ('Christ, having finished his instructions to his disciples, departs to preach in different cities, Mat 11:1. John sends two of his disciples ... Mat 11:2-6'). Clarke also states in the same block that the verse 'properly belongs to the preceding chapter, from which it should on no account be separated' — a substantive judgment, which was used, embedded in the chrome, which was not."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "3"
+      ],
+      "note": "Four incompatible explanations of why John sent the question, all preserved in the same catena. (1) Jerome and Gregory: he asked whether Christ would descend to the world below — Jerome, 'direct me, since I am about to go down into the lower parts of the earth, whether I shall announce Thee to the spirits beneath'; Gregory, 'not that he doubted that this was the Redeemer of the world, but he asks that he may know whether He who in His own person had come into the world, would in His own person descend also to the world below.' The Gloss adds a limiting note that neither meant the preaching there to convert unbelievers. (2) Chrysostom rejects that outright — 'this seems hardly reasonable', 'the reason of his seeking to know, namely, that he might preach Him there, is even ridiculous' — and refers the question to the disciples' need, John fearing 'to leave his disciples a prey to some pernicious doctrine'. (3) Ambrose allows a real doubt of a limited kind: 'he doubted therefore though not in faith, yet in love.' (4) Lightfoot rejects both ignorance and the disciples' instruction and refers the question to John's own imprisonment. Hilary will have no doubt at all."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "11"
+      ],
+      "note": "Jerome and Pseudo-Chrysostom draw opposite inferences from the identical clause, in adjacent blocks of the same key. Jerome: 'it does not follow that because others are not greater than him, that therefore he is greater than others' — so John is made equal to the prophets and patriarchs, not set above them. Pseudo-Chrysostom: 'He that hath none greater than Himself, is greater than all.' Neither notices the other. On the second half of the verse the field is four-way: Chrysostom reports that 'some say that Christ spoke this of the Apostles'; Augustine gives two constructions with two different punctuations, one of which makes the lesser one Christ himself; Ellicott rejects that Christological reading explicitly ('Very many commentators have thought, strangely enough, that our Lord referred in these words to Himself ... it would be but a poor truism'); Clarke refers it to the gospel preacher and insists the advantage is 'merely in the difference of the ministry', neither in holiness nor in future glory."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "21",
+        "23"
+      ],
+      "note": "The hardest theological exchange in the chapter, and the two sides are set out with unusual clarity. Jerome raises the objection himself: 'If Tyre and Sidon could have done penitence at the preaching of the Saviour, and His miracles, they are not in fault that they believed not; the sin is his who would not preach to bring them to penitence.' His answers are that we do not know God's judgments, that the mission was bounded by Judea to avoid giving the priests occasion, and that those cities did afterwards believe the apostles. Augustine reports a further solution from 'a certain Catholic disputant of some note' — that the miracles were mercifully withheld because those cities would have lapsed after believing — and then gives his own, which is predestination: 'unless they be by the high sentence of God set apart from the mass of perdition through the predestination of grace, then neither words nor works are set before them by God ... it profited those not that they could have believed, for that they were not predestinated.' Remigius, in the same key, draws the contrary inference from a single word: 'The Lord, who knows all things, here uses a word expressing uncertainty—perhaps, to shew that freedom of choice is left to men.'"
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "27"
+      ],
+      "note": "The entry for 11:27 initially recomputed as grade B (compress 0.416, ttr 0.551) while every other entry in the chapter graded A. The cause was inherent to the verse rather than to padding: a 650-word treatment of Father, Son, knowing and revealing repeats those four terms unavoidably, and the repetition depresses both the zip ratio and the moving-window type-token ratio at once. The fix was not to pad but to compress — the entry was cut from 648 to 586 words and the two densest paragraphs rewritten with varied vocabulary, which lifted it to compress 0.437, ttr 0.632. Worth knowing for other high-Trinitarian verses: on this kind of passage the length target and the grade gate pull against each other, and the shorter entry is the better one."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "4",
+        "7",
+        "11",
+        "16",
+        "20",
+        "25",
+        "27",
+        "28"
+      ],
+      "note": "All nine entries re-read verse by verse against the source blocks in their declared range and self-graded A. Every attribution checked against the block header by positive voice filter — necessary here, since the donor chapter is adjacent (Matthew 10) and the Jamieson blocks read as plausible Matthew commentary. Excluded from the prose: all three Jamieson blocks; the chapter-analysis chrome opening Barnes and Clarke at 11:1. Two source labels for one author ('Chrysostom' and 'John Chrysostom') are both declared at 11:25 because both blocks are present there with distinct text; the prose attributes to each only what its own block says, and refers to the Homilies material as what he says 'elsewhere' rather than treating it as a second witness. Matthew Henry's four section-length blocks were used only within the entries whose ranges they cover. Two names were added to the school map: Pseudo-Chrysostom as eastern-antiochene and Raban as latin-fathers; both are source labels, not claims about authorship."
     }
   ]
 }
