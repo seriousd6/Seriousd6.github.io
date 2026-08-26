@@ -28904,6 +28904,57 @@
         "45"
       ],
       "note": "Origen's application at k45 is the sharpest in the chapter and was placed at the head of the moral reading: if a preacher sells for money what the Holy Spirit revealed to him, or will not teach without a fee, he is selling a dove, that is, the Holy Spirit. Gregory's satire on churchmen who sink Holy Orders into worldly traffic runs alongside it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "4",
+      "verses": [
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "Jamieson displacement, 22nd confirmation, and the most extreme duplication case yet recorded. Four JFB blocks at keys 9, 15, 21, 27 -- exact stride 6, no gap -- and all four are BYTE-IDENTICAL, the same 227-word block repeated verbatim at every landing site (md5 3a122e7d on all four). The text is not comment on Exodus at all: it is JFB on GENESIS 44, the speech of Judah before Joseph -- \"Benjamin, who stood there speechless like a victim about to be laid on the altar, when he heard the magnanimous offer of Judah to submit to slavery for his ransom\" -- followed by an appraisal of Joseph as a manager of a deep-laid plan. So the recipient lattice behaved exactly as documented (stride 6, four consecutive sites) while the DONOR CURSOR STUCK, emitting the same block four times instead of advancing. This is a new sub-class: previous chapters showed byte-identical PAIRS (luke 15 keys 13/19, numbers 22 keys 10/16 and 34/40, exodus 16 keys 29/35), never a run of four. Note also the reflexive relationship with an earlier repair: exodus 16 own displaced JFB blocks were traced to Exodus 4:24-5:14, so exodus 4 is both a donor to a later chapter and a victim of Genesis 44 here."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "4",
+      "verses": [
+        "6",
+        "11",
+        "30",
+        "31"
+      ],
+      "note": "Three further defects, one of them the confirming third sighting of a chrome class. (1) THIRD SIGHTING of the sacred-texts.com chrome, and the pattern now looks settled: it appears inside a GILL block, at the LAST VERSE of the chapter, as navigation furniture appended after the final sentence. Here at 4:31 Gill ends \"...signifying their readiness to obey. Next: Exodus Chapter 5 Sacred Texts | Bible << Previous: John Gills Exposition of the Entire Bible: Exodus: Exodu... Index Next: ...\" The first sighting was exodus 36:8 (inside a Gill block, though mid-chapter), the second leviticus 23:44 (Gill, last verse). Two of three are Gill at the chapter close. Distinct from the StudyLight template. (2) StudyLight chrome for a FOURTEENTH consecutive chapter: the Ellicott block at key 30 runs 1120 visible words of which only 137 are commentary, the other 983 the standard template. The 983 figure has now held across colossians, 1peter, revelation 5, acts, hebrews, luke, matthew, numbers, exodus 16, revelation 4, 2corinthians 13, 2thessalonians 1, leviticus 23 and exodus 4. (3) Keil and Delitzsch are cut at exactly 200 words at nine keys, and the block at key 28 is 102 words of pure KJV lemma (Exodus 4:28-31 quoted, no commentary at all), so Keil had to be suppressed from the closing entry. Also worth noting: Gill is capped at 200 at keys 24 and 25, both mid-sentence, and Albert Barnes and A.T. Robertson are entirely absent from Exodus as from Leviticus."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "4",
+      "verses": [
+        "13",
+        "21",
+        "24"
+      ],
+      "note": "Three substantial disputes. (1) At 4:13, whether \"send by the hand of him whom thou wilt send\" is a prayer for the Messiah. Clarke reports that many commentators ancient and modern held it, and refuses: \"It is right to find out the Messiah wherever he is mentioned in the Old Testament; but to press scriptures into this service which have not an obvious tendency that way, is both improper and dangerous. I am firmly of opinion that Moses had no reference to the Messiah when he spoke these words.\" Calvin, two and a half centuries earlier, rejects it on exactly the same ground: the reading is \"forced and far-fetched, which is contradicted by the context, for God would not have been so aroused to anger by such a prayer.\" Two commentators from opposite schools independently using the divine anger of the next verse as the decisive objection. (2) At 4:21, how Pharaohs heart is hardened -- four distinct positions in one chapter. Clarke cites Augustine that God hardens by withholding mercy rather than infusing malice, and argues from the Hebrew that the verb means to strengthen or embolden. Ellicott builds a three-stage developmental model: the heart hardens itself while Pharaoh is simply unimpressed, then Pharaoh hardens his own heart by an effort of will, then after two such refusals God steps in and smites him with blindness as a judgment; he supports it by showing that each of the three biblical expressions predominates in a distinct period of the narrative. Wesley makes it permissive with a named agent: \"I will at last permit Satan to harden it effectually.\" Calvin refuses all softening: whatever opposed the deliverance \"would arise from his own secret counsel\", and the king was hardened so that he might be the more gloriously overwhelmed. (3) At 4:24, who was threatened at the inn. Gill states expressly that it was Moses \"and not the uncircumcised son of Moses, as some think\". Clarke is precisely those some, and reconstructs the whole passage around it, referring the threat against a firstborn to Gershom rather than to Pharaohs son. On the manner of the visitation Ellicott says a fatal illness, and Calvin rebukes exactly that: those who \"pronounce also, too boldly, on the nature of his scourge, viz., that he was afflicted by a severe disease\" go beyond what can be known."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "4",
+      "verses": [
+        "10",
+        "17",
+        "24",
+        "29"
+      ],
+      "note": "Four things worth keeping. (1) WESLEY COPYING HENRY, the clearest instance yet found. At 4:10 Wesleys note runs: \"He was a great philosopher, statesman, and divine, and yet no orator; a man of a clear head, great thought and solid judgment, but had not a voluble tongue, nor ready utterance; and therefore he thought himself unfit to speak before great men... Moses was mighty in word, Acts 7:22, and yet not eloquent: what he said was strong and nervous, and to the purpose, and distilled as the dew, Deut 32:2.\" Henry, on the same verse, has the identical sentences with the identical two proof texts. At 4:24 it happens again: both write that the sin was \"neglecting to circumcise his son, which perhaps was the effect of his being unequally yoked with a Midianite, who was too indulgent of her child, and Moses so of her\", and both then observe that God \"was conversing with him as a friend, and now coming forth against him as an enemy\". This is the fourth chapter in which the dependence has been visible (exodus 16 was the first recorded); here it is close to verbatim. As before, where both appear in one entry they are credited as agreeing rather than as two independent witnesses. (2) At 4:17 Clarke devotes a long block to arguing that the thyrsus of Bacchus and the caduceus of Mercury are borrowings from the rod of Moses, the poets Bacchus being exposed on the Nile, named for being drawn out of the water, an eminent lawgiver who wrote his laws on two tables and worked miracles with a serpent-wreathed staff. Same class as his pagan parallels for the feast of tabernacles at leviticus 23:34. (3) At 4:29 Calvin asks the sharpest question in the chapter and answers it theologically: if slowness of speech kept Moses from addressing the people, why was the word not simply given to Aaron in the first place? Because, he says, God was pleased to prove their faith by making them receive at second hand what one man had heard directly -- from which he concludes that anyone who objects to being taught through a human voice \"is not worthy to have God as their Teacher and Master\". (4) At 4:31 Calvin alone denies that the peoples belief was real faith: it \"was without any living root\", \"such belief as might be dissipated by the first adverse wind; and so, indeed, it happened\", and those who receive Gods word eagerly deserve no praise unless faith is rooted deeply enough to stand under temptation. Gill and Clarke both take the same verse at face value."
     }
   ]
 }
