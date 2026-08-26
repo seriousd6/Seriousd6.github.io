@@ -27877,6 +27877,132 @@
         "41"
       ],
       "note": "All six entries re-read verse by verse against the source blocks in their declared range and self-graded A. Every attribution checked against the block header by positive voice filter. Excluded from the prose: all three Jamieson blocks (Mark 6 donor text — note that same-book donor text reads plausibly and needs the header check, not a subject check), all four Cyril of Jerusalem blocks (lecture sections on the right hand of the Father and on eternal life, keyed by proof-text rather than by argument), the French editorial glosses inside Calvin's blocks, the 'MATTHEW 24:1-8' lection heading closing Calvin at 12:43, and the devotional excursus filling the last 700 words of Clarke's block at 12:41. Pseudo-Jerome was added to the school map as latin-fathers; the name is a source label, not a claim about authorship, and the prose attributes to it only what its blocks say."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "8",
+        "20",
+        "26"
+      ],
+      "note": "Jamieson, Fausset and Brown displacement, fourteenth confirmation, and the first with a DROPPED landing site. Four JFB blocks sit at source keys 2, 8, 20 and 26 - strides of 6, 12 and 6 - and none of them comments on Matthew 11. In donor order they are JFB on Matthew 9:29 ('Receive this cure as granted to your faith'), Matthew 9:34 ('the demons through the prince of the demons'), Matthew 10:5 (the Samaritans as Gentiles by blood who had adopted the religion of the Jews) and Matthew 10:10 (the scrip, the coats, and the staff-or-staves variant). The donor advances by 5, 6 and 5 verses while the landing sites advance by 6, 12 and 6, so the fixed stride of 6 still governs but the slot at key 14 was skipped rather than filled. That is a new sub-pattern: the grid holds and a landing is simply dropped. All four declared residue."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott chrome constant holds for a SEVENTH consecutive chapter, and for the first time in a Gospel. Source key 30 carries an Ellicott block of 1048 words, of which 65 are commentary on Matthew 11:30 and 983 are the StudyLight page furniture. The figure is 983 exactly, as measured at colossians 2, 1peter 4, revelation 5, acts 14, hebrews 1 and luke 15: now five books across three canon sections plus a second Gospel, one fixed template appended to the chapter's last key and wholly independent of the commentary beneath it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "3",
+        "11",
+        "13",
+        "15",
+        "19",
+        "27",
+        "28"
+      ],
+      "note": "Cyril of Jerusalem is placed seven times here and only two placements comment on the verse they sit under. Genuine: key 11, Catechetical Lecture 3.6, which quotes verse 11 itself - 'its author was John, than whom was none greater among them that are born of women' - and reads baptism as the end of the Old Testament and the beginning of the New; and key 27, Lecture 6, arguing that the angels see God only as far as they are capable and citing John 6:46, which bears directly on 'neither knoweth any man the Father, save the Son'. Residue: key 3, the descent into hell, placed on 'Art thou he that should come'; key 13, byte-identical to key 11, the duplication defect again; key 15, the lecture on the chrism applied to forehead and ears, placed on 'He that hath ears to hear'; key 19, the Daniel 7 vision, placed on 'The Son of man came eating and drinking' by the words 'Son of Man came'; key 28, the lecture on the titles of the Holy Spirit, placed on 'Come unto me, all ye that labour', with no connection at all. The pattern matches luke 15: the placements are keyword matches, and only those whose host verse happens to be the lecture's own proof-text survive."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "25"
+      ],
+      "note": "New duplication sub-class: the same passage harvested twice under two different labels. At key 1 a 36-word block headed 'Chrysostom' and a 106-word block headed 'John Chrysostom' carry the same sentence of Chrysostom in two translations - the Catena Aurea rendering ('Having sent them forth, He withdrew Himself, giving them opportunity and time to do the things that He had enjoined; for while He was present and ready to heal, no man would come to His disciples') and the NPNF Homilies rendering ('That is, after He had sent them, He proceeded to withdraw Himself, to give them room and opportunity to do what He had enjoined. For while He was present and healing, no one would be willing to approach them'). The same pairing recurs at key 25, where 'Chrysostom' gives the Catena text on the wise and the babes and 'John Chrysostom' gives the Homily text on the same verse. This is distinct from the verbatim duplication already recorded, since the text is not identical - it is one author harvested from two editions and filed under two head names. Handled with SILENT_BY_ENTRY so the voice is named once."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "22",
+        "24"
+      ],
+      "note": "Verbatim duplication recurs in the Wesley stream: the block at key 22 and the block at key 24 are byte-identical ('Moreover I say unto you - Beside the general denunciation of wo to those stubborn unbelievers, the degree of their misery will be greater than even that of Tyre and Sidon, yea, of Sodom'). Both were left live because the note names Tyre, Sidon and Sodom together and so bears on the whole span, but the duplication is the same harvester behaviour recorded at luke 15 keys 13 and 19."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "3"
+      ],
+      "note": "The richest crux in the chapter is why John sent from prison, and the sources take four incompatible positions. (1) Gregory and Jerome deny that John doubted at all and read the question as asking whether Christ would descend in person to the world below, Jerome supporting it from the wording, not 'he that hath come' but 'he that is to come'; the Gloss guards the reading against misuse and Cyril of Jerusalem cites John's own question as evidence for the descent to redeem the righteous. (2) Chrysostom demolishes that reading with four arguments - John preached the death first, the question does not say 'to the world beneath', a forerunner to the dead is absurd since this life is the time of grace, and salvation after death would leave nobody lost - and makes the errand a dying teacher's provision for followers he could not simply dismiss. Calvin adopts Chrysostom's answer and calls the descent reading absurd and the self-doubt reading exceedingly foolish. (3) Ambrose proposes a doubt of love rather than of faith, John being unable to bear that the coming one should die, and compares Peter's 'this be far from thee'. (4) Ellicott alone takes the question at face value, since it comes from John and the answer is returned to him, and reads deferred hope souring into impatience; Robertson agrees in substance and Clarke reaches it by a different route. Hilary denies any doubt and reads John allegorically as the Law. Five distinct answers to one question, with two of them explicitly refuting the others."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "8",
+        "11"
+      ],
+      "note": "Two named cross-century refutations in this chapter, both from later voices against readings recorded earlier in the same catena. (1) On verse 11 Augustine offers as one of two constructions that the lesser person is Christ himself, later than John in birth but greater in nature, and repunctuates the sentence to suit; Ellicott calls it strange that so many commentators have taken it so and refutes it twice over, as a poor truism about a King outranking his herald and as having no parallel elsewhere in Christ's speech, while Calvin independently calls the same view a strange blunder that confuses personal rank with pre-eminence of office. (2) On verse 8 Gregory argues that the verse must condemn rich dress, since John is commended for coarse clothing and Peter checks the same desire in women, and Jerome extends the censure to preachers and to the houses of the rich; Calvin denies the reading outright, granting freely that other passages censure luxury but holding that this one says only that nothing in the wilderness could have drawn crowds. Augustine, between them, locates the fault in the user's appetite rather than in the goods."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "16",
+        "19",
+        "23"
+      ],
+      "note": "Four text-critical points surface in this one chapter, three of them noticed independently by more than one voice. Verse 2: Clarke records manuscripts reading 'by his disciples' for 'two of his disciples', and Robertson adopts that reading while noting the parallel in Luke has the other. Verse 16: Clarke reports that many of the best manuscripts read 'the others' rather than 'their fellows', and Ellicott rests his whole reversal of the parable on that reading, making the inviting children the condemned generation rather than Christ and John. Verse 19: Jerome reports copies reading 'wisdom is justified of her works' and prefers them, since wisdom seeks the witness of works and not of words; Clarke records the same variant with its versional support and suggests the Hebrew idiom behind 'children' produced it; Robertson notes the opposite pressure, of copies assimilating Matthew to Luke's 'by all her children'. Verse 23: Jerome reports copies that make the clause a statement rather than a question and gives a different sense for each. A sixteen-century span of witnesses converging on the same four places."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "1",
+        "7",
+        "11",
+        "16",
+        "20",
+        "25"
+      ],
+      "note": "Attribution hazards handled in this chapter. (1) Fourteen patristic head names appear, several of them label variants of one another: 'Chrysostom', 'John Chrysostom' and 'Pseudo-Chrysostom'; 'Raban' and 'Rabanus'. Build-time label subtraction was used so that the shorter name counts only where it appears outside the longer, and the two Chrysostom labels were resolved to a single named voice per entry. (2) The Catena blocks again carry in-line sub-attributions beneath their head names, so every patristic attribution was taken from the sub-head rather than the block head. (3) An anonymous 'Gloss' appears six times, the Glossa Ordinaria; it was carried in the tables as a Latin voice and named as such rather than being attributed to any father. (4) Robertson's citations of Bruce, Plummer, McNeile, Ragg and Moulton, and Barnes's of American missionaries at Sidon, were left unnamed rather than being treated as voices. Every verse self-graded A."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "11",
+      "verses": [
+        "11",
+        "13",
+        "15",
+        "27",
+        "28",
+        "30"
+      ],
+      "note": "Truncation profile for this chapter: Gill is cut at exactly 200 words at keys 27, 28 and 30, and Cyril of Jerusalem at exactly 200 at keys 11, 13, 15, 27 and 28 - two sources sharing one cap, unlike hebrews 1 where Gill was cut at 200 and Chrysostom at 302. No other source shows a floor: Henry runs to 4790 at key 25, Barnes to 1044 at key 30, Clarke to 1518-equivalent lengths, Calvin to 1423 at key 25. The cap therefore remains per-source rather than global, and the value 200 now appears in three separate chapters."
     }
   ]
 }
