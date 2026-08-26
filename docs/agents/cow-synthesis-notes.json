@@ -28565,6 +28565,123 @@
         "14"
       ],
       "note": "Three cross-references between voices inside the catena. (1) At 13:1 Ellicott calls the reading that makes Pauls own comings the \"two or three witnesses\" strained, almost fantastic, and raises what he calls a fatal objection: it turns the judge into a prosecutor. That reading is held, in this same chapter, by Chrysostom (\"setting his comings and his warnings in the place of witnesses\"), by Calvin (\"his three comings to them will be in the place of three witnesses\"), by Henry (the two epistles are the witnesses) and by Gill. Ellicott names none of them. (2) At 13:14 Barnes writes of the closing Amen that it \"is wanting, says Clarke, in almost every Ms. of any authority\" -- an explicit citation of another commentator in the same catena, matching the numbers 22 case where Ellicott cites Gill by name. Clarke block a few lines below says exactly that. (3) At 13:11 Barnes and Clarke both close their comment on the farewell greeting with the same remark, that this was among the last words the dying Cyrus spoke to his friends. Neither credits the other, and the observation is too particular to be independent; one is reading the other, or both are reading a common source. Also worth recording as a convergence rather than a borrowing: Clarke at 13:14 argues that a believer may have as full an evidence of his acceptance as of his own existence and calls any doctrine that leaves it uncertain \"a spurious gospel\", which is the same ground Calvin defends at 13:5 against the \"moral conjecture\" party -- the Arminian and the Reformed voice arriving at the same doctrine of assurance from opposite directions, nine verses apart."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "Jamieson donor bug, tenth consecutive chapter. All three Jamieson blocks are text on Luke 22, not John 9: k6 is on the strife over who should be greatest (Lk 22:24ff, 'the paschal arrangements committed to two of the Twelve'), k12 is on 'he that hath no sword, let him sell his garment and buy one' (Lk 22:36), k18 is an 852-word exposition of Gethsemane (Lk 22:39-46). Notably the previous chapter repaired, john 11, drew from Luke 23 - two consecutive John chapters taking donors from adjacent Luke chapters. All three excluded. The k18 block alone contributes 852 foreign words to this chapter's nominal source-word count."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "8"
+      ],
+      "note": "Cyril of Jerusalem chrome, two blocks with no bearing on their host verses. The k6 block is Catechetical Lecture section 26 on the meaning of the word Ecclesia and how to find the Catholic Church in a strange city; the k8 block is section 18 on why the Spirit gave Paul fourteen epistles, whose only link to the verse is the incidental phrase 'Is not this he that was formerly a persecutor?' echoing 'Is not this he that sat and begged?'. Neither was used."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "13",
+        "35",
+        "39"
+      ],
+      "note": "Matthew Henry section-level blocks dominate four keys and span whole pericopes: k1 4828w on vv.1-7, k13 9331w on vv.13-23, k35 1756w on vv.35-38, k39 1569w on vv.39-41, plus k8 1480w and k24 193w. Together roughly 19,000 of the chapter's 70,461 words, each block repeating across every verse it covers, so per-key source counts overstate distinct material substantially."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "35"
+      ],
+      "note": "Two voice labels for one author again, as in john 11 and matthew 11: 'Chrysostom' (Catena Aurea extracts) and 'John Chrysostom' (Homilies on John) both appear with distinct text at keys 1, 6, 17, 30, 34 and 35. A dedupe by author name would lose the Homilies material."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "35"
+      ],
+      "note": "Key 35's Catena block (1150w) covers vv.35-41, so the same source block supplies both the final two entries. The Hilary material on believing in the Son of God rather than in Christ occurs only there, and is the sole appearance of that voice in the chapter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "1-41"
+      ],
+      "note": "Tiled at 9 pericopes over 41 verses and 70,461 usable source words: 1-5, 6-7, 8-12, 13-17, 18-23, 24-29, 30-34, 35-38, 39-41. All nine entries landed 640-650 QA words, grade A, overall compression about 12:1. Every first draft again overshot the 650 cap, by 54 to 199 words."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "39-41"
+      ],
+      "note": "The 39-41 entry has the lowest compression in the chapter at 0.438 and the lowest TTR at 0.618, both clearing the A thresholds (0.42 and 0.58) but by the narrowest margins. The cause is inherent: a treatment of 'that they which see not might see, and that they which see might be made blind' cannot avoid repeating see, blind, sight and judgment."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "7"
+      ],
+      "note": "Foregrounded a real split on the name Siloam. Clarke reports and favours the view that the fountain typified the Shiloh of Jacob's blessing and that the man was sent there to point him to that prophecy; Barnes had printed exactly that in his own first edition and here withdraws it, on the ground that Siloam derives from the verb to send while Shiloh means rest, and that there is no evidence John had the prophecy in mind. Lightfoot uses the gloss for a third purpose, to identify which of two pools was meant. All three are given without adjudication."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "31",
+        "32",
+        "33"
+      ],
+      "note": "Foregrounded the split over 'God heareth not sinners'. Barnes treats it as an uninspired man's opinion with no bearing on prayers for salvation, and says it would not be true if it had; Ellicott warns the sentence has been lifted from context to bear a darkness it cannot carry; Calvin explicitly rejects that softening and says it is the uniform doctrine of Scripture; Clarke and Wesley take a middle course by restricting the word to heathen or to the impenitent. Given in the 30-34 entry without adjudication."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "9",
+      "verses": [
+        "6"
+      ],
+      "note": "Ellicott's treatment of the clay (762w at k6) is the most substantial defence in the chapter of Christ's use of ordinary means, citing Pliny, Tacitus and Suetonius on fasting saliva as a recognised eye remedy, against Robertson and Clarke who deny any medical tendency. Both sides are represented in the 6-7 entry."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "rejected",
+      "book": "john",
+      "chapter": "9",
+      "note": "failed lint (chapter); reverted, attempt kept at scratchpad/rejected/john-9-20260826-043909"
     }
   ]
 }
