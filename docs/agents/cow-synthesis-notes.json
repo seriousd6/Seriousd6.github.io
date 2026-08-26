@@ -31278,6 +31278,82 @@
         "1-28"
       ],
       "note": "Fidelity self-grade A for all 12 pericopes. Every quoted string was checked back against the cow catena block it came from; no voice is credited with a position it does not hold; held_by lists and outlier attributions were reconciled against each key's voice list after trimming (Gill dropped from the vv.6-8 tile and Barnes from the v.24 tile, where trimming removed their last citation; Wesley added to vv.19-23). Second-hand mentions were kept out of the voice lists: Chrysostom named inside Calvin's note at vv.3-5 and inside Clarke's manuscript list at v.17 is a report, not a source citation, and was reworded away. Excluded throughout: all five Jamieson stride-6 Passion blocks (keys 4, 10, 16, 22, 28), Cyril of Jerusalem's misfiled catechetical peroration at key 25, and the JavaScript chrome tail of Ellicott's key-28 block. Ellicott's four-part Nazarite excursus, hoisted from v.18 to keys 1-4, was used at the v.18 pericope where it belongs. Chrysostom's key-18 homily and Henry's five inflated section blocks were redistributed across the pericopes they actually treat. Source corpus 53,050 words across 28 keys tiled into 12 pericopes at an overall 6.8:1 compression, inside the 5-8:1 norm; the widest tile is v.18 alone at about 10:1, kept single because the verse carries the vow crux, and the tightest is vv.14-16 at 3.6:1."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25",
+        "31",
+        "37"
+      ],
+      "note": "Jamieson stride-6 residue lattice again, seventh consecutive chapter. Donor is Matthew 10-11 throughout (Beelzebul household at 13, Luke 21:18 at 19, ambassador saying at 31), seven keys, tied with acts 4 for the longest run seen. Declared as excluded_voices at each key."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "50"
+      ],
+      "note": "Ellicott block at key 50 runs past his comment into StudyLight site furniture: a Copyright Statement paragraph, terms of use and privacy links, then roughly 1500 characters of raw CSS from the site stylesheet. Third distinct chrome pattern recorded (983-word constant, 303-word truncation, now a stylesheet dump). Only the pre-chrome text was used."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "3",
+        "11"
+      ],
+      "note": "Clarke reproduces Lightfoot almost verbatim three times in this chapter: the Passover-calendar reckoning and the Kimchi citation at keys 1 and 3, and the whole set of rabbinic canons about a beast fallen into a ditch at key 11. He credits Lightfoot only at key 11. Treated as one witness where the wording is identical."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "17",
+        "18",
+        "28",
+        "29",
+        "31",
+        "32",
+        "40",
+        "44",
+        "50"
+      ],
+      "note": "Cyril of Jerusalem appears with two different duplicated blocks. The Spirit-operations block sits at 17, 18, 28, 31, 32, 44 and 50 and is on-verse only at 18. A second block, on binding the strong man and on the three days, sits at 29 and 40 and is genuinely on-verse at both. Duplication again proves nothing by itself; only the content test decides."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "20"
+      ],
+      "note": "Lightfoot reads the bruised reed and the smoking flax as measures of noise rather than portraits of persons: Christ will make no more sound than a snapping reed or a doused wick. Every other voice in the entry reads them as the weak believer. A genuine structural disagreement, not a difference of emphasis."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "12",
+      "verses": [
+        "9"
+      ],
+      "note": "Roster mismatch in scripts/synthesis_qa.py, same class as the Cyril of Jerusalem case filed at acts 4. VOICE_LABELS carries the bare label Robertson while the catena head reads A.T. Robertson, so declaring the full name as an exclusion is undeclarable and the validator rejects it. Declared as Robertson instead, which the roster does detect. Victorinus of Pettau remains the third instance, still open for an owner decision."
     }
   ]
 }
