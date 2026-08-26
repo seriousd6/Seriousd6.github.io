@@ -32594,6 +32594,77 @@
         "25"
       ],
       "note": "Tile v.25 self-graded A. Ellicott, Robertson, Calvin, Gill, Barnes, Clarke and Wesley verified. Clarke's polemic about the Roman pontiffs is quoted in his own words."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson stride-6 residue lattice, ninth consecutive chapter. Donor is Luke 7-8 throughout: Simon the Pharisee and the woman at keys 2 and 14, the withheld salute at key 8, Herods steward Chuza at key 20. A clean single-donor lattice again after the mixed-donor variant recorded at mark 6. Declared as excluded_voices at each key."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "11",
+        "26",
+        "31",
+        "34"
+      ],
+      "note": "Systematic defect in the Catena Aurea on Luke as scraped. Speaker changes inside a block are left as inline uppercase tags rather than becoming new blocks, so the strong-tag boundaries misattribute material. Examples: the block labelled Cyril at key 1 turns into Theophylact halfway through; the block labelled Ambrose at key 3 carries both THEOPHYL and BEDE continuations; the Bede block at key 26 carries a CHRYS continuation; Ambrose at key 34 carries AUG, THEOPHYL and CYRIL in turn. Where the inline voice also has a real block at that key the material was reattributed correctly; where it does not, the material was used without a name rather than misattributed, since naming it would trip the not-sourced-here lint. Worth an owner decision on whether the scraper can split on the inline tags."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "19"
+      ],
+      "note": "Cross-chapter verse-number collision. The Matthew Henry block at key 19 is his exposition of Luke 16:19-31, the rich man and Lazarus, not of Luke 17:19. Same family as the documented 2 Chronicles 27 key 16 case that holds Henry on chapter 28. Declared as residue. Henry at key 20 was checked and is genuine, so the collision is isolated to key 19."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "37"
+      ],
+      "note": "Ellicott block at key 37 is 1089 words of which about 110 are his comment; the remainder is StudyLight chrome, navigation crumbs and a stylesheet dump. Third instance in three consecutive chapters and the third time at the chapter final verse, after matthew 12 key 50 and mark 6 key 56. The pattern is now established well enough to be worth a scraper fix rather than a per-chapter workaround."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "31"
+      ],
+      "note": "The Catena on Luke carries Cyril of Alexandria under two distinct labels, a bare Cyril and a full Cyril of Alexandria, in the same chapter and sometimes at the same key. Treated as two voices for lint purposes since the build counts labels, and both mapped to eastern-alexandrian. The bare label is declarable by the synthesis_qa roster while the full one is not, which is the same mismatch filed for Cyril of Jerusalem and for Robertson."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "17",
+      "verses": [
+        "21"
+      ],
+      "note": "A settled-looking rendering that both grammarians reject. Ellicott and Robertson each argue at length that within you and not among you is the necessary sense, Robertson holding that the classical examples cited for among do not survive investigation. Barnes leaves both open and Wesley keeps both at once. The entry records the split rather than adopting the margin."
     }
   ]
 }
