@@ -1,452 +1,232 @@
 {
  "1": {
   "voices": [
-   "Bede",
-   "Theophylact",
-   "Augustine of Hippo",
-   "Pseudo-Chrysostom",
-   "Chrysostom",
-   "Pseudo-Jerome",
-   "Glossa Ordinaria",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "Theophylact",
+   "Bede"
   ],
+  "range": "1",
+  "pericope_label": "He arose and came into the coasts of Judea beyond Jordan, and taught the people again",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The transition to the Peraean ministry on Christ's last journey to Jerusalem; much of Luke and John 7-11 intervenes (Robertson, Lightfoot); the crowds resort to him and he teaches as was his constant practice."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The crowds come to be taught, the Pharisees to tempt (Bede); Christ enters Judaea, where his Passion must be, to do good to the multitudes (Theophylact)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill locates the departure from Galilee and particularly from Capernaum."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Christ the itinerant preacher teaches even those already taught again; Moses' permission of divorce was for hardness of heart, not to be used."
+    "summary": "Henry reads the verse as a portrait of Christ&rsquo;s habits, an itinerant preacher whose parish was the whole land and whose circuit was like the sun&rsquo;s, compares Matthew&rsquo;s healing with Mark&rsquo;s teaching as mutually explanatory, and draws from the word again that those already taught need teaching again."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes the transactions Matthew and Mark both omit and which Luke and John supply, and offers an alternative rendering of the opening verb; Wesley marks the departure from Galilee."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Robertson both mark the long stretch of other Gospels the harmonists insert here and identify the Peraean ministry, Robertson adding that only weeks now remain and reading the crowds as passover caravans travelling with Jesus; Lightfoot argues that half a year separates this journey from the words just before it and concludes that a full history is composed only out of the evangelists together."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact explains that Christ enters the region his enemies had often driven him from because his Passion was to happen there, but keeps to the confines rather than Jerusalem so as to benefit multitudes who were not evil."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede marks the verse as the point where Mark turns from Galilee to Judaea, distinguishes the wider and narrower senses of the name, and contrasts the multitude who gather to be taught and healed with the Pharisees who come only to tempt."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Lightfoot, Robertson, Ellicott and Clarke independently converge on the same observation, that a large and unmarked interval of narrative belongs between this chapter and the last."
+  ],
   "themes": [
-   "coasts of Judaea beyond Jordan",
-   "the people resort again",
-   "as he was wont, he taught",
-   "Peraean ministry"
+   "from Galilee to Judaea",
+   "the Peraean ministry",
+   "gaps between the Gospels",
+   "teaching as constant practice"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "2": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
    "A.T. Robertson",
-   "John Wesley"
+   "Theophylact",
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Augustine"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees ask not to learn but to ensnare (Robertson) — a question with a precipice on either side (Theophylact); perhaps hoping to entangle Christ with Herod as the Baptist was."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a good question if humbly asked, but put to tempt — ministers must guard against being ensnared under pretence of being consulted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "is it lawful to put away his wife",
-   "tempting him",
-   "the Pharisees' snare",
-   "question with a precipice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ's prudent counter-question turns them to Moses (Deuteronomy 24:1), drawing the ground of his answer from their own mouths, before going back to the creation ideal (Genesis 1:27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the seed growing secretly (Mark 4:27), belongs elsewhere, not this verse."
-   }
-  ],
-  "themes": [
-   "what did Moses command",
-   "Christ's counter-question",
-   "respect for Moses",
-   "drawing out their answer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Pharisees cite Moses' 'bill of divorcement' (Deuteronomy 24:1), reflecting the lax Hillel view of easy divorce; Christ takes the stricter Shammai view, expounding marriage's purpose (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bill of divorcement",
-   "Moses suffered",
-   "permitted not commanded",
-   "Hillel vs Shammai"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "2-5",
+  "pericope_label": "Is it lawful to put away a wife? For the hardness of your heart he wrote you this precept",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: Christ interprets Moses' permission as a concession 'for the hardness of your heart' — no honour but a confession of sin; to claim it is to admit one's own hardness (Henry)."
+    "summary": "Gill takes the approach as an attempt to ensnare rather than to learn, and marks the joints of the dialogue, including that Christ&rsquo;s answer bears on the sufferance of Moses which they had urged."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Robertson allows that the word for tempting can mean testing and still judges their motive evil, offers two guesses at their hope, notes that Jesus goes behind the Mosaic concession to the creation, and identifies the bill as a diminutive rendered a libel of forsaking, aligning the questioners with the school that allowed easy divorce and Jesus with the stricter one."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact describes a question built with a precipice on either side, so that either answer could be turned against him out of Moses; Chrysostom reads the clause about hardness of heart as rescuing Moses from their accusation and turning the charge on themselves; Pseudo-Chrysostom takes the same clause as measuring the men, since a soul purged of desire and anger could bear the worst of women."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the written bill was a delay to deter the hasty and give the wise room to reconcile; only an unmeltable hardness proceeded to divorce (under v.1)."
+    "prevalence": "single",
+    "summary": "Augustine harmonises the two Gospels on who raised the bill of divorcement first, arguing that the intention of the speakers is shown either way so that a difference in the manner of relating is no discrepancy, and offering a second reconstruction of the exchange."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Pseudo-Chrysostom alone reads the concession as calibrated to the parties rather than to the institution, so that what is permitted depends on what the passions have already done to the mind."
+  ],
   "themes": [
-   "hardness of your heart",
-   "Moses' concession",
-   "regulating an evil",
-   "confession of sin"
+   "a question built as a trap",
+   "the concession of Moses",
+   "harmonising the two accounts",
+   "hardness of heart"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.33
+   }
   }
  },
  "6": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Pseudo-Jerome",
+   "Gloss"
   ],
+  "range": "6-11",
+  "pericope_label": "From the beginning of the creation God made them male and female: what God hath joined together",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill identifies the phrase as a common Jewish form of speech, records that two versions and the oldest copy he knew omit the words of the creation, and flags a Persian addition with no foundation in the text."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ appeals from Moses' permission back to the creation ordinance — God made one man and one woman (Genesis 1:27), condemning polygamy and divorce at pleasure (Wesley)."
+    "summary": "Ellicott marks the private question in the house as peculiar to Mark despite his generally shorter narrative; Robertson notes the absence of Matthew&rsquo;s exception clause and judges the point implied anyway, since a formal divorce does not annul a consummated marriage while the breaking of that bond does."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley draws from the phrase about the beginning of the creation that no creation preceded the one Moses describes, and from the second clause that Adam was made male only and Eve female only; on the saying itself he concludes that all polygamy is totally condemned."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: had God willed divorce and remarriage he would have created several women; 'male and female' (Bede) binds them by the tie of one wife."
+    "prevalence": "several",
+    "summary": "Chrysostom argues from the order of creation that a single woman was made for a single man, presses the word cleave as showing marriage indissoluble, and extends the conclusion from marriage to the union of Christ and the Church; Pseudo-Chrysostom explains why the second union is called adultery, notes that the law forbade only what was plainly adultery while Christ forbids what was neither plain nor commonly known, and resolves the difference between Matthew and Mark over who was addressed."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Pseudo-Jerome explains the word again as referring back to the subject the Pharisees had raised and attributes the remark to Mark in his own person; Gloss takes the repetition as a lesson, since a saying of the Word repeated produces thirst rather than weariness."
    }
   ],
   "debates": [],
   "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on the great tribulation and Antichrist, is an off-topic catechetical aside, not on this verse."
-   }
+   "Wesley uses the verse as evidence in two arguments outside its subject, one about the age of the creation and one about the original constitution of Adam."
   ],
   "themes": [
-   "from the beginning of the creation",
-   "male and female",
-   "the creation ordinance",
-   "monogamy by design"
+   "the order of creation",
+   "marriage indissoluble",
+   "the private question in the house",
+   "what Mark omits"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The foundational text (Genesis 2:24): a man leaves father and mother to cleave to his wife — marking both the nearness and permanence of the bond, supreme over all natural ties (Henry)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: 'he shall cleave' shows the impossibility of severing marriage — an inseparable union."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.01
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "leave father and mother",
-   "cleave to his wife",
-   "Genesis 2:24",
-   "permanence of marriage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'No more twain, but one flesh' (Genesis 2:24) — the most intimate, sacred union, ground of the prohibition (Henry); Paul applies it to Christ and the Church (Ephesians 5:31)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Chrysostom/Bede: framed of one root they join into one body, figuring the inseparable union of Christ and his Church."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they twain one flesh",
-   "no more twain",
-   "the most intimate union",
-   "figure of Christ and Church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The climax: since God himself joins husband and wife into one flesh, man must not put them asunder (Henry) — divorce a presumptuous undoing of God's own work."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Chrysostom: an awful argument — if those God joined are not to be separated, much more the Church from Christ; Bede: man cannot separate them, but God alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what God hath joined together",
-   "let not man put asunder",
-   "God ties the bond",
-   "indissolubility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A detail peculiar to Mark (Ellicott): the disciples ask again privately 'in the house' — the place of fuller instruction apart from crowd and Pharisees (Henry)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The disciples were not fully satisfied and question again (Theophylact); repetition of the Word breeds not weariness but hunger (Gloss)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in the house",
-   "disciples asked again",
-   "private instruction",
-   "seeking further light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Divorce-and-remarriage is adultery 'against her' — wronging the first wife by breaking the one-flesh bond (Henry); Mark omits the Matthean exception, though the principle is implied (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "put away his wife and marry another",
-   "committeth adultery against her",
-   "wrong to the first wife",
-   "Mark omits the exception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
@@ -456,122 +236,144 @@
    "Charles Ellicott",
    "A.T. Robertson"
   ],
+  "range": "12",
+  "pericope_label": "And if a woman shall put away her husband, and be married to another",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill denies that Jewish law or practice allowed a wife to divorce her husband, allowing only that it may have crept in about this time in the nation&rsquo;s declining state, borrowed from the Gentiles."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the verse as evidence that wives did in some cases assume the same right, while admitting he can find no such right in Jewish law, defends an equally balanced law as a mutual check against the evils it was meant to cure, and lays down his own rule that divorce should be permitted only where the parties are miserable together and both perfectly willing to separate."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Peculiar to Mark and fitting his Roman readers: the wife who divorces her husband and remarries also commits adultery (Herodias, Salome) — the bond binds both sexes equally (Ellicott, Robertson)."
+    "summary": "Robertson distinguishes law from practice, noting that Greek and Roman law allowed it where Jewish law did not, that Herodias and Salome did it anyway, and rejects the suggestion that Mark added the clause for a Roman readership, since Jesus knew the practice existed; Ellicott marks the clause as peculiar to Mark and the only place where sentence is passed on the divorcing wife, and holds that one cause only justifies dissolution, every wider permission being a concession to hardness of heart."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether a Jewish wife could divorce her husband: Gill denies it was law or practice except as a late Gentile borrowing, Clarke infers from the verse that she sometimes could while conceding he cannot find the law, and Robertson separates the two questions by granting the Roman law and citing Herodias and Salome as instances.",
+   "On what the passage permits: Ellicott allows one cause only and treats every wider ground as a concession to hard hearts, while Clarke proposes mutual misery and mutual willingness as the standard."
+  ],
+  "outliers": [
+   "Clarke argues for the symmetry of the right on grounds of justice rather than exegesis, holding that a one-sided permission would itself be oppressive."
+  ],
   "themes": [
-   "if a woman put away her husband",
-   "she committeth adultery",
-   "equality of the bond",
-   "Mark's Roman context"
+   "the wife who divorces",
+   "law and practice compared",
+   "peculiar to Mark",
+   "grounds for dissolution"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.03
+   }
   }
  },
  "13": {
   "voices": [
-   "Theophylact",
-   "Chrysostom",
-   "Bede",
-   "Pseudo-Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Chrysostom",
+   "Origen"
   ],
+  "range": "13-14",
+  "pericope_label": "Young children brought to him, the disciples rebuking those that brought them",
   "schools": [
    {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "The children brought in great faith that Christ's touch would bless them (Theophylact); the disciples rebuke from a worldly pride Christ would tread underfoot (Chrysostom)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "'Of such is the kingdom' — childlike innocence, simplicity, and teachable faith that receives without contradicting (Bede, Origen); ministers must not forbid the lowly brought to Christ."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill identifies the bringers as parents, friends or nurses who had heard his fame and reckoned him a great prophet."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the disciples thought children useless and beneath Christ's dignity; he was displeased that they would keep any from him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they brought young children",
-   "the disciples rebuked them",
-   "childlike faith",
-   "of such is the kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Henry infers from the children needing neither cure nor teaching that those who brought them were concerned for their souls, which he makes every parent&rsquo;s principal care, and reads the episode as an encouragement to the weak and childish among grown people as well as to the young."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark alone records Christ's strong indignation ('moved with indignation') at the disciples' rebuke; he welcomes the children — to hinder them is a crime (Robertson); 'of such is the kingdom' claims it for the childlike."
+    "summary": "Robertson finds repetition in the imperfect, notes that no question of baptism or salvation was in view, calls the indignation a strong word of deep emotion and warns that parents who hinder their children will answer for it; Barnes explains the laying on of hands as the customary form of blessing and gives two reasons for the displeasure; Ellicott observes that the word used of our Lord here is peculiar to Mark."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley states the fault as blaming the blameless and hindering a blessing, and takes the saying to mean that the kingdom is composed of such, grown persons of a child-like temper included."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact contrasts the faith of the multitude, who believed a blessing came by the mere touch, with the wickedness of the Pharisees just described; Chrysostom reads the disciples&rsquo; interference charitably, as regard for Christ&rsquo;s dignity, and takes the answer as a lesson in modesty against worldly pride."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen turns the rebuke into a rule for teachers, that none should forbid a man who brings the low born and weak to the Saviour, and that disciples grown to full stature should become as children to gain children, since Christ himself humbled himself and became a child."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Robertson takes the occasion to deny that anything in the passage bears on baptism, a point none of the others raise here."
+  ],
   "themes": [
-   "much displeased",
-   "suffer the little children",
-   "forbid them not",
-   "of such is the kingdom"
+   "children brought for blessing",
+   "the disciples&rsquo; interference",
+   "indignation in Christ",
+   "parents and their children&rsquo;s souls"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
+   }
   }
  },
  "15": {
@@ -579,43 +381,77 @@
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Theophylact",
+   "Bede"
   ],
+  "range": "15",
+  "pericope_label": "Whosoever shall not receive the kingdom of God as a little child, he shall not enter therein",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the opening formula is the one our Lord used when about to assert something of moment."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The kingdom is received only 'as a little child' — with simplicity, humility, faith, and trusting obedience, disclaiming all self-worthiness (Barnes, Wesley); the condition is absolute (no entrance otherwise), rebuking the disciples' dispute about greatness (Ellicott)."
+    "summary": "Ellicott notes the verse is absent from Matthew, defines receiving the kingdom as a child as simplicity, faith, humility and love, and turns it against disciples disputing which of them was greatest; Barnes lists the child&rsquo;s qualities and presses the exclusion on mere professors; Robertson makes simple obedience the point, remarks on the poor results of a psychology that argues against teaching children to obey, and cautions that Christ does not say children are in the kingdom because they are children."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley defines the child-like reception as totally disclaiming all worthiness and fitness, as if one were but a week old."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact presses that Christ says the kingdom belongs to such and not to these, meaning those who have in intention and in work the harmlessness and simplicity children have by nature, and draws the comparison of a child who will not quit his mother though beaten nor scorn her poor clothing."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede offers two readings, innocence and purity of mind, or else the manner in which a child receives teaching without contradiction or counter-argument, so that the word of the Lord is to be taken with simple obedience and no gainsaying."
    }
   ],
   "debates": [],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the boat and teaching, belongs elsewhere, not this verse."
-   }
+   "Robertson enters a caution none of the others raise, that the verse makes childhood a model for adults rather than a title to the kingdom."
   ],
   "themes": [
-   "receive the kingdom as a little child",
-   "shall not enter therein",
-   "childlike humility and faith",
-   "the condition of entrance"
+   "receiving the kingdom as a child",
+   "obedience and teachableness",
+   "profession without reality",
+   "a saying Matthew omits"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.9
+   }
   }
  },
  "16": {
@@ -624,269 +460,306 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ folds each child in his arms and blesses them (mentioned by Mark alone) — a rebuke to the disciples and a model for parents to bring children to Christ; Barnes/Clarke draw the dedication/infant-baptism application."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The embrace figures Christ reconciling his fallen creation to himself; the lowly in spirit are worthy of his blessing (Pseudo-Chrysostom, Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "took them up in his arms",
-   "put his hands upon them",
-   "blessed them",
-   "Christ's tenderness to children"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Bede",
-   "Theophylact",
-   "Chrysostom",
-   "Origen",
-   "Pseudo-Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Pseudo-Chrysostom",
+   "Bede"
   ],
+  "range": "16",
+  "pericope_label": "And he took them up in his arms, put his hands upon them, and blessed them",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill collects the versions, which have him take them upon his arms or into his bosom, all expressing great tenderness."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ruler eagerly runs and kneels (details only in Mark) with a serious question about eternal life — every outward mark of earnestness and reverence (Robertson, Henry)."
+    "summary": "Ellicott prefers folded them in his arms and leaves open whether they were lifted at all, noting the word is Mark&rsquo;s alone and the blessing stated only here; Robertson reads the gesture as a rebuke to the over-particular disciples, finds repeated action in the imperfect and a hand laid on each child, and calls it a great moment for every mother and child; Barnes frames the blessing as a question of privilege rather than duty and applies it to infant baptism."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke argues from the embrace to infant baptism, dismissing the dispute over mode as unnecessary, and denounces parents who withhold it in the sharpest terms in the chapter."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom reads the lifting as the Creator reconciling himself to a creation that had fallen away, and the laying on of hands as divine power exercised in a human manner, since being God he kept to human ways of acting as very man."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: his question and confession are sincere, not tempting; yet Theophylact marks the love of money beneath, which would cause his sorrow."
-   },
-   {
-    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: a hopeful approach — running (humility), kneeling (veneration), asking the weightiest question; 'some hope when people enquire what they shall do to get to heaven.'"
+    "summary": "Bede finds in the embrace the same lesson as in the saying, that the lowly in spirit are the ones worthy of Christ&rsquo;s blessing and grace."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the passage bears on infant baptism: Barnes and Clarke both argue from it that a parent may and should devote his children in the ordinance, while Robertson had already said of the same scene that no question of baptism or salvation was involved in it."
+  ],
+  "outliers": [
+   "Clarke goes beyond argument to imprecation, saying it would be no crime to pray that those who withhold baptism from their children should never hear a child call them father or mother."
+  ],
   "themes": [
-   "one running and kneeled",
-   "Good Master",
-   "inherit eternal life",
-   "the rich young ruler"
+   "the embrace and the blessing",
+   "infant baptism disputed",
+   "divine power in human manner",
+   "the lowly in spirit"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.49
+   }
   }
  },
- "18": {
+ "17": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Lightfoot",
+   "Theophylact",
+   "Chrysostom",
+   "Bede"
   ],
+  "range": "17-18",
+  "pericope_label": "One came running and kneeling: Good Master, what shall I do? Why callest thou me good?",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the movement between the scenes, from the coasts of Judea toward Jerusalem."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the manner of the approach as a series of favourable signs, humility in the running, earnestness in the haste, courage in coming publicly rather than by night as another ruler had done, and in the kneeling a promise of obedience and not merely of obeisance."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Why callest thou me good?' is no disclaimer of deity but a probe — forcing the man to weigh the title; absolute goodness belongs to God alone (Ellicott, Robertson)."
+    "summary": "Robertson notes the running and kneeling as details peculiar to Mark, insists the counter-question is no disclaimer of deity, and reads it as a challenge to define the word in its absolute sense; Barnes takes the running for the intensity of a man seeking the way of life and holds such zeal cannot be too intense if well directed; Lightfoot argues from custom and rabbinic instances that the kneeling involved taking hold of the knees and kissing them; Ellicott states the drift of the question as forcing the man back on the conditions of absolute goodness."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom explains the reply by the questioner&rsquo;s assumption, that a man who came to Christ as to a Jewish teacher was answered as Man, and denies that men are excluded from goodness except by comparison with God; Theophylact takes the words as meant to raise the young man&rsquo;s mind to know him as God, draws a rule against flattery in conversation, and wonders at a man who asks for eternal life while loving his money."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: Christ implies he is God ('none good but God'); Chrysostom: he answered as man one who approached him as a mere teacher, excluding men only from comparison with God's goodness."
+    "prevalence": "single",
+    "summary": "Bede supplies the connection with what precedes and refuses to read the counter-question as a disclaimer, taking the one good God for the undivided Trinity, so that Christ does not deny he is good but implies that he is God."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Lightfoot alone treats the kneeling as a technical gesture with a documented form, arguing that the Greek covers taking hold of and kissing the knees rather than merely bending them."
+  ],
   "themes": [
-   "why callest thou me good",
-   "none good but God",
-   "probe toward his deity",
-   "God the standard of good"
+   "zeal to know the way of life",
+   "one good God",
+   "deity implied, not denied",
+   "flattery and true honour"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Bede"
   ],
+  "range": "19-20",
+  "pericope_label": "Thou knowest the commandments; and he answered, All these have I observed from my youth",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that the Jews taught these commandments to their children so the questioner could be expected to know them, judges him ignorant of their extent and spirituality, and hears a great deal of pertness in his reply."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ points to the second-table commandments (duty to neighbour); 'Defraud not' (for 'covet') is a special probe aimed at the rich man's gains (Ellicott, Barnes)."
+    "summary": "Ellicott marks the prohibition of defrauding as peculiar to Mark and aimed at this man in particular, pressing it as a series of questions about ill-gotten gains, withheld wages and sharp bargains with the poor; Barnes defines the fraud and argues that the clause condenses the ninth and tenth commandments; Robertson notes the emphatic form of the answer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley observes that the man now stands reproved and quietly drops the epithet he had begun with, no longer calling him good."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: the commandments set before him the law's righteousness, the childlike blamelessness proposed for entering the kingdom (under v.17)."
+    "prevalence": "single",
+    "summary": "Bede explains why the answer points to the commandments at all, since the righteousness of the law, kept in its own time, conferred eternal life as well as earthly goods on those who chose it."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone treats the added clause as personally aimed, reading it as a question put to a rich man about how his wealth was got."
+  ],
   "themes": [
-   "thou knowest the commandments",
-   "Defraud not",
-   "the second table",
-   "probing the rich man"
+   "the commandments recited",
+   "defraud not",
+   "covetousness and fraud",
+   "a title quietly dropped"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The young man confidently claims to have kept all from his youth — sincere and outwardly moral, yet betraying a shallow grasp of the law's spiritual depth (Henry; cf. Romans 7); he drops 'Good' now (Wesley)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all these have I observed",
-   "from my youth",
-   "self-ignorance of the moral man",
-   "shallow grasp of the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.45
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot",
+   "Cyril of Jerusalem",
+   "Pseudo-Chrysostom",
+   "Origen"
   ],
+  "range": "21",
+  "pericope_label": "Jesus, beholding him, loved him: one thing thou lackest",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark alone records Christ's loving look (perhaps the rabbinic kiss of approval, Lightfoot); the command to sell all, give, take up the cross, and follow is a touchstone of whether he loves God above wealth."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: Christ's 'love' is a real but lesser love for the man's virtues, not saving love (degrees of God's love); perfection lies in keeping the law, which the rich man fails while attached to riches — against the monks' claim of 'perfection.'"
+    "summary": "Gill distinguishes Christ&rsquo;s special love for those given him by the Father from a human affection for an appearance of moral good, and reads the look as an unspoken correction; Calvin denies that the one thing lies outside the law, insists that the giving and not the selling is the virtue, mocks the philosopher who threw his money into the sea, and makes the cross the heaviest part of the demand."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson says Jesus fell in love with the youth; Barnes limits the word to natural affection, since the sequel showed the man no disciple, and reads the command as a test of whether he loved God more than his wealth; Lightfoot and Ellicott independently supply the rabbinic custom of kissing the head of a promising pupil, and Ellicott notes that the call to take up the cross is Mark&rsquo;s alone and shows Christ&rsquo;s clear prevision of his death."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke grounds the love in the man&rsquo;s youth, earnestness and sincerity, names the lack as a heart disengaged from the world, and rules out other answers as being wise above what is written; Wesley finds the dawnings of good in him and calls the lack the love of God, without which religion is a dead carcass."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Theophylact: a great difference between having and loving riches; Cyril: wealth rightly used is no fault — money may become a door to the kingdom (give to the poor)."
+    "summary": "Pseudo-Chrysostom asks how Christ could love a man he knew would not follow, and answers that the love earned by keeping the law was not forfeited by failing to reach perfection; Cyril of Jerusalem argues that gold and silver belong to God, that a man may even be justified by money in feeding the hungry, and that money may become a door of the kingdom."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen takes the gesture as an endorsement of the man&rsquo;s profession, since Christ saw that he answered with a good conscience."
    }
   ],
-  "debates": [],
+  "debates": [
+   "How far the love reaches: Robertson, Clarke and Wesley take it at face value as real affection for what was good in him, Barnes and Gill restrict it to natural liking distinct from saving love, and Origen and Pseudo-Chrysostom go further still, treating it as an endorsement of a profession honestly made.",
+   "What the one thing is: Barnes makes it a test of sincerity, Clarke a heart disengaged from the world, Wesley the love of God, and Calvin denies it is anything outside the law at all, since covetousness already breaks it."
+  ],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the stilling of the storm ('What manner of man'), belongs to Mark 4, not this verse."
-   }
+   "Cyril of Jerusalem defends money as a positive instrument of salvation rather than an obstacle to it, arguing from the works of mercy that a man may be justified by what he spends."
   ],
   "themes": [
-   "beholding him loved him",
-   "one thing thou lackest",
-   "sell all and give to the poor",
-   "take up the cross and follow"
+   "the look and the love",
+   "one thing lacking",
+   "selling and giving",
+   "riches neither good nor evil"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
   }
  },
  "22": {
@@ -896,366 +769,271 @@
    "Charles Ellicott",
    "A.T. Robertson"
   ],
+  "range": "22",
+  "pericope_label": "And he was sad at that saying, and went away grieved, for he had great possessions",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "His countenance fell (a gloomy, lowering word) and he went away grieved — his sorrow proving his bondage; the riches the world counts a blessing were his ruin (Henry; cf. Matthew 6:24)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lists everything the man had been asked to bear, the one lack, the selling and giving away of all he had, and the taking up of a cross of reproach and persecution."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: he might have been a saint and apostle had he been poor — it is oftentimes a misfortune to be rich."
+    "prevalence": "single",
+    "summary": "Clarke declines the philology and pronounces on the man instead, that he might have been a saint and an eminent apostle had he been poor, and draws the general lesson that it is often a misfortune to be rich."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott prefers he frowned and identifies the verb with the word used of a lowering sky; Robertson derives it from an adjective meaning sombre and notes how rare the word is."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "sad at that saying",
-   "went away grieved",
-   "great possessions",
-   "loving wealth above life"
+  "outliers": [
+   "Clarke turns the verse into a judgment on wealth itself, asking who is aware that riches are a misfortune and who believes it."
   ],
+  "themes": [
+   "a countenance fallen",
+   "the cross refused",
+   "wealth as misfortune"
+  ],
+  "thin": true,
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.08
+   }
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ's searching look round the Twelve (peculiar to Mark) draws the lesson from the ruler's departure — 'how hardly shall they that have riches enter,' the difficulty being the hold riches take on the heart (clarified in v.24)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the rich have temptations the poor escape; those who eagerly seek the world will never prize Christ — watch against the love of riches."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on baptism by water and the Spirit, is an off-topic catechetical aside, not on this verse."
-   }
-  ],
-  "themes": [
-   "looked round about",
-   "how hardly shall they that have riches enter",
-   "the lesson of the rich ruler",
-   "peril of wealth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "23-24",
+  "pericope_label": "Jesus looked round about: how hardly shall they that have riches enter the kingdom",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the look as gathering their attention and explains their expectation of a Messianic kingdom set up in worldly pomp and supported by the rich men of the nation."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples (counting wealth God's favour) are astonished; Christ tenderly calls them 'Children.' Textual debate: 'that trust in riches' is absent from the best MSS (Ellicott, Robertson omit), but captures his meaning — the peril is trusting, not merely having."
+    "prevalence": "majority",
+    "summary": "Ellicott notes the look and gesture as Mark&rsquo;s alone and judges the clause about trusting in riches a later addition absent from the best manuscripts, made to tone the warning down to a rational medium; Robertson quotes two judgments on what the glance was for, explains the amazement from the Jewish view of wealth as a token of divine favour, finds the address to them as children unique and due to their perplexity, and reports the same manuscript evidence against the clause; Barnes reads that address as affection mixed with reproof at their slowness."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: he softens the harsh truth by his manner without abating a tittle; hard for a man to have riches and not trust in them."
+    "prevalence": "single",
+    "summary": "Wesley admires a harsh truth softened in the delivery without one tittle abated, and then builds his whole exposition on the disputed clause, taking trust in riches as reliance on them for defence, happiness or deliverance, and concluding that it is easier for a camel to pass the needle&rsquo;s eye than for a man to have riches and not trust in them."
    }
   ],
   "debates": [
-   {
-    "question": "Are the words 'that trust in riches' original to the text?",
-    "sides": [
-     {
-      "position": "A later gloss, absent from the best MSS, toning down the saying",
-      "holders": [
-       "Ellicott",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "Capturing Christ's true meaning — the danger is trusting, not having",
-      "holders": [
-       "Henry",
-       "Wesley"
-      ]
-     }
-    ]
-   }
+   "Whether the qualifying clause belongs to the text: Ellicott and Robertson both judge it an addition made to soften a hard saying, while Wesley rests his entire exposition of the passage on it."
   ],
   "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on baptism by water and the Spirit, is an off-topic catechetical aside, not on this verse."
-   }
+   "Robertson traces the disciples&rsquo; blank astonishment to a settled assumption, that wealth was evidence of God&rsquo;s special favour."
   ],
   "themes": [
-   "the disciples were astonished",
-   "Children",
-   "them that trust in riches",
-   "danger of trusting wealth"
+   "the look round the circle",
+   "riches and the kingdom",
+   "a disputed clause",
+   "wealth as a token of favour"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.43
+   }
   }
  },
  "25": {
   "voices": [
    "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "Theophylact"
   ],
+  "range": "25-27",
+  "pericope_label": "Easier for a camel to go through the eye of a needle: with God all things are possible",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains why the astonishment increased, the comparison seeming to make salvation not merely hard but impossible for a rich man, and reads the final look as Christ discerning their private reasoning by their faces and by his omniscience."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the lesson for both conditions, that those who eagerly seek the world&rsquo;s wealth will never rightly prize Christ, so that contentment must be learned in a low state and the love of riches watched against in a high one."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The camel and the needle's eye — the largest beast and smallest opening, a deliberate hyperbole for human impossibility; attempts to soften it (a 'gate' or 'cable') miss the point, for the impossibility is the lesson (Henry, Robertson)."
+    "summary": "Robertson supplies the different words the evangelists use for the needle&rsquo;s eye and uses the closing saying to dismiss the theory of a gate by that name, since the impossible beside men becomes possible beside God; Barnes glosses the second astonishment as meaning simply exceedingly."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact offers the animal or a ship&rsquo;s cable for the camel, makes the possibility turn on whether a man listens to God or keeps his human notions, and denies that riches are called bad, blaming only those who keep them to watch over them."
    }
   ],
   "debates": [],
   "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on baptism by water and the Spirit, is an off-topic catechetical aside, not on this verse."
-   }
+   "Robertson uses the closing saying to rule out the familiar explanation of a gate called the needle&rsquo;s eye, treating the impossibility as the point rather than a difficulty to be explained away."
   ],
   "themes": [
-   "a camel through a needle's eye",
-   "human impossibility",
-   "the rich man and the kingdom",
-   "driving us to God's grace"
+   "the camel and the needle",
+   "impossible with men",
+   "contentment and covetousness",
+   "riches neither good nor evil"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples, astonished beyond measure, despair — 'Who then can be saved?'; reasoning (from the Jewish view of wealth as God's favour) that if the rich can hardly enter, salvation is hard for all (Henry), driving them from human confidence to God's grace (v.27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "astonished out of measure",
-   "who then can be saved",
-   "despair of human means",
-   "prepared for God's grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ reads their amazement by look and omniscience; Robertson: the impossible with men is possible with God, dismissing the 'needle's-eye gate' theory; Barnes on God's omnipotence (Genesis 18:14; Luke 1:37)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: look to God's power, not our weakness, for with God all things are possible — the ground of hope for eternal life."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the 'needle's eye' refer to a narrow gate, easing the saying?",
-    "sides": [
-     {
-      "position": "No literal gate — salvation of the rich is humanly impossible, possible only to God",
-      "holders": [
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "with God all things possible",
-   "who then can be saved",
-   "divine power not human",
-   "no needle's-eye gate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.51
+   }
   }
  },
  "28": {
   "voices": [
-   "Gloss",
-   "Theophylact",
-   "Bede",
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson"
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "Theophylact",
+   "Chrysostom",
+   "Gloss",
+   "Bede"
   ],
+  "range": "28-29",
+  "pericope_label": "Lo, we have left all and have followed thee: there is no man that hath left house or brethren",
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The Gloss: the disciples ask their reward, the rich youth having refused; Bede: leaving all is completed by following Christ — 'we have done what Thou commanded.'"
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has Peter taking heart after the previous saying and offering their case as an instance of the power that could move a rich man too, and notes the promise about the thrones that Mark omits."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: Peter's 'all' was few things, yet held him by affection; he is beatified who leaves even a little that is his all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we have left all",
-   "the disciples' reward",
-   "following completes leaving",
-   "sacrifice measured by affection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports a variant in the clause about the Gospel and prefers the reading for the sake of on the authority of many manuscripts and nearly all the versions."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: Mark omits the thrones-promise (Matthew 19:28), perhaps for Gentile readers; Clarke on the textual 'for the gospel's sake'; the promise embraces every earthly tie."
+    "summary": "Robertson says it was hard for Peter to hold in, notes Matthew&rsquo;s form of the remark, and reads the speech as a claim of obedience set against the conduct of the rich ruler; Ellicott suggests Mark omitted the promise of the thrones as writing for Gentile converts."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact (v.28): the leaving is not neglect of duty but preferring God's glory to the things of this world."
+    "prevalence": "several",
+    "summary": "Theophylact observes that Peter calls a little his all, since even a few things hold us by affection, and guards the promise against the reading that would have men abandon parents or wives, illustrating from the apostles&rsquo; own experience of houses and friends; Chrysostom hears a covert announcement of coming persecution in the same words and identifies the name of Christ with the power of the Gospel and of the kingdom."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gloss connects the question to the man who has just gone away sorrowful, the disciples reckoning they had done a great thing; Bede locates the perfection of the claim in the words and have followed thee, without which leaving all would not suffice."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Theophylact turns the promise into a caution, reading it as a rule of preference rather than a licence to desert those who depend on us."
+  ],
   "themes": [
-   "left all for my sake and the gospel's",
-   "the disciple's reward",
-   "not neglect of duty",
-   "thrones-promise omitted"
+   "forsaking all",
+   "the reward asked for",
+   "a general answer to a particular question",
+   "persecution foretold"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.37
+   }
   }
  },
  "30": {
@@ -1263,976 +1041,702 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Pseudo-Chrysostom",
+   "Bede"
   ],
+  "range": "30-31",
+  "pericope_label": "He shall receive an hundredfold now in this time, with persecutions",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: not literal but a hundredfold spiritual compensation (pardon, God's favour, the saints' fellowship); 'with persecutions' (Mark's word) — the reward not exempt from the cross."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill states the same distinction briefly, that the promise is of enjoying what is a hundred times better rather than a hundred of the things named."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede records and rejects the millenarian misuse of 'hundredfold now' (the 'Jewish fable' of a thousand years); Theophylact: Peter gained the houses of all the disciples."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Bede",
-    "note": "Rejects the chiliast reading of 'hundredfold now' as a Jewish fable of a literal earthly restoration."
-   }
-  ],
-  "themes": [
-   "hundredfold now",
-   "with persecutions",
-   "eternal life",
-   "spiritual not literal reward"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: a rebuke to Peter's boast; Ellicott notes Mark omits the vineyard parable Matthew adds to illustrate it."
+    "summary": "Barnes denies the promise can be literal and enumerates what a hundredfold compensation consists in, while granting that godliness profits the present life as well; Ellicott reads the clause about persecutions, peculiar to Mark, as engraved on Peter&rsquo;s own memory; Robertson records that Jesus omits a hundred wives from the list, leaving an imperial sneer without foundation, and holds that Christ uses Messianic idiom only to idealise it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke resists the wholly spiritual reading as flat opposition to the text, argues that the hundredfold is often literally fulfilled in the hospitality of Christians and suits an itinerant life, and takes the phrase for this very time as a promise of providence; Wesley threads between the readings, not in the same kind but in value, and holds that none is entitled to the happiness but he who will accept it with persecutions."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: the Pharisees first became last; the suffering disciples, last here, shall be first by the hope in God."
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom settles the question in a sentence, that the reward is in participation and not in possession, fulfilled spiritually and not carnally."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede turns the verse against those who read the hundredfold as a thousand-year restoration after the resurrection, objecting that the hundred wives mentioned elsewhere expose the reading, that there is no marriage in the resurrection, and that persecutions accompany the restoration here promised."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the hundredfold is literal: Barnes and Pseudo-Chrysostom rule out a literal sense entirely, Clarke calls the wholly spiritual reading flat opposition to the text and points to the hospitality of Christians, and Wesley takes it as a hundredfold in value rather than in kind."
+  ],
+  "outliers": [
+   "Bede and Robertson both fasten on the hundred wives, Bede using the phrase to refute a millenarian reading and Robertson noting its absence from Mark as answering an old objection."
+  ],
   "themes": [
-   "first shall be last",
-   "check on pride",
-   "humility in reward",
-   "the kingdom's reversal"
+   "a hundredfold in this time",
+   "literal or spiritual reward",
+   "with persecutions",
+   "the first and the last"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.54
+   }
   }
  },
  "32": {
   "voices": [
-   "Bede",
-   "Theophylact",
-   "Gloss",
-   "Chrysostom",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Bede"
   ],
+  "range": "32",
+  "pericope_label": "They were in the way going up to Jerusalem, and Jesus went before them; and they were amazed",
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill marks the geography, that they had left the coasts of Judea beyond Jordan and were now on the road."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the walking ahead an emblem of command, the captain of our salvation pressing forward at the hardest point of his undertaking, and draws the note that it is encouraging to see our Master go first into suffering."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Bede: the disciples amazed and foreboding; Theophylact: Christ goes before to show he runs to meet his Passion voluntarily, forewarning them item by item lest its suddenness alarm them."
+    "summary": "Robertson reads the tenses for the scene, a solitary figure walking ahead and disciples reading his face correctly, and notes the idiom may cover only some of them; Barnes takes the leading as that of an intrepid guide exposing himself rather than his followers and locates their astonishment in his persevering when he knew what awaited him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke proposes rendering the following conjunction as for, which supplies the reason of their wonder and fear; Wesley says the amazement was at his courage and the fear both for him and for themselves."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: he joins the resurrection to the passion, that grief might give way to hope; Theophylact: he takes the Twelve apart to reveal the mystery to those closest to him."
+    "prevalence": "single",
+    "summary": "Theophylact says the walking ahead shows that Christ runs to meet his Passion and refuses no death for our salvation, argues from his foreknowledge that he gave himself up willingly, and explains both the taking apart of the Twelve and the enumerating of each particular as guards against their being troubled by surprise."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede explains the amazement from the passion prediction they remembered, whether they feared for themselves or for him, and reads the fresh forewarning as a remedy prepared against the trouble the Passion would bring."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Theophylact turns the foreknowledge into a proof of voluntariness, on the ground that a man who could flee a danger he foresees and does not is giving himself up by his own will."
+  ],
   "themes": [
-   "going up to Jerusalem",
-   "amazed and afraid",
-   "Christ goes before",
-   "voluntary passion foreknown"
+   "the leader going first",
+   "fear on the road",
+   "the Passion foretold in detail",
+   "suffering undertaken willingly"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
   }
  },
  "33": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Chrysostom",
+   "Gloss"
   ],
+  "range": "33-34",
+  "pericope_label": "Behold, we go up to Jerusalem, and the Son of man shall be delivered unto the chief priests",
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The Gloss parses each clause: 'Son of man' suffers (the Godhead cannot), delivered by Judas to the council, condemned, given to Pilate the Gentile."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill follows the same division, identifying the mockers and scourgers as Roman soldiers acting at their governor&rsquo;s connivance and by his order."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes that the spitting is reported here and by Luke but not by Matthew."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: he came to his passion willingly, foretelling its whole course lest the world perish in its sins."
+    "prevalence": "several",
+    "summary": "Chrysostom explains why the Resurrection is added, so that men saddened by the Passion should at the same moment be looking for the rising, and argues that having concealed nothing of the sorrows he had earned belief on the other point; Cyril of Jerusalem takes the forewarning as proof that Christ died willingly where others die unwillingly, gives the reason as the world perishing in its sins, and argues that the Cross is a glory to him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gloss glosses the prediction clause by clause, taking the title Son of man for that to which suffering belongs since the Godhead cannot suffer, and assigning each act in turn to Judas, to the priests and scribes, and to Pilate and his soldiers."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Cyril of Jerusalem treats the prediction as an argument about the Cross itself rather than about the events foretold, holding that what Christ foresaw and did not avoid is thereby made his glory."
+  ],
   "themes": [
-   "third passion prediction",
    "delivered to the Gentiles",
    "the Godhead cannot suffer",
-   "willing foreknowledge"
+   "the third day added",
+   "a death undergone willingly"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'spit upon him' shared with Luke not Matthew; Barnes on the prophetic portrait (Psalm 22:6-7); Gill: the Gentile soldiers mock and scourge; the catalogue crowned with the resurrection."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.03
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mock scourge spit and kill",
-   "spitting (with Luke)",
-   "the third day rise",
-   "cross crowned with resurrection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "35": {
   "voices": [
-   "Chrysostom",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Chrysostom",
+   "Augustine"
   ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: thinking the kingdom would come before his death, they sought the chief honours, ashamed and apart; Christ questions them to draw out their meaning."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark: the brothers ask directly (Matthew via the mother); Robertson: their dream of a Jewish world-empire brushed aside Christ's talk of death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "James and John's request",
-   "whatsoever we desire",
-   "carnal ambition",
-   "misunderstanding the kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill"
-  ],
+  "range": "35-37",
+  "pericope_label": "Master, we would that thou shouldest do for us whatsoever we shall desire",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the question put to the brothers and the mother together, gathering the whole petition."
+    "prevalence": "single",
+    "summary": "Gill has the mother as their mouth, speaking for them while they spoke by her, and Christ answering both her and them."
    },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (v.35): he asks not from ignorance but to make them answer, exposing their desire to themselves."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what would ye",
-   "the counter-question",
-   "drawing out the desire",
-   "Christ's method of teaching"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: Mark's 'in thy glory' (Matthew's 'in thy kingdom') — a dream of a Jewish world-empire; Clarke: a kingdom expected on earth; the request for the two chief seats of honour."
+    "summary": "Robertson notes the bluntness of a request made before its content is stated, likens it to spoiled children, and identifies the expectation as a grand world empire that dismissed all talk of death and resurrection as pessimism; Barnes says they did not come in person but got their mother to ask."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reconstructs the scene, the mother introducing them and Christ addressing the sons directly, and reports manuscript variants at two points; Wesley states flatly that it was she and not they who uttered the words."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom traces the request to a belief that the kingdom would come before the death just foretold, allows two motives for bringing the mother, shame at their own weakness and confidence of easy success, and reads the counter-question as meant to make them state the petition themselves; Theophylact has them expecting a reign in Jerusalem before the suffering, and reports Christ&rsquo;s answer that to sit at his right hand surpasses even the angelic orders."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine harmonises Matthew and Mark on who spoke, taking Mark to be brief rather than different, and notes that both evangelists have the Lord answer the sons rather than the mother."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Chrysostom declines to choose between two accounts of their motive and accepts both, shame at their own ambition and confidence that it would be granted."
+  ],
   "themes": [
-   "sit on thy right and left",
-   "in thy glory",
-   "the chief places",
-   "earthly kingdom expected"
+   "places in the kingdom",
+   "who made the request",
+   "a temporal kingdom expected",
+   "asking before saying what is asked"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.35
+   }
   }
  },
  "38": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Theophylact",
+   "Bede"
   ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: ye speak of honours, I of wrestlings and blood; Cyril: the cup and baptism are martyrdom, which even without water receives the kingdom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Mark has both the cup and baptism (Matthew only the cup), both of death (Mark 14:36; Luke 12:50); Ellicott: the baptism-clause originally Mark's alone."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the cup of inward, the baptism of outward sufferings — Christ filled within, covered without."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye know not what ye ask",
-   "the cup and the baptism",
-   "glory through suffering",
-   "martyrdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
+  "range": "38-40",
+  "pericope_label": "Can ye drink of the cup that I drink of? To sit on my right hand is not mine to give",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: 'We can' betrays double ignorance — of the kingdom and of their own weakness, speaking without dependence on Christ's strength."
+    "prevalence": "single",
+    "summary": "Gill calls the confident answer a second instance of ignorance, of the state they asked for and of themselves alike, and grounds the refusal in election, since the places belong to those given Christ by the Father and ordained to that happiness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley divides the two figures rather than merging them, the cup for inward and the baptism for outward suffering, and grounds the prepared inheritance in patient continuance in well doing, every man receiving his own reward according to his own labour; Clarke reports the variant conjunction in the clause."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ turns their boast into prophecy, fulfilled in James's martyrdom (Acts 12:2) and John's sufferings; Chrysostom: ye shall be worthy of martyrdom."
+    "summary": "Robertson traces both figures elsewhere in the Gospels and in Paul, notes that Matthew has only the cup, and observes that the ransom saying was not understood when spoken and has been preserved through Mark; Ellicott judges the baptism clause original to Mark and added later to Matthew by copyists, and reads the refusal as disclaiming not the power to give but the power to give arbitrarily."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact takes both cup and baptism for the cross, the one a potion sweetly received and the other the cause of our cleansing, and says the brothers answered supposing he meant a visible cup and the Jewish washings before meals."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede says those who ask a seat of glory they do not yet merit know not what they ask, answers from the ecclesiastical histories how John drank the cup though he died naturally, by the cauldron of oil and the exile to Patmos, and reads the refusal as addressed to proud men."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Who the prepared places belong to: Gill grounds the clause in election, the seats being reserved for those given to Christ by the Father, while Wesley grounds it in patient continuance in well doing and a reward proportioned to each man&rsquo;s labour; Ellicott confines the point to the manner of giving rather than its ground."
+  ],
+  "outliers": [
+   "Bede answers the objection that only one of the two brothers was martyred by admitting a cup of confession drunk without bloodshed, on the model of the three children in the furnace."
+  ],
   "themes": [
-   "we can",
-   "self-confidence",
-   "ye shall drink the cup",
-   "presumption fulfilled by grace"
+   "the cup and the baptism",
+   "ignorance of themselves",
+   "martyrdom without blood",
+   "the prepared places"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: Christ disclaims not the power but the arbitrary giving — the seats go 'to those for whom prepared' by the Father; Chrysostom: he condescends to their meaning."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: prepared for those who by patient well-doing seek glory; Barnes (Matthew 25:34): the kingdom prepared from the foundation."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.64
    }
-  ],
-  "debates": [
-   {
-    "question": "Does Christ deny the power to give the seats, or only arbitrary giving?",
-    "sides": [
-     {
-      "position": "Not the power, but the giving by favour — they go to those the Father has prepared",
-      "holders": [
-       "Ellicott",
-       "Chrysostom",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "not mine to give",
-   "for whom it is prepared",
-   "not arbitrary favour",
-   "prepared by the Father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "41": {
   "voices": [
-   "Theophylact",
-   "Bede",
    "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: the ten's indignation was envy, the same ambition — undisturbed while each thought himself honoured, displeased only when two reached for the chief places."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: vain both for the two to seek immoderate things and the ten to be annoyed, since greatness comes by humility not power."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the ten displeased",
-   "envy not zeal",
-   "ambition universal",
-   "occasion of the teaching"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: Christ calls them near to comfort, then shows that desiring the chief place belongs to the Gentiles, who rule tyrannically as lords."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott on the two verbs of domineering rule; the Gentile pattern of lordship over subjects, which the disciples were imitating."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rulers of the Gentiles",
-   "exercise lordship",
-   "worldly greatness",
-   "the foil to the kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: 'so shall it not be among you' — the lordly, heathenish spirit forbidden to the disciples."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'shall be your minister' (a statement, not 'let him be') — greatness in the kingdom is constituted by service, the way up is down."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "so shall it not be among you",
-   "great = your minister",
-   "the kingdom's reversal",
-   "greatness through service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he who desires the highest place and greatest honour must be servant of all."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The intensification — 'chiefest' must be 'servant (doulos) of all,' the higher the place desired the lower the service required."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "chiefest = servant of all",
-   "the deepening reversal",
-   "bondservant of all",
-   "preeminence through abasement"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
    "John Wesley",
+   "Theophylact",
    "Bede"
   ],
+  "range": "41-45",
+  "pericope_label": "The ten were displeased: whosoever will be great among you shall be your minister",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson on 'ransom for many' (lytron anti pollōn) as Christ's real teaching on his atoning death, preserved by Peter through Mark; Barnes gathers the substitution texts (2 Cor 5:21; Gal 3:13; 1 Tim 2:6)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill identifies what the ten had heard, observes that Christ could discern their heat from a little distance and knew they shared the same ambition, records a variant turning the prohibition into a command, and treats the closing clause as the last step of the argument, Christ adding his own example to check their ambitious desires."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: the Son of man's service the crowning example; 'for many, not all,' i.e. for those who would believe; Theophylact: what greater than to die for those he serves?"
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott twice notes that the form is indicative rather than imperative, that whoever will be great shall be minister and shall be servant, and refers the two verbs used of Gentile rulers to the fuller discussion elsewhere."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'a ransom for many' = for as many souls as needed such a ransom (2 Cor 5:15)."
+    "prevalence": "single",
+    "summary": "Wesley reads the same phrase in the opposite direction, that the ransom was for as many souls as needed such a ransom."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact traces the indignation of the ten to envy at not having been preferred themselves, notes that they were still imperfect and afterwards yielded the first place to one another, and describes the cure in two movements, a drawing near to comfort and a lesson that ambition belongs to Gentile rulers who seize the chief place tyrannically."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede states the principle that the greater is the one who is less and that the height of virtue is reached by humility rather than power, and holds that the ransom is said to be for many and not for all, meaning those who would believe on him."
    }
   ],
   "debates": [
-   {
-    "question": "For whom did Christ give his life a 'ransom'?",
-    "sides": [
-     {
-      "position": "For 'many' — the believing, the redeemed",
-      "holders": [
-       "Bede"
-      ]
-     },
-     {
-      "position": "For as many as need the ransom",
-      "holders": [
-       "Wesley"
-      ]
-     }
-    ]
-   }
+   "What a ransom for many means: Bede presses the wording as a deliberate limit, that Christ did not say for all but for many, meaning those who would believe, while Wesley takes the same two words to cover as many souls as needed such a ransom."
   ],
-  "outliers": [],
+  "outliers": [
+   "Theophylact excuses the ten only so far, granting that their anger was envy while noting that the same men later yielded precedence to one another."
+  ],
   "themes": [
-   "came to minister",
-   "a ransom for many",
-   "the atonement",
-   "the supreme example of service"
+   "envy among the twelve",
+   "greatness as service",
+   "Gentile rule contrasted",
+   "a ransom for many"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.46
+   }
   }
  },
  "46": {
   "voices": [
-   "Jerome",
-   "Bede",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Lightfoot",
+   "Pseudo-Chrysostom",
+   "Jerome",
+   "Bede",
+   "Augustine"
   ],
+  "range": "46-48",
+  "pericope_label": "Blind Bartimaeus sat by the wayside begging, and cried, Jesus, thou Son of David",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the movement of the party through Jericho on the way to Jerusalem."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry settles the number in a sentence, notes the reading that makes him a blind son of a blind father and so a fitter type of the grace that cures those born of the blind, and adds that men disabled by providence from earning are the most proper objects of charity."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says Mark names one without denying the other; Lightfoot answers the charge of tautology in the name twice, from the practice with common nouns and from an alternative rendering as son of profit; Robertson compares the formation with Bartholomew, distinguishes the old and new Jerichos, and observes that the beggar had his regular place."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke gives the derivation of the name, records the suggestion that the explanatory clause is an interpolation, and holds that the man is named as the most remarkable of the group."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom explains where the beggar got his title for Christ, hearing the passing multitude praise him and concluding that the expectation of the prophets was fulfilled."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede harmonises the Gospels (two blind men / one, entering / leaving) as fuller and briefer reports, not contradictions; Mark names the more notable; allegory of Jericho ('moon'), the gospel to Jews then Gentiles; Jerome on Jericho as anathema."
+    "summary": "Bede harmonises the three accounts by supposing one evangelist fuller than another and the named man the more important; Augustine agrees on why Mark singles him out but takes Luke&rsquo;s narrative for a separate miracle on a different man; Jerome reads the name of the city as agreeing with the approaching Passion, Jericho meaning moon or anathema."
    }
   ],
   "debates": [
-   {
-    "question": "How are the Gospels reconciled — two blind men or one, entering or leaving Jericho?",
-    "sides": [
-     {
-      "position": "Not contradiction but fuller and briefer reports of the same event; Mark names the more notable",
-      "holders": [
-       "Bede"
-      ]
-     }
-    ]
-   }
+   "Whether Luke reports the same miracle: Bede harmonises all three accounts as one event told with differing fulness, while Augustine holds that Luke describes a similar miracle worked on a different man."
   ],
   "outliers": [
-   {
-    "voice": "Bede",
-    "note": "Reads the number (one healed leaving, two entering in Matthew) allegorically of the gospel going first to the Jews, then to Jews and Gentiles."
-   }
+   "Lightfoot alone treats the doubled name as a philological problem and offers an alternative meaning, son of profit, to explain why the evangelist translated it at all."
   ],
   "themes": [
-   "blind Bartimaeus",
-   "Jericho",
-   "Gospel harmony",
-   "the last healing before the Passion"
+   "one blind man or two",
+   "the name Bartimaeus",
+   "Jericho and the Passion",
+   "Son of David"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill: he learned it was Jesus by the crowd's noise; 'Son of David' confesses Jesus as Messiah — the blind man seeing by faith what the seeing crowd did not."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus thou Son of David",
-   "have mercy on me",
-   "faith confessing the Messiah",
-   "the cry of the helpless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson on the tenses (kept rebuking; he cried the more); Gill: they would silence his 'Son of David'; Barnes on seeking with the whole heart (Jeremiah 29:13) — faith persevering against discouragement."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many charged him",
-   "he cried the more",
-   "perseverance against discouragement",
-   "importunate faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "49": {
   "voices": [
    "John Gill",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Wesley",
+   "Chrysostom",
+   "Bede",
+   "Origen"
   ],
+  "range": "49-51",
+  "pericope_label": "Be of good comfort, rise; and he cast away his garment and came to Jesus",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes the garment was little worth and was thrown off to make quicker despatch."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: Jesus stood still (halting his journey for one beggar), 'he calleth thee' joyful news, vivid presents; Ellicott: 'Call him' the better text, the bystanders' 'Be of good comfort' Mark's alone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus stood still",
-   "he calleth thee",
-   "be of good comfort",
-   "the crowd's reversal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
+    "summary": "Ellicott lists what Mark alone reports, the bystanders&rsquo; encouragement and the casting off of the mantle with the leap that follows, and prefers the Aramaic form of the address as expressing greater reverence and as another instance of Mark reproducing the very syllables spoken; Robertson confirms the picture from the tenses and notes that the verb means to see again, so the man had once been sighted, and that giving sight was expected of the Messiah; Barnes takes the discarded robe for an illustration of how a sinner should come to Christ."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Ellicott on the vivid casting-off and leaping up; Barnes and Clarke draw the application — cast away the garments of self-righteousness and run to Christ; Clarke's anecdote of the converted negro."
+    "summary": "Clarke describes the garment as a mendicant&rsquo;s blanket and his only protection from the weather, and wishes penitents as ready to throw off self-righteousness as this man was to throw off his cloak; Wesley compresses the action into joy and eagerness."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom gives a second reason for the question, that Christ made the good disposition of those about to be cured known to all before applying the remedy, both to stir up emulation and to show the man worthy of the grace."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede asks why one able to restore sight should need to ask what was wanted, and answers that the question is put to stir the man&rsquo;s heart to prayer, adding that a blind man values no gift but light."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the crowd&rsquo;s rebuke as an objection to the title itself, that those foremost in believing wanted him to stop saying Son of David and say Son of God, and judges this blind man the greater of the two, since Luke&rsquo;s had to be brought rather than called."
    }
   ],
   "debates": [],
   "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Tells the anecdote of the converted negro who found salvation quickly because, having little 'clothing,' he could throw it off and run to Christ."
-   }
+   "Origen alone reads the silencing of the beggar as a theological objection to what he called Christ rather than as a crowd suppressing a nuisance."
   ],
   "themes": [
-   "casting away his garment",
-   "eager haste to Christ",
-   "throw off every hindrance",
-   "the response of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: 'Rabboni' (as John 20:16), Mark reproducing the very syllable; Robertson: the Messiah expected to give sight (Isaiah 61:1); the same question as to James and John, but a humble answer — only sight."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what wilt thou",
+   "the garment cast away",
    "Rabboni",
-   "that I might receive my sight",
-   "humble believing prayer"
+   "prayer drawn out by questioning",
+   "the blind man values only light"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.57
+   }
   }
  },
  "52": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "Theophylact"
   ],
+  "range": "52",
+  "pericope_label": "Go thy way; thy faith hath made thee whole. And he followed Jesus in the way",
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Barnes: 'made whole' or 'saved thee,' joining bodily and spiritual; Ellicott: Bartimaeus went up with the company, named because he became a known eyewitness in the Church."
+    "summary": "Calvin takes the faith commended to be not merely a confident hope of recovering sight but the conviction that Jesus was the promised Messiah, drawn from the Law and the Prophets rather than bestowed at random, and presses the rule that though God&rsquo;s power sometimes reaches unbelievers no one enjoys his benefits rightly unless he receives them by faith, the word here covering the soul and not only an outward cure."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a proof of Christ's sovereign power used only in benevolence — how slow to punish, how prone to spare."
+    "prevalence": "single",
+    "summary": "Clarke reports a variant in the last clause and closes on the character of the miracle, that it shows not only sovereign power but benevolence, and that we never see that power used except in the way of benevolence."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson notes that the verb commonly means save and may carry that sense here, and finds in the imperfect a picture of Bartimaeus following the caravan into the new Jericho; Ellicott infers that he went up with the company to Jerusalem and suggests his prominence in Mark implies he became known in the Church afterwards, his new sight qualifying him as an eyewitness of the week that followed."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact ends on the man&rsquo;s gratitude, that being made whole he did not leave Jesus but followed him, and followed him in the way, that is, in this life, after which all are excluded who do not follow him here by working his commandments."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Clarke uses the cure to warn against a doctrine of sovereignty detached from benevolence, calling that a prevailing error and one confined to no single religious party."
+  ],
   "themes": [
-   "thy faith hath made thee whole",
-   "received his sight",
-   "followed Jesus in the way",
-   "faith and discipleship"
+   "faith that makes whole",
+   "following in the way",
+   "sovereignty and benevolence",
+   "an eyewitness of the last week"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.26
+   }
   }
  }
 }
