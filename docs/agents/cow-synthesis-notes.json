@@ -33585,6 +33585,78 @@
         "24"
       ],
       "note": "Only two keys in the chapter carry a full patristic bench (Chrysostom, Augustine, and at v.24 Cyril of Jerusalem as well); the rest of the chapter is carried by the eight modern and Reformation voices."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21"
+      ],
+      "note": "Jamieson stride-6 residue lattice for a twelfth consecutive chapter: keys 3, 9, 15 and 21, single donor, the donor being John 4 (the wearied man at the well, the Jew known by dress and dialect, the Samaritan antipathy, the wondering desire after she scarce knew what). Single-donor form as in john 14, john 5, numbers 34, revelation 20, jude 1, acts 4, matthew 12, luke 17, revelation 13 and acts 20; mark 6 remains the only mixed-donor variant."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "6",
+        "9",
+        "14",
+        "20",
+        "24"
+      ],
+      "note": "The clearest instance yet of the roster-mismatch family. This chapter carries two parallel patristic sources under near-identical labels: bare Chrysostom and bare Augustine are Catena Aurea extracts, complete with inline uppercase speaker tags (BEDE., CHRYS., AUG., HILARY.), while John Chrysostom and Augustine of Hippo are the standalone Homilies on John and Tractates on John. Both pairs occur at the same keys (1, 6, 14 for Chrysostom; 20 for Augustine), so a single key can carry the same father twice under two names. Handled by treating the catena blocks as silent where the full-name block is present and drawing their material through the father named in full."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "5",
+        "10",
+        "24"
+      ],
+      "note": "Cyril of Jerusalem appears three times and is on-verse at two. At key 5 the citation of John 17:5 falls in the last sentence of a 203-word block; at key 10 he quotes John 17:10 verbatim; key 24 has no citation of its verse. Note the method point: these patristic blocks are truncated at about 200 words, so an on-verse citation can fall past the cut, and a head-only content test under-detects. I first marked key 5 residue on a truncated view and had to correct it after reading the whole block."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "3"
+      ],
+      "note": "The Origen block at key 3 is his commentary on John 1:1, on the presence and absence of the article with Logos and Theos. It is thematically adjacent to the only true God of John 17:3 and is the standard patristic locus for that question, but it never cites the verse, so it is declared residue. Recorded as a borderline case: if the scrape were not truncated at 201 words a citation might yet appear."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "20",
+        "21",
+        "24"
+      ],
+      "note": "The Augustine of Hippo blocks at keys 20, 21 and 24 are all exactly 303 words. The identity is a truncation artefact of the scrape, not duplication: each is the opening of a distinct Tractate on John covering exactly that verse, and all three are genuine. This refines the duplication heuristic further, since equal length here means the opposite of residue."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "17",
+      "verses": [
+        "21"
+      ],
+      "note": "John Calvin charges the fathers with tearing this verse from its natural meaning under pressure of the Arian controversy, holding that Christ speaks of his mediatorial office and not simply of his divine essence. Augustine of Hippo is present in the same key doing precisely what Calvin describes, arguing from one substance. A rare case where the catena places a Reformer's criticism of patristic exegesis beside the patristic exegesis it criticises."
     }
   ]
 }
