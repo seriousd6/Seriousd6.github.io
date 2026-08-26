@@ -33942,6 +33942,58 @@
         "19"
       ],
       "note": "Five tiles for nineteen verses at about 6.4:1 overall. The fourth tile takes vv.10-15 together because vv.10-12 alone carry too little usable source to fill a tile without padding."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "59",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "Jamieson stride-6 residue lattice for a thirteenth consecutive chapter: keys 6 and 12, single donor, the donor being Nehemiah 4 (the Samaritan faction scoffing at the refortifying of Jerusalem, and the wall distributed in sections and raised to half its height). The coincidence is worth flagging: Adam Clarke reads this whole psalm against Nehemiah rather than Saul, so the residue donor happens to match one commentator's interpretive frame for the chapter. That is coincidence, not contamination, since the Jamieson blocks comment on Nehemiah itself and never touch the psalm."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "59",
+      "verses": [
+        "15"
+      ],
+      "note": "StudyLight page chrome at the chapter-final region, now six chapters running (matthew 12 key 50, mark 6 key 56, luke 17 key 37, revelation 13 key 18, acts 20 key 37, and here). The Ellicott block at key 15 measures 1071 words of which about 110 are prose; the rest is the site footer and inlined CSS. This is the strongest single argument for a scraper-side fix rather than per-chapter workarounds."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "59",
+      "verses": [
+        "1"
+      ],
+      "note": "First chapter in this run to carry C.H. Spurgeon and Keil and Delitzsch. The Spurgeon head reads C.H. Spurgeon while scripts/synthesis_qa.py VOICE_LABELS carries Charles Spurgeon, so the full head form is undeclarable in excluded_voices, the same roster-mismatch family as Cyril of Jerusalem, Victorinus of Pettau, Augustine of Hippo and A.T. Robertson. Keil and Delitzsch matches the roster exactly."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "59",
+      "verses": [
+        "2",
+        "11"
+      ],
+      "note": "The Keil and Delitzsch blocks at keys 2 and 11 contain nothing but the quoted verse text of the sections they head, with no commentary at all. Their block at key 1 is genuine introduction. Marked silent at 11 rather than residue, since the blocks are on-verse but empty."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "59",
+      "verses": [
+        "1"
+      ],
+      "note": "Adam Clarke rejects the psalm title outright, holding that scarcely anything in the psalm can apply to Saul's messengers and reading the enemies as Sanballat, Tobiah and Geshem opposing Nehemiah. Calvin, Henry, Spurgeon and Keil and Delitzsch all keep the title's occasion. Clarke sustains the Nehemiah frame through every verse, including a reading of the sin of their mouth as a misappropriated sin-offering, and then concedes at the very end that his analysis may be applied to the traditional occasion instead, or taken as a general resolution referring to no occasion at all."
     }
   ]
 }
