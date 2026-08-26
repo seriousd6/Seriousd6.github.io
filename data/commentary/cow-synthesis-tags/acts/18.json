@@ -5,82 +5,134 @@
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "After these things Paul departed from Athens, and came to Corinth; and found a certain Jew named Aquila, lately come from Italy with his wife Priscilla",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul departed Athens and came to Corinth — moving from the philosophic city to the wealthy, dissolute commercial center of Achaia (Henry), where a great church would be founded; the gospel finding more fruit among the dissolute Corinthians than the proud Athenian philosophers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Paul departed from Athens, and came to Corinth",
-   "from the philosophic to the commercial city",
-   "the providential transition",
-   "the founding of the Corinthian church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul found Aquila and Priscilla, expelled from Rome by Claudius's edict — which Suetonius attributes to tumults under 'Chrestus,' possibly a garbled reference to Christ and the disturbances over the gospel (Barnes, Clarke, Robertson); they became Paul's hosts and fellow-workers, Priscilla often named first (Robertson)."
+    "summary": "Corinth is described as the antithesis of Athens: Barnes calls it \"the Paris of antiquity\" where lasciviousness was consecrated in the worship of Venus, and Robertson counts a thousand temple prostitutes on the Acrocorinthus and a verb meaning to live immorally. Both trace the city's destruction by Mummius and refoundation by Julius Caesar; Robertson reads Aquila's bare description as a Jew, not yet a disciple, and dates Claudius's edict about A.D. 49, agreeing that Suetonius's Chrestus stands for Christ."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the providence — Aquila's exile, a calamity, became the means of his meeting Paul; God often provides better through affliction."
+    "prevalence": "several",
+    "summary": "Calvin takes the improbability of the mission as the argument: Paul enters a rich and crowded city \"a simple man, unknown, having no eloquence or pomp\", and the result proves the Spirit rather than the means. He then reads Aquila's double exile as providence rather than misfortune, since \"the Lord doth often better provide for us when he doth sharply punish us\", and Gill labours to distinguish this Aquila from the Greek translator and from Onkelos."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the historical apparatus — the Corinthian order of architecture, the reduced modern city — and then breaks with the consensus on Suetonius, refusing to identify Chrestus with Christ (\"how could he intend Christ, who was never at Rome?\") and insisting he was a real agitator. He also denies that Aquila and Priscilla were yet Christians, making their conversion the fruit of Paul's lodging with them. Wesley explains the failure at Athens by the philosophers' self-satisfaction."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that Paul left Athens unpersecuted — the reception was merely cold — and passes on the proverb that not every man may see Corinth, together with the observation that Aquila often changed his habitation, \"this is not the world we can propose ourselves a settlement in\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is Suetonius's \"Chrestus\" a mistake for Christ?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ],
+      "view": "Yes — a Roman historian, little acquainted with Jewish affairs, mistook disputes about Christ for a living ringleader; Barnes builds five steps to the conclusion and Robertson dates the edict about A.D. 49."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "No — Christ was never at Rome and no one personated him there; Chrestus \"is no fictitious name, no name of an absent person, nor of a sect\", but a real agitator who probably suffered for it."
+     }
+    ]
+   },
+   {
+    "question": "Were Aquila and Priscilla already Christians when Paul found them?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "It is evident that Aquila had become a convert to the Christian faith."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "There is no evidence of it; their conversion was most likely the fruit of Paul's lodging with them."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Luke's bare \"a Jew from Pontus\" implies he was apparently not yet a disciple."
+     }
+    ]
+   },
+   {
+    "question": "Is this Aquila the translator, or Onkelos?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "Neither — the proselyte Aquila who made the Greek version and Onkelos the Chaldee paraphrast differ from him in name, nation and date."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "He may well be the Onkelos of the Jewish writers."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Notes only that the translator was also from Pontus, and leaves the coincidence alone."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reads Paul's only lodging in Corinth being a twice-exiled man as instruction rather than hardship: \"this happy calamity of Aquila doth teach us, that the Lord doth often better provide for us when he doth sharply punish us.\""
+   }
+  ],
   "themes": [
-   "a certain Jew named Aquila with his wife Priscilla",
-   "Claudius had commanded all Jews to depart from Rome",
-   "the Suetonius 'Chrestus' reference",
-   "providence through exile"
+   "After these things Paul departed from Athens, and came to Corinth;",
+   "And found a certain Jew named Aquila, born in Pontus, lately come from Italy, with his wife Priscilla; (because that Claudius had commanded all Jews to depart from Rome:) and came unto them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "3": {
@@ -93,185 +145,131 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "3-5",
+  "pericope_label": "And because he was of the same craft, he abode with them, and wrought; and he reasoned in the synagogue every sabbath",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul, of the same trade (tentmaking), lodged and worked with Aquila — not ashamed of honest labor (Barnes), following the Jewish custom of every man learning a trade (Robertson, Wesley, the rabbinic principle that not teaching a son a trade is teaching him to steal)."
+    "summary": "Barnes and Robertson treat the trade as ordinary Jewish practice — Robertson quoting Rabbi Judah that not teaching a son a trade is teaching him to steal — while disputing what the trade was: a weaver of tapestry (as Luther translated), or a maker of tents from leather or goat's hair. On v.5 all three grammarians take the better reading to be \"constrained by the word\" rather than \"pressed in spirit\", though Robertson breaks with the translators by making the verb a direct middle, and Ellicott and Robertson then divide over what intensified Paul's preaching."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Paul worked to keep the gospel free from reproach, refusing support lest the false apostles slander him (1 Corinthians 9:12, 15)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he abode with them, and wrought",
-   "they were tentmakers",
-   "the dignity of labor",
-   "Paul's self-support"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul reasoned in the synagogue every sabbath, persuading Jews and Greeks — discoursing on Jesus as Messiah from the Scriptures (Clarke), trying to convince them (the conative imperfect, Robertson); his diligence in laboring by day and preaching on the sabbath (Gill)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he reasoned in the synagogue every sabbath",
-   "persuaded the Jews and the Greeks",
-   "Paul's synagogue method",
-   "the apostle's diligence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Calvin explains the manual labour strategically rather than from need: the false apostles taught without charge in order to \"craftily creep in\", and Paul would not concede them the advantage. He dismisses the Latin addition \"interposing the name of the Lord Jesus\" as a copyist's patch, and describes a deliberately indirect method — corrupt nature, the necessity of grace, the promised Redeemer as \"a fit and brief preparation unto Christ\" — with the rule that teachers should consider where to begin. Gill draws out the weekly rhythm of sabbath preaching and weekday work."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "When Silas and Timothy came, Paul was constrained to testify Jesus is the Christ; the better MSS read 'constrained by the word' (Clarke, Ellicott, Robertson) rather than 'pressed in the spirit' (TR); the arrival with Macedonian gifts (2 Corinthians 11:9) freed Paul from tentmaking to preach with fresh consecration (Robertson)."
+    "summary": "Clarke canvasses every proposed meaning of the trade and gives up honestly — \"in short, we know not what the trade was\" — then turns the verse into a defence of working preachers against the clergy who despise them. He argues at length that the manuscripts require \"constrained by the word\", and closes by noting that Silas vanishes from the record here, \"probably he died in Macedonia\". Wesley turns the Jewish custom of teaching every child a trade into a question for Christians."
    }
   ],
   "debates": [
    {
-    "question": "Does the text read 'pressed in the spirit' or 'constrained by the word'?",
-    "sides": [
+    "question": "Was Paul \"pressed in spirit\" or \"constrained by the word\"?",
+    "positions": [
      {
-      "position": "'Constrained by the word' — the better-attested reading",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Robertson"
-      ]
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ],
+      "view": "The better manuscripts read \"the word\"; Griesbach took it into the text and Clarke says there can be no doubt of it, Ellicott describing the Word within him as a constraining power."
      },
      {
-      "position": "'Pressed in the spirit' — the Textus Receptus reading",
-      "holders": [
-       "Barnes",
-       "Gill"
-      ]
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Accepts the reading but disputes the voice: the verb is a direct middle, so Paul held himself wholly to preaching instead of only on sabbaths."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "John Wesley"
+      ],
+      "view": "Keep the received text and read an inward impulse, Wesley urging every Christian to watch for such pressure and follow it where it agrees with Scripture."
+     }
+    ]
+   },
+   {
+    "question": "Why did Paul's preaching intensify when Silas and Timothy arrived?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "The gifts they brought from Macedonia released him from the tentmaking bench for a season."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Refuses that explanation — \"there is no indication of his giving up tent-making\" — and suggests instead that contact with people lately from Rome revived a long-cherished desire to preach there."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "Simply the news the two men brought from Thessalonica."
+     }
+    ]
+   },
+   {
+    "question": "Why did Paul work with his hands at Corinth?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "Plain necessity — \"it seems pretty evident that it was because he had no other means of maintenance\"."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "Strategy — the false apostles taught freely so as to creep in craftily, and Paul refused to give them that advantage."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Turns the tentmaking into a defence of the working preacher against his critics: \"how many of the clergy, and other ministers, are farmers, graziers, schoolmasters, and sleeping partners in different trades and commercial concerns! A tent-maker, in his place, is as useful as any of these.\""
+   }
+  ],
   "themes": [
-   "Silas and Timotheus were come from Macedonia",
-   "pressed in the spirit / constrained by the word",
-   "testified that Jesus was Christ",
-   "the intensified preaching"
+   "And because he was of the same craft, he abode with them, and wrought: for by their occupation they were tentmakers.",
+   "And he reasoned in the synagogue every sabbath, and persuaded the Jews and the Greeks.",
+   "And when Silas and Timotheus were come from Macedonia, Paul was pressed in the spirit, and testified to the Jews that Jesus was Christ."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "6": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "When the Jews opposed and blasphemed, Paul shook his raiment (a gesture of detestation, like Nehemiah 5:13) and declared 'your blood be upon your own heads; I am clean' — the watchman's disclaimer (Ezekiel 33, Ellicott, Robertson); turning to the Gentiles locally, giving up the Corinthian synagogue, not all Jews (Ellicott, as 13:46)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God is more displeased with contempt of his word than any wickedness; Paul, like Ezekiel's watchman, having warned, is clean of their blood, and turns to the Gentiles."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he shook his raiment",
-   "your blood be upon your own heads; I am clean",
-   "the watchman's disclaimer (Ezekiel 33)",
-   "turning to the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -280,71 +278,128 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "6-8",
+  "pericope_label": "And when they opposed themselves, and blasphemed, he shook his raiment, and said unto them, Your blood be upon your own heads",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul moved his preaching to the house of Justus, a God-fearer, adjoining the synagogue — changing his place of preaching, not his lodging (still with Aquila, Henry); the house next door chosen in charity, that Paul might remain near the Jews, ready to receive any who would hear (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "entered into a certain man's house, named Justus",
-   "one that worshipped God",
-   "the house joined the synagogue",
-   "the relocated ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "The grammarians read the opposition as organised — a verb of ranging in battle array — and the shaken raiment as a prophetic sign rather than temper, Robertson borrowing Ramsay's \"undoubtedly a very exasperating gesture\" and insisting the blood-formula is \"a solemn disclaimer of responsibility\", not a curse. Ellicott, alert that a Jew is doing this to Jews, calls it the last resource of one met by clamour instead of argument, and both he and Barnes limit the turn to the Gentiles to Corinth. On Justus they divide: Ellicott weighs the identification with the Titus of the epistles and refuses to decide, Robertson decides briskly against it."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin watches the escalation from gainsaying to blaspheming as the ordinary progress of licence, makes the shaken garment \"zeal kindled by God\" rather than private indignation, and turns Ezekiel's charge on the ministry: teachers must \"do what in them lieth to bring those which go astray into the way\". Alone among the voices he reads the turn to the Gentiles nationally, as an inheritance transferred to shame Israel; and he suggests Paul chose the house next the synagogue \"that he might the more nettle the Jews\", inferring from Sosthenes's later title that Crispus was one chief man among several."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Crispus, the synagogue ruler, believed with all his house — a signal triumph Paul honored by baptizing him himself (1 Corinthians 1:14, Barnes) — and many Corinthians believed and were baptized; the harvest in dissolute Corinth displaying that a church founded there can be founded anywhere (Barnes)."
+    "summary": "Clarke supplies the Nehemiah parallel for the shaken lap and dates the shaking-out of the nation sixteen years later, but also extends the verse into a standing charge against the Jews of his own century. He alone has Paul actually change lodgings to Justus's house, and lists what the synagogue ruler's office carried — presiding, interpreting, excommunicating, marrying, divorcing — supposing Sosthenes filled the vacant seat. Wesley limits the turn to the Gentiles narrowly: \"only he preached no more in their synagogue\"."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry denies that Paul moved house at all — the change was of meeting-place, not lodging — and prefers charity to provocation as the reason for the adjoining door: Paul \"would come as near to them as he could\", ready to return if received."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How far does \"from henceforth I will go unto the Gentiles\" reach?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "John Wesley",
+       "A.T. Robertson"
+      ],
+      "view": "Local and limited — Paul gave up the Corinthian synagogue, not the nation, and preached to Jews afterwards at Ephesus and Rome."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "National — the inheritance is taken from Israel and given to the Gentiles, partly to provoke them to repentance, though being incurable they got only despair from it."
+     }
+    ]
+   },
+   {
+    "question": "Did Paul move his lodging to the house of Justus?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "Yes — he departed from his former lodging and went \"to lodge with Justus\"."
+     },
+     {
+      "held_by": [
+       "Matthew Henry",
+       "John Wesley",
+       "John Calvin"
+      ],
+      "view": "No — he continued with Aquila and Priscilla and went to the house only to preach, Calvin adding that the move was to come nearer the Gentiles rather than from weariness of his hosts."
+     }
+    ]
+   },
+   {
+    "question": "Why was the meeting-house next door to the synagogue?",
+    "positions": [
+     {
+      "held_by": [
+       "Matthew Henry"
+      ],
+      "view": "Charity — Paul came as near to them as he could, ready to return if they would receive his message."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "Provocation — he chose that house \"that he might the more nettle the Jews\"."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Unknowable — \"whether Paul chose this location for his work because it was next to the synagogue, we do not know, but it caught the attendants at the synagogue worship\"."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "view": "Draws from the conversion of a synagogue ruler in so corrupt a city the wider inference that if a church could be organised at Corinth it can be organised anywhere, and \"there is none so corrupt that the gospel cannot change and purify it\"."
+   }
+  ],
   "themes": [
-   "Crispus, the chief ruler of the synagogue, believed",
-   "with all his house",
-   "many of the Corinthians believed and were baptized",
-   "the gospel triumphs in Corinth"
+   "And when they opposed themselves, and blasphemed, he shook his raiment, and said unto them, Your blood be upon your own heads; I am clean: from henceforth I will go unto the Gentiles.",
+   "And he departed thence, and entered into a certain man’s house, named Justus, one that worshipped God, whose house joined hard to the synagogue.",
+   "And Crispus, the chief ruler of the synagogue, believed on the Lord with all his house; and many of the Corinthians hearing believed, and were baptized."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "9": {
@@ -354,143 +409,135 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Lord spoke to Paul in a vision — 'be not afraid, but speak' — meeting his discouragement (the fear and trembling he confesses, 1 Corinthians 2:3, Barnes); one of several visions at the crises of Paul's life (Ellicott), his discouragement like Elijah's and Jeremiah's."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: nothing more contrary to the free preaching of the gospel than a faint heart (2 Timothy 1:7); the command charges Paul to speak plainly and fully, overcoming fear."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Lord spake to Paul in the night by a vision",
-   "Be not afraid, but speak",
-   "meeting Paul's discouragement",
-   "the charge to overcome fear"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "9-11",
+  "pericope_label": "Then spake the Lord to Paul in the night by a vision, Be not afraid, but speak, and hold not thy peace",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Lord promised 'I am with thee' (Matthew 28:20 personally applied, Ellicott) and protection, 'for I have much people in this city'; Barnes: God's certain purpose to save, the ground of evangelistic hope — had God no purpose to save, the minister could have no hope."
+    "summary": "The grammarians locate the fear precisely: Barnes in the learning and splendour of the city and Paul's own \"weakness, and fear, and much trembling\", Ellicott in the social gap between his slave-class converts and men of his own culture, Robertson in a letter written at the same moment. Robertson presses the tenses — \"stop being afraid, but go on speaking\" — and reads the promise of much people as conditional on Paul holding on; Ellicott declines the dogmatics and hears Elijah's seven thousand. Barnes and Gill differ over how long Paul stayed at Ephesus."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin (with Wesley): the 'much people' are the foreknown elect, not yet converted but written in the book of life (John 17:6), whom God would gather through Paul's preaching — God taking them as his people in respect of their future faith."
+    "summary": "Calvin refuses the word \"dream\", since Scripture distinguishes visions from dreams, and makes the oracle a remedy given only when necessity required it. He draws a rule from the pairing of the commands — fear does not merely silence a man but makes him speak guardedly, so \"speak not with half thy mouth\" — and qualifies the protection carefully: Paul was not spared violence, only frustrated attempts. On \"much people\" he grounds the title in the book of life, since \"many sheep wander without the flock for a time\". Gill reports the appearance as a dream."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads a concrete plot behind the promise — \"no man shall be permitted to lay violent hands upon thee\" — and shifts the ground of \"much people\" away from decree to response: they are those \"who have not resisted my Spirit, and consequently are now under its teachings\", ready when the gospel reaches them. He thinks both Thessalonian letters, and perhaps Galatians, were written in this interval. Wesley is briefest of all, calling them prophetically \"them that afterward believed\"."
    }
   ],
   "debates": [
    {
-    "question": "Who are the 'much people' God has in Corinth?",
-    "sides": [
+    "question": "What does \"I have much people in this city\" mean?",
+    "positions": [
      {
-      "position": "The foreknown elect, not yet converted but written in the book of life, certain to be gathered",
-      "holders": [
-       "Calvin",
-       "Wesley",
-       "Barnes"
-      ]
+      "held_by": [
+       "Albert Barnes",
+       "John Calvin"
+      ],
+      "view": "A fixed decree — \"there is no chance; no hap-hazard\" — those spoken of being God's already, before conversion, and written in the book of life."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "Not decree but non-resistance: they are people who have not resisted the Spirit and are already under its teaching, ready when the gospel reaches them."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "A prophetic way of speaking — he calls them his who would afterward believe."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Election with a condition attached to the outcome: they are \"not yet saved, but who will be if Paul holds on\"."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Declines the dogmatic question and hears the echo of Elijah's seven thousand — souls in whom conscience was not yet dead."
+     }
+    ]
+   },
+   {
+    "question": "Was the appearance a dream or a vision?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "Christ appeared to him asleep, in a dream."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "Not a dream — Scripture distinguishes the two, and Paul was in a trance and \"saw a certain shape or form whereby he knew that God was present with him\"."
+     }
+    ]
+   },
+   {
+    "question": "How long was Paul at Ephesus?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill"
+      ],
+      "view": "Two years — the only place where he stayed longer than the eighteen months at Corinth."
+     },
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "Three years."
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "I am with thee",
-   "I have much people in this city",
-   "the doctrine of election",
-   "the ground of evangelistic hope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul continued eighteen months at Corinth, teaching the word — an unusually long stay (Barnes), caused by his success and the need to establish the church firmly; the work extending beyond the city to Cenchrea and all Achaia (Ellicott, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the labor of founding a church is hard and sustained — the great workman spent so long laying the foundation of one church only."
+    "voice": "Albert Barnes",
+    "view": "Turns the contrast between the two cities into a rule about where the gospel prospers: \"Paul had little success in philosophic Athens; he had great success in dissolute Corinth\" — there is often more hope of an openly dissolute man than of one confident in his own wisdom."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "he continued there a year and six months",
-   "teaching the word of God",
-   "the long Corinthian ministry",
-   "the patient founding of a church"
+   "Then spake the Lord to Paul in the night by a vision, Be not afraid, but speak, and hold not thy peace:",
+   "For I am with thee, and no man shall set on thee to hurt thee: for I have much people in this city.",
+   "And he continued there a year and six months, teaching the word of God among them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "12": {
@@ -504,130 +551,117 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-13",
+  "pericope_label": "And when Gallio was the deputy of Achaia, the Jews made insurrection with one accord against Paul, and brought him to the judgment seat",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "When Gallio (Seneca's brother, a mild and beloved man, Gill) was proconsul of Achaia, the Jews made a concerted assault on Paul, bringing him to the judgment seat; Gallio's proconsulship a key chronological anchor for Paul's life (about A.D. 51-52)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when Gallio was the deputy of Achaia",
-   "the Jews made insurrection against Paul",
-   "Gallio as chronological anchor",
-   "the legal crisis"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Robertson alone can date the scene, from a Delphi inscription naming Gallio proconsul and fixing Paul at Corinth in A.D. 50-52, and he makes the point a manifesto: \"it is amazing how Luke is confirmed whenever a new discovery is made.\" Ellicott credits Luke's accuracy in official titles, though the two differ quietly on when Achaia passed back to the senate. Both correct the English — Ellicott objecting to \"insurrection\", Robertson finding a double compound meaning a rush at Paul — and Ellicott is certain the charge invoked Roman rather than Mosaic law, while Robertson concedes a double meaning but denies Jewish law any standing before a proconsul."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The Jews charged Paul with worship 'contrary to the law' — which must mean Roman law (Ellicott, Robertson): the Jews claimed Judaism was a licensed religion and accused Paul of preaching a new, unlicensed one; the legal strategy to show Paul violated Roman regulations on converts (Robertson)."
+    "summary": "Calvin offers two motives for the sudden move after a year of quiet: a new deputy emboldened them, \"as froward men use to abuse new things\", or they expected his favour. He reads the charge as innovation against the law of God, calling the Roman construction \"cold\" and \"forced\", and then turns the episode into a doctrine of the magistrate: Rome left provincial religion alone only because it had no truth of its own, whereas \"nothing is more absurd than to leave the worship of God to men's choice\". Gill supplies the geography of Achaia and Gallio's flight from a fever by ship."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gathers the classical testimonia to Gallio's sweetness of temper and supplies his end under Nero, and notes that the Jews had to come to the governor because they had no power to punish in a Roman province — \"had the Jews possessed the power here, Paul had been put to death!\" Wesley admires the man's generosity of temper and then withholds the last word: \"Yet one thing he lacked! But he knew it not and had no concern about it.\""
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry attacks the accusation by way of the toleration that made it possible: the Romans allowed the Jews their own law, but does a permission to keep it include a right to impose it? \"Must those therefore be prosecuted as criminals who worship God in any other way?\" He adds that their own law promised a prophet whom they should hear, so that Paul's preaching was perfective of it rather than contrary to it."
    }
   ],
   "debates": [
    {
-    "question": "Which law did the Jews mean — Roman or Mosaic?",
-    "sides": [
+    "question": "Which law did the Jews accuse Paul of contravening?",
+    "positions": [
      {
-      "position": "Roman law — claiming Paul preached an unlicensed religion (not a religio licita)",
-      "holders": [
-       "Ellicott",
-       "Robertson"
-      ]
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Rome's — Judaism was a licensed religion and the charge was that Paul preached a new one that was not."
      },
      {
-      "position": "Possibly both, or the law of Moses",
-      "holders": [
-       "Gill",
-       "Clarke"
-      ]
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "God's — the Roman reading is \"cold\" and \"forced\"; they charged him with altering the worship prescribed in the law so as to convict him of innovation."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Gill"
+      ],
+      "view": "Both at once — Clarke putting the argument in the accusers' mouths: he is not a Jew, for he does not admit circumcision; not a Gentile, for he preaches against the gods."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "The phrase has a double meaning, but Jewish law had no standing before Gallio, and no evidence for a breach of Roman law was produced."
+     }
+    ]
+   },
+   {
+    "question": "When did Achaia pass from the emperor back to the senate?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "In the same year as the expulsion of the Jews from Rome."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "In A.D. 44, when Claudius restored it with proconsul as the governor's title."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Alone has access to the Delphi inscription — a letter of Claudius naming Gallio proconsul of Achaia — which fixes the date of Paul's Corinthian ministry and which none of the older commentators could use."
+   }
+  ],
   "themes": [
-   "this fellow persuadeth men to worship contrary to the law",
-   "the charge before Gallio",
-   "Roman vs Mosaic law",
-   "religio licita"
+   "And when Gallio was the deputy of Achaia, the Jews made insurrection with one accord against Paul, and brought him to the judgment seat,",
+   "Saying, This fellow persuadeth men to worship God contrary to the law."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Before Paul could begin his defense (the formal apologia, Ellicott), Gallio interrupted — distinguishing real crimes ('wrong or wicked lewdness,' legal wrong or fraud, Robertson, Ellicott), which he would judge, from the religious question, which he would not; the conditional implying the Jews had no legal case (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when Paul was about to open his mouth",
-   "if it were a matter of wrong or wicked lewdness",
-   "Gallio's clear-headed judgment",
-   "crime vs religious dispute"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -637,71 +671,104 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "14-16",
+  "pericope_label": "And when Paul was now about to open his mouth, Gallio said unto the Jews, If it were a matter of wrong or wicked lewdness",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gallio refused to judge 'a question of words and names, and of your law' — perceiving it was Jewish, not Roman law (Ellicott); an absolute refusal to allow a religious question in a Roman court (Robertson); the decision, treating Christianity as a form of Judaism, in effect opening the door for Paul's preaching across the empire (Robertson); Clarke praising the principle of religious liberty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a question of words and names, and of your law",
-   "look ye to it; for I will be no judge",
-   "the refusal to judge religious questions",
-   "the legal toleration of the gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "The grammarians show that Gallio's apparent concession is hollow: Robertson identifies the condition as one determined as unfulfilled, so \"the Jews had no case against Paul in a Roman court\", while Ellicott hears the same as tone — \"the very turn of the phrase expresses an intense impatience\". They translate the two crime-words four ways between them, Barnes making the second the deed of a veteran offender and Robertson a \"slick citizen\". Ellicott catches the pronoun in \"your law\" and draws the comparison with Pilate; Robertson alone traces what the ruling did, leaving the movement a form of Judaism and so opening the empire to Paul's preaching."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gallio drove the Jews from the judgment seat — an authoritative dismissal, not violent but magisterial (Barnes, Clarke), the lictors clearing the court (Ellicott); the Jews stunned by the sudden blow from the mild proconsul (Robertson), their assault utterly failed."
+    "summary": "Calvin refuses to congratulate Gallio. He concedes the nation was contentious and that Paul himself rebukes trifling over words, but \"Gallio is not worthy to be excused who doth mock the holy law of God together with their curiosity\", since \"when the worship of God is in hand, the strife is not about words, but a matter of all other most serious is handled\". Gill notes that the Jews were dismissed with a warning not to return."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the ruling a landmark of liberty: \"a better answer could not be given by man\", the state having no right to control any man's religious opinion, and had every ruler acted so the persecution laws that remain \"blots and disgraces on the statute books of almost all the civilized nations of Europe\" would be unwritten. Wesley reads the manner rather than the doctrine — \"he speaks with the utmost coolness and contempt\" — then turns it on the reader, since the question of the name of Jesus \"is of more importance than all things else under heaven\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the moral value of Gallio's refusal to judge?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "It is exemplary — \"a better answer could not be given by man\"; the magistrate has no business restraining the free teaching of conscience where the state is not endangered."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "It is contemptuous — he mocks the law of God along with their curiosity, treating as mere words a matter of the utmost seriousness."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "Neither praise nor blame of the ruling, but of the manner: he speaks \"with the utmost coolness and contempt\" about a question of more importance than anything under heaven."
+     }
+    ]
+   },
+   {
+    "question": "Was anyone struck when the court was cleared?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Gill"
+      ],
+      "view": "No — the verb denotes no violence, only an authoritative dismission, Gill adding that they left under warning."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "Yes — the lictors were ordered to clear the court, and those who did not retreat at once \"were exposed to the ignominy of blows from their rods\"."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Alone reads the decision constitutionally rather than morally: it established nothing in favour of Christianity, only left it a form of Judaism and so not against Roman law — which \"opened the door for Paul's preaching all over the Roman Empire\"."
+   }
+  ],
   "themes": [
-   "he drave them from the judgment seat",
-   "the authoritative dismissal",
-   "the failure of the Jewish assault",
-   "Paul vindicated"
+   "And when Paul was now about to open his mouth, Gallio said unto the Jews, If it were a matter of wrong or wicked lewdness, O ye Jews, reason would that I should bear with you:",
+   "But if it be a question of words and names, and of your law, look ye to it; for I will be no judge of such matters.",
+   "And he drave them from the judgment seat."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "17": {
@@ -714,64 +781,148 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "17",
+  "pericope_label": "Then all the Greeks took Sosthenes, the chief ruler of the synagogue, and beat him before the judgment seat. And Gallio cared for none of those things",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The crowd beat Sosthenes (likely Crispus's successor, probably later a Christian, 1 Corinthians 1:1); 'Gallio cared for none of those things' strongly defended against the charge of religious indifference — meaning only that he would not meddle in a Jewish quarrel outside his province, not the indifference of a skeptic (Barnes, Clarke, Robertson)."
+    "summary": "Barnes takes the Greek bystanders literally and reads pagan indignation at Jewish bigotry; Ellicott and Robertson take \"Greeks\" for an interpolation and make the assault an attack by the Jews on their own failed leader. All three defend Gallio against the proverb built on him — Barnes denying any propriety in preaching the verse against worldly men, Robertson calling the charge \"quite beside the mark\" and praising \"a clear headed judge who would not be led astray by Jewish subterfuges\". Ellicott alone then supplies the sequel that undercuts the defence: the same easy temper served Nero's vices."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the Spirit condemns Gallio's carelessness in not protecting an unjustly punished man — the magistrate's duty to aid the oppressed, his indifference to Sosthenes's beating a fault."
+    "prevalence": "several",
+    "summary": "Calvin prosecutes where the others acquit. Gallio's indifference was contempt for the religion rather than sluggishness — Rome licensed vows to every idol, yet \"in the common liberty of all manner of superstition, only true religion was excepted\" — so he winked at the beating, wanting the Jews to destroy each other. And the verdict is not Calvin's own: \"by the mouth of Luke, the Spirit condemneth Gallio's carelessness, because he did not aid a man who was unjustly punished.\" Gill takes the assailants to be profane Greeks emboldened by the dismissal."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke assembles the manuscript case against the word \"Greeks\" and argues that Jews beating one of their own rulers \"through envy at his conversion\" is far more likely; he doubts Gallio even saw the assault, defends him against censure as \"manifest injustice\", and takes the resort to blows as proof of a bad cause — \"manual logic\". Wesley reads Sosthenes as probably Paul's chief accuser, beaten by his own party for wasting their time, and cannot believe it happened in Gallio's sight."
    }
   ],
   "debates": [
    {
-    "question": "Does 'Gallio cared for none of those things' show blameworthy religious indifference?",
-    "sides": [
+    "question": "Who beat Sosthenes?",
+    "positions": [
      {
-      "position": "No — it means only that he would not meddle in a Jewish quarrel outside his jurisdiction; the common reading misuses the text",
-      "holders": [
-       "Barnes",
-       "Clarke",
-       "Robertson"
-      ]
+      "held_by": [
+       "John Gill",
+       "Albert Barnes"
+      ],
+      "view": "Greeks — pagan bystanders indignant at the Jews' bigotry and encouraged by Gallio's dismissal, though Barnes notes some copies read \"Jews\"."
      },
      {
-      "position": "It marks a blameworthy carelessness — a magistrate ought to protect the oppressed",
-      "holders": [
-       "Calvin"
-      ]
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Jews — \"Greeks\" is absent from the best manuscripts and the fathers, and it is far likelier that they turned on their own ruler, whether for treachery or for failure."
+     }
+    ]
+   },
+   {
+    "question": "Which side was Sosthenes on?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott",
+       "John Calvin"
+      ],
+      "view": "Already leaning to Paul — Calvin calling him one of Paul's companions and advocates — so the blows punish defection."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "Paul's chief accuser, beaten by his own party for having wasted their time to no purpose."
+     },
+     {
+      "held_by": [
+       "John Gill",
+       "A.T. Robertson"
+      ],
+      "view": "Not yet converted; the conversion came later, Robertson noting drily that \"the beating did Sosthenes good\"."
+     }
+    ]
+   },
+   {
+    "question": "Did Sosthenes deserve the beating?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "He \"richly deserved\" it; the affair was a police-court matter beneath a proconsul's notice."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "He was guiltless and unjustly punished, and the failure to protect him is what the passage condemns."
+     }
+    ]
+   },
+   {
+    "question": "Did Gallio witness the assault?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "John Calvin"
+      ],
+      "view": "Yes — it happened before the tribunal, and the Jews did not shrink from venting their rage in his presence."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Wesley"
+      ],
+      "view": "Probably not — it happened as the court broke up or after he had left, Wesley thinking it can hardly have been in his sight."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Alone follows Gallio out of the chapter and lets the biography qualify the exegesis: the easy gentleness that reads so well here left him unfit to resist Nero's court, where he shared in ministering to the emperor's vices before ending under his displeasure."
+   }
+  ],
   "themes": [
-   "all the Greeks took Sosthenes and beat him",
-   "Gallio cared for none of those things",
-   "the misunderstood phrase",
-   "the magistrate and the oppressed"
+   "Then all the Greeks took Sosthenes, the chief ruler of the synagogue, and beat him before the judgment seat. And Gallio cared for none of those things."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "18": {
   "voices": [
    "John Chrysostom",
-   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
@@ -780,52 +931,122 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "18",
+  "pericope_label": "And Paul after this tarried there yet a good while, and then took his leave of the brethren, and sailed thence into Syria... having shorn his head in Cenchrea: for he had a vow",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul sailed for Syria with Priscilla and Aquila, having shorn his head at Cenchrea for a vow; the Greek ambiguous on whose vow (Paul's or Aquila's, Henry), most referring it to Paul; Ellicott justifies it as Paul being 'all things to all men' (1 Corinthians 9:20), testifying he did not despise the Law, the shearing guarding against effeminate long hair."
+    "summary": "Ellicott is confident the vow was the temporary Nazarite of Numbers 6 and solves the awkwardness of cropping rather than growing the hair by the difference between being shorn and being shaved, with the clippings still owed to the Temple — which explains the haste to reach the feast. He argues for Paul rather than Aquila on two grounds, and offers thankfulness after fear and the all-things-to-all-men principle as motives. Robertson denies the Nazarite identification outright, since such a vow could be absolved only at Jerusalem, and ends in candour about what kind of vow it was; Barnes describes the institution at length and then withdraws — \"where nothing is recorded, conjecture is useless\"."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin makes the reversal at Corinth significant: elsewhere Paul fled at once because his presence drew rage on the whole church, but with their malice bridled \"he had rather sting and nettle them, than by departing minister unto them any new occasion of rage\". On the vow he denies Paul acted for his own sake at all — it would be absurd \"for him to bind his own conscience with that religion from which he had loosed all other men\" — reading it wholly as accommodation, and then turns it against Rome's use of the passage to authorise vows."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the legal reason for the safety, that after Gallio's ruling no state persecution was possible and citizenship made Paul's person \"sacred\", and then sets out the whole roll-call of authorities on both sides of the Paul-or-Aquila question before concluding that \"the bare letter of the text determines nothing\" and leaning to Paul. He records the versions that solved it by making the verb plural. Wesley simply prints the shaving as Aquila's act."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sees no harm in referring the vow to either man, noting only that some throw it on Aquila as a Jew who \"retained perhaps more of his Judaism than was convenient\", and defends the Nazarite institution as having \"a great deal of moral and very pious significance\", fit to die last of all the Jewish ceremonies."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the Law breaking up yet conscience still binding — a Jewish custom to shear the head for a vow; Paul not yet withdrawing the Jewish believers from their custom."
+    "prevalence": "single",
+    "summary": "Chrysostom reads the whole scene as the old order dissolving — \"see how the Law was breaking up; see how they were bound by conscience\" — and notices the defect nobody else does: shearing the head with a vow was the Jewish custom, \"but then there ought to be also a sacrifice, which was not the case here\"."
    }
   ],
   "debates": [
    {
-    "question": "Whose vow was it, and was Paul right to keep a Jewish vow?",
-    "sides": [
+    "question": "Who was shorn at Cenchrea — Paul or Aquila?",
+    "positions": [
      {
-      "position": "The Greek is ambiguous (Paul's or Aquila's); if Paul's, a lawful accommodation, being 'all things to all men' without compromising the gospel",
-      "holders": [
-       "Henry",
-       "Ellicott",
-       "Chrysostom"
-      ]
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Paul, with \"hardly the shadow of a doubt\": a vow would have obliged Aquila to go to Jerusalem instead of staying at Ephesus, and the neighbouring participles are Paul's."
+     },
+     {
+      "held_by": [
+       "John Wesley"
+      ],
+      "view": "Aquila — printed as his act without argument."
+     },
+     {
+      "held_by": [
+       "Adam Clarke",
+       "John Calvin",
+       "Matthew Henry",
+       "Albert Barnes"
+      ],
+      "view": "The text does not settle it; Clarke lists the fathers and moderns on both sides before leaning to Paul, Calvin says \"neither skilleth it much\", Henry sees no harm either way, and Barnes says only that the connection requires Paul."
+     }
+    ]
+   },
+   {
+    "question": "Was it a Nazarite vow?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "Albert Barnes",
+       "Matthew Henry"
+      ],
+      "view": "Yes — the temporary Nazarite of Numbers 6, completed later at the Temple by one who was outside Palestine when the term expired."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "No — such a vow \"could be absolved only in Jerusalem\"; the hair was probably only trimmed, and what kind of vow it was is simply not clear."
+     },
+     {
+      "held_by": [
+       "John Chrysostom"
+      ],
+      "view": "The custom was Jewish, but the required sacrifice is missing, so the rite as performed is defective."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Alone turns the vow into controversy with Rome: since \"Paul was moved with no religion to make his vow\", the passage cannot authorise vow-making, and there is all the difference between tolerating an old rite until it dies out and reviving a dead one."
+   }
+  ],
   "themes": [
-   "having shorn his head in Cenchrea, for he had a vow",
-   "whose vow was it",
-   "accommodation to the Jews",
-   "all things to all men"
+   "And Paul after this tarried there yet a good while, and then took his leave of the brethren, and sailed thence into Syria, and with him Priscilla and Aquila; having shorn his head in Cenchrea: for he had a vow."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "19": {
@@ -834,226 +1055,247 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul came to Ephesus (the great capital of Asia, home of Diana's worship, Robertson, earlier forbidden to him, 16:6); he left Aquila and Priscilla there (that they might teach, Chrysostom) and reasoned in the synagogue — a brief visit preparing for the later three-year ministry (ch. 19)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he came to Ephesus, and left them there",
-   "reasoned with the Jews",
-   "leaving Aquila and Priscilla",
-   "preparing for the Ephesian ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Ephesians asked Paul to stay longer, but he consented not — their eagerness a hopeful sign of the great receptivity Paul found at Ephesus (Ellicott), foreshadowing the fruitful three-year ministry to come; Paul declining, determined to reach Jerusalem for the feast (v.21)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they desired him to tarry longer",
-   "he consented not",
-   "the receptive Ephesians",
-   "Paul's firm purpose"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paul bade the Ephesians farewell, determined to keep the feast at Jerusalem (to win his countrymen, Barnes, Wesley — the clause textually doubtful), promising to return 'if God will' — the pious submission of his plans to God's will (Ellicott, Robertson, James 4:15); fulfilling the promise at 19:1."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I must keep this feast that cometh in Jerusalem",
-   "I will return again unto you, if God will",
-   "pious submission to God's will",
-   "the promise to return"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Chrysostom"
   ],
+  "range": "19-23",
+  "pericope_label": "And he came to Ephesus, and left them there... I must by all means keep this feast that cometh in Jerusalem",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Paul landed at Caesarea, went up (to Jerusalem, the customary idiom, Clarke, Robertson) and saluted the church (his fourth post-conversion visit), then went down to Antioch — closing the second missionary journey; the Jerusalem visit brief (Calvin), perhaps completing the vow in the temple (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "landed at Caesarea, and gone up, and saluted the church",
-   "went down to Antioch",
-   "the close of the second journey",
-   "reporting to the churches"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "summary": "Barnes and Ellicott set out what Ephesus was — the Artemis temple, the meeting of East and West that made Greek religion \"fruitful in magic, and mysteries, and charms\" — and Barnes quotes Chandler on its ruin. Ellicott notes the better reading \"they came\", doubts the clause about the feast is even Luke's, argues for Pentecost against the passover, and thinks the bare verse hides a great deal: a possible shipwreck, Philip at Caesarea, the vow completed, and the clash with Peter of Galatians 2. Robertson builds the case that the unnamed city is Jerusalem from idiom, direction and the absence of any errand at Caesarea, and places the Galatians incident earlier than Ellicott does."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Paul began the third journey, going through Galatia and Phrygia 'in order' (systematically, Clarke), strengthening all the disciples — beginning alone without Barnabas or Silas (Robertson), revisiting his churches; the pastoral purpose to confirm them (as 15:41), the visit reflected in Galatians before the Judaizers' damage (Ellicott)."
+    "summary": "Calvin finds the refusal to stay at Ephesus genuinely strange, since Paul was heard more patiently there than anywhere and was asked to remain, and infers \"that he had some great cause to go up to Jerusalem in haste\". Of the return journey he insists it was not idle: strengthening all the disciples cost \"great pains-taking\", since he was enforced to go hither and thither and often turn out of his way. Gill supplies the antiquarian history of the city's many names."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads on past Chandler's account into the goats, crows and partridge of the ruined stadium and theatre, and ends on the seven churches — \"the Church of Ephesus is blotted out of the map of Christianity! Be silent and adore.\" He reports that the whole clause about keeping the feast is missing from the oldest manuscripts and four versions, with Griesbach flagging it doubtful, yet takes the feast to be the passover; and he identifies the church saluted as Jerusalem, \"the Mother, or Apostolic Church\", from which even Rome was only a daughter. Wesley denies Paul went from any conscience of obligation to Jewish feasts."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom gives the reason for leaving the couple behind that nobody else states plainly — Paul left them at Ephesus \"that they should teach\" — and pauses over the order of the names to remark, \"lo, a woman also\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Which feast was Paul hurrying to keep?",
+    "positions": [
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "The passover, at which he could meet the greatest number of his countrymen."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "Pentecost — miss it and nothing falls before Tabernacles, by which season sailing is dangerous."
+     }
+    ]
+   },
+   {
+    "question": "Is the clause about keeping the feast genuine?",
+    "positions": [
+     {
+      "held_by": [
+       "Adam Clarke",
+       "A.T. Robertson"
+      ],
+      "view": "Doubtful — it is missing from the oldest manuscripts and several versions; Griesbach flagged it and White thought it probably to be struck out, Robertson guessing it was added to explain the \"going up\" of the next verse."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Charles Ellicott",
+       "John Wesley"
+      ],
+      "view": "Treat it as text and expound it, differing only over which feast and why he went."
+     }
+    ]
+   },
+   {
+    "question": "Where does the confrontation with Peter of Galatians 2:11 belong?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "At this visit to Antioch, the Judaising party having gathered strength during Paul's long absence."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Earlier — at Paul's previous stay in Antioch, not this one."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Chrysostom",
+    "view": "Supplies the purpose of leaving Priscilla and Aquila at Ephesus — \"with good reason, namely, that they should teach\" — and stops to notice the woman named first, adding that Paul did not yet withdraw the couple from their Jewish customs."
+   }
+  ],
   "themes": [
-   "went over all the country of Galatia and Phrygia in order",
-   "strengthening all the disciples",
-   "the third journey begins",
-   "the pastoral visitation"
+   "And he came to Ephesus, and left them there: but he himself entered into the synagogue, and reasoned with the Jews.",
+   "When they desired him to tarry longer time with them, he consented not;",
+   "But bade them farewell, saying, I must by all means keep this feast that cometh in Jerusalem: but I will return again unto you, if God will. And he sailed from Ephesus.",
+   "And when he had landed at Cesarea, and gone up, and saluted the church, he went down to Antioch.",
+   "And after he had spent some time there, he departed, and went over all the country of Galatia and Phrygia in order, strengthening all the disciples."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "24": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "24",
+  "pericope_label": "And a certain Jew named Apollos, born at Alexandria, an eloquent man, and mighty in the scriptures, came to Ephesus",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Apollos, a Jew of Alexandria, eloquent and mighty in the Scriptures, came to Ephesus — combining the rhetorical training of Alexandria (home of Philo) with deep knowledge of the Old Testament (Henry); a remarkable figure who would labor at Corinth (1 Corinthians 1-3)."
+    "summary": "Robertson sets Apollos in an Alexandria where Jews were a third of the population and Jewish-Alexandrian philosophy was growing under a Philo still living, defuses the name as a contraction of Apollonius, and turns \"mighty in the Scriptures\" into a charge against the ministry — \"there is no excuse for ignorance of the Scriptures on the part of preachers\". Ellicott goes much further, arguing from Luther's guess about Hebrews and from parallels with the Wisdom of Solomon that Apollos wrote both, and traces to him the entry of the Philonic Logos into Christian thought; he also notes that the adjective rendered \"eloquent\" implies learning as much as speech."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin reads the timing as providence — Paul is driven from Ephesus and \"Apollos cometh in his place to supply his absence\" — and then weighs whether eloquence befits a minister at all. Paul was denied it so that \"the power of the Spirit might appear more excellent in his rude and homely speech\", yet that lack \"did no whit let but that the Lord might choose to himself eloquent ministers\". On being mighty in the Scriptures he withholds the credit from the man: the force belongs to Scripture, \"that it hath sufficient force both to defend the truth, and also to refute the subtilty of Satan\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke finds it strange that a Jew should bear a false god's name and conjectures Gentile parents who came over to Judaism after their son was named; he then wanders through Alexandria from the Pharos to Bonaparte's capture of the city. Wesley states the governing rule in a line: \"every talent may be of use in the kingdom of God, if joined with the knowledge of the Scriptures and fervour of spirit.\""
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why the narrative leaves Paul travelling to introduce Apollos — without this paragraph parts of Paul's letters cannot be understood — insists the name \"was not Apollo, the name of one of the heathen gods\", collects the renderings of the word for eloquent, and draws the distinction that matters: many could quote texts off-hand and had only \"the form of knowledge, and the letter of the law\", whereas Apollos understood their sense, so that \"a convincing, commanding, confirming power went along with all his expositions\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is Apollos named after the heathen god?",
+    "positions": [
+     {
+      "held_by": [
+       "Matthew Henry"
+      ],
+      "view": "No — the name \"was not Apollo, the name of one of the heathen gods, but Apollos\", and may be the Apelles of Romans 16:10."
+     },
+     {
+      "held_by": [
+       "Adam Clarke"
+      ],
+      "view": "Yes — \"for so we should write the word\"; it is strange in a Jew, and suggests Gentile parents who converted after naming him."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ],
+      "view": "The question does not arise: it is a contraction of Apollonius or Apollodorus, and Codex Bezae has the longer form."
+     }
+    ]
+   },
+   {
+    "question": "Does the word rendered \"eloquent\" mean speech or learning?",
+    "positions": [
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Either — a man of words or a man of ideas, since the root covers both; Apollos was doubtless both."
+     },
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "It \"implies learning as well as eloquence\", and was used above all of historians."
+     },
+     {
+      "held_by": [
+       "Matthew Henry"
+      ],
+      "view": "Collects the renderings without choosing: a prudent man, a learned man, a good historian, one who could speak well, \"an oracle of a man\"."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Advances the boldest claim in the chapter, arguing that the close agreement of style and language between the Wisdom of Solomon and the Epistle to the Hebrews makes it \"scarcely possible to resist the inference that they must have come from the same pen\", representing \"different stages in the spiritual growth of the same man\" — Apollos."
+   }
+  ],
   "themes": [
-   "a certain Jew named Apollos, born at Alexandria",
-   "an eloquent man, and mighty in the scriptures",
-   "the introduction of Apollos",
-   "learned men rising in the church"
+   "And a certain Jew named Apollos, born at Alexandria, an eloquent man, and mighty in the scriptures, came to Ephesus."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "25": {
@@ -1064,97 +1306,131 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Chrysostom"
   ],
+  "range": "25-26",
+  "pericope_label": "This man was instructed in the way of the Lord; and being fervent in the spirit... knowing only the baptism of John",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Apollos was instructed (catechized) in the way of the Lord, fervent in spirit (his own zealous spirit, Romans 12:11, Ellicott, Robertson), teaching diligently, yet 'knowing only the baptism of John' — accurate in what he knew, but his knowledge stopping short of the Cross, Resurrection, and Pentecost (Robertson)."
+    "summary": "Ellicott identifies the verb that later gave the Church its catechumens, concludes the Baptist's influence reached as far as Alexandria, and reconstructs precisely what Apollos lacked — a teacher who never passed the Baptist's standpoint, so that \"the Christ was for him the head of a glorified Judaism\". Barnes contradicts him flatly, holding that Apollos had not yet heard Jesus was the Messiah at all; Robertson takes the middle line and adds the root sense of teaching by dinning into the ears. On the fervent spirit Ellicott insists the noun means the man's own; on rebaptism Robertson denies what Ellicott thinks nearly necessary."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: zeal joined to knowledge — doctrine without zeal is cold, but zeal must be governed by knowledge of the Scripture; Apollos's fervor a gift of the Spirit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "instructed in the way of the Lord",
-   "fervent in the spirit",
-   "knowing only the baptism of John",
-   "zeal joined to knowledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Apollos preached boldly, and Aquila and Priscilla took him aside and expounded the way more perfectly — a gentle, delicate correction of a gifted preacher (Robertson); Apollos, the eloquent scholar, humbly received instruction from a Christian woman and her husband (Clarke)."
+    "summary": "Calvin makes the pairing of zeal and knowledge the lesson: \"doctrine without zeal is either like a sword in the hand of a madman, or else it lieth still as cold and without use\", yet knowledge must come first and govern it. He reads \"the baptism of John\" as covering the Baptist's whole ministry and draws from it a rule that it is \"wickedness and impious profanation\" to separate sacraments from doctrine. On Priscilla he praises, then restricts: she taught \"at home in her own house, that she might not overthrow the order prescribed by God and nature\". Gill guesses the teachers were parents once John's disciples."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: women were not as ignorant as the Papists claim — yet Priscilla taught privately at home, not overthrowing the order of public teaching prescribed by God and nature."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke defends the text against a proposed negative — \"surely it is possible for a man to teach accurately what he knows\" — and presses the scene on his male readers: a public teacher, eloquent and mighty in the Scriptures, \"was not ashamed to be indebted to the instructions of a Christian woman\"."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom raised the difficulty first and could not settle it: if Apollos knew only John's baptism, how was he fervent in the Spirit, and did the expounding \"more perfectly\" mean he needed to be baptised? The text records none, \"and it is likely that he did in fact receive baptism\"."
    }
   ],
   "debates": [
    {
-    "question": "How does Priscilla's teaching of Apollos bear on women teaching?",
-    "sides": [
+    "question": "What did Apollos not yet know?",
+    "positions": [
      {
-      "position": "It shows women's knowledge of the word, but was private instruction at home, not public office — not overthrowing church order",
-      "holders": [
-       "Calvin"
-      ]
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "He knew the life, death and resurrection and accepted Jesus as Christ, but from a teacher who never passed the Baptist's standpoint, so he had not learnt that circumcision was nothing or that the Temple ordinances were passing away."
+     },
+     {
+      "held_by": [
+       "Albert Barnes"
+      ],
+      "view": "\"It is clear that he had not heard that Jesus was the Messiah\"; he had only the right expectation of a humble and suffering deliverer, drawn from the Old Testament."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "He knew what the Baptist knew at his death — including that Jesus was the Son of God — but not the Cross, the Resurrection or Pentecost."
+     }
+    ]
+   },
+   {
+    "question": "Whose spirit was fervent?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "The man's own — the noun is used as in Romans 12:11, \"not for the Holy Spirit of God\"."
+     },
+     {
+      "held_by": [
+       "John Calvin"
+      ],
+      "view": "The Holy Spirit's — Luke \"doth attribute zeal to the Spirit\", and Apollos was moved not by the instinct of his own mind but by the Spirit's motion."
+     }
+    ]
+   },
+   {
+    "question": "Was Apollos baptised again after being taught?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott"
+      ],
+      "view": "It follows \"almost necessarily\", by the parallel of the disciples in the next chapter, that he was baptised into the name of the Lord Jesus."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "\"He was not rebaptized, but only received fuller information.\""
+     },
+     {
+      "held_by": [
+       "John Chrysostom"
+      ],
+      "view": "Cannot decide — no baptism is recorded, \"and it is likely that he did in fact receive baptism\"."
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Uses Priscilla's teaching against Rome — women were not then so ignorant of the word as the Papists would have them, since \"one of the chief teachers of the Church was instructed by a woman\" — and in the same breath confines the precedent to the house, \"that she might not overthrow the order prescribed by God and nature\"."
+   }
+  ],
   "themes": [
-   "he began to speak boldly in the synagogue",
-   "Aquila and Priscilla expounded the way of God more perfectly",
-   "a woman instructing privately",
-   "Apollos's humility"
+   "This man was instructed in the way of the Lord; and being fervent in the spirit, he spake and taught diligently the things of the Lord, knowing only the baptism of John.",
+   "And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "27": {
@@ -1167,72 +1443,105 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "27-28",
+  "pericope_label": "And when he was disposed to pass into Achaia, the brethren wrote, exhorting the disciples to receive him",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Apollos, going to Achaia (Corinth), was commended by the Ephesian brethren in a letter — the first instance of a 'letter of commendation' (2 Corinthians 3:1, Ellicott) — and helped the believers much, strengthening them against the Jews (Barnes); 'through grace' going with 'helped' or 'believed,' both true (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the brethren wrote, exhorting the disciples to receive him",
-   "helped them much which had believed through grace",
-   "the first letter of commendation",
-   "Apollos waters what Paul planted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
+    "summary": "Ellicott identifies the letter as \"the first instance of what were afterwards known technically as letters of commendation\" and reconstructs its afterlife: the Corinthian partisans held it up as a point in which Apollos excelled Paul, who answered that the church he planted was itself an epistle known and read of all men. Robertson traces the same line to the same verse. Ellicott also grants Apollos a larger success with Jews than Paul had, by a Philonic route, while Robertson takes the imperfect of the rare double compound to mean only that \"he had the last word\". Barnes uses the resulting factions to praise Paul's freedom from envy."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Apollos mightily and publicly confuted the Jews, showing by the Scriptures that Jesus is the Christ — his reasoning strong, arguments weighty, scriptural proofs irresistible (Gill, Barnes), bearing down all opposition; like Paul, proving from the Old Testament that Jesus is the Messiah."
+    "summary": "Calvin reads the commendation as more than hospitality: the Corinthians were asked not merely to lodge the man but \"that they should suffer him to teach\", lest the gifts given for edifying \"lie buried\". From the encounter he builds a doctrine of Scripture — if the law and the prophets sufficed for Apollos to prove Jesus is the Christ \"as if he did point out the matter with his finger\", it is \"detestable blasphemy\" to call Scripture dark, and refusing to dispute out of Scripture stands refuted by Luke. Gill has the Jews \"refuted over and over, and confounded to the last degree\"."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke translates the long Codex Bezae addition, in which visiting Corinthians beg Apollos to cross over with them, and reports that \"through grace\" is absent from several copies. He calls Apollos \"the innocent cause of a sort of schism\" at Corinth and records Jerome's claim that he became bishop there. Wesley states the principle behind the disputed phrase — \"it is through grace only that any gift of any one is profitable to another\" — and judges that Apollos \"was better able to convince the Jews, than to convert the heathens\"."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Did Apollos actually convince the Jews?",
+    "positions": [
+     {
+      "held_by": [
+       "John Gill",
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "Yes — they were confounded to the last degree, all opposition borne down and effectually silenced."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "No — the verb stands in the imperfect, which \"does not mean that Apollos convinced these rabbis, but he had the last word\"."
+     }
+    ]
+   },
+   {
+    "question": "Does \"through grace\" belong with helping or with believing?",
+    "positions": [
+     {
+      "held_by": [
+       "Charles Ellicott",
+       "John Calvin"
+      ],
+      "view": "With helping — grace working alongside the gift of wisdom enabled Apollos to raise men to a higher stage of thought."
+     },
+     {
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ],
+      "view": "Either is possible; the translators took the obvious course and tied it to believing."
+     },
+     {
+      "held_by": [
+       "A.T. Robertson"
+      ],
+      "view": "Declines to choose — \"both are true as the references show\"."
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Alone allows that Apollos outdid Paul on his own ground: arguing after the manner of Hebrews rather than Galatians, and treating hearers as men pressing on to maturity rather than children fed with milk, gave him \"a larger measure of real or apparent success in dealing with the Jews than had attended the labours of St. Paul\"."
+   }
+  ],
   "themes": [
-   "he mightily convinced the Jews, and that publicly",
-   "shewing by the scriptures that Jesus was Christ",
-   "the powerful public confutation",
-   "gifts joined to teachableness"
+   "And when he was disposed to pass into Achaia, the brethren wrote, exhorting the disciples to receive him: who, when he was come, helped them much which had believed through grace:",
+   "For he mightily convinced the Jews, and that publickly, shewing by the scriptures that Jesus was Christ."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }
