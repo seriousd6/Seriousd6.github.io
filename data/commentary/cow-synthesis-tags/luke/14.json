@@ -1,7 +1,7 @@
 {
  "1": {
   "voices": [
-   "Cyril of Alexandria",
+   "Cyril",
    "Bede",
    "Theophylact",
    "Gregory",
@@ -13,1420 +13,900 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "Tertullian"
+   "John Wesley"
   ],
+  "range": "1-6",
+  "pericope_label": "Is it lawful to heal on the sabbath day? And he took him, and healed him, and let him go",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot documents from the rabbis that Jewish tables were better spread on the sabbath, and on grounds of piety; Ellicott renders the host's title as one of the rulers of the Pharisees and takes him for a Sanhedrist, adds that sabbath feasts were often luxurious and the sabbath luxury of the Jews proverbial, and supplies the casuistry against which the counter-question was aimed, that food might be let down to a beast in a pit but no attempt made to draw it out; Barnes fences the precedent for dining out on the sabbath with conditions and denies that Christ's example can be pleaded for sabbath dinner-parties; Robertson finds in the watching a periphrastic imperfect middle, watching on the sly and with evil intent, and joins Ellicott in preferring the reading 'a son or an ox'."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin argues from the circumstances that the sick man was placed there, since a stranger could neither be at the table by accident nor enter a private house without consent, and holds to the principle that the law requires only that men rest from their own works, while this is God's; Gill says simply that the man was brought and set there on purpose."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the day as made for body as well as soul and not for austerity, glosses the watching from the preposition and then denounces the host's baseness in inviting a man to table only to accuse him, setting against it the Persian robber who tasted salt in a dark treasury and walked out empty-handed; Wesley alone denies that the dropsical man came by design, supposing he came hoping for a cure."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes that the Son of man came eating and drinking, cites Hammond that it violates every law of hospitality to seek advantage against a guest taken under one's protection, and observes that it is their own ox that is worth money, so that many dispense for their own interest with what they will not dispense with for God's glory."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact presses that a day which does not admit good works is accursed."
+   },
    {
     "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril has the man standing silent from fear of the Pharisees, so that the Lord did not ask whether he would be made whole but healed him at once: where a great good follows, we need not care that fools take offence."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Cyril: knowing their malice he became their guest to benefit those present; Gregory: the dropsy in the one body images the disease in the Pharisees' minds."
+    "summary": "Bede holds that they broke the sabbath by covetousness who charged Christ with breaking it by charity, and, following Augustine, likens the dropsical man to a covetous rich man whose thirst grows with the water in him; Gregory finds it fitting that he was healed in that company, the bodily infirmity of one expressing the mental disease of the others."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the man with the dropsy placed there deliberately, to entrap Christ?",
+    "positions": [
+     {
+      "view": "Yes — he was brought and set there on purpose, the circumstances admitting nothing else",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke",
+       "Albert Barnes",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "No — nothing suggests an insidious design; he probably came hoping for a cure",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Neither he nor his friends asked anything: Christ prevented him before he called",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They watched insidiously (periphrastic imperfect, middle voice); the host a 'ruler of the Pharisees,' likely of the Sanhedrin."
+    "question": "Does the counter-question read 'an ass or an ox' or 'a son or an ox'?",
+    "positions": [
+     {
+      "view": "'A son or an ox' — the better manuscripts, and the familiar pairing of ox and ass would tempt a copyist only one way",
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "'An ass or an ox', the received text, taken without comment",
+      "held_by": [
+       "Albert Barnes",
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Refuses to let Christ's presence at a sabbath dinner license the practice, allowing the precedent only to one who is away from home, goes to do good, and uses the occasion for religious discourse."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the miracle to correct, not abolish, the Sabbath — God's works and charity do not violate its rest; Henry: he came eating and drinking, even with enemies, to do good."
+    "voice": "Adam Clarke",
+    "claim": "Breaks off into a Persian anecdote of a robber who, finding he had tasted his victim's salt, left the treasury untouched, as a rebuke to a host who lays a snare for his own guest."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "sabbath at the Pharisee's house",
-   "they watched him",
-   "the dropsical man",
-   "doing good to enemies"
+   "And it came to pass, as he went into the house of one of the chief Pharisees to eat bread on the sabbath day, that they watched him.",
+   "And, behold, there was a certain man before him which had the dropsy.",
+   "And Jesus answering spake unto the lawyers and Pharisees, saying, Is it lawful to heal on the sabbath day?",
+   "And they held their peace. And he took him, and healed him, and let him go;",
+   "And answered them, saying, Which of you shall have an ass or an ox fallen into a pit, and will not straightway pull him out on the sabbath day?",
+   "And they could not answer him again to these things."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Dropsy' (hydropikos) a technical medical word, Luke's only record of this cure — the physician's precise diagnosis; debate whether the man was a planted trap or a sufferer come for help."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the man with dropsy",
-   "Luke the physician",
-   "trap or sufferer",
-   "the test set"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Jesus takes the initiative (unlike Luke 6/Matt 12), reading their thoughts and proposing the question first; the dilemma forestalls their charge; rabbinic rules allowed life-saving."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the question — is healing a violation of the Sabbath? — asked to guard himself against their slander; Wesley: answering the thoughts rising in their hearts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'is it lawful to heal?'",
-   "Christ takes the initiative",
-   "the dilemma",
-   "reading their thoughts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Their silence forfeits any later objection; 'took hold of him' (the only healing-use), cured by contact, then 'let him go' — dismissed him away from the critics."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they held their peace",
-   "took and healed him",
-   "let him go",
-   "controversy settled by deed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "From their own practice (cf Luke 13:15; Matt 12:11): if an ox may be saved on the Sabbath, much more a man; textual variant 'son or ox' / 'ass or ox' (look alike in uncials)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he shows he did nothing against the Sabbath, chiefly to guard himself against their slanders, not to instruct the blinded."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the ox fallen in the pit",
-   "argument from their practice",
-   "less to greater",
-   "the Sabbath of mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They 'were powerless to answer'; helpless to take up the argument, hating to admit they cared more for an ox than for the dropsical man."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the justice and mercy of his reasoning, agreeing with their own practice, shut their mouths."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "could not answer",
-   "helpless silence",
-   "rule defeated by love",
-   "defeat not repentance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
   "voices": [
    "Ambrose",
-   "Cyril of Alexandria",
+   "Cyril",
    "Basil",
    "Theophylact",
    "Bede",
    "John Gill",
+   "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Ambrose: after the healing, humility taught; Theophylact: vainglory no slight disease; Bede reads the 'parable' of the Church, where none should boast his merits."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Cyril: to seek unfitting honours is rashness; the lowly are crowned; Basil on the order due at a feast."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Parable' = precept/rule; they 'were picking out' the chief couches (imperfect); Calvin on the Pharisees' rife ambition and envy over seats."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "chief rooms / seats",
-   "a parable on humility",
-   "vainglory",
-   "the soul's ambition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The homely caution against claiming the chief couch lest displaced in shame; Christ honours ordinary courtesy yet aims chiefly to reprove pride; the Eastern reclining posture."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'sit not in the highest room'",
-   "prudence at the feast",
-   "risk of disgrace",
-   "humility taught by manners"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
+  "range": "7-11",
+  "pericope_label": "When thou art bidden, go and sit down in the lowest room: for whosoever exalteth himself shall be abased",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Shalt begin with shame' — the public moment of embarrassment, forced to the lowest place; Ellicott meets the difficulty that the precept seems calculating, as social precepts rise from prudence to higher ground."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'give this man place'",
-   "public humiliation",
-   "the descent to the lowest",
-   "pride's reward"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The lowest seat shows no greed for honour; the humble guest called up higher receives honour freely given; the host's 'Friend' a word of affection (John 15:14)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril hears beneath it the table God spreads for his own (Ps 23:5)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'sit in the lowest room'",
-   "'Friend, go up higher'",
-   "honour bestowed not seized",
-   "humility exalted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A universal divine principle — God abases the proud and favours the lowly; a repeated saying (Luke 18:14; Matt 23:12), echoed in 1 Pet 5:5."
+    "summary": "Barnes says the word here means a precept rather than a parable, a rule for attending a feast, and turns the passage into a defence of manners, since religion does not make men rude; Ellicott calls it hardly a parable in the modern sense, links it with the germ of the great invective of Matthew 23, states most sharply the difficulty that the counsel looks like a calculating humility, and answers it three ways — that social ethics begin from the prudential as in Proverbs, that the teaching is lowered to the hearers with some tinge of grave irony, and that a victory over a weakness strengthens self-control even when won from a lower motive; Lightfoot supplies the rabbinic maxim behind it from R. Aquila in the name of Simeon Ben Azzai; Robertson explains the chief seats as the first reclining places, the middle of a couch holding three being the place of honour."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: not ordinary social fact but God as Judge, who humbles haughtiness (Jas 4:6) — God an enemy to the self-exalting."
+    "summary": "Calvin refuses the whole frame of the difficulty: Christ is not speaking of outward and civil modesty, in which the haughtiest often excel, but of what we are inwardly before God, humility being not merely unfeigned abasement but a real annihilation of ourselves, and whoever claims merit must of necessity make war on God; Gill notes that the meal cannot have been a wedding feast, since they might not marry on the sabbath."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says our Lord is repeating counsel the rabbins gave their own pupils but were too proud to follow, and quotes Akiba, that a man should go two or three seats below his due and sit till he is told to go up higher; Wesley keeps the name of parable because several parts are not to be taken literally."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry appeals to Solomon and repeats from Lightfoot the rabbinic tale of prince, wise man and humble man, in which the king seated the humble man highest, and ends where pride is likeliest touched: instead of being proud that so many give place to us, it should humble us that there are so many to whom we must give place."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact answers beforehand the charge that so small a matter is beneath the Word of God — you would not call him a merciful physician who healed the gout but refused a toothache — and holds that the vainglory which set guests contending under the Saviour's eye was no slight passion; Basil guards the other flank, that to rush contentiously after the lowest place is itself a breach of order, and that resistance and contradiction are a stronger token of pride than taking the first seat."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril insists that the sentence is spoken according to the divine judgment and not after human experience, in which those who chase glory commonly get it and the humble stay obscure."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede argues from the form of the conclusion that the discourse must be read typically, since not everyone who exalts himself before men is abased by them, and reads it of the marriage feast of the Church, where one bidden earlier must give place to a worthier bidden later; Ambrose ties the two scenes of the chapter together, the dropsical man cured first and then humility taught at the table."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the counsel to take the lowest seat a prudential calculation or real humility?",
+    "positions": [
+     {
+      "view": "It looks calculating, and needs three defences: the prudential starting-point of social ethics, an accommodation to the hearers with a tinge of irony, and the strengthening effect of any victory over a weakness",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The question misses the point: Christ speaks not of civil modesty at all but of what we are inwardly before God",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The danger runs the other way too — contending for the lowest place is itself pride and a breach of order",
+      "held_by": [
+       "Basil"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Holds that our Lord is here only repeating advice the rabbis had long given their pupils and were themselves too proud to follow, quoting Akiba to that effect."
+   },
+   {
+    "voice": "Bede",
+    "claim": "Argues that the closing sentence proves the discourse typical rather than observational, since men are plainly not abased by men for exalting themselves."
+   }
+  ],
   "themes": [
-   "'exalteth himself shall be abased'",
-   "'humbleth himself shall be exalted'",
-   "the law of the kingdom",
-   "God abases the proud"
+   "And he put forth a parable to those which were bidden, when he marked how they chose out the chief rooms; saying unto them,",
+   "When thou art bidden of any man to a wedding, sit not down in the highest room; lest a more honourable man than thou be bidden of him;",
+   "And he that bade thee and him come and say to thee, Give this man place; and thou begin with shame to take the lowest room.",
+   "But when thou art bidden, go and sit down in the lowest room; that when he that bade thee cometh, he may say unto thee, Friend, go up higher: then shalt thou have worship in the presence of them that sit at meat with thee.",
+   "For whosoever exalteth himself shall be abased; and he that humbleth himself shall be exalted."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "12": {
   "voices": [
    "Theophylact",
    "Chrysostom",
+   "Origen",
    "Bede",
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact: guard the host against feasting to gain men's favour; Bede: kin and friends not forbidden, but such feasting fails to merit eternal life."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: not an absolute condemnation of entertaining friends — not to take away civility; Clarke: he condemns feasts given to the rich to flatter or to procure a return."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Robertson: present imperative prohibiting the habit of inviting only friends."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'call not thy friends'",
-   "self-interested hospitality",
-   "not condemning courtesy",
-   "giving for a return"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The four classes who cannot repay — poor, maimed, lame, blind (anarthrous, the whole helpless company); the form of obedience varies, best fulfilled by thoughtful, discriminate relief."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "call the poor and maimed",
-   "charity without return",
-   "the test of motive",
-   "love like God's"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The first occurrence of 'resurrection' in Christ's teaching (Ellicott); the poor cannot repay, so God recompenses 'at the resurrection of the just' (cf Acts 23:6)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: blessed are those who give without expecting earthly reward, looking to God; the self-interested have no claim on God's reward."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'thou shalt be blessed'",
-   "they cannot recompense thee",
-   "resurrection of the just",
-   "reward from God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "Eusebius",
-   "Cyril of Alexandria",
-   "Bede",
-   "Ambrose",
-   "Gregory",
-   "Basil",
-   "Augustine",
+   "Tertullian",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: he sighs for a distant bliss while the Bread of the kingdom (John 6:51) lay before him — 'open not your mouth but your heart.'"
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "several",
-    "summary": "Cyril: a carnal, careless hearer who thought the saints' reward bodily; Eusebius on supposing the resurrection one with the kingdom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: a pious platitude (ignorance or hypocrisy), the rabbis' banquet-figure for heaven; the Jewish dream of a temporal Messianic feast."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'blessed is he that shall eat'",
-   "the kingdom's feast",
-   "complacent presumption",
-   "the unrecognised Bread"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The host = God, the supper = salvation, the invitation = the gospel offer; the first 'feast' imagery in Christ's teaching (later expanded in Matt 22); the conventional remark answered to show complacency is no guarantee of godliness."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: the man represents God the Father."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'a great supper'",
-   "God the host",
-   "the gospel invitation",
-   "many bidden"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Eastern second summons when the feast is ready (to refuse it a deadly affront); the servant = the order of prophets and apostles; 'supper time' = the time of Christ's coming; 'all things now ready.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the servant = John the Baptist, or Christ, or the gospel ministry proclaiming the kingdom at hand."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'come, all things are ready'",
-   "the second summons",
-   "the gospel messengers",
-   "the freeness of the call"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'With one consent' looked like a conspiracy, each begging off (paraiteisthai); the first plea absurd (inspecting land near nightfall); sinners plead a self-made necessity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the three pleas — will ('I go'), pretended necessity ('I must'), impossibility ('I cannot') — all perish by things in themselves lawful."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'began to make excuse'",
-   "unanimous refusal",
-   "lawful things as pretexts",
-   "the love of the world"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A trifling excuse — he could test the oxen any time; selfish, like all sinners; 'five yoke' within a moderate farmer's reach (cf 1 Kgs 19:19)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the five yoke of oxen",
-   "a trifling excuse",
-   "worldly business",
-   "preference dressed as duty"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The curtest, rudest excuse ('I cannot come'); the law excused the newly married from war (Deut 24:5; 20:5-7) but not from courtesy — they treated the feast as a burdensome conscription; family love draws the heart from God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'I have married a wife'",
-   "'I cannot come'",
-   "family love as refusal",
-   "the threefold ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The host's ingressive anger and haste ('quickly'); the righteous indignation stronger in Matt 22:6; the 'streets and lanes' gather the city's neglected — poor, maimed, halt, blind."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the first-bidden Jews having rejected the word, the call goes to the despised and outcast."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the master angry",
-   "'bring in the poor'",
-   "grace and justice",
-   "the rejected feast filled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Yet there is room' — Barnes: heaven not yet full, room for millions more; the Master wished the places filled; the Eastern larger hall borrowed for many guests."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'yet there is room'",
-   "the gospel's spaciousness",
-   "heaven not full",
-   "wider welcome"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "12-14",
+  "pericope_label": "Call the poor, the maimed, the lame, the blind: and thou shalt be recompensed at the resurrection of the just",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The highways and hedges = the homeless, the Gentiles; 'compel' (anankason) means earnest persuasion, 'no thought of compulsion' (Clarke, Robertson)."
+    "summary": "Barnes reduces the prohibition to a supplement — call not only your friends, but also the poor; Ellicott sees in the sabbath feast only an ostentatious hospitality calculating on a return in kind, which could not take the place the Pharisee assumed for it among good works since being repaid on earth excluded it from the reward of the resurrection, and observes that this is the first occurrence of the word resurrection in our Lord's teaching, our Lord accepting the Pharisees' own doctrine while rebuking their pride; Robertson distinguishes the two meals as breakfast and dinner and takes the prohibition to be of the habit of inviting only such guests."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: 'as it were, violence' = the urgency of love for the poor."
+    "prevalence": "several",
+    "summary": "Calvin says those who read the words as an absolute condemnation of entertaining kindred take away part of civility, since it would be barbarous to rank relatives with strangers, and holds that the point is only that customary courtesies are no proof of charity, feasting the rich in hope of a return being not generosity but commercial exchange; he thinks Christ singled out this host as too addicted to pomp and too eager for the applause of the rich. Gill lets the promised blessing be temporal or spiritual, and adds that the poor will themselves pray for such a benefactor."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: compel 'with all the violence of love, and the force of God's word' — such compulsion only was used by Christ and his apostles."
+    "prevalence": "several",
+    "summary": "Clarke condemns what is spent to flatter the rich or procure a return, that money belonging properly to the poor, and collects the rabbinic praises of charity, Job setting a door in each quarter of his house for the poor while Abraham was reckoned more charitable for travelling the land to seek them out; Wesley leaves the offices of courtesy where they were but finds a higher duty implied, that we be sparing towards those who do not need it in order to assist those who do."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry alone reads the restored invitation typologically: Christ, like Joseph's host, gives out supplies without money and without price, and he adds the household arithmetic that one feast for the rich will make a great many meals for the poor, quoting Pliny that we should give to our poor friends and not to those who do not need us."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact marks the turn from the invited to the inviter, warning the host against feasting to gain the favour of men; Chrysostom presses the duty into practice, that if a man shrinks from receiving the poor in the best chamber he should admit Christ below among the servants or make the poor man his doorkeeper, since where there is alms the devil dares not enter, and answers the objection that the poor are unclean by telling the host to wash him, seat him, and clothe him."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the four classes as conditions of soul — the ignorant to be enriched, the wounded in conscience healed, those wandered from reason set straight, and those who discern not the truth brought to the true light."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede is careful that friends and kinsmen are not forbidden as though entertaining them were a crime, Christ saying not that sin is committed but that such intercourse fails to merit everlasting life, and explains that though all rise it is called the resurrection of the just because in it they do not doubt they are blessed; Tertullian turns the passage against Marcion, since a recompense forbidden now and promised at the resurrection is the plan of the Creator, who dislikes those that love gifts and follow after reward."
    }
   ],
   "debates": [
    {
-    "question": "What does 'compel them to come in' mean?",
-    "sides": [
+    "question": "How far does the prohibition of inviting friends and kindred reach?",
+    "positions": [
      {
-      "position": "earnest persuasion / the constraint of love, not force",
-      "holders": [
-       "Clarke",
-       "Robertson",
-       "Calvin",
-       "Wesley"
+      "view": "Not to an absolute ban — to read it so takes away part of civility; it means only that customary courtesies are no proof of charity",
+      "held_by": [
+       "John Calvin",
+       "Bede"
+      ]
+     },
+     {
+      "view": "It is a supplement, not a prohibition: call not only your friends, but also the poor",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "What is condemned is spending to flatter the rich or to procure a return, since that money belongs to the poor",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Courtesy is left where it was, but a higher duty is implied — be sparing towards those who do not need it",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Tertullian",
+    "claim": "Uses the deferred recompense of these verses as an argument against Marcion, on the ground that a reward postponed to the resurrection is the Creator's own method."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Notes that this is the first appearance of the word 'resurrection' in our Lord's teaching, and that he here adopts the fundamental doctrine of the Pharisees' own system while rebuking their pride."
+   }
+  ],
   "themes": [
-   "'compel them to come in'",
-   "highways and hedges",
-   "the Gentiles called",
-   "constraint of love not force"
+   "Then said he also to him that bade him, When thou makest a dinner or a supper, call not thy friends, nor thy brethren, neither thy kinsmen, nor thy rich neighbours; lest they also bid thee again, and a recompence be made thee.",
+   "But when thou makest a feast, call the poor, the maimed, the lame, the blind:",
+   "And thou shalt be blessed; for they cannot recompense thee: for thou shalt be recompensed at the resurrection of the just."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
- "24": {
+ "15": {
   "voices": [
+   "Eusebius",
+   "Cyril",
+   "Ambrose",
+   "Gregory",
+   "Augustine",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
+   "John Lightfoot",
    "John Wesley"
   ],
+  "range": "15-20",
+  "pericope_label": "A certain man made a great supper, and bade many: and they all with one consent began to make excuse",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Master's summing-up: not that no Jew is saved, but that those who decidedly rejected the offer shall not taste it; the anti-type in Israel's general rejection, yet not shutting the door on individuals who turn."
+    "prevalence": "several",
+    "summary": "Barnes explains the guest's mistake historically, the Jews expecting a temporal prince and a reign in which the ancient just would rise to share, and only they; Robertson calls the remark a pious platitude, of ignorance or hypocrisy, the banquet being a stock rabbinic figure for heavenly bliss, and keeps this parable distinct from the wedding feast of Matthew; Ellicott dissents from the harsher reading of the guest, hearing a burst of honest and unwonted enthusiasm, calls this the first appearance of the feast imagery in our Lord's teaching, and finds the sting of the third excuse in the law, since Moses allowed a new marriage, house or vineyard to excuse a man from military service; Lightfoot observes how unmannerly the excuses are if evening was coming on, no hour to inspect newly bought ground or try oxen."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill offers John the Baptist, Christ as minister of the circumcision, or the apostles for the servant sent at supper time."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prefers the reading of many manuscripts, dinner rather than bread, since a dinner was what they sat at; Wesley arranges the three excuses as a descent — one pleads his own will, the next a pretended necessity, the third impossibility — and remarks that all perish by things in themselves lawful."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the parable on the hearers, that hearts full of the world, laying house to house and field to field, have ears deaf to the invitation, and that each of the three might have deferred his errand a day and found it where he left it."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Eusebius takes the guest to identify the resurrection of the just with the kingdom of God, and so to be commending the recompense just promised."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril calls the guest carnal and a careless hearer who thought the reward of the saints would be bodily, and reads the servant as Christ himself, who emptied himself and took a servant's form, sent at supper time because the Word took our nature in the last age and not the first."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine answers that the man sighed after something far off while the bread he wanted lay before him, and makes the five yoke the five senses, paired in eyes, ears and nostrils and doubled in the mouth and in the pleasure of touch, called oxen because through them earthly things are ploughed for by men who believe nothing but what they see — noticing that the man goes not to feed them but to prove them, so that curiosity rather than delight is condemned; Gregory adds that the senses know only what lies without, that the two who beg to be excused mix a humble word with a proud act, and sets the two kinds of delight against each other, bodily pleasures longed for till they are had and loathed after, spiritual pleasures loathed till they are had and then the more desired; Ambrose sees three classes shut out, Gentiles, Jews and heretics, the five yoke being the ten commandments on their two tables."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What lies behind the guest's exclamation about eating bread in the kingdom?",
+    "positions": [
+     {
+      "view": "A carnal and careless hearing, which took the reward of the saints to be bodily",
+      "held_by": [
+       "Cyril"
+      ]
+     },
+     {
+      "view": "A pious platitude, whether of ignorance or hypocrisy, assuming himself among the blest",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "An honest, unwonted burst of enthusiasm kindled by sympathy with what our Lord had said",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A commendation of the recompense just promised, the resurrection of the just being taken for the kingdom itself",
+      "held_by": [
+       "Eusebius"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Reads the five yoke of oxen as the five bodily senses, paired anatomically, and argues from 'to prove them' rather than 'to feed them' that what is condemned is curiosity rather than sensual delight."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Finds the sting of the third excuse in the Mosaic exemptions from military service, so that the guests treat an invitation to a feast as though it were a conscription."
+   }
+  ],
   "themes": [
-   "'none shall taste my supper'",
-   "exclusion of the first-bidden",
-   "grace and judgment",
-   "despising the call"
+   "And when one of them that sat at meat with him heard these things, he said unto him, Blessed is he that shall eat bread in the kingdom of God.",
+   "Then said he unto him, A certain man made a great supper, and bade many:",
+   "And sent his servant at supper time to say to them that were bidden, Come; for all things are now ready.",
+   "And they all with one consent began to make excuse. The first said unto him, I have bought a piece of ground, and I must needs go and see it: I pray thee have me excused.",
+   "And another said, I have bought five yoke of oxen, and I go to prove them: I pray thee have me excused.",
+   "And another said, I have married a wife, and therefore I cannot come."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  }
+ },
+ "21": {
+  "voices": [
+   "Augustine",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "21-24",
+  "pericope_label": "Go out into the highways and hedges, and compel them to come in, that my house may be filled",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott distinguishes the piazza of an Eastern town from the lane hardly wide enough to ride through, makes them the by-ways of Jewish life which no scribe would enter, notices that the four adjectives are repeated exactly from the earlier precept so that in his own feast our Lord follows the rule he had just given for feasts on earth, refuses to admit space-limits into the interpretation, and calls it painfully true that men have read into 'compel' a sanction for force and penalties, which can make proselytes and hypocrites but not converts; Barnes reads the sequence nationally, the first bidden being Jews at ease and those in the streets Gentiles, expands at length on the room that still remains, describes the hedge from Hackett as a thorn fence of prickly pear, and cautions that parts of a parable are put in for keeping and should not be forced; Robertson quotes Vincent that the constraint is against the reluctance such poor creatures would feel, and adds that we need not say Jesus shuts the door against Jews who may yet turn to him; Lightfoot finds those among the hedges in the potters of 1 Chronicles 4:23, whom the Vulgate places among plantations and hedges."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin describes the master raking together the offscourings of the world rather than admit the ungrateful, and — alone among the moderns here — declines to disapprove the use Augustine made of the verse against the Donatists, since faith is voluntary and yet such methods are useful for subduing the obstinate; Gill takes the second commission as the apostles' turning from the Jews to the Gentiles."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues from usage that the verb means to prevail on by earnest entreaty, the same word serving where Christ constrained his disciples into the vessel, and ends flatly that no other constraint is ever recommended in the Gospel, every other compulsion being antichristian, submitted to only by cowards and knaves, and productive of hypocrites; Wesley allows only the violence of love and the force of God's word, such compulsion and no other having been used by Christ and his apostles."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine answers those who plead that they will enter of their own will by saying that a will is precisely what necessity applied from without gives rise to."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What kind of compulsion is meant by 'compel them to come in'?",
+    "positions": [
+     {
+      "view": "Earnest entreaty only; every other compulsion is antichristian and can produce nothing but hypocrites",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Moral constraint against the reluctance of the poor, with no thought of compulsory salvation",
+      "held_by": [
+       "A.T. Robertson",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "Force and penalties may make proselytes but never converts; the constraint of preachers is the love of Christ",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Necessity applied from without is what gives rise to a will, so the compulsion may be real",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "Chiefly exhortation and threatening; but Augustine's use of the verse against the Donatists is not to be disapproved",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Explicitly declines to disapprove Augustine's use of this verse to justify godly princes issuing edicts against the obstinate, on the ground that such methods subdue those who will not otherwise yield."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Turns 'yet there is room' into an extended appeal of his own — heaven is not full, and the message we are spared is that every place is filled."
+   }
+  ],
+  "themes": [
+   "So that servant came, and shewed his lord these things. Then the master of the house being angry said to his servant, Go out quickly into the streets and lanes of the city, and bring in hither the poor, and the maimed, and the halt, and the blind.",
+   "And the servant said, Lord, it is done as thou hast commanded, and yet there is room.",
+   "And the lord said unto the servant, Go out into the highways and hedges, and compel them to come in, that my house may be filled.",
+   "For I say unto you, That none of those men which were bidden shall taste of my supper."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "25": {
   "voices": [
    "Gregory",
+   "Ambrose",
+   "Cyril",
    "Theophylact",
    "Chrysostom",
-   "Cyril of Alexandria",
+   "Basil",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory: great rewards reached only by great labours; Theophylact: many followed lukewarmly, so he shows what a disciple must be."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'he turned' a deliberate act to check the unthinking enthusiasm of crowds following just to follow; Henry: understand discipleship's terms before professing it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "great multitudes",
-   "he turned to them",
-   "cost of discipleship",
-   "testing the crowd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "25-27",
+  "pericope_label": "If any man come to me, and hate not his father, and mother, he cannot be my disciple",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Hate' = love less (Matt 10:37; Rom 9:13 'Esau hated'); not literal, since parents are to be honoured (Matt 15:4); the hatred only where choice/competition comes in; here stronger ('not hating')."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: love them comparatively to Christ, renouncing all when they compete with him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'hate not his father'",
-   "'hate' = love less",
-   "supreme allegiance to Christ",
-   "hating one's own life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: bearing the cross = ever having death before our eyes, dying daily; Basil joins it to baptism, where the old man is crucified."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The familiar figure (Luke 9:23; Matt 16:24); each bears his own cross as Jesus did his (the verb elsewhere only of Christ, John 19:17); a fresh weight as his own cross neared."
+    "summary": "Robertson calls the turning a dramatic act, a check thrown across the enthusiasm of crowds who followed simply to be following, resists softening the verb 'hate' since the language of exaggerated contrast must not be watered down till the point is gone, notices that in naming the wife Christ has answered the third excuse of the parable just told, and observes that the verb for bearing is used of the cross nowhere else in the New Testament but here and of Christ in John 19:17; Barnes says flatly that 'hate' is to love less, the fifth commandment forbidding more, and points to the idiom of Jacob and Esau and of Leah; Ellicott notes the form is harder than in Matthew, 'not hating' having replaced 'loving more', and is addressed to the whole crowd of would-be followers, and adds that after what the disciples heard between Peter's confession and the Transfiguration the figure of the cross was growing daily more terrible."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill explains the crowds' expectation, the nation being big with carnal notions of a temporal kingdom, and takes the cross for all reproach, affliction and death itself, borne cheerfully and patiently."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues from Matthew's 'loveth more than me' that the word is comparative; Wesley reads it comparatively too, yet so that a man actually renounces field, oxen and wife and acts as if he hated them when they stand in competition with Christ."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sees a mixed multitude like that which left Egypt, many for love and more for company, infers that ministers must separate the precious from the vile, and keeps the trial practical: those who decline Christ's service for fear of disobliging a relative or losing a customer give cause to suspect where their love lies."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact says many followed lukewarmly, so that Christ showed what kind of man a disciple must be; Chrysostom insists that no beam of wood is meant by the cross but death kept always before the eyes, as Paul died daily; Basil hears in it the announcement of the Lord's death, which baptism anticipates when the old man is crucified."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril will not let the clause become a general renunciation of life: Paul kept his that he might preach Christ, and counted it not dear only when it had to be spent to finish his course."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory states the principle behind the harshness, that the mind kindles at heavenly rewards but great rewards are not reached except by great labours, meets the objection that we are elsewhere told to love enemies by distinguishing the bond of flesh from the enmity in the way of God, takes the clause about a man's own life as proof that the hatred springs from love and not passion, and divides the bearing of the cross into abstinence and compassion, adding that 'come after me' is required because some are abstinent for vainglory; Ambrose asks why anyone should be preferred before his Lord, who said, Who is my mother?"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "In what sense must a disciple 'hate' his own family?",
+    "positions": [
+     {
+      "view": "Simply to love less; we are not at liberty literally to hate our parents, and Scripture uses the word so elsewhere",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The strong verb must not be watered down: it bites where choice enters and a parent stands against Christ",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "view": "Harder here than in Matthew, and addressed to the whole crowd: self-renunciation to the extremest issue",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Comparative, yet so that a man acts as if he hated them when they stand in competition",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Resolved by a distinction: love those bound to us by flesh, refuse to know them as they stand in the way of God",
+      "held_by": [
+       "Gregory"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Observes that by naming the wife among the things to be hated Christ has answered the third excuse of the parable he has just finished telling."
+   },
+   {
+    "voice": "Cyril",
+    "claim": "Limits the hatred of one's own life by Paul's example, who preserved his while it served the preaching and counted it not dear only when it had to be spent."
+   }
+  ],
   "themes": [
-   "bearing his cross",
-   "willing endurance",
-   "crucified with Christ",
-   "daily dying"
+   "And there went great multitudes with him: and he turned, and said unto them,",
+   "If any man come to me, and hate not his father, and mother, and wife, and children, and brethren, and sisters, yea, and his own life also, he cannot be my disciple.",
+   "And whosoever doth not bear his cross, and come after me, cannot be my disciple."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "28": {
   "voices": [
    "Gregory",
+   "Basil",
    "Theophylact",
    "Augustine",
-   "Basil",
+   "Cyril",
+   "Bede",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory: every work preceded by consideration — brace against the world's ills; Theophylact: lay no foundation unfinished, lest like those who went back (John 6:66); Basil: the aim is to show the impossibility of pleasing God amid distractions."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: consider beforehand what the gospel demands — many yield to slight temptations because they pictured unmixed enjoyment."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Robertson: 'sit down' the attitude of deliberation, counting the cost first (cf Prov 24:27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the tower / count the cost",
-   "deliberation before building",
-   "not finishing",
-   "reckon discipleship's cost"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'To mock him' = to ridicule; the perfective 'finish out to the end' (ektelesai); the half-built tower exposed to public scorn."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the rash professor who takes up religion and a church-state, then fails."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the unfinished tower",
-   "public mockery",
-   "the backslider's shame",
-   "dishonour to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The taunt 'this fellow began and was not able to finish'; the shame in the gap between promise and performance."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he set out well, promised great things, made a stir, then could not finish."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'began... not able to finish'",
-   "the world's taunt",
-   "religion of mere beginnings",
-   "finishing the work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "28-33",
+  "pericope_label": "Which of you, intending to build a tower, sitteth not down first, and counteth the cost?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The king counts his troops as the builder his money; our enemies many and strong, our strength feeble; a possible side-glance at Herod's war with Aretas."
+    "prevalence": "several",
+    "summary": "Barnes takes the tower for a place of defence or observation, high enough to see an enemy and strong enough not to be easily taken, and declines to press the details of either parable, reducing both to plain resolutions; Robertson allows the tower to be a wall-tower, a vineyard watchtower or an ornamental building, and is better on the vocabulary, the verb for counting coming from the pebble used in voting as our calculate comes from a pebble, and the noun for cost from a root meaning to devour; Ellicott suspects a side-glance at the war the Tetrarch's divorce drew him into against Aretas, in which Josephus saw the beginning of all his later misfortunes, pairs the tower with the house built on rock, finds in the campaign both the Christian's conflict and the greater war Christ had entered, makes the embassy a lesson in thoroughness, and prefers 'renounce' as the word afterwards used at baptism."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin explains why the warning was needed, that men yield to slight temptations because they had pictured an unmixed enjoyment, as if always in the shade and at their ease, and that no one is fit to serve Christ till he has undergone a long preparation for warfare; he guards the comparison twice, warning that it would be idle to press a parable in every point so that the suit for peace must not become a compromise with our spiritual enemy, and that the meditation must not discourage us since the materials and the arms come from heaven. Gill makes the tower the profession itself, resting not on descent or education or bare knowledge but on Christ."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the 'other king' perhaps the prince of this world, with greater numbers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the warring king",
-   "count the cost",
-   "the Christian warfare",
-   "feeble against a strong foe"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The general scope (not the details) is thoroughness — if unable to fight, make peace; 'conditions of peace' = 'the things that make for peace' (Luke 19:42); some see the sinner suing to God for terms."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "conditions of peace",
-   "the prudent king",
-   "facing one's weakness",
-   "peace with God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Renounceth not' (apotassetai, a military word) = say good-bye to all — possessions, ease, besetting sins, fancied righteousness (cf Phil 3:7-8)."
+    "prevalence": "single",
+    "summary": "Clarke thinks the tower no more than a dwelling house with battlements after the Asiatic manner, used for air, refuge and prayer."
    },
    {
-    "school": "reformed",
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry itemises the cost — mortified lusts, self-denial, perhaps reputation, estate, liberty, life — and asks what that is beside what it cost Christ to purchase what comes to us without money and without price."
+   },
+   {
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Calvin: prefer Christ to life and all the flesh's wishes; Wesley: forsake all by withdrawing affection from the creatures, enjoying them only in and for God."
+    "summary": "Theophylact warns against laying a foundation and not ending the work, like the disciples who went back, since then a man is laughed at by men and by devils, and makes the opposing king sin reigning in the mortal body with the devils as its satellites, outnumbering us because spiritual against corporeal; Basil holds that the intention is not to leave a man free to be a disciple or not, but to show the impossibility of pleasing God amid things that distract the soul, and allegorises the tower into the understanding, given to preserve the good and mark the enemy's approach."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril widens the muster of enemies beyond spiritual wickedness to fleshly lust and the law of sin raging in the members."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory draws the plain rule that everything we do should be preceded by anxious consideration, and reads the embassy as counsel rather than reproach, since at that trial we are two against one, the enemy sifting us in thought as well as deed, so that while the judge is still afar off we should send tears, works of mercy and the propitiatory victim; Augustine finds in the same embassy a second reproach, those who have forsaken all being still unable to bear the threat of a coming temptation and making peace by consenting to sin, and ties both parables to the conclusion, that the cost of the tower and the strength of the ten thousand mean only that a man forsake all he has; Bede distinguishes renouncing from leaving, since few are perfect enough to leave all, but every believer must so hold the world as not to be held by it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the embassy that sues for peace a warning or a counsel?",
+    "positions": [
+     {
+      "view": "A reproach: those who have forsaken all still make peace with the devil by consenting to sin when temptation only threatens",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "view": "A counsel: while the judge is still afar off, send tears, works of mercy and the propitiatory victim as the embassy",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "view": "A lesson in thoroughness: if we will not pay for the war, better come to terms than fight with a wavering will",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Not to be pressed at all — the point is only that a man should count the cost deliberately",
+      "held_by": [
+       "John Calvin",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Suspects a contemporary allusion in the parable of the two kings to Herod Antipas's war with Aretas, which followed his divorce and destroyed his army."
+   },
+   {
+    "voice": "Bede",
+    "claim": "Distinguishes renouncing all things from leaving all things: few are perfect enough to leave all, but every believer must hold the world so as not to be held by it."
+   }
+  ],
   "themes": [
-   "'forsaketh not all'",
-   "renunciation",
-   "the heart's release",
-   "the terms of discipleship"
+   "For which of you, intending to build a tower, sitteth not down first, and counteth the cost, whether he have sufficient to finish it?",
+   "Lest haply, after he hath laid the foundation, and is not able to finish it, all that behold it begin to mock him,",
+   "Saying, This man began to build, and was not able to finish.",
+   "Or what king, going to make war against another king, sitteth not down first, and consulteth whether he be able with ten thousand to meet him that cometh against him with twenty thousand?",
+   "Or else, while the other is yet a great way off, he sendeth an ambassage, and desireth conditions of peace.",
+   "So likewise, whosoever he be of you that forsaketh not all that he hath, he cannot be my disciple."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "34": {
@@ -1436,84 +916,103 @@
    "John Gill",
    "John Lightfoot",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: season the heart with the salt of spiritual wisdom, becoming the salt of the earth; Theophylact extends it to private individuals, useful to those around them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Set beside Matt 5:13; Mark 9:50 — salt the purifying principle of unselfish devotion; Lightfoot reads it of the apostate who, counting the cost, goes back and becomes unsavoury salt."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "salt is good",
-   "savourless salt",
-   "the lapsed disciple",
-   "useful by grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "34-35",
+  "pericope_label": "Salt is good: but if the salt have lost his savour, wherewith shall it be seasoned?",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A new use of the salt-figure (independent of Matt 5:13; Mark 9:50) — fit neither for soil nor dunghill, cast out; 'he that hath ears' another repeated saying (Luke 8:8; Matt 11:15)."
+    "prevalence": "several",
+    "summary": "Barnes corrects the rendering, the salt being unfit not for the land but as land, since nothing can be sown on it, and unfit as manure besides, and applies it to the mere professor, who bears to true piety the relation this insipid mass bears to good salt; Ellicott hears an almost hopeless sadness in the question, takes the salt for the purifying element in life whose aspect here is self-renunciation, and makes most of the difference from the parallel sayings, which he thinks proves this one independent — a humbler use of salt is in view, mingled with the dunghill to prepare ground for seed, so that a corrupt church cannot influence even the secular life of its nation for good; Lightfoot supplies the connection with what precedes, that a man who does not weigh the undertaking beforehand will faint, go back and become unsavoury salt, and notes that the Hebrew word for savourless carries also the sense of foolish; Robertson observes only that the word for dunghill is late vernacular and occurs nowhere else in the New Testament."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill enters a mild demurral from husbandry, that salt does make land fruitful if not too much is used, though he cites Pliny on the other side."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley identifies the salt in four words: every Christian, and more eminently every minister."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril hears in the 'ears' the new hearing given in baptism for the divine mysteries."
+    "prevalence": "single",
+    "summary": "Theophylact widens the application from the gifted teacher to the private man, and explains the closing formula by the manner of the discourse, which had been in parables and dark sayings, so that our Lord rouses his hearers not to take the saying indifferently, the ears standing for the mind's perceptive power."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede begins from the substance of salt, water and air with a slight mixture of earth, which dries the fluent nature of corrupt bodies and keeps them from decay, so that the comparison fits disciples regenerated by water and the Spirit; he puts the difficulty as a question, what teacher is left to correct a man once enlightened who has cast away the sweetness he tasted, and adds that the hearing commanded is not by despising but by doing what has been learnt."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the point of comparison in the salt?",
+    "positions": [
+     {
+      "view": "Its preserving power: it dries corrupt bodies and keeps them from decay, as the regenerate change the corrupt life around them",
+      "held_by": [
+       "Bede",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "view": "A humbler use — salt mixed with the dunghill to prepare ground for seed, so that a corrupt church cannot even benefit the secular life of its nation",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The connection with what precedes: the man who did not count the cost goes back and becomes savourless",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Demurs from husbandry that salt does manure land when sparingly used, and especially fixed salts, citing Pliny on the other side."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Argues from the difference between this saying and the parallels in Matthew and Mark that the Lukan form is an independent saying resting on a distinct use of salt."
+   }
+  ],
   "themes": [
-   "fit for neither land nor dunghill",
-   "cast out",
-   "'he that hath ears'",
-   "weigh and hear"
+   "Salt is good: but if the salt have lost his savour, wherewith shall it be seasoned?",
+   "It is neither fit for the land, nor yet for the dunghill; but men cast it out. He that hath ears to hear, let him hear."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  }
 }

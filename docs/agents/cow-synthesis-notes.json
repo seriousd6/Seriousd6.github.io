@@ -29159,6 +29159,97 @@
       "book": "matthew",
       "chapter": "22",
       "note": "Self-graded A across all 30 entries, verses 1-46. Every claim traced to a named block in data/commentary/cow/matthew/22.json and attributed to the voice that makes it. Jamieson excluded as residue at keys 4, 10, 16 and 28 and declared in excluded_voices on the four entries covering them. Cyril of Jerusalem used as a live voice at 12, 32, 43 and 44 after checking that each block comments on the verse it is keyed to; he is invisible to the validator label regex, so his words do not count toward usable source totals. Nothing was drawn from the 992 words of StudyLight furniture in Ellicott at key 43, from the truncated tails of the nine 200-word blocks, or from the damaged Calvin block at key 2 beyond the sentences that survive intact. Fathers whose Catena blocks sit at the section-opening keys 1, 15, 23, 34 and 41 but comment on later verses were carried forward and named on the entry their material actually belongs to."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "7",
+        "13",
+        "19",
+        "25",
+        "31"
+      ],
+      "note": "Jamieson, Fausset and Brown donor bug, 14th consecutive chapter and the clearest case yet: the donor is Luke 6 and the mapping is verse-number IDENTITY, not merely monotonic. k13 = the night of prayer before choosing the Twelve (Lk 6:12-13); k19 = 'kept healing... successive acts of mercy till it went over all that needed' (Lk 6:19); k25 = the woe on those who have all their good things here (Lk 6:25); k31 = '27-36. (See on Mt 5:44-48; Mt 7:12)', i.e. the golden-rule block (Lk 6:27-36). k7 LOOKS on-topic — the sabbath principle that to neglect an opportunity of doing good is to incur the guilt of doing evil, citing Mk 3:4 — but Luke 6:6-11 is itself a sabbath healing controversy, so k7 is Luke 6:7 material that only appears to fit. Same book, eight chapters distant, key number = donor verse number throughout. This is the strongest evidence so far that the defect is an index lookup against the wrong chapter rather than random corruption; luke 19 (donor Luke 9) and genesis 42 (donor Genesis 36) were monotonic but not identity-mapped. No JFB material was usable and the voice is declared in no pericope."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "7",
+        "12",
+        "15",
+        "25"
+      ],
+      "note": "Cyril of Alexandria is keyed exactly one pericope late throughout luke 14, the same uniform series-wide offset recorded for luke 19. His k1 block is the homily on Luke 13:31-35 (Herod the fox, the lament over Jerusalem); k7 is the homily on 14:1-6 (the dropsy); k12 is on 14:7-11 (the chief seats); k25 is on 14:15-24 (the great supper). Not one of his blocks sits on its own pericope, so the voice was declared nowhere; the eastern-alexandrian school is carried in every tile by the Catena 'CYRIL' segments instead, which are correctly placed."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "10",
+        "35"
+      ],
+      "note": "Cyril of Jerusalem chrome, third chapter running (john 9, luke 19, now luke 14) and twice in this one. k10 is Mystagogical Catechesis on Psalm 23 and the eucharistic table, linked to Luke 14:10 by nothing but the word 'table'; k35 is the Catechesis on the chrism (anointing of forehead, ears, nostrils, breast), linked only by its quotation of 'He that hath ears to hear let him hear'. Both blocks are 203 words and neither is commentary on this chapter. Voice not declared."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "34",
+        "35"
+      ],
+      "note": "Two large end-of-chapter defects. (1) Adam Clarke's k34 block is 1251 words of which the salt comment is a single cross-reference; the remaining ~1200 words are Dr Dodd's four-point essay against religious persecution, explicitly headed 'On the subject referred to this place from Luk 14:23, Compel them to come in' — i.e. a chapter-end excursus filed under v.34 rather than v.23. Clarke's own anti-compulsion argument at k23 carries the same position, so the school's coverage is not lost, but the Dodd amplification could not be used in the vv.21-24 pericope where it belongs. Clarke is therefore not declared at 34-35. (2) Charles Ellicott's k35 block is 1231 words of which only ~250 are commentary; the rest is StudyLight.org page chrome pasted verbatim — copyright footer, inline CSS, site navigation. Same defect class as genesis 42 k38."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "7",
+        "15",
+        "21",
+        "25",
+        "28"
+      ],
+      "note": "Catena chain-labelling: in luke 14 the Catena aurea blocks are split under a single patristic header while the body runs through several fathers marked inline (CYRIL, CHRYS., AUG., GREG., THEOPHYL., ORIGEN, GREG. NYSS., PSEUDO-BASIL, AMBROSE, BASIL, BEDE). The k1 'Bede' block contains Theophylact and Augustine; k7 'Ambrose' contains Cyril and Chrysostom; k12 'Chrysostom' contains Origen and k12 'Bede' contains Chrysostom and Gregory of Nyssa; k15 'Cyril' contains Augustine, Origen, Ambrose and Pseudo-Basil; k28 'Gregory' contains Basil and Gregory of Nyssa. Every attribution in this chapter's prose was taken from the inline marker rather than the block header. Pseudo-Basil and Gregory of Nyssa were left uncited, since neither is separable enough to declare without gaming the grounding check."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "5",
+        "15",
+        "23",
+        "26",
+        "34"
+      ],
+      "note": "Five genuine splits foregrounded. (1) v.5 text: Ellicott and Robertson both prefer 'a son or an ox' over the received 'an ass or an ox', Ellicott arguing that the familiar pairing would tempt a copyist only one way. (2) v.2: was the dropsical man planted? Gill, Clarke, Barnes and Calvin say yes; Wesley denies it outright; Henry takes a third line. (3) vv.7-11: is the counsel prudential or humble? Ellicott concedes the difficulty and gives three answers, Calvin rejects the frame entirely, Basil warns that contending for the lowest place is itself pride. (4) v.23 'compel them to come in' — the sharpest split in the chapter: Clarke calls every other compulsion antichristian and productive of hypocrites, Ellicott that force makes proselytes not converts, Robertson and Wesley the same; against them Augustine argues that necessity from without gives rise to a will, and Calvin explicitly declines to disapprove Augustine's use of the verse against the Donatists. (5) v.26 'hate': Barnes and Clarke reduce it to 'love less', Robertson refuses to water it down, Gregory resolves it by a distinction."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "15",
+        "25"
+      ],
+      "note": "Tiling and density. luke 14 is 41,042 usable source words over 35 verses, split into eight pericopes at 1-6 / 7-11 / 12-14 / 15-20 / 21-24 / 25-27 / 28-33 / 34-35 (7003 / 5779 / 2951 / 9040 / 2981 / 4825 / 4635 / 3812 words). Mean compression is 7.9:1, but the tiles are very uneven: 15-20 runs at 13.9:1, at the top of the usable band, because k15 alone carries 6657 words (Matthew Henry 3258, Cyril 1098, Bede 775); 12-14 and 21-24 run at 4.5:1. The 15-20 entry therefore represents a smaller fraction of its sources than any other in the chapter — Origen, Basil and Bede were all cut from it for space and are carried elsewhere. Matthew Henry's blocks at k1, k7, k15 and k25 total ~9000 words, over a fifth of the chapter, and each ends with an appended abridgement of itself (Concise duplicating Complete)."
     }
   ]
 }
