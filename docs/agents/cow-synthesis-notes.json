@@ -31354,6 +31354,396 @@
         "9"
       ],
       "note": "Roster mismatch in scripts/synthesis_qa.py, same class as the Cyril of Jerusalem case filed at acts 4. VOICE_LABELS carries the bare label Robertson while the catena head reads A.T. Robertson, so declaring the full name as an exclusion is undeclarable and the validator rejects it. Declared as Robertson instead, which the roster does detect. Victorinus of Pettau remains the third instance, still open for an owner decision."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Jamieson stride-6 donor bug for the third chapter running, but with a difference worth recording. JFB appears at exactly five keys — 1, 7, 13, 19, 25 — stride 6 from key 1. The donor stream is JFB's own commentary running continuously from Matthew 3:7 forward, sampled in order: key 1 = Matthew 3:7 (the viper brood, Pharisees and Sadducees at John's baptism); key 7 = Matthew 3:12 (the winnowing fan, plus Luke's notice of John's imprisonment); key 13 = Matthew 3:17 (the voice at the baptism, 'Thou art', the aorist of absolute complacency). Those three are previous-chapter material and were excluded. But key 19 = Matthew 4:4 (Deuteronomy 8:3, 'not by bread alone') and key 25 = Matthew 4:8-9 ('and the glory of them, adds Luke') are THIS chapter's material, merely displaced fifteen and seventeen verses. Both were therefore RECOVERED and used at the pericopes they actually belong to — JFB at vv.3-4 and at v.8 — rather than discarded. So the same donor bug can be pure loss (acts 18, where every JFB block was Passion narrative) or partly recoverable, depending on how far the offset has carried the stream. Worth checking the tail of the stride in future chapters before excluding wholesale."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-4"
+      ],
+      "note": "Ellicott is NOT hoisted in this chapter, unlike acts 18 — every block is on its own verse. Recording the negative result because the acts 18 note might otherwise suggest a systematic Ellicott defect; it appears to be per-chapter."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "11-17"
+      ],
+      "note": "Cyril of Jerusalem shows the mixed placement recorded for him in acts 9 and acts 18, and the ratio is better here than the first scan suggested. Key 14 is plainly misfiled — a catechetical passage on Paul at Troas raising Eutychus and on the prophecies to the Ephesian elders, i.e. Acts 20 material sitting under a verse about the Isaiah prophecy — and was excluded. Key 11 looked misfiled on a first read of its opening lines (a lecture on Christ's Lordship, 'He is Lord, who was born in Bethlehem') but on reading the whole block it expounds Matthew 4:11 directly and at length: 'Of Angels He is Lord, as thou hast it in the Gospels, Then the Devil departed from Him, and the Angels came and ministered unto Him; for the Scripture saith not, they succoured Him, but they ministered unto Him, that is, like servants.' It was used. Key 17 is likewise on-verse, on why Christ preached only after his baptism. Lesson: Cyril's blocks open with catechetical framing and reach the verse later, so a first-190-characters scan will misclassify them."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-23"
+      ],
+      "note": "John Lightfoot is correctly placed at every one of his nine keys in this chapter — the Eden war at v.1, the pinnacle at v.5, the kingdoms as Rome at v.8, leaving Nazareth at v.13, Zabulon and Nephthali at v.15, the sea of Tiberias at v.18, fishers of men at v.19, James son of Zebedee at v.21, synagogues at v.23. This is a clean contrast with acts 9, where his single block was both misfiled and OCR-damaged, and is the strongest evidence so far that the misfiling defects are per-chapter accidents of assembly rather than per-voice corruption."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott's final block of the chapter, at key 25, carries the established StudyLight chrome tail — the usable note on the Decapolis city-list ends and is followed by navigation menus, copyright text and CSS. Usable text is the head of the block."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-23"
+      ],
+      "note": "Matthew Henry block inflation, five instances and the largest yet seen: 9,771 words at key 1 (his whole section commentary on the temptation, vv.1-11), 2,692 at key 12, 2,313 at key 18, 1,729 at key 23. Key 1 alone is 16,727 words, a quarter of the chapter's 65,763, and Henry is nearly 60 per cent of it. All genuine chapter material, none verse-addressed; redistributed across the pericopes actually treated."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-2"
+      ],
+      "note": "TILING CONSTRAINT, recorded because it forced an unusual ratio. Key 1 holds 16,727 source words — 25 per cent of the chapter — while key 2 holds only 967. Neither can stand alone: v.2 alone would be 1.5:1, below the padding floor, and v.1 cannot be split because a pericope must be a contiguous verse range and the validator requires the pericopes to tile the chapter. The vv.1-2 tile is therefore ~27:1 nominal, far above the 13:1 ceiling. The effective ratio is much lower, since Henry's 9,771-word block and the Catena's patristic set at key 1 are section commentary on vv.1-11 and were redistributed to the four temptation tiles. Recording this so the ratio is not read as a drafting failure."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Where the narrative of the Temptation came from — a question only Ellicott asks, and the boldest source-critical passage in the chapter. No eye-witness was present, so it must be myth, supernatural revelation, or Christ's own report. He rejects myth because a legend built on Genesis 3 would have reused the serpent and the trees, and because the expected Messiah was 'a great and mighty king', never 'a sufferer tried and tempted'. He rejects revelation because the evangelists are demonstrably compilers and 'the very difference in the order of the temptations is, as far as it goes, against the idea of a supernatural revelation'. What remains is that Jesus told a disciple."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "What kind of state 'led up of the Spirit' describes. Ellicott gathers John in the Spirit, Ezekiel lifted up and Philip caught away, and concludes an ecstasy 'in which the ordinary phenomena of consciousness and animal life were in great measure suspended'. Robertson claims much less — a strong impulsion sending Jesus out to think through what his baptism had committed him to. Wesley claims least: 'probably through a strong inward impulse'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "2"
+      ],
+      "note": "Whether Christ felt hunger during the forty days. Gill finds it 'very surprising' that none attended the whole time; Robertson quotes Alford that 'the wants of the natural body were suspended'; Calvin uses the point to deny the fast was an act of abstinence at all, since there was no virtue in refusing food 'for which he had no more appetite than if he had not been clothed with flesh'. Ellicott takes the closing words as 'a partial return to the common life of sensation', the cravings at last making themselves felt."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "3"
+      ],
+      "note": "Was the tempter visible? Gill has him tempting secretly for forty days and then putting 'on a visible form, and with an articulate, audible voice'; Wesley guesses 'probably in a human shape'. Ellicott refuses the whole picture — nothing suggests 'a bodily presence visible to the eye of sense', and attempts to supply one, Milton's or the rationalists' scribe or priest, are 'unauthorised, and diminish our sense of the reality and mystery of the Temptation'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "3"
+      ],
+      "note": "Did the devil know whom he was tempting? Both grammarians notice that 'Son of God' lacks its article and read the omission oppositely. Clarke: it should not be rendered 'the' Son, and 'whatever Satan might suspect, he did not fully know that the person he tempted was the true Messiah. Perhaps one grand object of his temptation was to find this out.' Robertson: the conditional is of the class that assumes its own truth, the devil quoting the baptismal voice back at Christ and daring him to act on it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "3"
+      ],
+      "note": "What sin the first temptation urged. Calvin reports and demolishes the patristic scheme of gluttony, ambition and covetousness — 'the ancients amused themselves with ingenious trifles', since nothing is intemperate in a starving man wanting food, and 'what luxury will they fancy themselves to have discovered in the use of bread?' — and holds instead that 'Satan made a direct attack on the faith of Christ'. Clarke agrees: 'distrust the Divine providence... and make use of illicit means.' Ellicott alone makes it layered — Esau's contempt for a birthright, an inference from Sonship to lordship over nature, and a public establishing of Messianic standing. Pseudo-Chrysostom, at v.8, still uses the very scheme Calvin rejected."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "4"
+      ],
+      "note": "Whether Deuteronomy 8:3 concerns spiritual food. Three voices go out of their way to reject a reading nobody in the passage holds. Barnes: neither Moses nor Christ 'had any reference to spiritual food, or to the doctrines necessary to support the faith of believers', the Hebrew word meaning thing. Gill grants the spiritual sense is 'a certain truth' but not the meaning here. Calvin says some 'torture it to a false meaning, as referring to spiritual life'. Recorded because the unanimity is itself the finding — the devotional reading was evidently common enough to need refuting three times."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "5"
+      ],
+      "note": "Was Christ physically carried to the pinnacle and the mountain? Four positions. Gill: 'not in a visionary way, but really and truly', Satan by divine permission having power over his body as the Spirit caught away Philip. Barnes: no — 'there is no evidence that Satan had power to do any of these things'; the verb means only to conduct or accompany, as when Balak brought Balaam. Ellicott: the taking lies 'outside the conditions of local motion', and with Paul, whether in the body or out of it we cannot say. Calvin: suspends judgment — 'in a matter that is doubtful, and where ignorance brings no risk, I choose rather to suspend my judgment.'"
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "5"
+      ],
+      "note": "Whose order of the temptations is right. Ellicott adjudicates for Matthew, since 'Get thee behind me, Satan' belongs at the close, and offers two explanations of Luke's difference: a less accurate informant, or genuinely differing impressions if the temptations recurred. Robertson explains Luke's principle as geographical. Calvin refuses the question — the evangelists did not aim at exact order, so which contest came second 'need not give us much trouble or uneasiness'. Jamieson, in a block displaced to key 19, says Matthew's order 'is the right one'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "5-6"
+      ],
+      "note": "What the pinnacle temptation was aiming at. Robertson makes it partly public — a man seen 'sailing down as if from heaven' would satisfy exactly what the populace expected of a Messiah, the angels serving as 'a spiritual parachute'. Ellicott had explicitly rejected that reading in advance: the point was not a wonder before the worshippers to win power and popularity, since the answer shows the suggestion 'tended, not to vain glory, but to distrust simulating reliance'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "Where the misquotation of Psalm 91 cheats. Clarke identifies the omitted clause, 'to keep thee in all thy ways', left out 'as quite unsuitable to his design', and concludes 'as the path of duty is the way of safety, they are entitled to no good when they walk out of it'. Calvin locates it more precisely: Satan 'is not wrong in proving from this passage, that angels have been given to Christ' — the fraud is that the guardianship is promised to those who 'keep themselves within their bounds', so God commands the walking and then promises the angels, while Satan produces the angels to license a leap."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "What Christ was shown from the mountain — the chapter's widest split. Barnes and Clarke take it literally, both citing the Abbé Mariti's summit overlooking Gilead, Moab, Jericho and the Dead Sea, and both requiring 'the world' to mean Judea, whose three governments had rulers called kings; Clarke's argument is that no mountain could show one hemisphere, 'and the other must of necessity be in darkness'. Lightfoot answers entirely differently: the kingdoms of the world means Rome and her empire, on four grounds including that Rome was 'the seat of Satan', so what was offered was the power of Caesar — 'this, antichrist afterward obtained.' Ellicott and Wesley take it as wholly visionary, Ellicott treating the verse as proof that the whole Temptation 'was in the region of which the spirit, and not the senses, takes cognisance'. Robertson refuses the disjunction: the panorama 'had to be partially mental and imaginative', but 'this fact does not prove that all phases of the temptations were subjective... Both could be true.'"
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "9"
+      ],
+      "note": "Whether the devil's claim to dispose of the kingdoms was valid. Barnes allows it 'with considerable justice'; Ellicott says it 'rested on the apparent evidence of the world's history' and that 'in part, the claim is allowed by our Lord's language'; Robertson agrees 'Jesus does not deny the grip of the devil on the world of men'. Calvin alone treats it as theft — the devil 'robbing God of the government of the world, and claiming it for himself'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "10"
+      ],
+      "note": "Whether the text reads 'get thee hence' or 'get thee behind me'. Clarke says the longer reading is added 'by a multitude of the best MSS., Versions, and Fathers' and Gill finds it in some copies; Robertson denies it flatly, those words belonging 'to Mt 16:23, not here'. Wesley turns the difference into a distinction of meaning — 'behind me' would send Satan to his proper place, as it later sent Peter, whereas this is bare dismissal. Calvin refuses to speculate 'as if the same words had not been addressed to Satan', while Ellicott builds his whole reading on precisely that identity."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "11"
+      ],
+      "note": "What the angels did. Clarke and Wesley have them bring food, Wesley adding they came 'to congratulate his victory', and Robertson that they cheered him in 'the inevitable nervous and spiritual reaction from the strain of conflict'. Ellicott declines to specify, warning against 'sensualising it as poets and artists have done', and adds the finest point in the tile: their service came 'as the reward of the abnegation which refused to make their ministry the subject of an experimental test'. Cyril presses the verb — Scripture 'saith not, they succoured Him, but they ministered unto Him, that is, like servants'. Calvin adds that Christ was never in fact forsaken by them, the grace present with him being 'sometimes hidden, so far as respects the feeling of the flesh'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-11"
+      ],
+      "note": "How many temptations there are, and of what. Pseudo-Chrysostom follows the patristic three — appetite, ambition, covetousness. Calvin dismisses that scheme as 'ingenious trifles'. Clarke substitutes a fourfold one — distrust, presumption, worldly ambition, idolatry — and claims 'there is probably not a temptation of Satan, but is reducible to one or other of these four articles'. Three incompatible taxonomies of the same three episodes."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "12"
+      ],
+      "note": "Why Jesus withdrew into Galilee. Chrysostom takes it as instruction — Christ departs 'again instructing us not to go to meet temptations, but to give place and withdraw ourselves. For it is no reproach, the not casting one's self into danger, but the failing to stand manfully when fallen into it.' Barnes denies the safety motive outright, since Jesus went straight into Herod's territory having given him no offence, and substitutes three others. Henry takes both — 'not only to provide for his own safety' but to supply John's want and build on his foundation."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "12"
+      ],
+      "note": "How to reconcile this verse with John's Gospel, which has the Baptist and Christ teaching simultaneously. Calvin: the synoptists pass over the overlap because the Baptist's course was preparatory and unfinished, so that although Christ taught within it 'he did not, strictly speaking, begin to [teach] till he succeeded to John' — 'when the dawn was passed, the sun arose'. Ellicott and Robertson treat the gap as simply unnarrated — a whole year, 'the year of obscurity', recoverable only from John — and Ellicott adds the inference that the verse implies a Judaean ministry 'which for some reason the writer does not narrate'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "13"
+      ],
+      "note": "Where Capernaum was, and the answer visibly changes across the corpus. Barnes, earliest, says the site 'is now uncertain' and reports an American missionary finding in 1823 only twenty or thirty uninhabited Arab huts among the presumed ruins. Ellicott can report the Palestine Exploration Society's identification with Tell-Hum and its disinterred Roman-period building, 'possibly, therefore, the very synagogue, built by the believing centurion, in which our Lord worshipped and taught'. Robertson gives it as settled. A clean instance of the corpus recording archaeological progress rather than exegetical disagreement."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "14-15"
+      ],
+      "note": "Whether Matthew has misused Isaiah. Calvin alone admits the difficulty — 'there is some appearance, as if Matthew had put a wrong meaning on the quotation from the prophet' — and answers by reading Isaiah 9 in its context of two calamities already fallen and a third foretold, rejecting as 'very absurd' the confining of it to Jerusalem's escape from Sennacherib. Barnes states the technical point without alarm: Matthew 'has given the sense, but not the very words'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "Whether the change from Isaiah's 'walked' to Matthew's 'sat' is deliberate. Clarke says yes, and infers a worsened condition: sitting in darkness 'expresses a greater degree of intellectual blindness, than walking in darkness does', so that after nearly seven centuries the people were worse off than when the prophet spoke. Wesley builds the same words into a three-step descent — walked, then sat, then in the region of the shadow of death."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "15"
+      ],
+      "note": "Whether 'beyond Jordan' means east of the river. Barnes denies it explicitly — 'this does not mean to the east of Jordan, as the phrase sometimes denotes, but rather in the vicinity of the Jordan' — while Wesley assumes exactly that eastward sense in the same breath as the neighbouring commentary."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "17"
+      ],
+      "note": "What 'began to preach' means, since by every account he had preached before. Gill dates the beginning neither from Capernaum nor from John's arrest but 'from the time that Satan left tempting him'. Wesley and Robertson make it the start of settled public work, Robertson noting he 'had been preaching for over a year already elsewhere'. Ellicott puts a season on it, the autumn or winter between the Passovers of A.D. 26 and 27."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "18"
+      ],
+      "note": "Whether the four had been called before and had gone back to fishing. Ellicott reconstructs exactly that from John's Gospel: they had accepted Christ months earlier, and when he began his Galilean circuit 'He was alone, and left them to return to their old calling', uncertain whether he would want them again. Calvin uses that very scenario to disprove a prior call: if they had been called and had returned to the boats, 'it would follow that they were apostates, who had forsaken their Master, despised their calling, and returned to their former occupation'. The two reconstructions cannot both stand. Gill, Henry and Robertson all side with Ellicott's sequence."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "18"
+      ],
+      "note": "Whether the unlearning of the first ministers licenses unlearned preachers. Clarke says the institutions cannot supply what God alone gives: seminaries have uses, but 'to make preachers of the Gospel is a matter to which they are utterly inadequate; it is a prerogative that God never did, and never will, delegate to man', and 'men-made ministers have almost ruined the heritage of God'. Henry, arguing the identical premise about mean instruments, guards the opposite flank in a sentence Clarke never writes: 'yet this will not justify the bold intrusion of ignorant and unqualified men into the work of the ministry.'"
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "21"
+      ],
+      "note": "Whether the mending of the nets is an undesigned coincidence with Luke's account of the broken nets. Ellicott raises the apologetic argument and then refuses it twice over: mending and washing followed even an unsuccessful night, and Luke's Greek 'does not say that the nets actually broke, but that they were on the point of breaking'. Recorded because a commentator declining a supporting argument available to him is rarer than one making it."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "23"
+      ],
+      "note": "How old the synagogues are. Barnes calls the origin 'involved in much obscurity' and derives them naturally from non-sacrificial worship plus the need for shelter from storm and heat. Clarke dates them firmly: 'not probably older than the return from the Babylonish captivity', and adds that they were built 'especially by rivers, that they might have water for the convenience of their frequent washings'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "23"
+      ],
+      "note": "What the healings are for. Calvin makes them evidential — such diseases 'cannot be healed by natural means', so curing them 'proved his divinity'. Ellicott resists precisely that: Matthew records them 'not directly as evidence of a supernatural mission, but almost, so to speak, as the natural accompaniments of His work; signs, not of power only or chiefly, but of the love, tenderness, pity, which were the true marks... of the kingdom of heaven'."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "23-24"
+      ],
+      "note": "Whether the moon affects the disease named after it — a three-way with an unexpected alignment. Calvin refuses to let the word commit the evangelists to the theory at all, on the principle that 'Scripture was not intended to determine questions of physical science, in which inductive reasoning is a sufficient guide', the term no more binding them to lunar medicine 'than the popular use of the phrases [sunrise] expresses a belief that it is the motion of the sun, and not of the earth, that produces the succession of day and night'. Barnes keeps the name and drops the theory — 'it is not certain that the moon has any effect... but no harm arises from the use of the name'. Clarke, uniquely, defends the theory as physically true and supplies a mechanism: at new and full moon the sun and moon act together on the atmosphere, producing tides and, in sensitive constitutions, real change."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "24"
+      ],
+      "note": "Whether the demoniacs were really possessed or the language is accommodation to popular error. Barnes argues seven ways for real possession — Christ and the apostles addressed and managed them as persons; they spoke, answered, and confessed knowledge of Christ, which 'could not be said of diseases'; they went out and entered others; the fathers read it so; and if Christ's belief here may be denied 'it does not appear why any other clear sentiment of his may not in the same way be disputed'. Clarke names and rejects the accommodation theory outright as one that 'can never comport with the accounts given of these persons'. Ellicott defers the question to the Gadarene narrative. Notable because Clarke rejects at v.24 the very accommodation principle Calvin had invoked at v.23 on the neighbouring word."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "25"
+      ],
+      "note": "Which cities made up the Decapolis, and where Damascus stood among them. Clarke calls Damascus 'the metropolis, and most ancient' of the ten and puts the district on both sides of Jordan. Barnes makes Scythopolis chief and 'the only one of them west of the Jordan', listing Damascus as merely one of two possible members. Ellicott gives Pliny's list, which includes Damascus, but notes that Josephus's calling Scythopolis the largest makes it 'almost certain that he did not include Damascus'. Three flatly different reference lists."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "4",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Fidelity self-grade A for all 13 pericopes. Every quoted string was checked against the Catena or commentary block it came from; no voice is credited with a position it does not hold; held_by lists and outlier attributions were reconciled against each key's voice list after trimming. Voices were declared only where read in full and cited directly: the smaller Catena entries at keys 3, 5, 8, 17 and 23 (Jerome, Gloss, Ambrose, Hilary, Remigius, Gregory, Augustine, Origen) were not read and are not declared, which is selection rather than misrepresentation. Excluded: the three JFB blocks carrying Matthew 3 material (keys 1, 7, 13) and Cyril's Acts 20 block (key 14), plus the StudyLight chrome tail of Ellicott's key-25 block. RECOVERED and used at their proper pericopes: JFB's key-19 block (Matthew 4:4 material, used at vv.3-4) and key-25 block (Matthew 4:8-9 material, used at v.8). Cyril's keys 11 and 17 were verified on full reading to be genuinely on-verse and were used. Henry's five inflated section blocks and the patristic set at key 1 were redistributed across the pericopes they actually treat. Source corpus 65,763 words across 25 keys tiled into 13 pericopes at an overall 7.8:1 compression, inside the 5-8:1 norm; the vv.1-2 tile is a forced outlier at about 27:1 nominal, for the tiling reason recorded separately, and the leanest is vv.6-7 at 2.6:1 usable after JFB's exclusion, kept dense rather than padded."
     }
   ]
 }
