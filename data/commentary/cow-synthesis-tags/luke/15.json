@@ -1,1216 +1,1431 @@
 {
  "1": {
   "voices": [
-   "Ambrose",
-   "Theophylact",
-   "Gloss",
    "John Gill",
-   "Albert Barnes"
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Gregory",
+   "Ambrose"
   ],
+  "range": "1-2",
+  "pericope_label": "Publicans draw near to hear him; Pharisees and scribes murmur that he receives sinners and eats with them",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill sets the scene on a sabbath as Jesus leaves the Pharisee&rsquo;s house, the crowd closing in once he is outside."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry defends the publicans as put into an ill name by national prejudice, notes the modesty of a crowd that came only near enough to hear, and observes that the meal was attacked because the preaching could not be."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott dates the boldness of the approach to Christ&rsquo;s withdrawal from the Pharisee&rsquo;s table; Robertson parses the periphrastic imperfect, the purpose infinitive, the doubled article separating publicans from sinners, the sneering demonstrative and the settled present of a habitual welcome; Barnes exposes the inference that kindness proves shared character."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the pair as tax-gatherers and heathens and presses the welcoming verb as taking to the bosom; Wesley limits &ldquo;all&rdquo; to all who were in that place and puts the scene in Galilee of the Gentiles."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Ambrose: the good Physician shows a remedy after the fall, the merciful Judge offers pardon; Theophylact: Christ took flesh to receive sinners as the physician the sick; the Gloss: publicans the despised tax-farmers — the outcast drawn to Christ."
+    "summary": "Ambrose reads the chapter as the remedy offered after the fall; Gregory contrasts true justice, which feels compassion, with false justice, which scorns."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the &ldquo;sinners&rdquo; are lax Jews or Gentiles: Clarke calls them heathens who believed neither in Christ nor Moses, and Wesley and Henry suspect a setting in Galilee of the Gentiles, while the grammarians treat them simply as the disreputable of the district."
+  ],
+  "outliers": [
+   "Robertson reaches outside the text for a comparison, likening the outcasts to the untouchables of India."
+  ],
   "themes": [
-   "publicans and sinners drew near",
-   "to hear him",
-   "the Physician for the sick",
-   "grace for the outcast"
+   "reception of sinners",
+   "murmuring",
+   "table fellowship",
+   "false and true justice"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the Pharisees judged Christ by his company, blind that he received sinners to heal not share their sin; Clarke: 'receiveth sinners' (takes to his bosom) is the gospel itself — the reproach turned to highest praise."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.1
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Pharisees murmured",
-   "this man receiveth sinners",
-   "the reproach is the gospel",
-   "self-righteous contempt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Christ answers the cavillers with parables, championing the lost (Ragg's climax: Pasture/House/Home, Herdsman/Housewife/Father, Sheep/Treasure/Son); Wesley: three parables of one import — how God receives sinners; Gill: to convict, encourage, and vindicate."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he spake this parable",
-   "three parables of one import",
-   "answering the murmurers",
-   "the climax of the lost"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: the flock all mankind, the Divine Shepherd Christ; the sheep an emblem of the heedless straying sinner, helpless to return; the shepherd goes 'until he find it' — the persevering pursuit of grace; Lightfoot on the Jewish 'ninety-nine.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an hundred sheep",
-   "go after that which is lost",
-   "the seeking Shepherd",
-   "grace pursues the helpless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Christ finds the sheep helpless and dead in sin, gives life, rescues from Satan, cleanses, clothes with his righteousness, and bears it home; Ellicott on the sheep laid on the shoulders — grace carrying the helpless sinner, the whole salvation the Shepherd's work, done rejoicing."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "layeth it on his shoulders",
-   "rejoicing",
-   "grace carries the helpless",
-   "the Shepherd's joy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the 'home' is the church and heaven, whither grace alone carries the found; Ellicott on the 'friends and neighbours' (cf. Luke 14:12) summoned to share — the shepherd's joy overflowing and communal, a rebuke to the Pharisees' grudging."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when he cometh home",
-   "rejoice with me",
-   "found my sheep",
-   "the overflowing joy of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Augustine",
-   "Albert Barnes",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill/Lightfoot: joy in heaven (and the church) over the penitent; 'just persons' = the truly righteous in Jewish usage, occasioning no such recovery."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: the ninety-nine read ironically of the self-righteous who 'need no repentance' only in their own conceit — rebuking the murmuring Pharisees; the joy greater because the recovery is the more unexpected mercy."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who are the 'ninety-nine just persons which need no repentance'?",
-    "sides": [
-     {
-      "position": "The truly righteous, occasioning no dramatic recovery",
-      "holders": [
-       "Gill",
-       "Lightfoot"
-      ]
-     },
-     {
-      "position": "Ironically, the self-righteous who only think they need none",
-      "holders": [
-       "Augustine"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "joy in heaven",
-   "one sinner that repenteth",
-   "more than ninety-nine just",
-   "heaven's gladness over the penitent"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Chrysostom",
-   "Gregory the Great",
-   "Augustine",
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the coin bears the King's image — man made in God's likeness, precious though lost; Gregory the Great: the woman is God/the divine Wisdom, the ten = nine angelic orders + man the tenth; Augustine: the nine = the self-trusting; the diligent search (candle, sweeping) for the precious thing."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Gregory the Great",
-    "note": "Reads the ten coins as the nine orders of angels and man created as the tenth, to fill up the number of the elect."
-   }
-  ],
-  "themes": [
-   "ten pieces of silver",
-   "the King's image",
-   "seek diligently till she find it",
-   "the worth of the lost soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: her female friends (feminine forms); 'which I had lost' — the woman owns the loss (grace on the seeker's side); the call 'rejoice with me' echoes the shepherd, pressing the same communal joy over the recovered."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "she calleth her friends",
-   "rejoice with me",
-   "found the piece I had lost",
-   "shared joy repeated"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Wesley",
+   "John Lightfoot",
+   "Cyril",
+   "Gregory of Nyssa",
+   "Gregory",
+   "Ambrose",
+   "Augustine"
   ],
+  "range": "3-6",
+  "pericope_label": "The parable of the lost sheep: the shepherd leaves the ninety and nine, seeks the one, carries it home and calls for shared joy",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the parable to convict the Pharisees, encourage the publicans and vindicate the speaker at once."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the natural history of a straying sheep and the raven that blinds the lamb, and asks who but a Pharisee or a devil would fault the rescue; Wesley identifies the wilderness as common land and reads the three parables as one answer."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: 'in the presence of the angels' = the joy of God himself before his court; Barnes: God has no pleasure in the wicked's death but joy in his turning (Ezekiel 33:11)."
+    "summary": "Robertson makes the wilderness ordinary pasture rather than peril, reads the seeking as a linear present closed by an effective aorist, and hears fellowship demanded by the verb of shared joy; Lightfoot documents the Jewish habit of dividing between one and ninety-nine; Ellicott allows both a narrow application to one soul present and a cosmic one in which the ninety and nine are unfallen creatures elsewhere."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the greater joy not because the righteous are less prized, but because the recovery of one devoted to destruction displays God's mercy more brightly — joy from an unexpected good."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "joy in the presence of the angels",
-   "one sinner that repenteth",
-   "the joy of God himself",
-   "heaven's gladness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Ambrose",
-   "Chrysostom",
-   "Augustine",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Ambrose: the three parables a threefold remedy — Shepherd's pity (sheep), Church's seeking (coin), Father's reconciliation (son); the prodigal the deepest, the sinner a beloved child who willfully departs and must return by repentance; the two sons = penitent sinners and murmuring Pharisees."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a certain man had two sons",
-   "the threefold remedy",
-   "the Father's reconciliation",
-   "the prodigal parable opens"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Ambrose"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the younger son the elect among sinners in a state of nature — conceited, impatient of restraint, withdrawing from God's yoke; the demand for his portion = the sinner wanting God's gifts but not his rule; God divides his living, permitting the willful their course."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril presses the perfection of the number ten times ten and denies that the shepherd was angry with the rest, who were left in safety."
    },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Ambrose: no fault in the father's giving, for no age is weak in the kingdom and God's gifts are freely bestowed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give me my portion",
-   "the self-willed demand",
-   "gifts without God's rule",
-   "the sinner's independence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes"
-  ],
-  "schools": [
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the 'far country' not a place but the heart's departure — the sinner flees God in disposition, to stand afar off and sin freely; Gill: the carnal man living independent, wasting God's gifts on his lusts; the swift descent from independence to riotous waste."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a far country",
-   "wasted his substance",
-   "departure in heart not place",
-   "the swift waste of God's gifts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: sin strips a man of every good (the image of God, righteousness, strength), leaving him poor, blind, naked — so there is no free will or native goodness in fallen man, all good coming from grace; the famine exposing the want, the world unable to satisfy the soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when he had spent all",
-   "a mighty famine",
-   "sin strips the soul",
-   "the emptiness of the far country"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the 'citizen' read as an unregenerate, legal preacher to whom the awakened sinner first turns (gifts without grace, a form without power); the swine-feeding the lowest degradation, sin's freedom become harsh bondage."
+    "prevalence": "single",
+    "summary": "Gregory of Nyssa observes that the sheep was neither punished nor driven but lifted and carried gently."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Barnes: he hired himself to the lowest service; for a Jew, feeding swine the depth of degradation — the soul enslaved to its basest lusts."
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory takes the ninety and nine for the angelic companies left in heaven and dwells on the call to rejoice with the shepherd rather than with the sheep; Augustine dissents, reading them as the proud who want to appear alone; Ambrose calls the shepherd rich, of whom each of us is a hundredth part."
    }
   ],
   "debates": [
-   {
-    "question": "Who is the 'citizen of that country'?",
-    "sides": [
-     {
-      "position": "An unregenerate, legal preacher the awakened sinner first turns to",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "Simply a master of that godless land — the degrading bondage of sin",
-      "holders": [
-       "Barnes"
-      ]
-     }
-    ]
-   }
+   "What the ninety and nine stand for. Ellicott and Gregory read unfallen angels, Clarke the whole flock of mankind, Robertson simply sheep at their usual pasture, while Augustine reverses the picture entirely and finds in them the proud who lack the unity that would complete them."
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke argues from his own observation of sheep and of ravens blinding lambs rather than from the text."
+  ],
   "themes": [
-   "joined himself to a citizen",
-   "feed swine",
-   "sin's freedom become bondage",
-   "the depth of degradation"
+   "seeking and finding",
+   "the shoulders of the shepherd",
+   "shared joy",
+   "the perfect number"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
+   }
   }
  },
- "16": {
+ "7": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "John Lightfoot",
+   "Cyril of Jerusalem",
+   "Tertullian"
   ],
+  "range": "7",
+  "pericope_label": "Joy in heaven over one sinner that repenteth, more than over ninety and nine just persons which need no repentance",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill allows the heaven in view to be either the church below or the angelic heaven above."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes strips the added word &ldquo;persons&rdquo;, allows the just ones to be angels, denies any sinless men on earth and forbids reading the numbers as a ratio; Ellicott hears an indignant protest veiled as concession against Pharisaic self-righteousness; Robertson finds no comparative in the Greek and takes the concession as argumentative, condemning the critics from their own claims; Lightfoot documents &ldquo;just persons&rdquo; as the ordinary Jewish name for the finally saved."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke lets the phrase describe genuinely upright people who cannot repent of sins they never committed, instances Cornelius, and reports without rejecting the view that the ninety and nine are angels; Wesley calls the joy solemn and festal, beginning in Christ and spreading to angels and the spirits of just men."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem applies the verse directly to catechumens, urging a new heart so that heaven may be glad."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Tertullian roots the joy in ownership: the seeker is the loser, the loser the owner, so the gladness is the Creator&rsquo;s."
+   }
+  ],
+  "debates": [
+   "Who the ninety and nine just persons are. Barnes leaves the term open to angels and denies any sinless men; Clarke defends a real class of upright people and passes on the angelic reading as worth weighing; Ellicott and Robertson deny the concession altogether and read it as irony aimed at the Pharisees."
+  ],
+  "outliers": [
+   "Clarke argues from a general maxim about unexpected advantages rather than from the passage, and Lightfoot digresses into rabbinic play on the two forms of a Hebrew letter."
+  ],
+  "themes": [
+   "repentance",
+   "joy in heaven",
+   "self-righteousness",
+   "the value of one"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Lightfoot",
+   "Gregory of Nyssa",
+   "Gregory Nazianzen",
+   "Gregory",
+   "Augustine",
+   "Chrysostom",
+   "Theophylact"
+  ],
+  "range": "8-10",
+  "pericope_label": "The parable of the lost coin: the woman lights a candle, sweeps and seeks until she finds it, and joy arises before the angels of God",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the husks (carob, swine's food) = the world's pleasures, riches, lusts — mean, empty, unsatisfying food that cannot fill the soul; 'no man gave unto him' — the far country abandons the ruined sinner, the world a hard master giving nothing in need."
+    "summary": "Gill makes the woman Christ and the coins the Jewish nation, and presses the coin&rsquo;s helplessness as proof of the sinner&rsquo;s passivity in conversion; Calvin explains the greater joy as the brighter shining of mercy on one already cut off, ascribed to God after the manner of men."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott finds significance in a coin lost indoors and in a woman seeking, and refuses to reduce the change of sex to an appeal to the women listening; Robertson traces the coin&rsquo;s name to a verb for grasping, infers a windowless house with a dirt floor, and observes that she lost the coin whereas the shepherd did not lose the sheep; Barnes notes the sum was small but was all she had; Lightfoot supplies a rabbinic parallel of candles lit for a lost shekel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke keeps the ancient coin names and observes that a coin long lost loses colour, gathers dirt and may have its image worn away, while warning that parables must not be made to go on all fours."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom reads the coin as man struck with the royal image, complementing the sheep; Gregory of Nyssa relocates the search inside one soul, the coins being the virtues and the house the conscience; Gregory Nazianzen makes the heavenly powers partners in the joy, and Theophylact ranks friends against nearer neighbours."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory makes the woman God and the nine coins the nine angelic orders, man created tenth; Augustine reads the nine instead as those who prefer themselves to returning sinners."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "What the nine remaining coins are. Gregory counts nine angelic orders with man as the tenth; Augustine takes them for the self-satisfied; Gill identifies them with the scribes and Pharisees; Gregory of Nyssa makes them the other virtues of a single soul.",
+   "Who the woman is: Christ for Gill, God and the wisdom of God for Gregory, and for Ellicott partly the Wisdom of Proverbs and partly the church."
+  ],
+  "outliers": [
+   "Clarke argues from the physical decay of a mislaid coin rather than from the text, and Robertson reconstructs the house from archaeology to explain the lamp."
+  ],
   "themes": [
-   "the husks the swine did eat",
-   "no man gave unto him",
-   "the world cannot satisfy",
-   "the sinner's friendlessness"
+   "the image of God",
+   "passivity in conversion",
+   "diligent search",
+   "joy before the angels"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
+   "Cyril",
+   "Ambrose",
+   "Augustine",
+   "Basil",
+   "Chrysostom",
+   "Theophylact"
+  ],
+  "range": "11-12",
+  "pericope_label": "A certain man had two sons; the younger asks for his portion of goods, and the father divides his living between them",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin reads the parable as confirming the preceding doctrine, with a father who goes out to meet rather than merely pardon; Gill takes the younger son for the elect among publicans and sinners."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes God father to the whole family of Adam, so that the publicans are the Pharisees&rsquo; own brethren, and draws the sons as characters rather than ciphers."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot finds the Jew-and-Gentile reading long established and fitting; Ellicott holds the narrow and wide applications together but turns the elder son against the angelic reading of the ninety and nine; Barnes and Robertson work out the law of the double share, the younger taking a third and probably in movable goods, with Roman and Syrophoenician parallels for claiming it early."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the early division an immemorial eastern custom the father could not legally refuse, framed to protect a child from ill usage."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril reports and rejects the Israel-and-Gentiles reading on the ground that the elder son&rsquo;s boast cannot fit a people so often reproved, preferring two ranks of the righteous, and locates free will in the father&rsquo;s refusal either to detain or to drive out."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose reads the three parables as pity, intercession and reconciliation; Augustine finds two nations from the beginning of the race, one keeping the worship of God and one deserting to idols, and hears in the request a soul pleased with its own power asking for what was always a gift."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom distinguishes a sheep that cannot find its way back from a son who acts by his own will, and refuses the reading that makes the elder son the angels; Theophylact makes the substance the capacity of reason with its liberty, together with heaven, earth, the Law and the Prophets; Basil notes that age is a matter of mind rather than grey hairs."
+   }
+  ],
+  "debates": [
+   "Whom the two sons represent. Barnes, Henry and Ellicott read Pharisees and publicans, with Lightfoot and Ellicott extending it to Jew and Gentile; Augustine sees two nations from the creation of the race; Cyril rejects the national reading because the elder son&rsquo;s claim of unbroken obedience cannot be said of Israel, and substitutes two ranks of the righteous; Chrysostom reports and rejects an older view that the elder son is the angels.",
+   "Ellicott argues from the elder son back to the earlier parables, holding that because he cannot stand for unfallen creation the ninety and nine sheep and the nine coins should not be read as angels either &mdash; against the reading he himself had allowed on verse 4."
+  ],
+  "outliers": [
+   "Clarke supports the legal point from an eastern law code and its scale of fines rather than from Jewish sources."
+  ],
+  "themes": [
+   "free will",
+   "the two sons",
+   "inheritance",
+   "the fatherhood of God"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.04
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "John Lightfoot",
+   "Ambrose",
+   "Augustine",
+   "Chrysostom"
+  ],
+  "range": "13-14",
+  "pericope_label": "The younger son gathers all, journeys into a far country, wastes his substance in riotous living, and a mighty famine leaves him in want",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill argues that sin strips the man of the divine image and of all strength for good, leaving nothing of free will and no capacity to prepare for conversion."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson sets the gathering against a scattering that is the word for winnowing and derives &ldquo;riotous&rdquo; from a root meaning unsaveable; Ellicott fills in the emigration to Alexandria, Rome or Corinth and reads the far country as a spirit wandering from God, with the famine under Claudius behind the second verse; Barnes keeps to the surface, converting the property to money and naturalising the famine from crop failure and plague."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies a motive of flight from legal penalty and reproach, traces the money to harlots on the elder brother&rsquo;s later charge, and supposes a country of riot where want must follow; Wesley compresses it to a God not in all his thoughts and grace squandered."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine traces the departure to a perverse imitation of God&rsquo;s ungoverned freedom, ending in a soul grown cold and vanishing from truth, and defines prodigal living as outward display that exhausts a man within; Ambrose calls the famine a fast not of food but of good works."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom denies that the far country is a place at all, since God is everywhere present; the flight is of the heart, so as to stand at a distance."
+   }
+  ],
+  "debates": [
+   "Whether the prodigal answers to the stubborn and rebellious son of Deuteronomy. Lightfoot raises the question and denies it, showing from the Sanhedrin&rsquo;s own definition that the conditions are drawn so narrowly that hardly such a son could exist."
+  ],
+  "outliers": [
+   "Clarke infers a flight from legal penalty that the narrative does not mention, and Lightfoot breaks off into an anecdote about an emperor&rsquo;s appetite."
+  ],
+  "themes": [
+   "the far country",
+   "waste",
+   "famine",
+   "the loss of the image"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.4
+   }
+  }
+ },
+ "15": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Ambrose",
+   "Augustine",
+   "Theophylact",
+   "Bede"
+  ],
+  "range": "15-16",
+  "pericope_label": "He joins himself to a citizen of that country, is sent into the fields to feed swine, and no man gives him even the husks",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill rejects both saints and devil &mdash; the devil being the country&rsquo;s prince rather than a citizen &mdash; and identifies an unregenerate legal preacher with gifts but no grace."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson reads the passive of a verb meaning to glue and derives the pod&rsquo;s name from the word for horn; Ellicott hears in the same verb the cleaving of husband to wife, denies that the citizen can be the tempter since he is one of many and serves to punish and preserve rather than to seduce, and records the manuscript variant behind the coarser phrase; Barnes takes the citizen simply for a landowner and quotes a traveller on the carob pods still fed to swine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley makes the citizen the devil or one of his children; Clarke argues from a botanist that the word never meant husks, and reports the Egyptian swineherd&rsquo;s exclusion from society, worship and marriage."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose calls the citizen a prince of the world and the farm an enslavement to worldly goods, and Bede glosses the farm the same way; Augustine names a prince of the air."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact assigns the feeding of swine to those who outdid others in vice and taught their trade to others."
+   }
+  ],
+  "debates": [
+   "Whom the citizen represents. Wesley, Ambrose, Bede and Augustine make him the devil or a prince of this world; Gill argues the devil is that country&rsquo;s ruler and not one of its citizens, and proposes a graceless legal preacher; Ellicott rules out the tempter because the citizen is one of many and functions to punish rather than to seduce, and reads him as worldly prudence and religionless ethics.",
+   "Whether the word rendered husks means husks at all: Clarke denies it on botanical authority, and Barnes, Robertson and Ellicott all identify the carob pod instead."
+  ],
+  "outliers": [
+   "Barnes and Clarke both settle the botany from outside sources, a travel narrative and a seventeenth-century naturalist, rather than from the text."
+  ],
+  "themes": [
+   "degradation",
+   "dependence",
+   "unsatisfied appetite",
+   "the far country"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  },
  "17": {
   "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
    "Gregory of Nyssa",
    "Ambrose",
    "Augustine",
-   "John Gill",
-   "Albert Barnes"
+   "Basil",
+   "Chrysostom",
+   "Bede"
   ],
+  "range": "17",
+  "pericope_label": "And when he came to himself, he said, How many hired servants of my father&rsquo;s have bread enough and to spare, and I perish with hunger",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill divides the madness between the voluptuary and the self-righteous man; Calvin makes hunger the best teacher and God&rsquo;s wedges hard for hard knots, but insists that hope of the father&rsquo;s kindness is what gave courage, so repentance must begin in an acknowledgment of mercy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry treats the coming to oneself as the turning point of conversion, where the convinced sinner sees the meanest servant of God happier than himself."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes reads the phrase as recovery from derangement and hears the sting in a son who had property and a kind father; Robertson keeps it spatial and weighs the Greek clause against clause, loaves like a flood against a man perishing here; Ellicott distinguishes the false self the man had been living to, and identifies the hired servants as those who serve for reward yet find enough."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls sin a course of madness and repentance a return to sound sense, and records the added &ldquo;here&rdquo; in many witnesses."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Basil sorts obedience into servile, mercenary and filial; Chrysostom hears wounded rank, a free and noble son sunk below hirelings by his own will; Gregory of Nyssa marks the arc from contempt to a chastened return."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Ambrose: 'came to himself' — in departing from the Father he departed from himself; returning to God restores the soul to itself; Augustine: he brought his mind back from outward enticements to the conscience; Gregory of Nyssa: chastened by hardship; the Father's bread-to-spare piercing him."
+    "summary": "Ambrose turns the phrase into a paradox, that returning to God restores a man to himself, and gives the heir&rsquo;s right against the wage; Augustine locates the turn in conscience and sharpens the mercenaries into preachers who work for a temporal reward; Bede notes the son asks only a hireling&rsquo;s place and admits he could not deserve even that."
    }
   ],
   "debates": [
-   {
-    "voice": "Ambrose",
-    "note": "Reads 'came to himself' as the soul's recovery of its true identity — sin a departure from oneself, repentance a return."
-   }
+   "What the hired servants stand for. Ellicott and Basil read them as a real if lower order of obedience that is genuinely fed; Augustine narrows them to preachers of the true word who work for pay; Ambrose contrasts them with the heir who holds the pledge of the Spirit."
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin generalises from the parable into a doctrine of affliction as God&rsquo;s ordinary teaching method, well beyond the scope of the verse."
+  ],
   "themes": [
-   "came to himself",
-   "hired servants have bread to spare",
-   "repentance as coming to oneself",
-   "remembering the Father's plenty"
+   "self-knowledge",
+   "madness and sanity",
+   "sonship and hire",
+   "the uses of hunger"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley",
+   "Ambrose",
+   "Augustine",
+   "Chrysostom",
+   "Bede"
   ],
+  "range": "18",
+  "pericope_label": "I will arise and go to my father, and will say unto him, Father, I have sinned against heaven, and before thee",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill distinguishes leaving one&rsquo;s vices while remaining in the far country from leaving the country itself, its acquaintance and its ministry."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: 'I will arise' a decisive resolve to return at once; the sinner has nowhere to go but to God, trusting the kindness he wronged; Gill: he forsakes the far country itself; the confession owns sin against God first ('heaven') then the father — self-accusation, the heart of repentance."
+    "summary": "Robertson makes the resolve an act of will after clear sight and notes the hard word said first, a verb for missing the mark; Ellicott presses the aorist back to the first act of sin and reads the willingness to be a hired servant as the contrite heart taking the lowest place; Barnes treats the opening verb as an idiom for setting about business and argues that the offended father is the only place left to go."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley marks the accuracy of the steps and glosses heaven as God; Clarke grants the periphrasis but reports the rival rendering &ldquo;even unto heaven&rdquo;, an idiom for sinning beyond description."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine asks whether the two clauses name one thing or two, offering the father&rsquo;s supremacy, or the souls of the saints against the sanctuary of conscience; Ambrose reads the Spirit&rsquo;s gifts or the heavenly Jerusalem, and urges that God waits for the voice of confession though he knows all things; Bede notes the request is pitched below sonship on purpose."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom proposes that heaven here stands for Christ, since to sin against the visible heaven is to sin against the manhood he assumed."
    }
   ],
-  "debates": [],
+  "debates": [
+   "What &ldquo;against heaven&rdquo; means. Barnes and Wesley take it as the customary substitute for the name of God, while Clarke passes on a rendering that makes it an idiom of degree rather than an object; Chrysostom proposes Christ; Augustine offers the father&rsquo;s supremacy or the souls of the saints; Ambrose the gifts of the Spirit or the heavenly Jerusalem."
+  ],
   "outliers": [],
   "themes": [
-   "I will arise and go to my father",
-   "I have sinned against heaven",
-   "the decisive resolve",
-   "honest confession"
+   "resolution",
+   "confession",
+   "the name of God",
+   "humility"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.64
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Gregory of Nyssa",
+   "Ambrose",
+   "Augustine",
+   "Chrysostom"
   ],
+  "range": "19-20",
+  "pericope_label": "I am no more worthy to be called thy son; make me as one of thy hired servants. And he arose and came, and when he was yet a great way off his father saw him, had compassion, ran, fell on his neck and kissed him",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he owns his unworthiness to be called a son in any sense; Barnes: the request shows deep humility (a sinner's), love for the Father's house, and confidence in his kindness — content with the servant's place, casting himself wholly on mercy, though grace will give far more than he asks."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no more worthy to be called thy son",
-   "make me a hired servant",
-   "the humility of repentance",
-   "casting himself on mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the son's arising and coming carried out by grace, not his own strength."
+    "prevalence": "several",
+    "summary": "Gill takes the renunciation to cover national adoption and argues that the resolve proved to be of grace because it was executed, in another&rsquo;s strength; Calvin argues from lesser to greater, that God will not be harsher than fathers prone to revenge, and attacks as sophistry the inference that grace waits upon a repentance men produce themselves."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the father saw him 'a great way off' (watching for him), ran (where the son came slowly), embraced and kissed him before his confession — the eager, anticipating love of God meeting the penitent while yet far off."
+    "summary": "Robertson calls the disclaimer a confession of the facts and finds in the genitive absolute a father already watching; Barnes lists humility, love of home and confidence in the request, adds that the son&rsquo;s sense of his father was inadequate as every sinner&rsquo;s is, contrasts a son who came slowly with a father who ran, and locates the point of the parable here; Ellicott dresses the returning man as poor in spirit, needing more than rags of his own."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley notes the resolve was executed the moment it was made; Clarke presses the compound verb to mean he kissed him again and again."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom reads the running as God coming to those who cannot reach him, and the kiss as given to the mouth that made the confession; Gregory of Nyssa says the meditated confession alone won the father over."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose has the father hear the heart&rsquo;s secrets and run out lest anyone stop him, foreknowledge in the running and mercy in the embrace, and prefers being a son to being a sheep; Augustine makes the neck the place where the Father lowers his own Arm, which is Christ."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether the father&rsquo;s running proves that grace precedes repentance. Calvin sets the verse against opponents who argue that God shows grace only to those who first begin to seek him, granting that grief of conscience is required for pardon but denying that such repentance is a man&rsquo;s own production; Gill argues the same way from the son&rsquo;s rising, which he says was made and executed in another&rsquo;s strength."
+  ],
   "outliers": [],
   "themes": [
-   "a great way off",
-   "his father saw him and ran",
-   "fell on his neck and kissed him",
-   "the Father's anticipating love"
+   "unworthiness",
+   "grace and repentance",
+   "the father&rsquo;s haste",
+   "reconciliation"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.36
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Ambrose",
+   "Augustine",
+   "Chrysostom",
+   "Theophylact",
+   "Bede"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: the son's plea 'make me a servant' is cut short (the added words a later harmonizing gloss) — the father's love cannot wait for the full confession but interrupts with pardoning assurance; grace gives more than the penitent asks, restoring him as a son not a servant."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Why does the son not ask to be made a hired servant here?",
-    "sides": [
-     {
-      "position": "The father's love interrupts before he can; the added words are a later gloss, and the omission is the parable's beauty",
-      "holders": [
-       "Clarke",
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the son's confession",
-   "I have sinned against heaven",
-   "grace cuts short the plea",
-   "forgiven more than he asks"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
+  "range": "21-22",
+  "pericope_label": "The son confesses that he has sinned and is no more worthy to be called a son; the father calls for the best robe, a ring and shoes",
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the eloquent 'but' of grace — the father hears nothing of the servant's place; the best robe figuring Christ's righteousness covering the sinner's rags."
+    "prevalence": "several",
+    "summary": "Calvin defines a second branch of repentance as conviction attended by grief and shame, distinguishes this confession from the auricular kind, and allows that the Father restores the gifts he had stripped away; Gill hears grace in the conjunction and has the son prevented from asking pardon by the kiss already given."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the best robe (festal, Genesis 27:15), the ring (dignity and adoption, Genesis 41:42), the shoes (the free son, not the barefoot slave) — the full and free restoration to sonship, the sinner justified, adopted, adorned."
+    "summary": "Ellicott hears an unvaried confession and a dropped request, since a man who has felt the kiss cannot ask for a hireling&rsquo;s place; Robertson defends the disputed clause on manuscript grounds and reads the robe as first in rank, with ring and sandals as marks of a freeman; Barnes refuses to spiritualise the gifts at all, taking them as narrative colour for a single truth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke judges the extra clause an interpolation that spoils the beauty of an interrupted confession, and supplies the festal garment, the ring of dignity and the shoes restored with liberty; Wesley draws the moral that God often cuts an earnest confession short with a display of pardoning love."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine has the son nobly disdain the request after the kiss, and makes the robe the dignity Adam lost and the servants the preachers of reconciliation; Ambrose calls the robe the cloak of wisdom and the ring the seal of unfeigned faith, and Bede reads the hand as a man&rsquo;s working."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom notes that the father answers the steward rather than the son, because a penitent receives no reply in words but sees mercy at work; Theophylact takes the servants for ministering spirits or for priests who clothe the soul with Christ in baptism."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the words &ldquo;make me as one of thy hired servants&rdquo; belong in the son&rsquo;s speech. Clarke calls them an interpolation supplied to match the earlier resolve; Robertson notes the leading early manuscripts carry them and supposes the father broke in; Ellicott and Augustine hold that the son himself dropped the request once he had been kissed.",
+   "Whether the robe, ring and shoes should be read symbolically. Barnes forbids it outright and Calvin calls minute allegorising idle, while Ellicott, Ambrose, Augustine, Bede and Theophylact each assign the gifts a meaning."
+  ],
+  "outliers": [
+   "Clarke supports the note on shoes with the price of Bengali and Chinese footwear in his own day."
+  ],
   "themes": [
-   "bring forth the best robe",
-   "a ring on his hand",
-   "full restoration to sonship",
-   "the robe of righteousness"
+   "confession",
+   "pardon",
+   "restoration",
+   "the marks of sonship"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.38
+   }
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley"
   ],
+  "range": "23-24",
+  "pericope_label": "Bring the fatted calf and kill it, and let us eat and be merry; for this my son was dead and is alive again, was lost and is found",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill identifies the calf with Christ in allusion to the sin, peace and burnt offerings of the day of atonement, and unfolds the death as death in Adam, death under the law&rsquo;s sentence, and death in trespasses and sins."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the fatted calf figures Christ — either the sacrifice slain in the sinner's stead (atonement) or the rich spiritual food the believer feeds on; Barnes: 'be merry' = 'eating, let us rejoice' — the choicest of the herd for the greatest joy, the feast centred on Christ."
+    "summary": "Ellicott takes the verb as the technical word for slaying a victim and finds a hint that the joy required a death, with the article pointing to a calf already fattened for a particular feast; Robertson denies the sacrificial sense outright and keeps to the vocabulary, an animal fed on wheat and kept for festive occasions; Barnes corrects the English &ldquo;merry&rdquo;, which suggests jovial mirth where the Greek means simply joy, and weighs two senses of &ldquo;was dead&rdquo;, preferring death to virtue."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the imperative &ldquo;sacrifice it&rdquo; and explains that feast animals were first offered to God, the flesh consecrated and the guests fed on divine food; Wesley insists the word rendered merry implies no levity but a solid, serious, heartfelt joy."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the calf is killed sacrificially. Clarke and Ellicott both press the sacrificial force of the verb, Clarke from ancient feast custom and Ellicott from its technical use, while Robertson denies it flatly and takes the killing as ordinary provision for a feast."
+  ],
+  "outliers": [
+   "Clarke supports the sacrificial reading from present-day eastern custom rather than from the passage or its Jewish background."
+  ],
   "themes": [
-   "bring the fatted calf",
-   "let us eat and be merry",
-   "the feast on Christ",
-   "festal joy over the penitent"
+   "sacrifice and feast",
+   "joy",
+   "death and life",
+   "the completed trilogy"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the son 'dead' = dead in Adam, in law, in trespasses (separation from God, his image defaced); conversion a passage from death to life, lostness to recovery — the greatest change, the fittest occasion of the greatest joy; the father owns him 'my son.'"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.47
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "was dead and is alive again",
-   "was lost and is found",
-   "conversion from death to life",
-   "the joy begins"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "25": {
   "voices": [
-   "Bede",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Ambrose",
    "Augustine",
-   "John Gill"
+   "Jerome",
+   "Theophylact",
+   "Bede"
   ],
+  "range": "25",
+  "pericope_label": "Now his elder son was in the field, and as he came and drew nigh to the house he heard musick and dancing",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill identifies the scribes and Pharisees by eliminating angels, mature converts and the Jewish nation; Calvin grants the national reading some force but holds it inattentive to the occasion, and notes that Christ concedes the boast for the sake of argument."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the character for the Pharisees though not of them alone, and finds grace shining almost as bright in God&rsquo;s bearing with peevish saints as in his receiving of prodigals."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes takes the elder son for the Pharisees and defends the mention of dancing without endorsing it; Ellicott identifies a symphony of voices and instruments and derives our word choir from the second term; Robertson keeps the dance as a circular one on the green."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports a scholar who denies the word means dancing at all, taking it for a choir of singers; Wesley identifies the elder son with the scribes and Pharisees of the opening verses."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: the third parable not only declares the joy but blames the envious (the elder son); Augustine: the elder son = Israel in the field of the law's earthly labours, not in the house; the music and dancing = the Spirit-filled gospel joy of the Church — the murmuring Pharisees figured in him."
+    "summary": "Bede marks the third parable as the one that blames the envious; Augustine reads the elder son as Israel, out in the field of the Law and the Prophets, and takes the father&rsquo;s going out as an open calling of the Jews after the fullness of the Gentiles; Ambrose makes the younger son the Gentile people and derives the elder&rsquo;s age from envy; Jerome traces the kid to a deliverance from Rome that never came and adds that all human justice is injustice beside God&rsquo;s."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact widens the figure to everyone offended at the sudden salvation of others."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whom the elder son represents. Barnes, Wesley and Gill confine him to the scribes and Pharisees, Gill arguing the point by eliminating angels, mature believers and the nation; Augustine and Ambrose read Israel against the Gentiles; Calvin grants that reading some argument but judges it inattentive to the occasion; Theophylact generalises to anyone who resents another&rsquo;s salvation.",
+   "What the kid means. Ambrose reads it as the sacrifice the Jew still waits for and links it to Antichrist; Augustine rejects that reading with three objections and makes the kid the Lord himself, withheld from a nation that reckons him a sinner; Jerome makes it a deliverance from Rome; Theophylact a persecutor whose downfall would have given relief.",
+   "Whether &ldquo;dancing&rdquo; means dancing. Clarke reports a denial that the word ever means it, and Ellicott derives it from the dramatic chorus and includes song, while Robertson keeps a literal circular dance."
+  ],
+  "outliers": [
+   "Barnes leaves the verse to argue at length about the propriety of dancing and what may or may not be pleaded from scriptural examples."
+  ],
   "themes": [
-   "his elder son was in the field",
-   "heard musick and dancing",
-   "the self-righteous murmurer",
-   "the second movement of the parable"
+   "envy",
+   "the elder son",
+   "music and joy",
+   "Israel and the Gentiles"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.18
+   }
   }
  },
  "26": {
   "voices": [
    "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the servant a serving-boy (not the bondslave of v.22); the elder son 'inquired' eagerly and repeatedly, keeping outside; Gill: he questions a servant (a minister/disciple) as the Pharisees did when offended — near the house but not in it, inquiring about grace from afar."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he called one of the servants",
-   "asked what these things meant",
-   "inquiring from afar",
-   "near the house but not in it"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Augustine"
   ],
+  "range": "26-27",
+  "pericope_label": "He calls a servant and asks what these things mean, and is told that his brother is come and his father has killed the fatted calf because he has received him safe and sound",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill finds it characteristic that the son questions a servant rather than his father, as the scribes put their objections to a disciple rather than to Christ, and records the variation among the versions at the opening of the answer."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'safe and sound' (in health) Luke the physician's word (cf. 5:31; 7:10) — recovery of body and soul; Robertson: 'hath gotten him back'; the servant names him 'thy brother' (the kinship the elder son will deny); the father's joy at receiving him back, not reward for merit."
+    "summary": "Robertson distinguishes the servant questioned from the bondslaves of the earlier verse, reads the imperfect as eager repeated inquiry, defends the indirect question against a charge of poor Greek, and works through three tenses in the report, ending with a father who has got his son back in good health despite everything; Ellicott gives the last word as literally &ldquo;in health&rdquo; and notes the participle as characteristic of Luke and Paul."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley notices which detail the servant chose, guessing that the calf was mentioned rather than the robe or ring because it stood nearer to the music and dancing."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine reads the consultation as the searching of a prophet, so that the question is why these feasts are kept in the church, and hears in the answer the new song rising from the end of the earth."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "thy brother is come",
-   "received him safe and sound",
-   "the household's joy",
-   "kinship the elder will deny"
+   "inquiry",
+   "report",
+   "recovery",
+   "the outsider at the door"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 1.1
+   }
   }
  },
  "28": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Augustine",
+   "Chrysostom",
+   "Theophylact"
   ],
+  "range": "28-29",
+  "pericope_label": "He is angry and will not go in; his father comes out and entreats him, and he answers that he has served many years and never transgressed, yet was never given a kid to make merry with his friends",
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: the anger is self-righteousness' hatred of free grace — displeased that salvation is free, full, for sinners, by Christ alone; Clarke: the indignation of the scribes and Pharisees (Luke 15:1-2); the father comes out and entreats — grace stooping to the resentful as to the sinner."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he was angry, would not go in",
-   "his father intreated him",
-   "self-righteousness hates free grace",
-   "the Father entreats the elder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+    "summary": "Gill reads the offence as anger at the preaching of a crucified Christ and free, discriminating grace; Calvin grants the boast for argument&rsquo;s sake and answers that not even a holiness equal to the angels would justify complaining that a brother is pardoned."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'I serve, as a slave serves' — servile obedience from fear and hope of reward, not love; Clarke: the complaint unjust (the father had divided his living, the son wanted nothing); Barnes: grudging even a kid — the mercenary, loveless self-righteousness of the Pharisee, measuring love by reward."
+    "summary": "Robertson makes the anger an ingressive explosion after long resentment, sets the aorist of never transgressing against the present of long serving, and notes what the complaint avoids saying;  Ellicott presses the verb for slavish service and traces the absence of joy to an unconsciousness of transgression; Barnes calls the complaint unreasonable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues from the earlier division and from eastern inheritance law that the anger was groundless,; Wesley finds the resentment natural, identifies this son with the just persons of the earlier verse, and suggests God gives little joy to those who never felt the sorrows of repentance."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine limits the unbroken commandment to the worship of one God, so that the son stands for Israelites who never turned to idols; Jerome likens him to the Pharisee justifying himself, keeping the law in the letter; Ambrose warns that grudging pardon to another may cost us our own."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact turns the concession into a question, whether being truly just could ever be a reason to refuse those who turn from iniquity; Chrysostom answers that no saint grieves at another&rsquo;s good but counts it his own."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the elder son&rsquo;s claim of unbroken obedience is to be believed. Wesley takes him for one of the just persons who need no repentance named earlier in the chapter; Ellicott and Robertson treat the claim as the Pharisees&rsquo; own valuation of themselves; Calvin and Theophylact concede it hypothetically only, to show that even a perfect obedience would give no right to resent a brother&rsquo;s pardon; Augustine narrows it to a single commandment actually kept."
+  ],
+  "outliers": [
+   "Clarke again settles the question of inheritance rights from an eastern law code rather than from Jewish practice."
+  ],
   "themes": [
-   "these many years do I serve thee",
-   "never gavest me a kid",
-   "servile, mercenary obedience",
-   "self-righteous self-justification"
+   "envy",
+   "self-righteousness",
+   "free grace",
+   "brotherhood refused"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.41
+   }
   }
  },
  "30": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "Ambrose",
+   "Augustine",
+   "Jerome"
   ],
+  "range": "30",
+  "pericope_label": "But as soon as this thy son was come, which hath devoured thy living with harlots, thou hast killed for him the fatted calf",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the refusal of the word brother as a refusal of the relation the father had just acknowledged, and reads the objection as offence that a crucified Christ should be preached to sinners so soon."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: 'this thy son' (not 'my brother') a phrase of studied contempt, disowning the kinship and reproaching the father; casting up the worst sins to make the welcome seem unjust; Gill: the true offence is free grace to sinners, that the worst should be received so freely and so soon — the murmuring Pharisee mirrored."
+    "summary": "Barnes calls &ldquo;this thy son&rdquo; an expression of great contempt and a striking instance of petty malice, insulting brother and father at once; Robertson catches what is not said, neither &ldquo;came back&rdquo; nor &ldquo;came home&rdquo;, renders the verb for devouring as eaten down, and observes that the charge about harlots may be true but was beyond the accuser&rsquo;s knowledge, and may show what he would have done himself; Ellicott hears a concentrated malignity in the turn of the phrase."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke finds supreme contempt in a man who will not use his brother&rsquo;s name, reproaching an affectionate father in the same breath."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome likens the speaker to the Pharisee justifying himself, keeping the law in the letter while accusing his brother wickedly; Augustine reads the harlots as Gentile superstition; Ambrose warns that grudging pardon to another may cost a man his own."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Robertson notes that the accusation about harlots, though it matches the narrative, is something the speaker could not have known."
+  ],
   "themes": [
-   "this thy son",
-   "devoured thy living with harlots",
-   "contempt for the returning sinner",
-   "resentment of free grace"
+   "contempt",
+   "accusation",
+   "self-justification",
+   "the refused brother"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.62
+   }
   }
  },
  "31": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
+   "Albert Barnes",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
   ],
+  "range": "31",
+  "pericope_label": "Son, thou art ever with me, and all that I have is thine",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin divides the answer into two arguments, that the brother&rsquo;s reception costs the elder son nothing and that grief at another&rsquo;s rescue is wicked hardness of heart; Gill grants the title of son by creation, national adoption and profession."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the elder son lost nothing (the property divided, all the remainder his); the father reasons gently, owning him 'Son'; the parable's design — the elder son the Pharisees, the younger the returning sinner, the father God; those who abide with God lack nothing and have no cause to grudge grace to others."
+    "summary": "Robertson notes the informal &ldquo;child&rdquo; and the emphatic pronoun of a man who never appreciated his privileges at home; Ellicott raises and rejects the suggestion that the compliment is ironical, since the covenants, law and promises really had been given and only the power to use them was lacking; Barnes settles the legal question, that the property had been divided and what remained was already the elder son&rsquo;s."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley finds a strong reason against murmuring, since receiving the younger son disinherited nobody, but adds that the returning sinner will not be raised to a glory equal to that of those who have made greater progress in holiness."
    }
   ],
-  "debates": [],
+  "debates": [
+   "Whether the words are ironical. Ellicott raises the possibility that they are spoken from the Pharisees&rsquo; own point of view and rejects it, holding them literally true of Israel; Wesley turns them into a comparative reward, denying the penitent an equal glory where the servant has made greater progress; Calvin and Barnes take them as a plain statement that the elder son had lost nothing."
+  ],
   "outliers": [],
   "themes": [
-   "Son, thou art ever with me",
-   "all that I have is thine",
-   "the constant privilege",
-   "no cause to grudge grace"
+   "no loss in mercy",
+   "privilege unused",
+   "inheritance",
+   "comparative reward"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.19
+   }
   }
  },
  "32": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Wesley"
   ],
+  "range": "32",
+  "pericope_label": "It was meet that we should make merry and be glad, for this thy brother was dead and is alive again, and was lost and is found",
   "schools": [
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill adds that the elder brother had reason of his own to keep the feast, had he felt for his kinsmen what the apostle felt for his."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill: the joy was 'meet' for all, the elder brother too, had he the spiritual affection to rejoice at sinners' conversion; Clarke: the father gently turns the elder's 'this thy son' into 'this thy brother,' restoring the kinship — the parable ends open, the appeal left hanging before the Pharisees and every reader."
+    "summary": "Ellicott presses the Greek for moral necessity rather than fitness, finds the repeated &ldquo;he was dead&rdquo; singularly emphatic, and hears tenderness as well as reproof in the answer &ldquo;this thy brother&rdquo;; Robertson locates the necessity in the father&rsquo;s heart, notes that the two verbs mean deep-seated joy and not hilarity, and ends with the objectors silenced by a picture of their own attitude."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley calls the change of pronoun one of a thousand delicate touches an inattentive reader misses, and draws from it the intimation that the best of men should account the worst sinners their brethren still; Clarke has the father return his son&rsquo;s unkind words in a wholly different spirit and holds that the hearers, unable to approve the elder son, had to condemn themselves in silence."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Clarke frames his closing reflections on the parable around a devotional writer&rsquo;s three-part scheme rather than the text."
+  ],
   "themes": [
-   "it was meet to make merry",
-   "this thy brother was dead and is alive",
-   "the duty of joy",
-   "the parable's open appeal"
+   "moral necessity of joy",
+   "brotherhood",
+   "death and life",
+   "the parable&rsquo;s purpose"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.12
+   }
   }
  }
 }

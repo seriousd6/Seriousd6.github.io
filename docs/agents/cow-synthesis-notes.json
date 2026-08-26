@@ -27629,6 +27629,152 @@
         "16"
       ],
       "note": "All eight entries re-read verse by verse against the source blocks in their declared range and self-graded A. Every attribution checked against the block header by positive voice filter. Excluded from the prose: all three Jamieson blocks (1 Corinthians 10-11 donor text), Tertullian's block at 2:1 (an exposition of 2 Thess 1:7-9), Cyril of Jerusalem sections 17 and 29 (section 29 being a note on 2 Cor 4:4), the duplicate pastings of section 9 across six keys, the editorial French glosses inside Calvin's blocks, the 'CHAPTER 5' heading closing Calvin at 2:16, and the chapter-analysis chrome opening Barnes and Clarke at 2:1. One deliberate inclusion: Clarke's 6,300-word chapter-end dissertation at 2:17 was used at verses 3 and 4, since it is genuine commentary on this chapter's crux rather than foreign matter. One near-miss avoided: at 2:4 the prose mentions Gregory VII making the emperor Henry wait barefooted — 'Henry' there is Henry IV, not Matthew Henry, and Matthew Henry is correctly not declared as a voice for that entry."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "Jamieson, Fausset and Brown fixed-stride displacement, thirteenth confirmation and the cleanest yet. Five JFB blocks sit at source keys 1, 7, 13, 19, 25 - exact period 6, no gaps - and none of them comments on Luke 15. Their content is JFB on Luke 6:27 - 7:9, in order: key 1 gives '27-36. (See on Mt 5:44-48; Mt 7:12; and Mt 14:12-14.)' = Luke 6:27-36; key 7 gives the blind-leading-the-blind cross-reference to Mt 15:14 = Luke 6:39; keys 13 and 19 both give '41-49. (See on Mt 7:3-5, Mt 7:16-27.)' = Luke 6:41-49; key 25 gives '(See on Mt 8:5-13.)' plus the centurion note = Luke 7:1-9. The donor is nine chapters back in the same book. All five declared residue."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "13",
+        "19"
+      ],
+      "note": "Verbatim duplication, second confirmation. The defect class first isolated at hebrews 1 (Cyril blocks pasted twice on adjacent key pairs) recurs here in the Jamieson stream: keys 13 and 19 carry byte-identical text, '41-49. (See on Mt 7:3-5, Mt 7:16-27.)'. The harvester pastes one donor block at two landing sites rather than splitting or advancing it. Distinct from displacement (which explains WHERE the block came from) and from truncation (which explains where it stops)."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "32"
+      ],
+      "note": "Ellicott chrome constant holds for a sixth consecutive chapter. Source key 32 carries an Ellicott block of 1120 words, of which 137 are commentary on Luke 15:32 and 983 are the StudyLight page furniture - sub-menu markup, copyright statement, an inline accordion script. 983 words exactly, the same figure measured at colossians 2, 1peter 4, revelation 5, acts 14 and hebrews 1: four books, three canon sections, one fixed template appended to the last key of the chapter and wholly independent of the commentary beneath it."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "8",
+        "11",
+        "17",
+        "25"
+      ],
+      "note": "New source shape in this chapter: catena-of-catena blocks. Eleven patristic head names appear here that no previous COW chapter has carried - Ambrose, Augustine, Jerome, Basil, Theophylact, a bare Chrysostom, a bare Cyril, Cyril of Alexandria, a bare Gregory, Gregory Nazianzen, Gregory of Nyssa. These are Catena Aurea extracts, and each block is headed with the name of only its FIRST citation while further fathers are spliced in beneath it under abbreviated in-line heads (AMBROSE, GREG., THEOPHYL., TITUS BOST., AUG., BEDE). The 596-word block headed 'Cyril' at key 1 runs into Ambrose and then Gregory inside itself; the 101-word 'Gregory Nazianzen' block at key 8 runs into Gregory and then Theophylact. Attribution must therefore be taken from the in-line sub-head, not from the block head. Related label inconsistency: bare 'Cyril' and 'Cyril of Alexandria' are heads at the same two keys, 1 and 11, and are the same voice split under two labels."
+    },
+    {
+      "at": "2026-08-25",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "11"
+      ],
+      "note": "Both Cyril of Alexandria blocks in this chapter are lemma-only: not commentary but the bare Scripture heading of his homily. The block at key 1 prints '14:25-35' followed by the full KJV text of Luke 14:25-35; the block at key 11 prints '15:1-10' followed by the full text of Luke 15:1-10. In each case the harvester captured the sermon's text header and none of the exposition beneath it, and at key 1 it took the header of the PREVIOUS homily, so the block is both empty of comment and one sermon out of place. Cyril of Alexandria therefore has no live material anywhere in Luke 15; both placements declared residue."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "4",
+        "11",
+        "29"
+      ],
+      "note": "The catena-internal disputes in this chapter are the sharpest yet found, and two are direct refutations. (1) On the kid of verse 29, Ambrose reads it as the sacrifice the Jew still waits for and suggests that those who seek a kid are waiting for Antichrist; Augustine then rejects that reading outright with three arguments - that a son told 'thou art ever with me' cannot be asking his father for belief in Antichrist, that the elder son cannot be restricted to such Jews as would believe in him, and that a man who did not believe in him could hardly feast on him - and substitutes his own reading, that the son was denied the Lord himself. (2) On verses 11-12 Ellicott turns the elder son against a reading he had allowed on verse 4: because the elder son plainly cannot stand for the unfallen part of creation, he says, this tells against interpreting the ninety and nine sheep or the nine coins as angels - which is precisely what Gregory had done and what Ellicott himself had granted as a legitimate extension."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "7",
+        "29",
+        "31"
+      ],
+      "note": "Wesley alone takes the elder brother's boast at face value. On verse 29 he writes that this son 'was one of the instances mentioned Lu 15:7' - that is, one of the ninety and nine just persons which need no repentance - and adds 'How admirably therefore does this parable confirm that assertion!' Every other voice on verse 7 had treated that phrase as either ironic (Ellicott, Robertson), open to angels (Barnes), or a comparative description of the merely respectable (Clarke). Wesley makes it a real class with a real member, and on verse 31 completes the position: God's receiving notorious sinners is no loss to those who have always served him, and he will not raise the penitent to a glory equal to theirs where they have made the greater progress in holiness. It is the one reading in the chapter that gives the elder son a genuine standing rather than a concession."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "7",
+        "10",
+        "18",
+        "20"
+      ],
+      "note": "Cyril of Jerusalem is placed four times in this chapter and only one placement is usable. Key 7 carries Catechetical Lecture 1.1, addressed to catechumens, which quotes the verse's own words about joy over one sinner that repenteth - genuine and on point. Key 10 repeats that block byte for byte, the same duplication defect as the Jamieson pair at keys 13 and 19. Key 18 carries a lecture on John 20:17, distinguishing 'My Father' by nature from 'your Father' by adoption, placed here on the bare word Father and saying nothing about the parable. Key 20 carries a lecture on the Holy Spirit, a chain of Isaiah and Ezekiel proof-texts with no contact with the verse at all. Keys 10, 18 and 20 declared residue. Together with the two lemma-only Cyril of Alexandria blocks, six of the chapter's twenty patristic placements are unusable."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "10",
+        "11",
+        "18",
+        "20"
+      ],
+      "note": "The validator cannot see multi-word patristic labels. scripts/synthesis_qa.py VOICE_LABELS carries bare 'Cyril' and bare 'Gregory' but not 'Cyril of Jerusalem', 'Cyril of Alexandria', 'Gregory of Nyssa' or 'Gregory Nazianzen', and _LABEL_RE requires the label to be followed directly by a colon, so a block headed 'Cyril of Alexandria:' matches nothing and split_voices reports no voice for it. Declaring such a block in excluded_voices therefore fails validate-synthesis.py with 'excluded_voices names a block absent from this entry's source'. The five residue placements here were handled with build.py's EXCL_UNDECLARABLE, so the exclusion is honoured in the tiling but not written into the tags. If the label list is ever extended, luke 15 keys 1, 10, 11, 18 and 20 can declare their residue properly."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "8",
+        "11",
+        "17",
+        "25"
+      ],
+      "note": "Two attribution hazards in this chapter, both handled. First, the Catena Aurea blocks name only their first citation in the head while splicing further fathers beneath under abbreviated in-line heads, so every patristic attribution here was taken from the in-line sub-head rather than the block head: the 'true justice feels compassion' passage is Gregory though it stands under a Gregory head, but the 'Rich then is that Shepherd' line inside the Cyril block is Ambrose, the ninety-nine-as-the-proud reading inside the same block is Augustine, and the gentle carrying is Gregory of Nyssa. Second, a Titus of Bostra appears twice as an in-line sub-head (keys 11 and 25) and is in no voice table; nothing was attributed to him. Every verse self-graded A."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "15",
+      "verses": [
+        "5",
+        "6",
+        "8",
+        "12",
+        "15",
+        "16",
+        "17",
+        "23",
+        "24",
+        "25",
+        "28",
+        "30"
+      ],
+      "note": "Truncation in this chapter runs at a single cap, not the two found at hebrews 1. Gill is cut at exactly 200 words at twelve keys (5, 6, 8, 12, 15, 16, 17, 23, 24, 25, 28, 30), each mid-sentence. No other source in the chapter shows a truncation floor: Barnes runs to 1363 words at key 31, Clarke to 1518 at key 32, Henry to 9943 at key 11. So the cap is applied per source and is not a global harvester limit, which matches the hebrews 1 finding that Gill cut at 200-202 while Chrysostom cut at exactly 302."
     }
   ]
 }
