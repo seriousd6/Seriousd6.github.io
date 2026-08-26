@@ -28451,6 +28451,72 @@
         "49"
       ],
       "note": "Foregrounded a genuine split on the loosing of Lazarus: Calvin reads 'loose him and let him go' as purely evidential, Christ employing the spectators' hands as witnesses, and attacks the sacramental reading by name; Augustine, Gregory and Alcuin read exactly that reading, the bands as sins and the loosing as the ministry's absolution. Both are given in the 41-44 entry without adjudication."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "Jamieson displacement, 18th confirmation, and the first instance where the whole mechanism becomes predictive. The two JFB blocks here (keys 2 and 8, stride 6) are not comment on Revelation at all: key 2 is JFB on Colossians 3:13 (forbearing, forgiving, \"cause of complaint\", the variant \"the Lord\" for \"Christ\") and key 8 is JFB on Colossians 3:18 (wives, \"own\" omitted by the oldest manuscripts, Greek \"was fit\", \"at Colosse some degree of failure\"). Surveying the neighbouring chapters shows the landing sites form ONE global lattice, not a per-chapter pattern: rev 2 at 1,7,13,19,25 (29 verses); rev 3 at 1,7,13,19 (22 verses); rev 4 at 2,8 (11 verses); rev 5 at 2,8,14 (14 verses); rev 6 at 5,11,17 (17 verses); rev 7 at 5,11,17 (17 verses); rev 8 at 5,11 (13 verses). The rule that fits every one of those six chapter boundaries is: next = prev + 6, and on overflow the next chapter starts at overflow minus (verses_in_chapter + 1) -- i.e. a single counter running over the verses plus one extra slot per chapter, stepping by six, continuous across chapter boundaries. The one exception is rev 8 -> rev 9, which predicts key 3 and observes 9, exactly one lattice step skipped (the same dropped-landing-site behaviour already seen at matthew 11). Meanwhile the DONOR text is a separate sequential cursor moving forward through a completely different book -- Colossians 2 in rev 3, Colossians 3 in rev 4, Colossians 3-4 in rev 5, and past Colossians into the following epistles by rev 6. This is the first cross-book donor observed, and it explains all seventeen earlier sightings: stride 6 inside any chapter, phase inherited from the chapter before, donor unrelated to the recipient."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "11"
+      ],
+      "note": "StudyLight chrome for a tenth consecutive chapter. The Ellicott block at key 11 runs 1075 visible words, of which only 83 are commentary -- the threefold doxology, the reading \"O Lord, and our God\", and the insistence on \"they were\" rather than \"they are\". The remaining 992 words are the site template: a chapter-navigation line, copyright and terms boilerplate, the whole sub-menu stylesheet, the resource directory (144 commentaries, 26 dictionaries, 7 encyclopedias, reading plans), and a block of verse-popup JavaScript. The 992 is the familiar 983-word template plus a 9-word navigation line whose length varies with the book and chapter name. Books affected so far: colossians, 1peter, revelation (x2), acts, hebrews, luke, matthew, numbers, exodus."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "5",
+        "6",
+        "10"
+      ],
+      "note": "Two truncation defects in one chapter. (1) Cyril of Jerusalem appears at keys 6 and 10 with material that is not comment on Revelation at all. Key 6 is Catechetical Lecture 9 on the firmament -- the heaven made out of water, fire and water coexisting, the hail of Egypt -- harvested presumably because Revelation 4:6 mentions a sea; key 10 is Lecture 15 on the Antichrist and the great tribulation, which touches nothing in the verse about the elders casting their crowns. Both are cut at exactly 200 words, key 10 breaking off mid-sentence (\"A time is the one year in...\"). Both are declared residue and kept out of the prose; because the validator label list carries bare \"Cyril\" but not \"Cyril of Jerusalem\", and its label regex needs the label followed directly by a colon, they cannot be declared in excluded_voices and are handled through EXCL_UNDECLARABLE. (2) Gill is cut at exactly 200 words at keys 1 and 6, both mid-sentence, and at key 5 his block is nine words of bare lemma with no commentary at all -- the same harvester cap already documented for Keil and Delitzsch across exodus 36, numbers 22 and exodus 16."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "4",
+        "7",
+        "9"
+      ],
+      "note": "Three linked disputes about the elders and the living creatures, none of them resolved inside the chapter. (a) What the twenty-four elders are. Barnes argues in numbered steps that they cannot be angels, since angels appear separately in the next chapter, and must be the redeemed Church of every land and age; Ellicott agrees and notes that Ezekiel-s parallel vision contains no human figures at all, so their presence here is deliberate; Wesley calls them the saints of former ages and infers from their never being called souls that they already possess glorified bodies. Against all of these Robertson reports, without adopting it, that a modern editor takes them for angels rather than redeemed men. (b) Where the number twenty-four comes from: the lesser Sanhedrin of twenty-three (Gill, who concedes the numbers do not fit; Clarke), the twenty-four priestly courses of David (Clarke, Ellicott), the twelve tribes joined to the twelve apostles or the two Testaments (Ellicott), or nothing determinable (Robertson, who adds an unknown angelic rank as a further possibility). (c) The four faces. Clarke transmits the traditional assignment to the evangelists -- eagle to John, ox to Luke, lion to Mark, man to Matthew -- as Christian tradition; Robertson calls it an early and baseless identification and refuses to look for a symbolism in each face. Gill takes a fourth road entirely and makes the lion the emblem of the ministers of the word."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "11"
+      ],
+      "note": "Clarke turns the closing doxology into an explicit polemic against reprobation: because the song says God made all things for his pleasure and preserves them from the same motive, it is \"most evident that he hateth nothing that he has made, and could have made no intelligent creature with the design to make it eternally miserable\", and it is \"high time that the benevolent nature of the Supreme God should be fully vindicated from aspersions of this kind\". He names no opponent. The catena places him in the same chapter as Gill, who at 4:9 has the living creatures ascribe to the three persons \"their due glory in election, redemption, and sanctification\". Neither writer acknowledges the other, and the doxology itself decides nothing between them, so the entry states both positions and leaves the question open."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "4",
+      "verses": [
+        "7",
+        "8"
+      ],
+      "note": "Unattributed borrowing inside the catena. At 4:7 Ellicott argues that the four living beings are representatives of animated nature because four beings hold a primacy in the world -- \"among created beings, man; among birds, the eagle; among cattle, the ox; among untamed animals, the lion\" -- and offers it as his own analysis. At 4:8 Clarke quotes Shemoth Rabba, where Rabbi Abin says: \"There are four which have principality in this world: among intellectual creatures, Man; among birds, the Eagle; among cattle, the Ox; and among wild beasts, the Lion.\" The list, its order and its framing are the same. Ellicott gives no source. This is the same class of finding as the numbers 22 case where Ellicott cites Gill by name -- a nineteenth-century commentator working from material that sits, unacknowledged, a few blocks away in the same catena."
     }
   ]
 }
