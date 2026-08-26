@@ -1,275 +1,147 @@
 {
  "1": {
   "voices": [
-   "Theophylact",
-   "Bede",
-   "Augustine",
-   "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Augustine"
   ],
+  "range": "1-5",
+  "pericope_label": "A prophet without honour in his own country",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "several"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The visit to Nazareth, distinct from the earlier rejection (Luke 4:16-31); a second chance for his home town (Matthew 13:54-58)."
+    "summary": "several"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Theophylact: he returned that they might have no excuse; Bede on the Nazarenes' blindness despising him for his kindred; Pseudo-Jerome: a man's origin breeds contempt (1 Samuel 25:10)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: though endangered there (Luke 4:29), Christ came again — so he waits to be gracious; the disciples followed into danger."
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "Is he the carpenter or the carpenter&rsquo;s son?",
+    "sides": [
+     {
+      "a": "The carpenter, on the reading of all the ancient copies",
+      "who": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "Both: he carried on the business after Joseph&rsquo;s death",
+      "who": [
+       "A.T. Robertson",
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "Both may be said, the one following from the other",
+      "who": [
+       "Augustine"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why could he do no mighty work there?",
+    "sides": [
+     {
+      "a": "He did not choose to: he spared them from a greater blame",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "A Hebrew idiom: what is not fit to be done is said to be impossible",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "a": "More evidence would only have increased their damnation",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "Blindness that despised him for his kindred alone",
+      "who": [
+       "Bede"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Pseudo-Jerome reads the workman as one whose work was the morning and the sun, the first Church and the second"
+  ],
   "themes": [
-   "return to Nazareth",
-   "rejection at home",
-   "contempt from kindred"
+   "rejection",
+   "unbelief",
+   "trade of Christ",
+   "kinship"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The curt 'Whence these things?' with a sting; 'the many' amazed yet challenging his wisdom and works (reported, since none done at Nazareth); taught on the sabbath."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns the sealing of the sepulchre, not this verse."
-   }
-  ],
-  "themes": [
-   "astonishment with contempt",
-   "'Whence hath this man?'",
-   "wonder without faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark alone calls Jesus 'the carpenter' (Matthew 13:55 'the carpenter's son'); tekton a worker in wood; the Jewish maxim that a father must teach a trade."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: great rabbis plied trades, so no ground to despise him; he worked to bear part of Adam's curse."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: no doubt he wrought with Joseph in his youth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'the carpenter'",
-   "offence at his lowliness",
-   "reality of the Incarnation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The proverb of the prophet without honour at home (Matthew 13:57; John 4:44) explains the Nazarenes' rejection; Mark adds 'among his own kin, and in his own house'."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Christ answered their offence with the proverb."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a prophet without honour",
-   "rejection by his own",
-   "narrowing circle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark alone adds the laying on of hands on a few sick; the laying-on detail peculiar to Mark."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the Hebrew idiom 'could not' means 'not fit and proper', not that he lacked power (Genesis 19:22; Mark 9:23)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: he could not work miracles there consistently with his wisdom and goodness, which would only increase their condemnation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'could do no mighty work'",
-   "unbelief withholds blessing",
-   "sovereignty of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
-  "voices": [
-   "Theophylact",
-   "Bede",
-   "Gregory",
-   "Pseudo-Chrysostom",
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "His marvelling at unbelief bears on the reality of his human nature; he marvelled at the centurion's faith (Luke 7:9) and here at its lack at home."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Theophylact: sow the word in lowly villages, sending two-by-two (Ecclesiastes 4:9); Bede: he gave his servants his own healing virtue."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "marvelled at unbelief",
-   "true human nature",
-   "teaching the villages"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
   "voices": [
    "John Gill",
    "Matthew Henry",
@@ -277,2131 +149,1673 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Chrysostom",
+   "Augustine",
+   "Gregory"
   ],
+  "range": "6-7",
+  "pericope_label": "He sent them forth by two and two",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Paired two-by-two for mutual support and union; six pairs covering Galilee; Mark omits the discourse of Matthew 10, being the Evangelist of action; the imperfect 'kept on giving' authority."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Gregory: sent two-by-two because charity needs two — none without love of neighbour should preach."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: they received that they might give, learned that they might teach, now set to work."
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "several"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "several"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "several"
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "Why were they sent in pairs?",
+    "sides": [
+     {
+      "a": "For activity, and because larger parties would not reach many villages",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "Because charity has two precepts and cannot exist between fewer than two",
+      "who": [
+       "Gregory"
+      ]
+     },
+     {
+      "a": "The rule of two witnesses, and company among strangers",
+      "who": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "a": "Mutual support, which serves usefulness and happiness together",
+      "who": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "a": "Coverage: six pairs could work Galilee in six directions",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What does his marvelling concede?",
+    "sides": [
+     {
+      "a": "The reality of the human nature and the limits within which he worked",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "Divine insight together with human limitations not clear to us",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "He marvelled as man; as God nothing was strange to him",
+      "who": [
+       "John Wesley",
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "May they carry a staff or not?",
+    "sides": [
+     {
+      "a": "The word bears two senses: forbidden as a possession, allowed as an ensign of authority",
+      "who": [
+       "Augustine"
+      ]
+     },
+     {
+      "a": "The stricter Gospels teach perfection; Mark speaks by permission",
+      "who": [
+       "Pseudo-Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "A.T. Robertson objects that the verse division splits the third Galilean tour from the sending it introduces"
+  ],
   "themes": [
-   "sending the Twelve",
-   "two by two",
-   "Christ's authority delegated"
+   "unbelief",
+   "mission of the Twelve",
+   "poverty",
+   "gospel harmony"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "8-9",
+  "pericope_label": "Take nothing for the journey",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "The staff discrepancy (Mark allows, Matthew 10:10 / Luke 9:3 forbid) resolved by 'no second staff' or differing emphases; 'no money' = no brass coin (Mark 12:42); Mark omits the ban on Gentiles."
+    "summary": "majority"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
   "debates": [
    {
-    "question": "Did Jesus permit a staff (Mark) or forbid it (Matthew, Luke)?",
+    "q": "How is Mark&rsquo;s staff reconciled with Matthew and Luke?",
     "sides": [
      {
-      "position": "No second staff — a single staff allowed",
-      "holders": [
-       "Grotius"
+      "a": "Several ways, none decisive; Mark may preserve the saying more clearly",
+      "who": [
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "Differing emphases of one command to austere simplicity",
-      "holders": [
-       "Swete",
-       "Bruce"
+      "a": "One staff only; the plural in Matthew forbids a second",
+      "who": [
+       "Charles Ellicott",
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "Either one staff to a pair, or simply an order to leave at once as they stood",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Are sandals distinct from the forbidden shoes?",
+    "sides": [
+     {
+      "a": "Yes: lighter and fitter for travel, though some deny any difference",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "a": "Yes: a light shoe of meaner make, by the etymology",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "Perhaps, but the prohibition is more likely of a second pair",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "They are simply the footwear of the poor",
+      "who": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns a salutation, not this verse."
-   }
+   "Albert Barnes notes that Mark omits the ban on going to Gentiles and Samaritans, perhaps because he wrote for Gentile readers"
   ],
   "themes": [
-   "take nothing for the journey",
-   "the staff discrepancy",
-   "austere simplicity"
+   "mission of the Twelve",
+   "poverty",
+   "dress",
+   "gospel harmony"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sandal (Acts 12:8), lighter wear of the poor, distinguished from the 'shoes' forbidden in Matthew 10:10; two coats a sign of wealth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the mission initiated them into apostolic work, teaching them to trust God's care (Luke 22:35)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.49
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sandals not shoes",
-   "one tunic",
-   "unencumbered dependence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: abide in one house, avoiding a restless manner and choosing a home with care (Matthew 10:11; Luke 9:4); not a ban on accepting invitations."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Christ continued his directions to them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "abide in one house",
-   "contentment",
-   "stability of the messenger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Shake off the dust' as a testimony against the rejecters (Luke 9:5; Acts 13:51); 'whatsoever place' the better text; the Sodom clause transferred from Matthew 10:15."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem entry is a catechetical passage on eternal life, tangential to the verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on eternal life, not on the verse."
-   }
-  ],
-  "themes": [
-   "shaking off the dust",
-   "testimony against rejecters",
-   "the messenger's clear conscience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "10-13",
+  "pericope_label": "They anointed with oil many that were sick",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They preached repentance, the message of the Baptist (Matthew 3:2) and Jesus (Mark 1:15); a continuation of John's work, not yet proclaiming Jesus as the Christ (Ellicott)."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the apostles executed a temporary commission, going through the villages and soon returning."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Twelve preach repentance",
-   "continuation of John's work",
-   "temporary commission"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "several"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark alone mentions anointing with oil (cf. James 5:14); debated as medicine or symbol of divine healing (John 9:6); with no affinity to extreme unction."
+    "summary": "majority"
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke and Wesley: the oil availed no more of itself than the laying-on of hands; the cure was by God's supernatural blessing."
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
   "debates": [
    {
-    "question": "Was the anointing with oil medicine or symbol?",
+    "q": "Was the oil medicine or sign?",
     "sides": [
      {
-      "position": "A symbol of miraculous power, not a medicament",
-      "holders": [
-       "Lightfoot",
-       "Clarke"
+      "a": "Sign only: ordinary remedies would have obscured the miracles",
+      "who": [
+       "John Calvin"
       ]
      },
      {
-      "position": "Uniting natural means with prayer for blessing",
-      "holders": [
-       "Ellicott"
+      "a": "Genuinely medicinal, as Jewish practice was, with prayer joined to the means",
+      "who": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "a": "A sign here, though the practice was medical among the Jews",
+      "who": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "a": "Both at once: an outward sign helping faith and a remedy joined to prayer",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "Undecided; the verb may mean rub as easily as anoint",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What was the commission at this stage?",
+    "sides": [
+     {
+      "a": "Temporary, lasting only a few days",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "a": "A continuation of the Baptist&rsquo;s work, without yet naming their Master as Christ",
+      "who": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "A summons grounded on the evil of sin and the Messiah&rsquo;s coming",
+      "who": [
+       "Albert Barnes"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Adam Clarke notes that the clause about Sodom is absent from most chief copies and was probably carried here from Matthew"
+  ],
   "themes": [
-   "casting out demons",
-   "anointing with oil",
-   "James 5:14",
-   "not extreme unction"
+   "mission of the Twelve",
+   "repentance",
+   "anointing",
+   "healing",
+   "extreme unction"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  },
  "14": {
   "voices": [
-   "Gloss",
-   "Pseudo-Chrysostom",
-   "Pseudo-Jerome",
-   "Bede",
-   "Theophylact",
-   "Augustine",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Pseudo-Chrysostom",
+   "Augustine",
+   "Gloss"
   ],
+  "range": "14",
+  "pericope_label": "King Herod heard of him",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The tour spread Christ's fame to the palace; Herod's guilty 'theology' that miracles 'work in' a risen John (John 10:41); Persius on Herod's birthday dread; full account in Matthew 14."
+    "summary": "several"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "several"
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede on Jewish envy believing John risen but not Jesus; Theophylact/Pseudo-Chrysostom: the people veil under Moses' prophet (Deuteronomy 18:15) their fear to confess the Christ."
+    "summary": "several"
+   }
+  ],
+  "debates": [
+   {
+    "q": "Did Herod believe John had risen?",
+    "sides": [
+     {
+      "a": "He hesitated and then confirmed it &mdash; or the words may still be doubt",
+      "who": [
+       "Augustine"
+      ]
+     },
+     {
+      "a": "He spoke in irony",
+      "who": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "a": "He believed it, knowing he had killed a just man",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "Superstition and a guilty conscience raised the ghost",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry surveys the wild notions of the people, who would believe anything but that he was the Son of God."
+    "q": "What did the popular guesses concede?",
+    "sides": [
+     {
+      "a": "Just thoughts of the power of the resurrection, though not of Christ&rsquo;s",
+      "who": [
+       "Bede"
+      ]
+     },
+     {
+      "a": "A veiled confession of the prophet promised to Moses",
+      "who": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "a": "Anything rather than the truth: an idle faith with a working fancy",
+      "who": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "a": "That miraculous powers were at work, whoever the worker was",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns Pilate and the governor, not this verse."
-   }
+   "Charles Ellicott links a Roman satirist&rsquo;s scene of a Herod birthday feast to the failed embassy of Antipas to Rome"
   ],
   "themes": [
-   "Herod hears",
-   "John risen from the dead",
-   "guilty conscience",
-   "opinions of Christ"
+   "Herod",
+   "resurrection",
+   "superstition",
+   "popular opinion"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
   }
  },
  "15": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "John Wesley"
+   "A.T. Robertson",
+   "John Wesley",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Gregory",
+   "Remigius",
+   "Gloss"
   ],
+  "range": "15-17",
+  "pericope_label": "Herod laid hold upon John",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The rival opinions — Elijah, or a prophet like the ancients (Matthew 16:14); Clarke's textual note on omitting 'or'."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'a prophet, as one of the prophets' = not inferior to the ancient prophets."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "opinions about Jesus",
-   "Elijah or a prophet",
-   "blindness to his deity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "several"
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Herod's fears settled on this nightmare, the charger in his dreams; 'whom I beheaded' shows he recognises his guilt; Wesley: he still said 'It is John'."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'John, whom I beheaded'",
-   "guilty conscience",
-   "the haunting of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Theophylact",
-   "Bede",
-   "Gloss",
-   "Remigius",
-   "Gregory",
-   "Pseudo-Jerome",
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark recounts John's death before Herod's fears; the murder at Machaerus ended the tour (Matthew 14:12); fuller notes at Matthew 14:3-12."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede on the unlawful marriage; Theophylact on the fury of lust; Gregory's wonder that the greatest prophet dies for a girl's dancing; Pseudo-Jerome allegorises the head of the Law."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill and the Gloss: Herod feared John, knowing him just and holy."
+    "summary": "majority"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "Who did the people take Jesus for?",
+    "sides": [
+     {
+      "a": "Elijah, whom many expected in person before the Messiah",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "a": "A prophet not inferior to the ancient prophets",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "The text is better read without the connecting word, which mends the sense",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why was the marriage unlawful?",
+    "sides": [
+     {
+      "a": "The levirate applied only where a brother died childless, and here a daughter survived",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "A man might not marry his brother&rsquo;s wife while the brother lived",
+      "who": [
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why was so great a man given so ignominious a death?",
+    "sides": [
+     {
+      "a": "Not for any fault: God casts down lowest those he means to raise highest",
+      "who": [
+       "Gregory"
+      ]
+     },
+     {
+      "a": "The fury of lust, which displaced all Herod&rsquo;s reverence",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "A lesser fault becoming the cause of a greater",
+      "who": [
+       "Remigius"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Pseudo-Jerome reads the severed head as the law given to the Gentile Church and passed on to the synagogue"
+  ],
   "themes": [
-   "John imprisoned",
-   "the unlawful marriage",
-   "faithful reproof",
-   "fury of lust"
+   "Herod",
+   "John the Baptist",
+   "oaths",
+   "martyrdom",
+   "providence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The marriage forbidden by Leviticus 18:16; unlawful while the brother lived (Leviticus 20:21); John told Herod plainly to his face (Gill)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem entry on the apostles' dignity is tangential to the verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on the apostles' dignity, not on the verse."
-   }
-  ],
-  "themes": [
-   "'it is not lawful'",
-   "fearless reproof",
-   "the Levitical law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Herodias 'had it in for him' (Robertson) — the imperfect of settled, persistent hostility (Genesis 49:23); 'could not' marks only delay; she sought to kill him."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: she bore an inward grudge and lay in wait for the first opportunity."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Herodias's grudge",
-   "implacable malice",
-   "a second Jezebel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "18-20",
+  "pericope_label": "Herod feared John",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The portrait peculiar to Mark — 'just' toward men, 'holy' toward God, 'much perplexed' (better text); the prison interviews bracing Herod's jaded mind (Robertson)."
+    "summary": "majority"
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Barnes and Wesley: Herod did many things but not the one required — a 'delusive joy' hearing John gladly while Herodias lay in his bosom."
+    "summary": "several"
+   }
+  ],
+  "debates": [
+   {
+    "q": "Did Herod do many things, or was he much perplexed?",
+    "sides": [
+     {
+      "a": "Much perplexed: the better manuscripts read so",
+      "who": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "He did many things &mdash; a compromise with conscience, short of the one thing demanded",
+      "who": [
+       "Albert Barnes"
+      ]
+     }
+    ]
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: reverence and fear of the multitude alike restrained him."
+    "q": "What kept Herodias from killing him?",
+    "sides": [
+     {
+      "a": "Herod&rsquo;s veneration, or dread, and his fear of the multitude",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "a": "A certain reverence for his prisoner",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "Vacillation between two fears, John&rsquo;s and hers",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "Nothing but delay: the power was wanting, not the will",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns baptizing the nations, not this verse."
-   }
+   "A.T. Robertson renders the Greek idiom for her hostility in modern slang, that she had it in for him"
   ],
   "themes": [
-   "Herod feared John",
-   "a divided conscience",
-   "heard him gladly",
-   "clinging to sin"
+   "rebuke",
+   "Herodias",
+   "conscience",
+   "textual variants"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.49
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'well-appointed day' Herodias awaited; the guests the magnates, chiliarchs, and chief men of Galilee; the birthday feast (Genesis 40:20)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the festal mirth and the king's cups gave Herodias her opportune time."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Herod's birthday",
-   "the convenient day",
-   "revelry the occasion of malice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The textual variants on the dancer's name; Herodias degraded her own daughter to a lascivious dance before drunken men (Isaiah 3:16); Gill names her Salome, Philip's daughter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the daughter's dance",
-   "the rash promise",
-   "unbridled mirth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The swaggering oath 'unto the half of my kingdom' echoes Ahasuerus to Esther (Esther 5:3; 7:2); Clarke on eastern extravagance toward dancers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Herod added an oath to confirm and encourage her; Wesley: a proverbial expression of liberality."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the rash oath",
-   "'half of my kingdom'",
-   "a snare for the vain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Her going to ask proves she was not told beforehand (Robertson); the consultation peculiar to Mark; she withdrew, women not sitting at the feast."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Herodias acted not from mere revenge but the dread of being cast off, hoping the prophet's blood would secure her position."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "consulting her mother",
-   "'the head of John'",
-   "Herodias's calculating malice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Straightway with haste' before the king's mood passed (Robertson); 'by and by' meant 'forthwith' in old English; she returned with eager diligence, hastened by her mother."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the hasty demand",
-   "the head in a charger",
-   "driving the plot through"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "C",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "21-29",
+  "pericope_label": "The dance and the death of John",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Herod caught between conscience and environment, which stifled it (Robertson); the guests glad to see the prophet extinguished (Clarke)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: he repents of his levity but lacks courage to refuse, as if retracting a rash promise were worse than a heinous crime; Wesley: his honour like the chief priests' conscience (Matthew 27:6)."
+    "summary": "several"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "several"
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "majority"
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "q": "Why did Herodias want John dead?",
+    "sides": [
+     {
+      "a": "Not revenge but dread of being cast off, and a hope of binding Herod closer",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "a": "A trap long planned, in which Herod was the catspaw",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "The guests wanted it too, John being the public reprover of their vices",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why did Herod keep the oath?",
+    "sides": [
+     {
+      "a": "The vanity of kings, and the presence of witnesses",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "a": "Conscience stifled by his environment",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "His honour was like the chief priests&rsquo; conscience: innocent blood wounded neither",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here is misplaced, not bearing on the verse."
-   }
+   "Adam Clarke supports the extravagance of the promise from eastern accounts of gifts to dancers, including one made joint governess of an empire"
   ],
   "themes": [
-   "the king's false sorrow",
-   "honour above conscience",
-   "an oath no warrant for sin"
+   "Herodias",
+   "oaths",
+   "conscience",
+   "martyrdom",
+   "burial"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's Latin word speculator — a bodyguard soldier used as courier and executioner (Suetonius, Tacitus); Lightfoot on the Targum transliteration; one of his guard."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the king sent the executioner immediately, the prison being near."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the executioner",
-   "speculator",
-   "swift secret murder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: the head brought in a dish and passed to the girl and her mother; Calvin: the holy man's head made a matter of sport, yet his blood precious to God (Psalm 116:15), and Herodias later ruined in banishment."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the head in a charger",
-   "Herodias's triumph and ruin",
-   "precious blood of the saints"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John's disciples bury their executed master and go to tell Jesus (Matthew 14:12) — a mournful time, turning to the One John announced."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the burial honours the dead as a token of the resurrection, attests the disciples' continued loyalty to John's doctrine, and braves the tyrant's rage — a praiseworthy, courageous confession."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "took up his corpse",
-   "laid it in a tomb",
-   "burial as token of resurrection",
-   "pious courage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
   "voices": [
-   "Glossa Ordinaria",
-   "Pseudo-Jerome",
-   "Theophylact",
-   "Bede",
-   "Augustine of Hippo",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Augustine",
+   "Gloss"
   ],
+  "range": "30-34",
+  "pericope_label": "Come apart into a desert place and rest",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Twelve return from their first mission and report all to Jesus, who listened attentively (Luke 9:10); near the same time John's death is told."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The sent ones return to the fountain-head to give thanks and report (Pseudo-Jerome); we must not overstep our office but report often — not only teach but act (Theophylact)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: ministers are accountable for both deeds and doctrine — let them do and teach only what they are willing to lay open before Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the apostles gathered to Jesus",
-   "told him all things",
-   "accountability of ministers",
-   "return to the Master"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ calls the over-wrought apostles to rest — a needed lesson for all preachers of occasional refreshment, which even Jesus felt the need of (Robertson, Clarke)."
+    "summary": "single"
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a tender call to come apart, alone, to a desert place, for a little while — the full rest reserved for heaven; those set over others deserve rest (Theophylact)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "come apart and rest",
-   "no leisure to eat",
-   "needful rest for servants",
-   "Christ's compassion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ and the Twelve withdraw by ship to a desert place near Bethsaida for rest and privacy — the voyage sparing the toil of the road (Henry); the privacy soon broken by the crowd."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "into a desert place",
-   "by ship privately",
-   "withdrawal for rest",
-   "privacy soon broken"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "several"
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The crowds recognize Jesus and outrun the boat on foot from all the cities, waiting when he lands (Robertson) — their breathless pursuit excused by fulness of affection (Henry); a trial of faith met (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ran afoot thither",
-   "outwent them",
-   "eager pursuit of the crowds",
-   "hunger for Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ, instead of resenting the intrusion on his rest, is moved with compassion at a leaderless people (the rabbis blind leaders) and teaches them many things (Robertson)."
+    "summary": "several"
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Theophylact: the Pharisees were ravening wolves devouring the sheep; they gather to Christ the true Shepherd, who feeds them with the word of God."
+    "summary": "single"
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: he was moved with compassion, not displeasure — the sheep willing to be taught but shepherdless; he healed and taught them."
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "Why did he take them apart?",
+    "sides": [
+     {
+      "a": "Because those who labour in the word deserve rest and should not labour continually",
+      "who": [
+       "Theophylact",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "a": "Plain necessity: they were overwrought, and even Jesus felt the need of change",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "That living among evil men they might not set their minds on evil",
+      "who": [
+       "Pseudo-Jerome"
+      ]
+     },
+     {
+      "a": "To try the faith of the multitude and see whether they would follow",
+      "who": [
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What did the crowd lack?",
+    "sides": [
+     {
+      "a": "Teaching, not healing: runners round a lake have few sick among them",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "Guides, the priests and scribes having neglected the common people",
+      "who": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "a": "A shepherd: the Pharisees devoured the sheep instead of feeding them",
+      "who": [
+       "Theophylact"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Adam Clarke says scarcely a verse in the New Testament has suffered so much from transcribers as this one"
+  ],
   "themes": [
-   "moved with compassion",
-   "sheep without a shepherd",
-   "the true Shepherd",
-   "teaching before feeding"
+   "rest",
+   "ministry",
+   "shepherd",
+   "gospel harmony"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
   }
  },
  "35": {
   "voices": [
-   "Theophylact",
-   "Bede",
-   "Augustine of Hippo",
-   "Gregory",
-   "Pseudo-Jerome",
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Lightfoot",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Augustine",
+   "Gregory"
   ],
+  "range": "35-38",
+  "pericope_label": "Give ye them to eat",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The day far spent (after 3 P.M.), the disciples pity the crowd; Christ calls them to feed the people that they may testify they have no bread, magnifying the miracle (Bede)."
+    "summary": "majority"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The five loaves = the books of Moses, two fishes = Psalms and Prophets, opened by Christ and distributed through the apostles; twelve baskets = the Church's teachers (Bede); the ranks = the churches of the one Catholic (Gregory)."
+    "summary": "several"
+   }
+  ],
+  "debates": [
+   {
+    "q": "What are the two hundred pence?",
+    "sides": [
+     {
+      "a": "A proverbial round sum, familiar from the rabbinic rulings",
+      "who": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "a": "A real reckoning: about six pounds, probably the whole of their purse",
+      "who": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     }
+    ]
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact: the disciples grow in love, interceding for the crowd; Christ tries their faith and, looking to heaven, teaches us to seek food from God, giving with superabundant profusion."
+    "q": "Do the numbers carry a figure?",
+    "sides": [
+     {
+      "a": "Yes: five books of Moses, and the Psalms and Prophets",
+      "who": [
+       "Bede"
+      ]
+     },
+     {
+      "a": "Yes: the ranks are the churches, the Jubilee rest doubled from fifty to a hundred",
+      "who": [
+       "Gregory"
+      ]
+     },
+     {
+      "a": "Yes: the twelve baskets are the twelve thrones of judgment",
+      "who": [
+       "Pseudo-Jerome"
+      ]
+     },
+     {
+      "a": "No: it is a harmony question, one Evangelist giving a part and the other the whole",
+      "who": [
+       "Augustine"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   "A.T. Robertson notes that only John reports the lad and the lunch his mother had given him"
+  ],
   "themes": [
-   "the day far spent",
-   "a desert place",
    "feeding of the five thousand",
-   "Law and Prophets typology"
+   "trial of faith",
+   "allegory",
+   "gospel harmony"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples propose sending the crowd to the farms and villages to buy bread — a kind but limited compassion (Henry), not grasping that Christ could feed them where they sat."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "send them away",
-   "buy themselves bread",
-   "limited compassion",
-   "the crowd's contented hunger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Give ye them to eat' tests their faith; '200 pennyworth' (a famous rabbinic sum, likely their whole purse) — Philip's incredulous reckoning (John 6:7) exposes weak faith, echoing Moses (Numbers 11:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "give ye them to eat",
-   "two hundred pennyworth",
-   "testing their faith",
-   "calculating instead of trusting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'How many loaves?' tries their faith further and makes the miracle undeniable (Gill); the five barley loaves and two fishes — a lad's lunch (John 6:9) — a slender store magnifying the miracle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how many loaves have ye",
-   "five, and two fishes",
-   "establishing the slender store",
-   "the little we bring"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ seats the crowd in orderly companies on the green grass — a vivid Markan/Petrine touch marking the spring, near Passover (John 6:4); the God of order, that none be overlooked (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sit down by companies",
-   "upon the green grass",
-   "orderly arrangement",
-   "Passover season"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "39-44",
+  "pericope_label": "The feeding of the five thousand",
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
     "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "majority"
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The crowd sat in ranks 'like garden beds' (Peter's vivid memory), by hundreds and fifties (~5,000) — colour and order combined, recalling rabbinic school seating; the green grass marks Passover (Robertson)."
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "What does the word for ranks picture?",
+    "sides": [
+     {
+      "a": "The rabbinic schools, whose scholars sat rank by rank like a planted vineyard",
+      "who": [
+       "John Gill",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "a": "Garden beds of flowers or herbs, painted to the eye",
+      "who": [
+       "Albert Barnes",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "Garden beds given colour by the many-coloured clothes",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Does the arithmetic of the ranks work?",
+    "sides": [
+     {
+      "a": "Fifty in rank and a hundred in file makes exactly five thousand",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "Not practically: fifty deep could not be served conveniently",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "a": "The numbers need not be exact; they indicate a multitude",
+      "who": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "A.T. Robertson infers from the green grass a ministry longer than a single year"
+  ],
   "themes": [
-   "sat down in ranks",
-   "by hundreds and fifties",
-   "garden beds",
-   "order for distribution"
+   "feeding of the five thousand",
+   "order",
+   "miracle",
+   "evidence"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ takes, looks up, blesses, breaks, and gives through the disciples; the blessing the means of the multiplying (Henry); thanksgiving due to God who gives (Clarke)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Looking to heaven teaches us to seek food from God and shows Christ at one with the Father; distribution through the disciples makes them witnesses and figures their office of dispensing to the world (Chrysostom, Bede)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.5
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "looked up to heaven",
-   "blessed and brake",
-   "gave to the disciples",
-   "Christ the great Feeder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'All eat, and were filled' — the proof and measure of the miracle; from five loaves five thousand fully satisfied, Christ the great Feeder in whom is enough for all (Henry; cf. Deuteronomy 8:3)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they did all eat",
-   "were filled",
-   "completeness of the provision",
-   "enough for all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Twelve baskets of fragments (more than the original store) prove the superabundant power of Christ; a lesson against wasting God's gifts, mindful of the needy (Henry)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Each apostle bears a basket as witness of the unspeakable miracle; Christ's gifts are lavish unlike Moses' manna or Elijah's measured store; the twelve baskets figure the apostles and teachers (Chrysostom, Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "twelve baskets of fragments",
-   "superabundance",
-   "against waste",
-   "the apostles as witnesses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Five thousand 'men' (excluding women and children) fed from five loaves — a nature miracle only God can work, recorded by all four Gospels and three eyewitnesses, overwhelming proof of Christ's divinity (Robertson, Clarke)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "about five thousand men",
-   "greatness of the miracle",
-   "all four Gospels",
-   "proof of Christ's divinity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "45": {
   "voices": [
-   "Glossa Ordinaria",
-   "Pseudo-Chrysostom",
-   "Bede",
-   "Theophylact",
-   "Augustine of Hippo",
-   "Chrysostom",
-   "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Augustine",
+   "Gloss"
   ],
+  "range": "45-47",
+  "pericope_label": "He constrained his disciples to get into the ship",
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ urgently sends the disciples ahead and dismisses the crowd to defuse the move to make him king (John 6:15); the two-Bethsaida question explains the geography (Ellicott)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Walking on the waves proves Christ Master of the elements and true God in real flesh (Bede, against Theodore of Pharan); the tossed ship figures the Church striving through the world's storms toward her rest."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Christ prays alone on the mountain while the Church is tossed — a comfort that the Master intercedes; his delayed coming meets their extremity; 'It is I' makes them cheerful."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "constrained his disciples",
-   "go before unto Bethsaida",
-   "defusing the king-making",
-   "Master of the elements"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ withdraws to the mountain to pray alone (cf. Mark 1:35) — following the dismissal of the king-making crowd (John 6:15); a model of secret devotion before the night's work."
+    "summary": "single"
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: though sinless he prayed alone to set us an example and encourage dependence on his intercession — 'a good man is never less alone than when alone with God.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "departed into a mountain",
-   "to pray",
-   "secret devotion",
-   "the interceding Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "several"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "At nightfall the ship is mid-sea, Christ alone on the land (a vivid Markan/Petrine touch) — he watches his disciples toil from the shore, present in his gaze before he comes (John 6:17)."
+    "summary": "several"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "several"
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: the lone ship and Christ on land figure the Church seemingly deserted in tribulation, yet seen and strengthened by her Redeemer's look of love."
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "q": "Why did he constrain them to go?",
+    "sides": [
+     {
+      "a": "They could not part from him without pain, and did not know how he would follow",
+      "who": [
+       "Pseudo-Chrysostom",
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "To get them away from a crowd in the mood for revolution",
+      "who": [
+       "A.T. Robertson",
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Where were they sent, and how does it fit Luke and John?",
+    "sides": [
+     {
+      "a": "To the town, Luke meaning the desert places belonging to it",
+      "who": [
+       "Bede"
+      ]
+     },
+     {
+      "a": "There were two towns of the name, and the marginal reading is a guess",
+      "who": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "Two places four miles apart on the same shore, either of which would serve",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on the firmament of creation, is an off-topic catechetical aside, not on this verse."
-   }
+   "Augustine argues that he meant to pass them by precisely so that their cry for help would be wrung from them"
   ],
   "themes": [
-   "even was come",
-   "ship in the midst of the sea",
-   "he alone on the land",
-   "the watching Lord"
+   "walking on the sea",
+   "prayer",
+   "patience",
+   "geography"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.16
+   }
   }
  },
  "48": {
   "voices": [
    "John Gill",
    "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "48-52",
+  "pericope_label": "Walking on the sea",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ sees them distressed against the contrary wind, comes in the fourth watch (3-6 A.M.) walking on the sea; 'would have passed by them' (only in Mark) — a delay meeting their extremity (Henry)."
+    "summary": "several"
    },
    {
-    "school": "latin-fathers",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "He seems to pass by to wring from them the cry for help (Augustine); he let them toil all night to teach patience and to wait for help in tribulation (Theophylact)."
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "What does their heart was hardened mean?",
+    "sides": [
+     {
+      "a": "Not opposition, but slowness to perceive; heart is often used so",
+      "who": [
+       "Albert Barnes",
+       "John Wesley"
+      ]
+     },
+     {
+      "a": "A failure to learn from a miracle seen the day before",
+      "who": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "A hardened reasoning process, of the kind that still refuses nature miracles",
+      "who": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why does Mark omit Peter walking on the water?",
+    "sides": [
+     {
+      "a": "Peter was perhaps not fond of telling that story",
+      "who": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "The Evangelist&rsquo;s connection with the Apostle spared his rashness and failing faith",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "John Wesley takes the passing by for a manner of walking rather than an intention to leave them"
+  ],
   "themes": [
-   "toiling in rowing",
-   "the fourth watch",
-   "walking upon the sea",
-   "would have passed by them"
+   "walking on the sea",
+   "fear",
+   "slowness of faith",
+   "Peter"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples take Christ for a spirit and cry out in terror — the natural reaction of frightened men in the dark (Henry; cf. Luke 24:37); they mistook their Saviour for a phantom."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.48
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "walking upon the sea",
-   "supposed it a spirit",
-   "terror in the dark",
-   "mistaking Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "All saw and were troubled; Christ's voice reassured them — 'It is I' both reveals him and dispels terror; they knew his voice as sheep their shepherd (John 10:4)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: 'I am he' is God's delivering name (Exodus 3:14) — it strikes down enemies (John 18:6) but raises up and comforts those who come by faith; to know Christ near is cheer in any storm."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on teaching (Matthew 7:28-29), belongs elsewhere, not this verse."
-   },
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on the Spirit breathed on the apostles, is an off-topic catechetical aside."
-   }
-  ],
-  "themes": [
-   "it is I, be not afraid",
-   "they all saw and were troubled",
-   "the delivering name",
-   "knowing his voice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ enters the ship and the wind ceases at once — by his presence, not a formal rebuke as in Mark 4:39 (Henry); Mark omits Peter's faltering walk (perhaps his own humility, Robertson)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Theophylact: entering the ship he restrains the tempest; the storm made the miracle greater, giving the apostles a fuller knowledge of his power than the loaves had."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he went up into the ship",
-   "the wind ceased",
-   "calm by his presence",
-   "sore amazed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Their excessive amazement sprang from not learning from the loaves; 'hardened' means slow, dull apprehension (not hostility or reprobation), failing to reason that all nature is subject to Christ (Barnes, Wesley); Peter's candid memory (Ellicott)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: had they weighed the loaves rightly, the walking on the sea would not have so astonished them — we are over-amazed at Christ's works for want of learning from the former ones."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "considered not the loaves",
-   "their heart was hardened",
-   "slowness of apprehension",
-   "learning from former works"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "53": {
   "voices": [
-   "Glossa Ordinaria",
-   "Theophylact",
-   "Bede",
-   "Pseudo-Jerome",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They land at the fertile plain of Gennesaret ('prince's garden') and moor the boat, driven south of Bethsaida by the night wind (Robertson)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The people's great faith (kindled by the report of the woman with the issue of blood, Mark 5) brings the sick to Christ; the hem read as his least commandment or his incarnate flesh (Theophylact, Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "land of Gennesaret",
-   "drew to the shore",
-   "eager faith",
-   "the hem of his garment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "54": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people 'straightway knew him' — by sight and the fame of his miracles, for he had been there before (Barnes, Clarke); recognition moves them to seize the opportunity (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "come out of the ship",
-   "straightway they knew him",
-   "Christ's fame",
-   "eager recognition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "55": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people run through the whole region, carrying the sick on pallets (cf. Mark 2:4) to wherever Christ was (Robertson) — an eager, energetic faith that spares no labour to bring the needy to the Healer (Henry, Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ran through the whole region",
-   "carried the sick in beds",
-   "active faith",
-   "bringing the needy to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "56": {
-  "voices": [
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Theophylact",
+   "Bede",
+   "Pseudo-Jerome",
+   "Gloss"
   ],
+  "range": "53-56",
+  "pericope_label": "Healings in the land of Gennesaret",
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "single"
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Wherever Christ went the sick were laid in the marketplaces to touch even the hem (fringe, Numbers 15:38) of his garment, and all who touched were healed (recurring tense); his tireless going about a pattern for ministry (Clarke)."
+    "summary": "several"
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "single"
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "single"
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The touch of the hem, learned from the woman with the issue of blood (Mark 5), read mystically as Christ's incarnate flesh by which we come to the Word (Theophylact)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they sought only healing for the body, not teaching for the soul — a sad reminder that men care more for the body than the soul."
+    "prevalence": "several",
+    "summary": "several"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "q": "How did the people of Gennesaret recognise him?",
+    "sides": [
+     {
+      "a": "They recollected him, having seen him preach and work miracles there before",
+      "who": [
+       "Albert Barnes",
+       "Adam Clarke",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "a": "By report rather than by his features, though some may have known his person",
+      "who": [
+       "Bede"
+      ]
+     },
+     {
+      "a": "By the report of the woman with the issue of blood, which had produced great faith",
+      "who": [
+       "Theophylact"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the hem of the garment?",
+    "sides": [
+     {
+      "a": "A matter of dress: better rendered hem or fringe than border",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "a": "The slightest of the commandments, which whoever holds is made whole",
+      "who": [
+       "Theophylact"
+      ]
+     },
+     {
+      "a": "A promise not yet fulfilled, awaiting the flight of grief and mourning",
+      "who": [
+       "Pseudo-Jerome"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Adam Clarke makes the indiscriminate range of the healings a pattern for every preacher of the gospel"
+  ],
   "themes": [
-   "villages, cities, or country",
-   "touch the border of his garment",
-   "as many as touched were made whole",
-   "Christ the universal Healer"
+   "Gennesaret",
+   "faith",
+   "healing",
+   "close of the Galilean ministry"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.3
+   }
   }
  }
 }

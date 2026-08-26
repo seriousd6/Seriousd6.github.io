@@ -31744,6 +31744,70 @@
         "1-25"
       ],
       "note": "Fidelity self-grade A for all 13 pericopes. Every quoted string was checked against the Catena or commentary block it came from; no voice is credited with a position it does not hold; held_by lists and outlier attributions were reconciled against each key's voice list after trimming. Voices were declared only where read in full and cited directly: the smaller Catena entries at keys 3, 5, 8, 17 and 23 (Jerome, Gloss, Ambrose, Hilary, Remigius, Gregory, Augustine, Origen) were not read and are not declared, which is selection rather than misrepresentation. Excluded: the three JFB blocks carrying Matthew 3 material (keys 1, 7, 13) and Cyril's Acts 20 block (key 14), plus the StudyLight chrome tail of Ellicott's key-25 block. RECOVERED and used at their proper pericopes: JFB's key-19 block (Matthew 4:4 material, used at vv.3-4) and key-25 block (Matthew 4:8-9 material, used at v.8). Cyril's keys 11 and 17 were verified on full reading to be genuinely on-verse and were used. Henry's five inflated section blocks and the patristic set at key 1 were redistributed across the pericopes they actually treat. Source corpus 65,763 words across 25 keys tiled into 13 pericopes at an overall 7.8:1 compression, inside the 5-8:1 norm; the vv.1-2 tile is a forced outlier at about 27:1 nominal, for the tiling reason recorded separately, and the leanest is vv.6-7 at 2.6:1 usable after JFB's exclusion, kept dense rather than padded."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26",
+        "50",
+        "56"
+      ],
+      "note": "Jamieson stride-6 residue lattice, eighth consecutive chapter, but with a new variant: the donor is NOT a single chapter. Keys 2, 14 and 20 carry Matthew 28 material (the sepulchre made sure, the bribe of the guard, make disciples of all nations); key 8 carries Luke 1 (the salute of the Visitation); keys 26, 50 and 56 carry Mark 1 (Malachi 3:1 at the opening, the astonishment at his teaching in the synagogue). Every previous lattice ran off one donor chapter, or two adjacent ones. Declared as excluded_voices at each key."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "6",
+      "verses": [
+        "56"
+      ],
+      "note": "Ellicott block at key 56 is 1052 words of which roughly 100 are his comment. The rest is StudyLight chrome: navigation crumbs, a Copyright Statement paragraph, terms and privacy links, then a long dump of the site stylesheet. Identical in kind to the defect filed at matthew 12 key 50, and again at the last verse of the chapter, which suggests the scrape appends page furniture at chapter boundaries rather than at random. Only the pre-chrome text was used."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "6",
+      "verses": [
+        "11",
+        "18",
+        "47",
+        "50"
+      ],
+      "note": "Cyril of Jerusalem appears four times in this chapter and is off-verse at every one: eternal life at key 11, the pre-eminence of the Son at 18, the creation of the firmament at 47, the Spirit breathed on the apostles at 50. Unlike matthew 12, where one of his duplicated blocks was genuinely on-verse, here the content test rejects all four. Suppressed rather than declared, since the roster in synthesis_qa.py cannot detect the label."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "6",
+      "verses": [
+        "20"
+      ],
+      "note": "A textual variant with doctrinal weight at key 20. Ellicott and Robertson both report that the better manuscripts read that Herod was much perplexed, not that he did many things. Barnes keeps the older reading and builds his entire comment on it, making Herod a man who compromised with conscience by doing many things short of the one thing demanded. The two readings yield different portraits, and the entry records both rather than choosing."
+    },
+    {
+      "at": "2026-08-26",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "6",
+      "verses": [
+        "6",
+        "14",
+        "30",
+        "35",
+        "45",
+        "53"
+      ],
+      "note": "The Catena on Mark pools its patristic blocks at the first key of each pericope, so the fathers at key 6 comment on verses 7 to 13, those at key 35 on the whole feeding, and those at key 45 on the walking on the sea through verse 52. Tiling had to follow the pooling rather than the verse divisions: entries 6-7, 35-38 and 45-47 exist to keep each father with his own subject. Same pattern noted at matthew 12 key 14 but far more systematic here."
     }
   ]
 }
