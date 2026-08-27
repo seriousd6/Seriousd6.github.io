@@ -13,8 +13,12 @@
 > Westminster, Barmen), with the visible/invisible church as the running thread;
 > registered in `topical[]`. Same day: dependency hygiene — `npm audit fix`
 > patched js-yaml 4.3.2, nanoid 3.3.18, postcss 8.5.26, svgo 4.1.0 (clears 4 of
-> 6 Dependabot-flagged packages; build verified). Remaining astro+sharp
-> advisories need the Astro 7 major upgrade — see below.)
+> 6 Dependabot-flagged packages; build verified). Then the Astro major upgrade:
+> **astro 6.4.8 → 7.2.8** (brings sharp 0.35) — `npm audit` now reports
+> **0 vulnerabilities**. Verified by building the full site on both versions
+> and hashing all 9,582 HTML pages: byte-identical modulo whitespace except
+> one page (`/discipline/`), where Astro 7 spec-correctly escapes `&` as
+> `&amp;` in href query strings — a no-op in browsers.)
 > Previously **2026-08-16**: new single-page topical study, **The Straight
 > and Narrow Path**, at `topics/narrow-path/` — walking with the Lord, from the
 > narrow gate through self-deception, Korah's Scripture-twisting, wilderness
