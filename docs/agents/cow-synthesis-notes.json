@@ -40304,6 +40304,34 @@
         "1"
       ],
       "note": "Clarke argues that the Jews of our Lord's time must have read the psalm as Davidic and messianic, since they did not gainsay it when he quoted it, nor contradict Peter and Paul when they applied it; several later Jewish writers concede the messianic sense while disputing the application to Jesus."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "note": "BLOCKED - psalms 108 cannot be synthesised from the present source file. The cow file has no keys at all for verses 5, 8 and 12, and a survey of the whole psalms tree shows it is the ONLY chapter in the book with gaps of this kind. Both build.py and validate-synthesis.py reject any entry whose range covers a verse absent from the source, so the chapter can only be tiled as 1-4, 6-7, 9-11 and 13. That tiling is unusable: verses 9 to 11 carry 69 usable source words between them and verse 13 carries 267, so the two tail entries would need 120 and 350 words of prose against those totals - ratios of 1.9x and 1.3x, which is padding, not synthesis. Recommend the owner either restore the three missing keys to the source scrape or mark the chapter blocked alongside numbers 31. Nothing was committed; the two data files written during the attempt were removed."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "108",
+      "note": "psalms 108 is also the only chapter in the current sweep with no Ellicott blocks whatsoever, and therefore the only one with no StudyLight page chrome. Its commentary is unusually thin overall - about 4090 usable source words for thirteen verses - because Gill and Clarke both decline to comment, referring the reader back to psalms 57 and psalms 60, of which this psalm is a compilation. Augustine declines outright, saying he has already expounded both sources, and Calvin says a fresh exposition would be superfluous."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "note": "Jamieson residue lattice, stride 6, three marks, and the donor is Job for the third time in four chapters. Keys 1, 7 and 13 carry no Psalm 108 comment but three numbered fragments of the Job 13 commentary in canonical order - Job wishing to plead his cause before God, the warning that partiality can never please the impartial God, and Job wishing to be spared their speeches so as to speak out all his mind. With the Job 13 to 14 fragments at psalms 109 and the Job 14 fragment at psalms 111, Job is now the most frequently observed donor outside the post-exilic histories."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "note": "Third confirmed instance of post-Calvin material inside a Calvin block, after Horsley at psalms 109 and Jebb and Lightfoot at psalms 111. The block attributed to Calvin here carries a long quotation, closed with a volume and page reference, arguing that the borrowed sections of this psalm are marked off in their originals by the pause-word and were therefore treated as detachable compositions. Three instances in three chapters settles the matter: the Calvin blocks in this corpus are an edited text with editorial matter interleaved, and any claim attributed to Calvin needs checking against his date."
     }
   ]
 }
