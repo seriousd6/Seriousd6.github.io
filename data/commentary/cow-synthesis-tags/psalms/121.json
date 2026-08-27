@@ -1,0 +1,297 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "C.H. Spurgeon"
+  ],
+  "range": "1",
+  "pericope_label": "I will lift up mine eyes unto the hills, from whence cometh my help",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Delitzsch makes the psalm's unique inscription the key to its form; Ellicott settles the grammar of 'whence' and canvasses where the poet may have stood."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill weighs the readings of the first line and identifies the hills with Zion and Moriah or with heaven; Calvin alone finds the opening theologically awkward and answers his own objection."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the psalm as a captivity prayer and proposes a dialogue structure for it; Wesley gives the hills in three words."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry turns the interrogative reading against creature confidence; Spurgeon reads the verse through the geography of health and then names the hills allegorically."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine allegorises the hills into the apostles and the Scriptures, and insists that the help is from him of whose fulness the hills received, not from the hills."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the first line a statement or a question?",
+    "positions": [
+     {
+      "summary": "Half a question: the Hebrew word is always interrogative, so our version is wrong to make 'whence' a relative — but the margin is wrong too in making the whole verse a question. Render: I will lift up mine eyes to the hills. Whence comes my help?",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "Interrogative, and a rebuke to creature confidence: shall I depend on princes and great men, who like hills fill the earth?",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "summary": "Reports the interrogative reading, with the idols worshipped on the high places as its object, and also a reading that puts the psalmist upon the hills looking thence to heaven.",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the hills?",
+    "positions": [
+     {
+      "summary": "Zion and Moriah, the holy mountains.",
+      "held_by": [
+       "John Wesley",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "summary": "The hills on which Jerusalem is built, though the poet's own standpoint cannot be fixed — he may be far off like the prophet turned toward the mountains of Israel, or near the end of a pilgrim journey.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "The purposes of God, the divine attributes, the immutable promises, the covenant ordered and sure.",
+      "held_by": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "summary": "The apostles and the Scriptures, who received of his fulness.",
+      "held_by": [
+       "Augustine of Hippo"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What kind of psalm is it, and who speaks?",
+    "positions": [
+     {
+      "summary": "Not a pilgrim song: the opening implies a fixed abode far from the singer's native mountains. The unique inscription marks a rule — the psalm is composed after the manner of steps.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "summary": "A prayer of the Jews in captivity, cast as a dialogue between a worshipper and the ministering priest.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "summary": "The opening speaks in the person of an unbelieving man, whose eyes wander before faith turns them back to God.",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "summary": "Alone raises the objection that the unsettled looking of the first line is unworthy of faith, and answers it: the thoughts of the godly are never so stayed on the word as not to be carried away at the first impulse, and the difference from unbelievers is not that they escape deception but that God corrects the vice of their nature."
+   },
+   {
+    "voice": "Adam Clarke",
+    "summary": "Assigns the verses to alternating speakers — worshipper, priest, worshipper, priest — a dramatic structure no other reader proposes."
+   }
+  ],
+  "themes": [
+   "I will lift up mine eyes unto the hills, from whence cometh my help."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "2": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "range": "2-8",
+  "pericope_label": "My help cometh from the Lord, which made heaven and earth... The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Delitzsch traces the shadow figure and the poet's application of Israel's Keeper to himself; Ellicott handles the mood of the verb, the step-like repetitions, the right-hand shade, and the moon."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill qualifies each promise carefully — how far the feet may be moved, in what sense God seems to sleep, what the keeping does and does not cover — and names Christ as the keeper."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the sleepless watchman through a Greek tragedy and reduces the sun and moon to heat and cold; Wesley takes the moon's cold and moisture as a cause of disease."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the third verse a statement or a wish?",
+    "positions": [
+     {
+      "summary": "A wish: the Greek and Latin rightly give 'may he not suffer', since the Hebrew cannot be a simple negative, and the next verse shows Israel is addressed.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "A statement, addressed to the psalmist's own soul or to a friend — though the saints may be moved in some sense, their steps well nigh slipped, but not so as to fall finally.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "summary": "A statement about standing ground: the foundation cannot be moved, and while a man stands on it neither can his foot.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by the sun and the moon smiting?",
+    "positions": [
+     {
+      "summary": "Simply heat and cold — no sun-stroke by day nor frost-bite by night; the Chaldee's day and night spectres are set aside.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "summary": "Sunstroke literally; for the moon, either the old belief in the harm of moonlight still recalled in the word lunacy, or the injurious cold of night set against the noonday heat, or the harmful effects of night air.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "The moon's cold and moisture, intemperate heats and colds being the springs of many diseases.",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the shade at the right hand mean?",
+    "positions": [
+     {
+      "summary": "Not the sunny southern side, which is prosaic, but a confused combination of metaphors including the right-hand comrade in war who guards the unshielded side.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "An overshadowing that spreads over the man and screens him from the sun's heat.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "summary": "Uses the doubled 'slumber nor sleep' as an example of the step-like style critics suppose gives these psalms their name, while denying any climax between the words — the first, used of the sleep of death, being if anything the stronger."
+   },
+   {
+    "voice": "John Gill",
+    "summary": "Sets the sleepless keeper beside Homer's Jupiter, whom sleep does not hold while gods and men sleep all night, and against the Phrygian notion that their god slept through the winter."
+   }
+  ],
+  "themes": [
+   "My help cometh from the Lord, which made heaven and earth.",
+   "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+   "Behold, he that keepeth Israel shall neither slumber nor sleep.",
+   "The Lord is thy keeper: the Lord is thy shade upon thy right hand.",
+   "The sun shall not smite thee by day, nor the moon by night.",
+   "The Lord shall preserve thee from all evil: he shall preserve thy soul.",
+   "The Lord shall preserve thy going out and thy coming in from this time forth, and even for evermore."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  }
+ }
+}
