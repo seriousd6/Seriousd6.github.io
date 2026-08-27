@@ -1,0 +1,496 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-4",
+  "pericope_label": "O God, the heathen are come into thine inheritance; thy holy temple have they defiled",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": [
+     "Adam Clarke"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "When was the psalm written?",
+    "sides": [
+     {
+      "view": "Long after David &mdash; at the Chaldean sack, or under Antiochus",
+      "who": [
+       "John Calvin",
+       "Adam Clarke",
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "In David&rsquo;s own day, as prophecy stated in the past tense",
+      "who": [
+       "Augustine of Hippo"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the inheritance that was invaded?",
+    "sides": [
+     {
+      "view": "Land, city and temple by turns, each called his because he dwelt there",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Both land and people together",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "What is God&rsquo;s before it is ours &mdash; and so the greater grief",
+      "who": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Augustine of Hippo",
+    "view": "Keeps the psalm in David&rsquo;s mouth by making its past tenses prophetic, since the temple it laments was not yet built when it was sung"
+   }
+  ],
+  "themes": [
+   "desecration",
+   "lament",
+   "captivity",
+   "inheritance",
+   "reproach",
+   "bloodshed"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
+  }
+ },
+ "5": {
+  "voices": [
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "5-7",
+  "pericope_label": "How long, LORD? pour out thy wrath upon the heathen that have not known thee",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": [
+     "Adam Clarke"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "How is the imprecation to be justified?",
+    "sides": [
+     {
+      "view": "It is not revenge but public justice, and in effect a prophecy",
+      "who": [
+       "John Gill",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "By comparison &mdash; unfaithful as we are, they never knew thy name at all",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Who are the heathen that have not known God?",
+    "sides": [
+     {
+      "view": "Whole kingdoms that neither know God nor pray, and are not safe for their numbers",
+      "who": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "The antichristian states, Christian in profession only",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The persecutors of the Maccabaean age, whose cry this psalm answers",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "C.H. Spurgeon",
+    "view": "Concedes the appearance the prayer rests on &mdash; that providence sometimes deals more severely with the righteous than the wicked &mdash; and calls the verse a bold appeal founded on it"
+   }
+  ],
+  "themes": [
+   "wrath",
+   "imprecation",
+   "justice",
+   "ignorance",
+   "desolation",
+   "prophecy"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.21
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "8-10",
+  "pericope_label": "O remember not against us former iniquities: wherefore should the heathen say, Where is their God?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Whose iniquities are the former ones?",
+    "sides": [
+     {
+      "view": "All of them at once &mdash; Adam&rsquo;s, our youth&rsquo;s, our fathers&rsquo;, the golden calf&rsquo;s",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The forefathers&rsquo; only",
+      "who": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is asked in purge away our sins?",
+    "sides": [
+     {
+      "view": "That they be covered over, as a plea covers a crime",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "That God be propitiated and receive an atonement for them",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Asks whether the psalmist confesses any guilt of his own generation or only inherited guilt, and decides for the latter from the general tone of post-exile psalms"
+   }
+  ],
+  "themes": [
+   "confession",
+   "inherited guilt",
+   "atonement",
+   "help",
+   "reproach",
+   "vindication"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.67
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "11-13",
+  "pericope_label": "Let the sighing of the prisoner come before thee: so we thy people and sheep of thy pasture will give thee thanks for ever",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Who are those appointed to die?",
+    "sides": [
+     {
+      "view": "Both the guilty and the condemned &mdash; Israel was each at once",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The captives, as the same phrase means elsewhere",
+      "who": [
+       "Charles Ellicott",
+       "John Wesley",
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What does the sevenfold recompense ask?",
+    "sides": [
+     {
+      "view": "Abundant repayment, but never past the rules of justice",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Exact reciprocity &mdash; captivity for captivity, and probably a prediction",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Declines to soften the sevenfold plea and sets it openly against the law of Christian forgiveness"
+   }
+  ],
+  "themes": [
+   "captivity",
+   "recompense",
+   "forgiveness",
+   "covenant",
+   "thanksgiving",
+   "praise"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.33
+   }
+  }
+ }
+}
