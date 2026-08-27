@@ -1,15 +1,21 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-27** (new single-page topical study, **A Walk Through
-> Church History**, at `topics/walk-through-church-history/` — a primary-source
-> era-by-era walk from the apostolic age to the present (Didache, Pliny, Justin,
-> Cyprian, Nicaea, Augustine, Hus, Luther, Calvin, Westminster, Barmen), with
-> the visible/invisible church as the running thread; registered in `topical[]`).
+> Last updated: **2026-08-27** (new single-page topical study, **The Nehushtan
+> Test**, at `topics/veneration/` — icons, relics, prayers to the saints, Marian
+> dogma, and apparitions examined against six biblical control cases, with the
+> strongest Catholic/Orthodox arguments represented before each verdict;
+> registered in `topical[]`; source draft tracked at
+> `docs/drafts/nehushtan-test.md`. Same day: new single-page topical study,
+> **A Walk Through Church History**, at `topics/walk-through-church-history/` —
+> a primary-source era-by-era walk from the apostolic age to the present
+> (Didache, Pliny, Justin, Cyprian, Nicaea, Augustine, Hus, Luther, Calvin,
+> Westminster, Barmen), with the visible/invisible church as the running thread;
+> registered in `topical[]`).
 > Previously **2026-08-16**: new single-page topical study, **The Straight
 > and Narrow Path**, at `topics/narrow-path/` — walking with the Lord, from the
 > narrow gate through self-deception, Korah's Scripture-twisting, wilderness
-> grumbling, love, abiding, and endurance; registered in `topical[]`).
+> grumbling, love, abiding, and endurance; registered in `topical[]`.
 > Previously **2026-08-15**: study part picker made mobile-usable — clipped
 > tab labels, sticky bars hidden under the fixed topbar, and a study-wide 16px
 > horizontal page scroll all fixed, across every study that uses the component.
