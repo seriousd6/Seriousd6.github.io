@@ -1,0 +1,757 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-2",
+  "pericope_label": "The heavens declare the glory of God; and the firmament sheweth his handywork",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What are the heavens that declare?",
+    "sides": [
+     {
+      "view": "Not the sky, but the apostles and evangelists in whom God dwells",
+      "who": [
+       "John Gill",
+       "Augustine of Hippo"
+      ]
+     },
+     {
+      "view": "The visible heavens, whose structure argues a Creator",
+      "who": [
+       "Adam Clarke",
+       "Matthew Henry",
+       "C.H. Spurgeon",
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The sky as immediately apprehended &mdash; intuition, not argument",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Who receives the testimony?",
+    "sides": [
+     {
+      "view": "Day and night pass it between themselves, like a choir chanting alternately",
+      "who": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "We do &mdash; the heavens are a legible book in which he that runs may read",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Matthew Henry",
+    "view": "Calls the production of the heavens by a casual hit of atoms an absurdity fit rather to be bantered than reasoned with"
+   }
+  ],
+  "themes": [
+   "creation",
+   "revelation",
+   "testimony",
+   "atheism",
+   "poetry",
+   "day and night"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "3-4",
+  "pericope_label": "There is no speech nor language, where their voice is not heard",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Is the voice of the heavens heard or not?",
+    "sides": [
+     {
+      "view": "Heard and understood by every nation &mdash; the heavens are a universal teacher",
+      "who": [
+       "John Wesley",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Not heard at all &mdash; the sky&rsquo;s communication is eloquent but mute",
+      "who": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the line that goes out?",
+    "sides": [
+     {
+      "view": "Not a cord &mdash; the verse wants sound, which the versions supply",
+      "who": [
+       "Charles Ellicott",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The apostles&rsquo; line, each with the measure of his own course",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Lines in the sense of writing, since the heavens teach the eye and not the ear",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Holds that the allegory making the heavens the Church and the sun the Gospel loses the force and beauty of Paul&rsquo;s own use of the verse"
+   }
+  ],
+  "themes": [
+   "revelation",
+   "silence",
+   "translation",
+   "apostles",
+   "sun",
+   "textual crux"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.35
+   }
+  }
+ },
+ "5": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "5-6",
+  "pericope_label": "Which is as a bridegroom coming out of his chamber, and rejoiceth as a strong man to run a race",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What does the bridegroom image convey?",
+    "sides": [
+     {
+      "view": "The suddenness of an Eastern sunrise, unlike the slow dawns of Western poetry",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The splendour of his ornaments and the power of his light and heat",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Is the sun&rsquo;s course as the psalm describes it?",
+    "sides": [
+     {
+      "view": "Only in appearance &mdash; both motions are the earth&rsquo;s, on its axis and in its orbit",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The sun goes forth from the east and returns, and every part of earth feels it",
+      "who": [
+       "John Wesley",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Breaks off to correct the psalm&rsquo;s cosmology, giving the sidereal day to the second and attributing both apparent solar motions to the earth"
+   }
+  ],
+  "themes": [
+   "sunrise",
+   "bridegroom",
+   "circuit",
+   "astronomy",
+   "poetry",
+   "light"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.51
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "7-8",
+  "pericope_label": "The law of the LORD is perfect, converting the soul",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What law is called perfect?",
+    "sides": [
+     {
+      "view": "The whole doctrine of God, especially the Gospel, not the law of Moses",
+      "who": [
+       "John Gill",
+       "C.H. Spurgeon",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The Jewish code &mdash; the word here bears its narrower sense",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Either of two books of revelation, or the fathers&rsquo; three laws of nature, Moses and grace",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "In what sense are the statutes right?",
+    "sides": [
+     {
+      "view": "Straight &mdash; the plainness of the road of duty is itself a cause of gladness",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Upright as against crookedness of mind and conduct, and right in their effect",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "C.H. Spurgeon",
+    "view": "Argues from David calling his fragment of Scripture perfect that the whole must be more so, and calls adding to the gospel a crime, altering it treason, and taking from it felony"
+   }
+  ],
+  "themes": [
+   "the law",
+   "revelation",
+   "perfection",
+   "conversion",
+   "structure",
+   "duty"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "9-11",
+  "pericope_label": "The fear of the LORD is clean, enduring for ever",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Matthew Henry"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What is the fear of the Lord here?",
+    "sides": [
+     {
+      "view": "The word of God itself, which teaches and causes holy fear",
+      "who": [
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The reverence we owe to God, standing for the whole of divine worship",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Not a quality of the individual at all, but religion, the service the Law demands",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What does warned mean?",
+    "sides": [
+     {
+      "view": "Illuminated or instructed, from a root meaning clear and pellucid",
+      "who": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Warned in the strict sense, the wicked and the righteous alike",
+      "who": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Breaks off to reproach the reader, saying that though the verse is strictly true most men prefer gold to God and his judgments"
+   }
+  ],
+  "themes": [
+   "the fear of the Lord",
+   "judgments",
+   "gold",
+   "honey",
+   "warning",
+   "reward"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.49
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "12-14",
+  "pericope_label": "Who can understand his errors? cleanse thou me from secret faults",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Are the presumptuous sins sins or men?",
+    "sides": [
+     {
+      "view": "Men &mdash; the word always elsewhere means the arrogant, so the prayer is against their company",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Sins, committed wilfully against knowledge and conscience",
+      "who": [
+       "John Gill",
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What does cleanse thou me ask for?",
+    "sides": [
+     {
+      "view": "Acquittal &mdash; clear me, pronounce me innocent, not cleanse",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Justification and sanctification together",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Cleansing from a whole catalogue of forgotten, inward and ignorant sins",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "C.H. Spurgeon",
+    "view": "Sets the verse against the Lateran decree requiring annual confession of all sins to a priest as the only hope of pardon"
+   }
+  ],
+  "themes": [
+   "self-knowledge",
+   "secret sin",
+   "presumption",
+   "acquittal",
+   "prayer",
+   "redemption"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
+  }
+ }
+}
