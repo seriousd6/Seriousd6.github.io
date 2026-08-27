@@ -1,0 +1,630 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "1-3",
+  "pericope_label": "God is our refuge and strength, a very present help in trouble",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What occasion produced the psalm?",
+    "sides": [
+     {
+      "view": "Unknowable &mdash; and the tone is faith under threat, not triumph after it",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The return from Babylon, with the Persian troubles after Cambyses in view",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Is the upheaval an earthquake or a revolution?",
+    "sides": [
+     {
+      "view": "An earthquake, in a land marked everywhere by volcanic agency",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Political commotion &mdash; mountains are states and waters are peoples",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Simply confusion and desolation, as such metaphors commonly mean",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Augustine of Hippo",
+    "view": "Reads the title&rsquo;s things secret through the veil rent at Calvary, making the cross the key by which what was closed is opened"
+   }
+  ],
+  "themes": [
+   "refuge",
+   "fear",
+   "upheaval",
+   "providence",
+   "confidence",
+   "deliverance"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "4-5",
+  "pericope_label": "There is a river, the streams whereof shall make glad the city of God",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Does the river point to a real watercourse?",
+    "sides": [
+     {
+      "view": "Not the Kidron &mdash; the word means a perennial stream; perhaps Siloam, perhaps nothing local",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The Kidron or Shiloah, and then figuratively the gospel, the Spirit, or God&rsquo;s love",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "No watercourse at all, but the gracious presence and blessing of the Lord",
+      "who": [
+       "John Wesley",
+       "C.H. Spurgeon"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is meant by help that comes right early?",
+    "sides": [
+     {
+      "view": "At the turning of the morning &mdash; the dawn of a brighter day",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "With the utmost speed &mdash; God is there as soon as the onset is made",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Suggests the river is the Medo-Persian army and its divisions, the branches that took Babylon and set the Jews free"
+   }
+  ],
+  "themes": [
+   "grace",
+   "providence",
+   "the church",
+   "presence",
+   "deliverance",
+   "siege"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.56
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "6-7",
+  "pericope_label": "The heathen raged, the kingdoms were moved: he uttered his voice, the earth melted",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Matthew Henry"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Which raging is meant?",
+    "sides": [
+     {
+      "view": "The nations against David&rsquo;s throne and against the Son of David&rsquo;s kingdom",
+      "who": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "The persecuting empires, pagan and then papal, down to the fall of Babylon",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The actual wars that crushed mighty states while the Jews were preserved",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the voice that melts the earth?",
+    "sides": [
+     {
+      "view": "Thunder and earthquake &mdash; or else the wars themselves, figuratively",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "God speaking in wrath, so that the enemy&rsquo;s heart dissolves like snow",
+      "who": [
+       "Matthew Henry",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Reads the verse as technique rather than history, crediting its force to dropped conjunctions and a shift from past tense to future"
+   }
+  ],
+  "themes": [
+   "providence",
+   "rage",
+   "judgment",
+   "preservation",
+   "sovereignty",
+   "covenant"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.33
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "8-9",
+  "pericope_label": "Come, behold the works of the LORD: he maketh wars to cease unto the end of the earth",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What are the desolations?",
+    "sides": [
+     {
+      "view": "Either the silence of desolation or wonders that silence by their suddenness",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Literal ruins &mdash; Assyria, Babylon, Petra, and abbeys nearer home",
+      "who": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "view": "Empires destroyed and remade, which no hand but God&rsquo;s could effect",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "How far do the wars cease?",
+    "sides": [
+     {
+      "view": "To the ends of the earth, and chiefly in the latter day",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Across the land of Israel, from one end of it to the other",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Across the Persian empire, quieted when Darius came to the throne",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "C.H. Spurgeon",
+    "view": "Turns the verse into a rule for reading history and the newspaper, and wishes openly for more such desolations"
+   }
+  ],
+  "themes": [
+   "providence",
+   "history",
+   "judgment",
+   "peace",
+   "ruin",
+   "disarmament"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.69
+   }
+  }
+ },
+ "10": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "10-11",
+  "pericope_label": "Be still, and know that I am God: I will be exalted among the heathen",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Who is commanded to be still?",
+    "sides": [
+     {
+      "view": "The nations &mdash; stir no more against my people",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The fearful in the church, still being addressed by her",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The hearers, who are to stop provoking, murmuring, and even working, and reflect",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "How will God be exalted among the heathen?",
+    "sides": [
+     {
+      "view": "By punishments, which show his justice, and by the gospel, which shows his goodness",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "By his great and wonderful works, which make him glorious",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Passes over the sense entirely and praises the staging &mdash; the Protector himself speaking just before the refrain is a fine touch of art"
+   }
+  ],
+  "themes": [
+   "stillness",
+   "trust",
+   "sovereignty",
+   "judgment",
+   "mission",
+   "refuge"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.33
+   }
+  }
+ }
+}
