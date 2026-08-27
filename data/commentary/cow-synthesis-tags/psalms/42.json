@@ -1,0 +1,509 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-2",
+  "pericope_label": "As the hart panteth after the water brooks, so panteth my soul after thee, O God",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Who composed the psalm?",
+    "sides": [
+     {
+      "view": "David, the sons of Korah being named only because it was committed to them",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "The descendants of Korah, in the captivity, as a psalm of consolation",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A family rather than a man &mdash; the inscription names a house, not an author",
+      "who": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Why does the hart pant?",
+    "sides": [
+     {
+      "view": "Because it is hunted, and takes to the water to escape and to cool itself",
+      "who": [
+       "Adam Clarke",
+       "C.H. Spurgeon",
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Simple thirst, as travellers report of the desert herds",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Augustine of Hippo",
+    "view": "Records that the psalm is customarily chanted for catechumens approaching the font, then denies that Baptism fully satisfies the longing"
+   }
+  ],
+  "themes": [
+   "longing",
+   "thirst",
+   "exile",
+   "worship",
+   "authorship",
+   "the living God"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.11
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "3-5",
+  "pericope_label": "My tears have been my meat day and night, while they continually say unto me, Where is thy God?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Is the text of the fourth verse sound?",
+    "sides": [
+     {
+      "view": "No &mdash; the versions and two strange words indicate a corruption, though the sense survives",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Difficult, with a great variety of translations, which he declines to canvass",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Plain enough as a memory of going up with the multitude",
+      "who": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the refrain doing?",
+    "sides": [
+     {
+      "view": "The psalmist correcting himself, since there is no room for despair",
+      "who": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A sigh breaking in, dejection struggling against faith &mdash; and its wording needs emending",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Breaks off from the verse&rsquo;s difficulties, saying his plan will not permit him to follow the critics, and refers the reader elsewhere"
+   }
+  ],
+  "themes": [
+   "grief",
+   "memory",
+   "festival",
+   "textual corruption",
+   "refrain",
+   "hope"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.65
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "6-8",
+  "pericope_label": "Deep calleth unto deep at the noise of thy waterspouts",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What is the noise of the waterspouts?",
+    "sides": [
+     {
+      "view": "Literal waterspouts, tubes of cloud that draw up water, common on the Syrian coast",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The cataracts of the Jordan, which the exile had before his eyes",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The figure only &mdash; successive afflictions, or successive showers",
+      "who": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the hill Mizar?",
+    "sides": [
+     {
+      "view": "Zion, little beside the Hermons",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Not Zion, since Hebrew poetry exalts Zion rather than belittling greater mountains",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "No particular hill, but every place he would be driven to",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Explains the waterspout as a tube of cloud formed by the electric fluid, citing a traveller&rsquo;s sightings at Mount Carmel"
+   }
+  ],
+  "themes": [
+   "dejection",
+   "memory",
+   "exile",
+   "flood",
+   "geography",
+   "lovingkindness"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.15
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "9-11",
+  "pericope_label": "I will say unto God my rock, Why hast thou forgotten me?",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Is the received pointing of these verses right?",
+    "sides": [
+     {
+      "view": "No &mdash; they are badly pointed, and the sword belongs to the mourning",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The difficulty is a variant reading, some copies having as and others with",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The received sense will do &mdash; a sword that cuts the very bones",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Whom do the reproaches strike?",
+    "sides": [
+     {
+      "view": "God himself, since they are aimed past the sufferer at his power to save",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The psalmist, as a sword through the marrow of his bones",
+      "who": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Quotes the old Psalter making the psalm belong to perfect men in the contemplative life, and therefore sung in the office of the dead"
+   }
+  ],
+  "themes": [
+   "reproach",
+   "rock",
+   "pointing",
+   "refrain",
+   "contemplation",
+   "the hart"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.29
+   }
+  }
+ }
+}

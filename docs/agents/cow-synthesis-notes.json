@@ -36028,6 +36028,57 @@
         "1"
       ],
       "note": "15,250 usable source words over 17 keys, tiled into four pericopes at roughly 6.0:1 compression."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "42",
+      "note": "Keil and Delitzsch block displacement, eleventh documented chapter. Key 2 quotes vv.2-6 and comments on v.6; key 7 is quoted verse text (vv.7-11) with no comment and was silenced at entry 6. Key 1 is a genuine introduction to the Second Book of Psalms and was used at entry 1, so K and D stay named there."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "42",
+      "note": "StudyLight page chrome, nineteenth consecutive chapter. Ellicott key 10 scrapes at 1102 words with no real comment at all in the block. Ellicott stays live in that entry only through his twelve-word note at key 9."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "42",
+      "note": "MAJOR: the Jamieson stride-6 residue lattice is now measurable directly in the source file, not inferred chapter by chapter. Scanning data/commentary/cow-sources/jfb/psalms.json for Ezra and Nehemiah proper nouns flags 30 blocks across 16 psalms. Every chapter with more than one mark has stride exactly 6: ps41 [2,8], ps47 [3,9], ps49 [2,8], ps50 [5,11], ps55 [8,14], ps60 [6,12], ps64 [1,7], and ps78 [24,30,36,42,54,60,66,72] with a single 12 gap where the tell-words did not fire. Single marks at ps38 21, ps40 14, ps53 5, ps59 12, ps63 7, ps65 8, ps69 25, ps105 2. The regex is conservative and misses residues without those proper nouns, so the true count is higher: psalms 42 key 6 and psalms 44 key 18, both found by hand this window, are not in the list. Keys mod 6 differ per chapter, so there is no global phase. The corruption is upstream of the cow build and the donor blocks are absent from the corresponding jfb book files, so the psalms scrape itself pulled foreign content rather than copying it from a sibling file in this corpus."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "42",
+      "verses": [
+        "11"
+      ],
+      "note": "Tenth tracked Old Psalter appearance in Adam Clarke, and the fullest yet: at the chapter close he says he cannot withhold a curious gloss on verse 1, gives the Middle English rendering and paraphrase, and reports that the psalm is sung in the office of the dead because it belongs to perfect men burning in the flame of God's love who pass into the contemplative life. He then backs the hart-eats-serpents tradition from Aelian, Nicander and Pliny. This links to Gill at verse 1, who reports the same explanation from Schindler."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "42",
+      "verses": [
+        "6"
+      ],
+      "note": "Ellicott explicitly rejects the identification Clarke reports from Bishop Horsley, that the hill Mizar is Zion. His ground is a rule of style rather than geography: the custom of Hebrew poetry was to exalt Zion, not to depreciate the higher mountains, so a lower hill near the Hermons is the natural supposition."
+    },
+    {
+      "at": "2026-08-27",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "42",
+      "verses": [
+        "6"
+      ],
+      "note": "Adam Clarke's block at key 6 ends with the sentence: No such hill as Mizar is known in India. Almost certainly a scanning corruption of Judea or a similar word; recorded here so the oddity is not mistaken for the commentator's own claim. Not used in the prose."
     }
   ]
 }
