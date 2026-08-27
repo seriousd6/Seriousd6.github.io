@@ -1,7 +1,14 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-27** (new single-page topical study, **The Nehushtan
+> Last updated: **2026-08-27** (new single-page topical study, **How the Church
+> Took Shape**, at `topics/doctrine-sacrament-order/` — the development of
+> Christianity's doctrines, sacraments, and hierarchy: when each took form,
+> under what pressure, the supporting Scripture, the four great splits, a
+> branch-comparison of the living traditions, and the through line of the
+> faithful; primary-source quotes verified against `data/library/` with
+> Library read-links; registered in `topical[]`. Same day: new single-page
+> topical study, **The Nehushtan
 > Test**, at `topics/veneration/` — icons, relics, prayers to the saints, Marian
 > dogma, and apparitions examined against six biblical control cases, with the
 > strongest Catholic/Orthodox arguments represented before each verdict;

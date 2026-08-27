@@ -107,6 +107,28 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 
 ## Next
 
+- [x] **Topical study: How the Church Took Shape** (2026-08-27) — single-page
+  hand-authored study at `topics/doctrine-sacrament-order/` on the
+  `topic-guide.css` component set (sticky TOC, no per-study CSS), registered in
+  the `topical` array of `data/books-content.json`. Owner-requested subject: the
+  doctrines, sacraments, and hierarchy of Christianity — when each developed,
+  why, the Bible's supporting texts, when things split, how the branches differ
+  now, and the through line of the faithful. Twelve sections in three arcs
+  (doctrine: rule of faith/creeds/canon → Trinity/Christology → sin/grace/
+  justification; sacraments: category-and-count → baptism → supper; hierarchy:
+  NT pattern → elders-to-patriarchs), then the four great splits (431, 451,
+  1054, 1517) on a timeline, a six-row branch-comparison table (`tg-compare`),
+  and a closing through-line section anchored on Acts 2:42 / Eph 4:4–6 /
+  Rev 7:9–10. Complements the chronological Walk Through Church History
+  (thematic vs. era-by-era; cross-linked both ways via Related Studies).
+  Primary-source quotes (Didache 7/9/15, Ignatius Smyrn. 7–8 + Eph. 20,
+  Irenaeus AH I.10.1, Vincent Comm. II.6, Orange 529, Chalcedon definition,
+  Augsburg IV, 39 Articles XXV, Schleitheim I, 1 Clement 44) verified verbatim
+  against `data/library/` with `/library/read/<id>/` links; out-of-corpus quotes
+  (Justin 66, Jerome, Gregory the Great) cited by standard editions. All 224
+  `data-ref` anchors machine-checked against `data/bible/BSB` (parseRef-
+  equivalent grammar, incl. single-chapter-book forms `Jude 3`, `Jude 24-25`);
+  TOC anchors, Library links, and cross-study links all verified.
 - [x] **One Full Treatment page** built — `topics/[book]/commentary.astro`: rich
   intro (overview, timeline, key people, vocabulary, language, reception, literary/
   cultural) + synthesized commentary in per-chapter divisions + per-chapter
