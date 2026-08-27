@@ -1,0 +1,418 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-3",
+  "pericope_label": "Praise ye the LORD. I will praise the LORD with my whole heart",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Gill",
+     "John Calvin"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Does the opening Hallelujah belong to the psalm?",
+    "sides": [
+     {
+      "view": "No &mdash; the alphabetical arrangement begins only with the words that follow",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "It is the title, and the acrostic itself shows why it cannot be part of the body",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The psalm has no title unless this word is one",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What does it mean that the works are sought out?",
+    "sides": [
+     {
+      "view": "Investigated by the philosopher and lover of nature who traces the First Cause through them",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The object of meditation and enquiry &mdash; historical proofs first, but the words range wider",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Diligent meditation on works from creation to grace",
+      "who": [
+       "John Wesley",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Declares the received division of the psalm into verses improper, since Hebrew poetry requires each hemistich to stand alone with a complete sense"
+   },
+   {
+    "who": "Charles Ellicott",
+    "view": "Illustrates a verse of the psalter from a living critic&rsquo;s campaign against insensibility to natural beauty"
+   }
+  ],
+  "themes": [
+   "the acrostic",
+   "the Hallel",
+   "praise",
+   "assemblies",
+   "the works of God",
+   "meditation"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.13
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "4-6",
+  "pericope_label": "He hath made his wonderful works to be remembered: the LORD is gracious",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Matthew Henry"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "How are the wonderful works made to be remembered?",
+    "sides": [
+     {
+      "view": "By a memorial made for them &mdash; so the Hebrew literally runs",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "By institutions: the passover, the pot of manna, the supper",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "By their own construction, which strikes the imagination and edifies the intellect",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the meat given to them that fear him?",
+    "sides": [
+     {
+      "view": "Simply food; no allusion to spoil is needed, though the next verse makes it probable",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Prey &mdash; game taken in hunting, or spoil taken from enemies, or the quails",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The spoil of Egypt or the manna, and beyond them spiritual food",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "All necessary provision for being and well-being",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Grounds the memorability of God&rsquo;s works in their aesthetic construction &mdash; framed to strike the imagination, interest the senses and charm the intellect"
+   }
+  ],
+  "themes": [
+   "memorial",
+   "the passover",
+   "manna",
+   "prey and spoil",
+   "the exodus",
+   "the conquest"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "7-10",
+  "pericope_label": "The works of his hands are verity and judgment; all his commandments are sure",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Is reverend a fit rendering of the divine name?",
+    "sides": [
+     {
+      "view": "No &mdash; the Hebrew means terrible, and the English word has become an empty clerical title",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "It carries three senses at once: terrible, venerable and holy",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the good understanding of the last verse?",
+    "sides": [
+     {
+      "view": "Good discernment to the doers &mdash; the words our version supplies are unnecessary",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A good estimation: righteousness wins esteem, and the enduring praise is the good man&rsquo;s",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Obedience as the proof of sound judgment; practical godliness is the test",
+      "who": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "view": "The chief of wisdom rather than merely its beginning",
+      "who": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Uses the verse to attack the title reverend as an empty form of ecclesiastical respect, and denies it belongs to man at all"
+   }
+  ],
+  "themes": [
+   "truth and judgment",
+   "permanence",
+   "redemption",
+   "the divine name",
+   "the fear of the Lord",
+   "obedience"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.23
+   }
+  }
+ }
+}
