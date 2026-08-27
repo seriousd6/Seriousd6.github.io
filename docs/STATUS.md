@@ -11,7 +11,10 @@
 > a primary-source era-by-era walk from the apostolic age to the present
 > (Didache, Pliny, Justin, Cyprian, Nicaea, Augustine, Hus, Luther, Calvin,
 > Westminster, Barmen), with the visible/invisible church as the running thread;
-> registered in `topical[]`).
+> registered in `topical[]`. Same day: dependency hygiene — `npm audit fix`
+> patched js-yaml 4.3.2, nanoid 3.3.18, postcss 8.5.26, svgo 4.1.0 (clears 4 of
+> 6 Dependabot-flagged packages; build verified). Remaining astro+sharp
+> advisories need the Astro 7 major upgrade — see below.)
 > Previously **2026-08-16**: new single-page topical study, **The Straight
 > and Narrow Path**, at `topics/narrow-path/` — walking with the Lord, from the
 > narrow gate through self-deception, Korah's Scripture-twisting, wilderness
