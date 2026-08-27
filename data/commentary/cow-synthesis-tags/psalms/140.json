@@ -1,0 +1,311 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "C.H. Spurgeon"
+  ],
+  "range": "1-7",
+  "pericope_label": "Deliver me, O Lord, from the evil man: preserve me from the violent man... O God the Lord, the strength of my salvation, thou hast covered my head in the day of battle",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Delitzsch dates the psalm from Absalom's rebellion and grants that its form is more bold than beautiful; Ellicott refuses the singular enemy, re-derives the verb of gathering, and supplies the natural history of the adders."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill collects the Jewish attributions and the serpent lore; Calvin rejects the usual identification with Doeg and defends the psalm's temper as a plea of innocence rather than personal abuse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke names Saul throughout and reads the snares as the machinery of a state prosecution; Wesley glosses the serpent's tongue."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry paints the enemies as the seed of the serpent and observes that great persecutors have often been great politicians; Spurgeon makes the plea one against a species rather than a man."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine hears the voice of the Church set among the wicked, and reads the deliverance as sought from the whole class of evil men and from their prince."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who is the evil and violent man?",
+    "positions": [
+     {
+      "summary": "Saul, and the counsellors who inflamed him — not Doeg, as the great body of interpreters hold, since the context is against it.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "summary": "Saul, the psalm belonging to the moment when he tried to transfix David with his spear.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "summary": "Saul as ring-leader, though the Chaldee names both Doeg and Ahithophel despite the distance of time between them.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "summary": "Not one man at all: the singular must not mislead, since it is immediately changed to the plural.",
+      "held_by": [
+       "Charles Ellicott",
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "summary": "The situation is that of Absalom's rebellion, with the Benjamite Sheba's attached to it as an outbreak of Ephraimitish jealousy.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the enemies doing in the second verse?",
+    "positions": [
+     {
+      "summary": "Continually stirring up wars, the verb better derived from a root meaning to incite than rendered 'gathered together' or 'dwell with wars'.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "Plotting secretly and continually, traducing David to Saul and devising means to take his life.",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the imprecatory temper of the psalm to be defended?",
+    "positions": [
+     {
+      "summary": "David is not multiplying terms of reproach as men do in personal disputes but conciliating God's favour by proving his innocence.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "summary": "The form is more bold than beautiful, and the language becomes fearfully obscure just where it turns against the enemies.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "summary": "The plea is against a species rather than a person, and reads like a clause of the Lord's prayer.",
+      "held_by": [
+       "C.H. Spurgeon"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "summary": "Observes that great persecutors have often been great politicians, which has made them the more formidable — but that the Lord preserves the simple without any of those arts."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "summary": "Supplies the zoology of the adders: the Hebrew word occurs only here and has been explained as a compound meaning that which rolls itself up and lies in ambush, with a naturalist's report of the vipers common in Syria."
+   }
+  ],
+  "themes": [
+   "Deliver me, O Lord, from the evil man: preserve me from the violent man;",
+   "Which imagine mischiefs in their heart; continually are they gathered together for war.",
+   "They have sharpened their tongues like a serpent; adders’ poison is under their lips. Selah.",
+   "Keep me, O Lord, from the hands of the wicked; preserve me from the violent man; who have purposed to overthrow my goings.",
+   "The proud have hid a snare for me, and cords; they have spread a net by the wayside; they have set gins for me. Selah.",
+   "I said unto the Lord, Thou art my God: hear the voice of my supplications, O Lord.",
+   "O God the Lord, the strength of my salvation, thou hast covered my head in the day of battle."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "C.H. Spurgeon"
+  ],
+  "range": "8-13",
+  "pericope_label": "Grant not, O Lord, the desires of the wicked: further not his wicked device... Surely the righteous shall give thanks unto thy name: the upright shall dwell in thy presence",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott treats the closing verses as a damaged text and proposes a series of emendations; Delitzsch marks the change of mood at the end and generalises the promise to the whole good cause."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the coals of both this life and hell, identifies the man of tongue, and notes the double reading at the twelfth verse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke draws a doctrine of the resurrection out of the Chaldee's paraphrase and expounds the three-forked tongue; Wesley reduces the coals to divine vengeance."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry reads the eighth verse as a prayer for disappointment rather than destruction; Spurgeon relishes the retaliation and calls the psalm grandly positive."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the eighth verse a prayer or a prophecy?",
+    "positions": [
+     {
+      "summary": "A prayer for disappointment rather than destruction — that providence should not favour their designs — though some choose to read it as prophecy.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "summary": "A prayer that God may disappoint and confound enemies still plotting his death.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "summary": "A deprecation grounded on the fact that the desires of the wicked are under God's restraint and cannot be fulfilled without his leave.",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the text of the closing imprecations sound?",
+    "positions": [
+     {
+      "summary": "No: the versions insert a negative and take a noun as a verb, the word lift up belongs to the following verse, a clause has probably dropped out, and the tenth verse needs a further change to give a grammatical sentence.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "summary": "Read as it stands, of coals falling from heaven as at Sodom, covering the judgments of this life and everlasting burnings.",
+      "held_by": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the man of tongue?",
+    "positions": [
+     {
+      "summary": "A man of detraction with a three-forked tongue, wounding three at once — the neighbour he slanders, the one who receives it, and himself who deals in it.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "summary": "One who sets his mouth against the heavens and whose tongue walks through the earth.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "summary": "Literally a man of tongue, and probably some particular person noted for the violence of his speech.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "summary": "Argues from the Chaldee's paraphrase — miry pits from which they shall have no resurrection to eternal life — that the Jews did believe in a resurrection of the body."
+   },
+   {
+    "voice": "Keil and Delitzsch",
+    "summary": "Marks the change of key at the close: the rage having spent itself, the mood and language become cheerful and the psalm trips along merrily to the end."
+   }
+  ],
+  "themes": [
+   "Grant not, O Lord, the desires of the wicked: further not his wicked device; lest they exalt themselves. Selah.",
+   "As for the head of those that compass me about, let the mischief of their own lips cover them.",
+   "Let burning coals fall upon them: let them be cast into the fire; into deep pits, that they rise not up again.",
+   "Let not an evil speaker be established in the earth: evil shall hunt the violent man to overthrow him.",
+   "I know that the Lord will maintain the cause of the afflicted, and the right of the poor.",
+   "Surely the righteous shall give thanks unto thy name: the upright shall dwell in thy presence."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ }
+}
