@@ -1,0 +1,644 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-3",
+  "pericope_label": "Great is the Lord, and greatly to be praised in the city of our God",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "When was the psalm composed?",
+    "sides": [
+     {
+      "view": "In the time of Ahaz, when the city was besieged",
+      "who": [
+       "John Calvin"
+      ]
+     },
+     {
+      "view": "In the reign of Jehoshaphat, which the confederate kings and the ships of Tarshish fit best",
+      "who": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "After the return from captivity, perhaps for the second temple&rsquo;s dedication",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "How is Zion the joy of the whole earth?",
+    "sides": [
+     {
+      "view": "The Hebrew means this land only &mdash; the temple was the glory of Judea",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Spoken prophetically, since the gospel was to go from there to all nations",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Augustine of Hippo",
+    "view": "Reads the liturgical title for the second day of the week as the firmament of the creation, and so of the Church in its strong members"
+   }
+  ],
+  "themes": [
+   "Zion",
+   "praise",
+   "dating",
+   "elevation",
+   "refuge",
+   "the great King"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.14
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "4-6",
+  "pericope_label": "For, lo, the kings were assembled, they passed by together",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Which kings assembled?",
+    "sides": [
+     {
+      "view": "Unknowable &mdash; the picture is not defined enough to choose among the candidates",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Jehoshaphat&rsquo;s confederates, or the Assyrian princes",
+      "who": [
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The kings of the earth gathered at the last day to Armageddon",
+      "who": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What did they see?",
+    "sides": [
+     {
+      "view": "The power of God, or God himself going forth to fight",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Only the city, which they looked at without entering or shooting an arrow",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "The text does not say &mdash; only that they looked and were panic-struck",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Calls the identity of the kings merest conjecture while canvassing newly deciphered Assyrian annals for candidates"
+   }
+  ],
+  "themes": [
+   "siege",
+   "panic",
+   "flight",
+   "identification",
+   "Armageddon",
+   "deliverance"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.45
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "Matthew Henry",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "7-8",
+  "pericope_label": "Thou breakest the ships of Tarshish with an east wind",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "Matthew Henry"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What is Tarshish?",
+    "sides": [
+     {
+      "view": "Not Spain, nor Tarsus, nor Jonah&rsquo;s port, but the sea in general",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Tarsus in Cilicia, the ships being vessels large enough for that voyage",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "A trade &mdash; the ships are merchantmen named from it, standing for a powerful empire",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Does the promise to establish her hold as it stands?",
+    "sides": [
+     {
+      "view": "Only of the Christian Church &mdash; the Jewish type perished, the antitype remains",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Of the holy city, as the refrain of the song",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Of Jerusalem, but conditionally &mdash; she forsook God and forfeited his protection",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "John Wesley",
+    "view": "Attaches a condition to the promise that God will establish the city for ever, holding that Jerusalem forfeited it"
+   }
+  ],
+  "themes": [
+   "Tarshish",
+   "east wind",
+   "testimony",
+   "fulfilment",
+   "promise",
+   "permanence"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.22
+   }
+  }
+ },
+ "9": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "9-11",
+  "pericope_label": "We have thought of thy lovingkindness, O God, in the midst of thy temple",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What did they do with the lovingkindness?",
+    "sides": [
+     {
+      "view": "Waited and hoped for it, as the Syriac and some of the rabbis have it",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "Meditated on it, deeply and in public worship",
+      "who": [
+       "C.H. Spurgeon",
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Who are the daughters of Judah?",
+    "sides": [
+     {
+      "view": "The towns and villages of Judah, not the maidens of Jerusalem",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The people themselves, glad at the turning of the captivity",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Charles Ellicott",
+    "view": "Infers a liturgic origin for the whole psalm from the single mention of the temple in this verse"
+   }
+  ],
+  "themes": [
+   "meditation",
+   "lovingkindness",
+   "fame",
+   "righteousness",
+   "rejoicing",
+   "judgments"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.49
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "12-14",
+  "pericope_label": "Walk about Zion, and go round about her: tell the towers thereof",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": [
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Who is told to walk about Zion?",
+    "sides": [
+     {
+      "view": "Perhaps the enemies, sarcastically, or the builders surveying repairs &mdash; or rather the saints",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The church&rsquo;s own people, counting her towers in exultation",
+      "who": [
+       "C.H. Spurgeon",
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Does the psalm end with the words unto death?",
+    "sides": [
+     {
+      "view": "No &mdash; the versions and variants prove them a misplaced musical direction",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Yes &mdash; even unto and in death he will be our portion",
+      "who": [
+       "Adam Clarke",
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "C.H. Spurgeon",
+    "view": "Defends preaching the security of the saints against those who abuse it: we are not to stop inspecting Zion&rsquo;s ramparts because idlers skulk behind them"
+   }
+  ],
+  "themes": [
+   "inspection",
+   "bulwarks",
+   "security",
+   "instruction",
+   "permanence",
+   "guidance"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.29
+   }
+  }
+ }
+}
