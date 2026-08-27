@@ -1,0 +1,504 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Calvin",
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "range": "1-2",
+  "pericope_label": "Hear my cry, O God: from the end of the earth will I cry unto thee",
+  "schools": [
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": [
+     "Augustine of Hippo"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": [
+     "John Calvin",
+     "John Gill"
+    ]
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": [
+     "Charles Ellicott",
+     "Keil and Delitzsch"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Where is the end of the earth?",
+    "sides": [
+     {
+      "view": "Beyond the Euphrates, at the close of the captivity",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "David&rsquo;s exile during Absalom&rsquo;s revolt",
+      "who": [
+       "John Calvin",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "view": "A hyperbole for distance, proving nothing about the date",
+      "who": [
+       "Charles Ellicott",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "What is the rock higher than I?",
+    "sides": [
+     {
+      "view": "A height he cannot climb unaided &mdash; security given, not achieved",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "A fortress, plainly meant",
+      "who": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Deliverance under Cyrus, or, with the fathers, Christ himself",
+      "who": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Augustine of Hippo",
+    "view": "Denies that one man speaks: no single man cries from the ends of the earth, so the voice is Christ&rsquo;s whole body calling from East to West"
+   }
+  ],
+  "themes": [
+   "prayer",
+   "exile",
+   "distress",
+   "refuge",
+   "the church",
+   "access"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.17
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "3-4",
+  "pericope_label": "For thou hast been a shelter for me: I will abide in thy tabernacle for ever",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Which tabernacle is meant?",
+    "sides": [
+     {
+      "view": "Undecidable &mdash; either the Mosaic tent, dating the psalm, or a figure for God&rsquo;s protection",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "All three at once: a shepherd&rsquo;s tent, the house of worship, and heaven",
+      "who": [
+       "John Gill"
+      ]
+     },
+     {
+      "view": "The temple, longed for by the priestly authors of the captivity psalms",
+      "who": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Are the verbs promise or petition?",
+    "sides": [
+     {
+      "view": "Petition &mdash; let me be a guest, let me find refuge",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Expectation &mdash; I shall, I doubt not, be restored",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Defends the plainness of the imagery, holding homely comparisons from rural life more consoling in such circumstances than allegories drawn from sublime subjects"
+   }
+  ],
+  "themes": [
+   "shelter",
+   "worship",
+   "refuge",
+   "exile",
+   "tabernacle",
+   "trust"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.81
+   }
+  }
+ },
+ "5": {
+  "voices": [
+   "Matthew Henry",
+   "C.H. Spurgeon",
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "5-6",
+  "pericope_label": "For thou, O God, hast heard my vows: thou wilt prolong the king&rsquo;s life",
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": [
+     "Matthew Henry",
+     "C.H. Spurgeon"
+    ]
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "What is the heritage of those that fear his name?",
+    "sides": [
+     {
+      "view": "Length of days, or, with the Greek and Latin, the land of Canaan",
+      "who": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "Access to God in his ordinances, prized above every other good",
+      "who": [
+       "John Wesley",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The saints&rsquo; common portion, sufferings and all, shared with the First-born",
+      "who": [
+       "C.H. Spurgeon",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "Whose life is prolonged?",
+    "sides": [
+     {
+      "view": "No earthly king at all &mdash; the words fit Christ the Mediator only",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "David, and through him his posterity and the Messiah",
+      "who": [
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Rules out David and every earthly sovereign from the sixth verse, holding that its days upon days can be said of Christ as Mediator alone"
+   }
+  ],
+  "themes": [
+   "vows",
+   "answered prayer",
+   "inheritance",
+   "kingship",
+   "messiah",
+   "perpetuity"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.25
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "John Gill",
+   "John Wesley",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "range": "7-8",
+  "pericope_label": "He shall abide before God for ever: so will I sing praise unto thy name for ever",
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": [
+     "John Gill"
+    ]
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": [
+     "Adam Clarke",
+     "John Wesley"
+    ]
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": [
+     "Charles Ellicott"
+    ]
+   }
+  ],
+  "debates": [
+   {
+    "q": "Who abides before God for ever?",
+    "sides": [
+     {
+      "view": "Christ, seated at the right hand, a priest upon his throne",
+      "who": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "David, abiding in the throne and worshipping in the tabernacle",
+      "who": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "q": "How should the clause about mercy and truth be read?",
+    "sides": [
+     {
+      "view": "As an entreaty &mdash; O let thy mercy and faithfulness preserve him",
+      "who": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "As a command to appoint them, or else emended from a parallel psalm",
+      "who": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "who": "Adam Clarke",
+    "view": "Parades five renderings of one untranslatable particle &mdash; Houbigant and Lowth, the Anglo-Saxon, the Old Psalter, Kennicott and Coverdale &mdash; before choosing the last"
+   }
+  ],
+  "themes": [
+   "intercession",
+   "kingship",
+   "mercy",
+   "truth",
+   "praise",
+   "vows"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "cow-synthesis-loop",
+    "expansion": 0.34
+   }
+  }
+ }
+}
