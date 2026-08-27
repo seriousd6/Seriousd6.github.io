@@ -5,7 +5,7 @@
 > He broke in pieces the bronze serpent that Moses had made, for until those days the people of Israel had made offerings to it; it was called Nehushtan — a piece of bronze. He trusted in the LORD, the God of Israel, so that there was none like him among all the kings of Judah.
 > — **2 Kings 18:4–5**
 
-*(Draft for a possible topical study. Published artifact version: styled long-form article. Not yet wired into the site — if promoted to `src/pages/topics/`, register it in `data/books-content.json` per CLAUDE.md.)*
+*(Source draft. Live as a topical study at `src/pages/topics/veneration/` — registered in `data/books-content.json` `topical[]`. Edit the study page, not this draft, for site changes.)*
 
 ---
 
