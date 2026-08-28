@@ -49672,6 +49672,80 @@
         "1"
       ],
       "note": "Six entries, all self-graded A, tiled 1 / 2-4 / 5-8 / 9-11 / 12-14 / 15-17. Verse 1 stands alone because the Clarke introduction of 6,793 words is attached to it. The ratio there is 0.08, the lowest in this run; the entry selects the argument about the book's nature rather than attempting coverage. Entry 15-17 carries five voices, Henry having no block after key 12."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "1-28"
+      ],
+      "note": "Every claim was checked against the block it came from. Two attributions were watched. Clarke's note on verses 4 and 5 rests on a long quotation from Bishop Warburton, and the synthesis credits Clarke with importing it rather than originating it. Delitzsch's blocks repeatedly reprint his comment on the following verse inside the block for the current one, so his material on verses 5, 14, 16, 20, 22 and 25 appears twice in the source; each was cited once, at the key where its own verse falls."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "12",
+        "28"
+      ],
+      "note": "What the twelfth verse means by a man being hidden. Ellicott reports that the Hebrew literally reads sought for: men conceal themselves from fear and must be hunted out. Delitzsch reads the clause as the people being searched, and glosses the opposite half through an Arabic idiom for a festival day, so that the glory of the first line is the putting on of holiday clothes. Henry, Wesley and Gill take it as political withdrawal — wise men declining office, rich men avoiding extortion, good men absconding. At the twenty-eighth verse the same question returns for the second clause, where Delitzsch declines the reading that has the righteous coming forward into public view and prefers growth, as plants multiply once the caterpillars are destroyed, while Henry has better men put into the offices the wicked vacated."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "17"
+      ],
+      "note": "Whether the man of verse 17 acts or suffers. The English and Luther read one who does violence to the blood of a person. Delitzsch argues at length that the Hebrew participle cannot bear an active sense — there is no such passive form throwing the action back on the subject — and renders a man burdened with the guilt of blood upon his soul; Ellicott agrees. Gill splits the difference with a psychological reading, a murderer pressed and tortured in his own conscience, or pursued by the avenger of blood. Henry, Clarke and Wesley keep the active sense and treat the second clause as a prohibition on sheltering him."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "21"
+      ],
+      "note": "The scale of the morsel of bread. Delitzsch calls it too low a conception to read it as the size of the bribe, and takes the point to be that even a trifle can awaken favour or dislike and so bend the will from strict rectitude, citing a Roman anecdote in which Cato said a tribune could be hired with a scrap of bread either to speak or to keep silent. Henry takes the opposite view and makes the smallness the whole point: a judge who first required a noble present ends by giving judgment against his conscience for a crust. Wesley and Ellicott follow Henry."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "All four Jamieson, Fausset and Brown blocks in this chapter are foreign and none belongs to Proverbs. Key 6 discusses instruments of music not excluding the voice; keys 12, 18 and 24 all carry the same block about God's truth, faithfulness and creative power, and about his minute knowledge of all men, twice with the identical opening. That repetition of one block across three keys matches the fault recorded at psalms 130, where a single Job block appeared verbatim at two keys, and points to a repeated-block ingestion error rather than a verse offset. JFB is not declared anywhere in this chapter. Sixteenth consecutive chapter in which every JFB block is foreign."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "27"
+      ],
+      "note": "Charles Ellicott at key 27 carries roughly 1,400 words of site chrome — footer text, copyright notices, raw CSS, and a long block of JavaScript including a fetch call and DOM-manipulation code — wrapped around a genuine note of about twenty words. This is the first chapter in the run where the chrome includes executable script rather than only markup and stylesheet text. Thirty-eighth consecutive chapter with Ellicott chrome."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "28",
+      "verses": [
+        "1-28"
+      ],
+      "note": "This is the most evenly distributed chapter processed in the run: twenty-eight source keys averaging 667 usable words, with no block over 1,600 and none under 440, and every Matthew Henry block verse-local at 150 to 300 words rather than spanning a section. Tiling was therefore free of the block-containment constraint that has driven boundaries in most recent chapters, and the five pericopes were chosen for balance and sense alone."
     }
   ]
 }
