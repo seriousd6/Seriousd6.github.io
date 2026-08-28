@@ -51265,6 +51265,109 @@
         "13"
       ],
       "note": "Ellicott opens the section by saying that no confidence can be placed in the attempts to find a definite historical reference in these verses, while Gill instances Joseph and David and Clarke reports the paraphrase that names Abraham. The voices thus disagree on whether the passage has a history behind it at all."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "17",
+        "20"
+      ],
+      "note": "Every tile in this chapter is under a block-containment constraint from Henry, who has four blocks (keys 1, 12, 17, 18). The tiling 1-3 / 4-11 / 12-16 / 17-19 / 20-26 contains all four, so Henry is declared in three tiles and absent only from 4-11 and 20-26, where he has no block. Note that his key-18 block is a concise-commentary block whose content runs through v.26; because its key is 18 it is declared in the 17-19 tile, so his material on eating and drinking is unavailable to the 20-26 tile."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "12"
+      ],
+      "note": "Who 'the man that cometh after the king' is divides the voices. Henry, Clarke and Wesley take the AV sense — if the king with all his means has failed, a private person has little chance. Ellicott prefers the successor, noting that the phrase means that later in the book and that the section's theme is the absence of progress in human affairs. Delitzsch spends the verse instead rejecting Mendelssohn's and Hitzig's renderings on the ground that the connecting particles are copulative, not correlative."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "17"
+      ],
+      "note": "Whether the heir of vv.18-21 is Rehoboam: Clarke states it as fact, Gill reports the suspicion and says it proved true, Wesley reports it without endorsing, Ellicott denies any special reference and reads a general principle. Delitzsch turns the same indefiniteness into an authorship argument — a reigning king would not speak so coldly of his own successor, so the fiction discovers itself and the speaker is stripped of historical individuality."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "Two textual cruxes in one tile. At v.24 the word 'than' is supplied (Ellicott gives both senses without deciding; unemended the verse denies that eating is good). At v.25 'more than I' versus 'without Him': Clarke argues for the variant from eight of Kennicott's and De Rossi's MSS with the LXX, Syriac and Arabic, quoting Coverdale; Ellicott agrees; Delitzsch adopts the same sense while allowing the traditional text defensible; Gill and Wesley keep the received reading, Wesley defending it on the ground that Solomon was best placed to answer."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "4"
+      ],
+      "note": "The two Hebrew words closing v.8 (rendered 'musical instruments, and that of all sorts') are conceded on all hands to be obscure. Clarke lists captives, cups and flagons, cooks and confectioners, and a musical form traced to a Phoenician woman named Sido, before settling on wives and concubines; Ellicott says the guesses are too numerous to recount, that the AV rendering is by no means among the most probable, and that concubines is most in favour; Delitzsch renders the pair 'mistress and mistresses'."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "How far the chapter's censure of mirth reaches: Gill and Henry restrict it to excess, holding that moderate laughter serves body and mind and that seasonable mirth fits a man for business; Clarke narrows it to intemperate pleasure as against sober enjoyment; Delitzsch will not soften it, taking the participle for raving madness. The same pattern recurs at v.16, where Gill alone restricts the loss of remembrance to natural wisdom."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "17",
+        "20"
+      ],
+      "note": "Every JFB block in this chapter is foreign — keys 1, 7, 13, 19 and 25 all carry Psalms material (Psa 6, 9, 10, 27, 28, 38). JFB is therefore declared in no tile. This is the twenty-third consecutive chapter in which every JFB block is foreign; the pattern is an ingestion fault, not a commentary defect."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott block at key 26 carries page chrome — StudyLight footer text, CSS, and executable JavaScript including DOM binding code — rather than commentary. Forty-fifth consecutive chapter with Ellicott chrome; the second in the run where the chrome includes executable script and not merely markup and styling."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "ecclesiastes",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "17",
+        "20"
+      ],
+      "note": "Ellicott twice steps outside exegesis in this chapter to argue about the book's authorship: at v.16 (a later writer who chose Solomon as his hero would not have him predict his own wisdom forgotten, so what is recorded is the history of Solomon's reflections rather than the book's conclusions) and implicitly at v.18. Delitzsch reaches a compatible conclusion at v.18 by a different route, from the coldness of the reference to the successor. This is unusual for the catena and worth flagging: two grammatical-historical voices independently treating the chapter as evidence against Solomonic authorship."
     }
   ]
 }
