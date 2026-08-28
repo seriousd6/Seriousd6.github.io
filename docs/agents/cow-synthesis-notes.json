@@ -45946,6 +45946,116 @@
       "book": "proverbs",
       "chapter": "5",
       "note": "Four entries, 1-6, 7-14, 15-20 and 21-23, at 620, 621, 618 and 448 words, tiling all 23 source keys. Entry 21-23 grades against 1871 source words but roughly 1000 are StudyLight chrome in the Ellicott block at key 23, so the usable source is about 871 and the real ratio is near 0.51 rather than the reported 0.24; the entry was kept short deliberately. One ENTITIES flag was raised and fixed: the word German was used of Keil and Delitzsch and does not appear in the chapter source."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "8"
+      ],
+      "note": "Foreign JFB block: the JFB entry at verse 8 is Job 41 material on leviathan/the crocodile, unrelated to Proverbs 8. Not used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "14"
+      ],
+      "note": "Foreign JFB block: Job 41 leviathan material again, unrelated to the verse. Not used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "20"
+      ],
+      "note": "Foreign JFB block: Job 41 leviathan material, unrelated. Not used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "26"
+      ],
+      "note": "Foreign JFB block: Job 41 leviathan material, unrelated. Not used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "32"
+      ],
+      "note": "Foreign JFB block: Job 41 leviathan material, unrelated. Not used. Five foreign JFB blocks in one chapter is the highest concentration observed in this corpus so far; all five are from a single neighbouring passage (Job 41), consistent with a repeated-block/neighbouring-file ingestion fault rather than a sliding verse offset."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "36"
+      ],
+      "note": "Ellicott chrome: the Ellicott entry at verse 36 carries roughly 1,020 words of front/back matter (publisher apparatus and boilerplate) around about twenty words of genuine comment. This is the twenty-sixth consecutive chapter with this defect, and it attaches to Ellicott last block in the file rather than to the chapter last verse."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "1-36"
+      ],
+      "note": "Truncation caps: Keil and Delitzsch blocks throughout the chapter stop at exactly 200 words, several mid-sentence. John Gill blocks are likewise capped at 200 words at verses 6, 7, 14, 17, 18, 20, 21, 22, 30, 31, 32 and 36. Both are instances of the corpus-wide 200-word ingestion cap; the affected material was used only as far as it runs."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "1-36"
+      ],
+      "note": "Tiling rationale: 27,362 usable source words across 36 keys. Henry four section-blocks fall at verses 1, 12, 22 and 32, which at four tiles would have given compression ratios of 9.8, 11.1, 11.0 and 8.1 to one. The two heaviest sections were split, yielding seven tiles at roughly 6.6, 3.2, 7.3, 3.8, 7.1, 3.9 and 8.1 to one."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "36"
+      ],
+      "note": "Clarke closing material at verse 36 is a genuine 1,719-word essay on wisdom and the personification question, not chrome. It was read and used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "22-31"
+      ],
+      "note": "The central disagreement of the chapter: whether Wisdom here is a personification of a divine attribute or a direct self-revelation of Christ as the eternal Word. Gill, Henry and Wesley read the passage christologically; Keil and Delitzsch and Ellicott read it as personified attribute and warn against pressing possessed and brought forth into ontological statements. Clarke explicitly refuses the eternal-sonship reading while still affirming the divinity of Christ, which places him apart from both camps."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "proverbs",
+      "chapter": "8",
+      "verses": [
+        "1-36"
+      ],
+      "note": "Every verse-range claim in the seven tiles was checked back against the source block it came from, including voice attribution. No misattributions found."
     }
   ]
 }
