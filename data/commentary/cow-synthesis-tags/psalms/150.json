@@ -1,0 +1,150 @@
+{
+ "1": {
+  "voices": [
+   "Augustine of Hippo",
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley",
+   "C.H. Spurgeon"
+  ],
+  "range": "1-6",
+  "pericope_label": "Praise ye the Lord. Praise God in his sanctuary: praise him in the firmament of his power... Let every thing that hath breath praise the Lord. Praise ye the Lord",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Delitzsch counts the tenfold call enclosed between the two Hallelujahs against the synagogue's thirteen attributes, takes both opening terms as attributive to God and heavenly, and reads the last verse as generalizing the summons to every being endowed with breath; Ellicott moves the psalm from earth to heaven, works cautiously through the instrument names, and then restricts the closing summons to those assembled in the temple."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the mighty acts as creation, providence, redemption and grace together, and takes the breath of the last verse as wide as it will go; Calvin holds that heaven is meant in both clauses of the opening, the second merely repeating the first, and rejects as forced the reading that divides angels above from men below."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes this as the first place where the compound is praise God rather than praise the Lord, catalogues every instrument in turn and insists the word rendered dance is a pipe, and reads the last verse as a stage direction summoning all voices to a full chorus; Wesley divides the opening between temple and heaven and assigns the firmament to the angels."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry refuses to let the identity of the instruments matter, holding that the best music in God's ears is a melodious heart, and warns that in praising God the whole danger lies in saying too little; Spurgeon builds on the change of divine names, since power without righteousness would be oppression and righteousness without power too weak to be useful."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine leaves the text for the arithmetic, reading the number of the psalms as a multiple of fifteen and fifteen as the concord of the two Testaments."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What are the sanctuary and the firmament of his power?",
+    "positions": [
+     {
+      "view": "The earthly temple first, then heaven; the psalm moves from earth upward.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "view": "The temple, or any place dedicated to God's service, or else his own holiness working in the heart.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "The temple below and heaven above, where the angels praise him.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Heaven in both clauses, the second merely repeating the first; the division between angels above and men below is forced and unnatural.",
+      "held_by": [
+       "John Calvin",
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who is everything that hath breath?",
+    "positions": [
+     {
+      "view": "All mankind, every being endowed with the breath of life.",
+      "held_by": [
+       "Keil and Delitzsch",
+       "John Gill",
+       "John Wesley"
+      ]
+     },
+     {
+      "view": "Possibly the brute creatures too, whose singing is a kind of praise.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "view": "All the voices and instruments of the temple, summoned to close the service in full chorus.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "view": "Only those assembled in the sanctuary; the closing hallelujah rises from Hebrew voices alone.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine of Hippo",
+    "note": "Devotes his comment to the numerology of the Psalter's arrangement rather than to the psalm's text, deriving fifteen from the seventh day and the eighth."
+   },
+   {
+    "voice": "Adam Clarke",
+    "note": "Identifies each instrument technically, denies flatly that the word usually rendered dance ever means dance, and cites a manuscript Psalter on his own desk as pictorial evidence."
+   }
+  ],
+  "themes": [
+   "Praise ye the Lord. Praise God in his sanctuary: praise him in the firmament of his power.",
+   "Praise him for his mighty acts: praise him according to his excellent greatness.",
+   "Praise him with the sound of the trumpet: praise him with the psaltery and harp.",
+   "Praise him with the timbrel and dance: praise him with stringed instruments and organs.",
+   "Praise him upon the loud cymbals: praise him upon the high sounding cymbals.",
+   "Let every thing that hath breath praise the Lord. Praise ye the Lord."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-28",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ }
+}

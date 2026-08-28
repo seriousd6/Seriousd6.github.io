@@ -47147,6 +47147,86 @@
       "book": "proverbs",
       "chapter": "21",
       "note": "Five entries, 1-6, 7-12, 13-18, 19-24 and 25-31, tiled by even blocks of six verses rather than by sense, this being a maxims chapter with one independent saying per verse and no thematic structure. Word counts 612, 623, 635, 635 and 619, all in window on the first draft. Entry 25-31 grades against 5170 source words but roughly 1026 are StudyLight chrome, giving a real ratio near 0.15. One GHOST was raised and fixed by naming Wesley in entry 13-18, and one ENTITIES flag, Talmudic, where the source abbreviates the word."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "3"
+      ],
+      "note": "Foreign JFB block: the only JFB entry in this chapter is a bare cross-reference fragment drawn from the Job commentary, unrelated to Psalm 150. Not used, so JFB is absent from the chapter. This is the seventh consecutive chapter in which every JFB block is a repeated block from elsewhere."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "6"
+      ],
+      "note": "Ellicott chrome: the Ellicott entry at verse 6 carries roughly 1,120 words of site boilerplate, copyright notice and inline CSS after a substantial and genuine note on the scope of the closing summons. Thirty-first consecutive chapter with this defect. Unusually, the genuine part here is complete rather than truncated, so nothing was lost."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "1"
+      ],
+      "note": "Truncation caps: the Augustine block stops at exactly 303 words, mid-sentence, in the middle of his exposition of the number fifty, an instance of the corpus-wide 300-word cap. Keil and Delitzsch is capped at 200 words at verses 1 and 2, the second breaking off at \"the chorus of mankind concerting with\". Spurgeon is capped at just over 300 at verse 1. The material was used only as far as it runs."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "1-6"
+      ],
+      "note": "Tiling rationale: 5,937 usable source words across 6 keys, less about 1,120 words of chrome at verse 6, leaving roughly 4,790. Written as a single tile covering the whole psalm, at about 7.4 to one. Splitting was rejected because Henry 1,939-word block sits at verse 1 and covers the entire psalm, so any second tile would have fallen to about 1.6 to one on the short instrument verses."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "1"
+      ],
+      "note": "What the sanctuary and the firmament of his power are. Ellicott takes them as earthly temple then heaven, the psalm moving upward and so reversing the order of the psalm before it. Clarke allows the temple, any place dedicated to God service, or else his own holiness working in the heart. Wesley divides them between temple below and heaven above, where the angels praise him. Calvin rejects precisely that division as forced and unnatural, holding that heaven is meant in both clauses and the second merely repeats the first; Delitzsch likewise takes both terms as naming what is heavenly. Henry sets out both possibilities without choosing."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "6"
+      ],
+      "note": "Who is meant by everything that hath breath, and it is the sharpest disagreement in the chapter. Delitzsch takes the summons as generalized from Israel to all mankind and hears the Psalter close on that note. Gill and Wesley take it as wide as it goes. Henry canvasses both senses and allows that the singing of birds is a kind of praise. Clarke reads the verse as a stage direction summoning all the temple voices and instruments to a full chorus. Ellicott alone resists, arguing that the psalm places the reader so positively inside the temple among the covenant people that only those assembled there can be meant, and that the hallelujah closing the Psalter rises from Hebrew voices alone."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "1"
+      ],
+      "note": "Delitzsch records that the synagogue reckoned thirteen divine attributes and that Kimchi matched them to thirteen imperatives in this psalm, but prefers to count the tenfold call enclosed between the two Hallelujahs, ten being for him the number of completeness. The two counts are not reconciled in his text."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "150",
+      "verses": [
+        "1-6"
+      ],
+      "note": "Every claim in the tile was checked back against the source block it came from, including voice attribution, with particular care where Clarke and Ellicott both identify the same instruments and reach different conclusions, and at the opening where Calvin explicitly rejects the reading Wesley adopts. No misattributions found."
     }
   ]
 }
