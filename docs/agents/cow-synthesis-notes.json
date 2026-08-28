@@ -48894,6 +48894,54 @@
       "book": "psalms",
       "chapter": "108",
       "note": "failed validator; reverted, attempt kept at scratchpad/rejected/psalms-108-20260828-102310"
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "108",
+      "verses": [
+        "1",
+        "5",
+        "6",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "note": "Retiled after a validator rejection. The first attempt used a single tile keyed 1 with range 1-13; the validator failed it because entries covered verses 5, 8 and 12, which have no source entries at all. The source keys are 1,2,3,4,6,7,9,10,11,13, giving contiguous runs 1-4 (2,171 usable source words), 6-7 (1,446), 9-11 (75) and 13 (271). The chapter is therefore tiled as 1-4 and 6-7 only. Verses 9-13 are left uncovered: 346 usable words across five verses of one-line cross-references cannot support a 350-word tile without fabrication, and the tiling rule computes its required set as the contiguous run from the lowest source verse, so coverage that stops at the first gap is permitted."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "108",
+      "verses": [
+        "6"
+      ],
+      "note": "Henry's block at key 6 runs 950 words and expounds verses 6 through 13 in seven heads on prayer. Only his first two heads fall inside the 6-7 tile; his material on the territorial catalogue, the conquest of Edom, the casting off, the vanity of human help and the valour that is God's alone is unrepresented in the synthesis, because the verses it treats have no tile."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "verses": [
+        "7"
+      ],
+      "note": "Jamieson, Fausset and Brown at key 7 is foreign: the block discusses partiality in judgment, names Job, and cites Judges 6:31. It belongs to a commentary on Job, not to this psalm. Thirteenth consecutive chapter in which every JFB block is foreign."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "108",
+      "verses": [
+        "7"
+      ],
+      "note": "Keil and Delitzsch at key 7 is not commentary: the block is a bare reprint of the KJV text of verses 7 through 13 with no exposition attached. Delitzsch is consequently not declared for the 6-7 tile, though he carries substantial argument at key 1."
     }
   ]
 }
