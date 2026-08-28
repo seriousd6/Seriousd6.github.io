@@ -46618,6 +46618,116 @@
       "book": "psalms",
       "chapter": "80",
       "note": "Four entries, 1-3, 4-7, 8-13 and 14-19, following the psalm's own refrain divisions at verses 3, 7 and 19, at 593, 511, 603 and 598 words, tiling all 19 source keys. Entry 4-7 is the thin one at 1047 source words against 511 prose, a ratio of 0.49, and was kept short deliberately. Entry 14-19 grades against 2992 words but roughly 1050 are StudyLight chrome and 129 Jamieson residue, so the real ratio is near 0.32 rather than the reported 0.20. One ENTITIES flag was raised and fixed: Rome, where the source has the Roman empire."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "5"
+      ],
+      "note": "Foreign JFB block: the JFB entry at verse 5 is Job 22 material on being taken away from the evil to come, unrelated to Psalm 120. It is the only JFB block in the chapter, and it is foreign, so JFB is effectively absent. This is the fifth consecutive chapter in which every JFB block is a repeated block from a neighbouring passage."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "7"
+      ],
+      "note": "Ellicott chrome: the Ellicott entry at verse 7 carries roughly 1,070 words of site boilerplate, copyright notice and inline CSS after a five-word fragment of genuine comment, which itself breaks off mid-sentence at \"For the pregnant, I peace,\". Twenty-ninth consecutive chapter with this defect."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "1-7"
+      ],
+      "note": "Truncation caps: the Augustine block at verse 1 stops at exactly 303 words, mid-sentence at \"and a still\", an instance of the corpus-wide 300-word cap. Keil and Delitzsch is capped at 200 words at verses 1 and 2, the second breaking off at \"the poet appears to base\". Gill is capped at 200 at verse 4. The material was used only as far as it runs."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "6"
+      ],
+      "note": "Keil and Delitzsch entry at verse 6 contains no commentary at all, only a restatement of the King James text of verses 6 and 7. His substantive note on Meshech and Kedar sits inside his verse 2 block, which by block containment falls in the 1-4 tile, so he was declared there only and not in the 5-7 tile."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "1-7"
+      ],
+      "note": "Tiling rationale: 9,263 usable source words across 7 keys, less about 1,070 words of chrome at verse 7. Two tiles at 1-4 and 5-7, giving compression ratios of roughly 7.5 and 5.1 to one. The boundary follows the psalm own turn from the deceitful tongue to the sojourn in Meshech, and matches Henry two section blocks at verses 1 and 5."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "5"
+      ],
+      "note": "The Calvin block at verse 5 carries a long appended editorial note, quoting a traveller on the character of Arab tribes and discussing the identification of the Hebrew word, interleaved with Calvin own text. It was read but not used, since it is not Calvin."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "1"
+      ],
+      "note": "Authorship and date. Calvin finds David manner throughout and is inclined to ascribe it to him without affirming it; Henry and Gill assume David. Clarke assigns the whole collection of fifteen to the return from Babylon, holds the author unknown, and doubts they are the work of one person, listing six names to which they have been ascribed without evidence. Delitzsch leaves the period open and records a proposal placing them after the Return, when Samaritan hostility opposed the young colony."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "4"
+      ],
+      "note": "Whether the sharp arrows and coals of juniper describe the slanderous tongue or the punishment awaiting it. Gill allows the first reading but prefers the second; Henry and Wesley take it flatly as the wrath of God. Calvin reports both sides and takes it himself as comparison, slander piercing like an arrow and burning long like these coals. Ellicott reads the preceding question rhetorically, so that the two images are the stock figures of malicious speech supplied as its answer."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "5"
+      ],
+      "note": "Whether Meshech and Kedar are literal residences. Henry, Wesley and Calvin take them metaphorically, Henry comparing the idiom to saying of bad neighbours that we dwell among Turks and heathens. Clarke keeps them geographical and reads the psalm as the complaint of captives held among those peoples. Ellicott makes their very remoteness from each other the reason for the pairing. Calvin separately defends the word as a proper name against the Septuagint, Syriac, Vulgate and Arabic, which render it as an appellative meaning a protracted sojourn."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "5-7"
+      ],
+      "note": "Whether the distress is one man or the nation. Henry, Calvin and Gill read it of David among Saul court or among false brethren of his own people. Ellicott holds that the two concluding verses leave no doubt that a troubled state of affairs affecting the whole nation, not an individual, is presented. Clarke reads it of the captives collectively."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "120",
+      "verses": [
+        "1-7"
+      ],
+      "note": "Every verse-range claim in the two tiles was checked back against the source block it came from, including voice attribution, with particular care where Gill, Clarke, Ellicott and Calvin all propose different identifications for Meshech, and where the geographical premise shared by several voices is stated as framing rather than attributed. No misattributions found."
     }
   ]
 }
