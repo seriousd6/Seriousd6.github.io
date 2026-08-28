@@ -46193,6 +46193,116 @@
       "book": "psalms",
       "chapter": "119",
       "note": "Twenty-two entries, one per acrostic stanza of eight verses, tiling all 176 source keys with no gaps and no overlaps. Word counts run 568 to 649, every entry in window on the first draft except two which needed a single trim pass each. Ratios run 0.06 to 0.18 against source, the lowest in the corpus, because the source is 89,911 words. Usable source is about 88,900 after the single chrome block at key 176. One ENTITIES flag was raised and fixed: the word Reformation, used of the Augsburg Confession, does not appear in the chapter source."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "Foreign JFB block: the JFB entry at verse 1 is Job 41 material on leviathan (potsherds, the scales of the belly, the threshing instrument on the mire), unrelated to Proverbs 9. Not used."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "13"
+      ],
+      "note": "Foreign JFB block: the JFB entry at verse 13 is Job 42 material on hearing versus seeing God, unrelated to the verse. Not used. Both JFB blocks in this chapter are foreign and both come from the neighbouring book, consistent with the repeated-block ingestion fault seen in the preceding chapter, where five foreign JFB blocks were all drawn from Job 41. JFB is effectively absent from Proverbs 9."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "18"
+      ],
+      "note": "Ellicott chrome: the Ellicott entry at verse 18 carries roughly 1,000 words of site boilerplate and inline JavaScript around no genuine comment at all. This is the twenty-seventh consecutive chapter with this defect, and it attaches to Ellicott last block in the file."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Truncation caps: Keil and Delitzsch blocks stop at exactly 200 words throughout the chapter, several mid-sentence (the note on mingled wine at verse 2 breaks off at \"but\", and the note on Hitzig at verse 4 at \"far more inconceivable than\"). John Gill blocks are capped the same way at verses 1, 3, 4, 6, 7 and others. Both are instances of the corpus-wide 200-word ingestion cap; the material was used only as far as it runs."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Tiling rationale: 14,683 usable source words across 18 keys, less about 1,000 words of chrome at verse 18. Four tiles at 1-2, 3-6, 7-12 and 13-18, giving compression ratios of roughly 7.5, 3.8, 4.1 and 5.6 to one. The natural three-section split (1-6, 7-12, 13-18) was rejected because Henry 3,102-word section block sits at verse 1, which would have put the head tile at about 11.4 to one."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "7-12"
+      ],
+      "note": "Block containment cost: Henry single block at verse 1 surveys the whole first half of the chapter, including the sayings about the scorner at verses 7-12, but by the block-containment rule he is declared only in the 1-2 tile. His material on reproof therefore goes unrepresented in the 7-12 tile, which rests on Gill, Delitzsch, Clarke, Ellicott and Wesley."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "1-2"
+      ],
+      "note": "The chapter opening disagreement is over how far the allegory may be pressed. Gill, Henry, Ellicott and Wesley identify the house and its seven pillars with Christ incarnate, the church, or heaven. Clarke rejects the sacramental and patristic readings outright as strange creatures of the interpreters own brain and takes the house for the created universe framed by the eternal counsel of God. Delitzsch declines both, confining the pillars to the self-communicating virtues of Wisdom own nature and refusing to allegorize the flesh and wine at all."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "2"
+      ],
+      "note": "A word-level dispute with doctrinal weight: Henry and Gill read the slaughtered beasts as a sacrifice, making the feast a feast upon a sacrifice. Delitzsch, following Michaelis, holds that the noun used here is the ordinary term for slaughter outside the sacrificial system, as distinguished from the proper sacrificial word, and that the beast is simply an ox."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "6"
+      ],
+      "note": "Whether the verse tells the simple to forsake foolish company (Gill, Clarke, Wesley) or addresses the simple in the vocative and tells them to leave off their own simplicity (Delitzsch, with Ellicott agreeing on the sense of the word). Delitzsch grounds his reading on the oddity of the simple being told to forsake the simple."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "13-18"
+      ],
+      "note": "Who the foolish woman is. Henry takes her for carnal sensual pleasure; Delitzsch, Ellicott and Clarke for Folly as the abstract counterpart the picture demanded; Gill identifies her with antichrist and the great whore and reads the entire section as a portrait of Rome, its chapels, its proselytizing and its priests."
+    },
+    {
+      "at": "2026-08-28",
+      "kind": "fidelity",
+      "book": "proverbs",
+      "chapter": "9",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Every verse-range claim in the four tiles was checked back against the source block it came from, including voice attribution, with particular care where Clarke and Ellicott both discuss the mingling of the wine and where Gill and Clarke both report the older versions on the shades at verse 18. No misattributions found."
     }
   ]
 }
