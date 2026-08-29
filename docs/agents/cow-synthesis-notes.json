@@ -53280,6 +53280,136 @@
       "book": "isaiah",
       "chapter": "20",
       "note": "SCOPED the 'Bogus footnote' artefact corpus-wide as recommended: 395 occurrences across 22 files, ALL of them Isaiah, chapters 10 and 12-32 contiguous (10, 12-32 with 11 absent). Every occurrence is inside a Calvin block, standing where a footnote marker belongs. The tight, contiguous chapter range points at one ingestion run over Calvin's Isaiah rather than a general Calvin problem — the other books are clean. Harmless for synthesis (surrounding prose is intact and the marker is skipped as noise), but it is a defined, bounded cleanup: strip the literal string from Calvin blocks in data/commentary/cow/isaiah/{10,12..32}.json. Flagging for an owner decision since it touches the source tree, which this loop does not modify."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "1-16"
+      ],
+      "note": "Tiled as five entries, 1-3 / 4-7 / 8 / 9-12 / 13-16, across 16 source keys and about 18,700 usable words. Verse 8 stands alone because Henry puts a 3,400-word block there, and verses 1-3 and 13-16 are similarly weighted by Henry and by the long Ellicott notes."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "Jamieson, Fausset and Brown blocks at keys 1, 7 and 13 are residue from the Psalms, on the familiar stride of six. All three declared as excluded voices."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "StudyLight page chrome at the end of the Ellicott block at key 16. About 150 words of real commentary precede it, on the airs of love and on the closing clause as a separate verse, and were used."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "What does the word rendered locks mean? Ellicott and Keil and Delitzsch both make it a veil, Ellicott from the derivation and cognates and Keil and Delitzsch from the grammar of the preposition; Clarke reports that neither our version nor the old ones translate the clause well. Ellicott adds that the mistranslation out of thy silence, mystified further in the Latin, has been a fruitful source of moral allusion to the hidden beauties of the soul."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "2"
+      ],
+      "note": "Do the sheep bear twins or come in pairs? Ellicott prefers pairs, since the rows of teeth are exactly matched upper to lower; Wesley reads the twins as the two rows; Gill and Clarke keep to whiteness and evenness."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "4"
+      ],
+      "note": "Can the tower of David be located? Ellicott says not, since better-described towers have been lost and the structure now bearing the name is Herodian; Keil and Delitzsch identify it with the tower of the flock and a court of justice on Zion; Gill leaves it between the stronghold and an armoury. Clarke compares the shields with the weapon-pillars in a modern armoury, such as that in the tower of London."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "5"
+      ],
+      "note": "Clarke refuses to defend the comparison at all, holding that language fails an impassioned lover so that his similes come out without strict correctness, and counts the description more of nature than of art. Keil and Delitzsch instead count the figures and find seven parts praised, a deliberate sevenfold beauty."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "6"
+      ],
+      "note": "Who speaks the sixth verse? Keil and Delitzsch give it to the bride and call the alternative absurd, since it would make the mountain of myrrh stand for her body; Gill and Wesley give it to Christ, Wesley noting that the bride had used the same words earlier."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "Is it come with me or come to me? Ellicott prefers to me, since the Greek and Latin read hither and the difference is only in the vowel points, and takes the word rendered look in its primitive sense of come; Keil and Delitzsch reject on three grounds the construction that makes the verse promise her a palace. Clarke reports a theory that two queens appear in the song, a Jewish princess and an Egyptian bride."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "9"
+      ],
+      "note": "Did she take his heart or give him courage? Ellicott reports both senses and settles for the received one on the strength of the neck-chain; Keil and Delitzsch reject the emboldening sense as unfitting in a king who is no coward; Gill notes that the word occurs nowhere else."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "12"
+      ],
+      "note": "Ellicott and Clarke agree that the closed garden and sealed fountain were established metaphors for a chaste wife, Ellicott citing a prayer still used at Jewish marriages and Clarke citing Greek custom and poetry; Clarke ends by exclaiming how many will make metaphors out of metaphors."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "13"
+      ],
+      "note": "What are the plants? Clarke takes them for the fecundity of the bride and reads the passage as connubial; Ellicott reports and rejects the reading that makes them offspring, holding that the poet describes her charms in the language of flowers; Gill and Wesley make them members of the church."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "4",
+      "verses": [
+        "16"
+      ],
+      "note": "Should both winds blow? Clarke passes on a proposal to read retire, thou south, since the south wind there is hot and troublesome; Gill objects that the verb is singular and that opposite winds cannot blow at once; Keil and Delitzsch note that the east wind is purposely left out as destructive; Henry and Wesley take the winds as dispensations of the Spirit, conviction and comfort."
     }
   ]
 }
