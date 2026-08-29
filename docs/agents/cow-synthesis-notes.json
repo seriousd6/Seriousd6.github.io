@@ -53273,6 +53273,13 @@
         "4"
       ],
       "note": "'Bogus footnote' appears again in Calvin at v.4. Third consecutive Calvin-heavy chapter carrying the artefact (isaiah 21, isaiah 18, now isaiah 20). Recommend a corpus-wide grep of data/commentary/cow/*/*.json for the literal string to size the problem."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "20",
+      "note": "SCOPED the 'Bogus footnote' artefact corpus-wide as recommended: 395 occurrences across 22 files, ALL of them Isaiah, chapters 10 and 12-32 contiguous (10, 12-32 with 11 absent). Every occurrence is inside a Calvin block, standing where a footnote marker belongs. The tight, contiguous chapter range points at one ingestion run over Calvin's Isaiah rather than a general Calvin problem — the other books are clean. Harmless for synthesis (surrounding prose is intact and the marker is skipped as noise), but it is a defined, bounded cleanup: strip the literal string from Calvin blocks in data/commentary/cow/isaiah/{10,12..32}.json. Flagging for an owner decision since it touches the source tree, which this loop does not modify."
     }
   ]
 }
