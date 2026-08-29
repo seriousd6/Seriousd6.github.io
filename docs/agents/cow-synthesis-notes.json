@@ -56764,6 +56764,71 @@
         "1-17"
       ],
       "note": "All five entries self-graded A. Every entry inside the 350-650 word window; each entry names only voices sourced in its own keys. Two proper nouns flagged by the entities check on a first pass, Testaments and Arabian, were replaced with forms that appear verbatim in the source."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "52",
+      "note": "MAJOR INGEST GAP FOUND, escalating: John Calvin is missing from isaiah 49 through 66 — the entire back half of the book, eighteen consecutive chapters, ZERO Calvin blocks at any key. He is present and full-length through chapter 48 (44: 26/28 keys, 45: 22/25, 46: 13/13, 47: 15/15, 48: 22/22), then stops dead at 49 and never resumes. This is not a Calvin-wrote-nothing case as with the Song of Solomon: Calvin's Isaiah commentary covers all sixty-six chapters. The practical cost is large — the reformed school drops to Gill alone for every remaining Isaiah chapter in the queue, and the gap covers the Servant Songs and chapters 53, 55, 61 and 65, among the most heavily commented in the book. It also explains the zero bogus-footnote counts observed in isaiah 51 and 52, since that artefact rides on the Calvin ingest. Recommend re-ingesting Calvin for isaiah 49-66 before the remaining chapters of the book are synthesized, since every one of them will otherwise be permanently thin on one school."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "52",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JFB blocks foreign and truncated again, and the Psalms source is confirmed a fourth time. Key 6 is a fourteen-word headless fragment, 'His judicial decisions for the good and against the wicked'. Key 12 is explicit: '8-11. The covenant was often ratified... answering to covenant [Psa 105:9] in the parallel clause... which, according to Psa 105:10, He set for' — Psalm 105 named twice. Fourth consecutive chapter where the foreign material is Psalms and where both the foreign and truncated shapes appear together. Across every traceable case in this run (isaiah 51, isaiah 1, songofsolomon 2, isaiah 52) the misplaced JFB text has come from the Psalms without exception."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "52",
+      "verses": [
+        "15"
+      ],
+      "note": "Ellicott site-chrome artefact on the chapter's FINAL verse: about 950 words of StudyLight navigation, CSS and footer after roughly 270 words of commentary at key 15. Eleventh Isaiah chapter and twelfth overall, final verse every time, no exceptions in this run."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "52",
+      "verses": [
+        "8"
+      ],
+      "note": "Clarke and Delitzsch face the same broken construction in v.8 and take opposite routes. Word for word the Hebrew runs 'the voice of thy watchmen: they lift up their voice', and Clarke says neither the ancient versions nor the modern interpreters have cleared it up in any way that is easy and natural. He is persuaded of a scribal error, since two Hebrew letters are similar in sound, and would read 'all thy watchmen' for 'the voice of thy watchmen', noting that in one manuscript the letter stands on an erasure, and claiming the correction perfectly rectifies both sense and construction. Delitzsch keeps the text and explains the idiom instead: the noun followed by a genitive forms an interjectional clause and has almost become an interjection outright, so the words are simply 'Hark, thy watchers!' A clean instance of emendation against idiom on the same difficulty."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "52",
+      "verses": [
+        "15"
+      ],
+      "note": "Four-way split on the verb rendered 'sprinkle' (v.15), and Clarke is unusually candid about it: he keeps the received rendering while saying he is by no means satisfied, since the word means only to sprinkle and the grammar wants the thing sprinkled in the accusative with a preposition for what is sprinkled on, which is not what stands here. He then rejects in turn Munster and two rabbis making it 'cause speech of himself' on the analogy of dropping a word, a bishop's proposal that sprinkling stands for astonishing as men are who have water thrown over them (which the Septuagint appears to follow, and which Clarke calls ingenious but too refined), and a conjecture reading 'they shall regard'. Ellicott lists five rival versions — spring up, startle, scatter, fling away, marvel at him — admits the difficulty and keeps the received text, taking the sprinkling for the priest's cleansing of a leper performed by one himself counted a leper. Gill and Wesley make it the doctrine, dropped like rain."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "52",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott alone gives a genetic account of the Servant idea rather than an identification of its referent. Where Gill catalogues and dismisses the Jewish alternatives (Abraham, Moses, Ezra, Zerubbabel, any righteous man, Israel in captivity, Josiah, Jeremiah) and Henry and Wesley appeal to ancient Jewish opinion and to Acts, Ellicott asks how the conception could have arisen in the prophet's mind at all: he had seen partly good kings and one who nearly answered his ideal, none of whom redeemed the people, while what good was done came through prophets mocked and persecuted for speaking the word — so that a law was dawning on him, the power of vicarious suffering and the might of martyrdom, which then had to be worked out on a wider scale, the Servant embracing the nation, its prophetic kernel, and the individual identifying himself with both. A different kind of answer from everyone else's, and worth flagging because the same question recurs through chapter 53."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "52",
+      "note": "isaiah 52 self-graded A on all three tiles. Every verse in 1-15 is represented; each attribution traced to a named block in the catena, assigned by block key. JFB omitted (Psalms blocks, truncated). Calvin does not appear because he is absent from the whole of isaiah 49-66, per the separate escalation note; the reformed school therefore rests on Gill alone throughout this chapter. Compression roughly 7.8 / 8.7 / 7.5 to 1 on usable source words, the last after discounting about 950 words of Ellicott chrome at key 15."
     }
   ]
 }
