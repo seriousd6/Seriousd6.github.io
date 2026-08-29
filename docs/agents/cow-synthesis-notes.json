@@ -53233,6 +53233,46 @@
         "7"
       ],
       "note": "The literal string 'Bogus footnote' appears again in Calvin's blocks here (vv.3, 4, 6, 7 — four occurrences), as it did in isaiah 21 (five occurrences). Two consecutive Calvin-heavy chapters with the same artefact suggests it is systematic in the Calvin ingestion rather than incidental, and worth a corpus-wide grep."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "20",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB foreign-block pattern continues: the single JFB block in this chapter (v.3) carries Psalm 74 material from another commentary. That is 35 consecutive chapters in which every JFB block is foreign."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "20",
+      "verses": [
+        "6"
+      ],
+      "note": "Ellicott chrome at v.6 is severe: the block is 1,082 visible words, of which perhaps 80 are commentary and the rest is site footer, navigation and CSS. This single block is 15 percent of the chapter's reported 7,285 usable source words. 57th consecutive chapter with chrome, and the clearest case yet that the chrome materially distorts the 'size' figure the loop budgets by."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "Isaiah 20 gives an unusually clean instance of a debate axis that runs on scholarly date rather than theology: whether Sargon is another name for Sennacherib. Clarke, Calvin and Wesley say yes, reasoning from Tartan being Sennacherib's captain; Henry leaves it open; Ellicott and Delitzsch say no, from the Khorsabad inscriptions, Delitzsch adding that Sargon took Samaria himself and usurped the throne. This is one of the few places in the corpus where the grammatical-historical pair are on one side against all three of reformed, wesleyan-arminian and puritan-evangelical, and the split is dated by an excavation rather than a doctrine."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "20",
+      "verses": [
+        "4"
+      ],
+      "note": "'Bogus footnote' appears again in Calvin at v.4. Third consecutive Calvin-heavy chapter carrying the artefact (isaiah 21, isaiah 18, now isaiah 20). Recommend a corpus-wide grep of data/commentary/cow/*/*.json for the literal string to size the problem."
     }
   ]
 }
