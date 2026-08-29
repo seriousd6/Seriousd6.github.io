@@ -53179,6 +53179,60 @@
         "6"
       ],
       "note": "Ellicott notes that the Hebrew for inhabitant is feminine, making her the daughter of Zion, and that this hymn closes what has been called the Immanuel volume of the prophecies. Henry draws the same grammatical point into an exhortation that the weaker sex be strong in the Lord."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "18",
+      "verses": [
+        "7"
+      ],
+      "note": "JFB foreign-block pattern continues: the single JFB block in this chapter (v.7) carries Psalm material from another commentary and says nothing about Isaiah 18. That is 34 consecutive chapters in which every JFB block is foreign."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "18",
+      "verses": [
+        "7"
+      ],
+      "note": "Ellicott chrome at v.7: footer, terms-of-use links, navigation and CSS. 56th consecutive chapter."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "18",
+      "verses": [
+        "6",
+        "7"
+      ],
+      "note": "Tiling caution for short chapters with heavy chrome: 'size' reported 2,341 usable source words at v.7, but Gill's block there is a single sentence and Calvin's is nearly the whole of it, the rest being Ellicott's page furniture. A v.7-only tile would have been padding at a nominal 3.6:1. Retiled to 1-2 / 3-5 / 6-7. Where one key holds most of a chapter's word count AND that key carries Ellicott chrome, discount the count before choosing tile boundaries."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "18",
+      "verses": [
+        "5"
+      ],
+      "note": "Delitzsch's v.5 block is another instance of the quotation-heavy pattern: it prints vv.5-7 in full and only begins commenting at v.7. Fifth instance recorded (psalms 106, psalms 81, psalms 137, songofsolomon 7, now isaiah 18). The pattern is not confined to Psalms or to chapter-final verses — here it is a mid-chapter key that swallows the remaining verses. It looks like the Delitzsch ingestion emits one commentary unit under the first verse key of that unit and leaves the later keys thin or absent."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "18",
+      "verses": [
+        "3",
+        "4",
+        "6",
+        "7"
+      ],
+      "note": "The literal string 'Bogus footnote' appears again in Calvin's blocks here (vv.3, 4, 6, 7 — four occurrences), as it did in isaiah 21 (five occurrences). Two consecutive Calvin-heavy chapters with the same artefact suggests it is systematic in the Calvin ingestion rather than incidental, and worth a corpus-wide grep."
     }
   ]
 }
