@@ -56216,6 +56216,82 @@
         "1-12"
       ],
       "note": "All four entries self-graded A. Every entry inside the 350-650 word window; each entry names only voices sourced in its own keys."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "1",
+      "verses": [
+        "1",
+        "7",
+        "19",
+        "31"
+      ],
+      "note": "JFB foreign-block pattern, and the foreign source is again identifiable: all four Jamieson, Fausset and Brown blocks (keys 1, 7, 19, 31) are Psalms material, and three of the four can be pinned. Key 1 gives '12-14. This description of treachery does not deny, but aggravates, the injury from enemies' — Psalm 55. Key 7 '19. God hears the wicked in wrath... Prosperity hardens them (Psa 73:5)' — Psalm 55 again by verse number, with a Psalm 73 citation. Key 19 '5-6. A vivid picture of the conduct of malicious enemies'. Key 31 'or self, or life, which is threatened (Psa 17:8; 36:7)' — Psalm 7 or thereabouts. All four are also truncated, headless fragments of 14-25 words. Second chapter (after isaiah 25) where the foreign and truncated shapes co-occur, and second (after isaiah 51) where the foreign source is traceable to specific psalms. JFB omitted from all eight voice lists."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "1",
+      "verses": [
+        "31"
+      ],
+      "note": "Ellicott site-chrome artefact on the chapter's FINAL verse, tenth Isaiah chapter running: about 990 words of StudyLight navigation, CSS and footer after roughly 70 words of commentary at key 31. Recorded now in isaiah 17, 18, 20, 33, 43, 23, 27, 51, 25 and 1 — ten chapters, final verse every time, no exceptions. This is now reliable enough that the size figure for any Isaiah chapter should be discounted by roughly 900-1,100 words before tiling."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "1",
+      "note": "NO bogus-footnote markers in isaiah 1 despite Calvin being present at all 31 keys and carrying full-length blocks throughout. This is a clean lower-bound datapoint for the artefact's range: the contiguous band mapped so far is isaiah 10 and 12-32 (11 absent), and isaiah 1 confirms the band does not extend backwards to the start of the book. Combined with isaiah 33 (zero occurrences, upper bound) and isaiah 51 (Calvin absent entirely, zero occurrences), the boundaries are now closed at both ends with a clean control."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "1",
+      "note": "Largest chapter processed in this run: 55,067 usable source words across 31 keys, over the 40,000 threshold, so it was the whole batch. Tiled into 8 (1 / 2-3 / 4-7 / 8-11 / 12-17 / 18-21 / 22-26 / 27-31) at compressions 7.6 / 10.4 / 9.7 / 11.9 / 12.1 / 12.2 / 10.1 / 9.9 to 1. Two constraints drove the tiling: keys 1 and 2 are each about 4,900 words, so no tile can contain both without exceeding the 13:1 ceiling; and the 5:1 floor rules out finer splits at the short end. Seven tiles would have averaged 12.2:1, at the very top of the acceptable band, so eight was the safer choice. Worth recording as the pattern for the other very large chapters still in the queue."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "1",
+      "verses": [
+        "27"
+      ],
+      "note": "Calvin flatly contradicts Ellicott on whose righteousness redeems Zion (v.27), and the disagreement is doctrinally load-bearing. Ellicott renders 'through justice' and locates the condition in the preceding verse: redemption proceeds from God's compassion but is impossible without the renewed righteousness of man to man, since that is of its very essence. Calvin says in terms that this is a great mistake — to refer the judgment and righteousness to the church, as though Isaiah were describing the well-ordered condition of a city; the plain meaning is that God's justice alone suffices to redeem her though men yield no assistance. Delitzsch takes a third position, God's right fulfilling itself judicially. Clarke and Gill a fourth, a double operation on the obdurate and the penitent."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "1",
+      "verses": [
+        "2",
+        "5",
+        "13"
+      ],
+      "note": "Three places where a commentator breaks with the consensus he himself reports. (1) v.2: Calvin notes that almost all commentators end the clause at 'the Lord hath spoken', grants that the sense looks fuller that way, and rejects it anyway because the context requires the hearing to attach to the complaint that follows. (2) v.5: Clarke reads 'on what part' rather than 'why', with the Vulgate and Abendana, and supports it with Ovid ('there is no place on you for a new stripe') and a line of Euripides that Longinus praised for compression; Delitzsch canvasses the same reading, records the objection that it is spiritless since a struck limb can be struck again, and decides against it. (3) v.13: Clarke rewrites 'new moons and sabbaths' as 'the fast and the day of restraint' on the Greek, arguing the prophet could hardly have omitted the fast from a list of solemnities or from an indictment of hypocrisy he handles at length later; Ellicott keeps the traditional list."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "1",
+      "verses": [
+        "31"
+      ],
+      "note": "Four-way split on the strong one that becomes tow (v.31), turning on one participle. Wesley and Gill: the idol its owners thought able to defend them. Calvin: the word means strong and keeps that sense even here — 'that god who was your strength shall be turned into stubble' — with men and idols heaped like a woodpile so one conflagration takes both, the idols for tow and the men for fire; he also reports and rejects a reading that finds repentant idolaters burning their own images. Delitzsch refuses the participial 'its maker' on two grounds, that maker is an unusual epithet for an idol and that the figure would run backwards, the idol kindling the man rather than the reverse, and reads 'his work' with the Septuagint, Targum and Vulgate. Ellicott follows and draws the moral: the sin itself becomes the instrument of destruction."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "1",
+      "note": "isaiah 1 self-graded A on all eight tiles. Every verse in 1-31 is represented; each attribution traced to a named block in the catena, assigned by block key under the containment rule. JFB omitted throughout (Psalms blocks, truncated). Compression 7.6 to 12.2 to 1 on usable source words, the last tile after discounting about 990 words of Ellicott chrome at key 31. Matthew Henry appears only at keys 1, 2, 10, 16, 21 (chapter-level expositions rather than verse notes), so he is declared in five of the eight tiles and absent from the other three by containment, not by omission."
     }
   ]
 }
