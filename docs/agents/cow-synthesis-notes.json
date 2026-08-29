@@ -52519,6 +52519,98 @@
         "35"
       ],
       "note": "Keil and Delitzsch deny that shame sweeps fools away, since the verb means to raise up, and read it as exalting them into warning examples. Clarke observes that many such fools are exalted to the gibbet and gallows."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "Nine source keys, 9,019 words, very front-loaded (key 1 alone carries 3,798 words and nine voices). Henry has three blocks (keys 1, 5, 7); tiling at 1-4 / 5-9 contains all three. Two tiles only: a three-way split would have put vv.5-6 in a tile of 530 source words, far below the padding floor. Compressions 7.8 and 6.1:1. Note that Henry's key-5 block is his concise-commentary block covering the whole close of the psalm, including the imprecation, so his position on vv.8-9 comes from a block keyed at v.5 — contained in the same tile, so no material was lost."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "5"
+      ],
+      "note": "Delitzsch's block at key 8 is verse quotation of vv.8-9 with no comment attached. He is declared in the 5-9 tile by block containment and cited there for exactly that. This is the THIRD such block in the run (psalms 106 key 25, psalms 81 key 12, now psalms 137 key 8) — all three in Psalms, all three at the closing verses of a psalm. Worth flagging as a possible pattern in the Delitzsch ingestion: his commentary on the final verses of a psalm may be systematically truncated to the quotation."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "5"
+      ],
+      "note": "The central disagreement of the chapter, and the sharpest in the corpus so far: whether the closing beatitude on dashing infants is revenge. Henry says it is not — holy zeal for God's glory, and vengeance left to God, so that we may not pray for the ruin of the church's enemies even while praying for her success. Gill says it is not — a just retaliation for what Babylon did to Jewish children, desired for the glory of divine justice. Clarke removes the difficulty by changing the mood: these are prophetic declarations of what retributive providence would bring about, containing no incitement to cruelty, so 'praying for the destruction of our enemies is totally out of the question.' Spurgeon leaves the case with a God of recompenses. Ellicott ALONE declines the defence and names it: 'The luxury of revenge is well expressed in this beatitude, pronounced on him who can carry out to all its bitter end the lex talionis. Commentators have in turn tried to disguise and justify the expression of passion.' Delitzsch offers nothing. Both the four-fold defence and Ellicott's refusal of it are represented in the tile without adjudication."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "1"
+      ],
+      "note": "What tree the harps hung on. Ellicott denies it can be the willow, which is not found in Babylonia, and identifies the poplar (Populus Euphraticus), adding that identifying it may not matter since the picture may only be a poetical way of saying all religious and festal song fell silent. Clarke keeps the willow and cites Isaiah 15:7's 'brook of the willows'; Gill keeps it too and adds Ovid on willows growing on riverbanks."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "1"
+      ],
+      "note": "Why the exiles were beside the water: quartered there for forced labour or chosen as the most melancholy spot (Henry), by preference to escape the noisy streets (Spurgeon), because synagogues were sited near water for washing before prayer and they had none in Babylon (Calvin, following Rosenmuller, with Chrysostom's conjecture that they were dispersed along the rivers and not allowed in the cities), or simply because rivers are the country's characteristic feature (Ellicott). Gill allows both choice and compulsion."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "5"
+      ],
+      "note": "The word rendered 'who art to be destroyed' at v.8 is textually uncertain. Ellicott sets out the range: our version follows Theodotion, Aquila and Jerome give 'wasted', Symmachus 'robber', the LXX and Vulgate 'wretched'; as pointed it must be a passive participle, though a Hebrew would speak proleptically of a doom foreseen but not accomplished, and he cites the Arab saying 'Pursue the caught one.' Clarke identifies the man called happy as Cyrus, God's chosen agent."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "Both JFB blocks in this chapter (keys 2 and 8) are foreign — they carry Job material (Job 6:5, 19:12, 24:4) and Zechariah/Psalms cross-references from another commentary. JFB is therefore declared in no tile. Twenty-ninth consecutive chapter in which every JFB block is foreign."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "5"
+      ],
+      "note": "Ellicott block at key 9 carries StudyLight page chrome — navigation and footer text — after the note on the last verse. Fifty-first consecutive chapter with Ellicott chrome."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "137",
+      "verses": [
+        "1"
+      ],
+      "note": "SECOND occurrence of the vcheck false positive first recorded at proverbs 16: Calvin reports Chrysostom's conjecture about where the exiles were settled, and the voice-list checker matched 'Chrysostom' as cited-but-not-declared. Reworded to 'an early Greek father' to clear it. The pattern is now confirmed rather than incidental — any chapter where one commentator names another (Augustine, Chrysostom, Jerome, Calvin and Luther are all both voices in this corpus and figures commentators cite) will trip the same check. Worth considering whether vcheck should require the name to appear in a citation position rather than anywhere in the prose."
     }
   ]
 }
