@@ -55993,6 +55993,78 @@
         "1-29"
       ],
       "note": "All eight entries self-graded A. Every entry inside the 350-650 word window; each entry names only voices sourced in its own keys."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "25",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "JFB blocks show BOTH defect shapes in the same chapter, which has not happened before. Key 5 is foreign AND truncated: 'literally, added to sin, instead of being led to repentance (Ro 2:4)' — a headless fragment commenting on Romans. Key 11 is foreign and truncated the same way: '23-29. (Compare Ex 16:11-15; Nu 11:4-9)' — a bare cross-reference line belonging to Psalm 78, the manna passage. Previously the foreign-block pattern (48 chapters) and the truncation pattern (isaiah 27) looked like alternatives; here they co-occur. JFB omitted from both voice lists."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "25",
+      "verses": [
+        "12"
+      ],
+      "note": "Ellicott site-chrome artefact on the chapter's FINAL verse again: about 990 words of StudyLight navigation, CSS and footer after roughly 60 words of commentary at key 12. Ninth Isaiah chapter recorded with it (17, 18, 20, 33, 43, 23, 27, 51, 25), final verse every time without exception. The rule holds across every Isaiah chapter this run has touched."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "25",
+      "note": "Bogus-footnote Calvin artefact present, 17 occurrences, consistent with the contiguous isaiah 10 and 12-32 range already mapped. Unlike isaiah 27 and 23 the markers here are bare — no inline dump of the translator's numbered footnote apparatus. So the artefact has two forms: a silent marker (the common case) and an apparatus dump (isaiah 23 key 12, isaiah 27 key 1). Still awaiting the owner decision."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "25",
+      "note": "Keil and Delitzsch forward-offset confirmed in a THIRD chapter. In isaiah 25 the block at key 1 covers verse 1, key 2 quotes and comments through verse 6, key 7 comments on 7-8, key 8 on 8-9, key 10 on 10-11, key 11 is a bare quotation of 11-12 with no comment. Same shape as isaiah 27 and isaiah 51: each block opens by quoting the range it covers, and the last block in a chapter is often quotation only. Three chapters now, which makes it a property of the Delitzsch ingest (chunked by pericope, keyed to the first verse of the chunk) rather than per-chapter corruption. Assignment by block key under the containment rule handles it correctly, but the size figures for Delitzsch keys are misleading."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "25",
+      "verses": [
+        "6"
+      ],
+      "note": "Calvin records and rejects two hostile readings of the feast (v.6) that no other voice in the catena even mentions: first, that it is a threat, the Gentiles invited to prey on the Jews as beasts are fattened for slaughter, with the Romans plundering while God spreads the table; second, that the drink is the cup of wrath and the guests are made drunk on it. He refuses both without long refutation and reads the passage as grace revealed at Christ's coming. Valuable because it preserves interpretations that would otherwise be invisible in this corpus — the other five voices treat the banquet as unambiguously gracious."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "25",
+      "verses": [
+        "7"
+      ],
+      "note": "Four-way split on the covering over all peoples (v.7). Delitzsch, Calvin and Wesley: spiritual blindness, expressly NOT mourning — Delitzsch says so in terms. Ellicott: the mourner's covered face, an eastern sign of grief for the dead, so that destroying it defeats death, with the blindness sense mingled in. Gill: the darkness spread by Mahomet and by Rome, and above all human doctrines and traditions. Clarke: the Mosaic ritual itself, unveiled and shown by the apostles to have pointed at one sacrifice. Four incompatible referents for one image, and the split determines whether the verse is about death, ignorance, false religion, or typology."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "25",
+      "verses": [
+        "11"
+      ],
+      "note": "Three-way split on who spreads forth his hands like a swimmer (v.11), and Ellicott enumerates it himself: Jehovah spreading his hands with a swimmer's strength to repress Moab, the outstretched hands upon the Cross, or Moab vainly struggling in deep waters — noting each has the support of commentators and judging the third most in harmony with the context. Clarke agrees with the third and goes further, repointing the participle to 'he that sinketh' because he cannot conceive how a swimming stroke illustrates God stretching out his hands to destroy. Gill and Wesley keep it as God's hand. Calvin keeps God's hand too but for a reason nobody else offers: swimmers do not rush with violence, they spread and draw back gently and still cut the water, so God destroys the well-armed without armies, noise or uproar."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "25",
+      "note": "isaiah 25 self-graded A on all three tiles. Every verse in 1-12 is represented; each attribution traced to a named block in the catena, assigned by block key under the containment rule despite the Delitzsch forward offset. JFB omitted (foreign and truncated at both keys). Compression roughly 11.0 / 9.0 / 7.8 to 1 on usable source words, the last after discounting about 990 words of Ellicott chrome at key 12. Three tiles because the chapter's natural units are three: the song (1-5), the feast (6-8), and the welcome with the judgment on Moab (9-12)."
     }
   ]
 }
