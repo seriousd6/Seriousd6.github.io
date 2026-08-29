@@ -55745,6 +55745,79 @@
         "1-30"
       ],
       "note": "All nine entries self-graded A. Every entry inside the 350-650 word window; each entry names only voices sourced in its own keys."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "51",
+      "verses": [
+        "6",
+        "12",
+        "18"
+      ],
+      "note": "JFB foreign-block pattern present again, and this time the foreign material is identifiable: all three Jamieson, Fausset and Brown blocks (keys 6, 12, 18) comment on Psalm 104. Key 6 gives '20-23. He provides and adapts to man's wants the appointed times and seasons'; key 12 '24-26. From a view of the earth thus full of God's blessings, the writer passes to the sea'; key 18 '31-34. While God could equally glorify His power in destruction, that He does it in preservation is of His rich goodness'. All three match Psalm 104 verse for verse. This is the first chapter where the foreign source can be pinned to a specific psalm, which may help whoever repairs the ingest. JFB omitted from all three voice lists."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "51",
+      "note": "John Calvin is entirely absent from isaiah 51 — no Calvin block at any of the 23 keys, where every other Isaiah chapter processed in this run has carried him. Correspondingly there are zero bogus-footnote markers in the chapter, consistent with that artefact being attached to the Calvin ingest rather than to the chapter. Worth checking whether the Calvin gap is confined to this chapter or covers a range, since it drops the reformed school here to Gill alone."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "51",
+      "verses": [
+        "23"
+      ],
+      "note": "Ellicott site-chrome artefact once more on the chapter's FINAL verse: the Charles Ellicott block at key 23 carries roughly 900 words of StudyLight navigation, CSS and copyright footer after about 60 words of real commentary — the worst signal-to-chrome ratio recorded so far, since the genuine note on this verse is unusually short. Eighth Isaiah chapter with the defect (17, 18, 20, 33, 43, 23, 27, 51), final verse every time."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "51",
+      "note": "Keil and Delitzsch blocks in isaiah 51 are forward-offset in the same way as isaiah 27: the block at key 2 quotes and comments on verses 2-4, key 5 on 5-6, key 8 on 8-9, key 10 on 10-12, key 13 on 13-16, key 18 on 18-23. Each opens by quoting the range it covers, so the offset is detectable, and content was assigned by block key under the containment rule. Two chapters now showing it, which suggests the Delitzsch ingest chunks by pericope rather than by verse rather than being individually corrupt."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "51",
+      "verses": [
+        "4"
+      ],
+      "note": "Clarke stands alone against Wesley, Henry and Delitzsch on who is addressed in v.4. On the evidence of the Bodleian and eight other manuscripts, four of De Rossi's and the Syriac, he reads the plurals ammim and leummim — 'ye peoples, ye nations' — which turns the verse from an address to the Jews into a call of the Gentiles. His supporting argument is worth keeping: God nowhere else in Scripture calls his people 'my nation', and the corruption is explained by the scribal habit of abbreviating a plural ending with a stroke that later gets effaced. Gill straddles, taking the addressees as God's special people whether Jews or Gentiles."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "51",
+      "verses": [
+        "9"
+      ],
+      "note": "Four-way split on who cries 'Awake, awake' in v.9, and Ellicott is unusual in enumerating it himself: the redeemed and ideal Israel (which he prefers), the Servant of the Lord, the prophet, or Jehovah in self-communing after the manner of men — before adding that the loftiness of the poetry may transcend the distinction altogether. Gill makes it the church praying through the prophet and expressly rejects the Septuagint, Arabic and Syriac readings that address it to Jerusalem or Zion. Henry allows the arm to stand for Christ or for God. A second split runs alongside on whether v.11 is self-quotation, later citation, or a copyist's interpolation, with Ellicott rejecting the last and Clarke using the repetition to correct the text instead."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "51",
+      "verses": [
+        "19"
+      ],
+      "note": "The arithmetic of v.19 divides four ways. 'These two things are come unto thee' is followed by four nouns. Clarke (with Lowth) takes them alternately — desolation by famine, destruction by the sword — and records that the Chaldee paraphrast, missing the construction, took refuge in rendering it 'two afflictions are come, and when four shall come'. Wesley reaches the same pairing independently. Ellicott inverts it into two effects and two causes. Gill alone does not count the four at all, making the two the affliction and the absence of any friend to bear it. Paired with a textual disagreement in the same verse over 'by whom shall I comfort thee': Clarke prefers the third person on manuscript and version evidence, while Ellicott keeps the first and lets it stand at its bleakest, God himself shown failing to find a comforter."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "51",
+      "note": "isaiah 51 self-graded A on all three tiles. Every verse in 1-23 is represented; each attribution traced to a named block in the catena, assigned by block key under the containment rule despite the systematic Delitzsch forward offset. JFB omitted (Psalm 104 blocks). Calvin does not appear because he is absent from the source. Compression roughly 8.4 / 8.9 / 7.3 to 1 on usable source words, the last after discounting about 900 words of Ellicott chrome at key 23. Three tiles rather than four or five because the natural pericope units would have produced two tiles under the 5:1 compression floor."
     }
   ]
 }
