@@ -55591,6 +55591,160 @@
       "book": "isaiah",
       "chapter": "27",
       "note": "Tiling note for chapters with a single oversized first key: isaiah 27's key 1 is 5,888 raw words against a chapter total of 23,068, so verse 1 was given a tile to itself (compression 6.2:1 on usable words) and the remaining twelve verses split 2-6 / 7-9 / 10-13. Also a process note worth recording: the tile keyed '4' for the range 2-6 failed validate-synthesis, which requires the tag key to equal the range START. Rekeying to '2' fixed it. Worth checking at install time rather than after stamping, since re-running the put script resets schools, debates, outliers and themes and the emit and stamp steps have to be repeated."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "1-30"
+      ],
+      "note": "Tiled as nine entries: 1-4, 5-7, 8-11, 12-14, 15-17, 18-21, 22-24, 25-27, 28-30. 30 source keys, no gaps, 20454 usable source words, distributed unusually evenly at roughly six hundred words a key. John Calvin has no commentary on Proverbs and is absent from every key, so the entries run on Gill, Keil and Delitzsch, Henry, Clarke, Ellicott and Wesley."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "Jamieson, Fausset and Brown appears at keys 4, 10, 16, 22 and 28 on a stride of six, and the text is Psalms commentary rather than Proverbs. Marked as residue and excluded from the five entries containing those keys."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "30"
+      ],
+      "note": "StudyLight page chrome at key 30. Real Ellicott commentary on the stripes of a wound precedes the boilerplate and was used."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "4"
+      ],
+      "note": "Why the sluggard does not plough: Keil and Delitzsch deny the word means cold at all, read it as the gathering, and make the clause temporal rather than causal, since ploughing and sowing there followed the fruit harvest. Clarke and Henry keep the cold and treat it as a pretence. Preserved unresolved."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "5"
+      ],
+      "note": "Why the deep water is drawn out: Keil and Delitzsch read the saying adversarially, of a crafty man whose concealed design is penetrated by one who sees through him, while Henry and Clarke read it of a wise and modest man whose counsel must be coaxed out by good questions. Both preserved."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "6"
+      ],
+      "note": "Keil and Delitzsch deny that the first line means most men proclaim their own goodness, rendering it that almost every one meets a man gracious to him, and reject a further proposal as stylistically impossible. Henry, Gill and Ellicott all keep the boast. Preserved."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "11"
+      ],
+      "note": "Whether a child can be read from his conduct: Henry says children have not yet learned the art of dissembling, while Gill reports a contrary sense in which the child carries himself a stranger in his doings and is not known by them, and Clarke has met the same view that every child will dissemble."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "14"
+      ],
+      "note": "Who speaks in the fourteenth verse: Keil and Delitzsch report a rendering with many supporters making the speaker a man who disparages what he owns and praises it once gone, and reject it because the word means the possessor by acquisition, that is, the buyer."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "16"
+      ],
+      "note": "Who the stranger is in the proverb on suretiship: Clarke makes the stranger the one offering himself as security, so that caution is needed against him, while Ellicott, Keil and Delitzsch and Henry take the surety to be the man whose garment or person is seized. Ellicott also notes that text and margin differ over the last words, read either for strangers or for a strange woman."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "20"
+      ],
+      "note": "What the extinguished lamp is: Henry takes it of reputation, peace of mind and shortened days, Clarke of posterity cut off root and branch, and Keil and Delitzsch of everything that brightened the life. Keil and Delitzsch also distinguish the legal death sentence, which they say was seldom carried out, from the fearful end the proverb actually describes."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "21"
+      ],
+      "note": "How the twenty-first verse should be read: Gill notes the written text gives loathsome or abominable and reports a derivation giving covetously obtained, while Keil and Delitzsch reject both and keep the marginal reading, hastened, linking the verse to the cursing son of the previous verse whose parents live too long for him."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "25"
+      ],
+      "note": "What the twenty-fifth verse means: Keil and Delitzsch and Ellicott read it of a man who cries holy in haste and looks into his vow only afterwards, rejecting the received construction as expressing something suffered rather than done; Henry, Clarke and Gill keep the received sense of sacrilege, of holy things turned to private use. A clean split, preserved."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "30"
+      ],
+      "note": "What the blueness of a wound is: Clarke alone takes it for the scar formed when the two lips of a wound are joined in healing; Ellicott renders it wounds that cut into the flesh; and Keil and Delitzsch cannot settle the predicate at all, calling the marginal noun syntactically hard and scarcely original and the rival rendering constrained."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "1-30"
+      ],
+      "note": "Clarke reports that six verses of this chapter, the fourteenth to the nineteenth, are missing from two ancient versions, and that four others stand after the twenty-second rather than in their received places. He confesses he cannot account for it unless leaves were misplaced in the manuscripts. Recorded as a whole-chapter textual observation."
+    },
+    {
+      "at": "2026-08-29",
+      "kind": "fidelity",
+      "book": "proverbs",
+      "chapter": "20",
+      "verses": [
+        "1-30"
+      ],
+      "note": "All nine entries self-graded A. Every entry inside the 350-650 word window; each entry names only voices sourced in its own keys."
     }
   ]
 }
