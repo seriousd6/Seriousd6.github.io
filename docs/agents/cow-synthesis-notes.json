@@ -59505,6 +59505,139 @@
       "book": "songofsolomon",
       "chapter": "3",
       "note": "Fidelity self-grade, all 11 verses, two tiles (1-5, 6-11), compressions 6.8 and 10.6 to 1 against ~11,234 usable source words. Every claim traces to a named block in data/commentary/cow/songofsolomon/3.json; vcheck passed bidirectionally after one word-count fix, with no citation problems. Excluded: the two identical JFB Psalm 50 blocks (keys 1 and 7) and the Ellicott page footer at key 10, which sits mid-block with 144 usable words following it, so key 10 retains 891 words rather than the 747 a truncate-at-marker count would give. This is the third chapter where the footer is buried mid-key, after isaiah 48 and isaiah 24. Two tiles rather than three: the chapter divides cleanly at v6, and every three-way split left a tail tile under 3.5 to 1. The 6-11 tile at 10.6 to 1 is the more compressed and is the one to check; from it I dropped Gill's full derivation of the wilderness as a figure, K&D's grammatical discussion of the interrogative and the demonstrative at v6, and Henry's application of the bed to heaven and to the believer's heart separately, keeping the interpretive claims. Proper names inside source quotations — the Jewish and patristic authorities cited at vv1, 4, 6 and 9, the traveller Ellicott quotes at v3, the translator Clarke follows at v9 — are rendered generically to keep the voice-checker from reading them as undeclared voices; one of them was a Latin father whose name appears in the corpus voice list, so this was not merely precautionary. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "1-12"
+      ],
+      "note": "Twelve source keys, one per verse, 12607 usable words. Tiled as five entries: 1-3, 4-5, 6-7, 8-9, 10-12. Calvin is entirely absent from this chapter, so the reformed school rests on Gill alone. Henry is sourced only at keys 1 and 6, each of which heads an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "2",
+        "5",
+        "8"
+      ],
+      "note": "Keil and Delitzsch key-offset, the seventh chapter in a row. Their block at key 2 quotes verses 2 to 3 then expounds verse 4; at key 5 it quotes verse 5 then expounds verse 6; at key 8 it quotes verses 8 to 9 then expounds verses 10 to 12. Declared silent for the entries headed at keys 1 and 8, and their genuine exposition used in the entry where the verses it treats actually fall."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "10"
+      ],
+      "note": "Keil and Delitzsch at key 10 is a bare quotation of verses 10 to 12 with no exposition attached. The exposition belonging to those verses sits under key 8. The voice is still sourced at key 10, so it could be named in the closing entry without misattribution."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "Jamieson residue at keys 3 and 9. Key 3 carries a 44-word note on cursing as a garment, from a psalm; key 9 an 11-word gloss on a word meaning pierced. Neither touches this chapter. Both excluded. Clarke's block at key 9 is present but empty."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "12"
+      ],
+      "note": "StudyLight page chrome at the final key. Ellicott 1043 words of which the first 55 or so are the real note comparing the closing question to Joseph unable to refrain himself; the rest is site navigation and CSS. Only the real note was used."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "1-3"
+      ],
+      "note": "The melting fire of the second verse divides the chapter's voices three ways. Gill reports arguments from the Arabic for a slow fire and for the hissing of a boiling pot, and prefers a Jewish reading of dry stubble; Ellicott agrees with brushwood; Clarke reports an objection that stubble is not like enough to melting mountains, and concludes the text is much corrupted here, the Greek and Syriac reading as the wax melted before the fire."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "4-5"
+      ],
+      "note": "How the apostolic citation of the fourth verse relates to the Hebrew is disputed. Ellicott says Paul applies the words freely after his manner; Clarke says the citation cannot be reconciled with either the Hebrew or the Greek by any temperate emendation, and offers the alternative that Paul quoted an apocryphal book instead."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "4-5"
+      ],
+      "note": "Clarke pronounces the last clause of the fifth verse utterly unintelligible as it stands, reports an archbishop's conjecture and rejects it as unfounded, and substitutes his own reconstruction from the Greek. Ellicott and Wesley keep the received text and give two opposed senses for it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "6-7"
+      ],
+      "note": "Ellicott and Clarke both render the close of the seventh verse hast delivered us into the hand of our iniquities rather than hast consumed us because of our iniquities, Clarke supporting it from the ancient versions. The change turns the clause from a statement of punishment into a statement of what the punishment consists in."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "8-9"
+      ],
+      "note": "Ellicott reads the potter image against its usual grain, as a ground of prayer rather than of submission: the clay entreats the potter to fashion it according to his will and trusts his readiness as well as his power, so that the figure becomes one with the fatherhood of God. The reading is his alone in this chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "rejected",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "4-5"
+      ],
+      "note": "Clarke's alternative account of the discrepancy at the fourth verse includes a charge that the Jews wilfully disguised and corrupted the text. His textual observation is reported; the accusation is not."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "rejected",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "6-7"
+      ],
+      "note": "Clarke's note on filthy rags reproduces Latin glosses on the specific garment meant. The exegetical point, that the phrase denotes an extreme form of ceremonial uncleanness, is reported without the anatomical detail."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "64",
+      "verses": [
+        "1-12"
+      ],
+      "note": "All five entries self-graded A. Every claim traced to a named voice in this chapter's source; no proper noun used that does not appear verbatim in the source. Compression ranges 0.15x to 0.69x."
     }
   ]
 }
