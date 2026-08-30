@@ -59638,6 +59638,80 @@
         "1-12"
       ],
       "note": "All five entries self-graded A. Every claim traced to a named voice in this chapter's source; no proper noun used that does not appear verbatim in the source. Compression ranges 0.15x to 0.69x."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "9"
+      ],
+      "note": "JFB foreign-fragment defect, instance 43. The single Jamieson-Fausset-Brown block in the jeremiah 24 catena (key 9) carries no comment on Jeremiah at all. Its text is: '5-6. The distress is aggravated by the contrast of former comfort ( Psa 22:3-5 ), for whose return he longs. which needs rain, as did his spirit God's gracious visits ( Psa 28:1 ; 89:17 ).' Read on its own terms the fragment is a comment on Psalm 143:5-6 ('I remember the days of old... my soul thirsteth after thee, as a thirsty land'): the internal label is 5-6, the cross-references are to Psalms, and the glossed phrase 'which needs rain' matches 'as a thirsty land'. This identification rests on the fragment text itself, not on position in a sequence. Noting separately, and as a weaker observation, that Psalm 143 would fall after the Psalm 119:159-174 fragment seen at jeremiah 11 and so is consistent with the monotonic-pointer reading of this defect recorded in notes 5543/5561/5592; consistency is not confirmation, and one fragment cannot establish it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "24",
+      "note": "Fidelity self-grade A for all three tiles (1-3, 4-7, 8-10). Every verse in the chapter is represented. Tile 1 covers the date and the visionary mode (v1), the deported craftsmen (v1), the two baskets and their setting before the temple (v1-2), the horticulture of first-ripe and uneatable figs (v2), and the question put to the prophet (v3). Tile 4 covers the fresh word and the interval it implies (v4), the acknowledging of the captives for good (v5), the eyes set upon them and the building and planting (v6), and the heart to know God, the covenant formula, and the whole-hearted return (v7). Tile 8 covers Zedekiah, his princes, the residue, and those in Egypt (v8), the catalogue of reproach, proverb, taunt and curse (v9), and the sword, famine and pestilence with the consuming from off the land (v10). No claim in any tile is unattributed and none goes beyond what the cited voice says."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "1"
+      ],
+      "note": "Three-way split on what it means that the baskets were set before the temple. Ellicott calls the detail significant and reads the figs as a votive offering, first-fruits or tithes brought to the Lord; Clarke reads them the same way; Henry supplies a conjecture on the same side, that the priests were remiss and had not come out to receive them, which is why the baskets are still standing. Keil and Delitzsch deny the construction outright, naming Graf as its proponent: the figs are not an offering, the place is not where first-fruits were presented, and the baskets have nothing to do with first-fruits at all but symbolize the people appearing before their God at the altar of burnt-offering. Calvin takes a third line, reading the temple as God's tribunal, so that the whole nation stands at the bar and the division of its lot proceeds from God rather than from the conqueror's will."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "2"
+      ],
+      "note": "Whether the two sorts of fig describe character or only sentence, and the split runs inside the reformed school. Calvin states the rule twice, at v2 and again at v8: the prophet speaks not of persons but of punishment. Jeconiah was suffering for his own sins and is not called good in himself; he is a good fig only because God chastened him more gently than he meant to chasten those left behind, and the residue are bad figs with reference to the severity coming on them, not only to their guilt. Gill, in the same school, locates real worth in the exiles, naming Ezekiel among them and adding that all of them might be called good in comparison with a Jerusalem growing worse. Henry stands with Gill in treating the good figs as the pious captives, while drawing the opposite pastoral caution from it, that we must not conclude of the first and greatest sufferers that they were the worst sinners."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "5"
+      ],
+      "note": "Four voices divide on the ground of the favour shown the captives, and the division is between schools. Clarke says those already carried off are esteemed far more excellent than those still in the land: they have not sinned so deeply, and they are now penitent. Wesley presses the same line, that they were not leaders in sin but led away by the ill example of others, and that in captivity they grew sensible of their sins and accepted the punishment of their iniquities. Keil and Delitzsch block that reading on the grammar of v7: the clause is for they shall return, not when they shall return, and the turning cannot be the condition of favour because God gives the heart. Calvin makes the same denial theologically and at length, holding repentance to be the effect of pardon rather than its cause, distinguishing a hidden reconciliation from the felt one, and refusing the halving of conversion between God and man."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "10"
+      ],
+      "note": "Ellicott site-chrome footer, thirteenth consecutive confirmation at 926 words, and the fourth instance found mid-key rather than at the end of a key. It sits inside key 10: 184 usable words precede the StudyLight marker and 1,561 words follow it, of which the trailing Calvin block on v10 is real commentary. Raw chapter total is 14,666 words; true usable is 13,740. This matters for any fix to the size command, which must subtract the 926-word chrome span wherever it falls rather than truncate the key at the marker, since truncating key 10 here would discard Calvin's whole comment on the last verse. Prior mid-key instances: isaiah 48, isaiah 24, songofsolomon 3."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "24",
+      "verses": [
+        "9"
+      ],
+      "note": "Keil and Delitzsch have a block at key 9 of this chapter which contains no commentary at all, only the text of vv9-10 reprinted. Under the containment rule this block would put them among the declared voices of the 8-10 tile, but there is nothing of theirs to cite there, so they are declared only in the 1-3 and 4-7 tiles. Their one substantive remark bearing on the second half sits at key 5, inside the 4-7 tile: that as one throws away bad uneatable figs, so the Lord will deliver Zedekiah and his princes to ignominious ruin. Worth watching whether bare-verse-text blocks with no comment occur elsewhere in this source, since they inflate the source-word count that the size command reports without contributing anything to synthesize."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "24",
+      "note": "Compression of the 8-10 tile is 4.7 to 1 (2,642 usable source words to 559 output), below the 5 to 1 working heuristic I have been holding, and recorded here as a deliberate choice rather than an oversight. The alternatives were worse: a two-tile chapter either splits the good-figs oracle of vv4-7, which is a single connected promise ending in the covenant formula, or pushes the first tile past 12 to 1. Three pericope-aligned tiles follow the vision's own shape, the two baskets, the good figs, the evil figs. The tail is thin because the source is thin there in substance rather than in bulk: much of key 9's 1,064 words is Calvin working over the Hebrew for a single term and setting out his own verse rendering, and key 10's usable 819 words include his long note on one preposition. The 5 to 1 figure is my own heuristic and not a documented rule; the only documented floor is the 350-word minimum."
     }
   ]
 }
