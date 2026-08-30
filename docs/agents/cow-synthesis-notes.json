@@ -60532,6 +60532,69 @@
         "1-21"
       ],
       "note": "All eight entries self-graded A, and the entity check passed on the first build with no proper noun requiring replacement. Every claim traced to a named voice in this chapter's source. Compression ranges 0.17x to 0.73x."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "25",
+      "verses": [
+        "4",
+        "28",
+        "34"
+      ],
+      "note": "JFB foreign-fragment defect, three more instances, and one qualification to the rate estimate. The fragments: key 4, labelled 10, reads '(Compare Psa 5:8; 27:11). literally, an even land (Psa 26:12)' — Psalm 143:10, where the cross-references are the standard ones for leading in righteousness and the gloss 'an even land' renders 'the land of uprightness'. Key 28, labelled 1-2, reads '(Compare Psa 30:1). celebrate Thy perfections (Psa 5:11). God is addressed as king, alluding to His government of men' — Psalm 145:1-2, the extolling of God as king. Key 34 is a four-word gloss, 'which produce dread or fear', too short to identify with confidence; it would suit the terrible acts of Psalm 145:6 but that is a guess and is recorded as one. The sequence is continuous with jeremiah 24, which drew Psalm 143:5-6, so the Jeremiah pointer runs 143:5 to 143:10 to 145:1 across the two chapters. The qualification: the three blocks fall at keys 4, 28 and 34, that is twenty-four apart and then six apart. Every previous chapter examined in detail (isaiah 49 at keys 3, 9, 15, 21; isaiah 57 at 4, 10, 16; isaiah 37 at 5, 11, 17, 23, 29, 35; isaiah 38 at 2, 8, 14, 20) showed a uniform six. This chapter does not, and the earlier estimate of one fragment per six verse keys should therefore be treated as a common case rather than a rule. Whether the twenty-four-key gap means three emissions were dropped, or the rate varies with something not yet identified, is not established from this chapter alone. Recorded against the corrected corpus-wide framing of note 5697, not the superseded one."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "25",
+      "note": "Self-graded A across all eight tiles. Every clause in the prose traces to a named block in data/commentary/cow/jeremiah/25.json for a verse inside the tile's own range; no voice is credited with a claim outside the block bearing its name. Checked in particular: the four date reconciliations (Clarke co-regency, Henry overlapping regnal years, Calvin interval-of-events plus sole-reign dating, Ellicott both-stand) are each read off that commentator's own block at key 1; the seventy-year reckonings at keys 11-12 are each attached to the voice that gives the arithmetic, with Gill's sixty-nine years and two months and Wesley's thirty-six years for the conqueror left in conflict rather than harmonised; and Keil and Delitzsch's refusal of a literal cup at key 15 is his own argument, not Ellicott's parallel complaint, though the two agree. Where the source is a bare lemma with no exposition (Gill at keys 8-10) nothing is attributed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "25",
+      "verses": [
+        "38"
+      ],
+      "note": "Ellicott site-chrome footer present again at exactly 926 words, and again mid-key: at key 38 the marker falls with 395 words of real content before it and 1,968 words after, of which 926 are the chrome block and 1,042 are genuine commentary, so key 38's usable total is 1,437. This is the seventh mid-key instance recorded (isaiah 48, isaiah 24, songofsolomon 3, jeremiah 24, jeremiah 22, isaiah 57, jeremiah 25) and the fourteenth consecutive confirmation of the 926-word figure. Any future fix in the size counter must subtract the 926-word span wherever it falls, never truncate the key at the marker: truncating here would discard Calvin's comment on the final verse along with the closing Ellicott and Gill material."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "25",
+      "verses": [
+        "12",
+        "13",
+        "14"
+      ],
+      "note": "Ellicott and Keil and Delitzsch are flatly opposed on the authenticity of verses 12-14, and the disagreement is worth keeping rather than smoothing. Ellicott argues for interpolation from the Greek (the clause naming the king absent, the words at v13 detached as a title and followed there by the oracles against the nations that the Hebrew places at the end of the book) and from the internal difficulty that v26 veils in enigma what v12 states openly, calling the phrase about all that is written in this book manifestly a scribe's addition. Keil and Delitzsch report the three critics who pronounce the verses spurious and answer that their main argument reduces to a dogmatic prejudice about what the prophet could have foreseen in that year. Both positions are declared in the tile; neither is adjudicated."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "25",
+      "verses": [
+        "8",
+        "9",
+        "10"
+      ],
+      "note": "Gill's blocks at keys 8, 9 and 10 are lemma-only: key 9 carries nothing but the verse words, and keys 8 and 10 add a single clause each (armies above and below; at their festivals and nuptial solemnities). Gill's substantive comment in the 8-11 range survives only at key 11, on the extent of the desolation. This is truncation in the ingest rather than a short original — Gill's other blocks in this chapter run to full paragraphs. The 8-11 tile therefore cites Gill once, from key 11, and declares him on that basis; nothing is drawn from the three stub blocks."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "25",
+      "verses": [
+        "20"
+      ],
+      "note": "The Keil and Delitzsch block at key 20 contains no commentary at all: it is a straight reproduction of the verse text of 25:20-27 with the verse references interleaved, breaking off mid-sentence in v27. There is no Keil and Delitzsch exposition anywhere in the 20-26 range, so Keil and Delitzsch was dropped from that tile's voice list rather than credited with the identifications supplied by Ellicott, Clarke, Gill, Calvin and Wesley. Keil and Delitzsch is declared normally in the other seven tiles, where his blocks carry real content."
     }
   ]
 }
