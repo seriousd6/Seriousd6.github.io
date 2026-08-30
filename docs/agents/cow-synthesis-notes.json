@@ -58018,6 +58018,176 @@
         "26"
       ],
       "note": "All seven tiles self-graded A (QA 643-649, audit 642-650, compress 0.455-0.474, ttr 0.635-0.706). vcheck caught two errors on the first pass and both were fixed before tags were emitted: tile 8 cited Chrysostom by name inside a Calvin quotation, which the checker read as an undeclared voice (reworded to 'an old preacher'); tile 20 declared Wesley without citing him, since his blocks at keys 20, 22, 23 and 24 had all been trimmed away in the word-cap passes (a Wesley clause was restored). Three tiles came back over the audit cap after the first grade — 18 at 652, 20 and 26 at 650 — and were trimmed and re-emitted. Bogus-footnote count zero, Calvin present at all 30 keys, Wesley at 22 of 30."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "1-33"
+      ],
+      "note": "Tiled as ten entries: 1-3, 4-6, 7-9, 10-14, 15-17, 18-20, 21-23, 24-28, 29-31, 32-33. 33 source keys, no gaps, 22978 usable words. Tiling follows the sense units of the chapter - the preface, the prayer, the four generations, the four insatiable things, the four wonders, the four intolerable, the four little and wise, the four stately, and the closing counsel - and also puts each of Matthew Henrys long blocks at the head of an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "3-33"
+      ],
+      "note": "Jamieson, Fausset and Brown carries Psalm 35 residue on a stride of six at keys 3, 9, 15, 21, 27 and 33 - numbered notes on Psalm material with no bearing on Proverbs. Excluded via RESIDUE_BY_KEY. The same lattice appeared in isaiah 7, ecclesiastes 1, isaiah 45, isaiah 16 and isaiah 44."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "33"
+      ],
+      "note": "StudyLight page chrome at the final key: the Ellicott block runs 1056 words of which nearly all is site navigation, CSS and a commentary index following a short real note. Only the real note was used."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "7-33"
+      ],
+      "note": "Keil and Delitzsch blocks are offset from their keys through this chapter - the block filed at a key regularly comments on the verse or verses after it. Marked silent for entries 7-9, 21-23 and 32-33, where their block at the entry keys discusses verses outside the entry. Their material was used where it does fall inside."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "1"
+      ],
+      "note": "Whether Agur is Solomon under another name. Gill reports the identification and rejects it as not fitting the person whose words these are; Ellicott calls it without a shadow of reason; Clarke argues from verses 2-3 and 8-9 that they suit no part of Solomons life; Keil and Delitzsch record the synagogue allegory."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "1"
+      ],
+      "note": "Ellicott proposes reading Agur the son of Jakeh the Massan, a descendant of the Massa named among the sons of Ishmael, which would place him in North Arabia and make Lemuel king of the same tribe."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "4"
+      ],
+      "note": "Clarke uses the son clause to warn against resting a great doctrine on an obscure text - quote nothing that is not clear, advance nothing that does not tell, and injudicious defenders may be ranked among the enemies of the truth they defend. Reported at length because it is a methodological statement, not an exegetical one."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "6"
+      ],
+      "note": "Gill and Clarke both apply the prohibition against adding to Gods words polemically against Rome. Reported for the exegetical substance - tradition set beside the written word, and further writings canonised - without reproducing the invective."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "8"
+      ],
+      "note": "Clarke narrows vanity and lies to idolatry, on the ground that the one word is elsewhere used for an idol and the other for what fails and deceives. Gill, Henry, Ellicott and Wesley all read the petition broadly of sin and falsehood in general."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "rejected",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "21"
+      ],
+      "note": "Clarke supports his reading of the first intolerable case with a racialised anecdote about colonial regiments. Omitted entirely; only his exegetical claim, that a slave raised to rule becomes an unprincipled tyrant, was carried over."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "22"
+      ],
+      "note": "Gill applies the servant who reigns to an ecclesiastical ruler who styles himself the servant of servants while deposing kings. Reported in summary without the polemic."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "15"
+      ],
+      "note": "Clarke conjectures that the word rendered horseleech is a proper name, like Agur, Jakeh, Ithiel and Ucal, and prefers that to every allegorical reading. Ellicott, Gill, Henry and Wesley all take it as an emblem of insatiable greed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "19"
+      ],
+      "note": "Clarke reports manuscript and version support for reading in his youth rather than with a maid in the fourth wonder, and takes the received reading, where it concerns a suspected loss of chastity, to rest on signs he judges unascertainable. His anatomical discussion was omitted; only the exegetical point was kept."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "26"
+      ],
+      "note": "The second little creature is disputed. Ellicott says the rendering coney is a mistake and describes a rock-dwelling animal with nails instead of claws; Clarke agrees it is not the rabbit; Gill reports the mountain mouse as the preferred alternative."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "28"
+      ],
+      "note": "The fourth little creature is disputed. Ellicott argues for the lizard, since each first line of the four expresses weakness, and renders it thou canst catch it with the hands. Keil and Delitzsch note that even the spelling of the word wavers in the editions and manuscripts. Gill, Henry and Wesley keep the spider."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "31"
+      ],
+      "note": "The last clause of the stately four. Ellicott and Clarke read a king none can rise against; Wesley and Ellicotts alternative read a king with whom is his people. Clarke further floats King Alkum as a proper name, answering the objection that no such king is known by pointing out that Agur, Ithiel and Ucal are equally unknown."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "proverbs",
+      "chapter": "30",
+      "verses": [
+        "33"
+      ],
+      "note": "Ellicott observes that one Hebrew word underlies the three English words churning, wringing and forcing, so that the verse is a single figure of pressure pressed three ways. That reading was made the frame of the closing entry."
     }
   ]
 }
