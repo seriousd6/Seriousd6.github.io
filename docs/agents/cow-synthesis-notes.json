@@ -58188,6 +58188,62 @@
         "33"
       ],
       "note": "Ellicott observes that one Hebrew word underlies the three English words churning, wringing and forcing, so that the verse is a single figure of pressure pressed three ways. That reading was made the frame of the closing entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "58",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JFB foreign-block defect, instances 19 and 20 in the running tally. Both blocks at keys 6 and 12 are Psalm 106 material and are labelled with Psalm verse ranges ('34-39' at Isaiah key 6, '44-46' at Isaiah key 12), walking forward through Psalm 106 across ascending Isaiah keys. This is the same in-order walk observed in isaiah 37 (six blocks) and isaiah 5 (five blocks, Psalm 89 both times), and it holds the hypothesis: the JFB stream was paired against the wrong book and then advanced verse by verse alongside it. Both blocks omitted from the tiles; JFB not declared as a voice anywhere in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "58",
+      "verses": [
+        "14"
+      ],
+      "note": "Ellicott site-chrome page footer again at the final key, fifth consecutive chapter (45, 50, 37, 5, 58). Key 14 measures 429 usable words before the StudyLight marker and 986 after, i.e. the footer is once more the fixed 926 words. Chapter usable drops from 14,889 to ~13,963. This confirms the earlier recommendation strongly enough to act on: scripts/synthesis-loop.py size should subtract 926 automatically when the final key contains the marker, since the constant has now held across chapters spanning 11k-40k source words."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "58",
+      "note": "Calvin gap 49-66 confirmed a second time by direct observation: zero Calvin blocks at all 14 keys of isaiah 58, as at all 11 keys of isaiah 50. Two chapters now synthesized inside the gap, both with the reformed school reduced to Gill alone. Calvin is present at 21/25 (isaiah 45), 36/38 (isaiah 37) and 30/30 (isaiah 5), all outside the gap. The gap is an ingest failure, not a coverage limit of the commentary, and a re-ingest of Calvin for chapters 49-66 is now the highest-value repair available to the corpus."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "58",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "Two clean small disagreements. (1) v12 'paths to dwell in': Ellicott reads the streets of the city, flanked once more with houses rather than roads running from point to point; Wesley reads the highways between cities, desolate and grown over with grass and weeds. Clarke's versions (Syriac, Symmachus, Theodotion) give 'paths to be frequented by inhabitants', which sides with Ellicott's sense of habitation. (2) v13 'thy pleasure': Ellicott renders it 'thy business', against Henry and Clarke, who read recreation and sport, Clarke applying it to visits and country jaunts and the sabbath day's journey. The rendering decides how much of ordinary life the verse restrains."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "58",
+      "verses": [
+        "6"
+      ],
+      "note": "Independent convergence worth recording: Keil and Delitzsch and Ellicott both reach, without dependence, for the Jeremiah 34 emancipation and re-enslavement of Hebrew slaves as the historical illustration of the chosen fast, K&D adding that the same despotic temper travelled into captivity and Ellicott that the truth was recognised in danger and forgotten in safety. Against both, Clarke refuses to leave the verse in the past at all and arraigns the contemporary slave trade under it, and closes the chapter (v14) with a dated 1823 protest against a national fast kept to subjugate Spain and restore the inquisition. Clarke is the only voice in this chapter who treats the fast as a live political question."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "58",
+      "note": "Fidelity self-grade, all 14 verses, three tiles (1-5, 6-9, 10-14), compressions 9.1, 6.9 and 5.6 to 1 against ~13,963 usable source words. Every claim in the prose is traceable to a named block in data/commentary/cow/isaiah/58.json; vcheck passed bidirectionally on the first run with zero problems, so no declared voice is uncited and no cited voice undeclared. Two source items were deliberately excluded: the JFB Psalm 106 blocks at keys 6 and 12 (foreign, see the source-defect note) and the Ellicott page footer at key 14. Three paraphrases to flag for review: Clarke's textual authorities at v12 are named in the source as Syriac, Symmachus and Theodotion but appear in the prose only as 'Clarke's versions'; the 2,000-cubit sabbath limit at v13 is attributed in the source to Kimchi and was cut from the prose during the word-cap pass; and Clarke's emendation at v11 is rendered as 'an old paraphrase promising the body life eternal', which compresses the Chaldee reading he quotes. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
