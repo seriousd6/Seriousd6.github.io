@@ -58682,6 +58682,136 @@
       "book": "isaiah",
       "chapter": "48",
       "note": "CORPUS-WIDE SCAN for the Calvin translation-appendix defect, run after finding the second instance. Twelve chapters carry it, totalling 36,480 words of non-commentary text sitting inside Calvin blocks at final-verse keys: ephesians 6 key 24 (5,760 words), hosea 14 key 9 (4,788), isaiah 32 key 20 (2,269), isaiah 48 key 22 (721), jeremiah 19 key 15 (4,681), jeremiah 29 key 32 (2,793), jeremiah 47 key 7 (1,602), jeremiah 9 key 26 (5,436), joshua 24 key 32 (4,618), jude 1 key 24 (1,728), philemon 1 key 24 (569), romans 16 key 21 (1,515). The pattern is confirmed: each appendix reprints Calvin's own verse translation for a chapter range and is emitted at the LAST verse of the chapter that closes that range (Jeremiah 1-9 at Jer 9, 10-19 at Jer 19, 20-29 at Jer 29, 30-47 at Jer 47, Isaiah 33-48 at Isa 48, Joshua 1-24 at Josh 24, and so on). Note two mismatches worth checking: jude 1 carries an appendix headed 'FIRST EPISTLE OF PETER', philemon 1 one headed 'FIRST EPISTLE OF PAUL TO...', and ephesians 6 one headed 'GALATIANS' — the appendix is attached to the chapter FOLLOWING the range it covers in those cases, so the boundary rule is not uniform. Of the twelve, EIGHT are already synthesized (ephesians 6, isaiah 32, isaiah 48, jeremiah 9, joshua 24, jude 1, philemon 1, romans 16) and FOUR are still pending: hosea 14, jeremiah 19, jeremiah 29, jeremiah 47. Those four will over-report size when picked, by 4,788, 4,681, 2,793 and 1,602 words respectively — jeremiah 19 and hosea 14 by enough to matter to the 40,000-word batch rule. Recommendation: scripts/synthesis-loop.py size should strip from any 'A TRANSLATION OF' heading to the end of its containing block, alongside the 926-word Ellicott footer. This is a small, well-specified fix with a measured 36,480-word payoff in queue-budget accuracy."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "1-19"
+      ],
+      "note": "Tiled as eight entries: 1-2, 3-4, 5-6, 7-8, 9-10, 11-14, 15-16, 17-19. 19 source keys, one per verse, no gaps, 20208 usable words. The tiling follows the two halves of the chapter - the vision of the conqueror from Edom in 1-6, and the prayer that begins at verse 7 and runs into the next chapter - and puts each of Matthew Henrys three long blocks at the head of an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "5-11"
+      ],
+      "note": "Jamieson, Fausset and Brown carries Psalm 109 residue at keys 5 and 11, on the familiar stride of six. Excluded via RESIDUE_BY_KEY. The lattice has now appeared in isaiah 7, ecclesiastes 1, isaiah 45, isaiah 16, isaiah 44, proverbs 30, isaiah 65 and ecclesiastes 9."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "19"
+      ],
+      "note": "StudyLight page chrome at the final key: the Ellicott block runs 1086 words of which about 95 is real commentary and the rest site navigation, CSS and a commentary index. Only the real note was used - and it carries the chapters sharpest textual point, so the chrome nearly buried it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "8"
+      ],
+      "note": "Keil and Delitzsch offset from their key again, as in proverbs 30, ecclesiastes 9 and isaiah 65: their block at key 8 quotes verse 8 and then comments on verse 9. Marked silent for entry 7-8 and used at the keys where their material falls inside the entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "1"
+      ],
+      "note": "Calvin is entirely absent from this chapters source, so the reformed school is carried by Gill alone throughout."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "1"
+      ],
+      "note": "Who the conqueror from Edom is. Gill rejects the angels at the ascension, Israel, Michael and Judas Maccabaeus, and settles on the Messiah. Clarke devotes most of his note to demolishing the Maccabean reading, partly on geography - the Idumea of the prophets day was not the country Judas conquered, and the city he took was Hebron, not Bozrah - and confesses he knows no event in history that fits. Henry rejects the Babylonian reading because Babylon is always the land of the north while Edom lay south. Ellicott takes Edom as representative of all the nearer hereditary enemies."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "6"
+      ],
+      "note": "Whether the passage may be read of the passion. Ellicott notes it has often been so applied, as in the Prayer-Book epistle for the Monday before Easter, and denies that this is an interpretation of the passage, which paints a victory and not a passion; he allows it only as a remote analogy, the true parallel being the triumphant Christ of the Revelation. Gill had already drawn the same distinction at verse 3, that the winepress here is the wrath Christ executes and not the wrath he bore."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "5"
+      ],
+      "note": "Clarke reports a substantial variant at verse 5, my righteousness for my fury, supported by a good many manuscripts though not by the versions; he calls it both pleasing and impressive."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "9"
+      ],
+      "note": "Whether the text reads he was afflicted or there was no affliction. Ellicott lays out the written text and the margin and infers from the Greek rendering - neither a messenger nor an angel, but he himself saved them - that the variation existed early and drew conjectural emendation. Gill takes the received reading and qualifies it, since God is impassible and the words are said after the manner of men."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "10"
+      ],
+      "note": "Both Keil and Delitzsch and Ellicott independently find a foreshadowing of trinal personality here, on the ground that the Spirit of holiness can be grieved and therefore is distinguished from God as a person, as the angel of his face is by his name and his redeeming activity."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "11"
+      ],
+      "note": "Who remembers the days of old. Gill makes God the subject, stirring himself up by the questions that follow. Ellicott and Keil and Delitzsch make it Israel, which by remembering repents; Keil and Delitzsch concede that the accentuation as it stands would favour Gill. Wesley canvasses both and adds a third, that the words are the language of the exiles."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "19"
+      ],
+      "note": "The sharpest textual point in the chapter, and it sits behind the StudyLight chrome. Gill and Wesley read the last verse as a claim of covenant standing - we are thine, whereas they never were. Ellicott points out that thine is not in the Hebrew and that its insertion distorts the meaning: the sense is that we are become as those over whom thou hast never ruled, so that the plea is not a contrast with the heathen but a confession of having sunk to their level."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "1-2"
+      ],
+      "note": "Two proper nouns were replaced after the entity check flagged them: Maccabean, which does not occur in the source, became the wars of Judas Maccabaeus, and Jericho, which I had supplied, was dropped in favour of Joshua and the man with the drawn sword, both of which are verbatim in Henry."
     }
   ]
 }
