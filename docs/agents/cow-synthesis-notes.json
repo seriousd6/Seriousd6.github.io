@@ -58440,6 +58440,60 @@
         "22"
       ],
       "note": "Clarke reports very large ages claimed for certain eastern trees and expresses scepticism about the figures. His remark is framed as scepticism about the reported ages rather than reproducing his aside about the nation that reported them."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25"
+      ],
+      "note": "JFB foreign-block defect, instances 23-27, and the first NON-ISAIAH chapter to show it — the mechanism is therefore not book-specific. Five blocks, at keys 1, 7, 13, 19 and 25, i.e. every sixth key. All five are Psalm 119 material, and three carry explicit stanza labels: key 7 is '118-120', key 13 is '121-126', key 25 is '131-135'. Key 1 comments on a hiding place and shield ('confidently rest on its teachings and promises'), consistent with Psalm 119:113-117; key 19 glosses 'wonders' as moral excellence, consistent with 119:127-130. The stream walks forward through one Psalm in order across ascending Jeremiah keys, at ~5-6 Psalm verses per 6 Jeremiah keys. This is the cleanest instance yet because the labels are numeric and the spacing is regular. Four chapters, four Psalms (89, 89, 106, 105) and now 119: the JFB stream was paired against the wrong book and advanced verse by verse alongside it. All five blocks omitted; JFB not declared anywhere in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "9",
+      "verses": [
+        "26"
+      ],
+      "note": "NEW defect class, distinct from the Ellicott footer: a CHAPTER-RANGE TRANSLATION APPENDIX inside a Calvin block. Calvin's block at key 26 is 7,023 words, of which only 1,415 are commentary on the verse and 172 a closing prayer; the remaining 5,436 words are an appendix headed 'A TRANSLATION OF CALVIN'S VERSION OF JEREMIAH CHAPTERS 1-9', reprinting his rendering of chapters 1 through 9 and truncating mid-chapter-7. The Ellicott site footer (exactly 926 words, seventh consecutive confirmation) is also present at key 26, buried mid-block rather than at the end. Raw size for the chapter is 41,654 usable words; true usable is 41,654 - 926 - 5,436 = 35,292, a 15 percent overstatement. This matters operationally: the batch-budget rule keys off ~40,000 words, and the raw figure put this chapter over the line when it is in fact well under. Recommend the size command subtract both the 926-word footer and any block region following a 'A TRANSLATION OF' heading. Worth checking whether other Calvin final-verse blocks carry the same appendix."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "9",
+      "verses": [
+        "4",
+        "17",
+        "21",
+        "26"
+      ],
+      "note": "Four disagreements worth surfacing. (1) v4, Gill reads 'take ye heed every one of his neighbour' as advice against credulity; Calvin denies it is admonition at all, calling it a statement that no fidelity survived and charging the people with being natural monsters. Same clause, opposite speech-act. (2) v4, the word for the go-between: Ellicott renders 'walketh a slanderer'; Calvin refuses slander as 'too unmeaning', argues the word never appears without the verb to go, and derives it from the root for merchant, so that it means a fraud moving about veiled. (3) v21, what 'death' is that comes up at the windows: Ellicott says the pestilence specifically, creeping in while the invader is still held off; Gill and Wesley the assault itself; K&D and Clarke death personified entering suddenly like a thief; Calvin a derision of men who thought closed doors could exclude God. Four-way and all defensible. (4) v26, 'those in the utmost corners': Calvin takes the words for extremity and corner literally (remote recesses that are no refuge); Clarke and Ellicott both make it shorn temples, Ellicott identifying a wild Arabian tribe and calling the epithet a scornful nickname. Calvin's own editorial note concedes his reading is the modern rabbinic one and inconsistent with all the ancient versions."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "9",
+      "verses": [
+        "23"
+      ],
+      "note": "Calvin's methodological complaint at v23 is worth recording on its own account. Of 'let not the wise man glory in his wisdom' he says it is 'often found in the mouth of men, as other notable sentences, which are known as proverbial sayings: but yet few rightly consider how these words are connected with the previous context', and that those who treat it as an abrupt new beginning 'misrepresent the meaning of the Prophet, or at least diminish much of the force of what is taught'. He then supplies the connection: the sentence answers the specific false confidence in prudence, defences and wealth just rebuked. Ellicott independently reaches the same structural conclusion, calling it the climax of the prophecy and the conclusion of the whole matter, and Henry supplies the concrete corporate form (wise men to advise the war, mighty men to fight it, rich men to bear its charges). Three voices converging on context against the proverbial reading is unusual and is the strongest thing in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "9",
+      "note": "Fidelity self-grade, all 26 verses, seven tiles (1-2, 3-6, 7-11, 12-16, 17-22, 23-24, 25-26), compressions 9.2, 6.7, 6.2, 10.8, 8.7, 8.7 and 4.4 to 1 against ~35,292 usable source words. Every claim traces to a named block in data/commentary/cow/jeremiah/9.json; vcheck passed bidirectionally on the first run with zero problems. Deliberately excluded: the five JFB Psalm 119 blocks (keys 1, 7, 13, 19, 25), the Ellicott page footer and the Calvin chapters 1-9 translation appendix (both at key 26) — see the two source-defect notes. Three declaration decisions to flag: Keil and Delitzsch are NOT declared in tiles 3 and 25 because their blocks at keys 5 and 26 are bare quoted verse text with no comment; Henry's block sits at key 12 and covers vv12-22 in its content, so by the containment rule he is declared only in the 12-16 tile and his material on vv17-22 is not drawn on in tile 5. The final tile at 4.4:1 is below my usual 5:1 working floor — a consequence of the appendix discovery, since the alternative (merging 23-26) would have run 13.1:1; the 5:1 figure is a working heuristic, not a documented rule, and under-compression seemed the safer error. Names appearing inside source quotations are rendered generically where the voice-checker might read them as undeclared voices. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
