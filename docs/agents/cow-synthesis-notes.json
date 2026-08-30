@@ -57242,6 +57242,91 @@
         "1-18"
       ],
       "note": "All seven entries self-graded A after the final build, each inside the 350-650 word window. Compression ranges from 0.08x at the single-verse entry 1 to 0.38x at entry 2-3. One ENTITIES warning appeared on the first fidelity pass - Greeks in entry 7-9, where Henry source reads Grecians - corrected and rebuilt, after which the pass was clean. Watch-list names were avoided throughout: Grotius at key 1, Spinoza at key 18, and the modern German critics named by Keil and Delitzsch were all paraphrased rather than named."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "Jamieson, Fausset and Brown is foreign at all three of its blocks in this chapter and was omitted from every voice list. Key 10 comments on divine perfections citing Psalms 97 and 99; key 22 reads 'To the obligations of a creature and subject is added that of a beneficiary' citing Psalm 95; key 16 is a fragment on 'the experience of these servants of God' citing Exodus, Leviticus, Deuteronomy and 1 Samuel. Two of the three are traceably from a Psalms commentary. This is now the sixth and seventh consecutive traceable case of JFB foreign material sourced to Psalms (isaiah 51, isaiah 1, songofsolomon 2, isaiah 52, isaiah 29, and here twice), and the truncated shape co-occurs with the foreign shape as in the last five."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott site-chrome at the final verse again: 926 usable words of navigation, copyright boilerplate and inline CSS beginning mid-Ellicott at key 25, between his block and Calvin's. Fourteenth instance, and the final verse of the chapter every time without exception across isaiah, songofsolomon and the rest. Key 25's real content is 745 words (Gill 275 with Delitzsch quotation-only and Ellicott's opening, plus Calvin and Wesley at 470); the size figure of 35,755 is therefore 34,829 usable, and tile 7 was compressed against the corrected figure."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "1",
+        "2",
+        "5",
+        "12",
+        "25"
+      ],
+      "note": "Calvin is present and full-length at 21 of 25 keys in isaiah 45, which confirms the boundary reported earlier: he runs to the end of chapter 48 and then vanishes entirely for chapters 49 through 66. This chapter is the strongest single case for the value of what is missing — Calvin supplies the chapter's most contested readings at nearly every verse, including the rejection of the Belshazzar reading at v.9, the two-front argument on created evil at v.7, the naming and rejection of the christological 'hidden God' at v.15, and the objection-and-answer on the covenant at v.25. With him gone from 49-66 the reformed school in the Servant Songs and in chapters 53, 55, 61 and 65 reduces to Gill alone. Re-ingest still recommended before those chapters are picked."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "24"
+      ],
+      "note": "Sharpest disagreement in the chapter: who speaks 'Surely, in the LORD have I righteousness and strength'. Clarke, after listing manuscript variants over a pronoun and a number, proposes the words are probably Cyrus's own and cites his decree acknowledging that the kingdoms of the earth had been given him — putting a confession of imputed righteousness in a Persian mouth. Ellicott hears the prophet overhearing a confession made in a far-off time. Gill and Wesley assign it to every convert. Calvin notes that commentators differ and keeps to believers. Delitzsch adds that the homage is sworn and not forced. Four incompatible speakers for one clause."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "11",
+        "15"
+      ],
+      "note": "Two places where a textual or interpretive choice reverses the sense of the verse. At v.11 the received text invites consultation ('Ask me of things to come'); Clarke repoints on the Chaldee and drops a letter on the Greek to get two indignant questions, and Ellicott concedes outright that the received text says the opposite but judges the emendation more coherent — so Clarke, Ellicott, Calvin and Wesley read a rebuke while Henry and Gill read an invitation, and Henry reports the rival construction fairly without taking it. At v.15 Calvin names and rejects two readings held by his own colleagues here: the Jewish reading (hidden from the nations, revealed to Israel) which is exactly Clarke's line and Gill's first sense, and the christological reading (divinity concealed under flesh) which he calls ingenious but far-fetched."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "1",
+        "11",
+        "20"
+      ],
+      "note": "Tiling note for chapters with an even spread of large keys. isaiah 45 has 25 keys and no key under 271 words, with four heavy ones (1 at 3505, 11 at 4207, 20 at 2822, 5 at 2565) distributed across the chapter rather than clustered. Seven tiles keyed 1/3/7/11/14/18/21 kept the four heavy keys in four different tiles and landed every compression between 6.2 and 9.1 to 1. Where isaiah 29 needed tiling against pericope boundaries to separate outsized keys, an even chapter like this one lets pericope boundaries and the compression band agree; the rule is to check the distribution of the heavy keys first and only override the sense divisions when they cluster."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "45",
+      "verses": [
+        "1",
+        "3",
+        "7",
+        "11",
+        "14",
+        "18",
+        "21"
+      ],
+      "note": "All seven tiles self-graded A (QA 637-645, audit 632-646, compress 0.456-0.476, ttr 0.649-0.697). vcheck clean after one correction: tile 18 initially omitted Keil and Delitzsch and Wesley, whose blocks sit at key 19 and are contained in the 18-20 range; both were added. Every voice declared is cited by name in its tile and no voice is cited undeclared. Bogus-footnote count for the chapter is zero, with Calvin present at 21 of 25 keys — a second clean negative control alongside isaiah 1 for the artefact's correlation with Calvin's absence."
     }
   ]
 }
