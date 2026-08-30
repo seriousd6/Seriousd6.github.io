@@ -61721,6 +61721,47 @@
         "1-27"
       ],
       "note": "Every entry self-graded A: prose grounded in the named voices only, with nothing introduced from outside the catena."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "12",
+      "verses": [
+        "1-6"
+      ],
+      "note": "Tiles 1 (vv.1-4) and 5 (vv.5-6) fidelity self-grade, verse by verse. v.1 the plea and the confession of righteousness: Gill's first-principle framing, his report of the interrogative rendering and of the Targum's reversal, Henry's armour image, Wesley's not-by-way-of-accusing, and Calvin's outright refusal of the shaken-prophet reading are each his own and are attributed as such; I did not harmonise Calvin toward the other four. v.2 the planting — Gill and Calvin affirm real blessing, Ellicott makes the words distrust speaking, and I kept both. v.3 the heart-searcher: the grammatical point that the fidelity phrase attaches to the heart is Keil and Delitzsch's, the devote-not-prepare rendering and the turning-back of the sheep figure are Ellicott's. v.4 the mourning land: the drought is Keil and Delitzsch's and Ellicott's, the argument from innocent beasts is Calvin's, the prayer for removal Clarke's, and the variant boast that God does not see their ways is Ellicott's report of the older Greek, given as a variant and not as the text. vv.5-6: the rebuke reading (Keil and Delitzsch, Ellicott, Clarke) is held apart from Calvin's denial of it and from Wesley's preparation reading; Clarke's identification of footmen and horses with actual national armies is given with his own concession that the words remain proverbial; Ellicott's refusal to decide between the flood and the jungle of Jordan is recorded as a refusal, not resolved. No claim in either tile is mine."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "12",
+      "verses": [
+        "7-17"
+      ],
+      "note": "Tiles 7 (vv.7-10), 11 (vv.11-13) and 14 (vv.14-17) fidelity self-grade, verse by verse, with key 17 read only to its 314th word (chrome fills the rest). v.7 the forsaken house: the two-fulfilment reading with the portent voice before the city fell is Gill's and is attributed to him, not asserted; Calvin's widening of the house to the whole land is kept distinct from the temple-only readings of Henry, Clarke and Wesley. v.8 the lion and the hard clause therefore have I hated it — Ellicott's speaking after the manner of men is his, and I did not soften the clause on my own account. v.9 the speckled bird is given as a genuine four-way split (Gill's blood-stained bird of prey, Clarke's borrowed plumage, Ellicott's mobbed vulture from observed bird life joined by Wesley, Calvin's wild bird of the wood), with Calvin's explicit dismissal of the first two preserved. v.10 the pastors: Gill's Chaldean identification, Clarke's long succession, Ellicott's nomad herdsmen and objection to the English word, Calvin's antithesis. vv.11-13 the desolation: Wesley's argument that God cannot be the subject, Ellicott's impersonal reading, Calvin's every-individual reading; the high places three ways; the sowing, where Gill and Calvin both report and reject the prophets reading before landing on the Egyptian alliance. vv.14-17: the rosters of evil neighbours differ between Gill, Henry, Ellicott and Clarke and I let them differ; the mercy to the nations is given as each voice frames it; Ellicott's asymmetry of the two pluckings and his echo of the call-word are his. Nothing asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "12",
+      "note": "JFB donor stride — a FOURTH confirming instance, and the first that anchors the EARLY part of Jeremiah. jeremiah 12 carries Jamieson-Fausset-Brown blocks at verse keys 2, 8 and 14 — exactly the fixed stride of one donor block per six sampling keys established this window (notes 5758-5759, extended at 5776). Identifications: key 2 is on the slander and deceit of Psalm 120:2-3 (it even cites Psalm 52 as a parallel); key 8 is Psalm 120:6-7, and its own remark that 'this Psalm may well begin such a series as this' fixes it as the first Song of Degrees beyond doubt; key 14 is Psalm 121:3-4, the sleepless keeper who will not slumber. This matters beyond one more confirmation because it tests the model's canonical-order claim across a long span of the sampling book. jeremiah 12 sits thirteen chapters before jeremiah 25, whose donor was already fixed at Psalm 145:1-2 (note 5758). Psalms 121 to 145 is twenty-four psalms across thirteen sampling chapters, which is the right order of magnitude given that Psalms 120-134 are the short Songs of Degrees and that each sampling chapter consumes only three to five donor blocks. The donor stream therefore runs forward through the Psalter in step with Jeremiah's chapter order, with no reset at a chapter boundary — consistent with the crossing already proved between jeremiah 25 and 26. ESTABLISHED unchanged: order and stride. STILL NOT ESTABLISHED: the phase within a chapter (here the first JFB key is 2, adding another value to the spread already recorded across jeremiah 26-36) and the occasional dropped block. It also weighs against the alternative raised at note 5799 for isaiah 62: a chapter with no JFB blocks at all now looks more like a local ingest gap than a pause in the donor stream. No repair attempted — a mass data-tree operation is the owner's call. Practice unaffected: JFB blocks were excluded as foreign at all five tiles."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "12",
+      "note": "Chrome footer, twenty-first consecutive chapter — but a DIFFERENT AND LARGER VARIANT than the 926-word constant. jeremiah 12 carries the StudyLight chrome at key 17, the last key, with 314 words of real content before the marker and 1,141 words after it. That tail is 215 words longer than the 926-word figure confirmed on twenty prior chapters, including isaiah 62 only one batch ago. Inspecting it shows why: this instance is not the Ellicott footer alone. Past the usual rights-and-permissions and contact block it continues into several hundred words of raw CSS — sub-menu rules, search-button and selection-div declarations, colour and flex properties — that the ingest captured verbatim as visible text. So the 926-word figure is the footer proper, and 1,141 is the footer plus a stylesheet fragment. Two consequences. First, the constant is a constant only for one chrome variant; a validator or truncation rule keyed to the number 926 would leave 215 words of CSS in place here. Second, and unchanged in practice: the truncation must stay marker-scoped, cutting from the StudyLight marker to the end of the block rather than trimming a fixed count. As with isaiah 62 the chrome is the entire tail, so key 17 usable is exactly 314. Sizing effect, restated: 'synthesis-loop.py size' reported 30,064 raw for jeremiah 12 against 28,923 actually usable."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "12",
+      "note": "Matthew Henry section-length blocks, now SIX chapters running (jeremiah 22, 7, 26, 36, isaiah 14, and here), confirming again that this is a property of the Henry ingest and not of any book. In jeremiah 12 Henry appears at only three of the seventeen keys — 1, 7 and 14 — and those three are precisely the heads of the chapter's three natural sections (the expostulation, the forsaken heritage, the oracle on the neighbours). His key-1 block runs over vv.1-6 as one exposition. The containment rule therefore stranded material again: I tiled vv.1-4 and vv.5-6 separately for pericope reasons, so Henry could be declared only in the first, and his comment on the footmen and the swelling of Jordan — which sits inside the key-1 block — is unreachable from the tile that actually covers those verses. Tile 5 is consequently a six-voice tile in a seven-voice chapter, and a reader meets vv.5-6 without the puritan-evangelical voice that has something to say about them. This is the same defect logged for jeremiah 42 at note 5796 in its other form (question in one tile, answer in the next). The tiling was still right: merging vv.1-6 into one tile to capture Henry would have run a single tile at 12,386 source words and about 19 to 1 compression, well past anything I can write honestly."
     }
   ]
 }
