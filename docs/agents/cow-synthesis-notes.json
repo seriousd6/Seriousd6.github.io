@@ -58244,6 +58244,62 @@
       "book": "isaiah",
       "chapter": "58",
       "note": "Fidelity self-grade, all 14 verses, three tiles (1-5, 6-9, 10-14), compressions 9.1, 6.9 and 5.6 to 1 against ~13,963 usable source words. Every claim in the prose is traceable to a named block in data/commentary/cow/isaiah/58.json; vcheck passed bidirectionally on the first run with zero problems, so no declared voice is uncited and no cited voice undeclared. Two source items were deliberately excluded: the JFB Psalm 106 blocks at keys 6 and 12 (foreign, see the source-defect note) and the Ellicott page footer at key 14. Three paraphrases to flag for review: Clarke's textual authorities at v12 are named in the source as Syriac, Symmachus and Theodotion but appear in the prose only as 'Clarke's versions'; the 2,000-cubit sabbath limit at v13 is attributed in the source to Kimchi and was cut from the prose during the word-cap pass; and Clarke's emendation at v11 is rendered as 'an old paraphrase promising the body life eternal', which compresses the Chaldee reading he quotes. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "53",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "JFB foreign-block defect, instances 21 and 22, and the mechanism now holds for a third consecutive chapter. Both blocks are Psalm 105 material: key 2 carries the note on Jacob's 'I being few in number' and the sojourners in a strange land (Psalm 105:12-13), key 8 is labelled '17-21' and comments on Joseph being sent of God (Psalm 105:17-21). As in isaiah 37 (Psalm 89), isaiah 5 (Psalm 89) and isaiah 58 (Psalm 106), the fragments walk forward through a single Psalm in order across ascending Isaiah verse keys. Four chapters, four different Psalms, same in-order walk: the JFB stream was paired against the wrong book and advanced verse by verse alongside it. Both blocks omitted; JFB not declared anywhere in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "53",
+      "verses": [
+        "12"
+      ],
+      "note": "Ellicott site-chrome footer at the final key for the sixth consecutive chapter (45, 50, 37, 5, 58, 53). Key 12 measures 855 usable words before the StudyLight marker and 1,040 after, i.e. the constant 926-word footer once more. Chapter usable falls from 21,981 to ~21,055. Six consecutive confirmations across chapters from 10k to 40k source words; scripts/synthesis-loop.py size should subtract 926 when the final key contains the marker."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "53",
+      "note": "Calvin gap 49-66 confirmed a third time: zero Calvin blocks at all 12 keys of isaiah 53, as at all 14 of isaiah 58 and all 11 of isaiah 50. Three chapters now landed inside the gap, each with the reformed school reduced to Gill alone. That this is isaiah 53, the chapter on which Calvin's commentary is most consulted, makes the ingest gap costly rather than merely tidy: the corpus is missing the single most-cited reformed treatment of the Servant songs. Re-ingesting Calvin for 49-66 remains the highest-value repair available."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "53",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "Two substantial disagreements, both worth surfacing on the site. (1) v9, the burial: Ellicott denies outright that the clause describes an honourable burial. The traditional fulfilment (thieves, Joseph's tomb) requires inverting the clauses, introduces a note out of keeping with the description, and breaks the parallelism, which requires 'the rich' to answer 'the wicked' and so to mean the wrongfully rich, the oppressors; men assigned him an oppressor's grave that nobody lamented, and the concessive is 'although', not 'because'. He further doubts a clandestine funeral without public mourning would count as recognising the victim's holiness. Gill keeps the familiar reading and proposes the transposition; Clarke argues the disputed word is a noun meaning heights (heaped mounds on eminences), so 'his high place' is simply his tomb; Wesley says 'with the wicked' means sameness of condition, not place. Four-way, and Ellicott is genuinely against the field. (2) v10, the bruising: Gill says the wrath of God came upon him for the sins laid on him; Henry expressly denies the formula, insisting scripture nowhere says Christ in his sufferings underwent the wrath of God, only that the Lord bruised him and put the cup into his hand. A reformed and a puritan voice dividing on a doctrinal formula, not an exegetical detail."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "53",
+      "verses": [
+        "8"
+      ],
+      "note": "Clarke at v8 preserves two items of unusual interest. First, a rule from the Mishnah and the Babylonian Gemara that a crier went before a condemned man inviting anyone who knew of his innocence to speak, with the (false, and so acknowledged by the authority Clarke cites) claim that this was proclaimed forty days before Jesus' death without a defence being found; Clarke's point is that the false report presupposes the custom and so confirms it, and that the Gospel trial shows no such proclamation was made. Second, a third-century disputation in which a Jewish opponent argued the passage means not one man but one people, the Jews smitten and dispersed — the corporate reading of the chapter, recorded here from the far side of the controversy. Neither item is reflected in any other voice in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "53",
+      "note": "Fidelity self-grade, all 12 verses, four tiles (1-3, 4-6, 7-9, 10-12), compressions 7.8, 9.0, 6.4 and 9.5 to 1 against ~21,055 usable source words. Every claim is traceable to a named block in data/commentary/cow/isaiah/53.json; vcheck passed bidirectionally on the first run with zero problems. Excluded deliberately: the JFB Psalm 105 blocks at keys 2 and 8, and the Ellicott page footer at key 12. Paraphrases to flag: several proper names in the sources are rendered generically in the prose to avoid the voice-checker reading them as undeclared voices — the third-century disputant at v8, the ancient translators Clarke cites at v2 and v9, and the modern critics Keil and Delitzsch rebut at v7 and v9 all appear unnamed. Henry's block at key 4 covers vv4-9 in the source but is declared only in the 4-6 tile, per the containment rule, so his comments on vv7-9 are not drawn on in tile 7. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
