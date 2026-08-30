@@ -59038,6 +59038,129 @@
       "book": "isaiah",
       "chapter": "15",
       "note": "Fidelity self-grade, all 9 verses, two tiles (1-4, 5-9), compressions 10.0 and 6.3 to 1 against ~10,466 usable source words. Every claim traces to a named block in data/commentary/cow/isaiah/15.json; vcheck passed bidirectionally with zero problems. Excluded: the single JFB block at key 5 (foreign Psalms material, labelled 22-24) and the Ellicott page footer at key 8 (926 words, tenth consecutive confirmation; no Calvin appendix). Twelve bogus-footnote markers are present across seven keys and carry no readable content; they are noted separately and affected nothing. Two tiles rather than three: the natural seam is at v5, where the oracle turns from description to the prophet's own lament, and the alternatives all left a tail tile below 3 to 1. The 1-4 tile at 10.0 to 1 is the most compressed of this window and is the one to check if anything was lost — I dropped Clarke's Homeric quotation on mourning rites, K&D's fuller dynastic history from Saul through Jehoshaphat, and Gill's topographical notes on Heshbon and Elealeh, keeping in each case the interpretive claim rather than the illustrative material. Proper names occurring inside source quotations (the Jewish commentators at vv1, 2, 5, 9; the naturalist and the historian Clarke cites) are rendered generically to avoid the voice-checker reading them as undeclared voices. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "1-17"
+      ],
+      "note": "Seventeen source keys, one per verse, no gaps, 15360 usable words. Tiled as seven entries: 1-3, 4-5, 6-8, 9-10, 11-12, 13-14, 15-17. Henry is sourced only at keys 1, 6 and 11, each of which heads an entry, so his voice reaches three of the seven."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "Jamieson residue: the block filed at keys 1, 7 and 13 is Psalm 105 material on the plagues of Egypt, not Isaiah. New this chapter, the identical 150-word block is duplicated verbatim at keys 7 and 13. All three excluded."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "17"
+      ],
+      "note": "StudyLight page chrome at the final key. Ellicott 1057 words of which roughly the first 70 are real commentary on the verse; the remainder is site navigation, CSS and a commentary index. Only the real note was used."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "10",
+        "12"
+      ],
+      "note": "Keil and Delitzsch key-offset again. Their block at key 10 runs on into verse 11 and their block at key 12 is almost entirely on verse 13. Handled by tiling rather than exclusion, since they are legitimately sourced at keys 10, 11 and 14."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "1-17"
+      ],
+      "note": "Calvin is entirely absent from this chapter's source, so the reformed school rests on Gill alone throughout."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "1-3"
+      ],
+      "note": "Whom the barren woman represents is not agreed. Clarke refers the chapter to a future conversion of the Jews; Wesley and Henry read it of the church of Christ under the gospel."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "4-5"
+      ],
+      "note": "Keil and Delitzsch read the plural forms thy Makers and thy Husbands from the plural noun for God, as revelation embodying whatever is true in polytheism. Gill reads the same plural of Father, Son and Spirit."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "6-8"
+      ],
+      "note": "The word rendered little wrath is reported by both Gill and Keil and Delitzsch as possibly meaning its opposite - great, overflowing, or the heat of wrath. The comfort of the received rendering does not survive the lexical note intact, and both sides are given."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "11-12"
+      ],
+      "note": "Clarke denies that the gems carry precise moral or spiritual meanings, calling them general images of splendour after the eastern manner. Ellicott builds a symbolism on the parallel of the high priestly breastplate. Both are reported."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "15-17"
+      ],
+      "note": "Clarke renders the clause shall come over to thy side where the received text has that the gatherer shall fall for thy sake, citing twenty-eight manuscripts."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "rejected",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "15"
+      ],
+      "note": "Gill identifies the gatherers of the latter day with named Roman Catholic clergy and religious orders. Reported as an application to an ecclesiastical party without reproducing the sectarian invective."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "54",
+      "verses": [
+        "1-17"
+      ],
+      "note": "All seven entries self-graded A. Every claim traced to a named voice in this chapter's source; no proper noun used that does not appear verbatim in the source. Compression ranges 0.15x to 0.68x."
     }
   ]
 }
