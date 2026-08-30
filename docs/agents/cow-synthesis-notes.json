@@ -57940,6 +57940,84 @@
         "26-28"
       ],
       "note": "Named contemporaries in the sources were paraphrased rather than quoted by name where they fall on the proper-noun watch list or would not survive the entity check. Cyrus, Jerusalem, Babylon, the Euphrates, the Tigris, Nebuchadnezzar, Josiah and Darius all appear verbatim in the chapter source."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "Jamieson, Fausset and Brown is foreign at all five of its blocks in this chapter and was omitted from every voice list. Key 2 cites Psalm 89:35 and Amos 4:2 on swearing by God's attributes; key 8 gives 'places remote from the sanctuary' with Deuteronomy 28:64; key 14 cites Psalms 40 and 57 on mercy and truth personified; key 20 cites Psalms 9, 18 and 10 on the divine titles; key 26 is a fragment on the covenant established and Nathan. Four of the five are traceably from a commentary on Psalm 89, and — as in isaiah 37 — the fragments walk through that psalm roughly in order across ascending Isaiah verse keys. Eighteen consecutive traceable instances are now recorded across nine chapters, of which fifteen are Psalms. The isaiah 37 hypothesis holds here: the JFB stream appears paired against the wrong book and advanced verse by verse alongside it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott site-chrome at the final verse, seventeenth instance, 926 words for the fourth consecutive chapter (isaiah 45, 50, 37, 5). Four identical counts across chapters of 11k to 40k source words settles the artefact as a fixed-length page footer. Key 30's real content is 1,045 words; the chapter's 40,281 is 39,355 usable, which is what the seven tiles were compressed against. Recommend the size command subtract 926 automatically for any chapter whose final key contains the marker."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "6"
+      ],
+      "note": "A methodological disagreement worth recording because it is explicit on both sides. Ellicott decodes every item of the vineyard's husbandry — fence as the law, stones as the old idolatries, tower as the throne of David or the prophets' watchtower, winepress as the temple — and Wesley does the same for the sentence, making the pruning the ministers, the thorns the people's lusts, the withheld rain every blessing lost. Calvin refuses outright and names the exposition he declines: 'we do not choose to attempt, as some commentators have done, an ingenious exposition of every clause, such as, that the Church is [fenced] by the protection of the Holy Spirit... that the [tower] is doctrine; and that by [stones] are meant the annoyances of errors.' His ground is that the prophet's design was plainer, that by unceasing care and large expenditure God performed the part of an excellent husbandman. Same passage, same evidence, opposite hermeneutics — and Calvin is arguing against the practice, not merely declining to follow it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "25",
+        "26"
+      ],
+      "note": "Two disagreements on referent and tense. At v.25 the trembling hills split four ways: Clarke refers them to the great earthquake of Uzziah's reign, remembered as an era by two later prophets, and Ellicott agrees the shock was still fresh; Delitzsch denies it outright, since the verbs after 'therefore' are prophetic preterites like the three before, so the judgment is complete and still future; Calvin takes a third line, granting freely that 'the past tense is frequently employed instead of the future' but preferring here punishments already endured with heavier ones ahead. At v.26 the distant nation splits three ways: Gill rules out the Chaldeans by two arguments (they were one nation, not many, and near, not far) and settles on Rome; Calvin names the Chaldeans flatly; Delitzsch keeps to neither and dates the beginning of fulfilment to Ahaz, adding that the passage 'has every possible mark of the very opposite of a vaticinium post eventum' — an unprompted defence of predictive prophecy in a purely grammatical commentary."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "8",
+        "11",
+        "18",
+        "20",
+        "26"
+      ],
+      "note": "Tiling note for a chapter at the whole-batch threshold. isaiah 5 has 30 keys and 39,355 usable words, and its structure resists even division: key 1 alone runs 5,540 words (Henry's section commentary sits there), keys 8 and 18 run 4,010 and 4,094, while six keys fall under 500. The song of the vineyard (1-7) is 12,015 words, far too large for one tile at 18.6 to 1. Solution: give verse 1 a tile of its own at 8.6, take 2-7 as a second at 10.0, then follow the woes — 8-10, 11-17, 18-19 — and merge the three short woes with the two 'therefore' verses into 20-25, closing with 26-30. Seven tiles at 8.6 / 10.0 / 9.5 / 9.1 / 8.3 / 8.0 / 7.6. Eight tiles is arithmetically impossible without a sub-floor tile: every candidate split of the seven groups leaves a remainder under 3,225. Rule: where one key carries a whole-section commentary, a single-verse tile is the right answer, not a defect."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "8",
+        "11",
+        "18",
+        "20",
+        "26"
+      ],
+      "note": "All seven tiles self-graded A (QA 643-649, audit 642-650, compress 0.455-0.474, ttr 0.635-0.706). vcheck caught two errors on the first pass and both were fixed before tags were emitted: tile 8 cited Chrysostom by name inside a Calvin quotation, which the checker read as an undeclared voice (reworded to 'an old preacher'); tile 20 declared Wesley without citing him, since his blocks at keys 20, 22, 23 and 24 had all been trimmed away in the word-cap passes (a Wesley clause was restored). Three tiles came back over the audit cap after the first grade — 18 at 652, 20 and 26 at 650 — and were trimmed and re-emitted. Bogus-footnote count zero, Calvin present at all 30 keys, Wesley at 22 of 30."
     }
   ]
 }
