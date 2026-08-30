@@ -60971,6 +60971,56 @@
         "20"
       ],
       "note": "Four positions stand unreconciled on whose speech the Urijah narrative is, and the tile keeps all four. Gill gives it to members of the court siding with the accusers, citing Kimchi, Jarchi and the Siphri, since the instance tells against the elders who had just spoken. Wesley agrees it is probably enemies. Calvin canvasses both readings, notes that the connecting particle admits an adversative sense, and finally assigns it to the prophet's defenders on the common consent of interpreters and because the two examples run on with nothing between them. Ellicott refuses both, holding that the verses cannot be part of the elders' argument since they tell the other way, that nothing in the text says the accusers alleged them, and that the narrator was recording that this prophet did not stand alone. The question decides whether verses 20-23 are hostile evidence or a martyr-memorial, and nothing in the chapter settles it."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "36",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "note": "JFB blocks at keys 3, 9, 15, 21 and 27 -- six keys apart -- are JFB on Proverbs 6, in order: 6:13-14 (signs used to carry on intrigues, still so used in the East), 6:16 (a mode of speaking to arrest attention), 6:24 (by appreciating truth men are not affected by lying flattery), 6:27-29 (the guilt and danger most obvious), 6:34-35 (nor any terms of reconciliation be admitted, or accept any ransom). All five excluded as foreign; JFB is declared in no tile. See the accompanying observation note: this chapter completed a test of the misalignment hypothesis, and the test passed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "36",
+      "note": "THE OFFSET IS NOW ESTABLISHED, not merely conjectured, and this supersedes the uncertainty recorded at note 5697. Having identified jeremiah 26's JFB blocks as Psalm 145:11-21 and jeremiah 36's as Proverbs 6:13-35, I predicted that the nine intervening Jeremiah chapters must carry the donor material lying between those points -- Psalms 146-150 and Proverbs 1-5 -- and checked all nine. Every one confirms it: jeremiah 27 = Psalm 146-147 (his providence supplies the wild animals, Ps 147:8-9); jeremiah 28 = Psalm 147:15-18 and 148:7-10 (God's Word as a swift messenger; the call on the earth including seas and the dragon); jeremiah 29 = Psalm 148:11-12, 149:2, 149:7 (all rational beings from highest rank to little children; God signalized his relation as sovereign in restoring them to their land); jeremiah 30 = Proverbs 1:9 and 1:10-19 (a solemn warning against temptation); jeremiah 31 = Proverbs 1:20-33 and 2:1-11 (some interpreters regard this address as the language of the Son of God under the name of Wisdom); jeremiah 32 = Proverbs 3 (wisdom personified as bringing the best blessings); jeremiah 33 = Proverbs 4; jeremiah 34 = Proverbs 5 (her enticing promises are deceitful); jeremiah 35 = Proverbs 5:22-23 and 6:4-10. The run is continuous, monotonic and canonical across eleven consecutive sampling chapters, with no reset at any chapter boundary of either book. ESTABLISHED: the donor stream is consumed in canonical order at a fixed stride of one donor block per six sampling verse-keys. NOT ESTABLISHED: the phase within a chapter, which varies (first JFB key is 1, 6, 1, 1, 4, 3, 4, 1, 4, 5, 3 across jeremiah 26-36), and the occasional missing block (jeremiah 29 skips the expected key 25, jeremiah 31 skips key 9). Practice is unaffected -- JFB blocks have always been excluded as foreign -- but this now gives the owner a deterministic model: given any one confirmed identification, the donor for every other chapter in the sampling order can be computed. No repair attempted; a mass data-tree operation is the owner's call."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "36",
+      "note": "Self-graded A across all five tiles. Every clause traces to a named block in data/commentary/cow/jeremiah/36.json for a verse inside the tile's own range. Checked in particular: the four answers on why the roll was to be written are each that commentator's own, with Keil and Delitzsch's denial that a collection was intended kept as a denial rather than folded into Henry's four reasons; the dispute over who proclaimed the fast preserves Calvin's grammatical argument from the versions and Keil and Delitzsch's flat rejection of it side by side; Ellicott's observation that the Hebrew leaves it uncertain whether the king or the reader cut and burned the roll is given as his, and the other voices are not made to share a doubt they do not raise; and Gill's four canvassed accounts of the prophet's being shut up are reported as canvassing, since he settles none of them. Where a block is a bare lemma nothing is attributed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "36",
+      "verses": [
+        "32"
+      ],
+      "note": "Ellicott site-chrome footer again at the last key, mid-key: at key 32 the marker falls with 194 words of content before it and 1,407 after, of which 926 are chrome and 481 real, so key 32's usable total is 675 rather than 1,601. Seventeenth consecutive confirmation of the 926-word figure and the tenth mid-key instance. scripts/synthesis-loop.py size again reported the raw total (27,630) rather than the usable one (26,704); as with jeremiah 26 in the same batch, the difference did not affect the pick, but the counter is consistently about 926 words high on every chapter that carries the footer."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "36",
+      "verses": [
+        "1",
+        "9",
+        "20"
+      ],
+      "note": "Matthew Henry's blocks are section-length here as in the last three chapters worked: key 1 covers verses 1-8, key 9 covers 9-19, and key 20 covers 20-32. Under verse-key containment that is a better fit than usual, since the tiling happens to place each Henry block inside a tile that shares its scope, so Henry is declared in tiles 1-4, 5-9 and 20-26 and undeclared only in 10-19 and 27-32, where his material is genuinely held by the neighbouring blocks. Fourth chapter in a row exhibiting the pattern (jeremiah 22, jeremiah 7, jeremiah 26, jeremiah 36); it is a property of the Henry ingest generally, not of any one chapter."
     }
   ]
 }
