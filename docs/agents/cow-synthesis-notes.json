@@ -61540,6 +61540,47 @@
         "1-40"
       ],
       "note": "Every entry self-graded A: prose grounded in the named voices only, with nothing introduced from outside the catena. Compression is severe in four entries, reaching one tenth of source, so selection rather than summary governs those."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "62",
+      "verses": [
+        "1-5"
+      ],
+      "note": "Tile 1 (vv.1-5) fidelity self-grade: every claim traced to a named block in keys 1-5. Checked verse by verse. v.1 the refusal to hold peace and the going-forth of righteousness as brightness — all six voices present, the speaker question (God or the prophet or the Messiah) carried as a live five-way disagreement rather than resolved. v.2 the new name: I preserved the split between Clarke and Wesley (a name actually conferred, Christian) and Ellicott and Keil and Delitzsch (a name withheld until the mouth of the LORD names it, so the point is the deferral). v.3 the crown of glory in the hand rather than on the head — Gill and Keil and Delitzsch both make the hand deliberate and I kept it. v.4 Hephzibah and Beulah rendered from the source glosses, not from my own Hebrew. v.5 the marriage of sons to their mother, which every voice treats as a difficulty: Gill and Ellicott ease it by making the sons the builders, Clarke by an emendation of the pointing, Keil and Delitzsch by insisting the figure changes mid-verse. No claim in the tile is mine."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "62",
+      "verses": [
+        "6-12"
+      ],
+      "note": "Tile 6 (vv.6-12) fidelity self-grade: every claim traced to a named block in keys 6-12, with key 12 read only to its 453rd word (the Ellicott chrome footer occupies the entire remainder). v.6 the watchmen: I kept the four-way spread intact — Gill and Henry make them ministers, Ellicott intercessors, Clarke reconstructs an actual temple watch from the antiphonal 134th Psalm, which I flagged as an outlier rather than folding into the consensus. v.6-7 the LORD's remembrancers and the refusal to give him rest, taken from the source phrasing. v.8 what God swears by: Gill and Ellicott read the right hand and the arm of strength as one oath, Keil and Delitzsch as two; I preserved the disagreement. v.10 the gates — whose gates is genuinely disputed (Zion's, Babylon's, the nations') and I named all three holders. v.11-12 the proclamation to the end of the world and the four names of v.12 given as the sources give them. Nothing asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "62",
+      "note": "JFB stride model — a NEGATIVE datum. isaiah 62 carries ZERO Jamieson-Fausset-Brown blocks across all twelve source keys. Under the stride established this window (notes 5758-5759, 5776: one donor block per six sampling verse-keys, donors consumed in canonical order) a twelve-key chapter should carry roughly two JFB blocks, and every other chapter examined this window did carry them at the predicted spacing. Their total absence here is the first chapter I have met with none. Two readings are open and I cannot decide between them from one chapter: either the donor stream is exhausted or paused over this stretch of Isaiah, or the JFB ingest simply failed for isaiah 62 independently of the donor mechanism. Worth checking isaiah 61 and 63 at the next opportunity — if they carry JFB at the predicted phase then the absence is local to 62 and is an ingest gap, not a break in the stride. Practice unaffected either way: JFB blocks are excluded as foreign wherever they appear, so a chapter without them simply has nothing to exclude."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "62",
+      "note": "Ellicott chrome footer, twentieth consecutive confirmation, in its cleanest form yet. isaiah 62 carries the footer at key 12 (the last key), measured at exactly 926 visible words — the same constant seen on every affected chapter this window. Here the marker falls with 453 words of real content before it and the 926 words of chrome after it, so the chrome is the ENTIRE TAIL of the chapter and key 12's usable content is exactly 453 words. This is the tidiest instance I have logged: no content resumes after the footer, so a naive tail-truncation at the StudyLight marker would be exactly correct for this chapter. That is NOT generally true — twelve mid-key instances are on record where content resumes after the marker — so the truncation rule must stay marker-scoped rather than key-scoped. Consequence for sizing, unchanged and worth restating: 'synthesis-loop.py size' reports the RAW total, which for isaiah 62 is 11,206 against 10,280 actually usable."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "62",
+      "note": "Calvin absent from all twelve keys of isaiah 62 — a further instance of the known isaiah 49-66 ingest gap. Calvin's Isaiah commentary exists in full for these chapters in print, so this is a gap in the ingest and not in the source. Practical effect on the synthesis: the reformed school in this chapter rests on Gill alone, which narrows the reformed voice to one witness in both tiles and removes the strongest counterweight to the allegorizing readings of vv.4-5 and v.12. I declared the reformed school on Gill only and did not manufacture breadth it does not have. Worth noting that this gap compounds with the JFB absence recorded at note 5799 — isaiah 62 is the thinnest source field of any chapter I have synthesized this window at 10,280 usable words across six voices, and the 6.8:1 and 9.3:1 compression ratios reflect a genuinely smaller corpus rather than a light touch."
     }
   ]
 }
