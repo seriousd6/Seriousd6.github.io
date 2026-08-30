@@ -61141,6 +61141,73 @@
         "1-26"
       ],
       "note": "Every entry self-graded A: prose grounded in the named voices only, with no material introduced from outside the catena."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "14",
+      "verses": [
+        "4",
+        "5",
+        "9",
+        "10",
+        "12",
+        "13",
+        "14",
+        "19",
+        "20",
+        "23",
+        "28",
+        "29",
+        "31",
+        "32"
+      ],
+      "note": "Twenty-one literal {Bogus footnote} markers stand inside the visible prose of the Calvin blocks in this chapter, spread over fourteen keys (4 twice, 5, 9 twice, 10, 12, 13 three times, 14, 19, 20, 23 twice, 28, 29, 31 three times, 32). They fall mid-sentence and mid-paragraph, so the ingest has converted the Calvin edition's footnote call-marks into that literal string rather than dropping them. They are not stray text at the edges of a block and cannot be removed by truncation; anything reading these blocks as prose will read the marker as words. First chapter in this window with a non-zero bogus count, so the defect is not universal, but wherever it appears it corrupts the Calvin text specifically. No synthesis draws on any sentence containing one, and the markers do not appear in the tiles."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "14",
+      "verses": [
+        "14",
+        "20",
+        "26",
+        "32"
+      ],
+      "note": "JFB blocks at keys 14, 20, 26 and 32 -- six keys apart -- are JFB on Psalm 71, in order: 71:4 (a gloss on cruel, literally sour), 71:6-9 (his history from early infancy illustrated God's care, his deliverances being at once occasions of praise and ground of confidence), 71:14-16 (the ruin of his enemies illustrating God's faithfulness), 71:17-21 (past experience again encourages). All four excluded as foreign; JFB is declared in no tile. This is the second sampling book in which the offset model of note 5759 has now been checked, and it holds: isaiah 12 carries Psalm 69:7-12, isaiah 13 carries 69:16-27, isaiah 14 carries 71:4-21, isaiah 15 carries 71:22-24 (the psalm's last verse), isaiah 16 carries 72:4-14, and isaiah 17 carries 72:18-19 with the note that the psalm's closing verse is evidently a later addition. Continuous, monotonic and canonical across six consecutive Isaiah chapters, with the donor psalm exhausted exactly at the point where the next begins. The stride and the canonical order established for the Jeremiah slice therefore govern Isaiah too; only the phase differs, which was already recorded as chapter-local."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "14",
+      "note": "Self-graded A across all seven tiles. Every clause traces to a named block in data/commentary/cow/isaiah/14.json for a verse inside the tile's own range. Checked in particular: the five answers on whose rod was broken are each that commentator's own, with Wesley's rejection of both kings kept as his argument from the thirty-two years rather than merged into Calvin's; on the Lucifer verse all four voices who raise the question deny the Satan reading, and the tile says so rather than manufacturing a dissent; Clarke's proposal to render the word Howl, son of the morning is given as his own doubt about the rendering, which is what his block says; and the split over the mount of the assembly keeps Clarke and Wesley on the temple hill against Ellicott and Keil and Delitzsch on the Babylonian heaven of the gods, with Keil and Delitzsch's argument stated negatively as he states it. No clause is drawn from any Calvin sentence carrying a bogus-footnote marker."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "14",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "Two disagreements are preserved unresolved in the 9-15 tile. (1) On the fallen star, all four voices who raise the question deny that Satan is meant, but they deny it on different grounds and with different force: Clarke protests that it would be strange for the Spirit to call the arch-enemy of God the light-bringer and goes on to doubt the rendering itself, deriving the word from a root meaning to howl and preferring, with the Syriac, Howl, son of the morning; Ellicott gives the philology of the shining one and calls the English word singularly unfortunate, since its later Latin use for the devil has hidden from most readers that a king is addressed; Gill allows an allusion at most and turns the fall into a type of the papal antichrist's; Keil and Delitzsch keep to the astronomy without engaging the theological question at all. The tile reports the agreement without flattening the four routes to it. (2) On the mount of the assembly the voices split two and two, Clarke and Wesley reading the temple hill and its northward position, Ellicott and Keil and Delitzsch denying that Zion can be meant and putting in its place the heaven where the gods the king believed in sat in council; Ellicott states that most modern scholars hold the older reading untenable, which is his claim and is reported as such."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "14",
+      "verses": [
+        "4",
+        "24",
+        "28",
+        "32"
+      ],
+      "note": "Three structural notes. (1) Matthew Henry's blocks are section-length again: key 1 covers verses 1-3, key 4 covers 4-23, key 24 covers 24-27, and key 28 carries only a short summary. Under verse-key containment this puts all his comment on verses 9-23 inside the tile holding key 4, so the 9-15, 16-20 and 21-23 tiles cannot cite him and he is undeclared in all three. Fifth chapter running with this pattern, and the first outside Jeremiah, which confirms it as a property of the Henry ingest rather than of any book. (2) The Ellicott chrome footer appears at key 32, mid-key: 705 words of content before the marker, 1,456 after, of which 926 are chrome and 530 real, so key 32's usable total is 1,235 rather than 2,161. Eighteenth consecutive confirmation of the 926-word figure and the eleventh mid-key instance. scripts/synthesis-loop.py size reported the raw 36,654 rather than the usable 35,728. (3) Both Calvin and Gill note that a new chapter ought to begin at verse 28, where the burden of Philistia opens; the tiling respects this by making 28-32 its own tile."
     }
   ]
 }
