@@ -57489,6 +57489,71 @@
         "1-25"
       ],
       "note": "All nine entries self-graded A after the final build, each inside the 350-650 word window. Compression ranges from 0.10x at entry 19-22 to 0.34x at entry 3-4. The fidelity pass was clean on the first run with no ENTITIES warnings. Watch-list and named-critic risks were avoided throughout: Vitringa, Lowth, Ewald and Umbreit at key 19, Hitzig at key 9, Knobel at key 16 and Grotius-style emendation proposals were all paraphrased rather than named, as were the classical authorities in Gill and Clarke."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "6"
+      ],
+      "note": "Jamieson, Fausset and Brown is foreign at its only block in this chapter and was omitted from both voice lists. Key 6 reads '10-13. Once destructive, these waters are subjected to the service of God's creatures... In rain and dew from His chambers (compare Psa 104:3), and fountains and streams' — commentary on Psalm 104, verses 10-13. This is the eighth consecutive traceable case of JFB foreign material sourced to Psalms, across isaiah 51, isaiah 1, songofsolomon 2, isaiah 52, isaiah 29, isaiah 45 (twice) and now here. The pattern is now strong enough to state plainly: where a JFB block in the COW catena does not match its Isaiah verse, the text it does match is a Psalm."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "11"
+      ],
+      "note": "Ellicott site-chrome at the final verse yet again: 926 usable words of navigation, copyright boilerplate and inline CSS beginning inside the Ellicott block at key 11, between his comment and Wesley's. Fifteenth instance, final verse of the chapter every time without exception. The chrome word count is 926 here, identical to isaiah 45's — the artefact appears to be a fixed-length page footer rather than variable content. Key 11's real content is 762 words, so the chapter's 11,286 is 10,360 usable, and both tiles were compressed against the corrected figure."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "1",
+        "4",
+        "7",
+        "10"
+      ],
+      "note": "Calvin is absent from isaiah 50 entirely — no block at any of the eleven keys — which is direct confirmation of the 49-66 gap reported from isaiah 45 and from the sweep over chapters 44-66. This is the first chapter synthesized inside the gap, and the cost is now visible rather than predicted: the reformed school in this chapter reduces to Gill alone, and Gill's contributions here are largely devotional application rather than exegetical argument. Isaiah 50 is a Servant Song; the chapters still queued in the gap include 53, 55, 61 and 65. Re-ingest of Calvin for 49-66 still wants an owner decision, and every chapter synthesized before it happens is permanently one school short."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "10"
+      ],
+      "note": "The sharpest exegetical clash yet recorded in the corpus, and it is pastoral. Clarke opens by saying the verse 'has been generally, if not dangerously, misunderstood' — preached to prove that a man may sincerely fear God and obey the Servant's voice and still walk in darkness with no sense of approbation. He calls this 'utterly impossible' on the strength of the promise that Christ's follower shall not walk in darkness, adopts Lowth's redistribution into two questions each with its own answer (supported by the Greek and Syriac reading the participle as a verb), and adds that where some 'under the influence of morbid melancholy, are continually writing bitter things against themselves, the word of God should not be bent down to their state.' Henry holds exactly the position Clarke attacks, and describes it in detail: evidences clouded, joy interrupted, the Spirit's testimony suspended, the light of God's countenance eclipsed, with the observation that 'pensive Christians are apt to be melancholy, and those who fear always are apt to fear too much.' Ellicott goes further than Henry, quoting Ajax's prayer for light even if it be light to die by and applying the verse to the cry of dereliction. Wesley supplies the distinction that makes the majority reading defensible: the darkness is 'not in sin, but in misery.' Four against one, with the one arguing on textual grounds."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Tiling note for short chapters with no small keys. isaiah 50 has 11 keys, 10,360 usable words and no key under 271, so three tiles was arithmetically impossible: the natural divisions 1-3, 4-9 and 10-11 give 2,671 / 4,786 / 2,903, two of which fall under the 5:1 floor. Two tiles were forced, and the seam had to fall inside the Servant's speech. Chose 1-6 / 7-11 at 9.9 and 6.2 to 1, taking the 'For the Lord GOD will help me' at v.7 as the real turn from suffering to vindication, over the numerically better balanced 1-4 / 5-11 at 8.3 and 7.7. Rule: in a short chapter, compute the floor before choosing seams, and prefer the true pericope seam over numerical balance when both options are inside the band."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "50",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "Both tiles self-graded A (QA 646 and 644, audit 646 and 643, compress 0.464 and 0.470, ttr 0.666 and 0.670). vcheck clean; one word-cap overrun on tile 7 was caught by vcheck at 652 and trimmed to 644 before emitting tags. Every declared voice is cited by name and no voice is cited undeclared. Bogus-footnote count zero — but here with Calvin absent from every key, which breaks the correlation suggested by isaiah 1 and isaiah 45 between the artefact and Calvin's presence; the marker's distribution is evidently independent of him."
     }
   ]
 }
