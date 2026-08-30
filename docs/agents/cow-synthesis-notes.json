@@ -60929,6 +60929,48 @@
         "1-25"
       ],
       "note": "All twelve entries self-graded A. One proper noun flagged by the entity check on the first pass was replaced with a name appearing verbatim in the source and the chapter rebuilt clean. Every claim traced to a named voice in this chapter's source. Compression ranges 0.08x to 0.42x - the tightest of the run."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB blocks at keys 1, 7 and 13 -- exactly six keys apart -- carry no Jeremiah material. All three are JFB on Psalm 145, in order: key 1 comments on verses 11-12 (the declaration of God's glory is for the extension of his knowledge and perfections in the world), key 7 on verse 15 (or, look with expecting faith, citing Psalm 104), key 13 on verse 21 (the Psalm ends, as it began, with ascriptions of praise). This continues the run recorded at jeremiah 25, whose JFB block at key 28 was identified as Psalm 145:1-2 and whose key 34 carried a short unidentifiable gloss from the same neighbourhood. The donor is therefore being consumed straight across a chapter boundary of the sampling book: Psalm 145:1-2 late in jeremiah 25, then 145:11-12, 145:15 and 145:21 through jeremiah 26. That is the first time the run has been shown to cross from one sampling chapter into the next without resetting, which is direct evidence for the corpus-wide misalignment recorded at note 5697 and against any explanation local to a single chapter's ingest. All three excluded as foreign; JFB is declared in no tile."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "26",
+      "note": "Self-graded A across all five tiles. Every clause traces to a named block in data/commentary/cow/jeremiah/26.json for a verse inside the tile's own range. Checked in particular: the five answers on where the chapter belongs are each that commentator's own, with Keil and Delitzsch's rejection of a three-supplements scheme kept as his report of Graf against Ewald rather than presented as his own initiative; the four-way dispute over whose speech the Urijah narrative is remains unadjudicated, with Calvin's own hesitation preserved (he canvasses both and comes down for the defenders on the common consent of interpreters, which the tile says); and Gill's attribution of the enemies reading to Kimchi and Jarchi and an ancient book is reported as his citation, not as his own opinion. Where a block is a bare lemma nothing is attributed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "26",
+      "verses": [
+        "1",
+        "7",
+        "16",
+        "24"
+      ],
+      "note": "Two structural notes. (1) Matthew Henry's blocks are again section-length: key 1 covers verses 1-6, key 7 covers 7-15, and key 16 covers 16-24. Under verse-key containment this puts all of Henry's comment on the elders' precedent, on Urijah and on Ahikam inside the tile holding key 16, so tiles 17-19 and 20-24 cannot cite him and he is undeclared in both, though he writes on all of it. Third chapter in a row with this pattern (jeremiah 22, jeremiah 7, jeremiah 26). (2) The Ellicott site-chrome footer appears again at key 24, mid-key: 529 words of content before the marker, 1,459 after, of which 926 are chrome and 533 real, so key 24's usable total is 1,062 rather than 1,988. Sixteenth consecutive confirmation of the 926-word figure and the ninth mid-key instance. scripts/synthesis-loop.py size again reported the raw total (27,837) rather than the usable one (26,911)."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "26",
+      "verses": [
+        "20"
+      ],
+      "note": "Four positions stand unreconciled on whose speech the Urijah narrative is, and the tile keeps all four. Gill gives it to members of the court siding with the accusers, citing Kimchi, Jarchi and the Siphri, since the instance tells against the elders who had just spoken. Wesley agrees it is probably enemies. Calvin canvasses both readings, notes that the connecting particle admits an adversative sense, and finally assigns it to the prophet's defenders on the common consent of interpreters and because the two examples run on with nothing between them. Ellicott refuses both, holding that the verses cannot be part of the elders' argument since they tell the other way, that nothing in the text says the accusers alleged them, and that the narrator was recording that this prophet did not stand alone. The question decides whether verses 20-23 are hostile evidence or a martyr-memorial, and nothing in the chapter settles it."
     }
   ]
 }
