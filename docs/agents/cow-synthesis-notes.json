@@ -58988,6 +58988,56 @@
         "6-22"
       ],
       "note": "Gill reads the whole second half of the chapter as a prophecy of a later ecclesiastical power - its revenues, its images, its secular supporters and its merchants - rather than of Judah under Uzziah and Ahaz. His application is reported as his structural reading throughout; the itemised polemic that accompanies it in his commentary was not reproduced."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "15",
+      "note": "CORRECTION to note 5543 (isaiah 55), which over-claimed. There I asserted that the JFB Psalm pointer 'advances MONOTONICALLY ACROSS ISAIAH CHAPTERS IN CANONICAL ORDER' and called the mechanism a single continuous read. isaiah 15 does not fit, and re-examining the evidence shows the claim was built on too small and too inferred a sample. What is actually established, and remains well attested across eight chapters: (a) each chapter's JFB fragments are foreign Psalms material; (b) they appear at regular intervals, most often every sixth verse key; (c) the verse-range labels they carry ASCEND within a chapter, resetting when a psalm boundary is crossed (isaiah 55: 42-45 at key 7 then 4-5 at key 13, i.e. Psalm 105 into 106); (d) the isaiah 48 pair at keys 8 and 14 is the identical fragment emitted twice, so the index can fail to advance. What is NOT established: the cross-chapter ordering. isaiah 15 carries a single fragment labelled 22-24 whose content (adding the promise of praise to its occasion, 'as to Thy truth or faithfulness') reads like Psalm 71:22-24, which would place it earlier in the Psalter than the isaiah 5 fragments, though isaiah 5 precedes it. Identifying the source psalm for each fragment needs the fragment text read against candidate psalms, not the cross-references it happens to cite, and I did that for only a few. Treat the mechanism as sequential consumption with an unknown reset or multi-pass structure, not as one global pointer. The recoverability suggestion in note 5544 still stands on its own footing, since it depends on the labels, not on the cross-chapter order."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "15",
+      "verses": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "note": "Bogus-footnote markers present in this chapter, 12 of them, distributed across keys 2 (2), 3 (2), 4 (1), 5 (2), 7 (1), 8 (1) and 9 (3). This is the first chapter in this run to carry any; the preceding several (isaiah 45, 50, 37, 5, 58, 53, 48, 55 and jeremiah 9) all reported zero. Recorded for the running correlation study only; the markers do not affect the synthesis, since they carry no readable content. Note that the earlier hypothesis linking bogus-footnote density to Calvin's presence was already broken by isaiah 50 (zero markers, Calvin absent); isaiah 15 has Calvin at all 9 keys and 12 markers, which is consistent with the correlation but does not restore it, one chapter either way proving little."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "15",
+      "verses": [
+        "5"
+      ],
+      "note": "Verse 5 carries a clean four-way disagreement on a single pronoun, and a separate four-way on a single image. (1) Whose heart cries out for Moab: Gill takes it for the prophet's, pitying fellow creatures though enemies, and reports that others with the Targum refer it to the Moabites lamenting their own land; Clarke settles it against the prophet on textual grounds, since the Greek and the Chaldee read 'his heart' rather than 'my heart', and renders it 'the heart of Moab crieth within her'; Ellicott keeps the prophet, touched with pity though a stranger and of a hostile people; Calvin refuses the psychological question altogether and makes it a matter of prophetic convention — the prophets 'assume the character of those whose calamities they foretell', exhibiting their condition 'as it were, on a stage', which 'produces a stronger impression than if they delivered their instruction in a direct form'. Calvin raises the objection against himself first, that the prophet ought rather to have lamented the ruin of the Church and rejoiced at her enemies' fall. (2) The heifer of three years old: Clarke reports from an ancient naturalist that in cattle alone the female's voice is deeper than the male's, making a heifer's lowing the apter mourning image, then admits the expression is 'very short and obscure'; Ellicott hears a wild untamed scare; Calvin transfers the figure from the fugitives to Zoar, a town in unbroken vigour that had never been attacked; Henry hears a heifer lowing for her calf. Four commentators, four different tenors for one simile."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "15",
+      "verses": [
+        "1"
+      ],
+      "note": "Two convergences and one textual claim worth keeping from the chapter opening. (1) Henry and Calvin independently reach the same answer to why an oracle against Moab was preached to Judah — that it was never delivered to Moab at all. Henry: 'We cannot suppose that the prophet went among the Moabites to preach to them this sermon; but he delivered it to his own people', and gives three purposes. Calvin: the prophet 'neither addressed them with his voice, nor sent to them a written communication', so 'it was to believers, rather than to them, that the Prophet looked', chiefly so that men seeing kingdoms overturned 'might not think that this world is governed by the blind violence of fortune'. (2) Gill, Clarke and Ellicott all independently deny that the first place named in v2 is a proper name, taking it for the house or temple of Chemosh. (3) Clarke makes a structural claim not made elsewhere: this chapter and the next 'make one entire prophecy, very improperly divided into two parts', and Jeremiah 'has happily introduced much of this prophecy of Isaiah into his own larger prophecy against the same people', so that comparing the two allows transcribers' errors in both texts to be rectified. If that is right it has practical consequences for tiling isaiah 16, which should probably not be treated as an independent oracle."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "15",
+      "note": "Fidelity self-grade, all 9 verses, two tiles (1-4, 5-9), compressions 10.0 and 6.3 to 1 against ~10,466 usable source words. Every claim traces to a named block in data/commentary/cow/isaiah/15.json; vcheck passed bidirectionally with zero problems. Excluded: the single JFB block at key 5 (foreign Psalms material, labelled 22-24) and the Ellicott page footer at key 8 (926 words, tenth consecutive confirmation; no Calvin appendix). Twelve bogus-footnote markers are present across seven keys and carry no readable content; they are noted separately and affected nothing. Two tiles rather than three: the natural seam is at v5, where the oracle turns from description to the prophet's own lament, and the alternatives all left a tail tile below 3 to 1. The 1-4 tile at 10.0 to 1 is the most compressed of this window and is the one to check if anything was lost — I dropped Clarke's Homeric quotation on mourning rites, K&D's fuller dynastic history from Saul through Jehoshaphat, and Gill's topographical notes on Heshbon and Elealeh, keeping in each case the interpretive claim rather than the illustrative material. Proper names occurring inside source quotations (the Jewish commentators at vv1, 2, 5, 9; the naturalist and the historian Clarke cites) are rendered generically to avoid the voice-checker reading them as undeclared voices. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
