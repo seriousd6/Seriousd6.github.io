@@ -58858,6 +58858,136 @@
       "book": "isaiah",
       "chapter": "55",
       "note": "Fidelity self-grade, all 13 verses, three tiles (1-5, 6-9, 10-13), compressions 9.5, 6.7 and 2.2 to 1 against ~11,894 usable source words. Every claim traces to a named block in data/commentary/cow/isaiah/55.json; vcheck passed bidirectionally with zero problems. Excluded: the two JFB Psalm blocks (keys 7, 13) and the Ellicott page footer at key 12 (926 words, ninth consecutive confirmation; no Calvin appendix in this chapter). Two things to flag. First, the 10-13 tile runs at 2.2 to 1, well under my usual 5 to 1 working floor — the tail of this chapter simply has little source (1,435 words across four keys, much of it one-line Wesley glosses). I chose three tiles over two because folding 10-13 into a 6-13 tile would have compressed four famous verses to roughly 200 words. The risk at 2.2 to 1 is padding, and I checked the tile against that specifically: it carries Gill's two readings of the Word, the K&D/Ellicott disagreement on the comparison, the shared classical parallel at v12 with two renderings, and Clarke's Aramaic moral sense and marginal-reading complaint at v13 — all real source content, no carrier phrases. Second, my first draft of tile 1 covered only vv1-2 of its 1-5 range and left K&D declared but uncited; I caught it before installing and rewrote the tile from five paragraphs to six so that vv3-5 (the covenant, the sure mercies, the witness, the calling of the nations) are actually represented. Proper names inside source quotations are rendered generically throughout. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "1-22"
+      ],
+      "note": "Tiled as ten entries: 1-2, 3-5, 6-7, 8-9, 10-11, 12-13, 14-16, 17-18, 19-21, 22. 22 source keys, one per verse, no gaps, 32494 usable words - the largest chapter taken in several batches. The tiling follows the chapters three movements: the mountain of the Lords house in 1-5, the indictment of Judah in 6-9, and the day of the Lord against everything lofty in 10-22, with each of Matthew Henrys three long blocks at the head of an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "5-17"
+      ],
+      "note": "Jamieson, Fausset and Brown carries Psalms residue at keys 5 and 17 - notes on Psalm 7 and Psalm 109 material with no bearing on Isaiah. Excluded via RESIDUE_BY_KEY. The lattice has now appeared in isaiah 7, ecclesiastes 1, isaiah 45, isaiah 16, isaiah 44, proverbs 30, isaiah 65, ecclesiastes 9 and isaiah 63."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "22"
+      ],
+      "note": "StudyLight page chrome at the final key: the Ellicott block runs 1156 words of which about 165 is real commentary. The real note carries his defence of the verses genuineness, so the chrome again sits on top of the most consequential remark in the entry. Keil and Delitzsch at that key supply only the verse text, so they were marked silent for the entry; their comment on the verse sits in the key-21 block instead - the same offset defect recorded in proverbs 30, ecclesiastes 9, isaiah 65 and isaiah 63."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "The date. Clarke and Ellicott reason from the same commercial evidence to different reigns: Clarke from the abundance of silver and gold and the Red Sea trade, which required Elath, lost under Ahaz, so he places the prophecy under Jotham or Uzziah; Ellicott from the ships of Tarshish belonging to a time before Elath was taken, plus the character of the king in chapter 3 and the Philistine influence, to fix it in the early years of Ahaz."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "The parallel with Micah 4:1-3. Clarke supposes Micah the borrower, since he began to prophesy later and this seems one of Isaiahs earliest pieces. Ellicott lists four possibilities - Isaiah borrowing, Micah borrowing, both drawing on an older prophet, or two independent identical revelations - says we have no adequate data, and inclines to the common older source. Keil and Delitzsch treat verses 2-4 as an older prophecy that Isaiah quotes and holds up as a mirror."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "3"
+      ],
+      "note": "Calvin draws two lessons from the form of the invitation: that faith cannot keep the light choked up in a mans own breast, and that teachers should not sit down and command but walk with those they teach, since some are severe instructors who urge others forward and yet do not move a step."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "6"
+      ],
+      "note": "Calvin reads the sudden turn to God in verse 6 as the prophet breaking off in astonishment, and draws from it a consolation for preachers: when we think we are speaking to the deaf we grow faint and say we are beating the air, yet the prophet does not cease to exhort those in whom he saw no ground of hope."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "8"
+      ],
+      "note": "Whether the idolatry described was public. Clarke argues from the records of Uzziah and Jotham, who did what was right save that the high places remained, that public idolatrous worship was not permitted then, so the idols named must have been domestic images kept for divination. Ellicott dates the cultus to Ahaz and Jotham. Keil and Delitzsch simply call the state ripe for judgment."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "13"
+      ],
+      "note": "Whether the cedars, oaks, mountains and towers are literal or figurative. Keil and Delitzsch report and resist the view that the trees stand for the buildings made from them. Clarke defends a full allegorical key as the settled idiom of Hebrew poetry - cedars and oaks for potentates, mountains and hills for states, towers for defenders, ships of Tarshish for merchants. Calvin says God is not actually angry with mountains and trees but holds out judgment in the harmless creatures. Ellicott and Wesley let both senses stand."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott takes the pleasant pictures for works of art imported by the ships and describes a mania for them among the higher classes in Jerusalem, comparing the aestheticism of the Roman Empire, of the Renaissance and of his own century. Calvin defends navigation in itself as a means by which God joins the human race in mutual kindness, before condemning what it brought in."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "17"
+      ],
+      "note": "Calvin answers the objection that chastisement often hardens rather than humbles: the prophet is not describing the effect of chastisement, as if God bent rebellious men into obedience, but saying that though the hearts of the reprobate are unchanged the Lord will not cease to punish until their presumption is brought low."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "22"
+      ],
+      "note": "Whether the last verse is genuine and where it belongs. Ellicott records that it is wanting in some manuscripts of the Greek and rejected by some critics as a marginal comment, weighs both objections and keeps it as the natural close of the discourse. Calvin holds it is connected with what follows and that whoever divided the chapters here divided what should have been joined. Calvin also rejects two other readings of the breath in the nostrils - one referring it to the anger of Christ, one to the fear of men."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "2",
+      "verses": [
+        "6-22"
+      ],
+      "note": "Gill reads the whole second half of the chapter as a prophecy of a later ecclesiastical power - its revenues, its images, its secular supporters and its merchants - rather than of Judah under Uzziah and Ahaz. His application is reported as his structural reading throughout; the itemised polemic that accompanies it in his commentary was not reproduced."
     }
   ]
 }
