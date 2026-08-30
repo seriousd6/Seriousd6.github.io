@@ -60343,6 +60343,53 @@
         "1-22"
       ],
       "note": "All eight entries self-graded A, and the entity check passed on the first build with no proper noun requiring replacement. Every claim traced to a named voice in this chapter's source. Compression ranges 0.13x to 0.33x."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "39",
+      "verses": [
+        "3"
+      ],
+      "note": "CORRECTION to the framing of the JFB foreign-fragment defect recorded in notes 5543, 5561, 5592 and the instance series through 5677. Those notes described the defect as JFB's Psalms commentary being consumed as a single continuous stream while the Isaiah catena is ingested, advancing monotonically in canonical order at about one fragment per six verse keys. The observations were correct; the framing was too narrow, and it named the wrong thing as the source. The defect is corpus-wide, and the Psalms commentary is itself a victim of it, not the origin. Verified today from the data tree by direct reading. First, the Isaiah run continues and is continuous across chapter boundaries: isaiah 37 carries Psalm 89 fragments at keys 5, 11, 17, 23, 29 and 35; isaiah 38 carries them at keys 2, 8, 14 and 20; isaiah 39 carries one at key 3. Six apart throughout, and the count does not reset at the chapter boundary. The Psalm 89:19-20 fragment is emitted four times running (isaiah 37 keys 29 and 35, isaiah 38 keys 2 and 8) and the Psalm 89:38-52 fragment three times (isaiah 38 keys 14 and 20, isaiah 39 key 3). Second, and decisively: the Psalms 89 catena itself carries JFB blocks at keys 16, 22, 28, 34, 40 and 46, again six apart, and their content is Esther, not Psalm 89 (the conduct of Esther, the swift camels, the khelaat of official honor and the dress of blue and white, the tables turned, the two antagonistic decrees). Third, the chain continues: esther 1 key 16 carries a comment naming Mephibosheth, esther 5 keys 1 and 13 carry comments on the archers who found Saul and on sparing the king of the Amalekites, all from Samuel or Chronicles; job 5 keys 4, 10 and 22 carry comments on the Levites appointed to the choirs before the ark, from Chronicles. Job 1 carries none. What is established: every book sampled receives JFB fragments belonging to some other book, at a rate near but not exactly one per six verse keys, and the same fragment is repeated across consecutive slots wherever the donor commentary has fewer blocks than the sampler consumes. What is NOT established, and should not be inferred from this note: the offset function, whether the displacement is fixed or accumulates, or whether the monotonic-in-canonical-order behaviour holds generally or only within the Isaiah-from-Psalms slice where it was observed. The earlier estimate of 52 instances counted only the Isaiah and Jeremiah occurrences and is therefore a floor on a much larger number. Practice is unaffected: JFB blocks have been excluded from every tile as foreign throughout, which remains correct. No repair attempted, since any fix is a mass data-tree operation and belongs to the owner."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "39",
+      "note": "Fidelity self-grade A for both tiles (1-4, 5-8). Every verse is represented. Tile 1 covers the letters and present sent by the Babylonian king on hearing of the recovery (v1), Hezekiah's gladness and the showing of the treasure house (v2), the prophet's coming and his question where the men came from, with the answer naming a far country (v3), and the second question what they had seen, with the answer that nothing among the treasures was withheld (v4). Tile 5 covers the summons to hear the word of the Lord of hosts (v5), the sentence that all in the house and all the fathers had laid up shall be carried to Babylon with nothing left (v6), the sons that shall issue from him taken to be eunuchs in the palace (v7), and the reply that the word is good, with the clause about peace and truth in his days (v8). No claim is unattributed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "39",
+      "verses": [
+        "8"
+      ],
+      "note": "Five distinct readings of Hezekiah's reply, and the interest is that two of them are attempts to rescue him from the charge the third makes. Gill takes it for immediate repentance, the sin acknowledged and the sentence owned as just, with mercy seen in the delay. Ellicott presses the charge: the words have the appearance of a pious resignation, but are less true and noble than the confession of the king who said on a like occasion, I have sinned and done wickedly, but these sheep, what have they done, and this thanksgiving reminds him a little too much of the saying that after him may come the flood. Clarke rescues him by re-reading the clause as a question rather than a statement, whether there shall be prosperity and truth in his days and whether he shall escape the evil predicted, and says openly why: understood otherwise the words manifest a pitiful unconcern both for his family and for the nation, so I be well, I care not how it may go with others. Calvin rescues him differently and without touching the text: the particle marks an exception, so the king adds something new and gives thanks for a mitigation, since God might have raised up enemies at once; and Calvin explicitly names and rejects the construction Ellicott would put on it, calling the sayings that wish the earth burnt once a man is dead profane and shocking and the property of swine and Epicureans, and insisting the king wished well to posterity but could not disregard a token of forbearance. Henry takes a fifth line, allowing a reasonable contentment: we must not be regardless of those who come after, yet may reckon ourselves well done by if there is peace in our days, and count it a favour to reach harbour before the storm. Recorded because the three defences are independent of one another and one of them, Clarke's, is a textual move made for a frankly stated moral motive."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "39",
+      "verses": [
+        "1"
+      ],
+      "note": "Four accounts of Merodach-baladan from four kinds of evidence, and the chapter is a good specimen of how the corpus's voices differ in method rather than in conclusion. Gill works entirely from earlier commentators and rabbinic tradition, canvassing and rejecting the opinion that made the man the father of Nebuchadnezzar and the one that made him Esarhaddon on the ground that Esarhaddon was king of Assyria and not of Babylon, before settling on the Mardocempad of Ptolemy's canon and noting that both elements of the second name mean lord. Ellicott and Keil and Delitzsch work from the Assyrian monuments, which had become available between Gill's time and theirs: Ellicott finds him conspicuous in the inscriptions of Sargon as a rebel who set up an independent monarchy and styled son of Yakin, which he takes for a dynastic appellative on the analogy of an Israelite king called son of Omri in the same records; Keil and Delitzsch give a full political narrative from the same source, twelve years as a vassal, two rebellions, defeat, and refuge on an island of the Persian Gulf, with a son taken by the conqueror. Calvin, writing before any of that, makes him the first of his nation to hold the royal title and credits him with subduing Assyria, adding that it is a mistake to date that war from Nebuchadnezzar. Worth recording because the four are not really disagreeing about the same question with the same evidence, and a synthesis that flattened them into competing opinions would misrepresent all four."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "39",
+      "verses": [
+        "5"
+      ],
+      "note": "Calvin's comment on v5 contains a passage worth marking as a specimen of his method. Having argued backwards from the severity of the sentence that the fault must have been grave, since God observes the highest moderation in chastising, he sets out in turn every apology the king's conduct admits of and dismisses them by asking what the alternative would have been. The treasures were shown: had they been heaped up that they might always lie hidden in the earth? The messengers were received kindly: should he have driven them away? He listened to their proposals: ought he to have rejected so valuable an advantage, offered voluntarily by the rival of his enemy? His conclusion is that so far as appearances go we shall find nothing for which an apology may not be offered, and that what God sees is what appearances cannot show, ingratitude in a man forgetful of the distress he was lately in, pride, an appetite for a ruinous alliance, and above all ambition. He then quotes Augustine on the poison of pride that cannot be cured but by poison, the cure meant being the thorn given to an apostle. The structure, conceding every defence in order to locate the fault where no defence can reach, is the same move he makes at jeremiah 24 on the good and bad figs, and is worth watching for elsewhere."
     }
   ]
 }
