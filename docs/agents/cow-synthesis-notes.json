@@ -61348,6 +61348,38 @@
         "1-11"
       ],
       "note": "Every entry self-graded A: prose grounded in the named voices only, with nothing introduced from outside the catena."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "42",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB blocks at keys 2, 8, 14 and 20 -- six keys apart -- are JFB on Proverbs 10, in order: 10:9 (he that perverteth his ways acts deceitfully, and is discovered and punished), 10:14 (knowledge laid up as treasures for good use, against a mouth near destruction that exposes itself to evil by prating), 10:19 (much speech involves risk of sin, hence the wisdom of restraining the tongue), 10:24 (the wicked get dreaded evil, the righteous desired good). All four excluded as foreign; JFB is declared in no tile. This continues the run established at note 5759 exactly: jeremiah 36 carried Proverbs 6, so the nine intervening chapters must carry Proverbs 7 through 10:8, and jeremiah 42 resumes at 10:9. Recorded as a confirming instance rather than re-verified chapter by chapter, since the model is already established and the arithmetic is now predictive."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "42",
+      "note": "Self-graded A across all three tiles. Every clause traces to a named block in data/commentary/cow/jeremiah/42.json for a verse inside the tile's own range. Checked in particular: the five-way split on why the answer took ten days keeps each reason with its own voice, with Clarke's doctrine that prophetic and miraculous gifts are given only for the moment not blended into Ellicott's account of deliberate reticence; the spectrum on whether the inquiry was honest runs from Calvin and Gill and Henry, who deny it, to Clarke and Ellicott, who allow the applicants real perplexity, and the tile keeps both ends rather than settling for the majority; Gill's three renderings of the clause about dissembling are reported as choices he does not settle, which is what his block does; and Gill's qualification that only those obstinately set on going fall under the sentence, some having been carried to Egypt against their will, is his own and is given as such."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "42",
+      "verses": [
+        "5",
+        "7",
+        "20"
+      ],
+      "note": "Two notes. (1) The question why the answer waited ten days is split across a tile boundary by the containment rule. Keil and Delitzsch discuss it in the block at key 5, which falls in the 1-6 tile, while Gill, Henry, Clarke, Ellicott and Calvin all discuss it at key 7, which falls in the 7-12 tile. The 1-6 tile therefore carries Keil and Delitzsch's rejection of the view that the delay was the prophet's own as an outlier, while the five-way debate proper sits in the next tile without him. This is the first time in this window that a single question has had to be reported in two tiles; it is a consequence of the rule rather than a defect, but a reader moving tile by tile will meet the answer before the question. (2) The Ellicott chrome footer appears again at key 20, mid-key: 390 words of content before the marker, 1,662 after, of which 926 are chrome and 736 real, so key 20's usable total is 1,126 rather than 2,052. Nineteenth consecutive confirmation of the 926-word figure and the twelfth mid-key instance; scripts/synthesis-loop.py size again reported the raw 17,866 rather than the usable 16,940."
     }
   ]
 }
