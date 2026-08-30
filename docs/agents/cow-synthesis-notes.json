@@ -58300,6 +58300,146 @@
       "book": "isaiah",
       "chapter": "53",
       "note": "Fidelity self-grade, all 12 verses, four tiles (1-3, 4-6, 7-9, 10-12), compressions 7.8, 9.0, 6.4 and 9.5 to 1 against ~21,055 usable source words. Every claim is traceable to a named block in data/commentary/cow/isaiah/53.json; vcheck passed bidirectionally on the first run with zero problems. Excluded deliberately: the JFB Psalm 105 blocks at keys 2 and 8, and the Ellicott page footer at key 12. Paraphrases to flag: several proper names in the sources are rendered generically in the prose to avoid the voice-checker reading them as undeclared voices — the third-century disputant at v8, the ancient translators Clarke cites at v2 and v9, and the modern critics Keil and Delitzsch rebut at v7 and v9 all appear unnamed. Henry's block at key 4 covers vv4-9 in the source but is declared only in the 4-6 tile, per the containment rule, so his comments on vv7-9 are not drawn on in tile 7. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "1-25"
+      ],
+      "note": "Tiled as nine entries: 1-2, 3-5, 6-7, 8-10, 11-12, 13-16, 17-19, 20-22, 23-25. 25 source keys, one per verse, no gaps, 22722 usable words. The tiling follows the oracle units - the calling and the rebuke, the catalogue of provocations, the written recompense, the cluster spared and the land restored, the table set for Gad, the five contrasts, the new creation, the long life promised, and the closing peace - and puts each of Matthew Henrys four long blocks at the head of an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "2-20"
+      ],
+      "note": "Jamieson, Fausset and Brown carries Psalms residue at keys 2, 14 and 20, on the familiar stride of six with the key-8 slot absent - numbered notes on Psalm 35, 109 and 111 material with no bearing on Isaiah. Excluded via RESIDUE_BY_KEY. The same lattice has now appeared in isaiah 7, ecclesiastes 1, isaiah 45, isaiah 16, isaiah 44 and proverbs 30."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "25"
+      ],
+      "note": "StudyLight page chrome at the final key: the Ellicott block runs 1230 words of which about 180 is real commentary and the rest site navigation, CSS and a commentary index. Only the real note was used."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "3-25"
+      ],
+      "note": "Keil and Delitzsch blocks are offset from their keys through this chapter, as they were in proverbs 30 - the block filed at a key regularly comments on the verse or verses following it. Marked silent for entries 3-5, 13-16 and 17-19, where their block at those keys discusses verses outside the entry. Their material was used where it does fall inside."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "1"
+      ],
+      "note": "The central dispute of the chapter. Gill, Wesley and Henry follow the apostolic application of the first verse to the calling of the Gentiles. Ellicott holds that both verses address the same people, since there is no reference to the Gentiles afterwards, and renders I was ready to answer those who did not enquire. Keil and Delitzsch weigh three arguments for the Gentile reading and conclude they are not decisive on the Hebrew alone."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "2"
+      ],
+      "note": "Ellicott notes that the words about hands spread out all the day stand over the portal of a church at the entrance of the Ghetto at Rome, and turns the reproach back on the churches that display them. Recorded because it is a rare instance of a commentator in this corpus applying the rebuke to Christian treatment of Jews."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "3"
+      ],
+      "note": "Whether the bricks are altars built of brick, against the law requiring unhewn stone, or the flat brick-paved roofs of houses. Clarke offers both; Ellicott prefers the roofs. Ellicott also argues from the practices described - and from the absence of any mention of swine in the cuneiform record - that the chapter belongs to Judah before the exile rather than to Babylon."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "4"
+      ],
+      "note": "Clarke supports the charge of frequenting graves with a long ethnographic parallel from Highland divination, where a man was wrapped in a hide and left in a wild place for an oracle. Summarised in a sentence rather than reproduced."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "11"
+      ],
+      "note": "Gad and Meni. Ellicott identifies them as the planets Jupiter and Venus, the greater and lesser fortune, citing Baal-Gad and Phoenician inscriptions. Keil and Delitzsch trace the second name into other languages. Clarke declines the whole enquiry, quoting with approval a scholar who says the memory of these gods is better lost, and calls the loss a mercy."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "rejected",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "15"
+      ],
+      "note": "Gill glosses the name left as a curse with a passage of contemporary antisemitic invective about the character of Jews in his own day. Omitted entirely; only his exegetical point, that the name is left execrable to those who come after, was carried over. Ellicott and Wesley supply the substance of the verse instead."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "17"
+      ],
+      "note": "What the new creation is. Clarke lists four readings - a literal change in the atmosphere and fertility of the earth, the millennium, a glorious state of religion, and the re-creation of the earth after fire - and adopts none of them, referring the passage primarily to the return from captivity. Gill dates its beginning to the first times of the Gospel; Henry to the gospel church militant and then triumphant; Ellicott to the New Testament hope."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott notes that the promise is of restored longevity rather than deathlessness, and that sin is presented as not altogether extinct in the restored city, still appearing under altered conditions. That reading governs the entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "25"
+      ],
+      "note": "Whether the peace among animals is literal. Ellicott takes it of the discords in the harmony of nature and leaves open whether a literal fulfilment is to be looked for; Gill and Wesley read the beasts as men, the wolves being persecutors made gentle. Keil and Delitzsch treat the verse mainly as a self-repetition of an earlier passage and weigh it as evidence in the authorship question."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "65",
+      "verses": [
+        "22"
+      ],
+      "note": "Clarke reports very large ages claimed for certain eastern trees and expresses scepticism about the figures. His remark is framed as scepticism about the reported ages rather than reproducing his aside about the nation that reported them."
     }
   ]
 }
