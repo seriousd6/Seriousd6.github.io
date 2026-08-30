@@ -58494,6 +58494,136 @@
       "book": "jeremiah",
       "chapter": "9",
       "note": "Fidelity self-grade, all 26 verses, seven tiles (1-2, 3-6, 7-11, 12-16, 17-22, 23-24, 25-26), compressions 9.2, 6.7, 6.2, 10.8, 8.7, 8.7 and 4.4 to 1 against ~35,292 usable source words. Every claim traces to a named block in data/commentary/cow/jeremiah/9.json; vcheck passed bidirectionally on the first run with zero problems. Deliberately excluded: the five JFB Psalm 119 blocks (keys 1, 7, 13, 19, 25), the Ellicott page footer and the Calvin chapters 1-9 translation appendix (both at key 26) — see the two source-defect notes. Three declaration decisions to flag: Keil and Delitzsch are NOT declared in tiles 3 and 25 because their blocks at keys 5 and 26 are bare quoted verse text with no comment; Henry's block sits at key 12 and covers vv12-22 in its content, so by the containment rule he is declared only in the 12-16 tile and his material on vv17-22 is not drawn on in tile 5. The final tile at 4.4:1 is below my usual 5:1 working floor — a consequence of the appendix discovery, since the alternative (merging 23-26) would have run 13.1:1; the 5:1 figure is a working heuristic, not a documented rule, and under-compression seemed the safer error. Names appearing inside source quotations are rendered generically where the voice-checker might read them as undeclared voices. No claim is asserted more strongly than its source warrants."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Tiled as seven entries: 1-3, 4-6, 7-8, 9-10, 11-12, 13-16, 17-18. 18 source keys, one per verse, no gaps, 16721 usable words. The tiling follows the sense units - the one event to all, the state of the dead, the call to enjoyment, the wife and the work, time and chance, the little city, and the closing proverbs - and puts each of Matthew Henrys four long blocks at the head of an entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "2-14"
+      ],
+      "note": "Jamieson, Fausset and Brown carries Psalms residue at keys 2, 8 and 14, on the familiar stride of six - notes on Psalm 35 and Psalm 45 material with no bearing on Ecclesiastes. Excluded via RESIDUE_BY_KEY. This lattice has now appeared in isaiah 7, ecclesiastes 1, isaiah 45, isaiah 16, isaiah 44, proverbs 30 and isaiah 65."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "14"
+      ],
+      "note": "StudyLight page chrome at key 14: the Ellicott block runs 1050 words of which about 55 is real commentary and the rest site navigation, CSS and a commentary index. Only the real note was used, and it is his only contribution to that entry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "Whose love and hatred are meant. Gill, Henry, Wesley and Clarke take the verse of Gods love and hatred, unknowable from a mans outward condition. Ellicott and Keil and Delitzsch take it of a mans own love and hatred, whose objects he cannot tell beforehand - Keil and Delitzsch arguing that the nouns are too general for the other sense, so that man is their subject and not their object, and defending the determinism that follows."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "2"
+      ],
+      "note": "Clarke answers the equality of outward events with a general theodicy: the evils in nature are effects of the Fall, God will not suspend general laws to favour individual cases, and there is evil enough in the world to show that man has fallen and good enough to show that God deals with him in mercy."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "4"
+      ],
+      "note": "A textual crux. The written text reads chosen and the margin joined. Gill and the received version follow the margin; Ellicott tries to construe the written form by attaching it to the previous verse; Clarke offers a rendering of his own; Keil and Delitzsch say the written form admits of no tenable meaning."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "5"
+      ],
+      "note": "How far the ignorance of the dead extends. Clarke states the limitation as a principle - the ignorance is in reference only to this life, and though the dead have no portion under the sun he does not intimate they have none elsewhere. Gill goes further, denying that separate spirits are without affections at all. Keil and Delitzsch decline the doctrinal question and describe the passage as beginning sarcastically and becoming elegiac."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "7"
+      ],
+      "note": "Gill limits the exhortation to enjoyment, excluding epicures and voluptuous persons, for whom the annexed reason does not suit, and applying it to religious persons who deny themselves lawful comforts under gloomy views of Providence."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "9"
+      ],
+      "note": "Keil and Delitzsch rest on the indefinite form of both nouns - a wife whom thou hast loved, not the wife whom thou lovest - and find in it an implied call to choose well; they add that on this reading the books earlier pessimistic estimate of women falls into the background."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "The sharpest disagreement in the chapter. Gill allegorises the poor wise man as Christ, poor for his peoples sake and the one in whom the treasures of wisdom are hid. Clarke names that reading and calls it an abuse of the text, rejecting the Christian allegory and the Jewish one alike, and substituting the historical parallel of Archimedes at Syracuse."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "14"
+      ],
+      "note": "Whether the little city is history or parable. Gill reports both views; Ellicott calls the search for a historical reference idle, since the story so resembles the deliverance of Abel-beth-Maachah by an unnamed wise woman that no other history need be supposed; Henry treats it as a case in fact and fills out the siege."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "17"
+      ],
+      "note": "Keil and Delitzsch argue that the quiet belongs to the wise man himself and not to his hearers, since the contrast is with a cry, and that the phrase means a ruler among fools rather than over them. Gill offers both readings; Wesley takes the same side as Keil and Delitzsch."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "ecclesiastes",
+      "chapter": "9",
+      "verses": [
+        "13-18"
+      ],
+      "note": "Clarke runs a single illustration - Archimedes defending Syracuse, and his death at a soldiers hand - across four verses, using it for the poor wise man, for the despised words, for wisdom outweighing weapons, and for the one sinner who destroys much good. Reported as the continuous thread it is in his commentary."
     }
   ]
 }
