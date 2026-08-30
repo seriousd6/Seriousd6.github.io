@@ -60729,6 +60729,73 @@
         "1-24"
       ],
       "note": "All ten entries self-graded A. One proper noun flagged by the entity check on the first pass was rewritten to a word appearing verbatim in the source and the chapter rebuilt clean. Every claim traced to a named voice in this chapter's source. Compression ranges 0.10x to 0.67x."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "7",
+      "note": "Self-graded A across all seven tiles. Every clause traces to a named block in data/commentary/cow/jeremiah/7.json for a verse inside the tile's own range, and no voice is credited with a claim outside the block bearing its name. Checked in particular: the four answers on which gate the prophet stood in are each read off that commentator's own block at key 2; the identifications of the queen of heaven are kept separate, with Ellicott's careful distinction between her and Ashtoreth not merged into Clarke's and Wesley's simpler lunar reading, and Calvin's refusal to decide left as a refusal; the reconciliations of the denial that sacrifice was ever commanded are each the voice's own argument, Ellicott from the preposition, Henry from the order of the books, Wesley from comparison, Calvin from the vitiating of the sign, and are not blended; and Clarke's report of Blayney's view that the prophet himself is addressed at the shorn-hair verse is given as a report he rejects, which is what his block says. Where a block is a bare lemma with no exposition nothing is attributed."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "7",
+      "verses": [
+        "34"
+      ],
+      "note": "Ellicott site-chrome footer present again, and again mid-key: at key 34 the marker falls with 447 words of real content before it and 1,130 after, of which 926 are the chrome block and 204 genuine commentary, so key 34's usable total is 651 rather than the 1,577 the raw count gives. This is the eighth mid-key instance recorded (isaiah 48, isaiah 24, songofsolomon 3, jeremiah 24, jeremiah 22, isaiah 57, jeremiah 25, jeremiah 7) and the fifteenth consecutive confirmation of the 926-word figure. Note that scripts/synthesis-loop.py size reported 42,310 usable words for this chapter, which is the raw total with no chrome subtracted; the true usable figure is 41,384. The chapter was over the 40,000 batch ceiling either way, so the pick was unaffected, but a chapter sitting near the line could be misbudgeted by this."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29"
+      ],
+      "note": "JFB blocks at keys 5, 11, 17, 23 and 29 -- exactly six keys apart, five of them -- carry no Jeremiah material at all. Their content is JFB on Psalm 119, and the fragments run in order through that psalm's stanzas: key 5 comments on verses 69-70 (the crafty malice of slanderers binding him closer to God's word, with Hengstenberg referring the lie to slanders against the Jews during the captivity), key 11 on 74, key 17 on 79-80 (those who thought his afflictions evidence of rejection, as Job's friends did), key 23 on 84-87 (the shortness of life requiring speedy relief), key 29 on 89-91 (in all changes God's word remains firm). Monotonic, continuous, and consuming the donor in canonical order at one block per six sampling keys. This is a further instance of the corpus-wide JFB misalignment recorded at note 5697, and one of the cleanest, since the donor psalm is long enough that no fragment repeats across the interval. All five were excluded from the tiles as foreign; nothing in this chapter's synthesis is drawn from them, and Jamieson, Fausset and Brown is declared in no tile."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "16",
+        "17",
+        "21",
+        "29"
+      ],
+      "note": "Matthew Henry's blocks in this chapter are section-length, not verse-length: the block at key 1 expounds the whole of verses 1-16, the block at key 16 covers 16-20, key 21 covers 21-28, and key 29 covers 29-34, with short supplementary blocks at keys 17 and 29. Under the verse-key containment rule this puts all of Henry's comment on verses 4-15 inside the tile that holds key 1, so tiles 4-8 and 9-15 cannot cite him even though he writes at length on both, and Henry is undeclared in those two tiles. Same pattern recorded for jeremiah 22. A separate defect in the same block: the sentence 'Reformation is the only way, and a sure way to ruin' contradicts its own context, which is the offer of mercy on amendment; words have plainly dropped out of a clause that should read something like a sure way to prevent ruin. Not used."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "7",
+      "verses": [
+        "16"
+      ],
+      "note": "Wesley stands alone against the plain sense of the prohibition on prayer, and the disagreement is preserved rather than smoothed. The command is unqualified -- pray not, lift not up cry nor prayer, make no intercession, for I will not hear thee -- and Ellicott, Henry, Calvin and Clarke all read it as absolute, differing only over why it was given. Wesley writes that the prophet certainly did pray, that God would save a remnant, though not that he would revoke his decree, which asserts an obedience the text does not record and a distinction the text does not draw. It is declared as his position in the tile and left unadjudicated; the reader can see it is a single voice against four."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "7",
+      "verses": [
+        "8",
+        "9",
+        "10"
+      ],
+      "note": "Gill's blocks are lemma-only through much of the chapter: at key 1 he gives nothing but the Targum's gloss on the opening phrase, at key 2 a single clause naming the gate, at key 3 a clause on the divine title, at key 11 nothing but the word temple. His substantive comment survives at keys 5, 6, 7, 8, 9, 10, 19, 29 and 33. The pattern matches the truncation seen in jeremiah 25 and is ingest damage rather than brevity in the original, since his surviving blocks in this same chapter run to full paragraphs. Gill is declared in every tile and cited only from the blocks that carry real content."
     }
   ]
 }
