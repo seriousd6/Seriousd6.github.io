@@ -59469,6 +59469,42 @@
         "1-15"
       ],
       "note": "All six entries self-graded A. Every claim traced to a named voice in this chapter's source; no proper noun used that does not appear verbatim in the source. Compression ranges 0.11x to 0.45x."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "songofsolomon",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "JFB foreign-block defect, instances 41-42, and this chapter supplies an OUT-OF-SAMPLE CONFIRMATION of the mechanism verified at isaiah 24 (note 5592). Two blocks, keys 1 and 7, six apart as usual. They are IDENTICAL in text — a third attested pointer-stall, after isaiah 48 keys 8/14 and isaiah 37 keys 29/35. Their content ('to bring, with the external symbolical service, the homage of the heart, and faith, penitence, and love. To this is added an invitation to seek, and a promise to afford, all needed help in trouble') is Psalm 50:14-15. The prediction this tests: Song of Solomon precedes Isaiah in canonical order, so if the JFB Psalms stream is consumed sequentially as the corpus is ingested, this chapter should draw a Psalm EARLIER than isaiah 5's Psalm 60-62. It draws Psalm 50. The prediction was not made to fit the data — the verified sequence was fixed at isaiah 24 before this chapter was picked, and this is the first non-Isaiah, non-Jeremiah chapter tested. Eleven chapters now fit, across three books. Both blocks omitted; JFB not declared anywhere in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "songofsolomon",
+      "chapter": "3",
+      "note": "Calvin is absent from all 117 keys of Song of Solomon, not merely from this chapter. This should NOT be filed as an ingest defect alongside the isaiah 49-66 gap, and the distinction matters for anyone acting on those notes. Calvin wrote no commentary on the Song of Songs; his Old Testament commentaries and lectures cover most of the canon but not this book, so there is nothing to ingest. That is a fact about his corpus rather than about the data tree, and I flag that I am asserting it from background knowledge rather than from anything verifiable in this repository — a future worker should confirm it before relying on it. The isaiah 49-66 gap is different in kind: Calvin's commentary on those chapters exists and is well known, and its absence from the data (confirmed by direct observation at isaiah 50, 53, 55 and 58) is a genuine ingest failure worth repairing. Practical consequence for this book: the reformed school reduces to Gill alone in every chapter of the Song, and tags emitted for it will show a single-voice reformed summary throughout. That is correct rather than deficient."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "songofsolomon",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "9"
+      ],
+      "note": "This chapter carries the cleanest genre disagreement in the corpus so far, and it should be surfaced prominently because it governs how every other line is read. On v1 there are five positions on what kind of text this is. Gill: allegory, the night being the darkness of the Old Testament church under the shadow of the ceremonial law, Christ's absence making night as his presence makes day. Henry: the same allegory given a history, that it was hard for that church to find Christ in the types and figures and that the consolation of Israel was long looked for. Wesley: allegory throughout, Christ's gracious presence sought and withdrawn. Clarke: literal and domestic, the bridegroom coming only by night and failing to come as usual, with the episode dated to the third night of the nuptials. Ellicott: a poem, 'a reminiscence of the intensity of their love before their union, put by the poet into his lady's mouth'. Keil and Delitzsch: a dream, which they use to dissolve a difficulty the others leave standing, since on any outward account her question to the night watch is foolish, whereas 'it is in the very nature of a dream that things thus quickly follow one another without fixed lineaments'. A second disagreement at v9 turns on a word occurring nowhere else in the language: Ellicott argues the etymology through four languages and concludes firmly for a palanquin, on the context and on the word rendered covering; Clarke judges it very likely a nuptial bed and not a chariot; Gill canvasses five possibilities without choosing; Wesley allegorises it as the word of Christ. Ellicott separately makes the royal pageant a foil rather than the subject, introduced to contrast the poet's own espousals, 'of which all the joy centred in true love', with the pomp of a state marriage."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "songofsolomon",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all 11 verses, two tiles (1-5, 6-11), compressions 6.8 and 10.6 to 1 against ~11,234 usable source words. Every claim traces to a named block in data/commentary/cow/songofsolomon/3.json; vcheck passed bidirectionally after one word-count fix, with no citation problems. Excluded: the two identical JFB Psalm 50 blocks (keys 1 and 7) and the Ellicott page footer at key 10, which sits mid-block with 144 usable words following it, so key 10 retains 891 words rather than the 747 a truncate-at-marker count would give. This is the third chapter where the footer is buried mid-key, after isaiah 48 and isaiah 24. Two tiles rather than three: the chapter divides cleanly at v6, and every three-way split left a tail tile under 3.5 to 1. The 6-11 tile at 10.6 to 1 is the more compressed and is the one to check; from it I dropped Gill's full derivation of the wilderness as a figure, K&D's grammatical discussion of the interrogative and the demonstrative at v6, and Henry's application of the bed to heaven and to the believer's heart separately, keeping the interpretive claims. Proper names inside source quotations — the Jewish and patristic authorities cited at vv1, 4, 6 and 9, the traveller Ellicott quotes at v3, the translator Clarke follows at v9 — are rendered generically to keep the voice-checker from reading them as undeclared voices; one of them was a Latin father whose name appears in the corpus voice list, so this was not merely precautionary. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
