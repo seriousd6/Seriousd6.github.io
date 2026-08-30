@@ -58812,6 +58812,52 @@
         "1-2"
       ],
       "note": "Two proper nouns were replaced after the entity check flagged them: Maccabean, which does not occur in the source, became the wars of Judas Maccabaeus, and Jericho, which I had supplied, was dropped in favour of Joshua and the man with the drawn sword, both of which are verbatim in Henry."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "55",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "JFB foreign-block defect, instances 32-33, and this chapter supplies the KEY to the whole pattern. Two blocks, keys 7 and 13 (six apart, as in jeremiah 9 and isaiah 48). Key 7 is Psalm 105:42-45, labelled '42-45'; key 13 is Psalm 106:4-5, labelled '4-5'. Placed against the other chapters, the Psalm pointer advances MONOTONICALLY ACROSS ISAIAH CHAPTERS IN CANONICAL ORDER: isaiah 5 and 37 draw Psalm 89; isaiah 48 draws Psalm 22/102/103; isaiah 53 draws Psalm 105:12-21; isaiah 55 draws Psalm 105:42 through 106:5; isaiah 58 draws Psalm 106:34-46; and jeremiah 9 draws Psalm 119. Every chapter's fragments are later in the Psalter than the preceding chapter's, without exception across seven chapters. This is not a per-chapter mispairing but a SINGLE CONTINUOUS READ of the JFB Psalms commentary being consumed as the corpus is ingested in canonical order, at roughly one fragment per six verse keys. It explains the regular spacing, the in-order walk within each chapter, and the isaiah 48 duplicate at keys 8 and 14 (the pointer failing to advance for one step). Both blocks omitted; JFB not declared anywhere in the chapter."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "55",
+      "note": "Follow-up check on the JFB mechanism, prompted by the isaiah 55 finding. If a single JFB Psalms stream is being consumed into the Isaiah/Jeremiah files, the Psalms files themselves should be short of it. They are: psalms 119 has 176 verse keys but JFB blocks at only 29 of them; psalms 105 has 45 keys with 8; psalms 106 has 48 keys with 5; psalms 102 has 28 keys with 3; psalms 89 has 52 keys with 6; psalms 22 has 31 keys with 4. Across the book, 117 of 150 psalms chapters have at least one JFB block, so the commentary is present but sparse. This is consistent with one stream split between two destinations rather than with wholesale loss, and it means the JFB material now sitting in Isaiah and Jeremiah is probably RECOVERABLE — it could be matched back to its Psalm verses by the labels the fragments carry (many are explicitly numbered, e.g. '42-45', '118-120', '23-28'). Worth an owner decision: a repair pass could move these blocks to their correct Psalms keys rather than merely deleting them from the prophets."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "55",
+      "verses": [
+        "12"
+      ],
+      "note": "Independent convergence: at v12 Clarke and Ellicott both reach for the same classical parallel (the passage in which the unshorn mountains fling their voices to the stars), each quoting it in a different English rendering, Clarke's having the mountain tops rejoice and the shrubs partake of human voice, Ellicott's having the hills break forth to the stars in minstrelsies. Ellicott credits it to a modern commentator rather than finding it himself. Neither cites the other. Ellicott then adds the observation that completes the image, that the waving of branches is to a tree what the clapping of hands is to a man. Also worth noting: Calvin is absent from all 13 keys, the fourth chapter now synthesized inside the 49-66 gap (with isaiah 50, 53 and 58), and the reformed school again reduces to Gill alone."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "55",
+      "verses": [
+        "6",
+        "11"
+      ],
+      "note": "Two disagreements worth surfacing. (1) v6, 'while he may be found': Clarke reports a Jewish commentator he credits with the true sense, reading the clauses as CAUSAL rather than temporal — 'Seek ye the Lord, because he may be found: call upon him, because he is near' — against Ellicott, Wesley and Henry, who all read a time limit. The difference decides whether the verse is an encouragement or a warning. Henry takes both halves and adds that the closing of the day of grace may fall within this life, when the heart is incurably hardened. (2) v11, where the point of the rain comparison lies: Keil and Delitzsch put it in energy, the word being fulfilled 'assuredly and irresistibly'; Ellicott puts it in proportion, arguing that what nature shows is the predominance of fertility despite partial or apparent failures, and then draws the consequence explicitly — the comparison 'does not exclude the partial, or even total, failure of many; it asserts that the saved are more than the lost'. That is a substantive limitation on one of the most-quoted promises in the book, stated by Ellicott and denied in effect by K&D, and it should not be smoothed over in the tile."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "55",
+      "note": "Fidelity self-grade, all 13 verses, three tiles (1-5, 6-9, 10-13), compressions 9.5, 6.7 and 2.2 to 1 against ~11,894 usable source words. Every claim traces to a named block in data/commentary/cow/isaiah/55.json; vcheck passed bidirectionally with zero problems. Excluded: the two JFB Psalm blocks (keys 7, 13) and the Ellicott page footer at key 12 (926 words, ninth consecutive confirmation; no Calvin appendix in this chapter). Two things to flag. First, the 10-13 tile runs at 2.2 to 1, well under my usual 5 to 1 working floor — the tail of this chapter simply has little source (1,435 words across four keys, much of it one-line Wesley glosses). I chose three tiles over two because folding 10-13 into a 6-13 tile would have compressed four famous verses to roughly 200 words. The risk at 2.2 to 1 is padding, and I checked the tile against that specifically: it carries Gill's two readings of the Word, the K&D/Ellicott disagreement on the comparison, the shared classical parallel at v12 with two renderings, and Clarke's Aramaic moral sense and marginal-reading complaint at v13 — all real source content, no carrier phrases. Second, my first draft of tile 1 covered only vv1-2 of its 1-5 range and left K&D declared but uncited; I caught it before installing and rewrote the tile from five paragraphs to six so that vv3-5 (the covenant, the sure mercies, the witness, the calling of the nations) are actually represented. Proper names inside source quotations are rendered generically throughout. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
