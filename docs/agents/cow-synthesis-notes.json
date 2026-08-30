@@ -58624,6 +58624,57 @@
         "13-18"
       ],
       "note": "Clarke runs a single illustration - Archimedes defending Syracuse, and his death at a soldiers hand - across four verses, using it for the poor wise man, for the despised words, for wisdom outweighing weapons, and for the one sinner who destroys much good. Reported as the continuous thread it is in his commentary."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "48",
+      "verses": [
+        "22"
+      ],
+      "note": "The Calvin translation-appendix defect RECURS, in a different book and with a different range, confirming it is periodic rather than a one-off. Calvin's block at key 22 carries an appendix headed 'A TRANSLATION OF CALVIN'S VERSION OF THE PROPHECIES OF ISAIAH. CHAPTERS 33-48', 721 words, appended after his commentary (301 words) on the final verse. The jeremiah 9 instance was headed 'CHAPTERS 1-9'. Both sit at the last verse of the chapter that closes the range they cover, so the dump appears to be emitted at range boundaries — Jeremiah 1-9 at Jeremiah 9, Isaiah 33-48 at Isaiah 48. The Ellicott site footer (926 words, eighth consecutive confirmation) is also present at key 22, buried inside Ellicott's block rather than at its end. Raw size reports 26,474 usable words; true usable is 26,474 - 926 - 721 = 24,827, a 6.6 percent overstatement. Recommend scripts/synthesis-loop.py size subtract both, detecting the appendix by the 'A TRANSLATION OF' heading; and recommend a corpus-wide scan for that heading to find the other range-boundary chapters."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "source-defect",
+      "book": "isaiah",
+      "chapter": "48",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "JFB foreign-block defect, instances 28-31, with a NEW variation. Four blocks at keys 2, 8, 14, 20 — again every sixth key, as in jeremiah 9. All are Psalm material in ascending order: key 2 comments on an organized body as a Church, citing Psalm 22:31; keys 8 and 14 are Psalm 102:23-28, labelled '23-28'; key 20 glosses 'pit of corruption' and 'adorneth' and 'compassions', i.e. Psalm 103:4-8. The new fact is that keys 8 and 14 carry the SAME fragment verbatim, the identical Psalm 102 note emitted twice at two different Isaiah keys. In every previous chapter the fragments advanced monotonically; here the pointer stalled for one step before resuming. That is evidence the pairing is driven by an index that can fail to advance, not by a fixed offset. Running tally 31 instances across six chapters and five books' worth of Psalms (89, 89, 106, 105, 119, and now 22/102/103)."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "48",
+      "verses": [
+        "16"
+      ],
+      "note": "Verse 16 is the sharpest disagreement I have met in this corpus, and it is worth surfacing prominently since the verse is a standing trinitarian proof-text. On 'and now the Lord GOD, and his Spirit, hath sent me' there are four positions: Gill and Henry hear Christ, Henry adding that the Spirit appears as a person distinct from Father and Son with divine authority to send prophets, so that whom God sends the Spirit sends; Wesley takes the sent one to be Isaiah, a type of Christ, allowing the reference to reach both; Ellicott finds the prophet appearing abruptly in his own person and thinks he may be the speaker throughout, recording two further constructions, one referring the words to the Servant of the Lord and another making the Spirit the OBJECT of 'sent' rather than its subject; and Calvin refuses both leading readings by name, calling the application to Christ a forced interpretation ('the Prophet meant no such thing; but we ought to guard against violent and forced interpretations') and the application to the prophet unsuitable ('this discourse would not be applicable to a man'), leaving God himself as the speaker. Clarke independently prefers the word order that makes the Spirit sent along with the messenger. A reformed voice explicitly refusing a christological reading that a reformed and a puritan voice both affirm is unusual and should not be smoothed over. Secondary disagreement at the same verse on who is addressed: Clarke alone reads the summons as thrown at the idolatrous nations, on the strength of a manuscript adding 'O ye nations', against Ellicott, Gill and Calvin who read Israel."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "disagreement",
+      "book": "isaiah",
+      "chapter": "48",
+      "verses": [
+        "10",
+        "21"
+      ],
+      "note": "Two further disagreements. (1) v10, 'I have refined thee, but not with silver': Gill declines to choose and catalogues four renderings (not in a furnace of silver; in a furnace of poverty, with several versions and the Targum; not into silver; not for the sake of silver, God being no gainer). Clarke changes a letter to read 'like silver' on the Latin's authority and makes the furnace a crucible. But all five voices converge on the sense — Clarke, Wesley, Henry, Calvin and Ellicott all take it to mean the refining stopped short of what would have consumed them, Calvin adding that silver at least contains something pure whereas in us nothing would be found but chaff. The following verb then splits them: Clarke and Ellicott prefer 'tried' on manuscript authority, Henry and Wesley keep 'chosen' and build on it. (2) v21, the water from the rock: Clarke reports a learned Jewish expositor wondering why Ezra records no such miracles of the return, and answers with a long and rather delighted rebuke about the parabolic style running from the book's first verse to its last; Ellicott independently calls the same objection 'a dead prosaic literalism' and reads the water as the standing symbol of spiritual refreshment; Calvin attacks the opposite error, that the Jews 'contrive absurd fables, and invent miracles which were never performed, not through ignorance, but through presumption'. Three voices, one question, three different targets."
+    },
+    {
+      "at": "2026-08-30",
+      "kind": "fidelity",
+      "book": "isaiah",
+      "chapter": "48",
+      "note": "Fidelity self-grade, all 22 verses, six tiles (1-2, 3-8, 9-11, 12-15, 16, 17-22), compressions 6.4, 5.9, 7.2, 5.0, 6.4 and 7.5 to 1 against ~24,827 usable source words. Every claim traces to a named block in data/commentary/cow/isaiah/48.json. Excluded deliberately: the four JFB Psalm blocks (keys 2, 8, 14, 20), the Ellicott page footer and the Calvin chapters 33-48 translation appendix (both at key 22) — see the two source-defect notes. Verse 16 was given a tile of its own rather than being folded into 12-15, because the four-way disagreement on who speaks the closing clause would not have survived an 11.4-to-1 compression; the single-verse tile runs 6.4 to 1. vcheck failed once on the first run, reporting Adam Clarke declared but not cited in tile 1: his key-1 block is a chapter-summary rather than a verse comment, and I had drawn nothing from it. Fixed by citing his statement of the chapter's purpose and trimming to compensate — the fix is a real citation, not a removed declaration. Names inside source quotations (the Jewish expositors at v13, v19 and v21, the Greek translator at v14) are rendered generically to avoid the voice-checker reading them as undeclared voices. No claim is asserted more strongly than its source warrants."
     }
   ]
 }
