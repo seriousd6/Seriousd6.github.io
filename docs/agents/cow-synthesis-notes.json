@@ -68214,6 +68214,48 @@
         "9"
       ],
       "note": "Calvin illustrates the temptation to withdraw the word, on the ground that men are made worse by it, with a confessional comparison between the discipline that existed under the Papacy and the licence many take under the liberty of the Gospel. The exegetical core is carried, that the apparent failure of the word tempts even the firm to wish it buried; the confessional aside is dropped."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "Fidelity self-grade, all three tiles: every claim traced to a named block in data/commentary/cow/ezekiel/8.json before installation, and vcheck ran clean both ways (no voice cited without declaration, none declared without citation). Tile 1 (vv.1-6, 7 voices): Gill's sixth-year dating and sabbath conjecture, K&D's year-and-two-months interval and the idolatry/smiting/forsaking sequence, Henry on why a Babylonian captive is shown Jerusalem, Clarke on the personification device, Ellicott on the prophet's standing and house among the exiles, Calvin's insistence that no bodily journey occurred, Wesley on the figure as the man of the throne. Tile 7 (vv.7-12, 6 voices): Henry's staged disclosure, Ellicott's unfixable location and Egyptian argument, Clarke's list of painted subjects and tomb comparison, Calvin's geographic reading, Wesley on the private priests' door and the worshippers' excuse, Gill on the eastern gate. Tile 13 (vv.13-18, 7 voices): the Adonis/Osiris split, the twenty-five as courses plus high priest, the branch at the nose, Calvin on prayer from faith versus the tumult of necessity. No claim in the prose lacks a source block; no source voice with substantive exposition was silently dropped."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "JFB stride, eleventh consecutive chapter with interval exactly 6. Jamieson-Fausset-Brown blocks fall at keys 2, 8, 14 — phase 2, three blocks, donor content in the Proverbs 27-28 region and monotonic. Running record of phases across the eleven chapters audited this session: 4, 1, 3, 6, 2, 3, 4, 5, 1, 2, 2. Every value from 1 to 6 has now appeared at least once, so the phase is a free parameter of the chapter and carries no information; the interval of 6 has never once varied. As in every prior case the content under a JFB key is donor material from an unrelated book, not commentary on the verse the key names, so JFB is excluded from every tile here."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "Ellicott chrome: the StudyLight footer marker appears at exactly one key in this chapter, key 18, where 148 usable words of Ellicott precede the marker and 1,439 words of boilerplate follow it. 1,439 is the twenty-second distinct chrome size recorded and again matches no earlier value. Running series: 926, 937, 940, 995, 996, 1141, 1226, 1256, 1285, 1353, 1369, 1439, 1651, 1656, 1688, 1697, 1743, 1819, 1829, 1915, 1999, 2015. The chrome is stripped before word-budgeting, so this chapter's usable total is 22,494 rather than the raw figure. Consistent with the standing conclusion that chrome length is a property of the individual fetch, not of the author or the book."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "Keil and Delitzsch ingest pattern, ezekiel 8 — a mixed chapter that again confirms the block-level mechanism. Ten K&D blocks, at keys 1, 2, 5, 6, 7, 8, 13, 14, 16 and 17; nine are hard-capped at exactly 200 visible words and key 17 runs short at 96. Usable exposition survives at keys 1 (opens directly on the interval since the call, no verse quotation at all), 5, 6, 7, 13 and 16, each of which reaches real comment before the 200-word window closes. Keys 2, 8, 14 and 17 are quotation-only or drift: key 2 spends its whole window on quoted verses and ends inside the heading for the next section, key 8 ends in quotation and a section heading, key 14 gives the verses of 14-17 and stops at a question, key 17 is quotation of 17-18 entire with nothing after it. The determining factor is again what the block opens with: where K&D preface a section with the verses in full, the window closes before exposition begins; where the block opens with a heading or with comment (keys 1, 5, 6, 7, 16), the comment survives. Both behaviours appear in this one chapter, as at ezekiel 20 and ezekiel 37, so the defect operates per block, not per chapter. K&D was therefore declared in tiles 1 and 13, where usable exposition falls, and not in tile 7, whose K&D content at key 8 is quotation only."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "Correction to the preceding K&D note for ezekiel 8: key 7 belongs with the quotation-only group, not with the usable ones. Its 200-word window is spent entirely on the quoted verses of 7-12 and reaches the exposition only in its final four words, where the sentence is cut off mid-clause. That leaves the usable K&D blocks at keys 1, 5, 6, 13 and 16, and the unusable at 2, 7, 8, 14 and 17 — five and five. This does not change the tiling decision: tile 7 (vv.7-12) still has no usable K&D content and does not declare the voice, while tiles 1 and 13 do."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "8",
+      "note": "Two live disagreements carried into the tags for this chapter. First, the identity of the mourned figure at the north gate: Keil and Delitzsch, following Jerome with Melito and the Greek fathers, treat the Greek youth as the correct identification and Clarke follows them, while Ellicott supplies the philological reason the Greek name itself could not appear in the Hebrew text, since in that form it means Lord and is used of God. Calvin dissents on distribution rather than etymology — the lamentation is attested in Greece and Asia Minor and not in the regions bordering Judaea, whereas the Egyptian rite was practised by immediate neighbours from whom other borrowings are already documented in the chapter's painted chamber — and so prefers the Egyptian figure. The Egyptian character of the wall paintings a few verses earlier is agreed by Clarke, Ellicott and Gill, which strengthens Calvin's case more than any of them notice. Second, the gesture with the branch: Clarke takes it for boughs carried in procession and declines to repeat the coarser readings, Ellicott concedes the custom is lost and offers the Parsee twigs held before the mouth as the least speculative guess, and Wesley compares the wreathed staff of the wine-god's worshippers. No voice claims certainty and none of the three explanations excludes the others."
     }
   ]
 }
