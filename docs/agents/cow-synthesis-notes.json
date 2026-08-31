@@ -68941,6 +68941,48 @@
         "21"
       ],
       "note": "Clarke presses the equality of the dead twice, first asking how little it signifies whether a mummy is well embalmed and richly painted and inviting the reader into the tombs to see whether one carcass is preferable to another, and later quoting verses in which the buried and the unburied share an equal honour and a great captain knows no more than the beggar he had condemned."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "Fidelity self-grade, all four tiles: every claim traced to a named block in data/commentary/cow/ezekiel/40.json before installation, and vcheck ran clean both ways on each tile. Tile 1 (vv.1-4, 6 voices): the undated era and the season, K&D's framing of the last nine chapters, Clarke's practical motive for the minuteness, the non-corporeal transport, the identity of the mountain, Henry on the city that is all temple, and the identity of the man of brass. Tile 5 (vv.5-16, 6 voices): the four incompatible reckonings of the reed, the surrounding wall, why the east gate comes first, the stairs, the guard-chambers, the sixty-cubit posts and the splayed windows. Tile 17 (vv.17-27, 6 voices): the outer court and its users, the thirty chambers and the paving, why the pavement is called lower, the hundred cubits measured three times, and the uniformity of the north and south gates. Tile 28 (vv.28-49, 6 voices): the inner court and its extra step, the disputed verse on the arches, the sacrificial tables and their number, the hooks, and the singers, keepers and porch. Two exclusions are deliberate: JFB at keys 3, 9, 15, 21, 27, 33, 39 and 45 is donor residue and is cited nowhere, and Calvin has no block anywhere in this chapter, which for Ezekiel past chapter 20 is expected rather than defective."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "JFB stride, fifteenth consecutive chapter with interval exactly 6, and the longest run of blocks yet recorded. Jamieson-Fausset-Brown blocks fall at keys 3, 9, 15, 21, 27, 33, 39 and 45 — eight blocks, seven intervals of 6, phase 3, equalling the eight-block run at ezekiel 20 and exceeding it in the number of consecutive intervals that had a chance to break. Running record of phases across the fifteen chapters audited this session: 4, 1, 3, 6, 2, 3, 4, 5, 1, 2, 2, 6, 4, 5, 3. Phases 3 and 4 have now appeared three times each, 1, 2, 5 and 6 twice each; the distribution is flat, and the interval has never once varied in any chapter of any book. This chapter is the strongest single case yet, for two reasons. It has 47 source keys, so the pattern survived seven consecutive opportunities to fail. And its content is pure architectural measurement with no narrative or rhetorical structure that could plausibly generate a six-key rhythm — there is nothing in the text at keys 3, 9, 15, 21, 27, 33, 39 and 45 that distinguishes them from their neighbours. Fifteen chapters, eight books' worth of positions, one invariant interval: this is a property of how the JFB source was fetched, not of the commentary. Every block is donor material from an unrelated book and is cited nowhere. This is the third batch in which I have recommended an owner check of the JFB fetch; the evidence is now as strong as this loop can make it without access to the ingest scripts."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "MISSING SOURCE KEYS: this chapter has no commentary blocks at all for verses 36 and 37. The source file data/commentary/cow/ezekiel/40.json holds 47 keys and jumps straight from 35 to 38; data/bible/KJV/ezekiel.json has all 49 verses of the chapter, so the two verses exist and simply were not ingested. Both are substantive: verse 36 gives the chambers, posts and arches of the north gate of the inner court with its windows and its fifty by twenty-five cubits, and verse 37 gives its posts toward the outer court, its palm trees and its eight steps. Ellicott's block at key 31 expressly says that verses 35-37 describe the north gate, so at least one voice had comment on the missing material that the ingest did not capture. This is a different defect from the two I have been tracking. It is not the Ellicott chrome, which is a trailing-boilerplate problem, and not the JFB donor substitution or the K&D quotation-window truncation, both of which produce a block that exists but is unusable. Here the keys are simply absent. Nothing in the tiling was harmed, since tile 28 covers verses 28-49 and the neighbouring keys carry the parallel descriptions, but a systematic sweep for missing verse keys across the corpus would be worth an owner's time; I have not seen this before in the chapters audited this session, which suggests it is rare rather than routine."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "No Ellicott chrome in this chapter: the StudyLight footer marker appears at none of the 47 keys, so the usable total equals the raw total at 16,216 and the running series of distinct chrome sizes stays at twenty-four. Worth recording as a negative, since two chapters in a row had produced new values in the tight 990-1030 band. Taken with jeremiah 46, also clean, the pattern remains that chrome is a property of the individual fetch rather than of the author, the book or the chapter length — this is a 47-key chapter with Ellicott present at 19 keys and no marker anywhere, while ezekiel 42, a 20-key chapter with Ellicott at 15 keys, carried 1,021 words of it."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "Three disagreements carried into the tags, two of them textual and one of measurement. (1) The length of the measuring reed, which governs every dimension in the next nine chapters, and on which four voices give four answers. Henry makes it six sacred cubits of twenty-two inches, each carrying its own handbreadth above the common eighteen, and reports but rejects the rival construction that the reed was six common cubits with a single handbreadth added to the whole. Ellicott agrees on the distribution but refuses to fix the cubit, since estimates run from eighteen inches to twenty-four and the measure demonstrably changed over time — a chronicler dates measurements to the first measure, implying the post-exilic cubit differed from the Mosaic one, which is precisely why the prophet specifies. He settles on twenty inches for convenience, giving a rod of about ten feet. Clarke computes ten feet six from a cubit of twenty and a half plus a palm. Wesley keeps the common eighteen. Ellicott's is the only treatment that explains why the text bothers to define its unit at all. (2) The verse giving the arches as twenty-five cubits long and five broad, where Clarke and Ellicott diverge in method rather than conclusion: Clarke emends, holding that the word for twenty dropped out of the breadth and citing manuscripts that lack the verse entirely, one of them his own copy with a marginal supply by a later hand; Ellicott suspects the whole verse, since the term should mean wall projections, the dimensions correspond to nothing, the statement is unparalleled among the gate descriptions, and the Greek omits it. He also rejects the one attempt to rescue the figure by summing the projections, on the sound ground that no other measurement in the chapter is reached by addition. (3) The number of sacrificial tables: Keil and Delitzsch read eight from the text as it stands, while Ellicott distinguishes the eight of one verse from the four-plus-four of another and arrives at twelve, and relocates them from in the porch to beside it, since the porch is too small and a thoroughfare is no place to kill an animal."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "rejected",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "failed validator; reverted, attempt kept at scratchpad/rejected/ezekiel-40-20260831-213335"
     }
   ]
 }
