@@ -1,0 +1,902 @@
+{
+ "1": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "1-5",
+  "pericope_label": "They say, If a man put away his wife, and she go from him, and become another man’s, shall he return unto her again? shall not that land be greatly polluted? but thou hast played the harlot with many lovers; yet return again to me, saith the Lord. Lift up thine eyes unto the high places, and see where thou hast not been lien with. Therefore the showers have been withholden, and there hath been no latter rain; and thou hadst a whore’s forehead, thou refusedst to be ashamed. Wilt thou not from this time cry unto me, My father, thou art the guide of my youth?",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch and Ellicott work the text: the opening infinitive cannot begin a new train of thought, the cry My father is dated to Josiah's reformation and judged lip-service, and the closing boast carries a variant behind the older Greek."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill and Calvin both refuse to join these verses to the preceding chapter and both hear grace rather than accusation in the call to cry My father, though they part on the untranslatable opening word."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley keep the passage practical — vice in affluence against piety in poverty, ways just but dark — and both take the appeal to God as Father for a real invitation, though they part over the Arabian at the wayside."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry treats the confession of God's righteousness as armour put on before the argument begins, and turns the catalogue of high places into a rule for penitents."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does a new section begin here, or do these verses continue the preceding chapter?",
+    "positions": [
+     {
+      "position": "A new section: a fresh subject is before us, God seeking reconciliation with an unchaste wife.",
+      "held_by": [
+       "John Gill",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Continuous with what precedes, since the opening infinitive cannot begin a new train of thought and must hang on the earlier verb.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "These verses allude to the previous subject, with the new section beginning further on.",
+      "held_by": [
+       "Adam Clarke",
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the untranslatable opening word to be construed?",
+    "positions": [
+     {
+      "position": "The Greek and Syriac leave it untranslated and Jerome makes it a thing commonly said; the rendering I might say is unjustifiable.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "It is the idiom of supposing a case: the divorce law stated as men state it, then overtopped.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Simply saying.",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the Arabian at the wayside a robber or a trader?",
+    "positions": [
+     {
+      "position": "A robber, one of the lawless desert tribes lying in ambush and watching for the dust of a caravan.",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "A trader, pitching his tent by the roadside to meet passing customers.",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the cry My father welcomed or exposed?",
+    "positions": [
+     {
+      "position": "Exposed: lip-service, and a stern irony painting a surface repentance.",
+      "held_by": [
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Welcomed: God puts the words of return into their mouths and allures them of his own accord.",
+      "held_by": [
+       "John Gill",
+       "John Calvin",
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Suspects that the appeal to God as Father and the questions about his anger are quoted from penitential litanies the people had actually used, and records a variant behind the older Greek in which the closing boast is that God does not see their ways."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Turns the catalogue of high places into a rule for penitents: in repentance it is good to reflect on the particular places and companies where the sin was committed."
+   }
+  ],
+  "themes": [
+   "They say, If a man put away his wife, and she go from him, and become another man’s, shall he return unto her again? shall not that land be greatly polluted? but thou hast played the harlot with many lovers; yet return again to me, saith the Lord.",
+   "Lift up thine eyes unto the high places, and see where thou hast not been lien with. In the ways hast thou sat for them, as the Arabian in the wilderness; and thou hast polluted the land with thy whoredoms and with thy wickedness.",
+   "Therefore the showers have been withholden, and there hath been no latter rain; and thou hadst a whore’s forehead, thou refusedst to be ashamed.",
+   "Wilt thou not from this time cry unto me, My father, thou art the guide of my youth?",
+   "Will he reserve his anger for ever? will he keep it to the end? Behold, thou hast spoken and done evil things as thou couldest."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-31",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  }
+ },
+ "6": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "6-11",
+  "pericope_label": "The Lord said also unto me in the days of Josiah the king, Hast thou seen that which backsliding Israel hath done? she is gone up upon every high mountain and under every green tree, and there hath played the harlot. And I said after she had done all these things, Turn thou unto me. But she returned not. And her treacherous sister Judah saw it. And I saw, when for all the causes whereby backsliding Israel committed adultery I had put her away, and given her a bill of divorce; yet her treacherous sister Judah feared not. And the Lord said unto me, The backsliding Israel hath justified herself more than treacherous Judah.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch and Ellicott work the text hardest here and divide over it: Ellicott adopts the emendation and she saw, Keil and Delitzsch reject it as destroying the clause relation, though both lean from lightness toward a cry."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill and Calvin both keep the received reading and make God the one who sees the idolatry and its causes, so that Judah surpassed her sister by deliberate wickedness rather than ignorance."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke dates the discourse and lists the prophets sent to Israel; Wesley makes the divorce the giving up into Assyrian hands, where God took from her the title of his church."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry insists the date makes the sermon intelligible: Josiah was hearty in his reformation, the people were not sincere, and the whole address is aimed at that hypocrisy."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was Turn thou unto me spoken through the prophets, or only thought?",
+    "positions": [
+     {
+      "position": "Spoken, through the prophets sent to the ten tribes before their captivity.",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Only thought: the words are no summons but what God said to himself.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "A hope rather than a demand, the verb being read in the third person: I said she will return.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Should the And I saw of the eighth verse be emended?",
+    "positions": [
+     {
+      "position": "Yes: read and she saw, a conjectural emendation giving a better sense.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "No: that proposal and Jerome's outright omission both bury what Judah saw in a subordinate clause and halve the preceding verse.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Keep the received text: not Judah only but God saw the idolatry and its causes.",
+      "held_by": [
+       "John Gill",
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the lightness of her whoredom mean?",
+    "positions": [
+     {
+      "position": "Swiftness, the thing running through the land from one to another, or else a trivial offence.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Levity and lustfulness.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Not lightness but a cry, as the cry of the cities of the plain was said to be great; lightness makes a poor predicate for a whoredom that pollutes a land.",
+      "held_by": [
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The substance rather than the word: the grossness of the idolatry.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why was Judah worse than Israel?",
+    "positions": [
+     {
+      "position": "The reformation restored temple worship outwardly while the heart still clave to the idols.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "She had looked on her sister with contemptuous scorn, and her repentance was simulated, made with a lie.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "She should have grown wise by her brethren's fall and was not moved by it.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The people complied hypocritically with a king who was hearty in reform.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Raises the difficulty nobody else does: how can a bill of divorce be said to have been given to Israel when God denies through another prophet that he ever gave one?"
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Hears in the technical fulness of the eighth verse the opening formula of a real writing of divorcement, reciting the causes the husband alleged."
+   }
+  ],
+  "themes": [
+   "The Lord said also unto me in the days of Josiah the king, Hast thou seen that which backsliding Israel hath done? she is gone up upon every high mountain and under every green tree, and there hath played the harlot.",
+   "And I said after she had done all these things, Turn thou unto me. But she returned not. And her treacherous sister Judah saw it.",
+   "And I saw, when for all the causes whereby backsliding Israel committed adultery I had put her away, and given her a bill of divorce; yet her treacherous sister Judah feared not, but went and played the harlot also.",
+   "And it came to pass through the lightness of her whoredom, that she defiled the land, and committed adultery with stones and with stocks.",
+   "And yet for all this her treacherous sister Judah hath not turned unto me with her whole heart, but feignedly, saith the Lord.",
+   "And the Lord said unto me, The backsliding Israel hath justified herself more than treacherous Judah."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-31",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
+  }
+ },
+ "12": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "12-14",
+  "pericope_label": "Go and proclaim these words toward the north, and say, Return, thou backsliding Israel, saith the Lord; and I will not cause mine anger to fall upon you: for I am merciful, saith the Lord, and I will not keep anger for ever. Only acknowledge thine iniquity, that thou hast transgressed against the Lord thy God, and hast scattered thy ways to the strangers under every green tree, and ye have not obeyed my voice. Turn, O backsliding children, saith the Lord; for I am married unto you: and I will take you one of a city, and two of a family, and I will bring you to Zion.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch keep the promise within the Messianic pattern of a saved remnant increasing; Ellicott recovers the assonance the English loses and reads the withheld threat as literally the face."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill answers the geographical difficulty of a northward message to eastern exiles, denies any journey was meant, and takes only at face value; Calvin agrees on the geography but renders the particle yet, as a guard against presumption."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley agree on the ground of exile and then divide twice over, on whether one of a city is a floor or a guarantee, and on whether the Zion promised is the land or the church."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the northward facing a rebuke to Judah and reads the whole passage as gospel: the church founded, the ceremonial law superseded, Jews and Gentiles united."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the prophet to travel north, or only to face that way?",
+    "positions": [
+     {
+      "position": "No journey: go expresses a command and the prophet's readiness, and the words were read in Jerusalem before the elders of Judah.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The facing is itself a rebuke to Judah, who would hear a call no better than men hundreds of miles off.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "An address directed north because the capital of the empire that took them lay there.",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does one of a city and two of a family promise?",
+    "positions": [
+     {
+      "position": "A floor: if only one is left, or willing, and two of a whole tribe, these will still be received and brought home.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The opposite, that none is missed: God will find them out though there be but one in a city.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "A remnant formula; family is the wider word, a clan taking in many cities.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the Zion of the promise literal or spiritual?",
+    "positions": [
+     {
+      "position": "Literal: a bringing back from captivity into their land.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Spiritual, since the ten tribes never did return.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Gospel: the church founded by gathering the scattered children of God.",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "The increase of a saved remnant, a constant feature of the Messianic picture.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the particle of the condition only or yet?",
+    "positions": [
+     {
+      "position": "Only, and the smallness is the point: it is all that is insisted on, the least that can be done.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Yet, as an exception guarding against the presumption that matters are easily settled with God.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The one sufficient condition of pardon: a confession that keeps nothing back and makes no excuses.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Protests that he has heard these words most sinfully applied to prove an eternal decree electing one out of a city and two out of a family and leaving the rest to perish, by men professing to believe in one who tasted death for every man."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Turns the address to backsliding children into an inventory of how God's own people backslide: love waxing cold, private prayer restrained and public worship neglected, bad company and gross sin."
+   }
+  ],
+  "themes": [
+   "Go and proclaim these words toward the north, and say, Return, thou backsliding Israel, saith the Lord; and I will not cause mine anger to fall upon you: for I am merciful, saith the Lord, and I will not keep anger for ever.",
+   "Only acknowledge thine iniquity, that thou hast transgressed against the Lord thy God, and hast scattered thy ways to the strangers under every green tree, and ye have not obeyed my voice, saith the Lord.",
+   "Turn, O backsliding children, saith the Lord; for I am married unto you: and I will take you one of a city, and two of a family, and I will bring you to Zion:"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-31",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ },
+ "15": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "15-18",
+  "pericope_label": "And I will give you pastors according to mine heart, which shall feed you with knowledge and understanding. And it shall come to pass, when ye be multiplied and increased in the land, they shall say no more, The ark of the covenant of the Lord: neither shall it come to mind. At that time they shall call Jerusalem the throne of the Lord; and all the nations shall be gathered unto it, to the name of the Lord. In those days the house of Judah shall walk with the house of Israel, and they shall come together out of the land of the north to the land that I have given for an inheritance unto your fathers.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch note that Judah's exile is already assumed here and keep the preposition as walking upon; Ellicott reads the pastors as kings, would render walk to rather than with, and holds the prophet to his own horizon on the holy city."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill excludes political rulers from the pastors and reads throne and reunion of the Gospel church; Calvin charges every interpreter with having perverted the ark verse and grounds the promise in the historical breach between the two kingdoms."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke will not choose between king and prophet, and gives the prophecy two aspects, the return from Babylon and the days of Christianity; Wesley extends the abolished ark to the whole ceremonial system, of which Christ is the substance."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who are the pastors according to God's heart?",
+    "positions": [
+     {
+      "position": "Ministers of the word, not political rulers, chiefly the apostles.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Kings and rulers, not priests: a return to the pattern of the ideal ruler.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "King or prophet, either or both, men of God's own choosing.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Chiefly prophets and priests, faithful magistrates included, since the ruin came of instruction ceasing.",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the abolition of the ark signify?",
+    "positions": [
+     {
+      "position": "The germ of the new covenant: the very centre of worship passing away as the brazen serpent had.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The pledge no longer necessary, worship confined to no one place or people, and if the ark is lost it is never rebuilt.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The whole ceremonial system, of which the ark was shadow and Christ substance.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The kingdom of Christ; the older glosses about carrying the ark to battle are wholly foreign to the subject.",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the Jerusalem called the throne of the LORD the city or the church?",
+    "positions": [
+     {
+      "position": "The Gospel church.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The universal church, God enthroned wherever the Lamb is acknowledged.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The church typified by the city, God's residence in place of the ark.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The actual city: it was not given the prophet to see what even the apostles were slow to learn, that there is no holy city on earth.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does Judah walk with Israel, or to Israel?",
+    "positions": [
+     {
+      "position": "To rather than with: Judah seeking Israel's alliance and asking reconciliation.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "With, in the sense of walking upon.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Charges every interpreter with having perverted the verse about the ark and none with having seen its design, dismissing as frigid and wholly foreign the old gloss that the ark would no more be carried out to battle."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Records the legend that Jeremiah himself hid the tabernacle and the ark in a cave to be restored in the latter days, a story sitting oddly against the verse it attaches to."
+   }
+  ],
+  "themes": [
+   "And I will give you pastors according to mine heart, which shall feed you with knowledge and understanding.",
+   "And it shall come to pass, when ye be multiplied and increased in the land, in those days, saith the Lord, they shall say no more, The ark of the covenant of the Lord: neither shall it come to mind: neither shall they remember it; neither shall they visit it; neither shall that be done any more.",
+   "At that time they shall call Jerusalem the throne of the Lord; and all the nations shall be gathered unto it, to the name of the Lord, to Jerusalem: neither shall they walk any more after the imagination of their evil heart.",
+   "In those days the house of Judah shall walk with the house of Israel, and they shall come together out of the land of the north to the land that I have given for an inheritance unto your fathers."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-31",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
+  }
+ },
+ "19": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "19-25",
+  "pericope_label": "But I said, How shall I put thee among the children, and give thee a pleasant land, a goodly heritage of the hosts of nations? Surely as a wife treacherously departeth from her husband, so have ye dealt treacherously with me, O house of Israel. A voice was heard upon the high places, weeping and supplications of the children of Israel. Return, ye backsliding children, and I will heal your backslidings. Behold, we come unto thee; for thou art the Lord our God. Truly in vain is salvation hoped for from the hills: truly in the Lord our God is the salvation of Israel. We lie down in our shame, and our confusion covereth us: for we have sinned against the Lord our God.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch and Ellicott agree that the opening is an exclamation and that the closing posture is future rather than present, and both identify the shame with Baal, Keil and Delitzsch adding that the idols consumed the wealth through the invasions idolatry drew down."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the shame as possibly the rejection of the Messiah and the hills as either fortification or idols; Calvin makes the severity toward Israel a device aimed at Judah and the confession of the hills a psychological one."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke builds the opening verse as a question with its answer and sets the confession out as a five-part argument; Wesley reads a condition laid down and takes the hosts of nations for Gentiles joined in the gospel church."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes treachery against God treason rather than mere unfaithfulness, and finds the mark of a true penitent in learning to call sin shame, even the sin that pleased him most."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is How shall I put thee among the children an exclamation or a question?",
+    "positions": [
+     {
+      "position": "An exclamation, a promise uttered with intensity of affirmation, what follows being the same thought continued rather than an answer.",
+      "held_by": [
+       "Charles Ellicott",
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "A question with its reply: how can ye be accounted a holy seed, being polluted, to which Thou shalt call me My father answers.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "A question of a different kind, asked so the Jews should feel their case past remedy.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "A condition: esteemed a child only on proof of repentance.",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the hills and the multitude of mountains?",
+    "positions": [
+     {
+      "position": "A fortification of encompassing hills, or the idols worshipped on them.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The idols and the sacrifices offered there.",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The trust that many gods gave more defence than one, a deception that ruined them.",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Revelry: the wild ritual on the high places, which brought loss and not gain.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The tumult of the mountains, taken by an older construction for the many gods.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the shame that devoured their labour Baal, or sin at large?",
+    "positions": [
+     {
+      "position": "Baal, the thing that brought them into contempt and ruin, with a prodigal waste of victims.",
+      "held_by": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Baal, but consuming through the invasions idolatry drew down rather than by sacrifice alone, since sheep and oxen were offered to the LORD too.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Wickedness and sin generally, the thing that brought shame first into the world.",
+      "held_by": [
+       "John Calvin",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Possibly the rejecting and crucifying of the Messiah, to be repented of at a future conversion.",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What tense is We lie down in our shame?",
+    "positions": [
+     {
+      "position": "Future and volitional: we will lay ourselves down, as a man in grief throws himself on the ground.",
+      "held_by": [
+       "Keil and Delitzsch",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Present, the Hebrew future often bearing that sense.",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Raises treachery against God from unfaithfulness to treason, and marks the true penitent by his learning to call sin shame, even the sin that had pleased him most."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Sets the closing confession out as a five-part argument for returning, from God's being the true God and salvation his alone to the barrenness of everything since they left him."
+   }
+  ],
+  "themes": [
+   "But I said, How shall I put thee among the children, and give thee a pleasant land, a goodly heritage of the hosts of nations? and I said, Thou shalt call me, My father; and shalt not turn away from me.",
+   "Surely as a wife treacherously departeth from her husband, so have ye dealt treacherously with me, O house of Israel, saith the Lord.",
+   "A voice was heard upon the high places, weeping and supplications of the children of Israel: for they have perverted their way, and they have forgotten the Lord their God.",
+   "Return, ye backsliding children, and I will heal your backslidings. Behold, we come unto thee; for thou art the Lord our God.",
+   "Truly in vain is salvation hoped for from the hills, and from the multitude of mountains: truly in the Lord our God is the salvation of Israel.",
+   "For shame hath devoured the labour of our fathers from our youth; their flocks and their herds, their sons and their daughters.",
+   "We lie down in our shame, and our confusion covereth us: for we have sinned against the Lord our God, we and our fathers, from our youth even unto this day, and have not obeyed the voice of the Lord our God."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-08-31",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ }
+}

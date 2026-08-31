@@ -62012,6 +62012,47 @@
         "24"
       ],
       "note": "Clarke closes on the matrimonial application with the claim that where there are matrimonial contentions there are faults on both sides. That is an assertion about abuse and blame with no support in the text and real capacity to harm, so it was omitted from the prose."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "3",
+      "verses": [
+        "1-11"
+      ],
+      "note": "Tiles 1 (vv.1-5) and 6 (vv.6-11) fidelity self-grade, verse by verse. v.1 the divorce law: the dispute over whether the section begins here is given as the sources give it — Gill and Calvin for a new section, Keil and Delitzsch for continuity on the grammatical ground that the opening infinitive cannot start a train of thought, Clarke and Henry reporting the older join. The untranslatable opening particle is attributed three ways without my adjudicating: the versions' silence and Jerome's rendering to Keil and Delitzsch, the supposing-a-case idiom to Calvin, the bare saying to Gill. Ellicott's refusal of the ironic reading of yet return again to me is recorded as his refusal, not adopted as mine. v.2 the Arabian is a genuine two-way split and I kept it: robber for Clarke and Ellicott, trader for Wesley. v.3 the rain calendar genuinely disagrees between Gill, Clarke and Ellicott and I reported all three including Ellicott's inversion of the seasons, without correcting him. vv.4-5 the My father cry: the lip-service reading (Keil and Delitzsch, Ellicott) is held apart from the invitation reading (Gill, Calvin, Clarke, Wesley), and Gill's own preference for the second over the first is given as his. vv.6-11: the And I said crux, the And I saw emendation (Ellicott adopting it, Keil and Delitzsch rejecting it by name of the proposers), and the lightness-or-cry dispute are all reported as unresolved. No claim in either tile is mine."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "3",
+      "verses": [
+        "12-25"
+      ],
+      "note": "Tiles 12 (vv.12-14), 15 (vv.15-18) and 19 (vv.19-25) fidelity self-grade, verse by verse, with key 25 read only to its 313th word (chrome fills the rest). v.12 the northward message: Gill's denial that any journey was meant, against the Targum, is his; the geographical answer that the empire's capital lay north though the exiles lay east is given jointly to Gill and Calvin because both make it. vv.13-14: the only-or-yet dispute over the particle is Gill against Calvin as they state it, and the one-of-a-city promise is a real inversion between Clarke, who reads a floor, and Wesley, who reads a guarantee that none is missed — I preserved the inversion rather than harmonising two voices of one school. Clarke's protest against the election reading is quoted as a protest and attributed to him. vv.15-18: the pastors question runs Gill against Ellicott in flat contradiction, ministers against rulers, and I let it stand; Calvin's charge that every interpreter has perverted the ark verse is his charge, not my verdict on them; Ellicott's holding of the prophet to his own horizon on the holy city is given as his own limitation of the prophet, since it disagrees with the three who read the church directly. vv.19-25: the exclamation-or-question dispute, the four readings of the hills, the Baal-or-sin dispute over shame including Gill's messianic addition, and the tense of we lie down are each attributed to their holders. Nothing asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "3",
+      "note": "Chrome footer: a THIRD distinct size, and the largest yet. jeremiah 3 carries the StudyLight chrome at key 25, the last key, with 313 words of content before the marker and 1,688 words after it. That is a third value for what earlier notes treated as a constant: 926 words on twenty chapters through isaiah 62, 1,141 on jeremiah 12 one batch ago (note 5835), and now 1,688 here. Inspection of the jeremiah 12 case showed the excess over 926 was raw CSS captured as visible text; the same is true here on a larger scale, so the pattern is footer proper plus a variable-length stylesheet fragment. Two conclusions, one firmer than before. First, the 926 figure should be recorded as the floor of a family of chrome captures, not as a constant — three sizes in three consecutive chapters that carry it. Second, and unchanged: the truncation rule must be marker-scoped, cutting from the StudyLight marker to the end of the block, never a fixed count, since a rule keyed to 926 would leave 762 words of CSS standing here. As with isaiah 62 and jeremiah 12 the chrome is the entire tail, so key 25 usable is exactly 313. Sizing effect: 'synthesis-loop.py size' reported 37,913 raw for jeremiah 3 against 36,225 actually usable — a 1,688-word overstatement, the largest gap I have logged."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "3",
+      "note": "JFB donor stride — a FIFTH confirming instance, and the tightest fit yet. jeremiah 3 carries Jamieson-Fausset-Brown blocks at verse keys 6, 12, 18 and 24: four blocks at an exact interval of six, with no dropped block anywhere in a twenty-five-key chapter. This is the cleanest instance of the stride recorded this window (notes 5758-5759, 5776, 5834) and the first with four consecutive blocks at perfect spacing. It also sharpens the phase question. The first JFB key here is 6; across the chapters examined this window the first key has run 1, 2, 3, 4, 5 and 6, so the phase is genuinely free and is NOT predictable from the sampling chapter, while the stride within a chapter has never once varied. That is worth stating precisely because it bounds what a repair could do: given ONE confirmed identification in a chapter, every other JFB block in that chapter is locatable; without one, the phase must be found empirically. Canonical order across the sampling book continues to hold — jeremiah 3 sits nine chapters before jeremiah 12, whose donor was fixed at Psalms 120-121 (note 5834), so the donor here should fall earlier in the Psalter still, consistent with the model though I did not identify these four blocks by psalm. No repair attempted; a mass data-tree operation is the owner's call. Practice unaffected: all four blocks were excluded as foreign, and none of the five tiles cites Jamieson."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "3",
+      "note": "A cross-school pattern worth logging: in jeremiah 3 the sharpest disagreements fall INSIDE schools rather than between them, three times over, and twice between Clarke and Wesley. On one of a city and two of a family (v.14) Clarke reads a floor — if only one is left, yet that one is received — while Wesley reads the identical words as a guarantee that none is missed, God finding them out though there be but one in a city. On the Zion of the same verse Clarke keeps a literal restoration to the land while Wesley argues from history against it, that the ten tribes never did return, so the going up must be spiritual. And on the Arabian of v.2 Clarke has a robber lying in ambush for caravans where Wesley has a trader pitching his tent to meet customers. The third instance is reformed: Gill excludes political rulers from the pastors of v.15 by name, taking them for ministers of the word, while Ellicott excludes exactly the other side — kings and rulers, not priests — so that the flattest contradiction in the chapter is between the two voices normally furthest apart in method. The practical effect on the tags is that school summaries for this chapter had to be written as internal divisions rather than positions, which is unusual; ordinarily the wesleyan-arminian summary can speak with one voice. Recorded because a reader arriving at the study desk expecting schools to behave as blocs will find this chapter does not."
     }
   ]
 }
