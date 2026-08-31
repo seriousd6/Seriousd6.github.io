@@ -68584,6 +68584,48 @@
         "16"
       ],
       "note": "Henry defends the marriage of the prophet in passing, that a married state agrees well with the prophetic office, being honourable in all and therefore not sinful in ministers, and that a prudent and tender companion who shared his griefs must have been a happiness in his captivity."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "Fidelity self-grade, both tiles: every claim traced to a named block in data/commentary/cow/ezekiel/42.json before installation, and vcheck ran clean both ways. Tile 1 (vv.1-9, 6 voices): Gill on the northward exit and the three storeys, K&D on the cell-building and their three-part refutation of the entrance reading of the one-cubit way, Henry's moral reading of the private chambers, Clarke on which court is meant, Ellicott on the plain sense of outer, the external measurements, the gallery phrase, the emendation to one hundred, the pillars aside and the screen-wall vocabulary, Wesley on the southern prospect, the galleries, the sense of shortened, and the unwalked ledge. Tile 10 (vv.10-20, 6 voices): the eastern block, the priests' portion and the missing peace offerings, the vestment rule, the arithmetic of the precinct, the separating wall, and the size read as promise. No claim lacks a source block. Two exclusions are deliberate and recorded separately: JFB at keys 4, 10 and 16 is donor residue and is cited nowhere, and Calvin has no block anywhere in this chapter."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "CORRECTION to earlier notes on Calvin's absence in Ezekiel. At ezekiel 37 (and by implication isaiah 60) I recorded a whole-chapter Calvin absence as 'likely a systematic ingest gap worth an owner check'. For Ezekiel that conclusion was wrong, and the evidence is a clean step function at chapter 20. Counts of keys carrying a 'John Calvin:' block: ezekiel 4 has 8 of 17, ezekiel 8 has 13 of 18, ezekiel 15 has 3 of 8, ezekiel 20 has Calvin throughout — then ezekiel 21 has 1 of 32, and ezekiel 22, 24, 25, 30, 33, 37 and 42 have 0 of 31, 27, 17, 26, 33, 28 and 20 respectively. Calvin's lectures on Ezekiel broke off partway through chapter 20 and were never completed; the single stray block at chapter 21 is consistent with the tail of the last lecture. So there is nothing missing from the ingest for Ezekiel past chapter 20 — there is nothing to ingest. Practical consequence for this loop: in any Ezekiel chapter from 21 onward, expect the reformed school to rest on Gill alone, and do not treat the absence as a source defect or raise it for an owner check. The isaiah 60 case is separate and still unexplained, since Calvin's Isaiah commentary is complete; that one may still be a genuine gap and is worth checking on its own."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "JFB stride, thirteenth consecutive chapter with interval exactly 6. Jamieson-Fausset-Brown blocks fall at keys 4, 10 and 16 — three blocks, two intervals of 6, phase 4. Running record of phases across the thirteen chapters audited this session: 4, 1, 3, 6, 2, 3, 4, 5, 1, 2, 2, 6, 4. Phase 4 has now appeared three times, phases 1, 2, 3 and 6 twice each, and 5 once, which is what a uniformly distributed free parameter looks like across thirteen draws; the interval of 6 has never once varied, in any chapter of any book, across the whole session. This chapter is a useful confirming case because it is short (20 keys) and architectural, with no narrative structure that could plausibly produce a six-key rhythm by accident. As always the content under a JFB key is donor material from an unrelated book, not comment on the verse the key names, and JFB is cited in neither tile."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "Ellicott chrome: the StudyLight footer marker appears at exactly one key, key 20, with 347 usable words of Ellicott before it and 1,021 words of boilerplate after. 1,021 is the twenty-third distinct chrome size recorded and again matches no earlier value. Running series: 926, 937, 940, 995, 996, 1021, 1141, 1226, 1256, 1285, 1353, 1369, 1439, 1651, 1656, 1688, 1697, 1743, 1819, 1829, 1915, 1999, 2015. Note that 1021 falls between 996 and 1141, in a gap the series had not yet filled, and lands 25 words from 996 — the third-tightest near-miss on record after 995/996 and the 926/937/940 cluster, and still no repeat. Twenty-three fetches, twenty-three distinct lengths, is now strong evidence that the trailing boilerplate is assembled per request rather than being a fixed template. With the chrome stripped, this chapter's usable total is 6,582 rather than the raw 7,603, which is what the two-tile split was budgeted against."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "WESLEY BORROWING HENRY VERBATIM — fourth instance, and the clearest yet. At ezekiel 42:20 Wesley's whole note on the five hundred reeds reproduces Henry's language on the same verse almost word for word: both call the enclosure 'the suburbs of this mystical temple', both gloss it as 'signifying the great extent of the church in gospel times', and both close with the same sentence structure, that it is 'in part fulfilled already, by the accession of the Gentiles to the church' and will be accomplished 'when the fulness of the Gentiles shall come in, and all Israel shall be saved'. The earlier three instances were ezekiel 2:6, ezekiel 5:5 and ezekiel 20:5. Two consequences for the loop. First, the standing rule holds: a claim shared this way is one voice and not two, so in the tags the reading is given as a single position held by both rather than as agreement between independent witnesses. Second, this case supplies an internal check the earlier ones did not, because the two men disagree on the arithmetic they attach to the shared reading — Henry makes the circuit 'above four miles round' and Wesley 'about eight miles round', from the same figure of five hundred reeds at above three yards and a half. Henry has computed the perimeter of the square and Wesley has doubled it, or has taken the side as the mile and the circuit as four; either way the disagreement is Wesley's own arithmetic laid over Henry's borrowed prose, which is a useful signature of the borrowing rather than an argument against it."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "42",
+      "note": "Two live disagreements carried into the tags, both of them textual rather than theological. (1) The way of one cubit at verse 4. Keil and Delitzsch dismantle the reading that makes it the width of the chamber entrances, on three independent grounds — the word is used collectively after a word that is not collective and before a plural noun for their doors, a way is not lexically the same thing as an entrance or a doorway, and a one-cubit opening into a large building bears no proportion to the ten-cubit walk beside it — and then conclude, unusually for them, that no suitable sense can be got from the words as they stand. Ellicott declines to stop there and emends: the Greek reads a hundred, and the change requires only a transposition of the first two letters of one word plus a consequent alteration of one letter in the other. His decisive support is internal — exactly the same transposition has occurred later in this chapter at verse 16, where the Hebrew margin itself corrects five cubits to five hundred. Wesley keeps the received text and makes it a ledge nobody walked on. Ellicott's case is the strongest of the three because it explains the corruption rather than merely tolerating or rejecting the result, and because the resulting hundred-cubit walk terminates exactly at the steps of the inner north gate where the sacrifices were dressed, which gives the architecture a purpose. (2) The unit of the precinct measurement at verses 16-20, where the size of the enclosure has been disputed since antiquity, as Keil and Delitzsch note. Ellicott holds the rod decisive, making each side about a mile, concedes that such a square could never have stood on the temple hill, and concludes with Keil that no earthly site was intended. Gill reaches the same conclusion from the opposite end, that since no such edifice ever existed no material building can be meant. Clarke simply registers the scale and observes that it is no wonder the place is called a city."
     }
   ]
 }
