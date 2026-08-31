@@ -68983,6 +68983,20 @@
       "book": "ezekiel",
       "chapter": "40",
       "note": "failed validator; reverted, attempt kept at scratchpad/rejected/ezekiel-40-20260831-213335"
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "rejected",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "First finish attempt on ezekiel 40 was rejected by the validator, and the rejection was correct. My initial tiling was 1-4, 5-16, 17-27 and 28-49, and the last range failed the check that pericopes tile the chapter: 'entries cover verses absent from the source: [36, 37]'. The source file has no keys for verses 36 and 37 at all — it jumps from 35 to 38 — so any pericope range spanning them claims to synthesise commentary that does not exist. I had noted the gap before drafting and recorded it as a source defect, but did not draw the consequence for the tiling, which is the actual lesson: a missing source key is not merely a documentation matter, it constrains where pericope boundaries may fall. The fix was to re-tile as 1-4, 5-16, 17-35 and 38-49, which leaves the two absent verses outside every range. That meant rewriting two tiles rather than one, since the material on entering the inner court and on the disputed verse about the arches (verses 28-31) had to move from the last tile into the third, and the last tile had to be rebuilt from the tables onward. Compression stayed inside the band: 5.9, 7.3, 6.7 and 5.1 to one. Standing rule for the loop, worth applying at pick time rather than at finish time: after mapping a chapter, check the source keys for gaps against the verse count in data/bible/KJV/<book>.json, and choose tile boundaries so that no range spans a missing key. The rejected attempt is preserved at scratchpad/rejected/ezekiel-40-20260831-213335."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "40",
+      "note": "Fidelity self-grade, revised tiling (1-4, 5-16, 17-35, 38-49), all four tiles: every claim traced to a named block in data/commentary/cow/ezekiel/40.json before installation, and vcheck ran clean both ways on each tile. Tile 1: the undated era and the season, K&D's framing of the last nine chapters, Clarke's practical motive for the minuteness, the non-corporeal transport, the identity of the mountain, Henry on the city that is all temple, the man of brass. Tile 5: the four incompatible reckonings of the reed, the surrounding wall, why the east gate comes first, the stairs, the guard-chambers, the sixty-cubit posts, the splayed windows. Tile 17: the outer court and its users, the thirty chambers and the paving, why the pavement is called lower, the hundred cubits, the uniformity of the gates, and — moved here from the rejected last tile — the inner court's extra step and the disputed verse on the arches. Tile 38: the sacrificial cell and tables with their disputed count, Henry on tables against altar, the hooks, the singers and keepers, and the porch. Every voice declared in a tile has usable exposition within that tile's own range under the revised boundaries; nothing was carried over from the earlier draft without rechecking it against the keys the new range covers. Two exclusions remain deliberate: JFB at keys 3, 9, 15, 21, 27, 33, 39 and 45 is donor residue cited nowhere, and Calvin has no block in the chapter, which for Ezekiel past chapter 20 is expected."
     }
   ]
 }
