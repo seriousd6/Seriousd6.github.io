@@ -68406,6 +68406,34 @@
         "10"
       ],
       "note": "Gill identifies the blind watchmen with the Popish clergy, bishops and priests, and at the following verse glosses the greedy dogs as the priests, monks and friars who live on the fat of the land. The exegetical core is carried, that the charge falls on teachers who are ignorant, silent where warning is needed and self-serving; the identification of a living communion is dropped. Clarke makes the same application without naming a party, of any careless or hireling minister, and that form is carried."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "46",
+      "note": "Fidelity self-grade, all five tiles: every claim traced to a named block in data/commentary/cow/jeremiah/46.json before installation, and vcheck ran clean both ways on each tile. Tile 1 (vv.1-5, 7 voices): Gill on concerning versus against and the shield distinctions, K&D's comparison with two earlier collections of foreign-nation oracles, Henry on God as Judge of nations and the against/for antithesis, Clarke on the two-prophecy structure and the campaign history, Ellicott on the arrangement as an appendix and the identity of the Egyptian king, Calvin on the herald device and the watch-tower, Wesley on the title. Tile 6 (vv.6-12, 6 voices): the prohibition-or-future ambiguity, the flood figure, the auxiliaries, the day of sacrifice, the balm irony, the closing report. Tile 13 (vv.13-17, 7 voices): the second superscription, the named cities, the disputed strong one, the flight of the strangers, the cry about Pharaoh. Tile 18 (vv.18-23, 6 voices): the oath, the two mountains, the packing order, the heifer and gadfly, the stalled mercenaries, the hiss and the axes. Tile 24 (vv.24-28, 6 voices): the disgrace, the punished god and its city, the delivering up, the revival of Egypt, the promise to Israel. No claim in the prose lacks a source block, and no voice with substantive exposition was silently dropped: Henry has blocks only at keys 12 and 13, whose content runs forward into the second oracle and the closing comfort, so he is declared in tiles 13 and 24 where that content lands, and not in tiles 6 or 18 where he has nothing. Wesley likewise is absent from keys 24-28 and is not declared in tile 24."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "46",
+      "note": "JFB stride, twelfth consecutive chapter with interval exactly 6. Jamieson-Fausset-Brown blocks fall at keys 6, 12, 18 and 24 — four blocks, three intervals of 6, phase 6, the first time phase 6 has recurred since ezekiel 17. Running record of phases across the twelve chapters audited this session: 4, 1, 3, 6, 2, 3, 4, 5, 1, 2, 2, 6. Every value from 1 to 6 has now appeared and two have appeared twice, which is what a free parameter looks like; the interval of 6 has never varied in any chapter of any book. As in every prior case the content under a JFB key is donor material from an unrelated book rather than comment on the verse the key names, so JFB is excluded from all five tiles here. Twelve chapters is now a large enough sample that the interval should be treated as a property of the ingest itself rather than a coincidence of particular chapters, and it would be worth an owner check of how the JFB source was fetched."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "46",
+      "note": "Clean chapter on both of the recurring defects. No StudyLight footer marker appears at any of the 28 keys, so there is no Ellicott chrome to strip and the raw and usable word counts are identical at 27,495; the running chrome series stays at twenty-two distinct sizes. Calvin is present at 27 of 28 keys, missing only at key 4, which is the shortest key in the chapter at 305 words — the opposite of the whole-chapter Calvin absences recorded at isaiah 60 and ezekiel 37. Keil and Delitzsch appear at 15 keys and, unlike the ezekiel chapters, several of their blocks carry real exposition after the quoted verses rather than closing the 200-word window on quotation alone; the usable ones supported declarations in every tile. Taken with jeremiah 38 and isaiah 41, this is now the third chapter where the K&D quotation-only defect is largely absent, and all three are outside Ezekiel."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "46",
+      "note": "Four substantive disagreements carried into the tags. (1) The strong one swept away at verse 15: Gill takes it of the valiant men driven from their posts, Keil and Delitzsch weigh the men of war but admit the singular verbs and singular suffix point to a singular noun the plural form resists, and Ellicott cuts through by reading thy strong bull dragged away, noting that the old versions agree in number and that the Greek referred it to the sacred bull standing for the chief deity — which makes the line a contest between the God of Israel and an animal god, and which Ellicott ties forward to the heifer of verse 20. This is the most consequential split in the chapter and Ellicott's reading is the only one that accounts for both the grammar and the imagery that follows. (2) The two mountains of verse 18: Ellicott applies them to the invader's towering greatness, Clarke turns the comparison round and applies them to Egyptian valour that will still not hold, and Wesley reads them as encompassing rather than height. (3) The cry about Pharaoh at verse 17, where every voice has a different text: ruin rather than noise with the crying in Egypt (K&D), an altered text giving they have called the name of Pharaoh, A Noise (Ellicott), the allies excusing a missed rendezvous (Clarke, printing another scholar's version), and a plain great noise come to nothing (Wesley). (4) The city of the punished god at verse 25: Clarke and Ellicott both place it in the south, at Thebes, while Calvin takes the word in its ordinary Hebrew sense of multitude and puts the city at the northern port later renamed after its Macedonian founder, adding that a part stands for the whole country in any case. Calvin is alone here and the archaeological evidence the other two cite was not available to him."
     }
   ]
 }
