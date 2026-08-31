@@ -62514,6 +62514,54 @@
         "19"
       ],
       "note": "Gill mentions Grotius as identifying Kerioth with a town in an ancient geographer list, and Calvin refers at one point to Luther among the translators. Both names sit on the naming watch list for this corpus and were referred to obliquely or omitted rather than named in the prose."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "rejected",
+      "book": "jeremiah",
+      "chapter": "15",
+      "note": "CONTENT DECLINED, and flagged for the owner. Adam Clarke's block at key 5, commenting on 'who shall go aside to ask how thou doest', leaves the verse entirely and turns to the Jews of his own day: 'Perhaps there is not a more despised nor a more degraded people under the sun. Scarcely any one thinks himself called upon to do a kind office for a Jew. Their character is bad in society, and they are not at all solicitous to redeem it.' I did not reproduce this in tile 5 and did not paraphrase it. My reason: it is not exposition of the text but an assertion that Jews as a people have a bad character and do not care to mend it, and putting it into the tile — even attributed — would place an antisemitic generalisation in the site's own prose, where a reader meets it as part of the distilled comment rather than as a quotation being examined. The prose rules require faithful representation of what the sources say, and I take the faithful course here to be recording the omission in the tracked notes rather than silently passing the claim through. Clarke is still declared and cited four times in the tile on the same verses. Two distinctions worth preserving for whoever reviews this. First, this is NOT the same as Clarke's remark at key 4, which I did include: that one is an apologetic argument from the survival and dispersion of the Jews, and asserts nothing about their character. Second, the decision is mine and is reversible — the source block is untouched in the data tree, so an owner who wants the material carried can restore it. If a policy on nineteenth-century anti-Jewish commonplaces in this corpus is wanted, this is a good test case, and Clarke is the voice most likely to supply more of them."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "15",
+      "verses": [
+        "1-9"
+      ],
+      "note": "Tiles 1 (vv.1-4) and 5 (vv.5-9) fidelity self-grade, verse by verse. v.1 the two intercessors: Clarke's recollection that both had prevailed before, Ellicott's anthropomorphism and his parallel of three other righteous men, Henry's report that not a reprieve was gained, and Calvin's refusal to let the prayer be wasted are each attributed as given; I did not resolve Henry's total refusal against Calvin's partial one. vv.2-3 the four kinds: Clarke's numbered list and Calvin's objection that the dogs drag rather than tear are held apart, and Ellicott's Homeric quotation is given as his. v.4 Manasseh: the three-way agreement on the patronymic as aggravation is reported as agreement, which is unusual enough in this chapter to be worth stating; Gill's and Clarke's extensions to the later dispersion are theirs, not mine, and Clarke's apologetic argument is given as an argument he makes. vv.5-9: the gates of the land are given as a genuine five-way with no adjudication; the tense dispute preserves Keil and Delitzsch's charge that the past reading proceeds from a system of slighting prophecy, which is their characterisation of an opponent and is marked as theirs; Ellicott's eclipse dating and his travail-pangs emendation are given as his proposals. One omission is recorded separately at the note above: Clarke's remark at key 5 about the character of the Jews of his own day is not represented in the tile, by my decision. Apart from that omission, nothing in either tile is mine and nothing is asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "15",
+      "verses": [
+        "10-21"
+      ],
+      "note": "Tiles 10 (vv.10-14), 15 (vv.15-18) and 19 (vv.19-21) fidelity self-grade, verse by verse, with key 20 read only to its 287th word (chrome fills the rest of that key, though the chapter continues at key 21). v.10 the outburst: Gill's plain reading, Calvin's bounded weakness, Keil and Delitzsch on the apostrophe measuring sorrow, and Henry's peaceable man are each theirs; Ellicott's dislocation hypothesis is given as a hypothesis and set against Keil and Delitzsch's denial of it, without my choosing. v.11 the remnant: four readings, and I did not harmonise Wesley's remnant of days with the three that make it a promise of good. v.12 the iron: Ellicott's four refused readings are listed as his refusals, not as live options I endorse, and Keil and Delitzsch's grammatical objection is theirs. vv.13-14: Calvin's metaphorical borders, with the line from a heathen poet, is his; Ellicott's suspicion of corruption is given as suspicion. vv.15-18: the collapse-or-device question preserves Calvin's device reading at v.15 alongside his own later concession of the prophet's infirmity at v.18, since both are his and they develop rather than contradict; Clarke's mirage is his. vv.19-21: Ellicott's inward turn on the precious and the vile is marked as his own reading against Clarke's and Wesley's outward ones; Calvin's suspected corruption at the word rendered fenced is given together with his refusal to act on it, which is the point of the datum. Nothing asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "15",
+      "note": "Chrome footer: a FIFTH distinct size, and the first instance that is NOT the tail of the chapter. jeremiah 15 carries the StudyLight chrome at key 20 — the second-to-last key, not the last — with 287 words of content before the marker and 1,829 words after it. Key 21 then follows with 331 words of ordinary commentary. This breaks the pattern of the four preceding instances (isaiah 62, jeremiah 12, jeremiah 3, jeremiah 43), in every one of which the chrome fell in the final key and ran to the end of the chapter. Two consequences. First, the rule of thumb 'the chrome is the tail' is now falsified as a general statement: a truncation pass that stopped at the first chrome marker and discarded everything after it would here lose key 21 entirely, 331 words of real commentary from Gill, Clarke, Calvin and Wesley. The correct rule remains what it always was and is now better evidenced: truncate from the StudyLight marker to the end of THAT KEY's block, never to the end of the chapter. Second, the size series is now 926, 1141, 1226, 1688, 1829 across five consecutive affected chapters, no two alike, confirming that only the footer proper is constant and the remainder is a variable stylesheet capture. Key 20 usable is exactly 287. Sizing: 'synthesis-loop.py size' reported 38,389 raw against 36,560 actually usable."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "15",
+      "note": "JFB donor stride: the FIRST MEASURED DROPPED BLOCK. jeremiah 15 carries Jamieson-Fausset-Brown blocks at verse keys 5 and 17 only — an interval of twelve in a twenty-one-key chapter. Under the established stride of one donor block per six sampling keys (notes 5758-5759, 5776, 5834, 5853, 5884) a chapter of this length should carry blocks at 5, 11 and 17, so the block at key 11 is missing. This is the first instance in the window where I can point at a specific expected position and say a block is absent, and it matters because the stride model has otherwise held exactly in six chapters running. It also settles the shape of the exception: the surviving blocks are at the PREDICTED positions and the interval between them is a clean multiple of the stride, so what happened is a dropped block and not a phase shift or a reset. That is the weaker of the two failure modes and leaves the model intact — a repair pass could still compute every expected position from one identification, and would simply find nothing at some of them. Recorded as the counterpart to isaiah 62 (note 5799), which had no blocks at all: between them the two exceptions are now characterised as absences against an otherwise exact stride, rather than as evidence of a second mechanism. No repair attempted; a mass data-tree operation is the owner's call. Practice unaffected: both surviving blocks were excluded as foreign and no tile cites Jamieson."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "15",
+      "note": "Keil and Delitzsch 200-word truncation: the rule from note 5882 applied, and it changed a voice list. Every Keil and Delitzsch block in jeremiah 15 is exactly 200 visible words — fourteen blocks, fourteen exact hits, the fifteenth (key 20) running short at 68 because his comment there ends. That confirms the cap as a hard property of the ingest rather than a coincidence of two chapters. Applying the practical test recorded at note 5882 — check whether the 200 words clear the quoted verses before declaring him — the blocks at keys 1 and 2 fail it, and for two different reasons worth distinguishing. Key 2 fails the ordinary way: the 200 words are consumed by quoting verses 2 to 5, leaving only the fragment 'In Jeremiah 15:5-9 we have a still' before the cut. Key 1 fails a stranger way: its 200 words are entirely commentary on the END OF THE PRECEDING CHAPTER, discussing the question 'hast Thou utterly rejected Judah?' and the looking for peace, which belong to jeremiah 14:19-22, with the verse numbers printed as 15:19-22. This is not a donor misalignment of the kind logged for Jamieson — it is Keil and Delitzsch's own section boundary, since his exposition of 14:19-15:9 begins in the previous chapter and the ingest has filed its opening paragraph under key 1 of this one. The effect is the same either way: nothing in either block bears on verses 1 to 4, so I DROPPED Keil and Delitzsch from tile 1's voice list. He is declared in the other four tiles, where his 200 words do clear the quotation and carry real exposition."
     }
   ]
 }
