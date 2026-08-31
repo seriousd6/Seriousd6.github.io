@@ -62952,6 +62952,40 @@
         "14"
       ],
       "note": "Gill cites Maimonides by name for the reading of the seven years. That name sits on the naming watch list for this corpus, so the authority was referred to obliquely in the prose rather than named."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "18",
+      "verses": [
+        "1-12"
+      ],
+      "note": "Tiles 1 (vv.1-6) and 7 (vv.7-12) fidelity self-grade, verse by verse. vv.1-3 the errand: the dating agreement between Clarke and Ellicott is reported as agreement; Gill's distinct-prophecy reading and Keil and Delitzsch's three-chapter compilation are held apart because they are genuinely different claims about scope, not about date. Gill's rejection of a site beneath the temple is given as his rejection, and Ellicott's identification with the potter's field is given with the objection he himself raises against it. The wheel is described twice and differently, once by Clarke as one moving stone on a fixed one and once by Ellicott as two wheels, and I did not reconcile them. v.4 the marring: Clarke's workshop causes, Calvin's timing, and Ellicott's theological consequence are each attributed. v.6 the sovereignty: the convergence of Gill and Calvin on the same argument from the less to the greater is reported as convergence, and Clarke's protest against a decree of reprobation is given as his protest, in his own terms, without my endorsing or answering it — it is the sharpest cross-school clash in the chapter and the tile is the right place for it to stand. vv.7-12: Calvin's distinction between this popular statement of the figure and the apostle's higher use of it is his own, and I marked it as his because it is the exact counterweight to Clarke's protest and a reader should see both. The despair-or-defiance question preserves three readings and the tense point on which Ellicott and Keil and Delitzsch agree. No claim in either tile is mine."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "18",
+      "verses": [
+        "13-23"
+      ],
+      "note": "Tiles 13 (vv.13-17) and 18 (vv.18-23) fidelity self-grade, verse by verse. v.13 the appeal to the heathen: Calvin's turning away in disgust and Ellicott's contrast of height and depth are each theirs, and Clarke's manuscript variant is reported as a variant. v.14 the snow of Lebanon is the clearest four-against-one in the chapter and I stated it as such: Gill, Clarke, Wesley and Calvin all build on the English subject, and Ellicott denies that subject exists, holding the words a man interpolated. I gave his reading its force without adopting it. v.15 the unnamed cause of the stumbling is supplied by Ellicott alone and is marked as his supplement. v.16 the hissing: Clarke's contempt and Ellicott's pity are a flat contradiction and both stand; Calvin's wordplay between the ancient paths and the perpetual hissing is his observation. v.17 the east wind: Clarke's proverb is quoted as a proverb he quotes. vv.18-23: Clarke's reading of smiting on rather than with the tongue, with the leather strap and the bodkin, is given as his rendering and his ethnographic claim, not as fact about the verse. The imprecation is the tile's centre and I let all four positions stand unresolved — Clarke denying they are prayers, Wesley denying the practice to Christians, Calvin conceding the fault and excusing it by the Spirit's motion, Ellicott refusing to decide. I did not choose among them and did not soften the curses themselves. Nothing asserted beyond the blocks."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "18",
+      "note": "JFB donor stride: a SEVENTH confirming instance, and the cleanest of the window. jeremiah 18 carries Jamieson-Fausset-Brown blocks at verse keys 5, 11, 17 and 23 — four blocks at an exact interval of six across twenty-three keys, with no drop and no phase change. Together with jeremiah 3 (keys 6, 12, 18, 24, note 5853) this is the second chapter in the window with four consecutive blocks at perfect spacing. The running record for the stride model is now: seven chapters in which it held exactly, one chapter with a single dropped block at a predicted position (jeremiah 15, note 5918), and one chapter with no blocks at all (isaiah 62, note 5799). Both exceptions are absences, not misfires — in neither case did a block turn up anywhere the model did not predict. That asymmetry is the strongest evidence yet that the mechanism is a single ordered consumption of a donor stream with occasional gaps in the ingest, rather than anything more complicated. The phase here is 5, which adds nothing new; phases 1 through 6 have all now been observed and remain unpredictable from the sampling chapter. No repair attempted; a mass data-tree operation is the owner's call. Practice unaffected: all four blocks were excluded as foreign and no tile cites Jamieson."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "18",
+      "note": "Chrome footer: a SIXTH distinct size, and the largest yet. jeremiah 18 carries the StudyLight chrome at key 23, the last key, with 622 words of content before the marker and 2,015 words after it. The size series across six consecutive affected chapters is now 926, 1141, 1226, 1688, 1829, 2015 — six values, no two alike, and spanning better than a factor of two. Taken with the jeremiah 15 instance (note 5917), where the chrome fell in the second-to-last key with real commentary following it, the two properties of this defect are now both well evidenced and both negative: the size is not constant, and the position is not always terminal. The only rule that has held for every instance is the marker-scoped one — truncate from the StudyLight marker to the end of that key's block. I have now logged enough cases that I would put the practical summary this way for whoever handles the data tree: do not look for a constant, do not assume the chapter ends there, find the marker and cut to the end of the block it sits in. Key 23 usable is exactly 622. Sizing: 'synthesis-loop.py size' reported 29,339 raw against 27,324 actually usable."
     }
   ]
 }
