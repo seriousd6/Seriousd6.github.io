@@ -65615,6 +65615,60 @@
         "18"
       ],
       "note": "Calvin twice turns his exposition into confessional polemic against the Roman church and once compares its adherents unfavourably with Muslims and Jews. The exegetical points carry without the polemic, and were kept: that a great multitude who boast the name of the Church may be alienated from God, and that the godly are looked on with abhorrence by their own countrymen."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "32",
+      "verses": [
+        "1-44"
+      ],
+      "note": "Fidelity self-grade for all eight tiles: every claim traced to a named block in the catena and attributed to the voice that makes it. Checked in particular: the three-way split on the closing visitation of the king (Ellicott deliverance, Calvin death then alleviation, Wesley mercy); the four siege-work descriptions (Gill ramparts/engines, Clarke terraces, Ellicott mounds and wooden towers, Wesley engines); the until-this-day debate where K&D explicitly rejects the memory reading held by Calvin and Rosenmueller and Jerome's alternative construction; and the fulfilment debate where Clarke denies that anything resembling the promised good followed the return while Calvin confines the promise to the elect remnant and Gill takes the temporal fulfilment as earnest of the spiritual. No claim in the prose is unsourced; no voice is credited with a position it does not hold."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "32",
+      "verses": [
+        "27",
+        "39"
+      ],
+      "note": "K&D blocks at keys 27 and 39 are pure verse quotation with no exposition at all: key 27 quotes vv.27-32 and stops, key 39 quotes vv.39-44 and stops. Both are the standard 200 visible words, so the block was truncated by the ingest window before any comment began. K&D was therefore NOT declared in tiles 26 and 36 even though its block keys fall inside those ranges. This is a new failure mode alongside the known K&D block drift: not a block expounding the wrong verses, but a block expounding nothing. Three of the eleven K&D blocks in this chapter (7, 9, 11) carry real exposition; keys 1, 2, 17, 20, 21, 24 carry partial exposition after the quotation; 27 and 39 carry none."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "32",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22",
+        "28",
+        "34",
+        "40"
+      ],
+      "note": "JFB stride: seven blocks at keys 4, 10, 16, 22, 28, 34, 40 - six consecutive intervals of exactly 6, phase 4, no drops. This is the longest perfect run recorded so far (previous best six, at jeremiah 2). The donor content is continuous and monotonic Proverbs: 3:7, 3:11-12, 3:16-17, 3:22-24, 3:27-28, 3:32-35, 4:1-2. Position and content advance together across the whole chapter, which is direct support for the ordered-walk model and for the reinterpretation of earlier apparent drops (jeremiah 17 key 21) as the donor stream advancing rather than a block being lost. Standing rule holds: position is predictable, content is not. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "32",
+      "note": "Ellicott chrome: ZERO in this chapter. The StudyLight footer marker appears in 0 of 44 keys although Ellicott is present in 24 of them. This is the first clean negative in the series and confirms that the chrome is a property of particular fetches, not of the Ellicott source itself. Running series of distinct chrome sizes elsewhere: 926, 940, 996, 1141, 1226, 1285, 1369, 1651, 1656, 1688, 1829, 1999, 2015 - thirteen sizes, no two alike. No bogus footnotes in this chapter either. Voice distribution: Gill 44/44, Calvin 40/44, Ellicott 24, Clarke 17, K&D 11, Wesley 7, JFB 7, Henry only 3 (keys 1, 16, 26), with key 26 a 3,755-word Gill-plus-Henry block that carries the whole answer-to-the-prayer exposition."
+    },
+    {
+      "at": "2026-08-31",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "32",
+      "verses": [
+        "42"
+      ],
+      "note": "Sharpest disagreement in the chapter, and it is about fulfilment. Clarke: the word cannot fail, the Jews have never yet received the good promised, nothing like it followed the return from Babylon, therefore a rest remains for that people under the Christian dispensation. Calvin: the exile was temporary as to the remnant only, most of the nation was wholly rejected, the promise belongs to the elect and not indiscriminately to all twelve tribes, and it was fulfilled when a portion returned so that the Church was not cut off. Gill takes a middle road, a temporal fulfilment after the seventy years serving as pledge of spiritual fulfilment in Gospel times. Ellicott, on the unity promise of v.39, concedes that the hope has never been realised and that the prayers taking it up are still waiting - which lands nearer Clarke than Calvin."
     }
   ]
 }
