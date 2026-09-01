@@ -73345,6 +73345,57 @@
         "1-21"
       ],
       "note": "Every entry was self-graded against its own source blocks after writing. Each claim traces to a named block in the catena for the keys that entry covers; no voice is named in an entry where its block does not appear; the four residue blocks and the four dead Keil and Delitzsch blocks were excluded before drafting, along with the chrome tail of the Ellicott block at key 21. Proper nouns were checked against the chapter source and the automated entity check returned no flags. All six entries fall inside the 350 to 650 word window."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "45",
+      "note": "Fidelity self-grade, all 25 verses: every position carried is attributable to a named voice in the source catena. Three tiles (1-8, 9-17, 18-25), all grade A, all in window. 11,736 source words over 25 keys, no gaps. Voice counts 6, 4, 4. Jamieson Fausset and Brown declared nowhere -- all five of its blocks are wrong-passage content. Keil and Delitzsch dropped from tile 2, where both their windows are pure quoted verse text; they are cited in tiles 1 and 3, where the windows carry a real textual query and a real comment on the passover clause."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "45",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB misaddressing, sixth chapter running, and this one is unusually legible. Five blocks at keys 1, 7, 13, 19 and 25 -- interval exactly 6, phase 1 -- and every one is commentary on Isaiah 20 to 21. Key 1 glosses 'the loose outer garment of coarse dark hair-cloth', which is the sackcloth of Isaiah 20:2. Key 13 describes the feast in Babylon during which Cyrus opened the dykes made by Semiramis, which is Isaiah 21:5. Key 19 renders 'my son of the floor' for the threshed people, which is Isaiah 21:10. Key 25 reads only 'the fugitive Dedanites and other Arabs', which is Isaiah 21:13-14. A single contiguous run of one source chapter distributed across a stride-6 lattice in a different book: the clearest single-chapter illustration of the mechanism yet found. See the ezekiel 11 note for the corpus-wide audit and the 47 affected landed chapters."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "45",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott chrome: 926 words on the ELLICOTT fetch at key 25 of 25, leaving 229 words of real content. SIXTH consecutive observation of exactly 926 and the 37th overall. The constant now holds across four books and six chapters running; treating 926 as fixed and stripping by length-and-marker match is safe. Keil and Delitzsch truncated to 203 words at keys 1, 2, 10, 14, 18, 19 and 21 and to 144 at key 22; at keys 2, 10, 14, 18, 19 and 22 the window is entirely quoted verse text, so the voice is unusable at most of its appearances in this chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "45",
+      "note": "Calvin absent from all 25 keys, as expected in any Ezekiel chapter from 21 onward; the reformed school rests on Gill alone. Henry appears at keys 1, 9 and 13 only, each time as a whole-section exposition. Wesley appears at keys 2, 6 and 7 only, all inside the first tile, which is why tiles 2 and 3 run at four voices. Gill is the one voice present at every key."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "45",
+      "note": "Recorded splits: (1) whether a real division of land is meant -- Gill denies it outright and reads the allotment as Christ's kingdom settled through the world, Henry finds it fulfilled in the Christian church, Clarke keeps it literal but limited to temple, priests and prince; (2) the unit of the twenty-five thousand -- Ellicott argues reeds and gets over forty-seven miles, Wesley reckons cubits and gets twelve and a half, a sixfold divergence on the same figure; (3) what the city is -- Ellicott denies it is Jerusalem at all and says Jerusalem has faded from the vision like the ark, Wesley takes it for the capital, Gill for the civil state of God's people; (4) the maneh's odd figures -- Henry explains them as three coins of twenty, twenty-five and fifteen shekels making a sixty-shekel pound, while Ellicott calls the clause extremely obscure, says the value is unknown and offers three manehs only to add that there is no evidence for it; (5) who the prince is -- Gill the Messiah, Ellicott and Clarke the civil ruler, with Ellicott noting that his duty to furnish the festal sacrifices is entirely new since the older law left them to freewill offering."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "45",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott's own assessment of the ritual changes cuts both ways within one chapter and both halves were carried as his. At the passover he calls the offerings 'much richer than under the law' -- a whole ephah per victim where the law asked graded portions, fourteen ephahs a day. At the seventh-month feast he calls the same prophet's scheme 'on the whole a great diminution in the number of sacrifices, with a simplification of the ritual'. Not a contradiction, since the two feasts are treated separately, but worth flagging for anyone reading the tags who might expect one verdict."
     }
   ]
 }
