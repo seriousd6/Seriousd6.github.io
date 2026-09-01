@@ -76620,6 +76620,99 @@
         "1-15"
       ],
       "note": "Every entry self-graded against its source blocks. All nine entries fall inside the length window; every named voice is sourced in the keys its entry covers, and the voice whose blocks argue verses outside their keys or carry no comment was declared silent for those entries rather than paraphrased. No proper noun appears in the prose that is not verbatim in the chapter source, and no scripture reference is cited by chapter and verse in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "jonah",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all 10 verses across 5 tiles: every claim traced to a named source block in data/commentary/cow/jonah/3.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 5 tiles, Clarke 5, Calvin 5, Ellicott 4, Keil and Delitzsch 2 (keys 1 and 6 only, the sole keys where a K and D block exists), Matthew Henry 2 (keys 1 and 5). JFB excluded for cause. No Wesley material exists anywhere in this chapter, so Clarke alone carries the wesleyan-arminian school in every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "2",
+        "6"
+      ],
+      "note": "NEW SIGNATURE, cleanly characterized: the three Keil and Delitzsch blocks in this chapter are each EXACTLY 203 words and each breaks off mid-sentence — key 1 ends 'refer to the circumference of the', key 2 ends 'laid aside his royal robe (addereth, see at Joshua', key 6 ends 'the repentance was not a lasting one, or permanent'. Identical length to three decimal places of coincidence is not plausible: this is a fixed-length truncation at 203 words applied to the K and D fetch. This retroactively explains jeremiah 51 key 1, which I logged earlier as a 203-word K and D block 'commenting on vv41-46' and filed as a window offset — the 203 was the truncation length, not a coincidence, and the offset is a separate problem. Recommend a corpus-wide scan for K and D blocks of exactly 203 words. Compounding it here, the windows are also offset: the key-2 block prints the text of vv2-5 and comments on vv5-6, and the key-6 block prints vv6-10 before commenting."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "3",
+        "5"
+      ],
+      "note": "NEW DEFECT CLASS: editorial footnote apparatus fetched as Calvin's commentary, with the quoted commentators' names excised and words dropped where markup was stripped. Three instances in this one chapter. (a) Key 2: the Calvin block reproduces Adam Clarke's note verbatim — 'Be my herald, and faithfully deliver my message... The soft speaking, gentle toned, unmoved preacher, is never likely to awaken souls' — introduced only as 'renders the sentence thus' and 'adds the following remarks', with the attribution removed; the same passage stands under Clarke's own name at key 2, so the corpus silently attributes Clarke to Calvin. The excision also drops words where italics were: 'both signifying a a a one that makes proclamation with a and cry'. (b) Key 3: 'The remark of is', 'This is the view of and many others', 'seems to have taken it in this sense' — same excision pattern, and the block truncates mid-sentence at 'thirty leagues according to'. (c) Key 5: a Hebrew-grammar footnote on the Hiphil of aman, citing a dozen passages, is spliced into the middle of the block before it returns to Calvin's own exposition. This is related to but distinct from the printed-edition apparatus already logged at daniel 12 and jeremiah 29: there whole prefaces and dissertations were fetched as commentary; here a footnote is merged INTO the commentary with attributions stripped, which is worse because it is not visible as an intrusion. Only genuine Calvin was used in the tiles; the Clarke-derived material was cited to Clarke."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "10"
+      ],
+      "note": "Ellicott chrome, SEVENTEENTH consecutive chapter, 48th observation. The hosting block at key 10 carries the invariant 926-word StudyLight tail; of 1,044 measured words only 60 are real Ellicott content on v10, and one of those 60 is a bare cross-reference stub ('And God repented. — See Note, Genesis 6:6') whose target note is not present in the corpus. Recent real-content remainders: daniel 12 key 13 = 53, amos 3 key 15 = 57, amos 2 key 15 = 23, jeremiah 6 key 30 = 68, joel 2 key 32 = 90, jonah 3 key 10 = 60."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "6"
+      ],
+      "note": "JFB misaddressing, SEVENTEENTH consecutive chapter. Only one JFB block exists in this chapter, at key 6, and it is 31 words of commentary on an entirely different passage: '12. (Da 9:5, &c.). antithesis. that is, we are conscious of them (Job 12:3, Margin; Job 15:9). acknowledge they are our iniquities.' Nothing in it touches Jonah. A single block cannot establish an interval, but key 6 sits exactly on the interval-6, phase-0 grid observed in amos 2, jeremiah 6 and joel 2, so it is consistent with the standing characterization. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "6",
+        "7"
+      ],
+      "note": "Whether the fast was the people's spontaneous act or the effect of the royal edict. Ellicott reads v5 as a spontaneous popular resolution and v6 as describing the cry spreading district by district until it reaches the king afterwards. Calvin denies it outright — it is by no means probable that a fast was proclaimed in the royal city by the mere consent of the people with the king and his counsellors present — and reads v5 as a brief summary of the fruit and vv6-7 as the fuller explanation, the Hebrews commonly stating the chief point first and then adding the account. Clarke agrees with Calvin in a sentence. Calvin also reports, without adopting, a reading in which the people led the way and the king afterwards enforced and generalized what they had begun."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "3",
+        "4"
+      ],
+      "note": "Three further splits in the first half. (1) v2: whether 'the preaching that I bid thee' means the message already given — Clarke, 'the same oracle as that before given' — or one still to come, Keil and Delitzsch rendering it as a charge to proclaim what Jehovah would say to him. (2) vv3-4: what the day's journey was. Clarke has him walking the circuit of the walls, three days round at fifty-four to sixty English miles, announcing from them; Gill and Calvin have him entering the streets and crying at once, before one day was out; Ellicott calls the question trivial, since the writer supplies no data for dimensions but only a sense of vast size. Ellicott separately reports the division over whether the three days' journey gives the diameter or the circumference. (3) v4: whether the number is forty or three. Clarke defends the Hebrew against the Septuagint and Arabic, tracing 'three' to a copyist's confusion of the Greek numerals and arguing from sense that forty days left room to reflect and return where three would have produced only terror."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jonah",
+      "chapter": "3",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "Two splits at the close. (1) v9: whether 'who can tell' is the king's speech or the people's — Gill notes the Septuagint and Arabic prefix a word of saying and make it the people's, which he judges plainly wrong, and reports rabbinic readings that attach the phrase to what follows. Calvin insists it is interrogative and finds a king doubtful but not despairing, then defends at length the claim that a measure of doubt can coexist with faith. Clarke reads it as a peradventure deliberately left open. (2) v10: in what sense the works God saw brought the deliverance. Gill restricts them to inward faith and repentance with its fruits, seen so as to be approved and accepted, not the sackcloth and fasting; Calvin reaches the same restriction and then guards it, denying that repentance is the procuring cause since God was freely pacified and no satisfaction compensated for former sins; Clarke reads it plainly as a met condition, the purpose changed and the city saved."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "jonah",
+      "chapter": "3",
+      "note": "Coverage map for jonah 3: 10 KJV verses, 10 catena keys, no gaps. Calvin present at all 10 keys — the second chapter after jeremiah 6 with complete Calvin coverage, though here three of the ten blocks are contaminated by spliced editorial apparatus. John Wesley is ABSENT FROM THE ENTIRE CHAPTER: no Wesley block exists at any key, so Adam Clarke alone carries the wesleyan-arminian school in all five tiles. Worth checking whether Wesley's notes on the minor prophets are systematically thin or missing in the corpus. Matthew Henry appears at only two keys but with very large section-blocks (2,937 words at key 1 and 3,279 at key 5) that cover several verses each."
     }
   ]
 }
