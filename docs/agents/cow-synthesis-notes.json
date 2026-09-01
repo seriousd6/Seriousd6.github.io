@@ -69870,6 +69870,54 @@
         "14"
       ],
       "note": "Gill cites a note he calls very good on the rejoicing of the whole earth, but the quoted note is missing from the source block, which breaks off immediately after the attribution. Minor ingest truncation, not the standard chrome or misfile pattern."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "daniel",
+      "chapter": "3",
+      "note": "Self-graded every verse against the source catena. All 30 source keys read; five tiles at 1-7, 8-12, 13-18, 19-23, 24-30. 32,437 usable source words distilled to 3,198, compression 13.2:1 / 8.1:1 / 7.9:1 / 9.0:1 / 11.6:1. Every claim in the prose traces to a named block; no voice is given a position it does not hold. Wesley appears in four tiles and is independent of Henry throughout this chapter (no borrowing found). Keil and Delitzsch is absent from tile 8 because key 9's block is quotation only. Grades A across all five tiles."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "3",
+      "note": "JFB STRIDE, 19th consecutive chapter, interval still exactly 6 with no variation in any chapter of any book. Daniel 3 carries Jamieson-Fausset-Brown at keys 3, 9, 15, 21, 27 — phase 3. Phases recorded in order across the run: 4,1,3,6,2,3,4,5,1,2,2,6,4,5,3,6,3,3,3. Here the last block is NOT on the final verse (27+6=33 > 30), so the stride simply runs out mid-chapter, which is the ordinary case; the coincidences at ezekiel 27 and daniel 1 were verse-count artifacts. A fixed stride of 6 across four books and nineteen chapters is not editorial; recommend the owner inspect the JFB fetch/ingest path, which appears to be sampling every sixth verse rather than taking the commentary's own block boundaries."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "3",
+      "note": "ELLICOTT CHROME: 1,193 words of trailing StudyLight boilerplate on key 30, the chapter's final key, with only 234 usable words before it. Twenty-seventh distinct size in the series, falling between 1141 and 1226: 926, 937, 940, 995, 996, 1010, 1021, 1055, 1141, 1193, 1226, 1256, 1284, 1285, 1353, 1369, 1439, 1651, 1656, 1688, 1697, 1743, 1819, 1829, 1915, 1999, 2015. No two alike in twenty-seven observations, with two one-word near-misses (995/996 and 1284/1285), so the boilerplate is assembled per request rather than served from a fixed template. Fifth consecutive chapter in which the marker falls on the final key, supporting the reading that it is appended to whichever block ends the fetch."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "3",
+      "verses": [
+        "24-30"
+      ],
+      "note": "The fourth figure in the furnace: Clarke calls the received rendering a most improper translation and insists on a son of the gods, a divine being or angel, asking what notion an idolatrous king could have of Christ; Wesley holds the Angel of the covenant appeared before the incarnation and applies it to those who suffer for Christ; Ellicott takes the middle, that the words are a heathen's who calls the same person an angel four verses later, notes the fathers read it of Christ, and says we have no means of knowing beyond that. Whether the king's confession was conversion: Clarke and Henry take it at face value; Gill grants conviction but not thorough conversion since the king kept his own gods, and Calvin presses hardest, that repentance is perseverance rather than one or two acts, and that the pronoun is the tell-tale since the king never calls that God his own."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "3",
+      "verses": [
+        "19-23"
+      ],
+      "note": "Who the mighty men were: Gill takes them for the most famous in the army for courage and strength, Ellicott for those likeliest to endure the heat with the army evidently present, Clarke for generals or chief officers since mere strength was not what the task required. What the sevenfold heating signifies: Clarke reads seven as intensity only, as hot as the furnace could be made; Ellicott doubts a round number and offers the seven demons the Babylonians reckoned most formidable, making the overheating itself a religious act; Henry takes it as an aggravation of sentence where rank might have earned mitigation."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "3",
+      "note": "Calvin is present at 19 of 30 keys in this chapter, thinning toward the end — consistent with the Daniel lectures being complete but unevenly ingested, not with the Ezekiel break-off at chapter 20. No missing source keys: 30 keys for 30 KJV verses. Gill and Clarke both note that the old versions insert a song of sixty-seven verses between verses 23 and 24 which is absent from the Hebrew; Clarke observes the join between those verses is visibly broken. That apocryphal insertion is recorded in the tiles as a textual observation, not carried as content."
     }
   ]
 }
