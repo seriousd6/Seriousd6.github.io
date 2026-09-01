@@ -77827,6 +77827,61 @@
         "1-11"
       ],
       "note": "Nine of the thirty-four keys carry Gill alone, most of them under fifty words, and four consecutive keys in the pillar description have no other voice. The chapter is narrative rather than argument and the corpus treats it as such; the tiling is correspondingly coarse, five entries over thirty-four verses."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "19",
+      "note": "Fidelity self-grade, all 14 verses across 4 tiles: every claim traced to a named source block in data/commentary/cow/ezekiel/19.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 4 tiles, Clarke 4, Ellicott 4, Calvin 4, Wesley 4, Keil and Delitzsch 2 (tiles 1 and 10, the only tiles whose range contains a K and D block - keys 1, 2, 10, 11), Matthew Henry 2 (keys 1 and 10 only). JFB excluded for cause."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "19",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "JFB misaddressing, TWENTY-FIRST consecutive chapter. Three JFB blocks, at keys 2, 8 and 14 - interval exactly 6, phase 2. Phases 0, 1, 2, 3, 4 and 5 have now all been observed across the chapters examined, with the interval never once departing from 6, which completes the residue set modulo 6 and settles the characterization: the sampler steps by 6 and is re-entered at an arbitrary offset per chapter. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "19",
+      "verses": [
+        "14"
+      ],
+      "note": "Ellicott chrome, TWENTY-FIRST consecutive chapter, 52nd observation. The hosting block at key 14 carries the invariant 926-word StudyLight tail; of 2,025 measured words only 132 are real Ellicott content on v14."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "19",
+      "note": "Coverage map for ezekiel 19: 14 KJV verses, 14 catena keys, no gaps. Calvin at 13 of 14 keys (absent at key 3). Gill at all 14. Clarke at 13, Ellicott at 12, Wesley at 11. Keil and Delitzsch at only 4 keys (1, 2, 10, 11) and all four are 203-word capped blocks - and note what the cap does to the shape of the chapter's evidence here: because K and D quote long runs of verses before commenting, their key-1 and key-10 blocks are largely chapter summaries, so the voice contributes structure but almost no verse-level exegesis anywhere in this chapter. Matthew Henry at only keys 1 and 10, which fall exactly at the heads of the two parables (the lioness and the vine)."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "19",
+      "verses": [
+        "5",
+        "10",
+        "14"
+      ],
+      "note": "Three substantive splits. (1) v5, which king is the second whelp. Clarke, Calvin, Wesley and Gill all take him for Jehoiakim - Calvin adding that he was set up by the conqueror after Egypt was wasted, and acted perfidiously. Ellicott dissents on evidence and gives his reasoning: Jehoiakim was indeed appointed by Pharaoh and bound in fetters with intent to carry him to Babylon, but he died in disgrace in Jerusalem and was succeeded regularly by his son without foreign interference, so the king actually carried away must be Jehoiachin, whose ways vv6-7 describe. (2) v10, the phrase 'in thy blood'. Clarke states plainly 'Of this expression I know not what to make' and sets out three proposals - the blood of the grape, an emendation to 'at a pomegranate' which the Septuagint and Arabic appear to have read, and a one-letter change giving 'thy vineyard' supported by manuscripts. Ellicott agrees it is obscure and has perplexed commentators, but if the text stands reads it as a vine living in the blood, that is the life, of her children. Gill and Henry keep the received text and explain it from husbandry, the practice of laying blood at the roots of vines. Keil and Delitzsch sidestep it entirely, rendering the word 'repose'. (3) v14, whose rod the fire came out of. Gill and Wesley say Zedekiah, the fire being his rebellion and broken oath. Clarke looks past the king to Ishmael son of Nethaniah, also of the blood-royal, who assassinated the governor left in the land, and reads the closing clause to mean that from that time not one of her own royal race ever sat on the throne. Calvin keeps the emphasis on culpability, that the last slaughter proceeded from the people themselves."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "19",
+      "note": "Two passages worth flagging for their own sake. (1) Calvin at v13 raises an objection against himself that none of the other voices notices: the two clauses are 'openly at variance', since a vine described as not merely withered but burnt up cannot also be planted in a desert - 'if it was withered, it could not take root again; but the burning removed the slightest hope; for when the twigs were reduced to ashes, who ever saw a vine spring up and grow from its ashes?' His answer is that the burning states the conclusion men's own senses were bound to reach when the city lay ruined, not the final state of the thing itself. (2) Matthew Henry at v1 turns the commission to lament into a rule for preachers - a minister who boldly foretells destruction must yet bitterly lament it, since 'how can we expect that others should be affected with that which we ourselves are not affected with?' - which is a rare instance in this corpus of a commentator drawing a homiletic obligation directly out of a prophet's brief."
     }
   ]
 }
