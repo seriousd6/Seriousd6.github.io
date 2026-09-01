@@ -76713,6 +76713,73 @@
       "book": "jonah",
       "chapter": "3",
       "note": "Coverage map for jonah 3: 10 KJV verses, 10 catena keys, no gaps. Calvin present at all 10 keys — the second chapter after jeremiah 6 with complete Calvin coverage, though here three of the ten blocks are contaminated by spliced editorial apparatus. John Wesley is ABSENT FROM THE ENTIRE CHAPTER: no Wesley block exists at any key, so Adam Clarke alone carries the wesleyan-arminian school in all five tiles. Worth checking whether Wesley's notes on the minor prophets are systematically thin or missing in the corpus. Matthew Henry appears at only two keys but with very large section-blocks (2,937 words at key 1 and 3,279 at key 5) that cover several verses each."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "10",
+      "note": "CORPUS-WIDE DEFECT, HIGHEST PRIORITY YET FOUND — the Keil and Delitzsch fetch is truncated at a fixed 203 words. I ran a scan over the whole data/commentary/cow tree (1,189 chapters). Of 10,472 Keil and Delitzsch blocks in the corpus, 9,727 are EXACTLY 203 words long — 92.9 percent. They occur in 926 of the 927 chapters that carry any K and D block at all. 9,266 of the 9,727 do not end in terminal punctuation, i.e. they break off mid-sentence; sampled tails: joshua 15 key 29 ends 'called Tolad (without the Arabic article) in 1 Chronicles', joshua 15 key 55 ends 'and has been preserved in the ruins upon', joshua 13 key 6 ends 'in vv. 15-33 of the land assigned by Moses'. This is not per-chapter variance and not a scraping accident on particular pages: it is a hard cap applied at fetch time to essentially every Keil and Delitzsch entry in the corpus. Consequences: (1) K and D is systematically the thinnest voice available at every tile, which is why it has repeatedly had to be dropped from voice lists for want of usable content — I have logged that as a 'window gap' or 'no usable comment' at amos 3, jeremiah 6 and joel 2, and all of those are almost certainly this same truncation instead. (2) The 203-word K and D block I logged at jeremiah 51 key 1 as a window offset was this truncation. (3) Every synthesis chapter written to date has had access to at most 203 words of K and D per key. RECOMMENDATION FOR THE OWNER: this warrants a re-fetch of the Keil and Delitzsch source before further synthesis, or at minimum a decision on whether to accept the cap; it is a data-acquisition bug, not something a synthesis worker can repair, and re-fetching would change the content available to all 926 affected chapters including the ones already synthesized."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "daniel",
+      "chapter": "10",
+      "note": "Fidelity self-grade, all 21 verses across 7 tiles: every claim traced to a named source block in data/commentary/cow/daniel/10.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 7 tiles, Clarke 7, Ellicott 7, Keil and Delitzsch 7, Calvin 7, Wesley 5, Matthew Henry 2 (keys 1 and 10, the only keys with a Henry block). JFB excluded for cause. Note that all seven K and D citations rest on 203-word truncated blocks - see the corpus-wide truncation note filed under this chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "10",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "JFB misaddressing, EIGHTEENTH consecutive chapter. Three JFB blocks, at keys 4, 10 and 16 - interval exactly 6, phase 4. Consistent with the standing characterization: the interval has been 6 without exception across amos 2/3/4, jeremiah 6, jeremiah 51, daniel 12, joel 2, jonah 3 and now daniel 10, while the phase differs per chapter (0, 1, 3 and now 4 all observed), confirming the sampler is re-entered at an arbitrary offset for each chapter. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "10",
+      "verses": [
+        "21"
+      ],
+      "note": "Ellicott chrome, EIGHTEENTH consecutive chapter, 49th observation. The hosting block at key 21 carries the invariant 926-word StudyLight tail; of 1,121 measured words only 137 are real Ellicott content on v21. The 926 figure has not varied in eighteen chapters. Recent real-content remainders: amos 2 key 15 = 23, daniel 12 key 13 = 53, amos 3 key 15 = 57, jonah 3 key 10 = 60, jeremiah 6 key 30 = 68, joel 2 key 32 = 90, daniel 10 key 21 = 137."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "10",
+      "verses": [
+        "5",
+        "13",
+        "21"
+      ],
+      "note": "Three major christological and angelological splits, the richest cluster in the chapter. (1) v5, who the man clothed in linen is: Ellicott identifies him as the Angel of God, God's Presence or Name, carefully distinguished from Michael and, by the prophet's silence, from Gabriel, and calls him the One who was the Logos; Wesley says very probably Christ in royal and priestly robes; Clarke notes the description is very like our Lord in the apocalyptic vision; Gill reads the sky colour of the stone as signifying he was the Lord from heaven; Calvin refuses all of this, calling the figure an angel and holding it a gross error to suppose angels become men whenever they are corporeally visible. (2) v13, who the prince of the kingdom of Persia is: Gill argues by elimination to an evil angel, Satan or one of his chief officers, since a king would be styled king and good angels do not militate against one another; Ellicott makes it a devil and builds the verse into a doctrine of spiritual powers governing nations, calling it perhaps the clearest verse in Scripture on the subject; Clarke says making it either a good or an evil angel would turn an important place into a legend, and identifies it with Cyrus himself, hesitating at the greatness of the work; Wesley keeps a human king but makes it Cambyses. (3) v21, who Michael is: Keil and Delitzsch leave him one of the chief princes; Clarke makes him an archangel, the only one named in Scripture, whose name sometimes signifies the Messiah; Wesley reports the common identification with Christ and elsewhere states it flatly as Christ the sole protector of his church."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "10",
+      "verses": [
+        "7",
+        "10",
+        "21"
+      ],
+      "note": "Three further splits. (1) v7, what the companions perceived: Ellicott says they heard the voice but saw nothing, citing Jerome's comparison with the apostle's companions; Calvin says they caught only a confused sound without understanding the language; Clarke says all felt a divine influence but only one saw the corporeal appearance; Keil and Delitzsch reject the whole class of such readings as incorrect, since the voice was not heard until after the companions had fled. (2) v10, whose hand touched him: Gill denies it can be the figure whose hand was polished brass and makes it an attendant with a softer, more human hand, probably Gabriel; Ellicott says flatly it was the hand of the person who appeared; Clarke observes that nothing was apparent but a hand and that since the hand often stands for God's power, perhaps God himself is meant, citing an ancient Vienna Septuagint whose paintings represent every appearance of God by a hand in the clouds. (3) v21, what the scripture of truth is: Gill, Keil and Delitzsch and Calvin all make it the eternal decree - Calvin adding that paper and books are helps to a memory that lets things slip, whereas God never forgets and therefore needs no books - while Clarke and Ellicott refer it to revelations already given or shortly to be given, Clarke thinking of the earlier visions the prophet had written down."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "10",
+      "note": "Coverage map for daniel 10: 21 KJV verses, 21 catena keys, no gaps. Calvin at 16 of 21 keys (absent at 3, 6, 10, 17, 18). Wesley at 8 keys, Matthew Henry at only 2 (keys 1 and 10) but with very large section-blocks of 1,895 and 3,457 words covering several verses each. Keil and Delitzsch present at 13 keys - and every one of those 13 blocks is exactly 203 words, which is what prompted the corpus-wide scan filed separately under this chapter. Minor observation on the tiling: the K and D blocks at keys 8 and 9 overlap, the key-8 block running past v8 into the opening of v9 which the key-9 block then repeats."
     }
   ]
 }
