@@ -77882,6 +77882,62 @@
       "book": "ezekiel",
       "chapter": "19",
       "note": "Two passages worth flagging for their own sake. (1) Calvin at v13 raises an objection against himself that none of the other voices notices: the two clauses are 'openly at variance', since a vine described as not merely withered but burnt up cannot also be planted in a desert - 'if it was withered, it could not take root again; but the burning removed the slightest hope; for when the twigs were reduced to ashes, who ever saw a vine spring up and grow from its ashes?' His answer is that the burning states the conclusion men's own senses were bound to reach when the city lay ruined, not the final state of the thing itself. (2) Matthew Henry at v1 turns the commission to lament into a rule for preachers - a minister who boldly foretells destruction must yet bitterly lament it, since 'how can we expect that others should be affected with that which we ourselves are not affected with?' - which is a rare instance in this corpus of a commentator drawing a homiletic obligation directly out of a prophet's brief."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "habakkuk",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all 19 verses across 9 tiles: every claim traced to a named source block in data/commentary/cow/habakkuk/3.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 9 tiles, Clarke 9, Ellicott 9, Calvin 9, Keil and Delitzsch 8, Wesley 7, Matthew Henry 3 (keys 1, 3, 16 - the only keys with a Henry block). JFB excluded for cause. Tile 16 initially failed vcheck for declaring Keil and Delitzsch without citing them; their key-17 block is largely quoted verse text, but it does carry their rendering of the catalogue of failures, which I added rather than dropping the voice."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19"
+      ],
+      "note": "JFB misaddressing, TWENTY-SECOND consecutive chapter. Four JFB blocks, at keys 1, 7, 13 and 19 - interval exactly 6, phase 1. Note that this is habakkuk 3 and the preceding chapter habakkuk 2 had phase 4: two consecutive chapters of the same book at different phases, which is the same evidence pattern amos 2/3/4 gave and independently reconfirms per-chapter re-entry. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "3",
+      "verses": [
+        "19"
+      ],
+      "note": "Ellicott chrome, TWENTY-SECOND consecutive chapter, 53rd observation. The hosting block at key 19 carries the invariant 926-word StudyLight tail; of 2,823 measured words only 184 are real Ellicott content on v19."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "habakkuk",
+      "chapter": "3",
+      "note": "Coverage map for habakkuk 3: 19 KJV verses, 19 catena keys, no gaps. Calvin at 18 of 19 keys (absent at key 18). Gill at all 19. Ellicott at 19, Clarke at 18, Wesley at 15, Keil and Delitzsch at 13 (all capped at 203 words), Matthew Henry at 3. Key 18 is the thinnest key encountered in a while: 137 words total, carrying only Gill and Ellicott, with no Calvin, no Clarke and no Wesley - which is why tile 18 runs on the key-19 blocks for most of its voices."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "habakkuk",
+      "chapter": "3",
+      "verses": [
+        "6",
+        "11",
+        "17"
+      ],
+      "note": "Three sharp splits, two of them philological. (1) v6, what the standing and measuring mean. Gill takes the standing for the ark abiding at Gilgal through the fourteen years of the conquest, after which the land was measured and divided by lot; Clarke reads it as the division of the promised land among the tribes, on the analogy of a conqueror dividing a subdued country among his soldiers; Wesley makes it God's presence with Joshua, standing by while the work was done. Calvin rejects the whole line - 'what the Jews affirm of the ark seems to me strained and frigid' - and holds that God stood as a man draws himself erect to be seen at a distance, while the measuring must not be confined to Judea but extended to the whole world, since to measure the earth properly belongs to a sovereign king. Keil and Delitzsch abandon the verb 'measure' entirely, rendering it that he stands and sets the earth reeling. (2) v11, whether the sun and moon standing still refers to Joshua's long day. Clarke, Wesley, Ellicott and Calvin all say it does - Calvin adding that the sun could not have stopped unless the moon were stayed with it, since there must have been the same action as to both luminaries, and that Joshua commanded the sun through the secret impulse of the Spirit having already been answered as to his prayer; Ellicott adds that the conception is apparently of heavenly bodies shamed into ceasing their journey by the brightness of the theophany. Gill denies the reference outright and gives four separate reasons: a different word is used in the account of that miracle, the sun and moon are not there said to stand in their habitation, neither the series of past history nor the thread of prophecy will admit it, and the words describe not the clear shining of the two lights but the reverse. Keil and Delitzsch reach the same denial independently, taking the two to have entered their dwelling so that the verse describes a darkening. (3) v17, whether the conjunction concedes or explains: Ellicott alone renders 'For' rather than 'Although', making the catalogue of failing harvests an explanation of the affliction rather than the condition despite which the prophet rejoices."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "habakkuk",
+      "chapter": "3",
+      "note": "Two things worth flagging. (1) Ellicott renders the whole ode in the FUTURE or present where the other voices render it past - 'God shall come from Teman', 'Before Him shall go the plague', 'I see' and 'are trembling' for 'I saw' and 'did tremble', 'Here the verbs are in the future, and are to be rendered accordingly' at v12, 'Thou walkest' at v15. This is not a scattering of local choices but a sustained editorial decision running the length of the chapter, and it changes the poem from a recital of past deliverances into a prophecy of a coming one. It is worth recording as a systematic difference of reading rather than as a set of individual disagreements. Ellicott also corrects the paragraphing, holding that the poem ends at v15 and the new section begins at v16, not at v17 as the Authorised Version indicates. (2) Adam Clarke twice argues from physical specimens in front of him: at v9 he supports the reading that the bow is taken from its case rather than the arrow drawn by describing 'a fine oriental bow and bow-case, with quiver and arrows' that are 'now before me', and at v17 he corrects the natural history of the fig tree from repeated personal observation that the young figs appear as soon as the old ones are ripe. Gill reaches the same botanical conclusion by a different route, and Calvin grants the point while defending the received verb on the ground that it strictly means to bud."
     }
   ]
 }
