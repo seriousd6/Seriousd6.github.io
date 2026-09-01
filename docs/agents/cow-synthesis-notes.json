@@ -77020,6 +77020,90 @@
         "1-19"
       ],
       "note": "Every entry self-graded against its source blocks. All eleven entries fall inside the length window; every named voice is sourced in the keys its entry covers. No proper noun appears in the prose that is not verbatim in the chapter source, and no scripture reference is cited by chapter and verse in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "2",
+      "note": "CORRECTION AND MAJOR EXTENSION of the K and D truncation note I filed under daniel 10. The 200-word cap is NOT confined to Keil and Delitzsch. Scanning all 141,039 commentary blocks in data/commentary/cow, THREE voices have a hard ceiling of exactly 200 body words, with not one block in the entire corpus exceeding it: John Gill (29,682 blocks, max body 200, zero over), Keil and Delitzsch (10,472 blocks, max 200, zero over), and Cyril of Jerusalem (1,273 blocks, max 200, zero over). That is 41,427 blocks under a hard cap. By contrast Adam Clarke runs to 10,884 body words and John Calvin to 7,841, and both have thousands of blocks over 200, so the cap is voice-specific and not a global fetch limit. 13,799 blocks sit exactly at the cap, meaning they were actually truncated; the rest of the capped voices' blocks were naturally shorter. My earlier note said 92.9 percent of K and D blocks were truncated and treated it as a K and D problem; the accurate statement is that three whole voices are capped, and the largest of them is GILL, which is the most-used voice in the corpus and appears in essentially every tile I have written. Two further details. (1) The cap is on BODY words: blocks measure 202 total for two-word names (Gill, Lightfoot) and 203 for three-word names (Keil and Delitzsch, Cyril of Jerusalem), which is what made it look like two different numbers. (2) Truncation rate tracks how long the commentator naturally is on a passage, so it clusters by book - Gill is capped in 49.6 percent of songofsolomon blocks, 45.3 percent of colossians, 42.9 percent of 1peter and 31.0 percent of hebrews, but only 0.7 percent of nehemiah and 0.0 percent of ezra. The dense doctrinal books are the worst hit. AMBIGUOUS CASE: John Lightfoot has 132 of 1,056 blocks at exactly 200 words (12.5 percent) but a maximum of 493, so it is not capped; that spike needs separate explanation. RECOMMENDATION unchanged but now much wider in scope: this is a data-acquisition bug requiring an owner decision on re-fetching, and it now touches the corpus's principal reformed voice as well as its principal grammatical-historical one."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "habakkuk",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all 20 verses across 13 tiles: every claim traced to a named source block in data/commentary/cow/habakkuk/2.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 13 tiles, Clarke 13, Calvin 13, Ellicott 11, Keil and Delitzsch 8, Wesley 7, Matthew Henry 2 (keys 1, 5, 15 - the only keys with a Henry block; he is in tiles 1, 5 and 15). JFB excluded for cause. One deliberate omission: I did NOT cite Calvin at key 13, because that entire 779-word block is editorial footnote apparatus with no Calvin exposition in it at all - see the apparatus note. Calvin's presence in tile 12 rests on the genuine key-12 block."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "13"
+      ],
+      "note": "Editorial footnote apparatus fetched as Calvin's commentary - THIRD BOOK showing this defect class, after jonah 3 (three instances) and the volume-boundary cases at daniel 12 and jeremiah 29. Two instances here, and one of them is the worst yet. (a) Key 4: the Calvin block runs into a manuscript-variant discussion - 'Two MSS. give another reading; one has [...] and the other [...], which means to swoon, or to faint' - with the commentators' names excised throughout, exactly the pattern found at jonah 3. (b) Key 13: the ENTIRE 779-word Calvin block is apparatus with no Calvin exposition whatsoever. It opens 'Then he adds, The construction of the first line of this verse, as given by , is stiff and unnatural' - note the excised name after 'by' - and continues through the Septuagint, Syriac and Arabic renderings and a comparison of word order with another prophet, never returning to Calvin's own voice. A worker who trusted the attribution would cite an anonymous nineteenth-century editor as Calvin. I did not cite Calvin at key 13 for this reason. RECOMMENDATION: a scan for Calvin blocks that open with 'The construction of' or contain 'MSS.' would probably find these mechanically."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "10",
+        "16"
+      ],
+      "note": "JFB misaddressing, NINETEENTH consecutive chapter. Three JFB blocks, at keys 4, 10 and 16 - interval exactly 6, phase 4, identical to daniel 10 in the same batch. The interval has been 6 without a single exception across every chapter examined since amos 4; phases 0, 1, 3 and 4 have all now been observed, confirming per-chapter re-entry at an arbitrary offset. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "habakkuk",
+      "chapter": "2",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott chrome, NINETEENTH consecutive chapter, 50th observation. The hosting block at key 20 carries the invariant 926-word StudyLight tail; of 1,047 measured words only 63 are real Ellicott content on v20. The 926 figure has not varied in nineteen chapters. Recent real-content remainders: amos 2 key 15 = 23, daniel 12 key 13 = 53, amos 3 key 15 = 57, jonah 3 key 10 = 60, habakkuk 2 key 20 = 63, jeremiah 6 key 30 = 68, joel 2 key 32 = 90, daniel 10 key 21 = 137."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "habakkuk",
+      "chapter": "2",
+      "note": "Coverage map for habakkuk 2: 20 KJV verses, 20 catena keys, no gaps. Calvin at 19 of 20 keys (absent at key 3). Keil and Delitzsch at 9 keys, and eight of those nine blocks are exactly 203 words - i.e. truncated at the 200-word body cap; the exception is key 19 at 61 words. Gill at all 20 keys, of which five are at the 202-word cap (keys 3, 5, 14, 15, 20), so a quarter of the chapter's Gill material is truncated mid-thought. Matthew Henry at only 3 keys (1, 5, 15) but with large section-blocks of 2,084, 3,249 and 2,367 words. Wesley at 12 keys, absent from key 19."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "habakkuk",
+      "chapter": "2",
+      "verses": [
+        "4",
+        "15"
+      ],
+      "note": "The two great cruxes of the chapter. (1) v4, how 'the just shall live by his faith' is to be taken. Ellicott is the outlier and states his position as a caution to students: the renderings 'he that is righteous-by-faith shall live' and 'he that is justified-by-faith shall live' have been suggested by the apostolic citations, but the adjective cannot be taken in that close collocation, and 'here, at least, the words have no doctrinal significance', though their ethical importance is undeniable; for him the emphatic word is 'live' and the reward of patient waiting is deliverance from destruction. Clarke keeps the historical sense primary - the man who believed the warning escaped the siege and saved his life - and treats the apostolic use as an accommodation, noting the Christians who withdrew to Pella. Calvin sets faith against every other defence men rely on. Wesley makes it the humble man persuaded of the promises. Calvin separately prefers a reading of the first clause in which the proud man's punishment is that he never finds tranquillity, being his own executioner. (2) v15, whether the giving of drink is literal. Henry reads it literally against promoters of drunkenness, verified in the king who began the healths before a thousand lords, and speculates that the later Persian law forbidding compulsion in drinking arose from it. Calvin calls most expounders frigid here, charges the Jewish interpreters with contriving fables when nothing certain occurs to them, rejects the captive-kings story because no history relates it, and holds the discourse metaphorical and aimed at the whole empire. Gill also takes it figuratively but of Jesuit methods used on Protestants after the Reformation. Clarke looks outside Babylon entirely, to the Egyptian king who enticed the last two kings of Judah into rebellion."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "habakkuk",
+      "chapter": "2",
+      "verses": [
+        "2",
+        "6",
+        "7"
+      ],
+      "note": "Two philological clashes. (1) v2, whether 'that he may run that readeth it' means a reader running past. Calvin and Wesley say yes - large letters so that anyone passing quickly may see at a glance, the writing not causing readers to stop. Ellicott makes it the reader running his eye through the inscription. Clarke rejects the whole line with unusual heat: the popular saying that God's book is so plain that he who runs may read 'is very foolish', since God never intends his words to be understood by the careless, and no trifler understands Scripture - adding that if a play-bill were read as many read the Bible, its readers would know as much of the one as of the other. Clarke's own sense is that the attentive reader may speed away and save his life. (2) vv6-7, whether the taunt's imagery is commercial or physical. Ellicott makes it commercial throughout: the man accumulates usury rather than thick clay, the received rendering resting on a false etymology found in the rabbinic commentary; the verb 'bite' means to oppress with usury; 'vex' alludes to a creditor's forcible seizure of a debtor. Calvin rejects this flatly - the answering words are 'biters' and 'tormentors', the verb's common meaning is to bite and it carries the usury sense only in one conjugation, and the Septuagint gives 'biters', so 'the idea of lending on usury cannot be admitted'. Keil and Delitzsch retain 'thick clay' without argument; Gill reports the usurer rendering as what some give, without adopting it."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "habakkuk",
+      "chapter": "2",
+      "note": "Gill runs a fully worked-out papal-historicist scheme through this whole chapter, and it is worth flagging because it makes him structurally the odd voice out at nearly every tile rather than only occasionally. At v5 he explicitly rejects the Chaldean reference on the ground that reading the passage of the Babylonians 'is to go back to times before the first coming of Christ' and so breaks the thread of a prophecy which he takes to run from the first coming to the second. Thereafter: v7's sudden risers are the Christian emperors overthrowing the heathen ones; v8's remnant that spoils the spoiler are the survivors of the persecutions rising under Constantine; v9's covetous house-builders are the bishops of Rome enriched by imperial donation; v11's crying stones are men within the corrupted body - he names Bernard, Wycliffe and Huss; v12's town built with blood is the church of Rome, mystical Babylon; v15's giving of drink is Jesuit method used on Protestants after the Reformation; v18's graven images are those of the Trinity, Christ, the Virgin, angels and departed saints. Adam Clarke supplies the chapter's other striking application, reading v12 against the slave trade, where 'to a considerate and humane mind, the walls appear as if composed of the bones of negroes, and cemented by their blood'."
     }
   ]
 }
