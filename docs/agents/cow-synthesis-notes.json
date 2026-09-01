@@ -70298,6 +70298,64 @@
         "28"
       ],
       "note": "Calvin notes that profane men call the rainbow after a goddess and imagine she performs the commands of the gods, whereas Scripture calls it the bow of God."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "18",
+      "note": "Self-graded every verse against the source catena. All 32 source keys read; six tiles at 1-4, 5-9, 10-18, 19-22, 23-29, 30-32. 37,483 usable source words distilled to 3,870, compression 10.6:1 / 9.9:1 / 10.1:1 / 8.6:1 / 8.9:1 / 9.4:1. Every claim traces to a named block and no voice is given a position it does not hold. Keil and Delitzsch is carried in tiles 1, 5 and 10 only; its blocks at keys 22 and 28 are pure scripture quotation with no comment, so it is not listed as a voice in tiles 19 and 23. Henry is absent from 5-9 and 23-29, where the source has no Henry block. Grades A across all six tiles."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "18",
+      "note": "JFB STRIDE, 20th consecutive chapter, interval still exactly 6. Ezekiel 18 carries Jamieson-Fausset-Brown at keys 5, 11, 17, 23 — phase 5. Phases in order across the run: 4,1,3,6,2,3,4,5,1,2,2,6,4,5,3,6,3,3,3,5. NEW VARIATION worth recording: the run STOPS EARLY here. The chapter has 32 keys, so the stride should continue to 29 and beyond, but there is no JFB block at 29. Every prior chapter ran the stride out to the end of the available keys. Four blocks only, and the last is nine verses short of the chapter end. Block sizes are also unusually uneven (223, 376-key share, 8, 32 words), the key-17 block being 8 words. This looks like a fetch that terminated mid-chapter rather than a different stride. Twenty chapters and four books with an interval that has never once varied remains the headline: recommend the owner inspect the JFB fetch/ingest path, which appears to sample every sixth verse rather than follow the commentary's own block boundaries."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "18",
+      "note": "ELLICOTT CHROME: 1,592 words of trailing StudyLight boilerplate on key 30, with 1,063 usable words before it. Twenty-eighth distinct size in the series, falling between 1439 and 1651: 926, 937, 940, 995, 996, 1010, 1021, 1055, 1141, 1193, 1226, 1256, 1284, 1285, 1353, 1369, 1439, 1592, 1651, 1656, 1688, 1697, 1743, 1819, 1829, 1915, 1999, 2015. Still no two alike in twenty-eight observations, with two one-word near-misses (995/996, 1284/1285): the boilerplate is assembled per request, not served from a fixed template. STRONGEST EVIDENCE YET for the placement rule. Key 30 is NOT the chapter's last key — there are keys 31 and 32 — but it IS Ellicott's last block, since Ellicott is absent from 31 and 32. The chrome therefore attaches to the end of the ELLICOTT fetch, not to the end of the chapter. Earlier chapters where it landed on the final key were cases where Ellicott happened to run to the end. Ellicott's block here also ends with visible navigation debris (repeated chapter-link fragments) immediately before the boilerplate."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "18",
+      "verses": [
+        "23-24"
+      ],
+      "note": "The sharpest clash in the chapter, and one commentator names the other's position to reject it. On the righteous man who turns away, Gill denies a truly righteous man can be meant, since no one is righteous by anything of his own but by Christ's imputed righteousness, which is God's and can never be lost; the man in view is righteous in his own esteem, holding a ceremonial or at best a merely moral righteousness. Clarke calls exactly that reading the gloss of theologians and rejects it: God never speaks of turning away from self-righteousness, which in his eyes is a nonentity, and there is no holiness but what he infuses, so a real righteous principle and practice is meant and a man once holy may fall from it and perish everlastingly. Calvin stands nearer Clarke, holding that only perseverance is blessed and a temporary righteousness never profits an apostate. Separately on the denial of pleasure in the wicked's death: Gill takes it comparatively (God does delight in judgment as it glorifies his justice; mercy is his delight and destruction his strange work), while Clarke takes it absolutely and infers that God cannot have decreed to abandon a man to the evil of his nature and then condemn him for what he could not avoid."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "18",
+      "verses": [
+        "5-9"
+      ],
+      "note": "Usury: Ellicott holds the word means not excessive interest but any interest at all, forbidden of a Hebrew and allowed without limit from a foreigner, a law of kindness rather than a regulation of trade. Calvin argues at length for the opposite, that interest cannot be condemned without exception, since the law is a complete rule of just living and permitted it from strangers, so that the law would stand convicted of defect otherwise; his rule is a borrowed formula, neither everywhere, nor always, nor all things, nor from all, while granting the trade is illiberal and citing a Roman who called taking usury much the same as murder. Clarke and Wesley take a middle line, exorbitant or illegal profit exacted on need. Also here: Gill alone makes the just man evangelically rather than legally just, against Keil and Delitzsch and Ellicott who make the righteousness the fulfilling of the law."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "18",
+      "verses": [
+        "19-32"
+      ],
+      "note": "How the chapter squares with the second commandment: Calvin answers twice over, that nobody dies innocent since all fell in one man, and that the punishment on children of the impious is chiefly inward, God withdrawing the spirit of rectitude and leaving them in the death they were born in; Wesley answers that children who suffer do in fact share the sin though the connexion escapes us, Scripture dooming nobody for sins he is wholly free of; Ellicott answers that no law is reversed at all, a higher law simply prevailing over a lower. And on the command to make a new heart: Henry says God does not command what cannot be done but bids us do what is in our power and pray for what is not; Clarke has the asking do the work, God being pleased in some sort to attribute to us what his grace alone performs; Ellicott denies human sufficiency is in question, the Spirit being given to those who ask while the decision falls to each man; Calvin makes the exhortation itself the instrument by which the grace is conferred, resting on the old prayer that God grant what he commands and command what he wishes."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "18",
+      "note": "CALVIN CORRECTION CONFIRMED AGAIN, and this chapter is the strongest counter-example yet to the old ingest-gap theory. Calvin is present at 20 of 32 keys in ezekiel 18 and dominates the chapter by volume — his blocks run 3,166 words at key 6, 2,427 at key 32, 1,815 at key 20, 1,725 at key 17. This sits squarely inside the range (chapters 1-20) where his Ezekiel lectures are complete, and it is the largest Calvin presence recorded in any Ezekiel chapter this run. The break-off at chapter 20 stands: ezekiel 21 = 1/32 keys, and 22, 24, 25, 30, 33, 37, 42 = 0. Rule unchanged: from ezekiel 21 onward expect the reformed school to rest on Gill alone, and do not file it as a source defect. Separately: Keil and Delitzsch blocks in this chapter are ALL exactly 200 words (keys 2, 5, 6, 11, 15, 22, 28), the known window-truncation defect, and two of them (22, 28) are pure scripture quotation with no comment at all."
     }
   ]
 }
