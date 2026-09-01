@@ -74889,6 +74889,102 @@
         "1-31"
       ],
       "note": "Self-graded every entry against its source keys. All eleven entries name only voices sourced in their own keys, with Keil and Delitzsch declared silent for the entry covering verses 20 to 23, whose block argues the following two verses. Proper nouns checked verbatim against the chapter source; the royal names spelled inconsistently across blocks, and the modern scholars and rabbinic authorities cited within them, were referred to descriptively rather than by name."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "51",
+      "note": "Self-graded every verse 1-64 against the catena. Seventeen tiles at keys 1, 3, 7, 11, 15, 20, 25, 30, 33, 36, 41, 44, 46, 51, 56, 59, 61. 65,018 usable source words in, 10,436 out, ~6.2:1. Every claim traced to a named block; no voice declared that is not cited, none cited that is not declared. All seventeen grade A. Largest chapter attempted in this loop to date."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "2",
+        "8",
+        "20",
+        "26",
+        "32",
+        "38",
+        "44",
+        "50",
+        "56",
+        "62"
+      ],
+      "note": "JFB misaddressing, eleventh chapter running, and the clearest instance of the stride yet: ten JFB blocks at keys 2, 8, 20, 26, 32, 38, 44, 50, 56, 62 — an exact interval of 6 with no exceptions across a 64-verse chapter. Every one is Proverbs commentary (16:24 at key 2; 3:31/1:10 at 8; 14:31 at 20; 17:10 at 26; 3:32/12:2 at 32; 17:20 at 38; 17:21/10:1 at 44; 18:1 at 50; 18:6-7 at 56; 18:11 at 62), and they run in ascending Proverbs order, which suggests the wrong-book sampler walks its own source sequentially. JFB excluded from all seventeen tiles."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "64"
+      ],
+      "note": "Ellicott chrome at key 64: the fixed 926-word StudyLight boilerplate, eleventh consecutive chapter, 42nd observation. Ellicott v64 measures 1077 words of which 130 are real comment. Attaches to the end of the Ellicott fetch, not the end of the chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "16",
+        "18",
+        "19"
+      ],
+      "note": "New Gill defect class: at keys 16, 18 and 19 the Gill block is a bare cross-reference stub, 'See Gill on .', with the target reference stripped out — 47, 22 and 37 words, all of them the quoted verse text plus the dead pointer. Gill at keys 15 and 17 is quoted verse text only. Gill was therefore undeclarable across the whole 15-19 tile, which runs on three voices instead of six. Worth checking how widely the stripped 'See Gill on' stub occurs in the corpus; it silently removes a voice."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "1",
+        "47"
+      ],
+      "note": "Two further window artifacts. K&D at key 1 is truncated to 203 words and its content is commentary on verses 41-46 of this chapter, so the K&D window is offset from its key, not merely cut short — the block at the first key discusses material sixty verses later. And the K&D block at key 47 carries an interpolated editorial note in parentheses correcting Keil's own reading of the Hebrew; the corrective apparatus of the printed edition is being swept into the fetched block alongside the commentary."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "51",
+      "note": "64 verses, 64 keys, no gaps. Calvin at 61 of 64 keys, absent only at 21, 22 and 23 — and those three keys carry nothing but a short Gill note each (29, 29 and 64 words), the thinnest stretch in the chapter. Matthew Henry appears at exactly two keys, 1 and 59, and both are whole-chapter expositions rather than verse comment: the key-1 block runs 6,238 words and covers the entire chapter under four heads."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "20"
+      ],
+      "note": "Who the battle-axe is: Ellicott judges the Persian conqueror, so that the hammer of the whole earth is broken by a mightier weapon, and holds the tenses present; Clarke judges the reigning king of Babylon and insists all the verbs are past; Calvin holds Babylon was the hammer God employed and that he will hereafter employ a hammer within Babylon itself, on the ground that the accents and versions do not support the other pointing; Gill canvasses all three and adds a fourth, the kingdom of Christ."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "5"
+      ],
+      "note": "Whether Israel is 'not forsaken' or 'not widowed': Ellicott corrects the participle to widowed and reads a denial of apparent abandonment by the husband; Calvin reaches the same figure independently and makes the divorce temporary; Clarke takes the verse quite differently, of prophets still sent, and proposes that the word rendered sin means punishment. Also at v1 Ellicott alone identifies the closing clause as the Atbash cipher resolving to the name of the Chaldeans."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "51",
+      "verses": [
+        "32"
+      ],
+      "note": "What the burnt reeds are: Clarke confesses he cannot tell, unless marsh reeds fired after the capture, and reports a conjecture he cannot support from any historian; Ellicott takes the word as elsewhere meaning pool and refers it to a great artificial reservoir; Wesley makes the reeds a defensive barrier burned by the invaders; Calvin rejects all literal renderings as misplaced, the prophet saying hyperbolically that the fords were dried as though wood had been set alight."
     }
   ]
 }
