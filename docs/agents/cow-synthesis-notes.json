@@ -73009,6 +73009,47 @@
         "1-15"
       ],
       "note": "Every entry graded A. All proper nouns in prose verified verbatim against this chapter source; the fidelity check returned no entity flags on the first pass. Scholar names carrying umlauts in the Ellicott blocks were deliberately not carried into prose. No bare scripture references in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "9",
+      "note": "Fidelity self-grade, all 11 verses: every position carried is attributable to a named voice in the source catena. Three tiles (1-4, 5-7, 8-11), all grade A, all in window. 16,300 source words over 11 keys, no gaps. Voice counts 7, 5, 5. Jamieson Fausset and Brown declared nowhere -- both its blocks in this chapter are wrong-passage content. Keil and Delitzsch dropped from tile 2, where the 203-word window contains nothing but quoted verse text; they are cited in tiles 1 and 3, where the windows do carry real comment."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB misaddressing confirmed again, fifth chapter running. Two blocks only, at keys 1 and 7 (interval 6, phase 1). Key 1 reads 'A poor but wise man can discover (and expose) the rich and self-conceited', numbered 11 -- wisdom-literature commentary, not Ezekiel. Key 7 is numbered 17 and cites Proverbs 29:3 and 15, Proverbs 19:18 and Proverbs 29:9. Same signature as ezekiel 11: the host keys run at a stride of 6 while the source notes run at their own stride in a different book. See the ezekiel 11 note for the corpus-wide audit and the list of 47 affected landed chapters."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "9",
+      "verses": [
+        "8"
+      ],
+      "note": "Ellicott chrome: 926 words, on the ELLICOTT fetch at key 8 of 11, leaving 160 words of real content there. FIFTH consecutive observation of exactly 926 and the 36th overall. NOTE A MEASUREMENT PITFALL for whoever writes the stripper: measuring from the first occurrence of the string StudyLight in the whole KEY gives 1710 here, because the boilerplate contains the word twice; measuring from the marker inside the Ellicott BLOCK gives the true 926. Anchor on the block, not the key. Keil and Delitzsch are truncated to 203 words at keys 2, 4, 5 and 8 and to 103 at key 9; at key 5 the window is entirely quoted verse text."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "9",
+      "note": "Calvin present at 9 of 11 keys, absent at 4 and 6, as expected in an Ezekiel chapter before his lectures break off. Henry appears at keys 1 and 5 only, each time as a whole-section exposition rather than a verse note. Gill is thin throughout, several blocks running to a dozen or two words, but none is truncated mid-clause, so this is brevity rather than the fetch defect seen in hosea 3."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "9",
+      "note": "Recorded splits: (1) who the six men are -- Ellicott and Henry angels, Clarke and Calvin the Chaldeans, Gill and Wesley leaving it open; (2) what the number six signifies -- Henry one per principal gate, Ellicott six plus the man in linen making a mystical seven, Calvin saying flatly that he has not found out; (3) whether the mark is a cross -- Ellicott and K and D yes on the evidence of the old script and the coins, Clarke knows the whole tradition and rejects it for this place since the Hebrew says only that a mark shall be made, and Calvin dismisses it outright as puerile and calls Jerome's Samaritan-cross report a figment; (4) why the judgment begins at the sanctuary -- Clarke by proportion of privilege, Henry by causation from the priests' debaucheries, Ellicott because the sin had culminated there; (5) what defiling the house amounts to -- Clarke a sentence of abandonment, Ellicott part of the judgment, Gill a permission to the executioners, and Henry alone that it was really a purification; (6) how to treat the anomalous form behind 'I was left' -- K and D a copyist's error, Calvin a meaningful compound."
     }
   ]
 }
