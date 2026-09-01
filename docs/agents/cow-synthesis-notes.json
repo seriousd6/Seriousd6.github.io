@@ -72826,6 +72826,57 @@
         "1-16"
       ],
       "note": "Every entry graded A. All proper nouns in prose verified verbatim against this chapter source; the fidelity check returned no entity flags on the first pass. Scholar names carrying umlauts in the Ellicott block were deliberately not carried into prose. No bare scripture references in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "11",
+      "note": "Fidelity self-grade, all 25 verses: every position carried is attributable to a named voice in the source catena. Six tiles (1-2, 3-7, 8-13, 14-16, 17-21, 22-25), all grade A, all in window. 28,562 source words over 25 keys, no gaps. Voice counts 7, 5, 5, 6, 5, 6. Jamieson Fausset and Brown was DECLARED NOWHERE in this chapter -- see the source-defect note; all four of its blocks are commentary on a different book. Keil and Delitzsch were dropped from tiles 2, 4 and 6 because their blocks at those keys are pure quoted verse text with no attributable comment, the familiar 203-word window defect."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "11",
+      "verses": [
+        "2"
+      ],
+      "note": "CORPUS-WIDE JFB MISADDRESSING -- the most serious defect found so far, and it supersedes the JFB stride finding I have reported for 27 chapters. All four JFB blocks in this chapter are commentary on Proverbs 29: at key 2 the note numbered 12, at key 8 the note numbered 17 citing Proverbs 29:3 and 15 and 19:18, at key 14 the note numbered 22 citing Proverbs 15:18, at key 20 the note numbered 27 citing Proverbs 3:32 and 29:16 and Psalm 37:12. Their own internal numbering runs 12, 17, 22, 27 -- a stride of 5 in the SOURCE book -- while the host keys run 2, 8, 14, 20, a stride of 6. I then audited every chapter I have synthesized this session plus samples across the corpus: ezekiel 18 carries Ecclesiastes 5, jeremiah 31 carries Proverbs 2 and 6, lamentations 2 carries Proverbs 11 and 20 and 28, daniel 2 carries Isaiah 26 and 9, hosea 3 carries Isaiah 40, matthew 5 carries the Isaiah citation belonging to Matthew 4, john 12 carries Luke 24, mark 7 carries Mark 1, genesis 4 carries Genesis 3, acts 6 carries John 9, 1kings 1 carries a high-priesthood note from elsewhere, and numbers 31 carries one Numbers 7 block DUPLICATED at two keys. I found no correctly addressed JFB block anywhere. Corpus tally: 1121 chapters carry JFB blocks, 3863 blocks in all; 2446 of the 2742 key intervals are exactly 6 and every remaining interval but one is a multiple of 6 (12, 18, 24, 30), so the insertion stride is essentially universal; 194 chapters contain duplicate JFB text. CONSEQUENCE FOR LANDED WORK: 150 already-landed tiles across 47 chapters declare JFB as a voice and therefore carry positions attributed to it that come from commentary on other passages. The affected chapters are concentrated in the gospels (matthew 1-8 and 13-28, mark 1-13, luke 2-13, john 1-20), plus acts 6, genesis 4, joshua 11, 1samuel 23 and 27, 1kings 1 and 16, and numbers 31. This needs an owner decision: the ingest path should be fixed first, and then those 47 chapters re-synthesized or their JFB material stripped. I have not touched them, since that is a mass regeneration and not mine to start."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "11",
+      "verses": [
+        "23"
+      ],
+      "note": "Ellicott chrome: 926 words, attached to the end of the ELLICOTT fetch at key 23 of 25, leaving 167 words of real content there. FOURTH consecutive observation of exactly 926 and the 35th overall, now across three books (ezekiel 30, ezekiel 44, hosea 3, ezekiel 11). The fixed-template reading is confirmed; 926 can be treated as a constant and stripped by length-and-marker match. Keil and Delitzsch are truncated to 203 words at keys 1, 2, 6, 14 and 15, and at three of those the window contains nothing but quoted verse text, so the voice is unusable there."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "11",
+      "note": "Calvin present at 17 of 25 keys, absent at 2, 7, 9, 10, 11, 15, 16 and 23. Expected: this chapter precedes the point in the lectures where his Ezekiel commentary stops, so the reformed school has both Gill and Calvin throughout most of the chapter, unlike every Ezekiel chapter from 21 onward. Henry appears only at keys 1 and 22, each time as a whole-section exposition rather than a verse note, so his material on verses 3 to 13 sits under key 1 and had to be drawn on there."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "11",
+      "note": "Recorded splits: (1) whether the twenty-five men are the twenty-five seen worshipping the sun -- Clarke yes, Henry firmly no, Ellicott holds the question open; (2) what the number signifies -- Ellicott offers the king with two princes per tribe or no significance at all, Henry reports twenty-four city wards with a president, Calvin takes it as definite for indefinite; (3) what 'it is not near' means -- Clarke and Wesley the invasion, Gill records two other renderings and rejects them, Ellicott reconstructs it as a retort against the letter telling the exiles to build for a long captivity; (4) whether Pelatiah actually died then -- Clarke and Calvin yes, Wesley in vision only as an assurance; (5) who the brethren are -- everyone but Wesley makes them the exiles, Wesley the kindred left in Jerusalem; (6) what 'a little sanctuary' means -- Wesley small in size, Ellicott adverbial and temporal, Calvin allowing either small or of-the-few and preferring the first; (7) whether the new heart is spiritual or historical -- Ellicott, Calvin, Gill and Clarke spiritual, Wesley alone reading the whole promise of the return under two Persian proclamations."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "rejected",
+      "book": "ezekiel",
+      "chapter": "11",
+      "verses": [
+        "15"
+      ],
+      "note": "Calvin's expositions at verses 1, 14 and 15 all carry attacks on a named contemporary church, used as illustrations of the principle at issue. I carried the principles -- that rank confers no immunity from censure, and that the Church is not to be identified by visible splendour but is often preserved in hiding places among people of no estimation -- and dropped the sectarian labels, following the policy applied at jeremiah 31:34 and hosea 3:1. This is now the third chapter in this run where the same editorial call was needed; the owner may want a standing rule written into the prose guide rather than a per-chapter decision."
     }
   ]
 }
