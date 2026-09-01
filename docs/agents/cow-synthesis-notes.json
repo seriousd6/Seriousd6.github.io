@@ -76260,6 +76260,76 @@
         "1-21"
       ],
       "note": "Every entry self-graded against its source blocks. All eleven entries fall inside the length window; every named voice is sourced in the keys its entry covers, and the voice whose blocks argue verses outside their keys or carry no comment was declared silent for those entries rather than paraphrased. No proper noun appears in the prose that is not verbatim in the chapter source, and no scripture reference is cited by chapter and verse in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "joel",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all 32 verses across 13 tiles: every claim traced to a named source block in data/commentary/cow/joel/2.json; no verse left unrepresented; no synthesized claim without a source voice. Voices carried: Gill 13 tiles, Calvin 13, Clarke 13, Wesley 13, Ellicott 12, Keil and Delitzsch 10, Matthew Henry 5 (keys 1, 12, 15, 18, 28). Calvin present at 31 of 32 keys (absent only at key 7). JFB excluded from every tile for cause (see the misaddressing note)."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "joel",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30"
+      ],
+      "note": "JFB misaddressing, SIXTEENTH consecutive chapter. Five JFB blocks at keys 6, 12, 18, 24, 30 — interval exactly 6, phase 0. None of the five comments on Joel; each is commentary on an unrelated passage elsewhere in Scripture. The interval has been 6 with no exception across amos 2/3/4, jeremiah 6, jeremiah 51, daniel 12 and joel 2, while the PHASE differs per chapter (amos 2 phase 0, amos 3 phase 1, amos 4 phase 3) — three consecutive chapters of one book at three phases rules out per-book alignment and shows the sampler is re-entered at an arbitrary offset for each chapter. jeremiah 51's ten blocks were consecutive Proverbs passages in ascending order (sequential walk of the source); daniel 12's two blocks were the same Isaiah 38 text duplicated; jeremiah 6's five blocks crossed at least three books, so the sampler's own sequence crosses book boundaries. JFB excluded from every tile in this chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "joel",
+      "chapter": "2",
+      "verses": [
+        "32"
+      ],
+      "note": "Ellicott chrome, SIXTEENTH consecutive chapter, 47th observation. The hosting block at key 32 carries the invariant 926-word StudyLight site-furniture tail (navigation, ads, footnotes apparatus) appended to the commentary; of 1,074 measured words only 90 are real Ellicott content on v32. The 926 figure has not varied in sixteen chapters, so it is a fixed template, not scraped variance. Real-content remainders continue to shrink across recent chapters: jeremiah 51 key 64 = 130, daniel 12 key 13 = 53, amos 3 key 15 = 57, amos 2 key 15 = 23 (minimum to date), jeremiah 6 key 30 = 68, joel 2 key 32 = 90."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "joel",
+      "chapter": "2",
+      "note": "Coverage map for joel 2: 32 KJV verses, 32 catena keys, no gaps. Calvin at 31 of 32 keys (absent at key 7) — near-complete, second only to jeremiah 6 which was the first chapter with Calvin at every key. Keil and Delitzsch present but with no usable comment at v23 (the two rains), so tile 23 was written from five voices; that tile then fell under the 350 floor after a split and was extended with further Wesley/Gill/Clarke material on the former and latter rain rather than padded."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "joel",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "Whether the morning spread upon the mountains means the swiftness and suddenness of dawn or the blackness that precedes it. Calvin and Wesley read it of speed — the locust army covers the land as light floods the hills at daybreak. Ellicott argues from the root for blackness, the dark of the dawn-cloud rather than its brightness, so that the image is of gloom spreading rather than light. Gill and Clarke keep the comparison to a spreading army without deciding the color."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "joel",
+      "chapter": "2",
+      "verses": [
+        "10"
+      ],
+      "note": "Whether the shaking of earth and heaven and the darkening of sun, moon and stars is hyperbole. Ellicott rejects the label, holding the language proper to the day itself. Calvin grants that it is hyperbolical and defends the propriety of hyperbole in prophetic speech. A related split runs through the same verse on whether the darkened luminaries are literal (an actual obscuring, whether by the locust cloud or by judgment) or figurative of the fall of powers and rulers."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "joel",
+      "chapter": "2",
+      "verses": [
+        "14",
+        "20",
+        "32"
+      ],
+      "note": "Three further splits. (1) v14 who is it that returns and repents — God, turning from the threatened evil, or the people, whose repentance is the condition; the who knoweth is read either as leaving God's freedom intact or as encouraging the doubting. (2) v20 why the invader is called the northern one, when locusts normally come on Judah from the south: answered variously by the direction of the particular swarm, by the standing prophetic idiom for the Assyrian and Babylonian invader, and by taking the locusts as figures of that northern army. (3) v32 how far the deliverance reaches — restricted to a remnant in Zion and Jerusalem, or extended through the apostolic citation to whosoever calls, with the remnant clause read as the effectual call rather than a geographic limit."
     }
   ]
 }
