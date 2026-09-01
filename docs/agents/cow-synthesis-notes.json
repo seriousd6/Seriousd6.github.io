@@ -71676,6 +71676,79 @@
         "22"
       ],
       "note": "Clarke and Ellicott both read the uncovering of sins by its opposite, since to cover sin is to forgive it and therefore to uncover it is to punish it."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "daniel",
+      "chapter": "2",
+      "note": "Self-graded every verse against the source catena. All 49 source keys read; ten tiles at 1-3, 4-13, 14-18, 19-23, 24-30, 31-35, 36-43, 44, 45, 46-49. 66,676 usable source words distilled to 6,424, compression 11.9:1 / 11.2:1 / 9.3:1 / 9.5:1 / 10.2:1 / 13.1:1 / 9.1:1 / 6.5:1 / 11.5:1 / 11.2:1. Largest chapter attempted in this run by a wide margin, roughly twice the previous largest. Every claim traces to a named block. Verses 44 and 45 are each a whole tile because the source blocks are 4,154 and 7,263 words. Tile 45 carries only four voices (Keil and Delitzsch, Clarke, Ellicott, Wesley): Gill's block at key 45 is a bare cross-reference of 19 words with no content, and Calvin and Henry have no block there. Grades A across all ten tiles."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "2",
+      "note": "JFB STRIDE, 22nd consecutive chapter, interval still exactly 6. Daniel 2 carries Jamieson-Fausset-Brown at keys 5, 11, 17, 23, 29, 35, 41, 47 — phase 5, eight blocks, the longest run yet observed in a single chapter. 47+6=53 exceeds the chapter's 49 verses, so the stride simply runs out. Phases in order across the run: 4,1,3,6,2,3,4,5,1,2,2,6,4,5,3,6,3,3,3,5,4,5. This is now 22 chapters across five books with an interval that has never varied once, in chapters of every length from 22 to 49 verses and every literary type. An eight-block run at a fixed interval of 6 through a chapter with clear and well known pericope divisions (the dream, the decree, the prayer, the image, the four kingdoms, the promotion) — none of which fall at verses 5, 11, 17, 23, 29, 35, 41 or 47 — is decisive. Recommend the owner inspect the JFB fetch/ingest path, which is sampling every sixth verse rather than following the commentary's own block boundaries."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "2",
+      "note": "ELLICOTT CHROME: 1,366 words of trailing StudyLight boilerplate on key 49, with 478 usable words before it. Thirtieth distinct size in the series, landing in a now-crowded band between 1353 and 1369: 926, 937, 940, 995, 996, 1010, 1021, 1055, 1141, 1193, 1226, 1256, 1284, 1285, 1334, 1353, 1366, 1369, 1439, 1592, 1651, 1656, 1688, 1697, 1743, 1819, 1829, 1915, 1999, 2015. Thirty observations, still no two alike, but the near-misses are accumulating fast: 995/996, 1284/1285, and now 1353/1366/1369 within sixteen words of each other. If the sizes were drawn from a fixed set of templates we would have seen a repeat by now; the pattern is consistent with per-request assembly from a pool of components. Placement again confirms the rule: key 49 is both Ellicott's last block and the chapter's last key. Same navigation debris (repeated chapter-link fragments) immediately before the boilerplate."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "daniel",
+      "chapter": "2",
+      "verses": [
+        "45"
+      ],
+      "note": "NEW DEFECT INSTANCE — empty cross-reference block. Gill's entry at key 45 is 19 words and consists entirely of the lemma plus 'See Gill on' with no target and no content. This is distinct from the missing-key class (ezekiel 40) and from window truncation (Keil and Delitzsch, which produces exactly 200 words): here the key exists and the author is present, but the block is a dangling cross-reference whose target was lost in ingest. Gill uses 'See Gill on' with a missing target at several other keys in this chapter too (8, 33, 37, 41), though those carry substantive text as well. Key 45 is the only one where the cross-reference is the whole block, which cost that tile a voice. Worth a corpus-wide sweep for Gill blocks under about 30 words containing 'See Gill on', since they are silently unusable."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "2",
+      "verses": [
+        "45"
+      ],
+      "note": "The sharpest disagreement in the chapter, and a genuinely consequential one. Clarke holds the stone has already struck: it began striking when the apostles went out through the empire pulling down idolatry, and the great blow fell at the conversion of Constantine, at a moment when the empire happened to be divided among four emperors at once and was thus an epitome of the four monarchies; the stroke is continual in its effects until idolatry is destroyed everywhere. Ellicott holds the opposite: the stone is rolling now as the kingdom of God spreads day by day, but the image is still standing and the stone has not yet fallen upon it, and only when that moment arrives will the kingdoms of the world become the kingdom of the Lord. Clarke also departs from everyone else on the legs of iron, taking them first for the Egyptian and Syrian kingdoms of Alexander's successors and only then for Rome, a reading Gill explicitly rejects at verse 40 on the ground that those belong to the thighs and no kingdom of Christ arose in their time."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "daniel",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "3",
+        "39",
+        "44",
+        "46",
+        "47"
+      ],
+      "note": "Five further splits. (1) The second year: Clarke and Calvin read it by the co-regency, Henry and Wesley from the day Daniel first stood before the king, and Gill rejects all the late Jewish reckonings since the man was already famous. (2) Had the king forgotten the dream: Clarke says nothing remained but the impression; Gill, Ellicott and Wesley say he remembered in general but could not repeat it; Keil and Delitzsch deny he had forgotten at all, and turn the point into a defence of the narrative's historicity against critics who called the demand madness. (3) In what sense the second kingdom is inferior: Ellicott says in its divided character against the solidity of its predecessor, Calvin denies inferiority of power or wealth and locates it in the world's general condition, Wesley in duration, Gill in the decline of its later reigns. (4) Whose days are the days of these kings: Wesley while the iron kingdom stood, Ellicott while the fourth exists in modified form with its parts at war, Gill the days of the ten divided kingdoms with the glory still future, Calvin the close of the fourth monarchy when it began to be torn. (5) The king's confession: Wesley takes it at full value, Ellicott gives no more than admission to the Babylonian pantheon, Calvin holds the words pious enough to pass for conversion but the fit momentary."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "2",
+      "verses": [
+        "44"
+      ],
+      "note": "FIDELITY DECISION worth recording. Calvin's block at key 44 is 21,659 characters and consists largely of a point-by-point reply to Isaac Abarbanel's six arguments against the Christian reading of the fifth kingdom. The exegetical substance is first-rate and is fully represented in the tile. However, in the middle of that reply Calvin inserts a gratuitous slur — that he has conversed with many Jews and never found a drop of piety, a grain of truth, or common sense in any of them — which is prejudice rather than argument and contributes nothing to the interpretation. I have carried every one of his actual answers (the comparison need not match at every point; religion was never the distinguishing mark between the four; the kingdom is invisible, so the Turks holding half the world proves nothing; the Roman monarchy began with the reduction of Macedon, not with Julius Caesar; the prophecy ends the empire where it began to be torn) and omitted the slur. Flagging this as a judgment call rather than an omission by oversight: the rule I applied is that abuse of a class of people is not a position held on the text and so is not a voice's position to record. Similar material may appear in other Calvin blocks on Daniel."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "daniel",
+      "chapter": "2",
+      "note": "Chapter shape. 49 source keys for 49 KJV verses, no gaps. Calvin present at 39 of 49 keys, absent from 4, 13, 18, 32, 35, 36, 37, 41, 42, 45 — his Daniel lectures are complete and densely ingested, unlike the Ezekiel ones which break off in chapter 20. Keil and Delitzsch blocks are again ALL exactly 200 words wherever they appear (32 of them), the known window-truncation defect; several are wholly scripture quotation carried over from the preceding verse's window, which is why the school is absent from several tiles. Henry appears at only four keys in the whole chapter (1, 14, 24, 31, 46) despite its length. The largest single block in the corpus so far encountered is Clarke's discourse at key 45, 6,545 words, an extended historical essay on the four monarchies with dates; it is the reason verse 45 needed a tile of its own."
     }
   ]
 }
