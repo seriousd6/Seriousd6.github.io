@@ -77294,6 +77294,79 @@
         "1-14"
       ],
       "note": "Every entry self-graded against its source blocks. All eight entries fall inside the length window; every named voice is sourced in the keys its entry covers, and the voice whose block was bare verse text was declared silent for that entry. No proper noun appears in the prose that is not verbatim in the chapter source, and no scripture reference is cited by chapter and verse in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "49",
+      "note": "Fidelity self-grade, all 39 verses across 12 tiles: every claim traced to a named source block in data/commentary/cow/jeremiah/49.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 12 tiles, Clarke 12, Calvin 12, Ellicott 11, Wesley 11, Keil and Delitzsch 9, Matthew Henry 4 (keys 1, 7, 23, 28, 34 - the only keys with a Henry block). JFB excluded for cause. ONE VOICE DROPPED FOR CAUSE: tile 13 (vv13-16) was written with five voices instead of six because the Keil and Delitzsch block at key 15 has no usable comment - see the truncation note filed under this chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "49",
+      "verses": [
+        "15"
+      ],
+      "note": "CONCRETE INSTANCE of the 200-word body cap destroying a voice outright, worth recording because it shows the mechanism rather than the statistics. The Keil and Delitzsch block at key 15 is 200 body words, and ALL 200 are quoted KJV text: it prints vv15, 16, 17, 18 and 19 in full and then reads, at the very end, 'The execution of the judgment, and fall of Edom. - Jeremiah' - which is the heading of the exposition, severed at the exact word the actual commentary begins. The block therefore contains zero words of Keil and Delitzsch's own comment. I had to drop the voice from tile 13 for want of anything to cite, and the vcheck 'declared but not cited' failure is what surfaced it. This matters for the standing recommendation: where a commentator's practice is to quote a block of verses before commenting - which is exactly Keil and Delitzsch's practice throughout - a 200-word cap can consume the entire entry with scripture text and leave nothing. That is a systematically worse outcome than losing the tail of a long comment, and it means the count of USABLE K and D entries in the corpus is lower than the count of non-empty ones. Recommend that any re-fetch decision take this into account, and that a scan be run for capped blocks whose content is entirely quoted verse text."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "49",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35"
+      ],
+      "note": "JFB misaddressing, TWENTIETH consecutive chapter. Six JFB blocks, at keys 5, 11, 17, 23, 29 and 35 - interval exactly 6, phase 5. This is the largest number of JFB blocks observed in a single chapter since jeremiah 51's ten, and they sit on a perfect arithmetic grid across a 39-verse chapter, which is about as clean a demonstration of the sampler's behaviour as the corpus is likely to give. Phases 0, 1, 3, 4 and now 5 have all been observed, with the interval never once departing from 6. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "jeremiah",
+      "chapter": "49",
+      "verses": [
+        "39"
+      ],
+      "note": "Ellicott chrome, TWENTIETH consecutive chapter, 51st observation. The hosting block at key 39 carries the invariant 926-word StudyLight tail; of 1,796 measured words only 89 are real Ellicott content on v39. The 926 figure has not varied in twenty chapters."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "49",
+      "note": "Coverage map for jeremiah 49: 39 KJV verses, 39 catena keys, no gaps. Calvin at ALL 39 keys - the third chapter with complete Calvin coverage, after jeremiah 6 and jonah 3, and by far the longest of the three. Gill at all 39 keys, of which seven sit at the 202-word cap. Keil and Delitzsch at 17 keys, all of them capped. Wesley at 21 keys, Ellicott at 30, Clarke at 33, Matthew Henry at only 5 (keys 1, 7, 23, 28, 34) but each a large section-block introducing one of the five oracles - which is a useful structural signal in itself, since Henry's blocks fall exactly at the heads of the Ammon, Edom, Damascus, Kedar and Elam oracles."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "49",
+      "verses": [
+        "7",
+        "9",
+        "11"
+      ],
+      "note": "Two notable splits in the Edom oracle. (1) vv7-9, the direction of dependence between this chapter and the shorter prophecy against Edom. Calvin is explicit that Obadiah came first and is the true interpreter, that Jeremiah borrowed from him, and that where the earlier prophet spoke of a future thing this one exults over a judgment near at hand; he also charges that interpreters have 'not only obscured but also perverted this verse' precisely because they failed to make the comparison. Henry agrees the expressions are borrowed and explains the harmony by one and the same Spirit inspiring all the prophets. Keil and Delitzsch call it a reproduction but note an alteration - what the earlier prophet offers as a comparison is here applied directly to the enemy - and expressly warn against the harmonising move, insisting the following clauses are not questions and that the parallel does not license importing the interrogative particle from it. Ellicott, notably, speaks of the words as 'reproduced in Obadiah', which reverses the direction. (2) v11, whether 'Leave thy fatherless children, I will preserve them alive' is mercy or irony. Gill hears it as the speech of a fleeing or dying man committing his family to a friend, then says there would be no Edomites left to say such words, and settles it in the next verse by stating that the preceding words are not spoken by way of promise and comfort but of threatening. Clarke reads it straight as a maxim of great importance, widows and orphans being the peculiar care of God, so that even Esau's shall be cared for. Ellicott poses the alternatives directly - stern irony veiling a threat, or a mingling of pity for the helpless - and judges the second truer to this prophet's character."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "jeremiah",
+      "chapter": "49",
+      "verses": [
+        "28",
+        "34",
+        "39"
+      ],
+      "note": "Two identity disputes and one eschatological one. (1) v28, what Hazor is - five distinct positions. Gill makes it Petra itself and denies it can be the Canaanite Hazor; Wesley identifies it with the Canaanite head city of Joshua's time; Henry takes a middle road, that the people were originally Canaanites of that northern kingdom, driven out and settled among the Kedarenes; Ellicott doubts it is a city at all and takes it for a district, since the name belongs to many Palestinian places while the pairing with Kedar points elsewhere; Clarke simply confesses he cannot find the place, which was 'no doubt in Arabia, and a place of considerable importance; but it is now no more'. (2) v34, who the Elamites were. Wesley and Henry say the Persians; Gill and Clarke prefer the distinct country of Elymais, Clarke calling the Persian identification 'not at all likely'; Calvin would rather say the Parthians, were it not that an evangelist lists the two as distinct, and gives a reason none of the others gives - that the Persians were remote from the Jews and had never injured them, so a prophet had no occasion to denounce them. (3) v39, the restoration in the latter days. Gill rules out Cyrus on chronology and takes it of the Messiah's times; Clarke thinks it probably the spiritual freedom under the gospel while keeping the Persian union in view; Wesley lets both senses stand and supplies the evidence that Elamites were at Jerusalem at Pentecost and were among the converted; Calvin is the frankest, admitting that no restoration of the nation is recorded in history at all, and resting the promise on their being united under Christ as their head - 'though the Elamites were not afterwards known, yet this was not said in vain'."
     }
   ]
 }
