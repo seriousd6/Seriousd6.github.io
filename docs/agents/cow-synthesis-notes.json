@@ -72520,6 +72520,64 @@
         "1-45"
       ],
       "note": "Every entry graded A. All proper nouns in prose verified verbatim against this chapter source; the fidelity check returned no entity flags on the first pass. Ligature spellings in the Ellicott and Henry blocks, and diacritic-stripped scholar names in the Keil and Delitzsch blocks, were deliberately not carried into prose. No bare scripture references in prose."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "fidelity",
+      "book": "hosea",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all 5 verses: every position carried is attributable to a named voice in the source catena. Three tiles (1, 2-4, 5), all grade A, all in window. 13,809 source words over 5 keys, so compression runs 8.6:1 at verse 1 and about 6.7:1 and 4.6:1 for the other two. Voice counts: 6, 7, 6. Contested points recorded as debates with holders named rather than harmonised."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "hosea",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "NEW DEFECT CLASS -- WRONG-PASSAGE BLOCK. The Jamieson, Fausset and Brown entry at hosea 3:5 is not commentary on this verse or this book. Its 153 words discuss God as Lord of Sabaoth reviewing the heavenly hosts, numerous as the stars, called each by name, none driven astray, citing Job 38:32 and Genesis 2:19-20 and quoting Horsley -- that is the standard JFB note on Isaiah 40:26. It has been filed under hosea 3:5 with a correct-looking author label. This is distinct from every defect class recorded so far (missing key, window truncation, empty cross-reference, trailing chrome): here the key exists, the block is well formed and the attribution is plausible, but the CONTENT belongs to a different book. I dropped JFB from the declared voices for that tile. Recommend the owner sweep the corpus for JFB blocks whose scripture citations fall outside the host book -- this class is invisible to the existing validators and would silently corrupt any synthesis that trusted it."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "hosea",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Truncated Gill blocks, two in one chapter. At verse 1 Gill is 12 words and stops mid-sentence: 'Then said the Lord unto me,.... Or, as the Targum,' with nothing after. At verse 3 he is 22 words and likewise stops mid-clause: '...this was the covenant or agreement he made with her,'. Both are cut at a point where the next word was due, so this is fetch truncation, not an empty entry. Gill was accordingly dropped from the declared voices of tile 1. Adds to the daniel 2 key 45 empty-cross-reference case as evidence that the Gill ingest path loses block tails."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "source-defect",
+      "book": "hosea",
+      "chapter": "3",
+      "note": "Ellicott chrome: 926 words, attached to the end of the ELLICOTT fetch at key 5 of 5, leaving only 78 words of real Ellicott content there. This is the THIRD CONSECUTIVE observation of exactly 926 (ezekiel 30, ezekiel 44, hosea 3) and the 34th overall, and the first in a different book division -- the minor prophets rather than Ezekiel. Three identical values in a row across two books settles it: the per-request-assembly inference I held for the first 31 observations is wrong, and the chrome is a fixed-length template. Recommend the owner treat 926 as a known constant and strip it by length-and-marker match. Keil and Delitzsch are truncated to exactly 203 words at every one of the five keys, the familiar window defect, uniform across the chapter."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "observation",
+      "book": "hosea",
+      "chapter": "3",
+      "note": "JFB stride: the only JFB entry in the chapter is at key 5 of 5, consistent with the fixed interval of 6 at phase 5, and this is the 26th consecutive chapter in which the lattice holds. But see the separate source-defect note -- the block at that key contains Isaiah content, so the stride here delivered a wrongly addressed fetch rather than a missing one. That is new information about the mechanism: the sampler is not merely skipping verses, it can also return another passage's note under the sampled key. Calvin present at all 5 keys, as expected in Hosea."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "disagreement",
+      "book": "hosea",
+      "chapter": "3",
+      "note": "Recorded splits: (1) the rendering of 'beloved of her friend' -- Clarke resolves it by pointing to 'loving another', Ellicott to 'loved by another' against the Greek 'lover of evil', Calvin takes the word for husband outright and draws an aggravation from it, Wesley simply 'her husband'; (2) the flagons -- K and D and Ellicott read cakes, Clarke allows either vessels or cakes, Wesley and Henry keep the drink, Calvin makes it a figure for drunkenness and novelty-chasing; (3) the price -- Gill, Wesley and Calvin count fifteen shekels as half a servant's price, while K and D and Ellicott add the barley and reach thirty, a full slave's price; (4) 'so will I also be for thee' -- Ellicott with two rabbis makes it the husband abstaining too, Calvin makes it the husband's counter-pledge, K and D think the prophet not included; (5) the length of the many days -- Calvin restricts it to the seventy years, Gill and Clarke extend it through the present dispersion, Wesley keeps to the exile; (6) when the latter days fall."
+    },
+    {
+      "at": "2026-09-01",
+      "kind": "rejected",
+      "book": "hosea",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "Calvin's exposition of verse 1 ends with an attack on a named church as boasting of antiquity while its devotions are modern and unstable. I carried the argument -- that novelty-chasing is the standing temper of superstition, and that the remedy is to cleave to the word -- and dropped the sectarian label, following the policy applied at jeremiah 31:34. Flagged in case the owner wants a different rule. Separately, Clarke at verse 4 expects the deprivation to last until the Jewish people acknowledge the one they crucified; that is a position held on the duration of the text and so was carried, attributed and neutrally phrased, with his epithet for the crucified omitted."
     }
   ]
 }
