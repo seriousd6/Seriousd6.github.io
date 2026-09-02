@@ -78615,6 +78615,57 @@
         "1-2"
       ],
       "note": "Matthew Henry is sourced only at keys 1, 8 and 14, each block covering a section. Entries 3-4, 5, 6-7, 9-10, 11-13, 16-18 and 19-20 fall inside a Henry section with no Henry block at their keys, and he is not named there."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "hosea",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all 23 verses across 10 tiles: every claim traced to a named source block in data/commentary/cow/hosea/2.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 10 tiles, Clarke 10, Calvin 10, Keil and Delitzsch 10, Ellicott 8, Wesley 6, Matthew Henry 3 (keys 1, 6, 14 - the only keys with a Henry block). JFB excluded for cause. Tile 12 graded B on the first stamp (ttr 0.571) and was rewritten for lexical variety, coming back A at 0.634; no other tile needed a second pass and vcheck was clean on all ten at the first attempt."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "hosea",
+      "chapter": "2",
+      "note": "CALVIN COVERAGE, positive control for the defect filed under zechariah 5. hosea 2 has Calvin at ALL 23 keys, and the blocks are genuine per-verse exposition throughout, not a single chapter-opening lecture. This is exactly what the corpus scan predicted: hosea measured 191 of 192 keys (99.5 percent) for Calvin, near the top of the distribution, against zechariah's 14 of 211 (6.6 percent) at the bottom. Having now worked chapters from both ends of that distribution in consecutive batches, I can confirm the difference is not a matter of degree but of kind - in hosea 2 Calvin comments verse by verse and is citable in every tile, while in zechariah 3 and 5 only the chapter's opening lecture survives. That strengthens the case that the low-coverage books are suffering a fetch failure rather than reflecting what Calvin actually wrote."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "hosea",
+      "chapter": "2",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "JFB misaddressing, TWENTY-FIFTH consecutive chapter. Four JFB blocks, at keys 5, 11, 17 and 23 - interval exactly 6, phase 5. Ellicott chrome, TWENTY-FIFTH consecutive chapter, 56th observation, and this is a NEW MINIMUM for real content: the hosting block at key 23 measures 2,433 words of which only 45 are real Ellicott, and of those 45 the usable content is a single sentence about the apostle's use of the prediction. The previous minimum was amos 2 key 15 at 23 words, so 45 is not the smallest ever seen, but the ratio here - 45 real words carried inside a 2,433-word block - is the worst signal-to-chrome ratio recorded. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "hosea",
+      "chapter": "2",
+      "verses": [
+        "13",
+        "14",
+        "23"
+      ],
+      "note": "Three splits worth recording. (1) v13, what the plural Baalim denotes. Clarke reads it as a multitude of separate deities - Baal being the general title for a male divinity as Astarte was for a female, so that one plural gathers all the male objects of worship and the other all the female, particular kinds distinguished by an epithet - and Wesley agrees, that the great idol of the ten tribes gave its name to the whole crowd. Ellicott construes it quite otherwise, as the cult of a SINGLE divinity carried on at many sanctuaries with distinguishing local features, so that Baal-Zephon, Baal-Hermon and Baal-Gad are local forms of one god rather than a pantheon, and on that footing glosses 'the days of Baalim' as the whole era through which the cult was practised. (2) v14, what force the connective 'therefore' has. Henry alone keeps its full causal force and treats the result as a wonder: after 'she went after her lovers and forgot me' one would expect 'therefore I will abandon her', and instead comes 'therefore I will allure her'. Ellicott denies the inference outright, holding the particle is sometimes used to make a strong transition, linked with what precedes but not concluding from it. Gill and Keil and Delitzsch both settle on 'nevertheless', Keil and Delitzsch expressly rejecting the 'assuredly' of some versions. (3) v23, whether the closing promise is fulfilled. Ellicott points to the apostolic use and takes it as truly fulfilled when both Jews and Gentiles are called children of the living God; Wesley divides it, the Jews multiplying after the captivity but much more since the gospel; Gill places the whole in the latter day; Clarke, having laid out what the promise contains, ends by doubting that it has yet been accomplished at all."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "hosea",
+      "chapter": "2",
+      "verses": [
+        "2",
+        "4",
+        "19"
+      ],
+      "note": "Two further points where a voice stands against the plain sense. (1) vv2-4, Calvin denies that the command to plead with the mother means what it appears to. 'It was far from the mind of the Prophet to suppose that God here teaches the faithful who had already repented that they ought to condemn their own mother. The Prophet meant nothing of the kind' - the passage instead checks the waywardness of a people who never ceased contending with God as though he had been more severe than just toward them. (2) v19, Calvin declines the doctrinally loaded reading of 'in righteousness and in judgment'. He reports that some take righteousness for what is conferred through gratuitous imputation and judgment for God's defence against the assaults of enemies, and sets it aside: the prophet intimates something more general, that the covenant would stand firm because there would be truth and rectitude on both sides. That is Calvin declining an imputation reading that a reader might have expected him to welcome, and it stands against Clarke, who reads the four terms as measures of the transaction and suggests besides an allusion to the betrothal dowry. Also worth noting from v1: Adam Clarke names the mother as Samaria in his chapter argument and as Jerusalem at the second verse, two different cities within a page - an internal inconsistency in the source rather than a disagreement between voices."
     }
   ]
 }
