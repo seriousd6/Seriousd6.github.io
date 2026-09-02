@@ -78307,6 +78307,44 @@
       "book": "zechariah",
       "chapter": "5",
       "note": "FOLLOW-UP TO THE CALVIN COVERAGE NOTE - I ran the scan and the hypothesis is CONFIRMED, and the defect is book-scoped rather than chapter-scoped. Across the corpus, 175 chapters of six or more keys have Calvin at exactly ONE key. They are not scattered: they cluster into whole books. Every one of zechariah's 14 chapters, every one of 1timothy's 6, 2timothy's 4, malachi's 4 and titus's 3, and 136 of psalms' 138 chapters have Calvin at exactly one key. Measuring Calvin's share of keys per book gives a clean bimodal split. At the bottom: 2timothy 4 of 83 keys (4.8 percent), 1timothy 6 of 113 (5.3), psalms 154 of 2408 (6.4), titus 3 of 46 (6.5), zechariah 14 of 211 (6.6), malachi 4 of 55 (7.3) - i.e. essentially one key per chapter, which is the signature of capturing only the chapter's opening block. A middle band follows: mark 11.5 percent, leviticus 20.4, numbers 25.9, joshua 26.3, ezekiel 29.8, luke 32.2. At the top, jonah 100 percent, hosea 99.5, lamentations 98.7, joel 98.6, micah 98.1. A commentator does not write on 100 percent of the verses of Jonah and 5 percent of the verses of 1 Timothy; this is a fetch pattern, not an authorial one. CONCLUSION: this is a SECOND data-acquisition defect, independent of the 200-word body cap already filed, and it silently removes the corpus's principal reformed voice from entire books - most consequentially from Psalms, which is 2,408 keys, the largest single block of keys in the corpus. Any chapter synthesized from those books has been written without Calvin at 93 to 95 percent of its keys. RECOMMENDATION for the owner: this belongs alongside the 200-word cap as a re-fetch decision, and the affected book list above gives the scope directly."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "zechariah",
+      "chapter": "3",
+      "note": "Fidelity self-grade, all 10 verses across 3 tiles: every claim traced to a named source block in data/commentary/cow/zechariah/3.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 3 tiles, Clarke 3, Ellicott 3, Wesley 3, Matthew Henry 3, Keil and Delitzsch 2 (keys 2, 6, 7 - the only keys with a K and D block), Calvin 1 (tile 1 only, his single block in the chapter being at key 1). JFB excluded for cause."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "3",
+      "note": "SECOND CONFIRMATION of the Calvin one-key-per-chapter defect within the same batch. zechariah 3 has Calvin at exactly 1 of its 10 keys, matching zechariah 5's 1 of 11. This is now two chapters of the same book observed directly, on top of the corpus scan filed under zechariah 5 which found all 14 zechariah chapters, all 6 of 1timothy, all 4 of 2timothy, all 4 of malachi, all 3 of titus and 136 of 138 psalms chapters at exactly one Calvin key. In both zechariah chapters the single surviving Calvin block is the chapter's opening lecture - at zechariah 3 key 1 it literally begins 'Chapter 3' and proceeds as a lecture introduction - which is the direct evidence for the mechanism I proposed: the fetch is capturing the head of each lecture and discarding the per-verse remainder. Practical consequence for this batch: both zechariah chapters were synthesized with the corpus's principal reformed voice present in only one tile each, and in zechariah 3 that tile is the only one where a reformed-school summary can rest on Calvin at all."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "3",
+      "verses": [
+        "2",
+        "8",
+        "10"
+      ],
+      "note": "JFB misaddressing, TWENTY-FOURTH consecutive chapter. Two JFB blocks, at keys 2 and 8 - interval exactly 6, phase 2, matching zechariah 5's phase 0 in the same book and batch, another same-book phase difference. Ellicott chrome, TWENTY-FOURTH consecutive chapter, 55th observation: the hosting block at key 10 carries the invariant 926-word StudyLight tail, of 1,280 measured words only 114 being real Ellicott content on v10. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "zechariah",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "8",
+        "9"
+      ],
+      "note": "Three splits worth recording. (1) v1, whether Joshua is seen personally or typically. Gill sets out the personal case - a man who came up from the captivity, was concerned in the building, had enemies, and had fallen into sin, or his sons had in marrying foreign wives - then judges it better to take him typically, for the state of the priesthood under the second temple or for the church. Ellicott makes him representative of the people in guilt, pardon and promise alike, and reports great variety of opinion among commentators on the capacity in which he stands. Henry keeps both, observing that the prophet knew the man well but saw only how he appeared before men, so that how he stood before God had to be shown in vision - 'men are really as they are with God, not as they appear in the eye of the world'. (2) v2, what the rebuke formula implies about the angel of the Lord. Gill, Henry and Wesley all identify him with Christ outright. Keil and Delitzsch dissent carefully, warning against the inference drawn from the epistle of Jude: the words are a standing formula for uttering the threat of a divine judgment, from which no conclusion can be drawn about the relation of the persons, so the angel is not to be placed beneath Jehovah on their strength. (3) v9, what the stone is. Gill makes it Christ and explicitly rejects both the plummet and Zerubbabel's foundation stone; Clarke allows the allusion to the foundation stone but insists the thing signified is 'Christ, and none other'; Wesley takes it as a particular stone pointed out. Ellicott dissents on grammar alone: if the received sense were right the following words should read 'upon that stone' rather than 'upon one stone', so the singular must be a noun of multitude meaning the material stones of the house, and the laying of them before Joshua figures the whole command to build."
     }
   ]
 }
