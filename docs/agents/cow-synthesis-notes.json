@@ -78268,6 +78268,45 @@
         "1-3"
       ],
       "note": "Clarke block at key 1 is a chapter argument rather than a comment on the verse, and his notes at keys 3 and 4 both attribute their substance to a named eighteenth-century scholar. Carried as Clarke reporting what he chose to extract, without the name."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "zechariah",
+      "chapter": "5",
+      "note": "Fidelity self-grade, all 11 verses across 2 tiles: every claim traced to a named source block in data/commentary/cow/zechariah/5.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 2 tiles, Clarke 2, Ellicott 2, Wesley 2, Keil and Delitzsch 2, Matthew Henry 2, Calvin 1 (tile 1 only, since his single block in the chapter is at key 1). JFB excluded for cause."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "5",
+      "note": "CALVIN COVERAGE COLLAPSE, and it is the sharpest instance yet. John Calvin is present at only ONE of this chapter's eleven keys - key 1, where the block is his opening lecture for the chapter - and is entirely absent from keys 2 through 11. This is a striking outlier against the recent run: jeremiah 49 had Calvin at all 39 keys, habakkuk 3 at 18 of 19, jonah 3 at all 10, ezekiel 19 at 13 of 14, habakkuk 2 at 19 of 20. A drop from near-total coverage to 1-of-11 in a chapter of comparable size is not plausibly explained by Calvin having written less on Zechariah 5, since the key-1 block is a full lecture opening that plainly continues past what was fetched. RECOMMENDATION: check whether Calvin's Zechariah commentary is lecture-structured in the source and whether the fetch is capturing only the first key of each lecture, discarding the per-verse remainder. If so this is a distinct defect from the 200-word body cap and would affect every lecture-structured commentary in the corpus. A quick scan for chapters where Calvin appears at exactly one key while other voices appear at most would find them mechanically."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "11"
+      ],
+      "note": "JFB misaddressing, TWENTY-THIRD consecutive chapter - though with only a single block, at key 6, an interval cannot be established from this chapter alone; key 6 sits on the interval-6 grid at phase 0. Ellicott chrome, TWENTY-THIRD consecutive chapter, 54th observation: the hosting block at key 11 carries the invariant 926-word StudyLight tail, of 1,478 measured words only 110 being real Ellicott content on v11. JFB excluded from both tiles."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "zechariah",
+      "chapter": "5",
+      "note": "Coverage map for zechariah 5: 11 KJV verses, 11 catena keys, no gaps, but the thinnest chapter encountered in this run. Total source is only 8,372 words across 11 keys, and several keys are nearly bare: key 8 has 118 words (Gill and Wesley only), key 10 has 99 words (Gill and Keil and Delitzsch only), key 7 has 282 words (Gill and Wesley only). Gill is the only voice present at all 11 keys. Ellicott at 8, Clarke at 6, Wesley at 6, Keil and Delitzsch at 4, Matthew Henry at 2, Calvin at 1. Because of this thinness the chapter divides naturally into just two tiles on its two visions (the flying roll, vv1-4; the ephah and the woman, vv5-11), and tile 5 rests substantially on Gill, since he is the only voice with anything at four of its seven keys."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "zechariah",
+      "chapter": "5",
+      "note": "FOLLOW-UP TO THE CALVIN COVERAGE NOTE - I ran the scan and the hypothesis is CONFIRMED, and the defect is book-scoped rather than chapter-scoped. Across the corpus, 175 chapters of six or more keys have Calvin at exactly ONE key. They are not scattered: they cluster into whole books. Every one of zechariah's 14 chapters, every one of 1timothy's 6, 2timothy's 4, malachi's 4 and titus's 3, and 136 of psalms' 138 chapters have Calvin at exactly one key. Measuring Calvin's share of keys per book gives a clean bimodal split. At the bottom: 2timothy 4 of 83 keys (4.8 percent), 1timothy 6 of 113 (5.3), psalms 154 of 2408 (6.4), titus 3 of 46 (6.5), zechariah 14 of 211 (6.6), malachi 4 of 55 (7.3) - i.e. essentially one key per chapter, which is the signature of capturing only the chapter's opening block. A middle band follows: mark 11.5 percent, leviticus 20.4, numbers 25.9, joshua 26.3, ezekiel 29.8, luke 32.2. At the top, jonah 100 percent, hosea 99.5, lamentations 98.7, joel 98.6, micah 98.1. A commentator does not write on 100 percent of the verses of Jonah and 5 percent of the verses of 1 Timothy; this is a fetch pattern, not an authorial one. CONCLUSION: this is a SECOND data-acquisition defect, independent of the 200-word body cap already filed, and it silently removes the corpus's principal reformed voice from entire books - most consequentially from Psalms, which is 2,408 keys, the largest single block of keys in the corpus. Any chapter synthesized from those books has been written without Calvin at 93 to 95 percent of its keys. RECOMMENDATION for the owner: this belongs alongside the 200-word cap as a re-fetch decision, and the affected book list above gives the scope directly."
     }
   ]
 }
