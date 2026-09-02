@@ -79066,6 +79066,43 @@
         "13-14"
       ],
       "note": "Checked against keys 13 and 14. The continued figure and the two further applications are Gill, the literal drying up and the rejection of the sin-offering reading are Calvin, the question about age and the frontier crossed for vows are Ellicott, the word for way used of a whole religion is Clarke, and the idol at Beersheba is Wesley. Keil and Delitzsch declared silent, his block at key 14 being bare verse text. Grade A."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "micah",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all 13 verses across 6 tiles: every claim traced to a named source block in data/commentary/cow/micah/2.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 6 tiles, Clarke 6, Ellicott 5, Calvin 6, Keil and Delitzsch 6, Wesley 6, Matthew Henry 3 (keys 1, 6, 12 - the only keys with a Henry block). JFB excluded for cause. All six tiles passed vcheck at the first attempt and all six graded A on the first stamp."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "micah",
+      "chapter": "2",
+      "verses": [
+        "12",
+        "13"
+      ],
+      "note": "THE MOST INTERESTING DISAGREEMENT IN THE CHAPTER, and one where Calvin knows he stands alone. Micah 2:12-13 - 'I will surely assemble, O Jacob, all of thee... The breaker is come up before them' - is read by almost everyone as the promise of restoration that conventionally closes such a chapter. Matthew Henry states the convention explicitly, that after threatenings of wrath a prophecy usually ends with promises of mercy, fulfilled in part at the return from Babylon and fully in the kingdom of the Messiah. Clarke calls it plainly a promise of restoration and reads the breaker as the one who gives deliverance and takes down the hurdles to let the flock through. Wesley divides the fulfilment the same way as Henry. Calvin dissents and says so in terms: 'The exposition of this passage is twofold. The greater part of interpreters incline to this view, that God here promises some alleviation... They therefore apply this passage to the kingdom of Christ, as though God gave hope of a future restoration. But when I narrowly weigh every thing, I am, on the contrary, forced to regard these two verses as a commination, that is, that the Prophet here denounces God's future vengeance on the people' - and he acknowledges that 'the former opinion is almost universally received' before proceeding. On his reading every image inverts: the gathering becomes a rout, the broken gate is broken because the ordinary passage would be too narrow for a people going out in confusion, and the king who passes before them is a king made captive, which Calvin calls the saddest spectacle of all since some hope remained while only the dregs of the people had been carried off. John Gill takes a third line, reporting that the words may be the false prophet's own continued from the preceding verse, promising plenty and the return of the captive tribes. This is worth flagging as a case where the corpus preserves a genuine minority reading argued against a stated consensus, rather than a difference of emphasis."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "micah",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB misaddressing, TWENTY-SIXTH consecutive chapter. Three JFB blocks, at keys 1, 7 and 13 - interval exactly 6, phase 1. Ellicott chrome, TWENTY-SIXTH consecutive chapter, 57th observation: the hosting block at key 13 carries the invariant 926-word StudyLight tail, of which only 66 words are real Ellicott content on v13. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "micah",
+      "chapter": "2",
+      "note": "Coverage map for micah 2: 13 KJV verses, 13 catena keys, no gaps. Calvin at ALL 13 keys with genuine per-verse exposition - micah measured 103 of 105 keys (98.1 percent) in the corpus scan, near the top of the distribution, and this chapter bears that out. Gill at all 13, Clarke at all 13, Wesley at all 13, Ellicott at 12, Keil and Delitzsch at 8, Matthew Henry at 3 (keys 1, 6, 12). A note on two verses that every voice found hard: at v6 both Ellicott and Calvin open by conceding the difficulty - Ellicott that 'the construction of this verse is very confused, but the intention of it is fairly clear', Calvin that 'the conciseness of the expressions has made interpreters to differ in their views' - and at v8 Calvin says again that 'as the words of the Prophet are concise, they contain some obscurity. Hence interpreters differ.' Where three independent voices flag the same two verses as textually hard, that is a useful signal for anyone later auditing the synthesis of this chapter: the prose there rests on genuinely contested ground and reports the contest rather than resolving it."
     }
   ]
 }
