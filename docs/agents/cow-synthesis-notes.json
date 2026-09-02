@@ -80986,6 +80986,133 @@
         "18"
       ],
       "note": "Entries 9-11, 12-17 and 18-21 self-graded verse by verse against the source blocks; every claim traced to a named voice, no proper noun used that is not verbatim in this chapter."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "nahum",
+      "chapter": "2",
+      "note": "Fidelity self-grade, all 13 verses across 4 tiles (1-2, 3-5, 6-9, 10-13): every claim traced to a named source block, no inference beyond what a source states. Calvin present at ALL 13 keys with substantial per-verse exposition (blocks of 239-1136 words) and cited in every tile. Ellicott absent from keys 4, 11, 13; Wesley present only at key 1 (23 words) and cited only in tile 1; Henry only at keys 1 and 11. JFB excluded. All four tiles graded A on first stamp (compress 0.438-0.461, ttr 0.607-0.661)."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "nahum",
+      "chapter": "2",
+      "note": "POSITIVE CONTROL for the Calvin coverage defect. Nahum 2 has Calvin at all 13 of 13 keys with genuine per-verse exposition, not a single opening lecture. Nahum is NOT in the exactly-one band, and this chapter shows what real coverage looks like: block sizes vary from 239 to 1136 words and each engages the verse in front of it. Set this beside the six chapters observed this window with Calvin at exactly one key, always key 1 (Zechariah 5, 3, 7, 12, 2 and Malachi 1). The contrast is the strongest single piece of evidence that the exactly-one pattern is a fetch defect."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "JFB misaddressing, thirty-third chapter observed with JFB blocks present. Two blocks only, at keys 3 and 9 (the key-9 block is 9 words), interval exactly 6, phase 3. JFB excluded from every tile written. Note that malachi 1, handled in the previous batch, had ZERO JFB blocks — so the streak of consecutive chapters WITH JFB present was broken there and resumes here."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "nahum",
+      "chapter": "2",
+      "note": "Ellicott chrome ABSENT from nahum 2 — a counterexample that qualifies the rule recorded at zechariah 2 and malachi 1. The last Ellicott block in this chapter is at key 10 and runs 26 words; keys 11, 12 and 13 have no Ellicott at all, and no block in the chapter carries the site boilerplate. So chrome does not attach to the last Ellicott block unconditionally. The better statement is that chrome appears when the fetch reached the foot of the chapter page, and its absence here coincides with Ellicott's coverage dropping out three verses before the end. Chapters where Ellicott's last block is well short of the final verse may be systematically chrome-free."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "2",
+        "3",
+        "5",
+        "8",
+        "13"
+      ],
+      "note": "Editorial apparatus fetched as Calvin, sixth book affected and a NEW sub-class within it. Several Calvin blocks in this chapter carry footnote apparatus inline with commentator names excised, leaving broken sentences: at v2 'in reference to what had already taken place, that is that God Some give this rendering' and 'confessed that he did not understand this verse. The view given of it by seems plain, and has taken the same view of it: but , as well as , differ widely'; at v3 'The most satisfactory explanation of this word is what is offered by and adopted by He says that peled, in Arabic, is to or and that'; at v13 'then renders the clause, Succendam usque ad fumum - I will burn to smoke the chariots: and the version of is the'. NEW: the v2 block also contains a run of ENGLISH TEXT TYPED IN GREEK CHARACTERS - 'Ανδ τηεψ ηαςε δεστροψεδ τηειρ σηοοτσ' decodes as 'And they have destroyed their shoots'. This is a font-encoding artifact (a Symbol-font passage transliterated character-for-character), not a Greek quotation. Worth a corpus grep for Greek-character runs that decode as English."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "Calvin sets out THREE constructions of the first verse where the others give one. (1) The verb means vanished rather than ascended, so the waster has disappeared before the chosen people and the four orders are a comfort to Judah. (2) The same words are terror spoken during a siege, telling the besieged to guard their fortresses and warning it will avail nothing. (3) The address is to the Assyrians and the destroyer is Nebuchadnezzar. He prefers the third. Gill rejects Kimchi's Sennacherib-against-Jerusalem reading for Aben Ezra's Babylonian, specifying Nabopolassar rather than his son; Clarke names the same pair; Ellicott suggests Cyaxares; Henry and Wesley keep it general."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "A total split on one verb. Gill and Calvin read 'the Lord hath TURNED AWAY the excellency of Jacob' — Calvin arguing at length that the noun means haughtiness far more often than glory, so the sense is that Nineveh's hour came only after God had humbled first the northern and then the southern kingdom, the Assyrians having been spared so long precisely because they were the instrument of that correction. Ellicott reads 'the Lord RESTORES the glory of Jacob so that it is as the glory of ancient Israel', and builds on the two names, the birth-name of a downtrodden people against the name given to the man who prevailed; he rejects the view that the names denote the two kingdoms. Clarke reports Bishop Newcome's emendation to 'restoreth' and declines it. K&D render with the turning away."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "2"
+      ],
+      "note": "CORPUS SCAN for the Greek-typed-English artifact found at nahum 2 v2: it is UNIQUE. Scanning all 1189 chapters for runs of Greek characters that transliterate back to common English words returns exactly ONE hit, this block ('Ανδ τηεψ ηαςε δεστροψεδ τηειρ σηοοτσ' = 'And they have destroyed their shoots'). Genuine Greek quotations are common in the corpus (Acts 1023 runs, John 848, Matthew 579, and so on) and are legitimate. So this is a one-off Symbol-font transliteration artifact in the Calvin fetch for this verse, not a systematic defect. Recording it so a future re-fetch can spot-fix the single block rather than hunt for a class."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "4"
+      ],
+      "note": "Whose army is described, and Ellicott is internally inconsistent across two verses. At v3 he says the mighty men are the BESIEGER's; Gill agrees (Babylonians and Medes) and Calvin dismisses the Assyrian reading as 'too strained'. Clarke alone refers the red shields and scarlet clothing to the preparations of the BESIEGED. But at v4 Ellicott restricts the raging chariots to the besieged city and rejects Kleinert's contrast (order without, wild terror within) as fanciful, while Gill takes those chariots for the enemy's and reports Kimchi's alternative that they are the defenders' own; Clarke has both sets meeting in the streets. So the pair of verses is read besieger-then-besieged by Ellicott and besieged-then-both by Clarke."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "7"
+      ],
+      "note": "The word left untranslated in the received version (Huzzab) draws five distinct answers, the widest spread in the chapter. Gill catalogues most of them: the Targum's 'the queen'; Jarchi and Aben Ezra after R. Samuel making it the queen's proper name; others the king himself figured as a woman for the effeminacy historians record of the last Assyrian king (spinning, wearing women's apparel); others the idol Venus; Kimchi's father the palace; others Nineveh itself. Clarke inclines to the queen on the ground that the ancient account of the burning names only the king, the concubines and the eunuchs, so she may be supposed to have escaped. Calvin calls the proper-name reading 'too strained', adopted only because 'there was a wish to say something', and refers the words by personification to the state of the kingdom. Ellicott rejects the name outright, taking the form as a verb cognate with a word meaning 'of a certainty' — so simply 'it is decided' — and makes the mourning maidens Nineveh's dependent cities. K&D keep the name."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "6"
+      ],
+      "note": "Clarke and Ellicott quote the same ancient account (Ctesias via Diodorus: the oracle that the city would fall when the river became its enemy, the third-year rains, twenty stadia of wall thrown down, the king's pyre) and draw OPPOSITE conclusions about 'the palace shall be dissolved'. Clarke: the prophecy was literally fulfilled, 'the gates of the river were opened, and the palace dissolved, i.e., burnt'. Ellicott: the account is inaccurate in detail but rests on a substratum of fact, and the verb must be taken in its literal sense of a solid dissolved by water, against Pusey's figurative reading of it as the dissolution of the empire; he answers the objection that the excavated palaces show fire-damage rather than water-damage by noting that water is the less demonstrative agent and a later conflagration would conceal the flood's work."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "12"
+      ],
+      "note": "Gill's note on the lioness is a self-contained excursus in natural history with no bearing on the verse: he reports the notion advanced by Herodotus that the lioness, as the strongest and boldest creature, bears but once in her life and then but one; notes that Gellius confuted it from the testimonies of Homer and Aristotle; and adds that the prophet's own words (whelps, plural) show it false. He then returns to the exposition as though nothing had happened. Comparable to his lion-and-fire digression at zechariah 2 v5 — this is a habit of his rather than a one-off."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "nahum",
+      "chapter": "2",
+      "verses": [
+        "13"
+      ],
+      "note": "Three readings of 'I will burn her chariots in the smoke'. Calvin rejects the suggestion that the phrase means merely a smoky fire, and takes it that at the first onset the whole force of the city is consumed, chariots standing by synecdoche for all warlike preparation as armoured horsemen would in his own day; he renders 'I will burn to smoke'. Henry keeps the preposition and finds contempt in it — not in the fire but in the smoke, consumed while the fire of God's indignation has not yet flamed out — and offers as an alternative that the drivers are smothered where they sit. K&D render plainly. Calvin also makes the change of speaker at this verse the point: the prophet has been God's herald until now, and God coming forward to declare his own decree without the mouth of a man is far more impressive."
     }
   ]
 }
