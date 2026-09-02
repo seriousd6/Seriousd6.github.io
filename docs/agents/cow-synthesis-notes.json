@@ -79103,6 +79103,61 @@
       "book": "micah",
       "chapter": "2",
       "note": "Coverage map for micah 2: 13 KJV verses, 13 catena keys, no gaps. Calvin at ALL 13 keys with genuine per-verse exposition - micah measured 103 of 105 keys (98.1 percent) in the corpus scan, near the top of the distribution, and this chapter bears that out. Gill at all 13, Clarke at all 13, Wesley at all 13, Ellicott at 12, Keil and Delitzsch at 8, Matthew Henry at 3 (keys 1, 6, 12). A note on two verses that every voice found hard: at v6 both Ellicott and Calvin open by conceding the difficulty - Ellicott that 'the construction of this verse is very confused, but the intention of it is fairly clear', Calvin that 'the conciseness of the expressions has made interpreters to differ in their views' - and at v8 Calvin says again that 'as the words of the Prophet are concise, they contain some obscurity. Hence interpreters differ.' Where three independent voices flag the same two verses as textually hard, that is a useful signal for anyone later auditing the synthesis of this chapter: the prose there rests on genuinely contested ground and reports the contest rather than resolving it."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "39",
+      "note": "IMPORTANT CORRECTION AND NARROWING of the Calvin coverage defect I filed under zechariah 5 and confirmed under zechariah 3. Working ezekiel 39 I found Calvin at ZERO of its 29 keys, and checked whether that was the same defect. It is not, and the check produces a sharp and testable distinction that materially reduces the scope of my earlier recommendation. Calvin's coverage of Ezekiel by chapter runs dense through chapter 20 (ch 16 = 52 of 63 keys, ch 20 = 35 of 49), collapses to 1 of 32 at chapter 21, and is ZERO from chapter 22 through 48. That is exactly where Calvin's lectures on Ezekiel actually stop - he died in 1564 partway through chapter 20 and the commentary was never completed. So Ezekiel's low corpus figure of 29.8 percent is GENUINE ABSENCE correctly represented, not a fetch failure. Re-running the scan while separating chapters with ZERO Calvin blocks from chapters with EXACTLY ONE gives two entirely different populations. Zero-Calvin: 387 chapters, concentrated in job (42 of 42), 2chronicles (36), 1samuel (31), proverbs (31), 1chronicles (29), 2kings (25), 2samuel (24) - books on which Calvin wrote no commentary at all - plus ezekiel 22-48. Exactly-one-Calvin: 175 chapters, and these are confined to psalms (136 of 138), zechariah (14 of 14), 1timothy (6 of 6), 2timothy (4 of 4), malachi (4 of 4) and titus (3 of 3), with only joshua and mark contributing two stray chapters each. Calvin demonstrably wrote complete commentaries on every one of those six books. REVISED RECOMMENDATION: the fetch defect is confined to roughly 175 chapters across SIX books - psalms, zechariah, malachi, 1timothy, 2timothy and titus - where exactly one block per chapter survives and it is the chapter's opening lecture. That is the re-fetch scope. The middle band I previously flagged as suspicious (mark 11.5 percent, leviticus 20.4, numbers 25.9, joshua 26.3, ezekiel 29.8, luke 32.2) shows MANY blocks per chapter rather than exactly one, and is a different phenomenon - partial within-chapter coverage consistent with Calvin's sermon series and gospel harmony rather than a systematic truncation. My earlier note implied the whole low band was defective; that was too broad, and this note supersedes it on scope."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "39",
+      "note": "Fidelity self-grade, all 29 verses across 4 tiles: every claim traced to a named source block in data/commentary/cow/ezekiel/39.json; no verse unrepresented; no synthesized claim without a source voice. Voices carried: Gill 4 tiles, Clarke 4, Ellicott 4, Wesley 4, Keil and Delitzsch 2 (tiles 1 and 9 only), Matthew Henry 2 (keys 1, 8, 11 and 23 carry Henry, falling in tiles 1 and 9). JFB excluded for cause. CALVIN IS ABSENT FROM THIS CHAPTER ENTIRELY and could not be cited in any tile - see the correction note filed under this chapter, which establishes that this is genuine absence rather than a fetch defect, Calvin's Ezekiel lectures having stopped partway through chapter 20."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "39",
+      "note": "Coverage map for ezekiel 39: 29 KJV verses, 29 catena keys, no gaps, but a very thin chapter and unevenly distributed. Total source is 13,641 words across 29 keys, and several keys are nearly bare: key 24 has 23 words with Gill alone, key 5 has 49 with Gill alone, key 4 has 37 words, key 27 has 62, key 28 has 68. Gill is the ONLY voice present at all 29 keys and is the sole voice at three of them, so tiles 17 and 25 rest heavily on him. Clarke at 20 keys, Ellicott at 17, Wesley at 13, Keil and Delitzsch at 7, Matthew Henry at 4, Calvin at none. Because of the thinness the chapter divides into only four tiles on its natural sections - the announcement against Gog (1-8), the burning and burying (9-16), the sacrificial feast (17-24), and the restoration (25-29)."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "39",
+      "verses": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27",
+        "29"
+      ],
+      "note": "JFB misaddressing, TWENTY-SEVENTH consecutive chapter. Five JFB blocks, at keys 3, 9, 15, 21 and 27 - interval exactly 6, phase 3. Ellicott chrome, TWENTY-SEVENTH consecutive chapter, 58th observation, and this ties the all-time minimum for real content: the hosting block at key 29 measures 926 words of chrome against only 28 words of real Ellicott on v29, against the previous minimum of 23 at amos 2 key 15. JFB excluded from every tile."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "39",
+      "verses": [
+        "1",
+        "9",
+        "19"
+      ],
+      "note": "Three splits worth recording. (1) vv1-8, whom the prophecy concerns. Adam Clarke reads every element historically of the Seleucid campaign - the archers whose bows are struck are the Persians in Antiochus's army, the fire on Magog is the destruction of the Syrian troops, those dwelling carelessly in the isles are auxiliaries from the Euxine, and the defeat in the midst of Israel is the rout of his army in that land where he had profaned the temple. Gill reads it as still future and names the country to be burnt as the Ottoman empire. Ellicott takes it apocalyptically, noting the judgment falls on the distant country as well as the invading army and that the Apocalypse represents this fire as coming down from God out of heaven. Wesley calls it the day of recompences against the last great enemies of the church. (2) vv9-16, whether the seven years of burning and seven months of burying can be literal. Ellicott denies it flatly and supports the denial with an arithmetic reductio borrowed from Fairbairn - that even on a moderate literal supposition a million men burying two corpses apiece daily through the working days of seven months would amount to three hundred and sixty million bodies. Clarke takes a middle course, figurative but admitting a good deal of literal meaning since many of the defeated died hidden and were not all found at once. Wesley defends the burning on the practical ground that the need of fire in that country is much less than in England. Gill takes it plainly. (3) v11, the valley of the passengers: Clarke and Wesley make it a real trade road by which merchants went from Syria into Egypt, while Ellicott denies both the derivation from the passing invaders and the identification with any known road, holding it denotes some probably imaginary thoroughfare which the buried bodies are to block up."
+    },
+    {
+      "at": "2026-09-02",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "39",
+      "note": "Adam Clarke uses the commentary on v19 to rebut Voltaire by name. Asking who it is that shall eat the fat and drink the blood, he answers that it is not the Jews, and reports that 'Voltaire says they ate human flesh, and are invited here by the prophet to eat the flesh and drink the blood of their enemies; which is a most unprincipled falsehood', since it is the fowls and the beasts that God invites. This is recorded because it is an unusual thing to find in the corpus - a commentator interrupting exposition to answer a named Enlightenment critic on a point of anti-Jewish slander - and because it bears on how the passage should be handled. The synthesis carries Clarke's rebuttal rather than the slander. Ellicott separately notes what makes these verses hard to read steadily, a curious mingling of the figurative and the literal, since the princes whose blood is drunk are immediately explained as sacrificial animals and those animals are reinterpreted a few lines later as horses, chariots and men of war; Wesley describes the same movement as an enigmatical invitation followed by its own key."
     }
   ]
 }
