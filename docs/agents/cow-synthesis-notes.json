@@ -84444,6 +84444,61 @@
       "book": "1kings",
       "chapter": "7",
       "note": "Every tile self-graded A: each claim traces to a block within or bearing on the tile's own verses, and the expansions are framing rather than new content. The two places where I leaned hardest on judgement: (1) at key 36 Delitzsch's text as scraped reads 'if then the basins were a cubit in diameter at the top' where the verse says four cubits — evidently a slip in the source — so the prose states the measurement the verse gives and attributes to him only the inference he actually draws from it, the wide-spreading shell shape; (2) at key 27 Gill's denial that the wheels were for carriage and his later comparison of the wheel's FORM to a chariot wheel are not a contradiction, and the prose keeps them apart rather than harmonising or flattening either."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "9",
+      "verses": [
+        "9",
+        "15",
+        "33",
+        "39"
+      ],
+      "note": "JFB MISADDRESSING, second confirmation of the SIX-KEY STRIDE in one session. The Jamieson, Fausset and Brown blocks in this chapter sit at keys 9, 15, 33 and 39 — all on the arithmetic progression 9, 15, 21, 27, 33, 39, with 21 and 27 simply carrying no JFB block at all — and none of the four comments on 1 Chronicles 9. Key 9 gives secretaries of state and the historiographer's office; key 15 gives Benhur and Bendekar and Syrian patronymics; key 33 and key 39 give straw and barley as horse fodder, one-humped camels, and Solomon's wisdom. That is 1 Kings 4 material throughout. Taken with 1 Kings 7 (keys 1, 7, 13, 19, 31, 37, 43, all carrying 1 Samuel 11-12 material) and numbers 31 (keys 6, 12, 18, 24, 30, 36, 42, 48, 54, all carrying Numbers 7 material), the defect is now demonstrated in three chapters with the same fixed stride of six and a different foreign passage each time. It is a scraper artefact, not a filing error. A corpus scan for chapters whose JFB keys form an arithmetic progression of six would enumerate every instance cheaply, and would tell the owner how much of the JFB corpus is unusable before any re-fetch is scoped. JFB was dropped as uncitable in all four tiles that would have carried it."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "9",
+      "verses": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44"
+      ],
+      "note": "VERSES 37-44 NOT COVERED, and the reason is the source rather than the tiling. Source keys 37, 38, 40 and 42 are absent outright, so no pericope may span them (the validator rejects a range covering a verse missing from the catena). Of the four keys that survive past the first gap: key 39 holds nothing but the misaddressed JFB block described in the companion note; key 41 is 95 words of Clarke on the translators having supplied a name in italics; key 43 is a single 13-word sentence from Ellicott on a contracted form; and key 44's one genuine sentence — that the omission of two families here matches a similar abridgment elsewhere and so looks deliberate rather than inadvertent — is followed immediately by StudyLight navigation, copyright text and raw CSS, the usual chrome on the LAST Ellicott block of a chapter. The chapter is therefore tiled over keys 1-36 only, which satisfies the contiguous-run coverage rule. NOTE FOR A FUTURE PASS: the Keil and Delitzsch block at key 36 quotes vv.36-44 entire, so the Saul genealogy COULD be covered from it if the owner is willing to accept a tile whose declared range exceeds the source keys it sits on. That is a contract question, not a writing one, which is why I have not done it unilaterally."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "9",
+      "note": "Rewritten from legacy per-verse prose as 15 pericope tiles over keys 1-36: 1-2, 3-4, 5-7, 8-9, 10-11, 12-13, 14-16, 17-19, 20-22, 23-25, 26-27, 28-30, 31-32, 33-34, 35-36. Six of the fifteen land in the 350-375 band and carry the advisory FLOOR flag; the gate passes with 0 violations. That is not floor-hugging in the sense the flag was built to catch — a register of names, numbers and duty rosters simply yields less per verse than narrative or discourse does, and several of these tiles are carried by two witnesses rather than four. Matthew Henry's block at key 14 is another section-opening block, covering the whole Levitical section through v.34 and commenting explicitly on vv.16, 22 and 34; he was declared only in the tiles his material actually bears on. The Keil and Delitzsch comment on the repeated Saul register sits at key 34 but is a comment on v.35, so it was used in the 35-36 tile rather than the 33-34 one."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "9",
+      "verses": [
+        "35",
+        "36"
+      ],
+      "note": "The chapter's sharpest disagreement is worth recording on its own: Matthew Henry and Keil and Delitzsch give opposite accounts of why the Saul genealogy appears twice. Henry, having granted that the originals of these books carry some transcriptional error, suspects a copyist whose eye caught the identical phrase about dwelling in Jerusalem in the earlier chapter and who carried on with what followed THERE, then let the duplication stand rather than blot his page. Delitzsch holds the repetition to be deliberate and structural — it joins the genealogies to the history of the kingship and introduces the account of Saul's death — and argues from the very differences between the two copies that this one derives from a separate document better preserved than the earlier one. Both are recorded, with Henry's as the outlier, since the two cannot both be right and neither is obviously wrong."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "9",
+      "note": "Every tile self-graded A. Attributions were held back wherever a block was truncated in my reading rather than guessed at: John Wesley has blocks at keys 11, 21, 22, 30, 33 and 34 that I did not read in full, and he is therefore NOT declared in the tiles covering those verses even though he is present in the chapter and the voices-sourced rule would permit it. Same for Charles Ellicott at key 14 and Adam Clarke at key 20. The chapter is consequently thinner in declared voices than its catena would allow; that is deliberate, and a later pass with more room could recover those blocks. One judgement call: Clarke's astonished total for the priests differs by twenty from the figure the verse gives, so the prose reports his astonishment and the gatekeepers he excludes from it without attaching the discrepant number to him."
     }
   ]
 }
