@@ -137,6 +137,42 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   override** per discipline per date (force-on / force-off / auto) that every
   `is*Done` consults first; the home checklist circles are buttons. Covered by
   27 unit assertions + 20 browser assertions (see the commit).
+- [x] **Topical study: The Faith Once Delivered — Apostolic and Confessional
+  Belief** (2026-09-13) — single-page hand-authored study at
+  `topics/confessional-apostolic-beliefs/` on the `topic-guide.css` component set
+  (sticky TOC, no per-study CSS), registered in the `topical` array of
+  `data/books-content.json`. Owner-requested subject: confessional and apostolic
+  belief for a modern believer, with the overlap identified, per-denominational
+  development traced, and a final table of confessional beliefs by tradition with
+  the supporting evidence. Ten sections — the *apostolic* / *confessional*
+  distinction (source vs method, `homologia`, `norma normans` vs `norma normata`);
+  the proto-creeds inside the NT (1 Cor 15:3–5 with the
+  `paredōka`/`parelabon` transmission pair, Rom 10:9, 1 Cor 8:6, Phil 2:6–11,
+  1 Tim 3:16, Eph 4:4–6, Heb 6:1–2) and the `parathēkē` deposit language;
+  the pre-Nicene rule of faith in three independent witnesses (Irenaeus,
+  Tertullian, Origen) plus the Old Roman Symbol; the four ecumenical creeds
+  including `homoousios` and the filioque; **the overlap** — a 13-row table of
+  what is confessed in common, each row carrying both its confessional anchor and
+  its scriptural anchor, plus the 1999 Joint Declaration on Justification as a
+  genuine convergence and six honest exceptions (Oriental Orthodox/Assyrian,
+  filioque, Nicaea II, Oneness Pentecostalism, lapsed subscription,
+  non-Trinitarian groups); **per-denominational development** — a 13-row era
+  timeline then a tradition-by-tradition account of why each confession was
+  written and what it was written against; the seven flashpoints with the note
+  that six are downstream of authority; `quia`/`quatenus` subscription and
+  three-order doctrinal triage; then **the deliverable** — seven comparison tables
+  (authority, justification, baptism, the Supper, election/perseverance, church
+  and ministry, last things), each row a tradition with its confessional evidence
+  (document + article + quotation) and the scripture that position rests on;
+  closing with a 30-row register of the confessional documents themselves.
+  Internal divisions are stated rather than smoothed (Baptists on the Supper and
+  on election; AG's deliberate silence on eternal security; millennial views
+  flagged as cross-cutting rather than confessional). All 195 unique `data-ref`
+  anchors verified against `data/bible/books.json` through the real `parseRef`
+  logic — canonical book names, in-range chapters, single-chapter verse
+  convention (`Jude 3`); 10 TOC anchors verified to match their section ids.
+  Cross-links to Church Authority, Walk Through Church History, Holy Catholic
+  Church, Justification, and Assurance of Salvation.
 - [x] **Topical study: The Straight and Narrow Path** (2026-08-16) — single-page
   hand-authored study at `topics/narrow-path/` on the `topic-guide.css`
   component set (sticky TOC, no per-study CSS), registered in the `topical`

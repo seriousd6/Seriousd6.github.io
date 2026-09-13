@@ -1,7 +1,22 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-27** (new single-page topical study, **The Nehushtan
+> Last updated: **2026-09-13** (new single-page topical study, **The Faith Once
+> Delivered: Apostolic and Confessional Belief**, at
+> `topics/confessional-apostolic-beliefs/` — confessional and apostolic belief for
+> a modern believer: the *apostolic* (source) / *confessional* (method)
+> distinction, the proto-creeds embedded in the NT, the pre-Nicene rule of faith
+> in three independent witnesses, the four ecumenical creeds, a 13-row table of
+> the doctrine actually held in common (each row with both its confessional and
+> its scriptural anchor) alongside the 1999 Joint Declaration and six honest
+> exceptions, a tradition-by-tradition account of why each confession was written
+> and what against, `quia`/`quatenus` subscription with three-order doctrinal
+> triage, then the deliverable — seven comparison tables setting out confessional
+> belief by tradition with the documentary and scriptural evidence for each, and a
+> 30-row register of the confessions themselves. Internal divisions stated rather
+> than smoothed. Registered in `topical[]`; all 195 `data-ref` anchors and 10 TOC
+> anchors verified; all four validators and the full production build pass.)
+> Previously **2026-08-27**: new single-page topical study, **The Nehushtan
 > Test**, at `topics/veneration/` — icons, relics, prayers to the saints, Marian
 > dogma, and apparitions examined against six biblical control cases, with the
 > strongest Catholic/Orthodox arguments represented before each verdict;
@@ -18,7 +33,7 @@
 > **0 vulnerabilities**. Verified by building the full site on both versions
 > and hashing all 9,582 HTML pages: byte-identical modulo whitespace except
 > one page (`/discipline/`), where Astro 7 spec-correctly escapes `&` as
-> `&amp;` in href query strings — a no-op in browsers.)
+> `&amp;` in href query strings — a no-op in browsers.
 > Previously **2026-08-16**: new single-page topical study, **The Straight
 > and Narrow Path**, at `topics/narrow-path/` — walking with the Lord, from the
 > narrow gate through self-deception, Korah's Scripture-twisting, wilderness
