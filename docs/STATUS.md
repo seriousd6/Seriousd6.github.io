@@ -1,7 +1,15 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-08-27** (new single-page topical study, **The Nehushtan
+> Last updated: **2026-09-13** (reader bug fix, owner-reported: with several
+> chapters on the page — "John 3; John 4", "John 3-4", or a whole book —
+> Commentary mode repeated the FIRST chapter's notes against every later
+> chapter. Commentary data is now keyed per book AND per chapter and resolved
+> from each verse's own `data-book`/`data-ch`; Cross-Refs mode had the same
+> defect across books and is fixed with it. Commentary now fetches only the
+> selected source, and a chapter as it nears the viewport, so a whole-book
+> Psalms view costs 2 files / 4.2 s instead of 150 files / ~15 MB / 20.5 s.)
+> Previously **2026-08-27**: new single-page topical study, **The Nehushtan
 > Test**, at `topics/veneration/` — icons, relics, prayers to the saints, Marian
 > dogma, and apparitions examined against six biblical control cases, with the
 > strongest Catholic/Orthodox arguments represented before each verdict;

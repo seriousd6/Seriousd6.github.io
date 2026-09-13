@@ -685,6 +685,9 @@ export function initReaderLookup() {
 
         resultsEl.querySelectorAll('.reader-result-group__text').forEach(autoTagTermsWhenReady);
 
+        // Last: Commentary / Cross Refs grids consume the text elements above.
+        if (!_strippedMode) _applyInlineGridModes();
+
         // ?study=1 deep link: now that the passage is on the page, open the full study view.
         // Cleared first (and undefined means "not pending") so chapter nav doesn't re-fire it.
         if (typeof _pendingStudyVerse !== 'undefined') {
@@ -1207,14 +1210,23 @@ export function _ensureReaderPanelStructure() {
 
 export function loadReaderPanelContent(parsed) {
   _readerPanelParsed = parsed;
-  // Re-activate inline grid modes after chapter navigation.
+  // Inline grid modes are re-activated by _applyInlineGridModes at the end of
+  // _finalizeLookup, not here: this runs from inside the render loop, when only
+  // the first result group is on the page.
+  var notesEl = document.getElementById('reader-panel-notes');
+  if (notesEl) _loadReaderNotes(parsed, notesEl);
+}
+
+// Re-activate the inline grid modes after a render. Called once every passage is
+// on the page and the compare/parallels/interlinear/paragraph passes have run
+// against the flowing text — the grids replace .reader-result-group__text, so
+// building them earlier both hides that text from those passes and leaves every
+// group after the first without a grid.
+function _applyInlineGridModes() {
   var commBtn     = document.getElementById('reader-comm-toggle');
   var xrefModeBtn = document.getElementById('reader-xref-mode-toggle');
   if (commBtn     && commBtn.getAttribute('aria-pressed')     === 'true') { _activateCommMode(); }
   if (xrefModeBtn && xrefModeBtn.getAttribute('aria-pressed') === 'true') { _activateXrefMode(); }
-  // Notes always reload immediately.
-  var notesEl = document.getElementById('reader-panel-notes');
-  if (notesEl) _loadReaderNotes(parsed, notesEl);
 }
 
 // ── Notes panel visibility toggle ─────────────────────────────────────────
@@ -1935,14 +1947,122 @@ function _renderReaderBookIntro(bookId, bookName) {
 // ── Commentary Mode — RD-M ────────────────────────────────────────────────
 // INTENT: Verse-locked split view. Replaces the flowing reader text with a
 //   per-verse CSS grid so each verse is horizontally aligned with its commentary.
-//   _commModeChData stores { [srcId]: chapterObj } for the current passage;
-//   it is rebuilt whenever loadReaderPanelContent fires with a new passage.
-// CHANGE? _commModeChData is keyed only for the first passage's chapter. If
-//   multi-passage commentary is needed, switch to a [bookId+ch] composite key.
+//   _commModeChData holds { data, pending }, both keyed by "<srcId>|<bookId>:<ch>".
+//   A multi-ref query ("John 3; Romans 8"), a chapter range and a whole-book view
+//   each put several chapters — and sometimes several books — on the page at once,
+//   so every lookup is per book AND per chapter. Two things keep that affordable:
+//   only the SELECTED source is fetched, and a chapter's file is only fetched once
+//   its verses come near the viewport. Eagerly pulling every source for every
+//   chapter would cost 150 files / ~15 MB on a whole-book view of Psalms.
+// CHANGE? A new composite source (like 'mkt') needs its track ids in
+//   _commSourceIds and its own branch in _rebuildCommCells.
 // VERIFY: Load John 3, click Commentary, observe per-verse rows with source
-//   picker. Navigate to John 4 — rows update. Click Commentary again to restore.
+//   picker. Navigate to John 4 — rows update. Look up "John 3; John 4" (or
+//   "John 3-4") — each chapter shows its OWN commentary, not chapter 3's twice.
+//   Click Commentary again to restore.
 
-var _commModeChData = null;
+var _commModeChData   = null;  // { data: {key→chapterObj|null}, pending: {key→true} }
+var _commRefreshTimer = null;
+var _commObserver     = null;  // watches one anchor cell per chapter
+var _commNearChs      = {};    // "<bookId>:<ch>" → true while near the viewport
+
+function _commKey(srcId, bookId, ch) { return srcId + '|' + bookId + ':' + ch; }
+
+// 'mkt' is a composite with no data file of its own — it loads three tracks.
+function _commSourceIds(srcId) {
+  return srcId === 'mkt' ? ['mkt-original', 'mkt-context', 'mkt-christ'] : [srcId];
+}
+
+// Every (bookId, ch) pair currently on the page, read back off the rendered
+// verses so multi-ref, chapter-range and whole-book views are all covered.
+function _readerPassages() {
+  var resultsEl = document.getElementById('reader-results');
+  if (!resultsEl) return [];
+  var seen = {}, out = [];
+  resultsEl.querySelectorAll('.reader-verse[data-book][data-ch]').forEach(function (span) {
+    var bookId = normalizeBook(span.getAttribute('data-book') || '');
+    var ch     = parseInt(span.getAttribute('data-ch'), 10);
+    if (!bookId || !ch) return;
+    var k = bookId + ':' + ch;
+    if (seen[k]) return;
+    seen[k] = true;
+    out.push({ bookId: bookId, ch: ch });
+  });
+  return out;
+}
+
+// Fetch one chapter's file for `srcId` (every track, for a composite) and redraw
+// when it lands. Chapters already loaded or in flight are no-ops, so this is safe
+// to call repeatedly from the observer and on every source change.
+function _loadCommChapter(srcId, bookId, ch) {
+  var store = _commModeChData;
+  if (!store || !bookId || !ch) return;
+  _commSourceIds(srcId).forEach(function (id) {
+    var key = _commKey(id, bookId, ch);
+    if ((key in store.data) || store.pending[key]) return;
+    store.pending[key] = true;
+    var settle = function (chData) {
+      if (_commModeChData !== store) return;   // navigated away mid-flight
+      store.data[key] = chData;
+      delete store.pending[key];
+      _scheduleCommRefresh();
+    };
+    loadCommentary(bookId, id, ch)
+      .then(function (bookData) { settle((bookData && bookData[String(ch)]) || null); })
+      .catch(function () { settle(null); });
+  });
+}
+
+// Load the selected source for every chapter currently near the viewport. Called
+// on activation and whenever the source picker changes — the new source has its
+// own files, so what is already in hand doesn't carry over.
+function _ensureCommData(srcId) {
+  Object.keys(_commNearChs).forEach(function (k) {
+    var sep = k.lastIndexOf(':');
+    _loadCommChapter(srcId, k.slice(0, sep), k.slice(sep + 1));
+  });
+}
+
+// Watch one anchor cell per chapter so a chapter's commentary is fetched as the
+// reader approaches it. Without this, a whole-book view would request every
+// chapter at once. No IntersectionObserver (older Safari) → fetch them all.
+function _watchCommChapters() {
+  if (_commObserver) { _commObserver.disconnect(); _commObserver = null; }
+  _commNearChs = {};
+
+  var anchors = document.querySelectorAll('.reader-comm-cell--verse[data-comm-ch]');
+  if (!('IntersectionObserver' in window) || !anchors.length) {
+    _readerPassages().forEach(function (p) {
+      _commNearChs[p.bookId + ':' + p.ch] = true;
+    });
+    _ensureCommData(getCommentarySource());
+    return;
+  }
+
+  _commObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var k = e.target.dataset.commCh;
+      if (!k) return;
+      if (!e.isIntersecting) { delete _commNearChs[k]; return; }
+      _commNearChs[k] = true;
+      var sep = k.lastIndexOf(':');
+      // Read the source live: the picker can change between observations.
+      _loadCommChapter(getCommentarySource(), k.slice(0, sep), k.slice(sep + 1));
+    });
+  }, { rootMargin: '800px 0px' });
+
+  anchors.forEach(function (a) { _commObserver.observe(a); });
+}
+
+// Chapters resolve in browser-throttled waves; coalesce their refreshes so a
+// many-chapter view rebuilds a handful of times, not once per chapter.
+function _scheduleCommRefresh() {
+  if (_commRefreshTimer) return;
+  _commRefreshTimer = setTimeout(function () {
+    _commRefreshTimer = null;
+    document.querySelectorAll('.reader-comm-grid').forEach(function (g) { _rebuildCommCells(g); });
+  }, 120);
+}
 
 export function initCommModeToggle() {
   var browseBar = document.querySelector('.reader-browse-bar');
@@ -2012,13 +2132,13 @@ function _activateCommMode() {
   if (!parsed || !parsed.bookId) return;
 
   // Mutual exclusion with xref-mode: deactivate first (re-renders clean text)
-  // then let loadReaderPanelContent re-enter.
+  // then let _applyInlineGridModes re-enter.
   var xrefModeBtn = document.getElementById('reader-xref-mode-toggle');
   if (xrefModeBtn && xrefModeBtn.getAttribute('aria-pressed') === 'true') {
     var commBtn2 = document.getElementById('reader-comm-toggle');
     if (commBtn2) commBtn2.setAttribute('aria-pressed', 'true');
     try { localStorage.setItem('bsw_reader_comm_mode', '1'); } catch (e) {}
-    _deactivateXrefMode(); // triggers re-render; loadReaderPanelContent will re-enter
+    _deactivateXrefMode(); // triggers re-render; _applyInlineGridModes will re-enter
     return;
   }
 
@@ -2032,29 +2152,12 @@ function _activateCommMode() {
   var layout = document.querySelector('.reader-layout');
   if (layout) layout.classList.add('reader-layout--comm-mode');
 
-  var bookId = parsed.bookId;
-  var ch     = parsed.ch;
-  var chDataMap = {};
-  _commModeChData = chDataMap;
+  _commModeChData = { data: {}, pending: {} };
 
-  // Load all standard sources, then load the three MKT sub-sources separately
-  // since 'mkt' is a composite and has no single data file of its own.
-  var standardSources = COMMENTARY_SOURCES.filter(function (s) { return s.id !== 'mkt'; });
-  var mktTrackIds = ['mkt-original', 'mkt-context', 'mkt-christ'];
-  Promise.all(
-    standardSources.map(function (s) {
-      return loadCommentary(bookId, s.id, ch).then(function (bookData) {
-        chDataMap[s.id] = (bookData && bookData[String(ch)]) || null;
-      }).catch(function () { chDataMap[s.id] = null; });
-    }).concat(mktTrackIds.map(function (id) {
-      return loadCommentary(bookId, id, ch).then(function (bookData) {
-        chDataMap[id] = (bookData && bookData[String(ch)]) || null;
-      }).catch(function () { chDataMap[id] = null; });
-    }))
-  ).then(function () {
-    // Guard: a subsequent navigation may have replaced _commModeChData already
-    if (_commModeChData === chDataMap) _buildCommGrid();
-  });
+  // Build the split view immediately so the verse column is never blank; each
+  // chapter's commentary cells fill in as that chapter comes into view.
+  _buildCommGrid();
+  _watchCommChapters();
 }
 
 function _deactivateCommMode() {
@@ -2068,6 +2171,9 @@ function _deactivateCommMode() {
   if (layout) layout.classList.remove('reader-layout--comm-mode');
 
   _commModeChData = null;
+  if (_commRefreshTimer) { clearTimeout(_commRefreshTimer); _commRefreshTimer = null; }
+  if (_commObserver) { _commObserver.disconnect(); _commObserver = null; }
+  _commNearChs = {};
 
   // Re-render from scratch to restore the original inline verse flow
   if (window._readerLookupFn) window._readerLookupFn();
@@ -2081,7 +2187,7 @@ function _activateXrefMode() {
   if (!parsed || !parsed.bookId) return;
 
   // If commentary grid is in the DOM, deactivate it first (re-renders clean text)
-  // then loadReaderPanelContent will re-enter _activateXrefMode.
+  // then _applyInlineGridModes will re-enter _activateXrefMode.
   var commBtn = document.getElementById('reader-comm-toggle');
   if (commBtn && commBtn.getAttribute('aria-pressed') === 'true') {
     var xrefBtn2 = document.getElementById('reader-xref-mode-toggle');
@@ -2100,10 +2206,24 @@ function _activateXrefMode() {
   var layout = document.querySelector('.reader-layout');
   if (layout) layout.classList.add('reader-layout--comm-mode');
 
-  loadCrossRefs(parsed.bookId).then(function (xdata) {
-    _xrefModeData = xdata || {};
-    _buildXrefGrid();
-  }).catch(function () { _xrefModeData = {}; _buildXrefGrid(); });
+  // Cross refs come in one file per book, so a multi-ref query spanning books
+  // needs one load each — keyed by bookId, not flattened onto the first book.
+  var books = [];
+  _readerPassages().forEach(function (p) {
+    if (books.indexOf(p.bookId) === -1) books.push(p.bookId);
+  });
+  if (!books.length) books.push(parsed.bookId);
+
+  var store = {};
+  _xrefModeData = store;
+  Promise.all(books.map(function (bid) {
+    return loadCrossRefs(bid)
+      .then(function (xdata) { store[bid] = xdata || {}; })
+      .catch(function () { store[bid] = {}; });
+  })).then(function () {
+    // Guard: a subsequent navigation may have replaced _xrefModeData already
+    if (_xrefModeData === store) _buildXrefGrid();
+  });
 }
 
 function _deactivateXrefMode() {
@@ -2122,9 +2242,8 @@ function _deactivateXrefMode() {
 }
 
 function _buildXrefGrid() {
-  var xdata   = _xrefModeData;
-  var parsed  = _readerPanelParsed;
-  if (!xdata || !parsed) return;
+  var byBook = _xrefModeData;   // { bookId: chapter-keyed cross-ref data }
+  if (!byBook) return;
 
   var resultsEl = document.getElementById('reader-results');
   if (!resultsEl) return;
@@ -2138,6 +2257,7 @@ function _buildXrefGrid() {
     var verseData = verseSpans.map(function (span) {
       return {
         span: span,
+        book: normalizeBook(span.getAttribute('data-book') || ''),
         ch:   parseInt(span.getAttribute('data-ch'), 10),
         v:    parseInt(span.getAttribute('data-v'),  10)
       };
@@ -2169,7 +2289,8 @@ function _buildXrefGrid() {
       xrefCell.dataset.commIdx  = String(idx);
       if (vd.span.style.display === 'none') xrefCell.style.display = 'none';
 
-      var chData  = xdata[String(vd.ch)];
+      var bookXd  = (vd.book && byBook[vd.book]) || null;
+      var chData  = bookXd && bookXd[String(vd.ch)];
       var rawRefs = chData && chData[String(vd.v)];
       if (rawRefs && rawRefs.length) {
         var entries = rawRefs.map(parseCrossRefEntry)
@@ -2224,6 +2345,9 @@ function _buildCommGrid() {
     var verseData = verseSpans.map(function (span) {
       return {
         span: span,
+        // Per verse, not per group: a whole-book view renders every chapter into
+        // ONE group, so the chapter a cell belongs to is only known verse by verse.
+        book: normalizeBook(span.getAttribute('data-book') || ''),
         ch:   parseInt(span.getAttribute('data-ch'), 10),
         v:    parseInt(span.getAttribute('data-v'),  10),
         cell: null  // filled below; used by _rebuildCommCells and _syncCommGridPage
@@ -2238,12 +2362,19 @@ function _buildCommGrid() {
     grid.appendChild(_buildCommGlobalPicker());
 
     // Rows 2+: one verse cell per verse in column 1, with explicit grid-row
+    var anchored = {};
     verseData.forEach(function (vd, idx) {
       var cell = document.createElement('div');
       cell.className      = 'reader-comm-cell reader-comm-cell--verse';
       cell.style.gridRow    = String(idx + 2); // row 1 = picker
       cell.style.gridColumn = '1';
       cell.dataset.commIdx  = String(idx);
+      // First cell of each chapter is that chapter's anchor for _watchCommChapters.
+      var chKey = vd.book + ':' + vd.ch;
+      if (vd.book && vd.ch && !anchored[chKey]) {
+        anchored[chKey] = true;
+        cell.dataset.commCh = chKey;
+      }
       // Hide cell when the verse is currently paginated out so no empty rows appear
       if (vd.span.style.display === 'none') cell.style.display = 'none';
       cell.appendChild(vd.span);
@@ -2288,6 +2419,8 @@ function _buildCommGlobalPicker() {
       var sib = g.querySelector('.reader-comm-src-sel');
       if (sib && sib !== sel) sib.value = sel.value;
     });
+    // The new source has its own files — fetch any chapter it is missing.
+    _ensureCommData(sel.value);
   });
 
   return wrap;
@@ -2297,26 +2430,52 @@ function _rebuildCommCells(grid) {
   if (!grid._verseData) return;
   var verseData = grid._verseData;
   var srcId     = getCommentarySource();
+  var store     = _commModeChData;
   // For mkt (composite), use mkt-original's chapter data to find section boundaries
   // since 'mkt' has no single data file and the three tracks share the same verse layout.
-  var chd = srcId === 'mkt'
-    ? (_commModeChData && _commModeChData['mkt-original'])
-    : (_commModeChData && _commModeChData[srcId]);
+  var keyId = srcId === 'mkt' ? 'mkt-original' : srcId;
+
+  // Commentary lives in a per-book, per-chapter file, so every lookup is keyed by
+  // the verse's OWN book and chapter — reusing one chapter's data for the whole
+  // grid made every chapter after the first repeat the first one's notes.
+  function chdFor(id, vd) {
+    if (!store || !vd || !vd.book || !vd.ch) return null;
+    return store.data[_commKey(id, vd.book, vd.ch)] || null;
+  }
+  // "Not here yet" covers both in flight and not-yet-requested: the observer only
+  // asks for a chapter as it nears the viewport, and a cell must not claim there
+  // is no commentary before its file has been asked for.
+  function isLoaded(vd) {
+    if (!store || !vd) return true;
+    if (!vd.book || !vd.ch) return true;   // unresolvable ref — nothing to wait for
+    return _commSourceIds(srcId).every(function (id) {
+      return _commKey(id, vd.book, vd.ch) in store.data;
+    });
+  }
 
   // Remove previous commentary cells, keep picker and verse cells
   grid.querySelectorAll('.reader-comm-cell--comm').forEach(function (el) { el.remove(); });
 
   // Group consecutive verses that share the same foundKey into sections.
-  // Each section gets exactly one commentary cell spanning all its rows.
+  // Each section gets exactly one commentary cell spanning all its rows. A change
+  // of book or chapter always starts a new section — its notes come from another file.
   var sections = [];
   verseData.forEach(function (vd, idx) {
-    var foundKey = _commFindKey(chd, vd.v);
+    var foundKey = _commFindKey(chdFor(keyId, vd), vd.v);
     var last = sections.length ? sections[sections.length - 1] : null;
-    if (last && last.foundKey === foundKey && last.ch === vd.ch) {
+    if (last && last.foundKey === foundKey && last.ch === vd.ch && last.book === vd.book) {
       last.endIdx = idx;
     } else {
-      sections.push({ foundKey: foundKey, ch: vd.ch, startIdx: idx, endIdx: idx });
+      sections.push({ foundKey: foundKey, book: vd.book, ch: vd.ch, startIdx: idx, endIdx: idx });
     }
+  });
+
+  // Last verse of each chapter actually on the page — the "vv.12–17" label is
+  // clamped to it, so a later chapter's verses can't stretch the printed range.
+  var lastVByCh = {};
+  verseData.forEach(function (vd) {
+    var k = vd.book + ':' + vd.ch;
+    if (lastVByCh[k] == null || vd.v > lastVByCh[k]) lastVByCh[k] = vd.v;
   });
 
   // Insert each comm cell immediately after the last verse cell of its section.
@@ -2337,10 +2496,16 @@ function _rebuildCommCells(grid) {
     });
     if (allHidden) cell.style.display = 'none';
 
-    if (srcId === 'mkt') {
+    var anchor = verseData[sec.startIdx];
+    var chd    = chdFor(keyId, anchor);
+
+    if (!isLoaded(anchor)) {
+      // This chapter's file has not arrived; _scheduleCommRefresh redraws it.
+      cell.innerHTML = '<p class="reader-hint">Loading commentary…</p>';
+    } else if (srcId === 'mkt') {
       // Composite: pull the matching section from each of the three MKT tracks
       var mktHtmls = ['mkt-original', 'mkt-context', 'mkt-christ'].map(function (tid) {
-        var td = _commModeChData && _commModeChData[tid];
+        var td = chdFor(tid, anchor);
         if (!td || sec.foundKey === null || !td[String(sec.foundKey)]) return null;
         return td[String(sec.foundKey)];
       });
@@ -2354,7 +2519,7 @@ function _rebuildCommCells(grid) {
       // The end comes from the next key, clamped to the last verse actually on
       // the page: a chapter's final entry has no next key, and printing "v.40–…"
       // (the old fallback) told the reader nothing.
-      var span = commSpan(chd, sec.foundKey, verseData[verseData.length - 1].v);
+      var span = commSpan(chd, sec.foundKey, lastVByCh[sec.book + ':' + sec.ch]);
       if (span.end > span.start) {
         html = '<p class="reader-comm-span-note">▸ commentary on vv.' + span.start +
                '–' + span.end + '</p>' + html;

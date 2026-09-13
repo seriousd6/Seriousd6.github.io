@@ -126,6 +126,23 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   Desk A/B/C link groups; answers preview caps/notes.
 - [ ] About page (`src/pages/about/index.astro`): its prompt copies now mirror
   `docs/agents/` — keep them in sync when prompts change.
+- [x] **Reader: per-chapter commentary in multi-chapter views** (2026-09-13) —
+  owner-reported: with several chapters on the page ("John 3; John 4", "John 3-4",
+  a whole book), Commentary mode showed the FIRST chapter's notes against every
+  later chapter. `_commModeChData` held one chapter's data per source, but
+  `_buildCommGrid` renders a grid per result group and a whole-book view puts all
+  150 chapters in ONE group, so every cell resolved against chapter 1's file.
+  Data is now keyed `<srcId>|<bookId>:<ch>` and looked up from each verse's own
+  `data-book`/`data-ch`, so books and chapters both resolve. Two things keep the
+  cost down: only the selected source is fetched (was: all five, always), and an
+  IntersectionObserver fetches a chapter as it nears the viewport — whole-book
+  Psalms went from 150 files/~15 MB/20.5 s to 2 files/4.2 s, the rest arriving on
+  scroll. The same first-book-wins defect in Cross-Refs mode is fixed alongside
+  (Romans 8 was given John's cross refs). Grid building also moved out of the
+  render loop into `_applyInlineGridModes` at the end of `_finalizeLookup`: it ran
+  while only group 1 existed, which is why a second group never got its own data.
+  Verified in Chromium against the live data tree — multi-ref, chapter range,
+  cross-book, all three sources, source switching, paragraph view, scroll-in.
 - [x] **Discipline: catch-up + manual ticks** (2026-08-09) — two owner-reported gaps.
   (1) A missed reading-plan day was invisible and unmarkable: the card only ever
   showed *today*. Enrolled plans now carry a **catch-up list** (every past
