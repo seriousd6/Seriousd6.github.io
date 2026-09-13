@@ -31,26 +31,49 @@ Progress is derived from the data itself — there is no tracker file, and since
 hand-count and do not trust a figure written in this file: ask the tool.**
 
 ```
-python3 scripts/synthesis-frontier.py                    # summary + both queues
+python3 scripts/synthesis-frontier.py                    # summary + all queues
 python3 scripts/synthesis-frontier.py --next             # one unit: "<book> <ch>"
-python3 scripts/synthesis-frontier.py --next --queue repair --worst-first
+python3 scripts/synthesis-frontier.py --next --queue polish --worst-first
 python3 scripts/synthesis-frontier.py --next --queue auto --worst-first
 python3 scripts/synthesis-frontier.py --next --queue auto --spread 40   # concurrent runs
+python3 scripts/synthesis-frontier.py --blocked          # what is suppressed, and why
 ```
 
 **`--queue auto` is how you run the corpus to completion in one pass**: it serves
-repair until that queue is empty, then generation, and exits 3 only when both are
-done. Repair leads deliberately — finishing the corpus while 43% of what is
-already published is filler would only grow the surface to fix. In this mode
-`--next` prints `<queue> <book> <ch>`, so the caller knows which kind of work it
-picked up.
+each queue until it is empty, in the order below, and exits 3 only when all four
+are done. Defects lead deliberately — finishing the corpus while what is already
+published is filler would only grow the surface to fix. In this mode `--next`
+prints `<queue> <book> <ch>`, so the caller knows which kind of work it picked up.
 
-There are **two queues**, and a loop should drain them in this order:
+There are **four queues**, and `auto` drains them in this order:
 
 | queue | what it holds | how it is derived |
 |---|---|---|
+| **repair** | chapters carrying a defect | any verse with `qa.standard == legacy-unversioned` and `qa.grade` in C/D, any unstamped verse, or any verse with `qa.ungrounded_voices` |
 | **generate** | chapters with a source catena but no synthesis | `cow/<book>/<ch>.json` exists, `cow-synthesis/<book>/<ch>.json` does not |
-| **repair** | chapters carrying the 2026-07-22 debt | any verse with `qa.standard == legacy-unversioned` and `qa.grade` in C/D, any unstamped verse, or any verse with `qa.ungrounded_voices` |
+| **polish** | chapters whose worst verses graded **B** | any verse with `qa.grade == "B"` — faithful but stretched, or thin enough that the lint marked it down |
+| **legacy** | chapters still on the 2026-07-22 per-verse prose | any verse with `qa.standard == legacy-unversioned` (graded A at the time, written before any recorded standard) |
+
+A chapter appears in **exactly one** queue — the earliest it qualifies for — so
+the three chapter counts in `status` add up to the work that is actually left
+rather than three overlapping views of the same 300 chapters. Most polish
+chapters are also legacy chapters (5,525 of the 8,700 legacy verses sit inside
+the 239 polish chapters); rewriting one re-stamps every verse in it, so it
+leaves both queues at once. That is why polish runs first — it is the same
+rewrite, ordered so the worst-reading chapters are fixed soonest.
+
+**Repair and generate closed on 2026-09-12** (1,189/1,189 chapters, zero
+defects outside the blocklist). Polish and legacy are the live work.
+
+### The blocklist
+
+`docs/agents/cow-synthesis-blocklist.json` lists chapters taken out of
+circulation; the frontier filters **every** queue through it. Put a chapter here
+rather than in an operator's prompt — a block the picker cannot read is not a
+block, it is a tax: `numbers 31` sat at the head of the repair queue for nine
+days and every worker spent a draw declining it. Each entry records `why` and
+`unblock_when`; delete the entry to put the chapter back in circulation, no
+other change needed.
 
 `--next` prints one `<book> <ch>` line and exits 3 when the queue is empty, so a
 shell loop can drive itself:
@@ -64,9 +87,10 @@ unit=$(python3 scripts/synthesis-frontier.py --next --queue auto) || exit 0
 set -- $unit; queue=$1; book=$2; ch=$3
 ```
 
-`--worst-first` orders the repair queue by defect weight, counting a fidelity
-defect three times a grade defect — so the chapters that invent commentators
-(Joshua 21, Joshua 12) come before the merely padded ones.
+`--worst-first` orders by defect weight rather than canonical order, and it is
+also roughly longest-first: repair by defect count (a fidelity defect counts
+three times a grade defect, so the chapters that invent commentators come before
+the merely padded ones), polish by grade-B count, legacy by legacy-verse count.
 
 **Book profiles still matter.** Psalms is pure Hebrew poetry — apply the Job
 dialogue-poetry profile (witnesses on wording, imagery, textual variants, and

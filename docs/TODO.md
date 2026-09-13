@@ -15,30 +15,46 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
 > work-unit and must pass its validator before committing. No pushes without
 > owner approval.
 
-- [ ] **COW synthesis loop — continue at the OT frontier** *(active focus —
-  2026-08-02)*. **738/1,189 = 62.1% done** (Genesis→**Job** + the whole NT
-  complete; corpus validates clean). **2 Chronicles + Ezra + Nehemiah + Esther +
-  Job (42/42) finished** (narrative + genealogy/register + dialogue-poetry
-  profiles all calibrated; anti-templating check added — see loop-doc). Frontier =
-  **Psalms 1** — pure Hebrew poetry, 150 ch (verse counts range 2 → 176), the
-  largest remaining book; then the rest of Psalms → Malachi + poetic/wisdom
-  (~451 ch). Mirror the source's sparse verse keys exactly, EXCEPT omit
-  out-of-range scrape keys (see loop-doc ch27 note). This also unblocks the Book
-  Treatment loop (a book is treatment-eligible only once its synthesis is done —
-  **2 Chronicles + Ezra + Nehemiah + Esther + Job now eligible**; completing
-  Psalms synthesis will finally unblock the long-pending Psalms treatment).
+- [x] **COW synthesis loop — generation complete (2026-09-12)**. **1,189/1,189
+  chapters**, all 66 books; the repair queue closed the same week. Every book is
+  now treatment-eligible, **Psalms included** — that unblocks the long-pending
+  Psalms treatment in the Book Treatment loop below.
   Procedure: [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md).
+- [ ] **COW synthesis — polish, then rewrite the legacy prose** *(active focus —
+  2026-09-13; this is what the two Routines now run)*. Generation and repair are
+  done, so the loop drains two follow-on queues, in this order:
+  **polish** — 239 chapters holding the 1,063 verses that graded **B** (faithful
+  but stretched, or thin enough for the lint to mark down); then
+  **legacy** — the 132 remaining chapters still on the 2026-07-22 per-verse
+  prose (3,133 verses stamped `legacy-unversioned`; another 5,525 sit inside the
+  polish chapters and are re-stamped when those are rewritten).
+  Same unit, same pipeline, same commit discipline as repair — `--queue auto`
+  now serves repair → generate → polish → legacy and a chapter appears in
+  exactly one of them, so the three counts in `synthesis-loop.py status` add up
+  to the work left. **Do not hand-count: ask the tool.**
+- [ ] **numbers 31 — owner decision on the source file** *(blocked, not
+  forgotten)*. The only chapter on
+  [agents/cow-synthesis-blocklist.json](agents/cow-synthesis-blocklist.json),
+  and the whole of the corpus's remaining C/D debt (42 verses). Its catena is
+  missing vv.33-35, 38-41, 43-47 and carries a 207-word JFB block on Numbers 7
+  inserted at every sixth key; keys 36 and 42 hold nothing else. A re-scrape is
+  impossible from a CCR container (egress proxy denies studylight.org), so this
+  needs a fetch from a machine with egress or a decision to accept a partial
+  tiling. **Until then the blocklist keeps it out of every queue** — before that
+  file existed it sat at the head of the repair queue for nine days and cost
+  every worker a draw. Delete the entry to put it back in circulation.
 - [ ] **Book Treatment loop** — the single per-book study that fills the Studies
   tool: **one Full Treatment** per book (auto-assembled intro + synthesized
   multi-perspective commentary in per-chapter divisions, chapter picker +
   lazy-load for big books). One tracker, agent-claimed. Entry:
   [agents/study-pipeline.md](agents/study-pipeline.md); tracker:
   [agents/study-pipeline-tracker.md](agents/study-pipeline-tracker.md).
-  **Eligibility: only books with complete COW synthesis** (38 today). Done:
-  **Philemon** (seed), **Hebrews**, **Romans** (16 ch), **Revelation** (22 ch);
-  34 eligible books remain. **Psalms is `⛔` blocked** — no COW synthesis; its
-  overview `_book.json` is kept as a head-start (not wired), and it will need a
-  big-book nav (grouped by the 5 books / search) before its 150-ch picker scales.
+  **Eligibility: only books with complete COW synthesis — all 66 since
+  2026-09-12.** Done: **Philemon** (seed), **Hebrews**, **Romans** (16 ch),
+  **Revelation** (22 ch); 62 books remain. **Psalms is no longer blocked** — its
+  synthesis is complete and its overview `_book.json` is already there as a
+  head-start (not wired); it still needs a big-book nav (grouped by the 5 books /
+  search) before its 150-ch picker scales.
 - [ ] **COW synthesis quality debt — 43% of the corpus is filler**
   *(audit done 2026-08-09, repair NOT started —
   [plans/cow-synthesis-quality-audit.md](plans/cow-synthesis-quality-audit.md))*.
@@ -51,11 +67,13 @@ Keep [STATUS.md](STATUS.md) current in that same commit.
   six prose rules are in the loop prompt, the lint is a required pre-commit gate
   alongside the validator, and the owner chose the `thin` exemption for the
   350-word floor (source-checked, implemented in `validate-synthesis.py`).
-  **Remaining: the repair itself** — ~9,354 grade-D verses in ~356 chapters,
-  priority Romans, Hebrews, 1–2 Corinthians, Genesis, Exodus, Judges. Not
-  started; needs an owner call on scope. **The loop is ready to run it**:
-  `scripts/synthesis-frontier.py` derives both queues (generate / repair) from
-  the qa metadata, `synthesis-loop.py` drives it unattended (verify → lint →
+  **The repair is DONE (2026-09-12)**: the grade-D population is down from
+  ~9,354 verses in ~356 chapters to **41 verses in one chapter** — numbers 31,
+  which is blocklisted on a source defect (see its entry above). What is left is
+  softer debt, tracked as its own item above: 1,063 grade-B verses and the 8,700
+  verses still stamped `legacy-unversioned`.
+  `scripts/synthesis-frontier.py` derives all four queues (repair / generate /
+  polish / legacy) from the qa metadata, `synthesis-loop.py` drives it unattended (verify → lint →
   fidelity → stamp → gate → commit, reverting anything that fails), and the
   repair procedure is documented in
   [agents/cow-synthesis-loop.md](agents/cow-synthesis-loop.md). Launch prompt:

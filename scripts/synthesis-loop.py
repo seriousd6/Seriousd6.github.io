@@ -8,7 +8,8 @@ anything that does not earn the standard). An agent only has to write files;
 everything mechanical is here, so a run can be left alone.
 
     python3 scripts/synthesis-loop.py next                    # what to work on
-    python3 scripts/synthesis-loop.py next --queue repair --worst-first
+    python3 scripts/synthesis-loop.py next --queue auto --worst-first
+    python3 scripts/synthesis-loop.py next --queue polish --worst-first
     python3 scripts/synthesis-loop.py finish <book> <ch>      # verify+stamp+commit
     python3 scripts/synthesis-loop.py finish <book> <ch> --unattended --push
     python3 scripts/synthesis-loop.py size <book> <ch>        # how big a unit is
@@ -20,6 +21,10 @@ EXIT CODES (stable — a shell loop depends on them)
     3  queue empty — nothing left to do, stop the loop
     4  the chapter failed verification; nothing was committed
     5  --push only: another run finished this chapter first; ours was dropped
+
+QUEUES (see synthesis-frontier.py): repair -> generate -> polish -> legacy, in
+that order under --queue auto. A chapter listed in
+docs/agents/cow-synthesis-blocklist.json is served by none of them.
 
 `finish` runs, in order: validator -> lint (chapter) -> fidelity -> stamp ->
 gate (chapter) -> gate (corpus) -> commit. Any failure stops before the commit,
@@ -350,9 +355,11 @@ def main():
     sub = ap.add_subparsers(dest='cmd', required=True)
 
     p = sub.add_parser('next'); p.set_defaults(fn=cmd_next)
-    p.add_argument('--queue', choices=['generate', 'repair', 'auto'],
-                   help="'auto' drains repair first, then generation, and is "
-                        "empty only when both are; prints '<queue> <book> <ch>'")
+    p.add_argument('--queue',
+                   choices=['generate', 'repair', 'polish', 'legacy', 'auto'],
+                   help="'auto' drains repair, then generation, then polish, "
+                        "then legacy, and is empty only when all four are; "
+                        "prints '<queue> <book> <ch>'")
     p.add_argument('--worst-first', action='store_true')
     p.add_argument('--spread', type=int, default=0, metavar='N',
                    help='pick uniformly from the first N of the queue instead '

@@ -1,0 +1,19 @@
+{
+  "_doc": "Chapters taken out of circulation for the COW synthesis loop. scripts/synthesis-frontier.py reads this and filters EVERY queue through it, so a blocked chapter is never offered to any worker. Before this file the block lived only in the operator's poke prompt, which meant the picker kept serving numbers 31 to every worker and every worker spent a draw declining it: a block the picker cannot read is not a block. Remove an entry to put the chapter back in circulation; the loop picks it up on the next run with no other change.",
+  "_fields": {
+    "book": "book id as used under data/commentary/cow/",
+    "chapter": "integer chapter number",
+    "since": "date the block was recorded",
+    "why": "what is wrong — enough for a later reader to judge without re-deriving it",
+    "unblock_when": "the condition that would make this chapter workable again"
+  },
+  "blocked": [
+    {
+      "book": "numbers",
+      "chapter": 31,
+      "since": "2026-09-13",
+      "why": "Source catena cannot support the current prose contract. (1) It is incomplete: source keys run 1-32, 36, 37, 42, 48-54 — verses 33-35, 38-41 and 43-47 are absent entirely, and validate-synthesis.py rejects any pericope covering a verse absent from the source, so no span can bridge the gaps. (2) An identical 207-word Jamieson, Fausset and Brown block on the tribal princes' offerings of Numbers 7 is mechanically inserted at every SIXTH key (6, 12, 18, 24, 30, 36, 42, 48, 54) — unmistakable scrape residue. Keys 36 and 42 contain nothing else: usable_source_words returns 0 for both once the JFB residue is excluded. The 42 legacy C/D verses here are the entire C/D population of the corpus, so the repair queue is empty the moment this chapter leaves it.",
+      "unblock_when": "The source file is re-fetched or hand-repaired. A re-scrape was attempted and is blocked in the CCR container — the egress proxy denies www.studylight.org (403 at CONNECT) — so this needs either a fetch from a machine with egress, or an owner decision to accept a partial tiling. See the source-defect entries for numbers 31 in cow-synthesis-notes.json for the full investigation, including the finding that vv.33-47 are probably not a scrape gap at all: Gill folds them into his note on v.32."
+    }
+  ]
+}

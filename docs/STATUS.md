@@ -1,7 +1,20 @@
 # STATUS — live view
 
 > Update this file in the same commit as the work it describes.
-> Last updated: **2026-09-13** (new single-page topical study, **The Faith Once
+> Last updated: **2026-09-13** (**COW synthesis loop re-aimed.** Generation
+> finished at 1,189/1,189 on 2026-09-12 and the repair queue emptied behind it,
+> leaving the loop deadlocked: the only chapter left in `--queue auto` was
+> numbers 31, blocked on a source defect, and every worker spent nine days
+> declining it once an hour. Two changes. (1) **A blocklist the picker can read**
+> — `docs/agents/cow-synthesis-blocklist.json`, filtered out of every queue, with
+> numbers 31's defect and unblock condition recorded in it; a block that lives
+> only in an operator's prompt is a tax, not a block. (2) **Two follow-on
+> queues** — `polish` (239 chapters, the 1,063 grade-B verses) then `legacy`
+> (132 chapters, 3,133 verses still stamped `legacy-unversioned`); `--queue auto`
+> now drains repair → generate → polish → legacy, a chapter appears in exactly
+> one queue, and `status` reports all of them. Worker A's Routine was rewritten
+> to pick from the new chain.
+> Also **2026-09-13**: new single-page topical study, **The Faith Once
 > Delivered: Apostolic and Confessional Belief**, at
 > `topics/confessional-apostolic-beliefs/` — confessional and apostolic belief for
 > a modern believer: the *apostolic* (source) / *confessional* (method)
@@ -69,19 +82,22 @@
   B+ → A−); adversarial audit fix batches P1–P6 ([AUDIT.md](archive/AUDIT.md));
   OL decomposition through Phase 4a / P26 / P27
   ([plans/OL-DESK-PLAN.md](plans/OL-DESK-PLAN.md)).
-- **In flight (active focus)**: **COW synthesis — 738/1,189 chapters = 62.1%.**
-  NOT a single canonical frontier: **Genesis→Job and the entire NT are complete**
-  (2 Chronicles + Ezra + Nehemiah + Esther + all 42 of **Job** finished —
-  genealogy/register + narrative + dialogue-poetry profiles all calibrated;
-  each chapter validated + scrape-meta-scanned + anti-templating-checked before
-  commit); the gap is now the OT back-half (**Psalms → Malachi** + the remaining
-  poetic/wisdom books). OT frontier = **Psalms 1** (pure Hebrew poetry, 150 ch).
-  Advancing this loop is
-  the current focus — it also gates the Studies tool, since a book earns a Full
-  Treatment only after its synthesis is done (see below). The
-  62 legacy validator failures (John 4, Luke 13, Genesis 41, 1 Samuel 5) are
-  repaired and the full corpus validates clean; OL Phase 4b pending the owner
-  review ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
+- **In flight (active focus)**: **COW synthesis — generation COMPLETE at
+  1,189/1,189 chapters (2026-09-12)**, all 66 books, and the repair queue closed
+  with it: the grade-D population went from ~9,354 verses in ~356 chapters to 41
+  verses in one chapter (numbers 31, blocklisted on a source defect). Every book
+  is now treatment-eligible, **Psalms included**, which unblocks the
+  long-pending Psalms treatment in the Studies tool.
+  **The loop's live work is now the two follow-on queues (2026-09-13)**:
+  **polish** — 239 chapters holding the 1,063 grade-**B** verses — then
+  **legacy** — the 132 chapters still on the 2026-07-22 per-verse prose (3,133
+  verses; another 5,525 sit inside the polish chapters and are re-stamped when
+  those are rewritten). `--queue auto` serves repair → generate → polish →
+  legacy, a chapter appears in exactly one queue, and
+  `docs/agents/cow-synthesis-blocklist.json` is filtered out of all of them.
+  The full corpus validates clean and the quality gate passes at 0 violations;
+  OL Phase 4b pending the owner review
+  ([REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md)).
 - **Studies — one Full Treatment per book (reshaped 2026-07-20)**: the earlier
   three tiers were **collapsed into a single per-book page** — a rich intro
   (overview, **timeline**, key people, key vocabulary, language notes, reception,

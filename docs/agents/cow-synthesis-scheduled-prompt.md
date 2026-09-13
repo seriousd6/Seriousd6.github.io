@@ -61,14 +61,22 @@ Then do UP TO 3 CHAPTERS, and stop. Per chapter:
    set -- $unit; queue=$1; book=$2; ch=$3
    --spread 40 picks at random from the queue's worst 40 instead of its head, so
    two concurrent runs rarely choose the same chapter. Do not drop it, and do not
-   pick a chapter by hand. Exit 3 means BOTH queues are empty — the corpus is
+   pick a chapter by hand. Exit 3 means ALL FOUR queues are empty — the corpus is
    done; stop and say so.
 
-2. If queue is "repair", read the EXISTING prose first to see which defect shape
-   it is: stock carrier phrases, the verse re-quoted for length, or the
-   parenthesised slot-list. If queue is "generate" there is nothing to read yet
-   — study a finished chapter instead (cow-synthesis/2kings/13.json is the gold
-   standard) and match its voice.
+2. What to read first depends on which queue served you:
+   - "repair" — read the EXISTING prose to see which defect shape it is: stock
+     carrier phrases, the verse re-quoted for length, or the parenthesised
+     slot-list.
+   - "generate" — there is nothing to read yet. Study a finished chapter instead
+     (cow-synthesis/2kings/13.json is the gold standard) and match its voice.
+   - "polish" — the chapter's worst verses graded B. Read them AND the fidelity
+     notes recorded against them (synthesis-note.py --list --book <book>): the B
+     was recorded by a writer who said in the note where the prose leans past
+     its witness. Fix that specific lean; do not simply rewrite around it.
+   - "legacy" — the chapter is still on the 2026-07-22 per-verse prose, one blob
+     per verse. Rewrite it as pericope tiles under the current rules, exactly as
+     a repair: regenerate from the catena rather than re-tiling the old prose.
 
 3. Read data/commentary/cow/<book>/<ch>.json and write the chapter under the
    prose rules in the loop doc. On a repair, regenerate rather than trim — a
@@ -129,7 +137,13 @@ Record at least:
 Other rules:
 - Never hand-edit a qa block. Step 6 writes it.
 - If the same chapter fails twice, note it and move on; do not keep retrying.
-- Do not switch queues by hand; --queue auto does it. Repair finishes first.
+- Do not switch queues by hand; --queue auto does it, in the order
+  repair -> generate -> polish -> legacy.
+- If a chapter is genuinely unworkable because its SOURCE is defective, do not
+  keep declining it every run: write a source-defect note, and say plainly in
+  your report that it belongs on docs/agents/cow-synthesis-blocklist.json. Do
+  not add it yourself — the blocklist is the owner's call — but a block that
+  lives only in a prompt costs every worker a draw, every run, forever.
 - Do not touch anything outside data/commentary/cow-synthesis*/ and the notebook.
 - When the batch budget is spent, stop. Another run fires in 30 minutes and
   will continue. Never start a chapter you cannot finish — an abandoned pick
@@ -186,19 +200,72 @@ fresh session rather than nursed.
 **Check the meters, not the firings.** A Routine that fires perfectly and does
 nothing looks identical to one that is working, from everywhere except the data.
 
+## The hourly poke (current text, 2026-09-13)
+
+The block above is the full standing procedure; a persistent worker has already
+read it. What the Routine actually sends each hour is a short poke that names
+what changed since the worker last looked. It is tracked here because it is the
+thing that actually runs — a prompt that lives only inside a Routine is
+knowledge nobody can review.
+
+**Worker A** (`trig_013MAoEBMhzYYLzGuB9Ryet8`, fires at `:13`) carries this text
+as of 2026-09-13. **Worker B** (`trig_019Kd3xEeRNyLNuth964AEu5`, `:43`) still
+carries the previous generation/repair-era text; it keeps working unchanged,
+because `--queue auto` picks up the new queues on its own and the blocklist
+makes its "do not attempt numbers 31" clause moot. Repoint it with
+`update_trigger` when convenient.
+
+```
+Run another COW synthesis batch, then stop. The queue changed — pull first, it is all in the repo.
+
+1. git fetch origin master && git reset --hard origin/master
+
+2. Generation and repair are DONE — 1,189/1,189 chapters, zero defects left in circulation. The loop now works two FOLLOW-ON queues and `--queue auto` serves them in order:
+   polish — 239 chapters holding the 1,063 verses that graded B (faithful but stretched, or thin enough for the lint to mark down);
+   legacy — 132 chapters still on the 2026-07-22 per-verse prose (3,133 verses stamped legacy-unversioned; another 5,525 sit inside the polish chapters and get re-stamped when those are rewritten).
+   Same unit, same pipeline, same rules as repair. Exit 3 now means all four queues are empty; say so and stop.
+
+3. numbers 31 is on docs/agents/cow-synthesis-blocklist.json and the picker no longer offers it — you do not need to decline it by hand any more. If you hit another chapter whose SOURCE is genuinely unworkable, write a source-defect note and say in your report that it belongs on the blocklist. Do not add it yourself.
+
+4. Budget the batch by SOURCE WORDS, not chapter count. After each pick run
+       python3 scripts/synthesis-loop.py size "$book" "$ch"
+   Over ~40,000 usable source words that chapter is the WHOLE batch — do it and stop. Under that, two chapters is a reasonable batch. --worst-first is also longest-first. Never start a chapter you cannot finish; an abandoned pick costs the run everything and the queue nothing.
+
+Otherwise as before. Pick with
+    python3 scripts/synthesis-loop.py next --queue auto --worst-first --spread 40
+On a "polish" pick, read the existing prose AND the fidelity notes recorded against its B verses —
+    python3 scripts/synthesis-note.py --list --book "$book"
+— the note says where the prose leans past its witness; fix that specific lean rather than rewriting around it. On a "legacy" pick, regenerate from the catena as pericope tiles; do not re-tile the old per-verse prose.
+
+Write under the prose rules in docs/agents/cow-synthesis-loop.md, fidelity-self-grade every verse, record notes with scripts/synthesis-note.py before finishing, and land with
+    python3 scripts/synthesis-loop.py finish "$book" "$ch" --unattended --push
+Exit 5 means the other worker got there first — expected, move on. Reset to origin/master between chapters. Never push by hand, never force-push, never rebase. If a push fails, note it and stop rather than working around it by hand.
+
+Report chapters landed, dropped, failed, and the meters from "python3 scripts/synthesis-loop.py status". Then stop and wait for the next poke. Say so if your context is getting long — I would rather rotate you than have you degrade.
+```
+
 ## Watching it
 
 ```sh
-python3 scripts/synthesis-loop.py status                  # both queues + grades
+python3 scripts/synthesis-loop.py status                  # all queues + grades
+python3 scripts/synthesis-frontier.py --blocked            # what is suppressed, and why
 python3 scripts/synthesis-note.py --list --since <date>   # what the runs saw
 python3 scripts/synthesis-note.py --list --kind rejected  # what the driver refused
 git log --oneline --since=<date> --grep='^COW synthesis'  # what actually landed
 ```
 
-The two meters in `status` are the honest ones: the **exempt/legacy count** falls
-as chapters are repaired, and **synthesized** climbs toward 1,189 as generation
-proceeds. A run that reports three chapters landed but moves neither meter is a
-run that did nothing — check the notebook for `rejected` entries first.
+The meters in `status` are the honest ones. **synthesized** climbed to 1,189/1,189
+and **to repair** fell to zero on 2026-09-12; what moves now is **to polish**
+(239 chapters / 1,063 grade-B verses) and **to rewrite** (132 chapters / 3,133
+legacy verses), and the **legacy-unversioned** line in the verses-by-standard
+block falls as both drain. A run that reports three chapters landed but moves no
+meter is a run that did nothing — check the notebook for `rejected` entries
+first.
+
+`python3 scripts/synthesis-frontier.py --blocked` prints what the blocklist is
+suppressing and why. A queue that reads empty while a chapter is blocked is
+empty *of workable chapters*, which is the honest answer; the blocked one is
+waiting on an owner decision, not on a worker.
 
 ## What to expect from concurrency
 
