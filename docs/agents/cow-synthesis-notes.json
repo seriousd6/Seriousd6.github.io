@@ -84394,6 +84394,56 @@
         "1-12"
       ],
       "note": "All four entries fidelity-graded verse by verse against the catena. Every proper noun in the prose appears verbatim in this chapter's source; entities check clean on the first run. Calvin's aside at key 6 about profane men clothing themselves with the titles of princes, bishops and prelates of the Church is carried in general form, without the list of offices."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "31",
+        "37",
+        "43"
+      ],
+      "note": "JFB MISADDRESSING, and this chapter shows the mechanism plainly: the Jamieson, Fausset and Brown block appears at keys 1, 7, 13, 19, 31, 37 and 43 — every SIXTH key, with only 25 absent — and every one of them carries 1 Samuel 11-12 material (Nahash and the Jabeshites' right eyes; Saul's war-summons and the disaffection of Judah; the assembly at Gilgal; Samuel's testimony of his integrity; the thunder in wheat harvest). Not one sentence of it touches 1 Kings 7. This is the same mechanical every-sixth-key insertion recorded for numbers 31 (where a 207-word JFB block on Numbers 7 sits at keys 6, 12, 18, 24, 30, 36, 42, 48, 54), which means the defect is a scraper artefact with a fixed stride, not a one-off. JFB was dropped as uncitable in all seven tiles here. Worth a corpus-wide scan keyed on the stride: any chapter whose JFB blocks land on an arithmetic progression of six is a candidate."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "7",
+      "verses": [
+        "51"
+      ],
+      "note": "ELLICOTT CHROME at the last key again — key 51's Ellicott block ends its genuine commentary at 'brought into the sacred treasury' and then runs into StudyLight navigation, copyright text and raw CSS (sub-menu, search-button, int-search-div rules). Consistent with the settled rule that the chrome attaches to the LAST Ellicott block fetched for a chapter. Omitted silently per the prose rules."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "7",
+      "verses": [
+        "51"
+      ],
+      "note": "UNDER-CAPTURE: the Keil and Delitzsch entry at key 51 is the bare verse text with no comment attached — the lemma only. Delitzsch was therefore NOT declared in the closing tile, though he is the chapter's densest witness everywhere else. Gill's blocks at keys 33, 34 and 50 are similarly near-empty (29, 19 and 10 words, mostly cross-reference stubs whose targets did not survive the scrape). Adds 1 Kings to the list of books where a scan for blocks under ~15 words would find real gaps rather than genuinely thin comment."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "7",
+      "note": "Rewritten from legacy per-verse prose as 15 pericope tiles: 1, 2-5, 6-8, 9-12, 13-14, 15-18, 19-22, 23-26, 27-30, 31-35, 36-39, 40-44, 46-47, 48-50, 51. Source key 45 is ABSENT, so no tile may span 44-46; the seam there is forced by the source, not chosen. Two section-opening blocks carry material for verses well past their own key: Matthew Henry's key-1 block covers the whole palace section (vv.1-12) and his key-13 block covers the entire brass section (vv.13-51), commenting explicitly on the pillars, the sea, the lavers, the casting and the dedicated treasure. He was declared in the tiles his block actually discusses rather than only at keys 1 and 13 — the voices-sourced rule is chapter-level by design, and confining him to the key his text happens to sit on would have silently dropped the chapter's only devotional witness from two thirds of it."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "7",
+      "note": "Every tile self-graded A: each claim traces to a block within or bearing on the tile's own verses, and the expansions are framing rather than new content. The two places where I leaned hardest on judgement: (1) at key 36 Delitzsch's text as scraped reads 'if then the basins were a cubit in diameter at the top' where the verse says four cubits — evidently a slip in the source — so the prose states the measurement the verse gives and attributes to him only the inference he actually draws from it, the wide-spreading shell shape; (2) at key 27 Gill's denial that the wheels were for carriage and his later comparison of the wheel's FORM to a chariot wheel are not a contradiction, and the prose keeps them apart rather than harmonising or flattening either."
     }
   ]
 }
