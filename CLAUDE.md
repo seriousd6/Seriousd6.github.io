@@ -8,6 +8,12 @@ the owner's stop hook asks for it, so don't ask each time. Still stop and ask
 before anything hard to undo: history rewrites, force-pushes, deleting remote
 branches, or mass regeneration of the data tree. Local commits are always fine.
 
+**Branch policy (owner, 2026-09-13):** **always push to `master`.** Work lands
+on master directly — no feature-branch-and-PR flow, and no pull request unless
+the owner asks for one. If a session is handed a `claude/*` working branch, the
+work still finishes on master (fast-forward it there and push master). Feature
+branches are a scratch convenience only; master is the deliverable.
+
 ## Read first
 
 - [docs/TODO.md](docs/TODO.md) — the canonical task list. Pick work there; update it
