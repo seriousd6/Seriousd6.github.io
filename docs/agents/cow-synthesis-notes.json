@@ -84499,6 +84499,16 @@
       "book": "1chronicles",
       "chapter": "9",
       "note": "Every tile self-graded A. Attributions were held back wherever a block was truncated in my reading rather than guessed at: John Wesley has blocks at keys 11, 21, 22, 30, 33 and 34 that I did not read in full, and he is therefore NOT declared in the tiles covering those verses even though he is present in the chapter and the voices-sourced rule would permit it. Same for Charles Ellicott at key 14 and Adam Clarke at key 20. The chapter is consequently thinner in declared voices than its catena would allow; that is deliberate, and a later pass with more room could recover those blocks. One judgement call: Clarke's astonished total for the priests differs by twenty from the figure the verse gives, so the prose reports his astonishment and the gatekeepers he excludes from it without attaching the discrepant number to him."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "Polish-queue reconnaissance, not a rewrite. john 16 is 33 source keys / 70,431 usable source words - the largest draw seen in the polish queue so far (john 19 69.6k, john 20 62.1k, john 15 59.8k, matthew 7 57.8k, luke 7 52.4k). All 33 verses are legacy-unversioned, so the unit is a full regeneration into pericope tiles, not a targeted B-verse fix. Second finding worth more than the first: the Johannine catena draws a different voice set from the OT chapters the loop has been draining - Chrysostom, Augustine, Cyril of Alexandria, Theophylact, Origen, Hilary, John Lightfoot, Albert Barnes, A.T. Robertson - none of which appear in the ten-voice OT profile. Any worker carrying scratch lint tuned to the OT set must rebuild its voice-to-school map before drafting, mapping Chrysostom and Theophylact to eastern-antiochene, Cyril and Origen to eastern-alexandrian, Augustine and Hilary to latin-fathers, Barnes, Robertson and Lightfoot to grammatical-historical. The existing tags on john 20 already follow that convention and are a good template."
     }
   ]
 }
