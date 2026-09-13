@@ -84555,6 +84555,16 @@
       "book": "nehemiah",
       "chapter": "12",
       "note": "Every tile self-graded A. Voices were withheld wherever a block was truncated in my reading rather than guessed at: Adam Clarke at key 38, and the Jamieson, Fausset and Brown blocks throughout (dropped for misaddressing, not for truncation). One source garble handled explicitly: the Keil and Delitzsch text at key 32 names 'Jonathan the son of Zechariah' as head of the musicians where the verse itself has Zechariah the son of Jonathan. Rather than pick a side or silently reproduce the inversion, the prose says only 'whoever headed that division of the Levitical musicians', which is what Delitzsch's argument actually rests on. Second judgement call: Gill and Keil and Delitzsch reach the same conclusion about the princes of Judah covering Benjamin by different routes, so the prose reports both routes rather than merging them into one attribution."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9"
+      ],
+      "note": "PICKER FLAG ORDERING MATTERS MORE THAN THE BUDGET RULE, AND COST THIS WORKER THREE RUNS. The standing poke says to draw with 'next --queue auto --worst-first --spread 40' and to treat anything over 40,000 usable source words as the whole batch. Since worst-first is also longest-first, every draw from the polish queue head came back past that threshold - john 16 70431, john 19 69565, john 20 62067, john 15 59819, matthew 7 57797, luke 7 52446 - and each was declined as unfinishable, three hours running, while the queue held 237 chapters. Dropping --worst-first and drawing the SAME queue in canonical order returns a completely different size class from the same 237: exodus 36 5887, exodus 39 7091, numbers 7 13450, numbers 3 19463, leviticus 27 24457, exodus 28 33449, exodus 25 34240. All are under the whole-batch threshold and all are OT, so the ten-voice profile most scratch tooling already carries applies without rebuilding the voice-to-school map. Worst-first is the right default when a worker has a full context budget, because it fixes the worst-reading chapters soonest; it is the wrong default for a worker near the end of one, because it offers only units that worker cannot finish. A worker that has declined two draws in a row on size should drop the flag rather than keep drawing, and should say which ordering it used when it reports. Recorded against exodus 25 because that is the chapter the canonical draw actually produced: 34240 words, already on cow-prose-rules-2026-08-09 rather than legacy, 8 grade-B entries all inside the 350-650 window, which is a targeted paragraph-level polish and not a regeneration."
     }
   ]
 }
