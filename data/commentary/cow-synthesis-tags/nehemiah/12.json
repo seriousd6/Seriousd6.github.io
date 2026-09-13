@@ -3,218 +3,100 @@
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Matthew Henry",
-   "John Wesley",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil frames the verse as the title of the first list, its twenty-two heads recurring (with clerical variations) as the priestly houses of vv.12-21; Ellicott takes Seraiah as the family name represented by Jeshua and owns nothing more is known of Jeremiah and Ezra."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads the long roll as a memorial of faithful ministers, that posterity might know their debt (Ps. 112:6; Heb. 13:7)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley and Clarke fix these as the chief of the twenty-four Davidic courses (1 Chron. 24), thinned to twenty-two by the captivity; Clarke calls the list the chief, not the whole, and notes the LXX omissions."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes Zerubbabel the prince and Jeshua the high priest at the head of the returning company."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the 'Ezra' named here Ezra the scribe?",
-    "sides": [
-     {
-      "position": "the same Ezra the scribe, preserved by providence to a great age",
-      "holders": [
-       "Adam Clarke"
-      ]
-     },
-     {
-      "position": "not the famous scribe, or now beyond recovery",
-      "holders": [
-       "Matthew Henry",
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the register of returning priests",
-   "the memorial of faithful ministers",
-   "the twenty-four priestly courses",
-   "the identity of Ezra"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Adam Clarke",
-   "Charles Ellicott",
    "Matthew Henry"
   ],
+  "range": "1-2",
+  "pericope_label": "Now these are the priests and the Levites that went up with Zerubbabel the son of Shealtiel, and Jeshua: Seraiah, Jeremiah, Ezra, Amariah, Malluch, Hattush,",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Delitzsch treats the verse as the title of the first list and reads its closing subscription, explains that the brethren of the priests are the Levites, connects the twenty-two heads named here both to the priestly houses listed further down and to the fifteen who sealed the covenant, and identifies the last Levite named as the Asaphite head of the first band of singers."
+   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill finds these names among the sealers of the covenant (Neh. 10) and marks the Malluch here as the Melicu of v.14."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil sets the twenty-two heads as the houses that recur in vv.12-21; Ellicott reads them as family names, not individuals, so a name may pass down generations."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley grounds the count in David's twenty-four courses (1 Chron. 24), thinned to twenty-two by the captivity and to twenty in v.12 where Hattush left no posterity; Clarke calls the list the chief, not the whole."
+    "summary": "Gill states the terms of the register — priests and Levites who came up from Babylon with Zerubbabel the prince and Jeshua the high priest — notes that the priestly names run through the next six verses, and observes that the names of the second verse stand among the sealers of the covenant, one of them appearing later in an altered form."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry keeps the memorial purpose of the register before the reader."
+    "summary": "Henry asks why a register of names is here at all and answers that it keeps these men in remembrance, so that later generations might know to whom under God they owed the revival of their religion; he adds a second purpose, to stir up the sons who inherited these offices to imitate their fathers, and cautions that the Jeremiah and Ezra named near the head of the list are probably neither the prophet nor the scribe."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the sealers of the covenant",
-   "the priestly courses",
-   "name variations (Malluch/Melicu)",
-   "family names"
+   "Now these are the priests and the Levites that went up with Zerubbabel the son of Shealtiel, and Jeshua: Seraiah, Jeremiah, Ezra,",
+   "Amariah, Malluch, Hattush,"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "6": {
   "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "John Gill",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads the 'and' before Joiarib as beginning the list of those who did not seal the covenant (cf. v.19); Keil notes fifteen of the twenty-two heads had sealed it (Neh. 10)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the names among the sealers and the chief priests whose courses the return was restoring."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley keeps the frame of the twenty-four courses (1 Chron. 24) thinned by the captivity, each name standing for a ministering house."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry presses the memorial worth of the record, a debt owed to faithful guides (Heb. 13:7)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dividing 'and'",
-   "sealers and non-sealers of the covenant",
-   "the priestly courses",
-   "the memorial of ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
+   "Charles Ellicott",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Gill",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
+  "range": "6-14",
+  "pericope_label": "Shemaiah, and Joiarib, Jedaiah, Sallu, Amok, Hilkiah, Jedaiah. These were the chief of the priests and of their brethren in the days of Jeshua. Moreover the Levites: Jeshua, Binnui, Kadmiel, Sherebiah, Judah, and Mattaniah, which was over the thanksgiving, he and his brethren. Also Bakbukiah and Unni, their brethren, were over against them in the watches. And Jeshua begat Joiakim, Joiakim also begat Eliashib, and Eliashib begat Joiada, And Joiada begat Jonathan, and Jonathan begat Jaddua. And in the days of Joiakim were priests, the chief of the fathers: of Seraiah, Meraiah; of Jeremiah, Hananiah; Of Ezra, Meshullam; of Amariah, Jehohanan; Of Melicu, Jonathan; of Shebaniah, Joseph;",
   "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke fixes the four-and-twenty courses David established (1 Chron. 24), continuing to the Roman destruction of Jerusalem; Wesley counts the twenty-two the return could muster."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott grants 'chief' genealogically but not by the courses, which are complete in none of the lists; Keil reads the verse as the subscription sealing the first list, the brethren being the Levites."
+    "summary": "Ellicott reads the conjunction before one name as marking off those who did not seal the covenant, insists the men are chief genealogically rather than by course, since the courses are complete in none of the lists, and declines to explain the anomalies between the two registers; Delitzsch reads the inserted genealogy as a connecting link that dates the lists on either side of it by the high priest then in office, and takes the pair named after the Levites as an answering choir rather than a watch."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill keeps the arithmetic of the courses, twenty-two of David's twenty-four surviving the exile."
+    "summary": "Gill counts twenty heads in the son's days against twenty-two in the father's and accounts for the difference by two houses that left no descendants; on the high-priestly succession he reports the identification of the last name with the Jaddus of Josephus who met Alexander, and concludes from it that the paragraph cannot be Nehemiah's but was inserted later by a godly hand under divine direction."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the courses their history, twenty-four orders established by David and continuing until the Romans destroyed Jerusalem; Wesley describes the office over the thanksgiving as a duty rather than a rank, to see that the psalms of thanksgiving were sung continually at the due time and in the due manner, and explains the second register as sons serving in their fathers' places."
    }
   ],
   "debates": [
    {
-    "question": "Does this list of chief priests preserve David's twenty-four courses?",
-    "sides": [
+    "question": "Who wrote the note on the high-priestly succession?",
+    "positions": [
      {
-      "position": "the courses David established, continuing in force to Roman times",
-      "holders": [
-       "Adam Clarke"
+      "position": "Not Nehemiah: if the last high priest named is the one who met Alexander, Nehemiah could not have lived so long, so a later hand inserted the fragment.",
+      "held_by": [
+       "John Gill"
       ]
      },
      {
-      "position": "genealogical heads only; the courses are complete in none of the lists",
-      "holders": [
-       "Charles Ellicott"
+      "position": "It belongs where it stands, as a connecting link explaining how the lists on either side are dated.",
+      "held_by": [
+       "Keil and Delitzsch"
       ]
      }
     ]
@@ -222,497 +104,83 @@
   ],
   "outliers": [],
   "themes": [
-   "the priestly courses",
-   "the subscription of the first list",
-   "the incompleteness of the courses",
-   "a restored but diminished priesthood"
+   "Shemaiah, and Joiarib, Jedaiah,",
+   "Sallu, Amok, Hilkiah, Jedaiah. These were the chief of the priests and of their brethren in the days of Jeshua.",
+   "Moreover the Levites: Jeshua, Binnui, Kadmiel, Sherebiah, Judah, and Mattaniah, which was over the thanksgiving, he and his brethren.",
+   "Also Bakbukiah and Unni, their brethren, were over against them in the watches.",
+   "And Jeshua begat Joiakim, Joiakim also begat Eliashib, and Eliashib begat Joiada,",
+   "And Joiada begat Jonathan, and Jonathan begat Jaddua.",
+   "And in the days of Joiakim were priests, the chief of the fathers: of Seraiah, Meraiah; of Jeremiah, Hananiah;",
+   "Of Ezra, Meshullam; of Amariah, Jehohanan;",
+   "Of Melicu, Jonathan; of Shebaniah, Joseph;"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke glosses 'over the thanksgiving' as chief of the principal singers (Neh. 11:17); Wesley reads it as a standing trust to keep the psalms of thanksgiving continually sung in due order."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil sets the Levitical heads among the sealers of Neh. 10, takes 'Judah' as miswritten for Hodiah, and identifies Mattaniah the Asaphite (Neh. 11:17) as over the singing of praise."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes these as the Levites who lived in the same generation as the priests just listed."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levitical heads",
-   "Mattaniah over the thanksgiving",
-   "the continual song of the temple",
-   "covenant and praise joined"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads 'over against them in the watches' as the answering choir, not watch-posts (forbidden by v.24), and notes Unni is met with nowhere else yet is not to be emended away."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks two further Levites, the first named again in the muster of Neh. 11:17."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "antiphonal praise",
-   "ward over against ward",
-   "the answering choirs",
-   "a name preserved though unknown"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Wesley",
-   "Keil and Delitzsch",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil sets the genealogy as a connecting link fixing the dates of the several lists, and takes 'Jonathan' for a clerical error for Johanan, who (per Josephus) murdered his brother in the temple."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads the succession of high priests as a necessary calendar, the times of the second temple now measured by high priests and not by kings."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill judges the paragraph a later inspired insertion, since Nehemiah could scarcely have lived to Jaddua's meeting with Alexander."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "John Gill",
-    "note": "Holds the high-priestly genealogy, reaching to Jaddua and Alexander's day, to be a later inspired insertion by another hand, as with similar insertions in Moses and Joshua, since Nehemiah could hardly have lived so long."
-   }
-  ],
-  "themes": [
-   "the high-priestly succession",
-   "time measured by high priests",
-   "Jonathan/Johanan and the temple murder",
-   "a later inspired insertion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott corrects Jonathan to Johanan (v.22) and takes Jaddua for the high priest who met Alexander; Keil reads the succession as fixing the dates of the Levitical lists."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke recovers the scene of Jaddua meeting Alexander in pontifical robes after Tyre and Gaza, so that the conqueror spared Jerusalem (Josephus, Prideaux)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill draws from the reach to Alexander's day his conclusion that the passage is a later inspired hand."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jonathan/Johanan corrected",
-   "Jaddua and Alexander the Great",
-   "the succession dating the lists",
-   "the authorship of the passage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies Joiakim as Jeshua's son and counts twenty heads against the fathers' twenty-two, Hattush and Miamin leaving no descendants."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads the sons executing the priesthood in their fathers' room, some fathers living and many dead."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil sets the houses of vv.12-21 as answering, with slight variations, to the heads of vv.1-7."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry blesses the providence by which one generation of ministers succeeds another — the rare mercy of twenty good sons filling twenty good fathers' places."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the next generation of priests",
-   "sons in fathers' places",
-   "twenty houses against twenty-two",
-   "providence in the succession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil lays the roll beside vv.1-7 house by house; Ellicott notes the names do not always answer cleanly (Melicu for Malluch, a dropped name), anomalies of which no account can now be given."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill keeps the tally of twenty heads against twenty-two, Hattush and Miamin failing of descendants."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry redeems the dry column with the wonder that twenty good fathers should leave twenty good sons to fill their places."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the matched houses",
-   "textual variations",
-   "the succession of ministry",
-   "God who never leaves his house without a servant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Charles Ellicott",
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott identifies Melicu as the Malluch of v.2 and notes Hattush omitted, anomalies of which no account can be given; Keil files the divergences under clerical error."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill accounts for the vanished Hattush, whose house left no posterity, so that twenty heads stand where the fathers had twenty-two."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley likewise traces the missing Hattush to a house extinct without descendants."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "name variation (Melicu/Malluch)",
-   "the omitted Hattush",
-   "unexplained anomalies",
-   "fidelity to an imperfect text"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott notes that against Miniamin 'some name has dropped out'; Keil sets the loss among the clerical slips of a hand-copied text."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill keeps the register's character, the houses named by ancestor, most otherwise unknown."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry lifts the damaged line to its memorial purpose — to know what our godly predecessors were."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a dropped name",
-   "the imperfection of the transmitted list",
-   "Scripture's honesty",
-   "the memorial of ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
+   "Charles Ellicott"
   ],
+  "range": "22-26",
+  "pericope_label": "The Levites in the days of Eliashib, Joiada, and Johanan, and Jaddua, were recorded chief of the fathers: also the priests, to the reign of Darius the Persian. The sons of Levi, the chief of the fathers, were written in the book of the chronicles, even until the days of Johanan the son of Eliashib. And the chief of the Levites: Hashabiah, Sherebiah, and Jeshua the son of Kadmiel, with their brethren over against them, to praise and to give thanks, according to the commandment of David the man of God, ward over against ward. Mattaniah, and Bakbukiah, Obadiah, Meshullam, Talmon, Akkub, were porters keeping the ward at the thresholds of the gates. These were in the days of Joiakim the son of Jeshua, the son of Jozadak, and in the days of Nehemiah the governor, and of Ezra the priest, the scribe.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil reads the verse as both the title of the Levite list and the subscription of the priest list, recorded 'under the reign of Darius the Persian.'"
+    "summary": "Delitzsch strikes out as a gloss the word making one Levitical head the son of another, notes that the phrase ward over against ward is borrowed from the gatekeepers and applied here to the choirs, and marks the final verse as the subscription covering both lists; Ellicott observes that the account resumes with a list of the temple's serving officers, many of the names already familiar."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill fixes Eliashib as the third high priest of the second temple, in whose days the list was drawn."
+    "summary": "Gill identifies the third high priest of the second temple, notes that some refer the book of chronicles mentioned here to a particular passage, marks where the thread of Nehemiah's own narrative resumes after the two intervening verses, and dates the closing subscription by a high priest whose grandfather had held the office in Babylon."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke rehearses Jaddua meeting Alexander and sets out the rival Dariuses; Wesley chooses Darius Nothus, making this Jaddua the father of the one in Alexander's day."
+    "summary": "Clarke tells the story attached to the last name — the priest going out in his robes to meet Alexander, who spared the city, bowed before him, worshipped at the temple and granted many privileges — reports without resolving the dispute over which Darius is meant, and denies flatly that the book of chronicles named here can be the canonical book of that name; Wesley takes the earlier Darius and draws the consequence, that this Jaddua may be the father of the man who met Alexander rather than the man himself."
    }
   ],
   "debates": [
    {
-    "question": "Which Darius the Persian is meant?",
-    "sides": [
+    "question": "Which Darius does the chapter reach?",
+    "positions": [
      {
-      "position": "Darius Nothus, the earlier king",
-      "holders": [
-       "John Wesley",
-       "Usher (as reported by Adam Clarke)"
-      ]
-     },
-     {
-      "position": "Darius Codomanus, the last king, defeated by Alexander",
-      "holders": [
-       "Calmet (as reported by Adam Clarke)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the Levite heads",
-   "Jaddua and Alexander",
-   "which Darius",
-   "dating the register"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil sets the chief Levites to praise and give thanks according to David (1 Chron. 16:4; 23:30), 'ward over against ward,' and would expunge the 'ben' before Kadmiel as a gloss."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke insists 'the book of the chronicles' is not the canonical Chronicles, no such list being found there, but a lost register."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reports that some refer the phrase to the canonical Chronicles."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is 'the book of the chronicles' cited here?",
-    "sides": [
-     {
-      "position": "a lost official register, not the canonical Chronicles",
-      "holders": [
+      "position": "The later king, defeated by Alexander — so the chapter reaches to the very end of the Persian period.",
+      "held_by": [
        "Adam Clarke"
       ]
      },
      {
-      "position": "the canonical Chronicles, as some hold",
-      "holders": [
-       "John Gill (reporting the view)"
+      "position": "The earlier king of that name, which makes the Jaddua named here the father of the man who met Alexander.",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
@@ -720,102 +188,83 @@
   ],
   "outliers": [],
   "themes": [
-   "the lost chronicle",
-   "Johanan son of Eliashib",
-   "the antiphonal Levites",
-   "praise according to David"
+   "The Levites in the days of Eliashib, Joiada, and Johanan, and Jaddua, were recorded chief of the fathers: also the priests, to the reign of Darius the Persian.",
+   "The sons of Levi, the chief of the fathers, were written in the book of the chronicles, even until the days of Johanan the son of Eliashib.",
+   "And the chief of the Levites: Hashabiah, Sherebiah, and Jeshua the son of Kadmiel, with their brethren over against them, to praise and to give thanks, according to the commandment of David the man of God, ward over against ward.",
+   "Mattaniah, and Bakbukiah, Obadiah, Meshullam, Talmon, Akkub, were porters keeping the ward at the thresholds of the gates.",
+   "These were in the days of Joiakim the son of Jeshua, the son of Jozadak, and in the days of Nehemiah the governor, and of Ezra the priest, the scribe."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott hears the account resume with the Levites, the names largely recurring; Keil sets the answering companies to praise and give thanks per David (1 Chron. 23:30), ward over against ward."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks the point where Nehemiah's history is carried on from the priests to the Levites."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the resuming thread",
-   "the antiphonal choirs",
-   "praise according to David",
-   "the recurring names"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
- "25": {
+ "27": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott"
   ],
+  "range": "27-29",
+  "pericope_label": "And at the dedication of the wall of Jerusalem they sought the Levites out of all their places, to bring them to Jerusalem, to keep the dedication with gladness, both with thanksgivings, and with singing, with cymbals, psalteries, and with harps. And the sons of the singers gathered themselves together, both out of the plain country round about Jerusalem, and from the villages of Netophathi; Also from the house of Gilgal, and out of the fields of Geba and Azmaveth: for the singers had builded them villages round about Jerusalem.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil marks v.26 as the final subscription of the two lists; Ellicott glosses 'at the thresholds' as at the treasuries, the store-chambers attached to the gates."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke, puzzled by the notion of porticoes, proposes rather watch-boxes or moveable shelters for the gate-keepers."
+    "summary": "Delitzsch sets the dedication in the book's sequence, after the measures for filling the city had been carried out, explains that the Levites had to be fetched in because only some lived in Jerusalem, proposes a correction to the awkward phrase about dedication and joy, and reads the region the singers came from as the southern Jordan valley rather than the neighbourhood of the city; Ellicott places them instead in villages to the north."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill sets the porters keeping watch at the gates of the temple."
+    "summary": "Gill suggests the register was set down because so many priests and Levites took part in the dedication, widens what was dedicated to the whole city with its gates and houses, argues from the lesser to the greater that a new city deserved what a new house received, and passes on the tradition that the day was afterwards kept annually."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke identifies one of the singers' settlements as the village raised where Israel encamped after crossing Jordan under Joshua."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears the contrast with the earlier chapters — the wall built in fear and trembling, dedicated in joy and triumph — and gives the ceremony two meanings: a thanksgiving for a work finished against opposition, and a devoting of the city to God in his own name, the builders acknowledging that they held it as his tenants."
    }
   ],
   "debates": [
    {
-    "question": "What were the 'thresholds' the porters kept?",
-    "sides": [
+    "question": "Where did the singers live?",
+    "positions": [
      {
-      "position": "watch-boxes or moveable shelters at the gates",
-      "holders": [
-       "Adam Clarke"
+      "position": "In the southern Jordan valley near Jericho, and in villages some miles to the south-west.",
+      "held_by": [
+       "Keil and Delitzsch"
       ]
      },
      {
-      "position": "the treasuries or store-chambers attached to the gates",
-      "holders": [
+      "position": "Chiefly in villages to the north of the city.",
+      "held_by": [
        "Charles Ellicott"
       ]
      }
@@ -824,217 +273,34 @@
   ],
   "outliers": [],
   "themes": [
-   "the doorkeepers",
-   "the debated thresholds",
-   "guarding the temple's purity",
-   "the closing subscription"
+   "And at the dedication of the wall of Jerusalem they sought the Levites out of all their places, to bring them to Jerusalem, to keep the dedication with gladness, both with thanksgivings, and with singing, with cymbals, psalteries, and with harps.",
+   "And the sons of the singers gathered themselves together, both out of the plain country round about Jerusalem, and from the villages of Netophathi;",
+   "Also from the house of Gilgal, and out of the fields of Geba and Azmaveth: for the singers had builded them villages round about Jerusalem."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill traces the descent from Jozadak, high priest in Babylon, to his grandson Joiakim in the restored temple."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil fixes the verse as the final subscription dating both lists to Joiakim, Nehemiah, and Ezra."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sees in the whole register a memorial of God's care, its singers and porters set according to the command of David."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dating subscription",
-   "the priesthood across the captivity",
-   "Nehemiah and Ezra together",
-   "the memorial of ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Matthew Henry",
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry reads the dedication as thanksgiving, a devoting of the holy city to God (Ps. 48:2; Matt. 5:35), and a putting of it under his protection (Ps. 127:1) — sowing in tears, reaping in joy."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil marks the wall finished (Neh. 6:15) and now dedicated with gladness (cf. Ezra 6:16); Ellicott makes the solemnity processional, musical, and sacrificial after Solomon's pattern."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley reads the holy city given back to God who chose and sanctified it; Clarke notes the ancients too consecrated their cities and walls to their gods."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the dedication for a festival of prayer, praise, and sacrifice, kept yearly on the seventh of Elul."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Adduces Ovid's account of Romulus founding Rome — the heathen consecration of city walls to the gods — as a pagan shadow of Israel's true dedication."
-   }
-  ],
-  "themes": [
-   "the dedication of the wall",
-   "joy after fear",
-   "the holy city devoted to God",
-   "except the Lord keep the city"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil identifies the three Levitical companies of singers (Neh. 11:17) gathered from the Jordan valley and the villages of Netophathi (1 Chron. 9:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'the sons of the singers' for the singing Levites and their sons trained to the office."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry notes the Levites summoned from all parts of the country to the dedication."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the singers gathered",
-   "the hereditary choir",
-   "Netophathi geography",
-   "ministers summoned from afar"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces the companies to Beth-gilgal and the fields of Geba and Azmaveth; Ellicott sets the Levitical singers chiefly in villages north of the city."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reads Beth-Gilgal as the village where Israel encamped after crossing Jordan under Joshua."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill places Gilgal in the plains of Jericho."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the singers' villages round Jerusalem",
-   "Gilgal, Geba, Azmaveth",
-   "worship shaping the countryside",
-   "the gathering complete"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "30": {
@@ -1042,363 +308,132 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Keil and Delitzsch",
    "John Wesley",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
+  "range": "30-32",
+  "pericope_label": "And the priests and the Levites purified themselves, and purified the people, and the gates, and the wall. Then I brought up the princes of Judah upon the wall, and appointed two great companies of them that gave thanks, whereof one went on the right hand upon the wall toward the dung gate: And after them went Hoshaiah, and half of the princes of Judah,",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott insists on purification before consecration, by offerings and ablutions (2 Chron. 29:15; Ezra 6:20), the gates and wall sprinkled; Keil judges it done by sin- and burnt-offerings (2 Chron. 29:20)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke describes washings and abstinence, and the removing of filth and rubbish; Wesley: those who would sanctify others must first sanctify themselves."
+    "summary": "Ellicott states the principle that consecration must be preceded by cleansing, and makes the gates and the wall purified by sprinkling as the ministers were by offering and ablution; Delitzsch reads the princes of Judah as the princes of the whole community and describes the two thanksgiving companies going opposite ways along the wall to halt facing each other at the house of God, noting that the word for thanksgiving passes from praise to thankoffering and so to a company of singers."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the purifying to be by washing of body and clothes and sprinkling the water of purification."
+    "summary": "Gill takes the purification to have been by washing of bodies and clothes, perhaps with the sprinkling of the water of purification, observes that the wall was broad enough to be walked along, holds that the princes of Benjamin are included under the name of Judah, and notes that the second half of the princes followed with Hoshaiah at their head."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: cleanse hands and hearts when any work for God passes through them; the sprinkled water a type of the blood of Christ (Heb. 9:14; Num. 19:9)."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke describes a wider discipline of washings and abstinence, and makes the cleansing of the gates and wall a matter of clearing filth and rubbish rather than of rite; Wesley turns the verse into a charge, that those who would sanctify others must first sanctify themselves with purity of mind and sincerity of intention."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How were the gates and the wall purified?",
+    "positions": [
+     {
+      "position": "By clearing them: nothing was needed but to remove the filth from the gates and the rubbish from against the wall.",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "By sprinkling, as the ministers themselves were purified by offerings and ablutions.",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "purification of self, people, gates, wall",
-   "sanctify others by sanctifying self",
-   "a type of Christ's cleansing",
-   "cleansing before joy"
+   "And the priests and the Levites purified themselves, and purified the people, and the gates, and the wall.",
+   "Then I brought up the princes of Judah upon the wall, and appointed two great companies of them that gave thanks, whereof one went on the right hand upon the wall toward the dung gate:",
+   "And after them went Hoshaiah, and half of the princes of Judah,"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil sets two great companies of thanks going in opposite directions to meet at the house of God; Ellicott fixes the muster on the south-west wall before the division."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke lays out the order of the march from the dung gate, right and left, to the great space by the temple; Wesley sends half the people with the princes toward the south and east."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the wall broad enough to walk upon, the princes of Benjamin included."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sees the two companies with music, Ezra and Nehemiah leading, meeting at last in the temple."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.43
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the two thanksgiving companies",
-   "procession on the broad wall",
-   "beginning at the dung gate",
-   "dedicating the whole circuit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil lists the file of princes and the priests' sons with trumpets; Ellicott marks the mingling of the clerical and lay elements in the procession."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets Hoshaiah at the head of the other half of the princes of Judah."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry fixes Ezra leading the van of the first company."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the composition of the first company",
-   "lay and priestly mingled",
-   "the princes on the wall",
-   "the city as its people"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "33": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
+  "range": "33-37",
+  "pericope_label": "And Azariah, Ezra, and Meshullam, Judah, and Benjamin, and Shemaiah, and Jeremiah, And certain of the priests’ sons with trumpets; namely, Zechariah the son of Jonathan, the son of Shemaiah, the son of Mattaniah, the son of Michaiah, the son of Zaccur, the son of Asaph: And his brethren, Shemaiah, and Azarael, Milalai, Gilalai, Maai, Nethaneel, and Judah, Hanani, with the musical instruments of David the man of God, and Ezra the scribe before them. And at the fountain gate, which was over against them, they went up by the stairs of the city of David, at the going up of the wall, above the house of David, even unto the water gate eastward.",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "majority",
+    "summary": "Ellicott suspects one of the names simply duplicates the one before it and finds the arrangement of the company odd, with the laity set between priests before and behind; Delitzsch puts the trumpeters at seven on the evidence of a later verse, counts eight musicians following their head, and traces the route from the dung gate to the fountain gate and up by the stairs of the city of David to the water gate, while admitting that the description as a whole is not quite intelligible."
+   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill warns this Ezra is not the priest and scribe (who has his place at v.36) but one of the princes."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott suggests this Ezra is probably the same as the preceding Azariah; Keil files the names among the princes of the first company."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry keeps the first company moving toward the house of God."
+    "summary": "Gill distinguishes the Ezra named among the princes from Ezra the scribe, who has his own place later in the procession, insists that Judah and Benjamin here are two men rather than two tribes on the authority of Jarchi, notes that the trumpets were sounded by the priests, and fixes the fountain gate to the south of the dung gate."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the names in the procession",
-   "this Ezra not the scribe",
-   "Azariah and Ezra",
-   "the princes engaged"
+   "And Azariah, Ezra, and Meshullam,",
+   "Judah, and Benjamin, and Shemaiah, and Jeremiah,",
+   "And certain of the priests’ sons with trumpets; namely, Zechariah the son of Jonathan, the son of Shemaiah, the son of Mattaniah, the son of Michaiah, the son of Zaccur, the son of Asaph:",
+   "And his brethren, Shemaiah, and Azarael, Milalai, Gilalai, Maai, Nethaneel, and Judah, Hanani, with the musical instruments of David the man of God, and Ezra the scribe before them.",
+   "And at the fountain gate, which was over against them, they went up by the stairs of the city of David, at the going up of the wall, above the house of David, even unto the water gate eastward."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill, with Jarchi, takes Judah and Benjamin for the personal names of two princes, not the tribes."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott calls it a singular collocation, the laity set between priests; Keil places the names in the ordered file of princes."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sees the whole society, not the clergy only, giving thanks."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.92
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Judah and Benjamin as men not tribes",
-   "lay and priestly mingled",
-   "the whole nation as one company",
-   "every rank in the thanksgiving"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes the priests' sons with trumpets, the trumpet being the priestly instrument."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces Zechariah's descent from Asaph, the Davidic instruments (1 Chron. 23:5; 2 Chron. 29:26), and reckons seven trumpeters per company (v.41); Ellicott insists nothing deviated from sacred precedent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests' trumpets",
-   "the Asaphite leader",
-   "the music of David",
-   "order in joy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil sets the Davidic instruments and the ascent by the stairs of the city of David (Neh. 3:15), owning the topography not quite intelligible; Ellicott gives Ezra the scribe his place before them, greatest in dignity though second in office."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'his brethren' for the brethren of Zechariah, the file of players."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the music of David",
-   "Ezra the scribe leading",
-   "the ascending route",
-   "the reformers framing the processions"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces the ascent by the stairs of the city of David to the water gate, owning the statements not now quite intelligible; Ellicott marks the shorter eastern route and the fidelity to precedent."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the fountain gate south of the dung gate where the procession began."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the route of the first company",
-   "the fountain gate and the stairs",
-   "the water gate eastward",
-   "honest uncertainty about the topography"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "38": {
@@ -1406,470 +441,258 @@
    "John Gill",
    "Keil and Delitzsch",
    "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces the second company's route from the tower of the furnaces to the broad wall; Ellicott gives it the longer northern round by the sheep gate to the prison gate (cf. Neh. 3)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke supposes the broad wall a public promenade or a parade for the temple guard."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the second company on the northern part of the wall."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks Nehemiah bringing up the rear as Ezra led the van."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second company",
-   "Nehemiah bringing up the rear",
-   "the northern route",
-   "the broad wall"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "John Wesley"
   ],
+  "range": "38-40",
+  "pericope_label": "And the other company of them that gave thanks went over against them, and I after them, and the half of the people upon the wall, from beyond the tower of the furnaces even unto the broad wall; And from above the gate of Ephraim, and above the old gate, and above the fish gate, and the tower of Hananeel, and the tower of Meah, even unto the sheep gate: and they stood still in the prison gate. So stood the two companies of them that gave thanks in the house of God, and I, and the half of the rulers with me:",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott notes the gate of Ephraim was not repaired (Neh. 3), having remained comparatively intact with the broad wall; Keil carries the file of gates and towers to the sheep gate."
+    "summary": "Delitzsch follows the northern route through its named towers and gates to the halt at the prison gate; Ellicott observes that the gate of Ephraim is missing from the account of the repairs, having survived in reasonable condition with part of the broad wall, and distinguishes the companies standing outside from their later entry to present offerings, judging the day's main interest to have lain in worship under the open sky."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill fixes the gate of Ephraim, so named as leading toward that tribe."
+    "summary": "Gill gives the second company's direction as leftward along the northern wall, explains the gate of Ephraim by the road it opened toward that tribe's old territory, and notes that the two processions met in the great court of the temple, no smaller space being able to hold them."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley reads the halt as waiting, that the two companies might enter the house of God together in due order."
+    "summary": "Wesley attends to the halt rather than the route: the company stood still and waited, as their brethren waited, so that the two might enter together in due order and complete the solemnity as one body."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the northern gates",
-   "the gate of Ephraim intact",
-   "the halt at the prison gate",
-   "ordered stillness before joined entrance"
+   "And the other company of them that gave thanks went over against them, and I after them, and the half of the people upon the wall, from beyond the tower of the furnaces even unto the broad wall;",
+   "And from above the gate of Ephraim, and above the old gate, and above the fish gate, and the tower of Hananeel, and the tower of Meah, even unto the sheep gate: and they stood still in the prison gate.",
+   "So stood the two companies of them that gave thanks in the house of God, and I, and the half of the rulers with me:"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads that they stood first outside and then entered, the main worship being under the open heavens; Keil records the two companies standing in the house of God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks the companies meeting in the great court, for no lesser space could hold them."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: both companies met and joined their thanksgivings, Nehemiah with the half of the rulers."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the two companies meet in the temple",
-   "the joined thanksgiving",
-   "worship under open heaven",
-   "the leaders reunited"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "41": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott marks the names as personal, not found in the earlier lists; Keil reckons seven priests here, matching the first company's trumpeters."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the priests stood there also, whose names the verse gives."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the seven trumpet-priests",
-   "the symmetry of the two companies",
-   "the trumpet a priestly instrument",
-   "order in worship"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil fixes the singers singing loud under Jezrahiah their overseer; Ellicott insists nothing departed from the sacred forms of David."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the eight names for priests who blew the trumpets."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the loud singing",
-   "Jezrahiah the overseer",
-   "the trumpet-priests",
-   "the climax of praise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry",
    "John Wesley"
   ],
+  "range": "41-43",
+  "pericope_label": "And the priests; Eliakim, Maaseiah, Miniamin, Michaiah, Elioenai, Zechariah, and Hananiah, with trumpets; And Maaseiah, and Shemaiah, and Eleazar, and Uzzi, and Jehohanan, and Malchijah, and Elam, and Ezer. And the singers sang loud, with Jezrahiah their overseer. Also that day they offered great sacrifices, and rejoiced: for God had made them rejoice with great joy: the wives also and the children rejoiced: so that the joy of Jerusalem was heard even afar off.",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry paints the loud shouts of the common people heard afar, accepted by a God who overlooks not the zeal of mean people; God himself made them rejoice, and the baffled malice of their enemies added to the joy."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott marks the verse full of joy, yet the abundant sacrifice coming before the rejoicing."
+    "summary": "Ellicott points out that these priestly names, like the earlier ones in the procession, are personal and are not found in any of the registers filling the first half of the chapter, and holds the order of the closing verse to be its point: it is full of joy, but the abundant offering of sacrifice comes before the rejoicing."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the great sacrifices as many peace offerings on which the people feasted, a festival day."
+    "summary": "Gill notes that these priests stood with the rest and that the eight names following them seem all to be of trumpeters, reads the great sacrifices as many sacrifices after Ben Melech, supposes them of the larger cattle, and observes that the peace offerings among them were feasted on by the people, which made the day a festival."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley notes the wives and children rejoicing, their hosannas recorded to their praise."
+    "summary": "Wesley fastens on the children rejoicing with the rest, whose hosannas were not despised but are recorded to their praise, and draws the rule that all who share in public mercies ought to join in public thanksgivings."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "great sacrifices",
-   "the joy of Jerusalem heard afar off",
-   "women and children rejoicing",
-   "God the author of the joy"
+   "And the priests; Eliakim, Maaseiah, Miniamin, Michaiah, Elioenai, Zechariah, and Hananiah, with trumpets;",
+   "And Maaseiah, and Shemaiah, and Eleazar, and Uzzi, and Jehohanan, and Malchijah, and Elam, and Ezer. And the singers sang loud, with Jezrahiah their overseer.",
+   "Also that day they offered great sacrifices, and rejoiced: for God had made them rejoice with great joy: the wives also and the children rejoiced: so that the joy of Jerusalem was heard even afar off."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.13
+   }
   }
  },
  "44": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
    "Matthew Henry",
+   "Charles Ellicott",
    "John Wesley"
   ],
+  "range": "44-45",
+  "pericope_label": "And at that time were some appointed over the chambers for the treasures, for the offerings, for the firstfruits, and for the tithes, to gather into them out of the fields of the cities the portions of the law for the priests and Levites: for Judah rejoiced for the priests and for the Levites that waited. And both the singers and the porters kept the ward of their God, and the ward of the purification, according to the commandment of David, and of Solomon his son.",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry reads the appointment as the good fruit of a thanksgiving that leaves ministers and people more careful, some set to gather the dues lest the ministers' portion be lost for want of demanding."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil sets the joint work of Nehemiah and Ezra restoring the law's enactments; Ellicott the temple service restored to Davidical completeness, the people providing amply."
+    "summary": "Delitzsch credits the joint labours of Nehemiah and Ezra with restoring the law's enactments for the conduct and upkeep of public worship, supplies the subject of the clause about the wards from the opening of the verse, and makes two textual repairs — a conjunction wanting before one royal name and another standing superfluously in the next verse; Ellicott divides the sentence the same way, so that the clause covers the whole ministry, and defines keeping the ward as observing the appointed times and seasons of sacrifice and thanksgiving."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes overseers of the treasuries appointed on the very day of the dedication."
+    "summary": "Gill fixes the appointments to the day of the dedication itself, while the people were still in the frame the service had put them in, and describes the overseers chosen to keep the treasuries and see that what came in went to its intended use; on the wards he takes the plain reading, that the singers kept their courses and the porters kept the gates against anything unclean."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley: the people rejoiced for the ministers' gifts and the provision made, that they might wholly wait upon their office."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the treasuries and portions",
-   "provision for the ministers",
-   "joy issuing in generosity",
-   "ministers who wait on their office"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads the singers and porters keeping their office punctually according to the command of David and Solomon (2 Chron. 8:14); Ellicott glosses 'keep the ward' as observing the regular seasons of sacrifice and thanksgiving."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes the singers keeping their courses and the porters guarding the gates against the unclean."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads 'the ward' as the charge God prescribed, and chiefly the charge of purification."
+    "summary": "Wesley reads the ward as that charge which God had prescribed, and in particular the charge of purification, that no unclean person or thing should enter the house or its courts."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry finds the joy of the dedication quickening the ministers to diligence in their work."
+    "summary": "Henry treats these verses as a test applied to the thanksgiving itself: when such a day leaves ministers and people more careful and more cheerful in their duty afterwards, it has been accepted of God, and the joy that engages us to duty and enlarges us in it proves itself."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Whose wards does the verse describe?",
+    "positions": [
+     {
+      "position": "The singers and the porters, each keeping the duty of his own office.",
+      "held_by": [
+       "John Gill",
+       "John Wesley",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "The priests and Levites kept the ward, and the singers and porters theirs as well, the clause covering the whole ministry.",
+      "held_by": [
+       "Charles Ellicott",
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "keeping the ward",
-   "the ward of purification",
-   "David and Solomon's command",
-   "joy issuing in diligence"
+   "And at that time were some appointed over the chambers for the treasures, for the offerings, for the firstfruits, and for the tithes, to gather into them out of the fields of the cities the portions of the law for the priests and Levites: for Judah rejoiced for the priests and for the Levites that waited.",
+   "And both the singers and the porters kept the ward of their God, and the ward of the purification, according to the commandment of David, and of Solomon his son."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the chief singers of David and Asaph over the rest, with Heman and Jeduthun, to instruct and order the music."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads the current arrangement as continuing what David and Asaph established of old; Ellicott catches the reverence shown for the old precedents."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the antiquity of the singers",
-   "David and Asaph",
-   "reverence for old precedent",
-   "restorers not innovators"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
- "47": {
+ "46": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "Adam Clarke"
   ],
+  "range": "46-47",
+  "pericope_label": "For in the days of David and Asaph of old there were chief of the singers, and songs of praise and thanksgiving unto God. And all Israel in the days of Zerubbabel, and in the days of Nehemiah, gave the portions of the singers and the porters, every day his portion: and they sanctified holy things unto the Levites; and the Levites sanctified them unto the children of Aaron.",
   "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke traces the chain from the people through the Levites to the priests, 'sanctifying' meaning dedicating to holy use; Wesley presses the conscience that set apart firstfruits and tithes and would not profane holy things."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott sets the Levites between people and priests, receiving the tithe and giving the priests their tithe of the tithe (Num. 18:26)."
+    "summary": "Ellicott hears in the phrase of old the reverence these chapters consistently show for ancient precedent, and describes the chain of maintenance in a sentence, the Levites standing between people and priests, receiving the tithe and paying over a tithe of the tithe."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes the punctual payment of the Levites' dues under Zerubbabel and Nehemiah."
+    "summary": "Gill explains the appeal to the old days as an appeal to office, chiefs of the singers being set over the rest to instruct them and see the work done properly, and reads the closing verse as a tribute to two administrations under which the Levites were paid their dues punctually and at the proper season."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Henry: the holy things, given with an eye to God, are sanctified and bring the blessing to rest on the house (Ezek. 44:30)."
+    "summary": "Clarke sets out the mechanism — singers and porters supported by the people at large, each receiving his portion daily, the sacred things delivered by the people to the Levites and by them presented to the priests — and stops on the word for that transaction, sanctifying meaning here to dedicate a thing to the use for which it was designed rather than to perform a ceremony over it."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the daily portions",
-   "the tithe of the tithe",
-   "sanctifying the dues",
-   "the whole nation's provision"
+   "For in the days of David and Asaph of old there were chief of the singers, and songs of praise and thanksgiving unto God.",
+   "And all Israel in the days of Zerubbabel, and in the days of Nehemiah, gave the portions of the singers and the porters, every day his portion: and they sanctified holy things unto the Levites; and the Levites sanctified them unto the children of Aaron."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-13",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  }
 }

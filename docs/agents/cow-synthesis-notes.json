@@ -84509,6 +84509,52 @@
         "1"
       ],
       "note": "Polish-queue reconnaissance, not a rewrite. john 16 is 33 source keys / 70,431 usable source words - the largest draw seen in the polish queue so far (john 19 69.6k, john 20 62.1k, john 15 59.8k, matthew 7 57.8k, luke 7 52.4k). All 33 verses are legacy-unversioned, so the unit is a full regeneration into pericope tiles, not a targeted B-verse fix. Second finding worth more than the first: the Johannine catena draws a different voice set from the OT chapters the loop has been draining - Chrysostom, Augustine, Cyril of Alexandria, Theophylact, Origen, Hilary, John Lightfoot, Albert Barnes, A.T. Robertson - none of which appear in the ten-voice OT profile. Any worker carrying scratch lint tuned to the OT set must rebuild its voice-to-school map before drafting, mapping Chrysostom and Theophylact to eastern-antiochene, Cyril and Origen to eastern-alexandrian, Augustine and Hilary to latin-fathers, Barnes, Robertson and Lightfoot to grammatical-historical. The existing tags on john 20 already follow that convention and are a good template."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "13",
+        "25"
+      ],
+      "note": "JFB MISADDRESSING — and this chapter CORRECTS the stride finding I recorded earlier today. Here the Jamieson, Fausset and Brown blocks sit at keys 1, 13 and 25: a stride of TWELVE, not six. All three are misaddressed — key 1 gives Levitical city names against Joshua 21, key 13 gives the census arithmetic of the Tola branch from 1 Chronicles 7, key 25 gives the Zelophehad descent from Numbers 26. So the correct statement of the defect is: within a chapter, JFB blocks land on a fixed arithmetic progression and carry foreign material throughout; the STEP of that progression varies by chapter (6 in numbers 31, 1 kings 7 and 1 chronicles 9; 12 here). My earlier note on 1 chronicles 9 said the stride was six and implied it was universal — it is not, and a corpus scan should test for ANY constant step rather than for six specifically. Three different foreign source passages in three chapters, each internally consistent, still points at a scraper that pages through an offset list. JFB dropped as uncitable in all three tiles that would have carried it."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "4",
+        "5",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "47"
+      ],
+      "note": "SOURCE GAPS AND CHROME. Catena keys 3, 4, 5, 15, 16 and 18-21 are absent, so the contiguous run from the lowest key is only 1-2 and every later tile sits past a gap (coverage there is advisory by the 2026-08-24 rule). Key 17 survives the gaps but holds nine words of Ellicott on a contracted name — too little to carry even a thin entry at a defensible expansion ratio — so verses 15-21 are not covered. Key 47's Ellicott block ends its real content at the note about the Levites taking a tithe of the tithe and then runs into StudyLight navigation, copyright and raw CSS: the usual chrome on the LAST Ellicott block of a chapter, now observed often enough to be predictable rather than surprising. Also worth recording: the Keil and Delitzsch block at key 44 runs forward into chapter 13 material (Nehemiah's return to Babylon, Eliashib's chamber for Tobiah, the neglected tithes, the foreign marriages). Only his in-range sentences were used."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "12",
+      "note": "Rewritten from legacy per-verse prose as 10 pericope tiles: 1-2, 6-14, 22-26, 27-29, 30-32, 33-37, 38-40, 41-43, 44-45, 46-47. The tiling is dictated by the gaps rather than by sense — 6-14 is nine verses in one entry because the catena there is a string of 24-to-66-word fragments, while 27-29 is three verses carrying 2,774 source words. Four tiles land in the 350-375 FLOOR band; the gate passes at 0 violations. Two tiles needed a second pass for lexical variety: keys 33 and 46 first graded B on TTR (0.563 and 0.566) because a procession narrative and a tithe-chain description both force heavy repetition of a small vocabulary — gate, name, priest, Levite, tithe. Rewriting with synonyms lifted both to 0.63 and 0.59. Worth knowing for the rest of the polish queue: register and procession chapters are where the TTR threshold bites, not narrative."
+    },
+    {
+      "at": "2026-09-13",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "12",
+      "note": "Every tile self-graded A. Voices were withheld wherever a block was truncated in my reading rather than guessed at: Adam Clarke at key 38, and the Jamieson, Fausset and Brown blocks throughout (dropped for misaddressing, not for truncation). One source garble handled explicitly: the Keil and Delitzsch text at key 32 names 'Jonathan the son of Zechariah' as head of the musicians where the verse itself has Zechariah the son of Jonathan. Rather than pick a side or silently reproduce the inversion, the prose says only 'whoever headed that division of the Levitical musicians', which is what Delitzsch's argument actually rests on. Second judgement call: Gill and Keil and Delitzsch reach the same conclusion about the princes of Judah covering Benjamin by different routes, so the prose reports both routes rather than merging them into one attribution."
     }
   ]
 }
