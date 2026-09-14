@@ -84826,6 +84826,41 @@
         "84"
       ],
       "note": "SECOND WORKED CASE OF THE UNCLEARABLE B, AND A SHARPER ONE THAN EXODUS 25. Nothing written this run. numbers 7 carries exactly one B entry, 84, covering the range 84-88, and it is ttr-only: zip 0.444 against a 0.42 bar, ttr 0.573 against a 0.58 bar, a shortfall of 0.007. Zero duplicate sentences, duplicate-ngram fraction 0.000. What makes this case sharper than exodus 25 is the source. Keys 84 to 88 hold about 306 usable words in total - Gill 40, Clarke 74 at key 84; Gill 17 at 85, which is only the cross-reference See Gill on; Gill 35 at 86; Gill 22 and Wesley 21 at 87; Gill 20, Clarke 31 and Wesley 46 at 88 - and the entry is 357 words. That is an expansion of about 1.17x, close to the tightest the corpus allows, and inspection shows every substantive witness sentence is already carried: Clarke on the twelve days and on the anointing as consecration, Wesley on the latitude of in the day and on the meal offering omitted because the law made it understood, Gill on the spoons carrying incense and on the bullocks answering to the number of the princes. There is no unused material to draw in and no repetition to remove. The entry is faithful, tight and complete, and it is graded B because its subject supplies chargers, bowls, spoons, shekels, bullocks, rams, lambs and goats, and the moving window sees them recur. THE IMPLICATION THAT MATTERS FOR THE THRESHOLD DECISION. The lexical-variety measure penalises exactly the entries the prose rules are trying to produce - the ones that stay close to their witnesses and do not pad - whenever the witnesses are enumerating. A synthesist could raise this entry over 0.58 only by expanding it away from a 1.17x source, which is the padding the 350-word floor was relaxed in 2026-08-09 to stop. Two independent chapters now show the same shape, and the corpus scan recorded against exodus 25 puts 144 of 233 polish chapters in it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "35",
+      "verses": [
+        "12"
+      ],
+      "note": "JFB MISADDRESSING, single block at key 12 — Shalman and Sargon, from Hosea and Isaiah, with nothing bearing on Josiah's passover. One block only, so again below the three-block threshold of my corpus scan and therefore not counted in the 748. Second consecutive chapter where that undercount shows. Also: the Ellicott block at key 26, the chapter's last, ends its real content at the note on the source-title and runs into StudyLight navigation and copyright — eighth consecutive chapter with the chrome in exactly that position."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "35",
+      "note": "SCRATCHPAD WIPED BETWEEN ROUNDS — an operational note for whoever works this loop next. On starting this chapter I found the session scratchpad emptied of everything except a file written minutes earlier: the shared word-counter and the whole per-chapter toolchain (put/emit/vcheck/grade/stamp) for seven chapters were gone. Disk was not full (29G free), so this was a cleanup or container event rather than exhaustion. Cost was one rebuild, about five minutes, because the toolchain is short and its shape is documented in this notebook; had it been longer or undocumented the pick would have been abandoned. RECOMMENDATION: the six helper scripts are near-identical between chapters apart from three substitutions (book, chapter, tile list). They belong under scripts/ as one parameterised tool rather than being rebuilt per chapter in a directory that does not survive. I have not added it, since that is tooling and the owner's call, but every worker on this queue is currently reconstructing the same thing by hand. Rewritten from legacy per-verse prose as 9 pericope tiles: 1-3, 4-7, 8-10, 11-13, 14-17, 18-19, 20-22, 23-25, 26-27. Source keys 1-27 unbroken."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "35",
+      "verses": [
+        "3",
+        "8"
+      ],
+      "note": "Two clean contradictions preserved rather than harmonised. (1) WHY THE ARK WAS OUT OF PLACE: Ellicott takes the command to imply it had been removed from the inner sanctuary, probably under an idolatrous king; Clarke agrees it was displaced but credits the priests, who hid it for safety and can now restore it; Keil and Delitzsch deny the premise entirely, reading the verse not as restoring a displaced ark but as relieving the Levites of carrying it now that it has a fixed place. On the first two readings the verse repairs an outrage; on the third it ends an obligation. (2) WHO THE PRINCES WERE: Gill takes them for ecclesiastical princes, rulers of the house of God, reading the following names as proof; Delitzsch takes the same word for the princes of the kingdom, the king's own great men, and treats the ecclesiastical rulers named next as separate. Neither acknowledges the other's reading, and the Hebrew supports either depending how tightly the names are bound to the title. Recorded as debates because in both cases a synthesis that picked one side would be asserting more than the witnesses warrant."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "35",
+      "note": "Every tile self-graded A. Keil and Delitzsch was declared in eight tiles but NOT in the 23-25 tile: his block there is verse narration without comment, and vcheck caught me having declared him without citing him, which is exactly the check working as intended. Voices otherwise withheld where blocks were truncated in my reading: John Wesley at keys 12 and 20, Charles Ellicott at key 20. One sentence was rewritten before landing because it named Delitzsch in order to observe that he says nothing at the closing formula — true, but naming a voice to report his silence would have required declaring him for a bare lemma, so the observation was recast impersonally. Keil and Delitzsch's reading of the disguise verb at key 22 is recorded as an outlier rather than as plain exposition: taking the word into the moral realm, so that Josiah disfigured his character as well as his person, is his inference and not the text's statement, and it deserves to be marked as his."
     }
   ]
 }

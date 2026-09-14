@@ -1,367 +1,55 @@
 {
  "1": {
   "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "1-3",
+  "pericope_label": "Moreover Josiah kept a passover unto the Lord in Jerusalem: and they killed the passover on the fourteenth day of the first month. And he set the priests in their charges, and encouraged them to the service of the house of the Lord, And said unto the Levites that taught all Israel, which were holy unto the Lord, Put the holy ark in the house which Solomon the son of David king of Israel did build; it shall not be a burden upon your shoulders: serve now the Lord your God, and his people Israel,",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott fixes the date from 2 Kings 23:23 (the eighteenth year) and stresses the strict legal timing on the fourteenth of the first month; Keil reads the verse as a superscription over the whole festival account."
+    "summary": "Delitzsch treats the first verse as a heading, marks the fourteenth day of the first month as exactly the time the law fixed — pointedly unlike Hezekiah's passover — maps the chapter's four movements, and reads the command about the ark as ending the Levites' portage duty rather than restoring a displaced ark; Ellicott renders the priests' charges literally as their wards, glosses holy to the Lord as separated to his service, and takes the command about the ark to imply it had been removed from the inner sanctuary."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notes that Jerusalem was the only lawful place for the feast, describes the Levites' teaching office as going through the tribes to instruct the people in God's word and worship, and reports an old manuscript that reads the phrase quite differently, as those who prepared the holy things for all Israel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke supposes the priests had themselves secured the ark when they saw the idolatrous kings destroying whatever might lead the people back to the true God, and that it could be returned now the reform was settled."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry exalts the passover as the chief of feasts, typologically joined to the Lord's supper, while noting the people kept it more in compliance with the king than from zeal."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill fixes the place — Jerusalem, where alone it might lawfully be held."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke frames the chapter whole: Josiah completes the greatest passover since Solomon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief of feasts",
-   "strict legal timing",
-   "typology of the Lord's supper",
-   "the people's lukewarmness",
-   "the greatest passover since Solomon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'in their charges' as 'over their wards' (2 Chron 8:14); Keil takes it of the guards or posts and the strengthening by encouraging speech and teaching (cf. 29:5; Neh 2:18)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the priests set in their offices and proper stations to execute their part."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ordering the priests",
-   "priests over their wards",
-   "royal encouragement",
-   "reform begins with the ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil takes the Levites as teachers of the law (2 Chron 17:8) freed from bearing the ark on the shoulder now the temple gives it rest; Ellicott weighs three views of the command and rejects the 'set your minds on present duties' reading as too artificial."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley hold the ark had been removed by the idolatrous kings (Wesley names Amon) to save it from profanation, and is now restored to the holy of holies."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill describes the teaching Levites and records an old MS reading 'who prepared for all Israel the holy things.'"
+    "prevalence": "single",
+    "summary": "Henry explains the proportions of the two histories, the older giving length to the destruction of the idols and this book to the feast, and places the passover as chief of all the appointed feasts — opening them on the night Israel left Egypt and closing them on the night Christ was betrayed — before carrying the point forward to the Lord's supper, whose due observance he makes both a sign and a means of purity in churches."
    }
   ],
   "debates": [
    {
-    "question": "What does 'put the holy ark in the house' mean?",
-    "sides": [
+    "question": "Why was the ark not in its place?",
+    "positions": [
      {
-      "position": "the ark, removed under the idolatrous kings (Manasseh or Amon) or during the temple repair, is now restored to its place",
-      "holders": [
-       "Clarke",
-       "Wesley",
-       "Ellicott"
+      "position": "It had been removed from the inner sanctuary, probably under one of the idolatrous kings.",
+      "held_by": [
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "the words rather bid the Levites leave off bearing the ark about and set their minds on present duties",
-      "holders": [
-       "an artificial reading recorded and rejected by Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the Levites who taught Israel",
-   "restoring the ark",
-   "the ark no longer a burden",
-   "freed for present service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott makes the verb reflexive ('sanctify yourselves') and finds in the 'writing of David and Solomon' written memorials of worship (cf. 1 Chron 28:19); Keil pairs a Levite division to each lay father-house."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads it as a call to readiness and diligence according to the law of God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "preparation by the courses",
-   "the writing of David and Solomon",
-   "worship by the book",
-   "sanctify yourselves"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott pairs a portion of a Levite father-house to every lay father-house, the Levites to slay, skin, and hand the flesh to the people (vv.11-12)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill fixes 'the holy place' as the court of the priests."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley reads 'stand' as 'minister,' and notes the king calls the laity 'brethren' lest the Levites despise or grudge to serve them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Levites stationed to serve the laity",
-   "a division to each father-house",
-   "the servant posture",
-   "the passover by families"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil expounds the triple charge — kill, sanctify (by washing before handing the blood), prepare for the laity — as at 30:16; Ellicott reads 'that they may do' as 'so as to do,' the Levites obeying the Mosaic law as they serve."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: kill the passover in the manner, time, place, and for the persons the law required."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levites' triple charge",
-   "sanctifying between killing and preparing",
-   "Levite mediation for the unclean",
-   "according to the law of Moses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil: the king gave 30,000 small cattle and 3,000 bullocks of his own substance (cf. 31:3; 32:29) for all present who came without lambs; Ellicott reads 'gave' as presenting a heave-offering (30:24), the bullocks for the peace-offerings and feasting."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: 30,000 lambs or kids, enough to serve 30,000 families."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "royal liberality",
-   "the heave-offering",
-   "provision for all present",
-   "the king's own substance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil takes 'his princes' as the princes of the kingdom, distinct from the temple-rulers, and identifies Hilkiah as the high priest (34:9), Zechariah his deputy; Ellicott suspects a number has dropped out and names the rulers of the house of God (31:13)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the gift reached poorer priests and Levites whom the king's bounty had missed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley makes 'his princes' ecclesiastical — the chief of the priests and Levites — giving as need should require."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who were 'his princes' that gave willingly?",
-    "sides": [
-     {
-      "position": "ecclesiastical princes — the chief of the priests and Levites",
-      "holders": [
-       "Gill",
-       "Wesley"
+      "position": "The priests had hidden it for safety and can now restore it.",
+      "held_by": [
+       "Adam Clarke"
       ]
      },
      {
-      "position": "the princes of the kingdom (secular lords), distinct from the temple-rulers named afterward",
-      "holders": [
+      "position": "The verse is not about a displaced ark at all but relieves the Levites of carrying it, now that it has a fixed place.",
+      "held_by": [
        "Keil and Delitzsch"
       ]
      }
@@ -370,274 +58,218 @@
   ],
   "outliers": [],
   "themes": [
-   "the princes' free-will offering",
-   "ecclesiastical or secular princes",
-   "Hilkiah the high priest",
-   "provision for the priests"
+   "Moreover Josiah kept a passover unto the Lord in Jerusalem: and they killed the passover on the fourteenth day of the first month.",
+   "And he set the priests in their charges, and encouraged them to the service of the house of the Lord,",
+   "And said unto the Levites that taught all Israel, which were holy unto the Lord, Put the holy ark in the house which Solomon the son of David king of Israel did build; it shall not be a burden upon your shoulders: serve now the Lord your God, and his people Israel,"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
- "9": {
+ "4": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "range": "4-7",
+  "pericope_label": "And prepare yourselves by the houses of your fathers, after your courses, according to the writing of David king of Israel, and according to the writing of Solomon his son. And stand in the holy place according to the divisions of the families of the fathers of your brethren the people, and after the division of the families of the Levites. So kill the passover, and sanctify yourselves, and prepare your brethren, that they may do according to the word of the Lord by the hand of Moses. And Josiah gave to the people, of the flock, lambs and kids, all for the passover offerings, for all that were present, to the number of thirty thousand, and three thousand bullocks: these were of the king’s substance.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott sets out the arrangement by which a portion of a Levitical father-house was stationed beside every whole house of laymen, and lists what the service consisted of — killing and skinning the lambs, handing the blood to the priests, giving the people their share of the roasted flesh; Delitzsch states the upshot as serving your brethren the laymen, and explains the odd placing of the sanctifying between the killing and the preparing as the washing required before the blood was handed to the priest."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the command to prepare as a charge to be ready, diligent, and exact to the law, places the standing in the court of the priests, and counts the thirty thousand lambs and kids as enough to serve thirty thousand households."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley notes that the verb rendered stand frequently carries the sense of ministering rather than merely being present."
+   }
+  ],
+  "debates": [],
+  "outliers": [],
+  "themes": [
+   "And prepare yourselves by the houses of your fathers, after your courses, according to the writing of David king of Israel, and according to the writing of Solomon his son.",
+   "And stand in the holy place according to the divisions of the families of the fathers of your brethren the people, and after the division of the families of the Levites.",
+   "So kill the passover, and sanctify yourselves, and prepare your brethren, that they may do according to the word of the Lord by the hand of Moses.",
+   "And Josiah gave to the people, of the flock, lambs and kids, all for the passover offerings, for all that were present, to the number of thirty thousand, and three thousand bullocks: these were of the king’s substance."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
+   }
+  }
+ },
+ "8": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "8-10",
+  "pericope_label": "And his princes gave willingly unto the people, to the priests, and to the Levites: Hilkiah and Zechariah and Jehiel, rulers of the house of God, gave unto the priests for the passover offerings two thousand and six hundred small cattle, and three hundred oxen. Conaniah also, and Shemaiah and Nethaneel, his brethren, and Hashabiah and Jeiel and Jozabad, chief of the Levites, gave unto the Levites for passover offerings five thousand small cattle, and five hundred oxen. So the service was prepared, and the priests stood in their place, and the Levites in their courses, according to the king’s commandment.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil records the six Levite chiefs and their gift of 5,000 small cattle and 500 oxen, leading into the prepared service; Ellicott notes three of the names recur among Hezekiah's Levites (31:12-15), perhaps leading houses rather than persons."
+    "prevalence": "majority",
+    "summary": "Delitzsch takes the same word for the princes of the kingdom, the king's own great men, reads the key term as naming a freewill offering rather than describing the manner of giving, and marks the summary verse as the hinge where what was arranged is carried out; Ellicott renders the summary as the preparations being completed and the priests' place as their station."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill passes over the list with a cross-reference."
+    "prevalence": "single",
+    "summary": "Gill takes the princes who gave to be ecclesiastical rather than secular, reading the names that follow as proof, observes that their gift reached poor priests and Levites whom the king's bounty had not covered, and says everything was made ready for the passover and for the unleavened bread together, for rich and poor alike."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Who were the princes that gave?",
+    "positions": [
+     {
+      "position": "Ecclesiastical princes — rulers of the house of God, as the names that follow show.",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The princes of the kingdom, the king’s own great men.",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [],
   "themes": [
-   "the Levite chiefs' gift",
-   "graded liberality",
-   "old family names from Hezekiah's day",
-   "abundance for the feast"
+   "And his princes gave willingly unto the people, to the priests, and to the Levites: Hilkiah and Zechariah and Jehiel, rulers of the house of God, gave unto the priests for the passover offerings two thousand and six hundred small cattle, and three hundred oxen.",
+   "Conaniah also, and Shemaiah and Nethaneel, his brethren, and Hashabiah and Jeiel and Jozabad, chief of the Levites, gave unto the Levites for passover offerings five thousand small cattle, and five hundred oxen.",
+   "So the service was prepared, and the priests stood in their place, and the Levites in their courses, according to the king’s commandment."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'the service was prepared' as the completed preparations (vv.4,16), the priests on their stand (30:16); Keil marks the passage from preparation into action, priests and Levites at their posts per the king's command."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: everything got ready for passover and unleavened bread, for rich and poor alike."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.48
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the service prepared",
-   "priests and Levites at their posts",
-   "by the king's commandment",
-   "rich and poor alike"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill, Keil, and Ellicott take the Levites to have slain the victims, the priests sprinkling the blood the Levites handed them (as at 30:17), the exception now become the rule."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the lambs were killed by the Levites."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke holds the people themselves might slay their own lambs, the Levites flaying and dressing them."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who slew the paschal lambs?",
-    "sides": [
-     {
-      "position": "the Levites slew the victims on the people's behalf",
-      "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the people themselves slew their own lambs; the Levites only flayed and dressed them",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "slaying the passover",
-   "who wielded the knife",
-   "the blood to the priests",
-   "the Hezekiah precedent become rule"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "11-13",
+  "pericope_label": "And they killed the passover, and the priests sprinkled the blood from their hands, and the Levites flayed them. And they removed the burnt offerings, that they might give according to the divisions of the families of the people, to offer unto the Lord, as it is written in the book of Moses. And so did they with the oxen. And they roasted the passover with fire according to the ordinance: but the other holy offerings sod they in pots, and in caldrons, and in pans, and divided them speedily among all the people.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read 'the burnt offerings' as the fat pieces cut from the paschal victims for the altar (Lev 3:9), called the burnt offering though none was specially appointed, on the rule that 'all the fat is the LORD's' (Lev 3:16)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley takes them for whole lesser cattle set apart as burnt offerings (Lev 1:10), lest they be confounded with the paschal lambs."
+    "prevalence": "majority",
+    "summary": "Delitzsch traces the relay by which Levites slew, priests sprinkled the blood handed them, and Levites flayed, and identifies the consecrated things boiled in pots as the oxen; Ellicott explains the singular hand as the Levites' own, observes that what had been an exception under Hezekiah has here become the rule, takes the removed portions as the pieces due to the altar although no burnt offering proper was appointed for the passover evening, and stresses the haste with which the cooked meat was carried out to the laity."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill leaves both readings open — whole burnt-offering animals, or the fat removed from the victims."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What are 'the burnt offerings' that were removed?",
-    "sides": [
-     {
-      "position": "whole victims designated for burnt-offering, set apart from the paschal lambs",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the fat portions cut from the paschal victims to be burnt on the altar",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "portions for the altar",
-   "meaning of 'the burnt offerings'",
-   "all the fat is the LORD's",
-   "distinguishing altar from table"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil distinguishes the lamb roasted with fire (Exod 12:9) from the 'sanctified' oxen boiled in pots and caldrons; Ellicott adds the seven-days' scope (Deut 16:1-8) and the vivid haste of the serving (Gen 41:14) lest the meat grow cold."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: they roasted the passover with fire according to the ordinance."
+    "prevalence": "single",
+    "summary": "Gill has the Levites do the killing, allows two senses for what was removed — either the animals set aside for burnt offerings or the portions taken out of each to be burnt, the fat of the inwards, the kidneys, the caul on the liver — and anchors the roasting in the ordinance given by Moses."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "roasting versus boiling",
-   "lamb and peace-offerings distinguished",
-   "the seven days' feast",
-   "the speedy serving"
+   "And they killed the passover, and the priests sprinkled the blood from their hands, and the Levites flayed them.",
+   "And they removed the burnt offerings, that they might give according to the divisions of the families of the people, to offer unto the Lord, as it is written in the book of Moses. And so did they with the oxen.",
+   "And they roasted the passover with fire according to the ordinance: but the other holy offerings sod they in pots, and in caldrons, and in pans, and divided them speedily among all the people."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "14": {
@@ -646,678 +278,281 @@
    "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "14-17",
+  "pericope_label": "And afterward they made ready for themselves, and for the priests: because the priests the sons of Aaron were busied in offering of burnt offerings and the fat until night; therefore the Levites prepared for themselves, and for the priests the sons of Aaron. And the singers the sons of Asaph were in their place, according to the commandment of David, and Asaph, and Heman, and Jeduthun the king’s seer; and the porters waited at every gate; they might not depart from their service; for their brethren the Levites prepared for them. So all the service of the Lord was prepared the same day, to keep the passover, and to offer burnt offerings upon the altar of the Lord, according to the commandment of king Josiah. And the children of Israel that were present kept the passover at that time, and the feast of unleavened bread seven days.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil: the Levites prepared the meal for themselves and the priests, who were busied with the fat upon the altar till night, weighing carefully the terms for the burnt pieces; Ellicott hears the Gospel echo of 'making ready the Passover' (Luke 22:8)."
+    "prevalence": "majority",
+    "summary": "Delitzsch explains that the priests had to be waited on because they were occupied with the burnt offerings and the fat until nightfall, records that the porters could not leave their gates and were therefore provisioned by their brethren, and adds the seven days of unleavened bread from the fifteenth to the twenty-first; Ellicott reads the same day as meaning at that time and explains the burnt offerings of the summary as the burning of the fat."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: afterward they made ready the lambs and peace-offering parts that fell to them."
+    "prevalence": "single",
+    "summary": "Gill notes that the Levites served themselves and the priests only afterwards, and places the singers in the court of the priests, playing while the sacrifices were offered; he fixes the passover on the fourteenth of Nisan."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the ministers served last",
-   "priests busied till night",
-   "the Levites prepare for the priests",
-   "forwarding one another's work"
+   "And afterward they made ready for themselves, and for the priests: because the priests the sons of Aaron were busied in offering of burnt offerings and the fat until night; therefore the Levites prepared for themselves, and for the priests the sons of Aaron.",
+   "And the singers the sons of Asaph were in their place, according to the commandment of David, and Asaph, and Heman, and Jeduthun the king’s seer; and the porters waited at every gate; they might not depart from their service; for their brethren the Levites prepared for them.",
+   "So all the service of the Lord was prepared the same day, to keep the passover, and to offer burnt offerings upon the altar of the Lord, according to the commandment of king Josiah.",
+   "And the children of Israel that were present kept the passover at that time, and the feast of unleavened bread seven days."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil gathers the singers per the command of David, Asaph, Heman, and Jeduthun, and the porters kept at the gates; Ellicott reads 'they might not depart' as 'had no need to depart,' the Levites bringing them their portions (1 Chron 25:1-6)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill sets the singers in the court of the priests, playing while the sacrifices were offered."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the temple singers",
-   "the Davidic institution of music",
-   "porters at the gates",
-   "mutual service to keep every post"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads the verse as a summary of the account (v.10), 'to offer burnt offerings' being the burning of the fat; Keil takes 'the same day' to embrace the whole festival, as 'day' does the seven days of creation (Gen 2:4), all per the king's command."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: all the service prepared that day, with every sacrifice and for all sorts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the summarizing formula",
-   "all the service prepared",
-   "by the king's commandment",
-   "'the same day' as the whole festival"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott fix the calendar — the passover on the fourteenth of the first month, the Mazzoth from the fifteenth to the twenty-first — the legal timing that set this feast apart from Hezekiah's."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: kept in its proper time, on the fourteenth of Nisan."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the passover on its lawful day",
-   "seven days of unleavened bread",
-   "exact legal timing",
-   "Israel and Judah together"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "18-19",
+  "pericope_label": "And there was no passover like to that kept in Israel from the days of Samuel the prophet; neither did all the kings of Israel keep such a passover as Josiah kept, and the priests, and the Levites, and all Judah and Israel that were present, and the inhabitants of Jerusalem. In the eighteenth year of the reign of Josiah was this passover kept.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reconciles 'days of Samuel' with the Kings' 'days of the judges' (Samuel the last and greatest, 1 Sam 7:15) and notes the added roll of participants as the chronicler's own; Keil reads the close as a rhetorical enumeration (cf. 2 Kings 23:22; 34:33)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke (with Calmet) makes the king's unmatched liberality the distinguishing mark; Wesley adds the exact legal conformity Hezekiah's passover had lacked."
+    "prevalence": "single",
+    "summary": "Delitzsch notes that this book dates the comparison from the days of Samuel where the older account reaches back to the judges, reads the closing enumeration from king down to the inhabitants of Jerusalem as deliberate rhetoric performing the universality it claims, and draws out a difference between the two histories at the turn to Josiah's death: the older book prefaces the catastrophe with the statement that God did not turn from his wrath against Judah because of the sins of Manasseh, and this book does not."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: kept so exactly, so universally, and with such liberality as none since Samuel."
+    "prevalence": "single",
+    "summary": "Gill itemises what earned the superlative — the feast kept so exactly to the law, so universally by Israel and Judah together, and with such liberality from the king and the chief men of the priests and Levites."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "no passover like it since Samuel",
-   "exact legal conformity",
-   "unrivalled royal liberality",
-   "harmonizing Kings and Chronicles",
-   "the remnant of the north"
+   "And there was no passover like to that kept in Israel from the days of Samuel the prophet; neither did all the kings of Israel keep such a passover as Josiah kept, and the priests, and the Levites, and all Judah and Israel that were present, and the inhabitants of Jerusalem.",
+   "In the eighteenth year of the reign of Josiah was this passover kept."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil ties the date back to the reckoning at the account's opening, the last word before the reign's tragic end; Ellicott (2 Kings 23:23; 2 Chron 34:8) reads the passover as the fitting culmination of the reformation."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.52
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the eighteenth year",
-   "culmination of the reformation",
-   "the recovered law and covenant",
-   "the summit of the reign"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "20": {
   "voices": [
    "John Gill",
-   "John Wesley",
    "Matthew Henry",
-   "Charles Ellicott"
+   "Keil and Delitzsch"
   ],
+  "range": "20-22",
+  "pericope_label": "After all this, when Josiah had prepared the temple, Necho king of Egypt came up to fight against Carchemish by Euphrates: and Josiah went out against him. But he sent ambassadors to him, saying, What have I to do with thee, thou king of Judah? I come not against thee this day, but against the house wherewith I have war: for God commanded me to make haste: forbear thee from meddling with God, who is with me, that he destroy thee not. Nevertheless Josiah would not turn his face from him, but disguised himself, that he might fight with him, and hearkened not unto the words of Necho from the mouth of God, and came to fight in the valley of Megiddo.",
   "schools": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry reckons the thirteen years to the king's death and blames Josiah's rash, uncommanded war and his failure to consult the oracles of God, unlike David — yet it was in wrath to a hypocritical nation that he was so infatuated."
-   },
-   {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott sets the scene historically: Necho marching on Carchemish against the last king of Assyria (2 Kings 23:29), the chronicler drawing the following details from another source."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: their hopes of a settled happiness were quickly blasted — men are often mistaken about the designs of providence."
+    "prevalence": "single",
+    "summary": "Delitzsch corrects the phrase about the house of Necho's war, which means the hereditary enemy rather than a warlike house, and reads the verb describing Josiah's disguise as carrying a moral sense as well as a sartorial one — to disfigure oneself, to undertake what contradicts one's own character, which is what a king who had spent his reign carrying out God's will did in resisting a word claiming to come from God."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill marks the irony: after so thorough a reformation, great prosperity might have been expected."
+    "prevalence": "single",
+    "summary": "Gill lists what had just been achieved — the temple purified, repaired, its service put on a good footing — and says prosperity might reasonably have been expected after it; on the king's refusal he says plainly that he would not withdraw his forces and go back."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry counts the thirteen years between the passover and the death and asks why the narrative passes them in silence, answering that the people were not turned from the love of their sins nor God from the fierceness of his anger, so that the next news of Josiah is that he is cut off in the midst of his days and usefulness before he is forty."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Matthew Henry",
-    "note": "Uniquely presses Josiah's own blame — the rash, uncommanded war and the failure to enquire of the Lord after being warned — where the others dwell rather on the mystery of providence and the judgment on a wicked people."
+    "voice": "Keil and Delitzsch",
+    "claim": "That the verb describing Josiah's disguise is transferred to the moral realm, so that in disguising his person the king also disfigured his character — the one action of the reign that contradicted it."
    }
   ],
   "themes": [
-   "after all this",
-   "the reign's sudden ruin",
-   "Josiah's rash uncommanded war",
-   "Necho and Carchemish",
-   "the mystery of providence"
+   "After all this, when Josiah had prepared the temple, Necho king of Egypt came up to fight against Carchemish by Euphrates: and Josiah went out against him.",
+   "But he sent ambassadors to him, saying, What have I to do with thee, thou king of Judah? I come not against thee this day, but against the house wherewith I have war: for God commanded me to make haste: forbear thee from meddling with God, who is with me, that he destroy thee not.",
+   "Nevertheless Josiah would not turn his face from him, but disguised himself, that he might fight with him, and hearkened not unto the words of Necho from the mouth of God, and came to fight in the valley of Megiddo."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil renders 'the house of my war' as Necho's hereditary enemy (Judg 11:12); Ellicott prefers 'against the Euphrates is my war,' and holds Necho spoke of his own gods, needing no Jehovah-oracle (cf. the Moabite stone)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke reports the Targum's 'my idol commanded me,' the rabbinical excuse for Josiah's persistence."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes only that it was Necho who sent to Josiah."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [
-   {
-    "question": "In whose name did Necho's warning come?",
-    "sides": [
-     {
-      "position": "Necho spoke of his own gods; no real oracle from Jehovah need be assumed",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the word 'God' stands as a divine claim laid before the king",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "the Targum makes it Necho's idol — the rabbinic excuse for Josiah",
-      "holders": [
-       "the Targum (reported by Clarke)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Necho's warning",
-   "in whose name Necho spoke",
-   "the Egyptian consulting of oracles",
-   "the Targum's idol and the rabbinic excuse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads 'disguised himself' figuratively — Josiah disfigured himself, acting against his own character and God's will; Ellicott rejects this as wholly unlikely, keeps the literal disguise (like Ahab), and insists the warning of Necho was really divine, as the event proved."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he would not withdraw his forces and go back."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: how can we prosper if we do not acknowledge God in our ways?"
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is 'he disguised himself' to be read?",
-    "sides": [
-     {
-      "position": "a literal disguise, as Ahab at Ramoth-gilead",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "a figurative self-disfiguring — he departed from his own character and God's will",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "the Septuagint's 'he strengthened himself / persisted'",
-      "holders": [
-       "Bertheau (as reported by Keil and Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Josiah would not turn back",
-   "reading 'he disguised himself'",
-   "the warning really divine",
-   "acknowledging God in our ways"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
+   "Adam Clarke",
    "Charles Ellicott"
   ],
+  "range": "23-25",
+  "pericope_label": "And the archers shot at king Josiah; and the king said to his servants, Have me away; for I am sore wounded. His servants therefore took him out of that chariot, and put him in the second chariot that he had; and they brought him to Jerusalem, and he died, and was buried in one of the sepulchres of his fathers. And all Judah and Jerusalem mourned for Josiah. And Jeremiah lamented for Josiah: and all the singing men and the singing women spake of Josiah in their lamentations to this day, and made them an ordinance in Israel: and, behold, they are written in the lamentations.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil records the wound and the king's cry, 'Have me away, for I am sore wounded'; Ellicott hears in the archers' shot the deliberate echo of the deaths of Ahab (18:33) and Saul (1 Chron 10:3), whose very words Josiah repeats."
+    "prevalence": "single",
+    "summary": "Ellicott sets this account of the death beside the older one, which has the servants make him ride dead or dying from Megiddo, and refuses the suggestion that this chapter is an arbitrary literary alteration of it, arguing that the divergence points instead to the chronicler having material of his own."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: though disguised, the king plainly appeared the chief commander, and so was aimed at."
+    "prevalence": "single",
+    "summary": "Gill explains that the disguise concealed the king but not the commander, so that a man evidently in chief command drew the archers' fire, reports that they brought him to Jerusalem and buried him there, and guards against a common misidentification of Jeremiah's lost lamentation, which is not the passage sometimes cited for it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke offers a flat explanation of the second chariot, that they moved him out of his own either for secrecy or because it had been disabled, and widens the frame on the lamentation, noting that the Hebrews had poetical compositions for every great occasion and that this one has simply not survived; he passes on the Targum's account of an annual mourning."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "the king struck by archers",
-   "the disguise availed nothing",
-   "echoes of Ahab and Saul",
-   "'have me away, I am sore wounded'"
+   "And the archers shot at king Josiah; and the king said to his servants, Have me away; for I am sore wounded.",
+   "His servants therefore took him out of that chariot, and put him in the second chariot that he had; and they brought him to Jerusalem, and he died, and was buried in one of the sepulchres of his fathers. And all Judah and Jerusalem mourned for Josiah.",
+   "And Jeremiah lamented for Josiah: and all the singing men and the singing women spake of Josiah in their lamentations to this day, and made them an ordinance in Israel: and, behold, they are written in the lamentations."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott faces the divergence from 2 Kings 23:30 ('made him ride dead from Megiddo'): against Thenius he holds it no literary invention but proof that the chronicler had special sources; the 'second chariot' a more comfortable one, the burial among his fathers (2 Kings 21:18)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke takes the 'second chariot' to mean only that they moved Josiah into another, for secrecy or because his own was disabled."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: they carried him dead to Jerusalem and buried him."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
    }
-  ],
-  "debates": [
-   {
-    "question": "Did Josiah die at Megiddo or reach Jerusalem alive?",
-    "sides": [
-     {
-      "position": "the divergence between Chronicles and Kings proves the chronicler's independent sources, not literary alteration",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the account of Chronicles is an arbitrary alteration of the older narrative for literary effect",
-      "holders": [
-       "Thenius (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the dying king borne home",
-   "died at Megiddo or Jerusalem?",
-   "the chronicler's special sources",
-   "burial among his fathers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott takes 'the lamentations' for a lost Book of Dirges extant in the chronicler's day (cf. Jer 22:10; Zech 12:11), quite distinct from canonical Lamentations, whose subject is the Chaldean ruin."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reports the Targum ascribing the record to Baruch's pen in the book of Lamentations; Wesley reads 'to this day' of a nation that remembered Josiah's death as its first fatal blow."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill holds Jeremiah's lament for Josiah now lost, distinct from canonical Lamentations, which respects Zedekiah."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 'the lamentations' the canonical book or a lost collection of dirges?",
-    "sides": [
-     {
-      "position": "a separate, now-lost Book of Dirges, distinct from canonical Lamentations (which concerns the Chaldean ruin)",
-      "holders": [
-       "Gill",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the canonical book of Lamentations, written by Baruch from Jeremiah's mouth",
-      "holders": [
-       "the Targum (reported by Clarke)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Jeremiah's lost dirge",
-   "canonical Lamentations or a lost book?",
-   "an annual ordinance of mourning",
-   "Josiah's death the first fatal blow"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Adam Clarke"
   ],
+  "range": "26-27",
+  "pericope_label": "Now the rest of the acts of Josiah, and his goodness, according to that which was written in the law of the Lord, And his deeds, first and last, behold, they are written in the book of the kings of Israel and Judah.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'his goodness' as 'his pious deeds' (32:32) and marks the clause 'according to that written in the law of the LORD' as said of no king besides, the record referred to the annals of 2 Kings 23:28; Keil sets the formula in place."
+    "prevalence": "single",
+    "summary": "Ellicott points out that the goodness here is said to be according to what is written in the law of the Lord, a measurement made of no other king, and notes the wider title this book gives its source, the kings of Israel and Judah where the older account names Judah alone."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads 'his goodness' of Josiah's piety toward God and liberality to the people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the closing formula",
-   "his piety and liberality",
-   "goodness according to the law",
-   "a praise given to no other king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Adam Clarke"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Gill sums the closing formula in two words, the king's piety toward God and his liberality to the people."
+   },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke unfolds the Targum's survey of the reign — the child-king of eight, the reforms from his eighth year to his eighteenth, the purging of Israel and Judah — and notes the great royal annals are lost, only the leading facts preserved in Kings and Chronicles."
+    "summary": "Clarke passes on the Targum's expansion of the phrase about first and last deeds, which reads like a table of contents for a book nobody has, and observes plainly that these general histories are lost and that what survives of the leading facts is what stands in the books we possess."
    }
   ],
   "debates": [],
   "outliers": [],
   "themes": [
-   "his deeds first and last",
-   "the Targum's survey of the reign",
-   "the lost royal annals",
-   "the leading facts preserved"
+   "Now the rest of the acts of Josiah, and his goodness, according to that which was written in the law of the Lord,",
+   "And his deeds, first and last, behold, they are written in the book of the kings of Israel and Judah."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-31",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  }
 }
