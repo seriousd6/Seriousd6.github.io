@@ -85349,6 +85349,446 @@
       "book": "matthew",
       "chapter": "14",
       "note": "CORRECTION TO THE 2026-09-14 CLAIM THAT POLISH IS CLOSED TO AN HONEST WORKER. That note argued that of the 51 polish chapters carrying measurable duplication, all but two are legacy-unversioned and carry no fidelity grade, so landing them would mean self-grading every entry against the full catena. That is true, and it is also simply what a legacy rewrite is. A legacy-unversioned polish chapter is not a polish job at all: it is rewritten wholesale from the catena as pericope tiles and graded by the writer as part of the work, exactly like a legacy pick, and clearing its B verses is a side effect rather than the method. Four such chapters have been landed that way this run - 1chronicles 28, ezra 8 and mark 13 among them - every entry grade A, validator and both gates clean, no verse padded to reach the floor. The genuinely stuck set is the other one: the current-standard chapters whose only route to an A is thesaurus work on subject vocabulary. So the binding constraint on the polish queue head is SIZE, not honesty, and pointing a worker at the legacy queue instead would gain nothing that picking a small polish chapter does not already give."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Jamieson displacement, confirmed by content. The JFB blocks in this chapter sit at keys 1, 7 and 13, a fixed offset with step six, and none of them is Mark. Key 1 is the five-word stub See on Mt 13:12. Key 7 is 245 words of Matthew 25, the King on his throne addressing the heirs of the kingdom with Come ye blessed. Key 13 is the eight-word stub 37-39. Then shall the righteous answer him. All three excluded and declared on the entries covering those keys."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "45"
+      ],
+      "note": "StudyLight chrome at key 45. The Ellicott block runs 1036 words of which about forty are usable, one sentence noting that Mark alone makes the healed man the agent of the report and gives the pressure of the multitude more vividly, followed by navigation text, a copyright footer and several hundred lines of raw CSS. Used only the usable sentence."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "2-3"
+      ],
+      "note": "Cyril of Jerusalem blocks in this chapter are extracts from the Catechetical Lectures, keyed to the verse by theme rather than by exegesis, and capped at a hard 200 words so that most break mid-sentence. They appear at keys 1, 3, 4, 5, 7, 8, 11 and 24. Several are genuinely on point, notably key 1 on baptism as the end of the Old Testament and key 8 on John sanctified to baptize the Lord. Key 7 is not: its 200 words are entirely about the Holy Spirit granting Paul the writing of fourteen epistles, with no contact with the verse about the latchet. That block was not used."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Truncation at 200 words affects more than Cyril. John Gill is cut at exactly 200 at keys 1 and 43, breaking mid-clause both times, and every Keil-style long block in this catena shows the same ceiling. Where a block ends mid-sentence the entry uses only what survives the cut and does not guess at the remainder."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Voice profile. Twenty-three distinct voices, the largest set of any chapter landed on this run: Jerome, Pseudo-Jerome, Bede, Hilary, Gregory, Remigius, Gloss and Augustine on the Latin side; Chrysostom, Pseudo-Chrysostom, Theophylact and Cyril of Jerusalem on the Greek; Origen alone for Alexandria; Gill and Calvin, Henry, Clarke and Wesley, and Barnes, Ellicott, Robertson, Lightfoot and the displaced Jamieson among the moderns. Cyril of Jerusalem is mapped to eastern-antiochene on corpus precedent, where he carries that slug 280 times against 37 for eastern-alexandrian."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Tiling. 45 source keys, 44625 usable source words, cut into 28 pericope tiles rather than the ten or twelve the verse divisions would suggest. The chapter will not tile coarsely: keys 1, 9, 14, 23, 29 and 40 each carry a Matthew Henry exposition between 1100 and 2000 words plus a full patristic catena, so a six-verse tile routinely drafts at 800 words and has to be split. Finer tiling was the honest response, not heavier compression."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "2-3"
+      ],
+      "note": "The composite citation. Jerome says flatly it is Malachi and not Isaiah. The Greek catena allows that a mistake of the writer may be alleged, then prefers compression of two prophecies under the elder prophet. Bede offers the sense-is-in-Isaiah answer and then the remarkable second one, that the wrong name occurred to Mark by lapse of memory and he would have corrected it when reminded, unless the Spirit ruling his memory meant it. Separately the moderns split on the text: Clarke, Ellicott and Robertson for Isaiah, Gill and Lightfoot for the plural on Jewish citation practice. Both disputes preserved without adjudication."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "4-5"
+      ],
+      "note": "Whether John baptism remitted sins. Bede and Theophylact deny it outright, holding that he preached a remission he could not confer. Robertson reaches the same by grammar, that the preposition means with reference to. Clarke renders it toward the remission. Ellicott leans the other way, that repentance was followed by forgiveness then as ever, even though the blood availing for it had not been shed. Preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "34"
+      ],
+      "note": "Whether many means many or all. Theophylact reads it strictly as a real limit, since faithless persons could not be cured at all. Pseudo-Chrysostom reads it as a Scripture idiom in which many stands for all. The two blocks sit in the same source key and contradict each other directly. Both preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "27-28"
+      ],
+      "note": "Whether Mark constant immediately is significant. Clarke says it occurs more often in this evangelist than in any other writer of the new covenant, is very often superfluous, and may be omitted in translation without prejudice, being used as older English writers used forsooth. Ellicott counts the same word, forty-one times in the Gospel and nine in this chapter, and draws the opposite conclusion, that its recurrence should be noticed as the reader proceeds. Both preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "41-42"
+      ],
+      "note": "How I will, be thou clean should be read. Bede explicitly rejects the reading of many of the Latins, who take it as one sentence meaning I wish to cleanse thee, and insists on two separate utterances, the will and then the command, since there is no interval between the work of God and the command. Preserved as his position against a named opposing party."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "45"
+      ],
+      "note": "Whether the healed leper was wrong to publish. Barnes treats it as disobedience, however warm, the man following the natural dictates of his feelings rather than the command. Theophylact alone defends him outright, that the person benefited ought to be grateful and return thanks even though his benefactor requires it not. Preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "43-44"
+      ],
+      "note": "Why the silence was commanded, five answers that do not reduce to one. Barnes and Wesley give a legal reason in nearly identical words. Bede gives a doctrinal reason about the priest. Chrysostom makes it a lesson against seeking worldly honour. Calvin gives a reason of ministry, that the appetite for miracles left no room for doctrine. Robertson says it was to allay excitement. All preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "16-17"
+      ],
+      "note": "Whether this is the first call. Theophylact says plainly it is the second, the men having followed on the Baptist witness and returned to their trade. Bede reconciles the divergent account in Luke by sequence, arguing from the boats left afloat here. Gill reaches a prior appointment from a third direction. Preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "38"
+      ],
+      "note": "Itinerant against settled ministry. Calvin raises it as a real pastoral question, whether ministers should run here and there giving a slight and partial taste or remain and instruct perfectly, and answers only for this case. Clarke will not qualify it and makes it a standing rule binding every minister. Preserved without adjudication."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "24"
+      ],
+      "note": "Lightfoot opens a reading of let us alone that no other witness entertains, that the us may be the Galileans in the synagogue rather than the devils, since the masters taught that Galilee should be laid waste in the generation when the Son of David came. Recorded as an outlier rather than folded into the main reading, because it rests on a rabbinic expectation the other witnesses do not mention."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "Graded A. Every name is in key 1: Swete, Papias, Irenaeus, Tertullian, Eusebius, Augustine as the first to hold the abridgment theory, the three languages of the name from Pseudo-Jerome, and the Levite claim from Jerome. Dropped: the Whiston conjecture that Mark was Peter own son, Clarke sixteen-item list of what Mark omits, and the Barnes preface biography."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "2-3"
+      ],
+      "note": "Graded A. The Codex Bezae and Vatican citations, the versions, the Jewish citation practice in Lightfoot, the change of person noticed by Calvin, the rejection of the view that John was an angel by nature, and the Persian and Roman roads are all in keys 2 and 3. The rejected view is Origen in the source and the entry does not name him, since the editorial note rather than Bede text carries the attribution."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "4-5"
+      ],
+      "note": "Graded A. The name etymology, the proselyte custom, the epoch-not-event reading, the medical figure from Cyril and the Rebecca and Isaac allegory are all sourced. Dropped: the chrism editorial note and most of the Pseudo-Jerome camel-hair allegory, which belongs to key 4 but repeats at key 6."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "6"
+      ],
+      "note": "Graded A. The Talmudic camel-wool rule, the garments-of-light variant, the goat-hair penitent, the Bedouins and the three allegorical readings of the diet are all verbatim in key 6 or the key 4 blocks that cover the same verse. The three fathers are reported as differing, which is what the source shows."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "7-8"
+      ],
+      "note": "Graded A. The Gloss motive, the Bede two-stage announcement, the Pseudo-Chrysostom refusal to harmonise, Gregory two figures, Jerome one-line contrast and the Cyril fiery tongues are all sourced. The Cyril block at key 7 was not used at all, being about Paul epistles."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "9"
+      ],
+      "note": "Graded A. Nazareth against Galilee, the rent heavens, the immersion detail and the three reasons for the baptism are sourced. Dropped: the Henry exposition of what the voice meant, which is carried in the verse 10 to 11 entry instead."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "10-11"
+      ],
+      "note": "Graded A. The Cerinthian Gnostics, the fire in Jordan from Justin Martyr, the dove of the Canticles with its five titles, the Augustine refusal to adjudicate and the Trinity reading are all in keys 9 to 11. Scripture citations in the source blocks were not carried across as bare references."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "12"
+      ],
+      "note": "Graded A. The exorcism verb, the Barnes qualification, the Chrysostom Providence reading and the Bede appeal to Luke premise are all sourced. No proper noun in the prose is absent from key 12."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "13"
+      ],
+      "note": "Graded A. The bestiary, the Psalm that furnished the Tempter his weapon, the Swete observation, Adam before his fall, the ark, the Quarantania and the Abyssinian fast are all in key 13. The four-quarters and ten-commandments arithmetic is Bede own."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "14"
+      ],
+      "note": "Graded A. The tradition that John wrote to fill the year the others passed over is Bede, reported as he gives it. The regions of that year are Robertson. The castle and the reproof are Gill. Nothing asserted that key 14 does not carry."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "15"
+      ],
+      "note": "Graded A. Daniel, the fulness of time, the crisis word, the Origen distinction between the two names of the kingdom and the Pseudo-Jerome chain of images are all sourced. Calvin two reasons are given in his order."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "16-17"
+      ],
+      "note": "Graded A. The textual correction, the papyri note, the second-calling argument and the boats-left-afloat proof are all in keys 16 and 17. Robertson reading of the verb become is his."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "18-20"
+      ],
+      "note": "Graded A. The hired servants, the social inference, the Remigius inversion, the four names and the four cardinal virtues are all sourced. Dropped: the Peter-active and John-contemplative typology, for want of room."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "21-22"
+      ],
+      "note": "Graded A. The excavated synagogue, the order of the service, the count of the adverb, the Bede contrast with the Scribes and the Calvin aside on the speculative theology of his day are all in keys 21 and 22. The aside is reported as his own judgement, which is how the source frames it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "23"
+      ],
+      "note": "Graded A. The in-Christ idiom, the lucid intervals, the Eastern immunity of madness, the fourfold use of the word spirit and the town-of-consolation reading are all sourced. Robertson remark about confirmed criminals is his own and is attributed to him."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "24"
+      ],
+      "note": "Graded A. The article argument, the Messianic origin of the title, the I know against we know variant, the rabbinic expectation about Galilee, the Calvin reading of the flattery and the Augustine distinction between knowledge and charity are all in key 24 or the Calvin block at key 22 that covers the same verse."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "25-26"
+      ],
+      "note": "Graded A. The muzzling word with its competing renderings, the Barnes argument from conversation, the Calvin refusal to say there was no pain at all, and the medical sense of the convulsing word are all sourced."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "27-28"
+      ],
+      "note": "Graded A. The variant structures, the Syriac conjunction, Simon Magus, the dew-on-blossoms figure and the two opposite verdicts on the adverb are all in keys 27 and 28."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "29-31"
+      ],
+      "note": "Graded A. The three descriptions of the fever, the doctor standing over her, the not-feeling-the-pulse remark, the order matching the order of the fall and the fever-as-anger reading are all sourced."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "32-33"
+      ],
+      "note": "Graded A. The sunset reckoning, the hand laid on every one, the two features peculiar to Mark, the beggars at the door and the door-of-the-kingdom reading are all in keys 32 and 33."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "34"
+      ],
+      "note": "Graded A. The two opposite readings of many, the Calvin pair of reasons, the Bede account of why the devil urged the crucifixion, the gloss on the clause naming the Christ and the Wesley riposte to the medical theory are all in key 34 or the blocks at key 32 covering it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "35-37"
+      ],
+      "note": "Graded A. The watch of the night, the three modern guesses about the withdrawal, the hunting verb, the Barnes rule of morning prayer and the sorting of seekers by motive are all sourced. The three guesses are attributed to Robertson as the one reporting them, since the source gives them inside his block."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "38"
+      ],
+      "note": "Graded A. The rare compound, the lake-shore towns, the rabbinic town-and-city rule, the variant reading and the Calvin pastoral question are all in key 38."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "39"
+      ],
+      "note": "Graded A. The Ellicott qualification about what the disciples would have understood, the Pseudo-Chrysostom pairing of the two reports, the Augustine placing of the sermon on the mount and the Robertson admission that little is recorded are all sourced."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "40"
+      ],
+      "note": "Graded A. The kneeling variant, the compassion word peculiar to Mark, the Bede reading of shame and presumption, the Theophylact point about the phrasing and the Clarke recommendation of Mark as the best account are all in key 40."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "41-42"
+      ],
+      "note": "Graded A. The Law about touching a leper, the four reasons for the touch, the Bede rejection of the Latin reading and the royal-touch figure are all sourced. The Gehazi parallel is Pseudo-Jerome."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "43-44"
+      ],
+      "note": "Graded A. The snorting-horse word, the rabbinic causes of leprosy with their instances, the Itala omission, the Calvin reading of the pronoun and the Bede defence of the Mosaic sacrifice are all in keys 43 and 44."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "1",
+      "verses": [
+        "45"
+      ],
+      "note": "Graded A. The Barnes reading of the inability, the two named fears in Clarke, the Theophylact defence of the man, the Calvin account of what publicity cost and the Robertson aphorism are all sourced. The Ellicott contribution is the one usable sentence recovered from a block that is otherwise site chrome."
     }
   ]
 }

@@ -11,7 +11,6 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
@@ -19,51 +18,81 @@
   ],
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Mark names Christ 'Son of God' (Bede: rising from lesser to greater); Hilary: a true Son by nature, not adoption."
-   },
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark (Peter's interpreter) uniquely begins with the Baptist; the title 'Son of God' echoes Peter's confession (Matthew 16:16)."
+    "summary": "Robertson notes the absence of the article and allows the phrase to be a heading or superscription placed by Mark or a scribe, reports the manuscript division over Son of God, and borrows from Swete the point that every evangelist chooses a different starting point; Ellicott catches the word in transition between the good news of the kingdom and a book; Barnes denies it can mean history or life and reads the title as placed to secure respect."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: Mark begins with John because the Law's abrogation began with his preaching (Malachi 3:1; John 1:17)."
+    "summary": "Gill guards against the idea that the gospel first began to be preached here, since it was preached by Isaiah and to Abraham and as early as Eden; Calvin makes the late start a divine intention, the life of the Son being buried in silence until the time of full revelation."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: gospel = God's faithful word; its foundation is that Jesus is the Son of God."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley says the evangelist speaks with strict propriety, the beginning being the account of John and the Gospel itself the rest of the book; Clarke reports the ancient accounts of how the book was composed, rejects most as conjecture, and argues from its Latin words that it was written for the Roman people."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Pseudo-Jerome insists the four Gospels are one and one Gospel in four and gives the name in three languages; Bede finds a deliberate ascent from Matthew opening with the Son of David to Mark opening with the Son of God; Jerome makes Mark a Levite who had served the priesthood and wrote in Italy; Hilary presses Son by origin against sons by adoption."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is the opening clause a title or the first sentence of the narrative?",
+    "positions": "Robertson allows either, a heading for the paragraph about the Baptist or a superscription for the whole book, possibly added by a scribe; Barnes treats a prefixed title as the customary thing; Gill, Wesley and Calvin all read it as the narrative statement that this account begins with the ministry of John."
+   },
+   {
+    "question": "How was the Gospel of Mark composed?",
+    "positions": "Clarke reports the primitive fathers making Mark the amanuensis of Peter, Augustine first maintaining that he abridged Matthew, and others supposing a compilation out of Matthew and Luke, and calls most of these conjectures with little foundation; Barnes states the tradition as uniform, that Mark was the interpreter of Peter and wrote under his eye and with his approbation."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here belongs to Matthew 13:12, not this verse."
+    "voice": "A.T. Robertson",
+    "view": "Reports the textual division over the last three words, that some manuscripts omit Son of God while the great mass have it, and judges the phrase genuine on the ground that Mark uses it elsewhere."
+   },
+   {
+    "voice": "Jerome",
+    "view": "Makes Mark a Levite who served the priesthood and wrote his Gospel in Italy, and reads the opening prophetic cry as showing the order of the election of Levi."
    }
   ],
   "themes": [
-   "beginning of the gospel",
-   "Son of God",
-   "Mark and Peter",
-   "starting with the Baptist"
+   "the beginning of the gospel",
+   "the Son of God",
+   "one Gospel in four",
+   "a name in three languages",
+   "from less things to greater"
+  ],
+  "range": "1",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "2": {
@@ -79,100 +108,87 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Mark combines Malachi 3:1 and Isaiah 40:3; John is both 'angel' (messenger, by office) and 'voice' preceding the Word (Bede)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Textual debate: 'in the prophets' (Lightfoot, two sources) vs 'in Isaiah' as the harder, better reading (Clarke, Ellicott) — Isaiah as chief of the prophets."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the better reading 'in the prophets' or 'in Isaiah the prophet'?",
-    "sides": [
-     {
-      "position": "'In the prophets' (two sources cited)",
-      "holders": [
-       "Lightfoot",
-       "Gill"
-      ]
-     },
-     {
-      "position": "'In Isaiah' (harder, better-attested; Isaiah as head)",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "my messenger",
-   "Malachi and Isaiah",
-   "textual attribution",
-   "prepare the way"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
    "Cyril of Jerusalem"
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome states flatly that the words are in Malachi and not in Isaiah; Bede offers two answers and is candid about the second, that the sense is found in Isaiah in many places, or else that the wrong name occurred to Mark and he would have corrected it unless the Spirit meant it; Pseudo-Jerome hears a cry because we cry to the deaf and to those afar off, and turns the straightening of paths into a rule about neighbours."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "The Greek catena concedes that a mistake may be alleged and then explains the citation as two prophecies compressed into one and referred to the elder prophet; Theophylact calls the Forerunner an angel for his angelic life and makes the way the New Testament and the paths the Old; Cyril of Jerusalem sets baptism at the hinge of the two Testaments."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The herald's voice (Isaiah 40:3) prepares God's coming; John applied it to himself (John 1:23) — a voice announcing the Word, like a royal courier preparing the king's road."
+    "summary": "Clarke, Ellicott and Robertson all prefer the reading that names Isaiah and explain the plural as a correction, Ellicott adding that this is Mark s only prophetic quotation on his own account; Lightfoot argues the contrary from Jewish citation practice, that naming only the later of two testimonies is without all example."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the first testimony as the words of the Father to the Son concerning John and defends the plural reading from the two prophets cited; Calvin notices that the person of the quotation changes, the prophet having God say before me where Mark has God address the Son."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "voice in the wilderness",
-   "prepare the way",
-   "make paths straight",
-   "John the forerunner"
+  "debates": [
+   {
+    "question": "Should the text read in the prophets or in Isaiah the prophet?",
+    "positions": "Clarke cites the Codex Bezae, the Vatican and several versions for Isaiah and supposes the plural was introduced to comprehend both prophets; Ellicott agrees on manuscript grounds and adds that a general reference is more likely to have been specialised by a transcriber than the reverse; Robertson sorts the witnesses by class and says Isaiah is named as chief of the prophets; Gill and Lightfoot argue for the plural from the two prophets cited and from Jewish usage."
+   },
+   {
+    "question": "How is a quotation from Malachi attributed to Isaiah?",
+    "positions": "Jerome states the difficulty without resolving it; the Greek catena allows that it may be called a mistake of the writer, then prefers compression of two prophecies under the elder prophet who first intimated the sense; Bede offers the same and adds the possibility that the name occurred to Mark by lapse of memory, which the Holy Spirit did not correct because what the Spirit spoke by one prophet belonged to all."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "view": "Rejects the view that John was an angel by community of nature, allowing the title only by the dignity of the office, and sets voice before Word as sound necessarily precedes speech."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Turns the straightening of paths into a doctrine of neighbour-love, in which he who loves himself and corrects no one turns aside to the right, as Eli did, and he who rebukes well but acts badly turns to the left, as the Scribes and Pharisees."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Illustrates the prepared road from the Persian couriers and the roads that knit the Roman Empire together, and notes that John applied this very language to himself before the committee from the Sanhedrin."
+   }
+  ],
+  "themes": [
+   "as it is written in the prophets",
+   "I send my messenger before thy face",
+   "the voice of one crying in the wilderness",
+   "prepare ye the way of the Lord",
+   "a voice before the Word"
+  ],
+  "range": "2-3",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "4": {
@@ -181,7 +197,7 @@
    "Bede",
    "Theophylact",
    "Gregory",
-   "Glossa Ordinaria",
+   "Gloss",
    "Pseudo-Chrysostom",
    "Jerome",
    "John Gill",
@@ -196,77 +212,77 @@
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "John preached but could not give remission (Bede, Theophylact); his austere dress and food mark mortification and rebuke."
+    "summary": "Bede draws the line that remission is given only by the baptism of Christ, so that John preached a baptism which could remit sins precisely because he could not give it, and takes the confessing as a pattern for all who seek baptism; Pseudo-Jerome makes John the bridegroom s friend bringing the bride to Christ and reads the river name as an alien descent."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'For (eis) remission' = 'with reference to'; a baptism on the basis of repentance and confession (Robertson), the sign presupposing penitence and looking to forgiveness (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "baptism of repentance",
-   "remission of sins",
-   "John could not remit",
-   "Mark the evangelist of action"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "summary": "Ellicott makes the abruptness the point, since no other Gospel passes so completely into the Forerunner s work, and calls Mark the Evangelist of action; Robertson presses the verb, that the coming was an epoch and not an event, translates the difficult phrase as with reference to, and notes that the symbol was already in use for Jewish proselytes."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "A steady stream (imperfect tense) from Judea and Jerusalem; public confession of sin, the necessary accompaniment of baptism (cf. proselyte baptism, OT penitence)."
+    "summary": "Clarke takes the name itself as the theme, compounded of the grace or mercy of Jehovah, renders the phrase toward the remission, and supplies the proselyte custom in full; Wesley compresses the verse into preaching repentance and baptizing as a sign and means of it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill corrects the picture the word wilderness invites, since it had many cities, towns and villages in it, and notices that baptizing stands before preaching in the sentence though John came preaching first."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: first the wounds are shown, then the remedy applied — confession before cleansing; put off the old slough of sin."
+    "prevalence": "several",
+    "summary": "Theophylact says John s baptism had not remission but only brought men to penitence, preaching that to which penitence led; Cyril of Jerusalem keeps a medical figure, that they first showed their wounds and then he applied the remedies."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all Judea went out",
-   "confessing their sins",
-   "baptized in Jordan",
-   "preparing a people"
+  "debates": [
+   {
+    "question": "Did the baptism of John remit sins?",
+    "positions": "Bede and Theophylact both deny it outright, holding that John preached a remission he could not confer and that only the baptism of Christ remits; Robertson reaches the same conclusion by grammar, that the preposition means with reference to rather than in order to obtain; Clarke divides the work, repentance preparing the soul and baptism being the type or pledge; Ellicott leans the other way, that then as evermore repentance was followed by forgiveness even though the blood availing for it had not yet been shed."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Reads the scene as a betrothal, with John as the bridegroom s friend bringing the bride to Christ as a servant brought Rebecca to Isaac, and her descent from the camel as the Church humbling herself."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Holds that John is treating the Jewish nation itself as pagans who need to repent and come back, since the baptismal symbol already belonged to the admission of proselytes."
+   }
+  ],
+  "themes": [
+   "baptism of repentance",
+   "confessing their sins",
+   "the wilderness of Judea",
+   "the river of Jordan",
+   "a sign and means of it"
+  ],
+  "range": "4-5",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "6": {
@@ -282,34 +298,72 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Rough camel-hair cloth, leathern girdle, locusts and wild honey — the austere life of a wilderness penitent, recalling Elijah (2 Kings 1:8; Malachi 4:5)."
+    "summary": "Robertson settles the material as rough cloth woven of camel s hair rather than skin, and adds that dried locusts are palatable and the wild honey bountiful in the clefts of the rocks; Lightfoot goes to the Talmudists for the phrase camel s wool, the rule against mixing it with linen, and the opinion that the coats made for Adam were of camel s hair."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the social fact that penitents and men of austere life were expected to live in deserts and wear coarse apparel, and instances a man known by a goat s hair garment that cut his flesh."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede/Theophylact: the austere garb signifies mortification (Galatians 5:24) and the grief of repentance he preached."
+    "summary": "Bede reads hair against wool as austerity against effeminate luxury and the girdle of skins as mortification, and finds sweetness in the honey and swiftness of flight in the locusts; Gregory refers the food forward to the Lord, who took the sweetness of the barren Gentiles in the honey and the Jews in the locusts."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact turns every detail into a judgement on the hearers, the hair the grief of the penitent, the girdle the dead state of the Jewish people, and the wild honey the Scriptures which they had and did not rightly understand."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "camel's hair",
-   "locusts and wild honey",
-   "austere penitence",
-   "Elijah figure"
+  "debates": [
+   {
+    "question": "Is the clothing a historical detail or a sermon?",
+    "positions": "Robertson, Lightfoot and Gill treat it as fabric, custom and rabbinic usage, arguing about what the material was and who wore such things; Bede, Gregory and Theophylact read every item as significant, and differ among themselves over what it signifies, Bede referring it to John s own preaching, Gregory to the Lord he announced, and Theophylact to the condition of the Jewish hearers."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Collects the rabbinic variant in which the coats of skins made for Adam were of camel s hair, alongside the curious reading in one rabbi s law that had garments of light for garments of skins."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Notes that some Bedouins still make their living by gathering the wild honey out of the rocks."
+   }
+  ],
+  "themes": [
+   "camel s hair",
+   "a girdle of a skin about his loins",
+   "locusts and wild honey",
+   "sweetness and swiftness of flight",
+   "the marks of repentance"
+  ],
+  "range": "6",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.81
+   }
   }
  },
  "7": {
@@ -318,90 +372,86 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John's sincere self-effacement; Mark's vivid 'stoop down and unloose the latchet' marks the menial slave's office, magnifying Christ's dignity."
-   },
-   {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "John proclaims Christ first as a man mightier than he, gradually leading hearers to his deity; unworthy even of the servant's station."
+    "summary": "The Gloss says the disclaimer was made to do away with the opinion of the crowd that John was the Christ; Bede notices that the announcement is pitched low, proclaiming a man mightier than himself because the hearers were not yet capable, and then declares the divinity covertly since none but God gives the Holy Ghost; Gregory draws two figures from the shoe; Jerome puts the contrast in a line, that water is the ministry of man while the Spirit is ministered by God."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom refuses to harmonise loosing the latchet with carrying the shoes, holding that the Evangelists cannot err and that John said each in a different sense; Theophylact has John loosing the bands of everyone else s sin and unable to loose Christ s because he found no sin in him; Cyril of Jerusalem supplies the reason for the fire, that the descent of the Holy Ghost was in fiery tongues."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott treats the wording as a deliberate choice of the more vivid phrase, since stooping to loosen the sandals was the servant s office, and notes that Mark omits the fire Matthew joins to the Holy Ghost, possibly as less intelligible to Gentile readers; Robertson reports the judgement that this was a sceptical self-depreciation, thinks it sincere, and notes that Mark alone gives the touch."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke explains that the shoe was properly only a sole tied about the foot with thongs, and observes that the substance of these verses is absent from Matthew and John and appears with varying circumstances in Luke."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Are loosing the latchet and bearing the shoes the same saying?",
+    "positions": "Pseudo-Chrysostom insists they are not, since the Evangelists follow the order of the narrative and are unable to err, so John must have spoken each in a different sense, however variously commentators have expounded them; Ellicott treats the difference as Mark choosing the phrase that expressed the menial character of the office more vividly; Robertson notes only that the touch is peculiar to Mark."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on 'Come unto me,' belongs to Matthew 11, not this verse."
+    "voice": "Gregory",
+    "view": "Offers the ancient custom by which the kinsman who offered himself as husband took off the shoe of the man who refused the woman, so that John disclaims the name of Bridegroom as above his deserts."
+   },
+   {
+    "voice": "Gregory",
+    "view": "Reads the shoes as made from the skins of dead animals, so that the Lord coming incarnate appeared shod, having assumed the dead skins of our corruption."
+   },
+   {
+    "voice": "Theophylact",
+    "view": "Has John loose the shoe-latchet of all the others, meaning the bands of their sin, and unable to loose Christ s, because he found no sin in him."
    }
   ],
   "themes": [
    "one mightier than I",
-   "unworthy to loose the latchet",
-   "John's humility",
-   "exalting Christ"
+   "the latchet of whose shoes",
+   "I baptize you with water",
+   "he shall baptize you with the Holy Ghost",
+   "water and the Spirit"
+  ],
+  "range": "7-8",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John's water-baptism is the symbol; Christ's Spirit-baptism the substance (Acts 2; Joel 2:28); Mark omits 'fire' for Gentile readers (Ellicott)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: water is man's ministry, the Spirit God's — only God can give the Holy Ghost, a proof of Christ's deity."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "baptize with water",
-   "baptize with the Holy Ghost",
-   "sign and substance",
-   "Christ's deity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
@@ -409,7 +459,7 @@
    "Pseudo-Jerome",
    "Pseudo-Chrysostom",
    "Bede",
-   "Augustine of Hippo",
+   "Augustine",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -420,116 +470,167 @@
   ],
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The sinless Christ is baptized to fulfil righteousness, sanctify the waters, and be manifested; the Trinity is revealed (Bede) — Son baptized, Spirit descending, Father's voice."
+    "summary": "Ellicott points out that Mark supplies the town where Matthew gives the province and that the language is more boldly vivid, the heavens rent rather than opened; Robertson makes the same point from the participle, which splits the sky like a garment, and infers that the Baptist saw it since he mentions it later."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill insists that it was Christ and not John who came up out of the water, having descended into the river and been baptized by immersion, and that he came up out of the river itself and not merely from the water s edge."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom argues from the nature of the rite that John s baptism was incomplete beside Christ s and different from the Jewish, standing between both, and that the descent of the Spirit is not reported as a first coming, since he had never left him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede makes the baptism an approval of John s and a sanctifying of the waters, so that the descent of the dove might show the coming of the Holy Ghost in the laver of believers."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: he took the likeness of sinful flesh, washed as if polluted, sanctifying himself for our sakes (John 17:19)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's 'from Nazareth'; the Baptist saw the Spirit descend (John 1:32); against the Gnostic dove-Christ reading (Robertson)."
+    "summary": "Henry hears the end of a long obscurity and asks how much hidden worth is lost in the dust of contempt or wrapped in the veil of humility, and reads the submission as humility owning God, Christ washed as if he had been polluted though perfectly unspotted."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus baptized",
-   "why the sinless one",
-   "the Trinity revealed",
-   "fulfilling righteousness"
+  "debates": [
+   {
+    "question": "Why was a sinless man baptized?",
+    "positions": "Pseudo-Chrysostom says it was not for remission nor from want of the Spirit but to be made known to all and to fulfil all righteousness, joining earthly things to heavenly; Bede says it was to approve John s baptism and to sanctify the waters for believers; Henry says it was humility owning God and taking the likeness of sinful flesh."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "view": "Corrects the common reading that has John rather than Christ coming up out of the water, and presses the detail that he came out of the river itself and not from the bank."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "view": "Notes the one geographical addition Mark makes to the parallel, naming Nazareth where the other has only Galilee."
+   }
+  ],
+  "themes": [
+   "Jesus came from Nazareth",
+   "baptized of John in Jordan",
+   "the heavens rent asunder",
+   "coming up out of the water",
+   "a long obscurity ended"
+  ],
+  "range": "9",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's bold 'rent open' (vs 'opened') for the heavens; Christ saw them split and the Spirit descend like a dove — the Spirit loving simplicity and abiding on Christ (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "heavens rent open",
-   "Spirit like a dove",
-   "abiding anointing",
-   "inauguration of ministry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
+   "Charles Ellicott",
    "Albert Barnes",
    "A.T. Robertson",
    "Cyril of Jerusalem"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The Father's voice (cf. Psalm 2:7); Mark/Luke have 'Thou art' (to the Son), Matthew 'This is' (to bystanders) — same meaning (Augustine)."
+    "summary": "Bede denies any unclosing of the elements and puts the opening in the eyes of the spirit, reads the dove as an animal of great simplicity far from the malice of gall, explains that it sat on the head lest the voice be thought addressed to John, and finds the mystery of the Trinity in the scene; Augustine states the reason for the other Gospel s form of the voice and then refuses to choose between them."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Robertson sets the two reports of the voice side by side, Thou art against This is and in thee against in whom, and records the use the Cerinthian Gnostics made of the dove."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the difference between heavens opened to him and his seeing them opened, observes that many have heaven opened to receive them and do not see it, and preserves the older traditions of a fire in Jordan and a great light about the place without endorsing them."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Cyril: the Father's witness to the beloved Son refutes the Jews who deny the Only-begotten — 'unless thou be well pleased in Him, thou hast not life.'"
+    "summary": "Cyril of Jerusalem turns the Father s approval into a demand on the reader, that unless thou also be well pleased in him thou hast not life."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "voice from heaven",
-   "Thou art my beloved Son",
-   "Father's testimony",
-   "Psalm 2:7"
+  "debates": [
+   {
+    "question": "Did the voice say Thou art or This is?",
+    "positions": "Robertson reports the difference as a plain textual fact across the Gospels; Augustine explains the other form as meant to let the bystanders know which of them was the Son of God, then declines to adjudicate, saying take which you will and remember that the Evangelists relate the same meaning though not the same form of speaking."
+   },
+   {
+    "question": "In what sense were the heavens opened?",
+    "positions": "Bede denies any unclosing of the elements and puts it in the eyes of the spirit, or else says it was done for our sakes, since the door of the kingdom is opened by the laver of regeneration; Robertson keeps the physical image of a garment split; Henry distinguishes the two reports and reads the seeing as the point."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Records that the Cerinthian Gnostics took the dove for a heavenly Christ who descended on the man Jesus and left him at the Cross, and calls it a forecast of the modern distinction between the Jesus of history and the theological Christ."
+   },
+   {
+    "voice": "Matthew Henry",
+    "view": "Preserves without endorsing the tradition that a fire was kindled in Jordan at the baptism and that a great light shone round the place."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Opens with a figure for the evangelist himself, a hart longing after the fountains of water and a bee that sips the tops of the flowers, and runs the dove of the Canticles through its titles."
+   }
+  ],
+  "themes": [
+   "the Spirit like a dove descending",
+   "abiding upon him",
+   "Thou art my beloved Son",
+   "a voice from heaven",
+   "the mystery of the Trinity"
+  ],
+  "range": "10-11",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.23
+   }
   }
  },
  "12": {
@@ -547,36 +648,74 @@
   ],
   "schools": [
    {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: Christ fights Satan after baptism so the baptized may endure temptation; 'driven' shows divine providence — not self-sought, yet conquered."
-   },
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark's bold 'driveth' (the demon-casting word) means impelled/led by the Spirit, not forced against his will (Barnes); the Spirit, not the devil, leads (Bede)."
+    "summary": "Robertson calls the verb vivid and bolder than the other Gospels and notes that it is the same word used for driving out demons; Barnes refuses to let the force stand unqualified, insisting it does not mean compulsion against his will but that he was inclined or led there for important purposes; Ellicott flags the characteristic adverb and the stronger verb as Mark s own."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom takes the harshness as deliberate doctrine, that the text does not say he went so that we may understand it was according to the word of Divine Providence, and that the Spirit drove him in order to provoke the devil by hunger and by the place."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede guards the same word from the opposite error, noting that Luke has purposely premised that Jesus was full of the Spirit when he returned from Jordan, lest the evil spirit be thought to have had power over him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke renders the verb as putteth him forth against the milder was brought up of the parallel."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How strong is the verb that sends Jesus into the wilderness?",
+    "positions": "Robertson and Clarke both press its harshness, Robertson pointing out that it is the exorcism word and Clarke rendering it putteth him forth; Barnes deliberately softens it, denying any forcible compulsion against his will; Chrysostom keeps the harshness but refers it to Providence rather than to force, and draws from it the rule that no man should thrust himself into temptation while those who are driven into it remain conquerors."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Chrysostom",
+    "view": "Holds that the devil approaches only where he has seen a man set in a place of greater honour, and thrusts himself in most when he sees men remaining solitary."
+   },
+   {
+    "voice": "Bede",
+    "view": "Answers the question of which spirit drove him by appeal to the other Gospel s wording rather than to the verb itself."
+   }
+  ],
   "themes": [
    "the Spirit driveth him",
    "into the wilderness",
-   "favour then temptation",
-   "anointing for conflict"
+   "according to Divine Providence",
+   "driven and not going",
+   "full of the Spirit"
   ],
+  "range": "12",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
   }
  },
  "13": {
@@ -592,41 +731,83 @@
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede reads the forty as the whole time of this world, the globe divided into four quarters and the Commandments ten, and takes day and night for prosperity and adversity; he also divides the verse between the two natures, Christ among the beasts as man and served by Angels as God; Pseudo-Jerome reads the peace with the beasts as the peace of the ark, clean animals lodging with unclean."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark compresses the temptation but adds 'with the wild beasts' — terror and protection, fulfilling Psalm 91:13 (the Psalm Satan misused); the Second Adam where the first fell."
+    "summary": "Ellicott lists the creatures that might be meant and reads their presence as adding terror while the preservation fulfilled the promise in the very Psalm the Tempter had quoted; Robertson supplies the same bestiary and borrows from Swete the point that the promise of victory over the beasts stands next to the promise of angelic guardianship; Barnes places the ministry of angels after the days of temptation expired; Lightfoot reads the untouched safety back to Adam before his fall."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the wild beasts a curious circumstance mentioned by none of the other evangelists and takes it as an emblem of the brutal cruelty with which he was afterwards persecuted; Wesley notes that Mark gives not only a compendium of Matthew but several valuable particulars the others omitted."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the Father's care preserved him among the beasts; special protections are earnests of supplies; angels minister after victory (Hebrews 1:14)."
+    "summary": "Henry takes the preservation as his Father s care and an earnest that the same care would feed him when hungry, and hears in the beasts an intimation of the generation he was to live among."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom notes that the wilderness was impassable by man and full of wild beasts, and draws the rule that angels stand near and minister to those who conquer in temptation."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What do the wild beasts signify?",
+    "positions": "Clarke takes them as an emblem of the cruelty of Christ s future persecutors; Ellicott and Robertson read them as real danger whose absence of harm fulfils a Psalm promise; Lightfoot reads the safety typologically, back to Adam before his fall; Henry reads it as the Father s providential care and also as a comment on the men of that generation; Bede and Pseudo-Jerome allegorise, the one dividing man and God between beasts and angels, the other recalling the ark."
+   },
+   {
+    "question": "When did the angels minister?",
+    "positions": "Barnes places it after the days of temptation had expired, reasoning from the other Gospel that he ate nothing during them; Lightfoot divides the two by visibility, with forty days of invisible temptation and angels ministering visibly throughout, and has Satan at last appear as an angel of light pretending to wait on him; Wesley agrees that the visible temptation came afterwards."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here belongs to Matthew 25, not this verse."
+    "voice": "John Lightfoot",
+    "view": "Has Satan at the last put on the appearance of an angel of light and pretend to wait on Christ as the other angels did, hiding his hook of temptation the more artificially."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Reports that some Abyssinian Christians fast forty days during Lent on the summit of the Quarantania amid the ruins of its ancient cells, and answers that we are all tempted of the devil in the city even worse than in the desert."
    }
   ],
   "themes": [
-   "forty days tempted",
+   "forty days in the wilderness",
+   "tempted of Satan",
    "with the wild beasts",
-   "Second Adam",
-   "angels ministered"
+   "the angels ministered unto him",
+   "the peace of the ark"
   ],
+  "range": "13",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.64
+   }
   }
  },
  "14": {
@@ -647,41 +828,79 @@
   ],
   "schools": [
    {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "After John's arrest Christ retires to Galilee (teaching prudence in persecution) and preaches the kingdom — the Law complete, the Gospel now at work (Theophylact)."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede warns at length that the imprisonment did not follow immediately on the forty days, citing the Fourth Gospel for teaching and miracles before it, and reports the tradition that John, having approved the other three as true, saw they had covered only the year after the Baptist was gaoled and so wrote the earlier period they passed over."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ takes up his public ministry, heralding 'the gospel of the kingdom of God' (Mark's phrase for Matthew's 'kingdom of heaven')."
+    "summary": "Robertson says the same in modern terms, that but for the Fourth Gospel we should not know of the year of work in Perea, Galilee, Judea and Samaria, and that the arrest had much to do with the departure; Ellicott notes that Mark agrees with Matthew in omitting the early ministry and assumes the imprisonment known though he does not narrate it until much later; Barnes reads the withdrawal as deliberate caution."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom takes the retirement as instruction, that he goes back to Galilee teaching us not to resist the violence of evil men and keeping himself for teaching and healing before he suffered; Theophylact states the rule in full, that in persecutions we ought to retire and not await them, but when we fall into them we must sustain them."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: when John was silenced, Christ began to preach — the Word taking up where the voice left off."
+    "summary": "Henry turns the sequence into a promise, that the silencing of Christ s ministers shall not be the suppressing of Christ s gospel, since if some be laid aside others shall be raised up, perhaps mightier than they."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the facts the text assumes, the castle where Herod held John and the reproof that put him there."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "John imprisoned",
-   "gospel of the kingdom",
-   "Christ's ministry begins",
-   "retire in persecution"
+  "debates": [
+   {
+    "question": "Why did Jesus withdraw to Galilee?",
+    "positions": "Barnes makes it prudence, that Herod would have attempted his life also, his time of death not being come, and draws the rule that we are not wantonly to endanger our lives when they can be secured without a sacrifice of principle; Pseudo-Chrysostom and Theophylact make the same act doctrine, teaching that we should not resist the violence of evil men and should retire from persecutions rather than await them; Robertson treats the arrest simply as the historical cause of the move."
+   },
+   {
+    "question": "Does Mark start the ministry where it actually began?",
+    "positions": "Bede insists not, and marshals the Fourth Gospel to show teaching and miracles before the imprisonment, with the tradition that John wrote to fill in the year the others had passed over; Robertson agrees and lists the regions of that earlier year; Ellicott simply records the omission as shared with Matthew."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "view": "Reports that John, having read the other three Gospels, approved their text as true but observed that they had composed the history of only one year, and therefore related the earlier period himself."
+   }
+  ],
+  "themes": [
+   "after that John was put in prison",
+   "the gospel of the kingdom of God",
+   "when the Law ceases the Gospel arises",
+   "retiring rather than resisting",
+   "a silenced minister and an unsilenced gospel"
+  ],
+  "range": "14",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "15": {
@@ -694,36 +913,93 @@
   ],
   "schools": [
    {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley both refer the fulfilled time to the term specified by Daniel, Clarke adding that nothing is done but according to a plan laid by the Divine wisdom and never performed until the appointed time was filled up."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill offers two references for the fulfilled time and chooses neither, the end of the legal dispensation or the fulness of time agreed between the Father and the Son; Calvin asks why Mark separates repentance from believing the Gospel and answers with two reasons, the second being that the faith enjoined relates chiefly to the forgiveness of sins."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The time is fulfilled' (the fulness of time, Galatians 4:4; Daniel 9); the kingdom is at hand; the two-fold response of repentance and faith ('believe the gospel,' Mark's addition)."
+    "summary": "Ellicott notes that the clause is absent from the parallels and carries the Apostle s thought of the fulness of time, and that Mark adds the call to believe and prefers the kingdom of God to the kingdom of heaven; Robertson works on the word itself as an opportunity or crisis rather than time in general."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen holds that the kingdom of God and the kingdom of heaven are essentially the same though they differ in idea, and that the kingdom of God is confined neither by place nor by time."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry insists that repentance and faith must be held together, since reforming our lives will not save us without trusting the righteousness of Christ nor trusting Christ without reformation of heart and life."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede reaches the same balance from the other side, that believing without good works is of no use while the merit of good works does not bring a man to faith, but faith begins in order that good works may follow; Pseudo-Jerome argues it by images, the kernel and the shell, the apple and its bitter root, the hope of gain and the dangers of the sea."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Are repentance and faith one demand or two?",
+    "positions": "Calvin puts the question directly, since repentance depends on the Gospel, and answers that God sometimes calls for a changed life and afterwards shows that newness of life is his own gift, so duty is enjoined and the grace of obedience offered together; Henry insists the two are inseparable and that what Christ has joined no man should put asunder; Bede orders them, faith first and good works following, while denying that works can earn faith."
+   },
+   {
+    "question": "What does the fulfilled time refer to?",
+    "positions": "Clarke and Wesley name the term specified by Daniel; Gill allows either the close of the legal dispensation or the fulness of time agreed between Father and Son and does not choose; Ellicott and Robertson connect it with the Apostle s fulness of time and note the choice of a word meaning crisis or opportunity."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "view": "Distinguishes the kingdom of God and the kingdom of heaven in idea while identifying them in substance, and insists that the kingdom of God is confined neither by place nor by time."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Argues the necessity of repentance entirely by comparison, that he who would have the kernel breaks the shell, that the sweetness of the apple makes up for the bitterness of its root, and that the hope of health takes away from the painfulness of medicine."
+   }
+  ],
   "themes": [
    "the time is fulfilled",
-   "kingdom of God at hand",
-   "repent and believe",
-   "fulness of time"
+   "the kingdom of God is at hand",
+   "repent ye and believe the gospel",
+   "the fulness of time",
+   "faith begins that works may follow"
   ],
+  "range": "15",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.13
+   }
   }
  },
  "16": {
   "voices": [
-   "Glossa Ordinaria",
+   "Gloss",
    "Theophylact",
    "Remigius",
    "Bede",
@@ -737,178 +1013,157 @@
   ],
   "schools": [
    {
-    "school": "eastern-antiochene",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A second call (after the meeting in John 1 and the catch of Luke 5); honest fishermen, worthy first disciples; fishers of men make their catch alive, not dead (Remigius)."
+    "summary": "Robertson catches the camerawork, Mark using the word for alongside twice to make the picture realistic, and reads the participle as casting on both sides; he also notes that the four were partners in a trade and that the verb become is Mark s own, a slow and long process that Jesus undertook; Clarke contributes the textual point that the best manuscripts read the brother of Simon; Ellicott notes that Mark names Simon without adding Peter."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's realistic glimpse of Christ in action by the sea; the four fishermen-partners (Luke 5:7); unlettered men chosen that faith might rest on God's power, not learning (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "call of Simon and Andrew",
-   "fishers",
-   "second calling",
-   "fishers of men"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact makes this plainly a second calling, since Peter and Andrew had been disciples of the Forerunner and returned to their trade when John was imprisoned, adds that they lived on their own labours and not on the fruits of iniquity, and reads the summons as leaving no interval, since we must not allow any time to lapse but follow the Lord at once."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Mark's unique 'make you to become' — Christ undertakes the slow process of forming fishermen into fishers of men; the qualification is his gift, not their attainment."
+    "summary": "Bede faces the harder problem that Luke tells the story differently and resolves it in sequence, the boats not drawn ashore here being his proof; the Gloss marks the transition from the preaching to the disciples who were made ministers of it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reaches the same result as Theophylact by another road, that Jesus was looking out for them, having appointed them to this service long before."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "come after me",
-   "fishers of men",
-   "I will make you",
-   "Christ equips the called"
+  "debates": [
+   {
+    "question": "Is this the first time these men met Jesus?",
+    "positions": "Theophylact says plainly that it is the second calling, the men having followed on the Baptist s witness and gone back to their trade when he was imprisoned; Bede reconciles the same problem with Luke s account by putting Luke s episode first and this one later, arguing from the boats left afloat; Gill arrives at a prior appointment from the other direction, that Jesus was looking out for them."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Presses a textual correction into the text itself, that the reading should be the brother of Simon rather than his brother, on the authority of the best manuscripts and versions and the approval of the most eminent critics."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Reads the verb become as the whole programme, a slow and long process by which preachers are made out of laymen willing to leave their business."
+   }
+  ],
+  "themes": [
+   "casting a net into the sea",
+   "come ye after me",
+   "fishers of men",
+   "a second calling",
+   "boats not drawn ashore"
+  ],
+  "range": "16-17",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
-   "John Wesley"
+   "John Wesley",
+   "A.T. Robertson",
+   "Charles Ellicott"
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede takes the choice of unlettered men as evidential, that the faith of believers might be thought to lie in the power of God and not in eloquence or learning; Remigius turns the trade into a figure and inverts it, since fishes caught soon die while men caught by preaching are made alive; Pseudo-Jerome reads the four as a chariot drawing us to heaven and their names as obedience, manliness, supplanting and grace."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact reads the leaving of the father as exemplary and turns it into a precept for the reader hindered by parents, inferring from the silence that Zebedee was not a believer while the mother of the Apostles was."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Straightway' (Mark's word) they left their nets — perhaps their all — and followed; immediate, whole-hearted obedience the mark of true discipleship."
+    "summary": "Ellicott and Robertson both take the hired servants as a social detail peculiar to this Gospel, showing an extensive business that would go on without the sons; Robertson turns it into a modern question about young men entering the ministry and the burden borne by the home folks."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'Happy they who follow Christ at the first call!' — they forsook their employ and constantly attended him."
+    "prevalence": "single",
+    "summary": "Wesley marks only the speed of it, that from this time they forsook their employ and constantly attended him, and calls them happy who follow Christ at the first call."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forsook their nets",
-   "straightway",
-   "immediate obedience",
-   "follow at the first call"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's detail: 'a little further' and 'mending their nets' — James and John found at diligent work, called like the first pair from the midst of their daily labour."
+    "question": "How should the leaving of the father be read?",
+    "positions": "Theophylact makes it exemplary and directive, that they left him because he would have hindered them and that the reader should do likewise, and infers Zebedee s unbelief from the text s silence; Ellicott and Robertson read the same verse for its social detail instead, the hired servants showing a substantial family business that continued without them, and Robertson frames the cost as falling on those left at home."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Remigius",
+    "view": "Inverts the figure of the catch, since fishes when they are caught soon after die while men caught by the word of preaching are rather made alive."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Turns the four disciples into a chariot drawn by four horses and reads their names as obedience, manliness, supplanting and grace, matched to the four cardinal virtues."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Turns the hired servants into a question for his own day, whether a young man can leave father and mother for college and seminary, and notes that the sacrifice falls on the home folks who lose a bread-winner."
+   }
+  ],
   "themes": [
-   "James and John",
+   "straightway they forsook their nets",
    "mending their nets",
-   "sons of Zebedee",
-   "called from labour"
+   "with the hired servants",
+   "fishers and unlettered men",
+   "they left their father"
   ],
+  "range": "18-20",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's unique 'hired servants' shows the sons of Zebedee were of some means; they left a going business and their father to follow — a real sacrifice, shared by the family (Robertson)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "left their father",
-   "hired servants",
-   "prompt obedience",
-   "cost of following"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
@@ -921,92 +1176,97 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ teaches in the Capernaum synagogue (his new headquarters) on the sabbath; Mark's signature 'straightway' (41 times in the Gospel, 9 in ch.1)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "He teaches as the Lord of Moses, by his own authority ('But I say unto you'), not as the scribes who only expound (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Capernaum synagogue",
-   "sabbath teaching",
-   "'straightway'",
-   "Christ's authority"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
+   "John Wesley",
    "John Calvin"
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Pseudo-Jerome says outright that Mark arranges the sayings as they stood in his own mind rather than in themselves, quitting the order of the history and following the order of the mysteries; Bede specifies the difference from the Scribes exactly, that they taught what was written while Jesus, as the God and Lord of Moses, by the freedom of his own will added to the Law or altered it."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The hearers astonished at Christ's authority (Matthew 7:28-29) — power direct from God, unlike the scribes who merely cited traditions (Robertson)."
+    "summary": "Ellicott marks the seam where the narrative leaves Matthew for Luke and counts the characteristic adverb, forty-one times in the Gospel and nine in this chapter; Robertson supplies the setting from the inchoative tense to the excavated ruins of the synagogue, describes the order of the service, and sharpens the contrast with the Scribes who quoted other rabbis; Barnes explains the custom by which a layman was invited to address the people."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the scribes' doctrine was literal and dead, void of the Spirit; Christ's preaching shone with the Spirit's power (1 Corinthians 4:20)."
+    "summary": "Gill notes the plural verb that brings the four disciples in with him, and finds the people struck both by a doctrine they had not been used to hear and by a manner full of gracefulness, gravity and majesty; Calvin puts the astonishment entirely in the preaching, where the power of the Spirit shone so as to extort admiration even from cold hearers."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact supplies the reason behind the institution, that the Law commanded rest on that day precisely so that they might meet together to attend to sacred reading."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke locates the authority in the commission, since the Scribes had none from God, the matter of their teaching not coming from him and the teachers not being sent by him."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "taught with authority",
-   "not as the scribes",
-   "astonished hearers",
-   "power of the Spirit"
+  "debates": [
+   {
+    "question": "Was the astonishment at the matter taught or the manner of it?",
+    "positions": "Ellicott holds that the stress falls on the manner rather than the thing taught; Gill refuses to separate them and finds the people struck by both; Calvin puts it in the power of the Spirit in the preaching, against a scribal teaching that was literal and dead; Clarke locates it in the commission behind the teacher; Bede and Robertson both find it in the freedom with which Jesus handled the Law rather than expounding other men."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Claims that Mark quits the order of the history and follows the order of the mysteries, arranging the sayings as they stood in his own mind."
+   },
+   {
+    "voice": "John Calvin",
+    "view": "Extends the contrast with the Scribes to the speculative theology of his own day, where the masters thunder magisterially and their controversies exhibit no traces of religion."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Reports that the ruins of the Capernaum synagogue have been discovered with the stones in good preservation, and that there is even talk of restoring the building."
+   }
+  ],
+  "themes": [
+   "straightway on the sabbath day",
+   "he taught them as one that had authority",
+   "and not as the scribes",
+   "the order of the mysteries",
+   "a doctrine they had not been used to hear"
+  ],
+  "range": "21-22",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  },
  "23": {
   "voices": [
    "Bede",
    "Pseudo-Chrysostom",
-   "Augustine of Hippo",
+   "Augustine",
    "Theophylact",
-   "Glossa Ordinaria",
+   "Gloss",
    "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
@@ -1017,41 +1277,79 @@
   ],
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The demon recognizes Christ with knowledge but not charity, fearing judgment (Augustine); 'unclean' marks his impiety; the medicine first works against the author of death (Bede)."
-   },
-   {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the unclean spirit, having lost all purity, cries out in agony — the devils believe and tremble, with horror but no hope."
+    "summary": "Henry reads the phrase as possession rather than affliction, the spirit having the man and leading him captive as a man is said to be in a fever or in a frenzy, and alone suspects that the man came neither to be taught nor healed but to confront Christ and hinder belief."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The demoniac (with lucid intervals) mingled in the synagogue; Mark distinguishes the man from the unclean spirit in him."
+    "summary": "Robertson identifies the idiom as the one behind in Christ and in the Lord and notes that Jesus nevertheless distinguishes the man from the spirit; Ellicott answers the question of how such a man was present from custom, that in most Eastern cities madness had an immunity from restraint; Barnes supposes a fit came on while he was there."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom explains the adjective as a precaution against ambiguity, since the word for spirit is used of an Angel, the air, the soul and the Holy Ghost, and grounds the name in the thing; Theophylact finds the tenant miserable on his own terms, since to come out of a man the devil counts his own perdition."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke narrows the uncleanness to a particular vice and warns that giving way to the first attacks of such a spirit lets him take full possession of the whole soul, and agrees with Barnes that the man must have had lucid intervals."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede finds it fitting that the first miracle should be against the author of death, since by the envy of the devil death first entered the world; Pseudo-Jerome finds the fitness in place and day instead, reading Capernaum as the town of consolation and the sabbath as rest."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unclean spirit",
-   "in the synagogue",
-   "knowledge without charity",
-   "demons tremble"
+  "debates": [
+   {
+    "question": "How did a demoniac come to be in the synagogue?",
+    "positions": "Clarke and Barnes both suppose lucid intervals, without which he would not have been admitted, Barnes adding that a fit came on while he was there; Ellicott answers from Eastern custom, that madness had an immunity from restraint and the demoniacs mingled at will with the worshippers; Henry alone suspects design, that the man was brought or came to confront Christ."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Calls the whole subject of demonology difficult though no more so than the problem of the devil, and wonders aloud whether the confirmed criminals of his own day are not under a like power, the only cure being conversion."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Reads the setting allegorically, Capernaum as the town of consolation and the sabbath as rest, so that the man is healed by rest and consolation and the place and time agree with his healing."
+   }
+  ],
+  "themes": [
+   "a man with an unclean spirit",
+   "in their synagogue",
+   "the medicine against the author of death",
+   "the town of consolation",
+   "possession rather than affliction"
+  ],
+  "range": "23",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "24": {
@@ -1066,81 +1364,91 @@
   ],
   "schools": [
    {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry thinks the title Jesus of Nazareth was chosen to fix low thoughts in the people, and says that those who have only a notion that he is the holy One of God go no further than the devil does."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom reads the second title closely, that he is called holy not as one of many but by the article shown to be the One; Theophylact finds the confession useful, so that the bystanders might know from how great an evil the man was freed and believe on account of the miracle."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'What have we to do with thee' (Hebrew idiom); 'the Holy One of God' (cf. Psalm 16:10) — a forced confession from demons who knew his power and dreaded destruction."
+    "summary": "Ellicott traces the name to a Messianic reading of an older text and notes that it occurs only here, in the parallel and in the better manuscripts of the Fourth Gospel; Barnes explains it by three things and reads the plural as one spirit speaking for a league of others; Robertson notes the textual choice between I know and we know; Lightfoot opens the possibility that the us means the Galileans."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin reads the confession as a trick by which the devil insinuates a suspicion of some secret understanding with Christ, and says that in flattering him he indirectly withdraws himself from his power; Gill has the spirit pleading for the rest of his kind as well as himself."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Knowledge without faith — the demon confesses the One Holy yet without certain knowledge, that the miracle might lead others to believe (Theophylact)."
+    "summary": "Augustine explains what such knowledge is worth, that there was in them knowledge but not charity, since they feared their punishment and did not love the righteousness, and that he was known to them in terror rather than as eternal Life; Bede reconciles the tearing with the other account of a man unhurt."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke settles the idiom philologically from an older Hebrew quarrel and its Greek rendering, and concludes that the demoniac spoke in Hebrew or the dialect then common in Judea."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the demon s confession welcome?",
+    "positions": "Calvin reads it as a trick meant to suggest a secret understanding between Christ and the devil, which is why it is rebuked; Pseudo-Chrysostom generalises the refusal into a precept that we should not believe devils however they may proclaim the truth; Theophylact takes the opposite line and finds the confession useful, since it let the bystanders see how great an evil the man was freed from."
+   },
+   {
+    "question": "Who are the us of let us alone?",
+    "positions": "Barnes takes one spirit to speak in the name of others leagued together in evil, each knowing that the punishment of one would be shared; Robertson reads a double personality, the man speaking for the demon and for himself; Lightfoot opens a third possibility, that the us may be the Galileans in the synagogue, since the masters taught that Galilee should be laid waste in the generation when the Son of David came."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Suggests that the spirit exploited a rabbinic expectation that Galilee would be laid waste when the Son of David came, so as to frighten the Galileans out of receiving Christ."
+   },
+   {
+    "voice": "Augustine",
+    "view": "Distinguishes the devils knowledge from the angels, holding that he was known to them not as eternal Life but by some temporal effects of his power, and in terror."
+   }
+  ],
   "themes": [
-   "let us alone",
+   "what have we to do with thee",
    "art thou come to destroy us",
    "the Holy One of God",
-   "forced confession"
+   "knowledge without charity",
+   "a confession that is refused"
   ],
+  "range": "24",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
   }
  },
  "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ rebukes the spirit, not the man (proving a real being, not mere disease); 'Hold thy peace' = 'be muzzled/gagged' (the storm-stilling verb, Mark 4:39)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ refuses the demon's testimony lest his glory be soiled or collusion suspected — we must not believe devils though they speak truth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus rebuked him",
-   "hold thy peace",
-   "be muzzled",
-   "refusing demonic testimony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -1154,34 +1462,67 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The demon convulses the man and screeches but does no lasting harm (Mark's 'torn' reconciled with Luke's 'hurt him not'); a last act of impotent malice (Barnes)."
+    "summary": "Barnes observes that Jesus addressed the spirit and never the man, and argues from the conversation that this was no mere disease or delirium but a being that reasoned, cavilled, felt and resisted; Ellicott gives the command as be still or be gagged and notes the same verb in the calming of the sea; Robertson insists on the animal image of muzzling and canvasses the renderings of several translators."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the violent departure shows the devil's rage, yet the man is restored to perfect health; deliverance comes with a grievous tumult (Henry)."
+    "summary": "Gill reads the command as a refusal of an unwanted testimony, lest a confederacy be suspected; Calvin agrees that both accounts mean to show a violent departure but will not make the escape quite clean, allowing some feeling of pain before the man was restored to perfect health."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the principle in full, that Christ would suffer the spirits to speak neither against him nor for him, needing no such testimony; Clarke draws a pastoral moral, that a spirit of this cast yields only to the sovereign power of the Son of God and that watchings and fastings considered in themselves do little good, and turns the convulsion into counsel for the tempted."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the spirit tore him",
-   "cried with a loud voice",
-   "came out",
-   "impotent malice"
+  "debates": [
+   {
+    "question": "Was the man hurt in the departure?",
+    "positions": "Gill states the problem and answers it, that no limb was torn and no wound made since the other Gospel says he hurt him not, only that he was shaken and thrown down in convulsions; Ellicott simply records the added clause; Calvin agrees the two writers mean the same but declines to say the attack was in no degree attended by injury or some feeling of pain, holding only that the man was afterwards restored to perfect health."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "view": "Uses the fact that Jesus conversed with the spirit and not the man as proof that evil spirits exist and had taken possession, asking how the Son of God could hold converse with disease or delirium."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Turns the last convulsion into counsel for the tempted, that when the propensities of the flesh are most violent in someone determined to serve God it is often a proof that these are the last efforts of the impure spirit, who rages because his time is short."
+   }
+  ],
+  "themes": [
+   "hold thy peace and come out of him",
+   "be muzzled",
+   "tearing him and crying with a loud voice",
+   "he hurt him not",
+   "obedience that does all the ill it can"
+  ],
+  "range": "25-26",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.68
+   }
   }
  },
  "27": {
@@ -1197,69 +1538,76 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The miracle confirms the teaching — authority in word (v.22) shown in command over demons; a fresh, original teaching unlike the rabbis' droning (Robertson)."
+    "summary": "Robertson reads the crowd s words as deliberately incoherent, quoting Swete that Mark gives the excited remarks in their natural form, and dwells on the freshness of the teaching and the astonishing obedience of the demons; Ellicott notes a variant that yields a different structure and insists that doctrine here means the teaching as a whole, manner and substance together; Barnes says the novelty was the casting out, done by a word and by his own authority."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports a vast diversity in the manuscripts on the verse, says he has added a conjunction from the Syriac, and sets the crowd s inference plainly, that other men are subject to unclean spirits while this person subjects them to himself; he then lists three reasons the news travelled and turns on the adverb that carried it."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: they call it 'doctrine' in admiration, not reproach — but err in stopping at astonishment instead of advancing to faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they were all amazed",
-   "what new doctrine",
-   "authority over demons",
-   "astonishment vs faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Calvin defends the crowd s word against any charge of disparagement, holding that they call it doctrine as an acknowledgment of something unusual, and locates their fault only in remaining at hesitation; Gill notes that the astonishment was now at the miracle as well as the doctrine."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Christ's fame spread by word of mouth through all Galilee; the miracle was great, benevolent, and public (Clarke); Mark's frequent 'immediately' drives the pace."
+    "summary": "Bede connects the two halves of the day, that seeing the power of the miracle they wonder at the newness of the doctrine and are roused to search into what they had heard by what they had seen; the Gloss supplies the mechanism of rumour, that what men wonder at they soon divulge."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his fame spread",
-   "throughout Galilee",
-   "public miracle",
-   "'immediately'"
+  "debates": [
+   {
+    "question": "Is Mark s constant immediately significant or a verbal tic?",
+    "positions": "Clarke says the word occurs more frequently in this evangelist than in any other writer of the new covenant, that it is very often superfluous, and that it may be omitted in translation without prejudice to the sense, being used much as older English writers used forsooth; Ellicott counts the same word and draws the opposite conclusion, that its frequent recurrence should be noticed as the reader proceeds."
+   },
+   {
+    "question": "What exactly struck the crowd as new?",
+    "positions": "Barnes says the casting out, done by a word and on his own authority; Clarke puts the doctrine and the miracle together and lets the crowd draw the inference; Robertson makes the teaching itself the novelty in a synagogue of droned rabbinical rules, while calling the demons obedience the most astonishing thing of all; Calvin keeps it in the doctrine and reads the word as acknowledgment."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Contrasts the scene with the magical formulae of Jewish exorcists and recalls that Simon Magus could not understand how Simon Peter did his miracles without some secret trick and offered to buy it."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Dismisses the evangelist s favourite adverb as very often superfluous and comparable to the way older English writers used forsooth."
+   }
+  ],
+  "themes": [
+   "what new doctrine is this",
+   "with authority commandeth he even the unclean spirits",
+   "and they do obey him",
+   "his fame spread abroad",
+   "out of the abundance of the heart"
+  ],
+  "range": "27-28",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.71
+   }
   }
  },
  "29": {
@@ -1279,107 +1627,87 @@
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes the move from synagogue to house as evidence that Matthew did not observe the order of time, and thinks the touch deliberate since the will alone would have sufficed; Gill calls it a great fever, dangerous in an old person, and is careful that the hand was taken not to feel her pulse as physicians do but to restore her."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "An eyewitness scene (Peter behind Mark) in Peter's own house; the instant, complete cure of his mother-in-law by Christ's touch (1 Corinthians 9:5)."
+    "summary": "Robertson fills in the household and its sources, that Peter was married before he followed Jesus and that Mark heard the story from Peter about his own house, and sets the three descriptions of the fever side by side; Ellicott notes the characteristic adverb again; Barnes refers the account to the parallels."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the cure was complete — she rose strengthened to minister; the healing fits us for service."
+    "summary": "Henry draws the manners out of it, that Christ did not sit still once his name was up, that he conversed familiarly with poor fishermen and did not think it below him, and that the hand which healed her strengthened her, the cure being ordered to service."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Calvin: a private, familiar illustration of grace; a single touch instantly removed a violent disease, occasioning many further miracles."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter's house",
-   "mother-in-law healed",
-   "instant complete cure",
-   "healed to minister"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Bede sets the cure third in an order matching the order of the fall, notes that the other Gospel has them beseech him, concludes that the Saviour heals sometimes when asked and sometimes unasked, and takes the sabbath healing as proof that he is above the Law; Pseudo-Jerome reads the fever as intemperance cured by the hand of discipline."
+   },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the fever was 'great,' violent and life-threatening to an aged woman (Luke); the household's appeal to Christ models the recourse of faith in distress."
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact supplies the ordinary occasion, that he retired about evening as the custom was to eat in his disciples house, and reads the fever as anger and her ministering as a promise to those who serve the Saints; Pseudo-Chrysostom has the disciples pray at once rather than waiting for the evening."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sick of a fever",
-   "they tell him of her",
-   "gravity of the disease",
-   "appeal of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Christ took her hand not to diagnose but to restore; the instant, complete cure (no convalescence) left her strong to minister — healing for service (Henry)."
+    "question": "Was Jesus asked to heal her?",
+    "positions": "Mark reports only that they tell him of her; Bede notes that Luke has them beseech him and concludes that the Saviour sometimes heals after being asked and sometimes of his own accord; Pseudo-Chrysostom has the disciples, knowing they would benefit, pray without waiting for the evening."
+   },
+   {
+    "question": "Does Matthew place this episode correctly?",
+    "positions": "Calvin says there is reason to conjecture that he does not relate it in its proper order, since Mark expressly gives only four disciples and has Jesus go straight from the synagogue to the house; the other witnesses simply follow Mark s sequence without raising the question."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "view": "Insists that the taking of the hand was neither diagnosis nor mere courtesy, since it was not to feel her pulse and judge the disorder as physicians do."
+   },
+   {
+    "voice": "Matthew Henry",
+    "view": "Rebukes the idea that a man may rest on his reputation, saying Christ did not sit still as some think they may lie in bed when their name is up."
+   },
+   {
+    "voice": "Theophylact",
+    "view": "Reads the fever as anger, since a man in the unruliness of his anger stretches out his hands to do hurt, and if reason restrains them he will arise and serve reason."
+   }
+  ],
   "themes": [
-   "took her by the hand",
+   "Simon s wife s mother lay sick of a fever",
+   "he took her by the hand and lifted her up",
    "the fever left her",
-   "she ministered",
-   "healed for service"
+   "she ministered unto them",
+   "healed in order to serve"
   ],
+  "range": "29-31",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "32": {
@@ -1396,77 +1724,84 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "At sunset (sabbath ended) the people bring their sick in a steady stream; Mark's vivid detail, Luke adding Christ touched each one."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The waiting till evening shows sabbath scruple; the setting sun figures Christ's passion and the grace then extended to the Gentiles (Bede)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "at even, sun set",
-   "sabbath ended",
-   "brought all the diseased",
-   "evening throng"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's vivid detail (from Peter's eyes): the whole city gathered at Peter's door, Christ healing in the sunset glow."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill gives the reckoning that the sabbath ran from sunset to sunset, so that when the last of the two evening days had come and the sun was down the restraint was over."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'a fair prospect' — yet these blossoms would die without fruit, for the crowds came for healing, not faith."
+    "prevalence": "single",
+    "summary": "Wesley gives the same reckoning and then looks past the scene to ask what a fair prospect was here, and who could have imagined that all these blossoms would die away without fruit."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact makes the motive explicit, that the multitude thought it not lawful to heal on that day and therefore waited for the evening."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson watches the mechanics, the tense showing a steady stream and the parallel adding that Jesus laid his hand on every one of them as they passed by in grateful procession, and thinks the door detail shows Mark seeing with Peter s eyes; Ellicott names the two features peculiar to Mark here, the whole city at the door and the omission of Matthew s prophecy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry allows the scruple about the sabbath without approving it, noting that Christ had proved such healing lawful but that those who stumbled were welcome at another time, sees the crowd as beggars gathered for a dole, and takes the crowded doorway as a pattern for the hours after public worship, his word being a salve for every sore."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Pseudo-Jerome reads the door itself, making the door of the kingdom repentance and faith, which works health for various diseases, since divers are the vices with which the city of this world is sick."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all the city at the door",
-   "Peter's eyewitness detail",
-   "the throng",
-   "blossoms without fruit"
+  "debates": [
+   {
+    "question": "Why did the crowd wait for sunset?",
+    "positions": "Gill and Wesley answer from the calendar, that the sabbath was reckoned from sunset to sunset and the restraint simply expired; Theophylact answers from conviction, that they thought it unlawful to heal on that day; Henry treats it as a scruple that Christ had already refuted but did not press, since those who stumbled at it were welcome afterwards."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Imagines Peter watching with pride and gratitude as Jesus stood in the doorway healing the crowds in the glory of that sunset, a scene he loved to tell afterwards."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Turns the crowded door into a lament over what became of it, asking who could then have imagined that all these blossoms would die away without fruit."
+   }
+  ],
+  "themes": [
+   "at even when the sun did set",
+   "all the city was gathered together at the door",
+   "divers diseases",
+   "a steady stream of the sick",
+   "blossoms that died without fruit"
+  ],
+  "range": "32-33",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
   }
  },
  "34": {
@@ -1481,43 +1816,90 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Christ healed all the many brought, of every disease, and silenced the demons who knew him (Luke 4:41) — their testimony would not help his cause (Robertson)."
+    "summary": "Theophylact takes the word many strictly and makes it a limit, since there were faithless persons who could not be cured at all, so that he healed all who had faith; Pseudo-Chrysostom takes it loosely and makes it a total, holding that in the Scripture mode of expression many means all, and explains the difference from the other Gospel by Mark s habit of abbreviating."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede reads the hour rather than the number, taking the setting sun for the passion and finding it significant that more were healed as the sun went down, since he who taught a few Jews in the flesh has transmitted faith and health to all the Gentiles; and he presses the devils partial knowledge into an explanation of the crucifixion; Pseudo-Augustine makes the silencing a lesson, that we are not to believe devils even when they say true."
    },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin gives two reasons for the silencing and prefers the second, that Christ refused as heralds of his divinity those whose praise could only soil and injure his character, the prince of death being in irreconcilable enmity with the Author of eternal life."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Calvin: two reasons for silence — the time of full revelation not come, and the demons' praise could only soil his honour; Wesley refutes the 'mere disease' theory."
+    "summary": "Barnes gives the reason of timing, that the hour had not come when Christ wished his name promulgated; Robertson notes the imperfect of continued refusal and that testimony from such a source was not calculated to help the cause."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports that the clause naming the Christ is added by several ancient and respectable manuscripts but appears to be only a gloss; Wesley uses the verse to demolish the theory that the possessed were merely diseased persons."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "healed many",
-   "cast out devils",
-   "silenced the demons",
-   "real possession"
+  "debates": [
+   {
+    "question": "Does many mean many or all?",
+    "positions": "Theophylact reads it strictly and makes it a real limit, since some were too faithless to be cured and only those with faith were healed; Pseudo-Chrysostom reads it as a Scripture idiom in which many stands for all, and explains the apparent difference from the other Gospel by Mark s brevity."
+   },
+   {
+    "question": "Why were the demons silenced?",
+    "positions": "Barnes and Calvin both give the reason of timing, that the hour for promulgating the name had not come; Calvin prefers a stronger reason, that such heralds could only soil his character; Pseudo-Augustine makes it a lesson to the reader, that devils mingle truth with falsehood once they are believed; Robertson says only that such testimony would not have helped the cause."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "view": "Turns the verse against a medical theory of possession, that if the demoniacs were merely diseased persons then Christ suffered not the diseases to say that they knew him."
+   },
+   {
+    "voice": "Bede",
+    "view": "Argues that the devil urged on the crucifixion not because he doubted that Jesus was the Son of God, having suspected it from the miracles, but because he did not foresee that he himself would be condemned by that death."
+   }
+  ],
+  "themes": [
+   "he healed many",
+   "he suffered not the devils to speak",
+   "because they knew him",
+   "many that is all",
+   "truth mingled with falsehood"
+  ],
+  "range": "34",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.95
+   }
   }
  },
  "35": {
   "voices": [
    "Theophylact",
    "Pseudo-Chrysostom",
-   "Augustine of Hippo",
+   "Augustine",
    "Bede",
    "John Gill",
    "Albert Barnes",
@@ -1530,116 +1912,81 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ's early, solitary prayer (before dawn); Barnes' meditation — secret morning prayer is vital, else piety withers; the retreat guards him from the crowd's snare."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "He prayed not from need but 'by way of an economy,' as our model — attributing all good to God (Theophylact, Pseudo-Chrysostom)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: as man he prayed though as God prayed to; alone with the Father after public labour, a pattern of closet prayer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "before day he prayed",
-   "solitary place",
-   "secret morning prayer",
-   "Christ's example"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples 'hunted him out' (perfective verb) to his place of prayer; a well-meant pursuit (Luke: 'stayed him') that misread his purpose of withdrawal."
+    "summary": "Barnes reconciles the hour with the other account and then turns the verse into a rule of secret prayer pressed hard on the reader; Robertson fixes the watch, reads the tense as continuous prayer, and collects the modern guesses about what he was withdrawing from; Ellicott notes that the time is peculiar to Mark and that prayer followed a day of exhausting labour, and that Mark alone names who followed while Luke alone gives the motive."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: they followed eagerly, having begun to taste the good word — the fresh zeal of new converts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Simon followed after him",
-   "hunted him out",
-   "eager pursuit",
-   "misreading his purpose"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The disciples urge Christ back to the seeking crowds; a report mixing pride in his popularity with partiality for their own city (Henry); the seekers' motives were mixed (Clarke)."
+    "summary": "Clarke gives the word the whole space of three hours, denies any need in him since in him dwelt all the fullness of the Godhead bodily, and takes everything Christ did as either our pattern or our sacrifice; he also reads the pursuit warmly and sorts the seekers by motive."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom says it was not that he required prayer, since it was he who received the prayers of men, but that he did it by way of an economy as a model of good work; Theophylact draws the lesson from the solitude, that we are not to act for appearance nor publish our good openly."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill adds the calendar, that this was the morrow after the sabbath, and that he rose in spite of the fatigue of the day before."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede reads the dawn typologically, that if the setting sun meant the death of the Saviour the returning dawn may mean his resurrection."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all men seek for thee",
-   "the disciples' report",
-   "popularity",
-   "mixed motives"
+  "debates": [
+   {
+    "question": "What was Jesus withdrawing from?",
+    "positions": "Robertson collects three modern answers without settling them, a flight from the unexpected reality his calling had brought him, a retreat before sudden popularity lest he be ensnared into the ways of ease, and a deliberate departure with a preaching tour planned and opposition feared; Ellicott reads it simply as rest and prayer after exhausting labour; Theophylact reads it as a lesson against acting for appearance."
+   },
+   {
+    "question": "Did Christ need to pray?",
+    "positions": "Clarke denies it outright, since in him dwelt all the fullness of the Godhead bodily, and makes the prayer a pattern; Pseudo-Chrysostom says the same, that he who received the prayers of men did not require prayer but became the model of good work; Barnes argues the opposite way round, that if the Saviour who was perfectly holy prayed thus, the duty presses so much the more upon us."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "view": "Makes the verse a rule of life and a reproach, holding that the religious enjoyment of a whole day will be according to the state of the heart in the morning, and that those who spend the precious hours of the morning in sleep will find all going wrong."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Reads the verb of the disciples search as belonging to the hunt or the chase, so that Peter and the others hunted him out, and quotes the judgement that Simon meant well since the Master seemed to be losing precious opportunities."
+   }
+  ],
+  "themes": [
+   "rising up a great while before day",
+   "a solitary place, and there prayed",
+   "they followed after him",
+   "all men seek for thee",
+   "prayer after a day of labour"
+  ],
+  "range": "35-37",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
   }
  },
  "38": {
@@ -1656,34 +2003,72 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ leaves the Capernaum crowds for the 'village cities' to preach; the preacher must go to the people (Clarke); 'came forth' refers to his mission (Luke: 'sent')."
+    "summary": "Ellicott says the compound word occurs here only and seems coined for lake-shore places more than villages and hardly cities; Robertson finds the decision surprising, that Jesus should leave the eager throngs of Capernaum for country towns without walls; Lightfoot goes behind the Greek to the rabbinic distinction, that in a city anything is to be had and in a town it is not; Barnes reads the logic as a refusal of concentration."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: an earnest desire to fulfil his office — he must travel throughout Judea to rouse all to hear the Gospel, by the Father's call."
+    "summary": "Gill defines the word the same way, towns neither villages nor cities but between both, and notes that the places meant had synagogues; Calvin raises the pastoral question whether an itinerant or a settled ministry is better and answers for the particular case."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke records the variant that reads neighbouring villages and cities, and turns the verse into a standing rule that the preacher must go to the towns since they will not come to him."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact gives the thought a figure, that it was not right to shut up doctrine in one place but to throw out his rays everywhere, and that he passes on to those more in need."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "let us go to the next towns",
-   "that I may preach",
-   "for therefore came I forth",
-   "preaching over popularity"
+  "debates": [
+   {
+    "question": "Is an itinerant ministry better than a settled one?",
+    "positions": "Calvin asks the question directly, whether ministers should run here and there giving only a slight and partial taste in each place or remain and instruct perfectly the hearers they have obtained, and answers only for this case, that the design was agreeable to the call of the Father since Christ had to traverse Judea within a short period; Clarke will not qualify it and makes it a standing rule binding every minister; Barnes and Theophylact read it as a refusal to be confined to one town."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Supplies the rabbinic rule that a man cannot compel his wife to move from town to city nor from city to town, with the reason that in a city anything is to be had and in a town it is not."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Turns the verse into a charge on the ministry, that no minister should think he has delivered his own soul until he has made an offer of salvation to every city and village within his reach."
+   }
+  ],
+  "themes": [
+   "let us go into the next towns",
+   "village cities",
+   "that I may preach there also",
+   "the preacher must go to them",
+   "rays thrown out everywhere"
+  ],
+  "range": "38",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
   }
  },
  "39": {
@@ -1698,40 +2083,78 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A summary of the Galilean tour — preaching in the synagogues and casting out demons; Clarke: unwearied, persevering diligence, a pattern for ministers."
+    "summary": "Ellicott allows that the clause about coming forth might refer simply to leaving Capernaum and that only the other Gospel s wording connects it with the mission as a whole, and adds honestly that the disciples at this stage would have understood a coming forth from Nazareth rather than from the bosom of the Father; Barnes takes the larger sense without hesitation; Robertson calls this the first tour of Galilee and observes flatly that we are told little about it."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom makes the two reports complementary, finding in Mark s wording the mystery of the emptying and the sovereignty of the divine nature since he came willingly, while the other form proclaims the Dispensation and the good pleasure of the Father, and explains the dismissal of the crowd charitably; Theophylact notes that teaching and casting out are reported together and concludes that the teaching would not have been believed without the miracles."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Henry: 'Christ's doctrine is Satan's destruction' — preaching and exorcism go together, the gospel overthrowing the devil's kingdom."
+    "summary": "Augustine identifies what belongs inside this tour, holding that the sermon delivered on the mount falls within it, Mark having passed it over entirely and repeated only some of its sentences in scattered places and out of order."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the tense as continuance, that he kept preaching and never slackened his pace since immortal souls were perishing for lack of knowledge, and makes the diligence a charge upon the ministry of his own day."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "preached throughout Galilee",
-   "cast out devils",
-   "persevering diligence",
-   "word and power"
+  "debates": [
+   {
+    "question": "What does for therefore came I forth mean?",
+    "positions": "Ellicott allows that in this form it might mean no more than leaving Capernaum, and that the disciples would have taken it as a coming forth from his home at Nazareth rather than from the bosom of the Father; Barnes takes it at once as coming forth from God; Pseudo-Chrysostom treats Mark s wording and the parallel as two sides of one thing, the willingness of the Son and the good pleasure of the Father."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "view": "Places the sermon on the mount inside this Galilean preaching tour, noting that Mark passed it over entirely and repeated only scattered sentences of it spoken at other times."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Records the gap in the record itself, that this was the first tour of Galilee and that we are told little about so great a preaching tour."
+   }
+  ],
+  "themes": [
+   "he preached in their synagogues",
+   "throughout all Galilee",
+   "for therefore came I forth",
+   "teaching joined to casting out",
+   "a tour we are told little about"
+  ],
+  "range": "39",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.77
+   }
   }
  },
  "40": {
   "voices": [
    "Bede",
-   "Augustine of Hippo",
+   "Augustine",
    "Theophylact",
    "Chrysostom",
    "Pseudo-Jerome",
@@ -1746,39 +2169,82 @@
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The leper's faith and submission ('if thou wilt, thou canst'); Christ touches him as Lord of the Law, undefiled, healing by grace above the Law (Bede, Chrysostom)."
+    "summary": "Bede takes the kneeling as at once lowliness and shame, meant to show that every man should blush for the stains of his life, and observes that the shame did not stifle confession, the man showing his wound and begging for medicine, and that he doubted of the will not as disbelieving the compassion but as not presuming; Augustine infers that this is the same man Matthew has cleansed after the sermon on the mount."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: how to apply to Christ — humility, firm belief of his power, submission to his will; faith draws out his power into act."
+    "summary": "Henry sorts the approach into humility, a firm belief of the power and submission to the will, makes the second the practical point, and takes the compassion as the key to the whole cure, since Christ s reasons are fetched from within himself and our misery makes us the objects of his mercy."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks Mark the best of the three to preach this from because he is the most circumstantial, and lays the scene out in steps on both sides; Barnes and Clarke both treat the compassion as the source of the cure."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the kneeling entreaty, the touch evidencing power already put forth; only God works miracles, yet Christ does it by his own will — therefore Divine."
+    "summary": "Robertson notes the kneeling as a picturesque detail some manuscripts omit and that the word for compassion belongs to Mark alone here; Barnes refers the reader to the parallel for the legal position of the leper."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact hears the divinity implied in the phrasing, since the man did not say if thou wilt, pray unto God, but if thou wilt."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill guards the compassion from misconstruction, that it was moved by the deplorable case and not by any desire of popular applause."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "if thou wilt thou canst",
-   "the leper's faith",
-   "Christ touches him",
-   "Lord over the Law"
+  "debates": [
+   {
+    "question": "Was the leper s if a doubt?",
+    "positions": "Bede says he doubted of the will, not as disbelieving the Lord s compassion but as conscious of his own filth he did not presume; Henry says the reference to the will implied no doubt of Christ s readiness to help the distressed but the modesty that became a poor petitioner, and adds that the address is not in the form of a prayer yet was answered as a request; Theophylact hears no doubt at all but a confession of divinity."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Recommends Mark over the other two evangelists for preaching this cure, on the ground that his account is the most circumstantial."
+   },
+   {
+    "voice": "Matthew Henry",
+    "view": "Takes the clause about compassion, which Mark alone supplies, as showing that Christ s power is employed by his pity and that our misery is what makes us objects of his mercy."
+   }
+  ],
+  "themes": [
+   "there came a leper to him",
+   "kneeling down to him",
+   "if thou wilt, thou canst make me clean",
+   "moved with compassion",
+   "shame that did not stifle confession"
+  ],
+  "range": "40",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "41": {
@@ -1788,64 +2254,78 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom answers the difficulty of the touch from the Law, which made whoever touched a leper unclean till evening, and concludes that such uncleanness is natural, that the Law was laid down on account of mere men, and that Christ gives health not as a servant but as the Lord, confirming rather than correcting the opinion the leper held of him."
+   },
+   {
+    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Mark alone records Christ 'moved with compassion' (splanchnistheis) — not for applause but from genuine pity; the compassion, touch, and sovereign word together cleanse the leper."
+    "summary": "Bede gives the shorter reason for the touch, that he could not be defiled who frees others from pollution, and takes a side in the reading of the words, refusing the Latin rendering that makes them one sentence and insisting that the will and the command are separate, since there is no interval between the work of God and the command; Pseudo-Jerome leaves the history for the figure of the first man s sin."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Barnes reads the touch evidentially, that since the law counted it unclean the touching itself proved the healing power had already gone out, and draws from the words the plainest inference, that none but God can work a miracle and this was worked by an exertion of his own will."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry keeps the figure of the royal touch, that when the queen toucheth for the evil she saith I touch and God heals, whereas Christ toucheth and healeth too."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "moved with compassion",
-   "put forth his hand",
-   "I will, be thou clean",
-   "the touch that cleanses"
+  "debates": [
+   {
+    "question": "Why did Jesus touch a leper at all?",
+    "positions": "Chrysostom answers from the Law and makes the touch a demonstration that Christ is Lord of it and heals as Lord rather than servant; Bede says only that he could not be defiled who frees others from pollution; Barnes makes it evidence that the man was already clean before the touch; Henry makes it tenderness."
+   },
+   {
+    "question": "How should I will, be thou clean be read?",
+    "positions": "Bede rejects the reading of many of the Latins, who take it as a single sentence meaning I wish to cleanse thee, and insists that Christ says I will separately and then commands be thou clean, since the work is in the command; the other witnesses read the two clauses as answering the petition point for point, the man having said if thou wilt, thou canst."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Sets the royal touch for the king s evil beside this one, since the queen says I touch and God heals, while Christ toucheth and healeth too."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Makes leprosy the sin of the first man, beginning from the head when he desired the kingdom of the world, and covetousness the root of it, as when Gehazi in an avaricious pursuit was covered with leprosy."
+   }
+  ],
+  "themes": [
+   "he put forth his hand and touched him",
+   "I will, be thou clean",
+   "immediately the leprosy departed",
+   "the work is in the command",
+   "Lord of the Law"
+  ],
+  "range": "41-42",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the leprosy departed instantly at Christ's word — no interval, the work being in the command (Bede; Psalm 148:5); leprosy figuring sin, its cleansing the soul's."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 5.84
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "immediately cleansed",
-   "the leprosy departed",
-   "the word is the deed",
-   "cleansing of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "43": {
@@ -1853,81 +2333,89 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's strong word 'straitly charged' (embrimēsamenos, of a horse's snorting) marks Christ's powerful emotion before sin's symbol; the charge to report to the priest and avoid tumult (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill (with Henry): the stern charge may also warn against the sin that occasioned the leprosy (Miriam, Gehazi, Uzziah) — 'sin no more' (John 5:14)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "straitly charged",
-   "sent him away",
-   "Christ's emotion",
-   "sin no more"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: 'a testimony unto them' = to the priests, leaving them inexcusable if they reject Christ, who honoured every point of the Law; the silence prevents slander before the man arrives (Wesley)."
-   },
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The priest's verdict was needed to certify the cure officially (Robertson); Christ avoids tumult and worldly honour (Chrysostom)."
+    "summary": "Robertson says the word for the charge belongs to Mark alone here, that it is used of the snorting of a horse, and that it expresses powerful emotion as Jesus stood face to face with leprosy; Barnes gives the legal reason for the silence and reads the testimony as given to the people rather than the priest."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supposes the man was charged with the sin that had caused the disease and sets out the rabbinic list of the things leprosy was said to come for; Calvin rejects the reading that makes the testimony a statute delivered to Israel and refers the pronoun to the priests, so that the miracle would convict them of ingratitude and take away all occasion of slander."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the same legal reason as Barnes almost identically, that the priests seeing him and pronouncing him clean was such a proof that they durst never deny the cure; Clarke records that the verse is wanting in two copies of the Itala."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede gives a doctrinal reason for the silence, that the priest might understand the leper was healed not by the Law but by a grace above it, and answers the objection that the Lord seems to approve a sacrifice the Church rejects by observing that he had not yet offered his own holocaust."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom hears in the refusal that Christ required no such preaching, and teaches from it that we are not to seek worldly honour as the reward of our works, adding that the man was sent to the priest so as not to be cast out of the temple; Theophylact notes that the leper disclosed the benefit in spite of the prohibition."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why was the healed man told to say nothing?",
+    "positions": "Barnes and Wesley give a legal reason in almost the same words, that the story running ahead might prejudice the priest against declaring a cure wrought by Jesus to be thorough; Bede gives a doctrinal reason, that the priest should see the healing came by grace above the Law; Chrysostom makes it a lesson about not seeking worldly honour; Calvin gives a reason of ministry, that the demand for miracles left no room for doctrine; Robertson says it was to allay excitement and avoid needless opposition."
+   },
+   {
+    "question": "To whom is the testimony given?",
+    "positions": "Calvin refers the pronoun to the priests and rejects the alternative that would make it a law or statute given to Israel, so that the miracle convicts the priests if they refuse Christ; Barnes reads the same words as a testimony not to the priest but to the people, who would have the priest s decisive verdict as evidence of a real cure."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "view": "Sets out the rabbinic list of the sins for which leprosy was held to come, a proud look, a lying tongue and hands that shed innocent blood among them, each with its scriptural instance."
+   },
+   {
+    "voice": "Bede",
+    "view": "Defends the command to offer the Mosaic sacrifice against the objection that the Church rejects it, on the ground that Christ had not yet offered his own holocaust and that significative sacrifices could not be withdrawn before the thing signified was confirmed."
+   }
+  ],
   "themes": [
-   "say nothing",
-   "show thyself to the priest",
-   "Moses commanded",
+   "he straitly charged him",
+   "see thou say nothing to any man",
+   "shew thyself to the priest",
+   "offer for thy cleansing",
    "a testimony unto them"
   ],
+  "range": "43-44",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
   }
  },
  "45": {
@@ -1944,34 +2432,76 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The leper's disobedient publicity drove Christ from the cities to desert places, yet crowds sought him from every quarter — well-meant but disregarding his charge (Barnes)."
+    "summary": "Barnes says the man was so deeply affected and so rejoiced that he followed the natural dictates of his feelings rather than the command, and denies that the clause about the city means any natural inability, only difficulty or impropriety; Robertson turns the disobedience into an observation about human nature and reads the last verb as continuous; Ellicott notes that Mark alone makes the healed man the agent of the report and gives the pressure of the multitude more vividly."
    },
    {
-    "school": "latin-fathers",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Christ retires to the desert, loving a quiet life; manifested to those who quit the love of praise and follow him into solitude (Bede, Pseudo-Jerome)."
+    "summary": "Clarke supposes he published not only his own healing but all he had heard of the miraculous works, names the fear of the secular government and the Jewish rulers, and disputes the common opinion that few of these multitudes were saved; Wesley notes that this was the very inconvenience the command to silence was meant to prevent."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact alone defends the disobedience outright, on the ground that the person benefited ought to be grateful and return thanks even though his benefactor requires it not."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin supplies the fullest account of what the publicity cost, that Christ withdrew because he could not satisfy the people without overwhelming his doctrine by a superfluity of miracles; Gill adds that the Jewish canons did allow a leper into a synagogue provided certain rules were observed."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "published it much",
-   "could not enter openly",
-   "retired to desert places",
-   "crowds from every quarter"
+  "debates": [
+   {
+    "question": "Was the leper wrong to publish the cure?",
+    "positions": "Barnes says he followed the natural dictates of his feelings rather than the command, and treats it as disobedience however warm; Theophylact defends him outright, holding that the person benefited ought to be grateful and return thanks even though his benefactor requires it not; Clarke neither blames nor defends but supposes he published everything he had heard, thinking he could never speak too much nor too well of him."
+   },
+   {
+    "question": "In what sense could Jesus no more openly enter the city?",
+    "positions": "Barnes denies any natural inability or physical obstacle and reads only difficulty or impropriety, probably the crowds or the risk of provoking the civil rulers; Clarke names the fear more sharply as the jealousy of the secular government and the envy and malice of the Jewish rulers; Calvin locates the difficulty in the doctrine rather than the danger, that the appetite for miracles crowded out teaching."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Observes that one of the best ways to spread a thing is to tell people not to tell, and adds drily that some preachers are not so disturbed by the onrush of crowds."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Disputes the common opinion that few of the multitudes who came from every quarter were saved, holding instead that thousands were brought to God by that ministry though only the constant attendants are named."
+   }
+  ],
+  "themes": [
+   "he went out and began to publish it much",
+   "blaze abroad the matter",
+   "could no more openly enter into the city",
+   "he was without in desert places",
+   "they came to him from every quarter"
+  ],
+  "range": "45",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  }
 }
