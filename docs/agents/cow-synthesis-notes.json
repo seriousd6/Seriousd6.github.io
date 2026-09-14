@@ -84791,6 +84791,31 @@
       "book": "_corpus",
       "chapter": "0",
       "note": "REFINEMENT OF WORKER B'S POLISH-QUEUE FINDING (notebook commit 97fb4f49, 2026-09-14). B's core claim is correct and I confirm it: qa.grade is computed from compress and ttr, both redundancy measures, and measures nothing about fidelity; exodus 25's eight B verses clear compression, carry zero duplicate sentences, and are held at B by lexical variety alone, so there is no honest edit available and the chapter returns to the queue however carefully it is fixed. That is right and the recommendation to make the A threshold genre-aware, or to blocklist the affected chapters, should be acted on. ONE DISTINCTION THE 62 PER CENT FIGURE CONFLATES, measured the same way over all 233 polish chapters: of the 144 B calls ttr-only, only 51 are ALREADY AT THE CURRENT STANDARD and therefore genuinely stuck — exodus 25 among them. The other 101 still carry legacy-unversioned prose. For those the work is not ttr-tuning at all: the whole chapter gets regenerated from the catena as pericope tiles and re-stamped, which replaces per-verse prose written before any recorded standard, and the ttr of the old text is incidental to a rewrite that discards it. I have landed six such chapters this run (1 kings 7, 1 chronicles 9, nehemiah 12, 2 chronicles 31, nehemiah 11, 2 chronicles 6) and none of them involved reaching for synonyms to move a meter. SO THE PROPOSED BLOCKLIST BATCH IS ABOUT 51 CHAPTERS, NOT 144, and the queue retains 81 genuinely workable plus 101 legacy rewrites — 182 chapters of real work rather than 89. MY OWN EXPOSURE TO B'S CRITICISM, stated plainly: in nehemiah 12 two tiles first graded B on ttr (0.563 and 0.566) and I rewrote them with synonyms to clear the threshold. That is exactly the behaviour B warns against. The rewrites were defensible in themselves — a procession narrative genuinely can be varied — but my reason for making them was the meter, and a later reader should treat those two entries as meter-driven rather than fidelity-driven."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "29",
+      "verses": [
+        "13",
+        "19"
+      ],
+      "note": "JFB MISADDRESSING, two blocks only (keys 13 and 19) but both foreign and both on the step-6 lattice that runs 1, 7, 13, 19, 25, 31 through this chapter. Key 19 is Jehoiada's covenant and the destruction of the temple of Baal, from 2 Kings 11. Below the three-block threshold my corpus scan used, so this chapter does NOT appear in the 748 — which means that scan undercounts: chapters carrying only one or two JFB blocks can be affected too, and there are 373 chapters with JFB blocks that the progression test could not classify. The true figure is therefore somewhere above 748 of 1,121. Worth noting when the fetch fix is scoped, so that chapters are not passed over for having too few blocks to test."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "29",
+      "note": "Rewritten from legacy per-verse prose as 10 pericope tiles: 1-2, 3-5, 6-8, 9-11, 12-15, 16-19, 20-24, 25-27, 28-31, 32-36. Source keys run 1-36 unbroken and most carry four or five voices, so this is the richest chapter I have had this run and the only one where every tile had a real choice of witnesses. Picked deliberately: worker B's note of 2026-09-14 argues that much of the polish queue cannot be cleared honestly, and this chapter is in the 81 that measurement classifies as genuinely workable rather than in the 51 that are stuck. Three passages carry disagreement worth preserving. What Ahaz did to the vessels draws four different readings (Gill refuses the literal sense because gold and silver were too valuable to discard; Ellicott keeps the strong verb; Delitzsch glosses it as made worthy of rejection; Clarke's Targum has them collected, hidden and replaced). The closing joy divides two ways over whether God prepared the house for the people or prepared the people themselves, which Delitzsch argues explicitly. And Clarke, on the temple music, quotes a prophet against the practice his own text is commending and declines to resolve it — recorded as an outlier because it is a commentator leaving a tension open rather than closing it, which is rare in this apparatus."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "29",
+      "note": "Every tile self-graded A. Voices withheld where blocks were truncated in my reading rather than guessed at: Matthew Henry at key 1, Charles Ellicott at keys 1 and 25, John Wesley at keys 4, 5, 27, 33 and 34. One reading I was careful not to overstate: at the closing verse Delitzsch rejects the construction that would make the rejoicing be that God had made the PEOPLE ready, in favour of joy over what God had prepared FOR them. Clarke's block at that key is truncated mid-sentence in the source and appears to take the rejected reading, but I have not attributed it to him, since the sentence breaks before the object. The prose therefore gives Delitzsch's position and the alternative he names, without putting the alternative in a named mouth. Also recorded: the text's own explanation of the priest shortage — that the Levites were more upright in heart to sanctify themselves than the priests — is reported as it stands rather than softened, because it is the chapter's own judgement and not a commentator's inference."
     }
   ]
 }
