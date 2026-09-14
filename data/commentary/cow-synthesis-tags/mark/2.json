@@ -4,9 +4,6 @@
    "Bede",
    "Augustine",
    "Pseudo-Chrysostom",
-   "Theophylact",
-   "Chrysostom",
-   "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -15,136 +12,122 @@
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "1-2",
+  "pericope_label": "And again he entered into Capernaum after some days; and it was noised that he was in the house. And straightway many were gathered together, insomuch that there was no room to receive them, no, not so much as about the door: and he preached the word unto them.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The house is Peter's, now Christ's home (Mark 1:29); Augustine harmonises 'his own city' with Capernaum (Matthew 9:1)."
+    "summary": "Ellicott notes that Mark alone names Capernaum where the parallel says only his own city, and calls the crowding at the door one of Mark's graphic touches; Robertson renders the phrase at home, in Peter's house, traces the double negative that leaves no room even about the door, and reads the verb for preaching as a descriptive imperfect on a word once used of the chatter of birds; Barnes dates the interval only loosely and removes a difficulty of geography."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill names the house as Simon and Andrew's and fills the interval with preaching through Galilee and days of prayer in retirement."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley both identify the house as Peter's, Clarke glossing the word preached as the doctrine of the kingdom, and Wesley noting that at this stage all who heard still received the word with joy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has the crowd come before the sabbath and the synagogue, one inviting another until the house would not hold them, and infers from the open-air preaching that our Lord had a strong voice."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom offers the simplest solution to the naming of the city, that Capernaum was called his because he went there often and did many miracles there."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: he loosed the sins before the joints, calling the despised man 'son'; how each one's faith weighs with God; Pseudo-Jerome reads the palsy as the soul's torpor."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact and Chrysostom: he proved the cure of the soul by that of the body, the invisible by the visible."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the crowd gathered straightway — improve opportunities for the soul without losing time."
+    "summary": "Bede reads the return from the desert into the city as the compassion of God refusing to desert even carnal persons; Augustine reconciles the two namings of the place two ways."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why does one Gospel call the place his own city while Mark names Capernaum?",
+    "positions": [
+     {
+      "position": "Galilee itself may be called his city, Capernaum being its metropolis; or the other account passes over what fell between",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Capernaum was called his because he went there often and worked many miracles there",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "Simply a difference of report: Mark alone names the town",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does about the door describe?",
+    "positions": [
+     {
+      "position": "The street: this door opened straight onto it, not into a courtyard as larger houses had",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "The yard or court in front of the house",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Infers from the shore-side preaching and the overflowing house that Jesus had a strong voice and used it, since wisdom crieth without in the places of concourse."
+   }
+  ],
   "themes": [
-   "return to Capernaum",
-   "the paralytic",
-   "faith of the bearers",
-   "forgiveness before healing"
+   "And again he entered into Capernaum after some days; and it was noised that he was in the house.",
+   "And straightway many were gathered together, insomuch that there was no room to receive them, no, not so much as about the door: and he preached the word unto them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mark's graphic eyewitness detail of the packed house and choked doorway; 'preached the word' = the doctrine of the kingdom (Acts 6:2-7); the descriptive imperfect 'was speaking'."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the general impression still held — all received the word with joy before the scribes' opposition."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the crowded house",
-   "preaching the word",
-   "eyewitness detail"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Mark's vivid historical present 'they come' and the detail 'borne of four' (only in Mark; cf. Luke 5:18); the man too feeble to come alone."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the company were the sick man's friends and relations."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the paralytic",
-   "borne of four",
-   "Markan detail"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
+   "Pseudo-Chrysostom",
    "John Gill",
    "John Lightfoot",
    "Albert Barnes",
@@ -153,366 +136,339 @@
    "A.T. Robertson",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The flat eastern roof reached by outside stair; digging out the tiles (Luke 5:19); the 'bed' is the poor man's grabatus (John 5:8; Acts 9:33); Lightfoot's 'way of the roof'."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "uncovering the roof",
-   "importunate faith",
-   "breaking through the press"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
+  "range": "3-4",
+  "pericope_label": "And they come unto him, bringing one sick of the palsy, which was borne of four. And when they could not come nigh unto him for the press, they uncovered the roof where he was: and when they had broken it up, they let down the bed wherein the sick of the palsy lay.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The faith was that of the four and the man himself (Robertson); the astonishing thing is that Jesus forgave sins instead of healing; 'Son' a word of consolation (Ephesians 2:8)."
+    "summary": "Ellicott notes that the number of bearers and the strong language of damage to the roof are Mark's alone, and that Mark's word for the bed is the Greek form of a Latin word for the pallet of the poor; Robertson calls the four a Markan detail, finds a play on words in unroofed the roof, describes the tiles as laths and plaster with stone slabs, and refuses to say where in the house Jesus was; Barnes has them remove only an awning and part of the banisters; Lightfoot supplies the rabbinic phrase the way of the roof."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the faith of the sick man in being brought and of the friends in breaking through every difficulty."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'thy sins be forgiven'",
-   "faith of the five",
-   "forgiveness before healing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A Markan picture through Peter's eyes — scribes come from every quarter (Luke 5:17, 21) to pick flaws, jealous of Christ's power; their unspoken murmur read by Jesus."
+    "prevalence": "single",
+    "summary": "Gill widens the party beyond the four to townsmen, friends and relations."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the first offence came not from the plain people but from the learned 'blind guides'."
+    "prevalence": "several",
+    "summary": "Clarke pictures a man at each corner of the couch and has them strip tiles and laths after finding the trap door too narrow; Wesley has them take up the lattice and then break the opening wider."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom has the bearers, finding the door blocked, raise the bed with its burden and lay the man before the face of the Saviour."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How much of the roof was actually taken apart?",
+    "positions": [
+     {
+      "position": "Nothing structural: they removed the curtain or awning over the central area and part of the banisters",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "The trap door, widened when it proved too narrow for the couch",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Tiles, laths and timber stripped away",
+      "held_by": [
+       "Adam Clarke",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Real injury: the strong expressions for it are peculiar to Mark",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where in the house was Jesus?",
+    "positions": [
+     {
+      "position": "In the large open hall at the centre",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Not clear: downstairs, upstairs and the quadrangle are all possible",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Recovers the rabbinic phrase the way of the roof, including a teacher's bier proposed to be lowered through it and the rebuke that it honours a wise man to be carried out by the door."
+   }
+  ],
   "themes": [
-   "the scribes' murmur",
-   "hostile critics",
-   "reasoning in their hearts"
+   "And they come unto him, bringing one sick of the palsy, which was borne of four.",
+   "And when they could not come nigh unto him for the press, they uncovered the roof where he was: and when they had broken it up, they let down the bed wherein the sick of the palsy lay."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
   }
  },
- "7": {
+ "5": {
   "voices": [
+   "Bede",
+   "Pseudo-Chrysostom",
+   "Chrysostom",
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Lightfoot",
+   "A.T. Robertson",
+   "John Wesley"
   ],
+  "range": "5-8",
+  "pericope_label": "When Jesus saw their faith, he said unto the sick of the palsy, Son, thy sins be forgiven thee. But there were certain of the scribes sitting there, and reasoning in their hearts, Why doth this man thus speak blasphemies? who can forgive sins but God only? And immediately when Jesus perceived in his spirit that they so reasoned within themselves, he said unto them, Why reason ye these things in your hearts?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The scribes' logic was sound — only God forgives sins (Isaiah 43:25; Daniel 9:9) — the flaw being their refusal to see Christ's divine relation; the issue is the deity of Christ (Robertson)."
+    "summary": "Robertson includes the paralytic's own faith, calls the forgiveness rather than the healing the astonishing thing, and reads the scribes' silent charge off their faces; Barnes glosses the address as a word of consolation and argues that the testimony was borne to the judges rather than against them; Ellicott notes the better manuscripts breaking the charge into two sentences, and takes the naming of the spirit as bearing on the completeness of Christ's human nature; Lightfoot supplies the rabbinic axiom that pardon belongs to God alone."
    },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill includes both the sick man's faith and his friends', and insists the spirit here is the divine nature and not the human soul."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley turns on the objectors, noting that the first offence came from the men of learning and not from the plain people."
+   },
+   {
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Gill: taking Christ for a mere man, they reasoned he blasphemed in claiming what is peculiar to God; Lightfoot's rabbinic confirmation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "charge of blasphemy",
-   "only God forgives sins",
-   "deity of Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: 'in his spirit' is peculiar to Mark, bearing on the reality of Christ's human nature."
+    "summary": "Pseudo-Chrysostom holds that the faith seen was the bearers' and not the sick man's; Chrysostom explains the order of the miracle, the soul healed first so that a visible work might afterwards confirm the word."
    },
    {
-    "school": "reformed",
+    "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Gill: he knew their thoughts by his divine nature, which searches the most secret hearts."
+    "summary": "Bede makes the sins the cause of the palsy so that the bonds had to be loosed first, hears Christ's humility in calling the man son, and notes that the charge of blasphemy anticipated a sentence of death."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whose faith did Jesus see?",
+    "positions": [
+     {
+      "position": "The bearers', not the sick man's; a man is sometimes healed by another's faith",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "Both the sick man's and his friends'",
+      "held_by": [
+       "John Gill",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Another's faith carried such force that a whole man rose healed by one man's merit",
+      "held_by": [
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the spirit in which Jesus perceived their reasoning?",
+    "positions": [
+     {
+      "position": "The divine nature, by which he knew all things, not the human soul",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The region of his consciousness, bearing on the reality of his human nature",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Quotes a rabbinic dispute over the angel bearing the divine name, where both sides assume that pardon belongs to God alone, and turns it back on the rabbis for rejecting the one in whom the name was."
+   }
+  ],
   "themes": [
-   "perceiving in his spirit",
-   "reading the heart",
-   "true humanity and divine knowledge"
+   "When Jesus saw their faith, he said unto the sick of the palsy, Son, thy sins be forgiven thee.",
+   "But there were certain of the scribes sitting there, and reasoning in their hearts,",
+   "Why doth this man thus speak blasphemies? who can forgive sins but God only?",
+   "And immediately when Jesus perceived in his spirit that they so reasoned within themselves, he said unto them, Why reason ye these things in your hearts?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
+   }
   }
  },
  "9": {
   "voices": [
+   "Theophylact",
+   "Pseudo-Chrysostom",
+   "Pseudo-Jerome",
    "John Gill",
-   "John Lightfoot",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Lightfoot: 'easier' means the plainer thing — forgiveness none can test, healing all can see; Christ chooses the visible to prove the invisible."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the question proves his deity — he who cures the palsy by a word can forgive sins."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): Jesus the Healer ministers first to the soul, then extends healing to the body."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'which is easier'",
-   "the visible proves the invisible",
-   "power to forgive"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the visible healing proves the Son of Man's present authority to forgive (Acts 5:31); the parenthesis identical in all three Synoptics shows Mark's priority."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: though thought a mere man, Christ affirms his authority as the Son of man (Daniel 7:13)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The Cyril of Jerusalem entry is a Passion-meditation, tangential to the verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A Passion-meditation on the Son of man, not on this verse."
-   }
-  ],
-  "themes": [
-   "Son of man",
-   "power to forgive on earth",
-   "the miracle as proof"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Christ bids the man authoritatively to rise and carry his bed publicly, that all might witness the cure."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril of Jerusalem (on point): the Healer ministers first to the soul ('Sin no more') then the body ('Take up thy bed')."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'Arise, take up thy bed'",
-   "visible counterpart of pardon",
-   "Lord of soul and body"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "John Lightfoot",
+   "A.T. Robertson"
   ],
+  "range": "9-12",
+  "pericope_label": "Whether is it easier to say to the sick of the palsy, Thy sins be forgiven thee; or to say, Arise, and take up thy bed, and walk? But that ye may know that the Son of man hath power on earth to forgive sins, (he saith to the sick of the palsy,) I say unto thee, Arise, and take up thy bed, and go thy way into thine house. And immediately he arose, took up the bed, and went forth before them all; insomuch that they were all amazed, and glorified God, saying, We never saw it on this fashion.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The instant public cure silenced the scribes and amazed all ('We never saw it on this fashion', John 7:31); Christ made good his claim to equality with God."
+    "summary": "Lightfoot recovers the schools' idiom of easy and hard as plain and obscure, so that the forgiveness formula is the easier because unverifiable, and reads before them all as against them all; Robertson takes either saying as equally futile from the scribes and equally effective from Jesus, presses the authority claimed on earth and now, and argues from a shared parenthesis that the other two Gospels followed Mark; Barnes and Ellicott compare the crowd's reported words across the accounts."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes Son of man to mean himself, really man and the true Messiah, in a sense the older scriptures had already used."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: as the palsy is the soul's helplessness, grace repairs all in a moment; Wesley: even the scribes were amazed for a time."
+    "prevalence": "single",
+    "summary": "Clarke quotes Prosper on sin as a universal palsy of the soul which grace, being the almighty will of God, repairs in a moment."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact reconstructs the Pharisees' reasoning, that curing an unseen soul is the easier feat, and has Christ prove the harder by the easier; Pseudo-Chrysostom explains why a work had to follow the word."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Pseudo-Jerome reads the palsy as the torpor of a man slothful in the softness of the flesh while still desiring health."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Which really is easier to say?",
+    "positions": [
+     {
+      "position": "The forgiveness, because nobody in the room could check it; easy and hard mean plain and obscure in the schools",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "The Pharisees had it backwards: healing a body is really easier though it looked harder to them",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "Either is equally futile from them and equally effective from him; he took the harder first",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Argues from the identical parenthesis standing at the identical point in all three Gospels that the other two followed Mark's narrative, since three writers could not independently insert the same aside in the same place."
+   }
+  ],
   "themes": [
-   "instant healing",
-   "amazement and praise",
-   "authority proved"
+   "Whether is it easier to say to the sick of the palsy, Thy sins be forgiven thee; or to say, Arise, and take up thy bed, and walk?",
+   "But that ye may know that the Son of man hath power on earth to forgive sins, (he saith to the sick of the palsy,)",
+   "I say unto thee, Arise, and take up thy bed, and go thy way into thine house.",
+   "And immediately he arose, took up the bed, and went forth before them all; insomuch that they were all amazed, and glorified God, saying, We never saw it on this fashion."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.41
+   }
   }
  },
  "13": {
@@ -527,222 +483,219 @@
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "13-14",
+  "pericope_label": "And he went forth again by the sea side; and all the multitude resorted unto him, and he taught them. And as he passed by, he saw Levi the son of Alpheus sitting at the receipt of custom, and said unto him, Follow me. And he arose and followed him.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Teaching by the sea near Capernaum (Mark 1:16); Levi identified with Matthew the Evangelist (Matthew 9:9)."
+    "summary": "Robertson makes the walk by the sea one Jesus loved and taken to get clear of the packed house, places the toll-gate on the great west road from Damascus with its keeper collecting for Herod Antipas, and calls Levi an object lesson for men of business who defer service; Barnes names the lake beside which Capernaum stood."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill traces the movement from Simon's house and the city out to the sea."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley observes that he taught the crowd by the shore as readily as if they had been in a synagogue."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has him go to the shore for room, infers a strong voice from it, and supplies the genealogy that would make four brothers apostles."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact turns the crowd's pursuit into a maxim about glory, and measures Levi's conversion by his filling his house with guests; Chrysostom collects the two names across the Gospels and cites Jethro and Raguel as precedent for a man with two."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: Mark/Luke spare the old name while Matthew accuses himself, that none converted should despair; Pseudo-Jerome: Levi 'Appointed' quits all to follow (Luke 14:33)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: the more one flees glory the more she pursues."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: wherever Christ's doctrine is preached, even in corners, we must follow it."
+    "summary": "Bede finds a purpose in the seaside itself, defines the toll-house from its Greek and Latin names, explains why the other evangelists spare the publican's name while Matthew accuses himself, and reduces discipleship to four words, that to follow is to imitate; Pseudo-Jerome reads the name Levi as Appointed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why did Jesus go out to the sea?",
+    "positions": [
+     {
+      "position": "For room, no house or street being large enough",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "For air, as soon as he could get clear of the packed house",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "As if wishing to be alone, which teaches that the more you flee glory the more she pursues",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "To order the life of those who dwell by the sea and teach them to despise what passes like waves",
+      "held_by": [
+       "Bede"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "Explains the divergent naming as a courtesy: the other evangelists decline to attach the publican's name to a fellow apostle, while Matthew accuses himself so that no convert should despair."
+   }
+  ],
   "themes": [
-   "teaching by the sea",
-   "call of Levi",
-   "none need despair"
+   "And he went forth again by the sea side; and all the multitude resorted unto him, and he taught them.",
+   "And as he passed by, he saw Levi the son of Alpheus sitting at the receipt of custom, and said unto him, Follow me. And he arose and followed him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Levi = Matthew (two names), at the toll-gate collecting for Herod Antipas (Matthew 9:9); the sudden call and prompt obedience an object lesson against delay."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a Jew in the odious office of tax-gatherer; Gill: called as Christ went toward the sea."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "call of Levi/Matthew",
-   "'Follow me'",
-   "prompt obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Levi's feast in honour of the Saviour (Luke 5:29); 'sinners' of abandoned character; the 'many' following proves Christ's early popularity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the publicans partly invited by Matthew for compassion, the rest pressing in, drawn by Christ's gracious words."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem entry concerns 'Christians' named at Antioch (Acts 11:26), tangential to the verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "On the naming of Christians at Antioch, not on this verse."
-   }
-  ],
-  "themes": [
-   "Levi's feast",
-   "eating with sinners",
-   "gratitude of the converted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'The scribes of the Pharisees' scandalised that a Jew ate with publicans regarded as Gentiles (Acts 11:3); Lightfoot's rabbinic list of 'sinners'; Clarke's textual variant."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the learned raise prejudices, but Christ answers with calm, dispassionate reasoning."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "eating with sinners",
-   "Pharisaic separatism",
-   "censoriousness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
+   "Theophylact",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
+   "John Lightfoot",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "15-17",
+  "pericope_label": "And it came to pass, that, as Jesus sat at meat in his house, many publicans and sinners sat also together with Jesus and his disciples: for there were many, and they followed him. And when the scribes and Pharisees saw him eat with publicans and sinners, they said unto his disciples, How is it that he eateth and drinketh with publicans and sinners? When Jesus heard it, he saith unto them, They that are whole have no need of the physician, but they that are sick: I came not to call the righteous, but sinners to repentance.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The physician goes to the sick; Jesus accepts for argument the Pharisees' claim to be righteous; 'to repentance' not genuine in Mark (cf. Luke 5:32); Mark omits the Hosea 6:6 citation."
+    "summary": "Barnes shows that at meat is not in the Greek and reads the crowd of followers as evidence of an early popularity lost only after the rich ridiculed him; Robertson has the guests imitate Levi rather than merely accept his invitation, corrects the text to the scribes of the Pharisees, and places the objectors outside the door as too pious to enter; Ellicott takes the omitted scriptural citation for a mark of a Gospel written for Gentiles; Lightfoot names the trades the rabbis counted as sinners."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill sets the feast in Levi's own house and reads it as gratitude."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: if righteous he would not call them — they are the very persons he came to save (1 Timothy 1:15)."
+    "prevalence": "several",
+    "summary": "Clarke takes the word sinners for Gentiles, reports a variant addressing the complaint to the disciples, and argues both from manuscripts and from sense that unto repentance is no part of the text here; Wesley has most of the company press in uninvited and notes that Christ answers with no harshness yet."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact puts the Pharisees' posture in a phrase, that they blame this while making themselves pure."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who were the sinners at the table?",
+    "positions": [
+     {
+      "position": "Jewish trades counted disreputable: dicers, usurers, plunderers, publicans, herdsmen, sellers of the seventh year's produce",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "Gentiles, the Jews never applying the term to their own",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Either way the offence is the same, since publicans and sinners were regarded much as Gentiles were",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Do the words unto repentance belong to the text here?",
+    "positions": [
+     {
+      "position": "No: absent from many manuscripts and versions, struck by Griesbach, and the righteous cannot properly be called to repentance",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "No: not genuine in Mark, though genuine in the parallel",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "claim": "Reads the many followers as evidence that Jesus was extremely popular early on and became unpopular among common people only after the rich and the great had ridiculed him."
+   }
+  ],
   "themes": [
-   "the physician and the sick",
-   "'I came to call sinners'",
-   "mission to the lost"
+   "And it came to pass, that, as Jesus sat at meat in his house, many publicans and sinners sat also together with Jesus and his disciples: for there were many, and they followed him.",
+   "And when the scribes and Pharisees saw him eat with publicans and sinners, they said unto his disciples, How is it that he eateth and drinketh with publicans and sinners?",
+   "When Jesus heard it, he saith unto them, They that are whole have no need of the physician, but they that are sick: I came not to call the righteous, but sinners to repentance."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
   }
  },
  "18": {
@@ -755,212 +708,214 @@
    "Pseudo-Chrysostom",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "18-20",
+  "pericope_label": "And the disciples of John and of the Pharisees used to fast: and they come and say unto him, Why do the disciples of John and of the Pharisees fast, but thy disciples fast not? And Jesus said unto them, Can the children of the bridechamber fast, while the bridegroom is with them? as long as they have the bridegroom with them, they cannot fast. But the days will come, when the bridegroom shall be taken away from them, and then shall they fast in those days.",
   "schools": [
    {
     "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Robertson dates the complaint by the calendar, Levi's feast probably falling on a weekly fast-day, notes that John's disciples sided with the Pharisees in ceremonial observance while John himself was the greater ascetic, and shows Jesus taking up the Baptist's own image of the bridegroom and altering its terms."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill suspects the same collision of fast-day and feast."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports a variant reading in that day for in those days, meaning the day of the betrayal, and notes that Griesbach adopted it while the first half of the verse tells against it."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sees Christ made to justify first himself and then his disciples, which he will always do where they act according to his will."
+   },
+   {
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Levi's feast fell on a fast-day; John's ascetic disciples (Matthew 11:18) side with the Pharisees (who fasted twice weekly, Luke 18:12), though without real congeniality."
+    "summary": "Theophylact excuses John's disciples as still in an imperfect state, explains why the season of the first coming is one of rest rather than sorrow, and makes every man of good works a son of the Bridegroom who fasts only when a fall into sin takes the Bridegroom away; Chrysostom makes the question jealousy, whether he alone could conquer the passions without abstinence; Pseudo-Chrysostom defines the betrothal as the giving of an earnest and reads the coming fast as longing rather than licence."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede and Augustine: John's disciples kept imperfect Jewish customs; the Bridegroom brings rest, the sons of the bride-chamber fast not while he is present."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact/Pseudo-Chrysostom: Christ the Bridegroom betrothing the Church; they will fast when he is taken away, longing for his coming."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: strict professors make their own practice a standard and condemn others."
+    "summary": "The Gloss sets the two accusations side by side as designed to raise dissension; Augustine reconciles who asked the question; Bede reads the fasting party as men who take the preaching of Christ by the ear and not the heart."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who put the question about fasting?",
+    "positions": [
+     {
+      "position": "Guests who remembered the fast came over, the apostles being present, and each objected as he could",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "John's disciples, siding with the Pharisees in ceremonial observance",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why could the disciples not fast then?",
+    "positions": [
+     {
+      "position": "Because mourning does not suit a wedding feast, and Jesus is the bridegroom of the covenant",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Because the season of the first coming is one of rest, salvation coming without the works of the law",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "Because the Bridegroom is present; when he is taken they will fast in longing, so the freedom is a circumstance and not a rule",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "Reads the whole exchange inwardly: the man who boasts of works without faith wastes with a fasting soul, while the man joined to the members of Christ cannot fast, since he feasts on the Body and the Blood."
+   }
+  ],
   "themes": [
-   "the fasting question",
-   "the Bridegroom",
-   "joy of his presence",
-   "new dispensation"
+   "And the disciples of John and of the Pharisees used to fast: and they come and say unto him, Why do the disciples of John and of the Pharisees fast, but thy disciples fast not?",
+   "And Jesus said unto them, Can the children of the bridechamber fast, while the bridegroom is with them? as long as they have the bridegroom with them, they cannot fast.",
+   "But the days will come, when the bridegroom shall be taken away from them, and then shall they fast in those days."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sons of the bridechamber are the guests; Jesus adopts the Baptist's metaphor (John 3:29), claiming to be the divine Bridegroom of the OT (Hosea 2:19); mourning unfits a wedding."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: he who gave wine at Cana for the children of the bride-chamber gives his body and blood."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "children of the bridechamber",
-   "Christ the Bridegroom",
-   "joy not mourning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The prediction of fasting after Christ's departure (Acts 13:2); Clarke's variant 'in that day' pointing to his being delivered up."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: already a mourning time for John's disciples, their master imprisoned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the bridegroom taken away",
-   "the season of fasting",
-   "longing for the absent Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
+   "Bede",
+   "Theophylact",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson"
   ],
+  "range": "21-22",
+  "pericope_label": "No man also seweth a piece of new cloth on an old garment: else the new piece that filled it up taketh away from the old, and the rent is made worse. And no man putteth new wine into old bottles: else the new wine doth burst the bottles, and the wine is spilled, and the bottles will be marred: but new wine must be put into new bottles.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The rare verb 'seweth on' (only here); the raw, unshrunk cloth that tears the old garment (Matthew 9:16; Luke 5:36)."
+    "summary": "Robertson notes that the verb for sewing on occurs here and nowhere else in or outside the New Testament, and that Westcott and Hort bracket the closing clause about new wine as a Western non-interpolation though it is genuine in the parallel; Barnes glosses the cloth as raw or unwrought."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the old garment is the traditions of the elders, onto which the gospel cannot be patched."
+    "prevalence": "single",
+    "summary": "Gill identifies the new cloth with the traditions of the elders about eating and fasting, most of them later than the time of Ezra, and the old bottles with the scribes and Pharisees."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke observes that the printed editions open the verse with a conjunction which almost every manuscript of note omits, and that the construction varies among the copies."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact likens the disciples to old garments because of the infirmity of their minds, on which the heavy command of fasting was not fitting."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede makes the disciples the old bottles who would have burst at spiritual precepts, has them become new bottles after the ascension, and draws two rules of teaching from the figure."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the old garments and old bottles?",
+    "positions": [
+     {
+      "position": "The disciples, not yet strong enough for the heavy precept",
+      "held_by": [
+       "Bede",
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "The scribes and Pharisees, who receive neither the new covenant's blessings nor the gospel",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "Draws a rule for teachers from the figure: the hidden things of the new mysteries are not to be committed to a soul hardened in old wickedness."
+   }
+  ],
   "themes": [
-   "new cloth on old garment",
-   "incompatibility with old forms",
-   "the new dispensation"
+   "No man also seweth a piece of new cloth on an old garment: else the new piece that filled it up taketh away from the old, and the rent is made worse.",
+   "And no man putteth new wine into old bottles: else the new wine doth burst the bottles, and the wine is spilled, and the bottles will be marred: but new wine must be put into new bottles."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'bottles' are skins; new fermenting wine bursts old skins, so it needs fresh ones (Matthew 9:17; Luke 5:38); the closing clause bracketed by some but genuine in Luke."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the old bottles are the self-satisfied Pharisees; the new wine the love of God and the gospel they cannot receive."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.42
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "new wine in fresh skins",
-   "the gospel needs new vessels",
-   "new dispensation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
@@ -970,316 +925,165 @@
    "Chrysostom",
    "Augustine",
    "Theophylact",
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
+   "John Calvin",
+   "A.T. Robertson"
   ],
+  "range": "23-25",
+  "pericope_label": "And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn. And the Pharisees said unto him, Behold, why do they on the sabbath day that which is not lawful? And he said unto them, Have ye never read what David did, when he had need, and was an hungred, he, and they that were with him?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The hungry disciples plucked grain as the Law allowed (Deuteronomy 23:25); the charge was the 'work' of preparing food, not theft; poverty is not disgraceful (Barnes)."
+    "summary": "Robertson works Mark's verbs into a picture of men making their way now on the edge of the field and now within it, and notes that the rabbis classed the plucking as preparing food; Barnes explains what corn means here and draws a lesson from Christ letting his followers supply their want that way."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin observes that the charge was sabbath-breaking and not theft, makes the purpose of the day the measure of its lawful observance since a law is interpreted by the design of the Lawgiver, and reads the accusers' motive as ambition joined to hatred."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom has them eat simple food from necessity while the Pharisees served the figure and the shadow; Theophylact raises the difficulty of the priest's name without answering it; Pseudo-Chrysostom reads the disciples as men freed from the figure and grounds the precedent in the Lawgiver's authority over the law."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Pseudo-Chrysostom: freed from the figure, they keep not the figurative sabbath; Augustine: the Law allowed plucking another's corn, so the charge was sabbath-breaking."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the sabbath is a privilege and benefit, not a task and drudgery, never meant to be a burden."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The Cyril of Jerusalem note here concerns Antioch, tangential to the verse."
+    "summary": "Augustine supplies the written precept about a thief in the fields that shows why the charge had to be sabbath-breaking; Bede answers the difficulty about the priest's name from the careers of father and son."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How can the high priest be called Abiathar when the older history names Abimelech?",
+    "positions": [
+     {
+      "position": "The question is raised and left standing",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "Both were present; the son later held the office and so outgrew the father that he could be named of an occasion in his father's lifetime",
+      "held_by": [
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What exactly were the disciples charged with?",
+    "positions": [
+     {
+      "position": "Sabbath-breaking, not theft: the law let a man go free who touched nothing but what he ate",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Sabbath-breaking, as though famishing men ought rather to die than satisfy their hunger",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "An Antioch passage, tangential to the verse."
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Grounds the whole defence in the closing title: the law has no authority over the Lawgiver, and more is allowed a king than is appointed to other men."
    }
   ],
   "themes": [
-   "plucking grain on the sabbath",
-   "hunger and lawful liberty",
-   "sabbath not a burden"
+   "And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn.",
+   "And the Pharisees said unto him, Behold, why do they on the sabbath day that which is not lawful?",
+   "And he said unto them, Have ye never read what David did, when he had need, and was an hungred, he, and they that were with him?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plucking was lawful by Moses without distinction of days; the Pharisees denied it on the sabbath, but Christ shows from their own law it was not unlawful."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they blame not theft but sabbath-violation, as if men should rather die than eat; the Law must be read by the Legislator's design — superstition joined to hatred."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "charge of sabbath-breaking",
-   "legalism",
-   "the design of the Law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ answers from Scripture (Matthew 12:3; 1 Samuel 21:6), citing David's eating of the showbread — an argument from the greater to the less."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem entry meditates on the garden of burial and the true Vine, tangential to the verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A meditation on Christ's burial and the Vine, not on this verse."
-   }
-  ],
-  "themes": [
-   "David and the showbread",
-   "argument from Scripture",
-   "necessity over ceremony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
    "John Gill",
    "John Lightfoot",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
+  "range": "26-28",
+  "pericope_label": "How he went into the house of God in the days of Abiathar the high priest, and did eat the shewbread, which is not lawful to eat but for the priests, and gave also to them which were with him? And he said unto them, The sabbath was made for man, and not man for the sabbath: Therefore the Son of man is Lord also of the sabbath.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The crux: 1 Samuel 21:1 names Ahimelech, not Abiathar; solutions — Mark names the more famous son, soon high priest (1 Samuel 23:6); both bore both names (2 Samuel 8:17); or 'in the time of Abiathar'."
+    "prevalence": "several",
+    "summary": "Lightfoot proposes that Abiathar stood by association for the Urim and Thummim, so that the phrase is a claim about authority rather than a date; Barnes sets out what the day was designed to do and argues from consequences for its observance, then makes the second clause a matter of sequence; Robertson points to the word even, which Mark alone supplies, as a mark of how large a claim was being made."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads the showbread spiritually; David came on the sabbath when the loaves were renewed."
+    "prevalence": "single",
+    "summary": "Gill fixes the place as the tabernacle and reads the Son of man as Christ himself, with power to abrogate the sabbath as he did the rest of the ceremonial law."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: Abimelech was high priest then; the phrase means 'in the time of Abiathar, afterward high priest'."
+    "prevalence": "single",
+    "summary": "Clarke reports and rejects the reading that makes any man lord of the sabbath, and puts in its place a statement of purpose: the ordinances are regulated by their end, and God asks worship out of goodness rather than indigence or interest."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry calls the sabbath a privilege rather than a drudgery and holds that every observance of it is to be interpreted by the rule of mercy."
    }
   ],
   "debates": [
    {
-    "question": "Why does Mark say 'in the days of Abiathar' when Ahimelech was priest (1 Samuel 21:1)?",
-    "sides": [
+    "question": "Who is the Son of man who is lord of the sabbath?",
+    "positions": [
      {
-      "position": "Mark names the more famous Abiathar, present and soon high priest",
-      "holders": [
-       "Barnes",
-       "Ellicott"
+      "position": "Christ himself, with power to dispense with the day and to abrogate it",
+      "held_by": [
+       "John Gill"
       ]
      },
      {
-      "position": "Both father and son bore both names",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "'In the time of Abiathar' / leave it unexplained",
-      "holders": [
-       "Robertson",
-       "Wesley"
+      "position": "Man in general, the day being made for his ease and use — reported and rejected as harsh and lax",
+      "held_by": [
+       "Adam Clarke"
       ]
      }
     ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "David and the showbread",
-   "'Abiathar the high priest'",
-   "necessity over ceremony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark alone has this saying subordinating the sabbath to man's welfare against rabbinic rules; the sabbath a kind provision for rest and worship; institutionalism the perennial battle."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: those judge amiss who turn the sabbath to man's ruin, yet it is not abolished but rightly used; Wesley: it gives way to man's necessity."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'the sabbath was made for man' abolish the sabbath?",
-    "sides": [
+    "question": "How should the phrase in the days of Abiathar be read?",
+    "positions": [
      {
-      "position": "No — it teaches the proper use, not abolition",
-      "holders": [
-       "Calvin",
-       "Barnes"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "sabbath made for man",
-   "the rule of mercy",
-   "use not abolition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's emphatic 'even' shows the great claim — the Son of Man is master, not slave, of the sabbath, to interpret not abolish (Ephesians 1:22; Revelation 1:10)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: the supreme Lawgiver may dispense with his own law; Clarke warns against reading 'man' generally, lest the sabbath's obligation be annihilated."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The Cyril of Jerusalem entry is a Passion-meditation, tangential to the verse."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 'the Son of man' here Christ or man in general?",
-    "sides": [
-     {
-      "position": "Christ, the Messiah, claiming lordship of the sabbath",
-      "holders": [
-       "Robertson",
-       "Wesley",
-       "Barnes"
-      ]
-     },
-     {
-      "position": "Man in general (rejected, as annihilating the sabbath)",
-      "holders": [
-       "some (rejected by Clarke)"
+      "position": "As a claim about authority: the priest had the oracle with him and acted by divine direction",
+      "held_by": [
+       "John Lightfoot"
       ]
      }
     ]
@@ -1287,27 +1091,39 @@
   ],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "A Passion-meditation, tangential to the verse."
+    "voice": "Adam Clarke",
+    "claim": "Gives the social reasons for the command to rest: that servants should not be oppressed by their masters and that the labouring beasts might have their necessary rest."
    }
   ],
   "themes": [
-   "Son of man Lord of the sabbath",
-   "Christ's authority",
-   "interpret not abolish"
+   "How he went into the house of God in the days of Abiathar the high priest, and did eat the shewbread, which is not lawful to eat but for the priests, and gave also to them which were with him?",
+   "And he said unto them, The sabbath was made for man, and not man for the sabbath:",
+   "Therefore the Son of man is Lord also of the sabbath."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  }
 }
