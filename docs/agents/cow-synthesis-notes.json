@@ -85155,6 +85155,186 @@
       "book": "matthew",
       "chapter": "13",
       "note": "SIZE PROFILE, recorded for whoever takes this chapter. 58 source keys, no gaps, 89,290 usable source words - more than twice the ~40,000 threshold at which the poke makes a chapter the whole batch, and about 3.3x mark 13, the largest chapter landed so far. The figure is not inflated by the 200-word cap in the way exodus 39 was: the median key is 1,130 visible words and the ten largest run 2,350 to 10,412, with key 24 alone at 10,412 and key 1 at 9,469. Twenty-two distinct voices, including a heavy Latin and Greek catena - Jerome, Chrysostom, Origen, Remigius, Raban, Hilary, Gregory, the Gloss and Pseudo-Augustine alongside Gill, Barnes, Ellicott, Clarke, Robertson, Wesley, Calvin, Lightfoot and Henry. All 58 entries are legacy-unversioned, 26 of them graded B, so this is a full rewrite from the catena and not a polish. Expect roughly sixteen to eighteen pericope tiles. This is a fresh worker's whole batch; it was drawn and declined by a session already long in the tooth, on the rule that a chapter one cannot finish must not be started."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "4"
+      ],
+      "note": "Jamieson displacement. The JFB block at key 4 is foreign material from Deuteronomy or Joshua, not Ruth. Excluded and declared in excluded_voices."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "16"
+      ],
+      "note": "Jamieson displacement. The JFB block at key 16 is Joshua 6, on the horns of jubilee, the silent circuits of the ark and the number seven as the seal of the covenant. Nothing to do with Ruth. Excluded and declared."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "20-22"
+      ],
+      "note": "Two defects in key 22. The JFB block is Joshua 6 again, the silent procession round Jericho with Bishop Hall cited. The Ellicott block is 1032 words of which about 40 are usable, one sentence on barley harvest followed by StudyLight navigation, footer text and raw CSS. Both handled: JFB excluded and declared, Ellicott used only for the usable sentence."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "14-15"
+      ],
+      "note": "Keil and Delitzsch blocks are truncated at a hard 200 word ceiling. The block at key 15 breaks mid-sentence on the particle discussion, and the block at key 16 breaks at The subject to. Usable but incomplete, so the K and D material in these entries is drawn only from what survives the cut."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "16-18"
+      ],
+      "note": "The Keil and Delitzsch block at key 16 does not stop at verse 16. It runs on through verses 17, 18 and 19, including the arrival at Bethlehem and the start of the Is this Naomi exchange. Its verse 19 content was used in the verse 19 entry rather than here, since that is where it belongs."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "6-9"
+      ],
+      "note": "The Clarke block at key 22 carries a long digression from Ness on marriage as a state of rest, which answers verse 9 rather than verse 22. Not used, because the entry for verses 6 to 9 already has more grounded material than the word window allows, and moving it would have meant quoting a seventeenth century moralist at length on a subject the verse only touches."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "6-9"
+      ],
+      "note": "How far did the daughters-in-law mean to go. Gill reads it as an escort only, the parting at the utmost limits of Moab, with no intention of entering Canaan. Ellicott reads both as clearly purposing to go to the land of Israel. Keil and Delitzsch settle it grammatically, that the word return applies strictly only to Naomi. Preserved as a debate."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "10-13"
+      ],
+      "note": "The last clause of Naomi speech. The received text and Wesley read it as grief for their sakes. Ellicott judges it much more probable that it means it is far more bitter for me than for you, citing a parallel of construction with the Septuagint, the Peshito Syriac and the Targum against a loose Vulgate. Both preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "20-22"
+      ],
+      "note": "The date of barley harvest. Clarke puts it in the beginning of spring, immediately after the passover on the fifteenth of the month, nearly answering to March. Ellicott puts it about the end of April. Both preserved without adjudication."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "14-15"
+      ],
+      "note": "Whether Orpah and Ruth were idolaters or proselytes. Clarke says probably both idolaters, the proselyte conjecture unfounded, Chemosh the grand idol, and Ruth conversion commencing at this moment. Wesley assumes Naomi had already taught them the true religion. Preserved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "1-2"
+      ],
+      "note": "Graded A. Every chronology named is in the source: Josephus for Eli, the Jewish reckoning at Eglon and Ehud, Lightfoot, Usher for Shamgar, Patrick for Gideon, and the genealogical argument from Rahab used by Henry and Ellicott. No proper noun in the prose is absent from key 1 or key 2. Dropped: the fuller Clarke list of reasons the book stands apart from Judges."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "3-5"
+      ],
+      "note": "Graded A. The Alshech reading, the Aben Ezra proselyte view, the Targum verdict on strange wives, the Eglon parentage claim and the two etymologies of Ruth are all in the source. Ellicott refusal to adjudicate the deaths is quoted close to his wording. Dropped: some of the Gill catalogue of writers who excuse or condemn the marriage."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "6-9"
+      ],
+      "note": "Graded A. The angel of the Targum, the righteousness of Ibzan, the supplications of pious Boaz, the Aben Ezra and Josephus supplements to the blessing, and the mother house explanations from both Keil and Delitzsch and Wesley are all sourced. Dropped: the Ness digression on marriage as rest, which sits in key 22 rather than key 9."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "10-13"
+      ],
+      "note": "Graded A. The levirate logic, the Clarke step by step admiration of the address, and the Ellicott textual case on the last clause are all in the source, including the three versions he cites. Wesley gleaning remark is his. Nothing asserted that the source does not carry."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "14-15"
+      ],
+      "note": "Graded A. The Septuagint addition, the Vulgate, Syrian and Arabic agreement, Chemosh, and the Ellicott criticism of Naomi theology are all verbatim in the source. The Henry and Wesley warnings about valuing Christ are nearly identical in the two blocks and are attributed to both, which is what the source shows."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "16-18"
+      ],
+      "note": "Graded A. The Targum catechism is reported in the order Clarke gives it, including the two thousand cubits, the hundred and thirteen precepts and the four kinds of capital punishment. The divining remark and his account of seeing it in his youth are his. The classical parallels of friends buried in one grave are Gill, left unnamed because the source spells one of the names unusually and naming it would risk a false entity."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "19"
+      ],
+      "note": "Graded A. The fifty miles, the two rivers Arnon and Jordan, the feminine verbs, the gold become dim, the withered rose and the first and second temple are all in the source. Henry allows all four tempers in the crowd and the entry reports that rather than choosing for him."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ruth",
+      "chapter": "1",
+      "verses": [
+        "20-22"
+      ],
+      "note": "Graded A. The Josephus glosses and Gill refusal to depend on them, the Miriam and Mary denial, both readings of Shaddai, the Jarchi charge of covetousness and Gill rejection of it, the Targum sheaf claim and the Clarke argument from simplicity to genuineness are all sourced. Scripture citations in the source blocks were not carried across as bare references."
     }
   ]
 }
