@@ -84618,6 +84618,16 @@
       "book": "2chronicles",
       "chapter": "31",
       "note": "Every tile self-graded A. Voices withheld where blocks were truncated in my reading rather than guessed at: Adam Clarke at key 11, and John Wesley at keys 2, 3 and 4. One point where the witnesses converge but by different routes and the prose keeps them apart rather than merging: Gill dates the third month to the seam between barley and wheat harvest, Ellicott and Delitzsch to the close of wheat harvest, and Wesley to the start of the harvest season generally — three genuinely different agricultural claims about one month, recorded as a debate rather than harmonised into a vague one."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "1"
+      ],
+      "note": "WHAT A POLISH CHAPTER ACTUALLY COSTS, AND WHY THE GRADE-B COUNT UNDER-STATES IT BY A FACTOR OF FOUR. The status meter reports exodus 25 as 8 grade-B verses, which reads like eight paragraphs of work, and the diagnosis recorded alongside this note narrows it further: three of the eight are already clean and four of the remaining five need only a trim that stays above the 350 floor. On that accounting the chapter is an hour. It is not, because finish will not accept it. cmd_finish runs synthesis-fidelity.py --signals-only as its third gate, and that gate fails unless EVERY entry carries a writer-recorded self-grade, the block fidelity grade A checked_by self in its tags entry, which is a different field from the qa.grade the August backfill wrote. All 30 entries in this chapter have qa.grade and NONE has fidelity. So landing exodus 25 means personally reading all 30 entries against a 34,240-word catena and grading each, not editing five paragraphs - the 22 A-graded entries cost as much to certify as the 8 B ones, and stamping them A unread is precisely the fabrication that gate exists to prevent. THE GENERAL RULE, worth checking before any polish pick is budgeted: a chapter written before the self-grade requirement carries qa grades but no fidelity blocks, so its real unit of work is the whole chapter regardless of how few verses graded B. Check with a one-liner over the tags file for entries missing fidelity before deciding the batch, because size in source words does not reveal it and neither does the grade-B count. This is the third finding in three runs that the meters do not show, and all three point the same way: the polish queue's visible numbers describe the defect, not the labour."
     }
   ]
 }
