@@ -84994,6 +84994,16 @@
       "book": "ezra",
       "chapter": "8",
       "note": "Legacy per-verse prose in the old format, with school labels marked up inside the prose, replaced by nine pericope tiles regenerated from the catena (1-5, 10, 13-16, 17-20, 21-23, 24-26, 27-30, 31-34, 35-36). The catena is gapped at verses 6, 8, 9, 11 and 12, so no tile spans those; the required contiguous run from the lowest key is 1-5 and is covered. Verse 10 is a declared thin entry - its whole catena is a 21-word textual note by Ellicott. Verse 7 is dropped; see the source-defect note."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "1"
+      ],
+      "note": "THE POLISH QUEUE HAS TWO LANDABLE CHAPTERS IN 230, AND BOTH WERE ALREADY REJECTED. Nothing written this run. Scanning every polish chapter against the two conditions a worker actually needs - that the chapter already carries fidelity self-grades, so landing does not require grading the whole thing from scratch, and that at least one B verse carries measurable duplication, so the meter can be moved by deleting something real rather than by writing worse prose - leaves exactly two: exodus 36 and exodus 39. Both are already on the notebook as rejected pending an owner decision of the numbers 31 class. exodus 36 was refused on 2026-08-24 because key 26's entire content is Jamieson residue about Exodus 23:14-16, which leaves the run with no source at all once the residue is excluded, and four more runs are too thin to write; exodus 39 was refused on 2026-08-20 because its catena is predominantly cross-references back to Exodus 28, three of its eight legal runs cannot be written without inventing content, and the sizer over-reports because Keil's blocks are verse quotation cut off by the 200-word cap. SO THE POLISH QUEUE IS EFFECTIVELY CLOSED to an honest worker, and the three conditions that close it are independent. Of 230 chapters carrying B verses, 179 have no measurable duplication at all, so the only route to the grade is thesaurus work on subject vocabulary. Of the 51 that do have duplication, all but two are legacy-unversioned and carry no fidelity grade anywhere, so landing means self-grading every entry against the full catena - 1chronicles 7, where I demonstrated the fix working on four entries last night, is one of these. And the two that clear both conditions are the two already blocked on their sources. WHAT IS STILL OPEN. The legacy queue, 132 chapters and 3,133 verses, is untouched by any of this: those chapters are rewritten from the catena under the current rules and graded by the writer as part of the work, so neither the missing-grade problem nor the duplication problem applies. Its head is tractable - joshua 2 at 21,090 usable source words, ruth 1 at 18,364, ruth 2 at 15,169, 1samuel 11 at 12,759, all well inside a single batch. A worker with context to spend should be pointed there rather than at polish, and --queue auto will not do it, because auto drains polish before legacy and polish never empties."
     }
   ]
 }
