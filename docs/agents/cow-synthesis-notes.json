@@ -84924,6 +84924,16 @@
       "book": "1chronicles",
       "chapter": "28",
       "note": "Legacy per-verse prose replaced by eight pericope tiles regenerated from the catena (1-2, 3-5, 6-8, 9-10, 11-13, 14-16, 17-19, 20-21). Source keys run 1-21 with no gaps, so no tile spans an absent verse. Six voices carried; JFB dropped chapter-wide as misaddressed."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "8",
+      "verses": [
+        "8"
+      ],
+      "note": "CORRECTION TO MY OWN FIGURE OF AN HOUR AGO: THE HONESTLY FIXABLE SHARE OF THE POLISH QUEUE IS 22 PER CENT, NOT 38. Nothing written this run. I reported that 89 of 233 polish chapters, 38 per cent, were workable, and I counted a chapter as workable if any B verse failed the compression bar. numbers 8 shows that test is too loose. Its single B entry, covering 8-11, sits at zip 0.409 and ttr 0.567, so it fails compression and looked workable - but it has ZERO duplicate sentences and a duplicate-ngram fraction of 0.000. I tightened the two places where the prose really does double back, the Gill-and-Keil agreement on bringing the Levites into the court, which reported both witnesses at length saying nearly the same thing, and Wesley says the same, that Aaron caused them to imitate the motion, which restated Gill's clause immediately above it. That removed 36 words of genuine redundancy and moved zip from 0.409 to 0.413 and ttr from 0.567 to 0.573. Both still short. Reaching 0.42 and 0.58 from there would mean cutting witness content, not flab. The entry is 657 words reporting four witnesses on four separate questions - the age of the bullock, who laid on hands, what the act transferred, how the waving was done - and the low compression comes from that enumerative SHAPE, not from anything a careful editor could delete. RESCANNED ON THE STRICTER TEST, counting a chapter workable only where some B verse carries measurable duplication, dup_sentences above zero or dup_ngram_frac at or above 0.01: of 230 polish chapters with B verses, 51 have a cut actually available (22 per cent) and 179 do not (78 per cent). The 51 include 1chronicles 7 and 1chronicles 26, 1kings 8 and 1kings 21, 1samuel 17, 2chronicles 9 and 2chronicles 32, 2kings 20, acts 6, exodus 36, exodus 39 and ezra 5. Those are the chapters where a worker can improve the prose and move the meter honestly at the same time. On the other 179 the meter can only be moved by writing worse prose, and the earlier estimate of 89 should not be used."
     }
   ]
 }
