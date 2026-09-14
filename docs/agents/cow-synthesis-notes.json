@@ -84565,6 +84565,23 @@
         "9"
       ],
       "note": "PICKER FLAG ORDERING MATTERS MORE THAN THE BUDGET RULE, AND COST THIS WORKER THREE RUNS. The standing poke says to draw with 'next --queue auto --worst-first --spread 40' and to treat anything over 40,000 usable source words as the whole batch. Since worst-first is also longest-first, every draw from the polish queue head came back past that threshold - john 16 70431, john 19 69565, john 20 62067, john 15 59819, matthew 7 57797, luke 7 52446 - and each was declined as unfinishable, three hours running, while the queue held 237 chapters. Dropping --worst-first and drawing the SAME queue in canonical order returns a completely different size class from the same 237: exodus 36 5887, exodus 39 7091, numbers 7 13450, numbers 3 19463, leviticus 27 24457, exodus 28 33449, exodus 25 34240. All are under the whole-batch threshold and all are OT, so the ten-voice profile most scratch tooling already carries applies without rebuilding the voice-to-school map. Worst-first is the right default when a worker has a full context budget, because it fixes the worst-reading chapters soonest; it is the wrong default for a worker near the end of one, because it offers only units that worker cannot finish. A worker that has declined two draws in a row on size should drop the flag rather than keep drawing, and should say which ordering it used when it reports. Recorded against exodus 25 because that is the chapter the canonical draw actually produced: 34240 words, already on cow-prose-rules-2026-08-09 rather than legacy, 8 grade-B entries all inside the 350-650 window, which is a targeted paragraph-level polish and not a regeneration."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "12",
+        "16",
+        "21",
+        "22",
+        "23",
+        "26",
+        "34"
+      ],
+      "note": "DIAGNOSIS OF ALL EIGHT GRADE-B ENTRIES. They share one defect shape and three of the eight do not actually have it. The shape: a closing paragraph written in the synthesist's own voice that generalises across the witnesses, after the witness material has already been laid out. The 2026-08-16 fidelity note named three instances; the lint marked down five more, and inspection shows the same move in each. ALREADY CLEAN, no action needed - entry 12 closes on Clarke's reconciliation of the never-removed staves with Numbers 4:6, entry 34 closes on Gill's note that knops and branches were of the same mass, entry 23 closes on Henry's three readings of the bread with Gill's forward look to the table in the kingdom. All three end on attributable material. NEEDS A GROUNDED REPLACEMENT - entry 9 closes 'Taken together the witnesses agree on the substance while dividing on the mode ... to put the whole design outside the reach of human invention', which is the synthesist's, though the final Wesley clause is sound; entry 16 closes 'The point of the verse, on every reading offered here, is that the covenant document is not displayed but deposited'; entry 21 closes 'What the verse settles, in other words, is a relation rather than a measurement', and gathers Clarke on the sprinkled blood, Ellicott and Keil on the voice from between the cherubim, and the title ark of the testimony into one summary none of them makes; entry 22 closes 'Read against the rest of the chapter the verse changes the character of the furniture behind it ... the apparatus of a conversation', entirely unattributed; entry 26 closes 'What the three verses together establish is an arrangement designed so that nothing consecrated need be handled', which extends to the table a principle Ellicott states only of the ark at v.15. WORD BUDGETS FOR THE FIX, because deletion alone breaks the 350 floor: entry 9 is 575 total with a 69-word closing, 12 is 615, 16 is 564 with 136, 21 is 441 with 97 and so falls to 344 if the closing is simply cut, 22 is 462 with 91, 23 is 639, 26 is 440 with 62 and falls to 378. Entries 21 and 26 therefore need replacement rather than deletion; 9, 16 and 22 have room to be trimmed back to a witness-anchored ending. Nothing was written to the data tree this run."
     }
   ]
 }
