@@ -84934,6 +84934,66 @@
         "8"
       ],
       "note": "CORRECTION TO MY OWN FIGURE OF AN HOUR AGO: THE HONESTLY FIXABLE SHARE OF THE POLISH QUEUE IS 22 PER CENT, NOT 38. Nothing written this run. I reported that 89 of 233 polish chapters, 38 per cent, were workable, and I counted a chapter as workable if any B verse failed the compression bar. numbers 8 shows that test is too loose. Its single B entry, covering 8-11, sits at zip 0.409 and ttr 0.567, so it fails compression and looked workable - but it has ZERO duplicate sentences and a duplicate-ngram fraction of 0.000. I tightened the two places where the prose really does double back, the Gill-and-Keil agreement on bringing the Levites into the court, which reported both witnesses at length saying nearly the same thing, and Wesley says the same, that Aaron caused them to imitate the motion, which restated Gill's clause immediately above it. That removed 36 words of genuine redundancy and moved zip from 0.409 to 0.413 and ttr from 0.567 to 0.573. Both still short. Reaching 0.42 and 0.58 from there would mean cutting witness content, not flab. The entry is 657 words reporting four witnesses on four separate questions - the age of the bullock, who laid on hands, what the act transferred, how the waving was done - and the low compression comes from that enumerative SHAPE, not from anything a careful editor could delete. RESCANNED ON THE STRICTER TEST, counting a chapter workable only where some B verse carries measurable duplication, dup_sentences above zero or dup_ngram_frac at or above 0.01: of 230 polish chapters with B verses, 51 have a cut actually available (22 per cent) and 179 do not (78 per cent). The 51 include 1chronicles 7 and 1chronicles 26, 1kings 8 and 1kings 21, 1samuel 17, 2chronicles 9 and 2chronicles 32, 2kings 20, acts 6, exodus 36, exodus 39 and ezra 5. Those are the chapters where a worker can improve the prose and move the meter honestly at the same time. On the other 179 the meter can only be moved by writing worse prose, and the earlier estimate of 89 should not be used."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "Jamieson, Fausset and Brown blocks in this chapter sit at keys 1, 7 and 13 - a constant step of 6, the corpus signature of the misaligned JFB fetch. Content confirms it: key 1 is a note on Topheth and the drum, keys 7 and 13 are the same paragraph twice over on Josiah's iconoclasm through the cities of Samaria. None of it touches Ezra. JFB is declared nowhere in the chapter and is named in excluded_voices on the entries whose span contains those blocks."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "8",
+      "verses": [
+        "7"
+      ],
+      "note": "Key 7 is dropped from the tiling. Its entire catena is the misaddressed JFB paragraph, so after excluding the residue there is no usable source at all for verse 7, and a tile there would be invention. The key lies past the first source gap (verse 6 is absent), so coverage of it is advisory. The legacy per-verse entry that stood there drew on Delitzsch and Ellicott material filed under other keys; that material is carried in the 1-5 and 13-16 tiles instead."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "8",
+      "verses": [
+        "36"
+      ],
+      "note": "The Charles Ellicott block at key 36, the last key of the chapter, carries StudyLight site chrome beginning at the book-navigation breadcrumb and running on through menus, stylesheets and scripts. Ninth consecutive chapter with this pattern; the genuine commentary is the first paragraph only."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "8",
+      "verses": [
+        "17"
+      ],
+      "note": "Where Casiphia was. Clarke holds for the Caspian mountains between Media and Hyrcania, deriving the name from the word for silver and suggesting the Nethinim worked mines there. Gill names that reading and rejects it as too distant for messengers to go and return inside the narrative's days, placing it in or beside Babylon on Jarchi's authority. Ellicott puts it near Ahava as a Jewish colony under Iddo. All three carried."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "8",
+      "verses": [
+        "24",
+        "26"
+      ],
+      "note": "Two live disputes in the treasure section. First, whether Sherebiah and Hashabiah belong among the twelve chiefs of priests: Ellicott renders the particle to Sherebiah and joins the two Levites to an equal number of priests; Delitzsch refuses it, since they were Levites of Merari and a dative would subordinate the priests to them. Second, the silver vessels: Gill reports from Jarchi and Aben Ezra a hundred vessels of a talent apiece, which Clarke denies outright, making a hundred talents the total weight. Gill's valuation from Scheuchzer is also more than twice Clarke's and Ellicott's for the whole consignment."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "8",
+      "note": "Legacy per-verse prose in the old format, with school labels marked up inside the prose, replaced by nine pericope tiles regenerated from the catena (1-5, 10, 13-16, 17-20, 21-23, 24-26, 27-30, 31-34, 35-36). The catena is gapped at verses 6, 8, 9, 11 and 12, so no tile spans those; the required contiguous run from the lowest key is 1-5 and is covered. Verse 10 is a declared thin entry - its whole catena is a 21-word textual note by Ellicott. Verse 7 is dropped; see the source-defect note."
     }
   ]
 }
