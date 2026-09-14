@@ -85004,6 +85004,80 @@
         "1"
       ],
       "note": "THE POLISH QUEUE HAS TWO LANDABLE CHAPTERS IN 230, AND BOTH WERE ALREADY REJECTED. Nothing written this run. Scanning every polish chapter against the two conditions a worker actually needs - that the chapter already carries fidelity self-grades, so landing does not require grading the whole thing from scratch, and that at least one B verse carries measurable duplication, so the meter can be moved by deleting something real rather than by writing worse prose - leaves exactly two: exodus 36 and exodus 39. Both are already on the notebook as rejected pending an owner decision of the numbers 31 class. exodus 36 was refused on 2026-08-24 because key 26's entire content is Jamieson residue about Exodus 23:14-16, which leaves the run with no source at all once the residue is excluded, and four more runs are too thin to write; exodus 39 was refused on 2026-08-20 because its catena is predominantly cross-references back to Exodus 28, three of its eight legal runs cannot be written without inventing content, and the sizer over-reports because Keil's blocks are verse quotation cut off by the 200-word cap. SO THE POLISH QUEUE IS EFFECTIVELY CLOSED to an honest worker, and the three conditions that close it are independent. Of 230 chapters carrying B verses, 179 have no measurable duplication at all, so the only route to the grade is thesaurus work on subject vocabulary. Of the 51 that do have duplication, all but two are legacy-unversioned and carry no fidelity grade anywhere, so landing means self-grading every entry against the full catena - 1chronicles 7, where I demonstrated the fix working on four entries last night, is one of these. And the two that clear both conditions are the two already blocked on their sources. WHAT IS STILL OPEN. The legacy queue, 132 chapters and 3,133 verses, is untouched by any of this: those chapters are rewritten from the catena under the current rules and graded by the writer as part of the work, so neither the missing-grade problem nor the duplication problem applies. Its head is tractable - joshua 2 at 21,090 usable source words, ruth 1 at 18,364, ruth 2 at 15,169, 1samuel 11 at 12,759, all well inside a single batch. A worker with context to spend should be pointed there rather than at polish, and --queue auto will not do it, because auto drains polish before legacy and polish never empties."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "Jamieson, Fausset and Brown blocks in this chapter sit at keys 3 and 9 - a step of 6, the corpus signature of the misaligned JFB fetch. Content confirms it: key 3 is the walking on the water and the words It is I, key 9 a remark that the popular enthusiasm for our Lord was then at its height. Neither touches this chapter. JFB is declared nowhere here and is named in excluded_voices on the two entries whose span contains those blocks."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "2",
+        "11",
+        "26",
+        "30",
+        "31",
+        "32",
+        "34"
+      ],
+      "note": "Cyril of Jerusalem's blocks in this chapter are attached by keyword rather than by passage, and only some of them belong. Genuinely on this discourse, from the Catechetical Lecture on Antichrist and the Second Coming: keys 4, 6, 7, 8, 14, 19, 20, 21, 24, 27. Plainly foreign: key 2 (the names Jesus and Christ), key 11 (the titles of the Holy Spirit), keys 26, 30, 31, 32 and 34 (the session at the right hand, eternal life, the willing passion). Blocks are also duplicated across keys - 7 and 8 identical, 19 and 20 identical, 14 and 21 identical, 24 and 31 identical - so the same excerpt is filed several times. Cyril was used only where his block is on this passage, and declared only on those entries. A blanket exclusion is not appropriate here; the defect is per key."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "37"
+      ],
+      "note": "The Charles Ellicott block at key 37, the last key of the chapter, carries StudyLight site chrome beginning at the book-navigation breadcrumb and running through menus, stylesheets and scripts. Tenth consecutive chapter showing this pattern; the genuine commentary is the first sentence only. A cleanup keyed on the breadcrumb would recover all of them at once."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "14"
+      ],
+      "note": "What the abomination of desolation is, five ways. Gill and Henry: the Roman army encircling the city. Theophylact: the violent entry of enemies. Bede: refuses to settle, offering Antichrist, Pilate's statue of Caesar, or Hadrian's equestrian statue in the holy of holies. Augustine: harmonises the three Gospels and fixes the moment by the city compassed with armies. Robertson: the phrase is the one used in the Maccabean history of the altar to Zeus raised by Antiochus, so the prophet's words find a second fulfilment with Rome in Syria's place. All carried in the tile; none resolved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "32"
+      ],
+      "note": "Neither the Son. Two questions at once. On genuineness: Clarke reports from Ambrose that the clause was wanting in some Greek copies, notes its absence from both parallels, and says he suspects it was not original; Barnes and Robertson both hold it certainly genuine here. On sense: Barnes and Wesley appeal to a real and therefore finite human knowledge; Clarke to a variable communication from the indwelling Deity; Hilary denies ignorance altogether and resolves it as the hiding of the treasures of wisdom that are in Christ, adding that to make the Father withhold it ascribes envy to him; Theophylact points out that the text says ye know not, not I do not know, and treats the concealment as mercy. Carried as a debate."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "13",
+      "verses": [
+        "30"
+      ],
+      "note": "This generation, five readings. Gill and Henry: the men then living. Clarke: this very race of men, conceding that the word can mean a term of thirty-eight years - exactly the interval to the destruction - but preferring the other because events in the chapter look past it. Theophylact: the generation of Christians, since most of the apostles did not live to see the city fall. Bede: either the whole race of mankind or the Jews in particular. Wesley: settles it by narrowing all these things to the temple and the city rather than by widening the generation."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "13",
+      "note": "Legacy per-verse prose replaced by eleven pericope tiles regenerated from the catena (1-2, 3-4, 5-8, 9-13, 14-16, 17-20, 21-23, 24-27, 28-31, 32-33, 34-37). Source keys run 1-37 with no gaps. Eighteen distinct voices in the chapter across all seven schools; patristic material filed under one key but commenting on later verses was carried in the tile covering those verses, which is why Bede and Theophylact are declared on 5-8 though their blocks sit at key 3."
     }
   ]
 }
