@@ -85130,6 +85130,31 @@
         "22"
       ],
       "note": "Seven ranged entries tiling 1-24 exactly: 1-3, 4-7, 8-11, 12-14, 15-18, 19-21, 22-24. All seven graded A. Expansion runs 0.15x to 0.59x, the tightest at 8-11 where Henry alone supplies 2,689 words on Rahab's confession and the loosest at 19-21, the shortest run in the chapter. Three genuine disagreements are recorded rather than smoothed: whether Joshua's sending of spies was prudence or distrust, where Henry and Wesley take it for prudence and Calvin leaves open that Joshua trusted his own foresight without consulting God; whether Rahab's falsehood was sinful, where Clarke and Wesley call it sin outright, Ellicott holds it left no stain on her conscience though all falsehood is sin, and Calvin sets the question of treachery to her country beside it; and whether the scarlet line is the cord she let them down by, where Keil and Delitzsch and Wesley identify the two and Ellicott denies it flatly on the ground that the words differ in the original and that hanging out the means of escape would have declared the whole tale. Three outliers recorded: Ellicott on the varying standard of a believer's conscience, Ellicott that Rahab was morally superior rather than inferior to her countrymen, and Clarke that the inspired writer records her lie without making the Spirit of God responsible for it. One ENTITIES flag was raised on a first pass and fixed rather than defended: I had written that the Hebrew word for harlot is the one used of Jephthah's mother, but Wesley cites only the verse and never names him, so the name came from me and was removed."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "10",
+        "16",
+        "22",
+        "28",
+        "34",
+        "40",
+        "46",
+        "52",
+        "58"
+      ],
+      "note": "Jamieson, Fausset and Brown blocks in this chapter sit at keys 10, 16, 22, 28, 34, 40, 46, 52 and 58 - a perfect arithmetic step of 6 across all nine, the corpus signature of the misaligned JFB fetch, and the longest unbroken run of it found so far. Content confirms the misaddressing: key 22, which should be the thorny ground, is the disciples plucking corn on the sabbath and cites the parallel accounts of that scene by name. JFB should be declared nowhere in this chapter, and named in excluded_voices on whatever entries span those keys. Recorded ahead of the rewrite so the next worker does not have to rediscover it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "13",
+      "note": "SIZE PROFILE, recorded for whoever takes this chapter. 58 source keys, no gaps, 89,290 usable source words - more than twice the ~40,000 threshold at which the poke makes a chapter the whole batch, and about 3.3x mark 13, the largest chapter landed so far. The figure is not inflated by the 200-word cap in the way exodus 39 was: the median key is 1,130 visible words and the ten largest run 2,350 to 10,412, with key 24 alone at 10,412 and key 1 at 9,469. Twenty-two distinct voices, including a heavy Latin and Greek catena - Jerome, Chrysostom, Origen, Remigius, Raban, Hilary, Gregory, the Gloss and Pseudo-Augustine alongside Gill, Barnes, Ellicott, Clarke, Robertson, Wesley, Calvin, Lightfoot and Henry. All 58 entries are legacy-unversioned, 26 of them graded B, so this is a full rewrite from the catena and not a polish. Expect roughly sixteen to eighteen pericope tiles. This is a fresh worker's whole batch; it was drawn and declined by a session already long in the tooth, on the rule that a chapter one cannot finish must not be started."
     }
   ]
 }
