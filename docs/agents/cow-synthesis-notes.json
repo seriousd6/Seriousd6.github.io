@@ -84874,6 +84874,56 @@
         "39"
       ],
       "note": "THE COMPRESSION-DRIVEN B IS HONESTLY FIXABLE, DEMONSTRATED, AND THE FIX IS SMALL. This is the counterpart to the exodus 25 and numbers 7 cases: 1chronicles 7 has four B entries and all four fail COMPRESSION rather than variety - k16 zip 0.418, k29 0.411, k38 0.420, k39 0.420, every one of them already past the 0.58 variety bar. The defect is real, visible redundancy and removing it is a genuine improvement, not metric-chasing. WHAT IS WRONG. k29 states the same sentence twice with variations, once as Keil and Delitzsch's care to show how the Manassites held towns within their neighbours' borders, and Gill's simple placing of Ephraim beside Manasseh, together let the reader see the breadth of the blessing, and again twenty words later as Keil and Delitzsch's care to show that Bethshean and Megiddo, Taanach and Dor lay within the lands of Issachar and Asher yet were held by Manasseh, and Gill's simple placing of Ephraim beside its brother-tribe. k38 and k39 both close with long paragraphs that recapitulate their own earlier paragraphs - k39 restates Ellicott's Ulla-as-Ara repair three times and repeats the phrase from the thirtieth verse to the thirty-ninth, which is its worst repeated ngram. k16 repeats the Keil and Delitzsch sons of Gilead summary that its first paragraph had already given, and that phrase is its worst repeated ngram too. THE FIX, and it works: delete the duplicated sentences, keep the more specific of each pair, and where a deletion drops the entry under the 350 floor restore a short grounded clause rather than padding - for k16 the Keil and Delitzsch attribution without the repeated summary, for k39 the Gill-versus-Ellicott contrast, which is witness material rather than recap. Result: k16 zip 0.427 ttr 0.618 375w, k29 0.426/0.584 364w, k38 0.432/0.615 366w, k39 0.448/0.588 375w. All four grade A, the validator passes and the lint gate reports zero violations. WHY IT DID NOT LAND, and this is the part the next worker needs. The chapter is legacy-unversioned from 2026-07-22 and carries NO fidelity self-grade anywhere, neither at the top level of the tags entries nor under qa. The fidelity gate therefore refuses all 40 entries, and landing means reading and grading every one of them against a 12,897-word catena, not just the four that were edited. This refines the retraction I filed against exodus 25: the whole-chapter self-grade cost is real, but it applies to LEGACY chapters, not to chapters already on cow-prose-rules-2026-08-09, which carry their grades under qa.fidelity. Check which kind a polish pick is before budgeting it. The four edits above are four deletions and two short restorations and can be reapplied in minutes."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "28",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20"
+      ],
+      "note": "Jamieson, Fausset and Brown blocks in the catena for this chapter sit at keys 2, 8, 14 and 20 - a constant arithmetic step of 6, the corpus-wide signature of the misaligned JFB fetch. Content confirms the misaddressing: key 8 expounds the death of Baasha and the doom pronounced against Jeroboam, key 14 is Arza and the murder of Elah by Zimri, key 20 is Zimri's suicide in the burning palace and the proclamation of Omri. None of it touches this chapter. JFB was declared in no tile and none of this material was used."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "28",
+      "verses": [
+        "21"
+      ],
+      "note": "The Charles Ellicott block at key 21, the last key of the chapter, runs to roughly 33KB, of which about 30KB is StudyLight site chrome beginning at the book-navigation breadcrumb and continuing through menus, scripts and the full book/chapter index. The genuine commentary occupies the first ~1.3KB. Eighth consecutive chapter showing this pattern; a cleanup keyed on the breadcrumb would recover all of them."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "28",
+      "verses": [
+        "18"
+      ],
+      "note": "Which cherubim are called the chariot. Ellicott and Delitzsch both identify it with the two figures resting on the covering of the ark, Delitzsch arguing from apposition that the cherubim and not the ark form the chariot on which God is enthroned. Wesley denies this outright: those were made by Moses long before, so the chariot must be the far larger pair Solomon was still to make, and covered means before the ark, screening it from the high priest's eyes, not above it. Both readings carried in the tile."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "28",
+      "verses": [
+        "2"
+      ],
+      "note": "Whether David rose from a sickbed or from his throne divides the witnesses four ways: Clarke has him confined to bed and receiving strength to rise; Ellicott and Delitzsch both say the throne, Delitzsch expressly rejecting the bed and naming Kimchi as the source of the error; Gill offers both and supports the throne from an ancient custom of standing to address a crowd; Henry has both in sequence. Carried as a debate rather than resolved."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "28",
+      "note": "Legacy per-verse prose replaced by eight pericope tiles regenerated from the catena (1-2, 3-5, 6-8, 9-10, 11-13, 14-16, 17-19, 20-21). Source keys run 1-21 with no gaps, so no tile spans an absent verse. Six voices carried; JFB dropped chapter-wide as misaddressed."
     }
   ]
 }
