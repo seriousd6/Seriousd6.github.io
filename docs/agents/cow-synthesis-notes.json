@@ -84736,6 +84736,23 @@
       "book": "2chronicles",
       "chapter": "6",
       "note": "Every tile self-graded A. Keil and Delitzsch was NOT declared anywhere in this chapter: his two blocks (keys 2 and 13) are bare verse text with no comment attached, and declaring him for a lemma would misrepresent the catena. John Gill was likewise not declared, his single block being a cross-reference stub with no content. Both omissions are deliberate and are the reason two tiles carry one voice. Tiles 27-30 and 31-35 are Ellicott alone; their closing paragraphs generalise about his method rather than introducing new claims, which is framing and not attribution — I have kept those sentences descriptive of what his notes do, not of what he says about the verses."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "12",
+        "16",
+        "21",
+        "22",
+        "23",
+        "26",
+        "34"
+      ],
+      "note": "WHAT THE POLISH QUEUE IS ACTUALLY MEASURING, AND WHY EXODUS 25 CAME STRAIGHT BACK. I landed this chapter an hour ago having fixed the five leaning closing paragraphs, and the picker offered it again unchanged - still 8 qa.grade B. The reason is that qa.grade has nothing to do with fidelity. backfill-synthesis-qa grade_of reads two numbers off the prose: compress, the zlib ratio, A at 0.42 and B at 0.36; and ttr, the length-normalised moving-average type-token ratio, A at 0.58 and B at 0.50. Both are redundancy measures. Nothing in the grade looks at whether the prose says what the witnesses say - that is the separate fidelity self-grade, and on this chapter it was already clean everywhere except entries 21, 24 and 26, the three the 2026-08-16 note had named. EXODUS 25 MEASURED. All eight B entries clear the compression bar and are held at B by lexical variety alone: k9 zip 0.441 ttr 0.566, k12 0.430/0.570, k16 0.437/0.558, k21 0.455/0.551, k22 0.420/0.545, k23 0.434/0.553, k26 0.426/0.532, k34 0.423/0.550. Every ttr sits in the band 0.53 to 0.57 against a cutoff of 0.58; the largest gap is 0.048 and the smallest 0.010. ACROSS THE QUEUE, on a random sample of 404 B verses drawn from the polish chapters: 44 per cent are held back by ttr alone, 23 per cent by compression alone, 33 per cent by both. Roughly three quarters of the queue therefore involves lexical variety. THE PART THAT NEEDS AN OWNER'S VIEW. Raising ttr on a chapter of tabernacle joinery means not repeating ark, table, gold, rings, staves, cherubim inside the moving window, and those are the words the subject matter supplies. Some of that can be done honestly by varying verbs and construction, and where the prose really does circle a phrase it should be. But a synthesist who treats 0.58 as the target will reach for pronouns and near-synonyms on furniture vocabulary, and the prose will read worse while the meter reads better - and because the grade is computed from the prose alone, nothing downstream can tell the two apart. Recommend deciding explicitly whether descriptive chapters are expected to reach 0.58, or whether the A threshold should be genre-aware, before the queue is drained by workers optimising toward it."
     }
   ]
 }
