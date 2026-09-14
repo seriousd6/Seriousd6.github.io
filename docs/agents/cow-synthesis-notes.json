@@ -84669,6 +84669,20 @@
       "book": "nehemiah",
       "chapter": "11",
       "note": "Every tile self-graded A. Voices withheld where blocks were truncated in my reading: Adam Clarke at key 26, John Wesley at key 36. Two genuine disagreements were preserved rather than harmonised. First, whether the phrase mighty men of valour is martial: Gill takes it both ways, Clarke reads it as strength of body and courage in war, Ellicott refuses the martial sense entirely and makes it ability for the service of God's house — three readings of two words, recorded as a debate. Second, where Geba is: Gill puts it on Benjamin's southern border, Delitzsch makes it Judah's northern boundary three leagues north of Jerusalem, Clarke identifies it with Saul's Gibeah. These are not reconcilable by paraphrase and the prose does not try."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "16",
+        "21",
+        "22",
+        "26"
+      ],
+      "note": "POLISHED. Five closing paragraphs rewritten or removed, each of which ended the entry in the synthesist's own voice rather than a witness's. Entry 9 lost a generalisation about the pattern putting the design beyond human invention and now ends on Wesley's rule that what is done in God's service must be done by his direction. Entry 16 lost a closing sentence about the covenant document being deposited rather than displayed and now ends on Gill's figure of the law laid up in the heart of Christ. Entry 21 lost the cross-verse gathering the 2026-08-16 note flagged - the sprinkled blood from Clarke on v.17, the voice from between the cherubim from Ellicott and Keil on v.22, and the title ark of the testimony, none of which belong to v.21's witnesses - and keeps only a restatement of the arrangement the entry itself established. Entry 22's wholly unattributed close, which called the furniture the apparatus of a conversation, is replaced by Ellicott's own conclusion that the tabernacle was designed for the meeting and is therefore ordinarily named the Tent of Meeting, unhappily rendered tabernacle of the congregation. Entry 26 lost a closing that applied to the table the carried-never-handled principle Ellicott states only of the ark at v.15. All five stay inside the window at 531, 518, 375, 423 and 378 words. CORRECTION TO MY OWN NOTE OF AN HOUR AGO, which is wrong and should not be relied on. I reported that no entry in this chapter carried a fidelity self-grade and that landing it therefore meant grading all thirty from scratch. I had looked for the block at the top level of each tags entry; backfill-synthesis-qa.py line 173 pops it from there into qa.fidelity, so in any chapter that has already been landed it lives one level down. All thirty entries here were graded, the gate passed before I touched anything, and worker A's recently landed chapters that looked ungraded by the same test are fully graded too. The general claim built on that error - that a pre-self-grade chapter's real unit of work is the whole chapter - does not follow and should be disregarded. Second correction: the eight verses this chapter contributes to the polish meter are qa.grade B, which the lint assigns for length and density, not fidelity grades; only entries 21 and 26 were fidelity-B, and those are the two the August note had already named."
     }
   ]
 }
