@@ -85078,6 +85078,58 @@
       "book": "mark",
       "chapter": "13",
       "note": "Legacy per-verse prose replaced by eleven pericope tiles regenerated from the catena (1-2, 3-4, 5-8, 9-13, 14-16, 17-20, 21-23, 24-27, 28-31, 32-33, 34-37). Source keys run 1-37 with no gaps. Eighteen distinct voices in the chapter across all seven schools; patristic material filed under one key but commenting on later verses was carried in the tile covering those verses, which is why Bede and Theophylact are declared on 5-8 though their blocks sit at key 3."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "Jamieson displacement, the every-sixth-key signature, all four blocks foreign and two of them byte-identical. Keys 6, 12, 18 and 24 are the only Jamieson blocks in the chapter and all four are congruent to 0 mod 6. None is about Joshua 2. Key 6 is a framing sentence about Moses reviewing what God had done for his people about a month before his death, after the conquest of Sihon and Og. Keys 12 and 18 are the SAME 93 words verbatim, on Moses addressing the new generation at Horeb as representatives of their fathers and adopting Jethro's suggestion that judges be appointed. Key 24 is on the spies of the wilderness generation, that the proposal emanated from the people through unbelief and that the issue proved disastrous through their own sin and folly. All four are Deuteronomy 1 material, so the donor sits well before the host, and the duplicate pair at 12 and 18 is a second instance of the emitter repeating itself within one chapter. All four excluded and declared as excluded_voices on entries 4, 12, 15 and 22; Jamieson is named nowhere in the prose."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "joshua",
+      "chapter": "2",
+      "verses": [
+        "24"
+      ],
+      "note": "StudyLight chrome at key 24 in Ellicott. The block runs 1,012 words of which about 37 are usable - the single sentence noting the entirely satisfactory effect of the mission and pointing back to the opening of the chapter. Everything after it is navigation furniture, copyright and terms-of-use boilerplate, and then several hundred words of accordion JavaScript. The usable sentence was kept and Ellicott is named in entry 22 on that basis alongside his genuine note on the inclusive reckoning of the three days at key 22."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "joshua",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "13",
+        "16",
+        "23"
+      ],
+      "note": "Keil and Delitzsch quotes ahead of his comment, so his material regularly belongs to a later entry than the key it sits under. At key 3 his block quotes verses 3 to 7 and comments on the pursuit; at key 13 it quotes 13 to 16 and comments on the cord, the window and the flight to the mountain; at key 16 it quotes 16 and 17 and comments on the three conditions; at key 20 it quotes 20 to 22 and comments on the binding of the cord and the three days in the hills. In each case the comment was used in the entry it actually treats rather than the one its key falls in. Two further filings: Ellicott's block under key 1 is not about the sending of the spies at all but about Rahab's answer to the officers, and was used in the entry covering 4-7; Clarke's block under key 1 opens with a synopsis of the whole chapter before any comment begins, and only the comment was used."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "joshua",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "4",
+        "8",
+        "12",
+        "15",
+        "19",
+        "22"
+      ],
+      "note": "Seven ranged entries tiling 1-24 exactly: 1-3, 4-7, 8-11, 12-14, 15-18, 19-21, 22-24. All seven graded A. Expansion runs 0.15x to 0.59x, the tightest at 8-11 where Henry alone supplies 2,689 words on Rahab's confession and the loosest at 19-21, the shortest run in the chapter. Three genuine disagreements are recorded rather than smoothed: whether Joshua's sending of spies was prudence or distrust, where Henry and Wesley take it for prudence and Calvin leaves open that Joshua trusted his own foresight without consulting God; whether Rahab's falsehood was sinful, where Clarke and Wesley call it sin outright, Ellicott holds it left no stain on her conscience though all falsehood is sin, and Calvin sets the question of treachery to her country beside it; and whether the scarlet line is the cord she let them down by, where Keil and Delitzsch and Wesley identify the two and Ellicott denies it flatly on the ground that the words differ in the original and that hanging out the means of escape would have declared the whole tale. Three outliers recorded: Ellicott on the varying standard of a believer's conscience, Ellicott that Rahab was morally superior rather than inferior to her countrymen, and Clarke that the inspired writer records her lie without making the Spirit of God responsible for it. One ENTITIES flag was raised on a first pass and fixed rather than defended: I had written that the Hebrew word for harlot is the one used of Jephthah's mother, but Wesley cites only the verse and never names him, so the name came from me and was removed."
     }
   ]
 }
