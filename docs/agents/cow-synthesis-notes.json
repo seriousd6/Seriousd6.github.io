@@ -84628,6 +84628,47 @@
         "1"
       ],
       "note": "WHAT A POLISH CHAPTER ACTUALLY COSTS, AND WHY THE GRADE-B COUNT UNDER-STATES IT BY A FACTOR OF FOUR. The status meter reports exodus 25 as 8 grade-B verses, which reads like eight paragraphs of work, and the diagnosis recorded alongside this note narrows it further: three of the eight are already clean and four of the remaining five need only a trim that stays above the 350 floor. On that accounting the chapter is an hour. It is not, because finish will not accept it. cmd_finish runs synthesis-fidelity.py --signals-only as its third gate, and that gate fails unless EVERY entry carries a writer-recorded self-grade, the block fidelity grade A checked_by self in its tags entry, which is a different field from the qa.grade the August backfill wrote. All 30 entries in this chapter have qa.grade and NONE has fidelity. So landing exodus 25 means personally reading all 30 entries against a 34,240-word catena and grading each, not editing five paragraphs - the 22 A-graded entries cost as much to certify as the 8 B ones, and stamping them A unread is precisely the fabrication that gate exists to prevent. THE GENERAL RULE, worth checking before any polish pick is budgeted: a chapter written before the self-grade requirement carries qa grades but no fidelity blocks, so its real unit of work is the whole chapter regardless of how few verses graded B. Check with a one-liner over the tags file for entries missing fidelity before deciding the batch, because size in source words does not reveal it and neither does the grade-B count. This is the third finding in three runs that the meters do not show, and all three point the same way: the polish queue's visible numbers describe the defect, not the labour."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "20",
+        "26",
+        "32"
+      ],
+      "note": "JFB MISADDRESSING, sixth chapter, step 6 again. Blocks at keys 2, 20, 26 and 32 — on the progression 2, 8, 14, 20, 26, 32 with keys 8 and 14 carrying none — and all four are foreign: keys 2 and 32 give the Levitical city lists and genealogies of 1 Chronicles 6 and Joshua 21, key 20 and key 26 the same neighbourhood. Running tally now: numbers 31 (6), 1 kings 7 (6), 1 chronicles 9 (6), nehemiah 12 (12), 2 chronicles 31 (6), nehemiah 11 (6). Five of six chapters step by six and one by twelve, which is consistent with a single offset bug sampled at different densities rather than with two different faults. Note also that in THIS chapter the intruding material is itself a parallel register — Levitical cities — so a reader skimming would be least likely to catch it here. That is an argument for fixing the defect at the source rather than relying on writers to notice."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "11",
+      "verses": [
+        "27",
+        "28",
+        "29",
+        "34",
+        "36"
+      ],
+      "note": "SOURCE GAPS AND CHROME. Catena keys 27, 28, 29 and 34 are absent, so the tiling runs 1-26, then 30-33, then 35-36, and no tile may bridge those seams. Key 36's Ellicott block ends its genuine content at the remark about the fewness of the Levites and then runs into StudyLight navigation and copyright — the last-key chrome, sixth consecutive chapter in which it appears in exactly that position. Additionally: several keys in this chapter are bare or near-bare (key 15 is ten words, key 18 twenty-one, key 13 twenty-two, key 12 thirty-two), which is why eight of the ten tiles land in the 350-375 FLOOR band. The gate passes at 0 violations. This is not floor-hugging in the sense the flag exists to catch — it is a register whose catena averages under 300 usable words per verse, and honest coverage of it simply does not produce long entries."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "11",
+      "note": "Rewritten from legacy per-verse prose as 10 pericope tiles: 1-2, 3-5, 6-10, 11-15, 16-19, 20-21, 22-24, 25-26, 30-33, 35-36. This chapter is the direct parallel to 1 chronicles 9, which I rewrote earlier in this same run, and working the two in sequence made the relationship legible in a way neither would show alone: Ellicott's explanation of the gatekeeper discrepancy here (172 against 212 there, because one list stops with Zerubbabel's return and the other adds Ezra's company) is the same explanation Clarke gives for the differing scope of the whole register, and the Athaiah/Uthai pedigree problem recurs verbatim. A future pass that deliberately pairs parallel chapters — this one with 1 chronicles 9, 2 chronicles 31 with the Kings account of Hezekiah — would let each tile cite the cross-reference the commentators are actually arguing about, instead of leaving the reader to discover it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "11",
+      "note": "Every tile self-graded A. Voices withheld where blocks were truncated in my reading: Adam Clarke at key 26, John Wesley at key 36. Two genuine disagreements were preserved rather than harmonised. First, whether the phrase mighty men of valour is martial: Gill takes it both ways, Clarke reads it as strength of body and courage in war, Ellicott refuses the martial sense entirely and makes it ability for the service of God's house — three readings of two words, recorded as a debate. Second, where Geba is: Gill puts it on Benjamin's southern border, Delitzsch makes it Judah's northern boundary three leagues north of Jerusalem, Clarke identifies it with Saul's Gibeah. These are not reconcilable by paraphrase and the prose does not try."
     }
   ]
 }
