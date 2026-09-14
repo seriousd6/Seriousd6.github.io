@@ -84582,6 +84582,42 @@
         "34"
       ],
       "note": "DIAGNOSIS OF ALL EIGHT GRADE-B ENTRIES. They share one defect shape and three of the eight do not actually have it. The shape: a closing paragraph written in the synthesist's own voice that generalises across the witnesses, after the witness material has already been laid out. The 2026-08-16 fidelity note named three instances; the lint marked down five more, and inspection shows the same move in each. ALREADY CLEAN, no action needed - entry 12 closes on Clarke's reconciliation of the never-removed staves with Numbers 4:6, entry 34 closes on Gill's note that knops and branches were of the same mass, entry 23 closes on Henry's three readings of the bread with Gill's forward look to the table in the kingdom. All three end on attributable material. NEEDS A GROUNDED REPLACEMENT - entry 9 closes 'Taken together the witnesses agree on the substance while dividing on the mode ... to put the whole design outside the reach of human invention', which is the synthesist's, though the final Wesley clause is sound; entry 16 closes 'The point of the verse, on every reading offered here, is that the covenant document is not displayed but deposited'; entry 21 closes 'What the verse settles, in other words, is a relation rather than a measurement', and gathers Clarke on the sprinkled blood, Ellicott and Keil on the voice from between the cherubim, and the title ark of the testimony into one summary none of them makes; entry 22 closes 'Read against the rest of the chapter the verse changes the character of the furniture behind it ... the apparatus of a conversation', entirely unattributed; entry 26 closes 'What the three verses together establish is an arrangement designed so that nothing consecrated need be handled', which extends to the table a principle Ellicott states only of the ark at v.15. WORD BUDGETS FOR THE FIX, because deletion alone breaks the 350 floor: entry 9 is 575 total with a 69-word closing, 12 is 615, 16 is 564 with 136, 21 is 441 with 97 and so falls to 344 if the closing is simply cut, 22 is 462 with 91, 23 is 639, 26 is 440 with 62 and falls to 378. Entries 21 and 26 therefore need replacement rather than deletion; 9, 16 and 22 have room to be trimmed back to a witness-anchored ending. Nothing was written to the data tree this run."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "31",
+      "verses": [
+        "2",
+        "8",
+        "20"
+      ],
+      "note": "JFB MISADDRESSING, fifth chapter confirmed and the stride holds. Blocks at keys 2, 8 and 20 — the progression 2, 8, 14, 20 with key 14 carrying none — and all three are foreign: key 2 is unreadable as comment on this verse, key 8 is Elisha's last illness from 2 Kings 13, key 20 is Amaziah's accession from 2 Kings 14. Running tally of the defect: numbers 31 (step 6, Numbers 7 material), 1 kings 7 (step 6, 1 Samuel 11-12), 1 chronicles 9 (step 6, 1 Kings 4), nehemiah 12 (step 12, mixed Joshua/1 Chronicles/Numbers), 2 chronicles 31 (step 6, 2 Kings 13-14). Five chapters, five arithmetic progressions, and in every case the intruding material comes from a neighbourhood of the canon rather than at random — which suggests the scraper is walking a parallel index and emitting the wrong row at a fixed interval. JFB dropped as uncitable in all three tiles here."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "31",
+      "verses": [
+        "21"
+      ],
+      "note": "ELLICOTT CHROME at key 21, the chapter's last key: the genuine note ends at the comparison of with all his heart to the language of a perfect heart, and is followed by StudyLight navigation, copyright and raw CSS. Same position, same content, as in 1 kings 7 key 51, 1 chronicles 9 key 44 and nehemiah 12 key 47. The rule is now reliable enough to automate against: the chrome attaches to the LAST Ellicott block of a chapter and begins at the book-navigation breadcrumb. A scraper-side or cleanup-side fix keyed on that breadcrumb would recover several hundred words of real Ellicott commentary per affected chapter and remove a recurring trap for writers."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "31",
+      "note": "Rewritten from legacy per-verse prose as 8 pericope tiles: 1, 2-4, 5-7, 8-10, 11-13, 14-16, 17-19, 20-21. Source keys run 1-21 with no gaps — the first clean, unbroken catena I have had in four chapters, and it shows: eight tiles, all grade A first pass, no rewrites needed for TTR or length beyond the two that sit in the FLOOR band. Matthew Henry's block at key 1 is again a section-opening block, covering vv.1-3 and commenting explicitly on the courses and the king's portion, so he is declared in the 2-4 tile as well as the first. The chapter is unusually rich in genuine three- and four-way disagreement for a register: how the reformers could act in the northern kingdom (four positions), what the tents of the Lord means (three), where the third month falls in the harvest (three), whether Azariah is the priest who confronted Uzziah (three), and where the six subordinate Levites distributed (two)."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "31",
+      "note": "Every tile self-graded A. Voices withheld where blocks were truncated in my reading rather than guessed at: Adam Clarke at key 11, and John Wesley at keys 2, 3 and 4. One point where the witnesses converge but by different routes and the prose keeps them apart rather than merging: Gill dates the third month to the seam between barley and wheat harvest, Ellicott and Delitzsch to the close of wheat harvest, and Wesley to the start of the harvest season generally — three genuinely different agricultural claims about one month, recorded as a debate rather than harmonised into a vague one."
     }
   ]
 }
