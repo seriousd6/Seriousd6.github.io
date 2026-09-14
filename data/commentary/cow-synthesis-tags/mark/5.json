@@ -4,7 +4,7 @@
    "Theophylact",
    "Bede",
    "Pseudo-Chrysostom",
-   "Augustine of Hippo",
+   "Augustine",
    "Cyril",
    "Remigius",
    "Chrysostom",
@@ -23,76 +23,81 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Textual variants Gadarenes/Gerasenes/Gergesenes harmonized (Lightfoot: Gadara the heathen city within the wider Gergesene region); the demoniac met Christ across the sea."
+    "summary": "Ellicott and Robertson both prefer Gerasenes, Robertson settling the site topographically at the ruins of Khersa within the district of Gadara rather than the distant city; Lightfoot dissolves the quarrel by making the Gergesene region wider and containing the Gadarene, and derives the name from the Gergashite Canaanites or from the muddy soil."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom argues for Gergesenes on geography, since Gadara has no sea about it and Geraza neither lake nor sea, so that the other readings would convict the Evangelists of a manifest falsehood about country they knew."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The demons confess Christ (refuting the Pharisees' charge); the demoniac read as the Gentile peoples freed from Satan (Bede); demons hurt none without divine permission (Remigius)."
+    "summary": "Bede places Geraza in Arabia across the Jordan near mount Galaad and not far from the lake of Tiberias, and feels no difficulty; Augustine offers two ways of reconciling the one demoniac with the two of the other Gospel and insists there is no discrepancy."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports Griesbach preferring Gerasenes and relays a solution from Lightfoot that one demoniac was a Gadarene heathen and the other a Gergesenian Jew; Wesley supposes the one described here was the most remarkably fierce and ungovernable."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Christ crosses a storm to redeem a remnant from Satan; the Gadarenes prefer their swine to their Saviour — carnal hearts misread God's judgments."
+    "summary": "Henry reasons that if there were two there was one, and that Mark nowhere says there was but one."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "country of the Gadarenes",
-   "the demoniac",
-   "testimony of enemies",
-   "Christ over Satan's kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's vivid 'straightway'; he and Luke focus on the one more violent demoniac, Matthew notes two — emphasis, not contradiction (Augustine, Henry); the man dwells among the tombs."
+    "question": "What was the country called?",
+    "positions": "Ellicott reports the better copies giving Gerasenes and some Gergesenes; Clarke finds Griesbach preferring Gerasenes and notes the Gadarene territory lay within the Gergasene; Pseudo-Chrysostom insists the exact reading is Gergesenes because neither of the others has a lake; Bede gives Geraza without difficulty; Robertson answers topographically from the ruins of Khersa; Lightfoot makes the regions unequal so that both names can stand."
+   },
+   {
+    "question": "Was there one demoniac or two?",
+    "positions": "Augustine offers two solutions and chooses neither, that one was a more illustrious person whose state afflicted the country or that Mark and Luke related what was most worthy of compassion, and insists there is no discrepancy since they never said there was one alone; Henry reasons the same way; Wesley and Robertson both suppose one was more violent; Clarke relays Lightfoot dividing them by nationality, one heathen and one Jew."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "out of the tombs",
-   "a man with an unclean spirit",
-   "one or two demoniacs",
-   "death-in-life"
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Relays from Lightfoot that one of the two was a Gadarene and so a heathen while the other was a Gergesenian and so a Jew, and that the Gadarene is recorded because his was the only heathen our Lord cured except the daughter of the Syrophoenician woman."
+   },
+   {
+    "voice": "John Lightfoot",
+    "view": "Derives the regional name either from the old Gergashite family of the Canaanites or, as he prefers, from the muddy and clayey nature of the soil which the Jews called Gergishta."
+   }
   ],
+  "themes": [
+   "the country of the Gadarenes",
+   "a man with an unclean spirit",
+   "out of the tombs",
+   "two names for one region",
+   "one more illustrious than the other"
+  ],
+  "range": "1-2",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
   }
  },
  "3": {
@@ -106,118 +111,83 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He dwelt among the tombs and snapped every chain; the attempts to bind him had been given up in despair (Ellicott)."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: Satan is sometimes permitted preternatural strength beyond nature — a shocking reminder of how wretched it is to be under his tyranny; soul-distress worse than bodily agony."
+    "summary": "Gill notes that dwelling among the tombs is one of the marks of a madman in Jewish reckoning and that a heathen country would itself have made him unclean; Calvin takes a middle course on the strength, allowing that madmen show more than their natural capacity and that the devil does his part when God permits, but holding the force here far greater, and drawing the lesson that distress of mind is no less to be dreaded than bodily agony."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains the tombs by their situation outside the cities in desolate places, notes that the touch of a grave was polluting, turns the fetters into a figure of the law broken by the wild ass, and offers a quieter guess about the gashing."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine says the devils dwelt in tombs wishing to convey the false opinion that the souls of the dead were changed into devils."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott argues from the two verbs that the fastenings need not have been metal, since snapping one and wearing the other away by friction suggests cords, as with Samson; Robertson allows cords or wooden stocks, glosses the word for crushing together, and suggests the neighbours could point to the broken fragments."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke insists the strength was supernatural and turns aside to answer those who deny that there was any devil in the case at all."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What were the fetters made of?",
+    "positions": "Ellicott reasons from the pairing of snapping and wearing away that ropes or cords are meant rather than metal, citing a parallel case; Robertson allows cords or even wooden stocks and keeps the point open; Clarke will have nothing but supernatural strength and treats the question as a distraction from the reality of possession."
+   },
+   {
+    "question": "How far is the strength natural?",
+    "positions": "Calvin grants that madmen often show greater strength than their natural capacity allows and that the devil does his part when God permits, but insists the force described here was far greater than that; Clarke denies any natural explanation outright; Robertson describes the effect without explaining the cause."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Breaks off to argue with those who say there was no devil and the cases were only diseases, asking whom we should credit, the men sent from God or them."
+   },
+   {
+    "voice": "Matthew Henry",
+    "view": "Offers a quieter reading of the self-wounding than the others, that the cutting with stones may have been only his feet cut by the sharp stones he ran barefoot upon."
+   }
+  ],
   "themes": [
-   "dwelling among the tombs",
    "no man could bind him",
-   "preternatural strength",
-   "tyranny of Satan"
+   "the fetters broken in pieces",
+   "night and day in the tombs",
+   "crying and cutting himself with stones",
+   "chains that the law cannot hold"
   ],
+  "range": "3-5",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Every chain and fetter broken (vivid perfect tenses, perhaps eyewitness fragments); none could tame him — Mark's characteristic fulness of detail."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: his supernatural strength proves real diabolic agency, against those who reduce it to mere madness — the inspired writers must be credited."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "chains plucked asunder",
-   "fetters broken",
-   "none could tame him",
-   "real demonic agency"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ceaseless screeching and self-gashing night and day among tombs and mountains (a detail only in Mark) — the signature of demonic torment."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a specimen of Satan's cruelty to all the wicked if permitted — yet the devil himself has his chain; Henry: the voice of Satan is 'do thyself all the harm thou canst.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "night and day crying",
-   "cutting himself with stones",
-   "Satan's cruelty",
-   "the devil's chain"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
@@ -231,36 +201,65 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The raging man runs and bows — homage compelled by Christ's power (Clarke); the onrushing maniac throws himself on his knees, surprising the Twelve (Robertson)."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the demons are dragged reluctantly before their judge by Christ's secret authority — the whole of Satan's kingdom is subject to him."
+    "summary": "Gill reconciles the approach with the other account by distance, the tombs lying some way from the shore; Calvin reconstructs the order, that Christ gave the command first and the entreaty followed, and infers that the devils were drawn to him by a secret exercise of his authority so that the whole of Satan s kingdom stands under the government of Christ."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson quotes the suggestion that the man came at first with hostile intentions and that the onrush must have tried the confidence of the Twelve; Ellicott specifies the posture as touching the ground with the forehead; Barnes reads it as an acknowledgement of Christ s power over fallen spirits."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke calls it homage compelled by the power of God and asks how humiliating it must have been to Satan."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ran and worshipped",
-   "compelled homage",
-   "Satan's kingdom subject to Christ",
-   "first stirring of deliverance"
+  "debates": [
+   {
+    "question": "Was the worship genuine?",
+    "positions": "Barnes takes it as a real acknowledgement of Christ s power and control over fallen spirits; Clarke and Calvin both make it compulsion, Calvin adding that the rebellious complaints prove the confession was drawn out by force and not made from choice; Robertson relays the guess that the approach began as an attack."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reconstructs the sequence against the order of the sentence, that the command came first and the entreaty after, and uses it to argue that the devils appear at Christ s tribunal as unwillingly as their victims once ran before them."
+   }
+  ],
+  "themes": [
+   "he ran and worshipped him",
+   "drawn by a secret authority",
+   "homage compelled",
+   "the tombs far from the shore",
+   "Satan at the tribunal"
+  ],
+  "range": "6",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.65
+   }
   }
  },
  "7": {
@@ -269,76 +268,74 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Albert Barnes"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Son of the Most High God' (first NT use; Genesis 14:18) — a name used in exorcism formulae, now forced from the demoniac's lips; 'I adjure thee' is the exorcist's word turned to entreaty (Ellicott)."
+    "summary": "Ellicott makes this the first occurrence of the divine title in the New Testament and traces it from the patriarchs through the Prophets into Greek-speaking Judaism, concluding that it was common ground between Gentile and Jew and so found its way into formulas of exorcism, which is why a demoniac uses it; Robertson says more shortly that the demoniac puts Jesus on oath, and both note that the verb for torment properly means to test metals."
    },
    {
-    "school": "eastern-antiochene",
+    "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Cyril: the demons themselves are among the many true witnesses to Christ — 'we know Thee, who Thou art.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Son of the most high God",
-   "I adjure thee",
-   "torment me not",
-   "forced confession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Bede offers two accounts of the feared torment, that being cast out was itself a torment or that the spirit was invisibly tortured, and explains the urgency by the devils calendar, since they knew the time of their last punishment was not yet come."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The imperfect 'he was saying' shows Christ repeatedly commanded the spirit out, provoking the demon's plea; he speaks first as to one spirit before the Legion is revealed (Ellicott)."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Cyril describes the manner rather than the motive, a devil divided between two passions, fear and audacity, hanging back and praying as if meditating a question, while the words of Christ are to him fire and flame."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "come out of the man",
-   "thou unclean spirit",
-   "word of authority",
-   "the demon resists"
+  "debates": [
+   {
+    "question": "What torment was feared?",
+    "positions": "Bede allows either that being cast out is itself the torment or that the spirit was invisibly tortured, and adds that the devils feared their last punishment had been brought forward; Robertson locates the fear in an unwillingness to return to the abyss just then, which was their real home and also the place of torment; Ellicott and Robertson both note that the verb belongs to the testing of metals and then of men by torture."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Traces the divine title from Melchizedek and Balaam through the Greek Old Testament, where it rendered a word Pindar had already used, into the exorcism formulas that would have been most often sounded in a demoniac s ears."
+   },
+   {
+    "voice": "Bede",
+    "view": "Reports that the exorcists of his own day held that sufferers cannot be cured unless they openly declare in confession what they have suffered from the unclean spirits."
+   }
+  ],
+  "themes": [
+   "thou Son of the most high God",
+   "I adjure thee by God",
+   "torment me not",
+   "a name common to Gentile and Jew",
+   "the devils calendar"
+  ],
+  "range": "7-8",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
  "9": {
@@ -353,41 +350,74 @@
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says the question was not asked for Christ s sake, since he was ignorant neither of the name nor of the number, but that the misery of the man s condition might be known and the pity and power of his deliverer be the more manifest."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact agrees that the Lord did not require to know but asked that the rest might know a multitude dwelt in him, and adds a reason of his own, that by fighting with us the devils make us more expert."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A Roman legion ~6,000 men (here perhaps fewer, ~2,000 hogs); Christ asks not from ignorance but to display the man's misery and his own power (Gill)."
+    "summary": "Ellicott notes the narrative effect, that our Lord had spoken as though a single demon were in question and the man s own answer discloses the name; Robertson supplies the size of a full Roman legion and observes that this may not have been one, since the herd is numbered at about two thousand; Lightfoot brings rabbinic and Roman evidence for what the word conveyed."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the demon is forced to confess his multitude, magnifying Christ's grace; refutes the error of one private devil per man — many devils may punish one man."
-   },
-   {
-    "school": "puritan-evangelical",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Henry: the legion is military, numerous, unanimous (refuting 'Satan divided'), powerful, and ordered — yet we stand in the Lord's might."
+    "summary": "Wesley reads the grammar and concludes that all were under one commander who speaks throughout both for them and for himself."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the name a number or a figure?",
+    "positions": "Robertson gives the exact strength of a Roman legion and notes the arithmetic will not fit the two thousand swine, adding that a stickler might say each hog had several demons; Calvin and Pseudo-Chrysostom both deny that any number is intended, holding that the word means merely a great multitude and that precision would not help us understand; Lightfoot shows from Jewish usage that a legion was simply a way of naming a great number."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Adds that among the Talmudists a legion bespeaks an unclean company, no legion being without some relic used in enchantments, and sets beside it the Roman boast of ten legions that could pull down heaven itself."
+   },
+   {
+    "voice": "Theophylact",
+    "view": "Gives a second reason for the question that the others do not, that by fighting with us the devils make us more expert."
+   }
+  ],
   "themes": [
    "what is thy name",
-   "Legion, for we are many",
-   "multitude of demons",
-   "one man's misery"
+   "my name is Legion",
+   "for we are many",
+   "a number or a multitude",
+   "one commander speaking for all"
   ],
+  "range": "9",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.43
+   }
   }
  },
  "10": {
@@ -399,183 +429,164 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The demons beg to stay in the country; they cannot move without Christ's leave (Gill); the demoniac half-identifies with the forces tormenting him (Ellicott)."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: they dread being sent to the deep because it deprives them of their prey — their whole desire is the destruction of mankind, yet they must beg Christ's permission."
+    "summary": "Calvin rejects the reading that has the devils merely avoiding uninhabited places and refers the plea to their appetite for mischief, since they prowl among men like lions and are grieved at being deprived of the opportunity of ruining anyone; he also uses the verse to reject the common error that each man has his own particular devil; Gill draws the conclusion that the spirits which could not be held by chains are themselves held in chains."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supposes the district mattered because a heathen region was their own territory where they could act with less restraint, and elsewhere argues from the parallel Gospel that a disease could not have spoken so."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reads the sentence psychologically, as a man half-conscious of his own being and half-identifying himself with the forces tormenting him, and so led to regard the great Healer as his tormentor."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom explains why the harsher sentence was withheld, that Christ might have consigned them to the outer darkness at once and allowed them to remain in this world, lest the absence of a tempter should deprive men of the crown of victory."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not send them out of the country",
-   "demons subject to Christ",
-   "desire to harm men",
-   "must beg permission"
+  "debates": [
+   {
+    "question": "Why did they beg not to be sent out of the country?",
+    "positions": "Clarke supposes a heathen district was their own ground, where they could act with less restraint than where the worship of God was established; Calvin refuses the reading that has them merely avoiding a desert and refers it to their rage for doing mischief, since a deep place offers no one to ruin; Ellicott refers the plea to the divided consciousness of the man himself rather than to the demons at all."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Uses the verse to refute the doctrine, borrowed by Jews and Christians from the heathens, that every man is attacked by his own particular devil, on the ground that Scripture has one devil sent against a nation and many against one man as it pleases God."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "view": "Explains that Christ could have sent them to the outer darkness at once and did not, lest the absence of a tempter should deprive men of the crown of victory."
+   }
+  ],
+  "themes": [
+   "he besought him much",
+   "not send them away out of the country",
+   "held in chains themselves",
+   "the crown of victory",
+   "lions in search of prey"
+  ],
+  "range": "10",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.78
+   }
   }
  },
  "11": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A great herd of swine near the mountains confirms the heathen setting (swine forbidden to Jews, Leviticus 11:7); the unclean animal a fit refuge for the unclean spirits (Remigius, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a great herd of swine",
-   "heathen setting",
-   "unclean animals",
-   "fit habitation for demons"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The whole legion begs to enter the swine — supplicants from fear, not love, aiming at further mischief (Henry); they cannot act without Christ's leave (cf. Job 1:12)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "send us into the swine",
-   "demons beg leave",
-   "malice and mischief",
-   "subject to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's precise '~two thousand'; the difficulty of why Christ permitted it — better hogs than men, yet a real loss of property (Robertson)."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports that the mountains meant are those of Galaad or the range about Tiberias and that the copies differ between a plural and a singular, and keeps the force of the plural at the next verse, that the whole legion entreated and not merely their chief."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The permission displayed publicly the murderous fury of the demons toward men, which divine power had restrained — furthering the salvation of men (Pseudo-Chrysostom, Bede)."
+    "summary": "Augustine reconciles the two Gospels on the position of the herd without strain; Bede says the leave was given so that by the killing of the swine the salvation of men might be furthered, supplies the herdsmen s motive for flight, and observes that God frequently benefits men s souls by making them suffer loss in their possessions; Remigius explains why swine and not men or clean flocks."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom makes the permission a public demonstration of the fury devils entertain against men, which compassion would not allow to be shown upon men themselves; Theophylact reads the whole scene as a figure of those who live like swine and are driven down the precipice of perdition."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott counts the number two thousand another instance of Mark s graphic accuracy; Robertson calls the permission the crucial difficulty for interpreters and leaves it open, finds the imperfect picturing the disappearance of pig after pig, and rejects the deflationary reading of the man s language; Lightfoot shows from rabbinic usage that dwellers in the fields means the inhabitants of villages."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke records two textual points, that the word all before devils is dropped by Griesbach and that the better copies read they fed them rather than they fed the swine."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus gave them leave",
-   "the herd drowned",
-   "about two thousand",
-   "the demons' fury displayed"
+  "debates": [
+   {
+    "question": "Why did Christ permit the request?",
+    "positions": "Bede says it was so that the salvation of men might be furthered by the loss of the swine; Pseudo-Chrysostom says it was to show publicly how much worse the devils would do to men if Divine power did not hinder them, compassion forbidding the demonstration to be made on men; Remigius says the asking itself proves they cannot hurt anyone without permission; Robertson calls it the crucial difficulty, grants that hogs are better lost than men, and still finds the loss of property a problem of its own akin to tornadoes and earthquakes."
+   },
+   {
+    "question": "Why swine in particular?",
+    "positions": "Remigius gives three reasons at once, that they did not ask for men because their tormentor bore a human form, nor for clean flocks offered in the temple, but for swine because no animal is more unclean and devils delight in filthiness; Theophylact makes the choice figurative of men who roll in the slough of pleasure."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Dismisses as too easy the suggestion that the man was merely exaggerating in the way a distressed person says he feels possessed by a thousand devils."
+   },
+   {
+    "voice": "Bede",
+    "view": "Turns the herdsmen s ruin into a providence, that the necessity of their loss brought these men to the Saviour, since God frequently confers a benefit on men s souls by making them suffer loss in their possessions."
+   }
+  ],
+  "themes": [
+   "a great herd of swine feeding",
+   "send us into the swine",
+   "they ran violently down a steep place",
+   "about two thousand",
+   "loss in possessions and benefit to souls"
+  ],
+  "range": "11-14",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The terrified herdsmen flee and spread the report through city and country (Mark adds 'in the fields'); the loss of the swine draws the whole region out to see."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the herdsmen fled",
-   "told it in the city",
-   "they went to see",
-   "loss brings them to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
@@ -592,387 +603,281 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The once-raging man now sits clothed and sane at Jesus' feet — undeniable proof of divine power; the people are awed (Barnes); Mark's antithesis 'had the legion.'"
+    "summary": "Barnes argues that the change in a man so well known was itself proof that only the power of God had done it, and insists the fear was awe rather than apprehension of harm; Robertson notes the three participles and the ingressive aorist and observes that they had all been afraid of the man until now; Ellicott treats the clause naming his old condition as an antithesis peculiar to Mark."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: their fear was awe at God's majesty in Christ, yet did not ripen to faith — those who think the kingdom against their interest have no relish for grace."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sitting, clothed, in his right mind",
-   "undeniable miracle",
-   "they were afraid",
-   "awe without faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
+    "summary": "Calvin grants that the fear was right so far, since the majesty of God shone brightly in Christ, and makes the next act the worst thing they could have done, then generalises that wicked men adore God and would still choose distance from him, so long as they contemplate him as a Judge and not as a Father; Gill notes who came and how earnestly they importuned him."
+   },
    {
-    "school": "reformed",
+    "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Gill: the eyewitnesses (not the fled herdsmen) report both the deliverance and the loss of the swine to the crowd — laying the full evidence before them, leaving the country without excuse."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they that saw it told them",
-   "eyewitness testimony",
-   "the man and the swine",
-   "the evidence laid before them"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Theophylact locates the fear in self-interest, that being saddened at the loss of their swine they feared suffering the like again."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede sets the old state against the new, a man whom not even chains could bind now sitting at the feet of his healer, and offers the gentler reading that they judged themselves unworthy of the presence of the Lord."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The Gadarenes beg Christ to leave, prizing their swine above their Saviour — business over spiritual welfare (Robertson); the love of the world drives away the Deliverer (Henry)."
+    "summary": "Wesley remarks that they might otherwise have offered some rudeness if not violence; Clarke reports that the clause naming the legion is missing from several copies and that Mill, Bengel and Griesbach think it should be dropped."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "pray him to depart",
-   "swine above the Saviour",
-   "love of the world",
-   "Christ rejected"
+  "debates": [
+   {
+    "question": "What drove the request that Christ depart?",
+    "positions": "Calvin argues it was not the loss of the swine, since men exasperated by losses would have driven him out rudely rather than besought him, and refers it instead to dread of the divine majesty; Wesley says almost the reverse, that they might otherwise have offered rudeness if not violence; Robertson has no doubt it was property, business coming first in the clash with spiritual welfare; Theophylact puts loss and the fear of further loss together; Bede reads it as a sense of unworthiness."
+   },
+   {
+    "question": "Is the clause about the legion genuine?",
+    "positions": "Ellicott builds on it as a form of antithesis between the man s past and present state given by Mark only; Clarke reports that it is absent from several copies and that Mill, Bengel and Griesbach all judge it should be dropped."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Turns the episode into a general account of why the gospel is disliked, that though all wicked men adore God they would if they had their choice withdraw to the greatest possible distance, his face being terrible so long as they contemplate him as a Judge and not as a Father."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Reads the request as a clash between business and spiritual welfare in which business came first, as he says it often does still."
+   }
+  ],
+  "themes": [
+   "sitting and clothed and in his right mind",
+   "they were afraid",
+   "they began to pray him to depart",
+   "awe and not apprehension",
+   "the majesty that men wish at a distance"
+  ],
+  "range": "15-17",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The delivered man begs to go with Christ — in pointed contrast to the country's rejection; the rescued soul covets fellowship with its Deliverer (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "that he might be with him",
-   "the delivered man's love",
-   "contrast with rejection",
-   "desire for Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Christ sends him home to witness rather than follow — fitting for Decapolis where there was no danger of excess enthusiasm (Robertson); 'the Lord' = the Father (Ellicott, cf. Luke 8:39)."
+    "summary": "Gill gives three reasons for the refusal at once, that Christ could preserve him absent as well as present, that taking him along would have looked like ostentation, and that he had work for the man there; and he identifies the city as very likely Gadara, reckoned on ancient authority within the Decapolis."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: he is to glory above all in Christ's compassion, not merely his power — sent to witness where he is best known."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "go home to thy friends",
-   "tell how great things the Lord hath done",
-   "compassion on thee",
-   "sent to witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The man obeys, heralding throughout Decapolis 'how great things Jesus had done' — the first gospel witness there, his changed life itself a testimony; all kept marvelling (Robertson)."
+    "summary": "Barnes canvasses the conjectures and prefers the restoration of the man to his family; Robertson corrects the rendering to his own folk, observes that no people needed the message more than those begging Jesus to leave, and follows the imperfect that has men keep on marvelling; Ellicott argues from the parallel that the word Lord here means the Father and not the Lord Jesus."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact adds the assurance behind the refusal, that his power would keep the man though he himself was absent, and marks the humility of the Saviour in saying not what I have done but what the Lord hath done; Chrysostom explains why this man was told to speak when others were silenced, since all that region remained without God."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Theophylact: Christ said 'tell what the Lord hath done' to teach humility — yet the man names Jesus as that Lord, a quiet testimony to his deity."
+    "prevalence": "several",
+    "summary": "Gregory reads the refusal as an ordering of the Christian life, that the mind must first toil at its work and afterwards refresh itself with contemplation; Bede says the man who wished to remain signifies everyone who must work for a good conscience and serve the Gospel before he rests in Christ."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke gives the family reason alone and notes that the opening words are omitted by many copies and dropped by Griesbach; Wesley says the proclamation was peculiarly needful there, where Christ did not go in person."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "published in Decapolis",
-   "how great things Jesus had done",
-   "all men marvelled",
-   "the rescued man witnesses"
+  "debates": [
+   {
+    "question": "Why was the man not allowed to follow?",
+    "positions": "Gill gives three reasons together, Christ s power at a distance, the appearance of ostentation, and the work waiting for him; Barnes canvasses evidence, reassurance and family and prefers the last; Clarke gives only the joy of the relatives; Theophylact adds usefulness in the healing of others; Gregory and Bede both read the refusal as a rule that labour precedes contemplation and rest."
+   },
+   {
+    "question": "Why publish here when others were told to be silent?",
+    "positions": "Chrysostom answers from the state of the country, which being possessed by devils remained without God; Wesley says it was peculiarly needful where Christ did not go in person; Robertson contrasts Galilee, where publicity brought undue excitement, with a region where there was no danger of too much enthusiasm for Christ."
+   },
+   {
+    "question": "Who is meant by the Lord in the commission?",
+    "positions": "Ellicott argues from the parallel, where the equivalent is God, that the word must be taken in its Old Testament sense of the Father and not of the Lord Jesus; Theophylact reaches the same result devotionally, marking the humility of a Saviour who refers the work to God; Barnes and Robertson read the man s obedience as honour paid to Jesus."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Gregory",
+    "view": "Reads the refusal as a rule about contemplation, that when we have perceived ever so little of the divine knowledge we are at once unwilling to return to human affairs, whereas the Lord commands that the mind first toil hard at its work."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Compares the man s commission to modern rescue missions, saying that thousands of like conversions have happened in the cities of his own day."
+   }
+  ],
+  "themes": [
+   "he prayed him that he might be with him",
+   "go home to thy friends",
+   "how great things the Lord hath done for thee",
+   "he published in Decapolis",
+   "labour before contemplation"
+  ],
+  "range": "18-20",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.65
+   }
   }
  },
  "21": {
   "voices": [
    "Theophylact",
-   "Augustine of Hippo",
+   "Augustine",
    "Pseudo-Chrysostom",
    "Chrysostom",
    "Bede",
    "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede/Pseudo-Jerome: the woman healed = the Gentile Church by faith's touch; the ruler's daughter raised after = Israel saved when the fulness of the Gentiles comes in (Romans 11)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact: Jairus only partly faithful (begs Christ to come, not just speak); the woman most faithful, hoping for healing from his garment."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the two miracles intertwined; people come to Christ only as a last refuge, yet he is a sure refuge even to those who make him their last."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "passed over again",
-   "Jairus and the woman",
-   "intertwined miracles",
-   "Gentile Church and Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A ruler of the synagogue (the council president) falls at Jesus' feet — a striking humility born of his dying daughter's need; the named Jairus marks the miracle as attested (Pseudo-Chrysostom)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the rending of the temple veil, belongs to Matthew 27, not this verse."
-   }
-  ],
-  "themes": [
-   "a ruler of the synagogue",
-   "Jairus",
-   "fell at his feet",
-   "humility in affliction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the crossing into a rule, that a despised gospel will cross the water and go where it will have better entertainment, explains the ruler s office two ways, marks the humility of a ruler falling at Christ s feet, and accounts for the divergent reports of the child by fresh information reaching the father."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine argues that there must have been an interval here, since otherwise there would be no room for the feast the other Gospel relates, and explains the divergence by saying that the other evangelist attaches himself not to the father s words but to his wishes."
+   },
+   {
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "The tender plea — 'my little daughter' (Mark's affectionate diminutive), at the point of death (in extremis); a real if partial faith that Christ's touch will heal her."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "my little daughter",
-   "at the point of death",
-   "come and lay thy hands",
-   "a father's faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Pseudo-Chrysostom explains why the name is recorded and harmonises the two reports by brevity; Theophylact thinks the father faithful only in part, since he ought rather to have said, speak the word only."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ promptly went with Jairus (without rebuking his weak faith) while the crowd thronged and pressed him (imperfect tenses) — the press providentially cover for the woman's secret touch."
+    "summary": "Robertson finds the diminutive an endearing touch peculiar to Mark, notes that the words for I pray thee are absent from the Greek, sets the three descriptions of the child s state side by side without reconciling them, and describes the crowd pressing with a verb found nowhere else in the New Testament; Lightfoot supplies the rabbinic sense of little, which runs to twelve years complete; Ellicott renders the other phrase as in extremis."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley describes the institution behind the title, a council of grave men with a president over them; Clarke renders the diminutive as that little daughter of mine and adds from the parallel that she was an only child of about twelve."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the response as the answer to the father s weak faith, that Jesus went with him immediately and without objecting to it."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the child dead or dying when the father spoke?",
+    "positions": "Pseudo-Chrysostom harmonises by compression, holding that the other evangelist says she was dead for brevity though Mark has the news arrive later; Augustine explains it by intention rather than wording, that the other attached himself to the father s wish rather than his words, since he despaired of finding her alive; Henry explains it by fresh information reaching the father in the interval; Robertson sets the three accounts side by side and reconciles none of them."
+   },
+   {
+    "question": "Was the father s faith adequate?",
+    "positions": "Theophylact thinks him faithful only in part, since falling at Christ s feet was well done but asking him to come was not, and he should have said speak the word only; Gill takes the immediate compliance as an answer to that, since Jesus went without objecting to the weakness of his faith; Henry praises the humility and importunity of a ruler who knew he could obtain the mercy nowhere else."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Supplies the rabbinic boundary the word little marks, that a daughter is so called until twelve years complete and from twelve years and one day is called a young woman."
+   },
+   {
+    "voice": "Pseudo-Jerome",
+    "view": "Reverses the narrative order into salvation history, making Jairus come after the healing of the woman because when the fulness of the Gentiles has come in then shall Israel be saved."
+   }
+  ],
   "themes": [
-   "Jesus went with him",
-   "much people thronged him",
-   "prompt compassion",
-   "setting for the woman"
+   "one of the rulers of the synagogue",
+   "my little daughter lieth at the point of death",
+   "lay thy hands on her",
+   "much people followed him and thronged him",
+   "a ruler at the feet of Christ"
+  ],
+  "range": "21-24",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "25": {
@@ -980,43 +885,8 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The woman's twelve-year issue of blood was debilitating and ceremonially defiling (Leviticus 15:19); chronic and incurable, setting the stage for the instant cure (Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an issue of blood",
-   "twelve years",
-   "incurable and unclean",
-   "the suffering woman"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
+   "John Wesley",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson"
   ],
@@ -1024,139 +894,159 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Twelve years of fruitless, costly recourse to physicians (the rabbinic remedies, some useless or harmful); 'nothing bettered, but rather grew worse' — her extremity God's opportunity (Clarke)."
+    "summary": "Lightfoot sets out the rabbinic prescriptions for such a case at length, from gums and alum and crocus in wine to being frightened from behind where two ways meet; Robertson reads the same list as exoneration, since the doctors were not to blame for a disease they did not know how to cure, and notes that the physician among the evangelists says only that she could not be healed of any; Ellicott observes that the detail about growing worse is absent from the parallel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke gives the same prescriptions with one more, the seven trenches and the burnt vine cuttings, and concludes that from some she could not be bettered and from others she must have been made worse, so that she was a fit patient for the Great Physician."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill relays from Eusebius the tradition of her house at Caesarea Philippi with its brazen figures and healing plant, adds that Theophylact reports the monument broken up under Julian the apostate, and himself prefers to think her an inhabitant of Capernaum."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "suffered many things of physicians",
-   "spent all she had",
-   "rather grew worse",
-   "the Great Physician"
+  "debates": [
+   {
+    "question": "Were the physicians to blame?",
+    "positions": "Clarke concludes from the prescriptions themselves that she could not be bettered by some and must have been made worse by others, and that the expense and the years make it credible she spent all she had; Robertson draws the opposite moral from the same list, that they were not to blame since she had a disease they did not know how to cure."
+   },
+   {
+    "question": "Where was the woman from?",
+    "positions": "Gill relays the tradition from Eusebius that she belonged to Caesarea Philippi, where her house and a bronze monument were shown until his own day, and the report that it was destroyed under Julian; but he himself thinks it more likely she was an inhabitant of Capernaum, in whose streets the crowd was pressing."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Adds a prescription the others omit, seven trenches dug and vine cuttings burnt in them while the patient is led from one to the next, as evidence that the remedies must have made her worse."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Remarks that the physician among the evangelists neatly takes care of the physicians by recording only that she could not be healed of any."
+   }
+  ],
+  "themes": [
+   "an issue of blood twelve years",
+   "suffered many things of many physicians",
+   "spent all that she had",
+   "nothing bettered but rather grew worse",
+   "a fit patient for the Great Physician"
+  ],
+  "range": "25-26",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  },
  "27": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke"
+   "Adam Clarke",
+   "A.T. Robertson",
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "She presses through the crowd and touches his garment from behind — faith mingled with shy, conscious unworthiness (Barnes); her uncleanness made her shrink from an open approach (Chrysostom)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "came in the press behind",
-   "touched his garment",
-   "faith and unworthiness",
-   "the secret approach"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Chrysostom answers from the Law that she was unclean by it and being known to all did not dare come in front, and adds the correction the story needs, that it was not the hem of the garment but her frame of mind that made her whole; Theophylact reads the woman as human nature, which the wise men of this world and of the Law and the Prophets could not cure."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Her inward resolution of faith — 'if I may touch but his clothes' — without precedent grasped the inherent healing power of Christ (Henry); a secret cure suited to a secret grief."
+    "summary": "Barnes reads the approach as faith mixed with conscious unworthiness, illustrating how a sinner comes to God; Robertson puts it as timidity bred by the disease; Ellicott calls the clause about her feeling it in her body a graphic touch giving the woman s consciousness as well as the fact, and Robertson glosses the word for her affliction as a whip used in flagellations."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill shows that the phrase about the fountain of her blood is ordinary Jewish idiom both for the source of such an issue and for its drying up."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke admires the execution rather than the motive, that she formed her resolution in faith and carried it out with courage notwithstanding her weakness."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede makes her the Church gathered from the nations, which came behind because it did not see the Lord present in the flesh and yet attained the grace of his faith."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did she come from behind?",
+    "positions": "Chrysostom answers from the Law, that she was unclean and being celebrated dared not come in front; Barnes reads conscious unworthiness alongside confidence in the power; Robertson puts it as simple timidity and an unwillingness to attract attention; Bede allegorises, the Church of the Gentiles coming behind because it did not see the Lord in the flesh."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the women at the cross, belongs to Matthew 27, not this verse."
-   }
-  ],
-  "themes": [
-   "if I may touch his clothes",
-   "I shall be whole",
-   "faith in Christ's power",
-   "a private cure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "voice": "Chrysostom",
+    "view": "Corrects the whole account of the cure in one clause, that it was not the hem of the garment but her frame of mind that made her whole."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The issue dried up 'straightway'; she felt in her body she was healed (Mark's graphic touch) of her 'plague' (scourge) — an instant, complete, miraculous cure (Henry)."
+    "voice": "A.T. Robertson",
+    "view": "Glosses the word for her complaint as a whip used in flagellations, which came to be used of sufferings regarded as a scourge from God."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "the fountain dried up",
+   "if I may touch but his clothes",
+   "came in the press behind",
+   "the fountain of her blood was dried up",
    "she felt in her body",
-   "healed of that plague",
-   "instant complete cure"
+   "the hem and the frame of mind"
+  ],
+  "range": "27-29",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.64
+   }
   }
  },
  "30": {
@@ -1164,105 +1054,88 @@
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Adam Clarke"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ consciously felt the 'virtue' (supernatural power) go out at the touch of faith; he asks 'who touched me' not to learn but to draw the woman forward to confess (Barnes) — faith's touch distinct from the crowd's press."
+    "summary": "Ellicott takes the word for virtue in its old medical sense of a power that brings about a definite result and applies it with like precision to the supernatural power that flowed out at the touch of faith; Barnes says it was asked not for information but that she might confess the whole matter; Robertson canvasses the dispute over whether the healing was a conscious act and refuses to close it, insisting only that Jesus was conscious of the going out of power."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom guards the phrase against misunderstanding, that the virtues of Christ do not go out locally or corporally nor pass away from him, but being incorporeal are given to others as a teacher gives sciences to his pupils, and adds that the thronging crowds cannot be said to touch him since they do not come near in thought and faith."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill insists on the will behind the cure, that it came not without his knowledge and not without his will, and entirely by his power."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede gives the purpose of the question sharply, that she should confess the truth of her long want of faith and of her sudden belief and healing, so being confirmed herself and affording an example to others."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke turns the disciples objection into a warning, that many touch Jesus who are not healed by him because they do not do it by faith."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the healing a conscious act of Christ?",
+    "positions": "Robertson reports that scholars argue both ways, some for conscious will and others for an unconscious response to her appeal, and some even that the healing followed his becoming aware of her touch, and concludes only that Jesus was conscious of the going out of power; Gill forecloses the question, holding that the cure came not without his knowledge and not without his will; Pseudo-Chrysostom says the same in denying that anything left him without his knowing."
+   },
+   {
+    "question": "What is the difference between touching and thronging?",
+    "positions": "Pseudo-Chrysostom makes it a matter of thought and faith, since the crowds who press cannot be said to touch him at all; Clarke makes it faith joined to a sense of want; Bede makes it ecclesiological, one believing woman touching while the crowd merely presses; Robertson quotes the judgement that Jesus knew the difference between touch and touch."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Denies that there was any magic in the garments, allows that there may have been superstition in the woman s mind, and holds that Jesus honoured her darkened faith as he did in the matter of Peter s shadow and Paul s handkerchief."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Generalises from the outgoing of power that no real good can be done without it, which he says is true of mother, preacher, teacher and doctor alike."
+   }
+  ],
   "themes": [
-   "virtue had gone out",
+   "virtue had gone out of him",
    "who touched my clothes",
-   "power at faith's touch",
-   "drawing her to confess"
+   "thou seest the multitude thronging thee",
+   "touch and touch",
+   "power given without being lost"
   ],
+  "range": "30-32",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples think the question needless in a pressing crowd; but many touch Christ without faith and receive nothing, while faith alone draws his healing virtue (Clarke) — the throng's press distinct from the faith-touch."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.71
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the multitude thronging thee",
-   "who touched me",
-   "touch without faith",
-   "the faith-touch distinguished"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ keeps looking round (continued action) to find the woman — not to inform himself but to draw her forward and confirm her cure (Henry); his answer to the disciples' protest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he looked round about",
-   "to see her",
-   "drawing forth faith",
-   "secret faith known to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "33": {
@@ -1270,225 +1143,193 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The woman, trembling with needless fear, falls down and confesses 'all the truth' — the open avowal of her secret faith; her groundless fear mirrors the trembling believer (Gill, Henry)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fearing and trembling",
-   "fell down before him",
-   "told all the truth",
-   "needless fear of the believer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
+   "Albert Barnes",
    "John Calvin"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The tender 'Daughter'; 'thy faith hath made thee whole' (faith grasping Christ's power, not the touch); 'go in(to) peace' (shalom, health of body and soul) — the cure confirmed by his word."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the benefit is fully ratified when she hears from Christ's lips what she learned by experience — we enjoy God's benefits as contained in the treasury of his promises."
+    "summary": "Gill offers four possible grounds of her fear without choosing among them, the penalties of the law, Christ s displeasure, the recall of the cure, or her attempt to slip away without thanks, and marks the contrast that instead of reproving her he called her daughter; Calvin draws the conclusion that makes the words necessary, that the benefit was fully ratified only when she heard from Christ s lips what she had already learned from experience."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson reads the participles as a portrait of a woman who had tried to hide and now had to confess, and suggests the farewell carries the Hebrew sense of health of body and soul; Barnes reads the address as kindness meant to dissipate her fears and insists the second clause means continue whole; Ellicott notes the fuller description and concedes that the idiom of the farewell is too settled to change while the Greek properly means go into peace."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact says she feared because she had stolen her health, and gives three reasons for the public declaration, to approve her faith, to urge the ruler to a confident hope, and to free the woman from fear; Pseudo-Chrysostom reads the farewell as a sending away into the final good, so that she was healed not only in body but from the causes of bodily pain."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede grounds the title in the cure, that he calls her daughter because she was saved by her faith, and insists on the tense, that he said not thy faith is about to make thee whole but has made thee whole."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke agrees with Barnes that the words mean continue whole rather than be whole, and adds that they therefore carry a promise that the disorder should afflict her no more."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why was she afraid?",
+    "positions": "Gill lists four possibilities and settles on none, the law s penalty for appearing in public while unclean, displeasure at the method she had taken, the recall of the cure, or anger at her slipping away without thanks; Theophylact gives one reason and a phrase for it, that she had stolen her health; Robertson keeps to the narrative, that she had heard the question and felt his gaze so that secrecy was impossible."
+   },
+   {
+    "question": "What does be whole of thy plague mean?",
+    "positions": "Barnes and Clarke both read it as continue whole rather than be whole, since she was cured already, Clarke adding that it carries a promise for the future; Bede makes the same point from the perfect tense of the preceding clause, that in believing she had already been made whole."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the women at the cross, belongs to Matthew 27, not this verse."
+    "voice": "John Calvin",
+    "view": "Makes the spoken word necessary rather than decorative, since we do not truly or with a safe conscience enjoy God s benefits in any other way than by possessing them as contained in the treasury of his promises."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "view": "Concedes that the farewell has become too idiomatic to change while noting that the true meaning of the Greek is go into peace rather than go in peace."
    }
   ],
   "themes": [
-   "Daughter",
-   "thy faith hath made thee whole",
+   "fearing and trembling",
+   "she told him all the truth",
+   "daughter, thy faith hath made thee whole",
    "go in peace",
-   "the cure ratified by his word"
+   "continue whole and well"
+  ],
+  "range": "33-34",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.67
+   }
   }
  },
  "35": {
   "voices": [
    "Theophylact",
-   "Augustine of Hippo",
+   "Augustine",
    "Pseudo-Chrysostom",
    "Pseudo-Jerome",
    "Bede",
    "Chrysostom",
    "Jerome",
-   "Glossa Ordinaria",
+   "Gloss",
    "Gregory",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The messengers (and the world) think Christ's power, like a physician's, reaches only the living (Clarke); 'why trouble the Master?' — but he raised the widow's son at Nain."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "To men she is dead, to God asleep (Bede; whence Christians call the dead 'asleep'); the daughter = the synagogue raised after the Gentile Church (the matching twelve years)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: faith the only remedy against grief — 'only believe,' believe the resurrection; the mourners' scorn proves she was truly dead."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy daughter is dead",
-   "why trouble the Master",
-   "death as sleep",
-   "only believe"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ overhears the message of death, ignores its despairing conclusion, and steadies the father: 'Be not afraid, only believe' — spoken to prevent his distress (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: faith must not shut out grace by fear, for death is no hindrance to Christ; our narrow desires, not his limited power, straiten his gifts — we cannot believe beyond bounds."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be not afraid, only believe",
-   "death no hindrance",
-   "faith and God's power",
-   "sustaining the father"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
   "schools": [
    {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says these people had no other notion of our Lord than an eminent physician, useful while there was life and afterwards helpless, and reads the timing of the answer as pastoral, spoken the instant the news arrived; Wesley explains why the third disciple is named by his brother, since James lately beheaded was the better known when Mark wrote."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Only Peter, James, and John — the inner three (also at the Transfiguration and Gethsemane); enough to attest the miracle, not so many as to savour of vainglory (Henry)."
+    "summary": "Barnes says they had as yet no confidence that he could raise the dead; Ellicott gives the primary sense of the verb as to strip or flay and corrects the title to the Teacher; Robertson traces the same verb, notes that the news arrived opportunely for the woman just healed, finds a second possible sense of overhearing in the next verse, and supplies the plainest reason for the exclusion, that the house was probably too small."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine insists that the encouragement is not a rebuke for want of faith but a strengthening of belief the ruler already had, since the narrative never says he assented to the friends who wished to spare the Master the journey."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the crowd excluded lest the miracle be overpowered by noise or display; Chrysostom: he leaves witnesses of his divine power while avoiding ostentation."
+    "summary": "Calvin reads the words as a warning that fear and distrust might shut out a grace to which death is no hindrance, and enlarges it into a rule about the narrowness of our faith; he also gives two reasons for the exclusion of the crowd and prefers neither."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact explains the messengers assumption, that they took Christ for one of the prophets who should be asked to pray over the girl, and marks that Christ in his lowliness would do nothing for show; Chrysostom says the three were kept to take away display while still leaving witnesses of his divine power."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "save Peter, James, and John",
-   "the inner three",
-   "avoiding display",
-   "witnesses of the miracle"
+  "debates": [
+   {
+    "question": "Is be not afraid, only believe a rebuke?",
+    "positions": "Augustine says firmly that it is not, since the ruler is never said to have assented to the friends, and adds that if he had, the words the other Gospel puts in his mouth would contradict what was in his mind; Calvin treats it as a warning against a real danger of shutting out grace; Clarke treats it as pastoral, spoken to forestall the distress the father must otherwise have felt."
+   },
+   {
+    "question": "Why were only three disciples admitted?",
+    "positions": "Chrysostom says it was to take away display while leaving witnesses; Theophylact makes it part of a general refusal to do anything for show; Gill has him dismiss the crowd as one not desirous of applause; Calvin offers unworthiness or the danger of a noisy crowd and chooses neither; Robertson supplies the least exalted answer, that the house was probably too small."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Finds a second sense in the verb of the next verse, that beside not heeding it may carry the sense of overhearing something not addressed to him at all."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Explains the odd naming of John as the brother of James by the freshness of the memory when Mark wrote, James lately beheaded being then the better known of the two."
+   }
+  ],
+  "themes": [
+   "thy daughter is dead",
+   "why troublest thou the Master",
+   "be not afraid, only believe",
+   "save Peter and James and John",
+   "a physician thought useless after death"
+  ],
+  "range": "35-37",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
   }
  },
  "38": {
@@ -1497,41 +1338,6 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ meets the tumult of noisy Eastern mourning — wailing relatives and hired mourners with clanging, inarticulate cries (the alala of cymbals); the din contrasts with Christ's calm."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the tumult",
-   "wept and wailed greatly",
-   "hired mourners",
-   "clamour vs Christ's calm"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "A.T. Robertson",
    "John Calvin"
   ],
@@ -1539,86 +1345,84 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ stills the tumult: 'not dead, but sleepeth' — not denying her death but declaring he will wake her (cf. Lazarus, John 11:11); a beautiful word for death (Robertson)."
+    "summary": "Barnes describes the wailing as inarticulate mournful sounds, a howling for the dead; Ellicott identifies the verb as the one used of a clanging cymbal, formed from an interjection and applied to cries of despair or victory alike; Robertson traces it to Pindar and the battle cry, applies it to hired mourners making bedlam, notes the imperfect that has the laughter kept up, and remarks that the presence of some people will ruin the atmosphere for spiritual work."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "'Dead to you, asleep to Me' (Pseudo-Jerome, Bede) — whence Christians call the dead 'asleep'; in God's purpose the flesh rests to rise again."
+    "summary": "Pseudo-Jerome resolves the two reports in one line, that she is dead to you but to me she is asleep; Bede expands the same thought and traces from it the Christian custom of calling the dead asleep, and says the mockers are deservedly excluded as unworthy to witness the mystery of her rising."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: he distinguishes death and sleep to excite expectation of life; the scorn confirms she was truly dead, magnifying the miracle."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not dead, but sleepeth",
-   "death as sleep",
-   "stilling the tumult",
-   "Lord of life"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The mourners jeer (kept it up) — proving her real death; Christ, as master of the house, puts them all out and admits only the parents and the three (Robertson)."
+    "summary": "Calvin agrees that sleep everywhere denotes death and points to a future resurrection but insists Christ here makes an express distinction to excite an expectation of life, and finds in the mockery an additional confirmation of the miracle; Gill fills in the pipers and mourning women who got their livelihood that way."
    },
    {
-    "school": "latin-fathers",
+    "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Bede: the scoffers, choosing scorn over belief, are excluded as unworthy; mystically, the crowd of worldly thoughts must be cast out before the dead soul can rise."
+    "summary": "Pseudo-Chrysostom has him command them not to wail as if she were sleeping rather than dead; Theophylact says the mockers bear witness involuntarily that she was really dead whom he raised, so that their scorn establishes the miracle."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke explains who was kept in rather than who was put out, since prudence required the parents as witnesses, notes the same three disciples preferred on three important occasions, and reports that the participle describing the girl as lying is textually doubtful and dropped by Griesbach."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "In what sense was the child asleep?",
+    "positions": "Pseudo-Jerome holds both reports true in different references, dead to them and asleep to Christ; Bede makes the same distinction between what men could do and what God purposed, and derives the Christian usage from it; Calvin insists the distinction is drawn to excite an expectation of life, meaning that they would presently see raised the girl they supposed dead; Robertson puts it as not dead to stay dead and records that some have taken Christ to mean she was never dead at all."
+   },
+   {
+    "question": "What does the mockery prove?",
+    "positions": "Theophylact and Calvin both turn it into evidence, holding that those who laughed had no doubt whatever of her death and so bear involuntary witness to the miracle; Bede treats it instead as disqualifying, so that the mockers are deservedly excluded from the room."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here, on the sealed tomb, belongs to Matthew 27, not this verse."
+    "voice": "A.T. Robertson",
+    "view": "Observes that Jesus had to use pressure to make the hired mourners leave, and that the presence of some people will ruin the atmosphere for spiritual work."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Notes that our Lord gave a particular preference to the same three disciples on three important occasions, the Transfiguration, this raising, and the agony in the garden."
    }
   ],
   "themes": [
-   "laughed him to scorn",
-   "put them all out",
-   "the scoffers excluded",
-   "entering the chamber of death"
+   "them that wept and wailed greatly",
+   "the damsel is not dead but sleepeth",
+   "they laughed him to scorn",
+   "the hired mourners put out",
+   "a custom of calling the dead asleep"
+  ],
+  "range": "38-40",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.63
+   }
   }
  },
  "41": {
@@ -1633,71 +1437,83 @@
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome states the charge that the Evangelist has added words the Aramaic does not contain and answers that they were added to express that his meaning was to call and to command her; the Gloss reads the age as a note explaining that she was old enough to walk and takes the walking as proof of a perfect cure."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Mark preserves the Aramaic 'Talitha cumi' (Peter's memory); the touch of his hand a 'touch of life'; not a physician's wish but a sovereign command carrying power to accomplish it (Lightfoot, Henry)."
+    "summary": "Lightfoot answers the same charge differently, that the words sounded no more than maid arise but were pronounced with such authority that they sounded no less than a command, and sets them against the physicians formula met earlier in this chapter; Barnes calls the phrase the language our Saviour commonly spoke; Ellicott draws the opposite inference from the fact that these syllables were singled out for remembrance; Robertson has Peter hearing and remembering them, and notes the diminutive."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom notes that life is restored by the hand and by word of mouth together, the hand quickening the dead body and the voice raising her as she lies, and takes the walking as proof that she was raised really and not only to the eye of fancy."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a magnificent display of the power of Christ's voice, which reaches even the dead; Chrysostom: his hand and voice have quickening power."
+    "prevalence": "single",
+    "summary": "Calvin says the words could naturally do nothing to recall the senses of a dead girl, and that Christ meant a magnificent display of the power of his voice, which reaches even to the dead and exerts a quickening influence on death itself."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke records the oddest variant in the chapter, a reading in the Codex Bezae that turns the opening word into an address to a master, and judges one common spelling of the second word certainly faulty."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Talitha cumi",
-   "took her by the hand",
-   "I command thee, arise",
-   "quickening voice of Christ"
+  "debates": [
+   {
+    "question": "Why does the Greek say more than the Aramaic?",
+    "positions": "Jerome states the charge of falsehood and answers that the added clause expresses the intention to call and command; Lightfoot answers it from delivery rather than wording, that the same two words pronounced with such authority sounded no less than I command thee arise, where the Jewish healers who said arise from thy flux meant only that they wished it."
+   },
+   {
+    "question": "What language did Christ ordinarily use?",
+    "positions": "Barnes calls this mixture of Syriac and Chaldee the language our Saviour commonly spoke; Ellicott reasons the other way from the same evidence, that it would probably be too wide an inference to assume he ordinarily spoke Greek, while noting that Greek was current throughout Palestine and that the stress laid on the Aramaic words here and elsewhere shows they attracted special notice."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Turns the placing of the girl s age into a source-critical argument, that Mark gives it at the end and Luke at the beginning while Matthew omits it, which he counts a proof of real independence in handling the common material."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "view": "Quotes a broad dialect rendering of the command to the child alongside the Greek and the Aramaic."
+   }
+  ],
+  "themes": [
+   "he took the damsel by the hand",
+   "Talitha cumi",
+   "damsel, I say unto thee, arise",
+   "she arose and walked",
+   "a voice that reaches the dead"
+  ],
+  "range": "41-42",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The child instantly rose and walked in full health (the walking proving the cure complete); 'twelve years old' (Mark alone, at the close) marks independent eyewitness detail; all overwhelmed with astonishment."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.62
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the damsel arose and walked",
-   "twelve years old",
-   "astonished with great astonishment",
-   "complete restoration"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "43": {
@@ -1713,36 +1529,69 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The charge to silence reserves the full display of power over death for Christ's own resurrection (Henry); the food proves the cure complete and teaches that the miraculous does not dispense with ordinary means (Clarke)."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: silence to avoid ostentation and the Pharisees' envy; Christ stoops to see the raised child fed — extraordinary power joined to ordinary care."
+    "summary": "Gill gives the motives for silence as a dislike of ostentation, the avoiding of the envy of the Scribes and Pharisees, and the prevention of attempts to proclaim him king; Calvin doubts the fact could have stayed hidden, thinks it improper to suppress such a display of divine power, suggests the silence concerned the manner rather than the fact and only for a time, and rejects as unnatural the view that it was a device for whetting desire."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says he raised her by extraordinary power but willed that she should be sustained by ordinary means, and that the eating gave full evidence of a real restoration; Robertson doubts the silence was keepable at all, pointing out that there was the girl besides, and quotes the summary that she could walk and eat and so was not only alive but well; Lightfoot finds a rabbinic parallel in which a healed man asks for food in the same hour; Ellicott draws a source-critical inference from the detail."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke draws a general rule from a heathen poet, that miraculous power should be used when necessary and ordinary means when it is not, since to do otherwise would be to tempt God, and ends by holding that those taught by Christ have their understandings improved as well as their souls saved; Wesley gives the same motives for silence as Gill and states the principle for natural and spiritual life alike."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "charged them to silence",
-   "something given her to eat",
-   "ordinary means after miracle",
-   "proof of the cure"
+  "debates": [
+   {
+    "question": "Why command silence about a thing that could not stay hidden?",
+    "positions": "Gill and Wesley give motives of prudence, the avoiding of applause, of the anger of the Scribes and Pharisees, and of attempts to make him king before the hour of his death; Calvin thinks it would have been improper to suppress the power of God altogether and suggests the silence concerned the manner rather than the fact and only for a time, so that the parents might quietly revolve the work of God, while explicitly rejecting the explanation that the prohibition was meant to whet desire; Robertson doubts the command could have been kept."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Ends far beyond the verse, holding that those taught by Christ have their understandings improved as well as their souls saved, so that true religion, civilisation, mental improvement, common sense and orderly behaviour go hand in hand."
+   },
+   {
+    "voice": "John Lightfoot",
+    "view": "Reads the request for food as evidence not merely of life but of perfect health, and produces a rabbinic parallel in which a healed man asks for food in the same hour."
+   }
+  ],
+  "themes": [
+   "he charged them straitly",
+   "that no man should know it",
+   "something should be given her to eat",
+   "extraordinary power and ordinary means",
+   "not only alive but well"
+  ],
+  "range": "43",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-14",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  }
 }
