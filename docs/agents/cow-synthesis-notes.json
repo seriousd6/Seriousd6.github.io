@@ -84683,6 +84683,59 @@
         "26"
       ],
       "note": "POLISHED. Five closing paragraphs rewritten or removed, each of which ended the entry in the synthesist's own voice rather than a witness's. Entry 9 lost a generalisation about the pattern putting the design beyond human invention and now ends on Wesley's rule that what is done in God's service must be done by his direction. Entry 16 lost a closing sentence about the covenant document being deposited rather than displayed and now ends on Gill's figure of the law laid up in the heart of Christ. Entry 21 lost the cross-verse gathering the 2026-08-16 note flagged - the sprinkled blood from Clarke on v.17, the voice from between the cherubim from Ellicott and Keil on v.22, and the title ark of the testimony, none of which belong to v.21's witnesses - and keeps only a restatement of the arrangement the entry itself established. Entry 22's wholly unattributed close, which called the furniture the apparatus of a conversation, is replaced by Ellicott's own conclusion that the tabernacle was designed for the meeting and is therefore ordinarily named the Tent of Meeting, unhappily rendered tabernacle of the congregation. Entry 26 lost a closing that applied to the table the carried-never-handled principle Ellicott states only of the ark at v.15. All five stay inside the window at 531, 518, 375, 423 and 378 words. CORRECTION TO MY OWN NOTE OF AN HOUR AGO, which is wrong and should not be relied on. I reported that no entry in this chapter carried a fidelity self-grade and that landing it therefore meant grading all thirty from scratch. I had looked for the block at the top level of each tags entry; backfill-synthesis-qa.py line 173 pops it from there into qa.fidelity, so in any chapter that has already been landed it lives one level down. All thirty entries here were graded, the gate passed before I touched anything, and worker A's recently landed chapters that looked ungraded by the same test are fully graded too. The general claim built on that error - that a pre-self-grade chapter's real unit of work is the whole chapter - does not follow and should be disregarded. Second correction: the eight verses this chapter contributes to the polish meter are qa.grade B, which the lint assigns for length and density, not fidelity grades; only entries 21 and 26 were fidelity-B, and those are the two the August note had already named."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "6",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23",
+        "29",
+        "35",
+        "41"
+      ],
+      "note": "JFB MISADDRESSING — the cleanest instance of the stride yet found, and it should settle the diagnosis. SEVEN blocks, at keys 5, 11, 17, 23, 29, 35 and 41: a perfect arithmetic progression of six with no gaps in it, running the length of the chapter. Every one carries 1 Kings 20 material — Ben-hadad's demands on Ahab, the prophet's promise of victory, the goats-not-sheep comparison of the two Israelite divisions, the hundred thousand dead at Aphek and the wall that fell on twenty-seven thousand more, Ben-hadad fleeing chamber to chamber. That is one continuous foreign passage sampled at a fixed interval. Combined with the five chapters already recorded (numbers 31, 1 kings 7, 1 chronicles 9, nehemiah 12, nehemiah 11, 2 chronicles 31) the diagnosis is no longer speculative: the scraper is paging a second document in parallel and emitting a row from it at a fixed stride, and a corpus scan keyed on any constant-step progression of JFB keys would enumerate every affected chapter. Seven tiles here would have carried JFB; all seven dropped it."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "6",
+      "verses": [
+        "1"
+      ],
+      "note": "UNDER-CAPTURE, and this one is verified at the CORPUS level rather than inferred from the merged catena. Solomon's dedication prayer is among the most heavily commented chapters in the Old Testament, and this chapter's catena has: Ellicott 37 keys, JFB 7 (all misaddressed, see companion note), Clarke 8, Wesley 6, Keil and Delitzsch 2 (both bare verse text, no comment), Matthew Henry 2, John Gill ONE — and Gill's single block reads, in its entirety, 'See Introduction to Chapter 5'. I checked data/commentary/cow-sources/ directly rather than trusting the merge: gill/2chronicles.json has 1 key for each of chapters 4, 5 and 6, then 8 keys for chapter 7 and 12 for chapter 8. So the gap is a BAND of chapters in one commentator's corpus, not a merge failure and not a chapter-specific fetch error. That shape — a run of near-empty chapters followed by normal coverage — is the signature of a fetch that failed partway and resumed, and it is worth scanning the whole cow-sources tree for: any commentator with three or more consecutive chapters at one key while neighbouring chapters run to dozens. Two tiles here (27-30 and 31-35) are consequently single-voice, carried by Ellicott alone. That is honest under the prose rules — a verse with one witness is not worse than one with five — but it is thinner than the passage deserves."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "6",
+      "verses": [
+        "42"
+      ],
+      "note": "ELLICOTT CHROME at key 42, the last key: genuine content ends at the note on the imperative found only here and in Nehemiah, then StudyLight navigation, copyright and CSS. Seventh consecutive chapter with the defect in exactly that position."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "6",
+      "verses": [
+        "41"
+      ],
+      "note": "A real theological disagreement at the end of the prayer, preserved rather than smoothed. Ellicott judges that the phrase calling the sanctuary God's RESTING PLACE does not sit with the spirit of the prayer, which has insisted throughout that the heaven of heavens cannot contain him and has asked repeatedly that he hear from heaven his dwelling place; he treats it as a formula borrowed from a psalm and slightly at odds with its new setting. Wesley reads the identical petition in the opposite direction and paraphrases it warmly — that God would arise from the throne of his glory and come down into the place appointed for his constant habitation, from which he will not remove as formerly he has done. One takes the borrowing as a seam; the other takes it as the point the whole dedication has been working toward. Recorded as a debate because the two cannot both be right about what the verse is doing."
+    },
+    {
+      "at": "2026-09-14",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "6",
+      "note": "Every tile self-graded A. Keil and Delitzsch was NOT declared anywhere in this chapter: his two blocks (keys 2 and 13) are bare verse text with no comment attached, and declaring him for a lemma would misrepresent the catena. John Gill was likewise not declared, his single block being a cross-reference stub with no content. Both omissions are deliberate and are the reason two tiles carry one voice. Tiles 27-30 and 31-35 are Ellicott alone; their closing paragraphs generalise about his method rather than introducing new claims, which is framing and not attribution — I have kept those sentences descriptive of what his notes do, not of what he says about the verses."
     }
   ]
 }
