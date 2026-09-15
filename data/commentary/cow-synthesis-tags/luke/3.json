@@ -1,8 +1,7 @@
 {
  "1": {
   "voices": [
-   "Gregory the Great",
-   "Greek Exposition",
+   "Gregory",
    "Origen",
    "Bede",
    "Ambrose",
@@ -13,1589 +12,1450 @@
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Luke's precise dating (Tiberius's 15th year, Pilate, the tetrarchs) to fix the time exactly; the acceptable year of the Lord."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory/Origen: the naming of the Gentile emperor and the Jewish rulers signals a gospel for Jew and Gentile; the divided kingdom marks the appointed hour; Bede details Rome's control of the priesthood."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the dating shows a conquered people — the sceptre departed from Judah (Gen 49:10), so Shiloh must come."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the fifteenth year of Tiberius",
-   "Gentile emperor and Jewish rulers",
-   "the sceptre departed from Judah",
-   "the appointed hour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Bede",
-   "Chrysostom",
-   "Ambrose",
-   "Theophylact"
+   "John Lightfoot"
   ],
+  "range": "1-2",
+  "pericope_label": "Now in the fifteenth year of the reign of Tiberius Cesar, Pontius Pilate being governor of Judea, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Iturea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene, Annas and Caiaphas being the high priests, the word of God came unto John the son of Zacharias in the wilderness.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Two high priests (Annas deposed but influential, Caiaphas acting) betray a corrupt, Rome-managed priesthood; the word of God comes to John as to the prophets (Jer 1:2)."
+    "summary": "Barnes and Robertson reckon the fifteenth year from the two years of joint rule, making it the thirteenth of the sole reign; Robertson counts six separate marks of time and reads the pile-up as deliberate after centuries of prophetic silence, and answers the objection to Lysanias from an inscription found at Abilene naming him tetrarch at just this period; Barnes turns the whole apparatus into an argument for honesty, since an impostor would not scatter checkable names and provinces; Lightfoot explains the two high priests by the sagan, and refuses to identify him with the substitute held ready against defilement on the day of expiation."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Chrysostom: the word was a commandment, John came not of himself; Ambrose: the Church begins not from man but the Word; Theophylact: John hidden in the desert lest his witness seem mere kinship."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: prophecy long suspended revived in John; the word is not lost in a wilderness — God finds his servants anywhere."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Annas and Caiaphas",
-   "the word of God came to John",
-   "prophecy revived",
-   "the wilderness call"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Ambrose",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John comes from the desert to the Jordan region; the baptism of repentance — a familiar washing whose meaning was repentance, both binding to turn from sin and sealing pardon to the penitent (Ezek 18:30; Acts 13:24)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Ambrose: the wilderness whence he came figures the Church, the barren bearing more children than the wedded."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: those happiest in retirement must come forth when God calls; the baptism both obliged to repentance and assured of pardon."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he came to the Jordan",
-   "baptism of repentance",
-   "binding to turn, sealing pardon",
-   "preparatory to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John fulfils Isaiah 40:3 (John 1:23); Luke quotes the prophecy more fully than Matthew/Mark; the 'way' and 'paths' are the hearts to be prepared for Christ."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Ambrose: John is the voice, the Word follows — his dignity lies wholly in the One he heralds, not in himself."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the voice in the wilderness (Isa 40:3)",
-   "prepare the way",
-   "the voice and the Word",
-   "readying hearts for Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Luke alone extends the Isaiah citation (40:4); the levelling of the land read as the gospel's moral work — raising the lowly, abasing the proud, straightening the crooked, smoothing the rough."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the humble enriched, the proud humbled (to dust if penitent, to hell if not), the crooked heart made straight by grace, the way to heaven made plain."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "valleys filled, mountains lowered",
-   "Luke's fuller citation",
-   "the gospel reverses pride",
-   "obstacles cleared for grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The climax of Luke's citation (Isa 40:5): the salvation of God seen by all flesh — Jew and Gentile — fitting in the Gospel of the universal Saviour (Isa 52:10; Titus 2:11); 'salvation of God' = Christ himself."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the salvation more fully discovered and spread wider — when the way is made in the heart, bid the salvation of God welcome."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all flesh shall see",
-   "universal salvation",
-   "salvation of God = Christ",
-   "the goal of the prepared way"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "Origen",
-   "Basil",
-   "Ambrose",
-   "Chrysostom",
-   "Gregory the Great",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John reproves the crowds fearlessly (Matthew names Pharisees/Sadducees, Matt 3:7); his metaphors are from the wilderness; 'wrath to come' = the final judgment hypocrites ignore while spared (Calvin)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Chrysostom: Scripture names men by beasts for their passions — vipers for poison and cunning, parricides like the Jews who killed their teachers, yet without blaming the Patriarchs; Cyril of Jerusalem: put off the serpent's slough, baptism a redemption from the fire."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "O generation of vipers",
-   "Scripture names men by beasts",
-   "false trust in descent",
-   "flee the wrath to come"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Cyril of Alexandria",
-   "Chrysostom",
-   "Gregory the Great",
-   "Basil",
-   "Ambrose",
-   "Gregory of Nyssa",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Chrysostom/Gregory: repentance must bear fruit (the salve as well as the arrow drawn), worthy and proportioned to guilt; the stones = the Gentiles, faith poured into stony hearts to raise children to Abraham (Ambrose, Gregory of Nyssa)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Descent from Abraham avails nothing without the virtue of kinship (John 8:39; Rom 4:12); Lightfoot notes a possible wordplay on 'stones'/'children' deriding the national boast."
+    "summary": "Gill denies that two high priests could hold office at once, citing the rule that they do not appoint two at one time and rejecting alternating years as unattested; Calvin works the chronology from the historian, allowing Valerius Gratus his eleven years and placing the preaching in Pilate's second year, rejects the identification of Lysanias with the son of Ptolemy Mennaeus in favour of a like-named grandson, denies that either priest shared the title, and draws the ministerial rule that having the word is not a calling to preach it."
    },
    {
     "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley both reckon the fifteenth year from the joint rule, and both make Annas the high priest with Caiaphas as his deputy; Clarke, like Barnes, treats the density of names, dates and provinces as evidence that the account could have been checked and never was."
+   },
+   {
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Wesley: trust not in church membership or privilege — God requires a change of heart without delay."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fruits worthy of repentance",
-   "not 'we have Abraham'",
-   "privilege without holiness saves none",
-   "children from stones (the Gentiles)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Cyril of Jerusalem",
-   "Cyril of Alexandria",
-   "Gregory the Great",
-   "Chrysostom",
-   "Ambrose"
-  ],
-  "schools": [
+    "summary": "Henry hears the dating as a verdict on the nation: the lawgiver had departed from between Judah's feet, and a people reduced to dating its public acts by a foreign emperor is one for whom Shiloh must come; he adds the irony that a priest's son entering his thirtieth year should have gone onto the temple roll and is enrolled here instead."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom presses that the word was a command, for John came not of himself; Theophylact explains the long hiding, since a man raised in his kinsman's company could have had his witness put down to acquaintance; Gregory of Nyssa sees him withdrawn from the senses and their forced notions, in the spirit and power of Elias."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen sets the method against the older prophets, whose visions were dated by the kings of Judah alone because spoken to Jews alone, where a Gospel for the whole world is dated by the man who seemed lord of it."
+   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The axe 'laid near' (not fixed at) the root — a remnant yet saved (Cyril of Jerusalem); Gregory: the tree = the human race, the axe = the Redeemer striking by God's power at the root; the fruitless tree for the fire (Matt 7:19; Luke 13:7)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: the Romans are the axe in God's hand, about to bring ruin on the nation, city, and temple."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the axe at the root",
-   "imminent judgment",
-   "a remnant yet saved",
-   "the fruitless tree burned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Gregory the Great",
-   "Origen",
-   "Bede",
-   "Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The preaching pierces the conscience (Acts 2:37; 16:30); three classes inquire (multitude, publicans, soldiers); the questions peculiar to Luke, the physician of the soul, showing guidance for the conscience after confession (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: true repentance desires to know God's will; John points to the duties of charity (second Table) as the surer mark, less liable to hypocrisy than ceremonies."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Gregory/Origen: the troubled hearers seek advice; three classes inquire in turn."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What shall we do?",
-   "the awakened conscience",
-   "three classes inquire",
-   "practical duties, not ceremony"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem",
-   "Gregory the Great",
-   "Basil",
-   "Ambrose",
-   "Theophylact"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "To the crowds, practical mercy — sharing even necessaries (Gregory), out of love of neighbour (Basil), yet in proportion, not depriving oneself of all (Ambrose); John practised what he taught (Cyril of Jerusalem)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Religion's first demand is to do good, requiring self-denial and imitating Christ who became poor (2 Cor 8:14; 1 John 3:17; James 2:15); the coat is the inner undergarment."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: deeds of charity testify true piety, detecting the hypocrisy of those who profess with the mouth what is far from the heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "share coat and bread",
-   "charity the fruit of repentance",
-   "mercy in proportion",
-   "doing good proves the heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "Bede",
-   "Chrysostom"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The despised, oppressive tax-collectors (telos + ōneomai; Jews collecting for Rome by graft) come penitent; their presence implied in Matt 21:32; they ask the same 'what shall we do?'"
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede/Chrysostom: the power of John's word that even publicans seek salvation — the rich seeking the way from the poor."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: repentance demands the duties peculiar to each calling, not general sorrow only."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the publicans come",
-   "the power of John's preaching",
-   "an oppressive class penitent",
-   "repentance in one's calling"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Bede"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "John bids the publicans not quit but reform — 'exact no more than appointed'; the Roman farming system bred extortion (Ellicott); the office itself honourable and necessary, government must be supported (Rom 13:6)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Bede: keep from desiring others' goods, that they may come to share their own."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "exact no more than appointed",
-   "reform, not abandon the calling",
-   "the farming-system temptation",
-   "a lawful office purged of extortion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Augustine of Hippo",
-   "Gregory Nazianzen"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Likely Herod's troops (perhaps marching against Aretas); 'do violence' (diaseisēte, extortion by intimidation, Latin concutere); 'accuse falsely' (sykophantēsēte, the informer); 'wages' (opsōnia, rations/pay; 1 Cor 9:7; Rom 6:23) — discontent a mercenary's vice."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine: soldiers using arms are ministers of the law, not homicides; war's evils are cruelty and lust of power, not the office — so John reforms rather than forbids it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: John bids them not throw away arms but cease to pillage — the calling lawful, its abuses condemned."
+    "summary": "Gregory finds the pairing deliberate, a Gentile sovereign and the princes of Judea together because John preached a Redeemer for both, one man over the Roman state because all nations were to be gathered into one, and priests as well as rulers because the One preached was King and Priest; he also reads the divided tetrarchies as a kingdom divided against itself. Bede supplies the chronology of Pilate's ten years and notes that three others held the priesthood between Annas and Caiaphas. Ambrose observes that the third evangelist proves John a prophet in five words, and makes the wilderness the Church, the barren woman with more children than the married."
    }
   ],
   "debates": [
    {
-    "question": "Is military service lawful for the penitent?",
-    "sides": [
+    "question": "How were there two high priests at once?",
+    "positions": [
      {
-      "position": "Yes — the office is lawful, only its abuses (extortion, false accusation, cruelty) are condemned",
-      "holders": [
-       "Augustine of Hippo",
-       "Albert Barnes",
+      "position": "Annas held the office and Caiaphas was his deputy or sagan",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Caiaphas held the office and Annas was the deposed predecessor, still holding civil power and named first as elder and father-in-law",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Neither shared the title; the office was simply at the Roman governor's disposal and torn about by ambition",
+      "held_by": [
        "John Calvin"
+      ]
+     },
+     {
+      "position": "Annas held it that year and Caiaphas in the year of the Passion, three others intervening",
+      "held_by": [
+       "Bede"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who was the Lysanias named here?",
+    "positions": [
+     {
+      "position": "A son of Herod the Great, alongside Herod and Philip",
+      "held_by": [
+       "Bede"
+      ]
+     },
+     {
+      "position": "Not the son of Ptolemy Mennaeus, long since killed, but a grandson bearing the same name",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The objection from the historian is answered by an inscription at Abilene naming Lysanias tetrarch at this very period",
+      "held_by": [
+       "A.T. Robertson"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Reads the foreign dating itself as the proof that the sceptre had departed and Shiloh must therefore come."
+   },
+   {
+    "voice": "Gregory of Nyssa",
+    "claim": "Explains the desert years as a guard against error, John kept from the false notions the senses force on those accustomed to them."
+   }
+  ],
   "themes": [
-   "soldiers' duties",
-   "no violence or false accusation",
-   "content with wages",
-   "the calling reformed, not forsaken"
+   "Now in the fifteenth year of the reign of Tiberius Cesar, Pontius Pilate being governor of Judea, and Herod being tetrarch of Galilee, and his brother Philip tetrarch of Iturea and of the region of Trachonitis, and Lysanias the tetrarch of Abilene,",
+   "Annas and Caiaphas being the high priests, the word of God came unto John the son of Zacharias in the wilderness."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  }
+ },
+ "3": {
+  "voices": [
+   "Ambrose",
+   "Origen",
+   "Gregory",
+   "Chrysostom",
+   "Basil",
+   "Gregory of Nyssa",
+   "Cyril of Alexandria",
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Lightfoot",
+   "Adam Clarke",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley"
+  ],
+  "range": "3-6",
+  "pericope_label": "And he came into all the country about Jordan, preaching the baptism of repentance for the remission of sins; As it is written in the book of the words of Esaias the prophet, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight. Every valley shall be filled, and every mountain and hill shall be brought low; and the crooked shall be made straight, and the rough ways shall be made smooth; And all flesh shall see the salvation of God.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson maps the ground, the valley called El Ghor reaching north to Succoth, usually the western bank and sometimes the eastern, and notes that the word for remission is commoner in this evangelist than in all other New Testament writers together and is used by medical writers of a disease relaxing; he also recalls the people of Brusa turned out to clear rocks and fill hollows before the Sultan's visit. Lightfoot records the rabbinic reading, the cloud that levelled hills and raised valleys, and the restriction of the promise to bringing back the captivity."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill places John in the parts bordering the river, at Bethabara and Aenon near Salim, and notes that the region came to him rather than he to it; he records with Lightfoot the rabbinic application of the prophecy to the return from exile. Calvin turns the phrase into a rule for sacraments, that a sign without the Word is a dumb ceremony, and concludes that since meaning, power and nature are one it is wrong to call John's baptism a different thing from ours; he also argues that the return from exile cannot have fulfilled a salvation meant to strike every eye."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supplies the eastern custom of kings sending men ahead to have the inhabitants clear the roads, a necessity where there are no public ways; Wesley reads the salvation of God simply as the Saviour."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom asks how remission could be given before the Spirit had descended and answers that the phrase states the aim rather than the effect, John convincing them of the weight of their sins so they would seek a Redeemer; he also makes the levelled ground the hard road of the law turned into the easy road of faith. Basil refines Origen's reading, that as hills and mountains differ only in height the adverse powers agree in purpose and differ in the enormity of their offences. Gregory of Nyssa takes the levelling as a measure, virtue failing neither by defect nor excess. Cyril of Jerusalem hears the cry as still sounding, joined to the prophet's call to those who thirst."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Origen reads the ground, taking Jordan to mean descending and finding there the river of healing water, and makes the mountains and hills the hostile powers thrown down at Christ's coming. Cyril of Alexandria takes the herald's office as the lamp before the true light and the morning star before the sun, a voice and not a Word, and reads preparing the way as withdrawing the heart from the shadow of the law; he grounds it in the soul, created beautiful and straight, so that vice is its perversion."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose marks the order, the Word coming first and the voice following, since the Word works inward before the office of the voice begins. Gregory grants that John both preached and administered his baptism and denies flatly that it could remit; he reads the levelling as an exchange, the Gentiles filled with the grace the Jews forfeited, and alone refuses the present reference of all flesh, stretching it to the day of judgment when elect and reprobate see him alike."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What do the filled valleys and levelled mountains stand for?",
+    "positions": [
+     {
+      "position": "The hostile powers, overthrown at Christ's coming and differing among themselves only in the enormity of their offences",
+      "held_by": [
+       "Origen",
+       "Basil"
+      ]
+     },
+     {
+      "position": "An exchange between the peoples, the Gentiles filled with the grace the Jews forfeited",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "The difficulty of the law turned into the easiness of faith",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "A measure of virtue, which fails neither by defect nor by excess",
+      "held_by": [
+       "Gregory of Nyssa"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "When does all flesh see the salvation of God?",
+    "positions": [
+     {
+      "position": "In the spread of the Gospel through the world, striking every eye, which the return from exile never did",
+      "held_by": [
+       "John Calvin",
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Not in this life at all, but at the last judgment, when elect and reprobate see him alike",
+      "held_by": [
+       "Gregory"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Holds that since the meaning, power and nature of the two are the same, it is incorrect to call John's baptism a different thing from Christian baptism."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Notes that the word for remission is used by medical writers of a disease relaxing its hold, and is commoner in this Gospel than in the rest of the New Testament together."
+   }
+  ],
+  "themes": [
+   "And he came into all the country about Jordan, preaching the baptism of repentance for the remission of sins;",
+   "As it is written in the book of the words of Esaias the prophet, saying, The voice of one crying in the wilderness, Prepare ye the way of the Lord, make his paths straight.",
+   "Every valley shall be filled, and every mountain and hill shall be brought low; and the crooked shall be made straight, and the rough ways shall be made smooth;",
+   "And all flesh shall see the salvation of God."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
+  }
+ },
+ "7": {
+  "voices": [
+   "Origen",
+   "Chrysostom",
+   "Basil",
+   "Gregory",
+   "Ambrose",
+   "Cyril",
+   "Gregory of Nyssa",
+   "Cyril of Alexandria",
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Lightfoot",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "7-9",
+  "pericope_label": "Then said he to the multitude that came forth to be baptized of him, O generation of vipers, who hath warned you to flee from the wrath to come? Bring forth therefore fruits worthy of repentance, and begin not to say within yourselves, We have Abraham to our father: for I say unto you, That God is able of these stones to raise up children unto Abraham. And now also the axe is laid unto the root of the trees: every tree therefore which bringeth not forth good fruit is hewn down, and cast into the fire.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott judges the first Gospel more accurate in aiming the words at the Pharisees and Sadducees specifically; Robertson resists that harmonising, since the noun is plural and the verb an imperfect, so this evangelist reports what John used to say to crowd after crowd, and he adds that every image reached for, vipers and axe and chaff, comes off the wilderness floor. Lightfoot, without pressing the play on the two Hebrew words, hears plain scorn, that they were such children of Abraham as God could match out of gravel."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill and Calvin both take the words as aimed at the Pharisees and Sadducees, Calvin adding that the rebuke was delivered publicly for the bystanders' sake, that others also might fear; Gill names the Romans already in the land as the axe in God's hand, laid to the root of covenant, polity and boast."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom observes that the man of the desert did not bend under the weight of public admiration but reproved them, supplies the natural history of the viper that makes the breed parricides, denies that Abraham's line is disowned, and insists that leaving off sin is not enough since healing wants a salve and not merely the drawing of the arrow. Basil answers the boast with the horse, whose sire's speed does not make him swift. Gregory of Nyssa hears in the stones the calling of the Gentiles. Cyril of Jerusalem turns it on the hearer, bidding him shed the old skin as a serpent does, and warns the man who came only to spy out the grace that the Judge is inexorable."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Origen takes the warning from the participle, as falling on those still going out toward the water, and refers the axe to Israel, whose cutting off was near, noting how many ages have since passed. Cyril asks what inherited nobility profits a man fallen away from his ancestors' virtues, and holds the tool laid near the root rather than fixed to it, the branches cut but the tree standing, a remnant to be saved. Cyril of Alexandria holds that the Baptist already foresaw the slanders to be flung at Christ, and so called even the repentant wicked."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory makes them poisonous sons of poisonous parents by imitation, reads the wrath to come as final punishment awarded, presses the word worthy into a rule of proportion by which a man who has fallen must cut himself off from the lawful in the measure of the unlawful he committed, and shifts the whole figure of the axe, making the tree the human race and the axe the Redeemer, held by human hand yet striking with divine power. Ambrose allows the crowd more credit than the rest, finding in them a prudence that perceives what is coming and seeks help even while they do not let go of what harms them, and prefers the mystery to the miracle, since those who bowed to stones were stones themselves."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who was addressed as a brood of vipers?",
+    "positions": [
+     {
+      "position": "The Pharisees and Sadducees specifically, as the parallel account states more accurately",
+      "held_by": [
+       "Charles Ellicott",
+       "John Gill",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The crowds at large, the plural noun and the imperfect verb showing repeated preaching to successive multitudes",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Those still on their way out to the water, since men who had truly come forth would not be called vipers",
+      "held_by": [
+       "Origen"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did the crowd deserve the rebuke, or were they already turning?",
+    "positions": [
+     {
+      "position": "They show a genuine prudence, perceiving what is coming and seeking help",
+      "held_by": [
+       "Ambrose"
+      ]
+     },
+     {
+      "position": "The objection is fair but answered: John judged by hearts disclosed to him, not by appearances",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Even the repentant among them are called wicked, the Baptist foreseeing what they would do to Christ",
+      "held_by": [
+       "Cyril of Alexandria"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the axe at the root?",
+    "positions": [
+     {
+      "position": "The approaching cutting off of Israel, prophesied for that generation",
+      "held_by": [
+       "Origen"
+      ]
+     },
+     {
+      "position": "The Roman power already in the land, the axe in God's hand against nation, city and temple",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The wrath that fell for the impieties against Christ, laid near the root and not fixed to it, since a remnant is saved",
+      "held_by": [
+       "Cyril"
+      ]
+     },
+     {
+      "position": "The Redeemer himself, the tree being the whole human race",
+      "held_by": [
+       "Gregory"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Gregory",
+    "claim": "Turns worthy fruits into a rule of proportion, so that equal fruit will not serve for unequal guilt."
+   },
+   {
+    "voice": "Ambrose",
+    "claim": "Prefers the mystery to the miracle: those who worshipped stones were stones themselves, and the promise is that faith will be poured into such hearts."
+   }
+  ],
+  "themes": [
+   "Then said he to the multitude that came forth to be baptized of him, O generation of vipers, who hath warned you to flee from the wrath to come?",
+   "Bring forth therefore fruits worthy of repentance, and begin not to say within yourselves, We have Abraham to our father: for I say unto you, That God is able of these stones to raise up children unto Abraham.",
+   "And now also the axe is laid unto the root of the trees: every tree therefore which bringeth not forth good fruit is hewn down, and cast into the fire."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
+  }
+ },
+ "10": {
+  "voices": [
+   "Gregory",
+   "Origen",
+   "Theophylact",
+   "Basil",
+   "Ambrose",
+   "Chrysostom",
+   "Augustine",
+   "Cyril of Jerusalem",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin"
+  ],
+  "range": "10-14",
+  "pericope_label": "And the people asked him, saying, What shall we do then? He answereth and saith unto them, He that hath two coats, let him impart to him that hath none; and he that hath meat, let him do likewise. Then came also publicans to be baptized, and said unto him, Master, what shall we do? And he said unto them, Exact no more than that which is appointed you. And the soldiers likewise demanded of him, saying, And what shall we do? And he said unto them, Do violence to no man, neither accuse any falsely; and be content with your wages.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson sees the replies tailored to each questioner, John laying his finger on the weakness of whoever stands before him, notes the imperfect of repeated asking, traces the odium of a Jew collecting for Rome and the verb for exacting that came to mean working the public like blood-suckers, and matches the soldiers' first offence to a shaking that terrifies money loose. Ellicott holds these exchanges peculiar to this Gospel and a mark of guidance given after confession, traces the collectors' temptation to the Roman farming of taxes, and rejects a Roman identification of the soldiers outright, reading the participle as men on the march among the troops of Antipas moving against Aretas. Barnes defends the office as honourable and gives the Athenian fig-informer as the origin of the word for false accusation; Ellicott and Robertson both report that no instance of that usage survives. Lightfoot supplies the rabbinic side, collectors ruled unfit to give evidence, and the trade of the informer whose whispered secret makes the hearer liable too."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that nothing ceremonial is asked of the crowd and takes the soldiers for Jews in the pay of Herod or Philip; Calvin makes the reply a test, since the world prefers to discharge its debt to God by ceremony, and the second Table is the surer mark with less room for self-deception."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke insists the collector's work is honourable, since a state must be supported and someone must gather what is due, so that only the surcharge is sin, and he turns this at once on the assessors of his own day; he matches the soldiers' first offence to the Roman crime of extortion."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact finds the replies shaped to each, those in no evil trade told to do good and the other two what to stop. Basil holds that whatever exceeds daily support is owed to the man who has nothing, and that he loves his neighbour less than himself who withholds necessities. Chrysostom marvels that the rich should seek salvation from a man who owns nothing, and explains the modest counsel as accommodation, John withholding a wisdom they could not bear. Cyril of Jerusalem grounds the demand in the preacher who practised what he taught."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen notes that three classes come forward, the crowd, the collectors and the men under arms."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gregory reads the question as the mark of troubled hearers. Ambrose holds that mercy is the fullness of the virtues and owed in common rather than case by case, yet keeps a proportion, so that no man must strip himself bare, and reads the word on wages as the reason pay exists, lest armed men turn robbers. Augustine draws the largest conclusion, that John could have said lay down your arms and did not, because men under arms are ministers of law and defenders of public safety rather than killers, and what is blamed in war is not that mortal men die but the lust of power and the cruelty of revenge."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How far does the sharing go?",
+    "positions": [
+     {
+      "position": "To necessities, not surplus, since the garment named is the more needful one and a coat divided clothes nobody",
+      "held_by": [
+       "Gregory",
+       "Basil"
+      ]
+     },
+     {
+      "position": "A proportion is kept, mercy being owed in common but no man required to strip himself bare",
+      "held_by": [
+       "Ambrose"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who were the soldiers?",
+    "positions": [
+     {
+      "position": "Jews in the pay of Herod or of Philip",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "It cannot be determined",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Not Romans at all, but troops of Antipas on the march down the valley against Aretas",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the word for false accusation come from?",
+    "positions": [
+     {
+      "position": "From the Athenian informers against the export of figs",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "That derivation is reported but unverified, no actual instance of the usage surviving",
+      "held_by": [
+       "Charles Ellicott",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Takes John's silence about laying down arms as settling that soldiering is lawful, the evil of war lying in the appetite for harm and not in the deaths of mortal men."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Suggests that a writer who was a physician of souls would relish preserving this example of practical spiritual therapy."
+   }
+  ],
+  "themes": [
+   "And the people asked him, saying, What shall we do then?",
+   "He answereth and saith unto them, He that hath two coats, let him impart to him that hath none; and he that hath meat, let him do likewise.",
+   "Then came also publicans to be baptized, and said unto him, Master, what shall we do?",
+   "And he said unto them, Exact no more than that which is appointed you.",
+   "And the soldiers likewise demanded of him, saying, And what shall we do? And he said unto them, Do violence to no man, neither accuse any falsely; and be content with your wages."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "15": {
   "voices": [
    "Origen",
    "Ambrose",
-   "Greek Exposition",
    "Bede",
    "Chrysostom",
    "Basil",
-   "Cyril of Alexandria",
+   "Cyril",
    "Gregory of Nyssa",
+   "Gregory",
+   "Augustine",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson"
   ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The people's deference threatens to overreach (Origen: uncontrolled love is dangerous); Ambrose: their expectation absurd; John saw their hearts by God's gift, distinguishing the baptism of repentance from that of grace."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The people muse whether John is the Christ; the priests and Levites sent to ask (John 1:19-20); John gloried not but embraced humility."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "was John the Christ?",
-   "misplaced honour",
-   "John's humility",
-   "insight into hearts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Cyril of Jerusalem",
-   "Ambrose",
-   "Augustine of Hippo",
-   "Gregory the Great",
-   "Chrysostom"
-  ],
+  "range": "15-17",
+  "pericope_label": "And as the people were in expectation, and all men mused in their hearts of John, whether he were the Christ, or not; John answered, saying unto them all, I indeed baptize you with water; but one mightier than I cometh, the latchet of whose shoes I am not worthy to unloose: he shall baptize you with the Holy Ghost and with fire: Whose fan is in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "John publicly disclaims Messiahship; 'mightier than I' (no comparison possible — Ambrose); 'baptize with Holy Ghost and fire' both the spiritual baptism and the judgment-fire (Acts 1:5; Matt 3:11)."
+    "summary": "Barnes renders the mood as doubt rather than settled opinion; Robertson sharpens the puzzle, since John worked no miracle and stood outside David's line yet moved men so far that they suspected him, a suspicion the council would later put to him formally; Ellicott notes that this musing is preserved here alone, matches the fourth Gospel, and repairs the abruptness with which the mightier one is introduced elsewhere."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine reconciles 'bear'/'unloose' the shoes as one sense of humility; Gregory: the shoes figure the Incarnation's mystery John cannot fathom (the flesh as our corruption); Chrysostom: Christ's baptism excels John's water."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I baptize with water",
-   "one mightier than I",
-   "unworthy to unloose his shoes",
-   "baptism with Spirit and fire"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Bede",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fan/winnowing as the Messiah's sifting judgment (Jer 15:7; Ps 1:4); wheat gathered to the garner (Micah 4:12; Matt 13:30), chaff burned with unquenchable fire (Mark 9:48) — everlasting punishment for the impenitent."
-   },
-   {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Bede: the fan separates wheat from chaff as the wind does, testing to reveal hidden virtue or expose unbelief."
+    "summary": "Gill grounds the expectation in the chronology, the seventy weeks running out and the sceptre gone from Judah with the Romans governing."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke credits the reach of the reformation, a preacher who told crowd, collector and soldier each his duty."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry adds to the chronology that the lawgiver too had gone, Herod having lately destroyed the council, and observes that John had none of the pomp in which the Messiah was expected but a holy life instead."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom keeps the fire gracious, noting that John says baptize and not give, which signifies abundance, and reading it as the fervour of grace and the consuming of sins. Basil turns the verse elsewhere, that a baptism invoking the Spirit alone is no baptism, the tradition admitting neither addition nor subtraction. Gregory of Nyssa warns that the punishments bear no proportion to what the senses know, and that the word unquenched is there to stop us imagining an ordinary fire."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "several",
+    "summary": "Origen grants that John deserved more deference than other men, having lived as none did, then turns it to a warning that love without measure is dangerous and puts both lover and loved in fault; he also states the purgatorial reading plainly, the Lord standing in the fiery stream with the flaming sword to bathe whoever still needs purifying before paradise, and refusing it to any lacking the seal of earlier baptisms. Cyril reads the floor as Christ's own and the chaff as the light and empty, carried off by any wind of sin."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose presses an argument from absurdity, that men willing to find the Christ in one born of a woman would not believe him born of a virgin; he credits the reading of hearts to grace rather than native power, divides the baptism of repentance, which is man's work, from the baptism of grace, which is God's gift, and denies that mightier is a comparison at all. Gregory reaches for the custom by which a kinsman who would not take the widow he owed had his shoe loosed, and adds that shoes cut from dead beasts show the Lord in flesh shod in the carcass of our corruption; he also presses the fire physically, our fire dying without fuel while that one, once made, needs none. Bede allows that the Spirit himself may be meant by fire, reports others who divide the two as Spirit now and fire hereafter, and makes the floor the present Church where the winnowing goes on case by case. Augustine meets the discrepancy between bearing the shoes and loosing the latchet by supposing John said each at different times, or both."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the baptism with fire?",
+    "positions": [
+     {
+      "position": "The fervour of grace and the burning away of sins, wholly a gift",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "The Holy Spirit himself, who came on the apostles in that appearance",
+      "held_by": [
+       "Bede"
+      ]
+     },
+     {
+      "position": "A purging after death, the Lord bathing in a fiery stream those who still need cleansing before paradise",
+      "held_by": [
+       "Origen"
+      ]
+     },
+     {
+      "position": "The fire of judgment, unquenchable and out of all proportion to anything the senses know",
+      "held_by": [
+       "Gregory of Nyssa",
+       "Gregory"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is meant by loosing the latchet of the shoes?",
+    "positions": [
+     {
+      "position": "Only lowness before greatness, so that either form of the saying keeps the same sense",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "A refusal of the bridegroom's name, on the old custom of loosing the shoe of the kinsman who would not marry",
+      "held_by": [
+       "Gregory"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "claim": "Turns the crowd's admiration into a warning about love itself, which sins when it exceeds what its object deserves."
+   },
+   {
+    "voice": "Basil",
+    "claim": "Uses the verse against defective baptismal formulas, holding that a rite invoking the Spirit alone is no baptism at all."
+   }
+  ],
   "themes": [
-   "the fan in his hand",
-   "the floor purged",
-   "wheat to the garner, chaff to fire",
-   "unquenchable judgment"
+   "And as the people were in expectation, and all men mused in their hearts of John, whether he were the Christ, or not;",
+   "John answered, saying unto them all, I indeed baptize you with water; but one mightier than I cometh, the latchet of whose shoes I am not worthy to unloose: he shall baptize you with the Holy Ghost and with fire:",
+   "Whose fan is in his hand, and he will throughly purge his floor, and will gather the wheat into his garner; but the chaff he will burn with fire unquenchable."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "18": {
   "voices": [
    "Origen",
    "Theophylact",
+   "Bede",
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Luke gives only a sample of John's many messages (cf. John 21:25); the verb is 'preach good news' — his exhortation was gospel, pointing to the Messiah and to faith in him; Luke alone stresses the wider range."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Origen/Theophylact: John, like Christ, said many things too great to record; his 'exhortation' is fitly called Gospel, the telling of good things."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many other things",
-   "a sample of his preaching",
-   "his exhortation was gospel",
-   "pointing to the Messiah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
    "John Calvin",
-   "Origen"
+   "John Wesley"
   ],
+  "range": "18-20",
+  "pericope_label": "And many other things in his exhortation preached he unto the people. But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done, Added yet this above all, that he shut up John in prison.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Herod the tetrarch (distinguished from the nativity Herod) reproved (elenchō, convict/expose) for marrying Herodias, his brother Philip's wife (Matt 14:3; Lev 18:16), and for all his evils; Josephus confirms the marriage's repulsiveness."
+    "summary": "Ellicott observes that this is the one record insisting on the breadth of the Baptist's teaching and guesses that the source behind the earlier answers supplied more of the same; Robertson reads the phrase as many and varied things and judges what survives a bare sample that still yields a definite and powerful conception of the preaching, then works the vocabulary, the verb for reproving running from contempt to conviction and exposure, the adjective for the evil deeds giving the active side of evil, and the last verb a plain summary aorist. Barnes denies that this was the worst of Herod's acts and explains the early placing as a way of finishing John's account before the narrative moves on."
    },
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Calvin: John an example of the moral courage every minister needs — to reprove the great without acceptance of persons, whatever the cost."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Herod the tetrarch reproved",
-   "the unlawful marriage",
-   "reproof of all his evils",
-   "fearless prophetic courage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley",
-   "Bede",
-   "Gloss",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The imprisonment crowns Herod's crimes ('above all' = one more like the rest, not necessarily the worst — Barnes); Luke records it out of order to conclude John's history before turning to Christ (Wesley, Bede, Gloss)."
+    "summary": "Gill reads the words the other way from Barnes, as marking a sin more flagitious than the others and worse in its outcome; Calvin names the fortress of Machaerus from the historian and weighs his testimony against the evangelists', holding that since the historian's memory fails here and he misplaces Philip's death, the certain account is theirs."
    },
    {
-    "school": "reformed",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Calvin: 'above all' marks malice grown desperate — enraged by the remedy, taking vengeance on the reprover."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "John shut up in prison",
-   "the climax of Herod's sin",
-   "Luke's anticipatory placing",
-   "the herald's course concluded"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Ambrose",
-   "Chrysostom",
-   "Cyprian",
-   "Augustine of Hippo",
-   "Cyril of Alexandria",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Gregory Nazianzen",
-   "Bede"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Christ baptized not to be cleansed but to cleanse the waters and fulfil all righteousness (Matt 3:15), burying the old Adam; the opened heaven shows baptism's virtue — the kingdom's gates flung open (Bede)."
+    "summary": "Wesley explains the arrangement rather than the chronology, the history of the forerunner being concluded here so that the Lord's may run on without interruption."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "single",
-    "summary": "Chrysostom distinguishes the Jewish, John's, and Christian baptisms; Christ needed neither pardon nor the Spirit; Luke's 'praying' teaches constant prayer after baptism."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesus baptized to cleanse, not be cleansed",
-   "fulfil all righteousness",
-   "baptized and praying",
-   "the heaven opened"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem",
-   "Ambrose",
-   "Chrysostom",
-   "Athanasius",
-   "Augustine of Hippo"
-  ],
-  "schools": [
+    "summary": "Theophylact makes a point of the verb, that an exhortation which tells good things is properly called gospel, so that the forerunner was already an evangelist."
+   },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Spirit in 'bodily shape' (peculiar to Luke) like a dove, seen by the Baptist (John 1:33); the Trinity manifest, the deity and Sonship of Christ plain; the dove an emblem of purity."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen takes the summary line as an admission that much was left unwritten, holding some of what John said too great to be committed to writing, and marvels that one who was greatest among those born of women neither feared Herod nor shrank from death."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Ambrose: the dove signifies innocence and peace (the ark's olive branch); Chrysostom: meekness (vs Pentecost's fire), the Spirit received for us as Founder of our race; Athanasius: 'beloved Son' by nature, not grace — the Only-begotten, against Arius."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Spirit as a dove",
-   "received for us",
-   "Thou art my beloved Son",
-   "the Trinity revealed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "Origen",
-   "Augustine of Hippo",
-   "Gregory Nazianzen",
-   "Chrysostom",
-   "Ambrose",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Eusebius"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Luke's genealogy ascends from Christ; 'about thirty' the age of full maturity for ministry; 'as was supposed son of Joseph' — really of Mary, both of David's house (Luke 1:27); Luke traces through Nathan (2 Sam 5:14), Matthew through Solomon."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Origen: the line carried up to God; Gregory Nazianzen/Chrysostom: thirty years teach humility and fulfilling the whole law; Eusebius: Matthew gives the truth and descends into the flesh, Luke gives the common opinion and ascends to the regeneration."
+    "prevalence": "single",
+    "summary": "Bede takes the placing chronologically, noting that the fourth Gospel puts the arrest after miracles had been done and the Lord's baptizing was talked of, and accounts for the difference by a redoubled malice in Herod, who watched the crowds flocking and the collectors repenting and moved early."
    }
   ],
   "debates": [
    {
-    "question": "How are Matthew's and Luke's genealogies reconciled?",
-    "sides": [
+    "question": "Was imprisoning John the worst of Herod's crimes?",
+    "positions": [
      {
-      "position": "Levirate succession — Joseph son of both Jacob (Matthew) and Heli (Luke)",
-      "holders": [
-       "Augustine of Hippo"
+      "position": "No: the phrase means only that this was one more deed of the same character as the rest",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "Matthew gives the true legal line; Luke records the 'supposed' common reckoning, ascending and omitting the sinful kings",
-      "holders": [
-       "Eusebius"
+      "position": "Yes: a sin more flagitious than the others, and worse in what came of it",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is the arrest told before the baptism?",
+    "positions": [
+     {
+      "position": "Arrangement, not sequence: John's story is finished off so the Lord's may run without interruption",
+      "held_by": [
+       "Albert Barnes",
+       "John Wesley"
       ]
      },
      {
-      "position": "Luke traces Mary's line (through Nathan), Matthew Joseph's (through Solomon)",
-      "holders": [
-       "Ambrose"
+      "position": "Sequence: Herod's malice really did move early, against the flocking crowds",
+      "held_by": [
+       "Bede"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Prefers the evangelists to the historian on the marriage and the imprisonment, on the ground that the historian's recollection demonstrably fails at this point."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Notes that the old physicians used the verb for adding of sponges and of dosing with acorns, and states flatly that there is no evidence of a medical turn here."
+   }
+  ],
   "themes": [
-   "about thirty years of age",
-   "the genealogy ascends to God",
-   "as was supposed son of Joseph",
-   "Matthew's and Luke's lines"
+   "And many other things in his exhortation preached he unto the people.",
+   "But Herod the tetrarch, being reproved by him for Herodias his brother Philip’s wife, and for all the evils which Herod had done,",
+   "Added yet this above all, that he shut up John in prison."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
+   }
+  }
+ },
+ "21": {
+  "voices": [
+   "Ambrose",
+   "Gregory Nazianzen",
+   "Chrysostom",
+   "Augustine",
+   "Cyprian",
+   "Athanasius",
+   "Bede",
+   "Gregory",
+   "Cyril of Jerusalem",
+   "John Gill",
+   "Matthew Henry",
+   "Albert Barnes",
+   "John Lightfoot",
+   "Charles Ellicott",
+   "A.T. Robertson"
+  ],
+  "range": "21-22",
+  "pericope_label": "Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened, And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson denies that the text makes Christ wait until all were finished, the infinitive carrying no time and the sentence saying only that the baptism happened in connection with the baptizing of the people at large; he allows the praying to be peculiar to this Gospel but holds the participle gives only that heaven opened while Jesus prayed, not because he prayed, and he agrees the Baptist saw the vision while warning against the old error that made this the beginning of the Incarnation. Barnes places the scene after the administration rather than during it. Ellicott leaves the appearance open, allowing a descent after the manner of a dove, hovering then settling, in some undefined bodily form. Lightfoot adds the rabbinic curiosity of a golden dove atop Solomon's sceptre."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill restricts the sight to the baptizer, for whom it was a signal of the Messiah."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes much of the order, that Christ was baptized last, in the rear of the common people, humbling himself as less than the least, and prayed without confessing, having nothing to confess."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Gregory Nazianzen says shortly that he came to bury the old Adam in the water. Chrysostom insists the Son did not receive what he lacked, sending the Spirit from above as God and receiving him below as man, grades three washings with ours above John's and John's above the older rites, and contrasts the dove with Pentecost, gentleness while offences are pardoned and fire when trial comes. Cyril of Jerusalem settles the purpose rather than the appearance, the sight given not that Jesus might see the Spirit, whom he knew already, but for John's sake."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Athanasius presses the article, sons by grace being one thing and Isaac son of Abraham another, so that only the second sense will do or the Only-begotten differs in nothing from us; God cannot be divided and so begets without suffering, and beloved follows from the Son's singleness, a father of many having his affection divided."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Ambrose states the reason for the baptism, that the Lord went into the water not to be cleansed but to cleanse it, so that waters purified by sinless flesh might afterwards carry the power of baptism; he takes the dove for innocence and peace, recalling the olive carried to the ark, and observes that the Spirit was seen while the Father, taking no body, proved his presence in the Son by speaking. Augustine answers the difficulty of a gift at thirty from the manner of the conception and makes the scene a figure of the Church, and elsewhere harmonises the two forms of the heavenly words by noting that nothing was revealed to Christ, who knew it, the announcement being for the bystanders. Cyprian argues from the creature itself, which has no gall, no fierce bite and no tearing claws. Bede reads the good pleasure as a commission. Gregory takes it by contrast with repentance, the Father who spoke of repenting that he made man finding nothing in Christ to repent of."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was Christ baptized after all the people, and did heaven open in answer to his prayer?",
+    "positions": [
+     {
+      "position": "Yes on both: he came last, in the rear of the crowd, and prayed for the manifestation that followed",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Neither follows from the grammar: the baptism is merely concurrent with the people's, and heaven opened while he prayed, not necessarily because he prayed",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What was seen, and by whom?",
+    "positions": [
+     {
+      "position": "A real appearance, witnessed by the people",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Seen by the baptizer, for whom it was the appointed sign",
+      "held_by": [
+       "John Gill",
+       "Cyril of Jerusalem",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Possibly no dove-shaped body at all, but a descent after the manner of a dove in a bodily form left undefined",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why a dove rather than fire?",
+    "positions": [
+     {
+      "position": "Innocence and peace, after the bird that carried the olive to the ark",
+      "held_by": [
+       "Ambrose"
+      ]
+     },
+     {
+      "position": "The nature of the creature, which has no gall and lives by unanimity",
+      "held_by": [
+       "Cyprian"
+      ]
+     },
+     {
+      "position": "Gentleness suits the season of pardon, fire being kept for the season of judgment",
+      "held_by": [
+       "Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Athanasius",
+    "claim": "Reads the definite article in Son as the whole anti-Arian case, and derives beloved from the Son's singleness rather than from affection."
+   },
+   {
+    "voice": "Gregory",
+    "claim": "Explains the good pleasure by contrast with the divine repenting, the Father finding in Christ alone nothing to displease him."
+   }
+  ],
+  "themes": [
+   "Now when all the people were baptized, it came to pass, that Jesus also being baptized, and praying, the heaven was opened,",
+   "And the Holy Ghost descended in a bodily shape like a dove upon him, and a voice came from heaven, which said, Thou art my beloved Son; in thee I am well pleased."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
+  }
+ },
+ "23": {
+  "voices": [
+   "Origen",
+   "Gregory Nazianzen",
+   "Augustine",
+   "Ambrose",
+   "Chrysostom",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Matthew Henry"
+  ],
+  "range": "23",
+  "pericope_label": "And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was the son of Heli,",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson calls the familiar rendering impossible, wants the words to teach supplied with the participle, credits Tyndale with getting it right, and refuses to fix the figure at all, since prophets begin when the word of God comes to them and the age may be out by a year either way. Barnes denies the priestly inference outright, Jesus not being under the Levitical law of the priesthood and teachers commonly beginning earlier. Ellicott corrects the detail, that it was the Levites who entered full service at thirty after a probation from twenty-five or twenty, no age being fixed for priest or prophet, and lays out three reconciliations of the genealogies, inclining to the view that this is the mother's descent and suspecting the material reached the evangelist through the women round her. Lightfoot supplies the rabbinic maxim that he who educates a child is called father, not he who begets."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes thirty as the age at which those typified by Christ entered their work, and notes that the word began is absent from some versions and often redundant; Calvin ties the delay to the office rather than the calendar, baptism being an appendage of the Gospel and beginning when the preaching did."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the same phrase serves the old historian for a man only reputed to be another's son, and that the ascending list uses an indeterminate form covering sons real or putative where the descending one means natural generation; Wesley takes Heli for the father of Mary and the list for hers, the Jews marrying within their families."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry contrasts the two lists, the one making Christ son of Abraham and heir of David and this one the Seed of the woman who should bruise the serpent, and then declines to arbitrate, holding that learned men have removed the difficulties, that salvation does not hang on solving them, and that the Gospels' authority is not weakened by them."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Gregory Nazianzen draws three lessons from who was baptized, by whom and when, that the washed must not return to their vomit, that no man should speak against a steward of the mysteries he happens to outrank, and that no one trusting in his youth should think any age fit for teaching. Chrysostom explains the different reach of the two lists by their readers, one written for Jews content to have Christ from Abraham and David, the other for all men and so carried back to Adam."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the direction of the list as the point, since it climbs from Christ to God rather than descending, and ties the word began to the baptism just described, the second birth undoing the first."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine offers three ways of reconciling the lists, by a maternal grandfather or remoter ancestor, by adoption, or by the levirate; Ambrose gives the levirate version as a concrete story, Matthas of Solomon's line leaving a widow whom Melchi took."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does the age of thirty carry legal significance?",
+    "positions": [
+     {
+      "position": "Yes: it is the age the law required of those who served in the sanctuary",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Only loosely: the Levites entered then, but no age was fixed for priest or prophet, so at most thirty marked the completeness of manhood",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "No: Jesus was not under that law, teachers often began earlier, and the text does not fix the number anyway",
+      "held_by": [
+       "Albert Barnes",
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How are the two genealogies to be reconciled?",
+    "positions": [
+     {
+      "position": "By adoption, or by a maternal ancestor, or by the levirate, any one of which will serve",
+      "held_by": [
+       "Augustine",
+       "Ambrose"
+      ]
+     },
+     {
+      "position": "This is the mother's line, the reference to Joseph being a parenthesis",
+      "held_by": [
+       "Charles Ellicott",
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The question need not be settled, since nothing in salvation or in the authority of the Gospels depends on it",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Holds the traditional rendering of the opening clause to be an impossible translation, and refuses to commit the evangelist to precisely thirty years."
+   },
+   {
+    "voice": "Origen",
+    "claim": "Reads the ascending order as doctrine, the genealogy climbing to God because the baptized man has begun a second birth."
+   }
+  ],
+  "themes": [
+   "And Jesus himself began to be about thirty years of age, being (as was supposed) the son of Joseph, which was the son of Heli,"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "24": {
   "voices": [
    "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Obscure post-exilic links (Matthat, Levi, Melchi, Janna, Joseph) unknown elsewhere; a textual question whether Matthat and Levi belong (Grotius vs the versions); part of Luke's ascent to God (Matt 1:1)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "obscure post-exilic links",
-   "textual transmission of the line",
-   "the silent centuries",
-   "no link in God's purpose lost"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Unrecorded post-exilic generations (Mattathias, Amos, Naum, Esli, Nagge); little remembered of them; Luke's humbler ascending line preserving David's seed through the silent years until the fulness of time (Gal 4:4)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unrecorded generations",
-   "the silent years",
-   "God's hidden faithfulness",
-   "the fulness of time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The obscure descent continues (Maath, Mattathias, Semei, Joseph, Juda), names unknown elsewhere; Scripture traces the legal line of the husband (Ambrose); God's purpose advancing through ordinary faithfulness toward Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the continuing obscure line",
-   "the legal line of descent",
-   "ordinary faithfulness",
-   "the line held unbroken"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The line touches Zerubbabel of the return (Ezra 5:2; Haggai 1:1); Lightfoot on the name-changes in Babylon (Zerubbabel = 'winnowing of Babel') and the convergence at Salathiel/Neri vs Matthew's Jechonias (Matt 1:12; 1 Chron 3:19)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zerubbabel and the return",
-   "name-changes in Babylon",
-   "the line through the exile",
-   "the promise survives the winnowing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: these pre-exilic links were of David's house in the line of Nathan — Luke's distinctive descent through Nathan (not Solomon's royal kings), a path apart from the curse on the royal line (cf. v.23 discussion)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the line of Nathan",
-   "descent before the captivity",
-   "apart from the royal curse",
-   "God's reserved line"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Unremembered links in the Nathan branch (Simeon, Juda, Joseph, Jonan, Eliakim); their very anonymity attesting Christ's true, traceable human descent (Heb 2:17) within Luke's ascent to God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unremembered links",
-   "the reality of the incarnation",
-   "made like his brethren",
-   "the human roots of the Saviour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The line reaches David through Nathan, his son born in Jerusalem (2 Sam 5:14; Zech 12:12), not the prophet — the node where Luke and Matthew diverge; David the recipient of the messianic promise (Luke 1:32)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the line reaches David",
-   "through Nathan, not Solomon",
-   "the promise to David",
-   "Son of David, heir of the throne"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Gill: from Jesse back the line agrees exactly with Matthew and the OT (Ruth 4:18-22; Matt 1:5) — Jesse, Obed, Boaz, Salmon, Nahshon, the close of Ruth; the Gentile strand (Ruth, Rahab) foreshadowing salvation for all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Jesse, Obed, Boaz, Salmon",
-   "agreement with Matthew and the OT",
-   "the line of Ruth",
-   "the Gentile strand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The line reaches the patriarchs — Abraham, Isaac, Jacob, back through Terah and Nahor (Gen 11:24-26); where Matthew began, Luke passes through toward Adam; Abraham the covenant centre, Christ the promised Seed (Gen 12:3; Gal 3:16)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Abraham, Isaac, Jacob",
-   "the covenant of promise",
-   "where Matthew began",
-   "Christ the Seed of Abraham"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The post-flood patriarchs of Shem's line (Gen 11:16-18): Serug, Reu, Peleg, Eber, Salah; Eber the father of the Hebrew stock; Peleg, in whose days the earth was divided (Gen 10:25) — Christ kinsman of all nations descended from Noah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the post-flood patriarchs",
-   "the line of Shem",
-   "Eber and Peleg",
-   "kinsman of all nations"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
    "John Lightfoot",
-   "Adam Clarke"
+   "Charles Ellicott"
   ],
+  "range": "24-28",
+  "pericope_label": "Which was the son of Matthat, which was the son of Levi, which was the son of Melchi, which was the son of Janna, which was the son of Joseph, Which was the son of Mattathias, which was the son of Amos, which was the son of Naum, which was the son of Esli, which was the son of Nagge, Which was the son of Maath, which was the son of Mattathias, which was the son of Semei, which was the son of Joseph, which was the son of Juda, Which was the son of Joanna, which was the son of Rhesa, which was the son of Zorobabel, which was the son of Salathiel, which was the son of Neri, Which was the son of Melchi, which was the son of Addi, which was the son of Cosam, which was the son of Elmodam, which was the son of Er,",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "The famous crux of the second Cainan (son of Arphaxad), absent from the Hebrew, Samaritan, Targum, and Josephus but present in the LXX Luke follows (Gen 11:12); Gill judges it a transcriber's intrusion, Clarke a possible surname; the line runs sure through Shem and Noah (Gen 10:21)."
+    "summary": "Lightfoot notes that the father named for Zorobabel in the older register is missing here, matching the way the returning leader is named in the books written after the exile, and admits the omission is not easy to explain either way; he suggests too that men carried from Babylon into Judea may have changed their names, the more so since it was hardly safe to be known in Babylon by a name meaning the winnowing of Babel. Ellicott approaches the same knot from the royal side, taking the line from Solomon to have expired in Jeconiah, so that Salathiel of Nathan's line stepped into the inheritance, and finds it significant that a prophecy of the period gives the house of Nathan a pre-eminence of its own."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports that Grotius wished two names struck out as absent from the ancient exemplars, citing a row of early authorities, and declines to follow him because the Latin and all the Oriental versions keep them; he supplies second names and terms of office for several of the men from a list of Jewish rulers, and groups the long run down to Mattatha as men who lived before the captivity in the house of David through Nathan."
    }
   ],
   "debates": [
    {
-    "question": "Is the second 'Cainan' (son of Arphaxad) original to Luke?",
-    "sides": [
+    "question": "Why is Zorobabel's father missing here?",
+    "positions": [
      {
-      "position": "A later transcriber's intrusion, not original; absent from the Hebrew OT",
-      "holders": [
+      "position": "The omission matches the post-exilic books, but no reason for it can be guessed",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "The royal line failed in Jeconiah and Salathiel of Nathan's line took the place of inheritance",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Suggests the variation in these names may come from men changing them on leaving Babylon, a name meaning the winnowing of Babel being unsafe to carry there."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Reports that Grotius wished two of these names struck out as absent from the ancient exemplars, and declines to follow him because the Latin and all the Oriental versions retain them."
+   }
+  ],
+  "themes": [
+   "Which was the son of Matthat, which was the son of Levi, which was the son of Melchi, which was the son of Janna, which was the son of Joseph,",
+   "Which was the son of Mattathias, which was the son of Amos, which was the son of Naum, which was the son of Esli, which was the son of Nagge,",
+   "Which was the son of Maath, which was the son of Mattathias, which was the son of Semei, which was the son of Joseph, which was the son of Juda,",
+   "Which was the son of Joanna, which was the son of Rhesa, which was the son of Zorobabel, which was the son of Salathiel, which was the son of Neri,",
+   "Which was the son of Melchi, which was the son of Addi, which was the son of Cosam, which was the son of Elmodam, which was the son of Er,"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.73
+   }
+  }
+ },
+ "30": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes"
+  ],
+  "range": "30-32",
+  "pericope_label": "Which was the son of Simeon, which was the son of Juda, which was the son of Joseph, which was the son of Jonan, which was the son of Eliakim, Which was the son of Melea, which was the son of Menan, which was the son of Mattatha, which was the son of Nathan, which was the son of David, Which was the son of Jesse, which was the son of Obed, which was the son of Booz, which was the son of Salmon, which was the son of Naasson,",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Barnes adds only his references, and they are the useful ones: the place where Nathan is named among the sons born to David, the prophecy setting the house of Nathan apart among the mourning families, and the older record of the line running down to Jesse."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill runs the names off in order from Jesse back to Abraham and finds this stretch in perfect agreement with the descent given by the other evangelist and with the accounts in the older books, so that no reconciliation is called for; his one textual note is that the Arabic version inserts a further name here, which he rejects."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Marks this as the one long stretch of the chapter where the two genealogies and the older registers agree throughout."
+   }
+  ],
+  "themes": [
+   "Which was the son of Simeon, which was the son of Juda, which was the son of Joseph, which was the son of Jonan, which was the son of Eliakim,",
+   "Which was the son of Melea, which was the son of Menan, which was the son of Mattatha, which was the son of Nathan, which was the son of David,",
+   "Which was the son of Jesse, which was the son of Obed, which was the son of Booz, which was the son of Salmon, which was the son of Naasson,"
+  ],
+  "thin": true,
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.38
+   }
+  }
+ },
+ "34": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
+   "Bede",
+   "Ambrose"
+  ],
+  "range": "34-38",
+  "pericope_label": "Which was the son of Jacob, which was the son of Isaac, which was the son of Abraham, which was the son of Thara, which was the son of Nachor, Which was the son of Saruch, which was the son of Ragau, which was the son of Phalec, which was the son of Heber, which was the son of Sala, Which was the son of Cainan, which was the son of Arphaxad, which was the son of Sem, which was the son of Noe, which was the son of Lamech, Which was the son of Mathusala, which was the son of Enoch, which was the son of Jared, which was the son of Maleleel, which was the son of Cainan, Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot declines to reopen a controversy already sufficiently bandied, agrees that the Greek version was followed, and exposes a second-hand error, an early writer who omits the disputed name having had it inserted by a translator who found it nowhere in the original. Ellicott offers the alternative squarely, that either the Greek version rests on a Hebrew text older than ours or the name was inserted there to match the older list to this one, notes its absence from the Latin, Syriac and Samaritan Pentateuchs and from one of the best manuscripts here, then refuses to go further with a question he calls infinitesimally small; he also reads the reach back to Adam as fitting a Gospel written for the brotherhood of mankind, defends the plausibility of such pedigrees from the public registers, and applies the closing words to Adam, humanity as an immediate creative act being God's offspring."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the hardest line on the disputed name, absent as it is from the Hebrew, the Samaritan, the Targum, the historian and the oldest Greek copy of this Gospel; he reverses the usual account of the borrowing, holding that a careless early copyist of this Gospel introduced it and that it was afterwards carried back into the Greek version to give it authority, and concludes that it belongs in no text and no version."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reports the expedient of treating the disputed name as a surname and reading two names as one, admitting that if this does not untie the knot it cuts it; Wesley puts the closing doctrine in a line, that Adam received immediately from God whatever his sons receive from human parents, sin and misery excepted."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede states the relation without treating it as a fault, concluding simply that the evangelist took this generation from the Greek version, and counts Enoch at the seventy-seventh step in the climb from the baptized Son to God the Father. Ambrose will not have Noah passed over, since one born the builder of his Church sent ahead the man who founded a church in the figure of an ark, makes something of the reckoning that carries Methuselah's years past the flood, and presses Enoch hardest, arguing that a forebear taken up without dying shows Christ need not have died and chose a death to profit us."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Where did the disputed name between Arphaxad and Salah come from?",
+    "positions": [
+     {
+      "position": "From the Greek version, which the evangelist simply followed",
+      "held_by": [
+       "Bede",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "From a careless early copyist of this Gospel, the name being afterwards carried back into the Greek version to give it authority",
+      "held_by": [
        "John Gill"
       ]
      },
      {
-      "position": "Luke followed the Septuagint, which has it; perhaps a surname of Salah",
-      "holders": [
-       "John Lightfoot",
+      "position": "Either from a Hebrew text older than ours, or inserted into the Greek version to harmonise it with this list; the question is too small to press",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "It may be a surname of the next name in the list, the two being read together",
+      "held_by": [
        "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Ambrose",
+    "claim": "Argues from Enoch that Christ could not have been compelled to die, since the founder of his line was taken up without death."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Defends the credibility of the pedigree from the public registers of births and marriages kept for the priesthood across Babylon and Alexandria, with copies sent to Jerusalem."
+   }
+  ],
   "themes": [
-   "the Cainan textual crux",
-   "Luke and the Septuagint",
-   "the line through Noah and Shem",
-   "saved through the flood"
+   "Which was the son of Jacob, which was the son of Isaac, which was the son of Abraham, which was the son of Thara, which was the son of Nachor,",
+   "Which was the son of Saruch, which was the son of Ragau, which was the son of Phalec, which was the son of Heber, which was the son of Sala,",
+   "Which was the son of Cainan, which was the son of Arphaxad, which was the son of Sem, which was the son of Noe, which was the son of Lamech,",
+   "Which was the son of Mathusala, which was the son of Enoch, which was the son of Jared, which was the son of Maleleel, which was the son of Cainan,",
+   "Which was the son of Enos, which was the son of Seth, which was the son of Adam, which was the son of God."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "The antediluvian patriarchs (Gen 5): Methuselah the longest-lived, Enoch who walked with God and was translated (Gen 5:24) and prophesied the Lord's coming (Jude 14), Jared, Mahalaleel, the first Cainan; the line reaches back to the dawn of mankind."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.31
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the antediluvian patriarchs",
-   "Enoch who walked with God",
-   "translated that he should not die",
-   "the line to the dawn of history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Cyril of Jerusalem",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The line climbs through Enos and Seth to Adam, 'the son of God' by creation (Acts 17:28; Gen 1:26; 2:7); Luke ascends to God (Origen); Christ shown son of Adam and of God, kinsman of all mankind — the two Adams (1 Cor 15:45; Luke 1:35)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Adam the son of God",
-   "sonship by creation",
-   "the line ascends to God",
-   "the second Adam joined to the first"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

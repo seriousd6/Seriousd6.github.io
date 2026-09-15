@@ -86802,6 +86802,109 @@
         "1"
       ],
       "note": "OPERATIONAL NOTE ON HAND PUSHES, recorded because it nearly stopped a run. After synthesis-loop.py finish, HEAD is left DETACHED, and a subsequent git reset --hard origin/master keeps it detached. In that state git push origin master does not push your work at all: it pushes the stale local branch ref named master, which is far behind, and the server correctly rejects it as non-fast-forward with the message that a pushed branch tip is behind its remote counterpart. The message is misleading, because git ls-remote will show the true remote tip matching your commit parent exactly, which makes it look like a server or proxy fault. It is not. Check git rev-parse --abbrev-ref HEAD first; if it prints HEAD you are detached. The correct command is git push origin HEAD:master, which is a plain fast-forward and is exactly what finish --push already does, so chapter landings are unaffected. Only hand pushes of notebook commits hit this."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "30",
+        "36"
+      ],
+      "note": "Jamieson, Fausset and Brown residue at five keys on a perfect arithmetic step of 6 (12, 18, 24, 30, 36). Every one of the five blocks is Olivet Discourse material from the parallel chapters of the other Synoptics: the seating on Mount Olivet, the travail-pangs and Tacitus on the convulsions before the fall of Jerusalem, iniquity abounding and love waxing cold, flight not on the sabbath, and the impossibility of seducing the elect. None of it touches this chapter. Declared in excluded_voices on the five tiles that cover those keys. This is the same constant-step fetch defect logged for 1chronicles 28, ezra 8, mark 13, matthew 13, nehemiah 3, job 9 and luke 5; matthew 13 (nine keys) and this chapter (five keys) are the longest clean instances of step 6 found so far, which should make the upstream fix easy to test against."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "3",
+        "16",
+        "21",
+        "38"
+      ],
+      "note": "Cyril of Jerusalem is MIXED in this chapter and must not be excluded wholesale. Four of his nine blocks are keyword-attached residue from the Catechetical Lectures: the table prepared in the presence of enemies at key 3, the fourteen epistles of Paul at key 16, Barnabas at Antioch at key 21 (the same block that was residue in luke 5), and the post-resurrection All hail at key 38. The other five are genuinely on this chapter and are used: the voice crying in the wilderness at key 4, baptizing in Jordan and confessing sins at key 7, the axe at the root at key 9, the two coats at key 11, and the dove and the due order of preaching after baptism at key 22. This is the third chapter in which his blocks have proved to be per-key rather than uniform (ten of seventeen genuine in mark 13, none usable in mark 2 and luke 5, five of nine here). A blanket corpus-wide exclusion would destroy real material. NOTE ALSO a tooling detail for whoever fixes this: excluded_voices cannot be used for him at all, because synthesis_qa.split_voices does not emit the name Cyril of Jerusalem from these blobs, so a declared exclusion is rejected as naming an absent block."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "note": "Ellicott offset: his long note on the genealogy has been split and attached backwards to keys 1 through 5, which are about the dating of John's ministry and the Isaiah citation. Key 1 carries his three explanations of Joseph son of Jacob versus son of Heli; key 2 the unequal number of names; key 3 Jeconiah, Neri and Salathiel; key 4 the Aram spelling; key 5 the descent to Adam, the Cainan insertion and the Jewish public registers. He is correct from key 6 onward. This is misfiling, NOT foreign residue, so the material was relocated into the tiles covering the verses it actually treats (23, 24-28 and 34-38) rather than discarded. One casualty: the key 4 note on the Aram spelling belongs to verse 33, which has no source key at all, so it could not be placed and is unused."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "38"
+      ],
+      "note": "Ellicott site chrome again at the LAST key of the chapter. His genuine note on verse 38 runs about ninety words, ending at the comparison of the first and second Adam; the block then continues for roughly a thousand words of book-navigation breadcrumb, copyright boilerplate and raw CSS. This is the eleventh consecutive chapter in which the defect has appeared at the final key, always beginning at the navigation breadcrumb. A cleanup keyed on that breadcrumb would fix the whole corpus at once."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "23"
+      ],
+      "note": "Whether the age of thirty carries legal significance. Gill, Clarke and Wesley take it as the age the law required of those who served in the sanctuary, and all three call them priests. Ellicott corrects the fact: it was the LEVITES who entered full service at thirty, after a probation from twenty-five or, in later and lighter times, twenty, while no age at all was fixed for the priesthood or for a prophet; the most he will infer is that thirty was reckoned the completeness of manhood. Barnes denies the inference outright, since Jesus was not under the Levitical law of the priesthood and teachers commonly began earlier. Robertson goes furthest, calling the familiar rendering an impossible translation, supplying the words to teach with the participle, crediting Tyndale with getting it right, and refusing to commit the evangelist to precisely thirty at all."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "21"
+      ],
+      "note": "Two places where Henry and Robertson read the same clause in opposite directions, both carried in the tile covering 21-22. First, whether Christ was baptized last of all: Henry builds a whole meditation on humility out of it, Christ coming in the rear of the common people as less than the least; Robertson holds the grammar will not carry it, the articular aorist infinitive having no time in it, so the sentence says only that the baptism happened in connection with the baptizing of the people at large. Second, whether heaven opened in answer to the prayer: Henry says he prayed for that very manifestation; Robertson allows only that the present participle puts the opening while Jesus prayed, not necessarily because he prayed. Barnes sides with neither but places the whole scene after the administration rather than during it."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "3",
+      "verses": [
+        "16",
+        "36"
+      ],
+      "note": "Two four-way splits worth flagging. On the baptism with fire (key 16 span): Chrysostom keeps it wholly gracious, the fervour of grace consuming sins; Bede allows the Spirit himself, as at Pentecost, but reports others who divide the two, Spirit now and fire hereafter for lighter sins; Origen states that purgative view plainly, the Lord standing in a fiery stream with the flaming sword to bathe whoever still needs cleansing before paradise and refusing it to any lacking the seal of the earlier baptisms; Gregory of Nyssa and Gregory push hard the other way, that the punishments bear no proportion to anything the senses know and that the word unquenched is there precisely to stop us imagining an ordinary fire. On the Cainan inserted between Arphaxad and Salah (key 36 span): Bede and Lightfoot simply say the evangelist followed the Greek version; Gill reverses the borrowing, holding that a careless early copyist of this Gospel introduced the name and that it was afterwards carried back into the Greek version to give it authority, and concludes it belongs in no text and no version; Ellicott offers both directions and then refuses to press a question he calls infinitesimally small; Clarke reports the expedient of reading it as a surname of the following name and admits that if this does not untie the knot it cuts it."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "3",
+      "note": "Robertson polices the Luke-the-physician argument rather than pressing it. At the verb for adding in verse 20 he notes that Hippocrates used it of applying wet sponges to the head and Galen of a decoction of acorns, and then states flatly that there is no evidence the evangelist has a medical turn to the word here. This is worth recording alongside the physician-vocabulary observation filed for luke 5, where Ellicott and Robertson independently pressed the medical reading of full of leprosy, palsy-stricken and they that are in health. The same witness who supplies that evidence also refuses it where it does not hold, which is a point in favour of the earlier note rather than against it. Ellicott meanwhile presses the softer form of the argument at verse 10, suggesting that a physician of souls would relish preserving this example of practical spiritual therapy."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "3",
+      "note": "The catena blocks in this chapter are runs, not single entries: a block labelled with one father frequently continues with further catena entries introduced in capitals. The block labelled Origen at key 1 carries Bede; the block labelled Gregory at key 10 carries Origen, Theophylact, Basil and Ambrose; the block labelled Chrysostom at key 10 carries Bede, Ambrose, Gregory Nazianzen and Augustine, including the whole just-war passage; the block labelled Ambrose at key 21 carries Gregory Nazianzen, Chrysostom, Athanasius, Bede and Gregory; the block labelled Origen at key 18 carries Eusebius, Bede and the Gloss. Voices were therefore declared from the content of the runs and not from the block labels. Names that appear only inside another witness's run and are not catena voices in their own right (Eusebius, Maximus, the Gloss, a Greek expositor, Grotius, Bishop Pearce, Theophilus) are cited as the witnesses cite them and are NOT declared voices. Note also that Cyril and Cyril of Alexandria appear as two separate block labels in this chapter and are almost certainly the same father under two labels; both are declared, because both labels carry distinct material that is used."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "3",
+      "note": "Legacy-unversioned chapter regenerated wholesale from the catena as eleven pericope tiles: 1-2, 3-6, 7-9, 10-14, 15-17, 18-20, 21-22, 23, 24-28, 30-32, 34-38. The source has 36 keys with gaps at 29 and 33, so no tile spans a gap; the contiguous run from key 1 to key 28 is fully covered, and the three post-gap groups are tiled separately. Verses 29 and 33 have no source at all and no tile claims them. The tile covering 30-32 is marked thin: its usable source is 86 words once the Jamieson, Fausset and Brown residue at key 30 is excluded, and the prose is held to 175. Five tiles carry excluded_voices for that residue. Ellicott's genealogy material misfiled onto keys 1-5 was relocated into the tiles covering the verses it treats, and patristic material filed under key 23 but commenting on Noah, Methuselah and Enoch was carried into the tile covering 34-38. Every entry self-graded A on both compress and ttr; the word window held on all eleven; the bidirectional voice-citation check was clean; no entry contains strong tags, non-ASCII beyond the whitelist, or bare book-and-number scripture references."
     }
   ]
 }
