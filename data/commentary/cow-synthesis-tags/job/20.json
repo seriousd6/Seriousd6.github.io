@@ -5,102 +5,80 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Gregory the Great: the friends, trained by habit to good living but not to an exact estimate of God's judgments, could not conceive that a righteous man might suffer ills, and so judged Job wicked because they saw him scourged."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: regardless of Job's distress, plea, and confession, Zophar starts up and attacks with as much heat and passion as ever, still representing Job as a wicked man and a hypocrite."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Zophar, resolved to condemn Job for a bad man, is displeased that he talks so like a good one; the doctrine will be well explained and worst applied."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke lays out the plan of the whole speech — the wretchedness of the wicked and hypocrite, their short rejoicing, ruin in family and person, stripped wealth, and violent death."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: Zophar retorts with yet greater vehemence and a more ornate, elaborate style, reiterating the old burden of the speedy doom of the wicked."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Zophar's renewed vehemence",
-   "the movement of the second speech",
-   "the doom of the wicked",
-   "doctrine explained and misapplied"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
    "Charles Ellicott",
+   "Keil and Delitzsch",
    "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes Zophar at his own valuation: his thoughts, coming thick and fast, constrain him to answer, and he is anxious it be understood his reply proceeded from thought and mature deliberation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke calls Zophar the most inveterate of Job's adversaries, rendering the verse (with Good) 'whither would my tumult transport me?' — the Hebrew, 'there is sensibility in me'; Wesley: he makes haste, speaking sooner than intended, perhaps interrupting Job."
+    "summary": "Gill lists everything Zophar disregards in order to begin, the distressed condition Job was in, his request for pity, his confession of faith and his advice that they cease persecuting him, and says he starts up with as much heat and passion as ever, still representing Job as a wicked man and a hypocrite."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: the 'therefore' points back to the eagerness stirring him to reply; Keil and Delitzsch reject Schultens's 'perturbatio animi' for the crux and read the clause as an apology for the vehemence to follow."
+    "summary": "Ellicott marks the escalation in manner as well as matter, a retort of greater vehemence in a more ornate style on the same burden; Keil and Delitzsch report that all modern expositors take the second verse as an apology for what follows, canvass the elliptical reading and Ewald defence of it, and then refuse the result as furnishing no acceptable meaning, rejecting Schultens sense of a disturbance of mind as too remote from Hebrew usage."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry describes the entry closely, that Zophar was displeased Job talked so like a good man, broke in upon him and began abruptly, taking no notice of what was said to move pity or evidence integrity and fastening on the reproof at the close."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls Zophar the most inveterate of them all and says we must cease to call these men friends, relays Good rendering about the tumult that would transport him, and remarks that this is all the modesty the discourse contains; Wesley reads it as haste, that he speaks sooner than he intended and possibly interrupted Job mid-discourse."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thoughts that cause an answer",
-   "haste to reply",
-   "thought or passion",
-   "the crux of the second clause"
+  "debates": [
+   {
+    "question": "Can the second verse be construed at all?",
+    "positions": "Keil and Delitzsch report the consensus reading it as an apology and the majority treating the preposition as elliptical, with Ewald defending its standing alone, then hold that in spite of this the verse furnishes no meaning that can be accepted and reject the proposed sense of a disturbance of mind as too remote from Hebrew usage; Clarke, Ellicott and Wesley all render it without visible difficulty, Clarke through Good, Ellicott as simple eagerness, Wesley as haste."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Refuses to call the three men friends at all, holding that Zophar sets no bounds to his invective and outrages every rule of charity, and that a man of so bitter a spirit must in general have been very unhappy."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "view": "Notes that the escalation is stylistic as well as moral, Zophar assuming a more ornate and elaborate manner while reiterating the same burden of the speedy doom of the wicked."
+   }
+  ],
+  "themes": [
+   "then answered Zophar the Naamathite",
+   "my thoughts cause me to answer",
+   "the haste that interrupts",
+   "an apology for what follows",
+   "a verse that yields no meaning"
+  ],
+  "range": "1-2",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
  "3": {
@@ -114,513 +92,257 @@
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill gives two constructions: Zophar heard Job's reproof (the warning of the sword) and could not bear it; or he pretends to a divine oracle, a confutation heard from God with which he is furnished to answer."
+    "summary": "Gill takes the check to be Job warning that they should beware of the sword, and reports that some understand Zophar to be claiming a divine oracle of the kind Eliphaz alleged earlier, so that being divinely furnished he thought it his duty to deliver it."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: Zophar quotes Job's 'ten times ye reproached me' (ch. 19:3) and retracts nothing, sure his judgment cannot err; Wesley: 'I speak not from passion, but from certain knowledge.'"
+    "summary": "Clarke offers two referents for the reproach and concludes that Zophar assumes his old ground and retracts nothing, being determined to believe his judgment infallible; Wesley takes the speaker at his word, that he speaks not from passion but from certain knowledge."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott: 'the reproof of my shame'; 'out of my understanding my spirit answereth me' — Zophar moved by an inward impulse he cannot but obey."
+    "summary": "Ellicott renders it as a reproof that puts him to shame and reads the next clause literally, that out of his understanding his spirit answers him, so that he professes an impulse within which he cannot but obey."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry refuses the profession, observing that the abundance of the heart is what the mouth speaks while Zophar fathers the instigation on the spirit of his understanding, and that men often mistake the dictates of their passion for the dictates of their reason."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gregory reads the whole opening as a mind shaken by the terribleness of the last Judgment rather than a temper roused, and is clear that the friends erred by being uninstructed in the estimate of God judgments."
    }
   ],
   "debates": [
    {
-    "question": "What is 'the spirit of my understanding' from which Zophar answers?",
-    "sides": [
-     {
-      "position": "an offended, impatient spirit stung by Job's reproof",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "a pretended divine oracle, or certain knowledge and not passion",
-      "holders": [
-       "Gill",
-       "Wesley"
-      ]
-     }
-    ]
+    "question": "Is the answer reason or passion?",
+    "positions": "Wesley takes Zophar at his word that he speaks not from passion but certain knowledge; Ellicott reports the claim neutrally as a professed impulse that must be obeyed; Henry denies it outright, that the spirit of the understanding should cause us to answer but whether it did so here is a question, since men mistake passion for reason and therefore think they do well to be angry; Gill notes that some take the claim further still, as a pretension to a divine oracle."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Gregory the Great",
+    "view": "Reads the confusion of thought as the effect of seeing the terribleness of the last Judgment, since the mind spreads wider the more it considers what threatens it, and is transported diverse ways as it weighs by turns the evil done and the good left undone."
+   },
+   {
+    "voice": "Gregory the Great",
+    "view": "Diagnoses the friends error precisely, that though long acquaintance with Job life had taught them how to live well, they were uninstructed in forming an exact estimate of God judgments and would not believe the righteous could suffer here below."
+   },
+   {
+    "voice": "Matthew Henry",
+    "view": "Draws the maxim the exchange illustrates, that the best counsel is too often ill taken from an antagonist and may therefore be well spared, and that the friends had spirits too high to deal with a man in his low condition."
+   }
+  ],
   "themes": [
    "the check of my reproach",
-   "a divine oracle or mere pique",
-   "the spirit of understanding",
-   "Zophar unmoved"
+   "the spirit of my understanding",
+   "passion mistaken for reason",
+   "a claim to a divine oracle",
+   "a mind shaken by judgment"
   ],
+  "range": "3",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.02
+   }
   }
  },
  "4": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill renders 'of old' as 'from eternity' — an ancient and established maxim, not Zophar's novelty, which the knowing man Job must surely own."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke fixes 'since Adam was placed on the earth': a maxim as old as the world, with a thrust at Job's late confidence about a general judgment."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: an appeal to Job's own conviction and the experience of all ages — since man was made, the sin of sinners has been his ruin (Acts 28:4; Isa. 3:11)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render the solemn preface, 'knowest thou this which is from everlasting, since man was placed upon the earth.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a maxim as old as the race",
-   "the wages of sin",
-   "since man was on the earth",
-   "a true maxim ill-aimed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the friends, once denying the wicked prosper at all, now grant it but for a little while; the Hebrew sets the triumph 'from near,' begun lately and quickly ended."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the destruction of the wicked is not only certain but speedy (cf. Ps. 103:16; Job 7:8); Keil and Delitzsch render the couplet as one measured verdict on a prosperity allowed only to be pronounced brief."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry seizes on 'hypocrite,' Zophar's word for Job: dissembled piety is double iniquity, the hottest place in hell its portion (Matt. 24:51), though the wicked may for a time be secure and merry."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the triumph of the wicked is short",
-   "the joy of the hypocrite",
-   "prosperity briefly allowed",
-   "the sound thesis misaimed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: though his excellency mount to the heavens like the Assyrian's aspiration (Isa. 14:13) or Nebuchadnezzar's towering tree (Dan. 4:11), the loftier the rise the more complete the ruin."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the 'excellency' as Adam's original state in the image of God, cast down by sin; Wesley keeps it present — 'advanced to great dignity and authority.'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry supposes the prosperity as high as imagination reaches — not virtue but worldly wealth his excellency — bidding fair for universal monarchy, the pride and security but presages of ruin."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Reads the wicked man's 'excellency mounting to heaven' as an allusion to Adam's original state in God's image, ruined by the Fall — the chapter re-enacting Eden."
-   }
-  ],
-  "themes": [
-   "excellency mounting to heaven",
-   "the height before the fall",
-   "Adam's original glory",
-   "worldly greatness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry",
    "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill spreads the ruin over both worlds — substance, body, and soul — the man perishing in his own corruption, loathsome as dung that is never returned to its place."
+    "prevalence": "several",
+    "summary": "Gill takes the appeal to antiquity as a taunt and adds the obvious qualification that Job could not have known it from so early, being comparatively of yesterday; he declines to grant the maxim even in its reduced form, since it may be true in many instances but is not invariable and without exception the case; and he presses the figure of the dung to its end from ancient burial usage."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke hears Zophar covertly deny the resurrection Job had just confessed: the wicked is dust returning to dust — 'a speech partaking of the malevolence of Zophar's spirit.'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry graduates the ruin: shameful (like his own dung, Isa. 66:24), surprising (desolate in a moment, Ps. 73:19), swift, utter, and final."
+    "summary": "Clarke reads the second clause literally as since Adam was placed on the earth, turns the verse back on the speaker, keeps the first man as the reference for the height as well, and hears in the seventh verse a hint that Zophar disbelieves the resurrection Job had just asserted."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Keil and Delitzsch carry the run of verses in their rendering, the abrupt 'Where is he?' measuring the completeness of his disappearance."
+    "summary": "Ellicott summarises the claim exactly, that the destruction of the wicked is affirmed to be not only certain but speedy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sorts the speech into heads, treating the doctrine as introduced by an appeal to what all mankind is supposed to know."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley reduces the height to its plainest sense, advancement to great dignity and authority."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is the maxim about the wicked true as stated?",
+    "positions": "Ellicott reports it without endorsement as a claim of certain and speedy destruction; Gill traces how the friends retreated to it, having begun by denying the wicked ever prospered, and then refuses even the reduced version, that it may be true in many instances but is not invariable and without exception the case; Clarke turns it back on Zophar, that such is his character he has little reason to anticipate the day of judgment with joy."
+   },
+   {
+    "question": "Does the seventh verse deny the resurrection?",
+    "positions": "Clarke suspects that Zophar hints his disbelief in the resurrection of the body which Job had solemnly asserted in the preceding chapter, or else held that the wicked are annihilated and the righteous only raised, a doctrine he says no scripture confirms; Gill, taking the perishing to reach the soul in eternity as well as the body in the grave, reads it as everlasting ruin rather than annihilation."
+   }
+  ],
   "outliers": [
    {
+    "voice": "John Gill",
+    "view": "Supports the comparison to dung from ancient usage, that dead bodies were reckoned as dung and that the Arabians buried even their kings in dunghills."
+   },
+   {
     "voice": "Adam Clarke",
-    "note": "Takes 'he shall perish for ever like his own dung' as Zophar hinting his disbelief in the resurrection Job asserted in the preceding chapter."
+    "view": "Judges the verse as much by its temper as its doctrine, calling it a speech that partakes as much of the malevolence as of the asperity of Zophar spirit."
    }
   ],
   "themes": [
-   "perishing like his own dung",
-   "a covert denial of the resurrection",
-   "the graduated ruin",
-   "loathsome to God and men"
+   "knowest thou not this of old",
+   "the triumphing of the wicked is short",
+   "though his excellency mount up to the heavens",
+   "he shall perish for ever like his own dung",
+   "a maxim that will not hold"
+  ],
+  "range": "4-7",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'fly away as a dream' — as a dream forgotten, or the illusion of a dream, like the hungry man who dreams he eats and wakes empty (Isa. 29:8)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: instead of rising with a new body as Job hoped (ch. 19:26), the man's flesh rots and his spirit is dissipated like a vapour, leaving only the bare impression that he existed."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a swift and utter destruction — chased away on the wings of his own terrors, gone like a dream, nothing left but matter to laugh at the folly of."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Reads the vanishing dream as Zophar's answer to Job's resurrection-hope of ch. 19:26 — no rising, only a spirit dissipated like vapour."
-   }
-  ],
-  "themes": [
-   "fly away as a dream",
-   "a vision of the night",
-   "no rising for the wicked",
-   "substance without substance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
    "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs two senses — the eye no longer beholding his grandeur, or death having taken him quite away — preferring the latter from the parallel."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a final ruin — the eye that saw and adored him shall see him no more, his place giving him an eternal farewell, as Judas went to his own place (Acts 1:25)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch keep the couplet's force, the personified 'place' sealing the man's absence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seen no more",
-   "his place beholds him not",
-   "the world closes over him",
-   "the doom of the man of the world's eye"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the children, visited for the father's sins, seek to please the poor he oppressed, his hands restoring the plunder; but Jarchi turns the clause otherwise."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the children reduced to serving the very poor (Gen. 9:25), the wealth restored; he records Good's 'his branches shall be involved in his iniquity' and Calmet's turn."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: forced restitution — the clamour of the poor makes him send his children to beg pardon while his hands restore, not with a Zacchaeus's joy (Luke 19:8) but a vomit's pain."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott gives both poles: the children seek the poor's favour by making good what was taken, or 'the poor shall oppress his children.'"
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does the verse foretell of the wicked man's children?",
-    "sides": [
-     {
-      "position": "the sons appease the poor their father oppressed, restoring the plunder",
-      "holders": [
-       "Gill",
-       "Henry",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the sons sunk into poverty and servitude",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the poor turn at last upon the oppressor's children",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the children and the poor",
-   "forced restitution",
-   "the plunder disgorged",
-   "a contested verse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: youth's sins — pride, lust, luxury, intemperance — whose effects rot the flesh and the very bones; or, as some read, the man's 'secret sins' that God will find out."
+    "prevalence": "several",
+    "summary": "Gill offers both senses of the dream, one forgotten and irrecoverable and one remembered but illusory as a hungry man dreaming he eats; he explains the children courting the poor after the man death so as to escape reproach or revenge or a suit, notes that Jarchi renders it otherwise, and takes the bones literally of youthful sin and its bodily aftermath while recording that some read the word as secret sins."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke leans (with Rosenmuller and Good) to 'his hidden things' — secret vices bringing his strength to the dust; Wesley: 'bones' the whole body, and 'the sin' the punishment of it."
+    "summary": "Clarke hears the dream verse as a continued denial of the resurrection Job asserted, reads the next as reducing the children to servants of the poor, gives two further renderings from Good and Calmet, and prefers the sense of hidden things for the bones, naming Rosenmuller and German critics and Good for it while reporting that the Syriac, Arabic and Targum read the line as bones full of marrow; Wesley takes the bones for the whole body and the sin for the punishment of it."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott renders 'youthful vigour' (cf. Job 33:25; Ps. 89:46): though in the full vigour of life, it shall lie down with him in the dust."
+    "summary": "Ellicott adds a fourth rendering of the tenth verse, that the poor may be said to oppress his children, and takes the disputed word in the eleventh for youthful vigour rather than sin, so that a man in the full vigour of life shall yet lie down with it in the dust."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the lusts of youth contract diseases that gnaw age (Prov. 5:11), the sins of youth lying down with him in the dust, iniquity upon his bones (Ezek. 32:27)."
+    "summary": "Henry, sorting the speech into heads, files the clause under the lusts of the flesh, those being the sins to which that age is most tempted."
    }
   ],
   "debates": [
    {
-    "question": "What are the wicked man's bones 'full of'?",
-    "sides": [
-     {
-      "position": "the sins of his youth — moral sins and their bodily effects",
-      "holders": [
-       "Gill",
-       "Wesley",
-       "Henry"
-      ]
-     },
-     {
-      "position": "his hidden or secret vices",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "youthful vigour, cut short and laid in the dust",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "How should the tenth verse be rendered?",
+    "positions": "Clarke says outright that the clause is variously translated and gives three versions beside the received one, that the children become servants to the poor, that his branches are involved in his iniquity so that the children suffer on his account, and that his own hands render to himself the evil he did to others; Gill keeps the received sense of courting the favour of the oppressed and notes a further reading in Jarchi; Ellicott adds that it may be turned around so that the poor oppress his children."
+   },
+   {
+    "question": "What are his bones full of?",
+    "positions": "Gill reads literal youthful sin whose effect is the rotting of flesh and bone; Clarke prefers the sense of hidden things, so that secret vices bring down his strength, and names supporters for it while reporting three versions that read marrow instead; Ellicott takes the word for youthful vigour and not for sin at all; Wesley reads the sin as the punishment of it."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the sin of his youth",
-   "secret vices",
-   "youthful vigour",
-   "the sins that follow to the grave"
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Illustrates the depth of the poverty by the curse upon Ham, a servant of servants, and notes that there are cases where the poor actually serve the poor, which he calls the most abject state of poverty there is."
+   },
+   {
+    "voice": "John Gill",
+    "view": "Presses the dream figure to the waking, that the man who dreams he eats and drinks awakes empty and not at all refreshed, what he fancied being fled and never having had existence but in his imagination."
+   }
   ],
+  "themes": [
+   "he shall fly away as a dream",
+   "his children shall seek to please the poor",
+   "his bones are full of the sin of his youth",
+   "a clause variously translated",
+   "vigour that lies down in the dust"
+  ],
+  "range": "8-11",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "12": {
@@ -628,656 +350,324 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill inclines to read the sweet 'wickedness' as covetousness, unlawful gain (Broughton, 'wrong'), though it bears sin in general, sweet to the unregenerate who drinks iniquity like water."
+    "prevalence": "several",
+    "summary": "Gill judges from the context that covetousness is meant and reports Broughton rendering the word as wrong, while allowing a general application; he reads the sparing not as eating little but as valuing much, sin being a wicked man own child; and he presses the comparison of sin to bread of deceit that proves ashes and gravel stones."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke reads vv.12-16 as one sustained allegory — poison rolled under the tongue for its sweetness; Wesley pictures the epicure with his sweet morsel, kept and rolled to prolong the pleasure."
+    "summary": "Clarke refers the sweetness to the secret sins of the preceding verse and sets out the whole allegory of a man who takes poison for food and will scarcely let it down; Wesley gives the epicure with a morsel rolled about the mouth, and grades the bitterness in three steps from gall to the poison of asps that kills without remedy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry files it under the forbidden pleasures of sense and offers two senses of the hiding, obstinate persistence in sin and the re-acting of it by memory, or a hypocrite industrious concealment of a beloved lust."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: Zophar paints the wicked man as a gourmand or glutton — cruel and undiscerning if aimed at Job, perhaps charging him with an inordinate love of riches inferred from his wealth."
+    "prevalence": "several",
+    "summary": "Ellicott suspects a target rather than a category, that the portrait of a gourmand aimed at Job was a fresh instance of heartless cruelty and of unfitness for the office of judge Zophar assumed; Keil and Delitzsch, rendering this run of verses, reach outside Scripture to the golden age of which the poets sang, when rivers of milk and nectar ran."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the wickedness that is sweet in his mouth?",
+    "positions": "Gill judges from the context that it is covetousness or riches unlawfully got, citing Broughton rendering of the word as wrong, while allowing a general sense; Clarke refers it to the secret sins of the preceding verse; Henry files it under the lusts of the flesh; Ellicott suspects it is aimed at Job wealth, extracted from the bare fact of his having been rich."
+   },
+   {
+    "question": "What does hiding it under the tongue signify?",
+    "positions": "Henry offers two and chooses neither, obstinate persistence in sin, since the man spares what he should kill and mortify, and the re-acting of the sin by revolving it in memory, or else a hypocrite concealment of his beloved lust to save the credit of his profession; Wesley reads an epicure keeping a morsel to prolong the pleasure; Clarke reads poison held for its sweetness; Gill reads the sparing of a beloved child."
+   }
+  ],
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Judges the gourmand-portrait, if aimed at Job, a fresh instance of heartless cruelty and of Zophar's unfitness for the judge's office he assumes."
+    "view": "Turns the portrait back on the speaker, holding that if the picture of a gourmand was meant for Job it showed heartless cruelty, an entire want of discernment of character, and unfitness for the office of judge Zophar was so ready to assume."
+   },
+   {
+    "voice": "John Gill",
+    "view": "Reads the sparing of the morsel as the sparing of a beloved child, as Saul spared Agag and as a man spares an only son, sin being a wicked man own offspring and therefore dear to him."
    }
   ],
   "themes": [
-   "wickedness sweet in the mouth",
-   "hidden under the tongue",
-   "the glutton's morsel",
-   "a cruel and undiscerning portrait"
+   "wickedness sweet in his mouth",
+   "he hide it under his tongue",
+   "his meat in his bowels is turned",
+   "the gall of asps within him",
+   "rivers of milk and nectar"
   ],
+  "range": "12-14",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: he spares the sin not by eating sparingly but by refusing to spit it out, sparing it as Saul spared Agag, a darling child of his heart."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'he carefully cherished it and retained it in his palate,' setting the mouth's sweetness against the belly's bitterness, with the poets' golden-age rivers of milk."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: keeping it in his mouth denotes obstinate persistence, or the fond re-acting of sin (Ezek. 23:19), or the hypocrite's concealment of a beloved lust."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.6
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sparing and cherishing the sin",
-   "kept within the mouth",
-   "the loved and hidden lust",
-   "sweetness before the reckoning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the 'meat' is the sin the man lives on, a bread of deceit that turns in his bowels, the stomach revolting against it — the finishing of sin after the act."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the meat turned from sweet to bitter, 'the gall of asps,' most bitter and pernicious, killing within a few hours without remedy."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'his bread is now changed in his bowels, it is the gall of vipers within him,' the turn falling in the belly."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the sweet sin becomes bitter in reflection, turned in the bowels like the book sweet in the mouth but bitter in the belly (Rev. 10:10), the fawning tongue proving the viper's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the meat turned in the bowels",
-   "the gall of asps",
-   "sweetness soured to gall",
-   "conscience and the aftertaste of sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the riches are another's, spoiled and devoured, reckoned as safe as meat in the belly, yet to be refunded whether he will or no."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps the medical realism: vomiting is the effect of poison, nature ejecting what would be its bane, so the ill-got wealth is cast out."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'he hath swallowed down riches, and he shall vomit them up again; God shall cast them out of his belly' — his sickness and God's act at once."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: either his uneasy conscience forces restitution with a vomit's reluctance, or God's providence casts the goods out while the love of the sin stays in the heart."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "swallowed riches vomited up",
-   "God casts them from his belly",
-   "forced restitution",
-   "unjust gain will not stay down"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill dwells on the asp's poison in head and teeth (Pliny), and on death by the asp as an ancient punishment of malefactors — sure and swift."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the sweet, easily-besetting sin acts on the soul as the asp's poison on the body; the ancients held the venom to be the gall, exuded in the creature's rage."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: what the man sucked so sweetly proves the poison of asps; when conscience wakes, the charming graces of sin turn into so many raging furies."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'he sucked in the poison of vipers,' matching the earlier sweetness with the deadly draught that answers it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the poison of asps",
-   "the viper's tongue",
-   "sin's pleasure a swallowed poison",
-   "a true and dreadful equation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the venom's thirst unslaked (like the rich man begging a drop, Luke 16:24), and the honey and butter a plenty of good things the man shall never taste."
+    "prevalence": "several",
+    "summary": "Gill keeps the swallowing strictly to the figure, the riches being another man property devoured as food, and argues from the tense that the poison is not the sin but the punishment of it, noting that execution by the poison of asps was a penalty some peoples actually inflicted; he also takes the denial of rivers first as the thirst that poison excites."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: honey and butter, the yield of rich pasturage, a proverbial figure of the highest prosperity (Exod. 3:8; Isa. 7:22; Joel 3:18, and the classical poets); Wesley: he shall not 'see,' i.e. not enjoy, the satisfaction good men have."
+    "summary": "Clarke supplies the physiology the vomiting image depends on and reads the poison the other way, as the besetting sin acting on the soul as venom on the body, citing the older belief that the venom lay in the gall; he then relays Good account of honey and butter as the yield of a rich pasturage and sets beside it a shelf of classical parallels from Pindar, Virgil, Ovid and Horace; Wesley states the loss plainly."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott hears a possible clue to the book's age: the phrase may show not Zophar's reading of Moses but a common stock of proverbial speech, 'milk and honey' not original with the Pentateuch."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the man had promised himself rivers of sensual delight, and shall not see them, for the enjoyment sinks far below the raised expectation."
+    "summary": "Ellicott draws a consequential inference from the language of milk and honey, that since the phrase is not precisely identical with the promise made of Canaan it may show a community of proverbial speech and need not have originated with the Pentateuch."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is the poison the sin or its punishment?",
+    "positions": "Gill argues from the tense that it cannot be the sin, which would have required a past or present form as though the wickedness were sucked in like milk, and reads it as the punishment instead; Clarke reads it the other way without qualification, that the delicious morsel and easily besetting sin acts on the life of the soul exactly as the poison of an asp acts on the body."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Charles Ellicott",
-    "note": "Weighs the 'honey and butter' phrase as bearing on the date of Job — a community of proverbial speech rather than dependence on the Pentateuch's 'land flowing with milk and honey.'"
+    "voice": "John Gill",
+    "view": "Cites the old naturalist for the placing of the venom, whether in the teeth or as a yellow liquor in the gums, and repeats his account of the asps in copulation and the young that eat out the mother belly."
+   },
+   {
+    "voice": "Adam Clarke",
+    "view": "Collects four classical parallels for the rivers of honey and butter, from a poet comparing his own song to milk and honey through to the golden age with its floods of milk and nectar and honey distilling from oaks."
    }
   ],
   "themes": [
-   "rivers of honey and butter",
-   "plenty forfeited",
-   "milk and honey and the date of Job",
-   "expectation and disappointment"
+   "he hath swallowed down riches",
+   "he shall suck the poison of asps",
+   "the brooks of honey and butter",
+   "poison in the gall",
+   "a proverb older than the promise"
   ],
+  "range": "15-17",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
   }
  },
  "18": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'that which he laboured for shall he restore' — the sweated gain wrung from him again, as the vomiting of the earlier verse had figured."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prefers a reading from the Arabic supported by the Syriac, gives Good version and explains how it is reached, sets Houbigant against both and exclaims at how the doctors disagree, then commends Coverdale; on the next verse he renders the charge as the breaking in pieces of the forsaken of the poor and supplies a scene of famine orphans left to perish; and he takes the word rendered belly in its wider sense of the whole trunk and so of the thoughts seated there; Wesley leaves the construction alone and reads compensation for wrongs."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch: because he gives out again what he acquired, he has no pleasure in it, the verse's lines keeping their independence; Ellicott allows the latter part probably right but offers 'according to the substance he hath gotten he shall not rejoice.'"
+    "summary": "Keil and Delitzsch object on syntax rather than lexicon, refusing the translation that has him give back what he gained without swallowing it and rejecting every attempt to attach the last phrase to the first, since such readings run against the relative independence of the separate lines this poet preserves; Ellicott offers his own alternative and then answers the accusation of the next verse instead of expounding it."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Clarke ('O, how doctors disagree!') prefers 'he shall return to labour, but shall not eat,' with Good's dearth and Houbigant's and Coverdale's turns; Wesley: he shall not keep it, but part with his estate to make compensation for his wrongs."
+    "summary": "Gill notes that the verse explains in words what vomiting had expressed in figure, refuses to soften the charge into the desertion of former dependents, and canvasses three senses of the want of quietness before deciding for punishment rather than sin."
    }
   ],
   "debates": [
    {
-    "question": "How is the difficult verse to be rendered?",
-    "sides": [
-     {
-      "position": "he must restore or give back what he laboured for, with no enjoyment of it",
-      "holders": [
-       "Gill",
-       "Keil and Delitzsch",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "'he shall return to labour but not eat' / a dearth his recompense (Good, Coverdale)",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "'according to the substance he hath gotten he shall not rejoice'",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "How should the eighteenth verse be rendered?",
+    "positions": "Clarke prefers an Arabic reading supported by the Syriac, that he shall return to labour and not eat, then gives Good version making a dearth his recompense, then Houbigant quite different one, before exclaiming at the disagreement and commending Coverdale sense; Keil and Delitzsch reject the syntactic basis of several of these and argue from the independence of the verse lines; Ellicott allows the latter part is probably right but offers his own alternative."
+   },
+   {
+    "question": "Is the want of quietness his sin or his punishment?",
+    "positions": "Gill canvasses happiness in children, satisfaction in substance, and a restless craving that would make it his sin, then decides for punishment, that he has no quiet in his conscience because of how his riches were got; Clarke makes it endless dissatisfaction, an unending desire after secular good; Ellicott turns the clause into the cause rather than the effect, that because he knew no quietness within he shall save nothing of what he desires."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "restoring what he laboured for",
-   "no enjoyment of his gain",
-   "a knotted verse",
-   "the versions disagree"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: a settled cruelty — he crushes the poor and leaves them so, without pity, and seizes 'a house which he builded not.'"
+    "voice": "Adam Clarke",
+    "view": "Breaks off from the exposition to exclaim at how the doctors disagree, having set four renderings of a single verse against one another."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: 'he hath broken in pieces the forsaken of the poor' — suffering the children left by the famished to perish, and throwing down a house he will not rebuild — aimed 'at Job all the while.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: for these insinuations there was not a vestige of ground, Job formally rebutting them in his apology of ch. 31."
+    "voice": "Charles Ellicott",
+    "view": "Answers the accusation instead of expounding it, saying flatly that for these insinuations there was not a vestige of ground and that Job formally rebuts them later in the book."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "oppressing and forsaking the poor",
-   "the seized house",
-   "not a vestige of ground",
-   "Job's coming rebuttal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets aside the gentler gloss (no contentment in his substance) for punishment: no quietness in belly or conscience, the restless craving now his sleepless plague."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'belly' stands for the whole inward man, the verse an endless, unfillable desire after secular good; Wesley: no peace in his mind, and he shall keep no part of his desirable things."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the ill-got wealth like undigested meat always upbraiding him — disquieted looking back by conscience and forward by care — none may enjoy comfortably what they got unjustly."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
+   "that which he laboured for shall he restore",
+   "he hath oppressed and forsaken the poor",
+   "a house which he builded not",
    "no quietness in his belly",
-   "the insatiable craving",
-   "the punishment fitted to the sin",
-   "no rest in ill-gotten gain"
+   "four renderings of one verse"
   ],
+  "range": "18-20",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
+   }
   }
  },
  "21": {
   "voices": [
    "John Gill",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'none of his meat left' — none in the belly, none of his substance for himself or heirs; or none left to inherit, his family cut off."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke gives Coverdale's 'he devoured so greedily he left nothing behind,' the man stripped of everything; Wesley: being known as totally ruined, no kindred will trouble for his relics."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott points the logic — 'there was nothing left that he devoured not, therefore his prosperity shall not endure.'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: when he is dead no man shall look for his goods, nor any relation administer what he leaves."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "none of his meat left",
-   "the estate consumed",
-   "greed the seed of loss",
-   "no heir, no relic"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "Keil and Delitzsch",
-   "John Wesley",
    "Matthew Henry"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: amid a fulness of blessing he is reduced to straits — by fear of loss, a narrow spirit, dread of want, or sudden dispossession like Nebuchadnezzar."
-   },
-   {
-    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke calls it 'a fine saying,' true of every rich wicked man tormented by anxieties; Wesley reads the second clause of retribution in kind, punished by those as wicked as himself."
+    "summary": "Gill offers three senses of the twenty-first verse, nothing left in the belly, a table so mean that no crumb falls from it, and no heir left for his substance; and he lists the ways fulness turns to straitness before preferring the sharpest, a sudden dispossession in the height of prosperity as befell Nebuchadnezzar."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott renders 'the hand of every one that is in misery shall come upon him' — the wronged in retaliation; Keil and Delitzsch carry it into v.23, God sending His glowing wrath into his very flesh (cf. Zeph. 1:17)."
+    "summary": "Ellicott reverses the twenty-first verse entirely, that nothing was left which he did not devour and therefore his prosperity shall not endure, and reads the hands that fall on him as the hands of the miserable in retaliation; Keil and Delitzsch read the clause about filling as introducing what follows, that to fill an insatiable belly God sends forth his glowing wrath and rains it into the man very flesh."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the paradox of the twenty-second verse a fine saying few menders of the text have improved, and argues at length that the eating alludes to the lustings of Israel in the desert, supporting it with a rendering that takes the word for quietness as a quail; Wesley reads the hands as those of men as wicked as himself, and glosses the eating with the remark that the wrath fell so upon Job own sons."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry keeps the inward reading — in his fulness he is in straits through the anxieties of his own mind, like the rich fool of Luke 12:17."
+    "summary": "Henry dwells on the weight of the language, that every word speaks terror since it is not only justice but wrath, and the fury of that wrath, rained like the fire and brimstone upon Sodom, and suggests that Zophar may be reflecting on the death of Job children while they were eating and drinking."
    }
   ],
   "debates": [
    {
-    "question": "Whose 'hand' comes upon him in the midst of his sufficiency?",
-    "sides": [
-     {
-      "position": "the miserable and wronged, in retaliation",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the wicked at large, or those as wicked as himself",
-      "holders": [
-       "Gill",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the immediate hand of God's wrath",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
+    "question": "What does the eating allude to?",
+    "positions": "Clarke argues at length for the wilderness, finding a plain allusion to the lustings of Israel and the quails, supporting it with a rendering of the earlier verse that takes the word for quietness as a quail, and setting four verses beside the narrative and the psalm that retells it; Henry and Wesley hear a much more local allusion, that Zophar is reflecting on the death of Job own children while they were eating and drinking."
+   },
+   {
+    "question": "Whose hands come upon him?",
+    "positions": "Ellicott reads them as the hands of the miserable, coming in retaliation, and mentions but doubts a second sense in which every blow that can make a man wretched shall reach him; Wesley makes them the hands of men as wicked as himself, so that his wickedness is punished by his own kind; Henry has his hand against every one and therefore every man hand against him."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "straits in the fulness of sufficiency",
-   "the hand that comes upon him",
-   "abundance turned to distress",
-   "inward anxiety"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'about to fill his belly' both of an ordinary meal to satisfy nature and of gorging his barns, just as the wrath is poised to strike."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: every word speaks terror — not justice only but the fury of God's wrath, rained like fire on Sodom (Ps. 11:6), no fence but Christ (Isa. 32:2), the tempest surprising him in his security (Luke 17:26)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke hears an allusion to Israel's quails and the wrath rained while the flesh was in their mouths (Num. 11:33); Wesley: 'rain' names God the Author and the vehemence, and 'eating' is 'as it fell upon thy sons.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch confirm the grammar of the sudden sending-forth of wrath into his flesh."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
+    "voice": "Adam Clarke",
+    "view": "Builds an argument from a rendering that takes the word for quietness as a quail, and sets four verses of this passage beside the narrative of the manna and the quails to show what Zophar had in view."
+   },
+   {
     "voice": "Matthew Henry",
-    "note": "Suspects Zophar's 'while he is eating' a cruel reflection on the death of Job's children, killed at their feast when the house fell (ch. 1:18) — Wesley hears the same barb, 'as it fell upon thy sons.'"
+    "view": "Suggests that the picture of wrath falling on a man just as he is about to fill his belly may be a deliberate reflection on the death of Job children while they were eating and drinking."
    }
   ],
   "themes": [
-   "wrath rained while he eats",
-   "the fury of God's wrath",
-   "the quails of the wilderness",
-   "a barb at Job's bereavement"
+   "there shall none of his meat be left",
+   "in the fulness of his sufficiency he shall be in straits",
+   "God shall cast the fury of his wrath upon him",
+   "rain it upon him while he is eating",
+   "quails and the graves of lust"
+  ],
+  "range": "21-23",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "24": {
@@ -1285,335 +675,224 @@
    "John Gill",
    "Keil and Delitzsch",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: fleeing the iron weapon (the flaming sword of justice) betrays a guilty conscience, yet none can outrun the hand of God."
-   },
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch set the clauses as a conditional pair — flee the iron and the brazen bow pierces him, the flight itself the punishment; Ellicott: 'if he escaped one mischance, another should overtake him.'"
+    "summary": "Keil and Delitzsch arrange the two verbs of the twenty-fourth verse as a conditional clause and take that to be the relation the poet intended, so that flight from the near weapon ends under the arrow of the brazen bow; Ellicott states it as a rule that if he escaped one mischance another should overtake him, takes the terrors as cumulative, and then steps outside the exposition to judge the whole as true in a sense and even a truism but utterly false in its application to Job."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the weapon as the sword of God on Bar Tzemach authority and takes the flight itself as evidence of guilt in the conscience; he prefers the arrow drawn out of the body to Broughton drawing it from the quiver; and he gives three senses of the secret places, hiding places, God treasuries of vengeance, and the store of secret sins."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke (with Coverdale): though he flee the iron weapon the steel bow strikes him through — all kinds of death await him."
+    "prevalence": "several",
+    "summary": "Clarke reads the verse as archery in sequence and quotes Coverdale twice, lists the different instruments God is said to employ, and alone names a precedent for the unblown fire, suspecting an allusion to the fire that fell on Korah; Wesley draws the inference from the organ named, that the mention of the gall shows the wound deep and deadly, and presses the hiding-place sense of the secret places."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fleeing the iron weapon",
-   "the bow of brass",
-   "no escape from judgment",
-   "the doubled doom"
+  "debates": [
+   {
+    "question": "Where is the arrow drawn from?",
+    "positions": "Gill reports Broughton taking it of the quiver and prefers the other, that it is drawn out of the man body in the hope of curing the wound and to no purpose; Clarke reads the whole verse as archery in sequence, the arrow taken from the sheaf, discharged, piercing the vitals and passing out at the back."
+   },
+   {
+    "question": "What are his secret places?",
+    "positions": "Gill gives three answers, the places of concealment where he promises himself safety, the store of everlasting wrath laid up among God treasuries of vengeance, and, as Ben Gersom takes it and Broughton renders it, his store of secret sins; Ellicott and Keil and Delitzsch both take the word of hoarded goods rather than hiding places; Wesley keeps the hiding-place sense and presses it."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Steps outside the exposition to judge the doctrine, that all of this was perfectly true in a sense and even a truism, but utterly false in its application to Job himself."
+   },
+   {
+    "voice": "Keil and Delitzsch",
+    "view": "Sharpen the clause by contrast, that where a Psalm calls God store of earthly goods for men a treasured thing, here the stores a man lays up for himself are so called, and darkness is decreed against them because they were gathered covetously and without regard to the hand that gives."
+   }
+  ],
+  "themes": [
+   "he shall flee from the iron weapon",
+   "the bow of steel shall strike him through",
+   "the glittering sword cometh out of his gall",
+   "all darkness shall be hid in his secret places",
+   "a fire not blown"
+  ],
+  "range": "24-26",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the shaft drawn out, perhaps for healing but too late, the terrors upon him the terrors of an incurable death."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch render the 'glittering sword' drawn from the gall, the bright steel from the seat of life; Ellicott: even escaping a second and third calamity, terrors still — 'true, yet utterly false in its application to Job.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke keeps the archery — the arrow drawn and passing through the body (Coverdale); Wesley: drawn from the gall, showing the wound deep and deadly, the terrors those of a death past cure."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
    }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Grants the death-agony 'all perfectly true in a sense, yea, even a truism, but utterly false in its application to Job himself.'"
-   }
-  ],
-  "themes": [
-   "the arrow drawn from the gall",
-   "the glittering sword",
-   "terrors of an incurable wound",
-   "true of the impenitent, false of Job"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: darkness laid up in his secret places — everlasting wrath among God's stores of vengeance, or judgment 'for his store' of secret sins brought to light."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'a fire not blown' a supernatural fire, lightning, with allusion to Korah's company (Num. 16:32); Wesley: miseries laid up by God, a fire kindled not by man but by God, the curse reaching his family."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a ruin that comes insensibly — a hidden darkness in his secret place, a fire not blown that consumes surely but slowly, as a worm withers the gourd."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'a fire that is not blown upon devoureth him,' feeding on what is left in his tent."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "darkness in his secret places",
-   "a fire not blown",
-   "supernatural and inescapable ruin",
-   "the curse on what is left"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "27": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
    "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
    "Charles Ellicott",
-   "Keil and Delitzsch"
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill gives three senses of 'the heaven' — God who knows all secrets, the angels who gather out the wicked (Matt. 13:41), or the visible judgments descending from the sky."
+    "prevalence": "several",
+    "summary": "Gill offers three referents for the heaven that reveals him, God himself, the angels of heaven as the Targum takes it, and the judgments that descend from heaven, instancing the flood, the burning of Sodom and Gomorrah, and destruction by thunder and lightning; and he reports from Kimchi a reading that makes the increase of the house its walls, since a dilapidation can be expressed as a pouring down of stones."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: another allusion to Korah — the glory of the LORD revealing their iniquity, the earth swallowing them (Num. 16:31); Wesley: God a swift witness by extraordinary judgments, still reflecting on Job's fire from heaven, all creatures conspiring against him."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: heaven reveals his iniquity and refuses to receive him, earth rises against him as the stomach against what is loathsome (Isa. 26:21) — whither can he go but to hell?"
+    "summary": "Clarke hears in both verses a further allusion to the destruction of Korah company, the heaven revealing their iniquity when the glory of the Lord appeared and the earth rising when the ground clave asunder, and presses the inference that Zophar would not have passed over such well-attested facts had he known the record; Wesley makes the heaven God as a swift witness and adds that Zophar is still reflecting on Job case and the fire that fell from heaven."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: all nature combines for the ruin God has decreed — 'here we take leave of Zophar, who does not reply again; he has exhausted himself'; Keil and Delitzsch render the couplet plainly."
+    "prevalence": "single",
+    "summary": "Ellicott says in one sentence that all nature combines to bring about a ruin decreed by God, and then closes the speech with an observation about the speaker, that here we take leave of Zophar, who does not reply again, having exhausted himself for all his opening boast."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the heaven revealing his iniquity mean?",
+    "positions": "Gill offers God, the angels, or the judgments that descend from heaven, and instances the flood, Sodom and lightning; Clarke reads a specific allusion to the destruction of Korah company, with the heaven revealing their iniquity and the earth opening under them; Wesley makes it God as a swift witness and hears a reflection on the fire that fell on Job own flocks; Ellicott generalises it as all nature combining."
+   }
+  ],
   "outliers": [
    {
     "voice": "Charles Ellicott",
-    "note": "Marks the close of the dialogue: 'here we take leave of Zophar, who does not reply again; he has exhausted himself' — the third friend falls silent for good."
+    "view": "Closes the speech by noticing the speaker rather than the doctrine, that here we take leave of Zophar, who does not reply again, having exhausted himself notwithstanding the thoughts he claimed compelled him to answer."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Hears the verse as a direct thrust at Job, since the fire that fell from heaven upon his flocks is the very thing the clause about heaven revealing iniquity would call to mind."
    }
   ],
   "themes": [
-   "heaven reveals his iniquity",
-   "earth rises against him",
-   "God, angels, or visible judgment",
-   "Zophar's speech exhausted"
+   "the heaven shall reveal his iniquity",
+   "the earth shall rise up against him",
+   "the increase of his house shall depart",
+   "walls that flow away",
+   "we take leave of Zophar"
+  ],
+  "range": "27-28",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'the increase of his house' — his children or his goods, or (Kimchi) the very walls of the dwelling, the stones pouring down in ruin."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: a further allusion to Korah, whose houses and goods perished (Num. 16:32); Wesley: the estate lost, flowing away like waters to return no more, in the day of God's wrath."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: posterity rooted out and estate sunk together, the goods flowing away as fast as they came, the wrath he was treasuring up now paid out."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render 'the produce of his house must vanish, flowing away in the day of God's wrath.'"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the increase of his house departs",
-   "goods flowing away",
-   "posterity and estate swept off",
-   "wrath treasured up and paid out"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "29": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
-   "Keil and Delitzsch"
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the wicked man's 'portion,' though assigned from God, is at most worldly and confined to this life, hereafter an abode with the damned, banished from God's presence."
-   },
-   {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke reads the quail-and-wrath allusions (Num. 11:33) as fixing the poem after that history, against the extreme antiquity claimed for Job; Wesley marks 'the heritage,' firm as an inheritance, set against what was got by fraud."
+    "summary": "Clarke states the chapter largest claim openly, following the bishop of Killala reading of the word for quietness as a quail and holding that the poet is adorning his composition with allusions to his own people history, which fixes the date of the poem after the transgression of Israel at the graves of lust; he claims to have strengthened the reasoning by adding the manna and the rebellion of Korah, and concludes without hedging that the Book of Job is not so old as the Pentateuch; Wesley stops on the word heritage, so called to denote its stability against the inheritance got by fraud."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: Zophar concludes like an orator with the settled portion of the wicked (Ezek. 33:8), yet 'therein Zophar was mistaken,' for the impenitent do not always meet such temporal ruin — the doctrine well explained and worst applied."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render the summary, 'this is the lot of the wicked man from Elohim, and the heritage decreed for him from God.'"
+    "summary": "Gill draws the contrast that governs the whole speech, that a wicked man has his portion from God but his portion is not God himself, as a good man portion is, being at most in this life and afterwards among devils and damned spirits."
    }
   ],
   "debates": [
    {
-    "question": "Does the wicked man's temporal ruin always fall as Zophar describes?",
-    "sides": [
-     {
-      "position": "the portion is settled and certain — the wicked shall surely die (Ezek. 33:8)",
-      "holders": [
-       "Gill",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the impenitent do not always meet such temporal judgments — 'therein Zophar was mistaken'",
-      "holders": [
-       "Henry"
-      ]
-     }
-    ]
+    "question": "When was the Book of Job composed?",
+    "positions": "Clarke argues from the alleged allusions to the quails, the manna and the rebellion of Korah that the poem must be later than the Pentateuch, and says so against those who make it older, reporting that the bishop who first noticed the quail reading has been most unmeritedly ridiculed for it; Ellicott, earlier in the same chapter, reasons from the opposite end of similar evidence, that the language about brooks of honey and butter is not precisely identical with the promise made of Canaan and may show a community of proverbial speech rather than dependence, so that the phrase need not have originated with the Pentateuch at all. Neither cites the other."
    }
   ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Turns the closing verse into a digression on the date of Job, reading the quail, manna, and Korah allusions (with the bishop of Killala) as proof the poem was written after the Pentateuch's history."
+    "view": "Defends the bishop of Killala against ridicule and stakes a date for the whole book on the reading, holding that the allusions prove the poem was composed after the events they name, a point he says has never been and never can be disproved."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Reads the second noun as chosen for its stability, the heritage being as firm as an inheritance to the right heir and set deliberately against the inheritance the man had got by fraud and violence."
    }
   ],
   "themes": [
-   "the portion of the wicked from God",
-   "the heritage decreed",
-   "doctrine explained and misapplied",
-   "the date of the book of Job"
+   "this is the portion of a wicked man from God",
+   "the heritage appointed unto him",
+   "a portion that is not God himself",
+   "the date of the poem",
+   "an inheritance got by fraud"
   ],
+  "range": "29",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  }
 }
