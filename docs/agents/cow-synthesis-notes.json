@@ -87055,6 +87055,266 @@
         "25"
       ],
       "note": "Calvin twice refuses a conjecture other witnesses rest on: at 24 he will not draw the reason for the gradual cure from the patient, and at 26 he reports the conjecture that the town was under punishment and declines to rest on it, setting a time limit on the concealment instead."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "SIZED AND DECLINED at 70431 usable source words (69899 by direct count), 33 keys, no gaps. Larger than matthew 2 (62342) and matthew 3 (59565), both also declined. This is over the ~40000 single-chapter ceiling, so it is a whole batch on its own and needs a fresh worker with an empty context. Profile follows so nobody has to re-derive it."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB IS WHOLLY DISPLACED IN JOHN 16. Jamieson, Fausset and Brown sits at keys 1, 7, 13, 19, 25, 31 — the mod-six run again — and unlike matthew 2, ALL SIX blocks are foreign. Every one is commentary on John 3: k1 that which is born of the flesh, k7 the only-begotten in the bosom of the Father against Nicodemus we know, k13 condemnation is not the object of his mission, k19 the rural parts of that province, k25 the Bridegroom friend rejoicing, k31 he must increase but I must decrease. Exclude JFB at all six keys. Each key has Gill and several others besides, so exclusion leaves nothing empty."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "DUPLICATE-HEAD TRAP, both pairs present: Augustine appears as Augustine (3 keys) AND Augustine of Hippo (8 keys); Chrysostom appears as Chrysostom (5 keys) AND John Chrysostom (2 keys). Key 1 carries Augustine twice in one block, and key 23 carries both Chrysostom and two Augustine heads. Same trap flagged at matthew 3. Treat each pair as one voice when tagging, and check they are not verbatim duplicates before citing both."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "7"
+      ],
+      "note": "The bulk of john 16 is Matthew Henry running exposition, not a spread of witnesses: 2316 words at k1, 4401 at k7, 3525 at k16, 2877 at k23 and 3295 at k28 — 16414 words, about 23 percent of the chapter, in five keys. Those five keys are why the sizer reads 70431. The median key outside them is well under 1500."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "33"
+      ],
+      "note": "StudyLight chrome at key 33: the Ellicott block runs 1324 words, of which only the opening is commentary; the rest is site navigation, footer and a CSS stylesheet. Same defect catalogued at ruth 1 k22, mark 1 k45, mark 5 k43, job 20 k27, numbers 32 k41, matthew 2 k23, mark 8 k38."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "17"
+      ],
+      "note": "THIN-KEY TILING HAZARD. Keys 17 (158 words) and 18 (40 words) carry only Gill and Robertson, and key 6 (137) and key 19 (324) are nearly as thin. A one-verse tile on any of them will read as a large stretch against its own span, the way mark 8 key 13 did at 13.8x. Tile 17-18 together and attach 6 and 19 to a neighbour."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "2"
+      ],
+      "note": "Truncation cap of exactly 200 words on Gill at keys 2, 9, 10, 11, 14, 22, 23, 28, 31, on Cyril of Jerusalem at eleven keys, and on Origen at key 14 — all breaking mid-clause. Cyril appears at 13 keys in all and is the usual thematically-keyed catechetical filler; check each block for actual John 16 content before using it."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "25",
+      "verses": [
+        "1"
+      ],
+      "note": "SIZED AND DECLINED at 68498 usable source words (67945 direct), 46 keys, no gaps, 21 voices. Over the ~40000 ceiling. Three Matthew Henry expositions carry 17865 of that total on their own — 6398 at k31, 6236 at k14, 5231 at k1 — and the three keys they sit in (1, 14, 31) are the three parable openings and run 11369, 10450 and 10726 words each. A successor who tiles those three keys first has done a third of the chapter."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "25",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB at keys 3, 9, 15, 21, 27 — the mod-six run again, but short here (39, 21, 70, 24, 129 words). Check block by block before excluding: matthew 2 proved the pattern alone is not a displacement marker, and these are too short to assume either way."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "25",
+      "verses": [
+        "46"
+      ],
+      "note": "StudyLight chrome at key 46: the Ellicott block runs 1864 words with only the opening usable. Also note the duplicate-head trap, Chrysostom (3 keys) alongside John Chrysostom (1 key), and Cyril of Jerusalem at 15 keys in the usual truncated catechetical form."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "25",
+      "verses": [
+        "17"
+      ],
+      "note": "THIN-KEY TILING HAZARD, worse here than in john 16: key 17 has 16 words, key 22 has 51, key 39 has 73, key 38 has 95, and eleven more keys fall under 400. Fourteen keys under 400 words in all. None of these can carry a one-verse tile; they must be attached to a neighbour or the per-span stretch ratio will flag them."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "SIZED AND DECLINED at 57374 usable source words (56908 direct), 34 keys, no gaps, 22 voices. Over the ~40000 ceiling. Three Matthew Henry expositions carry 13087 of the total — 5925 at k1, 5063 at k20, 2099 at k29 — and those three keys run 11613, 8385 and 5631 words. Strip Henry and the StudyLight block at k34 and the rest of the chapter is a manageable 42000, which is still over but only just; a worker with a clean context should be able to take this one."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "2"
+      ],
+      "note": "JFB at keys 2, 8, 14 only — a mod-six run that stops early, and short (101, 174, 50 words). Check block by block rather than excluding on the pattern, per the matthew 2 correction."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "34"
+      ],
+      "note": "StudyLight chrome at key 34: the Barnes block runs 1923 words and the key totals 3326, most of it navigation and stylesheet. Duplicate-head trap present as usual, Chrysostom (5 keys) alongside John Chrysostom (2 keys), plus Pseudo-Chrysostom (5 keys) as a genuinely distinct third voice — do not fold that one in."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "5"
+      ],
+      "note": "THIN-KEY TILING HAZARD: eleven keys under 400 words, key 5 at 82 the worst. Attach each to a neighbour rather than giving it a one-verse tile."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "1"
+      ],
+      "note": "THE TTR WORRY WAS A MISREADING, recorded so nobody else stalls on it. exodus 25 was previously flagged as possibly needing a blocklist entry because list-genre chapters cannot reach an A at ttr 0.58. That 0.58 is the qa.grade A threshold in synthesis_qa, not a gate rule. The CI gate flags THIN only below ttr 0.45 (audit-synthesis-quality line 145), which ordinary discursive prose clears easily. This rewrite passed the chapter gate, the corpus gate and the fidelity read-back with zero violations and zero signals. Only the THIN threshold can fail a run."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "12"
+      ],
+      "note": "JFB IS WHOLLY DISPLACED IN EXODUS 25, all three occurrences. Key 12 has eight words, Here are given special directions for the observance, which is contentless. Key 18 has Jamieson on the elders communicating the directions and the Israelites giving prompt obedience, which belongs to the covenant scenes and not to the cherubim. Key 30 has a note on a great rabble, slaves and foreigners escaping in the crowd, which is commentary on the mixed multitude of the exodus itself. None was used. Note that this is NOT the mod-six run seen elsewhere, the keys being 12, 18 and 30."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "40"
+      ],
+      "note": "TWO chrome sources in one key. Key 40 carries StudyLight chrome in the Ellicott block, 998 words of which only the opening clause is commentary, the rest navigation, footer and a CSS stylesheet. The Gill block at the SAME key ends with Sacred Texts navigation residue, Next Exodus Chapter 26 Sacred Texts Bible Previous John Gills Exposition. That second source was first catalogued at numbers 32 key 25. This is the first chapter seen carrying both in one key."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "13"
+      ],
+      "note": "THIN-KEY TILING. Keys 13 (45 words), 14 (39), 28 (31), 35 (95), 25 (131), 26 (130), 27 (133), 38 (165), 19 (185), 12 (202), 36 (219), 32 (222) all carry too little to support a one-verse tile. Tiled as 12-15, 24-28, 32-36 and 37-40 so that each thin key rides with a rich neighbour. The chapter has only 8 voices, far fewer than a Gospel chapter, so a thin key here is much thinner than the same word count would be elsewhere."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "17"
+      ],
+      "note": "The chapter best dispute is whether kapporeth means a lid or a propitiatory. Ellicott and Keil and Delitzsch both decide for propitiatory from the form of the verb, that the intensive conjugation never means anything but covering or expiating sin and that the noun is formed from the intensive, and both call decisive the passage naming the holy of holies the house of expiation. Calvin concedes the whole philology to them and still declines the conclusion, arguing from the furniture rather than the grammar that it is a tame explanation to make it a mere lid when the cherubim turn their faces toward it and God promises to answer from it. Gill refuses to choose and keeps both senses."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "2"
+      ],
+      "note": "Calvin devotes his longest note in the chapter not to the offering but to the date, answering an opinion that the tabernacle was erected before Moses brought down the first tables. Three arguments against him, three answers, then three arguments of his own, two of which are arithmetical, counting the days available between the rearing of the tabernacle and the removal from Sinai. Recorded because it is a full scholastic disputation sitting inside a verse about a free-will offering, and a successor may not expect it there."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "18"
+      ],
+      "note": "On what the cherubim represent, Gill and Calvin take opposite sides of the same question. Gill denies that they are the angels, since Scripture distinguishes the two, and makes them emblems of the saints of both dispensations. Calvin holds it enough that the images were winged and represented angels, God having appointed angels to be a symbol of his presence. Wesley sides with Calvin. Gill also rejects, as many of the ancients held, that they are the two Testaments."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "29"
+      ],
+      "note": "The four vessels of the shewbread table draw two entirely different methods. Clarke works from the Hebrew roots and reaches kneading bowls, censers, a wine tankard and either sieves or ovens. Ellicott works from Egyptian wall decorations and the carving on the Arch of Titus and reaches serving bowls, incense pots, flagons and chalices. They agree on the censers and differ on nearly everything else."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "24"
+      ],
+      "note": "Ellicott settles three disputed fittings of the table from the Arch of Titus rather than from the text, the band midway up the legs, the height at which the table rode above the bearers, and the shape of the lamps. Clarke does the same for the candlestick and says he had a correct model of the arch in front of him as he wrote. Where the text is ambiguous in this chapter the monument, not the lexicon, is what the grammatical-historical witnesses reach for."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "fidelity",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "30"
+      ],
+      "note": "Clarke explicitly refuses to interpret the shewbread, holding its use more difficult to ascertain than almost any other emblem in the whole Jewish economy and declining to add to the conjectures already made. Kept as a named position rather than smoothed away, since Gill and Keil and Delitzsch both do offer readings and they point in opposite directions, Gill making it a memorial received back by the priests and Keil and Delitzsch a gift offered up by Israel."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "2"
+      ],
+      "note": "Truncation cap of exactly 200 words on Keil and Delitzsch at 22 of the 40 keys and on Gill at keys 2, 9, 10, 11, 14, 17, 18, 22, 23, 28, 30, 31, breaking mid-clause. The Keil and Delitzsch blocks also repeat themselves across adjacent keys, the same paragraph appearing at keys 6 and 7, at 24 through 28, and at 31 and 32, so a tile spanning those keys sees the same text more than once and must not count it twice as corroboration."
     }
   ]
 }

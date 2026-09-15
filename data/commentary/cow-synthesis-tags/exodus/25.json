@@ -9,37 +9,49 @@
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley repeats Henry's restraint and the typology of the true tabernacle; Clarke frames the chapter as free-will offerings commanded out of the divine glory."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry holds that Moses saw and heard very glorious things in the cloud which it was not lawful nor possible to utter, and that he therefore recorded nothing to satisfy the curiosity of those who would intrude into what they have not seen, but only what he was to speak to the children of Israel, since Scripture is designed to direct us in our duty and not to fill our heads with speculations."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Keil and Delitzsch: the sanctuary gives the covenant a definite external form; its whole design was fixed by God and could not be left to any man's inventive faculty."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Moses records only what he was to speak to Israel, not what he saw; the sanctuary is Israel's King keeping court, a movable palace, and a figure of the true tabernacle."
+    "summary": "Keil and Delitzsch give the purpose of the building, to give a definite external form to the covenant and construct a visible bond of fellowship, and argue that its erection could not be left to the inventive faculty of any man but must proceed from him who was there to manifest himself as the Holy One in righteousness and grace, so that the people could only carry out what God appointed."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill sets the word in the cloud on the mount, where Moses then was."
+    "summary": "Gill fixes the two moments the verse holds apart, that the Lord spake to Moses when on the mount and in the midst of the cloud, and that the speaking to Israel was to come when he should go down from the mountain to the camp."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley repeats the judgement about what Moses withheld almost word for word, and adds that probably no house or temple was ever built for sacred uses before this tabernacle."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the pattern given, not devised",
-   "God dwelling among his people",
-   "the tabernacle as type of Christ"
+  "debates": [
+   {
+    "question": "Why was the sanctuary to be built at all?",
+    "positions": "Keil and Delitzsch answer from the covenant, that it was to give the covenant a definite external form and a visible bond of fellowship; Henry answers from kingship, that God had chosen this people as a peculiar people and would be their King, and having already given them laws now orders a royal palace set up among them, at once ceremonial and typical."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Reads the silence of the record as a rule for Scripture itself, that what Moses saw in the cloud was left unwritten because the Bible is given to direct us in our duty rather than to satisfy curiosity."
+   }
+  ],
+  "themes": [
+   "the Lord spake unto Moses",
+   "let them make me a sanctuary",
+   "things not lawful to utter",
+   "a visible bond of fellowship"
+  ],
+  "range": "1",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -58,13 +70,14 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.26
+    "expansion": 0.16
    }
   }
  },
  "2": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
@@ -72,50 +85,49 @@
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill marks the word as carried down to the camp; Calvin: the tribute is not exacted but freely offered, since no obedience pleases God but what is voluntary, and the poorest gift is acceptable."
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott observes that God prefaced his directions about materials and form by inviting the people to contribute from their stores, calls the erection of sanctuaries one of the fittest occasions for man to show gratitude by giving to God of his own, gives the Hebrew as of every man whose heart impels him, and states bluntly that unless gifts come from the heart they are an offence to God."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke explains the terumah as a heave-offering, lifted up to be laid on the altar, and reads it as tribute brought to a king; Wesley notes nothing was prescribed as to amount."
+    "summary": "Clarke explains the term as a kind of free-will offering consisting of anything necessary for the occasion, properly meaning anything lifted up since in presenting it to God it was lifted up to be laid on his altar, and supplies the political sense, that God required a tent suited in some sort to his dignity because he was to act as their king; Wesley notes that it was not prescribed what or how much they must give but left to their generosity."
    },
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Ellicott: the appeal for materials precedes the design; gifts that do not come from the heart are an offence, the Hebrew reading 'of every man whose heart impels him'."
+    "summary": "Calvin spends his longest note here on the date rather than the offering, answering an opinion that the tabernacle was built and set up before Moses brought down the first tables, and rejecting it on three grounds of chronology and arrangement."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry insists the gifts came not by a tax imposed upon them but by a voluntary contribution."
    }
   ],
   "debates": [
    {
-    "question": "Was the tabernacle built before Moses brought down the first tables?",
-    "sides": [
-     {
-      "position": "yes — the tent pitched outside the camp in token of Israel's divorce was the sanctuary already standing",
-      "holders": [
-       "Calvin"
-      ]
-     },
-     {
-      "position": "no — it could not be made before its fashion was shown in the mount, and the testimony was not yet given",
-      "holders": [
-       "Willet (as reported by Calvin)"
-      ]
-     }
-    ]
+    "question": "Was the tabernacle erected before or after Moses received the first tables?",
+    "positions": "Calvin reports three arguments for the earlier date, from a tabernacle named immediately after the tables were broken, from a testimony not yet received being ordered into the ark, and from the silence about the apostasy when the people are exhorted to build; he answers that the tent there was Moses own and pitched outside the host, that what was described first was the form the ark should take rather than the ark, and that the silence is forbearance rather than innocence. His own three reasons are that the form was shown during the forty days at the end of which the tables were given, that the tabernacle was reared in the first month of the second year with the camp removing a month and a half later, leaving no room for two further absences of forty days, and that the earlier dating would require transposing a great part of the book."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the freewill offering",
-   "the cheerful giver",
-   "building the spiritual temple"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Turns the qualifying clause into a rule about giving in general, that gifts which do not come from the heart are an offence to God, who loveth a cheerful giver."
+   }
   ],
+  "themes": [
+   "that they bring me an offering",
+   "of every man that giveth it willingly",
+   "my heave-offering",
+   "when the tabernacle was erected"
+  ],
+  "range": "2",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -149,29 +161,115 @@
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill: each man gave what suited him, out of the wealth God had given them favour to carry from Egypt; Calvin: goats' hair is reckoned no less than gold, and the variety of gifts pictures the building of the spiritual temple."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott traces the metals to Egyptian gifts and Amalekite spoil; the silver was later raised by the half-shekel, and the 'brass' was bronze, small in amount."
+    "summary": "Gill reads the list as a list of alternatives rather than a schedule of dues, since it was not expected that something of each should be had of everyone but that every man should give whatever suited him best to bestow, and notes that many were supplied for the service out of what they had brought from Egypt, so that having had the riches by God giving them favour in the eyes of the Egyptians they were under the greater obligation to part with some of it freely; Calvin draws the moral of the variety rather than of the quantity, that what the poor offer of their little is not eclipsed by the abundance of the rich, since God reckons goats hair among the sacred offerings not less than gold."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke distinguishes four Hebrew words for gold, derives silver from a root meaning pale, and takes 'brass' for copper or a copper-zinc alloy."
+    "summary": "Clarke distinguishes four Hebrew words for gold and assigns each a stage, gold in the ore, gold coined and stamped, wrought and polished gold used for gilding, and gold formed into plate, holding that the third is the word here because it was in a state capable of being manufactured for the sanctuary; he derives silver from a root meaning pale or white and takes brass for copper unless the factitious metal is meant."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott asks whether they could afford it and answers that they could, having brought out of Egypt both their ancestral wealth and the gifts received at their departure and added the plunder of the Amalekites, while the silver was comparatively small and the brass, or rather bronze, since brass seems to have been unknown at this time, was of no great value."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wealth brought out of Egypt",
-   "the rich and the poor in one offering"
+  "debates": [
+   {
+    "question": "What does the variety of the materials mean?",
+    "positions": "Calvin makes it a picture of the Church, that by the varied and manifold contributions God would show as in a glass that a variety of gifts are necessary to the building of the spiritual temple, and that those who aid the Church by their more excellent gifts should admit poor brethren into fellowship without contempt; Gill keeps to the practical point, that each gave what he had and what he had a heart to give; Clarke and Ellicott attend only to the metals themselves."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Finds the doctrine in the mixture rather than the value, that as gold and precious stones were mixed with brass and iron in the one building, so the more richly gifted are to receive the poor into fellowship without dislike."
+   }
+  ],
+  "themes": [
+   "gold, and silver, and brass",
+   "what the poor offer of their little",
+   "the plunder of the Amalekites",
+   "a variety of gifts"
+  ],
+  "range": "3",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.66
+   }
+  }
+ },
+ "4": {
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill is careful that what was asked for was a cloth and not a colour, since the Jewish doctors are much divided about these words but by them we are to understand neither the colours themselves, which could not be brought, nor the materials for dyeing them, but wool or cloths of those colours made up into yarn and woven, much used in the garments of the priests, the curtains and the vail."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke works from philology and the poets, taking the first colour for an azure or sky colour rendered by the old versions a deep violet, the second for a very precious colour extracted from a shell-fish and supposed to be the famous Tyrian purple, and the third from a word signifying a worm joined to another signifying to double, which implies the cloth was twice dipped, whence the old rendering of scarlet twice dyed and the French and English words for crimson; on the goats hair he cites the poet who reckoned it nearly of equal value with wool; Wesley disposes of the whole clause in five words."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott names the sources instead, a dark blue from indigo which was the only blue known to the Egyptians, a purplish crimson from the murex which was the main source of the Tyrian dye, and a scarlet from the cochineal insect of the holm oak now superseded by the brighter tint from Mexico; the fine linen he settles from the mummy cloths as white thread spun from flax, and the goats hair from present practice, the covering of an Arab tent being to this day almost always of it."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What were the three colours?",
+    "positions": "Clarke reasons from the words and the ancient dye-trade, an azure or violet, the Tyrian purple from a shell-fish, and a twice-dipped crimson; Ellicott reasons from the materials actually available in Egypt and names indigo, the murex and the cochineal insect; they arrive close together by different evidence."
+   },
+   {
+    "question": "What is the fine linen?",
+    "positions": "Clarke reports that whether the word means linen, cotton or silk is not agreed among interpreters, and gives the rabbinic derivation from the word for six, the fine linen of Egypt in which six folds constituted one thread; Ellicott answers from the mummy cloths and other undyed fabrics that it is white thread spun from flax, yellowish white, soft and wonderfully fine."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Supports the value of goats hair cloth from a Latin poet, who has the shepherd shearing the hoary beards of the herd to make cloth warm in tents for the soldier and a shield for the shivering mariner."
+   }
+  ],
+  "themes": [
+   "blue, and purple, and scarlet",
+   "fine linen",
+   "goats hair",
+   "twice dyed"
+  ],
+  "range": "4",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -194,80 +292,6 @@
    }
   }
  },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke works the words through Pliny, Horace and Virgil — the twice-dipped scarlet, the shellfish purple, the disputed 'fine linen', the fine goats' hair of Asia Minor; Wesley is content that these were materials of those colours."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott identifies indigo, murex purple and the coccus scarlet, takes the offering to be linen yarn of those colours, and describes the goats'-hair fabric of Arab tents."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: not the dyes themselves but wool or cloth already coloured, made into yarn for the priests' garments, the curtains and the veil."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What form did the coloured offering take?",
-    "sides": [
-     {
-      "position": "dyed wool or cloth, made into yarn",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "linen yarn of the three colours",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the dyes of antiquity",
-   "materials for the curtains and the veil"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.72
-   }
-  }
- },
  "5": {
   "voices": [
    "John Gill",
@@ -278,51 +302,48 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch take the takhash for the Red Sea sea-cow, whose hide suits both tent covering and sandals; Ellicott agrees it is a marine animal and rejects 'badger' outright, and identifies the shittah as the Sinaitic acacia."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke defends the literal red rams from natural history, that many travellers attest sheep in the Levant with red or violet fleeces and that almost all ancient writers say the same, one describing the rams of Polyphemus so, from which facts he thinks the fable of the golden fleece very probably arose; on the second kind of skin he follows the scholar who seems to have proved that no animal is intended but a colour, none of the ancient versions acknowledging an animal except the Chaldee from which our badger is borrowed; and he argues the wood is the acacia from its being plentiful in Egypt and abundant in the very desert where Moses built."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Clarke follows Bochart in making takhash a colour, the deep blue hysginus, and holds the red rams needed no dye, since Levantine sheep bear red and violet fleeces; Wesley calls shittim a durable and precious desert wood."
+    "summary": "Ellicott looks to the tanneries for the red skins, North Africa having always been celebrated for the best leather and its red skins famous in all ages, objects that the badger is native neither to North Africa nor to the Arabian desert so that the rendering is a very improbable conjecture, and reports the Arabic word as naming a marine animal resembling the seal; Keil and Delitzsch settle on the sea-cow of the Red Sea and note that its upper skin would serve for the thick covering of tents and the under for ornamental sandals."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes only that the red skins made a covering for the tent."
+    "summary": "Calvin quotes the naturalists on the acacia and adds that the most important material, the wood for the tent, is just the one found there most plentifully, and that the Greek translators named it wood that never decays."
    }
   ],
   "debates": [
    {
-    "question": "What are the 'badgers' skins'?",
-    "sides": [
-     {
-      "position": "the hide of a marine animal — seal, dugong or sea-cow",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "not an animal at all but a colour, the deep blue hysginus",
-      "holders": [
-       "Clarke",
-       "Bochart (as reported by Clarke)"
-      ]
-     }
-    ]
+    "question": "Does the second kind of skin name an animal or a colour?",
+    "positions": "Clarke follows the scholar who holds it a colour, a very deep blue, and marshals the old versions, which give violet, azure, black and simply ram-skins; Ellicott and Keil and Delitzsch keep the animal but move it into the sea, to a seal or dugong or, for Keil and Delitzsch specifically, the sea-cow of the Red Sea whose skin is admirably adapted for sandals."
+   },
+   {
+    "question": "What tree is the shittah?",
+    "positions": "Clarke reports it supposed by some the finest kind of cedar and by others the acacia, and argues for the acacia from supply; Ellicott treats the identification as settled, since there are no trees in that region from which boards could be cut except the palm and the acacia, and answers the objection that the tree is now too small there by noting that it grows larger further north."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the coverings of the tent",
-   "acacia wood in the wilderness"
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Adds his own field observation to the ancient testimony, sheep he has seen in the Zetland Isles with fleeces white, black and chocolate."
+   }
   ],
+  "themes": [
+   "rams skins dyed red",
+   "badgers skins",
+   "shittim wood",
+   "wood that never decays"
+  ],
+  "range": "5",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -356,110 +377,46 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott makes the anticipation the point — light, anointing and incense are all assumed before they are described; Keil and Delitzsch gloss the incense as 'the scents', since not every ingredient was fragrant."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the oil for olive oil, following the Targum of Jonathan and Jarchi."
+    "summary": "Ellicott reads the clauses about oil and spices as assumptions carried forward, that the sanctuary will need lighting, that anointing oil will be needed with spices as an ingredient since the tabernacle and its vessels and its priests had to be consecrated by anointing, and that there would be incense to burn; on the stones he counts the disagreement among the old versions and concludes plainly that there is considerable doubt what stone is meant, adding that only three were required, one for the breastplate and two for the shoulder-pieces; Keil and Delitzsch prefer beryls, gloss the second phrase as stones of filling, and record that the precious stones were presented by the princes of the congregation."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: the oil must have come out of Egypt, since there were no olives in the wilderness — a hint that some directions look to the settled land rather than the march."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "provision before design",
-   "oil, anointing and incense"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.1
-   }
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott lays out the versions' disagreement over shoham and counts only three such stones as required; Keil and Delitzsch prefer beryls and note the princes gave the gems."
+    "summary": "Clarke raises the practical objection that the oil must have been brought from Egypt since there were no olives in the wilderness, half answers it by supposing these directions look forward to a fixed and settled residence, and gives a long description of the ephod while admitting at the outset that it is very difficult to tell what it was or in what form it was made."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill derives 'onyx' from the likeness to a fingernail and sets the Targums and the Greek side by side without deciding."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke declines to identify the stone, guessing at the Egyptian pebble, and describes the ephod at length as a girdle-like or herald-like vestment carrying the engraved shoulder-stones."
+    "summary": "Gill derives the name of the stone from its likeness to the nail of a man finger and lists the competing renderings, beryl in the old versions, sardius in the Greek, and sardonyx in the judgement of those who think it had a likeness both to the onyx and to the sardius."
    }
   ],
   "debates": [
    {
-    "question": "What stone is the shoham?",
-    "sides": [
-     {
-      "position": "beryl",
-      "holders": [
-       "Keil and Delitzsch",
-       "the Targums (as reported by Gill)"
-      ]
-     },
-     {
-      "position": "sard or sardonyx",
-      "holders": [
-       "Josephus and the Vulgate (as reported by Ellicott)"
-      ]
-     },
-     {
-      "position": "undetermined — possibly the Egyptian pebble",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
+    "question": "What stone is meant?",
+    "positions": "Gill, Ellicott, Keil and Delitzsch and Clarke all confess uncertainty and answer differently: Gill lists beryl, sardius and sardonyx without choosing; Ellicott states flatly that there is considerable doubt; Keil and Delitzsch prefer beryls; Clarke guesses at the fine pale stone called the Egyptian pebble, specimens of which lay before him from his own collection of minerals."
+   },
+   {
+    "question": "What was the ephod?",
+    "positions": "Clarke offers two guesses and prefers the second: first, following the root meaning to bind close, a kind of girdle brought over the shoulders, crossed on the stomach and carried round the waist; then a garment like that worn by heralds, covering back, breast and belly, open at the sides and probably without sleeves."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the stones of ephod and breastplate",
-   "the priestly vestment"
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "view": "Note that the word rendered sweet incense means literally the scents, because the materials of which it was composed were not all of them fragrant."
+   }
   ],
+  "themes": [
+   "oil for the light",
+   "spices for anointing oil",
+   "onyx stones",
+   "stones to be set in the ephod"
+  ],
+  "range": "6-7",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -478,7 +435,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.72
+    "expansion": 0.47
    }
   }
  },
@@ -494,51 +451,43 @@
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: a nomadic people needed a tent-temple, portable but of the best materials; Keil and Delitzsch defend the tense of the pattern-clause against the inference that Moses had left the mountain."
+    "prevalence": "single",
+    "summary": "Ellicott makes the sentence the point the whole list has been running toward, the enumeration of the gifts having been subordinate to it; he explains why the house had to be a tent, since a people without fixed abode and continually shifting quarters must soon have quitted a building or forgone their hopes of Palestine, so that God devised a tent-temple modelled on the better Oriental tents but of the best materials and still portable; and he will not let the caution about dwelling empty the promise, since God manifested himself sensibly in the Holy of Holies where he dwelt continually."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: God promises to dwell among them as an incentive to give, but it was his name, not his infinite essence, that dwelt there, and the workmen were to invent nothing; Gill glosses the sanctuary from the dwelling."
+    "summary": "Calvin holds that the promise is what moves the giving, since no one willingly deprives himself of his own unless he has some compensation in view, and then guards the promise itself, that he who sits above the heavens could not be enclosed in the tabernacle, and that it was not the infinite essence of God that dwelt there but his name, or the record of his name; Gill defines the word simply as a holy place to dwell in, so called from his dwelling in it."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke, with Ainsworth, reads the sanctuary as a type of Christ's person, of the Christian, and of the Church; Wesley: God dwells there not by essence but by grace and glorious operations."
+    "summary": "Clarke narrows the word to that part of the tabernacle called the most holy place, into which the high priest entered only once a year on the great day of atonement; Wesley compresses the whole caution into a clause, that it is not by his essence, which is everywhere, but by his grace and glorious operations."
    }
   ],
   "debates": [
    {
-    "question": "In what sense does God 'dwell' in a tent?",
-    "sides": [
-     {
-      "position": "by a visible symbol of his grace — his name, not his essence",
-      "holders": [
-       "Calvin",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "by sensible manifestation in the Holy of Holies, where he dwelt continually",
-      "holders": [
-       "Ellicott",
-       "Clarke"
-      ]
-     }
-    ]
+    "question": "In what sense could God dwell there?",
+    "positions": "Calvin and Wesley guard the word against the letter, Calvin insisting that not the infinite essence but the name of God dwelt there and Wesley that it is by grace and glorious operations rather than by essence; Ellicott makes the same concession and then refuses to let it empty the promise, since God manifested himself sensibly in the Holy of Holies and might be consulted there by the temporal ruler of the nation."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "a tent-temple for a nomadic people",
-   "the sanctuary as type",
-   "God's name dwelling among men"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Explains the form of the building from the condition of the people, that a nomadic nation would have had to abandon a permanent structure or abandon its hopes of Palestine, so that a portable tent-temple was devised in harmony with their condition."
+   }
   ],
+  "themes": [
+   "let them make me a sanctuary",
+   "that I may dwell among them",
+   "a tent-temple",
+   "not his essence but his name"
+  ],
+  "range": "8",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -557,7 +506,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.2
+    "expansion": 0.19
    }
   }
  },
@@ -573,47 +522,42 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott sets out three accounts of the 'pattern' and judges a series of visions most likely; Keil and Delitzsch treat the verse as the general rule the following measurements execute."
+    "summary": "Ellicott states the question as a choice of three, whether God showed Moses a material structure furnished with material objects, a pictorial representation of the whole, or a series of visions in which the forms were represented to the eye of the mind, and judges the entire analogy of the divine dealings to be in favour of the last; Keil and Delitzsch argue a narrower question of tense against those who take the showing as already finished, holding that the participle does not refer to the past and that nothing in the later expression implies Moses had left the mountain."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the clause as an instruction about workmanship, that the sanctuary was to be made exactly according to the view Moses had upon the mount, which he was to communicate to the workmen for their instruction and direction; Calvin hears a prohibition in it as much as a direction, that the artificers should not dare to invent anything, since it would be a profanation to mix up anything human with the commands of God."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke reports the supposition of an earlier tabernacle on which this was modelled, and glosses mishcan as the dwelling; Wesley contrasts the brevity of the creation account with the minuteness of the tabernacle."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the sanctuary was to be made exactly according to the view Moses had on the mount, which he was to communicate to the workmen."
+    "summary": "Wesley turns the minuteness of the instructions into an argument about Scripture itself, that Moses gave a very short and general account of the creation of the world but describes the tabernacle with the greatest niceness and accuracy imaginable, because God church and instituted religion is more precious to him than all the rest of the world; Clarke reports an older opinion that there had been a tabernacle before the one Moses erected, and glosses the word as meaning literally the dwelling or habitation."
    }
   ],
   "debates": [
    {
-    "question": "What kind of 'pattern' was shown to Moses?",
-    "sides": [
-     {
-      "position": "a series of visions presented to the eye of the mind",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "an actual earlier structure serving as a model",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
+    "question": "What kind of thing was the pattern?",
+    "positions": "Ellicott sets out three possibilities, a material model, a picture, or a vision, and prefers the vision on the analogy of the divine dealings; Clarke assumes a material original, an ancient tabernacle on which the new one was to be modelled; Keil and Delitzsch do not answer the question but insist on the tense, that the showing is not spoken of as already past."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "nothing left to human invention",
-   "why scripture measures the tabernacle so exactly"
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "view": "Argues from the disproportion between the two accounts, that the creation of the world is described in a few general words while the tabernacle is described with the greatest niceness, because Scripture was written to acquaint us with the methods of grace rather than the works of nature."
+   }
   ],
+  "themes": [
+   "according to all that I shew thee",
+   "after the pattern of the tabernacle",
+   "the pattern of all the instruments",
+   "not to invent anything"
+  ],
+  "range": "9",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "B",
    "checks": [
     "length",
@@ -632,8 +576,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "note": "Closing generalisation removed; entry now ends on Wesley’s rule that what is done in God’s service must be done by his direction.",
-    "expansion": 0.87
+    "expansion": 0.89
    }
   }
  },
@@ -643,66 +586,58 @@
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the most excellent of the holy things, for whose sake tabernacle and temple were built; he reckons the chest at some four feet five by two feet six and thinks the rod and manna lay beside rather than in it; Wesley follows Henry's measurements."
-   },
-   {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott distinguishes aron from the word used of Noah's vessel, makes it a small coffer of about three feet nine inches, and compares the sacred coffers carried in Egyptian processions."
+    "prevalence": "several",
+    "summary": "Ellicott insists on the word, that the term rendered ark here is entirely different from the one used of the vessel that rode the flood and of the basket among the reeds, and properly means a chest or coffer of small dimensions used to contain valuables, once even applied to a mummy-case; he places the object in its setting, sacred coffers being important parts of the furniture of Egyptian temples; and on the overlaying he weighs gilding against plating and prefers plating as simpler in the desert and thought more suitable because more valuable; Keil and Delitzsch call the crown a golden rim encircling the ark like an ornamental wreath."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the ark is the first thing ordered and the chief token of God's presence; the tables are 'the testimony' both to direct Israel and to witness against them, and the provision for carrying it teaches us to take our religion wherever we go."
+    "summary": "Henry marks its place in the design, the ark with its appurtenances being the furniture of the most holy place and the special token of God presence, for which the tabernacle was erected to be the receptacle, and converts the dimensions on a cubit of twenty-one inches."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke ranges the word over ark, chest, coffer and coffin, judges the ark the most excellent of all the holy things of the Mosaic economy for whose sake the tabernacle and temple were built, and reasons backwards from the box to the tables it was to hold, that their length was not less than four feet and their breadth not less than two; Wesley repeats Henry figures exactly."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the chest as a type of Christ, in whom the treasures of wisdom lie, and the incorruptible wood of the two natures united in his person."
+    "summary": "Gill reads the material for what it signifies, the wood being incorruptible and rendered in the Greek by a word meaning exactly that, which he takes to denote the perpetuity of Christ in his person and in the natures united in it, and he states plainly that the ark was not gilded but had a plate of pure gold put over it."
    }
   ],
   "debates": [
    {
     "question": "How large was the ark?",
-    "sides": [
-     {
-      "position": "about fifty-two inches by thirty-one, on a twenty-one-inch cubit",
-      "holders": [
-       "Henry",
-       "Wesley",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "three feet nine inches by two feet three",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "positions": "Henry and Wesley make it about fifty-two inches by thirty-one by thirty-one on a cubit of twenty-one inches; Clarke on the same cubit gives four feet five by two feet six by two feet six; Ellicott gives three feet nine by two feet three by two feet three &mdash; three conversions of the same figures that agree within inches."
+   },
+   {
+    "question": "Was the ark gilded or plated?",
+    "positions": "Ellicott allows gilding to be possible but scarcely probable, since it requires much apparatus and was less likely in the desert than the simpler method of overlaying with plates, which would also be thought more valuable, and notes the Jewish tradition for plates; Gill states the same conclusion flatly."
    }
   ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "holds that Aaron's rod and the pot of manna were probably laid beside the ark, not in it."
+    "view": "Infers the size of the tables of stone from the size of the box made to hold them, and declines to guess their thickness because the ark was meant for other things besides, the rod and the pot of manna, which he thinks were probably laid beside it rather than in it."
    }
   ],
   "themes": [
-   "the ark as chest of the covenant",
-   "the testimony",
-   "a religion carried on the march"
+   "they shall make an ark of shittim wood",
+   "overlay it with pure gold",
+   "a crown of gold round about",
+   "waves of gold wreathed"
   ],
+  "range": "10-11",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -721,123 +656,61 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.32
+    "expansion": 0.28
    }
   }
  },
- "11": {
+ "12": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown",
+   "Adam Clarke"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott argues for plating rather than gilding as the only process practicable in the desert, and takes the crown for a rim whose object was to keep the mercy seat in place; Keil and Delitzsch gloss it as a golden wreath encircling the chest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: not gilding but a plate of pure gold laid over the wood."
+    "summary": "Ellicott explains both the number of the rings and their odd position, that the four were made to receive the two poles by which the ark was to be borne on the shoulders of the priests, and that the Hebrew is literally at the four feet, so that the rings went at the bottom corners and not the top in order that the ark might be elevated above the bearers and never come into contact with their persons; he grants the objection about equilibrium and answers it from the smallness of the dimensions, and he reads the standing order about the poles as a matter of danger, that there might never be a necessity for touching the ark itself, since he who touched it imperilled his life; Keil and Delitzsch translate the word for the feet as walking feet, bent as if for walking."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reports the Greek version's rendering of the crown as waves of gold wreathed round about."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gold within and without",
-   "the crown that holds the mercy seat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.23
-   }
-  }
- },
- "12": {
-  "range": "12-15",
-  "pericope_label": "The rings and the staves by which the ark is carried",
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the rings sat at the four feet, not the upper corners, so the ark rode above the bearers' shoulders; the staves stayed in place so that nobody need ever touch the ark, on pain of life."
+    "summary": "Clarke reads the same order as readiness rather than danger, the ark being always to be considered as in readiness to be removed since God had not told them at what hour he would command them to strike their tents; and he raises against himself the difficulty that another passage speaks of putting in the staves when the camp set forward, answering with a great show of probability that besides the poles in the rings there were two others in the form of a bier, taken from under the ark when they encamped."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the rings were cast in a mould, the poles were acacia plated so that no wood showed, and they were to remain in the rings always."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reconciles the standing staves with Numbers 4:6 by supposing a second pair of bearing-poles, like a bier, drawn out from under the ark when the camp halted."
+    "summary": "Gill attends to the making rather than the placing, that a mould was made and the melted gold poured into it, that the poles were of the same wood as the ark and covered so that they appeared all of gold, and that the poles were not only to be put into the rings but to remain in them, yea, always."
    }
   ],
   "debates": [
    {
-    "question": "How can the staves never be taken out if Numbers 4:6 has them put in for the march?",
-    "sides": [
-     {
-      "position": "a separate pair of bearing-poles, a bier, was added for travel and removed at each halt",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the staves simply remained in the rings at all times, so the ark need never be touched",
-      "holders": [
-       "Ellicott",
-       "Gill"
-      ]
-     }
-    ]
+    "question": "Why were the rings set at the feet rather than the corners?",
+    "positions": "Ellicott answers that the ark was to ride above the bearers shoulders and never touch them, and meets the objection that this would endanger its equilibrium by citing the smallness of its dimensions; Keil and Delitzsch describe the feet without arguing the point."
+   },
+   {
+    "question": "Were the poles ever removed?",
+    "positions": "Clarke states the difficulty that another passage seems to require their removal when the camp encamped, and reconciles it by supposing a second pair of poles in the form of a bier which were withdrawn while the ark own poles stayed in their rings; Ellicott and Gill simply insist that they always remained."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "carried, never handled",
-   "always ready to move"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Grounds the whole arrangement in a danger rather than in convenience, that the poles stayed in place so that there might never be any necessity for touching the ark, since he who touched it imperilled his life."
+   }
   ],
+  "themes": [
+   "four rings of gold",
+   "at the four feet thereof",
+   "staves of shittim wood",
+   "they shall not be taken from it"
+  ],
+  "range": "12-15",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "B",
    "checks": [
     "length",
@@ -856,7 +729,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 1.01
+    "expansion": 0.86
    }
   }
  },
@@ -871,30 +744,43 @@
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: 'testimony' names more than a rule of life — it is the compact binding God to his people and them to him, which is why the tables are later called the tables of the covenant; Gill takes the law as testifying God's will and witnessing against transgressors."
+    "summary": "Calvin holds that the title so often given to the law indicates something more than the rule of a just and holy life, namely the compact whereby God bound himself to his people and his people to himself, the word being equivalent to a contract or convention, and carries the point through the Psalms, where the name is given not only to the Commandments but to whatever God delivered by the hand of Moses; Gill makes it a testification of the mind and will of God, what he would have done or omitted, which would stand as a testimony against the Israelites should they transgress what they had approved, and follows the deposit into its application to Christ."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott: the tables are God's witness against sin, and give the chest its standing title, the ark of the testimony."
+    "summary": "Ellicott keeps the narrower sense, calling it simply God witness against sin, and notes the consequence for the chest, that as containing the tables it was called the ark of the testimony."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke notes the tables were not yet given, and extends the witness to the rod, the manna and the anointing oil as testifying to the Messiah's threefold office."
+    "summary": "Clarke notes that the tables were not yet given, derives the word from a root meaning forward or onward, to bear witness to or of a person or thing, and widens the witness to everything the ark held, the rod and the pot of manna and the holy anointing oil bearing testimony to the Messiah in his prophetic, sacerdotal and regal offices."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the covenant document deposited",
-   "law as testimony and as covenant"
+  "debates": [
+   {
+    "question": "How much is contained in the word testimony?",
+    "positions": "Calvin presses it furthest, to a covenant and a contract, so that the table of the covenant is afterwards used instead of the testimony and the law and the testimony named together are not two things but one commended twice; Gill and Ellicott keep the narrower sense of a witness to the will of God and against sin; Clarke widens it in a different direction, to every object the ark contained."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "view": "Follows the deposit through to its application, that the law laid up inside the ark may signify that the law was in the heart of Christ, which he undertook to fulfil and with pleasure did."
+   }
+  ],
+  "themes": [
+   "the testimony which I shall give thee",
+   "the table of the covenant",
+   "a witness against sin",
+   "the ark of the testimony"
+  ],
+  "range": "16",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "B",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
@@ -912,8 +798,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "note": "Closing generalisation removed; entry now ends on Gill’s figure of the law laid up in the heart of Christ.",
-    "expansion": 1.03
+    "expansion": 0.76
    }
   }
  },
@@ -930,57 +815,42 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch deny that the word can mean 'lid', since the verb never means covering in the relevant forms, and cite the 'house of atonement'; Ellicott answers Knobel and Gesenius on the same ground and notes the solid gold weighed some 750 pounds troy."
+    "summary": "Ellicott names the parties to the dispute and decides it, granting that the simple verb has the physical meaning of covering but insisting that the intensive form has never any other meaning than covering or expiating sins and that the noun is formed from the intensive, so that the old Greek and Latin renderings and our mercy seat are correct; Keil and Delitzsch argue the same case, that the meaning lid cannot be sustained since the verb has not the literal sense of covering in either conjugation, and both call decisive the passage naming the holy of holies the house of expiation."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill reports both renderings without deciding and reads the seat of mercy as the New Testament's throne of grace; Calvin grants the philology and holds the figure — the law needs a covering, and Paul's and John's words for propitiation look back to it."
+    "summary": "Calvin concedes the philology to the other side and then declines the conclusion, doubting not that Moses alludes to a metaphorical meaning since the law requires a covering to conceal our transgressions, and arguing from the furniture rather than the grammar that it is a tame explanation to make it a mere lid when the cherubim turn their faces toward it and God promises to answer from it; Gill keeps both senses without choosing and notes that the old Greek version renders it the propitiatory covering."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke explains covering as pardon — sin covered from the eye of justice, the offender covered from the stroke of the law — and identifies Christ as the true mercy seat; Wesley calls it a type of the great propitiation."
+    "summary": "Clarke reaches the sense by the metaphor itself, that by an act of pardon sins are represented as covered so that they no longer appear in the eye of divine justice, and records that the high priest sprinkled the blood of the expiatory sacrifices here on the great day of atonement; Wesley states the figure in a line, a type of Christ the great propitiation whose satisfaction covers our transgressions."
    }
   ],
   "debates": [
    {
-    "question": "Does kapporeth mean 'lid' or 'place of atonement'?",
-    "sides": [
-     {
-      "position": "a covering or lid, as the root and the object's function suggest",
-      "holders": [
-       "Jarchi and Aben Ezra (as reported by Gill)",
-       "Knobel and Gesenius (as reported by Ellicott)"
-      ]
-     },
-     {
-      "position": "a propitiatory — the intensive verb means only to expiate",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "both at once, the literal cover carrying a figure of expiation",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
+    "question": "Does the word mean a lid or a propitiatory?",
+    "positions": "Ellicott and Keil and Delitzsch decide for propitiatory on the form of the verb, and both cite the place where the holy of holies is called the house of expiation as decisive against the covering-house; Calvin grants their philology and argues from the honours paid to the object that the plain lid is too tame a reading; Gill declines to choose and keeps both senses, as he says the old Greek version did."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "propitiation",
-   "the throne of grace",
-   "solid gold over the law"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Reckons the cost of the object, a solid mass of pure gold rather than plated wood, at seven hundred and fifty pounds Troy and above twenty-five thousand pounds in value, the outlay marking it as the crowning glory of the material tabernacle."
+   }
   ],
+  "themes": [
+   "a mercy seat of pure gold",
+   "the house of expiation",
+   "the propitiatory covering",
+   "he dwelleth between the cherubim"
+  ],
+  "range": "17",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -999,76 +869,69 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.49
+    "expansion": 0.48
    }
   }
  },
  "18": {
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott",
+   "Jamieson, Fausset and Brown",
    "John Calvin",
    "John Wesley"
   ],
   "schools": [
    {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says outright that what these were we cannot distinctly say, reports the general supposition of a creature with four heads and one body drawn from the noblest of their kinds so that they might be representatives of all nature, and adds that the term often means a figure of any kind, such as was sculptured on stone or embroidered on cloth."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott makes cherubim a select class of angels fitted to act as guards, and reports the predominant modern opinion that they were winged human figures; Keil and Delitzsch insist they were made out of the mercy seat itself, inseparable from it."
+    "prevalence": "single",
+    "summary": "Ellicott sets out three schools, those who take them for winged bulls not unlike the Assyrian, those who regard them as more composite like the Egyptian sphinxes, and the predominant opinion which he follows, that they were simply human figures with the addition of a pair of wings, resembling the figures often seen inside Egyptian arks."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill rejects both the two-Testaments allegory and the identification with angels, taking the pair for the saints of both dispensations; Calvin is content that the winged images represented angels and calls the two-Testaments reading a plausible conceit contradicted by scripture."
+    "summary": "Gill rejects a string of identifications rather than proposing a form, denying that they are emblems of the two Testaments or of the angels or of the persons of the Godhead and making them emblems of the saints of both dispensations; Calvin takes the opposite side of that question and is content with less, preferring the derivation that treats the word as meaning any image at all and holding it enough that the images were winged and represented angels."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke confesses the form cannot be determined and reports the four-headed composite as the common supposition; Wesley takes them for an emblem of the angelical nature, attending the Redeemer and looking into the mysteries of the gospel."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Wesley agrees that they represent the holy angels, not by any effigy of an angel but by some emblem of the angelical nature."
    }
   ],
   "debates": [
    {
-    "question": "What do the two cherubim signify?",
-    "sides": [
-     {
-      "position": "the holy angels who attend the divine Majesty",
-      "holders": [
-       "Wesley",
-       "Calvin",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the saints and true believers of the legal and evangelical dispensations",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "the two Testaments looking to each other over the mercy seat",
-      "holders": [
-       "an old exposition, rejected by Calvin and Gill"
-      ]
-     }
-    ]
+    "question": "What did a cherub look like?",
+    "positions": "Clarke refuses to say and reports the composite creature of four heads; Ellicott lists winged bulls, sphinx-like composites and winged human figures, and follows the last as the predominant opinion; Calvin refuses the question as unimportant, holding it enough that the images were winged and represented angels."
+   },
+   {
+    "question": "What did the cherubim stand for?",
+    "positions": "Gill denies that they are the angels, since the two are distinguished, and makes them the saints of both dispensations; Calvin and Wesley make them the angels, Calvin because God appointed angels, by whom he exercises his dominion, to be a symbol of his presence."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "guards of the testimony",
-   "one piece with the mercy seat",
-   "the form of a cherub"
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Refuses the reading that makes the word mean like a boy, calling it forced and refuted by the prophet who gives the same name to the forms of a calf, a lion and an eagle as well as to the human form."
+   }
   ],
+  "themes": [
+   "two cherubims of gold",
+   "of beaten work",
+   "in the two ends of the mercy seat",
+   "dwelling between the cherubim"
+  ],
+  "range": "18-19",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1087,13 +950,11 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.36
+    "expansion": 0.21
    }
   }
  },
- "19": {
-  "range": "19-20",
-  "pericope_label": "One cherub at either end, wings spread and faces bent toward the mercy seat",
+ "20": {
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
@@ -1102,27 +963,44 @@
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Ellicott: the figures were not fastened on but formed out of the same mass of gold, their wings elevated and advanced to overshadow the seat, their faces bent as though gazing on it; Keil and Delitzsch call the wings a screen and point forward to the meeting promised above the capporeth."
+    "prevalence": "several",
+    "summary": "Ellicott glosses the beaten work as not cast but brought into shape by the hammer, notes that the Egyptian word for to hammer is the one from which some derive the name cherub, explains that the figures were not detached images fastened on but formed out of the same mass of gold, and observes that both wings of both figures were to be elevated and advanced so as to overshadow and protect the mercy seat, unlike the Egyptian figures in which one wing is depressed; Keil and Delitzsch describe the posture exactly, a screen formed over the covering with the faces turned towards one another but inclining towards it."
    },
    {
     "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the outstretched wings as evidence about the shape, that they were winged creatures like the seraphim and living creatures of the prophets, with wings stretched upward towards the heaven above their heads rather than hanging at their sides, and notes that there was one at each end and not two at both; Calvin refuses the obvious inference from the covering, holding that they covered the lid not to hide it but to mark the readiness of their obedience, the extension of the wings being equivalent to being prepared to perform whatever God might command."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Gill, following Jarchi, guards against reading two cherubim at each end, notes the wings stretched upward rather than hanging, and reads the pair as ministers of the word deriving all from Christ and pointing to him."
+    "summary": "Wesley gathers the whole posture into a sentence and reads it, that the faces looked one towards another and both downwards towards the ark while the wings were stretched out so as to touch, which notes their attendance upon the Redeemer, their readiness to do his will, their presence in the assemblies of saints and their desire to look into the mysteries of the gospel."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one piece of beaten gold",
-   "wings as a screen",
-   "faces toward the place of atonement"
+  "debates": [
+   {
+    "question": "Why were the wings spread over the covering?",
+    "positions": "Ellicott takes it as overshadowing and, as it were, protection; Calvin denies that concealment is meant and makes the outstretched wings a figure of readiness to perform whatever God commands; Wesley reads both wings and faces as attendance upon the Redeemer and desire to look into the mysteries of the gospel; Keil and Delitzsch describe the screen without assigning it a meaning."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reads the faces turned towards each other as a figure of the harmony in which the angels are united for performing the commands of God, and the faces turned towards the mercy seat as attentiveness to his will."
+   }
+  ],
+  "themes": [
+   "stretch forth their wings on high",
+   "covering the mercy seat",
+   "their faces shall look one to another",
+   "the readiness of their obedience"
+  ],
+  "range": "20",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
+   "generated": "2026-09-15",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
@@ -1140,95 +1018,57 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.84
+    "expansion": 1.29
    }
   }
  },
  "21": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch take the verse as the closing instruction of the ark section, gathering chest, contents and covering into one completed piece before the description moves on."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: mercy laid over the law means there is no mercy but in a way of righteousness; the cherubim make a throne and the ark a footstool, and Christ the propitiatory stands between God and the law he has fulfilled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mercy over law",
-   "the ark completed",
-   "no pardon without satisfaction"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "note": "Cross-verse gathering removed — the sprinkled blood, the voice from between the cherubim and the title ark of the testimony are drawn from other verses’ witnesses and are no longer summarised here.",
-    "expansion": 1.03
-   }
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
+   "Keil and Delitzsch",
    "Adam Clarke",
    "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: the Shechinah stood between the cherubim, and God met his people there literally by Urim and Thummim and spiritually in accepted offerings — whence the name Tent of Meeting, which he thinks the Authorised Version renders unhappily."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill extends the promise from Moses to the high priest and to the people represented by him."
+    "summary": "Gill reads the placing for its doctrine rather than its carpentry, that the mercy seat set above the ark where the law was signifies that there is no mercy but in a way of righteousness and of satisfaction to the law of God, the cherubim over it making a throne for the majesty of God and the ark below a kind of footstool, so that Christ stands between God and his law as mediator; and he widens the promised meeting beyond Moses to the high priest in later times and to the people of God as represented by him."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch explain the posture of the cherubim by the promise that follows, and give the verb its precise force, to appoint, to present oneself to a person at an appointed place; Ellicott distinguishes two modes within the one promise, that God would meet his people there either literally, as when he answered inquiries of the high priest, or spiritually, as when he accepted incense and the blood of offerings and prayers offered through the priests, and draws from the promise the name of the whole building, the Tent of Meeting, which our version renders less happily as the tabernacle of the congregation."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke fixes the place over the mercy seat and passes on Ainsworth's rabbinic saying that the heart of man should be made a holy of holies for the divine Majesty."
+    "summary": "Clarke keeps to the place and the occasion, that it was over the mercy seat and between the cherubim that God chose to give the most especial manifestations of himself, where the divine glory was to be seen and where Moses was to come to consult him about the management of the people."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Tent of Meeting",
-   "God found at an appointed place",
-   "the heart as sanctuary"
+  "debates": [
+   {
+    "question": "What kind of meeting was promised?",
+    "positions": "Clarke keeps it concrete, a place where the divine glory was seen and where Moses came to consult God about the management of the people; Ellicott divides it into a literal mode, the answering of inquiries, and a spiritual one, the acceptance of incense and blood and prayer; Gill extends the parties to the high priest and to the people he represented."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Closes with an application traced to the rabbis, that the heart of man may be likened to God sanctuary, so that as the divine glory dwelt where the ark and the tables and the cherubim were, a place should be made in the heart for the divine Majesty and be its holy of holies."
+   }
+  ],
+  "themes": [
+   "put the mercy seat above upon the ark",
+   "there I will meet with thee",
+   "from between the two cherubims",
+   "the Tent of Meeting"
+  ],
+  "range": "21-22",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "B",
    "checks": [
     "length",
@@ -1247,8 +1087,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "note": "Unattributed close replaced with Ellicott’s own conclusion that the tabernacle was designed for the meeting, and is therefore ordinarily named the Tent of Meeting.",
-    "expansion": 1.22
+    "expansion": 0.8
    }
   }
  },
@@ -1257,41 +1096,55 @@
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "John Calvin",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott notes only that no other wood was to be used for the sanctuary or its furniture."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the table stood in the holy place, not the holy of holies; God kept a good house, and as the ark signified his presence with Israel, the twelve loaves signified Israel presented to him — a thanksgiving, a token of communion, and a type of gospel provision."
-   },
-   {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the sanctuary being a dwelling, God would have the proper furniture of a house; the table is typical of Christ and of communion with him, now and in his kingdom."
+    "prevalence": "several",
+    "summary": "Gill argues from the logic of a house, that as the sanctuary was a house for God to dwell in he would have the proper furniture of a house, and fixes the table in the holy place on the north side rather than in the holy of holies where nothing but the ark stood; Calvin arrives at nearly the same place by way of an objection, and answers it from the difference of the dispensations, that God would have the loaves deposited among the golden dishes not because he had need of meat and drink but that he might prescribe the duty of temperance to his people by deigning to have his table among them."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke, following Cudworth and Nachmanides, argues that a house for God to dwell in visibly required all the furniture of a house — table, lamp, bread, fire and constant provision."
+    "summary": "Clarke quotes an older divine at length, that the mystery of the tabernacle was that it should be a place for the habitation of Divinity to be fixed in, and that once a dwelling is granted everything suitable to a house must follow, the table with its dishes though they were never used, the candlestick with its lamps continually burning, a continual fire on the altar as the focus of the house, and provision brought in by the sacrifices."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "several",
+    "summary": "Henry works the image from the other end, that God kept a good house and that in a royal palace it was fit there should be a royal table, and gives the purpose of the bread under three heads, a thankful acknowledgement of daily bread, a token of communion since the loaves were of the same corn as the bread on their own tables, and a type of the spiritual provision made in the church by the gospel; Wesley repeats the reading closely."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott notes only that no other wood was to be employed, either for the sanctuary itself or for its furniture."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a royal table in a royal palace",
-   "the twelve loaves and the twelve tribes",
-   "communion with God"
+  "debates": [
+   {
+    "question": "Does God need a table?",
+    "positions": "Calvin raises the difficulty through the saying of an ancient bishop who sold the sacred vessels in a famine and excused himself on the ground that our God, who does not eat or drink, has no need of patens and chalices; he answers that the bishop spoke piously under the Gospel what would have been unseasonable under the Law, since at the coming of Christ the shadows of the Law ceased, and that the loaves were required not for God need but to teach the people temperance and to remind them that their food was taken as before God."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Reads the arrangement as hospitality rather than ritual, that the tabernacle being God house he would show that he kept a good house, and that God and Israel did as it were eat together, since the bread on his table was of the same corn as the bread on theirs."
+   }
+  ],
+  "themes": [
+   "a table of shittim wood",
+   "the shewbread",
+   "bread of faces",
+   "a royal table"
+  ],
+  "range": "23",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "B",
    "checks": [
     "length",
@@ -1310,7 +1163,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.3
+    "expansion": 0.31
    }
   }
  },
@@ -1323,310 +1176,43 @@
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Ellicott: plated like the ark and the altar of incense, since the table was a species of altar standing close to the Presence, its crown an edging to stop what lay on it from falling off; Keil and Delitzsch describe the hand-breadth frame enclosing the four sides, into whose corners the feet were fixed."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the gold over the wood for a figure of Christ's natures, and inclines to the divine nature, which is as the most fine gold."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gold over acacia",
-   "the table as a kind of altar"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "the closing paragraph — that ark and table were built to one specification so that worshippers outside the veil knew both were of one design — is my framing; the witnesses state the parallel construction but do not draw that inference.",
-    "expansion": 1.26
-   }
-  }
- },
- "25": {
-  "thin": true,
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott renders it a band or framing and, from the table carved on the Arch of Titus, describes a flat bar midway between top and feet, connecting the legs; its golden crown was ornament only."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reports Jarchi's division: some place the hand-breadth border round the top of the table, others below, from foot to foot, with the board laid upon it."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Where did the hand-breadth border sit?",
-    "sides": [
-     {
-      "position": "above, as a rim round the tabletop",
-      "holders": [
-       "Jarchi (as reported by Gill)"
-      ]
-     },
-     {
-      "position": "midway down, as a framing that tied the four legs together",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the frame of a portable table"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.89
-   }
-  }
- },
- "26": {
-  "range": "26-28",
-  "pericope_label": "The rings at the feet and the staves that bear the table",
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott has the rings at the bottom corners so the table rode above the bearers, appeals again to the Arch of Titus, and admits frankly that 'over against the border' is not clear if the framing ran halfway up the legs while the rings sat at the feet."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes rings and staves as deliberate echoes of the ark's, of the same wood and for the same use, and records the ancient versions' 'under the border' against 'over against' it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the table on the march",
-   "rings, framing and poles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "note": "Closing removed; it applied to the table the carried-never-handled principle Ellicott states only of the ark at v.15.",
-    "expansion": 1.24
-   }
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott makes them large bowls for bringing the loaves, small incense pots (two of which appear on the Arch of Titus), and flagons and chalices for the drink offerings; he corrects 'to cover withal' to 'to pour out withal'."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill passes on Jarchi's account of two kinds of dish, an iron one for baking and a golden one to hold the bread until it was set out."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke takes the four words for kneading-bowls, censers for incense, a wine tankard for the sabbath libations, and either sieves or ovens, following Calmet."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What were the 'bowls' of the table?",
-    "sides": [
-     {
-      "position": "sieves for cleansing the wheat, or the ovens themselves",
-      "holders": [
-       "Calmet (as reported by Clarke)"
-      ]
-     },
-     {
-      "position": "chalices for the drink offerings",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "vessels dipped into the wine-cup to draw out the libation",
-      "holders": [
-       "others, as reported by Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the vessels of the table",
-   "bread, incense and libation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.23
-   }
-  }
- },
- "30": {
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch insist the bread was not food for Jehovah but a symbol of the spiritual food Israel was to prepare and of its labour in God's kingdom; Ellicott gives the literal 'bread of the presence'."
+    "summary": "Ellicott gives the practical reason for the plating and a classification with it, that like the ark and the altar of incense the table was to be overlaid with gold, being a species of altar on which lay offerings to God; he prefers a plainer word for the crown, an edging to prevent what was placed on the table from falling off; he settles the disputed band from a monument rather than a text, the representation on the Arch of Titus showing a flat bar midway between the top of the table and its feet, connecting the legs; and on the clause fixing where the rings went he admits that the meaning is not very clear; Keil and Delitzsch describe the same fittings and add that the vessels were to be of pure gold."
    },
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill describes the twelve cakes renewed each sabbath and eaten by the priests, reads them as a memorial of God's daily provision and a token of communion, and takes the unleavened loaves for the purity of God's people."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke weighs the two derivations of 'bread of faces' and prefers the one the text itself gives, then declines to add another conjecture about what the loaves represented."
+    "prevalence": "several",
+    "summary": "Gill says the table was covered with a plate of gold so that the wood was not seen and takes it to denote the excellency of Christ human nature or rather of his divine nature, reports that the Jewish teachers are divided about the band, some placing it above and some below with the board laid upon it, offers the old versions which render the preposition as under rather than over against, and says of the poles only that they were made in like manner as those for the ark."
    }
   ],
   "debates": [
    {
-    "question": "Why 'bread of faces'?",
-    "sides": [
-     {
-      "position": "because the loaves were square, each side presenting the same appearance",
-      "holders": [
-       "the Jewish teachers, as reported by Clarke"
-      ]
-     },
-     {
-      "position": "because they were set before the face of God",
-      "holders": [
-       "Clarke",
-       "Gill",
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "Where did the band round the table run?",
+    "positions": "Gill reports the Jewish teachers divided, some putting it above and round the table and others below, fixed from foot to foot with the board laid on it; Ellicott decides from the carving on the Arch of Titus that it was a flat bar midway between the top and the feet, connecting the four legs, and holds its golden edging to have been only ornament."
+   },
+   {
+    "question": "What does over against the border mean?",
+    "positions": "Ellicott concedes the meaning is not very clear, since if the framing had been at the bottom of the legs the rings could have been opposite where it was inserted, whereas the framing appears to have been halfway up while the rings were at the bottom, so that they were opposite it only in a loose and vague sense; Gill gives the old versions, which read under rather than over against, and the rabbinic view that the rings were fixed to the feet opposite the top of the band."
    }
   ],
   "outliers": [
    {
-    "voice": "Adam Clarke",
-    "note": "refuses to interpret the shewbread, calling its meaning harder to ascertain than almost any other emblem in the Jewish economy."
+    "voice": "Charles Ellicott",
+    "view": "Settles two disputed fittings from a Roman monument rather than from the text, reading both the band and the height at which the table was carried off the carving on the Arch of Titus."
    }
   ],
   "themes": [
-   "bread of the presence",
-   "daily bread acknowledged",
-   "the church as one bread"
+   "overlay it with pure gold",
+   "a border of an hand breadth",
+   "four rings of gold",
+   "that the table may be borne"
   ],
+  "range": "24-28",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
+   "generated": "2026-09-15",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
@@ -1648,6 +1234,152 @@
    }
   }
  },
+ "29": {
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott"
+  ],
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke guesses at the four vessels one by one from their roots, the dishes for the deep bowls in which they kneaded the mass out of which the shewbread was made, the spoons for censers since the same word elsewhere is always represented as filled with incense, the covers for a tankard in which pure wine was kept for libations poured out every sabbath when the bread was changed, and the bowls, from a root meaning to clear away, for either the sieves by which the Levites cleansed the wheat or the ovens in which the bread was baked or vessels dipped into the tankard to draw out the wine."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott answers the same four from monuments rather than roots, the dishes probably large bowls in which the loaves were brought to the table, such bowls being common in the Egyptian wall decorations, the so-called spoons small pots in which the incense was put and burnt, two of which appear on the Arch of Titus, and the covers and bowls flagons and chalices for the drink offerings; and on the closing clause he prefers the margin, to pour out withal rather than to cover withal."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says of the dishes only that the shewbread loaves were set upon them, and adds a rabbinic detail that they were of the form of the bread and of two sorts, one of gold and one of iron, the bread being baked in the iron one and put into the golden one until the morrow of the sabbath."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What were the four vessels?",
+    "positions": "Clarke works from the Hebrew roots and reaches kneading bowls, censers, a wine tankard and either sieves or ovens; Ellicott works from Egyptian wall decorations and the carving on the Arch of Titus and reaches serving bowls, incense pots, flagons and chalices; they agree on the censers and differ on nearly everything else."
+   },
+   {
+    "question": "Does the last clause mean to cover or to pour out?",
+    "positions": "Ellicott prefers the marginal reading, to pour out withal, on the ground that drink offerings were poured out in libation; the received text and the other witnesses keep to cover withal."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Passes on the tradition that the grain for the shewbread was sowed, reaped, ground, sifted, kneaded and baked by the Levites themselves, and takes one of the vessels to be the sieves used in that work."
+   }
+  ],
+  "themes": [
+   "the dishes thereof",
+   "spoons thereof",
+   "covers and bowls",
+   "to pour out withal"
+  ],
+  "range": "29",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "B",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.85
+   }
+  }
+ },
+ "30": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke explains the name two ways without choosing, either because the loaves were placed before the presence or face of God in the sanctuary or because they were made square, probably cubes with each side presenting the same appearance, though the Hebrew text seems to him to intimate the first since the Lord says they were set before my face; he adds that a golden dish of frankincense stood on the top of each row and was burned as a memorial when the loaves were changed; and he refuses to add a conjecture of his own about their meaning, holding it more difficult to ascertain than almost any other emblem in the whole Jewish economy."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill describes the arrangement, twelve cakes in two rows standing a whole week and renewed every sabbath, the old ones eaten by the priests, and reads them as a memorial of the goodness of God in daily providing bread for Israel and, since the priests ate them, as expressive of the communion between God and them; he also takes the unleavened cakes for the purity and sincerity of the church and the number twelve for the whole spiritual Israel."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott gives the name simply as bread of face or bread of presence; Keil and Delitzsch are more careful about the direction of the gift, that the loaves lay before the face of God as a meat-offering presented by the children of Israel, not as food for God but as a symbol of the spiritual food Israel was to prepare, the bread and wine as the fruit of its labour on the soil of its inheritance being a symbol of its spiritual labour in the kingdom of God."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why is it called bread of faces?",
+    "positions": "Clarke offers the choice between a placing before the face of God and a square shape with faces on every side, and leans to the first on the wording of the verse; Gill and Ellicott and Keil and Delitzsch all take it as presence without entertaining the other."
+   },
+   {
+    "question": "What did the bread represent?",
+    "positions": "Gill makes it a memorial of daily providence and a token of communion, since the priests ate what had been set before God; Keil and Delitzsch reverse the direction and make it a gift from Israel rather than food for God, a symbol of the spiritual labour it owed in the kingdom of God; Clarke declines to answer at all and will not add to the conjectures already made."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Refuses to conjecture, holding the use of the shewbread more difficult to ascertain than almost any other emblem in the whole Jewish economy, and preferring the older account that the tabernacle was God house and these were simply the furnishings of it."
+   }
+  ],
+  "themes": [
+   "shewbread before me alway",
+   "bread of presence",
+   "twelve cakes in two rows",
+   "a memorial of daily bread"
+  ],
+  "range": "30",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "B",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
+  }
+ },
  "31": {
   "voices": [
    "John Gill",
@@ -1655,59 +1387,54 @@
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Ellicott corrects bowls, knops and flowers to cups, pomegranates and blossoms and insists on one piece with stem and branches; Keil and Delitzsch itemise pedestal, hollow stem, flower-cups, spherical knobs and bud-shaped flowers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill takes the stand for the church, which has no light but what Christ puts into it; Calvin reads the seven lamps as the Spirit's manifold gifts and denies that the number teaches a sevenfold grace, taking seven for perfection."
+    "summary": "Clarke describes the form as one shaft with six branches, seven lamps in all lighted every evening and extinguished every morning, and claims an unusual certainty about it, since the candlestick and the golden table and the silver trumpets were carried in triumph to Rome after the overthrow of Jerusalem and are sculptured on the arch that records it, a correct model of which stood before him as he wrote."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry finds it magnificent, convenient and significant: all the light of that house was candle-light, marking the comparative darkness of the dispensation, and the word of God is now the candlestick."
+    "prevalence": "several",
+    "summary": "Henry adds that it was solid and not hollow and divides its qualities, magnificent and a great ornament to the place, and convenient, contrived both to scatter the light and to keep the tabernacle clean of smoke and snuffs; and he joins Wesley in reading the absence of windows as a statement about the age, that all its light was candle-light, which intimates the comparative darkness of that dispensation."
    },
    {
-    "school": "wesleyan-arminian",
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott corrects the three terms to cups, pomegranates and blossoms, notes that the cups are afterwards said to be like almond blossoms, and insists that all was of one piece with the stem and branches; Keil and Delitzsch gloss each word, the base, the reed or hollow stem, cups resembling the calix of a flower, spherical knobs and flowers in the form of buds."
+   },
+   {
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Clarke describes the seven lamps lit each evening, and claims we know this object's form better than almost any other, from the relief on the Arch of Titus in Rome."
+    "summary": "Gill notes that it was another piece of household furniture, useful especially in a house with no windows, stood in the holy place on the south side opposite the table, and holds forth the light put into it since it has none of itself."
    }
   ],
   "debates": [
    {
-    "question": "Does the number seven teach a sevenfold grace of the Spirit?",
-    "sides": [
-     {
-      "position": "no — Paul's list is longer; seven denotes perfection",
-      "holders": [
-       "Calvin"
-      ]
-     },
-     {
-      "position": "yes — the common notion Calvin reports and rejects",
-      "holders": [
-       "the schoolmen (as reported by Calvin)"
-      ]
-     }
-    ]
+    "question": "What do the names of the ornaments mean?",
+    "positions": "Ellicott renders them cups, pomegranates and blossoms and ties the cups to almond blossoms; Keil and Delitzsch give cups resembling a flower calix, spherical knobs and bud-shaped flowers; Clarke describes six flowers like lilies with bowls and knops placed alternately."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "light in a house without windows",
-   "beaten out of one mass",
-   "the lamp and the Spirit's gifts"
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Turns the Roman triumph into a lament and then answers himself, that to see these sacred articles gracing the triumph of a heathen emperor and at last consecrated to an idol affords melancholy reflections, though they had by then accomplished the end for which they were instituted, the true light being come."
+   }
   ],
+  "themes": [
+   "a candlestick of pure gold",
+   "his shaft, and his branches",
+   "the comparative darkness of that dispensation",
+   "carried in triumph to Rome"
+  ],
+  "range": "31",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1731,256 +1458,46 @@
   }
  },
  "32": {
-  "range": "32-33",
-  "pericope_label": "The six branches and the almond cups upon them",
   "voices": [
    "John Gill",
    "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Keil and Delitzsch set three branches on either side of the stem and refute Knobel and Thenius, who made cup, knob and flower one composite ornament, since the opening verse names them as three separate things; Ellicott reads cups like almond blossoms and prefers Reland's arrangement."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill has the branches beaten out of the shaft, the cups shaped like almond nuts — either holding oil or catching the snuff — the knop shaped like a pomegranate and the flower a lily, both emblems of the saints' graces."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Were cup, knop and flower three ornaments or one?",
-    "sides": [
-     {
-      "position": "three separate things, as the base and stem show",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "one composite — a knob with a flower issuing from it",
-      "holders": [
-       "Knobel and Thenius (as reported by Keil and Delitzsch)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "almond blossom in gold",
-   "six branches from one stem"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.76
-   }
-  }
- },
- "34": {
-  "range": "34-36",
-  "pericope_label": "The four cups of the central shaft, the knops at the junctions, and the whole of one beaten piece",
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Keil and Delitzsch place a knob wherever a pair of arms branched off, immediately below them, with a fourth higher up, and assemble the whole — pedestal, central pipe, three pairs of arms curving to the level of the stem; Ellicott reads 'the candlestick' here as the central shaft, with the triple series repeated four times."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the shaft carried four cups where the branches had three, passes on Jarchi's account of branches drawn from the middle of each knop and the tradition that the stand was eighteen hands' breadths high, and stresses that knops and branches were of the same metal and the same mass."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the junctions of shaft and branches",
-   "one beaten work, without a joint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.82
-   }
-  }
- },
- "37": {
-  "range": "37-38",
-  "pericope_label": "The seven lamps and the tongs and snuffdishes that served them",
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Keil and Delitzsch identify the tongs as snuffers and the dishes as receivers for the snuff, noting the word elsewhere means an ash-pan; Ellicott keeps the Hebrew order 'its lamps seven', gives each branch and the stem its own, and describes them from the Arch of Titus as hemispherical bowls."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill counts six lamps on the branches and one on the shaft, reports Jarchi's fork for lifting the wicks and small cups for the morning ashes, and allows Ben Gersom and Lyra's suggestion that the dishes held water to stop the snuffings smoking."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What were the snuffdishes for?",
-    "sides": [
-     {
-      "position": "to hold the ashes trimmed from the wicks each morning",
-      "holders": [
-       "Jarchi (as reported by Gill)",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "vessels of water, so the snuffings should not smoke",
-      "holders": [
-       "Ben Gersom and Lyra (as reported by Gill)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "seven lamps",
-   "the tools that kept them burning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.86
-   }
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
    "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch note the talent covered stand and vessels together, allowing a piece of considerable size, and pass on Bähr's conjecture that it matched the height of the table; Ellicott reports the estimates as unsettled, from four thousand pounds upward, and observes that 'he shall make it' points to the artificer."
+    "summary": "Keil and Delitzsch build the candlestick up from the base more exactly than anyone else, three side pipes branching from the central stem on either side and curving upwards in a quadrant to its level, four calices with knob and blossom on the stem and three on each branch, a knob wherever the arms branched off, the whole combined so as to form one piece of beaten work; they also report and reject an explanation which takes the words for knob and flower as in apposition, so that the flower-cups would consist of knobs with flowers bursting from them, since the opening verse names cups, knobs and flowers as three separate things; Ellicott leaves open whether the three cups on a branch were consecutive or each held a pomegranate followed by a blossom, and prefers the latter."
    },
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill gives the sacred talent as double the common, at a hundred and twenty pounds weight, with Bishop Cumberland's valuation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke computes a talent at three thousand shekels and reaches above seven thousand pounds sterling for the lampstand and its furniture, and reflects that their intrinsic worth was nothing to him whose the gold is, once they had served their end."
+    "prevalence": "several",
+    "summary": "Gill passes on a rabbinic detail of scale, that two branches were drawn out from the middle of the knop on either side and that the height of the whole was eighteen hands breadth; Calvin reads the seven lights as a lesson about how God is to be worshipped, that a light was set before their eyes which might disperse all the darkness of error, lest they should obscure his worship with their gross inventions."
    }
   ],
   "debates": [
    {
-    "question": "What was a talent of gold worth?",
-    "sides": [
-     {
-      "position": "just over five thousand pounds",
-      "holders": [
-       "Bishop Cumberland (as reported by Gill)"
-      ]
-     },
-     {
-      "position": "six thousand seven hundred and fifty pounds sterling",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "unsettled — from four thousand up to ten or eleven thousand",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "Were the cups, knobs and flowers three things or one?",
+    "positions": "Keil and Delitzsch report the view that the words stand in apposition so that a flower-cup would be a knob with a flower bursting from it, and reject it both as a singular idea and because the opening verse names the three separately; Ellicott treats them as distinct and asks only whether they ran consecutively along a branch or in repeated groups."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "a talent of pure gold",
-   "the cost of the sanctuary"
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reads the lamps as a warning against ceremonial religion, that the Israelites held fast the external form of the Law and were nevertheless degenerate, conceiving in obedience to their carnal reason that religion consisted in ceremonies."
+   }
   ],
+  "themes": [
+   "six branches out of the sides",
+   "bowls made like unto almonds",
+   "a knop and a flower",
+   "one beaten work of pure gold"
+  ],
+  "range": "32-36",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1999,45 +1516,62 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.71
+    "expansion": 0.53
    }
   }
  },
- "40": {
+ "37": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
    "Adam Clarke",
    "John Calvin"
   ],
   "schools": [
    {
-    "school": "reformed",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill takes the charge as oversight of the workmen, with everything described in the model; Calvin insists it was no mere vision but a pattern with a spiritual object, as Stephen and the Hebrews writer explain."
+    "summary": "Ellicott gives the Hebrew idiom for the lamps, notes that each branch as well as the stem was to have its own and that the Roman monument shows them as hemispherical bowls, describes the instruments as pincers for trimming the wicks and dishes for receiving what was removed, and reports the spread of estimates for the gold talent, none placing it much below four thousand pounds while some carry it as high as ten or eleven thousand; Keil and Delitzsch convert the talent to Parisian grains, remark that a candlestick of very considerable size was possible from that quantity, and pass on a conjecture matching its height to the table."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: nothing was left to Moses' invention or the workmen's fancy; God's providences never vary from his counsels, and his ordinances must be administered by his institutions."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill counts the seven lamps and takes them for the gifts and graces of the Spirit or the ministers of the Gospel, collects the rabbinic guesses about the instruments including vessels full of water into which the snuffings were dropped so that they might not smoke, gives the common talent at sixty pounds and the sacred at double, and reads the closing charge strictly, that nothing was left to the will, humour and fancy of men; Calvin insists that no mere vision is in question but that the external ornaments have their spiritual object."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reads the verse as a summary order given after the description, links it to Paul's 'form of sound words', and collects the heathen imitations — divided temples, portable shrines, sacred chests carried in procession, many-lamped candlesticks — as borrowings from this original."
+    "summary": "Clarke works out the value of the talent at length from the half-shekels the people contributed, and reads the closing verse as a command issued after the whole description was finished, which he then turns into a rule for the Church, that as God gave the plan by which the tabernacle must be constructed so he gives the doctrines by which the Christian Church is to be modelled."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the pattern in the mount",
-   "hold fast the form",
-   "the tabernacle and its imitations"
+  "debates": [
+   {
+    "question": "What was a talent of gold worth?",
+    "positions": "Keil and Delitzsch convert it to eight hundred and twenty-two thousand Parisian grains without pricing it; Gill reports one bishop reckoning at over five thousand pounds; Clarke works the same bishop figures from the half-shekels and reaches six thousand seven hundred and fifty; Ellicott declines a figure and reports a range from four thousand to eleven thousand."
+   },
+   {
+    "question": "What is the force of the closing charge about the pattern?",
+    "positions": "Gill reads it as strictness about workmanship, that nothing was left to the will, humour and fancy of men; Calvin reads it as a claim about the vision, that its object was spiritual and not a mere spectacle; Clarke reads it forward into the Church, as the ground for holding fast a form of sound words."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Takes the closing verse as the model for an apostolic charge, holding that the Apostle had this command in view when he told his son in the faith to hold fast the form of sound words he had heard of him."
+   }
+  ],
+  "themes": [
+   "the seven lamps thereof",
+   "the tongs and the snuffdishes",
+   "a talent of pure gold",
+   "after their pattern in the mount"
+  ],
+  "range": "37-40",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-09-14",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -2056,7 +1590,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.24
+    "expansion": 0.16
    }
   }
  }
