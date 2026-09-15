@@ -2,143 +2,136 @@
  "1": {
   "voices": [
    "Pseudo-Jerome",
-   "Glossa Ordinaria",
+   "Gloss",
    "Theophylact",
    "Gregory",
-   "Augustine of Hippo",
+   "Augustine",
    "Bede",
    "John Gill",
    "John Lightfoot",
    "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley"
   ],
+  "range": "1-3",
+  "pericope_label": "And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him. And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun. And they said among themselves, Who shall roll us away the stone from the door of the sepulchre?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The women buy spices to anoint the body — proof they did not expect the resurrection, which strengthens its evidence (Barnes, Clarke); after the sabbath, early Sunday."
+    "summary": "Robertson keeps both notes of time as the evangelist's own, a walk begun in the dark and ending as the sun came up, notes that the sabbath had to be over before spices could be bought, and says plainly that people debating how to get into a tomb have no hope of a resurrection. Barnes objects to calling the spices sweet, since myrrh and the rest were bitter, and turns the errand into evidence, women carrying embalming stuff having expected no rising. Lightfoot supplies the rabbinic name for the first glimmer of light, the hind of the morning, with the saying that Israel's redemption would come so, by degrees; he and Gill both cite the rule that anointing is lawful for the living on that day and not the dead. Ellicott harmonises the hour by a morning haze or the gloom left over the city, and catches the women with the question still on their lips as they look up and find the stone moved."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the rabbinic rule about anointing and that buying was unlawful on the sabbath. Calvin grants that the women came without due consideration, having watched the stone put in place and not thought of it until they were on the road, but refuses to let the fault stand against them, since holy zeal blinded them and God does not charge it."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke argues from their failure to remember what they had been told plainly that they expected no rising, which he takes as proof of the resurrection rather than against it; Wesley notes how little they knew, nothing of the seal or the guard, so the stone was the only trouble they foresaw."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry opens on the sabbath just ended, a day of rest to the buried Lord and a silent one to his disciples, the temple services never more an abomination than when the priests presiding had their hands full of his blood, and marks the turn, that the first day of the week is the first day of a new world."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact explains the spices medically, as absorbing the body's moisture and holding off corruption, and holds the angel seen outside on the stone and the one sitting within to be the same, though he reports the view that the accounts concern different women."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "A happy day dawns, the Lord rising in triumph (Pseudo-Jerome); we come to his sepulchre with the spices of virtue and good works (Gregory)."
+    "summary": "Pseudo-Jerome reads the hour by the light, the dawn standing between night's darkness and day's brightness so that the chief light shines on the chief of days. Gloss explains the delay, the ointment worked at until sunset on the Friday and not finished, with the night preventing any earlier coming. Augustine denies any discrepancy between the accounts of the hour, taking the words to mean not that the sun stood over the earth but that his rising had begun to light the eastern sky, and offers for the angels either two heard separately or an entering that means only passing an enclosure before the stone. Gregory reads the spices as the fragrance of good works and takes the side the angel sat on for the point, the left standing for this present life and the right for the life without end. Bede adds the figure of the stone rolled away as the opening of sacraments long shut under the letter of a law written on stone, and keeps the remark that it was great by office rather than bulk."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How is the hour to be reconciled with the other accounts?",
+    "positions": [
+     {
+      "position": "No discrepancy: the words mean the sky growing light in the east, not the sun standing over the earth",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "A morning haze, or the gloom left over the city from the day before",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Both notes of time are the evangelist's own: they set out in the dark and arrived as the sun came up",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Jewish anointing confirmed faith in the resurrection — God's image of life in death; Henry: a pious, not superstitious, visit."
+    "question": "Was there one angel or two, and where?",
+    "positions": [
+     {
+      "position": "One: the angel seen outside on the stone is the same afterwards seen sitting within",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "Either two, heard separately, or else entering means only coming inside an enclosure before the stone",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the sabbath was past",
-   "sweet spices to anoint him",
-   "proof of the resurrection",
-   "the women's devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The women came at dawn; 'while it was yet dark' (John) and 'at the rising of the sun' (Mark) harmonized by the gradual dawn (Augustine, Lightfoot's four twilights) — they set out dark, arrived at sunrise; the resurrection 'on the third day' (Robertson)."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "The Cyril fragment here, on the Church built of the Gentiles, touches the new age but is a broader catechetical aside."
-   }
-  ],
-  "themes": [
-   "very early the first day",
-   "at the rising of the sun",
-   "harmonizing the time",
-   "the resurrection morning"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The women's anxious question (peculiar to Mark) shows no hope of resurrection (Robertson); they knew not of the sealed stone and guard (Wesley); the difficulty was already removed (Henry)."
+    "voice": "John Calvin",
+    "claim": "Concedes the women acted without forethought in setting out with no way of opening the tomb, but holds that God does not charge a fault that holy zeal produced."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a holy but unconsidered zeal that God does not charge as fault — fear and astonishment had robbed them of thought; they came without due consideration."
+    "voice": "Bede",
+    "claim": "Reads the stone rolled from the door as the opening of the sacraments, long shut under the letter of a law that was itself written on stone."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "who shall roll away the stone",
-   "holy but unconsidered zeal",
-   "ignorant of the guard",
-   "difficulties vanish"
+   "And when the sabbath was past, Mary Magdalene, and Mary the mother of James, and Salome, had bought sweet spices, that they might come and anoint him.",
+   "And very early in the morning the first day of the week, they came unto the sepulchre at the rising of the sun.",
+   "And they said among themselves, Who shall roll us away the stone from the door of the sepulchre?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "4": {
@@ -149,122 +142,90 @@
    "Charles Ellicott",
    "A.T. Robertson"
   ],
+  "range": "4-6",
+  "pericope_label": "And when they looked, they saw that the stone was rolled away: for it was very great. And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted. And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The women look up and see the great stone already rolled away (Mark's vivid present) — its very greatness (the clause linked to v.3) magnifying the wonder of its removal by the divine hand (Matthew 28:2)."
+    "prevalence": "majority",
+    "summary": "Barnes holds that the clause about the stone's size belongs to the previous verse as the reason for the women's question, and describes the tomb as large enough to walk into, like a vault. Ellicott finds that reading less natural and takes the remark instead as the evangelist explaining why he wrote rolled away rather than taken off; he registers without comment that where one account says an angel of the Lord this one says a young man. Robertson keeps the clause with what follows, as the writer accounting for how startling the sight was, notes the vivid present tense against the parallel's plain past, and makes the divergence between a young man, an angel and two men into an argument that the narratives are independent and so strengthen the evidence rather than weakening it; he also works the angel's words, the verb quieting the women being the one that described their amazement, the title Nazarene used to identify Jesus by the name they knew, the participle for the crucified one carrying what was his shame and became his glory, and the announcement a bare past against the apostle's later perfect."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: the rolled-away stone figures the opening of the mysteries once veiled under the law written on stone."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the stone was rolled away",
-   "for it was very great",
-   "the open tomb",
-   "the divine hand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "An angel as a young man in white (Mark), 'angel' in Matthew, 'two men' in Luke — variations showing independent witness, strengthening the resurrection evidence (Robertson); the women utterly amazed."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory/Chrysologus: the right-hand seat = everlasting life, the white robe of heavenly light, the young man the 'age of joy' — the resurrection has no old age."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a young man in white",
-   "sitting on the right side",
-   "they were affrighted",
-   "independent witness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The angel stills their fear and announces the simple fact: 'He is risen; he is not here,' pointing to the empty place as proof; 'the crucified' become his crown of glory (Galatians 6:14, Robertson)."
-   },
-   {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: the Crucified is the Risen One — his shame wipes not the glory but the glory the reproach; the body risen, not stolen."
+    "summary": "Gill cites the rule by which Jewish sepulchres were cut large enough for people to enter, which is what makes the women's going in intelligible."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke agrees with Barnes on the punctuation, citing a Greek manuscript, three copies of the old Latin, the Syriac and an early historian, and draws the consequence that without access to the body the spices were useless; on the name of reproach he observes that Nazarene was an insult kept by the angel and the apostles because he was crucified under it, as Quaker and Puritan and Methodist were flung in derision and became ordinary titles, and concludes that a man need not be scrupulous about what he is called so long as the name carries no evil."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Where does the clause about the stone being very great belong?",
+    "positions": [
+     {
+      "position": "To the previous verse, as the reason for the women's question",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "To this verse, as the writer explaining his choice of the words rolled away",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "To this verse, as the writer accounting for how startling the open tomb was",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Treats the disagreement among the accounts over the figure in the tomb as evidence of their independence, and so as strengthening rather than weakening the case for the resurrection."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Turns the title Nazarene into a general rule about nicknames, noting that Quaker, Puritan and Methodist were all originally thrown in derision."
+   }
+  ],
   "themes": [
-   "be not affrighted",
-   "he is risen, he is not here",
-   "behold the place",
-   "the Crucified and Risen Christ"
+   "And when they looked, they saw that the stone was rolled away: for it was very great.",
+   "And entering into the sepulchre, they saw a young man sitting on the right side, clothed in a long white garment; and they were affrighted.",
+   "And he saith unto them, Be not affrighted: Ye seek Jesus of Nazareth, which was crucified: he is risen; he is not here: behold the place where they laid him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  },
  "7": {
@@ -272,417 +233,348 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
+   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Wesley"
   ],
+  "range": "7-8",
+  "pericope_label": "But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you. And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'And Peter' (only in Mark, gratefully remembered by Peter behind this Gospel) — a tender mercy to the penitent denier, assuring him he is still owned and loved by the risen Christ (Barnes, Gill)."
+    "summary": "Robertson takes the naming of Peter as surviving only here because Peter remembered the message gratefully, and holds that the later meeting with him that day turned doubt into certainty among the apostles; he presses the run of imperfects in the flight, the trembling that kept hold and the fear that continued and so explains the continued silence, and notes that the words here are trembling and ecstasy where the parallel has fear and great joy. He then sets out the state of the text: the two oldest and best Greek manuscripts stop at this verse, three Armenian copies stop here, some witnesses carry a shorter close and others one ending or another or both, which he judges to argue strongly against the genuineness of what follows, while refusing to believe the book was meant to end on a sentence about fear. Barnes forbids the inference that Peter had ceased to be a disciple, reading the words as his disciples and especially Peter, and finds in the message the proof that the Lord who might justly have cast him off loved him still. Ellicott renders the clause literally, that trembling and amazement seized them."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "reformed",
     "prevalence": "single",
-    "summary": "Henry: a sight of Christ welcome to the true penitent, and the penitent welcome to Christ; past sins, no longer pleasing, cease to hurt (Pseudo-Jerome)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "tell his disciples and Peter",
-   "goeth before you into Galilee",
-   "mercy to the penitent",
-   "boundless grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "summary": "Gill gives the message a pastoral motive, that Peter might be neither afraid nor ashamed to come with the others, and connects its appearing here alone with the tradition that this Gospel was published under Peter's own eye, so that the man with most to lose by the telling left in what aggravated his crime; he notes too that one version puts his name first, and that the word for quickly is missing from several old versions."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The women flee trembling, mixed fear and joy too great for speech (reconciled with Matthew's 'great joy,' Augustine); the two oldest MSS (Aleph, B) end here, gravely doubting the genuineness of vv.9-20 (Robertson)."
+    "summary": "Clarke takes the separation at face value and presses it hard, holding that Peter had forfeited the discipleship and every right belonging to an apostle by the denial, and is named on his own precisely as a penitent to be restored; Wesley says only what amazing goodness this was in one so often denied."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why is Peter named apart from the disciples?",
+    "positions": [
+     {
+      "position": "Because he had forfeited the discipleship by denying his Lord, and is named separately as a penitent",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Not because he had ceased to be one: the words mean his disciples and especially Peter",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "As a pastoral kindness, so that shame should not keep him from coming with the rest",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Judges the manuscript evidence to argue strongly against the genuineness of the verses that follow, while holding that the book cannot have been meant to end here, and proposing an interruption or a lost leaf at the end of the roll."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Explains the detail as Peter's own, on the tradition that this Gospel was published under his eye, so that nothing aggravating his crime was left out."
+   }
+  ],
   "themes": [
-   "fled trembling and amazed",
-   "said nothing for fear",
-   "fear hindering service",
-   "the textual crux"
+   "But go your way, tell his disciples and Peter that he goeth before you into Galilee: there shall ye see him, as he said unto you.",
+   "And they went out quickly, and fled from the sepulchre; for they trembled and were amazed: neither said they any thing to any man; for they were afraid."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
+   }
   }
  },
  "9": {
   "voices": [
-   "Augustine of Hippo",
+   "Augustine",
    "Bede",
    "Gregory",
    "Theophylact",
    "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
+   "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
-   "John Wesley"
+   "John Calvin"
   ],
+  "range": "9-11",
+  "pericope_label": "Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils. And she went and told them that had been with him, as they mourned and wept. And they, when they had heard that he was alive, and had been seen of her, believed not.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Christ appeared first to Mary Magdalene; but the grammatical voices note vv.9-20 are absent from the oldest MSS (Vaticanus, Sinaiticus), gravely doubted as the longer ending (Robertson, Clarke)."
+    "summary": "Robertson thinks the note of time more probably marks the rising while granting the other reading makes good sense, and piles up the internal evidence for another hand: the verb used here of the Risen Christ is used nowhere else of him, the preposition governing the casting out of demons is otherwise always different, the pronoun for she stands absolutely only here, the phrase for those who had been with him occurs in no other Gospel, and the description of Mary belongs properly to an earlier introduction. Barnes makes the disciples' refusal to believe into evidence, since men who disbelieved the report were plainly not expecting a resurrection, not easily deceived, and convinced by nothing short of the clearest proof."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Receiving the verses, the fathers read Mary's priority as grace abounding over sin (Romans 5:20): she who first tasted death's guilt becomes the first herald of life (Theophylact, Bede); the seven devils figure all vices (Gregory)."
+    "summary": "Gill holds the note of time marks the rising and not the appearing, the other pointing having been adopted only to avoid a supposed clash with another account which he denies exists, and identifies those told as the wider company. Calvin allows the disciples no credit at all: bound by a shameful indifference, they failed to recall what they had heard again and again, and to treat as a dream what the Son of God had so often promised was stupidity; he adds that all the women carried the message, one evangelist singling out Mary without contradicting the rest."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports that everything from this verse to the end is absent from a famous Greek manuscript and anciently from many others, and preserves the alternative close found in a later Syriac margin, in which the women report briefly to those with Peter and the Lord afterwards sends out through them the holy and incorruptible preaching of eternal salvation; he notes that the mourners were not the eleven only but the wider company, weeping for their Master and for having abandoned him."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: the forgiven woman who loved much was honoured as the first to see the risen Christ — the closer we cleave to Christ, the sooner we see him."
+    "summary": "Henry says the honour of seeing him first went to the woman forgiven much and loving much, and draws the rule that those who cleave closest see him soonest and see most of him."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact proposes the alternative pointing, stopping after the rising and reading the day with what follows, and offers for the seven devils the sharper reading of seven spirits set against the seven virtues, a spirit without fear, without wisdom, without understanding, each opposed to a gift of the Spirit."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine, looking ahead to the two on the road, identifies the farm house with the village named elsewhere and explains the other form by the holding of their eyes, something laid on them and left until the breaking of bread. Gregory takes the seven devils for totality, as seven days stand for all time, so that they mean every vice, adds the figure of Samson carrying off the gates of Gaza for the Redeemer taking the gates of hell, and turns the disciples' slowness into our strength, since the doubt drew out the many proofs by which we are steadied. Bede sets Mary's priority against the beginning, a woman having brought man into sin, so that she who first tasted death should first see the rising and the channel of guilt become the channel of grace. Pseudo-Jerome puts her with the harlots and publicans who enter the kingdom before the synagogue, and reads the walking of the two as the labour of the active life, where faith sees through a glass."
    }
   ],
   "debates": [
    {
-    "question": "Are verses 9-20 (the longer ending) genuine?",
-    "sides": [
+    "question": "How should the disciples' refusal to believe be judged?",
+    "positions": [
      {
-      "position": "Gravely doubted — absent from the oldest and best MSS (Sinaiticus, Vaticanus)",
-      "holders": [
-       "Robertson",
-       "Clarke"
+      "position": "As evidence: men so hard to convince were not expecting it and were not easily deceived",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "Received as Scripture and expounded by the ancient fathers and the mass of MSS",
-      "holders": [
-       "Augustine",
-       "Gregory",
-       "Bede",
-       "Henry"
+      "position": "As our strength rather than their weakness, the doubt having drawn out the proofs",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "As shameful indifference and stupidity, since the thing had been promised them repeatedly",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the note of time go with the rising or the appearing?",
+    "positions": [
+     {
+      "position": "With the rising; the other pointing was adopted only to avoid an imagined clash",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "With the appearing, stopping the sentence after the rising",
+      "held_by": [
+       "Theophylact"
+      ]
+     },
+     {
+      "position": "Probably with the rising, though the other makes good sense",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the seven devils?",
+    "positions": [
+     {
+      "position": "Totality: seven stands for all, so every vice",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "Seven spirits set against the seven virtues, each opposed to a gift of the Spirit",
+      "held_by": [
+       "Theophylact"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Assembles five separate points of vocabulary and idiom in these verses to argue that the closing portion is by a hand other than the evangelist's."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Preserves the alternative shorter ending from the margin of a later Syriac copy, in which the Lord sends the incorruptible preaching out from east to west."
+   }
+  ],
   "themes": [
-   "appeared first to Mary Magdalene",
-   "out of whom seven devils",
-   "grace abounding over sin",
-   "the longer ending"
+   "Now when Jesus was risen early the first day of the week, he appeared first to Mary Magdalene, out of whom he had cast seven devils.",
+   "And she went and told them that had been with him, as they mourned and wept.",
+   "And they, when they had heard that he was alive, and had been seen of her, believed not."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mary reports to the mourning, weeping disciples (their grief fulfilling John 16:20); the unusual phrase 'them that had been with him' is among the marks suggesting another hand for the longer ending (Robertson)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: no better news for disciples in tears than the resurrection — we should comfort mourners with what we have seen of Christ."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "she went and told them",
-   "as they mourned and wept",
-   "comforting the mourners",
-   "the first herald"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples' disbelief proves they did not expect the resurrection and were not easily deceived (Barnes); their slowness providentially strengthens the credibility of their later testimony (Henry)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a culpable, shameful indifference — they held as a dream what the Son of God had so often promised and eye-witnesses confirmed; unbelief robbed them of sound understanding."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "believed not",
-   "not easily deceived",
-   "culpable yet useful unbelief",
-   "credibility of the witnesses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
   "voices": [
    "John Gill",
+   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
    "John Wesley"
   ],
+  "range": "12-13",
+  "pericope_label": "After that he appeared in another form unto two of them, as they walked, and went into the country. And they went and told it unto the residue: neither believed they them.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Emmaus appearance 'in another form' — not a changed face but their eyes held from recognizing him (Luke 24:16); told in full by Luke; his countenance glorified, not lost (Chrysologus, Henry)."
+    "summary": "Lightfoot states the difficulty without softening it: the two returning from that walk found the company already saying the Lord was risen indeed and had appeared to Simon, and the grammar of that other account refers the words plainly to the eleven and those with them, so the same evening has them announcing the resurrection in one telling and refusing to believe it in another. Barnes fixes the destination, explains the other form as meaning only that he looked unlike himself, and reads the word for the rest as those who stayed in the city. Robertson rules out a transfiguration, noting that the other account puts the failure not in a changed body but in eyes that were held, observes that the connecting phrase occurs nowhere else in this Gospel, lets the clash between the accounts stand as evidence that they are not copied from one another, and suggests that belief was not uniform in the room, an element discrediting every report persisting as it did later on the mountain in Galilee."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Pseudo-Jerome: the walking disciples figure the believer's pilgrimage — now seeing Christ through a glass, hereafter face to face."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "appeared in another form",
-   "two on the road to Emmaus",
-   "their eyes held",
-   "seeing through a glass"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies from the fuller account what these two lines compress, the stranger joining the two on the road, opening the Scriptures as they walked, sitting down to meat and being recognised at that moment, and takes the rest to mean those who had stayed behind."
+   },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The two from Emmaus report, still met with disbelief; the tension with Luke 24:34 ('risen indeed') resolved as a wavering, conjectural hope, not yet full faith (Lightfoot, Wesley); the gradual proof providential (Henry)."
+    "summary": "Clarke thinks Lightfoot's criticism worth setting out at length and reproduces it whole; Wesley takes the gentler line, that the testimony of these two added to what Peter had already said moved them somewhat, so that what is denied is a settled belief rather than any belief at all."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How can the eleven both be announcing the resurrection and refusing to believe it on the same evening?",
+    "positions": [
+     {
+      "position": "The clash is real and grammatical: the other account's words belong to the eleven and those with them",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "Belief was not uniform in the room; an element still discredited every report",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "What is denied is a settled belief, not any belief: they were moved somewhat but not convinced",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Reproduces Lightfoot's rabbinic criticism entire rather than summarising it, as he does elsewhere in this chapter."
+   }
+  ],
   "themes": [
-   "told it unto the residue",
-   "neither believed they them",
-   "harmonizing with Luke",
-   "gradual proof"
+   "After that he appeared in another form unto two of them, as they walked, and went into the country.",
+   "And they went and told it unto the residue: neither believed they them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.36
+   }
   }
  },
  "14": {
   "voices": [
-   "Glossa Ordinaria",
+   "Gloss",
    "Gregory",
    "Pseudo-Jerome",
-   "Augustine of Hippo",
+   "Augustine",
    "Theophylact",
    "Bede",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ appears to the eleven at meat (cf. Luke 24:36-43; John 20:19), rebuking their unbelief; Augustine harmonizes 'the last time' and Thomas's absence."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The rebuke of love — that faith replace unbelief, a heart of flesh the stony heart (Pseudo-Jerome); the eating proves the reality of the risen flesh (Gregory)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: while Christ comforts his people, he sees it needful to rebuke their hardness in distrusting his promise — a correcting love."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "appeared unto the eleven",
-   "upbraided their unbelief",
-   "rebuke of love",
-   "the reality of the risen flesh"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Great Commission (cf. Matthew 28:16-20): preach to all the world, every creature — Gentile as well as Jew, breaking every barrier (Barnes); the universal reversal of 'go not to the Gentiles' (Wesley)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Gregory: 'every creature' = every man, for whose sake all was created; the preaching once thrust from Judaea now goes to all."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "go ye into all the world",
-   "preach the gospel to every creature",
-   "the Great Commission",
-   "universal scope"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -691,58 +583,149 @@
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "14-16",
+  "pericope_label": "Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen. And he said unto them, Go ye into all the world, and preach the gospel to every creature. He that believeth and is baptized shall be saved; but he that believeth not shall be damned.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Belief and baptism unto salvation, unbelief unto condemnation; the second clause omits baptism — condemnation rests on unbelief alone (Robertson, Wesley); Barnes stresses baptism's importance though not absolute necessity."
+    "summary": "Barnes presses the rebuke hardest as evidence, men this hard to convince having not conspired, having given all up as lost at the death and expected nothing, so that their resistance is the strongest proof the rising was real; on the commission he draws out how hard the reach to the Gentiles was, a command it took a special revelation to make Peter obey, and states the rule that wherever there is man the Gospel is to be preached. Robertson thinks this another report of the charge given on the mountain in Galilee, and argues from the silence of the second half, which threatens only the unbeliever and says nothing of the unbaptized, that condemnation rests on disbelief alone and baptism is the picture of the new life rather than the means of it, adding that so weighty a sacramental doctrine would need firmer ground than a disputed ending. Ellicott notes that much here is distinct enough to suggest a different occasion, and cautions that the word rendered damned means condemned and need not carry the irreversible sense English has acquired. Lightfoot shows every creature to be ordinary rabbinic usage for mankind and particularly for the Gentiles."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: baptism is the testimony/sign of salvation joined to faith, not half its cause — not necessary in itself but with respect to obedience; faith the decisive thing."
+    "summary": "Gill places the commission forty days later and in Galilee rather than on the first evening. Calvin agrees the reproof fits the first evening and disputes the meal besides, a laid table at that hour being improbable and not squaring with the account in which he asks whether they have anything to eat, so that the word should mean only that they were gathered; he rejects as forced the attempt to narrow the rebuke to Thomas."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says in fewer words what Barnes says at length, that so sceptical a company would credit nothing without the fullest evidence, so their unbelief proves the Gospel, and he follows Lightfoot in taking every creature of the Gentile world. Wesley presses the absence of any limit further: if any creature in any age has not heard, then either those who should have preached or those who should have heard, or both, have made void the counsel of God."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry adds a motive the others do not, that part of what kept them from believing was pride, the thought that if he were risen he would surely have shown himself first to them."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact takes every creature of believing and unbelieving alike, and holds that believing is not enough, the baptized having a perfect salvation the catechumen has not reached. Cyril of Jerusalem piles up the promises to the believer, who is not judged but has passed from death into life."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Gloss marks this the closing appearance. Augustine will not take the last time to mean the last of all, since the final meeting came forty days later when such a rebuke would make no sense, and reads it as the last showing of that day at nightfall. Gregory takes the eating as the point, since he ate and then ascended, the act declaring the truth of the flesh, and reads every creature of man alone, who shares something with each order, existence with stones, life with trees, feeling with animals, understanding with angels. Pseudo-Jerome reads the rebuke as surgery, faith put in place of unbelief and a heart of flesh in place of the stony one. Bede presses the baptismal logic to infants, who cannot believe for themselves and so believe by others, as they drew from others the sin baptism remits."
    }
   ],
   "debates": [
    {
-    "question": "Is baptism essential to salvation?",
-    "sides": [
+    "question": "Is baptism necessary to salvation?",
+    "positions": [
      {
-      "position": "No — condemnation rests on unbelief alone (baptism omitted in the second clause); baptism is the sign, not the cause",
-      "holders": [
-       "Robertson",
-       "Calvin",
-       "Wesley"
+      "position": "Yes: believing alone leaves the catechumen short of a perfect salvation",
+      "held_by": [
+       "Theophylact",
+       "Bede"
       ]
      },
      {
-      "position": "Strongly important though not absolutely necessary — its neglect endangers the soul",
-      "holders": [
-       "Barnes"
+      "position": "No: the threat names only the unbeliever, so condemnation rests on disbelief and baptism is the picture and not the means",
+      "held_by": [
+       "A.T. Robertson",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Which occasion is the commission given on?",
+    "positions": [
+     {
+      "position": "The first evening, the same gathering as the rebuke",
+      "held_by": [
+       "Augustine",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "Forty days later, in Galilee",
+      "held_by": [
+       "John Gill",
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Possibly a different occasion again, the report being distinct from the parallel",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does every creature mean?",
+    "positions": [
+     {
+      "position": "Man alone, who shares something with every order of creature",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "Mankind, and particularly the Gentiles, by ordinary rabbinic usage",
+      "held_by": [
+       "John Lightfoot",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Believing and unbelieving alike",
+      "held_by": [
+       "Theophylact"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "claim": "Takes the absence of any limit in the command to mean that wherever the Gospel has not reached, preachers or hearers or both have made void the counsel of God."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Traces part of the apostles' unbelief to pride, since they assumed that if he were risen he would have appeared first to them."
+   }
+  ],
   "themes": [
-   "he that believeth and is baptized",
-   "he that believeth not shall be damned",
-   "baptism the sign not the cause",
-   "faith the decisive thing"
+   "Afterward he appeared unto the eleven as they sat at meat, and upbraided them with their unbelief and hardness of heart, because they believed not them which had seen him after he was risen.",
+   "And he said unto them, Go ye into all the world, and preach the gospel to every creature.",
+   "He that believeth and is baptized shall be saved; but he that believeth not shall be damned."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "17": {
@@ -755,108 +738,114 @@
    "John Calvin",
    "John Wesley"
   ],
+  "range": "17-18",
+  "pericope_label": "And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues; They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The signs (casting out demons, new tongues — fulfilled at Pentecost) wrought 'in Christ's name,' not the apostles' own (Barnes); necessary to establish religion, not for all believers nor now (Barnes, Gill)."
+    "summary": "Barnes narrows the promise to the apostles and those of the first age with like power, and adds a rule of interpretation, that it is kept if the signs followed in the case of any who believed, so that an objector must prove they never happened before he can call it unfulfilled; he hedges the promise with the condition that such things happen when needed to establish religion, and points to the viper at Melita as the recorded instance. Ellicott observes that the promise of new tongues is the only place in any Gospel where the Pentecostal gift takes this definite form, recalls that authority over serpents and scorpions had been granted once before, and can find no instance of the drinking in the New Testament at all, offering only the tradition of the poisoned cup handed to the fourth evangelist. Robertson notes that the word new is doubtful in the best text, reports the judgement that these verses fall away sharply from the level of the farewell words in the first Gospel and carry the reader into the twilight of apocryphal storytelling, and, taking the evidence against the genuineness of the ending to be nearly conclusive, holds it unwise to build anything on them."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: miracles promised only for a time, to give lustre to the new gospel, then ceasing — later forged miracles opened the door to Satan's impostures (Matthew 24:24)."
+    "summary": "Gill says not all believers and not always, but some, and for a time, the signs being needed to establish the Gospel, with preaching ministers chiefly in view, and reports copies that add in their hands to the clause about serpents. Calvin explains why the promise was made at that moment, that the disciples might not think the power inseparable from the bodily presence then leaving them, and insists it was never held by every one of them, the gifts having been distributed variously and the working of miracles falling to few."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Gregory: the Church daily does in spirit what the apostles did in body — casting out devils, speaking a new language by the holy mysteries."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke corrects the verb, which means accompany rather than follow, names the apostles and the miraculously endowed of the first age as those intended, and reads the clause about poison as covering what is drunk by mistake or accident. Wesley breaks with all the rest: the believing here is the same believing named in the sentence before, since it was not one faith by which the apostle was saved and another by which he worked wonders, and in every believer still there is a latent power of the same kind, every effect of prayer being in truth miraculous, though in most it goes unexerted through smallness of faith and the unworthiness of the world; miracles were once helps to faith and have now become an object of it. On the poison he sets a firm limit, that it is not to be by a man's own choice, since God never calls anyone to try such experiments."
    }
   ],
   "debates": [
    {
-    "question": "Are the miraculous signs temporary or perpetual?",
-    "sides": [
+    "question": "Who was promised these signs?",
+    "positions": [
      {
-      "position": "Temporary — to confirm the new gospel, then ceasing",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Barnes"
+      "position": "Only some believers, and only for a time, chiefly the preaching ministers of the first age",
+      "held_by": [
+       "John Gill",
+       "Albert Barnes",
+       "Adam Clarke",
+       "John Calvin"
       ]
      },
      {
-      "position": "An ongoing spiritual fulfilment in the Church / latent power in faith",
-      "holders": [
-       "Gregory",
-       "Wesley"
+      "position": "Every believer, in whom the same power remains latent though usually unexerted",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the clause about drinking poison to be taken?",
+    "positions": [
+     {
+      "position": "Of what is swallowed by mistake or accident",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Never by a man's own choice, God calling no one to try such experiments",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "There is no New Testament instance of it at all, only a later tradition",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Declines the passage altogether, taking the evidence against the genuineness of this ending as nearly conclusive and the handling of vipers and poison as the twilight of apocryphal story."
+   },
+   {
+    "voice": "John Wesley",
+    "claim": "Holds that faith in every believer still carries a latent miraculous power, every effect of prayer being really miraculous, and that miracles have passed from being helps to faith into being an object of it."
+   }
+  ],
   "themes": [
-   "these signs shall follow",
-   "cast out devils",
-   "speak with new tongues",
-   "temporary or perpetual"
+   "And these signs shall follow them that believe; In my name shall they cast out devils; they shall speak with new tongues;",
+   "They shall take up serpents; and if they drink any deadly thing, it shall not hurt them; they shall lay hands on the sick, and they shall recover."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Serpent-immunity (Paul at Malta, Acts 28:5) and healing the sick (Acts) authenticated the apostolic mission; no warrant for presumptuous testing (Wesley); grave doubt over these verses' genuineness urges caution (Robertson)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "take up serpents",
-   "drink any deadly thing",
-   "lay hands on the sick",
-   "apostolic credentials"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "Pseudo-Jerome",
-   "Augustine of Hippo",
+   "Augustine",
    "Gregory",
    "Bede",
    "Theophylact",
@@ -869,86 +858,120 @@
    "John Wesley",
    "Cyril of Jerusalem"
   ],
+  "range": "19-20",
+  "pericope_label": "So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God. And they went forth, and preached every where, the Lord working with them, and confirming the word with signs following. Amen.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The ascension (located by Luke on Olivet after forty days) and session at God's right hand — the highest honour and sovereignty (Barnes; Acts 7:55; Hebrews 1:3); the author passes into theology (Swete)."
+    "summary": "Robertson supplies what the account leaves out, since nothing here tells when or where and the third Gospel alone sets the scene on Olivet at the end of the forty days; he ends on the text again, noting that three words in the last sentence are found nowhere else in the Gospels but are common in the apostle's letters, and setting out the shorter ending some manuscripts carry instead. Barnes warns that God has no hands and that Jesus sits in no direction, the phrase being human speech for the highest honour, as the seat beside a prince was reckoned, and lists the ways the Lord worked with them, by miracles, by removed obstacles and by success given the message."
    },
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Christ ascends by his own power, unlike Elijah's chariot (Gregory); the session signifies rule and the coming judgeship; the 'right hand' is power received as man, not bodily limbs (Augustine)."
+    "summary": "Gill traces the outward movement from Galilee to the city, then to Pentecost, then out again under the persecution after Stephen. Calvin observes that the first evangelist says nothing of the ascension and this one nothing of its place or manner, and draws a reason from the pattern of the appearances, that as the risen Lord did not show himself indiscriminately he did not let everyone witness his going, meaning the mystery to be known by preaching rather than seen with eyes; on the session he holds the phrase a metaphor for the power next to God, amounting to God's deputy, and insists it was added to tell us Christ was raised not to rest at a distance from us but to govern the world for the salvation of believers."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke assumes the forty days of converse, divides the working together into an inward illumination and an outward conveying of the word to the hearer, and then adds a limit his fellow Methodist would not, that miraculous powers are no longer requisite since the Gospel has been sufficiently confirmed, though the co-operation itself remains indispensable, without which no man preaches successfully and no soul is saved. Wesley pauses on the title Lord as peculiarly fitting here."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: sitting is rest (his work finished) and rule (his kingdom possessed) — glorified with the glory he had before the world."
+    "summary": "Henry finds two postures in one, rest because the work was finished and rule because the kingdom was entered, and hears the heavenly hosts receive him in state."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact takes the last clause for a rule, that words are made good by deeds, and turns it into a prayer that Christ would work with us until we are perfect. Cyril of Jerusalem gathers the testimonies to the session at the right hand from the other evangelist and two apostles."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Pseudo-Jerome puts it as a symmetry, that he who came down from heaven to free our weakness went up above the heavens. Augustine weighs whether the opening words fix this as the last speech on earth, notes that the text does not read after he had thus spoken so that the clause might cover all the discourses, and settles for the stricter sense only because of arguments made earlier. Gregory sets the going beside the older ascent, Elias raised only into the air and carried to a hidden region to wait until he returns to pay the debt of death, and mounting in a chariot because a mere man needs help from outside himself, where the Redeemer used no chariot and no angels. Bede observes that this Gospel, beginning later with the preaching of John, also runs further forward, to the years in which the apostles sowed the word through the world."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the opening clause mark this as the last discourse on earth?",
+    "positions": [
+     {
+      "position": "Probably, though the wording does not compel it, since it does not read after he had thus spoken",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "The account does not say: only the third Gospel supplies the time and the place",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the seat at the right hand to be understood?",
+    "positions": [
+     {
+      "position": "As human speech for the highest honour, God having no hands and no direction",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "As a metaphor for the power next to God, amounting to God's deputy, given so that we should know he governs the world for us and not rest at a distance",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "As two postures at once, rest for a finished work and rule over an entered kingdom",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Gregory",
+    "claim": "Contrasts the two ascents, Elias needing a chariot because a mere man requires help from outside himself, where the Redeemer was borne up by his own power."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "States plainly that miraculous powers are no longer requisite, the Gospel having been sufficiently confirmed, which sets him against Wesley's reading of the same promise earlier in the chapter."
+   }
+  ],
   "themes": [
-   "received up into heaven",
-   "sat on the right hand of God",
-   "the ascension",
-   "rest and rule"
+   "So then after the Lord had spoken unto them, he was received up into heaven, and sat on the right hand of God.",
+   "And they went forth, and preached every where, the Lord working with them, and confirming the word with signs following. Amen."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The apostles preach everywhere, the Lord working with them and confirming the word by signs (Barnes); the cooperation internal and external, still needful for successful preaching though miracles have ceased (Clarke); 'Amen' likely a later addition."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the apostles labour, God works effectually; the signs that follow — the world's reformation, idolatry's fall, sinners converted — are the gospel's standing proof."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "preached every where",
-   "the Lord working with them",
-   "confirming the word with signs",
-   "divine-human cooperation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

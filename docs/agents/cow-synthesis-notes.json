@@ -87315,6 +87315,81 @@
         "2"
       ],
       "note": "Truncation cap of exactly 200 words on Keil and Delitzsch at 22 of the 40 keys and on Gill at keys 2, 9, 10, 11, 14, 17, 18, 22, 23, 28, 30, 31, breaking mid-clause. The Keil and Delitzsch blocks also repeat themselves across adjacent keys, the same paragraph appearing at keys 6 and 7, at 24 through 28, and at 31 and 32, so a tile spanning those keys sees the same text more than once and must not count it twice as corroboration."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "5",
+        "7",
+        "16",
+        "19"
+      ],
+      "note": "Cyril of Jerusalem is MIXED in this chapter, and it contains the clearest single demonstration yet that the defect is per key and not per father. The SAME block, on the Son's sitting at the right hand of the Father, appears at key 5 and at key 19. At key 19 it is exactly on the verse. At key 5, which is the young man sitting in the tomb, it is foreign. One identical block, correct in one place and wrong in another. Also residue: key 2 (the Gentile Church and the Psalmist) and key 7 (the Son of God is Lord, born in Bethlehem). Genuine and used: key 16 (believe on the Son, he that believeth is not judged) and key 19. As in luke 3, excluded_voices cannot be used for him: synthesis_qa.split_voices does not emit the name Cyril of Jerusalem from these blobs, so a declared exclusion is rejected as naming an absent block. That tooling gap now blocks honest declaration of this father's residue in two chapters and should be fixed."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "16",
+      "verses": [
+        "2",
+        "12"
+      ],
+      "note": "Adam Clarke reproduces John Lightfoot wholesale twice in this chapter rather than summarising him. At key 2 he prints Lightfoot's rabbinic note on the divisions of the twilight, the hind of the morning and the saying about Israel's redemption, prefaced with an acknowledgement. At key 12 he prints Lightfoot's criticism of the harmonisation problem entire. Both are attributed, so this is not plagiarism and not a scrape defect, but it matters for voice counting: a reader of the raw catena would think two witnesses agree where in fact one is quoting the other. The prose attributes the material to Lightfoot and credits Clarke only with the judgement that it was worth reprinting."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "16",
+      "verses": [
+        "8",
+        "9",
+        "17",
+        "20"
+      ],
+      "note": "The textual question about the longer ending is carried by the witnesses themselves and is recorded in the prose rather than asserted by the synthesis. Robertson at key 8 sets out the manuscript facts, that the two oldest and best Greek copies and three Armenian copies stop at verse 8, that some witnesses carry a shorter close, and that others give one ending or another or both; he judges this to argue strongly against the genuineness of verses 9-20 while refusing to believe the book was meant to end on a sentence about fear, and proposes an interruption or a leaf torn from the end of the roll. He adds internal evidence at keys 9, 10 and 20: the verb used of the Risen Christ, the preposition with the casting out of demons, the absolute pronoun, the phrase for those who had been with him, and three words in the last sentence that occur nowhere else in the Gospels but are common in Paul. At key 17 he reports Bruce's judgement that the passage is a lapse from the level of the parallel farewell and that vipers and poison belong to the twilight of apocryphal story. Clarke at key 9 independently reports the absence from Codex Vaticanus and preserves the shorter ending from a later Syriac margin; Robertson quotes the same shorter ending from L at key 20. The chapter was tiled and written normally: the prose reports these judgements as the witnesses' own and takes no editorial position on the ending."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "16",
+      "verses": [
+        "17",
+        "20"
+      ],
+      "note": "A within-school split between the two wesleyan-arminian witnesses, and the sharpest disagreement in the chapter. At verse 17 Wesley holds that the believing which the signs follow is the same believing named in the verse before, since it was not one faith by which Paul was saved and another by which he worked wonders, and that in every believer still there is a latent power of the same kind, every effect of prayer being really miraculous, though usually unexerted through smallness of faith and the unworthiness of the world; miracles were once helps to faith and are now an object of it. At verse 20 Clarke states the opposite flatly: miraculous powers are no longer requisite, the Gospel having been sufficiently confirmed, although the divine co-operation itself remains indispensable, without which no man preaches successfully and no soul is saved. Gill, Barnes and Calvin all stand with Clarke in confining the signs to some believers of the first age. Both positions are carried, in the tiles covering 17-18 and 19-20 respectively, and the school summary for wesleyan-arminian names the split rather than papering over it."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "16",
+      "verses": [
+        "7",
+        "12",
+        "14"
+      ],
+      "note": "Three further splits carried in this chapter. (1) Why Peter is named apart: Clarke holds he had forfeited the discipleship and every apostolic right by the denial and is named separately as a penitent; Barnes expressly forbids that inference, reading the words as his disciples and especially Peter; Gill gives a pastoral motive, that shame should not keep him away. (2) How the eleven can be both announcing the resurrection and refusing to believe it on the same evening: Lightfoot states the clash as real and grammatical, since the participle in the other account refers the announcement plainly to the eleven; Robertson lets it stand as evidence that the narratives are independent and suggests a persisting unbelieving element; Wesley distinguishes degrees, so that what is denied is a settled belief rather than any belief. (3) Whether baptism is necessary to salvation: Theophylact and Bede argue yes from this verse, Bede extending it to infants who believe by others; Robertson argues no from the silence of the second clause, which threatens only the unbeliever, and adds that so weighty a sacramental doctrine would need firmer ground than a disputed ending; Wesley agrees, holding the unbeliever lost whether baptized or not."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "16",
+      "note": "A convergence running the length of this chapter, from witnesses who could not have coordinated: apparent weaknesses in the narrative are repeatedly turned into evidence for it. Barnes at verse 1 argues that women carrying embalming spices expected no rising, and that their not expecting it strengthens the case; Clarke says the same from their failure to remember what they had been told. Barnes at verse 11 makes the disciples' disbelief a proof that they were not easily deceived and had not conspired, and repeats it at verse 14. Gregory, twelve centuries earlier, had put it that their slowness is less their weakness than our strength, the doubt having drawn out the proofs by which we are steadied. Robertson at verse 5 makes the divergence between a young man, an angel and two men into an argument that the accounts are independent, and again at verse 13 over the welcome the two received. Five witnesses across three schools and many centuries running the same argumentative move is worth recording as a pattern of the chapter rather than of any one commentator."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "16",
+      "note": "Legacy-unversioned chapter regenerated wholesale from the catena as eight pericope tiles: 1-3, 4-6, 7-8, 9-11, 12-13, 14-16, 17-18, 19-20. The source has 20 keys with no gaps, so every verse is covered and no tile spans a gap. No tile is thin and no excluded_voices are declared; the Cyril of Jerusalem residue at keys 2, 5 and 7 could not be declared for the tooling reason recorded in the source-defect note, so he is simply not declared as a voice on the tiles covering those keys, and is declared only on the two tiles where his blocks are genuine. Catena blocks in this chapter are runs rather than single entries: the block labelled Gregory at key 1 carries Severianus, the block labelled Bede at key 9 carries Theophylact, the block labelled Chrysostom-style runs at keys 14 and 19 carry Theophylact and Severianus. Voices were declared from the content of the runs, not the block labels; names appearing only inside another witness's run and not catena voices in their own right (Severianus, Chrysologus, Bruce, Swete, Westcott and Hort, Grotius) are cited as the witnesses cite them and are not declared. Every entry self-graded A on both compress and ttr; the word window held on all eight; the bidirectional voice-citation check was clean; no entry contains strong tags, non-ASCII beyond the whitelist, or bare book-and-number scripture references."
     }
   ]
 }
