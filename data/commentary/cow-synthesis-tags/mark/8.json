@@ -3,6 +3,10 @@
   "voices": [
    "Theophylact",
    "Bede",
+   "Remigius",
+   "Gregory",
+   "Ambrose",
+   "Pseudo-Jerome",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -15,80 +19,71 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A distinct second feeding; the crowd three days fasting, some 'from far' (Mark's detail); the disciples' renewed unbelief, borne with patiently; gather the fragments and be content."
+    "summary": "Robertson defends the second feeding as a distinct event, arguing from the text that both evangelists give both miracles, keep the two different words for baskets apart, and report Jesus afterwards referring to the two incidents with the same distinction preserved."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede makes the compassion a proof of the two natures in one Redeemer and casts out the error of Eutyches by it, since the pity is the feeling of humanity while the satisfying of four thousand with seven loaves is a work of Divine virtue; Gregory turns the clause into a rule for preachers, and Ambrose presses it on the hearer who will not stretch out his hand to receive."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Theophylact: Christ feeds because the crowd was in danger, not to draw food-seekers; allegorises three days = the baptized, seven loaves = the Spirit, four thousand = the four virtues vs the five thousand enslaved to the senses."
+    "prevalence": "single",
+    "summary": "Theophylact answers the question of motive rather than history, that the Lord did not always work miracles about feeding lest men follow him for the sake of food, and would not have worked this one had he not seen the multitude in danger."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke prefers the reading that makes this again a great multitude rather than a very great one, on the authority of many manuscripts and versions and with Griesbach approving, and notes that such a multitude had been gathered once before."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did a second feeding so like the first really happen?",
+    "positions": "Robertson meets the objection head on and holds it easier to conceive that two such miracles were wrought than that the evangelists made a jumble of the whole business, the preserved distinction between the two words for baskets being his evidence; Theophylact does not argue the history but supplies a motive that would explain why such miracles were rare, that men should not follow him for the sake of food."
+   },
+   {
+    "question": "What does the compassion prove?",
+    "positions": "Bede takes it doctrinally, as a distinct operation of Divinity and of Manhood in one and the same Redeemer; Gregory takes it homiletically, that preachers must give the word of consolation lest men sink under the toil of this life for want of the food of truth; Ambrose takes it pastorally, that the good Lord will not dismiss men fasting but the hand must be stretched out to receive."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Theophylact",
-    "note": "Allegorises the numbers — three days = the illumined/baptized, seven loaves = the perfecting Spirit, four thousand = the perfect in the four virtues."
+    "voice": "Ambrose",
+    "view": "Lays the failure on the receiver rather than the giver: whoever refuses to stretch forth his hand cannot find fault with him who pities and divides."
    }
   ],
   "themes": [
-   "feeding of the four thousand",
-   "compassion on the multitude",
-   "the disciples' unbelief",
-   "Christ sends none away fasting"
+   "I have compassion on the multitude",
+   "three days and have nothing to eat",
+   "a distinct operation of Divinity and of Manhood",
+   "the word of consolation"
   ],
+  "range": "1-2",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Christ's compassion for both bodies and souls — teaching them three days and healing their diseases, his bowels yearning toward all."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: pity disposed to relieve (Psalm 145:15); Robertson on the parenthetic 'now three days'; Clarke on their expended provisions."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have compassion",
-   "three days",
-   "Christ's tenderness",
-   "soul and body"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
@@ -96,124 +91,82 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Albert Barnes"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott corrects to 'some are come from afar' (perfect tense); Robertson: this item alone in Mark; Clarke on the danger of fainting on the long road home."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry describes who followed and what it cost them, that the common people had more honesty and therefore more true wisdom than their leaders, that they were generally of the meaner sort with whom Christ was familiar because he had made himself of no reputation, and that true zeal makes nothing of hardships in the way of duty."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: they were now fasting, with a long journey home, their hunger real and immediate."
+    "prevalence": "single",
+    "summary": "Gill states the disciples failure plainly, that they had forgotten the late feeding of five thousand though they now had a smaller number and more provisions, and reads the clause about sending them away fasting as evidence that they had eaten nothing that whole day."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Robertson keep to small words, Ellicott noting that the clause about coming from afar is spoken by our Lord and stands in the perfect tense and that the term for the desert place is abstract and suggests loneliness, Robertson that the detail of their coming from far is in this Gospel alone and that the disciples do not rise to faith in the unlimited power of Jesus after all they have seen."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact agrees that they neither understood nor believed in his virtue notwithstanding former miracles, but makes the response the lesson, that the Lord does not blame them and so teaches us to bear with the ignorance of ignorant men."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke measures the danger in the verse, that divers of them could not possibly reach their respective homes without perishing unless they got food."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "faint by the way",
-   "came from far",
-   "Christ's foresight",
-   "care for the whole way"
+  "debates": [
+   {
+    "question": "How is the disciples question to be judged?",
+    "positions": "Gill and Robertson both state the failure without excuse, that they had forgotten the greater miracle and feel as helpless as before; Theophylact grants the same fact but shifts the weight to Christ response, that he does not blame them, and makes the forbearance the thing to be learned."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Turns the three days without food into an answer to a charge, that after this no Pharisee should say Christ disciples do not fast, and recalls an old saying among the Puritans that bread and the gospel are good fare."
+   }
+  ],
+  "themes": [
+   "whence can a man satisfy these men",
+   "divers of them came from far",
+   "here in the wilderness",
+   "bread and the gospel are good fare"
+  ],
+  "range": "3-4",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the disciples as helpless as before, not risen to faith after all they had seen; Gill: forgetting the first feeding; Ellicott on the 'lonely' wilderness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: they reason only from the visible means, forgetting the late greater miracle with less provision."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "from whence",
-   "the disciples' perplexity",
-   "slowness of faith",
-   "forgetting past mercies"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "5": {
-  "voices": [
-   "John Gill",
-   "Theophylact"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Christ begins from the slender means at hand, asking 'how many loaves' as before the first feeding."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The seven loaves the whole visible store; Christ multiplies what the disciples bring, not despising small means."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how many loaves",
-   "seven",
-   "beginning from the little",
-   "the method of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
@@ -222,36 +175,73 @@
   ],
   "schools": [
    {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Remigius denies that ignorance prompted the question about the loaves, holding that from their answering seven the miracle might be noised abroad and become better known in proportion to the smallness of the number, and draws from the thanksgiving an example for all gifts conferred from heaven; Bede reads the whole distribution allegorically, the breaking as the opening of mysteries and the handing of the loaves to the disciples as the assigning of the spiritual gifts of knowledge to the Apostles."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'sit down' = recline; Robertson on 'brake and gave' (the giving kept on) — the bread multiplying in the breaking, ministered through the disciples."
+    "summary": "Ellicott corrects the posture, noting that the Greek implies the usual Eastern reclining rather than our sitting; Robertson watches the tenses, a single act of breaking followed by an imperfect that keeps the giving going."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem draws the eucharistic resonance with the Supper, where Christ took, gave thanks, brake, and gave."
+    "prevalence": "single",
+    "summary": "Cyril of Jerusalem reads the gesture eucharistically, setting beside it the Apostle account of the night of the betrayal and asking who shall dare doubt after the words spoken over the bread and the cup."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley draws the plainest doctrine, that the miracle was intended to demonstrate that Christ is the true bread which comes down from heaven, since he who was almighty to create bread without means to support natural life could not want power to do the same for spiritual life."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gave thanks and brake",
-   "the bread multiplied",
-   "ministered by the disciples",
-   "eucharistic resonance"
+  "debates": [
+   {
+    "question": "Why did he ask how many loaves they had?",
+    "positions": "Remigius denies ignorance and makes the question a means of publicity, that the answer seven might fix the smallness of the means in the memory of the witnesses; Bede does not treat the question as needing a motive at all and reads the sequence that follows as a figure of the two Testaments."
+   },
+   {
+    "question": "What does the breaking of the bread signify?",
+    "positions": "Bede reads it as the opening of mysteries and the commissioning of the Apostles to distribute the food of life by their ministry; Cyril of Jerusalem reads it as the institution of the Eucharist, appealing to the words over the bread and the cup; Wesley reads it as a demonstration that Christ is the true bread from heaven; Ellicott and Robertson read only the posture and the tenses."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "view": "Marks the difference from the earlier feeding as a difference of covenants, the grass there signifying the letter of the Old Testament full of spiritual grace and the bare ground here the truth and grace of the New, which bids us leave even the earth itself and our temporal goods."
+   }
+  ],
+  "themes": [
+   "how many loaves have ye",
+   "he gave thanks and brake",
+   "set before the people",
+   "the true bread from heaven"
+  ],
+  "range": "5-6",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.66
+   }
   }
  },
  "7": {
@@ -259,126 +249,79 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Mark lists the fishes last, served after the bread; Clarke: a detail not in Matthew; Christ blesses the fishes as the loaves, multiplying both."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the disciples brought the few fishes to Christ, who blessed and distributed them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a few small fishes",
-   "he blessed",
-   "the little multiplied",
-   "an eyewitness detail"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
    "John Wesley"
   ],
   "schools": [
    {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact allegorises the numbers throughout, the three days for the baptized since baptism is called illumination, the seven loaves for spiritual discourses since seven points to the Holy Ghost who perfects all things, and the four thousand for men perfect in the four virtues who being more advanced ate more and left fewer fragments; he also notes that the disciples and not the multitude gathered the remains, and makes it a lesson in contentment."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Pseudo-Jerome makes the seven loaves the gifts of the Holy Spirit and the seven baskets the seven Churches, reads the four thousand as the year of the new dispensation with its four seasons, and takes the small fishes for the books of the New Testament or else for the saints snatched from the troubled waves of this world; Bede reads the distance travelled morally, that those who return to repentance after crimes of the flesh come to the Lord from afar in proportion as they have wandered."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: 'fragments' not 'broken meat'; Robertson on the overplus and the seven baskets (sphyrides, vs the twelve kophinoi); all filled to the full."
+    "summary": "Robertson insists the term for what was left means an overplus or abundance, the remains of broken pieces not used and not merely scraps or crumbs, and notes that this Gospel mentions the fishes last as though they were served after the food; Ellicott renders the word simply as fragments."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: amazing that all were satisfied to the full from so little."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the miracle proves Christ the true bread from heaven, almighty to support natural and spiritual life — pray, 'evermore give us this bread.'"
+    "prevalence": "single",
+    "summary": "Gill distinguishes what is merely surprising from what is astonishing, that the food should divide so far that every one had a piece is surprising, but that all should be satisfied to the full is the amazing thing."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "filled to the full",
-   "seven baskets of fragments",
-   "abundance over",
-   "the true bread from heaven"
+  "debates": [
+   {
+    "question": "What do the numbers stand for?",
+    "positions": "Theophylact assigns the seven to the Holy Ghost who perfects all things and the four thousand to men perfect in the four virtues; Pseudo-Jerome assigns the seven loaves to the gifts of the Spirit and the seven baskets to the seven Churches, and the four thousand to the four seasons of the new dispensation; Bede leaves the numbers and reads the distance travelled instead, of the Gentiles who came from afar while the Jews came from near."
+   },
+   {
+    "question": "How much was left over?",
+    "positions": "Robertson presses the word as meaning an overplus, an abundance of broken pieces not used; Ellicott renders it flatly as fragments; Theophylact takes the smaller quantity than at the earlier feeding as proof that these hearers were the more advanced."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Theophylact",
+    "view": "Draws a rule of life from who picked up the remains, that since the disciples and not the multitude took them up we should be content with what is sufficient and look for nothing beyond."
+   }
+  ],
+  "themes": [
+   "they did eat and were filled",
+   "seven baskets",
+   "four thousand",
+   "a few small fishes"
+  ],
+  "range": "7-9",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Four thousand men, besides women and children (Matthew); the satisfied dismissal answering the opening compassion."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact (v.1): Christ sends none away fasting, willing all to be nourished by his grace."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "four thousand",
-   "he sent them away",
-   "completeness of Christ's care",
-   "none sent away fasting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
@@ -386,88 +329,88 @@
    "Theophylact",
    "Augustine",
    "Bede",
+   "Pseudo-Chrysostom",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
   ],
   "schools": [
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine harmonises Dalmanutha/Magdala; Bede: the sign sought was manna from heaven like Moses; Theophylact: Christ quits the incorrigible Pharisees."
+    "summary": "Augustine holds it beyond doubt that the place is the same under another name, and notes that several manuscripts even of this Gospel have only the other form; Bede reads the demand for a sign as an appeal to precedent, that he who had twice fed thousands with a few loaves should now, after the example of Moses, refresh the whole nation with manna sent down from heaven."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the divergence of names as an instance of Mark independence, since he uses a name mentioned by no other writer; Robertson agrees both names are unknown elsewhere while placing them in the same region on the western side of the lake, notes that this Gospel alone says the disciples were with him, and observes that the Pharisees have now been joined by the Sadducees for the first time and began a dispute rather than an inquiry."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: he retires lest they make him king; the sign from heaven (sun and moon, hail) refused because its time is the second Advent, the first being full of mercy."
+    "prevalence": "single",
+    "summary": "Theophylact supplies the motive for the crossing rather than the geography, that after the miracle of the loaves he retires at once lest the multitudes take him to make him a king, describes the sign demanded as the sun and moon made to stand still or hail brought down since they supposed he could do signs on earth only by Beelzebub, and explains the refusal by the calendar of providence, that the time of signs from heaven belongs to the second Advent when the powers of heaven shall be shaken, whereas in the first Advent all things are full of mercy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry describes the manner rather than the content, that they came forth on purpose to question with him, not to propose questions that they might learn but to cross question him that they might ensnare, observes that a sign from heaven had already been given at the baptism in the descent of the dove and the voice, and doubts that another would have helped, since obstinate unbelief will have something to say however unreasonable and they that will not be convinced shall not."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Dalmanutha",
-   "a sign from heaven",
-   "obstinate unbelief",
-   "withdrawal from the incorrigible"
+  "debates": [
+   {
+    "question": "Why do the Gospels name the place differently?",
+    "positions": "Augustine says we cannot doubt it is the same place under another name and cites manuscripts; Ellicott takes the divergence as evidence of this evangelist independence; Robertson leaves both names unidentified and settles only for the same region."
+   },
+   {
+    "question": "What sign were they asking for?",
+    "positions": "Theophylact describes something spectacular in the sky, the sun and moon stayed or the atmosphere changed, on the assumption that his earthly works were credited to Beelzebub; Bede makes it a demand for manna after the example of Moses; Henry denies it was a request at all and calls it a cross examination meant to ensnare."
+   },
+   {
+    "question": "Why was such a sign withheld?",
+    "positions": "Theophylact answers by the season of providence, that signs from heaven belong to the second Advent and not to the first, which is full of mercy; Bede answers by the audience, that the sign is withheld from a generation that tempts and granted to a generation that seeks, and finds it given in the Ascension; Henry answers by the futility, that obstinate unbelief would have found something to say in any case."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Observes that the sign from heaven they demanded had already been given at the baptism, in the descent of the dove and the voice, and that they might have seen it had they attended."
+   }
+  ],
+  "themes": [
+   "the parts of Dalmanutha",
+   "seeking of him a sign from heaven",
+   "tempting him",
+   "signs from heaven belong to the second Advent"
+  ],
+  "range": "10-11",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'began to question' = dispute, kept up; Matthew adds the Sadducees, the parties now joined against Jesus (cf. Mark 3:6); 'tempting' = ensnaring (Wesley)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: obstinate unbelief always has something to say; Christ refuses the demand — if they will not be convinced, they shall not; a cause for lament."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Pharisees tempting him",
-   "a sign from heaven",
-   "obstinate unbelief",
-   "evidence refused"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "12": {
@@ -480,78 +423,90 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "Cyril of Jerusalem"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson on anastenaxas (a sigh from the depths, Christ resenting their prejudice); Barnes/Ellicott: Mark omits the Jonah exception, giving the flat 'no sign'; Lightfoot's rabbinic parallel."
+    "summary": "Robertson notes the verb for the sigh is the only instance of its compound in the New Testament with the preposition intensifying it, and identifies the form of the refusal as a conditional clause with the conclusion unexpressed, an aposiopesis imitating the Hebrew and the only such construction in the New Testament outside quotations; Barnes holds that a sign was promised but not the one demanded and not because they demanded it."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Bede sets the groan against the thanksgiving of the previous scene and makes the pair a portrait of one nature, that bearing about with him the feelings of human nature he grieves over errors as he rejoices over salvation, and reads the clause as an oath with its conclusion left unspoken, comparing the Psalm in which God swears by his holiness; Augustine insists the two accounts do not conflict, since the blank refusal here must be understood of such a sign as they asked."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he sighed over the hardness, malignity, and insincerity of those who sought only to ensnare him."
+    "prevalence": "several",
+    "summary": "Gill locates the cause of the groan in the hardness of their hearts, the malignity of their minds and the insincerity of their intentions, since they had no view to come at truth by the enquiry; Calvin presses the same point against an imagined objector, that the words are added emphatically so that no sophist might allege that Christ resorted to outward attitudes to express a grief he did not inwardly feel."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry generalises the grief, that the infidelity of those who have long enjoyed the means of conviction troubles the Lord Jesus, since sinners stand in their own light and put a bar in their own door."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact draws the practical rule from the leaving, that where there is hope of correction it is right to remain but where the evil is incorrigible we should go away."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he sighed deeply",
-   "no sign given",
-   "grief over unbelief",
-   "the sign of Jonah withheld"
+  "debates": [
+   {
+    "question": "What does the sigh show?",
+    "positions": "Robertson takes it lexically, that the intensified compound shows a sigh from the bottom of his heart and a human spirit stirred to its depths; Gill and Henry locate the cause in the hearers, their insincerity and their long-resisted means of conviction; Bede pairs it with the earlier thanksgiving as evidence of one and the same human nature; Calvin argues from the wording that the grief was inward and not a gesture."
+   },
+   {
+    "question": "Was the refusal of a sign absolute?",
+    "positions": "Augustine and Barnes hold that it was not, the refusal being of the sign they asked for while another was promised, which this evangelist simply omits; Robertson reports the contrary judgement that the mention of the prophet was itself an absolute refusal of signs in their sense; Ellicott records only the omission."
+   },
+   {
+    "question": "Was it worth staying to argue?",
+    "positions": "Theophylact makes the departure a rule, that where there is hope of correction it is right to remain but where the evil is incorrigible we should go away; Gill says the same of the leaving, that these were men with whom it was not worth while to discourse; Robertson notes drily that the rabbis were splitting hairs over the miracles as having a possible natural explanation, and that when he did rise on the third day the council refused to be convinced."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reads the emphatic wording as a guard against sophistry, lest anyone allege that Christ resorted to outward attitudes to express a grief he did not inwardly feel."
+   },
+   {
+    "voice": "John Lightfoot",
+    "view": "Meets the demand with a story instead of a comment, of a teacher who summoned a tree, a river and the walls of the school to witness for his tradition and received each sign in turn, only to be told that a proof is not to be fetched from such things."
+   }
+  ],
+  "themes": [
+   "he sighed deeply in his spirit",
+   "there shall no sign be given",
+   "he left them",
+   "an oath with the conclusion unspoken"
+  ],
+  "range": "12-13",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: he left them as a perverse, hardened generation, with whom it was not worth discoursing — a judicial withdrawal."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact's principle: stay where there is hope of correction, depart where the evil is incorrigible."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he left them",
-   "judicial withdrawal",
-   "incorrigible unbelief",
-   "turning to the teachable"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
@@ -559,121 +514,83 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'more than one loaf' a detail only in Mark; Ellicott links it closely to v.13; Gill: they forgot to take bread at Dalmanutha."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: a special providence in their forgetting, that they might be blamed and brought to know Christ's power."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forgotten the bread",
-   "one loaf",
-   "setup for the leaven",
-   "providence in forgetfulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Albert Barnes",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: Mark's 'Herod' for Matthew's 'Sadducees' — warned against all three; Robertson: the leaven of Herod (bad politics) and the Pharisees/Sadducees (bad theology); Ellicott on the repeated charge."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede raises the oddity as a question, how they could have no bread when they had filled seven baskets before embarking, and treats the forgetfulness as a credit to them, a proof how little care they had for the flesh; he also supplies a catalogue of what each leaven means, the traditions of men set above the divine law on one side and adultery, murder, rash swearing and a pretence of religion on the other, and completes the figure by making the true doctrine the food with which the people of God was nourished."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: the leaven is their corrupt doctrine full of old malice, the Herodians teaching Herod was the Christ; Wesley: two opposite extremes."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the leaven of the Pharisees",
-   "the leaven of Herod",
-   "corrupt doctrine",
-   "false religion and worldliness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Theophylact makes the same forgetfulness a discipline rather than a virtue, holding that by a special providence they forgot so that being blamed by Christ they might become better and arrive at a knowledge of his power, and reads the leaven as hurtful and corrupt doctrine full of the old malice, identifying the Herodians as teachers who said that Herod was the Christ; Pseudo-Chrysostom squares the Gospels by counting, that all three name the Pharisees as the chief party while two each mention one secondary sect."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: 'reasoned one with another' = discussion kept up (imperfect); they took the warning literally, of bread, not of doctrine."
+    "summary": "Ellicott reads the verse as continuous with what precedes rather than as a new section, notes the single loaf as another item peculiar to this Gospel, and infers from the phrase that others besides Pharisees were among the earlier questioners; Robertson supplies the arithmetic that makes it vivid, one loaf for thirteen hungry men, divides the two parties as bad politics and bad theology, and notes from the imperfect tense that the warning was repeated; Barnes holds that Christ probably cautioned them against all three parties and that the evangelists therefore speak the same thing."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: recollecting they had forgotten provisions, they supposed Christ chided them for having no bread."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley describes the pair as two opposite extremes."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they reasoned",
-   "no bread",
-   "carnal misunderstanding",
-   "literal not spiritual"
+  "debates": [
+   {
+    "question": "Why had the disciples forgotten the bread?",
+    "positions": "Bede credits it to their unworldliness, that in their eagerness to follow the Lord even the necessity of refreshing their bodies had escaped their minds; Theophylact credits it to providence arranging their correction, that they might be blamed and so become better; Robertson and Ellicott read it as a plain circumstance and count the loaf."
+   },
+   {
+    "question": "Why does this Gospel name Herod where the other names the Sadducees?",
+    "positions": "Barnes holds that all three parties were probably included and that each evangelist recorded part; Pseudo-Chrysostom reaches the same result by counting the accounts and calls this a supplement to the other narrative; Robertson does not harmonise but divides them by kind, bad politics against bad theology; Wesley calls them two opposite extremes."
+   },
+   {
+    "question": "What is the leaven?",
+    "positions": "Theophylact makes it corrupt doctrine full of the old malice; Bede itemises it as tradition set above the law and as a catalogue of moral crimes, and completes the figure by making true doctrine the food; Robertson and Ellicott attend to the repetition of the warning rather than its content."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "view": "Turns the empty bag into praise, taking the forgotten bread as a proof how little care the disciples had for the flesh."
+   }
+  ],
+  "themes": [
+   "neither had they in the ship more than one loaf",
+   "the leaven of the Pharisees",
+   "the leaven of Herod",
+   "they reasoned among themselves"
+  ],
+  "range": "14-16",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.84
+   }
   }
  },
  "17": {
@@ -688,176 +605,62 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: Mark's six keen questions revealing Christ's disappointment; Gill: he knew their thoughts by omniscience; Ellicott: 'heart hardened' peculiar to Mark, vivid and emphatic."
+    "summary": "Robertson counts six keen questions here against four in the parallel, sets out what each touches from the intellect to the memory of both feedings with the two words for baskets kept apart, quotes two harsh judgements that the Twelve are for the time wayside hearers with hearts like a beaten path, and reads the final question as the measure of the failure while noting from the parallel that they did understand in the end; Ellicott notes that the question about the hardened heart is peculiar to this Gospel and that the expression of indignant astonishment is characteristically more vivid here."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the strong words ('hardened,' 'eyes see not') are those used of the crowd, but here import only the present want of spiritual understanding, not judicial hardness."
+    "prevalence": "single",
+    "summary": "Wesley grants that our Lord affirms of all the apostles that their hearts were hardened and that having eyes they saw not, in the very same expressions used elsewhere of outsiders, and then draws the line, that it is certain they were not judicially hardened, so that these strong expressions need not import anything more than a present want of spiritual understanding."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the eyes and ears both ways, of the body and of the understanding, since they had seen the miracles with bodily eyes and taken little notice while the eyes of their understanding, though enlightened by Christ, still saw things very darkly; and he marks the sequence, that since they remembered the miracles and their circumstances so well the question that follows is the one they could not answer."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "perceive ye not",
-   "heart hardened",
-   "six keen questions",
-   "present dulness not reprobation"
+  "debates": [
+   {
+    "question": "How severe is the diagnosis of the disciples meant to be?",
+    "positions": "Wesley guards it explicitly, conceding the words are the same used of outsiders but insisting the apostles were not judicially hardened and that nothing more than a present want of spiritual understanding need be meant; Robertson lets the severity stand and quotes judgements sharper still, that they are for the time wayside hearers into whose beaten path the higher truths cannot sink; Gill sits between, allowing enlightenment and dimness together."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Notes that the disciples had once claimed to understand the parables, but that was a long time ago, and that the teacher must have patience if his pupils are to understand."
+   }
+  ],
+  "themes": [
+   "have ye your heart yet hardened",
+   "having eyes see ye not",
+   "how many baskets full of fragments",
+   "how is it that ye do not understand"
+  ],
+  "range": "17-21",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The questions echo Isaiah (44:18) and Matthew 13, turned on the disciples; Gill: eyes of body and understanding alike, seeing yet darkly."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: enlightened eyes that yet saw very darkly — a present blindness of the understanding."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.82
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "having eyes see ye not",
-   "do ye not remember",
-   "seeing yet darkly",
-   "spiritual faculties"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The appeal to the first feeding (Mark 6:38); the disciples recall the twelve baskets exactly (the kophinoi), yet draw no faith from the memory."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "five loaves five thousand",
-   "twelve baskets",
-   "memory without faith",
-   "recollection as cure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second appeal, to the feeding of the four thousand (Mark 8:1-9); the disciples recall the seven baskets exactly — a double witness to Christ's power they failed to read."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "seven among four thousand",
-   "seven baskets",
-   "double witness",
-   "accumulated evidence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the climax of the rebuke after all the explanation; yet Matthew records they then understood it was of doctrine, not bread — the patient teacher's lesson learned at last."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how is it ye do not understand",
-   "climax of the rebuke",
-   "patience of the Teacher",
-   "from misunderstanding to understanding"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
@@ -865,7 +668,10 @@
    "Gloss",
    "Bede",
    "Theophylact",
+   "Pseudo-Chrysostom",
+   "Pseudo-Jerome",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
@@ -875,79 +681,83 @@
   ],
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Bede: the touch that heals the blind; led out of town; the gradual cure deliberate, to show the depth of human blindness restored step by step, and Christ's furthering grace."
+    "summary": "Ellicott marks the cure as recorded by this evangelist only, judges from the places named before and after which town is meant, and adds that this and the cure of the deaf man are the only instances of the gesture in the first three Gospels and one of the links connecting this Gospel with the fourth; Robertson notices the dramatic present tenses, observes that Jesus keeps the utmost secrecy here as in the other cure this Gospel alone records, and declines to say why; Barnes denies any natural efficacy in the spittle and makes it a sign, and proposes that Christ wished to avoid a multitude and the designs of the Pharisees."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry argues from what was not done, that had privacy alone been wanted a house or an inner chamber would have served, so the leading out was meant to upbraid the town with the mighty works done there in vain, telling her she was unworthy to have more done within her walls, though he allows also that the open fields gave a larger prospect on which to try the recovered sight."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the same view of the reproach and adds that when a people do not improve the light they receive their candlestick is removed, and turns the spittle into a rule about miracles, that true miracles never effect by power what could be done by natural means while false ones are wrought without reason or necessity and are detected by it; Wesley agrees that the leading out was a reproach."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: Bethsaida's unbelief the reason for leading him out and for the partial cure — healing bestowed in proportion to faith."
+    "prevalence": "single",
+    "summary": "Theophylact locates the fault in the bystanders instead, that the faith of those who brought the man was not true faith, so that he was led away lest he take hurt in his soul from them."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede takes the spittle, as proceeding from the Head, to point out the grace of the Holy Ghost, and the taking of the hand as a strengthening for the practice of good works."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the local colour, a fishing town and the city of Andrew and Peter and Philip, and dismisses a variant reading that gives another name altogether."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did he lead the man out of the town?",
+    "positions": "Henry makes it a reproach to the town, since privacy could have been had indoors; Clarke and Wesley agree and Clarke generalises that an unimproved light has its candlestick removed; Theophylact blames the bystanders and their imperfect faith, from whom the man might take hurt in his soul; Barnes proposes avoidance of the crowd and of the designs of the Pharisees; Robertson declines to choose and calls it a season of retirement."
+   },
+   {
+    "question": "What was the spittle for?",
+    "positions": "Barnes makes it a sign accompanying rather than effecting the cure, the eyes being probably gummed shut; Clarke makes it a natural means used precisely because it needed no miracle, and builds a test for true miracles on the distinction; Pseudo-Chrysostom makes both gestures symbols, the hand for working and the spittle for the word proceeding out of the mouth; Bede makes it the grace of the Holy Ghost as proceeding from the Head."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Bede",
-    "note": "Reads the unique gradual cure as a deliberate lesson on the depth of human blindness, restored only step by step."
+    "voice": "Adam Clarke",
+    "view": "Builds a general test for miracles out of the spittle, that true miracles never effect by power what could be done by natural means, whereas false ones are wrought without reason or necessity and are detected by that."
    }
   ],
   "themes": [
-   "blind man of Bethsaida",
-   "they besought him to touch",
-   "the gradual cure",
-   "faith and healing"
+   "he cometh to Bethsaida",
+   "led him out of the town",
+   "when he had spit on his eyes",
+   "put his hands upon him"
   ],
+  "range": "22-23",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: led out to avoid the crowd and the Pharisees, doing good without ostentation; the spittle a sign, not a remedy — the power attended the application; Clarke: it may have parted the gummed eyelids."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "led out of the town",
-   "spit on his eyes",
-   "sign not remedy",
-   "without ostentation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "24": {
@@ -962,81 +772,72 @@
   ],
   "schools": [
    {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact says the man did not see perfectly at once because he had not perfect faith, since healing is bestowed in proportion to faith; Pseudo-Chrysostom says the same of the weak faith both of the man and of those who brought him, and notes that the question whether he could see anything was put to no one else Christ healed."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede makes the gradualness a demonstration rather than a limitation, that though by one word he could have cured the man wholly and at once he cures by degrees to show the greatness of human blindness, and supplies the comparison from ordinary experience that trees standing thick together look so to men who see them from afar or by the dim light of night, then reads it morally of one who cannot distinguish good from evil."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: a vivid description of dawning, incomplete sight, the single gradual cure; Ellicott renders the two verbs precisely and reads it as an acted parable of dim-then-clear spiritual perception."
+    "summary": "Barnes makes it pedagogy, that a partial restoration was evidence Christ could restore wholly and so drew the man to exercise faith anew; Robertson records that this is the single case of a gradual cure among the healings and that the reason for the method is not given, and calls the verse a vivid description of dawning sight; Ellicott reports that the better manuscripts give two different words for two forms of perception and extends the figure to a stage of spiritual growth that needs a second touch."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ asked for the disciples' sake, to show only a slight commencement of the cure; the man conjectures men from their motion."
+    "prevalence": "single",
+    "summary": "Calvin refuses every reason drawn from the patient and locates it entirely in the physician, holding that Christ proceeded so to prove he had full liberty as to his method and was not restricted to a fixed rule, so that the grace poured out suddenly on others flowed by drops on this man; and he presses the logic of the man answer, that he speaks only by conjecture, inferring from the motion that what he perceives in an erect posture must be men."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why was the cure gradual?",
+    "positions": "Theophylact and Pseudo-Chrysostom answer from the man imperfect faith and from the faith of those who brought him, healing being bestowed in proportion to faith; Bede answers that it is a demonstration of how great human blindness is, since by one word he could have cured wholly; Barnes answers that a partial cure was evidence drawing the man to exercise faith anew; Calvin rejects every reason drawn from the patient and locates it in Christ liberty of method; Robertson declines to give a reason at all and notes only that this is the single gradual cure."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Charles Ellicott",
-    "note": "Reads the half-restored sight as an acted parable of the soul's gradual illumination, needing a second touch to see all things clearly."
+    "voice": "John Calvin",
+    "view": "Denies that anything in the blind man explains the method, and reads the two stages as a proof that Christ was not restricted to a fixed rule, the grace that elsewhere was poured out suddenly here flowing by drops."
    }
   ],
   "themes": [
-   "men as trees walking",
-   "dawning sight",
-   "acted parable of illumination",
-   "seen dimly then clearly"
+   "I see men as trees walking",
+   "he had not perfect faith",
+   "the greatness of human blindness",
+   "a second touch of the divine hand"
   ],
+  "range": "24",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.82
+   }
   }
  },
  "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill on the repeated touch; Clarke: the variant 'saw all things,' and Christ sovereign of his graces, the small first mercy the beginning of fulness; Barnes develops the analogy of gradual spiritual illumination."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second touch",
-   "saw every man clearly",
-   "Christ sovereign of his graces",
-   "grace completed by degrees"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
   "voices": [
    "John Gill",
    "Albert Barnes",
@@ -1047,36 +848,64 @@
   ],
   "schools": [
    {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports that the better copies read that he saw all things rather than all men since his earlier view had been confused, reads the prohibition geographically as showing the man did not live in the village, notes that a miracle recorded by no other evangelist is one more proof that this Gospel did not abridge the first, and turns the gradualness into an address to the reader, that however insignificant means may appear they are divinely efficacious when Christ chooses to work by them."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson/Barnes: silence to avoid excitement and the Pharisees' jealousy before Caesarea Philippi; Clarke: the man not of Bethsaida; Ellicott: quietude and prayer for the right use of new sight."
+    "summary": "Ellicott agrees on the reading and adds that the received text uses a word implying he was far-sighted as well as clear-sighted, and reads the prohibition as spiritual discipline prescribed after the cure as well as before, partly because the restored power called for prayer over its right use and partly because Christ would not seem to court publicity; Robertson parses the verse as a sequence of an effective aorist, a double compound and an imperfect, and derives the adverb from words meaning afar and radiance; Barnes takes the prohibition as prudence, lest the jealousy of the Pharisees be excited."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: no miracle meant to remain buried, but concealed till Christ, having expiated sin by his death, should ascend to glory."
+    "prevalence": "several",
+    "summary": "Gill draws one small conclusion from the second laying on of hands, that it settles what the earlier verse left vague, since the hands were evidently placed on the eyes after the spittle; Calvin reports the conjecture that the town was being punished and declines to rest on it, holding instead that no miracle was performed in order to remain perpetually buried and that this one was to be concealed only until, having expiated the sins of the world by his death, he should ascend to the glory of the Father."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sent him to his house",
-   "neither go into the town",
-   "silence and discipline",
-   "judgment on Bethsaida"
+  "debates": [
+   {
+    "question": "Why was the man forbidden to go into the town?",
+    "positions": "Barnes makes it prudence against the jealousy of the Pharisees; Clarke makes it geography, since the man was sent home and told not to enter the village; Ellicott makes it spiritual discipline, a caution against the hasty utterances of a new-born excitement; Calvin reports and declines the conjecture that the town was under punishment, and sets a time limit on the concealment instead."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Draws a pastoral application from the prohibition, that a first clear apprehension of spiritual truth is not well followed by the hasty utterances of a new-born excitement."
+   }
+  ],
+  "themes": [
+   "he saw every man clearly",
+   "made him look up",
+   "neither go into the town",
+   "concealed until he should ascend"
+  ],
+  "range": "25-26",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  },
  "27": {
@@ -1084,163 +913,12 @@
    "Theophylact",
    "Bede",
    "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Origen",
    "John Gill",
+   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede: Caesarea Philippi (Philip's city for Tiberius); Christ asks men's opinion to try the disciples' faith, lest their confession rest on common report; Pseudo-Chrysostom: that they might praise him better than the crowd."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: he leads them away from the Jews that they might speak the truth without fear; the guesses show many thought him John risen."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Caesarea Philippi",
-   "whom do men say that I am",
-   "trying their faith",
-   "preface to the confession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The popular guesses (John, Elijah, a prophet) all suppose a great figure of the past returned; Barnes on Herod's theory (Matthew 14:2); honourable yet wide of the truth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "John Elijah a prophet",
-   "popular opinions",
-   "high but not high enough",
-   "foil to the confession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Mark's brief 'Thou art the Christ' carries the full idea; a serious test whether they still believed after the defections; Peter confesses for the Twelve; Clarke notes a variant adding 'Son of the living God.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou art the Christ",
-   "Peter's confession",
-   "Mark's brevity",
-   "the rock of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: tell no man he is the Christ, the time not ripe (Matthew 16:20; Luke 19:40); Ellicott: Mark's omission of the praise of Peter an evidence of the apostle's humility."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: three reasons for silence — not to encourage a temporal king, not to provoke premature destruction, not to forestall the resurrection's evidence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "tell no man",
-   "the messianic secret",
-   "timing of testimony",
-   "Peter's humility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
    "A.T. Robertson",
    "John Wesley",
    "Cyril of Jerusalem"
@@ -1248,72 +926,229 @@
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'began to teach' = 'from that time' (Matthew), the confession the right moment; death at the Sanhedrin's hands; 'after three days' = the third day; the resurrection unheeded."
+    "prevalence": "single",
+    "summary": "Robertson explains why the district mattered, that it lies on a spur of a mountain in territory ruled by Philip so that Jesus was safe from Herod Antipas and from the Pharisees and Sadducees and would have his best opportunity to teach the disciples about the crucifixion, and puts the question in historical terms, that the disciples had confessed him as Messiah before but Jesus had ceased to use the word to avoid political complications, so that the question is whether they still believed it after the defections they had seen."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede identifies the town and its renaming in honour of the emperor, and explains the order of the two questions, that he asks the opinion of men first in order to try the faith of the disciples lest their confession should appear to be founded on common opinion."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril: Christ came to his passion willingly, foretelling it lest the world perish in its sins; Gill: now told plainly because they were established in faith."
+    "prevalence": "several",
+    "summary": "Chrysostom says the manner of the question was itself designed to lead them to higher thoughts, that they might not agree with the multitude; Theophylact gives the same reason in his own terms, that having taken them far from the Jews he asks about himself so that they might speak the truth without fear; Cyril of Jerusalem gives the fullest account, that our Lord had lately become Man and was by the many unknown, and wishing to teach what was not known he asked them, not from vain-glory but lest, dwelling with the Only-begotten of God, they should think lightly of him as of some mere man."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry draws the human lesson, that although it is a small thing to be judged of men it may sometimes do us good to know what is said of us, not that we may seek our own glory but that we may hear our faults."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Son of man must suffer",
-   "passion foretold",
-   "divine necessity",
-   "death and rising joined"
+  "debates": [
+   {
+    "question": "Why did he ask what men said of him?",
+    "positions": "Bede makes it a test of the disciples, the common opinion being asked first so that their confession should not appear founded on it; Chrysostom and Theophylact make it a lifting of their thoughts above the multitude and a removal of their fear; Cyril of Jerusalem denies vain-glory outright and makes it instruction, lest those who dwelt with him should think lightly of him as a mere man; Robertson makes it a test of whether the earlier confession had survived the defections."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "view": "Holds that those outside might be excused their ignorance, but that Apostles who in his name cleansed lepers and cast out devils ought not to have been ignorant of him through whom they did those works."
+   }
+  ],
+  "themes": [
+   "whom do men say that I am",
+   "John the Baptist",
+   "Elias, or one of the prophets",
+   "the towns of Caesarea Philippi"
+  ],
+  "range": "27-28",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
- "32": {
+ "29": {
   "voices": [
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
+   "Charles Ellicott",
    "John Wesley"
   ],
   "schools": [
    {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Theophylact explains the omission of the blessing on Peter as the evangelist reticence, lest by relating it he should seem to be favouring his own master; Chrysostom looks past the silence to what ends it, that Christ would wait to fix the pure faith in their minds until the Crucifixion, which was an offence to them, was over, and that after it was perfected he sent them to teach all nations."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson on parrēsia ('held back nothing,' repeatedly, Mark alone); Gill: spoken plainly and boldly; Peter takes hold of him (Wesley) to remonstrate."
+    "summary": "Ellicott regards the omission as evidence of Petrine humility, since he shrank from what might seem to savour of self-assertion; Robertson says plainly that all praise of Peter is omitted, probably because Peter himself had done so in telling the story, and notes the modern criticism that treats the fuller narrative as a later development; on the silence he says only that the time was not yet ripe, and that when it came the very stones would cry out if men did not."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen observes only the fact, that the two shorter Gospels give the confession without the additional words and therefore without the blessing that answered them."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley gives three reasons for the silence at once, that he might not encourage the people to set him up for a temporal king, that he might not provoke the scribes and Pharisees to destroy him before the time, and that he might not forestall the bright evidence to be given of his divine character after the resurrection; Clarke notes that a few manuscripts supply the longer form of the confession here."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lists exactly what is missing, the rock, the gates of hell, the keys, and the binding and loosing."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he spake openly",
-   "Peter rebukes him",
-   "plain foretelling",
-   "carnal recoil"
+  "debates": [
+   {
+    "question": "Why does this Gospel omit the blessing on Peter?",
+    "positions": "Theophylact, Ellicott and Robertson converge on Petrine modesty, whether as the evangelist unwillingness to favour his own master or as Peter own reticence in telling the story; Origen registers only the fact of the omission without assigning a cause; Gill itemises what is absent without explaining it."
+   },
+   {
+    "question": "Why was silence imposed?",
+    "positions": "Wesley gives three reasons together, political, prudential and evidential; Robertson gives one, that the time was not ripe; Chrysostom reads the silence forward to the Crucifixion, after which the preaching was to begin; Henry explains instead why the crowd had not reached the confession themselves."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Explains the popular failure by the teachers rather than the people, that the crowd would have acknowledged him had their teachers not possessed them with the notion that the Messiah must be a temporal Prince appearing in outward pomp."
+   }
+  ],
+  "themes": [
+   "thou art the Christ",
+   "he charged them",
+   "tell no man of him",
+   "after the cross and resurrection"
+  ],
+  "range": "29-30",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.8
+   }
+  }
+ },
+ "31": {
+  "voices": [
+   "John Gill",
+   "A.T. Robertson",
+   "John Wesley",
+   "Cyril of Jerusalem",
+   "Albert Barnes",
+   "Adam Clarke"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says that until this point he had said nothing of his sufferings in express terms, but that now, they being firmly established in the faith of him as the Messiah, he thought it proper to inform them, and that it was spoken before them all in plain words without a figure, freely and boldly and with an undaunted courage."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson dates the teaching from the confession, notes that the death is to come at the hands of a council in which the two parties had about equal strength, remarks that the resurrection on the third day made no impression on their minds, and takes on the dispute over the phrase about three days, holding that it must have the same sense as the third day in the other Gospels or the accounts are hopelessly contradictory; Barnes says the saying was without parables so that there could be no possibility of misunderstanding."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Theophylact orders the two events the same way, that only after the Lord had accepted the confession of disciples who called him true God did he reveal to them the mystery of the Cross."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the disciples now began fully to understand him and that the observation about the plainness is this evangelist own addition; Wesley adds that till now he had only intimated it."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Does after three days mean the third day or the fourth?",
+    "positions": "Robertson reports that some stickle for a strict reading that would put the rising on the fourth day, and answers that the phrase must have the same sense as the third day in the other two Gospels or the accounts are hopelessly contradictory, since in popular language after three days can and often does mean on the third day while the fourth day is impossible."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Observes that although the resurrection on the third day was mentioned it made no impression on their minds, this rainbow on the cloud not being seen."
+   }
+  ],
+  "themes": [
+   "he began to teach them",
+   "the Son of man must suffer many things",
+   "after three days rise again",
+   "he spake that saying openly"
+  ],
+  "range": "31-32",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.47
+   }
   }
  },
  "33": {
@@ -1326,81 +1161,165 @@
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: Christ wheels round, the disciples in view (Mark's touch), rebuking Peter before all who may have shared his view; Peter acts Satan's role, the wilderness temptation renewed."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Bede excuses Peter furthest, saying he speaks with the feelings of a man who loves and desires, as if to say that this cannot be, and that his ears cannot receive that the Son of God is to be slain."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Theophylact: 'Satan' = the adversary; Peter, unwilling Christ should suffer, savoured carnal affections and became his adversary."
+    "prevalence": "several",
+    "summary": "Chrysostom explains rather than excuses, asking how one gifted with a revelation from the Father could so soon fall, and answering that he had learnt by revelation that Jesus was the Christ but the mystery of the cross and resurrection had not yet been revealed to him, and noting that Peter alone from the fervour of his disposition had the boldness to dispute; Theophylact gives the harshest reading, that Satan alone was unwilling Christ should suffer and the race of man be saved, so that Peter, savouring the things of Satan, is called by the adversary name; Pseudo-Chrysostom draws the finest distinction, that Christ did not say get thee behind me to the devil when he was tempted but says it to Peter, so that to Peter it means follow me and resist not the design of my voluntary Passion; Cyril of Jerusalem reads the exchange as proof of willingness, that he spoke of his passion beforehand and came to it not unwillingly but willing."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Robertson agrees it was more than mere officiousness, that Peter had not risen above the level of ordinary men and deserves the name whose role he was acting, and that the temptation offered on the mountain was here offered again; he supplies the staging that makes the rebuke public, that Peter had drawn Jesus aside privately but Jesus wheeled round on him and so brought the other disciples into plain view, a touch only in this Gospel, and suspects the others may have shared Peter mind."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Wesley reads the look the same way, that they might the more observe what was said."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "get behind me Satan",
-   "looked on the disciples",
-   "things of men not of God",
-   "love opposing God's will"
+  "debates": [
+   {
+    "question": "How culpable was Peter?",
+    "positions": "Bede excuses him as speaking from love and from ears that could not receive the news; Chrysostom explains the fall from what had and had not yet been revealed to him; Theophylact gives the harshest reading, that he savoured the things of Satan and is therefore called by the adversary name; Robertson calls it more than mere officiousness and holds he deserved the name whose role he was acting."
+   },
+   {
+    "question": "What does get thee behind me mean?",
+    "positions": "Pseudo-Chrysostom points out that the same words were not used to the devil in the temptation, and takes the difference to be the whole point, that to Peter it means follow me rather than depart; Theophylact takes the naming at full strength as an identification with the adversary; Cyril of Jerusalem reads the whole exchange as proof that Christ came to his passion willingly and would answer any dissuader in the same way."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Recovers the staging from a detail only this Gospel keeps, that Peter had drawn Jesus aside privately and Jesus wheeled round on him, bringing the other disciples into plain view so that the rebuke fell in the full presence of the group."
+   }
+  ],
+  "themes": [
+   "get thee behind me, Satan",
+   "thou savourest not the things that be of God",
+   "he turned about and looked on his disciples",
+   "he rebuked Peter"
+  ],
+  "range": "33",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.07
+   }
   }
  },
  "34": {
   "voices": [
    "Bede",
    "Chrysostom",
+   "Theophylact",
+   "Pseudo-Jerome",
+   "Remigius",
+   "Pseudo-Chrysostom",
+   "Gregory",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Chrysostom: the call is free, not forced; self-denial = holding one's body and life as another's, bearing all for Christ; the cross even to shameful death, but for Christ's sake."
+    "summary": "Chrysostom refuses to read the call as compulsion, that Christ calls to those good things which a man should wish for and does not force, since he who does violence to his hearer often stands in his way while he who leaves him free rather draws him, and presses self-denial past mere hardness, that a man should have nothing in common with himself and look on his own sufferings as if another were suffering, which is really to spare himself; he takes the cross at full strength as meaning even the most shameful death, and warns that a man may suffer and yet not follow Christ when he does not suffer for Christ sake; Theophylact presses the family image, that one who denies a brother or father does not grieve at his fate, and explains the shame of the cross historically."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Bede: deny self = forsake the old and reach the new; the cross = abstinence and fellow-feeling; for persecution and for peace alike."
+    "summary": "Bede sets self-denial in time rather than in feeling, that we deny ourselves when we avoid what we were of old and strive to reach the point whither we are newly called, and allows a second sense of the cross for times without persecution, the body pained by abstinence or the soul afflicted by fellow-feeling; Pseudo-Jerome gives the reason for saying any of it so early, that a skilful pilot foreseeing a storm in a calm wishes his sailors prepared."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke thinks the conditions are formed on those the Jews required of a proselyte, of which the first was that a man come voluntarily with neither force nor influence employed, and reads renunciation as answering to a new birth, the yoke of the law as answering to Christ own doctrine and cross, and perseverance to death as comprised in the last word; Wesley makes self-denial a matter of will in all things small and great, however pleasing, and that continually."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Robertson notes that this Gospel alone records the unexpected presence of a crowd in heathen territory, and that in its presence Jesus explains his philosophy of life and death in direct contrast with the one Peter had just offered."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies how the crowd came to be there, that they had followed him out of Galilee and from Bethsaida and were following at some distance, so that when the private conversation ended he beckoned them nearer."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "deny himself",
-   "take up the cross",
-   "follow me",
-   "conformity to the crucified"
+  "debates": [
+   {
+    "question": "What does denying oneself amount to?",
+    "positions": "Chrysostom will not settle for the milder word and requires that a man have nothing in common with himself, facing danger as if another were suffering, which he calls the true sparing; Theophylact makes it the coldness one shows to a disowned relation; Bede makes it a leaving of what we were of old for what we are newly called to; Wesley makes it a continual denial of one own will."
+   },
+   {
+    "question": "What is the cross here?",
+    "positions": "Chrysostom takes it at full strength as the most shameful death, and adds that suffering not borne for Christ sake is not a following of him; Theophylact explains its shame from the punishment of malefactors; Bede allows a second sense for peacetime, abstinence in the body and fellow-feeling in the soul."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Reads the whole verse as built on the four conditions the Jews required of a proselyte, beginning with the rule that a convert must come voluntarily and that neither force nor influence should be employed."
+   }
+  ],
+  "themes": [
+   "whosoever will come after me",
+   "let him deny himself",
+   "take up his cross",
+   "and follow me"
+  ],
+  "range": "34",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "35": {
@@ -1417,110 +1336,76 @@
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: 'and the gospel's' is Mark alone; Ellicott: it identifies Christ with the cause of the good news he died for (John 18:37); the paradox of two senses of life and save."
+    "summary": "Ellicott stops on the surplus wording, that where the other evangelist has simply for my sake this Gospel adds for the gospel sake, and calls the addition significant as showing that though our Lord demanded entire personal devotion it was for himself as identified with the cause of the good news of which he was to be the martyr; Robertson notes the phrase stands in this Gospel alone, that two senses of life and of save are at work, and that the final verb here is save where the other Gospel has find."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Remigius settles briefly which life is meant, that it is to be taken in this place for the present life and not for the substance itself of the soul."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: saving the present life by denying Christ forfeits the eternal; losing it for Christ saves it."
+    "prevalence": "single",
+    "summary": "Gill grants the instinct its due before taking it away, that life is a valuable thing and all a man has he will give for it, self preservation being a principle in nature, so that the loss described is the particular case of a man who, when his life is called for, will rather deny Christ and give up a profession of him than lay it down."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom reads the command as mercy rather than severity, since whoever spares his son brings him to destruction, argues the readiness from ordinary courage, that if a man prepared for death fights better in the battles of this world much more in spiritual battle where so great a hope of resurrection is set before him, and presses the question about profit as chosen on purpose, since a man can give the price of his house in exchange for the house but has no second soul to give for his soul."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry states the balance plainly, that as the happiness of heaven with Christ is enough to make up for the loss of life itself for him, so the gain of all the world in sin will not make up for the ruin of the soul by sin."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "save his life shall lose it",
-   "for my sake and the gospel's",
-   "the eternal arithmetic",
-   "gain through loss"
+  "debates": [
+   {
+    "question": "Which life is meant by the word?",
+    "positions": "Remigius restricts it to the present life and not the substance of the soul; Robertson leaves both senses in play and says the paradox turns on the two; Gill reads it as bodily life laid down or preserved at the price of a profession of Christ."
+   },
+   {
+    "question": "Why does this Gospel add for the gospel sake?",
+    "positions": "Ellicott takes the addition as significant, showing that the personal devotion demanded was for Christ as identified with the cause of the good news of which he was to be the martyr; Robertson notes only that the phrase is peculiar to this Gospel."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Chrysostom",
+    "view": "Reads the whole demand as an act of sparing rather than severity, on the rule that whoever spares his son brings him to destruction while whoever does not spare him saves him."
+   }
+  ],
+  "themes": [
+   "whosoever will save his life shall lose it",
+   "for my sake and the gospel",
+   "gain the whole world",
+   "what shall a man give in exchange for his soul"
+  ],
+  "range": "35-37",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the worldly bargain — saving life and gaining wealth by denying Christ — profits nothing at the issue, if the soul is lost."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The whole world weighed against a single soul and found too light; to win the temporal at the cost of the eternal is the most ruinous exchange."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.02
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what shall it profit",
-   "gain the world lose the soul",
-   "the soul's worth",
-   "ruinous exchange"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the whole world is no ransom for a soul; riches profit not in the day of wrath; once lost, it is past all recovery, for a man has nothing greater to give."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The sealing question: no price can buy back a forfeited soul, making the loss final and the warning absolute."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "exchange for his soul",
-   "no ransom",
-   "the loss is final",
-   "the unanswerable question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "38": {
@@ -1528,48 +1413,71 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Bede",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Cyril of Jerusalem"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the object of the shame from what has just been said, Christ as suffering and crucified and put to death, and describes the man who through scandal of the cross and fear of men dare not profess faith in him but conceals it and keeps it to himself."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: ashamed of Christ's lowliness and doctrine; refusal to confess here means exclusion hereafter; the two comings contrasted — humility then, majesty at the judgment."
+    "summary": "Barnes reads the reluctance as embarrassment at a lowly appearance and at poverty, contempt and sufferings, glosses the words as the doctrines and instructions and the generation as an age given to wickedness, and states the conclusion as a series of reversals, that they who would not acknowledge him here must be rejected by him there; Ellicott makes the sting immediate rather than general, noting the special bearing on those who like Peter had just shown they were ashamed of what had been said, and finds the force of the phrase in a contrast between those from whose scorn the disciples were shrinking and the bright hosts before whom the faithless should be put to shame; Robertson corrects the tense, insisting it is not a statement about future conduct but about present attitude, so that the conduct of men toward Christ now determines Christ conduct then, and adds that the saying and the one the chapter division puts after it form a single paragraph."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the offence is a suffering, lowly Messiah; the world is ashamed of him still; he will disown before God those who disowned him before men."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Bede: the glimpse of coming glory given to strengthen the disciples to bear adversity."
+    "prevalence": "several",
+    "summary": "Clarke traces the reluctance to a disappointed expectation, that the Jews saw nothing in the person of Jesus corresponding to the pompous notions they had formed of the Messiah and that had he come as a mighty and opulent man he would have had a multitude of partisans, most of them hypocrites, and states the reciprocity without softening, that as he refused to acknowledge me before men so will I refuse to acknowledge him before God and his angels; Wesley makes the confession wider than speech, as avowing what Christ has said both by word and by action."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ashamed of me",
-   "disowned at his coming",
-   "confession and reward",
-   "the glory of the Father"
+  "debates": [
+   {
+    "question": "Who is the warning aimed at?",
+    "positions": "Ellicott narrows it to those who had just shown themselves ashamed, Peter and probably the other disciples, general as the words are in themselves; Robertson narrows it by grammar instead, to present attitude rather than future conduct; Clarke widens it to the Jews at large and their expectation of a different kind of Messiah, and then to the world, which is to this day ashamed of him and of his words."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Notes against the chapter division that this saying and the one that follows it form a single paragraph and should be read together."
+   }
+  ],
+  "themes": [
+   "ashamed of me and of my words",
+   "this adulterous and sinful generation",
+   "the glory of his Father",
+   "with the holy angels"
+  ],
+  "range": "38",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  }
 }
