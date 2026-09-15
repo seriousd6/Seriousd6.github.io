@@ -1,47 +1,64 @@
 {
  "1": {
   "voices": [
-   "Matthew Henry",
    "John Gill",
-   "John Calvin",
    "Keil and Delitzsch",
+   "Matthew Henry",
+   "Adam Clarke",
    "Charles Ellicott",
+   "John Calvin",
    "John Wesley"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill accounts for the disproportionate herds by a stronger bent to the pastoral life; Calvin traces it to the Egyptian district they had lived in, and reads the seeing of the land as self-interest blinding men to an obligation laid on them by God."
+    "prevalence": "single",
+    "summary": "Gill says it is not easy to say how these tribes came to have more cattle in proportion than the rest, and supposes they were more addicted to the pastoral life and more diligent in the care of their beasts; he cites Aben Ezra for the view that the Gadites were the authors of the counsel."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry sets the request in the pause in the plains of Moab, notes it was granted at the tribes' request rather than by divine appointment, and names the lust of the eye and the pride of life as its two springs."
+    "summary": "Henry rejects the supposition that they brought more cattle out of Egypt, on the ground that forty years is long enough for stocks to change, and prefers better husbandry; he draws from the whole transaction the principle that even when much was being done by extraordinary Providence, many things were left to human prudence, since God makes use of the reason of men."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch locate Jazer and Gilead and explain the apposition that emphasises the multitude; Ellicott adds that Reuben and Gad had encamped together for thirty-eight years."
+    "summary": "Keil and Delitzsch explain the emphatic apposition in the first clause, place Gilead across two modern provinces north and south of the Jabbok, and note that ancient Gilead still shows traces of great fertility; Ellicott adds that the two tribes had encamped contiguously for thirty-eight years and would naturally wish to remain neighbours."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Wesley identifies Jazer as an Amorite city and country and Gilead as mountainous pasture land."
+    "summary": "Wesley reduces the geography to a line, a city and country of the Amorites and a mountainous country famous for pasturage."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why had these two tribes so much more cattle than the rest?",
+    "positions": "Gill declines to settle it and guesses at a stronger inclination to the pastoral life; Henry reports and rejects the common supposition that they brought more out of Egypt, since that was forty years before and stocks of cattle increase and decrease in less time, and prefers better husbandry, that they had not been so profuse as their neighbours in eating the lambs out of the flock."
+   },
+   {
+    "question": "Why is Gad named first after the opening verse?",
+    "positions": "Gill relays Aben Ezra that the Gadites were the authors of the counsel and moved it first to the Reubenites camped beside them; Henry offers that they were either the most forward or the better spokesmen, and adds a third consideration, that Reuben tribe still lay under the sentence that he should not excel."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Draws from the episode a rule about providence and prudence, that God in governing both the world and the church makes use of the reason of men and serves his own purposes by it, even in an age of extraordinary divine appearances."
+   }
+  ],
   "themes": [
+   "a very great multitude of cattle",
+   "the land of Jazer and the land of Gilead",
    "a place for cattle",
-   "the lust of the eye",
-   "choosing by sight",
-   "Gilead and Jazer"
+   "prudence inside providence",
+   "Reuben named first and Gad named after"
   ],
+  "range": "1-2",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -60,65 +77,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.23
-   }
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "John Calvin",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill follows Aben Ezra in making the Gadites the authors of the scheme, which explains why they are named first; Calvin praises the modesty of a petition sought by permission rather than seized, while faulting the private interest behind it."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads the inverted order the same way and adds Jacob's sentence on Reuben, that he should not excel."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch take the clause about the land the LORD smote as marking territory now without a ruler, and read \"let us not go over the Jordan\" in the milder sense."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the order of the names",
-   "petition rather than seizure",
-   "private interest",
-   "dwelling together in Canaan"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.99
+    "expansion": 0.14
    }
   }
  },
@@ -126,181 +85,66 @@
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "thin": true,
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies the towns as Amorite, taken from Sihon, and places Jazer some fifteen miles from Heshbon."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke assigns the places to the kingdoms of Sihon and Og, which became Israelite territory by conquest."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch treat the roll of names as the definition of the country asked for and defer the geography to the closing section."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a register of towns",
-   "the Amorite inheritance",
-   "defining the claim"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "the second paragraph is the summary's own framing of why the geography is deferred; the deferral is Keil and Delitzsch's, and the later redistribution of the towns is Ellicott's at v.34, but the contrast between claim and inventory is not drawn by any witness",
-    "expansion": 2.05
-   }
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Matthew Henry"
+   "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill ascribes the conquest to the LORD and infers that Moses, Eleazar and the princes, as representatives of the people, had the right to dispose of the land."
+    "prevalence": "several",
+    "summary": "Calvin condemns the request while allowing what can be allowed for it, that it was apparently reasonable and their modesty praiseworthy since they sought permission rather than seizing, yet holds that private interest had so mastered them that the main point escaped them, that their association for the war was established by God and the land of Canaan assigned to the whole race of Abraham; Gill notes that one of the towns is named nowhere else in Scripture."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch read the clause as a legal description of land without a ruler, and note the construction of the verb of giving."
+    "prevalence": "several",
+    "summary": "Ellicott sets two readings of the request against each other and prefers the stronger, and closes with the long-range fact that these tribes were among the first carried into captivity by the king of Assyria; Keil and Delitzsch allow the milder reading on the strength of the men later declaration, and note that the clause about the country the Lord smote describes a land without a ruler."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry allows that on its own terms the motion was not unreasonable, the land belonging to Israel in common and this being about their supposed proportion."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD smote it",
-   "title by conquest",
-   "a land for cattle",
-   "the measure of an inheritance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "the closing paragraph frames the request as a syllogism whose flaw lies in the conclusion; the criticism is Calvin's and Henry's, but the syllogism itself is the summary's own construction",
-    "expansion": 1.27
-   }
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott gives the two possible senses of \"bring us not over Jordan\", prefers the stronger, and notes that these tribes were among the first carried into Assyrian captivity."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the modest and respectful manner in which the request was addressed to Moses."
+    "summary": "Henry files the motives under two heads, the lust of the eye and the pride of life, the land being not only pleasant to look at but good for food."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke gives the plain motive, that the land was good for pasturage and they had many flocks."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry lists what the petition looked like at first sight — contempt of the promise, distrust of God's power, covetousness, neglect of the brethren — and the precedent it would have set."
+    "summary": "Clarke summarises the chapter as a whole and identifies the towns as having belonged to Sihon and Og."
    }
   ],
   "debates": [
    {
-    "question": "What does \"bring us not over Jordan\" actually ask for?",
-    "sides": [
-     {
-      "position": "only that their inheritance be assigned east of the river, without withdrawing help from the conquest",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "that the conquest of the west be left to the other tribes, so that they may settle at once in land already subdued",
-      "holders": [
-       "Ellicott",
-       "Henry"
-      ]
-     }
-    ]
+    "question": "What were the two tribes actually asking for?",
+    "positions": "Keil and Delitzsch allow that the words about not crossing the Jordan may express nothing more than a wish about where their inheritance should lie, with no intention of withdrawing help, and point to the men subsequent declaration; Ellicott concedes that reading but prefers a stronger one, that the words may equally be taken, as Moses appears to have understood them and as they were in all probability designed to be understood, as a request that the conquest of the western side be left to the other tribes."
+   },
+   {
+    "question": "How culpable was the request?",
+    "positions": "Calvin condemns it most heavily, as a severance from the body of the Church and a transgression of limits God had set, while granting that their modesty in asking rather than seizing was praiseworthy; Henry files it under the lust of the eye and the pride of life; Ellicott judges more coolly that the language indicated selfish consideration and was calculated to dishearten their brethren."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Takes the verb about seeing the land as a warning in itself, that we beware lest our eyes by unlawful looks lead us into snares and blind our minds, so that our senses are deceived by an envenomed sweetness."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "view": "Closes the account of the request with a fact from long afterwards, that these two tribes and the half tribe of Manasseh were among the first taken into captivity by the king of Assyria."
+   }
+  ],
   "themes": [
+   "let this land be given unto thy servants",
    "bring us not over Jordan",
-   "a bad precedent",
-   "the first into captivity",
-   "selfish interest"
+   "the country which the LORD smote",
+   "a land without a ruler",
+   "the lust of the eye"
+  ],
+  "range": "3-5",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -319,7 +163,7 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.98
+    "expansion": 0.5
    }
   }
  },
@@ -328,281 +172,61 @@
    "John Gill",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill records that Moses was displeased, the motion having the appearance of covetousness and cowardice; Calvin insists the vehemence was neither warmth nor error, since the request would lacerate the body of the Church, and holds their ingratitude to God the heavier count."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry imputes the heat to pious zeal against sin rather than the peevishness of age, and generalises the rebuke to all who sit unconcerned in their brethren's perils."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley catches the contrast the question is built on: ease and peace here, a bloody war there."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "shall ye sit here",
-   "severance of the body",
-   "zeal against sin",
-   "the same condition for all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.02
-   }
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill counts the military loss but thinks the moral discouragement worse, the request carrying a distrust of ever possessing Canaan; Calvin had already located the danger in hearts broken so that they refuse the call of God."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders the verb as to alienate or avert and notes its cognate in the account of the spies; Keil and Delitzsch give the idiom as holding the heart away, and set the charge in its sequence toward the wrath of God."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry supplies the reckoning a general would make, two tribes and a half being above a fifth part of Israel's strength."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "discouraging the heart",
-   "an unwilling army",
-   "the fifth part of the strength",
-   "bad example"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.02
-   }
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "unanimous",
-    "summary": "Gill takes \"your fathers\" of the whole generation, not the two tribes only; Calvin makes the imitation of ungodly parents double rather than excuse the guilt, compares Stephen and the psalm of provocation, and narrows the comparison to the ten spies from whom the sedition arose."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thus did your fathers",
-   "inherited impiety",
-   "the ten spies",
-   "perseverance to the goal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.84
-   }
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "John Calvin"
-  ],
-  "thin": true,
-  "range": "9-11",
-  "pericope_label": "Moses recites the report from Eshcol and the oath that followed",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "unanimous",
-    "summary": "Gill supplies the geography of Eshcol and the cluster it was named from, and marks the double object of the anger — the spies and the people who murmured; Calvin fastens on the ground of the oath, that nothing is praiseworthy unless men persevere to the goal."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the valley of Eshcol",
-   "the oath in the wilderness",
-   "perseverance",
-   "the proof and the report"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 2.02
-   }
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
+   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
-  "thin": true,
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs whether Caleb or Jephunneh is the Kenezite, prefers Jephunneh, derives the name from an ancestor called Kenaz, and reports Jarchi's contrary account."
+    "prevalence": "several",
+    "summary": "Calvin ranks the two charges explicitly and puts ingratitude towards God above injustice towards their brethren, argues that the very severity of the reproof proves the greatness of the wrong rather than any warmth in Moses, and distinguishes the comparison Moses actually makes, not to the whole people but to the ten spies from whom the sedition arose; Gill counts the practical loss of two thirds of a standard as well as the moral one."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke holds flatly that Jephunneh was the Kenezite and Kenaz probably his father; Wesley takes Kenaz to be the grandfather."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry names three faults together, disregard to the land of Canaan, distrust of the promise, and unwillingness to encounter danger, and turns the rebuke into a rule about not sitting down unconcerned at the perilous concerns of others."
    },
    {
     "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch order the charges as the speech orders them, want of brotherly feeling first and discouragement of the others second, and render the idiom literally as holding the heart away; Ellicott says the verb rendered discourage means rather to alienate or avert."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Ellicott passes over the genealogy and points to the commendation quoted from the earlier sentence, that they wholly followed the LORD."
+    "summary": "Wesley compresses the contrast into a line, that they would sit in ease and peace while their brethren were engaged in a bloody war."
    }
   ],
   "debates": [
    {
-    "question": "Who is called \"the Kenezite\", and from whom is the name taken?",
-    "sides": [
-     {
-      "position": "Jephunneh, not Caleb, and the name from an ancestor called Kenaz",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "Jephunneh, whose father was probably Kenaz himself",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "from Kenaz the grandfather",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "Caleb was son-in-law to Kenaz, and his mother bore Othniel to him",
-      "holders": [
-       "Jarchi (as reported by Gill)"
-      ]
-     }
-    ]
+    "question": "What is Moses chiefly rebuking?",
+    "positions": "Gill names covetousness and cowardice; Henry names disregard of Canaan, distrust of the promise and unwillingness to face danger; Keil and Delitzsch put want of brotherly feeling first and the discouraging of the other tribes second; Calvin ranks them and says explicitly that the ingratitude and perverseness towards God is chastised more severely than the injustice towards their brethren."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the Kenezite",
-   "Caleb and Joshua",
-   "wholly following",
-   "the exception to the oath"
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Defends the sharpness of the reproof as evidence rather than excess, that neither did inconsiderate warmth carry Moses into such anger nor did he pronounce on a matter he did not understand, since the two tribes desired to lacerate the body of the Church by this severance."
+   },
+   {
+    "voice": "John Calvin",
+    "view": "Distinguishes the comparison Moses makes, that he does not liken the Reubenites and Gadites to the whole rebellious people but specifically to the ten spies from whom the sedition arose, since so far as in them lay they turned the people aside from the right way."
+   }
   ],
+  "themes": [
+   "shall your brethren go to war and shall ye sit here",
+   "wherefore discourage ye the heart",
+   "thus did your fathers",
+   "the ten spies and not the whole people",
+   "holding the heart away"
+  ],
+  "range": "6-9",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "B",
+   "generated": "2026-09-15",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
@@ -620,149 +244,69 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 1.25
+    "expansion": 0.47
    }
   }
  },
- "13": {
+ "10": {
   "voices": [
    "John Gill",
-   "Charles Ellicott"
-  ],
-  "thin": true,
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill attaches the kindled anger to the murmuring that followed the spies' report."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott identifies the forty years as the fulfilment of the prediction Moses himself announced by divine commandment when the evil report was brought up."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forty years in the wilderness",
-   "a sentence fulfilled",
-   "the generation consumed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "Ellicott supplies the identification of the forty years as the fulfilment Moses himself announced; the second paragraph draws out what that means for the men listening, which is the summary's framing rather than his comment",
-    "expansion": 2.97
-   }
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley",
    "John Calvin",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill takes the succession to cover families, substance and manners alike; Calvin reads the noun as a climax — literally an increase, hence a heap — and makes the new generation fuel added to a smouldering fire."
+    "summary": "Gill takes the anger to have been kindled against the spies and against the people who murmured on their report, and argues at length that the epithet Kenezite belongs to the father rather than to Caleb, with reasons from the marriage of Othniel and from the constant naming of Jephunneh as the father; Calvin takes the word for what the sons are to their fathers as an addition or climax and names the renderings he rejects."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sets the increase of men against the increase of sinful men, and grieves that a rising generation should be worse than the one before it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "risen up in your fathers' stead",
-   "filling up the measure",
-   "an increase of sinful men",
-   "augmenting the anger"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.6
-   }
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill glosses turning away as ceasing to follow God in his word, worship and ordinances, and to walk after the pillar of cloud and fire."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states flatly that it was Jephunneh who was the Kenezite and not Caleb, supposing Kenaz probably his father; Wesley takes the same descent one generation further back, from Kenaz his grandfather."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render the idiom as drawing back behind him, and take the two clauses as a longer desert and a destruction the petitioners themselves would prepare."
+    "prevalence": "several",
+    "summary": "Ellicott notes that Moses is here declaring the fulfilment of the very prediction he himself announced when the evil report was brought up; Keil and Delitzsch render the threat plainly, that if these men draw back God will leave the nation still longer in the desert so that they prepare destruction for the whole people."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry warns of wrath brought on the whole congregation and draws the maxim that men who considered the end of sin would fear its beginnings."
+    "summary": "Henry draws the moral the passage is pointed at, that if men considered as they ought what would be the end of sin they would be afraid of the beginning of it."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "turning away from after him",
-   "the whole congregation endangered",
-   "the end of sin",
-   "the pillar moving westward"
+  "debates": [
+   {
+    "question": "Who was the Kenezite, and how does the descent run?",
+    "positions": "Gill argues for the father rather than Caleb, since it will not suit to derive the name from the Kenaz who fathered Othniel, Othniel being called Caleb brother though Caleb gave him his daughter, and since Jephunneh and never Kenaz is named as Caleb father, concluding that both were named from a remoter ancestor and relaying a rabbinic reading that made Caleb rather the son-in-law of Kenaz; Clarke agrees the epithet is the father and supposes Kenaz his father; Wesley makes Kenaz the grandfather."
+   },
+   {
+    "question": "How should the word for what the sons are to their fathers be rendered?",
+    "positions": "Calvin takes it as an addition and specifically a climax, holding that those translate poorly who render it education, or offspring, or foster-children, since the noun comes from a root meaning to increase and multiply and is applied for that reason to usury; the passage, he argues, requires the sense of a heap, a new body of persons springing up who carry impiety to its height."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Compares the doubling of guilt by imitation to a later preacher reproach that his hearers always resisted the Holy Ghost as their fathers did, and draws from the phrase about not fulfilling after the Lord that there is nothing praiseworthy in the most vigorous course unless men persevere even to the goal."
+   }
+  ],
+  "themes": [
+   "the LORD anger was kindled",
+   "save Caleb the son of Jephunneh",
+   "forty years in the wilderness",
+   "risen up in your fathers stead",
+   "fuel added to a smouldering fire"
+  ],
+  "range": "10-15",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -781,532 +325,144 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 1.44
+    "expansion": 0.65
    }
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "John Calvin",
    "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reconstructs the consultation behind the reply and weighs both possibilities — an honest intention misinterpreted, or plain dealing bringing them to their duty."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill notes the freedom and boldness of men who came nearer to speak again; Calvin credits the severity of the rebuke with the change, and reckons the middle course they devise leaves them without guilt while improving their domestic affairs."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch describe the folds as stone enclosures, citing Wetstein on the nomads of the Leja, and take the building of towns as rebuilding and fortification; Ellicott agrees on both, the verb often meaning to build up or repair."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke argues from impossibility, following Calmet: they could only have meant repairing the Amorite cities lately taken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sheepfolds and cities",
-   "building means repairing",
-   "the middle course",
-   "the use of plain dealing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.37
-   }
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke asks who could hold the fenced cities and answers with the census — 110,580 men in the two tribes and a half, of whom only 40,000 crossed, leaving 70,580 behind; Wesley reaches the same conclusion from the words themselves."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders the pledge as equipping themselves in haste and takes \"little ones\" of the whole defenceless part of the nation; Keil and Delitzsch fix the term of service by an event, the bringing of Israel to its place."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the emphasis as a direct answer to the charge of cowardice."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ready armed",
-   "the numbers who crossed",
-   "the little ones",
-   "an open-ended pledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.73
-   }
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "range": "18-19",
-  "pericope_label": "the pledge not to return, and the surrender of any claim west of Jordan",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the pledge at full weight — houses, families, flocks and herds left behind until every man in Israel has his inheritance — and denies that the renunciation was defiance or contempt of the good land."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott treats the verse as a crux for the term rendered \"on yonder side\" and \"on this side\", concluding that nothing can be inferred from it about where the writer stood; Keil and Delitzsch carry the speech through as one continuous undertaking."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry counts the renunciation as the fourth article of a fair and generous proposal, leaving so much the more on the far side for their brethren."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "not returning until all are settled",
-   "renouncing a share in Canaan",
-   "on yonder side",
-   "a generous proposal"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.09
-   }
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott shows that only the object of the phrase has changed, infers that Israel's army was regarded as the LORD's, and gathers the places where the ark went into war."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill records that Moses was now better satisfied; Calvin raises the objection that Moses extended boundaries God had fixed and answered without consulting him, and resolves it from the outcome and from the later approbation of the ruling."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks the substitution: they offered to go before the children of Israel, Moses requires them to go before the LORD, since the cause is God's more than their brethren's."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley identifies \"before the LORD\" as before the ark, the token of God's presence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "before the LORD",
-   "the ark in the war",
-   "Moses without consulting God",
-   "liberality out of error"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.75
-   }
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets out how thoroughly Moses tries them — over Jordan, all of them, and before the LORD — and notes how exactly the crossing was afterwards performed in those terms."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry states the practical form of the condition: they were never to lay down their arms till their brethren laid down theirs."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch treat the following verses as one conditional grant with its penalty clause attached."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all of you armed",
-   "until he hath driven out his enemies",
-   "a term God alone can close"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "the observation that the tribes' own wording left the term of service conveniently open, and that Moses replaces it, is the summary's inference from the two verses rather than a comment any witness makes",
-    "expansion": 1.23
-   }
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "thin": true,
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill explains the subduing before the LORD as done in his presence, by his power, and for his people."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry draws out the double clearance — guiltless before God and blameless before Israel — and applies it to any possession we come to."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley glosses the phrase as denoting God's presence and his gracious and powerful assistance."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott points forward to where the eastern grant is recorded as accomplished."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "guiltless before the LORD",
-   "blameless before Israel",
-   "a possession before the LORD"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "B",
-    "checked_by": "self",
-    "note": "the closing paragraph, that the verse never treats the eastern country as second-best, is read off the verse itself rather than taken from a witness, though it agrees with Henry on the possession being held guiltless",
-    "expansion": 3.47
-   }
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
-  "range": "23-24",
-  "pericope_label": "the warning against breaking the pledge, and the charge to build",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill keeps the failure in view as a failure of the promise given; Calvin treats the words as a formal protestation summoning them before the tribunal of God, and explains why \"your sin will find you out\" is stronger than saying they will not escape."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks the direction of the offence — against the LORD, and not against their brethren only — and warns that God will reckon with them though they make light of it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley reads \"your sin\" as its punishment and turns the sentence into counsel: find your sins out, that you may repent of them and forsake them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be sure your sin will find you out",
-   "sin lieth at the door",
-   "the danger of forbearance",
-   "their own words made a command"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.18
-   }
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "thin": true,
-  "range": "25-27",
-  "pericope_label": "the two tribes bind themselves to the terms",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill divides the answer between the two halves of the bargain — the march before the LORD and the provision for children and flocks — and reports Jarchi on the singular verb."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch note that the promise is repeated and that its verb stands in the singular, as through a spokesman."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry treats the speech as a bond given for performance, and supplies the equity behind it: their brethren had helped conquer this country, so justice bound them to the conquest of their brethren's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy servants will do",
-   "a bond for performance",
-   "one spokesman for both tribes",
-   "returning kindness received"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 2.16
-   }
-  }
- },
- "28": {
-  "voices": [
-   "Matthew Henry",
-   "John Gill",
    "John Calvin"
   ],
   "schools": [
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry sees Moses settling the matter with Eleazar and with Joshua his successor, knowing he will not live to see it perfected, and leaving an estate upon condition for Joshua to declare absolute."
+    "summary": "Henry raises the question whether the two tribes had meant this all along and refuses to settle it, drawing a separate lesson from each branch, that honest meaning is often unhappily misinterpreted, or that plain dealing has a good effect."
    },
    {
     "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin settles it the second way and makes the severity of Moses the cause, since a milder dealing would perhaps have been received with contempt, and notes the one advantage the tribes still keep, the opportunity of improving their domestic finances while their families sit safe."
+   },
+   {
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gill is careful not to overstate Moses' personal authority, allowing that the court may have consented; Calvin insists the elders were united with him in the decision, and explains the conditions as protecting both an honest performance and against a deceitful one."
+    "summary": "Ellicott and Keil and Delitzsch both read the verb as rebuilding or repair rather than founding, and describe the folds as loose stones piled one upon another; Keil and Delitzsch add a traveller report that nomads still ring each camp with a stone enclosure whose falling top stones betray a wolf at night."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reaches the same conclusion from impossibility, that cities could not have been built and fortified in the time, and cites Calmet for repairing the Amorite cities lately taken."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "an estate upon condition",
-   "Eleazar and Joshua",
-   "Moses settling his affairs",
-   "a record that protects both ways"
+  "debates": [
+   {
+    "question": "Had the two tribes intended to send their fighting men all along?",
+    "positions": "Henry poses the question and declines to answer it, drawing a lesson from either possibility, that what is honestly meant is often misinterpreted and Moses was excusable in suspecting the worst out of care to prevent sin, or that plain dealing brought them to their duty without murmuring; Calvin answers it, holding that the reply shows how usefully the severity of Moses had worked on their minds, since gentleness would have been received with contempt."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "view": "Support the description of the sheepfolds from a modern traveller account of nomads who ring each camping place with a stone wall the height of a man, so that the noise of the smaller stones laid on top betrays a wolf attempting to enter in the night."
+   },
+   {
+    "voice": "John Calvin",
+    "view": "Notes what the compromise still leaves the two tribes, that by depositing their wives and children in a peaceful spot they would have the opportunity of improving their domestic finances."
+   }
+  ],
+  "themes": [
+   "we will build sheepfolds here for our cattle",
+   "cities for our little ones",
+   "repair rather than found",
+   "a stone wall the height of a man",
+   "the good effect of plain dealing"
+  ],
+  "range": "16",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke asks who was to defend the fortified cities if only women and children were left, denies it possible, and proves from the census figures against the number recorded as crossing that some seventy thousand men must have stayed behind; Wesley reads the promise as elastic from the outset, that they undertook to go either all or as many as should be thought necessary."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott renders the phrase as equipping themselves in haste, notes that the word for little ones seems to cover the whole defenceless portion of the nation, and treats the nineteenth verse as a critical passage bearing on a word applied to the country on both banks of the river; Keil and Delitzsch set out the promise in its parts."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill insists the disclaimer was not said in contempt of the good land nor as a refusal, but as giving up all pretensions to any share there if their own request were granted."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Did every fighting man of the two tribes go over?",
+    "positions": "Clarke says it cannot be supposed possible that women and children could hold fortified cities, and counts the three tribal numbers from the last census against the forty thousand recorded as crossing armed, concluding that seventy thousand five hundred and eighty were left behind for the defence of the families; Wesley reads the undertaking as elastic from the start, either all or as many as should be thought necessary; Gill, on the terms Moses sets, notes that Moses is very express in requiring not some of them only but all."
+   },
+   {
+    "question": "Does the phrase on this side Jordan fix where the writer stood?",
+    "positions": "Ellicott treats the verse as one of the critical passages bearing on the question and answers that it does not, since the same word is applied here to the country on both sides of the river, so that nothing can be inferred with any degree of certainty about whether the writer was east or west of it."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Settles a question of numbers by arithmetic rather than exposition, setting the census totals of the three tribes against the figure recorded as actually crossing the Jordan armed, and naming the peoples the defenders were left to guard against."
+   }
+  ],
+  "themes": [
+   "we will go ready armed before the children of Israel",
+   "our little ones shall dwell in the fenced cities",
+   "we will not return unto our houses",
+   "on this side Jordan eastward",
+   "a promise larger than the muster"
+  ],
+  "range": "17-19",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1329,198 +485,66 @@
    }
   }
  },
- "29": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Matthew Henry",
-   "John Calvin",
-   "Keil and Delitzsch"
-  ],
-  "excluded_voices": [
-   "Jamieson, Fausset and Brown"
-  ],
-  "range": "29-30",
-  "pericope_label": "the conditional grant entrusted to Eleazar and Joshua",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill identifies the hearers as Eleazar, Joshua and the princes and glosses the failure as a change of mind and a broken promise; Calvin reads the two branches as one principle, the alternative being compulsion rather than a consolation portion, and notes that legislating for a division not yet possible encourages confidence."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry hears the distinction in the form of the sentence: not no inheritance at all, but not this inheritance which they covet."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley states the penalty plainly — they forfeit Gilead and are constrained to seek possessions among their brethren."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch keep the two conditional clauses in their formal shape."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the conditional grant",
-   "possessions among you",
-   "compulsion, not consolation",
-   "confidence in a victory not yet won"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.3
-   }
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "range": "31-32",
-  "pericope_label": "the two tribes answer as one man",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill draws attention to the singular verb as a mark of unanimity, reporting Jarchi, and notes how often the undertaking has now been repeated for confirmation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley opens out the appeal, taking \"as the LORD hath said\" either of the present word through Moses or of the old command to go in and possess."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch render the second clause as a request that the inheritance remain to them beyond Jordan; Ellicott notes that the ambiguous term for the river's sides stands here without its qualifying words."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks the repetition simply as their adhering to their brethren."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "answering as one man",
-   "as the LORD hath said",
-   "the crossing before the possession",
-   "adopting Moses' phrase"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.2
-   }
-  }
- },
- "33": {
+ "20": {
   "voices": [
    "John Gill",
    "Charles Ellicott",
    "John Calvin",
-   "Matthew Henry",
+   "John Wesley",
    "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Keil and Delitzsch both find the late appearance of half Manasseh strange and explain it from the conquests recorded next; Keil and Delitzsch give the extent of the grant in the terms the Hebrew uses."
+    "summary": "Ellicott infers from the phrase about going armed before the Lord that Israel army was regarded as the army of the Lord and that the ark was carried into war, supporting it from the order of march and two later scenes, and observes that the two tribes do not adopt the phrase until Moses has used it first."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill wonders whether the grant was by word of mouth or by a signed instrument; Calvin insists Moses laid down an inviolable law on God's command, and hears an implied contrast with the covenant made with Abraham."
+    "summary": "Calvin raises an objection against Moses that no other witness raises, that he extended boundaries God had prescribed and gave an immediate answer without consulting God, and then answers it from the later history; on the closing warning he holds that vengeance is so connected with sin that it cannot be severed from it; Gill notes that Moses is very express, requiring a crossing and not a march, and all of them and not some."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Henry suggests the land proved too much for two tribes, and that a warlike family was the right one to plant on a frontier."
+    "summary": "Wesley reads the phrase of the ark as the token of God presence, and turns the warning about sin finding them out into a duty, that we should find our sins out first so as to repent of them."
    }
   ],
   "debates": [
    {
-    "question": "Why does the half tribe of Manasseh appear only at the close of the grant?",
-    "sides": [
-     {
-      "position": "because that part of the tribe had conquered the districts and so acquired a just claim to them",
-      "holders": [
-       "Ellicott",
-       "Keil and Delitzsch",
-       "Calvin"
-      ]
-     },
-     {
-      "position": "because the land proved too much for two tribes, so a half tribe was given a lot among them",
-      "holders": [
-       "Henry"
-      ]
-     }
-    ]
+    "question": "Did Moses exceed his commission in granting the request?",
+    "positions": "Calvin poses the objection in its full force, that the inheritance had been promised in Canaan and it was not allowable for Moses to alter a divine decree, and that in a matter of such perplexity he did not consult God but gave an immediate answer indirectly overthrowing the previous ordinance; he answers from the outcome, that God pardoned the error and took occasion to extend his liberality, and that the arrangement was ratified after Moses death and excepted in the later assignment of inheritances, from which it is evident his decision was approved. No other witness raises the question."
+   },
+   {
+    "question": "What does going armed before the Lord mean?",
+    "positions": "Ellicott takes it of the ark carried into war and argues it from the order of march, in which these two tribes immediately preceded the ark; Wesley allows either the order of march or the manner of the passage over Jordan; Gill takes the passage as the reference, the ark going first into the river and standing there while the tribes went over."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Reads the saying that sin will find them out as stronger than a plain statement that they shall not escape, since it means that vengeance is so connected with sin that it cannot be severed from it, and warns that God forbearance encourages us to audacity while we suppose we have escaped."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Turns the same warning inside out into a duty, that it concerns us to find our sins out so as to repent of them and forsake them, lest our sins find us out to our confusion and destruction."
+   }
+  ],
   "themes": [
-   "the two kingdoms granted",
-   "half Manasseh added",
-   "an inviolable law",
-   "holding the frontier"
+   "if ye will go armed before the LORD to war",
+   "then afterward ye shall return and be guiltless",
+   "be sure your sin will find you out",
+   "do that which hath proceeded out of your mouth",
+   "the army of the Lord"
+  ],
+  "range": "20-27",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1539,155 +563,221 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 0.81
+    "expansion": 0.37
+   }
+  }
+ },
+ "28": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "John Calvin",
+   "Keil and Delitzsch",
+   "John Wesley"
+  ],
+  "schools": [
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets out the arrangement as a legal instrument, an estate upon condition left to Joshua to declare absolute, and is careful that the penalty was not the loss of all inheritance but the loss of this one, the tribes being compelled to take their lot among their brethren and fare as they fared."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin gives the reason for the conditions, that the two tribes should not afterwards be accused of crossing merely to seek a new home and that deceit should not profit them, and observes that the alternative allotment is not a reward for inertness but a compulsion; Gill notes that the sentence reads as though Moses determined the case himself and supposes it was rather by the vote of the whole court, and takes the singular verb of the reply as a mark of unanimity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley states the forfeit plainly, that they should lose their possessions in Gilead and be constrained to seek possessions among their brethren; and takes the clause about what the Lord has said either of the present moment or of the older command."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Keil and Delitzsch set out the conditional terms and the repeated promise in their order."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who made the grant?",
+    "positions": "Gill notes that the text reads as if Moses determined the case himself and supposes it was by the vote and with the consent of the whole court; Calvin agrees that though Eleazar and the elders are not named it is certain they were not passed over, since the case had been brought before them from the beginning, and adds that Moses acted relying on God command even though the text does not say God interposed his authority."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "view": "Is precise about what the threatened penalty actually was, not that the two tribes should have no inheritance at all, but that they should not have the one they coveted, and should not expect the lot to favour them."
+   },
+   {
+    "voice": "John Calvin",
+    "view": "Reads the confident tone of the arrangement as deliberate encouragement, since in laying down rules for a division of the land as though it were about to happen Moses raises everyone confidence, as if the victory were already in their hands."
+   }
+  ],
+  "themes": [
+   "Moses commanded Eleazar and Joshua",
+   "they shall give them the land of Gilead",
+   "possessions among you in the land of Canaan",
+   "an estate upon condition",
+   "answered as one man"
+  ],
+  "range": "28-31",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
+  }
+ },
+ "32": {
+  "voices": [
+   "John Gill",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill wonders in what form the grant was made, by word of mouth before the court or by an instrument drawn and signed, and notices that the undertaking is repeated again and again for confirmation; Calvin turns the late appearance of half Manasseh into a chronological question and rejects the reading that would put the conquests of Machir after the grant, while conceding he will not contend the point pertinaciously."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch define what was conveyed with the precision of a deed and call it strange that the half tribe should be included here for the first time at the close of negotiations in which it is never mentioned; Ellicott resolves the oddity by pointing forward to the verses showing that a portion of that tribe had conquered parts of Gilead and Bashan and so acquired a just claim."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers three possibilities for the inclusion and settles on none, adding a reason of his own, that men celebrated for courage were well placed in a frontier country."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Why does half Manasseh appear only at the end?",
+    "positions": "Keil and Delitzsch call it strange, since the half tribe takes no part in the negotiations; Ellicott resolves it from the closing verses, that a portion of the tribe had been chiefly if not exclusively engaged in conquering parts of Gilead and Bashan and had justly acquired a claim to what it had subjugated; Henry offers their own request, divine direction, or their having signalized themselves, chooses none, and adds that it was good policy to put a warlike family in a frontier country; Calvin makes it a matter of chronology, that the portion is excepted because those lands had been separately acquired already."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Argues the chronology from Hebrew narrative habit, that it is common with the Hebrews to transpose the order of occurrences when something omitted is added to explain what follows, and then declines to press the point against anyone who prefers the other reading."
+   }
+  ],
+  "themes": [
+   "we will pass over armed before the LORD",
+   "the kingdom of Sihon and the kingdom of Og",
+   "the land with the cities thereof",
+   "half the tribe of Manasseh",
+   "a claim acquired by conquest"
+  ],
+  "range": "32-33",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-15",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
    }
   }
  },
  "34": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "John Wesley",
    "Keil and Delitzsch",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Wesley"
   ],
-  "range": "34-36",
-  "pericope_label": "the cities the Gadites rebuilt",
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch identify each town on the ground, from Dibon north of the Arnon to Jogbehah near Amman, and correct v. Raumer on which Aroer is meant; Ellicott renders \"built\" as repaired or fortified, traces the later redistribution of the towns, and notes that the Moabite stone was found at Dibon."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the building as repair of walls and houses demolished in the wars with Sihon and Og, and supplies the later names of Bethharan."
+    "summary": "Gill argues the cities were repaired and not founded from the calendar, since these were places long in being and only months remained before the crossing, though he allows that men enough were left behind to be set to work; and he supplies the local traditions, a Talmudic form of one name, the renaming of a city by Herod, and a Targum describing another as the city of two streets paved with marble."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch identify almost every town with a modern ruin and give distances, correct a colleague by name over the site of Aroer, and admit ignorance where a town is mentioned only here; Ellicott argues from probability that new cities would not have been built and the circumstances admitted no such delay, and adds that the Moabite stone was discovered at Dibon in 1868."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Wesley explains that the old cities were not burnt as several in Canaan were, so repair was all that was needed; Clarke follows Aroer through Emim, Moabite, Amorite and Israelite hands to the Assyrian captivity and back to Moab."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Which Aroer is meant?",
-    "sides": [
-     {
-      "position": "the Aroer in the middle of the valley of the Arnon",
-      "holders": [
-       "Keil and Delitzsch",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the Aroer before Rabbah, allotted to Gad",
-      "holders": [
-       "v. Raumer (as reported by Keil and Delitzsch)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "building means repairing",
-   "the towns of Gad",
-   "towns that changed hands",
-   "fenced cities and folds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 0.7
-   }
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "range": "37-38",
-  "pericope_label": "the cities the Reubenites rebuilt, and the changing of their names",
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill argues from Heshbon and Elealeh that the towns were repaired rather than founded, collects the traditions about Kirjathaim, and notes that the Moabites afterwards restored the old names."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch fix Heshbon and Elealeh on the ground and follow the title of Heshbon from Reuben to Gad and on to the Levites."
+    "summary": "Wesley says they had neither need nor leisure to do more, the old cities not having been burnt and ruined as several in Canaan were; Clarke explains the changed names politically, that conquerors called cities after their own names."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry gives both motives for the renaming and puts his weight on the burying of idolatrous names in oblivion."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley allows either the custom of conquerors or the prohibition against naming other gods; Clarke takes the renaming simply as what conquerors did."
+    "summary": "Henry gives both reasons for the renaming and adds that the Amorites may have suffered the places to go to decay."
    }
   ],
   "debates": [
    {
-    "question": "Why were the names of Nebo and Baal-meon changed?",
-    "sides": [
-     {
-      "position": "to purge idolatrous names the people were forbidden to mention",
-      "holders": [
-       "Gill",
-       "Henry",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "because conquerors customarily renamed the cities they took",
-      "holders": [
-       "Clarke",
-       "Wesley"
-      ]
-     }
-    ]
+    "question": "Why were the names of the cities changed?",
+    "positions": "Gill and Wesley give the religious reason, that one name was an idol and another meant the habitation of Baal where a temple probably stood, so that the Reubenites would not retain such titles; Clarke gives a political reason, that conquerors called cities after their own names, instancing the city that took the name of the man who took it; Henry offers both without choosing, either to signify the change of owners or because the old names carried a respect to the deities worshipped there."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the towns of Reuben",
-   "their names being changed",
-   "burying the names of Baalim",
-   "names restored by Moab"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Brings the one modern fact into the chapter, that it was at Dibon that the Moabite stone was discovered in 1868."
+   },
+   {
+    "voice": "John Gill",
+    "view": "Notes what undoes the whole renaming, that the text never says what the new names were, and that when the places later fell to the Moabites their ancient names were restored to them."
+   }
   ],
+  "themes": [
+   "the children of Gad built Dibon",
+   "fenced cities and folds for sheep",
+   "their names being changed",
+   "repaired and fortified",
+   "ancient names restored"
+  ],
+  "range": "34-38",
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1706,151 +796,70 @@
    "fidelity": {
     "grade": "A",
     "checked_by": "self",
-    "expansion": 1.0
+    "expansion": 0.43
    }
   }
  },
  "39": {
   "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Calvin",
-   "John Gill",
-   "John Wesley"
-  ],
-  "range": "39-40",
-  "pericope_label": "Machir takes Gilead, and Moses confirms it to his house",
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders the opening as a pluperfect and treats the verse as the belated explanation of half Manasseh's inclusion; Keil and Delitzsch justify the pluperfect from Hebrew narrative style and map the Manassite share."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin weighs and rejects the view that the conquest followed the grant, without pressing the point; Gill distinguishes the Gilead already conquered from the part still in Amorite hands, and denies that Machir himself received it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley says plainly that the grant was to the posterity of Machir, not the man."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Did the Machirites take Gilead before or after Moses made the eastern grant?",
-    "sides": [
-     {
-      "position": "before — the verbs are pluperfect, and the conquest is the reason the grant excepts their portion",
-      "holders": [
-       "Ellicott",
-       "Keil and Delitzsch",
-       "Calvin"
-      ]
-     },
-     {
-      "position": "after, attracted by the advantage that presented itself — a view Calvin declines to contend against",
-      "holders": [
-       "Calvin (reporting others)"
-      ]
-     }
-    ]
-   },
-   {
-    "question": "Was Gilead given to Machir himself?",
-    "sides": [
-     {
-      "position": "to his family and posterity, Machir being long dead",
-      "holders": [
-       "Gill",
-       "Wesley",
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "to Machir in person, he being still alive",
-      "holders": [
-       "Aben Ezra (as reported by Gill)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the children of Machir",
-   "a pluperfect narrative",
-   "which Gilead is meant",
-   "the man or his posterity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.18
-   }
-  }
- },
- "41": {
-  "voices": [
    "John Gill",
    "Charles Ellicott",
    "Keil and Delitzsch",
+   "John Wesley",
    "Adam Clarke"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott and Keil and Delitzsch trace Jair through Segub and Hezron to a daughter of Machir, making him a great-grandson of Manasseh reckoned to his maternal tribe; Keil and Delitzsch suggest a rich dowry as the reason, and give the extent of the conquest in Argob."
+    "summary": "Keil and Delitzsch read the imperfects as pluperfects on the principle that Semitic narrative sets explanatory clauses before the leading thought, trace Jair descent through a father of Judah who married a daughter of Machir, and reject a proposed identification of Nobah city in favour of the site later geographers assign to Decapolis; Ellicott renders the verse as a pluperfect outright and gives the same descent for Jair."
    },
    {
     "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill states the anomaly at once, that Jair was of Manasseh by his mother and of Judah otherwise."
+    "prevalence": "several",
+    "summary": "Calvin reaches the same chronology by argument rather than grammar, that the lands were separately acquired and the portion excepted for that reason; Gill marks the distinction the passage turns on, that the part of Gilead the two tribes asked for was already conquered while the part given to half Manasseh was still in Amorite hands, and reports and rejects the opinion that Machir himself was still alive."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke would have translated Havoth-jair as the villages of Jair, and quotes Ainsworth on these tribes being first settled and first carried captive."
+    "prevalence": "several",
+    "summary": "Clarke cites Ainsworth for the observation that the tribes first settled were the first carried captive, names the kings and the places of that captivity, and objects that the name Jair gave his towns ought to have been translated rather than carried over; Wesley makes the same observation his closing remark and calls it a proportion providence frequently observes in balancing prosperity and adversity."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Did the conquests of Machir children precede the grant?",
+    "positions": "Keil and Delitzsch say the imperfects are to be read as pluperfects, the explanatory clauses preceding the leading thought in the Semitic manner, so that the sons of Machir had already taken Gilead when Moses gave it; Ellicott renders it so directly; Calvin reaches the same result by argument, rejecting as unsuitable and improbable the reading that puts the victories after the permission, while conceding that he will not pertinaciously contend against anyone who prefers it."
+   },
+   {
+    "question": "Was Machir himself alive to receive the grant?",
+    "positions": "Gill reports from Aben Ezra the opinion that he was, and rejects it on the rule that all who came out of Egypt aged twenty and upward died in the wilderness but two; Wesley says the same more shortly, that Machir was doubtless long since dead and the family or posterity is meant."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Ainsworth (as reported by Clarke)",
-    "note": "sets the honour of being first to receive an inheritance against the judgement of being first carried into Assyrian captivity."
+    "voice": "Keil and Delitzsch",
+    "view": "Explain why Jair line passed into his mother tribe against the ordinary rule, guessing that Machir had portioned his daughter with a rich dowry as though she were an heiress."
+   },
+   {
+    "voice": "John Wesley",
+    "view": "Closes the chapter on a symmetry, that as these tribes were placed before the other tribes so they were displaced before them, being carried captive some years earlier, which he takes for a proportion providence frequently observes."
    }
   ],
   "themes": [
-   "reckoned to the maternal tribe",
-   "Havoth-jair",
-   "the province of Argob",
-   "first settled, first carried away"
+   "the children of Machir went to Gilead",
+   "Moses gave Gilead unto Machir",
+   "Jair took the small towns thereof",
+   "Nobah took Kenath and called it after his own name",
+   "first settled and first carried away"
+  ],
+  "range": "39-42",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
+   "generated": "2026-09-15",
    "grade": "A",
    "checks": [
     "length",
@@ -1870,69 +879,6 @@
     "grade": "A",
     "checked_by": "self",
     "expansion": 0.32
-   }
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch place Nobah among the Machirites, identify Kenath with Kanatha of Coelesyria and the Decapolis, describe its extensive ruins, and decline Kurtz's identification of the site."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill admits that who Nobah was is not certain, and passes on the tradition that he was born in Egypt and buried beyond Jordan."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley infers an eminent man of Manasseh, and closes on the reversal — placed before the other tribes, and displaced before them; Clarke had already given the custom of conquerors naming cities after themselves."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Keil and Delitzsch",
-    "note": "reject the identification of Nobah with the village of Nowa in Jolan, holding that the name has not been preserved at all."
-   }
-  ],
-  "themes": [
-   "Nobah and Kenath",
-   "naming a city after oneself",
-   "a name that did not hold",
-   "placed first and displaced first"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-15",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid",
-    "voices-sourced",
-    "no-meta",
-    "no-noise",
-    "no-slot",
-    "no-carriers",
-    "quotes-capped",
-    "fidelity-self-graded"
-   ],
-   "lint": "audit-synthesis-quality/1",
-   "fidelity": {
-    "grade": "A",
-    "checked_by": "self",
-    "expansion": 1.19
    }
   }
  }
