@@ -86762,6 +86762,36 @@
         "39-42"
       ],
       "note": "Graded A. The pluperfect argument is Keil and Delitzsch, the direct pluperfect rendering Ellicott, and the argument from Hebrew narrative habit Calvin. The descent of Jair through a father of Judah who married a daughter of Machir is given by both Keil and Delitzsch and Ellicott and is reported once. Ainsworth is named as Clarke names him. The word Gilead is used in place of a gentilic form that the source does not contain."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "SIZE PROFILE, recorded for whoever takes this chapter. 23 source keys, 62342 usable source words by direct count and 62728 by the loop sizer, about 1.57x the 40000 threshold and larger even than matthew 3. No verse gaps. The weight is concentrated rather than spread: key 1 alone runs 14151 words, key 23 runs 6182 and key 16 runs 6012, against a median key of 1759. Four Matthew Henry expositions account for 9090 words and the Barnes, Clarke and Ellicott blocks at key 23 for another 4385. Twenty-eight distinct voices, the largest set met on this run, with a full Latin and Greek catena including Leo, Ambrose, Eusebius and Theodotus alongside the usual fathers and the nine moderns. Expect eight to ten pericope tiles on the natural divisions, but keys 1, 16 and 23 will each need splitting more than once. This is a fresh worker whole batch. Drawn and declined by a session that had already landed ruth 1, mark 1, mark 5, job 20 and numbers 32 in the same window, on the rule that a chapter one cannot finish must not be started."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "CORRECTION TO A WORKING ASSUMPTION ABOUT THE JAMIESON RUNS. Across ruth 1, mark 1, mark 5, job 20 and numbers 32 the JFB blocks sit at a fixed offset with step six and are, in every one of those chapters, foreign material imported from another book. It would be easy to generalise that the mod-six run is by itself a marker of displacement. Matthew 2 shows it is not. The JFB blocks here sit at keys 1, 7, 13 and 19, the same offset-one step-six run as mark 1, and they are genuinely about this chapter: key 7 is the Sanhedrin pronouncing Bethlehem the predicted birthplace, key 13 is on the form of the quotation, key 19 is on the stable and the emptying of Bethlehem. Matthew 3 key 13 is the same case, a JFB block on the meaning of the word for repentance that belongs to Matthew 3 even though keys 1 and 7 there are foreign. The run is an artefact of how the source was assembled; whether its content is foreign has to be checked block by block. Excluding on the pattern alone would silently discard usable source."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "19"
+      ],
+      "note": "Two voice-name defects in this chapter. First, key 19 carries a head named simply Pseudo- with nothing after the hyphen, a truncated or corrupted voice name on a 67-word block; a worker building a voice map will get a meaningless entry unless it is handled. Second, the catena again carries both Chrysostom and John Chrysostom as separate head names, as matthew 3 does, and they are different blocks rather than duplicates. Key 23 carries the usual StudyLight chrome, with Ellicott at 1452 words and the chapter-final marker present."
     }
   ]
 }
