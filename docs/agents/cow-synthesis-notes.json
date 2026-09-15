@@ -87390,6 +87390,126 @@
       "book": "mark",
       "chapter": "16",
       "note": "Legacy-unversioned chapter regenerated wholesale from the catena as eight pericope tiles: 1-3, 4-6, 7-8, 9-11, 12-13, 14-16, 17-18, 19-20. The source has 20 keys with no gaps, so every verse is covered and no tile spans a gap. No tile is thin and no excluded_voices are declared; the Cyril of Jerusalem residue at keys 2, 5 and 7 could not be declared for the tooling reason recorded in the source-defect note, so he is simply not declared as a voice on the tiles covering those keys, and is declared only on the two tiles where his blocks are genuine. Catena blocks in this chapter are runs rather than single entries: the block labelled Gregory at key 1 carries Severianus, the block labelled Bede at key 9 carries Theophylact, the block labelled Chrysostom-style runs at keys 14 and 19 carry Theophylact and Severianus. Voices were declared from the content of the runs, not the block labels; names appearing only inside another witness's run and not catena voices in their own right (Severianus, Chrysologus, Bruce, Swete, Westcott and Hort, Grotius) are cited as the witnesses cite them and are not declared. Every entry self-graded A on both compress and ttr; the word window held on all eight; the bidirectional voice-citation check was clean; no entry contains strong tags, non-ASCII beyond the whitelist, or bare book-and-number scripture references."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB IS WHOLLY DISPLACED IN 1KINGS 8, all ten blocks. They sit at keys 3, 9, 15, 21, 27, 33, 39, 45, 51 and 63 — the mod-six run, broken once between 51 and 63 — and every single one is commentary on 1 Samuel 13 and 14: Saul numbering his chariots, Saul at Gilgal, the garrison at Michmash, Jonathan and his armourbearer climbing the crag, the noise of dismay heard at Gibeah, the army eating flesh with the blood. Excluded at all ten keys. Same clean sweep as john 16, unlike matthew 2 where the mod-six blocks were genuine."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "VALIDATOR RULE WORTH KNOWING BEFORE YOU WRITE: excluded_voices may only name a voice that actually appears in THAT ENTRY span. Setting a chapter-wide exclusion list on every tile produces fifteen FAIL lines reading excluded_voices names a block absent from this entry source. Compute the exclusion per range, not per chapter."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "Only 6 voices in the whole chapter — Gill at all 66 keys, Keil and Delitzsch 34, Clarke 32, Ellicott 22, JFB 10 (all displaced), Henry 5. With JFB gone that is five usable voices, far thinner than a Gospel chapter, so a tile that would be comfortable elsewhere can be starved here. 37 of the 66 keys carry under 250 words. Tiled into 25 entries, mostly 2 to 6 verses, with every thin key riding with a rich neighbour."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "22"
+      ],
+      "note": "The chapter weight is in four Matthew Henry expositions: 4211 words at k22, 1419 at k12, 1438 at k1 and 1097 at k54 — 8165 words, 31 percent of the chapter, in four keys. Keys 22, 1, 12 and 54 are therefore the four places where a tile has real material to draw on; everything between them is Gill and Keil and Delitzsch on single clauses."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "2"
+      ],
+      "note": "The qa grade is computed from compress and moving-average ttr, NOT stored from the writer self-grade: A needs zip at or above 0.42 AND ttr at or above 0.58 (backfill-synthesis-qa line 100). Entry 2 first came out at ttr 0.499, one thousandth under the B floor of 0.50, and failed the gate as grade C. The cause was vocabulary repetition in a short entry — month, feast, tabernacles, seventh recurring in a 400-word span. Rewriting the same content with varied diction took it to 0.643 and grade A. Short entries on a narrow subject are where this bites."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "1"
+      ],
+      "note": "The FLOOR flag fires for any entry of 350 to 375 words (audit-synthesis-quality line 126), on the reading that the length was written to the minimum rather than to the material. It is a severity signal, not a gate violation, but three entries here tripped it. Worth aiming at 400 rather than 360 when a tile is genuinely thin."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "2"
+      ],
+      "note": "Three separate disagreements stack in one verse. On the name of the month, Keil and Delitzsch argue for flowing brooks and reject both the equinox, on the plural form, and the month of gifts, on when the rains actually start; Ellicott adopts the month of gifts. On which feast is meant, Clarke and Ellicott say Tabernacles while Gill denies it and makes it the feast of the dedication, arguing from the fortnight total and the date of dismissal. Gill is alone on that."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "3"
+      ],
+      "note": "Which tent was carried into the temple: Keil and Delitzsch are definite for the Mosaic tabernacle at Gibeon, since the tent on Zion can be proved never to have been called the tent of meeting; Clarke reports both candidates and declines to choose, noting some think both were brought in to prevent idolatry; Ellicott sidesteps it by supposing each division of Levites brought up its own charge."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "27"
+      ],
+      "note": "Clarke answers a rhetorical question about the heavens with several pages of astronomy — systems of systems, light travelling at a hundred and ninety thousand miles a second from suns whose light has not yet arrived, and a computation of how many worlds could have been made at one a week since creation. Keil and Delitzsch ignore the immensity entirely and treat the verse as a parenthesis inside a single continuous petition, rejecting on that ground both rival constructions of the connecting particle and the claim that a new section of the prayer begins here."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "46"
+      ],
+      "note": "Clarke corrects the received rendering of there is no man that sinneth not on grammatical grounds, arguing that as translated the second clause makes the supposition in the first nugatory, and that the original says there is no man that MAY not sin — liability rather than fact. He shows the same translators render the word permissively elsewhere, including at verse 31 of this chapter."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "62"
+      ],
+      "note": "On the twenty-two thousand oxen, Keil and Delitzsch defend the figure by dismantling the three assumptions behind the objection that too many beasts a minute would be needed; Ellicott accepts the figure as textually certain and relocates the difficulty from consumption to the physical act of offering, proposing that representative victims of each hundred were sacrificed and the rest merely dedicated. Ellicott then reads the profusion against Solomon, as carrying the heathen notion that God is pleased with thousands of rams and a display of royal magnificence inside the act of homage."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "56"
+      ],
+      "note": "Ellicott turns the thanksgiving for rest into a foreboding: entering that rest was conditional on walking in the ways of the Lord, a condition Solomon himself broke, so that the glory of the age was a gleam soon swallowed up. Clarke ends the chapter the same way at verse 66. Kept as named positions because Henry reads the same verses as unmixed celebration."
     }
   ]
 }
