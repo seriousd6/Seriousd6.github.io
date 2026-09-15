@@ -86792,6 +86792,16 @@
         "19"
       ],
       "note": "Two voice-name defects in this chapter. First, key 19 carries a head named simply Pseudo- with nothing after the hyphen, a truncated or corrupted voice name on a 67-word block; a worker building a voice map will get a meaningless entry unless it is handled. Second, the catena again carries both Chrysostom and John Chrysostom as separate head names, as matthew 3 does, and they are different blocks rather than duplicates. Key 23 carries the usual StudyLight chrome, with Ellicott at 1452 words and the chapter-final marker present."
+    },
+    {
+      "at": "2026-09-15",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "OPERATIONAL NOTE ON HAND PUSHES, recorded because it nearly stopped a run. After synthesis-loop.py finish, HEAD is left DETACHED, and a subsequent git reset --hard origin/master keeps it detached. In that state git push origin master does not push your work at all: it pushes the stale local branch ref named master, which is far behind, and the server correctly rejects it as non-fast-forward with the message that a pushed branch tip is behind its remote counterpart. The message is misleading, because git ls-remote will show the true remote tip matching your commit parent exactly, which makes it look like a server or proxy fault. It is not. Check git rev-parse --abbrev-ref HEAD first; if it prints HEAD you are detached. The correct command is git push origin HEAD:master, which is a plain fast-forward and is exactly what finish --push already does, so chapter landings are unaffected. Only hand pushes of notebook commits hit this."
     }
   ]
 }
