@@ -6,7 +6,6 @@
    "Jerome",
    "Chrysostom",
    "Hilary",
-   "John Chrysostom",
    "John Gill",
    "Matthew Henry",
    "Albert Barnes",
@@ -14,42 +13,77 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
+  "range": "1-5",
+  "pericope_label": "Judge not, that ye be not judged. For with what judgment ye judge, ye shall be judged: and with what measure ye mete, it shall be measured to you again. And why beholdest thou the mote that is in thy brother’s eye, but considerest not the beam that is in thine own eye? Or how wilt thou say to thy brother, Let me pull out the mote out of thine eye; and, behold, a beam is in thine own eye? Thou hypocrite, first cast out the beam out of thine own eye; and then shalt thou see clearly to cast out the mote out of thy brother’s eye.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Forbids rash, censorious, unjust judgment (Rom 2:1; Lk 6:37), not the magistrate's office or a necessary opinion of evil; 'critic' from krinō."
+    "summary": "Barnes grants that we cannot help forming opinions of evil conduct, so that what is condemned is the haste and the refusal to allow anything that might excuse, and he agrees with Robertson that the beam comes out so the eye may work, the verb changing from gazing at a thing to seeing through it. Ellicott states the retributive measure exactly, an unjust judgement of ours not bringing down an unjust judgement from God, but the harshness we measured out becoming the measure of what is justly dealt to us; he notes that satirists everywhere have made the point, and that such hypocrisy is the worse for not knowing itself. Robertson makes the mote dried wood rather than dust and the beam a joist sticking out grotesquely. Lightfoot supplies the rabbinic form of the measure."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill exempts the magistrate and the Church court and leaves only the private censure that reads words and deeds at their worst. Calvin treats the saying as medicine for a common disease, noting how strangely enjoyable the inspection of other men's faults is, and names both faults together, the sharp sight that comes of having no charity and the indulgence that shelters our own."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke prefers splinter to mote, since a splinter bears an analogy to a beam where a speck of dust does not, and reads the measure as plain consequence, the severity we dealt out returning as the severity we suffer. Wesley calls the words awful, a man in effect choosing whether God shall be severe or merciful to him. Both hear the word hypocrite aimed at a reformer who needs reforming."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry stands with Gill and Barnes in exempting the magistrate and the Church court, so that what is forbidden is the private censure which construes words and deeds at their worst."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Be not a bitter judge but a physician; the ban lies on those full of great evils who judge small ones; harmonized with 'reprove, rebuke.'"
+    "summary": "Chrysostom answers the difficulty by distinguishing manner from act: what is forbidden is bitterness, not correction, the sinner being still set right as by a physician applying a remedy and not by an enemy taking revenge, and the prohibition falling on men loaded with great evils who arraign others for small ones; he illustrates it with men who denounce a monk for one good meal while drinking to excess themselves. Pseudo-Chrysostom will not allow even the well-meant correction the others preserve, asks whether a man who merely refrains from judging has earned forgiveness, and aims the beam at teachers, for whom the same act is a beam where a layman's is a mote."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Put the best interpretation on doubtful acts; plain evils may be judged, indifferent ones not."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "A cure for the natural disease of probing others' faults while overlooking our own."
+    "summary": "Jerome frames the difficulty by cases, asking how Paul judged the offender at Corinth and Peter convicted Ananias. Augustine draws the line at evidence rather than office: where an act cannot be innocent we may judge, but where it might have been done from either mind the duty is to put the better construction on it, rashness being worst where the intention cannot be seen. Hilary goes his own way entirely, taking the saying to concern judgements passed on God rather than on one's neighbour, and making the beam the sin against the Holy Spirit."
    }
   ],
   "debates": [
    {
-    "question": "Does 'judge not' forbid all judging?",
-    "sides": [
+    "question": "What does the prohibition on judging forbid?",
+    "positions": [
      {
-      "position": "no; only rash/censorious judgment, not lawful or charitable discernment",
-      "holders": [
-       "Augustine",
-       "Chrysostom",
-       "Barnes",
-       "Calvin",
-       "Gill"
+      "position": "Bitterness of manner rather than correction itself; the sinner is still to be set right",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Judgement of acts that might have been done from either mind; where an act cannot be innocent we may judge",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Private censure only, the magistrate and the Church court being exempt",
+      "held_by": [
+       "John Gill",
+       "Matthew Henry",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Even the well-meant correction of another",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "Judgement passed on God and his promises, not on one’s neighbour",
+      "held_by": [
+       "Hilary"
       ]
      }
     ]
@@ -58,287 +92,182 @@
   "outliers": [
    {
     "voice": "Hilary",
-    "note": "Takes 'judge not' of judging God concerning his promises, where any judgment at all is sin."
+    "claim": "Takes the prohibition to concern verdicts passed on God rather than on one’s neighbour, so that the fault lies not in judging wrongly but in judging at all, and makes the beam the sin against the Holy Spirit."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Specifies that the retributive measure does not mean God returns an unjust judgement for ours, but that the harshness we measured out becomes the measure of what is justly dealt to us."
    }
   ],
   "themes": [
-   "judge not",
-   "censoriousness",
-   "lawful vs rash judgment",
-   "reproof"
+   "Judge not, that ye be not judged.",
+   "For with what judgment ye judge, ye shall be judged: and with what measure ye mete, it shall be measured to you again.",
+   "And why beholdest thou the mote that is in thy brother’s eye, but considerest not the beam that is in thine own eye?",
+   "Or how wilt thou say to thy brother, Let me pull out the mote out of thine eye; and, behold, a beam is in thine own eye?",
+   "Thou hypocrite, first cast out the beam out of thine own eye; and then shalt thou see clearly to cast out the mote out of thy brother’s eye."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "A common Jewish proverb ('in the measure a man metes...') adopted by Christ; a retributive law touching both God's and men's judgment of us."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "We choose whether God shall be severe or merciful; the merciless must expect judgment without mercy."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "measure for measure",
-   "retribution",
-   "Jewish proverb",
-   "mercy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Augustine",
-   "Jerome",
-   "Chrysostom",
-   "Pseudo-Chrysostom",
-   "Hilary",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "karphos (splinter/chaff) vs dokos (rafter/log); a current proverb (Tarphon, Arabic, Burns): keen to others' small faults, blind to our own great ones."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Beam vs mote = hatred vs anger (Augustine); the teacher's sin the beam; the unbeliever's distrust the beam (Hilary)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "The hypocrite's double fault: sharp-sighted to others' sins, ingenious in excusing his own."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "mote and beam",
-   "self-blindness",
-   "hypocrisy",
-   "proverb"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "An expression of astonishment at the censorious man's effrontery ('how wilt thou have the face to say'); a known rabbinic proverb (Tarphon)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Rebukes those who, not content to mark faults, reprove in a magisterial way while guilty themselves."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "how wilt thou say",
-   "effrontery",
-   "reprove the brother",
-   "self-condemnation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'See clearly' (diablepseis, look through) vs gazing; first remove your beam, then you can rightly help the brother — no hypocrisy, clear sight."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "'Hypocrite' fits one free in reproving others' sins while covering his own, to be thought holier than he is."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the Lord's Prayer rather than the beam and mote."
-   }
-  ],
-  "themes": [
-   "thou hypocrite",
-   "cast out the beam first",
-   "clear sight",
-   "order of reform"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
   "voices": [
    "Augustine",
-   "Pseudo-Chrysostom",
-   "Chrysostom",
-   "Rabanus",
-   "Gloss",
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
    "A.T. Robertson",
+   "John Gill",
+   "Pseudo-Chrysostom",
    "John Calvin",
-   "John Wesley"
+   "Chrysostom",
+   "Rabanus",
+   "Gloss"
   ],
+  "range": "6",
+  "pericope_label": "Give not that which is holy unto the dogs, neither cast ye your pearls before swine, lest they trample them under their feet, and turn again and rend you.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The holy' = sacrificial flesh (Lev 22; Exod 22:31), the 'pearls' the gospel's truths; dogs/swine = malignant despisers; note the transposition (dogs rend, swine trample)."
+    "summary": "Barnes sets the verse out as an introverted parallelism, the dogs rending and the swine trampling so that the clauses answer across each other, and alone takes the holy thing for anything connected with religion rather than sacrificial flesh. Ellicott and Robertson take it for flesh that had been offered, the objection being not that dogs would refuse it but that giving it to them would profane it; Ellicott, against the others, makes the dogs the type of impurity and the swine of ferocity, and suggests the swine's rage is disappointment at finding pearls where they expected grain."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill traces the law under which torn flesh was ordered to be given to dogs while nothing consecrated ever was. Calvin narrows the precept sharply against a use he thinks it has been tortured into: ministers cannot tell the children of God from the rest, so the doctrine of salvation is held out to all without distinction and charity forbids pronouncing anyone desperate at first sight, only those who by clear evidence have shown a hardened contempt being the dogs and swine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reaches the same chiastic reading by transposing the members of the verse outright, and Wesley notes the same transposition, the latter of the two things proposed being treated first. Wesley then makes it practical, warning against talk of perfection to men wallowing in sin and against declaring one's own experience to persecutors, while insisting that reproof itself is nowhere forbidden."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom presses the sacramental application hardest, the holy thing being baptism and the grace of Christ's body and the pearls the mysteries of truth lodged in the deep meaning of Scripture, and divides the animals by the marks of uncleanness in the law into Gentiles and heretics; but he will not carry it through, since the benediction is in fact given to Christians who live as brutes, lest being more grievously offended they perish outright. Chrysostom says why the caution is needed at all, such men feigning meekness in order to learn and attacking once they have learned."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The holy = what is impious to corrupt; priests withhold spiritual things (even baptism) from hardened enemies of the faith."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Not against wide preaching (Mk 16:15) but a charge to reserve heavenly wisdom from profane despisers once they prove hardened."
+    "summary": "Augustine defines the terms, the holy thing being whatever it would be impiety to corrupt and the pearls what is too precious to be despised, and distributes the animals by two faults, dogs tearing and swine trampling; he also supplies the caution the precept needs, that to hide a truth is not to utter a falsehood, since the Lord himself had many things to say that his hearers could not bear. Rabanus and the Gloss leave the door ajar, the dogs having returned to their vomit while the swine only wallow, and the words lest perchance allowing that they may yet wisely turn."
    }
   ],
   "debates": [
    {
-    "question": "What is 'that which is holy'?",
-    "sides": [
+    "question": "Which of the two animals answers to which fault?",
+    "positions": [
      {
-      "position": "sacrificial flesh / holy things, figuring the gospel",
-      "holders": [
-       "Ellicott",
-       "Robertson",
-       "Barnes"
+      "position": "Dogs assault and rend, swine despise and trample",
+      "held_by": [
+       "Augustine",
+       "Albert Barnes"
       ]
      },
      {
-      "position": "baptism and the spiritual graces withheld from the unworthy",
-      "holders": [
+      "position": "Dogs are the type of impurity, swine of ferocity",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the holy thing that is not to be given to dogs?",
+    "positions": [
+     {
+      "position": "Flesh that had been offered in sacrifice, which no unclean person or beast might eat",
+      "held_by": [
+       "Charles Ellicott",
+       "Adam Clarke",
+       "A.T. Robertson",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Whatever it would be impiety to corrupt",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Anything connected with religion: admonition, precept or doctrine",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Baptism and the grace of Christ’s body",
+      "held_by": [
        "Pseudo-Chrysostom"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Restricts the precept so far that it barely applies: since ministers cannot distinguish the children of God from the rest, the gospel must be offered to all without distinction, and only proven and apparently incurable contempt marks a man out as dog or swine."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Concedes against his own sacramental reading that the benediction is in practice given to Christians who live as brutes, not because they deserve it but lest they be more grievously offended and perish outright."
+   }
+  ],
   "themes": [
-   "holy to dogs",
-   "pearls before swine",
-   "profaning sacred things",
-   "discernment in teaching"
+   "Give not that which is holy unto the dogs, neither cast ye your pearls before swine, lest they trample them under their feet, and turn again and rend you."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "7": {
@@ -346,1221 +275,897 @@
    "Jerome",
    "Augustine",
    "Pseudo-Chrysostom",
-   "Gloss",
    "Chrysostom",
-   "Origen",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ask/seek/knock = rising earnestness (want, loss, earnestness); persevering prayer with implied right conditions (1 Jn 5:14); courage and wisdom sought in prayer."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Asking gains soul-health, seeking the truth, knocking actual possession; faith, hope, love (Gloss)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "No superfluous words but perseverance to rouse us; the promises move us, for prayer without faith is empty."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Origen",
-    "note": "Joins 'seek and find' to the merchant seeking the one pearl, Christ, counting all else loss (Phil 3:8)."
-   }
-  ],
-  "themes": [
-   "ask seek knock",
-   "persevering prayer",
-   "rising earnestness",
-   "prayer answered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Prayer 'always heard after one manner or other'; the promise as binding on God as the law on man; God no respecter of persons (Ps 81:10; Jn 16:24)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "God is of himself ready to listen, his riches at our command; the only failure is the slothful failure to ask."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "every one that asks receives",
-   "certainty of answer",
-   "impartiality",
-   "ground of prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Augustine",
-   "Pseudo-Chrysostom",
-   "Chrysostom",
-   "Remigius",
-   "Rabanus",
-   "Jerome",
-   "Gloss",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A homely Galilean image (bread/stone); stones can look like loaves (Mt 4:3); Seneca's 'stony bread' for a grudging gift."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Men 'evil' as lovers of this age; loaf = the word/knowledge of God, fish = faith of baptism, against stone and serpent."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Argument less-to-greater: a father's love is a drop of God's goodness (Eph 3:15); what then from the ocean?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "bread not a stone",
-   "fatherly goodness",
-   "less to greater",
-   "God's generosity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Serpent resembles a fish (eel); fish/bread the staple of Galilee; Luke adds egg/scorpion — all show the absurdity of a father mocking a child's request."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fish not a serpent",
-   "common food",
-   "inhuman counterfeit",
-   "prepares 'how much more'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Remigius",
+   "Rabanus",
+   "John Lightfoot",
+   "Charles Ellicott",
+   "A.T. Robertson"
   ],
+  "range": "7-11",
+  "pericope_label": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you: For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened. Or what man is there of you, whom if his son ask bread, will he give him a stone? Or if he ask a fish, will he give him a serpent? If ye then, being evil, know how to give good gifts unto your children, how much more shall your Father which is in heaven give good things to them that ask him?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Evil' recognizes depravity yet not total: natural affection makes human fatherhood a parable of God's; 'good things' = spiritual gifts / the Holy Spirit (Lk 11:13)."
+    "summary": "Ellicott holds the balance on the phrase being evil, the words admitting the fact of depravity and in the same breath denying that it is total, since the natural affection left in us is what makes human fatherhood a fit parable of God's; he finds the homeliness of the images worth remarking, addressed as they were to Galilean peasants. Robertson observes that some stones look like loaves, as the tempter knew. Lightfoot supplies the classical proverb about stony bread."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Christ names 'good things' to curb improper desires: submit our wishes to God's will, who gives only what is advantageous."
+    "summary": "Gill presses the evil of the hearers harder than the rest. Calvin turns the limit on the promise into a rule, that our affections being blind we are not competent judges and must restrain the heart from asking anything not agreeable to God's will; he then guards the whole from being read as cause and effect, since God keeps watch over sleeping believers and anticipates their wishes, and faith itself goes before all prayer in order and in time."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke calls the depravity radical and diabolical and then turns the verse against a doctrine, asking whether such a Father could reprobate to unconditional damnation any creature he has made; with Lightfoot he recalls the proverb Seneca preserved for a grudging benefit, stony bread. Wesley closes the doctrinal part of the sermon with the condition attached to the promise, that we imitate the God of love."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry insists that seeking and knocking mean more than asking, since we must second our prayers with our endeavours or we tempt God, and puts the limit on the promise in the nursery, where the child may ask for a sharp knife to play with and denials in love are better than grants in anger."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Paternal love called 'evil' only by comparison with God's superabundant goodness."
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom connects the passage by human incapacity, the precepts already given lying beyond the reach of human virtue so that men are sent to God, with whose grace nothing is impossible; he makes the three verbs three kinds of labour, since a man at a door not only cries out but strikes with his hand. Chrysostom takes the added words as demands for vehemence, the seeker casting all else from his mind, and denies that the race is called evil at all, paternal love being named evil only by comparison with a goodness it cannot approach."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome reads the turn as positive instruction, the ban on praying for the things of the flesh being followed by what we ought to ask. Augustine hears an objection instead, unfolds the three verbs carefully and then allows that it were better to refer all three to instant prayer, and grants that a man asking in faith for the necessities of this life is heard mercifully and also not heard mercifully, the physician knowing better than the sick man what the sickness needs. Remigius and Rabanus allegorise the loaf, the fish and the egg of the parallel account, and Remigius harmonises the promised good things with the Spirit named there."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does calling the hearers evil concede?",
+    "positions": [
+     {
+      "position": "Nothing about the race; paternal love is called evil only by comparison with God’s goodness",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Full depravity, the Apostles condemned in their persons along with the race",
+      "held_by": [
+       "Jerome",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Radical and diabolical depravity, though not such as would permit unconditional reprobation",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Real depravity which is nevertheless not total, natural affection surviving in it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the angels' vision of God, unrelated to the verse."
+    "voice": "John Calvin",
+    "claim": "Denies that prayer is the cause of God’s giving: God anticipates the wishes of sleeping believers, faith precedes all prayer in order and in time, and prayer is commanded so that faith may be exercised rather than so that God may be roused."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Turns the picture of the Father who gives good things into an argument against unconditional reprobation, asking whether a Father of this character could consign to eternal damnation any creature he has made."
    }
   ],
   "themes": [
-   "how much more",
-   "good gifts",
-   "the Holy Spirit",
-   "prayer and God's will"
+   "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you:",
+   "For every one that asketh receiveth; and he that seeketh findeth; and to him that knocketh it shall be opened.",
+   "Or what man is there of you, whom if his son ask bread, will he give him a stone?",
+   "Or if he ask a fish, will he give him a serpent?",
+   "If ye then, being evil, know how to give good gifts unto your children, how much more shall your Father which is in heaven give good things to them that ask him?"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.09
+   }
   }
  },
  "12": {
   "voices": [
-   "Augustine",
-   "Pseudo-Chrysostom",
-   "Gloss",
    "Chrysostom",
-   "Cyprian",
-   "Gregory",
-   "John Gill",
+   "John Calvin",
+   "Charles Ellicott",
+   "Pseudo-Chrysostom",
+   "Augustine",
+   "Adam Clarke",
    "John Lightfoot",
+   "A.T. Robertson",
+   "Cyprian",
+   "John Gill",
    "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Gregory"
   ],
+  "range": "12",
+  "pericope_label": "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Golden Rule sums the Law and Prophets; the negative form known to Hillel/Tobit/Confucius, Christ's positive form distinctive; guarded against private misuse."
+    "summary": "Ellicott routes the connection through likeness rather than exchange, man's highest blessedness being to resemble the God who gives good things to those who ask, and limits the rule by the state of the one obeying, reciprocity in folly or in lust being alien from the mind of Christ. Lightfoot tells the story of the Gentile who asked to learn the whole law standing on one foot and was given the rule in its negative form. Robertson lists that negative form in Tobit, Philo and Confucius and marks the difference, that Jesus puts it positively. Barnes calls the rule the balance-wheel of the moral world, correcting irregularity of movement as a governor does in an engine."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin denies the whole procedure: the particle is superfluous, glued to proverbs by long use, and since Matthew is gathering detached sayings rather than reporting one discourse the sentence must be read by itself. He confines the closing claim to the second table, and sees why the rule is so seldom kept, every man being a subtle doctor of justice where his own advantage is concerned. Gill calls the verse the epilogue of the whole discourse."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke limits the rule by office, quoting Selden's prisoner who asks the judge whether he would be content to hang in his place, where neither acts as a private man, both having consented beforehand to the law; and from the universality of the maxim he concludes that God seems to have written it on the hearts of all men."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry puts obedience in three steps: do what we ourselves acknowledge to be fit and reasonable, reckon others as much entitled to justice as we are, and suppose ourselves placed in their case, which is no strained supposition since we do not know how soon their case may be ours."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom makes the connective load-bearing, the saying being not all things whatsoever, simply, but all things therefore, so that besides what has just been asked of God something must also be done by us; and he notes that the standard set is what we would have a fellow-servant do rather than what we would have God do, which forecloses the plea that we cannot. Pseudo-Chrysostom hears only the thread of the opening precept resumed."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "All commands summed in one precept (Cyprian); owning our equal (Augustine); returning good for evil (Gregory)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The 'therefore' resumes 'judge not'; do for neighbour what you would have, the condition of being heard in prayer."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "The connective 'therefore' is a proverb-particle; the rule is the law of justice subjoined to the law of prayer."
+    "summary": "Augustine works from the words: some Latin copies add good things, an insertion he takes to forestall the man who would have a crime committed for his advantage, though he judges it unnecessary since will properly belongs only to the good and in the wicked is better called desire. He notices too that the clause is not called the whole Law here, as it is elsewhere, so that room is left for the command about loving God, then closes the gap, since whoever loves his neighbour must love love itself, and God is love. Cyprian sums the whole body of commands in this one. Gregory raises the standard to returning good for evil and better for good."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the connective therefore carry weight?",
+    "positions": [
+     {
+      "position": "Yes: besides what has been asked of God, this must also be done",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "No: the particle is superfluous and the saying must be read by itself",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "It connects by likeness: our blessedness is to resemble the God who gives",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "On what ground is the rule limited, so that it does not oblige us to wicked wishes?",
+    "positions": [
+     {
+      "position": "On the meaning of the word will, which properly belongs only to the good",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "On the state of the one obeying, whose own will must first be purified",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "On public office: judge and prisoner alike act under a law consented to beforehand",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "claim": "Treats the opening particle as a meaningless proverbial tag and the surrounding material as detached sayings collected by the evangelist, against readers who build the sense of the verse on its connection with what precedes."
+   },
+   {
+    "voice": "Adam Clarke",
+    "claim": "Meets the rule with Selden’s objection from the bench, that a judge asked whether he would be content to hang in the prisoner’s place answers as a private man and not as the officer of a law both have consented to."
+   }
+  ],
   "themes": [
-   "golden rule",
-   "law and prophets",
-   "positive form",
-   "Hillel"
+   "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "13": {
   "voices": [
-   "Augustine",
-   "Gloss",
-   "Pseudo-Chrysostom",
-   "Chrysostom",
-   "Jerome",
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
+   "John Wesley",
    "Adam Clarke",
    "Charles Ellicott",
+   "Pseudo-Chrysostom",
+   "John Lightfoot",
+   "Albert Barnes",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Jerome",
+   "Chrysostom",
+   "John Calvin"
   ],
+  "range": "13-14",
+  "pericope_label": "Enter ye in at the strait gate: for wide is the gate, and broad is the way, that leadeth to destruction, and many there be which go in thereat: Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Strait' (narrow) not 'straight'; the Two Ways (Deut 30:19; Didache; Tablet of Cebes); rabbinic public vs private road widths."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "The narrow way is yet light and pleasant, its toil borne for the good end of life (cf. the easy yoke)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The broad way needs no search; many find the narrow way yet desert it midway for the world's pleasures."
+    "summary": "Ellicott takes the way and the gate together as the way of obedience, allows the deeper sense in which Christ calls himself the way and the door while cautioning that this makes union with him the means of holiness and not a substitute for it, suspects a town actually in sight with its narrow pathway and needle's eye of a gate, and argues that the word destruction means waste and the loss of all that makes existence precious rather than extinction. Lightfoot finds behind the figure the rule of the Jewish lawyers, a private way four cubits broad and a public way sixteen. Barnes thinks of the walled city with its great thronged avenues and its private gates that few are seen entering, and joins Robertson in separating strait from straight. Robertson presses the word to a defile between high rocks and remarks that the broad road is in every town, with glaring lights that lure to destruction."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "The strait gate is Christ the door; the disciple must walk a thorny path, soothed by a joyful reward."
+    "prevalence": "several",
+    "summary": "Gill makes the strait gate Christ himself, the door into the church below and the holiest above, and is careful to add that faith is not the gate but the grace by which a man enters it. Calvin turns the fewness on the reader: a small company makes men careless, and we think it strange to be forcibly separated from the vast majority, as though we were no part of the human race; men ruin one another by example, and each rushes on because, being ruined in a crowd, he does not believe he is ruined."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley makes the gate the holiness described in the foregoing chapters and nothing else, and observes that nobody need look for the wide gate since men come to it of course. Clarke makes it instead the rule just given, doing to every man as you would be done by, prefers a different reading on the authority of most of the best copies, not because the gate is strait but how strait it is, counts the losses in stages, and insists that nothing makes the way narrow except sin."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom sets the two gates against each other as persons, Devil and Christ, explaining the epithets by character rather than power, the one broad by the license of unbridled pride and the other strait by humility. Chrysostom alone faces the objection that the same Lord calls his yoke easy and his burden light, answering that calling the way strait is what makes it light, since it sets men watching and stirs desire; the way is strait, he adds, but not the city, so we look for no rest here and expect no sorrow there. He reads the fewness as a warning against measuring by numbers, the many being merely sluggish."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Jerome hears an exactness in the verbs that the others pass over: of the broad way it is said that many walk, of the narrow that few find, the broad needing no search and not being found at all but presenting itself; and many who do find the narrow way desert midway, caught by the pleasures of the world."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the strait gate?",
+    "positions": [
+     {
+      "position": "Christ himself, the door",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The holiness described in the foregoing chapters",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The rule just given, doing to every man as you would be done by",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The way of obedience and holiness, with Christ as the way behind it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Christ as a person set against the Devil, the two gates being the two",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Argues that destruction here means waste and the loss of all that makes existence precious rather than extinction, and declines to shut out the possibility of deliverance, since the lost sheep was found and the perishing son came home."
+   },
+   {
+    "voice": "Chrysostom",
+    "claim": "Answers the objection from the easy yoke by making the straitness itself the relief, since calling the way narrow rouses watchfulness and desire; the way is strait but the city is not."
+   }
+  ],
   "themes": [
-   "strait gate",
-   "two ways",
-   "broad road to destruction",
-   "narrow gate to life"
+   "Enter ye in at the strait gate: for wide is the gate, and broad is the way, that leadeth to destruction, and many there be which go in thereat:",
+   "Because strait is the gate, and narrow is the way, which leadeth unto life, and few there be that find it."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Narrow' = hemmed in like a mountain gorge; first appearance of 'life' summing the kingdom's blessedness; 'how' vs 'because' reading; the few vs the many."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "The way hedged with afflictions, like the strait place where Balaam's angel stood, yet alone leads to life."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "narrow way",
-   "unto life",
-   "few find it",
-   "afflicted path"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
   "voices": [
    "Pseudo-Chrysostom",
-   "Augustine",
    "Chrysostom",
-   "Jerome",
-   "Gregory",
-   "Rabanus",
-   "Gloss",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
+   "John Wesley",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "John Lightfoot",
+   "Gregory",
+   "Charles Ellicott",
+   "Augustine",
+   "Jerome",
+   "Cyril of Jerusalem"
   ],
+  "range": "15-20",
+  "pericope_label": "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits. Do men gather grapes of thorns, or figs of thistles? Even so every good tree bringeth forth good fruit; but a corrupt tree bringeth forth evil fruit. A good tree cannot bring forth evil fruit, neither can a corrupt tree bring forth good fruit. Every tree that bringeth not forth good fruit is hewn down, and cast into the fire. Wherefore by their fruits ye shall know them.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "False prophets = false teachers / claimants to inspiration; sheep's clothing hides ravening wolves (2 Cor 11:13; 1 Jn 4:1); known by fruits."
+    "summary": "Ellicott states the question of the fruits as a standing dispute, between those who weigh the ethical side of religion and find them in the outcome of doctrine in life and deeds, and those who dread heresy and find them in doctrines on the ground that good works may be the clothing that hides the wolf; he decides for the first, since Scripture calls good works the fruits of faith, and notes with Henry that the words about the fire are the Baptist's, repeated unaltered. Lightfoot takes the sheep's clothing literally, as sheepskins rather than woollen cloth. Robertson names the Judaizers and Gnostics, remarking that wolves are more dangerous than dogs and hogs."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill holds without qualification that the fruits are doctrines and their effects, since a false teacher may so behave as never to be discovered by his conduct; and he insists on the order, that the tree is good before the fruit and the fruit only shows it so."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke names the man who enters the ministry for a living and clothes himself with the fleece, and turns the two trees against those who hold that great crimes may consist with a state of salvation or that the righteous necessarily sin in their best works. Wesley makes the quarry whoever describes a broad way to heaven, enters the most careful qualification in the chapter, that the goodness spoken of belongs to the doctrine rather than the character, and asks how dreadful is the teacher who has brought no sinners to God."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the danger in two, false commission and false doctrine, the first to be feared even where the teaching is true, and draws a moral from the Baptist's words being repeated unaltered, that novelty of expression is no virtue in a preacher."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom confines the warning to heretics and to nobody else, excluding Gentile and Jewish teachers because heretics come under the Christian name, and excluding Catholic teachers who are merely sinners because such have no purpose to destroy. Chrysostom decides the opposite way, aiming it less at the heretic than at the man whose life is corrupt behind a face of virtue, since among heretics a good life may often be found and among these never; on the fire he finds two punishments and rates them, holding that ten thousand hells would be lighter than the loss of that glory and being held in hate by Christ. Cyril of Jerusalem turns and addresses the hypocrite present in the room, who came to spy out what is given rather than receive it."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Specially heretics, cloaked in chastity and fasting yet poisoned within; the hypocrite strips off the sheepskin under trial (Gregory)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Aimed chiefly at corrupt-living teachers wearing virtue's face, since heretics may show a good life but these never."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "The Church exposed to impositions; Satan ever laying snares; perhaps a glance at the Scribes and Pharisees."
+    "summary": "Gregory puts the sharpest test: in quiet times the hypocrite keeps the skin on, and a persecution strips it off him. Augustine answers the old use of the two trees for two natures, since it is not said that a good tree cannot become bad but that it cannot bear evil fruit, the tree being the soul and the fruit the works, so that a man who would do good must first become good, as snow may cease to be snow but can never be warm; on the fruits he stands between the parties, holding that almsgiving and prayer displayed before men are the clothing and not the fruit, and adding a test the others lack, that when temptation withdraws whatever the display was aimed at it soon appears which animal is underneath. Jerome puts the objection from cases, asking how Moses sinned at the water of contradiction, how Peter denied his Lord, and how an unbelieving father-in-law gave good counsel."
    }
   ],
   "debates": [
    {
-    "question": "Are heretics or corrupt-living teachers chiefly meant?",
-    "sides": [
+    "question": "Whom does the warning against false prophets aim at?",
+    "positions": [
      {
-      "position": "corrupt-living teachers wearing a face of virtue",
-      "holders": [
+      "position": "Heretics, and at nobody else",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "Men whose life is corrupt behind a face of virtue, rather than heretics",
+      "held_by": [
        "Chrysostom"
       ]
      },
      {
-      "position": "heretics cloaked in outward sanctity",
-      "holders": [
-       "Jerome",
+      "position": "Teachers who enter the ministry for a living",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Whoever preaches a broad way to heaven",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "The Scribes and Pharisees with their free will and traditions",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What are the fruits by which they are known?",
+    "positions": [
+     {
+      "position": "Doctrines and their effects; conduct is no test, since a teacher may behave so as never to be discovered",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The practical outcome of doctrine in life, character and deeds",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Not the displayed works of piety, which are the clothing, but what appears when temptation withdraws the motive",
+      "held_by": [
        "Augustine"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "false prophets",
-   "sheep's clothing",
-   "ravening wolves",
-   "beware false teachers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Fruits = works of any kind, the tongue of the heart; a tree judged by fruit not foliage (Mt 12:33); epignōsesthe, fully know."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The mark saves us from holding all teachers suspect; Gill takes the fruits chiefly as their doctrines and effects."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "A plain test for the weakest: true prophets convert sinners, false do not (Lk 6:44)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Are the 'fruits' works or doctrines?",
-    "sides": [
-     {
-      "position": "works / life and conduct (the ethical reading)",
-      "holders": [
-       "Clarke",
-       "Barnes",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "chiefly their doctrines and effects",
-      "holders": [
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "by their fruits",
-   "works as the test",
-   "doctrine vs life",
-   "discerning teachers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The tree is good before its fruit; works manifest but do not make a man good; so a good preacher delivers sound doctrine."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Corrupt' = useless by nature, not vitiated; profession with an ungodly life is imposture (Lk 6:43)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "The goodness/badness respects doctrine rather than personal character: a bad man may preach good doctrine and convert sinners."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the tree-figure judge doctrine or personal character?",
-    "sides": [
-     {
-      "position": "chiefly doctrine (a bad man may preach truth)",
-      "holders": [
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the good heart and holy life",
-      "holders": [
-       "Clarke",
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on treasures and moths (Mt 6:19)."
+    "voice": "John Wesley",
+    "claim": "Refers the goodness and badness of the trees to the doctrine rather than the character, since a bad man preaching good doctrine is sometimes the instrument of converting sinners, while insisting that no one who fails to speak the truth is a true prophet."
+   },
+   {
+    "voice": "Chrysostom",
+    "claim": "Rates the loss of the promised glory above the pains of hell, holding that ten thousand hells would be lighter than falling from that blessedness and being held in hate by Christ."
    }
   ],
   "themes": [
-   "good tree good fruit",
-   "fruit reveals the tree",
-   "doctrine vs character",
-   "against hypocrisy"
+   "Beware of false prophets, which come to you in sheep’s clothing, but inwardly they are ravening wolves.",
+   "Ye shall know them by their fruits. Do men gather grapes of thorns, or figs of thistles?",
+   "Even so every good tree bringeth forth good fruit; but a corrupt tree bringeth forth evil fruit.",
+   "A good tree cannot bring forth evil fruit, neither can a corrupt tree bring forth good fruit.",
+   "Every tree that bringeth not forth good fruit is hewn down, and cast into the fire.",
+   "Wherefore by their fruits ye shall know them."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "A Spirit-led teacher cannot knowingly deliver doctrine against God's grace, Christ, or the saints' experience."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Love to God and man is the root; against antinomianism that lets the good tree bear bad fruit."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Again refers the goodness to doctrine; none are true prophets who do not convert, though not all who convert are true."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "good tree cannot bear evil",
-   "nature determines fruit",
-   "root of love",
-   "against antinomianism"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Echoes the Baptist's warning (Mt 3:10), linking Christ's teaching to the forerunner's; the excision is present and the curse now on false teachers."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "How dreadful the teacher who has brought no sinners to God."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril presses it on the hypocrite (Simon Magus): the axe is at the root, the Judge inexorable."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hewn down and burned",
-   "Baptist's words",
-   "fruitless judged",
-   "present judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A deliberate repetition fixing the rule; epignōsesthe = full, decisive knowledge (1 Cor 13:12); no innocent sterility — no fruit is to have evil."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Try men by their doctrines and the doctrines by Scripture; ordinarily as men are, so are their doctrines."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "by their fruits",
-   "repetition fixes the rule",
-   "test by Scripture",
-   "no neutral barrenness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "21": {
   "voices": [
    "Jerome",
-   "Chrysostom",
-   "Pseudo-Chrysostom",
    "Augustine",
-   "Hilary",
-   "Gregory",
-   "John Chrysostom",
-   "John Gill",
+   "Chrysostom",
+   "Charles Ellicott",
    "Matthew Henry",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Gregory",
+   "Hilary",
+   "Adam Clarke",
+   "John Calvin",
+   "Pseudo-Chrysostom"
   ],
+  "range": "21-23",
+  "pericope_label": "Not every one that saith unto me, Lord, Lord, shall enter into the kingdom of heaven; but he that doeth the will of my Father which is in heaven. Many will say to me in that day, Lord, Lord, have we not prophesied in thy name? and in thy name have cast out devils? and in thy name done many wonderful works? And then will I profess unto them, I never knew you: depart from me, ye that work iniquity.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Sharp 'not...but': the doer of the Father's will enters, not the mere confessor; confirms the ethical reading of 'fruits' (Jn 7:17)."
+    "summary": "Ellicott makes the passage the marvel of the sermon, since at the outset of his ministry the speaker claims with entire calm to be the one before whom all will give account. Barnes argues that God may give the power of raising the dead to a wicked man as readily as the skill of healing to a wicked physician, and takes the words I never knew you as the most decided proof that believers do not fall from grace, since Christ does not say he once knew them and afterwards rejected them."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin reads the clause as Barnes does, the Lord knowing who are his, and finds in it a guard to keep weak minds from being shaken when men of great reputation desert."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Wesley draws the blunt conclusion that the working of miracles is no proof a man has saving faith, and renders the sentence as meaning that Christ never approved of them. Clarke renders it the same way and asks how many are finger-posts on the road to eternal life, pointing out a way they do not walk themselves."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry brings forward the men who prophesied without being sent and the traitor who cast out devils, and warns the respectable that men may go to hell by the gates of heaven, secret haunts of sin under a visible profession ruining the hypocrite."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Chrysostom asks why the Father's will is named rather than the Son's and answers that it was fitted to their weakness, the will of the Son being no other, and notes that the Judge reveals himself at the sermon's close; he then reports two earlier answers to the question whether the works pleaded were real, rejecting both, and holds instead that grace has often worked through unworthy men for the sake of others, since not all are fit for all things. Pseudo-Chrysostom describes the scene of judgment, where each man's work speaks while his mouth is silent and to call once is not enough for a man in terror."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Sound doctrine destroyed by evil works avails nothing (Titus 1:16); 'say' = the will (reconciling 1 Cor 12:3); charity over mighty works (Gregory)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Censures the Jews who rest in dogmas; 'the will of my Father' (in condescension) — yet the Son's will is the Father's; Christ shows himself Judge."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Embraces all hypocrites, chiefly pretended teachers without the fear of God."
+    "summary": "Jerome sees the two halves of one warning, the previous verses refusing men of good life and impious doctrine and these refusing men of sound doctrine and evil works; he also catches the tense, that it is those who work iniquity and not those who have worked it, so that repentance is not shut off and the sentence falls on men who keep the desire of sinning when opportunity is gone. Augustine resolves the clash with the Apostle's rule that no man can call Jesus Lord but by the Holy Ghost, by distinguishing the sense in which a man properly says a thing from the ordinary sense in which one speaks without wishing or understanding. Gregory makes charity and humility rather than mighty works the proof of holiness, so that the Church despises even genuine wonders where the mark of holiness is absent. Hilary shifts the weight to the human side, something needing to be put forth out of ourselves that we may will the good."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the sentence I never knew you establish?",
+    "positions": [
+     {
+      "position": "That such men were never true believers, which proves that believers do not fall from grace",
+      "held_by": [
+       "Albert Barnes",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "That they were never approved, so that men who saved many souls were themselves never saved",
+      "held_by": [
+       "Adam Clarke",
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on baptism of water and Spirit, unrelated to the verse."
-   }
-  ],
-  "themes": [
-   "Lord Lord",
-   "doing the Father's will",
-   "Christ as Judge",
-   "profession vs obedience"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ's marvellous claim to be Judge 'in that day'; miracles no proof of piety; ou expects 'yes' — they really prophesied, yet are unmasked."
+    "voice": "Hilary",
+    "claim": "Places the decisive contribution on the human side, holding that something must be put forth out of ourselves so that we may will the good, rather than boast of what God enables."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Christ summons hypocrites to his judgment-seat; the day he cleanses his barn, parting chaff from wheat."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "in that day",
-   "prophesied and wrought miracles",
-   "miracles no proof of faith",
-   "Christ the Judge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I never knew you' = never approved/owned (not once-known-then-rejected); they were never true Christians; 'profess' (homologēsō) the public word of Mt 10:32."
+    "voice": "Albert Barnes",
+    "claim": "Treats the verse as the most decided proof in Scripture that believers do not fall from grace, since Christ does not say that he once knew them and afterwards rejected them."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Against the hypocrites' boasting Christ openly confesses their profession false; he never reckoned them his own; condemnation falls on workers of lawlessness."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on serving two masters (Mt 6:24)."
+    "voice": "Jerome",
+    "claim": "Reads the present participle strictly, so that the sentence falls on those who work iniquity and not on those who have worked it, leaving repentance open."
    }
   ],
   "themes": [
-   "I never knew you",
-   "workers of iniquity",
-   "final sentence",
-   "never truly Christ's"
+   "Not every one that saith unto me, Lord, Lord, shall enter into the kingdom of heaven; but he that doeth the will of my Father which is in heaven.",
+   "Many will say to me in that day, Lord, Lord, have we not prophesied in thy name? and in thy name have cast out devils? and in thy name done many wonderful works?",
+   "And then will I profess unto them, I never knew you: depart from me, ye that work iniquity."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
   }
  },
  "24": {
   "voices": [
    "Chrysostom",
-   "Pseudo-Chrysostom",
-   "Rabanus",
-   "Jerome",
-   "Hilary",
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
+   "Augustine",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Hearing joined to doing; the deep foundation on rock (Lk 6:48); Palestinian flash-floods; rabbinic parallel of works vs knowledge (Eleazar)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Allegory: the rock = the faith/the Church; storms = superstition, rumours, lust; none fears them who does the command."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Two houses of the same appearance; the unfounded falls, the founded stands; a vain profession wants a foundation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wise builder",
-   "rock foundation",
-   "hearing and doing",
-   "two houses"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Rain/floods/winds = Satan's temptations, the world's persecutions, heart's corruptions, false doctrine; the house on Christ stands (Ps 92:13)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Was founded' (past perfect): it had been built on rock and stood; eastern torrents melt sun-dried brick houses; three trials of believers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the storm tests all",
-   "founded on the rock",
-   "stood firm",
-   "trials of the believer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The fatal flaw is hearing without doing; sand cannot hold in the storm; hearing sermons is dangerous without practice (cf. Mt 5:19)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The foolish hearer rests on external hearing or speculative knowledge without practice; mere talk of Christ is self-deception."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "foolish builder",
-   "house on sand",
-   "hearing without doing",
-   "self-deception"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "The unfounded cannot stand against temptation, persecution, lust, false doctrine, or divine wrath; the fall inevitable and great."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Bengal fishermen's sand huts swept away in a night; the testing fire and dreadful fall (1 Cor 3:13; Heb 10:26)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "great was the fall",
-   "sudden ruin",
-   "inevitable destruction",
-   "two destinies parted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "Gloss",
-   "Rabanus",
    "Pseudo-Chrysostom",
-   "Augustine",
-   "Chrysostom",
-   "Jerome",
-   "Gregory",
    "Hilary",
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "Jerome",
+   "Albert Barnes"
   ],
+  "range": "24-27",
+  "pericope_label": "Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock: And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock. And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand: And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Astonished at his teaching, its manner more than substance; exeplēssonto = struck out of themselves; 'ended these sayings' implies one continuous discourse."
+    "summary": "Ellicott takes these sayings of mine as evidence that the discourse is continuous and not a compilation of fragments, makes the rock primarily repentance and obedience with two deeper senses behind it, the disciple who was named Rock and Christ himself, and declines the allegorising of wind and rain as an unreal minuteness, taking them collectively for persecution and temptation from without. Barnes describes the torrent-bed, dry for months and suddenly swollen, and ends where the parable does, with the man who perhaps laid for others the foundation on which they build for heaven and laid none for himself. Robertson adds that hearing sermons is dangerous business if they are not put into practice."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin, who has twice insisted that Matthew gathered detached sayings, concedes only that the relative covers not one class of sayings but the whole amount of doctrine, and puts the test where it belongs, since true piety cannot be told from its counterfeit until the trial comes and all build on sand who do not dig deep enough to deny themselves. Gill has four assaults rather than three: temptation, persecution, the stream of a man's own corruption, and the wind of strange doctrine."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke makes three kinds of trial, those that come in providence, those that come from the passions of men and those that come from Satan; he quotes two rabbinic parables of the same shape, the tree with many branches and few roots against its opposite and the house with stones at the foundation against the house with brick there, and judges that the dignity the figure gained in passing through these hands is sought in vain in the older version."
    },
    {
     "school": "eastern-antiochene",
     "prevalence": "several",
-    "summary": "Wonder vs faith: their admiration touched Christ's glory, not their belief; yet his power drew them to follow him down the mount."
+    "summary": "Chrysostom states the occasion, that some would admire the sayings without adding the showing forth which lies in action, and are warned beforehand. Pseudo-Chrysostom builds the boldest reading on a point of wording, the hearer being not accounted wise but likened to a wise man, so that the wise man is Christ who built the Church upon the rock of faith and the foolish man is the Devil whose house is the ungodly built on the sand of unbelief; every element of the storm then works twice over, and against the Devil's house the rain of true doctrine descends. He alone distinguishes the failure of the foundation itself from fornication or homicide, from which a man may rise again by penitence."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The wondering multitude = the simple folk; Augustine harmonizes Matthew's mount-sermon with Luke's plain."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "An unwonted majesty in his doctrine drew the minds of men."
+    "prevalence": "several",
+    "summary": "Augustine had said that these words show the sermon complete in the precepts by which the Christian life is formed, and assigns rain to the darkness of superstition, winds to the rumours of men and floods to the lust of the flesh. Hilary reads the three assaults as a progression, from the allurements of smooth and gently invading pleasures with which faith is first watered, through the torrents of fiercer desire, to the whole force of the tempest. Jerome fixes on the material, sand being what cannot be bound into one mass, and on it all heretical teaching is built so as to fall."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What do the rain, the winds and the floods stand for?",
+    "positions": [
+     {
+      "position": "The darkness of superstition, the rumours of men, and the lust of the flesh",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "A progression from gently invading pleasures through fiercer desire to the whole force of the tempest",
+      "held_by": [
+       "Hilary"
+      ]
+     },
+     {
+      "position": "Temptation, persecution, a man’s own corruption, and strange doctrine",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Trials from providence, from the passions of men, and from Satan",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Nothing individually; collectively the violence of persecution and temptation from without",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Reads the wise and foolish builders as Christ and the Devil, so that the same rain, winds and floods signify good or evil according to whose house they strike, and limits the great ruin to the failure of the foundation, holding that fornication and homicide leave room for penitence."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Refuses to assign meanings to the wind, rain and floods individually, calling such interpretation an unreal minuteness, and takes them collectively for persecution and temptation."
+   }
+  ],
   "themes": [
-   "the people astonished",
-   "wonder at his teaching",
-   "one continuous discourse",
-   "followed him down"
+   "Therefore whosoever heareth these sayings of mine, and doeth them, I will liken him unto a wise man, which built his house upon a rock:",
+   "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock.",
+   "And every one that heareth these sayings of mine, and doeth them not, shall be likened unto a foolish man, which built his house upon the sand:",
+   "And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell: and great was the fall of it."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
+   }
   }
  },
- "29": {
+ "28": {
   "voices": [
+   "Pseudo-Chrysostom",
+   "Chrysostom",
+   "Rabanus",
+   "Hilary",
+   "Augustine",
+   "Jerome",
    "John Gill",
+   "John Wesley",
    "John Lightfoot",
+   "Charles Ellicott",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Jerome",
-   "Chrysostom"
+   "Jamieson, Fausset and Brown"
   ],
+  "range": "28-29",
+  "pericope_label": "And it came to pass, when Jesus had ended these sayings, the people were astonished at his doctrine: For he taught them as one having authority, and not as the scribes.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The scribes borrowed authority from tradition ('the wise men say'); Jesus spoke with the authority of truth and the Spirit; the 'I say unto you' and the absence of cited rabbis."
+    "summary": "Lightfoot supplies the documentary proof, that no scribe's sermon carried weight without the formula that the rabbins have a tradition, and that even the greatest of them was not received, though he discoursed all day, until he named the teachers he had it from. Ellicott observes that what astonishes is less the I say unto you than the entire absence of any teacher's name, the scribe leaning on precedent as a lawyer leans on his cases, so that here it is the prophet, or rather the king, who speaks. Robertson says the scribes feared to express an idea without propping it on a predecessor, and dismisses the preserved specimens as the dullest collection of disjointed comments; he alone keeps the discourse's ending in view, a house falling on the sand like the crash of a great tree, with nothing done to smooth the outcome. Barnes holds that in no language is there a discourse to compare with this one. JFB will not gloss it at all, such teaching being best left in its own transparent clearness."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "As God and Lord of Moses he freely added to or changed the Law; not 'thus saith the Lord' like the prophets but his own word."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill locates the authority in the method rather than in the matter or the manner, truths delivered in his own name by one speaking as a lawgiver with authority from heaven and not from men."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "He taught as the great Lawgiver, with the power of the Spirit, not as the scribes who expounded another's law lifelessly."
+    "prevalence": "several",
+    "summary": "Wesley calls it a dignity peculiar to him as the great Lawgiver, the scribes expounding the law of another and that in a lifeless manner. Clarke charges the scribes with triviality and the splitting of controversial hairs, and closes the chapter by calling the sermon the most strict, pure and sublime ever delivered to man, and yet so simple that almost a child may apprehend it."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "several",
+    "summary": "Pseudo-Chrysostom takes the crowd's wonder coldly: a satisfied mind brings forth praise and an overcome mind wonder, and we admire only what we cannot praise worthily, so that their admiration went to Christ's glory and not to their faith, since men who believed would not have wondered; he notes too that it was the common people and not the chief among them, and that had such men been present the silence would have been broken by contradiction. Chrysostom reads the same verb warmly, the multitude being of benevolent temper and easily persuaded by truth, so that far from being repelled by the loftiness of the injunctions they would not leave him but followed him down the mountain; with Jerome he fixes the authority on the formula but I say unto you."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Rabanus offers both readings of the wonder without choosing between them, the astonishment of those who did not believe or the reverence of all for so great wisdom. Hilary compresses the matter to a line, that they measured the efficacy of his power by the might of his words. Augustine turns to who was listening and harmonises the two accounts of the sermon, then refers every precept back to the seven beatitudes with which it opened. Jerome grounds the authority in the speaker's identity, as the God and Lord of Moses himself, adding what the Law seemed to omit and altering what he chose, where the scribes taught only what was written."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What did the multitude’s wonder amount to?",
+    "positions": [
+     {
+      "position": "Admiration for Christ’s glory and not faith, since men who believed would not have wondered",
+      "held_by": [
+       "Pseudo-Chrysostom"
+      ]
+     },
+     {
+      "position": "A benevolent temper persuaded by truth, so that they followed him down the mountain",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Either the astonishment of unbelief or the reverence of all for so great wisdom",
+      "held_by": [
+       "Rabanus"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Refers every precept of the sermon back to the seven beatitudes with which it opened, making the whole discourse an exposition of them."
+   },
+   {
+    "voice": "Pseudo-Chrysostom",
+    "claim": "Treats the crowd’s wonder as evidence against their faith, on the ground that we admire only what we cannot praise worthily and that men who believed would not have wondered."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Keeps the discourse’s ending in view against the chorus of praise, noting that it finished with a house falling on the sand and that nothing was done to smooth the outcome."
+   }
+  ],
   "themes": [
-   "as one having authority",
-   "not as the scribes",
-   "unborrowed authority",
-   "the great Lawgiver"
+   "And it came to pass, when Jesus had ended these sayings, the people were astonished at his doctrine:",
+   "For he taught them as one having authority, and not as the scribes."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }

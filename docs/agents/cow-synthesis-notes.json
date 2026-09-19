@@ -87510,6 +87510,146 @@
         "56"
       ],
       "note": "Ellicott turns the thanksgiving for rest into a foreboding: entering that rest was conditional on walking in the ways of the Lord, a condition Solomon himself broke, so that the glory of the age was a gleam soon swallowed up. Clarke ends the chapter the same way at verse 66. Kept as named positions because Henry reads the same verses as unmixed celebration."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "Jamieson, Fausset and Brown fetch offset: keys 5, 11, 17, 23 carry JFB's commentary on the PREVIOUS chapter, at a perfect step of 6. Key 5 holds his note on the Lord's Prayer, key 11 is a bare cross-reference to Mt 6:12, key 17 is the clothes-moth and stored treasures of Mt 6:19-20, key 23 is the two masters and mammon of Mt 6:24. The chain stops there: key 29 carries JFB's genuine note on this chapter's closing verse and was used. Declared as excluded_voices on the tiles at 1, 7, 15 and 21. This is the tenth chapter in which the step-6 JFB offset has been measured, and the second clean four-or-five-key instance."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "11",
+        "19",
+        "21"
+      ],
+      "note": "Cyril of Jerusalem is mixed in this chapter, as elsewhere: genuine at key 19, where the catechesis on the axe laid to the root and the hypocrite who came to spy out the grace is commentary on this very verse, and used in the tile at 15. Foreign at key 11 (the little ones' Angels beholding the Father's face, which belongs to Matthew 18) and at key 21 (the twofold purification of water and Spirit, baptismal catechesis attached here only because it quotes 'enter into the kingdom of heaven'). A blanket corpus-wide exclusion of this father would destroy real material; the residue has to be judged key by key."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "11",
+        "21"
+      ],
+      "note": "TOOLING GAP, third chapter affected: excluded_voices cannot name 'Cyril of Jerusalem' because synthesis_qa.split_voices never emits that label from these blobs, so the validator rejects it as naming a block absent from the entry's source. The foreign Cyril material at keys 11 and 21 therefore had to be left silently unused rather than honestly declared. Previously hit in luke 3 and mark 16."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "29"
+      ],
+      "note": "Ellicott site chrome at the last key of the chapter again: key 29 ends with the book-navigation breadcrumb, the StudyLight copyright block and roughly a thousand words of raw CSS. Twelfth consecutive chapter showing this. A cleanup keyed on the breadcrumb would fix the corpus in one pass."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "6",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "19",
+        "24",
+        "25",
+        "26",
+        "27",
+        "29"
+      ],
+      "note": "Stub and truncated blocks in this chapter. Albert Barnes is reduced to a bare cross-reference ('Mt 7:7') or a bare scripture list at keys 8, 9, 10, 11, 19, 25, 26, 27 and 29, so he contributes nothing to the tiles at 7 and 24 beyond his substantive notes at 6, 12, 15, 21 and 28. John Wesley is reduced to 'Luke 6:31.' at key 12 and 'Luke 6:47.' at key 24. John Gill's note at key 6 is cut off mid-sentence at 'It is a common maxim with the Jews,'. John Calvin's note at key 6 has its italicised lemmas stripped by the scrape, leaving holes in the text ('he calls it and compares it to', 'attributing brutal stupidity to the and rage to the')."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "21"
+      ],
+      "note": "Catena blocks run past their key in this chapter. Matthew Henry's block at key 12 continues straight through his exposition of the strait gate at vv13-14, and his block at key 21 continues through the two builders and the crowd's astonishment, i.e. to the end of the chapter. Keys 24 to 29 therefore carry no Henry at all, and he could not be declared on the tiles for vv24-27 or vv28-29 although his commentary on those verses exists in the file."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "21",
+        "28"
+      ],
+      "note": "The same father appears under two block labels, 'Chrysostom' and 'John Chrysostom', at keys 21 and 28, with the second largely repeating the first in a different translation. Folded into one declared voice; a reader of the raw catena would count two witnesses where there is one."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "15",
+        "28"
+      ],
+      "note": "Chrysostom and Pseudo-Chrysostom contradict each other twice in this chapter. At v15 Pseudo-Chrysostom confines the false-prophet warning to heretics and to nobody else, while Chrysostom aims it at the man of corrupt life behind a face of virtue and says flatly that among heretics a good life may often be found and among these never. At v28 Pseudo-Chrysostom reads the crowd's wonder as evidence against their faith, since men who believed would not have wondered, while Chrysostom reads the same verb warmly, the crowd being of benevolent temper and following him down the mountain."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "23"
+      ],
+      "note": "The words 'I never knew you' are used for opposite doctrinal ends. Barnes calls the verse the most decided proof in Scripture that believers do not fall from grace, since Christ does not say he once knew them and afterwards rejected them, and Calvin reads it the same way. Clarke and Wesley render the phrase identically, as 'I never approved of you', and draw from it no such conclusion, Wesley observing only that men who saved many souls were themselves never saved. Both positions are carried in the tile."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "13",
+        "24"
+      ],
+      "note": "A running structural disagreement across the chapter. Calvin insists at v12, at v13 and again at v24 that Matthew has collected detached sayings rather than reported one continuous discourse, and reads each sentence by itself; at v12 he treats the opening particle as a meaningless proverbial tag. Ellicott at v24 takes 'these sayings of mine' as evidence that the discourse IS continuous and not a compilation of fragments, and Augustine had already said the words show the sermon complete in its precepts. Recorded in all three tiles."
+    },
+    {
+      "at": "2026-09-19",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "6",
+        "7",
+        "12",
+        "13",
+        "15",
+        "21",
+        "24",
+        "28"
+      ],
+      "note": "matthew 7 regenerated from the catena as nine pericope tiles (1-5, 6, 7-11, 12, 13-14, 15-20, 21-23, 24-27, 28-29), 57,797 usable source words compressed to 5,812. All nine self-grade A; compression 0.06x to 0.19x. Every declared voice is cited by name in its tile and every named voice is declared. The heaviest losses to compression, recorded here rather than in the prose: Augustine's full beatitude-by-beatitude mapping of the sermon at key 28 (only five of the seven pairs survive in the tile, the outlier note carries the claim); Lightfoot's and Clarke's shared rabbinic stock on the word 'gate' at vv13-14, the gate of repentance, of prayers and of tears, with the saying that when the Temple fell the gates of prayer were shut but the gates of tears were not; Pseudo-Chrysostom's allegory of the grape and the fig at v15; and Clarke's Bengal fishermen at vv24-27. Nothing was added that the source does not carry."
     }
   ]
 }
