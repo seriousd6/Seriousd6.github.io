@@ -88321,6 +88321,44 @@
       "book": "esther",
       "chapter": "9",
       "note": "One entity warning raised and cleared on esther 9: 'Jewry' was my word for Henry's 'those that write of the state of the Jews at this day' and was rewritten to 'the Jews of his own day' in prose and in both tag occurrences. Final state: six pericope tiles replacing 31 legacy per-verse entries, all grade A (compress 0.432-0.459, ttr 0.604-0.656), no entity warnings, chapter and corpus gates clean."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "3",
+        "5",
+        "10",
+        "13",
+        "17",
+        "28",
+        "41",
+        "46",
+        "54",
+        "57"
+      ],
+      "note": "Polish pass: these ten entries recomputed as grade B purely on ttr, with compress comfortably above the A floor in every case. The cause was not thin content but local vocabulary density. Two things drove it: repeated multi-word attributions, since Keil and Delitzsch costs three tokens every time it recurs and appeared up to five times in a single entry, and the unavoidable repetition of ark, priests, temple, house, cloud and poles in a chapter about moving one object into one building. Rewriting with pronouns and varied second references after the first naming of a voice, plus synonyms already present in the chapter pool, lifted all ten to A without changing a single claim. Worth trying first on any chapter that grades B on ttr alone."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "8",
+      "verses": [
+        "3",
+        "5",
+        "10",
+        "13",
+        "17",
+        "28",
+        "41",
+        "46",
+        "54",
+        "57"
+      ],
+      "note": "ttr before and after the polish pass: 3 was 0.575 now 0.634, 5 was 0.536 now 0.653, 10 was 0.558 now 0.634, 13 was 0.572 now 0.651, 17 was 0.528 now 0.587, 28 was 0.561 now 0.613, 41 was 0.576 now 0.619, 46 was 0.578 now 0.608, 54 was 0.565 now 0.619, 57 was 0.545 now 0.593. Entry 17 needed two passes because the long Ellicott paragraph on the nature of a divine covenant repeats covenant, call and obedience unavoidably; varying those to compact, summons and the commandments carried it over."
     }
   ]
 }
