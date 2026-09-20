@@ -88990,6 +88990,42 @@
         "8-11"
       ],
       "note": "Polish pass on the single grade-B entry. It was ttr 0.567 with compress 0.409, below the 0.42 floor, at 657 words near the top of the window, so it needed trimming as well as varying; it is now ttr 0.621 and compress 0.437 at 643 words. First-born, Levites, altar and waving were the recurring terms; varying them to eldest, the tribe, these men and the gesture after the first plain naming lifted both metrics. No claim altered."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "2",
+      "note": "Label-defect census for matthew 2, the densest yet recorded. Against a corrected splitter the chapter holds: Pseudo-Chrysostom 11 blocks, Gloss 9, Remigius 8, Jerome 7, Rabanus 6, Cyril of Jerusalem 5, Pseudo-Augustine 3, Hilary 3, Ambrose 2 — 54 blocks invisible to synthesis_qa or misattributed by it, against 12 genuine Chrysostom blocks (8 labelled Chrysostom, 4 labelled John Chrysostom). The production splitter reports 23 Chrysostom blocks, so eleven of the twenty-three are Pseudo-Chrysostom's. It also reports 11 Augustine where only 8 are Augustine's, the other 3 being Pseudo-Augustine. Every patristic attribution in this chapter was verified against the raw catena; the genuine Chrysostom blocks used are at keys 1, 3, 7, 12, 13 and 16, and the Augustine blocks at keys 1, 3, 9, 13, 16 and 21. Roughly 44 percent of the chapter's patristic material is unusable under the current splitter."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "13-15",
+        "19-23"
+      ],
+      "note": "Two prophecy cruxes in one chapter, and the commentators handle them by different strategies. On the quotation from Hosea at v15: Clarke states flatly that the words refer to Israel's deliverance and nothing else, and confesses he can see no other reference they can have beyond having passed into a proverb for any signal rescue; Wesley solves it by grammar, the word for purpose often meaning only consequence, so the saying was fulfilled anew in a higher sense; Chrysostom appeals to a law of prophecy, that things are said in one place of one subject and fulfilled in another of a different one; Calvin attacks a rival reading instead. On 'he shall be called a Nazarene' at v23, where no such text exists at all: Robertson states the problem exactly, that the plural is used and several prophecies must be combined, the term of contempt being what is meant; Wesley distinguishes what was spoken in effect from what was spoken in express words; Clarke admits he cannot tell which prophets are intended and reports the two passages usually offered; Lightfoot grants both have weight but reads it of the Saviour's mean condition; Calvin refuses to treat the branch passage as an etymology at all. Both recorded as debates."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "14",
+        "16"
+      ],
+      "note": "Two observations from matthew 2 worth preserving. Ellicott calls the phrase naming the child before the mother significantly reverential, since an ordinary narrative would have said the wife and then the child, and finds in the sheer brevity of the flight narrative an argument, so far as it goes, against treating the story as myth — a literary argument for historicity from compression rather than from corroboration. Separately, on the massacre, the silence of Josephus is met three ways: Ellicott by character, that it is admitted on all hands to be in keeping with the man; Calvin by naming the one writer who alludes to it; Clarke by producing the allusion itself, a fourth-century Latin author's jest that it was better to be this king's pig than his son."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "2",
+      "note": "matthew 2 rewritten from 23 legacy per-verse entries (5 graded B, all 23 stamped legacy-unversioned) to 5 pericope tiles: vv1-6, vv7-12, vv13-15, vv16-18, vv19-23. 62,728 usable source words in, 3,194 out. All 5 grade A (compress 0.456-0.463, ttr 0.637-0.680), one entity warning raised and cleared (Midian, my word rather than the source's), validator and both gates clean. Method note for a chapter of this size: all five tiles were written to the scratchpad BEFORE the data files were wiped, so that an incomplete run would have cost nothing in the repo. Recommended practice for any chapter over about 40,000 source words, where the risk of not finishing is real."
     }
   ]
 }
