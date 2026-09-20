@@ -88857,6 +88857,79 @@
         "27"
       ],
       "note": "ENTITIES signal cleared in an entry that was not being polished: the prose called Dathan and Abiram Reubenites, a form the source never uses, having only Reuben. Rephrased to belonged to the tribe of Reuben. Chapter now reports zero signals."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "4",
+      "note": "Label-defect census for mark 4, counted against a corrected splitter. Invisible to synthesis_qa and therefore undeclarable: Theophylact 5 blocks, Pseudo-Jerome 5, Cyril of Jerusalem 6, Gloss 3, Remigius 1 — twenty blocks, each silently appended to whichever listed voice preceded it. Misattributed by prefix: Pseudo-Chrysostom 3 blocks, all handed to Chrysostom, so the production splitter reports 7 Chrysostom blocks where only 4 are his. Working by accident: A.T. Robertson 33 and John Lightfoot 11, which match on their bare surnames and leave 'A.T.' and 'John' as orphan fragments on the previous voice. Every patristic attribution in this chapter was checked against the raw catena rather than against split_voices, and Chrysostom is declared as an excluded voice on the vv26-29 tile because the block the splitter offers under that name there is Pseudo-Chrysostom's."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "4",
+      "verses": [
+        "10"
+      ],
+      "note": "JFB residue at key 10 of mark 4: the single Jamieson, Fausset and Brown block in the chapter is on the Corban and the money dedicated to sacred purposes, which is Matthew 15 material. One chapter's worth of JFB, and none of it on Mark. Declared in excluded_voices on the vv10-12 tile."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "4",
+      "verses": [
+        "39"
+      ],
+      "note": "Site chrome confirms the refined diagnosis from job 3 for a second chapter. Ellicott's block at key 39 runs to 1,059 words where his other blocks in the chapter run 7 to 190; keys 40 and 41 have no Ellicott at all. So the chrome again attaches to the LAST ELLICOTT BLOCK rather than to the last key of the chapter — job 3 key 25 and now mark 4 key 39, both of them short of the chapter end. Two independent confirmations make this worth acting on: a filter that strips from the end of each chapter's final Ellicott block would clear the defect corpus-wide, where a filter keyed to the last verse would miss both of these."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "4",
+      "verses": [
+        "1",
+        "2",
+        "13"
+      ],
+      "note": "Cross-reference stubs in mark 4, the pattern first recorded for matthew 7. Barnes contributes almost nothing to the Sower itself: at key 1 his entire block is 'See the parable of the sower Mt 13:1-9' plus a reference list, and at several later keys he has only bracketed proof-texts. Clarke does the same at key 2, referring the reader to his own notes on the first Gospel rather than commenting. Both men write substantially elsewhere in the chapter, so this is not a thin source but a deliberate cross-reference; the effect on tiling is the same, that the vv1-9 tile had to be written without Barnes."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "4",
+      "verses": [
+        "10-12"
+      ],
+      "note": "The hard clause about seeing and not perceiving draws four answers on the vv10-12 tile, and two of them are in direct conflict about grammar. Ellicott admits the form at first sight suggests that blindness was the purpose, and escapes by making it the result of a wilful rejection instead. Robertson refuses that escape explicitly, on the ground that there is no way to give the particle a causal sense, and accepts a purpose of condemnation aimed at the blindness the Pharisees had already shown. Calvin avoids the grammar altogether with an image, that doctrine blinds only by accident as the sun dazzles weak eyes, the defect belonging to the eyes and not the sun. Wesley compresses it into a sentence: they would not see, and now could not, having been given up to the blindness they chose."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "mark",
+      "chapter": "4",
+      "verses": [
+        "26-29"
+      ],
+      "note": "Two debates on the parable peculiar to this Gospel. (1) Who the sower is: Calvin aims the whole discourse at ministers of the word, to keep them from indifference when the fruit of their labour does not appear at once; Wesley makes him a preacher casting the inward kingdom into the heart; Gregory takes him for any believer setting a good intention in his own heart. (2) Whether the sickle means the soul is taken as soon as it is ripe: Barnes floats the reading and then checks himself, since parables carry circumstances put in to fill out the story; Clarke refuses it outright, saying it has been supposed but the parable certainly does not say so; Ellicott keeps both levels, the harvest being the end of the world or the end of each man's life."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "4",
+      "note": "Three observations from mark 4 worth keeping. Clarke argues from this chapter that the second evangelist was not abridging the first, since the seed growing secretly is found here and nowhere else — an argument about Gospel relations drawn from a parable's mere presence. Robertson records what he calls a curious instance of early textual corruption, that the two oldest and best manuscripts both read 'under the lampstand' where the sense plainly requires 'upon' it. Chrysostom characterises the evangelist himself, saying he delights in brevity and therefore adds a short remark about many such parables instead of reporting them — a stylistic judgment about Mark from inside the catena."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "mark",
+      "chapter": "4",
+      "note": "mark 4 rewritten from 41 legacy per-verse entries (27 graded B, all 41 stamped legacy-unversioned) to 7 pericope tiles: vv1-9, vv10-12, vv13-20, vv21-25, vv26-29, vv30-34, vv35-41. 29,686 usable source words in, 4,491 out. All 7 grade A (compress 0.442-0.448, ttr 0.609-0.661), one entity warning raised and cleared (Messiahship, where the source has the misspelling Messiaship, rewritten to 'accepted him as Messiah'), validator and both gates clean. Process note: the cloned toolchain silently kept the previous chapter's index, so the KJV lookup read Mark 3 and failed on verse 36; caught immediately because the put step crashed rather than writing wrong data, but a clone that carried a stale index into a chapter with FEWER verses would have written wrong pericope labels without erroring. Worth a guard in any parameterised version of these helpers."
     }
   ]
 }
