@@ -88930,6 +88930,66 @@
       "book": "mark",
       "chapter": "4",
       "note": "mark 4 rewritten from 41 legacy per-verse entries (27 graded B, all 41 stamped legacy-unversioned) to 7 pericope tiles: vv1-9, vv10-12, vv13-20, vv21-25, vv26-29, vv30-34, vv35-41. 29,686 usable source words in, 4,491 out. All 7 grade A (compress 0.442-0.448, ttr 0.609-0.661), one entity warning raised and cleared (Messiahship, where the source has the misspelling Messiaship, rewritten to 'accepted him as Messiah'), validator and both gates clean. Process note: the cloned toolchain silently kept the previous chapter's index, so the KJV lookup read Mark 3 and failed on verse 36; caught immediately because the put step crashed rather than writing wrong data, but a clone that carried a stale index into a chapter with FEWER verses would have written wrong pericope labels without erroring. Worth a guard in any parameterised version of these helpers."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "19",
+      "verses": [
+        "1-42"
+      ],
+      "note": "TRIAGE, not attempted this run; nothing written to the tree. john 19 belongs with matthew 2 and john 16 rather than with the small polish chapters. 42 entries, all legacy-unversioned with no range field, ALL 42 reporting self-grade MISSING, and 69565 usable source words across 42 keys. Ten entries grade B, at verses 2, 17, 18, 20, 27, 34, 36, 40, 41 and 42; unlike john 16 these are not badly padded, since compress runs 0.403 to 0.442 and only three sit below the 0.42 floor, so the wording technique would lift most of them. Four ENTITIES signals stand in the prose: Ecce and Homo, Alphaeus, Docetism, Arimathaea. The single hard blocker is the same as in the other two, the 42 missing self-grades, which means reading the chapter end to end before finish will accept it."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "84-88"
+      ],
+      "note": "Polish pass on the single grade-B entry. It was ttr 0.573 at 357 words, with compress clear at 0.444, and is now ttr 0.611 at 356. The entry is a summary of totals, so the numerals are the repeated vocabulary and twelve appeared eight times; the fix was to stop repeating the count, giving as many bowls, a bullock and a ram and a lamb and a kid from every tribe, rather than restating the figure for each item. No total was altered. This chapter uses a different house convention from the others I have polished, naming the school inline in strong tags beside the voice, and that convention was kept."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "6",
+        "12",
+        "36",
+        "42",
+        "89"
+      ],
+      "note": "UNVERIFIED CROSS-REFERENCES, flagged rather than removed, because deciding them needs a source read I did not do. Six ENTITIES signals stand in this chapter and they are not spelling mismatches like the ones cleared in exodus 28, leviticus 11, leviticus 27 and numbers 3. Five are scripture cross-references whose book the chapter source never names: Titus 1:5 at key 2, 1 Corinthians 10:13 at key 6, 1 Chronicles 15:13 at key 6, 1 Corinthians 15:23 at key 12, James 2:1 at key 36, Hebrews 6:10 at key 42 and Hebrews at key 89. The sixth is a named authority, Eusebius of Emesa at key 2, likewise absent from the source. All are properly formed ref links, so the validator passes them."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "6",
+        "12",
+        "36",
+        "42",
+        "89"
+      ],
+      "note": "Evidence that the numbers 7 cross-references are an outlier rather than normal house practice. I sampled forty chapters at random from the synthesis tree and extracted every data-ref link, 762 of them, then checked whether the cited book name occurs anywhere in that chapter's own catena. Zero were absent. The corpus convention is therefore that a scripture cross-reference in the synthesis comes from the commentator being summarised. numbers 7 breaks that in six places, which suggests the references were supplied by the writer rather than drawn from the source. Whoever verifies this chapter should check whether the commentator alluded to those texts without naming them, in which case the gloss is defensible, or whether the allusion is imported."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "8",
+      "verses": [
+        "8-11"
+      ],
+      "note": "Polish pass on the single grade-B entry. It was ttr 0.567 with compress 0.409, below the 0.42 floor, at 657 words near the top of the window, so it needed trimming as well as varying; it is now ttr 0.621 and compress 0.437 at 643 words. First-born, Levites, altar and waving were the recurring terms; varying them to eldest, the tribe, these men and the gesture after the first plain naming lifted both metrics. No claim altered."
     }
   ]
 }
