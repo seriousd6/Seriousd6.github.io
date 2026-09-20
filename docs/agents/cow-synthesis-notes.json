@@ -88242,6 +88242,85 @@
         "19-21"
       ],
       "note": "Verse 21 is read by Clarke and Ellicott as sublime irony rather than a question, Ellicott proposing that it be printed without an interrogation mark. Gill alone answers it straightforwardly, that Job was not born when light and darkness were separated and that even the first man could not have been present, since man was not made until the sixth day."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "20-22",
+        "23-28",
+        "29-32"
+      ],
+      "note": "JFB residue, total: all three Jamieson, Fausset and Brown blocks in the esther 9 catena (keys 20, 26, 32) are 1 Chronicles 12 material — the companies that came to David at Ziklag, the Gadites and their lion-like countenance, the crossing of Jordan in flood. There is no genuine JFB commentary on esther 9 anywhere in the chapter. Declared in excluded_voices on all three tiles that contain them. This is the same total-residue pattern recorded for matthew 27 and john 10; three chapters now where JFB contributes nothing but foreign text."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "9"
+      ],
+      "note": "The catena has no key for esther 9:9 (the last four of Haman's ten sons). Keys run 1-8 then 10-32. This is a genuine missing verse rather than an out-of-range scrape key, so the pericope tiling had to be cut 1-8 / 10-15 rather than the natural 1-10: synthesis_qa.coverage_problems rejects any span that covers a verse absent from the source. The reader's walk-back resolves v9 to the vv1-8 tile, and the material is in fact covered there, since Keil and Delitzsch's key-7 block prints all ten names together."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "1-19"
+      ],
+      "note": "Blocks running past their key, this time costing a whole school its declarability. Matthew Henry contributes exactly two blocks to esther 9, at keys 1 and 20, and each is a section summary: the key-1 block expounds vv1-19 entire and the key-20 block expounds vv20-32 entire. Henry is therefore declarable only on the tiles keyed at 1 and 20, though his comment covers every verse in the chapter — the vv10-15 and vv16-19 tiles had to be written without him even though his best material on the second day, the spoil and the two festival dates sits in the key-1 block. Same defect class as the john 10 key-22 block that covered vv22-30."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "32"
+      ],
+      "note": "Site chrome at the last key, now fifteen consecutive chapters: key 32 of the esther 9 catena is 32,455 characters, of which the genuine commentary (Gill, Clarke, Ellicott on 'the book') is a small fraction; the rest is the StudyLight breadcrumb, two copyright lines and the full menu/sub-menu/lexicon-search CSS with its media queries. One filter on the trailing style blob would strip this corpus-wide."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "11-15"
+      ],
+      "note": "The sharpest disagreement in the chapter is moral, not textual: whether Esther's second day of slaughter was justified. Ellicott refuses to defend it, holding that the Jews were already masters of the situation after the first day, calling the fresh action needless butchery and the hanging of men already dead a gratuitous outrage, and saying explicitly that because Esther was used by God for a great purpose we are not called upon to tone down the black spots in her history. Wesley answers the objection by supposing the worst enemies had hidden for the one day and would have returned safely once the commission expired; Clarke answers it from information, that Esther had likely learned from Mordecai how many had escaped, and notes that three hundred more were in fact found. Recorded as a debate on the vv10-15 tile with all three positions kept."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "29-32"
+      ],
+      "note": "Two smaller disagreements on the closing tile, both recorded as debates. (1) Which letter is 'the first', so that this is 'the second': Keil and Delitzsch count from Mordecai's earlier letter to the provinces, Ellicott from the letter Esther obtained from the king, which makes Mordecai's the second and this its confirmation. (2) What 'the book' is: Clarke reports the versions without deciding (Vulgate making it the history called Esther, Targum having the roll transcribed in this book), while Ellicott rejects the self-reference as no natural way for an author to describe what he is writing and prefers either a contemporary book on the festival or the royal chronicles, the use of the word everywhere else in Esther favouring the latter."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "9",
+      "verses": [
+        "16-19"
+      ],
+      "note": "Two textual observations in this chapter that the loop should not lose. Ellicott prefers the Greek version's fifteen thousand to the received seventy-five thousand slain in the provinces, and is the only witness to doubt the number at all. Clarke records that the ancient Itala version omits the whole of the first nineteen verses and asks outright whether they were originally in the book, leaving the query unanswered; no other voice in the chapter takes it up. Both are preserved as outliers on the vv16-19 tile rather than argued."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "esther",
+      "chapter": "9",
+      "note": "One entity warning raised and cleared on esther 9: 'Jewry' was my word for Henry's 'those that write of the state of the Jews at this day' and was rewritten to 'the Jews of his own day' in prose and in both tag occurrences. Final state: six pericope tiles replacing 31 legacy per-verse entries, all grade A (compress 0.432-0.459, ttr 0.604-0.656), no entity warnings, chapter and corpus gates clean."
     }
   ]
 }
