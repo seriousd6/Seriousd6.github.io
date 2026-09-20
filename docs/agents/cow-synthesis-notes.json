@@ -87764,6 +87764,155 @@
         "41-42"
       ],
       "note": "Keil and Delitzsch leave the repentance question where Scripture leaves it, unascertainable, while allowing Ecclesiastes as possible evidence. That open verdict is recorded alongside Clarke sustained argument for the contrary at key 43, since the chapter carries both."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "60",
+        "66"
+      ],
+      "note": "Jamieson, Fausset and Brown appear at only two keys in this whole chapter, 60 and 66, and BOTH are residue: key 60 carries his note on the lamps and the oil of the ten virgins and key 66 his note on the reply 'Not so, lest there be not enough', both from Matthew 25. The two keys are six apart, matching the step-6 JFB fetch offset measured in ten other chapters, but here the offset reaches two chapters back rather than one, and there is no genuine JFB commentary on Matthew 27 in the file at all. Declared as excluded_voices on the tiles at 57 and 62."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "9",
+        "19"
+      ],
+      "note": "NEW AND PRECISE DEFECT: John Lightfoot's note on Matthew 28:N is appended to key N of this chapter. At key 9 his genuine note on the Jeremy/Zechariah attribution runs straight on into commentary on Matthew 28:9 (the women holding his feet, Magdalene at the sepulchre, mistaking him for the gardener). At key 19 his genuine note on 'have thou nothing to do with that just man' runs on into Matthew 28:19 ('Go ye therefore and teach all nations') with a long argument about infant baptism. Same verse number, next chapter, twice. This is mechanically diagnosable and should be fixable in one pass across the corpus."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "66"
+      ],
+      "note": "Ellicott site chrome at the last key of the chapter again: key 66 ends with the StudyLight book-navigation breadcrumb, the copyright block and roughly a thousand words of raw CSS. Thirteenth consecutive chapter showing this defect."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "24",
+        "26",
+        "35",
+        "38",
+        "51",
+        "54"
+      ],
+      "note": "Cyril of Jerusalem is present at eighteen keys in this chapter, far more than usual, and is mostly GENUINE, since his Catechetical Lectures cover the Passion at length. Used at keys 2 (bound and led to the king, with the Herod resolution), 3-6 and 10 (the thirty pieces and the Jeremy/Zechariah discrepancy) and 63 (the cross was no illusion). Foreign or unusable at 24 (a general exhortation not to be ashamed of the Cross), 26 (the Caiaphas trial, belonging to the previous chapter), 35 (a fragment beginning mid-sentence at 'are the branches'), 38 (the first Church cast off, apostles and prophets), 51 (the garden of the Canticles) and 54 (the vision of the angels and 'All hail', from Matthew 28). As in three previous chapters, the foreign blocks could not be declared in excluded_voices because synthesis_qa.split_voices never emits this father's label; they were left silently unused."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "33",
+        "45"
+      ],
+      "note": "Two further block defects. Leo's block at key 33 is the exordium of a Passion sermon, truncated mid-sentence with an ellipsis, and says nothing about Golgotha; it was unusable. At key 45 a block is labelled 'Dionys' (Dionysius, on the Heliopolis observation of the darkness), a label absent from the voice map and so undeclarable."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "1",
+        "15",
+        "26",
+        "33",
+        "50",
+        "57"
+      ],
+      "note": "Catena blocks run past their key throughout this chapter, more heavily than in any chapter worked so far. Matthew Henry's block at key 1 runs through his whole exposition of vv1-10; his block at key 26 runs through vv27-31; at key 33 through vv34-36; at key 50 through vv50-53; at key 57 through the burial to v61. Chrysostom's block at key 15 runs forward into vv25-26, so that his treatment of Pilate's wife's dream and of the scourging sits outside the pericopes those verses fall in. The practical consequence is that a voice sometimes cannot be declared on the tile whose verses he is actually commenting on."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "11",
+        "27",
+        "62"
+      ],
+      "note": "The same father appears under two labels, 'Chrysostom' and 'John Chrysostom', at keys 11, 27 and 62, the second largely repeating the first in a different translation. Folded into one declared voice each time. Separately, the label used throughout this chapter for Rabanus Maurus is 'Raban', not 'Rabanus' as in other chapters; the voice was left undeclared rather than risk a validator rejection, which cost his notes on the Parasceve and on the shape of the cross."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "25"
+      ],
+      "note": "The imprecation is read for opposite purposes and both readings are carried in the tile. Barnes and Clarke take the later history of the nation as its literal fulfilment, both dwelling on the detail that when the city fell crosses ran short for the men and room for the crosses. Ellicott enters three cautions: only a fraction of the people were present, some of the rulers dissented, and the son does not bear the father's iniquity except so far as he consents to it. Robertson goes further and states flatly that Pilate's guilt was not washed off either, that the guilt was shared by every actor in the scene, that at bottom the sins of all of us nailed Jesus to the cross, and that the words are no excuse for race hatred."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "45"
+      ],
+      "note": "Origen and Chrysostom contradict each other on the darkness. Origen concedes the astronomical objection in full, that an eclipse cannot fall at the Passover full moon and that no secular observer recorded it, refuses to claim a simple suspension of natural law, and confines the darkness to Jerusalem or Judaea. Chrysostom answers the same objection from duration rather than extent and insists on the opposite geography, that the wonder lay precisely in its covering the whole earth."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "52"
+      ],
+      "note": "On the risen saints, Ellicott and Barnes independently reject the traditional identification with the Old Testament patriarchs, arguing that the men came out of graves in Jerusalem and that the word saints was used from the first of disciples, so that these were people lately dead and still recognisable. Ellicott also states the modern objections to the passage plainly before answering them, and connects the episode with the apostolic language about a preaching to the spirits in prison."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "1"
+      ],
+      "note": "Queue bookkeeping: matthew 27 was served by the picker as a 'polish' job (38), but all 66 entries were stamped legacy-unversioned, so the work was in fact a full legacy regeneration rather than a repair of B-graded verses. The chapter's existing outline keys (1, 3, 11, 27, 32, 45, 57, 62) were all preserved as tile starts."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "27",
+      "verses": [
+        "1",
+        "3",
+        "11",
+        "15",
+        "19",
+        "24",
+        "27",
+        "32",
+        "35",
+        "39",
+        "45",
+        "50",
+        "54",
+        "57",
+        "62"
+      ],
+      "note": "matthew 27 regenerated from the catena as fifteen pericope tiles (1-2, 3-10, 11-14, 15-18, 19-23, 24-26, 27-31, 32-34, 35-38, 39-44, 45-49, 50-53, 54-56, 57-61, 62-66), 123,014 usable source words compressed to 9,684. All fifteen self-grade A; compression 0.05x to 0.19x, the heaviest in the corpus so far. Every declared voice is cited by name in its tile and every named voice is declared. Heaviest losses to compression, recorded here rather than in the prose: Chrysostom on why Pilate's wife and not Pilate saw the vision, and his line that the judge is judged and tortured before he tortures (it sits at key 15, outside the pericope of v19); Augustine's full discussion of the apocryphal Hebrew Jeremiah shown him by a Nazarene; Origen's typology of the sixth hour and the Moses parallel at the darkness; Jerome's wordplay on passing by and wagging the head; Pseudo-Chrysostom's catalogue of reversals at the darkness; Ellicott's four outrages of Pilate's earlier administration; and Clarke's Bengal fishermen. Nothing was added that the source does not carry."
     }
   ]
 }
