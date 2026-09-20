@@ -89026,6 +89026,36 @@
       "book": "matthew",
       "chapter": "2",
       "note": "matthew 2 rewritten from 23 legacy per-verse entries (5 graded B, all 23 stamped legacy-unversioned) to 5 pericope tiles: vv1-6, vv7-12, vv13-15, vv16-18, vv19-23. 62,728 usable source words in, 3,194 out. All 5 grade A (compress 0.456-0.463, ttr 0.637-0.680), one entity warning raised and cleared (Midian, my word rather than the source's), validator and both gates clean. Method note for a chapter of this size: all five tiles were written to the scratchpad BEFORE the data files were wiped, so that an incomplete run would have cost nothing in the repo. Recommended practice for any chapter over about 40,000 source words, where the risk of not finishing is real."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "1-47"
+      ],
+      "note": "TOOLING BUG, WORK LOST: running two finish commands in one session loses the second chapter's uncommitted prose edits. Reproduced three times today, every time I landed two chapters in one run. In each case the FIRST chapter committed prose, tags and notes correctly, while the SECOND committed only its tags file. Commits 07366292 leviticus 11, 2cd45992 numbers 3 and 93df43ac numbers 8 each contain one file, the tags, and no prose. Commits e653e1d4 exodus 25, 60a69bee exodus 28, 8285d273 leviticus 27, 8bb3940c numbers 7 and 5523f33a 1kings 8 all contain prose, tags and notes. Single-chapter runs are unaffected."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "1-47"
+      ],
+      "note": "Mechanism as far as the evidence shows it, without guessing further. Searching all history for a distinctive sentence of the lost leviticus 11 revision returns nothing, so the revised prose never reached any commit. The stamp step of the second finish recomputed grades from the ORIGINAL prose and correctly recorded B, so no inconsistency was written to the tree; the tags always match the prose that exists. The only casualty is the editing work itself, which the next git reset --hard then discarded. Since the only thing that ran between writing the prose and the second finish was the FIRST finish, that first finish appears to revert other modified files under data/. Workaround until it is fixed: land one chapter per run, or make no edits to a second chapter until the first has been committed and verified."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "11",
+      "verses": [
+        "1-47"
+      ],
+      "note": "What was lost and is being redone: leviticus 11 lost the polish of entry 36-38 and the three ENTITIES fixes at entries 17, 20 and 29. numbers 3 lost the polish of entries 33-37 and 38-39 and the Reubenites fix at entry 27. numbers 8 lost the polish of entry 8-11. All three chapters are therefore still carrying their original grade-B prose, which is why they remain in the polish queue. Verify after landing by checking that git show --stat lists the cow-synthesis prose file and not only the tags file."
     }
   ]
 }
