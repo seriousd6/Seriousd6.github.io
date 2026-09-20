@@ -89056,6 +89056,16 @@
         "1-47"
       ],
       "note": "What was lost and is being redone: leviticus 11 lost the polish of entry 36-38 and the three ENTITIES fixes at entries 17, 20 and 29. numbers 3 lost the polish of entries 33-37 and 38-39 and the Reubenites fix at entry 27. numbers 8 lost the polish of entry 8-11. All three chapters are therefore still carrying their original grade-B prose, which is why they remain in the polish queue. Verify after landing by checking that git show --stat lists the cow-synthesis prose file and not only the tags file."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "3",
+      "verses": [
+        "1-51"
+      ],
+      "note": "WORKAROUND VERIFIED for the two-finish bug recorded against leviticus 11 today. Landing two chapters in one run is safe provided no edit to the second chapter exists on disk while the first finish is running. This run I wrote leviticus 11 only, finished it, confirmed with git show --stat that commit 86044d7a carried the prose file and not merely the tags, and only then wrote numbers 3 and finished it as 4b02f9cf, which likewise carried its prose. Both chapters now compute 15 of 15 and 10 of 10 grade A with zero mismatch between recorded and recomputed grades. The earlier failures, 07366292, 2cd45992 and 93df43ac, all had the second chapter's edits sitting on disk while the first finish ran."
     }
   ]
 }
