@@ -1,1994 +1,1744 @@
 {
  "1": {
   "voices": [
-   "Gloss",
-   "Chrysostom",
-   "Augustine",
-   "Raban",
-   "Jerome",
    "Remigius",
-   "Origen",
-   "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Chrysostom",
+   "Matthew Henry",
+   "John Lightfoot",
+   "John Wesley",
+   "Jerome",
+   "John Calvin"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Identify Antipas the tetrarch, his realm and title, and the surprise he had not heard of Jesus earlier; note the Synoptic parallels."
-   },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Harmonise the order against Luke/Mark, reject metempsychosis, distinguish the two Herods, and contrast Gentile readiness to believe."
+    "summary": "Remigius clears up the confusion of names, recalling that the first Herod was long dead and that after Archelaus was exiled to Gaul the kingdom was divided into tetrarchies among the sons, so that the man who beheaded John is the son of the Herod under whom the Lord was born. Jerome refuses the doctrine of transmigration as an explanation of the tetrarch's verdict, since the Lord was thirty years old when John was beheaded."
    },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Christ's fame reached even Herod's court, leaving the Jews without the excuse of ignorance."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the powerful learn slowly; yet Herod fears John even dead — a witness to virtue."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen catalogues the Sadducean and Pharisaic opinions on resurrection behind Herod's fear."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: a guilty conscience torments Herod; conviction is not conversion."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Raban",
-    "note": "Reads the episode as showing the Gentile heart more disposed to faith than the Jewish."
-   }
-  ],
-  "themes": [
-   "guilty conscience",
-   "John the Baptist",
-   "resurrection",
-   "Herod Antipas"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Herod's Sadducean leanings versus his confession of a risen John; the rival popular opinions (Elijah, a prophet) and the verb 'work in him'."
-   },
-   {
-    "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the rumour rose first among the people; Herod believed what he dreaded; the misapplied Elijah promise."
+    "summary": "Ellicott traces the whole family connection, Antipas the son of Herod the Great by Malthace, his first wife a daughter of Aretas, and Herodias niece to both her husbands, in a marriage adulterous and by the Mosaic law doubly incestuous; he also thinks a tetrarch at Tiberias might well be slow to hear, and names the nobleman of Capernaum, Manaen and Chuza as likely informants. Barnes explains the title as ruler of a fourth part and the delay by absence and dissoluteness. Lightfoot argues from the leaven of Herod being elsewhere the leaven of the Sadducees that the confession of a resurrection was extorted from a conscience pricked with horror."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The power of conscience — 'Sadduceeism staggers when conscience awakes'; guilt accuses but cannot save."
+    "summary": "Clarke observes that the estates were in fact divided into three, not four, and sees in the verdict conscience performing the office of ten thousand accusers while offering no relief from God and no salvation from sin. Wesley compresses the whole point into a line, that Sadduceeism staggers when conscience awakes."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom puts the late hearing down to the pride and carelessness of a tyrant, since those in authority, fenced about with much pomp, learn such things slowly because they do not much regard them."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry turns the delay into a rule, that it is the unhappiness of the great ones of the world to be most out of the way of hearing the best things, and that God will honour those despised for his sake, the gospel like the sea getting in one place what it loses in another."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin declines to make the conjecture Herod's own, inferring from the parallel account that it was a report already current among the people, to which their hatred of the tyrant and their detestation of the murder had given rise."
    }
   ],
   "debates": [
    {
-    "question": "Was Herod a Sadducee, and if so how could he confess a resurrection?",
-    "sides": [
-     {
-      "position": "He held Sadducean opinions, overborne by a guilty conscience",
-      "holders": [
-       "Lightfoot",
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "The conjecture began among the people and Herod adopted it from fear",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
+    "question": "Did Herod invent the identification, or repeat it?",
+    "positions": "Lightfoot, Clarke and Ellicott read it as the work of his own guilty conscience overriding his Sadducean scepticism; Calvin holds that the conjecture was circulating among the people first and reached him from them."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "guilty conscience",
-   "resurrection",
-   "Sadducees",
-   "Herod Antipas"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Insists that this was neither a spectre from the unseen world nor the passing of John's soul into another body: to Herod the new Prophet was nothing less than John himself."
+   }
   ],
+  "themes": [
+   "Herod the tetrarch heard of the fame of Jesus",
+   "this is John the Baptist",
+   "he is risen from the dead"
+  ],
+  "range": "1-2",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "3": {
   "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
+   "Albert Barnes",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "Origen"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Reconstruct the genealogy of Herodias, the adulterous-incestuous marriage forbidden in Leviticus, and locate the prison at Machaerus from Josephus."
+    "prevalence": "several",
+    "summary": "Ellicott and Robertson both cite Josephus for Mach&aelig;rus in Per&aelig;a as the place of imprisonment, and Robertson adds the fortress on its high ridge, the palace Herod the Great built there with its view over the Dead Sea and Jordan, and the two dungeons still standing with staple-holes in the masonry; he corrects the identification of Herodias's first husband, who was Herod Philip of Rome and not Philip the Tetrarch, and calls the affair a nasty mess equal to any modern divorce. Barnes follows Josephus for the occasion of the match and separates the two crimes, adultery and incest."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke names Herodias's parents as Aristobulus and Bernice and carries the story forward to the war with Aretas, in which Herod's army was cut to pieces by the Arabians, which Josephus says was reckoned a judgment of God for the murder of the Baptist."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin prefers the Gospel's reason (reproof) over Josephus's political one and draws the duty of fearless reproof of princes."
+    "prevalence": "single",
+    "summary": "Calvin sets the evangelists against the historian: they say John was seized for condemning the marriage, Josephus that Herod suspected him on political grounds, and Calvin allows the latter as a pretext or a rumour while holding the Gospel account to be the true state of the fact; he also corrects Josephus for taking Herodias from the wrong brother."
    },
    {
     "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Origen: the killing of the last prophet withdrew the Jews' power of execution, fulfilling Genesis 49:10."
+    "summary": "Origen draws a long consequence from the killing: as the law and the prophets were until John, so the power of the rulers to put men to death lasted until John, and when the last of the prophets was unlawfully killed that power was withdrawn, or Pilate need never have been involved."
    }
   ],
   "debates": [
    {
-    "question": "Why was John imprisoned — reproof of the marriage, or Herod's political fear (Josephus)?",
-    "sides": [
-     {
-      "position": "For reproving the unlawful marriage, as the Evangelists say",
-      "holders": [
-       "Calvin",
-       "most"
-      ]
-     },
-     {
-      "position": "Josephus's political-fear account",
-      "holders": [
-       "Josephus (rejected)"
-      ]
-     }
-    ]
+    "question": "Why was John arrested?",
+    "positions": "Calvin reports Josephus's reason, that Herod dreaded a change of affairs and regarded John with suspicion, and Ellicott gives the same in its milder form, a fear of popular outbreak among the excitable peasantry; both stand against the evangelists' plain account that the arrest followed the rebuke of the marriage, which Calvin holds to be the truth of the matter."
    }
   ],
   "outliers": [
    {
     "voice": "Origen",
-    "note": "Typological reading: John's death marks the end of the Jewish rulers' power of execution."
+    "view": "Reads the death of the Baptist as the moment when the sceptre departed from Judah, the Jewish rulers losing the power of capital punishment they had held until then."
    }
   ],
   "themes": [
-   "John the Baptist imprisoned",
-   "unlawful marriage",
-   "fearless reproof",
-   "Machaerus"
+   "Herod had laid hold on John",
+   "bound him, and put him in prison",
+   "for Herodias' sake"
   ],
+  "range": "3",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "4": {
   "voices": [
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Ground the reproof in the Levitical law against a brother's wife; the repeated imperfect 'said'; Josephus on Herod's political fear."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "John's boldness as a manual for ministers — plain, courageous reproof of the great, soft words breaking the force of truth."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: John's zeal and courage show he came in the spirit of Elijah."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem excerpt is catechetical (apostles above the prophets), unrelated to this verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on the apostles' dignity, tangential to the verse."
-   }
-  ],
-  "themes": [
-   "fearless reproof",
-   "unlawful marriage",
-   "spirit of Elijah",
-   "fidelity of ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "majority",
-    "summary": "Calvin and Gill reconcile Herod's wish to kill with his reverence: conscience and reverence restrained him, then fear of the people; the rule never to flatter princes' sins."
+    "prevalence": "several",
+    "summary": "Gill has John go to Herod and reprove him to his face, and for all the evils he had done besides, showing zeal for holiness and the spirit of Elijah; he also describes the restraint that followed, with Herodias ready to kill the prisoner herself and hindered only by a Herod held back by his own conscience. Calvin reconciles the two Gospel accounts in sequence, an unwillingness restrained by religious scruple, then a fear of God shaken off under her urging, then a new restraint in the dread of a popular commotion, and reads her seeking an opportunity as working by indirect wiles."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Herod's struggle of conscience against passion (Mark 6:20), paralleled with Ahab and Elijah; fear of man not God restrains him."
+    "summary": "Lightfoot supplies the law behind the rebuke, the thirty-six cuttings off, among them lying with a brother's wife, and notes that Philip lived to the twentieth year of Tiberius. Robertson reads the imperfect tense as meaning John said it repeatedly, a blunt and brave thing that cost him his head. Ellicott follows the fullest account, in which Herod feared John as a just and holy man, was much perplexed, and heard him gladly, and sets the struggle of conscience against passion in the weak tetrarch beside Ahab's with Elijah, and Herodias beside Jezebel."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Herod would have killed John in passion but was restrained by fear of the multitude and reverence."
+    "prevalence": "several",
+    "summary": "Wesley holds it unlawful for either brother to have her, since her father was their own brother, and says John's words were rough like his raiment. Clarke turns the rebuke into a charge against court religion, laying down that the best service a subject can render a prince is to set the law of God plainly before him, and asking how unutterable must be the punishment of chaplains who flatter princes in their vices or wink at their sins; and he refuses to call Herod's restraint a virtue."
    }
   ],
   "debates": [
    {
-    "question": "How does Herod's wish to kill John square with his reverence for him (Mark 6:20)?",
-    "sides": [
-     {
-      "position": "Reverence and conscience restrained him at first, then fear of the people",
-      "holders": [
-       "Calvin",
-       "Gill",
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "What held Herod back from killing John at once?",
+    "positions": "Matthew gives the fear of the multitude and Mark charges Herodias alone, a difference Calvin resolves by putting the motives in sequence; Ellicott adds from Mark a genuine reverence for the prisoner, while Clarke sees only a prince who feared to offend his people more than to sin against God."
    }
   ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The entry here treats the sign-seeking of Matthew 12, not this verse."
+    "voice": "A.T. Robertson",
+    "view": "It is better to have a head like John's and lose it than to have an ordinary head and keep it."
    }
   ],
   "themes": [
-   "fear of man",
-   "conscience versus passion",
-   "Ahab and Jezebel",
-   "restraint by self-interest"
+   "it is not lawful for thee to have her",
+   "he would have put him to death",
+   "he feared the multitude",
+   "they counted him as a prophet"
+  ],
+  "range": "4-5",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "6": {
   "voices": [
-   "Gloss",
    "Jerome",
-   "Remigius",
-   "Isidore",
-   "Chrysostom",
-   "Gregory",
-   "Raban",
-   "Hilary",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Albert Barnes",
+   "Remigius"
   ],
   "schools": [
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Moralise the birthday and dance (Jerome, Remigius, Gregory, Isidore): only the wicked keep birthdays; an evil oath binds no one; Hilary allegorises the dance as pleasure from unbelief."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Salome's public dancing violated eastern modesty; the Jewish view of birthday-keeping as a Gentile custom; Herodias engineered it."
+    "summary": "Jerome observes that no others are found keeping their birthday besides Herod and Pharaoh, so that those alike in wickedness might be alike in their festivities. Remigius divides the blame between mother and host, since mothers poor as well as rich bring their daughters up so chastely that strangers scarcely see them, whereas this woman taught hers dancing rather than chastity, and Herod forgot that his was a royal palace while she made it a theatre."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin and Gill: lawful festal joy profaned by luxury, opening the way to murder (cf. Job's sacrifices)."
+    "summary": "Gill notes that the Gentiles kept the birthdays of princes but the Jews reckoned them among the feasts of idolaters. Calvin weighs the custom itself and finds nothing wrong in it, since the return of the day reminds us to thank God, to recollect how uselessly the granted time has passed, and to commit the rest to his protection, but adds that nothing is so pure the world will not taint it, the human mind going astray as soon as the reins are loosened."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: a twofold charge against the girl — dancing, and asking an execution as her reward."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot confirms from the schools that keeping birthdays was counted idolatrous worship, and then dissents about the dance, reading it not as lightness but as the national way of expressing joy, since the chief mirth of Tabernacles consisted in such dancing by the chief men and the aged and the most religious. Barnes calls it a violation of every rule of modesty, given the eastern practice of keeping women veiled and out of public view, and thinks it the wanton Ionic dance; Ellicott agrees, noting that such dancers were normally women who made it their calling, so that a daughter of a kingly house exposing herself to the chief captains was a new thing at which every decent Jew would shudder; Robertson calls it a shameful and prearranged exhibition."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke and Wesley: the dance and feast as the occasion of the crime; the daughter infamous thereafter."
+    "prevalence": "single",
+    "summary": "Clarke allows either the day of birth or the day of accession, and reaches, as Robertson does, for the old English rendering that treats the whole business with contempt."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What kind of dance was it?",
+    "positions": "Barnes, Ellicott and Robertson take it for a lewd performance beneath the dignity of a princess and prearranged by her mother; Lightfoot alone reads it as the customary national expression of festal joy, citing the dancing of the most religious men at the Feast of Tabernacles."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Hilary",
-    "note": "Allegorises the dancing daughter as pleasure from unbelief and John's head as the glory of the Law surrendered to it."
+    "voice": "Charles Ellicott",
+    "view": "Puts the blame on the mother, who knew the tetrarch's weak point as Madame du Barry knew that of Louis XV, and would bend him to her will even at the cost of her daughter's modesty."
    }
   ],
   "themes": [
-   "Herod's birthday",
-   "Salome's dance",
-   "rash oath",
-   "luxury and murder"
+   "when Herod's birthday was kept",
+   "the daughter of Herodias danced before them",
+   "and pleased Herod"
   ],
+  "range": "6",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "7": {
   "voices": [
-   "John Gill",
+   "Albert Barnes",
+   "Isidore",
    "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The oath as a rash, unlawful promise: Barnes and Lightfoot on its sinfulness and Talmudic form; Ellicott on imperial extravagance; Robertson on the Greek and the Esther parallel."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Herod was charmed by the dancing and the court's pleasure into the promise."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rash oath",
-   "extravagant promise",
-   "snare of the flesh"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
+   "John Gill",
    "John Wesley"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The request as the custom of proof-of-death; the timing of the mother's prompting (after the dance, per Mark 6:24); the men-only supper; lexical notes on 'charger'."
+    "prevalence": "several",
+    "summary": "Barnes calls the oath foolish and wicked, since to please a wanton girl the monarch called the eternal God to witness a promise of half his kingdom, and holds that such an oath was unlawful to make and should have been broken; he also explains why a head should be produced at all, since princes required the heads of the executed both to gratify resentment and to verify the sentence, and cites Agrippina examining the head of her dead rival with her own hands. Lightfoot names the form a rash oath in Talmudic terms and notes the grim fitness if it was sworn, as was usual, by the head. Ellicott renders the disputed participle as prompted or instigated rather than instructed beforehand, denies that the girl knew what to ask before she danced, and infers from her mother's absence that the supper was for men only. Robertson asks bluntly why the obsolete English word for the dish is kept."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Isidore states the principle in three clauses: in evil promises break faith, that promise is impious which must be kept by crime, and that oath is not to be observed by which we have unwittingly pledged ourselves to evil."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Moral horror at the mother and daughter; Wesley notes 'Give me here' — fearing Herod would relent if given time."
+    "summary": "Clarke complains that the English word for the dish now conveys nothing, preferring the older platter, recalls that the kings of Persia refused no petition preferred during an entertainment, and supplies the indignation the others omit at such a mother, such a daughter, and such a present for a young lady. Wesley reads the abruptness of the demand as calculated, since she says give me here for fear that if he had time to consider he would not do it."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the daughter hastened in by a mother eager for revenge."
+    "prevalence": "single",
+    "summary": "Gill has her go out at once and return straightway with haste to take the king at his word while he was still in the mood, urged on by a mother eager to satisfy her revenge."
    }
   ],
   "debates": [
    {
-    "question": "Was the girl told what to ask before she danced or only after?",
-    "sides": [
-     {
-      "position": "Only after, on going out to consult her mother (Mark 6:24)",
-      "holders": [
-       "Ellicott",
-       "Barnes"
-      ]
-     }
-    ]
+    "question": "Was the girl in the plot from the start?",
+    "positions": "Ellicott and Barnes both insist the prompting came after the dance, not before, since the other Gospel has her leave the hall to ask her mother; Gill and Wesley emphasise instead the haste and calculation with which she returned, and Barnes grants that consulting her mother was the one thing in the transaction that wore the appearance of right."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Herodias's revenge",
-   "head in a charger",
-   "a child made an instrument"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Guesses at what Herod thought he was risking, a jewel, a bracelet, a palace or a city, on the model of the extravagant rewards paid to mimes and dancers in the scandalous chronicles of the time."
+   }
   ],
+  "themes": [
+   "he promised with an oath",
+   "being before instructed of her mother",
+   "give me here John Baptist's head in a charger"
+  ],
+  "range": "7-8",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
   }
  },
  "9": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
+   "Jerome",
+   "Adam Clarke",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The oath was no excuse — a prior law against murder cannot be dissolved; Herod feared to be thought weak before his guests; Barnes turns it against the 'laws of honour' and duelling."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lists what the sorrow might have rested on, a lingering respect for John, a conscience foreseeing perpetual infamy, fear of a people attached to the prisoner, and even the Roman scruple against taking life on the day one received one's own; and he identifies the officer sent as the speculator whose particular business was beheading."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill catalogues Herod's several sorrows, including the Roman scruple against executions on a birthday."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes states the principle about the oath exactly, that Herod felt bound but was not, since the oath should never have been taken and, being taken, could not dissolve the prior obligation against murder. Ellicott finds the real motive not in the oath, which if taken in secret he might have got over, but in his shrinking from the taunt or whispered jest of the guests, a false regard for a narrow circle serving as an incentive to guilt instead of a restraint; and he gives the Baptist the verdict due to one of the greatest of the earth's sons. Robertson judges the swearing more like profane swearing than a solemn oath, from a man probably maudlin with wine. Lightfoot raises a difficulty of distance, that the head cannot have reached the feast the same night if the court was at Tiberias and the prison at Mach&aelig;rus."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Jerome alone refuses the sorrow as genuine, holding that Scripture speaks of events as they were commonly viewed and that Herod is called sorry because the guests believed him so, this dissembler displaying grief in his face while he had joy in his mind; and he presses the oath with a question, whether the king would have granted the death of his own father or mother had she asked it."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke on the plural 'oaths' and the guests' code of honour; Wesley: he murdered from 'tenderness of conscience'."
+    "summary": "Clarke notices that the word for oath stands in the plural, so that Herod had sworn again and again, one sin begetting many. Wesley compresses the whole into one line, that he murdered an innocent man from mere tenderness of conscience."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "false honour",
-   "the binding of an evil oath",
-   "cowardice before peers",
-   "conscience overborne"
+  "debates": [
+   {
+    "question": "Was the king's sorrow real?",
+    "positions": "Gill, Barnes and Ellicott take it as a genuine last struggle of conscience; Jerome holds it feigned for the benefit of the guests, a display of grief masking inward satisfaction."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Jerome",
+    "view": "Reads the mention of the guests as deliberate on Herod's part, since by keeping his word before them he would have them all sharers in his crime."
+   }
+  ],
+  "themes": [
+   "the king was sorry",
+   "for the oath's sake",
+   "and them which sat with him at meat",
+   "he sent, and beheaded John in the prison"
+  ],
+  "range": "9-10",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Details of the executioner and causative verb; Lightfoot's chronology (Machaerus to Tiberias, near the Passover); Josephus on Herodias's influence; Ellicott's eulogy of John's greatness."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley on the mystery of providence permitting a holy man's death, with confidence in heavenly recompense."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "martyrdom of John",
-   "providence and suffering",
-   "greatness of the Baptist"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "John Lightfoot",
+   "Raban",
+   "A.T. Robertson",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Nearness of the prison; the gruesome scene and rejection of Salome legends (Robertson); the later deposition and banishment of Herod and Herodias from Josephus (Ellicott)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke's warning that a reproved lascivious woman is most revengeful, and ministers most at risk."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns Nineveh's repentance, not this verse."
-   }
-  ],
-  "themes": [
-   "malice satisfied",
-   "after-history of the guilty",
-   "providential retribution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Origen",
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
+   "Gregory"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Why the disciples came to Jesus (consolation, warning, His own concern); John's disciples transferring allegiance though a remnant persisted (Apollos, Ephesus)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen: the withdrawal teaches lawful flight from persecutors (Matthew 10:23), and figures a turning to the Gentiles."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke's moral warning against feasting and dancing as snares for souls."
-   },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the disciples likely sought leave to take the body, as Joseph of Arimathea for Jesus."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "burial of John",
-   "telling Jesus",
-   "lawful flight from persecution",
-   "clinging to the great Shepherd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "Gloss",
-   "Augustine",
-   "Jerome",
-   "Chrysostom",
-   "Hilary",
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Gill infers from the head's arrival while the company were still at table that the prison must have been very near, and thinks the feast may have been held in the castle itself; he also supposes the disciples applied to Herod for the body as Joseph of Arimathea afterwards applied to Pilate."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Geography of the crossing (Lightfoot) and the prudent withdrawal to safety; added motives of rest for the Twelve and the nearing Passover (Ellicott)."
+    "summary": "Lightfoot, reckoning the court at Tiberias, had made that nearness impossible. Robertson describes Herodias witnessing with fiendish delight the triumph of an implacable hatred and dismisses the legends that make Salome herself in love with John, and he adds that the news was a shock to the Master, who alone knew how great John was, and a prophecy of what lay before him. Ellicott follows the accomplices into their after-history, the journey to Rome, the complaints of the oppressed Galileans, the deposition and banishment to Lugdunum where Herodias stayed faithful to his fallen fortunes, and the legend that the daughter's head was severed by a fall upon ice. Barnes gives three reasons why the disciples went to Jesus, the importance of the event, their own need of consolation, and their fear for one engaged in the same cause."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Jerome: He withdrew in mercy, not fear, leaving an example against rashness; Hilary allegorises the ship as the Church passing to the Gentiles."
+    "summary": "Raban reports both halves of the tradition, the imprisonment and death at the castle and the burial at Sebastia in Palestine. Gregory stands back to wonder that one filled with the spirit of prophecy in the womb should be beheaded for the dancing of a girl, and answers that God oppresses his people in the least things because he sees how to reward them in the highest, adding that though John suffered for the truth of righteousness rather than for the confession of Christ, because Christ is truth he went to death for Christ in going for truth."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: He withdrew to prolong the economy of His humanity, confirming the true incarnation; the crowds follow undeterred."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin reconciles the Synoptics on the reason and notes few of the crowd truly adhered (John 6:66)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the saints' sufferings further the gospel; withdrawal drew the people the more."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke generalises from Herodias to a class, that there is no person so revengeful as a lascivious woman when reproved, and warns preachers that the first of their profession lost his life for truth and chastity."
    }
   ],
   "debates": [
    {
-    "question": "Did Jesus withdraw from fear of death or for another reason?",
-    "sides": [
-     {
-      "position": "Not from fear but prudence/mercy and to set an example",
-      "holders": [
-       "Jerome",
-       "Barnes",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "To prolong the economy of His humanity and confirm the incarnation",
-      "holders": [
-       "Chrysostom"
-      ]
-     }
-    ]
+    "question": "Where was the banquet held?",
+    "positions": "Gill argues from the speed with which the head arrived that the feast must have been at Mach&aelig;rus itself; Lightfoot places the court at Tiberias and concludes that the execution and the presentation cannot have fallen on the same night."
    }
   ],
   "outliers": [
    {
-    "voice": "Hilary",
-    "note": "Mystical: the ship is the Church, the desert the Gentile world, the crowd moving from synagogue to Church."
+    "voice": "Charles Ellicott",
+    "view": "Dates from this moment the end of the Baptist's followers as a distinct community in Jud&aelig;a, while noting that Apollos and the disciples at Ephesus show a separate existence persisting in more distant regions."
    }
   ],
   "themes": [
-   "withdrawal of Jesus",
-   "desert place",
-   "the crowds following",
-   "prudence not fear"
+   "his head was brought in a charger",
+   "and she brought it to her mother",
+   "his disciples came, and took up the body",
+   "and went and told Jesus"
+  ],
+  "range": "11-12",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
+  }
+ },
+ "13": {
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Jerome",
+   "Chrysostom",
+   "John Calvin",
+   "John Wesley",
+   "Charles Ellicott",
+   "John Lightfoot",
+   "Albert Barnes"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the occasion simply, that Jesus heard of the death and cruel usage and that his own fame had reached the court. Calvin notes that one Gospel gives no reason while two others make the journey a rest for the disciples after their embassy, finds no contradiction between them, and adds that minds still feeble might well have been terrified by the end of so eminent a prophet."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has him withdraw on hearing not of the death but of the thoughts Herod had formed about him, and go further off to get out of that jurisdiction, laying down that in times of peril, when God opens a door of escape, it is lawful to flee unless we have a special call to expose ourselves; and he adds the detail that matters most to him, that Christ could have secured himself by divine power but used human prudence because his life was intended for an example."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke agrees it was not fear and reads it as teaching his messengers to yield to the storm where the case is hopeless. Wesley lists three motives together, to avoid Herod, to escape the pressing multitude, and to talk with disciples newly returned."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Jerome offers three readings and refuses the first outright: not through fear of death but in mercy to his enemies, that they might not add murder to murder; or to leave an example against the rashness that makes men surrender themselves, since not all persevere under torture with the constancy with which they offered themselves; or to prove the faith of believers, who followed on foot with the toil of their own legs."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom looks past the danger altogether, taking the withdrawal as prolonging the economy of his humanity, the time not being come for openly manifesting his deity, and observing that though he knew of himself what had happened he did not move until it was told him, so that the verity of the incarnation might be confirmed by his actions."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott adds the personal motive the others leave unsaid, the strong emotion at the death of one Jesus had known and loved, together with the wish not to become the centre of a popular excitement, and notes the approaching Passover. Lightfoot corrects the maps on the destination, since Josephus places Bethsaida in upper Gaulanitis on the eastern shore rather than in Galilee, and explains how the crowd could still follow on foot by way of the bridge of Jordan at Chammath. Barnes describes the country as a rough uncultivated tract used for pasture."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the withdrawal an escape from danger?",
+    "positions": "Henry and Clarke treat it as lawful flight and a model of human prudence; Jerome denies that fear of death had any part in it and offers mercy, example and testing instead; Chrysostom removes the question altogether by making it a measure of the incarnation rather than of safety."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "view": "Abandons the opinion he once shared with the commentators and the chorographical maps, that Bethsaida lay on the same shore as Capernaum, on the authority of Josephus."
+   }
+  ],
+  "themes": [
+   "he departed thence by ship into a desert place",
+   "when the people had heard thereof",
+   "they followed him on foot out of the cities"
+  ],
+  "range": "13",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "14": {
   "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
+   "John Gill",
+   "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin"
+   "Albert Barnes",
+   "John Calvin",
+   "Chrysostom"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The compassion verb and its 'sheep without a shepherd' background (Mark 6:34); the scribes' neglect; Christ going forward to meet the crowd."
+    "prevalence": "several",
+    "summary": "Ellicott marks the turn of the verse, that from the height to which he had withdrawn our Lord saw the crowds drawing near and went forward to meet them instead of retiring further. Barnes unfolds the shepherd figure from the parallel account at length, the feeding, the defence from wild beasts, the care of the young and feeble, and reads the want of a shepherd as the want of teachers who cared for the people, since the scribes and Pharisees were proud and when they taught led them astray. Robertson glosses the sick as those without strength and notes the oriental idea of the bowels as the seat of compassion."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: compassion for famishing souls; Christ lays aside His own rest for duty and still pities the shepherdless from heaven; teaching preceded healing."
+    "summary": "Gill weighs where he came out from, the mountain, the desert, or the ship, and prefers the last. Calvin reads the compassion as directed at famishing souls whom zeal had carried from their homes, qualifies it by saying that not in his divine nature but as man he judged according to the present aspect of the case, and counts the people's coming as no small manifestation of piety, since he had purposely concealed himself from them."
    },
    {
-    "school": "eastern-alexandrian",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Origen reads the sicknesses as diseases of the soul (avarice, ambition, lust) that Christ heals, distinguishing sin from sickness."
+    "summary": "Clarke holds the verb should generally be rendered tender compassion, notes that it seems not to have been used by any but ecclesiastical writers, and explains that it always intimates that motion of the bowels which is felt at the sight of another's misery."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom measures the healing against the zeal that earned it, finding that what was done for them surpassed the reward of any zeal, and calls it great compassion to heal all and not to require faith."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Origen",
-    "note": "Allegorises the healings as cures of spiritual diseases of the soul."
+    "voice": "John Calvin",
+    "view": "Notices what the healing cost: Christ was fatigued and almost worn out by uninterrupted toil and had sought relaxation for himself as well as his disciples, yet set that private consideration aside when urgent duty called."
    }
   ],
   "themes": [
-   "compassion of Christ",
-   "sheep without a shepherd",
-   "healing the sick"
+   "Jesus went forth, and saw a great multitude",
+   "was moved with compassion toward them",
+   "and he healed their sick"
   ],
+  "range": "14",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
   }
  },
  "15": {
   "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Hilary",
-   "Raban",
-   "Remigius",
-   "Origen",
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Albert Barnes",
+   "Chrysostom",
+   "Adam Clarke",
    "John Calvin",
-   "John Wesley"
+   "Charles Ellicott",
+   "Augustine"
   ],
   "schools": [
    {
-    "school": "latin-fathers",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "Typology of the five loaves as the Law and two fishes as the Prophets, broken to feed the Gentiles; the evening as the age's close or the Lord's death (Jerome, Hilary, Raban, Remigius)."
+    "summary": "Gill fixes which of the two Jewish evenings is meant, the earlier one beginning when the sun declined at noon, since a second evening comes later in the story and the proposal to go and buy food would make no sense after dark. Calvin sees a purpose in the delay, that the disciples might consider the miracle more attentively and learn that though Christ does not prevent their wants or always supply them at once, he never ceases to care and has the help at hand when it is required."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'first evening' from three o'clock; a lonely not desolate place; Ellicott on the only four-Gospel miracle and the inadequacy of rationalising it; the two hundred pennyworth."
+    "summary": "Robertson puts the hour at about three and keeps the geography modest, a lonely rather than a desolate stretch with villages too far to reach in time. Barnes glosses the phrase about the time being past as the wearing away of the day or the passing of the usual hour of refreshment. Ellicott stops before the miracle to say why this narrative matters: the only one recorded by all four evangelists, the fullest manifestation of sovereignty over nature, an act of creative power not to be explained away as strong faith or excited imagination, and he calls the one rationalising account ever offered, that the example shamed the crowd into producing concealed stores, ludicrously inadequate."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the desert clears the miracle of suspicion; the Lord waits to be asked; 'a table in the wilderness' (Psalm 78:19)."
+    "prevalence": "single",
+    "summary": "Chrysostom makes the desert part of the proof, since nobody could then suppose anything had been supplied from a neighbouring town, and recalls the proverb about spreading a table in the wilderness; he reads the crowd's endurance of hunger as evidence of faith, their silence as awe, and the Lord's waiting to be asked as his settled rule, while judging the disciples still imperfect, since they could only say the place was desert."
    },
    {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: 'the time is past' as the season of Law and prophets passing at the 'last hour'."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes their concern for the people's bodies as a credit to them, holding that no man is worthy to be called a minister of Christ who does not promote both the temporal and the spiritual welfare of those he serves."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: Christ purposely delayed so the disciples would attend and learn He never ceases to care for His people."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine settles the one apparent difference between the accounts, the question put to Philip which only the fourth Gospel records, by supposing it spoken after the words reported here, and adds that no one need be perplexed when one evangelist relates what the rest omit."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a table in the wilderness",
-   "loaves and fishes typology",
-   "the disciples' helplessness",
-   "only four-Gospel miracle"
+  "debates": [
+   {
+    "question": "Does the proposal to dismiss the crowd do the disciples credit?",
+    "positions": "Clarke commends their concern for the people's bodily wants as the mark of a true minister; Chrysostom counts it a sign of an imperfect condition, since they could not bring themselves to say give them to eat."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "States the alternatives without softening them: the narrative of the feeding must be accepted or rejected as a whole, and if accepted it is a proof of supernatural, if not absolutely of divine, power."
+   }
+  ],
+  "themes": [
+   "this is a desert place, and the time is now past",
+   "send the multitude away",
+   "that they may go into the villages and buy themselves victuals"
+  ],
+  "range": "15",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "16": {
   "voices": [
-   "Origen",
-   "John Gill",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
+   "Origen",
+   "John Calvin",
+   "Hilary",
+   "Raban"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The astounding emphatic command and the testing of Philip (John 6:5); Christ requires obedience and supplies the strength."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ now cares for bodies too (Matthew 6:33), works through the disciples' hands; be content with barley-bread."
+    "summary": "Robertson points to the emphasis in the Greek, which sets the disciples over against their own proposal and stands in the urgent aorist of instant action, and calls the lesson of the astounding command that no situation appears desperate to Christ and no crisis unmanageable. Barnes fills in the question put to Philip in order to prove him, works out the two hundred denarii at something near twenty-eight dollars, and insists that it was that arithmetic and not any unwillingness which had made the disciples ask that the crowd be sent away."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: begin at Christ's command and the bread of God multiplies in the minister's hands."
+    "prevalence": "single",
+    "summary": "Clarke turns the words into an address to ministers: when the means by which men help their fellows have failed we are not to suppose the bounty of God exhausted, so begin at the command, make the attempt, divide what you have, and the bread of God will be multiplied in your hands."
    },
    {
     "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen allegorises the loaves as Scripture's words and the fishes as the spoken/conceived word."
+    "prevalence": "single",
+    "summary": "Origen finds the disciples' error not in denying that they could give loaves but in thinking five too few, since they failed to consider that when Jesus takes each loaf, which is the Word, he extends it as far as he wills and makes it suffice for all whom he desires to nourish."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Calvin observes that Christ here takes the care of bodies into his duties as a shepherd, confirming his own saying that all other things shall be added to those who seek the kingdom, but guards the conclusion: we may not expect this method of supply always, only that he will never let his people want the necessaries of life; and those who wish to have Christ for their provider must learn to be satisfied with barley-bread."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Hilary takes the loaves for the five books of the Law and the fishes for the preaching of the Prophets and of John, and explains the disciples' helplessness by the same scheme, that it was not yet given them to minister the heavenly bread. Raban makes the fishes the Prophets and the Psalms and finds the point in what was not done, since Christ creates no new viands but takes what the disciples had, as in the flesh he preached no other things than had been foretold."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "faith over impossibility",
-   "Christ cares for the body",
-   "working through the disciples"
+  "outliers": [
+   {
+    "voice": "Albert Barnes",
+    "view": "Reads the command as the standing requirement of faith: we are to do what Christ commands without doubting that he will give strength to accomplish it."
+   }
   ],
+  "themes": [
+   "they need not depart",
+   "give ye them to eat"
+  ],
+  "range": "16",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.5
+   }
   }
  },
  "17": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
+   "A.T. Robertson",
    "Albert Barnes",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
+   "John Lightfoot",
+   "Adam Clarke"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says plainly that the disciples spoke to excuse themselves and to show the impossibility of feeding so large a number, and reads the command that follows as a test of their faith, their obedience and their liberality, drawing from it the rule that the best way to have an increase of temporal supplies is to bring what we have and put it into Christ's hands."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The disciples quick with reasons for inability; the barley loaves of the lad (John 6:9); Lightfoot's rabbinic discussion of 'salt fish' and blessing."
+    "prevalence": "several",
+    "summary": "Robertson observes that they were quick with reasons for their inability, as we are still, and marks the contrast between their helpless doubt and the confident courage of a Master who takes up the very loaves they had named as their reason for doing nothing. Barnes identifies the provisions from the fourth Gospel, in the hands of a lad most probably selling among the multitude, and of barley, a grain scarcely a third the value of wheat. Lightfoot declines to say what kind of fish these were, but notes the Talmudic discourse on salt fish and a tradition about blessing salted food that would be worth comparing here if the point could be established."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: conscious need leads to firmer faith; God brings His servants low to prove His kindness."
+    "prevalence": "single",
+    "summary": "Clarke turns the shortage into a lesson, that when we are deeply conscious of our own necessities we depend on Jesus with a firmer faith, and adds that no creature of God should be reckoned good or safe without the blessing of God in it, so that a handful of meal brought to Christ becomes a sufficiency for the body and a sacrament to the soul."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns Jesus's relatives in Mark 3, not this verse."
+    "voice": "John Lightfoot",
+    "view": "Refuses to determine whether the fishes were salted, calling the attempt ridiculous, while noting how neatly the Talmudic rule of blessing would fit the scene if they were."
    }
   ],
   "themes": [
-   "five loaves and two fishes",
-   "small faith reasoning from sight",
-   "conscious need"
+   "we have here but five loaves, and two fishes",
+   "bring them hither to me"
+  ],
+  "range": "17-18",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the contrast of the disciples' helpless doubt and Christ's confident courage; they overlooked His power."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the command tries their faith, obedience and liberality; bring what we have to Christ's hands for increase."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: nothing is good without God's blessing; the least, brought by faith, becomes sufficiency and a sacrament."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.61
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "surrender to Christ",
-   "increase from little",
-   "blessing on our resources"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The orderly reclining and easy counting; 'bless' as thanksgiving with the Jewish grace; bread broken not cut; Robertson defends the nature-miracle and Ellicott sees a eucharistic foreshadowing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: food is sanctified by thanksgiving (1 Timothy 4:5); looking up rouses us from sloth; Gill on the orderly distribution."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "giving thanks",
-   "breaking of bread",
-   "nature-miracle",
-   "bread of life foreshadowed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "An undoubted creative miracle attested by thousands; the travellers' baskets (cophinus, Juvenal); 'that nothing be lost' as economy; fragments for the poor."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the surplus shows provision for future want and is the same grace as the annual increase of corn, hidden only by our ingratitude."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "creative miracle",
-   "twelve baskets",
-   "economy and thrift",
-   "providence in daily bread"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The number magnifies the miracle; all four Gospels count 'men'; women and children grouped apart and uncounted but fed; the crowd judged Jesus 'that prophet' (John 6:14)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen allegorises the counted men, women and children as degrees of spiritual maturity."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Origen",
-    "note": "Reads the men/women/children allegorically of spiritual worth and maturity."
-   }
-  ],
-  "themes": [
-   "five thousand fed",
-   "magnitude of the miracle",
-   "'that prophet'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Raban",
-   "Hilary",
-   "Remigius",
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "Jerome",
+   "Hilary"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill harmonises the accounts by having both orders given, Christ commanding the multitude to sit, which they would never have done otherwise, and the disciples enjoined to place them in ranks by hundreds and fifties so that their number might be taken and the food distributed in order. Calvin agrees that the word denotes thanksgiving and draws the sharper conclusion, that we cannot partake of food with holiness unless we express gratitude, since unbelievers corrupt what is by nature pure and are corrupted in turn by what they swallow; of the lifted eyes he says the attitude is not always necessary in prayer, but that the Son of God did not disregard outward forms fitted to aid human weakness."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The strong 'compelled' explained by the king-making crowd (John 6:15); the disciples caught in mob enthusiasm; geography toward Bethsaida; retiring alone to pray under pressure of honour."
+    "summary": "Barnes corrects the English, since the word is to recline as at a meal, and makes the blessing a pattern, a prayer that the food may nourish, that we may be grateful to the Giver and remember the Creator. Ellicott notices the calm and orderly precision of the arrangement and passes on the picture of companies looking like beds of flowers in a well-ordered garden, which the bright colours of Eastern dress would make more striking than it could be among ourselves; he identifies the blessing as the grace of the head of a Jewish household, in formulae commonly short and simple. Robertson sets the scene in the afternoon sun on a grassy hillside sloping westward, with Jesus standing where all could see him break the thin Jewish cakes."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke identifies the act as that of the father of a family and presses a point of translation, that the word to be supplied is God rather than them, the Jewish custom being to bless not the food but the giver, though he grants that others take the loaves to be meant and blessed in order to be multiplied; he prints the Hebrew grace before meat for comparison, and reads the lifted eyes as teaching us to acknowledge God as the fountain of all excellence."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "The ship as the Church tossed by persecution but unsinkable while Christ prays; the four watches as the ages to His return; defence of His true body against Marcion and Theodore."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: He separates the disciples to verify the loaves-miracle and tosses them all night to train endurance and longing for Him."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: their submission in obeying against their own judgement is the rule of true obedience."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: they met the storm in the very path of duty — no new thing for Christ's disciples."
+    "summary": "Jerome observes that the Lord calls the apostles to the breaking so that the greatness of the miracle might rest on their own testimony that they had nothing, and that in the breaking there is a sowing of food, since whole loaves could never have fed so great a multitude. Hilary confesses he cannot tell where the increase happened, only that fragments succeed to fragments, the substance growing either upon the tables or in the hands that took them up."
    }
   ],
   "debates": [
    {
-    "question": "Why did Jesus 'constrain' the disciples to leave?",
-    "sides": [
-     {
-      "position": "To remove them from the crowd's attempt to make Him king (John 6:15)",
-      "holders": [
-       "Robertson",
-       "Ellicott",
-       "Lightfoot"
-      ]
-     },
-     {
-      "position": "To verify the loaves-miracle in His absence and to train them through the storm",
-      "holders": [
-       "Chrysostom"
-      ]
-     }
-    ]
+    "question": "What did Christ bless, the loaves or the God who gave them?",
+    "positions": "Clarke argues for the giver on the ground of Jewish custom, which blessed God rather than the food, and would supply the word God in the English; he reports the contrary view, held by others, that the loaves were blessed in order to be multiplied, and Barnes follows the parallel account in taking them as the object."
    }
   ],
   "outliers": [
    {
-    "voice": "Augustine",
-    "note": "Reads the four watches as the ages of Law, Prophets, Incarnation and the Second Coming, the ship as the persecuted Church."
+    "voice": "Hilary",
+    "view": "Will not say whether the multiplication took place on the tables or in the hands that carried the fragments away, only that the loaves are not multiplied into more but that fragments succeed to fragments."
    }
   ],
   "themes": [
-   "constrained into trial",
-   "king-making refused",
-   "the Church in the storm",
-   "withdrawal to pray"
+   "he commanded the multitude to sit down on the grass",
+   "looking up to heaven, he blessed, and brake",
+   "gave the loaves to his disciples"
   ],
+  "range": "19",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
- "23": {
+ "20": {
   "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin"
+   "John Lightfoot",
+   "Charles Ellicott",
+   "John Calvin",
+   "John Gill",
+   "Origen"
   ],
   "schools": [
    {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the wilderness is the 'mother of quiet'; solitude is good for prayer; Christ withdraws to train the disciples through the storm."
-   },
-   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Robertson: He needed the Father's sympathy amid enthusiasm and misunderstanding; Lightfoot on 'evening' as night; Clarke's conditions of praying well."
+    "summary": "Barnes calls it an undoubted miracle and argues that he who could increase so small a quantity had the power of creation itself; he explains the travelling baskets by the conditions of the road, since a Jew could expect little hospitality among Gentiles or Samaritans, and reads the command to gather the fragments as an example of economy, food being God's creation and having therefore a kind of sacredness. Robertson traces the verb for being filled to the word for grass and insists the broken pieces were the ones Jesus had broken and nobody had eaten, adding that Wycliff called the baskets coffins and that a larger word is used at the later feeding. Ellicott identifies the basket as the small hand-basket of travellers, quotes the Roman satirist on the Jews of Italy and their wisp of hay, and takes the express command that nothing be lost to mean that creative power was not to supersede thrift, the fragments being probably reserved for the poor. Lightfoot supplies a Talmudic definition of a proper meal and the saying that all eating where salt is not is not eating."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke presses the point against two evasions: there was a manifest creation of substance, since the parts of the bread were not dilated to seem large, and there was no delusion in the eating, since all ate and all were filled, so that here is one miracle attested by at least five thousand persons."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: as God-man He truly prayed; solitude disposes the heart, yet Paul bids prayer everywhere (1 Timothy 2:8) — no fixed rule."
+    "summary": "Calvin sees the leftovers as part of the design, more than twelve times what had been put into their hands remaining, so that all might know the power of Christ had provided not only for the moment but for future wants, and that a striking proof should survive to be contemplated at leisure. Gill notes that the word about is omitted in several versions."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen finds the closing count genuinely ambiguous, allowing either that no woman or child was present at all or that only the men were reckoned, as those of twenty years are in the Book of Numbers."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "solitary prayer",
-   "Christ as God and man",
-   "the example of retirement"
+  "debates": [
+   {
+    "question": "Were the women and children fed, or merely uncounted?",
+    "positions": "Ellicott supposes they were few, grouped by themselves and not counted, so that the round number stayed in men's minds without reference to them, and Robertson insists the phrase does not mean they went unfed; Origen allows the further possibility that none were present at all."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "view": "Hopes that the boy who had brought the five loaves and two fishes got one of the basketfuls, if not all of them."
+   }
+  ],
+  "themes": [
+   "they did all eat, and were filled",
+   "twelve baskets full",
+   "about five thousand men, beside women and children"
+  ],
+  "range": "20-21",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
+  }
+ },
+ "22": {
+  "voices": [
+   "A.T. Robertson",
+   "John Gill",
+   "John Lightfoot",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Jerome",
+   "Matthew Henry",
+   "John Calvin",
+   "Charles Ellicott",
+   "Chrysostom"
+  ],
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson renders the verb as compelled or forced and explains it by the crowd's excited purpose of making Jesus a national king, which would have been political revolution; the disciples, he thinks, had been swept off their feet by the mood of the mob, still sharing the Pharisaic hope. Lightfoot says briefly that they as yet dreamed too much of an earthly kingdom. Barnes dissents on the word itself, holding it means to command rather than to compel, since there was no need of compulsion, and observes that at the very moment when honours were almost forced upon him Christ retired for private prayer. Ellicott sees in this nearness to a path of earthly greatness something like a renewal of the temptation in the wilderness, to be faced alone as afterwards in Gethsemane, with no human eye to witness either the temptation or the victory."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill has the people determined, whether he would or not, to set him up as a temporal deliverer, and the disciples so far of the same mind that it took much difficulty to bring them off it. Calvin makes their reluctance the point of the whole verse, since they would never of their own accord have left him and it had every appearance of absurdity that he should be left alone with night coming on, which is why their yielding against their own opinion is so commendable."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke offers two reasons for their unwillingness, fear of returning into Herod's jurisdiction or refusal to embark without their Lord, and notes that Christ must have given the multitudes counsel afterwards which he did not wish them to hear."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Jerome takes their reluctance for love rather than fear, that they did not wish to be parted from their teacher even for a moment, and adds that they were right to be slow, lest they suffer shipwreck while he was not with them."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry says they were loth to go to sea without him and puts the prayer of Moses into their mouths, observes that the people would not stir until the disciples were gone, and has Christ send the crowd away with a blessing."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom finds a plainer purpose in the separation, that those who had beheld the feeding should be absent when the next sign was wrought, so that it could never be urged he had worked it fantastically in their presence."
+   }
+  ],
+  "debates": [
+   {
+    "question": "How strong is the word rendered constrained?",
+    "positions": "Robertson keeps its full force of compulsion and explains it by the danger of a popular rising; Barnes holds that it means simply to command, since no compulsion was needed, while Gill, Calvin, Clarke and Jerome all take the disciples to have been genuinely unwilling to go."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Makes obedience the lesson of the verse: we do not truly obey God unless we follow whatever he commands though our feelings are opposed, there being always the best reason for what he does even when he conceals it for a time."
+   }
+  ],
+  "themes": [
+   "straightway Jesus constrained his disciples",
+   "to go before him unto the other side",
+   "while he sent the multitudes away"
+  ],
+  "range": "22",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
+   }
+  }
+ },
+ "23": {
+  "voices": [
+   "John Gill",
+   "John Lightfoot",
+   "John Calvin",
+   "Adam Clarke",
+   "A.T. Robertson",
+   "Chrysostom",
+   "Hilary"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes that the crowd did not in fact generally disperse, a large body staying on the spot all night in expectation of his return. Calvin faces the question why he prayed at all, given what he had just done, and answers from the office: discharging every part of his work as Mediator he showed himself both God and man, so that though he had all things at his disposal he showed himself man by praying, and not hypocritically but with sincere human affection; and he adds the practical point that the slightest interruptions destroy the ardour of prayer, so that Christ, in no danger of that fault himself, meant to warn us by his example."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Lightfoot marks the word for evening as bearing a different sense here from the one it bore earlier in the chapter, the lateness of the night rather than of the day, and shows from the Talmudists that the same term covers the night itself. Robertson makes the prayer a matter of need rather than of pattern, since the masses were wild with enthusiasm and the disciples had wholly misunderstood him, so that the Father alone could offer help."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke answers from the danger of success, that one whom God has employed in a work of mercy needs to return by prayer as speedily as he can lest he value himself on what he has no merit in, and turns the scene into a list of what is wanted for praying well, retirement, elevation of heart, solitude and the silence of the night."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom calls the wilderness the mother of quiet, a calm and a harbour that delivers us from all turmoils, and then traces the training of the disciples: before this they had been in the storm with him in the ship, whereas now he departs and permits the storm to rise in mid sea, so that they might not look for hope of preservation from any quarter."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Hilary hears a foreshadowing instead, that his being alone in the evening signifies his sorrow at the time of the passion, when the rest were scattered from him in fear."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Thinks it probable that the Son of God, fully aware of the coming tempest, prayed for his disciples' safety, and meets the natural objection that he might rather have prevented the danger than employed himself in praying."
+   }
+  ],
+  "themes": [
+   "he went up into a mountain apart to pray",
+   "when the evening was come, he was there alone"
+  ],
+  "range": "23",
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.59
+   }
   }
  },
  "24": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
+   "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "John Lightfoot",
+   "John Calvin"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ship's distance and the lake's breadth; the verb 'tossed/plunged'; the boat bobbing in the choppy sea (Mark 6:48)."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the storm was permitted to fix their attention on Christ's help; their fault was forgetting the loaves — a hardened heart needing new eyes (Deuteronomy 29:4)."
+    "summary": "Gill reports the versions on the distance from land, one saying many furlongs and another about twenty-five. Calvin looks at what the delay was for, the adverse wind rising about midnight and Christ not appearing until three hours before sunrise, so that their arms were not more fatigued by rowing than their faith was shaken by terror, the long waiting being meant to fix their attention the more powerfully on the help he brought."
    },
    {
-    "school": "eastern-antiochene",
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes works the figure into miles and notes that since the lake was nowhere more than ten miles broad they were literally in the midst of it. Ellicott makes it nearly three-fourths of the way across and reads the detail as a personal reminiscence set down to guard against explanations that would minimise the miracle, such as that our Lord was seen on the shore or was swimming to the boat; on the walking he states the alternatives without softening them, simple acceptance or rejection as legend, and taking the first sees an anticipation of that spiritual body which appeared at the Transfiguration and became normal after the Resurrection. Robertson uses for the boat's distress the word that elsewhere describes a man tormented by demons, and calls the attempt to explain the walking away as a stroll along the beach an impossible theory unless the account is legendary. Lightfoot qualifies the reckoning of watches, since the Jews counted only three of deep night, treating the fourth part as morning."
+   },
+   {
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "The Cyril of Jerusalem excerpt is catechetical, on the firmament and the waters, not on this verse."
+    "summary": "Clarke renders the participle as grievously agitated and notes a manuscript reading that has the boat plunged under the waves; he calls the suspension of the laws of gravitation a proper manifestation of unlimited power and counts three miracles in the one, that at a distance Christ knew their distress, that he found them on the lake in the darkness, and that he walked upon the water."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "How were the watches of the night reckoned?",
+    "positions": "Barnes, Clarke and Ellicott describe the older Jewish division into three watches of four hours giving way to the Roman four of three hours each, and fix the hour between three and six; Lightfoot holds that the Jews in truth knew four watches but counted only three of deep night, the fourth being reckoned as morning."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on creation and the waters above the firmament, tangential to the verse."
+    "voice": "Charles Ellicott",
+    "view": "Admits that one speculates almost involuntarily about the process of the miracle, whether the ordinary laws of motion were broken, suspended, or counteracted by higher ones."
    }
   ],
   "themes": [
-   "storm at sea",
-   "faith tested",
-   "forgetting the miracle",
-   "hardened heart"
+   "the ship was now in the midst of the sea",
+   "tossed with waves: for the wind was contrary",
+   "in the fourth watch of the night",
+   "walking on the sea"
   ],
+  "range": "24-25",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The Roman fourth watch (3-6 a.m.) and the Jewish reckoning (Lightfoot); the walking as a creative miracle (Job 9:8); Ellicott guards against minimising it and sees an anticipation of the spiritual body."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fourth watch",
-   "walking on the sea",
-   "Godhead displayed",
-   "sovereignty over nature"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "26": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The conditions of the fright (dark, storm, no expectation of Christ); the ancient belief in appearing spirits; 'phantasma' as ghost and sailor superstition."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke defends the belief that the spirits of the dead may appear, as held by holy men."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem excerpt is catechetical, on the Holy Spirit, not on this verse."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on the Holy Spirit, tangential to the verse."
-   }
-  ],
-  "themes": [
-   "terror at the apparition",
-   "'it is a spirit'",
-   "ancient belief in ghosts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
+   "Jerome",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Hilary"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The unique power of Christ's voice to give courage; Ellicott on the words preserved by all three Evangelists and become the Church's watchword in distress."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: confidence is founded on His presence; He first corrects fear lest it destroy faith; the same voice is peace to believers, terror to the reprobate."
+    "summary": "Gill supposes it was now morning and perhaps moonlit, with more light on water than on land, so that they could discern something like a man but not who; and he stresses that Christ spoke the very moment they cried out, as one truly affected toward them, since he had come to save and not to frighten. Calvin examines what the reassurance does: Christ is not known as a Deliverer until he appears, and he corrects their terror first, not because they could at once feel unmingled joy but because the fear had to be allayed lest it destroy their confidence; the same voice, he adds, is deadly to the reprobate, and the reason we are disturbed by sudden alarms is that our ingratitude keeps us from using as shields the innumerable gifts of God."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes explains their conclusion from the beliefs of the time, since the ancients commonly held that the spirits of men appeared to the living after death. Robertson strengthens the verb to terrified, identifies the noun as spectre, and puts the outcry down to a touch of sailor superstition. Ellicott takes the exact agreement of three evangelists in reporting the words as proof of the impression they made, and thinks the moment must have returned to them, and to the Church at large, with something of a symbolic character, so that Be of good cheer became the watchword of their lives."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke will not have the belief called superstition at all, holding that the appearing of the spirits of the dead was a doctrine held by the greatest and holiest of men and never disproved by the cavillers of any age; and he says nothing but this voice could have given courage in such circumstances, since when Christ proclaims himself in the soul all sorrow and fear are at an end."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome turns the fear into an argument against the heretics who denied that the Lord was born of a virgin and made him a phantasm, since the apostles here plainly feared they were seeing what those men said he was. Hilary reads the night as a figure of history, the four watches standing for the Law, the Prophets, the coming in the flesh and the return in glory, so that Christ at the end shall find his Church tossed by the spirit of Anti-Christ and afraid even at his own approach."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'it is I'",
-   "courage from Christ's presence",
-   "fear corrected",
-   "a watchword for the Church"
+  "debates": [
+   {
+    "question": "Was the disciples' fear of a spirit mere superstition?",
+    "positions": "Barnes explains it as a common belief of the ancients and Robertson as a touch of sailor superstition; Clarke defends the doctrine itself as held by the greatest and holiest of men and never disproved."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "John Calvin",
+    "view": "Draws the contrast between the effects of the same presence, appalling to the reprobate and a ground of inward peace and strong confidence to believers."
+   }
+  ],
+  "themes": [
+   "they were troubled, saying, It is a spirit",
+   "they cried out for fear",
+   "be of good cheer; it is I; be not afraid"
+  ],
+  "range": "26-27",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
+   }
   }
  },
  "28": {
   "voices": [
-   "John Gill",
+   "John Wesley",
+   "John Calvin",
    "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
-   "John Calvin"
+   "Adam Clarke",
+   "Augustine",
+   "John Gill"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Peter's ardour and rashness — less faith than he supposed; Matthew alone records it; yet taking Christ at His word is sound reason (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the 'if it be thou' shows unsettled faith; a good principle in faulty excess; beware excessive haste and overleaping the Lord's bounds."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Peter's boldness",
-   "unsettled faith",
-   "love and rashness",
-   "waiting for Christ's word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill: Christ says 'Come' to assure them who He is and to confirm Peter's faith by a further instance of His power."
-   },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: Christ gives power to do the impossible to faith, but we must never test His power for curiosity or display."
+    "summary": "Wesley reads the opening clause as meaning since it is thou, holding that the word often bears that sense, and concludes that Peter was in no doubt at all, or he would never have quitted the ship. Clarke condemns the request outright, holding that a weak faith is always wishing for signs and miracles whereas to take Christ at his word argues the highest exercise of sound reason; and he guards the permission that follows, since we must never put Christ's power to the proof for a vain curiosity, or even to strengthen our faith while the ordinary means are within reach."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes the same clause as a condition and finds the doubt exactly there, since Peter had heard Christ speak and yet argues with himself under perplexity; while his faith is small a wish not well considered bursts into flame, and without the wings of faith he desires to fly at will. Calvin allows that the longing sprang from a good principle but cannot applaud it, and draws his rule: wherever the Lord calls we should run with alacrity, but whoever proceeds farther will learn what it is to overleap the bounds prescribed. Gill gives the single word of permission two purposes, to assure them who he was and to confirm Peter's faith by a further instance of power."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Barnes continues his assessment of Peter's character from the previous verse."
+    "prevalence": "several",
+    "summary": "Barnes reads the character rather than the grammar, finding in Peter less real faith than he supposed and more ardour than his faith would justify, really attached to Jesus but easily daunted and prone to fall, and suffered by this to learn his own character and his dependence. Robertson notes only that the impulsiveness appears as usual and that Matthew alone preserves the episode."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine hears in the words the one thing that keeps them from presumption, a confession of what Peter was in himself and of what he expected to receive, so that what no human infirmity was equal to he believed he would be enabled to do."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "walking on the water",
-   "power given to faith",
-   "not tempting Christ"
+  "debates": [
+   {
+    "question": "Does Peter's opening clause express doubt?",
+    "positions": "Wesley renders it since it is thou and holds Peter had no doubt whatever, arguing that otherwise he would not have left the ship; Calvin and Barnes read it as a condition betraying a faith not yet settled, and Clarke treats the whole request as the mark of a weak faith wishing for signs."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Holds that to take Christ at his word argues not only the perfection of faith but the highest exercise of sound reason, since he is to be credited on his own word because he is the Truth."
+   }
+  ],
+  "themes": [
+   "Lord, if it be thou, bid me come unto thee on the water",
+   "and he said, Come",
+   "Peter walked on the water, to go to Jesus"
+  ],
+  "range": "28-29",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
+   }
   }
  },
  "30": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
+   "John Wesley",
    "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Peter sinks from looking at the danger, not from the storm — the failure of faith (Clarke); the conflict of sight and faith (Ellicott); the urgent cry to be saved quickly."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: though a skilful swimmer, when grace acts the natural strength is withdrawn, that he may depend on Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "looking away from Christ",
-   "failure of faith",
-   "'Lord, save me'",
-   "sight versus faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
+   "Cyril of Jerusalem",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "Raban"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The immediate rescue and the verb 'doubt' as being pulled two ways; look to Christ's upholding power, not the danger (Clarke, James 1:6)."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: Christ reproves the doubt directly opposed to faith — Peter had an express command and recent proof, yet fell into wicked fear."
+    "summary": "Gill describes the wind blowing hard against him and raising waves that beat on him with violence, and points to a version that renders the rescue as coming in that very moment, the case requiring instant help. Calvin insists that in kindly preserving Peter the Lord does not connive at his fault, and then meets the question whether every kind of fear proves a weakness of faith, answering that Christ reproves the particular doubt directly opposed to faith, since a man may doubt without fault when the word of the Lord does not speak with certainty, whereas Peter had an express command and an experience of the power and abandoned both."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke states the principle plainly, that Peter was upheld by faith in the power of Christ, so that when the faith failed the suspended laws of gravitation returned to their wonted action, and that it was not the violence of the winds but his littleness of faith which endangered him; and he draws the standing lesson that we should consider not so much the danger we are exposed to as the power by which we are upheld. Wesley presses that Peter had been used to the sea and was a skilful swimmer, and takes it for a rule that when grace begins to act the natural courage and strength are withdrawn."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott describes the conflict between sight and faith in which the faith was worsted, and hears the reproof as coming from one unwilling even here to quench the smoking flax. Robertson notes that a fisherman and good swimmer was nevertheless beginning to plunge down, that the cry for rescue stands in a tense meaning do it quickly, and that the word for doubting comes from the root meaning twice, a man pulled two ways."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (here on point): faith's buoyancy upheld Peter on the water, and relaxing faith let him sink."
+    "prevalence": "single",
+    "summary": "Cyril puts the episode the other way round, as a demonstration of what faith can do, since Peter was a man like ourselves, made up of flesh and blood and living upon like food, yet while he believed he found his footing safer on the water than on any ground, and as his faith gradually relaxed his body was drawn down with it."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Raban turns the outstretched hand into the doctrine it illustrates, that the disciple found a salvation which is not of him that willeth, nor of him that runneth, but of God that showeth mercy."
    }
   ],
   "debates": [
    {
-    "question": "Does every fear betray a weakness of faith?",
-    "sides": [
-     {
-      "position": "Only the doubt directly opposed to faith, against a clear word, is faulted",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
+    "question": "Does the rebuke mean that fear is always a failure of faith?",
+    "positions": "Calvin denies it, distinguishing the doubt directly opposed to faith from the doubt a man may have without fault where God's word has not spoken with certainty; Clarke and Ellicott read the failure here as simply the moment when sight overcame faith."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "Christ's saving hand",
-   "reproof of little faith",
-   "faith's buoyancy",
-   "doubt opposed to faith"
+  "outliers": [
+   {
+    "voice": "Cyril of Jerusalem",
+    "view": "Finds in the episode a proof of the strength of faith rather than of its weakness: so great is that strength that it can buoy a heavy body up in walking on the sea."
+   }
   ],
+  "themes": [
+   "when he saw the wind boisterous, he was afraid",
+   "Lord, save me",
+   "O thou of little faith, wherefore didst thou doubt"
+  ],
+  "range": "30-31",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.67
+   }
   }
  },
  "32": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The instant calm as fresh proof of His power; the ship at once at land (John 6:21); the wind 'grew weary' before its Master; Ellicott on the disciples' amazement and their hardened hearts toward the loaves."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the calming is ascribed to Christ's coming aboard, not Peter's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the wind ceased",
-   "sovereignty over nature",
-   "ship at once at land",
-   "hardness toward the loaves"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "Charles Ellicott",
+   "John Gill",
+   "Adam Clarke",
+   "Raban",
+   "John Calvin",
+   "Origen"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The confessors as crew/passengers anticipating the disciples' faith (Ellicott, Clarke); Jesus accepts worship; growth toward Matthew 16:16; the anarthrous 'Son of God'."
+    "prevalence": "several",
+    "summary": "Barnes calls the lull a new proof of power, since he who has power over winds and waves has all power, and adds from the fourth Gospel that the ship was immediately at the land. Robertson notes that the verb means the wind grew weary and exhausted itself in the presence of its Master, and refuses to call the timing coincidence; on the confession he leaves the grammar open, allowing that the missing article would permit a son of God as on the centurion's lips, while holding they probably meant the full title. Ellicott makes the suddenness the point, since these mountain squalls usually died away by degrees and left the waves rough, and argues from the peculiar description of those in the ship that the speakers were the crew or chance passengers with no previous knowledge of him, who in that moment anticipated the faith of the foremost disciples."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: sailors and disciples alike confess Him Son of God, rendering Him the Messiah's honour as the prophets foretold."
+    "summary": "Gill corrects the attribution, since Peter came aboard too but the effect belongs to Christ's coming and not to his, and takes the confession to have been made by the mariners and owners as well as the disciples. Calvin agrees that it belongs to the disciples and the sailors and other passengers together."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke thinks the words were probably spoken by the sailors or passengers and not by the disciples at all, arguing from the absence of the articles that mark the Messianic title and from the improbability that men who had left everything to follow him were only now persuaded of it; and he reduces the calm to an aphorism, that Jesus is the Prince of peace and all is peace where he condescends to enter and abide."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Raban had said the same of the heart in which the Lord is present by grace, that there all wars cease."
    },
    {
     "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: only the disciples, and they say 'of a truth' (firmer than the demoniacs); the crossing figures the passage to the eternal land."
+    "prevalence": "single",
+    "summary": "Origen insists on the opposite, that the disciples in the boat say this and he does not think any others said it, and weighs the form of words, which is not the bare confession the two demoniacs had made but one strengthened by an opening asseveration."
    }
   ],
   "debates": [
    {
-    "question": "Who made the confession 'thou art the Son of God'?",
-    "sides": [
-     {
-      "position": "Chiefly the crew or passengers, distinct from the disciples",
-      "holders": [
-       "Ellicott",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "Only the disciples",
-      "holders": [
-       "Origen"
-      ]
-     },
-     {
-      "position": "Disciples and sailors together",
-      "holders": [
-       "Calvin",
-       "Gill"
-      ]
-     }
-    ]
+    "question": "Who made the confession in the boat?",
+    "positions": "Clarke assigns it to the sailors or passengers rather than the disciples, and Ellicott argues the same from the wording; Gill and Calvin take it for disciples and crew together; Origen holds that none but the disciples said it."
    }
   ],
-  "outliers": [],
-  "themes": [
-   "confession of the Son of God",
-   "worship of Christ",
-   "Creator and Governor of nature"
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "view": "Passes on the hard explanation the other Gospel gives for their astonishment, that they considered not the loaves because their heart was hardened, and reads it as the disciples' own later analysis of that night."
+   }
   ],
+  "themes": [
+   "the wind ceased",
+   "they that were in the ship came and worshipped him",
+   "of a truth thou art the Son of God"
+  ],
+  "range": "32-33",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
   }
  },
  "34": {
   "voices": [
-   "Remigius",
-   "Raban",
-   "Chrysostom",
-   "Jerome",
-   "Hilary",
-   "Origen",
-   "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "Matthew Henry",
+   "John Calvin",
+   "Origen",
+   "Jerome",
+   "Raban",
+   "Chrysostom",
+   "John Gill"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Gennesaret as the rich western plain including Capernaum, toward which they steered (John 6:24); the eager touching of His hem (Matthew 9:20)."
+    "summary": "Barnes and Clarke place Gennesaret in Galilee on the western side of the lake, containing Capernaum; Ellicott suggests the name may be a corruption of the older Chinneroth, calls the region one of singular fertility and among the most populous districts of Palestine, and observes that the widespread wish to touch the hem was the natural result of the earlier healing, the touch implying the faith which was the condition of receiving anything. Robertson measures the plain at four miles by two and allows the element of superstition in the request while noting that Jesus honoured the faith regardless."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Typology on the name: Christ guides the Church from persecution into harbour; the 'hem' as His least command or His assumed body (Jerome, Raban, Remigius, Hilary)."
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke says the people knew him again, having already seen his miracles, and collected every diseased person they could find so as to be the instruments of relieving their friends and neighbours; and he ends on a prayer, asking what influence the grace and Spirit of Christ must have in the soul when even the border of his garment produced such wonders in bodies."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the people's greater faith now brings all the sick to touch His garment; we receive not the hem only but His body."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sets these people against their neighbours across the lake, who had besought Christ to depart because they had no occasion for him while these besought him to help them because they had need of him, and lays down that Christ reckons it the greatest honour we can do him to make use of him; he guesses too that the report of the crossing helped prepare his welcome, which may have been one of the things Christ intended by it."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the land filled with proofs of His glory; healing bodies shadows the healing of souls (Isaiah 53:4)."
+    "summary": "Calvin declines to settle whether the country was named from the lake or the lake from the country, and reads the evangelists' purpose in the massing of cures: the glory of Christ was attested by a whole region filled with proofs whose report could easily reach Jerusalem, which is why the ingratitude of a nation that shut its eyes was so base. Gill finds two motives in the request to touch the hem, a confidence that did not doubt of a cure and a sense of unworthiness to be noticed in any nearer way."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry contrasts the eager Gennesarenes with the Gergesenes who begged Him to depart."
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Jerome measures their faith by its range, that they were not content with healing their own countrymen but sent to all the towns round about, and admits that if he knew what the name meant he could make more of the passage. Raban supplies an etymology anyway, from a power of so modulating the waters as to raise a breeze."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom marks the advance in the manner of their asking, since they no longer drag him to their houses or seek the touch of his hand but draw him by a greater faith, taught by the woman with the issue of blood that the hem alone was enough; and he presses the comparison, that if those who touched the hem drew such virtue from it, much more shall they who receive his body whole."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen says as frankly as Jerome that the interpretation of the name would help the exposition if it were known."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What does the name Gennesaret mean?",
+    "positions": "Origen and Jerome both say the interpretation is unknown to them and that knowing it would help; Ellicott derives it from the older Chinneroth, Henry renders it the valley of branches, and Raban offers a fanciful derivation from a supposed power of raising its own breeze."
+   }
+  ],
   "outliers": [
    {
-    "voice": "Hilary",
-    "note": "Reads the people meeting Christ as believers saved out of the Law, the hem's virtue as the Spirit's grace through the apostles."
+    "voice": "John Calvin",
+    "view": "Reads the whole summary of cures as a statement of why Christ came, to offer himself as a physician, shadowing out in the healing of bodies something greater."
    }
   ],
   "themes": [
-   "land of Gennesaret",
-   "touching the hem",
-   "Church brought to harbour",
-   "healing of body and soul"
+   "they came into the land of Gennesaret",
+   "they sent out into all that country round about",
+   "that they might only touch the hem of his garment",
+   "as many as touched were made perfectly whole"
+  ],
+  "range": "34-36",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "They knew Christ by face and gathered all the diseased; Clarke applies it to spreading the news of Christ; Ellicott links the place to the Capernaum discourse of John 6."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley cross-refers to Mark 6:45."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The note here concerns Christ's use of parables in Mark 4, not this verse."
-   }
-  ],
-  "themes": [
-   "recognising Christ",
-   "spreading the news",
-   "bringing others to the Physician"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Touching the hem as the woman of Matthew 9:20 did, in faith and humility; the fringe of Numbers 15:38; the touch implies the faith that is the condition of healing; perfect cures for all who apply."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke marvels at the grace working through the hem and prays for increased faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "touching the hem",
-   "perfect healing",
-   "humble importunate faith",
-   "healing of the soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

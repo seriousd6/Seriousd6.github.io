@@ -87913,6 +87913,158 @@
         "62"
       ],
       "note": "matthew 27 regenerated from the catena as fifteen pericope tiles (1-2, 3-10, 11-14, 15-18, 19-23, 24-26, 27-31, 32-34, 35-38, 39-44, 45-49, 50-53, 54-56, 57-61, 62-66), 123,014 usable source words compressed to 9,684. All fifteen self-grade A; compression 0.05x to 0.19x, the heaviest in the corpus so far. Every declared voice is cited by name in its tile and every named voice is declared. Heaviest losses to compression, recorded here rather than in the prose: Chrysostom on why Pilate's wife and not Pilate saw the vision, and his line that the judge is judged and tortured before he tortures (it sits at key 15, outside the pericope of v19); Augustine's full discussion of the apocryphal Hebrew Jeremiah shown him by a Nazarene; Origen's typology of the sixth hour and the Moses parallel at the darkness; Jerome's wordplay on passing by and wagging the head; Pseudo-Chrysostom's catalogue of reversals at the darkness; Ellicott's four outrages of Pilate's earlier administration; and Clarke's Bengal fishermen. Nothing was added that the source does not carry."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "35"
+      ],
+      "note": "All four Jamieson Fausset and Brown blocks in this chapter are foreign: key 5 carries Matthew 12 material on idle words and the sign demanded, key 11 the Ninevites, key 17 the brethren of Jesus from Matthew 13, key 35 the first formal use of parables from Mark 4. Checked block by block, not inferred from the interval. Declared as excluded_voices on the four entries whose ranges cover those keys."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "4",
+        "24",
+        "26"
+      ],
+      "note": "Three of the four Cyril of Jerusalem blocks are foreign, carrying Catechetical Lecture material unrelated to the verse: key 4 on Elijah and Paul and the keys of Peter, key 24 on the firmament and the waters above, key 26 on the Holy Ghost. The fourth, at key 31, is genuine and comments directly on Peter walking and doubting, so it is used in the 30-31 entry. NOT declared in excluded_voices because synthesis_qa split_voices does not recognise the label Cyril of Jerusalem, and the validator then rejects the declaration as naming an absent block; recorded here instead."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "4",
+        "24",
+        "26"
+      ],
+      "note": "synthesis_qa.split_voices misses multi-word patristic labels containing lowercase particles. It reads John Lightfoot as Lightfoot and A.T. Robertson as Robertson, and does not see Cyril of Jerusalem at all. Anyone wanting to declare a Cyril block as residue will hit FAIL excluded_voices names a block absent from this entry source even when the block is plainly there."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "36"
+      ],
+      "note": "StudyLight navigation, footer and CSS chrome closes the 1040-word Ellicott block at key 36, leaving only its opening sentence usable. The Barnes block at the same key is not chrome: it runs into his REMARKS ON MATTHEW 14, which are genuine chapter-end reflections."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "1",
+        "13",
+        "22",
+        "34"
+      ],
+      "note": "Matthew Henry appears in only four keys but supplies 14630 words, a quarter of the chapter: 5112 at key 1, 2725 at key 13, 5342 at key 22, 1451 at key 34. Each block is a running exposition of the whole section it heads, so Henry material for a given verse usually sits at the section head rather than at that verse."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "13",
+        "23"
+      ],
+      "note": "The catena carries both Chrysostom and John Chrysostom as separate heads in this chapter, at keys 13 and 23. They are the same father under two labels; the entries treat them as one voice."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "6"
+      ],
+      "note": "What kind of dance the daughter of Herodias performed. Barnes, Ellicott and Robertson take it for a lewd performance beneath a princess and prearranged by her mother; Lightfoot alone reads it as the customary national expression of festal joy, citing the dancing of the most religious men at the Feast of Tabernacles."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "9"
+      ],
+      "note": "Whether Herod sorrow was real. Gill, Barnes and Ellicott take it as a genuine last struggle of conscience; Jerome holds it feigned for the guests, a dissembler displaying grief in his face while he had joy in his mind."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "13"
+      ],
+      "note": "Whether the withdrawal was flight. Henry and Clarke treat it as lawful flight and a model of human prudence; Jerome denies fear of death had any part in it and offers mercy to his enemies, example against rashness, and the testing of faith instead; Chrysostom makes it a measure of the incarnation rather than of safety."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "28"
+      ],
+      "note": "Whether Peter opening clause expresses doubt. Wesley renders it since it is thou and holds Peter had no doubt whatever, since otherwise he would not have left the ship; Calvin and Barnes read it as a condition betraying an unsettled faith, and Clarke treats the whole request as the mark of a weak faith wishing for signs."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "32"
+      ],
+      "note": "Who made the confession in the boat. Clarke assigns it to the sailors or passengers and not the disciples, arguing from the missing articles and from the improbability that men who had left all were only now persuaded; Ellicott argues the same from the peculiar wording; Gill and Calvin take it for disciples and crew together; Origen insists none but the disciples said it."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "3"
+      ],
+      "note": "Why John was arrested. Calvin reports Josephus reason, that Herod dreaded a change of affairs and suspected him politically, and Ellicott gives the milder form, a fear of popular outbreak; Calvin allows this as a pretext or rumour but holds the evangelists account, the rebuke of the marriage, to be the truth of the matter."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "15"
+      ],
+      "note": "Ellicott prefaces the feeding with a three-point statement of why the narrative matters: the only miracle in all four Gospels, the fullest manifestation of sovereignty over nature, and an act of creative power that cannot be explained away. He calls the one rationalising account ever offered, that Christ example shamed the crowd into producing concealed stores, ludicrously inadequate, and says the narrative must be accepted or rejected whole."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "14",
+      "verses": [
+        "22",
+        "23"
+      ],
+      "note": "Key 22 alone carries 10178 source words across ten voices and key 1 carries 7493, so the two longest keys hold nearly a third of the chapter. Both were tiled as single-verse entries rather than folded into a span, since a pericope covering either would have compressed far below what the rest of the chapter runs at."
     }
   ]
 }
