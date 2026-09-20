@@ -1,62 +1,103 @@
 {
  "1": {
   "voices": [
-   "Chrysostom",
-   "Theophylact",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Chrysostom",
+   "Augustine",
+   "John Lightfoot"
   ],
+  "range": "1-6",
+  "pericope_label": "Verily, verily, I say unto you, He that entereth not by the door into the sheepfold, but climbeth up some other way, the same is a thief and a robber. But he that entereth in by the door is the shepherd of the sheep. To him the porter openeth; and the sheep hear his voice: and he calleth his own sheep by name, and leadeth them out. And when he putteth forth his own sheep, he goeth before them, and the sheep follow him: for they know his voice. And a stranger will they not follow, but will flee from him: for they know not the voice of strangers. This parable spake Jesus unto them: but they understood not what things they were which he spake unto them.",
   "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the door is the Scriptures, the porter perhaps Moses; an allusion to false Christs; Theophylact makes the porter the Holy Spirit."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the door is Christ himself — entering means preaching Christ in lowliness; the sheep are the foreknown/predestinated whom the Lord knows."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill/Calvin: Christ the only true shepherd; the Pharisees are thieves usurping a rule not given them."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A shepherd entering by the legitimate door; Lightfoot supplies the Talmudic sheepfold (gathering, milking, tithing)."
+    "summary": "Barnes argues from the formula, since the doubled asseveration is never used to open a discourse, so that the words follow straight on from the charge of blindness laid against men claiming to be shepherds; he applies the door narrowly to the ministry, the Pharisees having claimed the pastoral office without the appointment that alone opens it, and observes that in every church many have sought that office from ambition or love of ease. Ellicott raises a question of method before the details are pressed, since the word used is not the ordinary word for parable but a wider one covering any figurative speech, and in a parable the outer story is kept distinct from the truth it carries while here form and idea interpenetrate; he concludes that every particular, the porter expressly, is not to be pressed. Lightfoot alone describes the thing itself, the pen where the flock was gathered at night and the lambs tithed, the little door at which two could not pass together, the tenth lamb marked with red; and he supplies the legal distinction the terms carry, a thief taking when the owner is not privy and a robber openly and by force, the same line Barnes draws between stealth and bloodshed."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reports both datings without choosing, one putting the discourse immediately after the last and the other three months later."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: Christ marks true from false shepherds, leaving the Pharisees to see themselves."
+    "prevalence": "single",
+    "summary": "Henry leaves the dating open, noting that the later mention of the winter feast may date what precedes as well as what follows, the sheep metaphor being still in use when that feast is named. On the shepherd walking ahead he answers from custom rather than from doctrine, that going before was the way of the country, the shepherd walking first to meet danger."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom presses the particulars the other way. The porter he suggests is Moses, as the man to whom the oracles of God were committed; the door is the Scriptures, which admit us to the knowledge of God and bar the entrance to heretics, so that climbing another way means a self-chosen path, or the traditions of men taught to the neglect of the Law, and the verb is not entering but climbing, like a thief going over a wall. He resolves the shifting figure by office: bringing us to the Father he is the door, caring for us the shepherd. He also holds that shepherds always go behind their flocks and that this one goes before, which is the point."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine offers the Lord himself as the porter, since there is far less distance between a door and a porter than between a door and a shepherd, and he has already called himself both; if another person is wanted, take the Spirit who guides into all truth, but never esteem the porter greater than the door. He turns the verse against respectable unbelief, since many pass for good men by the world's measure and keep the Law after a fashion without being Christians, and a good life profits only as it leads to life eternal. He adds the image the others lack, that Christ is a lowly door and whoever would come through with his head whole must stoop; and he will not tidy away the difficulty that sometimes those who are not sheep hear the voice, since the traitor heard it, and sometimes the sheep do not, since some who crucified him were his sheep."
    }
   ],
   "debates": [
    {
-    "question": "What do the door and porter signify?",
-    "sides": [
+    "question": "Who is the porter that opens to the shepherd?",
+    "positions": [
      {
-      "position": "door = the Scriptures; porter = Moses or the Spirit",
-      "holders": [
-       "Chrysostom",
-       "Theophylact"
+      "position": "Moses, as the man to whom the oracles of God were committed",
+      "held_by": [
+       "Chrysostom"
       ]
      },
      {
-      "position": "door = Christ himself; porter = Christ or the Spirit",
-      "holders": [
+      "position": "The Lord himself, or else the Spirit who guides into all truth, but never anyone esteemed greater than the door",
+      "held_by": [
        "Augustine"
+      ]
+     },
+     {
+      "position": "Not to be identified at all, since this is not strictly a parable and its particulars are not to be pressed",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the discourse continue the preceding scene or open a new occasion?",
+    "positions": [
+     {
+      "position": "It continues it, since the doubled asseveration is never used to begin a discourse",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Left open, the winter feast named later possibly dating what precedes as well as what follows",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Both datings reported, one immediately after the last discourse and one three months later",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is it remarked that the shepherd goes before the sheep?",
+    "positions": [
+     {
+      "position": "Because it reverses the usual practice, shepherds going behind their flocks",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Because it was the custom of that country, the shepherd walking ahead to meet danger",
+      "held_by": [
+       "Matthew Henry"
       ]
      }
     ]
@@ -64,278 +105,46 @@
   ],
   "outliers": [
    {
-    "voice": "Augustine of Hippo",
-    "note": "Solves why wolves sometimes hear and sheep stray by appeal to the foreknown/predestinated whom the Lord alone knows."
+    "voice": "John Lightfoot",
+    "claim": "Alone describes the fold as a working pen, with its two doors, the nightly gathering and daily milking, and the tithing of lambs counted out and marked with red while the ewes waited outside."
+   },
+   {
+    "voice": "Augustine",
+    "claim": "Refuses to smooth the figure, granting that some who are not sheep hear the voice, the traitor having heard it, and that some who are sheep do not, since some who crucified him were his own."
    }
   ],
   "themes": [
-   "the sheepfold",
-   "thief and robber",
-   "true vs false shepherds",
-   "the door",
-   "predestination"
+   "Verily, verily, I say unto you, He that entereth not by the door into the sheepfold, but climbeth up some other way, the same is a thief and a robber.",
+   "But he that entereth in by the door is the shepherd of the sheep.",
+   "To him the porter openeth; and the sheep hear his voice: and he calleth his own sheep by name, and leadeth them out.",
+   "And when he putteth forth his own sheep, he goeth before them, and the sheep follow him: for they know his voice.",
+   "And a stranger will they not follow, but will flee from him: for they know not the voice of strangers.",
+   "This parable spake Jesus unto them: but they understood not what things they were which he spake unto them."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Here the shepherd = the gospel minister who enters by Christ the door; Ellicott links it to the sending of the Seventy toward the 'other sheep.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the marks of a good pastor — a lawful entrance by the internal call of Christ, aiming at God's glory and the salvation of souls."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: God, not the world's applause, approves the true shepherd who enters rightly."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the true shepherd",
-   "lawful entrance",
-   "the call to ministry",
-   "under-shepherds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The porter is the doorkeeper who opens the fold by morning; the sheep know the shepherd's voice (Robertson doubts every detail is allegorical)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the doorkeeper may be styled the Father, who opens the door of faith (Acts 14:27)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: 'by name' = the names of the predestinated; he leads them out by loosing the chain of their sins."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the porter",
-   "hearing his voice",
-   "called by name",
-   "personal knowledge of the sheep"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He puts forth 'all' his own, overlooking none, and goes before to find pasture and ward off danger — the tender care of the shepherd of souls."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: the pastor goes before by example as well as precept; the sheep follow with the witness in themselves of his words."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the sheep follow because the shepherd's voice is God's, not man's."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "going before the sheep",
-   "leading not driving",
-   "example",
-   "following the voice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'stranger' is any voice not the shepherd's; the sheep by no means follow, discerning the false from the true (Isa 1:3)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: the sheep detect and flee a stranger to salvation 'as from the plague,' finding nothing of God in his voice."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the stranger is one not sent by Christ and not preaching him."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fleeing the stranger",
-   "discerning false teachers",
-   "the trained ear",
-   "safety in the voice"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Augustine",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The word is 'paroimia' (a wayside saying/allegory), John's term, not the Synoptic 'parabolē'; they grasped neither its meaning nor design."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Augustine: the Lord feeds by plain words and exercises by obscure ones, the obscurity sifting the humble from the scornful."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: their proud self-conceit made them dull in a matter not even very obscure."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: they did not understand because they would not; the Spirit makes Christ known."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "paroimia/allegory",
-   "willful incomprehension",
-   "revelation sifts the heart",
-   "pride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "7": {
@@ -344,1832 +153,1037 @@
    "John Gill",
    "John Lightfoot",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
+   "Adam Clarke"
   ],
+  "range": "7-10",
+  "pericope_label": "Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep. All that ever came before me are thieves and robbers: but the sheep did not hear them. I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture. The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Not a new allegory but the unfolding of door and shepherd; Christ is the legitimate door of access to the fold (Eph 2:18)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the door he had shut he now opens — he is himself the door; Lightfoot: Christ's flock has a new mark, not mere Abrahamic descent."
+    "summary": "Lightfoot would gladly have referred the words to men who had claimed the title of Messiah and imposed themselves on the people, except that he can find hardly a single instance of anyone doing so before the true Messiah came, whereas after that coming there were a great many; he treats the asymmetry as evidence that the moment when Jesus appeared was precisely the moment the nation was looking for the Messiah, and supplies a drier note from the rabbis, who fixed the distance a beast might go out to pasture at sixteen miles. Barnes reaches the same conclusion independently and settles on the scribes and Pharisees as the men meant, disarming the word all as used in the popular sense the New Testament often gives it; on the last clause he distinguishes bare existence from the abundance superadded to it. Ellicott sets the saying beside the strait gate and the narrow way and draws the line firmly in both directions, that no shepherd enters the fold except through the character and life and death of Christ, and that we may neither narrow that door nor widen it; the fold, he adds, stands always open to the man who came in by it."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: all spiritual doctrine that feeds souls consists in Christ alone (1 Cor 2:2)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I am the door",
-   "one access to the fold",
-   "unveiling the allegory",
-   "Christ the centre"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin/Gill: not the true prophets, but all false doctrine and false prophets contrasted with the Gospel; the OT denounces such shepherds (Jer 23:1; Ezek 34:2)."
+    "prevalence": "single",
+    "summary": "Gill works through the exceptions: not Moses, not the prophets of the Lord, not the Baptist who prepared the way, but those who came unsent, and the shepherds of Israel who fed themselves; he adds a particular identification, the three shepherds cut off in one month, which he takes for the three sects and their leaders. On the other side of the contrast he describes the thief's aim, to carry the sheep away from their shepherd and steal their hearts as a rebel prince once stole the hearts of a kingdom from his father."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'came instead of me' = false Christs like Theudas/Judas (Acts 5:36-37); Wesley: the Pharisees' self-appointed rule over consciences."
+    "prevalence": "single",
+    "summary": "Clarke takes going in and out as a Hebrew idiom covering the whole activity of a life and the liberty of acting or not acting, and applies it to the shepherd who leads the flock to good pasture, watches there, and brings them back. He measures the abundance historically, as blessings greater than were ever enjoyed under the older dispensation, even in the promised land; and he is fiercest on the other side, that men who enter the ministry for its revenues are the basest of thieves, their doctrine deadly because it comes from no commission, adding that the charge is not to be applied to any one class of preachers only."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Textual note on 'before me'; the reference is to false Messiahs and self-appointed leaders, not the prophets."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom denies flatly that the prophets are meant, as he says the heretics take it, and names instead the agitators who had lately troubled the nation, supporting the reading from the next clause, since the sheep are praised for not hearing these men whereas those who disobeyed the prophets are everywhere condemned. Going in and out he refers to the apostles, who went in and out boldly and became the masters of the world, so that nobody could turn them out of their kingdom."
    }
   ],
   "debates": [
    {
-    "question": "Whom does 'all that came before me' condemn?",
-    "sides": [
+    "question": "Who are the all that ever came before him?",
+    "positions": [
      {
-      "position": "the false Messiahs/insurrectionists",
-      "holders": [
-       "Clarke",
-       "Robertson"
+      "position": "Not the prophets, as heretics allege, but the agitators who had lately troubled the nation",
+      "held_by": [
+       "Chrysostom"
       ]
      },
      {
-      "position": "the scribes and Pharisees",
-      "holders": [
-       "Barnes",
-       "Wesley"
+      "position": "Those who came unsent, and the shepherds of Israel who fed themselves, identified with the three shepherds cut off in one month",
+      "held_by": [
+       "John Gill"
       ]
      },
      {
-      "position": "all false teachers/prophets generally",
-      "holders": [
-       "Calvin"
+      "position": "The scribes and Pharisees, since there is no evidence of any pretended Messiah before him, and all is used in its popular sense",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Not Messianic pretenders, for hardly an instance of one can be found before that coming though many followed it, which is itself evidence of the timing",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is promised in going in and out and finding pasture?",
+    "positions": [
+     {
+      "position": "The bold freedom of the apostles, whom nobody could turn out of their kingdom",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "A Hebrew idiom for the whole activity of a life and the liberty of acting or not acting",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Freedom of access rather than range, the fold standing always open against storm or night",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "thieves and robbers",
-   "false Messiahs",
-   "the prophets exempted",
-   "the sheep did not hear"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+  "outliers": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The emphatic 'by me' — 'the narrowness of truth'; parallel to the strait gate (Mt 7:13-14); 'go in and out' = the whole of a safe, supplied life."
+    "voice": "Adam Clarke",
+    "claim": "Calls men who enter the ministry for its revenues the basest of thieves, their doctrine deadly because it carries no commission, while refusing to let the charge be fastened on any one class of preachers."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the believer's highest consolation — once in Christ, out of danger, kept safe and fed to the full."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: a threefold gift — salvation, liberty, and pasture — entered through faith and kept from the wolf."
+    "voice": "John Gill",
+    "claim": "Reads the thief's design as the theft of affection rather than of property, carrying the sheep away from their shepherd as a rebel prince stole the hearts of a kingdom from his father."
    }
   ],
-  "debates": [],
-  "outliers": [],
   "themes": [
-   "I am the door",
-   "exclusive way of salvation",
-   "assurance",
-   "pasture and liberty"
+   "Then said Jesus unto them again, Verily, verily, I say unto you, I am the door of the sheep.",
+   "All that ever came before me are thieves and robbers: but the sheep did not hear them.",
+   "I am the door: by me if any man enter in, he shall be saved, and shall go in and out, and find pasture.",
+   "The thief cometh not, but for to steal, and to kill, and to destroy: I am come that they might have life, and that they might have it more abundantly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The thief's escalating ruin (steal, kill, destroy) against Christ's gift of life 'more abundantly' — a superadded fulness."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: mercenary clergy who enter for revenue are the basest thieves with deadly doctrine; Wesley: such is any who enters not by Christ."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a warning against drowsy indifference to Satan's ministers; Henry: Christ knows and keeps his chosen."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the thief's ruin",
-   "abundant life",
-   "mercenary teachers",
-   "vigilance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
   "voices": [
    "Augustine",
-   "Augustine of Hippo",
-   "John Gill",
+   "Charles Ellicott",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "Chrysostom"
   ],
+  "range": "11-15",
+  "pericope_label": "I am the good shepherd: the good shepherd giveth his life for the sheep. But he that is an hireling, and not the shepherd, whose own the sheep are not, seeth the wolf coming, and leaveth the sheep, and fleeth: and the wolf catcheth them, and scattereth the sheep. The hireling fleeth, because he is an hireling, and careth not for the sheep. I am the good shepherd, and know my sheep, and am known of mine. As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'The shepherd the good (kalos) one' — the beautiful, ideal shepherd who exposes his life rather than flee the wolf."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: Christ is both Door and Shepherd; the good shepherd is known by giving his life, marking him off from the hireling."
+    "summary": "Ellicott rules out the obvious target, the hierarchy having already been called thieves and robbers, and takes the word for anyone who enters the office from a motive other than love of men, or by any door but Christ, noting that the Greek implies something below a household servant; on the knowing he objects that the verse division obscures the sentence, which should run on so that the mutual knowledge of Father and Son is not a separate assertion but the measure of the union between shepherd and sheep. Barnes describes the hireling concretely, a minister who preaches for support, will run no risk, and would rather see the church wasted by its enemies than lose his reputation or place; and he says the word for knowing carries affectionate regard, pointing out that it is glossed by love a few verses later. Robertson keeps the proportion honest, that no one may claim a knowledge like that between Father and Son and yet the sheep really do know the voice and follow it in spite of thieves and hirelings."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: his extraordinary love for the sheep does not spare his own life — to reject such a shepherd is gross ingratitude."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the good shepherd",
-   "laying down his life",
-   "atonement",
-   "shepherd's love"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The hireling is a low-status hired labourer with no interest in the sheep — the unfaithful minister who flees danger."
+    "prevalence": "single",
+    "summary": "Calvin declines the speculative question, how the Father knows his own Wisdom, and holds to what is said, that Christ stands between God and us as the bond of the union, so that it is no more possible for him to forget us than for the Father to disregard him."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: not receiving hire but loving the hire above the work makes a hireling; Clarke: every party may have one, the danger greatest where pay is largest."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill/Calvin: faithful ministers worthy of reward are not hirelings; even imperfect teachers of pure doctrine are to be heard."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the hireling",
-   "loving the hire above the flock",
-   "faithful vs mercenary ministers",
-   "fleeing the wolf"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He has no shepherd-heart — 'it is no care to him about the sheep'; the opening clause is likely a textual addition."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the day of contest exposes the hireling's treachery — he serves the wages, not the flock that is not his own."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: he flees because he loves the hire, not the sheep."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "divided heart",
-   "careth not for the sheep",
-   "danger reveals treachery",
-   "wages over flock"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Chrysostom",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Know' = affectionate, intimate regard (explained by 'loveth' in v.17); the sheep partake of his nature — the secret of their love."
+    "prevalence": "single",
+    "summary": "Clarke's old English Bible gave him the word merchant, of one who makes merchandise of men's souls, and he sets the two figures against each other exactly: the hireling counts the sheep his own only so long as they are profitable to him, and the good shepherd counts them his own so long as he can be profitable to them. He adds a caution the others do not, that no reader should fasten this on one class of men, since every party may have its hireling and the danger is greatest where the provision is largest; and on the mutual knowledge he offers a parallel from Homer, goatherds separating their own beasts with ease though the flocks feed mixed together."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: to preside over a church needs the courage to lay down life for the sheep — the weight of the shepherd's office."
+    "prevalence": "single",
+    "summary": "Chrysostom adds only what the last clause secures, that the passion was not undergone unwillingly."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the knowing proceeds from love and care, while he disregards all who will not obey the Gospel."
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine takes up the difficulty the two images make together: if he is the door, how does he enter by himself? As he knows the Father by himself and we by him, so he enters the fold by himself and we by him, we coming in by the door because we preach Christ while Christ preaches himself, a light showing both other things and itself. From this he draws the limit on the office, that there is one Shepherd and the rulers of the Church who are sons and not hirelings are shepherds only as members of him, none of us calling himself the door; and he notes that good could not have been added unless there were bad shepherds too. The fault in the hireling he locates deeper than the wages, in a man who seeks in the Church not God but something else, where had he sought God he would be chaste. He also refuses to let suffering settle the question, since those who laid down their lives were good shepherds not because they shed their blood but because they shed it for the sheep."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who is the hireling?",
+    "positions": [
+     {
+      "position": "Not the hierarchy, already named thieves and robbers, but anyone entering the office from a motive other than love of men",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The minister who preaches for support, will run no risk, and would rather see the church wasted than lose his place",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "One who seeks in the Church not God but something else, the fault lying deeper than the wages",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "The merchant who makes merchandise of souls, found in every party and likeliest where the provision is largest",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What kind of knowing passes between the shepherd and the sheep?",
+    "positions": [
+     {
+      "position": "Affectionate regard rather than information, the word being glossed by love a few verses later",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Real but not commensurate, since no one may claim a knowledge like that between Father and Son",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Not a separate assertion at all, the verse division obscuring a sentence in which the Father and Son's knowledge is the measure of the union",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Left unspeculative, Christ standing between God and us as the bond of the union",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Refuses to let martyrdom settle who the good shepherd is, since blood may be shed in pride or against the sheep, and a body given to be burned without charity profits nothing."
+   },
+   {
+    "voice": "Chrysostom",
+    "claim": "Takes from the closing clause only the one security that matters to him, that the passion was not undergone unwillingly."
+   }
+  ],
   "themes": [
-   "mutual knowledge",
-   "knowing as loving",
-   "union with the sheep",
-   "the shepherd's office"
+   "I am the good shepherd: the good shepherd giveth his life for the sheep.",
+   "But he that is an hireling, and not the shepherd, whose own the sheep are not, seeth the wolf coming, and leaveth the sheep, and fleeth: and the wolf catcheth them, and scattereth the sheep.",
+   "The hireling fleeth, because he is an hireling, and careth not for the sheep.",
+   "I am the good shepherd, and know my sheep, and am known of mine.",
+   "As the Father knoweth me, even so know I the Father: and I lay down my life for the sheep."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The sheep's knowledge of the shepherd is likened to the Father–Son knowledge; Christ knows the Father and so reveals him (John 1:18; 17:21)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: avoid thorny speculation — Christ is the bond between God and us, unable to forget us as surely as the Father cannot reject him."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'I lay down my life' in the present — his whole life was a going unto death."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.06
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Father–Son knowledge",
-   "Christ reveals the Father",
-   "laying down his life",
-   "atonement"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
+   "John Gill",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Adam Clarke",
+   "Origen"
   ],
+  "range": "16-18",
+  "pericope_label": "And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd. Therefore doth my Father love me, because I lay down my life, that I might take it again. No man taketh it from me, but I lay it down of myself. I have power to lay it down, and I have power to take it again. This commandment have I received of my Father.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The 'other sheep' are the Gentiles (and Samaritans); Christ's horizon takes in all races (John 11:52; 12:32; Acts 18:10)."
+    "summary": "Barnes refuses to let the present tense mean that these were already friends, and takes it for a purpose so settled that it could be spoken of as accomplished, comparing the assurance given at Corinth that God had much people in that city; the certainty, he presses, cannot rest on any disposition foreseen in them, since they were the most corrupt people of antiquity, so it must rest on the intention of God, from which he draws that salvation is no matter of chance and that a preacher has ground to expect success. On the one fold he keeps the historical edge, that this was a plain intimation of a gospel for the Gentiles, extremely offensive to those hearing it, and that no national privilege or pre-eminence of rank would remain. That the death was voluntary he argues from the escapes, and defends the right to it by ordinary cases, the patriot who dies on the field and the merchant who risks his life for gain. Ellicott calls the saying about the Father's love difficult and does not pretend otherwise, reading it of the self-devotion of the Son, so that he who gave his Son for the world loves the Son who of his own will gives himself, almost as though the salvation of mankind had called out a new relation of love between them; and he adds what most readers pass over, that the taking of the life again is given as part of the reason of that love."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: undoubtedly the calling of the Gentiles, joined to the ancient 'fold' of God's heritage."
+    "prevalence": "single",
+    "summary": "Gill reads the clause of the elect among the Gentiles, sheep before they are called or folded, given to Christ and already in his hands. He spreads the Father's love wider, over the Son as Son from eternity, as Mediator, as clothed with our nature and as suffering in our room, and states the hard half plainly, that the bruising was a pleasure to the Father not in itself but because by it the counsel was accomplished. On the voluntary death he grants everything the history says, that the rulers procured it and the soldiers carried it out, and still holds that none of them could have taken it without the Father's will and his own consent."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: 'one flock' not 'one fold' (a misprint) — one undivided flock under one shepherd; he dies for every man (Heb 2:9)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "other sheep",
-   "calling of the Gentiles",
-   "one flock one shepherd",
-   "scope of the cross"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Father's love is drawn out by the Son's voluntary self-offering (John 3:16; Phil 2:9); the laying down aims at the taking again."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a higher eternal love grounds the Father's love, yet the Son's dying makes our salvation dearer to him than his own life."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: not weakness but free purpose — he dies to expiate sin, to rise again for our justification."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Father's love",
-   "voluntary death",
-   "resurrection in view",
-   "atonement for the world"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wholly voluntary death — none could take it by force (John 19:11); he lays it down and takes it again by his own power."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a consolation — he dies not by constraint but offers himself willingly, free from the necessity that binds us."
+    "prevalence": "single",
+    "summary": "Clarke hears the clause as an answer to something the hearers were about to think: they were not to imagine, when they saw him crucified, that he had been abandoned by his Father and so fallen into their hands, nor that he was put to death because he lacked the strength to resist."
    },
    {
     "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen/Cyril: he came to his passion willingly, foretelling it beforehand."
+    "prevalence": "single",
+    "summary": "Origen reaches the same point from the other end, taking the lamb led to the slaughter and the lamb standing as if slain, and finding in this very saying the proof that the one who led that lamb to the slaughter was God in man, the great High Priest."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Why is the Father's love grounded on the laying down of the life?",
+    "positions": [
+     {
+      "position": "Because the self-devotion of the Son called out what is almost a new relation of love, the taking again being part of the reason given",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Because the love is eternal and manifold, and the bruising pleased the Father not in itself but as the counsel accomplished",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Because the clause forestalls the inference that the crucified one had been abandoned or simply overpowered",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "claim": "Sets the lamb led to the slaughter beside the lamb standing as if slain, and finds in the saying itself the proof that the one who led that lamb was God in man, the great High Priest."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Defends the right to lay down one's life by ordinary cases, the patriot who dies on the field and the merchant who risks his life for gain."
+   }
+  ],
   "themes": [
-   "voluntary death",
-   "power to take it again",
-   "the Father's command",
-   "willing passion"
+   "And other sheep I have, which are not of this fold: them also I must bring, and they shall hear my voice; and there shall be one fold, and one shepherd.",
+   "Therefore doth my Father love me, because I lay down my life, that I might take it again.",
+   "No man taketh it from me, but I lay it down of myself. I have power to lay it down, and I have power to take it again. This commandment have I received of my Father."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
+   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
+   "John Gill",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "19-21",
+  "pericope_label": "There was a division therefore again among the Jews for these sayings. And many of them said, He hath a devil, and is mad; why hear ye him? Others said, These are not the words of him that hath a devil. Can a devil open the eyes of the blind?",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Schisma' again (cf. 7:43; 9:16) — division over Jesus is a recurring mark in John; the Pharisees lead the hostile party."
+    "summary": "Barnes says the same of preaching in general, that this teaching always produced an effect and made either bitter enemies or decided friends, as all faithful preaching will, so that the divisions are to be laid at the door of unbelief and not of the gospel. Ellicott takes the second clause of the accusation for an explanation of the first, the madness being simply what possession looks like, and identifies the speakers on the other side as the same moderate party in the council that had appeared once before. Robertson is brusque about the motive, that it was an easy way of discounting him and had been used before."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supplies the background the others are working from, the Jewish notion of a particular evil spirit that takes away a man's understanding, and counts the numbers the other way about, the accusers many and the better sort few. Calvin reads the tactic as deliberate: the reproach is the most offensive one they can devise, chosen so that everybody may shudder at the thought of hearing him, and raised loudly enough that not a single word should be heard in silence; but the doctrine, he adds, has power enough in itself to answer such slanders."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke insists that a demoniac and a madman were not the same thing to that people, and that the two terms are here distinguished rather than repeated: they held him possessed by a spirit which deranged his faculties, and inferred that he must have been a wicked man to be given over to such a spirit at all. He takes the defenders' argument seriously and completes it, since the words themselves are words of sense and sobriety, which is not how possession sounds, and beyond the words there is the fact that this man had opened the eyes of one born blind, which no demon does. From that he turns to the bearing of the accused, that not a word of impatience escaped him under such usage, and draws the practical conclusion for ministers, that a disciple should not expect better treatment than his master."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the contrast of his gracious words and their spiteful ones threw them into heats and parties."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the doctrine wins some disciples and many adversaries, splitting what had seemed one body."
+    "prevalence": "single",
+    "summary": "Henry takes the division as the expected result rather than an accident, the sayings having been fit to gather men round a common centre and instead setting them at odds, which is what had been foretold; and he notes drily that a congregation once split is not easily mended, rents being sooner made than made up. He will not treat the split as simply bad, since it is better that men should be divided about the doctrine of Christ than united in the service of sin. He hears two charges in the accusation and not one, the first falling on the speaker, since the worst of characters is regularly fastened on the best of men, and the second on the audience in the question why they listen at all. On the defenders he notices what it cost them, since the stream ran strong and they swam against it, and suspects that they did not believe him to be the Christ but simply could not bear to hear him abused."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is he hath a devil and is mad one charge or two?",
+    "positions": [
+     {
+      "position": "Two, distinguished: possession by a spirit that deranged him, and the wickedness inferred from his being given over to it",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "One, the second clause explaining the first, since madness is simply what possession looks like",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What was the accusation meant to accomplish?",
+    "positions": [
+     {
+      "position": "An easy way of discounting him, already used on an earlier occasion",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "The most offensive reproach available, raised loudly so that nobody should hear a word of his in silence",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "A double stroke, at the speaker's character and at the audience for listening at all",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Matthew Henry",
+    "claim": "Observes that men are ruined by being laughed out of their regard for the word, though they would never allow themselves to be laughed out of their food, which is less necessary."
+   },
+   {
+    "voice": "John Gill",
+    "claim": "Counts the parties the other way about from the commentators who dwell on the defenders, the accusers being many and the better sort few."
+   }
+  ],
   "themes": [
-   "division/schism",
-   "the word divides",
-   "Pharisaic hostility",
-   "light received or resisted"
+   "There was a division therefore again among the Jews for these sayings.",
+   "And many of them said, He hath a devil, and is mad; why hear ye him?",
+   "Others said, These are not the words of him that hath a devil. Can a devil open the eyes of the blind?"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The recurring slander 'he hath a demon and is mad' (cf. 7:20; 8:48; Mark 3:21) — an easy way to discount Jesus."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the most offensive reproach, devised to make men shudder at hearing him and silence every word."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he hath a devil and is mad",
-   "slander to silence",
-   "discounting Jesus",
-   "contempt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The better party answers: his words are calm and sober, and 'can a demon open the eyes of the blind?' (cf. John 9:6) — an unanswerable question."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: an appeal to the fact itself — truth maintains itself, and no malice can keep God's power from shining in the Gospel."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril joins the opened eyes to the Messianic sign (Isa 35:5)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sober words",
-   "the miracle answers the slander",
-   "the better party",
-   "appeal to fact"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "22": {
   "voices": [
-   "Augustine",
-   "Alcuin",
-   "John Chrysostom",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
+   "Chrysostom",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
+   "Augustine",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "Charles Ellicott",
+   "John Lightfoot"
   ],
+  "range": "22-24",
+  "pericope_label": "And it was at Jerusalem the feast of the dedication, and it was winter. And Jesus walked in the temple in Solomon’s porch. Then came the Jews round about him, and said unto him, How long dost thou make us to doubt? If thou be the Christ, tell us plainly.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Maccabean feast of Dedication (Hanukkah), instituted 164 B.C. after Antiochus' defilement, kept eight days from 25 Chislev; ~two months after Tabernacles."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: 'enkainia' = renewal, the temple reconsecrated by Judas Maccabaeus, kept yearly to recall God's grace."
+    "summary": "Barnes tells the story of the Maccabees, the city taken and thousands killed and sold, a sow sacrificed on the altar, the service suspended three years, then the purifying with eight days of hymns and gold crowns; he reads the note about winter as weather, cold and inclement and given expressly as the reason for the portico, and explains that the porch took Solomon's name not from being built by him but from standing where his porch had stood. Robertson notes that the term for the feast occurs nowhere else in the New Testament, that this was not one of the great feasts and could be observed anywhere, allows nearly three months for the interval and refuses a proposed rearrangement of the chapter as purely arbitrary. Ellicott puts the interval at about two months, cites a calculation dating the one feast to mid-October and this to the twentieth of December, and fills the gap from the third Gospel. Lightfoot is the only one who looks hard at the feast's other name, the feast of Lights, and will not accept the explanation offered for it, since one would suppose from the name that candles were lit and there is no mention of any."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: Christ observed a festival of human appointment (1 Macc 4:59) — warrant that such observance may be innocent for us."
+    "prevalence": "single",
+    "summary": "Clarke tells the same story of the Maccabees and argues that there was no need to tell a reader it was winter when everyone knew the date, so that the word likelier means stormy or rainy, which explains the walking under cover. He observes that the evangelist passes over everything between the autumn feast and this one, probably because the others had covered it, and counts this the fourth of the four visits to Jerusalem that this Gospel alone records."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes a distinction about the kind of day it was: the celebration was not confined to Jerusalem, as the divinely appointed feasts were, but kept by every man in his own place, and kept not as a holy time, since only a divine institution can sanctify a day, but as a good time, like the days of Purim. He adds that Christ came up not in honour of a feast that did not require his attendance but to use the eight days of vacation, and that the council sat in the porch where he walked."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom takes the feast for the dedication of the temple after the return from Babylon. On the question put to him he finds the perversity in the pattern, that when he teaches by discourse they demand a sign and when he demonstrates by works they demand a plain word, being determined to oppose either way; he hears malice in the phrase itself, since nothing had been hidden at the feasts, and takes the courteous preface for flattery meant to draw out something they could use."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine supplies only the word, that any dedication of a new thing was called by the Greek name for new, and lets the season stand as a figure, the men who came being cold in love and burning in malevolence, and approaching not to honour but to persecute. On the question he says what they were angling for, a bare confession that he was the Christ, which men holding merely human notions of the Messiah could then turn into a charge of aspiring to a throne."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Which dedication is the feast of the dedication?",
+    "positions": [
+     {
+      "position": "The dedication of the temple after the return from Babylon",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "The purifying under the Maccabees after the profanation, kept with eight days of hymns and gold crowns",
+      "held_by": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Left unspecified, the name belonging to any dedication of a new thing",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why does the evangelist remark that it was winter?",
+    "positions": [
+     {
+      "position": "For the weather rather than the calendar, the word likelier meaning stormy or rainy, since nobody needed telling the date",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "As cold and inclement, given expressly as the reason for walking in the portico",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "As a figure of the men who came, cold in love and burning in malevolence",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Presses the feast's other name and rejects the received explanation of it, since candles are nowhere mentioned and the rabbinic account of the eight days he calls a cunning way of talking about the matter."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Distinguishes a good time from a holy one, holding that only a divine institution can sanctify a day, so that this feast ranked with the days of Purim."
+   }
+  ],
   "themes": [
-   "Feast of Dedication",
-   "Hanukkah/Maccabees",
-   "winter",
-   "Christ honours a human feast"
+   "And it was at Jerusalem the feast of the dedication, and it was winter.",
+   "And Jesus walked in the temple in Solomon’s porch.",
+   "Then came the Jews round about him, and said unto him, How long dost thou make us to doubt? If thou be the Christ, tell us plainly."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'picturesque imperfect' — Jesus walking in Solomon's eastern colonnade (Acts 3:11; 5:12), a relic surviving till Titus; eyewitness memory."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Gill: he walked to keep warm in winter; the 'temple' is the later structure bearing the old name."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Solomon's porch",
-   "eyewitness detail",
-   "winter scene",
-   "historical setting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
- "24": {
+ "25": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
-   "Adam Clarke",
+   "John Gill",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Calvin"
+   "Adam Clarke"
   ],
+  "range": "25-30",
+  "pericope_label": "Jesus answered them, I told you, and ye believed not: the works that I do in my Father’s name, they bear witness of me. But ye believe not, because ye are not of my sheep, as I said unto you. My sheep hear my voice, and I know them, and they follow me: And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand. My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand. I and my Father are one.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They encircle him ('ekyklōsan'); 'How long dost thou hold our souls in suspense?' — eyewitness scene; Lightfoot: they feared rather than hoped he was Messiah."
+    "prevalence": "majority",
+    "summary": "Barnes presses the original, which he renders as a declaration that they shall not be destroyed for ever, and notes that the verb for plucking means to rob, to seize and carry off as a robber does his prey, so that the picture is of an attempted theft that cannot succeed, the word any covering every power that might attempt it, man or devil, eloquent in error or mighty in rank. He draws the doctrine out in order and does not soften it, that the people are given by the Father to the Son, that the Son gives them the life which issues in glory, that Father and Son are alike pledged to keep them, and that no language could teach the perseverance of the saints more explicitly; then turns it into a test rather than a comfort. On the closing sentence he concedes what the grammar will not give him, since the word for one is neuter and expresses union without specifying its kind, and argues for a union of nature in four steps: the point in debate was power and not counsel, the hearers plainly understood a claim of equality, the speaker did not deny that this was his meaning, and he immediately said something else that produced the same effect. Ellicott notices the shape of the argument rather than its force, the thought mounting with each succeeding sentence, and refuses any limiting addition to the word all. Robertson stays with the manuscripts, where the readings differ between a masculine and a neuter both in the relative and in the comparative, and judges the neuter the likelier."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a cunning attack to draw the word from him before the crowd, that a mob or the Romans might destroy him."
+    "prevalence": "single",
+    "summary": "Gill reads the gift in the same direction, that the life given is already begun in a life of grace, held for them in their representative, and spoken of as given now because it is certain. On the closing sentence he reaches the same conclusion as Barnes by the grammar the others pass over, that the verb is plural, so that the sentence cannot mean one person but must mean one in nature and essence, and here particularly one in power, since the whole point at issue is whether the same hand holds the sheep."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke keeps to the one clause about the Father's greatness, which he glosses as more powerful than all the united energies of men and demons, and draws from it the plainest of consequences, that whoever loves God must be happy, and whoever fears him need fear nothing on this side of eternity."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB note merged here concerns Herod and does not bear on v.24."
+    "voice": "Albert Barnes",
+    "claim": "Turns the promise of perseverance into a test rather than a comfort, since the only evidence anyone has of belonging to that flock is the persevering resignation of himself to God day after day."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Refuses any limiting addition to the word all in the Father is greater than all, extending it to every creature and every power, and even to the Son considered in his subordination to the Father."
+   },
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Leaves the doctrine aside for the manuscripts, where relative and comparative alike vary between masculine and neuter, and judges the neuter the likelier reading."
    }
   ],
   "themes": [
-   "tell us plainly",
-   "kept in suspense",
-   "a snare not a question",
-   "Messianic demand"
+   "Jesus answered them, I told you, and ye believed not: the works that I do in my Father’s name, they bear witness of me.",
+   "But ye believe not, because ye are not of my sheep, as I said unto you.",
+   "My sheep hear my voice, and I know them, and they follow me:",
+   "And I give unto them eternal life; and they shall never perish, neither shall any man pluck them out of my hand.",
+   "My Father, which gave them me, is greater than all; and no man is able to pluck them out of my Father’s hand.",
+   "I and my Father are one."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "An indirect answer — the word 'Messiah' was impossible given their political misconception; his works in the Father's name already bear witness (John 5:36)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he does not conceal that he is the Christ but reproaches their obstinate malice — the fault of not knowing him is their own."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I told you",
-   "works bear witness",
-   "indirect answer",
-   "unbelief their own fault"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they believe not because they are reprobate — faith is a special gift; their unbelief detracts nothing from the Gospel."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke/Wesley: not a divinely-imposed inability — they are 'not sheep' because they proudly refuse to hear and follow."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Barnes names the moral cause — pride, prejudice, vainglory keep them from the evidence (John 8:47)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does unbelief follow from not being elect sheep, or are they 'not sheep' because they refuse to follow?",
-    "sides": [
-     {
-      "position": "they believe not because they are not of the elect",
-      "holders": [
-       "Calvin",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "they are not sheep because they will not hear and follow",
-      "holders": [
-       "Wesley",
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "unbelief and election",
-   "not of my sheep",
-   "reprobation vs free refusal",
-   "Calvinist/Arminian debate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The threefold mark — hear, are known, follow — repeats vv.4, 14, in contrast with the doubting Jews."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: an argument from contraries — God effectually calls the elect, so the sheep are proved by their faith and obedience."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley: three conditions (hear by faith, are approved as loving, follow) with three promises annexed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "my sheep hear my voice",
-   "marks of the sheep",
-   "election vs conditions",
-   "following Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Eternal life given now; emphatic double negative 'shall never perish'; none shall snatch them from his hand (John 6:40; 17:12)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: an inestimable fruit of faith — assurance of security, resting on Christ the faithful guardian and the power of God."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: security bound to the marks of v.27 — those who continue to hear and follow shall never perish."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "eternal life",
-   "never perish",
-   "none can pluck them",
-   "assurance/perseverance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A textual crux ('who is greater' vs neuter 'that which he gave is greater'); either way the Father's supreme power over all secures the sheep (John 6:37)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the Father is mightier than all the energies of men and demons — the lover of God need fear nothing."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the text 'the Father who is greater than all' or 'that which he gave me is greater than all'?",
-    "sides": [
-     {
-      "position": "the neuter reading (the gift is greater)",
-      "holders": [
-       "Westcott-Hort"
-      ]
-     },
-     {
-      "position": "the Father is greater than all",
-      "holders": [
-       "Ellicott",
-       "Barnes",
-       "most"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the Father's hand",
-   "greater than all",
-   "double security",
-   "omnipotence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Neuter 'hen' = one essence/nature, not one person; 'we are' refutes Sabellius, 'one' refutes Arius (Robertson, Wesley)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley/Clarke: unity not of will only but of power and nature — a claim no mere man could make without blasphemy."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: in context it asserts the agreement and shared power that secures the sheep, though grounded in unity of nature."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'I and the Father are one' argue first from essence or from shared operation/power?",
-    "sides": [
-     {
-      "position": "primarily unity of essence/nature",
-      "holders": [
-       "Wesley",
-       "fathers",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "in context unity of operation/power securing the sheep, grounded in nature",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "I and the Father are one",
-   "deity of Christ",
-   "one essence",
-   "Sabellius and Arius refuted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "31": {
   "voices": [
    "Augustine",
    "Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Stoning was the blasphemer's penalty (Lev 24:14-16); 'again' recalls 8:59 — they grasped his claim to equality with God."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: 'I and my Father are one' kindled their rage; Hilary turns it against heretics who deny what the Jews understood."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: unbelief is the mother of rage — their intent in questioning (v.24) is now exposed in their thirst for slaughter."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "took up stones",
-   "blasphemy charge",
-   "they understood the claim",
-   "unbelief's rage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin"
   ],
+  "range": "31-33",
+  "pericope_label": "Then the Jews took up stones again to stone him. Jesus answered them, Many good works have I shewed you from my Father; for which of those works do ye stone me? The Jews answered him, saying, For a good work we stone thee not; but for blasphemy; and because that thou, being a man, makest thyself God.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "'Many good (kala, noble) works from the Father' — beneficent healings; he appeals to them against the stones."
+    "summary": "Barnes notes that these were the only works there were to appeal to, so that the appeal could be made confidently, and adds the reflection that it would be a happy thing if everyone under persecution could point his persecutors to such a record of his own innocence. Ellicott dissents about which quality of the works is in view, arguing that the word does not make their beneficence prominent but their moral excellence, and that no English word quite carries it, though excellent or distinguished come nearer than good; he notices too that the question uses a word marking quality rather than mere distinction, and that in the reply the preposition is not the causal one of the previous verse but the word proper to an indictment. Robertson reads the same reply as a piece of evasion, since taken literally it denies that any good deed had brought them to this, which flatly contradicts what had happened after the healing on the sabbath, and observes that the charge had been stated more accurately on an earlier occasion; he grants the fact at once and puts the only question that matters, that it was blasphemy only if he was not the Son of God."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: a charge of ingratitude — to requite God's manifold favours with cruelty; the works are God's, so their rage is against God."
+    "summary": "Gill lists the good works as works of power that were also works of mercy, the sick healed, the possessed delivered, the lepers cleansed, the blind given sight. Calvin observes the constant habit behind the indictment, that wicked men carry on open war with God and still will not sin without first finding some plausible cover for it."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: a catalogue of mercies — healing, delivering, feeding, teaching freely — 'and is this my reward?'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "good works from the Father",
-   "appeal against violence",
-   "ingratitude",
-   "works attest deity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Their own indictment ('for blasphemy... makest thyself God') is a hostile witness that they rightly heard v.30 as a claim to deity (John 5:18)."
+    "prevalence": "single",
+    "summary": "Clarke reaches the conclusion by a test of his own: had they understood no more than a unity of sentiment with the Father they would not have treated it as blasphemy at all, since in that sense Abraham and Moses and every prophet was one with God, and what enraged them was that they heard a unity of nature. He explains the idiom of showing good works, since in that language it means to do them in earnest and give good things liberally, and supports it from several psalms; and he distinguishes the two uses of the word for blasphemy, which applied to men means speaking injuriously of a person or character and applied to God means speaking impiously, contrary to his nature and perfections and the wisdom of his providence."
    },
    {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they cloak their rage in zeal for God's glory — wicked men never sin without a plausible pretext."
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom makes the same point from the reply rather than the offence, that the speaker did not correct them as men who had misheard him, but confirmed and defended what he had said in the very sense they had taken it."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine puts the argument from the reaction most sharply, that the men who took up stones understood what a later party of interpreters did not, and were angry precisely because they could not take the words about being one with the Father as meaning anything short of equality."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What shows that the hearers heard a claim of equality?",
+    "positions": [
+     {
+      "position": "Their anger, since men who took up stones could not have taken the words as meaning anything less",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "The reply, which confirmed and defended the saying in the sense they had taken it rather than correcting them",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "The charge of blasphemy itself, which a mere unity of sentiment could not have sustained, since in that sense every prophet was one with God",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Which quality of the works does for which of these works do ye stone me point to?",
+    "positions": [
+     {
+      "position": "Their beneficence, works of power that were works of mercy, shown in the idiom of dealing liberally",
+      "held_by": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Not their beneficence but their moral excellence, which no English word quite carries",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Reads the reply as evasion, since taken literally it contradicts what followed the sabbath healing, and reduces the whole indictment to a single question, whether he was the Son of God."
+   },
+   {
+    "voice": "John Calvin",
+    "claim": "Notices the habit rather than the argument, that wicked men carry on open war with God and still will not sin without first finding some plausible cover for it."
+   }
+  ],
   "themes": [
-   "makest thyself God",
-   "blasphemy charge",
-   "they heard the claim rightly",
-   "pretext of zeal"
+   "Then the Jews took up stones again to stone him.",
+   "Jesus answered them, Many good works have I shewed you from my Father; for which of those works do ye stone me?",
+   "The Jews answered him, saying, For a good work we stone thee not; but for blasphemy; and because that thou, being a man, makest thyself God."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  },
  "34": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Gill",
+   "John Lightfoot"
   ],
+  "range": "34-38",
+  "pericope_label": "Jesus answered them, Is it not written in your law, I said, Ye are gods? If he called them gods, unto whom the word of God came, and the scripture cannot be broken; Say ye of him, whom the Father hath sanctified, and sent into the world, Thou blasphemest; because I said, I am the Son of God? If I do not the works of my Father, believe me not. But if I do, though ye believe not me, believe the works: that ye may know, and believe, that the Father is in me, and I in him.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "From Psalm 82:6 ('law' = whole OT); an a fortiori argument (Hillel's first canon) — 'gods' = the judges who bore God's word."
+    "prevalence": "majority",
+    "summary": "Barnes notes that the word law here covers more than the books of Moses, since the sentence quoted comes from a psalm, and takes the gods of that psalm for magistrates, named so for the dignity of the office, remarking that such a use of the word is rare. He states with unusual care what the argument proves and what it does not: the clause that Scripture cannot be broken settles the authority of the text, so that if the word god is there applied to men in office its application to men is not in itself blasphemous; but the speaker did not deny that he meant the term of himself, nor that it was properly applied to him, nor that it implied he was God, affirming only that his accusers were inconsistent. Sanctified he insists cannot mean made holy, since the Son was always holy, and takes it for setting apart from a common to a sacred use. Ellicott adds that the pronoun is emphatic in both Hebrew and Greek and reads the psalm as God sitting in judgment on the judges he had appointed and giving them a name that represents himself; he fixes the consecration on a moment instead, the Messianic work and the Incarnation which began it, and on the appeal to the works he is gentler and more exacting at once, holding that a higher faith would have believed the speaker himself and preferring a reading which asks them to perceive first and then to know permanently. Lightfoot reports what the rabbis had made of the same verse, calls it a most ridiculous sense, and sets against it the reading he thinks the whole contexture of the psalm requires, that it speaks of the magistracy, to whom the word of God came as an express commission and warrant for governing."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: he clears himself not by denying he is God's Son but by maintaining he justly said so, exposing their malice."
+    "prevalence": "single",
+    "summary": "Gill puts the act of sanctifying far earlier, in the eternal separation of the Son to the work of Mediator before the foundation of the world, and argues that this presupposes his eternal existence and so proves his deity by implication."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke agrees that the word law reaches beyond Moses, says the same of the judges called gods, and thinks this probably the only place in the Hebrew where the word is applied to any but the true God. He calls the reasoning from the works conclusive, since the only way to weaken it was to deny that the miracles were wrought by the power of God, which would have obliged the accusers to maintain that a bad man could work them, so that the argument had a complete triumph."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does sanctified and sent into the world mean?",
+    "positions": [
+     {
+      "position": "Setting apart from a common to a sacred use, the consecration of a man to an office, since the Son was always holy",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "The eternal separation of the Son to the work of Mediator before the foundation of the world",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The consecration to the Messianic work and the Incarnation which began it",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How strong is the closing appeal to the works?",
+    "positions": [
+     {
+      "position": "Conclusive and a complete triumph, since the only escape was to maintain that a bad man could work such miracles",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "A lower ground taken only because a higher faith failed, perception of the works being the step up to permanent knowledge",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Simply that none could do them unless sent from God, the union asserted being possible in no other case",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Lightfoot",
+    "claim": "Reports and then demolishes the rabbinic reading of the psalm, that but for the sin with the calf the fathers would have been like angels and begotten no children, calling it a most ridiculous sense."
+   },
+   {
+    "voice": "Albert Barnes",
+    "claim": "Lists what the speaker declined to deny: that he meant the term of himself, that it was properly applied to him, and that it implied he was God."
+   }
+  ],
   "themes": [
-   "ye are gods",
-   "Psalm 82:6",
-   "argument from lesser to greater",
-   "not a denial"
+   "Jesus answered them, Is it not written in your law, I said, Ye are gods?",
+   "If he called them gods, unto whom the word of God came, and the scripture cannot be broken;",
+   "Say ye of him, whom the Father hath sanctified, and sent into the world, Thou blasphemest; because I said, I am the Son of God?",
+   "If I do not the works of my Father, believe me not.",
+   "But if I do, though ye believe not me, believe the works: that ye may know, and believe, that the Father is in me, and I in him."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The judges were 'gods' as bearers of God's commission; 'the scripture cannot be broken' = its authority is final and unbreakable (Mt 5:19)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: magistracy is appointed by God's will (Rom 13:1-2); the argument rests on the unbreakable authority of Scripture."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'cannot be broken' = nothing written therein can be censured or rejected."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the word of God came",
-   "scripture cannot be broken",
-   "authority of Scripture",
-   "magistrates as 'gods'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Sanctified' = set apart/consecrated to the Messianic office and Incarnation; every word contrasts him with the mere judges of Ps 82:6."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a far higher consecration than believers' — he alone separated that the Spirit's power and God's majesty be displayed (John 6:27)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: a sanctification prior to his mission implying Christ is God in the highest sense, infinitely above those judges."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sanctified and sent",
-   "Son of God",
-   "consecration to office",
-   "claim vindicated not lowered"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He rests his case on doing 'the works of my Father' (which God only can do), repeating his claim to sonship and deity (John 5:17, 36)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a gracious concession — believe only on the plain evidence of the miracles, an evident proof of his Divinity."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: 'if I do not do such works as God only can perform, then believe me not.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "believe me not",
-   "the works of the Father",
-   "testable evidence",
-   "works prove deity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Believe the works' — irrefutable — leading to knowledge of the mutual indwelling 'the Father in me, and I in him' (John 5:36; 17:21)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: they are convicted of sacrilegious contempt for denying reverence to what are undeniably the works of God."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: knowledge may precede or follow faith; 'the Father in me' and 'I and the Father are one' illustrate each other."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "believe the works",
-   "Father in me, I in him",
-   "mutual indwelling",
-   "faith and knowledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
   "voices": [
    "Bede",
-   "Theophylact",
    "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
+   "John Lightfoot"
   ],
+  "range": "39-42",
+  "pericope_label": "Therefore they sought again to take him: but he escaped out of their hand, And went away again beyond Jordan into the place where John at first baptized; and there he abode. And many resorted unto him, and said, John did no miracle: but all things that John spake of this man were true. And many believed on him there.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "They 'kept on seeking' to seize him as before (7:30, 44; 8:20); he escaped, having left them with the impression of a claim to deity."
+    "summary": "Barnes turns the retreat into a general observation, that the persecution was itself the occasion of the journey, so that the wrath of men was made to serve the cause they opposed; on the place he agrees with Lightfoot, and on what the people said of the Baptist he points out the form of their reasoning, that John gave no miracle but foretold the character and the success of the one who came after, and that either a miracle or a prophecy is conclusive proof of a mission. Ellicott works the geography out at length and settles on a place north of the lake on the eastern side, then reads the withdrawal as a turning point, the teaching by divine words having been answered with stones and the appeal to divine works with an attempted arrest, so that the retirement from the city leaves it unvisited until the last Passover; yet he refuses to let the chapter end in the dark, since the light is never wholly absent, and sets the reception on the old ground against the rejection at the capital. He also makes the Baptist's want of signs a kind of evidence, since the man who did no sign had recognised the glory further than anyone else of his generation. Lightfoot answers a different question, identifying the spot by the earlier narrative as the Bethabara where the baptising began."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill draws a distinction in the attempt, that this was not the furious stoning of a moment earlier but a design to lay hold of him and bring him before the council, which is a different and colder intention."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke denies that the phrase means the far bank at all and would render it to the side of Jordan rather than beyond it. He puts the two grounds of the people's belief in order, the testimony of a man they knew to be honest and a prophet, and the miracles they had seen for themselves; then draws a comparison, that the scribes and Pharisees with all their learning could not reach a conclusion so plain, and that truth and common sense are often found with ordinary people whom the insolently wise are willing enough to dismiss as a mob."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Bede/Augustine: they persist in madness, seeking him with bloodthirsty violence; Theophylact: he withdraws to further the faith of the willing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: his escape was a wonderful exertion of divine power restraining their lawless passions; Henry: their hearts were hardened."
+    "prevalence": "single",
+    "summary": "Bede marks the persistence rather than the escape, that they were still in the same madness and tried once more to seize him."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Where is the place beyond Jordan to which he withdrew?",
+    "positions": [
+     {
+      "position": "Not the far bank at all, the phrase meaning to the side of Jordan rather than beyond it",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "The eastern side, north of the lake, the province proper lying west of the river and the name having spread eastward",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The Bethabara of the earlier narrative, identified from the record rather than from the geography",
+      "held_by": [
+       "John Lightfoot",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Bede",
+    "claim": "Marks the persistence rather than the escape, that the same madness held them and they tried once more to seize him."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Refuses to let the withdrawal read as an ending, taking it for the darkness before night while holding to the note struck in the Gospel's opening words, that the light is never wholly absent."
+   }
+  ],
   "themes": [
-   "sought to take him",
-   "escaped their hand",
-   "guarded by providence",
-   "hardened hearts"
+   "Therefore they sought again to take him: but he escaped out of their hand,",
+   "And went away again beyond Jordan into the place where John at first baptized; and there he abode.",
+   "And many resorted unto him, and said, John did no miracle: but all things that John spake of this man were true.",
+   "And many believed on him there."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "He returns to Bethany/Bethabara beyond Jordan (John 1:28), the site of John's early baptizing, and abode there."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin/Gill: a strategic withdrawal — not for ease but to preach and erect a sanctuary in the wilderness after Jerusalem drove him out."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the place where John baptized and gave so honourable a testimony of him."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "beyond Jordan",
-   "Bethabara",
-   "strategic withdrawal",
-   "ministry not idleness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "John wrought no signs but his witness proves true now the people see Jesus; 'prepared soil for Christ' — the light never absent (John 1:5)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the large assembly shows he withdrew not to cease his duty but to build a sanctuary in the wilderness after Jerusalem's rejection."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: 'John did no miracle' — an honour reserved for the One whose forerunner he was."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "John's witness vindicated",
-   "John did no miracle",
-   "prepared soil",
-   "light in darkness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'There many believed' (emphatic) — they recognized in Jesus the original John had drawn (John 1:29-34); reception contrasts Jerusalem's rejection."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: this is why Christ left Jerusalem — there were others appointed to believe (John 11:52)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: they believed on a double ground — the Baptist's trusted testimony and the miracles confirming it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "many believed",
-   "harvest beyond Jordan",
-   "John's witness fruitful",
-   "contrast with Jerusalem"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

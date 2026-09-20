@@ -88065,6 +88065,67 @@
         "23"
       ],
       "note": "Key 22 alone carries 10178 source words across ten voices and key 1 carries 7493, so the two longest keys hold nearly a third of the chapter. Both were tiled as single-verse entries rather than folded into a span, since a pericope covering either would have compressed far below what the rest of the chapter runs at."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "10",
+      "verses": [
+        "22-24"
+      ],
+      "note": "JFB fetch offset: the John 10 catena contains exactly one Jamieson, Fausset and Brown block, at key 24, and it is residue from elsewhere entirely (Samson and the gates of Gaza, Judges 16). No genuine JFB commentary on John 10 is present. Declared in excluded_voices for the vv22-24 tile. Same class of defect as the step-6 JFB offset recorded for matthew 7 and the two-chapters-back residue recorded for matthew 27."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "10",
+      "note": "NEW, systematic: the John catena uses abbreviated inline labels for the fathers (AUG., CHRYS., GREG., ALCUIN, THEOPHYL., HILARY., BEDE.) which synthesis_qa.split_voices cannot see, since it matches full-name labels only. A father is therefore declarable only where some key in the span happens to carry his full name. Cost in this chapter: Theophylact, the Gloss, Alcuin and Gregory are undeclarable throughout, though all four contribute substantively. Augustine was declarable in the vv1-6 tile (key 6 carries 'Augustine:') but NOT in vv7-10, where his best material - the reading of 'all that ever came' as 'came at variance with Me' - had to be dropped for want of a declarable label. This defect is distinct from the Cyril of Jerusalem one and worse in kind: it loses patristic material silently rather than failing loudly."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "10",
+      "verses": [
+        "22-30"
+      ],
+      "note": "Catena blocks run far past their key: the key-22 block is 9,910 words and covers vv22-30 entire. Consequence for tiling: the vv25-30 tile had no fathers declarable at all, since every patristic block bearing on those verses sits under key 22, which belongs to the previous tile. A voice can therefore be undeclarable on precisely the tile whose verses he comments on."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "10",
+      "note": "Cyril of Jerusalem in john 10 — fifth chapter affected by the same tooling gap. His label is present in the raw catena at keys 1, 7, 11, 14, 18, 21 and 38, but synthesis_qa.split_voices never emits it (confirmed again here against the vv16-18 span, which returns Clarke, Barnes, Ellicott, Calvin, Gill, Wesley, Origen and Robertson but not Cyril), so he can be neither declared nor named in excluded_voices. Placement in this chapter: genuine only at key 18, where the Catechetical Lecture on the willing passion answers v18 directly; arguably on point at key 38 (a third testimony to Christ's Godhead); foreign at 1, 7, 11, 14 and 21. Note also that the blocks are duplicated pairwise — keys 1 and 7 carry the identical eternal-life passage, and keys 11 and 14 the identical 'One Lord Jesus Christ' passage."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "10",
+      "verses": [
+        "22-24"
+      ],
+      "note": "Chrysostom stands alone against everyone else on which dedication the feast commemorates. He takes it for the dedication of the temple after the return from Babylon; Barnes, Clarke and the rest take it for the Maccabaean purifying, and the catena's own abbreviated voices (Alcuin, Bede) side against him, Alcuin listing the three dedications in order and assigning this one to Judas Maccabeus. Recorded as a debate on the vv22-24 tile with Chrysostom's position kept, since it is a genuine historical judgment and not an error of the fetch."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "10",
+      "note": "Four entity warnings raised and cleared on john 10, all of them spellings I introduced rather than source corruption: 'Maccabaean' (source has Maccabaeus, Maccabees, Maccabus) rewritten as 'the feast of the Maccabees' and 'the story of the Maccabees'; 'Judaea' in the beyond-Jordan geography (source spells it with the ligature, which the non-ASCII rule forbids in prose) rewritten as 'the province proper'; 'Homeric' (source says only 'Homer represents the goatherds') rewritten as 'a parallel from Homer'. Final state: ten tiles, all grade A, no entity warnings, chapter and corpus gates both clean."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "10",
+      "verses": [
+        "42"
+      ],
+      "note": "Site chrome at the last key of the chapter, now fourteen consecutive chapters with the same defect: key 42 of the john 10 catena is 34,398 words, the great bulk of it raw CSS scraped from the source site (menu, sub-menu, lexicon-search and media-query rules) plus two copyright lines. The genuine commentary on v42 is a small fraction of the block. Cheap to strip corpus-wide with a one-pass filter on the trailing style blob."
     }
   ]
 }
