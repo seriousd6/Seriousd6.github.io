@@ -88734,6 +88734,67 @@
         "36-38"
       ],
       "note": "Survey result worth recording for the next worker, since an earlier note in this notebook concluded that the polish queue had only two landable chapters and that both were already rejected. That is no longer true. Checking every polish chapter for the two conditions that actually matter, namely that it already carries fidelity self-grades and is stamped on the current standard, gives at least these: exodus 28, exodus 36, exodus 39, leviticus 11, leviticus 27, numbers 3, numbers 7, numbers 8, numbers 27, numbers 29, deuteronomy 21, joshua 12 and joshua 21, each with one to three grade-B entries and no missing grades. The exodus 36 and exodus 39 blocked notes are superseded, since both chapters were written after the coverage rule was relaxed and now sit in the tree with eight entries apiece."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "20"
+      ],
+      "note": "The label defect recorded at matthew 3 appears here in its second failure mode, and job 3 shows both modes in one chapter. 'Gregory the Great:' heads blocks at keys 1 and 20 (303 words each). synthesis_qa lists 'Gregory' among its 24 labels, but the regex requires 'Gregory\\s*:' and cannot match 'Gregory the Great:', so the label is invisible. Because these blocks stand FIRST in their keys, with no listed voice before them, split_voices emits them under a None label rather than appending them to a preceding voice — so here the material is lost outright rather than misattributed. Both outcomes follow from the same missing word-boundary and the same closed name list. Gregory the Great is therefore undeclarable in this chapter and his two blocks were dropped."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "3",
+      "verses": [
+        "5",
+        "23"
+      ],
+      "note": "JFB residue in job 3, from 2 Samuel. The block at key 5 is on the ark and who is worshipped there; the block at key 23 is on going round a baca-grove to come upon an enemy's rear. Both are 2 Samuel 5-6 material with nothing to do with Job's lament. Declared in excluded_voices on the vv3-10 and vv20-23 tiles. Note the donor book: every JFB displacement I have recorded until now has come from a book adjacent to the target in the canon or from the same book; 2 Samuel to Job is a long jump, which may mean the offset here is of a different size rather than a different kind."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "3",
+      "verses": [
+        "25"
+      ],
+      "note": "REFINEMENT of the site-chrome finding, now sixteen chapters. Until now I have recorded the chrome as attaching to the LAST KEY of a chapter. In job 3 it attaches to key 25, not key 26. Key 25 holds Ellicott's last block in the chapter (about 40 words of genuine comment followed by roughly 1,000 words of breadcrumb, copyright lines and the StudyLight footer), while key 26 has Gill, Clarke and Wesley but no Ellicott. So the chrome follows the last ELLICOTT block, not the last key. That is a sharper and more testable diagnosis than the one I have been recording, and it should make a corpus-wide filter easier to write: strip from the end of whichever block is Ellicott's last in each chapter."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "3",
+      "verses": [
+        "1-2",
+        "11-15",
+        "24-26"
+      ],
+      "note": "Three clean disagreements in job 3, all recorded as debates. (1) Whether the curse can be excused: Henry allows the extremity of the trouble to excuse it in part; Wesley refuses the excuse outright, since God afterwards reproves Job and Job accuses himself, and calls the curse sinful both as vain and as reflecting on providence. The same split recurs at the knees, where Wesley says Job is unthankfully despising the mercies of God toward helpless infants. (2) What the desolate places built by kings are: Clarke and Ellicott take them for tombs, mausoleums and sepulchral pyramids, Ellicott adding the paradox that gorgeous tombs are desolate precisely because only the dead tenant them; Wesley reads them as cities rebuilt or founded where there had been solitude. (3) Whether 'I was not in safety' refers to Job's prosperity: Gill says it cannot, since he was then plainly in safety with a hedge about him, while Clarke reads the clauses as questions so that it does, and Wesley makes it a claim about conduct rather than circumstance."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "3",
+      "verses": [
+        "20-23"
+      ],
+      "note": "The sharpest single observation in the chapter is Ellicott's, and it is worth keeping where a reader will find it: the hedge Job complains of in v23, whom God hath hedged in, is described with the very expression used in chapter 1 for his protection, where the hedge about him was the reason the adversary could not touch him. The same word marks the mercy and the grievance. Preserved as an outlier on the vv20-23 tile. Beside it, Henry notices that the Hebrew of v20 asks why doth he give light with no subject expressed, so that Job means God and will not name him, which Henry sets against the adversary's prediction that the man would curse God to his face."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "3",
+      "note": "job 3 rewritten from 26 legacy per-verse entries (5 graded B, all 26 stamped legacy-unversioned) to 6 pericope tiles: vv1-2, vv3-10, vv11-15, vv16-19, vv20-23, vv24-26. 18,708 usable source words in, 3,871 out. All 6 grade A (compress 0.441-0.463, ttr 0.603-0.645), no entity warnings, validator and both gates clean. Two drafts came in over the ceiling and were trimmed before installation; nothing reached the data tree over-length."
     }
   ]
 }
