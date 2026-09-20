@@ -1,1124 +1,514 @@
 {
  "1": {
   "voices": [
-   "Matthew Henry",
    "John Gill",
-   "John Wesley",
+   "Matthew Henry",
+   "Keil and Delitzsch",
+   "Charles Ellicott",
    "Adam Clarke",
-   "Charles Ellicott"
+   "John Wesley"
   ],
+  "range": "1-3",
+  "pericope_label": "Now those that sealed were, Nehemiah, the Tirshatha, the son of Hachaliah, and Zidkijah, Seraiah, Azariah, Jeremiah, Pashur, Amariah, Malchijah,",
   "schools": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry marks the change from covenanting by blood-sacrifice at Sinai to sealing written articles, orders the four ranks (governor, priests, Levites, chiefs), and reads Ezra's absence as leaving others their part after his work as scribe."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke lays down the four sealing classes and wonders that neither Ezra, Eliashib, nor any prophet appears; Wesley has them subscribe in their own and all the people's names, Ezra kept away by sickness or impediment (cf. Neh. 12:36)."
-   },
-   {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott takes Zidkijah for Zadok the scribe, Nehemiah's secretary (Neh. 13:13; cf. Ezra 4:8)."
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch fix the sense of the opening words against two older readings: the phrase means upon all this, on the foundation of the preceding prayer and penitence, and not after all this, nor in all the evil that had befallen us as Rashi and Aben Ezra took it; the word for what was made is a settlement or sure agreement rather than a covenant in the sacrificial sense. On the Levitical names they keep to the record, that fourteen Levites sealed, that the sons of two of them had returned with Zerubbabel among seventy-four others, that four of the names occur elsewhere as heads of orders, and that of the rest nothing further is known though they may be regarded as heads of Levitical houses. Ellicott works by identification: the first name on the list is the family name of the high-priestly house to which both Ezra and Eliashib belonged, so that one of them, probably Ezra, affixed its seal, and another of the names he takes for Zadok the scribe, who was Nehemiah's secretary."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes simply that those who sealed were the persons named following."
+    "summary": "Gill says only that these are they who sealed the covenant, and leaves the identifications and the arithmetic to the others."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke sets out the order of subscription in four classes, Nehemiah first as governor, then the priests, then the Levites, then the chiefs of the people, and finds it strange that neither Ezra nor the high priest Eliashib nor any of the prophets appears, though some of the prophets must have been at Jerusalem. He closes with a textual note the others do not raise, that the whole of this chapter except its first two verses is wanting in the Arabic version. Wesley reads the sealing as done both in the subscribers' own names and in the name of all the rest, and proposes an impediment for Ezra, sickness or something like it, supporting the guess from the later narrative where Ezra reappears at the dedication of the wall."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry begins with the change in the form of covenanting, that when Israel was first brought into covenant it was by sacrifice and the sprinkling of blood, while here it is by the more natural and common way of sealing and subscribing written articles which bound the people to no more than was already their duty. He counts the subscribers, twenty-two priests, seventeen Levites and forty-four of the chief of the people, and draws his lesson from the order rather than the numbers, that those above others in dignity and power should go before them in the way of God. He observes that the Levites who subscribed included those who had been the mouth of the congregation in prayer, which showed them affected by what they had said and unwilling to bind burdens on others that they declined to touch; and that most of those named earlier as heads of houses appear here among the first of the chief of the people, the present head bearing the name of him who was head when they came out of Babylon. On Ezra's absence he supposes that, having already done his part as a scribe, he left it to others to do theirs."
    }
   ],
   "debates": [
    {
-    "question": "Why is Ezra absent from the list of those who sealed?",
-    "sides": [
+    "question": "Why is Ezra not among those who sealed?",
+    "positions": [
      {
-      "position": "prevented by sickness or some extraordinary impediment",
-      "holders": [
+      "position": "Having already done his part as a scribe, he left this part to others",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Unexplained and strange, and the difficulty is wider, since Eliashib and the prophets are missing too",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Hindered by sickness or some like impediment, from which he was free by the dedication of the wall",
+      "held_by": [
        "John Wesley"
       ]
      },
      {
-      "position": "having done his part as a scribe at the reading of the law, he left it to others to do theirs",
-      "holders": [
-       "Matthew Henry"
+      "position": "He is there: the first name is his high-priestly family name, and probably Ezra himself affixed its seal",
+      "held_by": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Notes that the whole of this chapter except its first two verses is wanting in the Arabic version, a textual observation no other voice raises."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Observes that the Levites who subscribed were those who had been the mouth of the congregation in prayer, so that they would not bind burdens on others which they themselves declined to touch."
+   }
+  ],
   "themes": [
-   "sealing the covenant",
-   "representative subscription",
-   "the four ranks",
-   "the absence of Ezra",
-   "a written renewal of an old duty"
+   "Now those that sealed were, Nehemiah, the Tirshatha, the son of Hachaliah, and Zidkijah,",
+   "Seraiah, Azariah, Jeremiah,",
+   "Pashur, Amariah, Malchijah,"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "Charles Ellicott"
+  ],
+  "range": "8-9",
+  "pericope_label": "Maaziah, Bilgai, Shemaiah: these were the priests. And the Levites: both Jeshua the son of Azaniah, Binnui of the sons of Henadad, Kadmiel;",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "unanimous",
+    "summary": "Ellicott is the only voice on these two verses and his notes are short. On the first he observes that what the text calls the priests means the names of the priestly families rather than of individual men, referring the reader to the fuller priestly list given later in this book. On the second he reports only how far the names can be checked, that five of the Levitical family names are traceable in the earlier registers of the return and in the list of those who came up with Ezra. He offers no identification of the remaining names, no account of why these particular houses sealed, and no comment on the order in which they stand."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Establishes that the signatories of both orders sign as houses rather than as individuals, and that a minority of the Levitical houses can be matched against registers already in hand."
+   }
+  ],
+  "themes": [
+   "Maaziah, Bilgai, Shemaiah: these were the priests.",
+   "And the Levites: both Jeshua the son of Azaniah, Binnui of the sons of Henadad, Kadmiel;"
+  ],
+  "thin": true,
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 4.8
+   }
+  }
+ },
+ "11": {
+  "voices": [
+   "Keil and Delitzsch"
+  ],
+  "range": "11",
+  "pericope_label": "Micha, Rehob, Hashabiah,",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "unanimous",
+    "summary": "Keil and Delitzsch treat the roll of the chief of the people as a document to be checked against another document. Forty-four names stand under the heading; thirteen are found in the register of the kindreds who returned with Zerubbabel, and the remaining thirty-one are accounted for as heads of the particular houses into which those larger kindreds were divided, or as elders of the smaller towns of Benjamin and Judah which had no kindred name to sign under. The arithmetic between the two lists does not resolve in one direction: the earlier register carries thirty-three kindreds and places against forty-four here, but several names standing there are missing here, so the later roll is both longer and in places different rather than the earlier roll with names appended. Two causes are offered and neither is made to carry the difference alone, that a kindred included several houses whose heads each subscribed separately, and that the number of houses had itself grown over the intervening years. They do not apportion the increase between the two causes, nor explain the names that have dropped out."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Keil and Delitzsch",
+    "claim": "Establish that the roll is a list of signing units rather than of kindreds, so that it cannot be set against the earlier register name for name and a difference in length carries no conclusion about how many families had returned."
+   }
+  ],
+  "themes": [
+   "Micha, Rehob, Hashabiah,"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.95
+   }
+  }
+ },
+ "14": {
+  "voices": [
+   "Charles Ellicott"
+  ],
+  "range": "14",
+  "pericope_label": "The chief of the people; Parosh, Pahath–moab, Elam, Zatthu, Bani,",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "unanimous",
+    "summary": "Ellicott is again the only commentator, and his note is about the kind of list this is rather than about any name in it. The heading covers a mixture: some of the names are personal, some belong to families, some represent places, and some stand independent of any of these, so that the list can be read neither as a roll of individuals nor as a roll of clans. His second observation is comparative, that setting this catalogue beside the register of those who returned from the captivity shows the years between to have added to the number of houses. The growth is left as an observation rather than pressed into an argument, with no figure given and no account of whether it came from natural increase, from the subdivision of older kindreds, or from families joining the community after the return."
+   }
+  ],
+  "debates": [],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Notes that the heading covers personal names, family names, place names and independent names together, so the catalogue cannot be read consistently as either a roll of persons or a roll of clans."
+   }
+  ],
+  "themes": [
+   "The chief of the people; Parosh, Pahath–moab, Elam, Zatthu, Bani,"
+  ],
+  "thin": true,
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 3.98
+   }
   }
  },
  "28": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott weighs 'all they that had separated themselves' — not a recognised body of proselytes but the descendants of Israelites left in the land (cf. Neh. 9:2), the covenant mindful of the danger from commerce with the heathen; the children of understanding included in the oath."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: all the people were bound through their representatives in the classes that sealed, as truly as if each had signed."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'the rest of the people' for those who did not themselves sign and seal."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the unsealed multitude",
-   "bound through representatives",
-   "separated unto the law of God",
-   "children of understanding",
-   "a covenant reaching every rank and age"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "John Wesley",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch render 'holding with,' distinguish the community from the princes and heads of orders, and read the newly joined as Israelites left in the land; Ellicott weighs the oath (assuming the obligation) and the curse (imprecating the penalty), cf. Deut. 29:12."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley dwells on the nobles called brethren, rich and poor meeting in the things of God; Clarke: the unsealed bound themselves by solemn oath to walk according to the law of Moses."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the cleaving as ratifying assent to what the nobles had sealed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "cleaving to the nobles",
-   "the oath and the curse",
-   "ratifying assent",
-   "noble and commoner as brethren",
-   "entering the covenant by oath"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch set the refusal of heathen marriage at the head of the covenant's several engagements, the first way that had to be shut if the community would walk by God's law."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the people had been guilty of this and were prone to it still, the guilt owned at Ezra 9:2 — the door by which idolatry entered."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke glosses the vow as making 'no affinity with the people of the land.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no intermarriage with the heathen",
-   "making no affinity",
-   "striking first at the besetting sin",
-   "the door of idolatry barred"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "John Wesley"
   ],
+  "range": "28-31",
+  "pericope_label": "And the rest of the people, the priests, the Levites, the porters, the singers, the Nethinims, and all they that had separated themselves from the people of the lands unto the law of God, their wives, their sons, and their daughters, every one having knowledge, and having understanding; They clave to their brethren, their nobles, and entered into a curse, and into an oath, to walk in God’s law, which was given by Moses the servant of God, and to observe and do all the commandments of the Lord our Lord, and his judgments and his statutes; And that we would not give our daughters unto the people of the land, nor take their daughters for our sons: And if the people of the land bring ware or any victuals on the sabbath day to sell, that we would not buy it of them on the sabbath, or on the holy day: and that we would leave the seventh year, and the exaction of every debt.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott extends the rule to the holy days, reads 'leave the seventh year' of the untilled ground, and 'the exaction of every debt' as the Lord's release of Deut. 15:2."
-   },
-   {
-    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke gathers both vows — solemnly keep the sabbath, let the land rest every seventh year (Exod. 23:10-11); Wesley warns the profanation of the sabbath is a sure inlet to all profaneness."
+    "summary": "Keil and Delitzsch define the rest of the people as the members of the community exclusive of the princes and the heads of the priestly and Levitical orders, and suppose the Nethinim, among whom they count the servants of Solomon, to have been represented by the heads of the Levites. Those who had separated themselves they identify as the descendants of the Israelites left in the land who were now joining the new community, and they read the construction as significant, since the separation is not merely from the peoples but toward the law of God, which is to say in order to live by it. Ellicott refuses the natural reading of that clause on three grounds: there is as yet no record of a recognised body of converts from heathenism, the word for separated stands elsewhere in this book with another sense, and the following verses show the covenant concerned precisely with the danger arising out of commerce with the heathen. He adds that children able to take the oath intelligently were included, calls the people's act a union springing from a deep national conviction, and distinguishes the two instruments exactly, the oath assuming the obligation and the curse imprecating the penalty of violation. On the sabbath he extends the prohibition to the great festivals equally with the weekly rest, takes the sabbatical year as following naturally with the ground left untilled, and identifies the last clause with the release of debts belonging to that year."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill glosses the 'ware' as any goods brought to be sold on the holy day."
+    "summary": "Gill takes the rest of the people for those who did not themselves sign and seal, and has them declaring their approbation and ratifying what had been done in their name. On the marriage clause he reads it against the history, that they had intermarried already, were prone to it, and did it again after this; and he glosses the word for ware as anything that could be sold and carried away."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke turns the representation into a claim, that every one of the rest had his representative in one or another of the classes that sealed and was bound by their sealing, and observes that although they did not sign the instrument they bound themselves by a solemn oath to fulfil its conditions; the marriage clause he reduces to a phrase, that they would make no affinity with the people of the land, and the sabbath clause to two resolutions, that the sabbath should be kept and the land have its own rest every seventh year. Wesley presses the social point hardest, that the commonalty agreed with their nobles, that great men never look so great as when they encourage religion and are examples of it, and that the nobles are here called their brethren since in the things of God rich and poor meet together; on the sabbath he adds the reason for singling out that commandment, since its profanation is a sure inlet to all manner of profaneness."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are they that had separated themselves from the people of the lands?",
+    "positions": [
+     {
+      "position": "Not converts from heathenism: no such recognised body is yet on record, the word bears another sense elsewhere in this book, and the covenant is aimed at the danger of commerce with the heathen",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The descendants of the Israelites left in the land, now joining the new community, separated toward the law of God in order to live by it",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "claim": "Holds that great men never look so great as when they encourage religion and are examples of it, nor can they secure the regard of the best of their inferiors by anything more surely."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Separates the two instruments precisely, the oath assuming the obligation and the curse imprecating the penalty of its violation."
+   }
+  ],
   "themes": [
-   "keeping the sabbath",
-   "refusing sabbath trade",
-   "the sabbatical year and release",
-   "the sabbath the gate against profaneness"
+   "And the rest of the people, the priests, the Levites, the porters, the singers, the Nethinims, and all they that had separated themselves from the people of the lands unto the law of God, their wives, their sons, and their daughters, every one having knowledge, and having understanding;",
+   "They clave to their brethren, their nobles, and entered into a curse, and into an oath, to walk in God’s law, which was given by Moses the servant of God, and to observe and do all the commandments of the Lord our Lord, and his judgments and his statutes;",
+   "And that we would not give our daughters unto the people of the land, nor take their daughters for our sons:",
+   "And if the people of the land bring ware or any victuals on the sabbath day to sell, that we would not buy it of them on the sabbath, or on the holy day: and that we would leave the seventh year, and the exaction of every debt."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
   }
  },
  "32": {
   "voices": [
    "John Gill",
+   "Keil and Delitzsch",
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott"
   ],
+  "range": "32-34",
+  "pericope_label": "Also we made ordinances for us, to charge ourselves yearly with the third part of a shekel for the service of the house of our God; For the shewbread, and for the continual meat offering, and for the continual burnt offering, of the sabbaths, of the new moons, for the set feasts, and for the holy things, and for the sin offerings to make an atonement for Israel, and for all the work of the house of our God. And we cast the lots among the priests, the Levites, and the people, for the wood offering, to bring it into the house of our God, after the houses of our fathers, at times appointed year by year, to burn upon the altar of the Lord our God, as it is written in the law:",
   "schools": [
    {
-    "school": "puritan-evangelical",
+    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Henry marks the turn from ceasing evil to learning to do well: a self-imposed levy to furnish God's table, the people charging themselves, and no blessing to be looked for where public worship is not maintained."
+    "summary": "Keil and Delitzsch treat the payment as a revival of the Mosaic precept that every man of twenty years and upwards should give half a shekel, a tribute still being paid in the gospel period, with the rate alone altered, lowered to a third in consideration of the poverty of the greater part of the community; they reject Aben Ezra's view that the third was an addition to the half rather than a reduction of it as unsupported by the text, note that the text does not say who was liable and take this as evidence that the custom was already well known, and restrict the term for service to the regular worship rather than the building and repair of the temple. On the wood they state the gap in the law exactly, that it prescribes fire to be kept burning and wood to be burnt every morning but gives no direction about procuring it, so that the rulers must always have made some arrangement. Ellicott finds in the arrangement the origin of the feast of the wood offering, a single day afterwards substituted for the appointed times through the year, and adds that the lot determined the order in which the classes supplied it."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill notices first what kind of thing this is, an ordinance the people made among themselves binding them to what the law of God had not bound them to. On the wood he notes only how the lot was drawn, the priests and Levites together in one and the people in another."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke explains the third-shekel (against the law's half of Exod. 30:13) by their poverty, the half resumed in prosperity as the didrachma of Matt. 17:24 shows."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads it the origin of the annual temple-rate later raised to a half shekel, the ancient half having been only an occasional tax."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they made an ordinance for themselves, binding themselves to what the written law had not required."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the self-imposed temple tax",
-   "a third of a shekel",
-   "poverty and the lowered rate",
-   "maintaining public worship",
-   "every hand giving its little"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch fix 'we laid upon ourselves' as a revival of Exod. 30:13 (still paid in Christ's day, Matt. 17:24), lowered to a third for poverty, and 'the service of the house' as the regular worship, not the building — rejecting Aben Ezra's 'third in addition.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads it as defraying the constant expense, beginning with the shewbread."
+    "summary": "Clarke supplies the historical reason why an arrangement for the wood was needed now. Fetching it had been the business of the Nethinim, the hewers of wood and drawers of water, and after the captivity few of them were to be found, since as descendants of the Gibeonites they were reckoned little better than slaves and had as much interest in staying where they were as in returning. With too few left, the lot was cast, and he is precise that it did not decide who should furnish the wood but which class or district should furnish it at which season, so that the supply should be continuous. He reports that the bringing of the wood afterwards grew into a great day and was constituted a feast, which Josephus names as the carrying of the wood, and remarks that it is absent from the sacred writings because while the Nethinim were numerous there was no occasion for it."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry itemizes the daily and festal offerings and presses that worship worth keeping is worth paying for."
+    "summary": "Henry approaches the fund from the side of necessity. There had formerly been treasures in the house of the Lord for this charge and they were gone, with no settled fund in their place; the table and altar were a constant expense, they had no rich king to provide as Hezekiah had, and the priests' own maintenance was too small to bear it. So the people charged themselves, and he makes the arithmetic the moral, that when every one will act and every one will give, though but little, the whole amount will be considerable. He is careful to add that the governor did not impose the tax but that the people made it an ordinance for themselves."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the third of a shekel a new ordinance or an altered old one?",
+    "positions": [
+     {
+      "position": "New: an ordinance the people made among themselves, binding them to what the law of God had not",
+      "held_by": [
+       "John Gill",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "Old: a revival of the Mosaic half-shekel, the rate alone lowered for the poverty of the community",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Explains the shortage of Nethinim after the captivity by their status, since as descendants of the Gibeonites they were reckoned little better than slaves and had as much interest in staying in the land of their captivity as in returning."
+   },
+   {
+    "voice": "Matthew Henry",
+    "claim": "Grounds the whole fund in the loss of the old temple treasures and the absence of a rich king such as Hezekiah, so that the charge fell on small yearly contributions from everyone."
+   }
+  ],
   "themes": [
-   "furnishing the temple service",
-   "shewbread and daily offerings",
-   "the revived half-shekel law",
-   "worship as regular service",
-   "the cost of keeping worship"
+   "Also we made ordinances for us, to charge ourselves yearly with the third part of a shekel for the service of the house of our God;",
+   "For the shewbread, and for the continual meat offering, and for the continual burnt offering, of the sabbaths, of the new moons, for the set feasts, and for the holy things, and for the sin offerings to make an atonement for Israel, and for all the work of the house of our God.",
+   "And we cast the lots among the priests, the Levites, and the people, for the wood offering, to bring it into the house of our God, after the houses of our fathers, at times appointed year by year, to burn upon the altar of the Lord our God, as it is written in the law:"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch note the law required the altar's standing fire (Lev. 6:12) but gave no rule for procuring wood, so the rulers must provide it; Ellicott sees here the origin of the feast of the wood-offering, the lot ordering the classes."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the wood had been the Nethinim's charge, but few returned, so districts brought it by lot in turn — later the feast Xylophoria named by Josephus, though not in Scripture."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes priests and Levites in one lot, the people in another."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the wood-offering by lot",
-   "fuel for the altar fire",
-   "the decayed Nethinim",
-   "the later feast of wood",
-   "the humblest service covenanted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "35": {
   "voices": [
-   "John Gill",
    "Charles Ellicott",
-   "Matthew Henry"
+   "John Gill",
+   "Keil and Delitzsch",
+   "Adam Clarke"
   ],
+  "range": "35-39",
+  "pericope_label": "And to bring the firstfruits of our ground, and the firstfruits of all fruit of all trees, year by year, unto the house of the Lord: Also the firstborn of our sons, and of our cattle, as it is written in the law, and the firstlings of our herds and of our flocks, to bring to the house of our God, unto the priests that minister in the house of our God: And that we should bring the firstfruits of our dough, and our offerings, and the fruit of all manner of trees, of wine and of oil, unto the priests, to the chambers of the house of our God; and the tithes of our ground unto the Levites, that the same Levites might have the tithes in all the cities of our tillage. And the priest the son of Aaron shall be with the Levites, when the Levites take tithes: and the Levites shall bring up the tithe of the tithes unto the house of our God, to the chambers, into the treasure house. For the children of Israel and the children of Levi shall bring the offering of the corn, of the new wine, and the oil, unto the chambers, where are the vessels of the sanctuary, and the priests that minister, and the porters, and the singers: and we will not forsake the house of our God.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the firstfruits following the covenant's 'we made ordinances,' the minute specification implying that neglect had crept in."
+    "prevalence": "several",
+    "summary": "Ellicott marks the change of construction at the head of the section, that the firstfruits follow on the ordinance made earlier rather than on the casting of lots, and infers from the minuteness of the specification that neglect had crept in, the Mosaic law having made this expression of natural piety an obligation. He observes that the sons stand collocated with the cattle as elsewhere in the law, where the cattle are expressly the unclean beasts, so that sons and unclean beasts alike were redeemed with money while the firstlings of herds and flocks went to the ministering priests for sacrifice; he explains that the priest had to be present when the Levites gathered tithes in the country in order to secure the priests' own portion, identifies the chambers as the store-chambers described in the account of the first temple with a treasure-house for tithes added later, and glosses the cities of tillage as the agricultural towns where produce was first deposited. On the closing pledge he notes drily that both the promise and its violation are explained by a later chapter of this same book. Keil and Delitzsch set out the whole scheme of firstfruits and firstborn, the ground and the fruit trees, the sons redeemed at the priest's valuation, the unclean cattle redeemed likewise, and the firstlings whose fat was consumed on the altar while the flesh fell to the priests; they note that the construction changes at this point from the infinitive to the first person, so that the undertaking passes from description into promise, and read the last clause as confirming what precedes."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: not cast by lot as the wood but bound by oath per the law; Aben Ezra would restrict it to the sheaf and the two wave-loaves."
+    "summary": "Gill separates the firstfruits from the lot, holding that they were not settled by lot but undertaken by oath according to the law, and reports the narrower view of Aben Ezra restricting the term to the sheaf of the firstfruits and the two wave loaves. He identifies the cattle here meant as the unclean, the ass and its kind, and puts the check on the Levites in terms of motive rather than mechanism, that a priest was always present to observe the quantity received so that they might neither be tempted nor suspected."
    },
    {
-    "school": "puritan-evangelical",
+    "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Henry gathers firstfruits and tithes as the ministers' maintenance, the withholding of which is the robbing of God charged in Mal. 3:8."
+    "summary": "Clarke supplies the reason behind the institution of the firstborn, that the Lord had a right to all of them and was pleased to take the tribe of Levi instead, so that the Levites served at the tabernacle and temple in the room of the firstborn of all the tribes. On the tithes he states the mechanism plainly, the tithes of all the produce going to the Levites and a tenth part of those to the priests, which is what the tithe of the tithes means. The closing pledge he takes as a text rather than a clause, building a whole scheme of the household of God upon it and ending by asking the reader whether he belongs to that house, whether he attends its ordinances, and whether he has forsaken it."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Turns the closing pledge into a text, building from it a scheme of the house of God and its family and officers, and ending with direct questions to the reader about his own place in it."
+   },
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Reads the pledge against what followed, noting that both the promise not to forsake the house of God and its breach are explained by a later chapter of this same book."
+   }
+  ],
   "themes": [
-   "the firstfruits",
-   "sworn duty, not lot",
-   "detail as a sign of past neglect",
-   "maintaining God's ministers",
-   "the first and best given to God"
+   "And to bring the firstfruits of our ground, and the firstfruits of all fruit of all trees, year by year, unto the house of the Lord:",
+   "Also the firstborn of our sons, and of our cattle, as it is written in the law, and the firstlings of our herds and of our flocks, to bring to the house of our God, unto the priests that minister in the house of our God:",
+   "And that we should bring the firstfruits of our dough, and our offerings, and the fruit of all manner of trees, of wine and of oil, unto the priests, to the chambers of the house of our God; and the tithes of our ground unto the Levites, that the same Levites might have the tithes in all the cities of our tillage.",
+   "And the priest the son of Aaron shall be with the Levites, when the Levites take tithes: and the Levites shall bring up the tithe of the tithes unto the house of our God, to the chambers, into the treasure house.",
+   "For the children of Israel and the children of Levi shall bring the offering of the corn, of the new wine, and the oil, unto the chambers, where are the vessels of the sanctuary, and the priests that minister, and the porters, and the singers: and we will not forsake the house of our God."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch trace each due to its statute (Exod. 23:19; Num. 18:13, 16, 17); Ellicott sharpens the distinction — sons and unclean cattle redeemed by valuation, clean firstlings brought for sacrifice."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill distinguishes the firstborn of sons and unclean cattle (redeemed) from the clean firstlings (offered)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke grounds the law in Exod. 13:2 — the Levites taken in the room of Israel's firstborn."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the firstborn and firstlings",
-   "redeemed or offered",
-   "the Levites as ransom of the firstborn",
-   "resuming forgotten dues",
-   "the increase held in trust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch lay out the flow of dues — firstfruits and heave-offerings to the priests' chambers, the tithe of the ground to the Levites in the country towns; Ellicott identifies the store-chambers (1 Kings 6; Hezekiah's treasure-house, 2 Chron. 31:11) and the cities of tillage."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the first of the dough brought per the law, a cake set apart for the priest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "firstfruits of dough and the tithes",
-   "priests' chambers and Levites' tithe",
-   "the store-chambers of the temple",
-   "feeding the whole ministering household",
-   "the cities of tillage"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sends the reader to Num. 18:22-26 for the distinction of priest and Levite, the priest present when tithes were gathered in the Levitical cities to secure the tithe of the tithe."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke explains the 'tithe of the tithes' — the tenth the Levites gave the priests out of the tithe they received (Num. 18:26)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the priest's presence as a safeguard against defrauding the priests of their due."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priest with the Levites",
-   "the tithe of the tithes",
-   "a guard against fraud",
-   "honest handling of the sanctuary's revenue"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke swells 'we will not forsake the house of our God' into a meditation — the Church the house of God, believers his family, ministers its officers, ordinances its food — those who forsake it not continue in faith, grow, labour, and maintain its offerings."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott notes the priests exempt from gathering the tithes, and that the pledge and its breach are alike explained by Neh. 13:11-14."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the offerings of corn, wine, and oil flowing to the temple chambers."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "we will not forsake the house of our God",
-   "the house as the Church",
-   "the pledge and its later breach",
-   "sustaining the worship",
-   "to forsake the house is to forsake God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch describe the written amanah, a sure agreement built 'upon all this' preceding penitence and sealed by the heads of houses (the word recurs at Neh. 11:23); Ellicott takes Seraiah for the high-priestly house of Ezra and Eliashib, one of whom — probably Ezra — sealed for it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sealed covenant document",
-   "the amanah, a sure agreement",
-   "Seraiah the high-priestly house",
-   "representative sealing",
-   "a written and witnessed bond"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch treat the priestly names as the courses of the return (cf. Ezra 2:36ff.), heads of houses each standing for his order, kept in their ranks for exactness."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry numbers the priests at twenty-two, next after the governor, the teachers of the law foremost in binding themselves to keep it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reckons the priests the second sealing class (vv. 2-8) and marvels that neither Ezra nor Eliashib appears."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priestly courses",
-   "heads of houses",
-   "the teachers foremost",
-   "a representative roll",
-   "the missing Ezra and Eliashib"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch place the Levites among some fourteen heads of houses and pass to the forty-four chiefs (thirteen from Zerubbabel's kindreds, cf. Ezra 2), the greater number laid to the growth of the houses; Ellicott finds the family names traceable in the earlier lists."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reckons seventeen Levites, most of them the mouth of the congregation in the prayer of Neh. 9:4-5 — those who lead in prayer should lead in every good work."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps them in the third sealing class, the Levites between priests and chiefs."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levitical heads of houses",
-   "the roll turning to the chiefs",
-   "the growth of the houses",
-   "those who lead in prayer lead in the covenant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch keep these among the forty-four lay heads and note the roll opens at once into the accession of all the community — priests, Levites, porters, singers, Nethinim, and people; Ellicott finds the names personal, familial, and local."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sees the heads of Neh. 7:8 reappearing here, subscribing for their fathers' houses, their names set on record to their honour."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps them in the fourth sealing class, the chief of the people (vv. 14-27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the lay heads of houses",
-   "the people's accession to the covenant",
-   "representative sealing",
-   "names on record to their honour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'these were the priests' as naming the priestly families (cf. Neh. 12:1-6); Keil and Delitzsch count these among the one-and-twenty names of the returning courses, the orders kept distinct."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry numbers the priests at twenty-two, set next after the governor as teachers of the law."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke joins the standing wonder that neither Ezra nor Eliashib is among them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "closing the priestly roll",
-   "the priestly families",
-   "the courses of the return",
-   "the sacred order pledged",
-   "reform beginning at the altar"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott finds several Levitical family names traceable in the return (Ezra 2:40); Keil and Delitzsch reckon fourteen Levites led by Jeshua, Binnui, and Kadmiel (who returned with seventy-four others and appear as heads of orders in Neh. 12:8)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reckons seventeen Levites, most of them the mouth of the congregation in the prayer of Neh. 9:4-5."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets them in the third sealing class, following the priests."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levites of the covenant",
-   "heads of Levitical houses",
-   "the old serving stock",
-   "those who led the confession lead the pledge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads the names as personal, familial, and local, the houses multiplied since Ezra 2; Keil and Delitzsch count forty-four heads, thirteen from Zerubbabel's kindreds, the rest heads of houses or elders of the smaller towns."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry sees the heads of Neh. 7:8 among the first of the chief of the people to seal, subscribing for their fathers' houses."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets them in the fourth sealing class, filling the register to v. 27."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the turn to the laity",
-   "the chief of the people",
-   "the great clans of the return",
-   "the breadth of the covenant"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch reckon these among the one-and-twenty priestly names, heads of returning courses kept in their ranks; Ellicott reads them as family names to be compared with Neh. 12:1-6."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry numbers the priests at twenty-two, the teachers of the law foremost in the subscription."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets them in the second sealing class (vv. 2-8) and wonders that neither Ezra nor Eliashib appears."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priestly sealers",
-   "heads of returning courses",
-   "the teachers first at the covenant",
-   "representative sealing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch count fourteen Levites headed by Jeshua, Binnui, and Kadmiel (who returned with seventy-four others, Neh. 7:43, and appear as heads of orders in Neh. 12:8); Ellicott finds the family names traceable at Ezra 2:40."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reckons seventeen Levites, most of them the mouth of the congregation in the prayer of Neh. 9:4-5."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke places them in the third sealing class (vv. 9-13)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Levites who sealed",
-   "heads of Levitical houses",
-   "those who prayed lead in pledging",
-   "the singers of penitence pledge amendment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch reckon forty-four lay heads, thirteen from Zerubbabel's kindreds (Ezra 2), the rest heads of branched houses or elders of the smaller towns, the larger number laid to the growth of the community; Ellicott reads the names as personal, familial, and local."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: they gave it under their hands for themselves and all the rest, their names left on record to their honour."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets them in the fourth sealing class (vv. 14-27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the chief of the people",
-   "heads sealing for their clans",
-   "the representative weight of the seal",
-   "names to their honour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch take the forty-four heads to include both the ancient kindreds and the newer houses, with the elders of the lesser towns of Judah and Benjamin (not every name in the older list of Ezra 2); Ellicott reads them as personal, familial, and local."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: a great thing when men of influence throw it on the side of religion, these chief men subscribing for all they could sway, their names on record to their honour."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps them in the last sealing class, the roll ending with Baanah in v. 27."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the completeness of the sealing",
-   "every rank bound through its heads",
-   "the elders of the smallest towns",
-   "the covenant as wide as Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-01",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }

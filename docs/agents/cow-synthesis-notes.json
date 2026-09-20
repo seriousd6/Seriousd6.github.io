@@ -88359,6 +88359,106 @@
         "57"
       ],
       "note": "ttr before and after the polish pass: 3 was 0.575 now 0.634, 5 was 0.536 now 0.653, 10 was 0.558 now 0.634, 13 was 0.572 now 0.651, 17 was 0.528 now 0.587, 28 was 0.561 now 0.613, 41 was 0.576 now 0.619, 46 was 0.578 now 0.608, 54 was 0.565 now 0.619, 57 was 0.545 now 0.593. Entry 17 needed two passes because the long Ellicott paragraph on the nature of a divine covenant repeats covenant, call and obedience unavoidably; varying those to compact, summons and the commandments carried it over."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24",
+        "30",
+        "36"
+      ],
+      "note": "JFB stride bug with an exact period of 6, and a new wrinkle: the donor text does NOT advance. Jamieson, Fausset and Brown appears at keys 6, 12, 18, 24, 30 and 36 of the nehemiah 10 catena — six keys, spacing 6, 6, 6, 6, 6 — and all six carry the byte-identical block, on 1 Chronicles 6 and the genealogy of the Levitical families who were not priests. Verified mechanically: the six extracted blocks reduce to one distinct string. Every prior stride finding I have recorded (including the nehemiah 7 cluster) had the donor position advancing monotonically through the source book; here a single donor block is stamped at a fixed interval instead. That distinction is worth testing corpus-wide, because a fixed-block repeat and a walking offset are different bugs with different fixes."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "6",
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "CONSEQUENCE OF THE ABOVE, and the reason this chapter needed rewriting rather than polishing: four of the six JFB keys (6, 12, 18, 24) had NO other voice at all. Their entire usable source was the 58-word residue block. The legacy per-verse prose nevertheless carried full-length entries at each of them — 402, 409, 429 and 450 words — which means four entries of this chapter were synthesized wholly from 1 Chronicles material with nothing from Nehemiah behind them. Those four keys are omitted from the new tiling (legal, since all four fall past the first source gap and coverage_problems requires only the contiguous run from the lowest key), so the fabricated entries are gone rather than rewritten."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "8",
+        "9",
+        "14"
+      ],
+      "note": "Expansion far past the stretch ceiling in the legacy prose this pick replaced. STRETCH_RATIO is 6.0. The old entries ran: key 8, 17 source words to 427 prose (25.1x); key 9, 18 to 400 (22.2x); key 14, 42 to 415 (9.9x). The new entries hold these to 4.8x and 4.0x by declaring 'thin' and writing to the 120-349 window instead of the 350-650 one. Worth noting that the whole chapter was stamped legacy-unversioned and so was exempt from the gate; the ratios were never being measured."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "11",
+        "16"
+      ],
+      "note": "Duplicate and truncated Keil and Delitzsch blocks. Their analytical paragraph on the roll of the chief of the people — forty-four names against thirty-three in the earlier register, explained by kindreds containing several signing houses and by fresh accessions over the years — appears verbatim at BOTH key 11 and key 16. Key 16's copy then runs on into vv30-33 material and breaks off mid-sentence at 'bound themselves by an oath to walk'. Key 16 is omitted from the tiling: writing two entries from one paragraph would be exactly the cross-verse templating the audit exists to catch."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "16",
+        "32"
+      ],
+      "note": "Blocks running past their key again, and it shaped the tiling. Matthew Henry contributes two blocks: the key-1 block expounds vv1-29 entire and the key-32 block expounds vv32-39 entire, so Henry is declarable only on the tiles keyed at 1 and 32 although he comments on the whole chapter. Keil and Delitzsch's key-16 block likewise runs into vv30-33. Consequence here: Henry's treatment of the tithes and firstfruits sits in the key-32 block and could not be used on the vv35-39 tile, which had to be written from Gill, Keil and Delitzsch, Clarke and Ellicott alone. Third chapter in a row with this defect (john 10 key 22, esther 9 keys 1 and 20)."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "1-3"
+      ],
+      "note": "A clean four-way disagreement on why Ezra is not among the signatories, recorded as a debate on the vv1-3 tile. Henry: having already done his part as a scribe he left this part to others. Clarke: simply strange, and the difficulty is wider since neither Eliashib nor any prophet appears either. Wesley: hindered by sickness or a like impediment, since he reappears free of it at the dedication of the wall. Ellicott: the question dissolves, because the first name on the list is the family name of the high-priestly house to which Ezra and Eliashib both belonged, and probably Ezra himself affixed its seal. Ellicott's position is the only one that touches the text rather than the circumstances."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "28-31"
+      ],
+      "note": "Both witnesses who address the clause about those who had separated themselves reject the obvious reading, from different grounds, and this is recorded as a debate. Ellicott argues negatively: no recognised body of converts from heathenism is yet on record, the verb for separated carries another sense elsewhere in this book, and the following verses aim the covenant precisely at the danger of commerce with the heathen. Keil and Delitzsch argue positively: these are the descendants of the Israelites left in the land who were now joining the new community, and the construction is separation FROM the peoples TOWARD the law of God, i.e. in order to live by it. Worth flagging because Henry, in the key-1 block, does read them as proselytes of other nations — but he is not declarable on this tile, so the majority reading in the catena is not the one the tile can show."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "10",
+      "verses": [
+        "32-34"
+      ],
+      "note": "A second, quieter disagreement kept as a debate on the vv32-34 tile: whether the third of a shekel is a new ordinance or an altered old one. Gill calls it a law the people made among themselves, binding them to what the law of God had not; Henry agrees in substance, stressing that the governor did not impose it. Keil and Delitzsch treat it instead as a revival of the Mosaic half-shekel with the rate alone lowered for the community's poverty, and reject Aben Ezra's view that the third was an addition to the half rather than a reduction of it. The two readings differ on whether the covenant here adds to the law or restores it, which is the same question the chapter as a whole raises."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "10",
+      "note": "nehemiah 10 rewritten from 24 legacy per-verse entries to 7 pericope tiles: vv1-3, vv8-9 (thin), v11, v14 (thin), vv28-31, vv32-34, vv35-39. Five source keys are deliberately uncovered — 6, 12, 18 and 24 as JFB-residue-only, and 16 as a verbatim duplicate of key 11 — all of them past the first source gap and therefore advisory under coverage_problems, which I verified by testing the plan before writing. The vv35-39 tile first graded B (compress 0.407, ttr 0.554) because the two witnesses list the same firstfruits and firstborn categories one after the other; it was rewritten to state the scheme once and came back at 0.455 and 0.637. Final state: all 7 grade A, no entity warnings, validator, chapter gate and corpus gate all clean."
     }
   ]
 }
