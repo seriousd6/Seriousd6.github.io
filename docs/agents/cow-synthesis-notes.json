@@ -88126,6 +88126,122 @@
         "42"
       ],
       "note": "Site chrome at the last key of the chapter, now fourteen consecutive chapters with the same defect: key 42 of the john 10 catena is 34,398 words, the great bulk of it raw CSS scraped from the source site (menu, sub-menu, lexicon-search and media-query rules) plus two copyright lines. The genuine commentary on v42 is a small fraction of the block. Cheap to strip corpus-wide with a one-pass filter on the trailing style blob."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "29"
+      ],
+      "note": "All four Jamieson Fausset and Brown blocks in this chapter are foreign, carrying 2 Chronicles 16-17 material: key 5 on Asa and the league with the Syrians and the fortifying of Ramah, key 11 on Hanani rebuking Asa and being thrown into prison, key 17 on Asa disease and the physicians, key 29 on the teaching circuit of the princes and Levites. Checked block by block. Declared as excluded_voices on the four entries whose ranges cover those keys."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "12"
+      ],
+      "note": "The Gregory the Great block at key 12 is foreign: it is a discourse on the eternal generation of the Son and the incarnation, with nothing to do with commanding the morning. The other Gregory block, at key 2, is genuine and comments directly on why Job needed reproof after his constancy. NOT declared in excluded_voices because synthesis_qa split_voices does not recognise the label Gregory the Great and the validator then rejects the declaration as naming an absent block. Same tooling gap as Cyril of Jerusalem in matthew 14."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "41"
+      ],
+      "note": "StudyLight navigation, footer and CSS chrome closes the 1028-word Ellicott block at key 41, leaving only its opening sentence usable."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "1",
+        "4",
+        "12",
+        "25"
+      ],
+      "note": "Matthew Henry appears in only four keys of this chapter but supplies 8441 of its 27018 words, roughly a third. Each block is a running exposition of the section it heads, so Henry material for a given verse usually sits at the section head rather than at that verse."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "4-7"
+      ],
+      "note": "What sang at the founding of the earth. Clarke, Ellicott and Wesley all take both clauses for the angelic host, Clarke adding that their own creation may be included in the word heavens at the opening of Genesis. Gill alone keeps the literal sense of stars open, since all stars may be called morning stars, while offering the figurative readings of angels, of ministers, and of Christ as the principal morning star."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "22-24"
+      ],
+      "note": "Whether the parted light of verse 24 is daylight or lightning. Gill takes it of daylight and objects that lightning is mentioned in a later verse, and Wesley and Ellicott read it the same way; Clarke takes it of lightning and builds his whole note on the difficulty of describing how the flash divides."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "25-27"
+      ],
+      "note": "Whether the watercourse is cut in the ground or in the air. Gill, Wesley and Ellicott place it in the atmosphere, a channel by which rain descends in order; Clarke derives the word from a root meaning to ascend and suggests it names the cloud itself, or possibly a waterspout."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "34-36"
+      ],
+      "note": "Whose inward parts are meant in verse 36. Gill and Clarke take the verse of man and read it as continuing the argument from human incapacity; Ellicott, finding the placement in the middle of natural phenomena inexplicable, refers it to the lightnings just personified. Clarke reports the same alternative without adopting it, and notes how widely the old versions diverge, one reading the clause of women and embroidery and another of the cock."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "31-33"
+      ],
+      "note": "What the first phrase of verse 31 means. Gill and Wesley take it of the sweet influences of the season, which cannot be restrained; Ellicott and the versions Gill reports render it as bands or twistings, so that the question is whether Job could cluster such stars together. Clarke enters a caution about all these constellation identifications, that other scholars find them certain where he is obliged to doubt."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "39-41"
+      ],
+      "note": "Clarke and Ellicott both hold that chapter 39 ought to begin at verse 39, where the animal creation comes under review, and Clarke reports that the best Hebrew Bibles do begin it there. Gill notes the same practice without adopting it."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "38",
+      "verses": [
+        "19-21"
+      ],
+      "note": "Verse 21 is read by Clarke and Ellicott as sublime irony rather than a question, Ellicott proposing that it be printed without an interrogation mark. Gill alone answers it straightforwardly, that Job was not born when light and darkness were separated and that even the first man could not have been present, since man was not made until the sixth day."
     }
   ]
 }

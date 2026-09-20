@@ -3,1193 +3,567 @@
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Adam Clarke",
    "John Wesley",
+   "Adam Clarke",
    "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the whirlwind as notice of the Lord's appearing (Targum: 'whirlwind of distress'), and the speaker as Jehovah the Son, the eternal Word, seen in human form."
+    "summary": "Gill identifies the speaker as Jehovah the Son of God, the eternal Word, very probably appearing in a human form since an object was seen as well as a voice heard, and explains the storm as raised to give notice of the appearing and to command reverence; he notes that Elihu had seen it rising and hastened to finish, and that one Targum calls it the whirlwind of distress, answering to Job's own condition."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry orders the scene by heads (who, when, how, to whom, what): the eternal Word who spoke from Sinai now interposes 'then,' when all had spoken and none prevailed."
+    "summary": "Henry makes the speaker the second person of the Trinity, by whom the worlds were made and who afterwards spoke from Sinai, beginning here with the creation as there with the redemption out of Egypt; and he explains the timing, that when all had had their say without gaining their point it was time for God to interpose, convincing Job of his unadvised speaking and then convincing the three friends that they had wronged him."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke fixes the word as searah (not suphah), a tempest to fill Job with awe (Chaldee 'whirlwind of grief'); Wesley hears the harbinger of God's presence, sent to humble Job and his friends alike."
+    "summary": "Wesley describes the dark and thick cloud out of which a tempestuous wind was sent as the harbinger of the presence. Clarke works on the Hebrew and finds a different word from the one used a chapter earlier, meaning something turbulent and violently agitated, and reports that the Chaldee renders it a whirlwind of grief, which makes the scene allegorical rather than real."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott calls the chapter the grand climax of the poem, the argument drawn from man's ignorance, the tone throughout mingled with reproach though Job is later justified (42:8)."
+    "summary": "Ellicott reads the chapter as the grand climax and catastrophe of the poem, since nothing but darkness could remain unless he whose government was in dispute intervened, and states the single argument the remaining chapters develop, that man's ignorance of nature makes it absurd for him to judge God's moral government; he notes that although Job is justified later, the tone here is mingled with reproach."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "answered out of the whirlwind",
-   "the speaker is the eternal Word",
-   "the climax of the poem",
-   "reproof mingled with vindication"
+  "debates": [
+   {
+    "question": "Why does the answer come at this point?",
+    "positions": "Henry explains it by the exhaustion of the human speakers, each having silenced another without convincing him; Ellicott explains it structurally, as the only possible resolution of a dispute about God's own government."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Notes that the word for the storm is not the one used in the previous chapter, and that the Chaldee's whirlwind of grief turns the whole scene into something impressed on Job's imagination rather than seen."
+   }
+  ],
+  "themes": [
+   "the Lord answered Job",
+   "out of the whirlwind"
+  ],
+  "range": "1",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "2": {
   "voices": [
-   "Gregory the Great",
    "John Gill",
    "Keil and Delitzsch",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley",
-   "Charles Ellicott"
+   "Gregory the Great"
   ],
   "schools": [
    {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Gregory finds the reason for the reproof: since Job is to live on and receive double, God must humble him lest his very victory slay him with the sword of pride, the consciousness of virtue being the soul's deadliest peril."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the rebuke as aimed at Job, not Elihu, God wondering that such a man should so speak."
+    "summary": "Gill denies that the question is addressed to Elihu, as some have thought, since it was Job the Lord answered and Job who took the words to himself, and explains that God asks not as ignorant but as wondering that such a man should talk so; on the summons he has Job girded like a man of valour putting on his harness for battle, the allusion being to the long eastern garments gathered up for work or war, and observes that Job had blustered what he would do and is now dared to do it."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil reads zeh as intensifying 'who,' the participle showing Job interrupted mid-speech, 'counsel' put for 'my counsel,' the word coming 'out of the storm' (a spelling found only here and 40:6); Ellicott answers 'who is this?' from Job's own 14:1 &mdash; a dying man unequal to the task."
+    "summary": "Keil and Delitzsch argue from the participle that Job must have uttered such words immediately before and been interrupted by Jehovah without any intervening speaker, and notice that the word for counsel deliberately stands without the possessive. Ellicott answers the question from Job's own earlier words, that this is a dying and enfeebled man, not even in his best estate but persecuted and exhausted, and so altogether unequal to the task he has undertaken."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: who pretendest to speak on the deep things of God and leavest them darker; Wesley fixes 'counsel' as God's providence in afflicting Job, the first word that struck him and is echoed at 42:3."
+    "summary": "Clarke paraphrases the question as a challenge to one who pretends to speak on the deep things of God and leaves his counsels the darker for the explanation, and hears reassurance as well as challenge in the summons, since the questions to come are easier than those Job presumed to discuss; he adds that the most convincing manner of arguing is by interrogation. Wesley marks the effect rather than the sense, that this first word struck Job to the heart and is echoed back by him at the end as the arrow that stuck fast in him."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gregory asks why the rebuke was needed at all, and answers that since Job was to be restored rather than called out of the world, God was obliged in strict justice to reprove the man he preserved alive, lest his very victory lay him low with the sword of pride; nothing slays a soul more fatally than the consciousness of virtue, which puffs it up and diverts it from the intention of improvement."
    }
   ],
   "debates": [],
   "outliers": [
    {
     "voice": "Gregory the Great",
-    "note": "Reads the reproof as a mercy against pride: God must chasten the victorious Job lest the consciousness of virtue destroy the soul the scourges could not overcome."
+    "view": "Holds that Job was just before his scourges and more just after them, raised the higher in the praise of God as he was smitten with the heavier chastisement."
    }
   ],
   "themes": [
-   "darkeneth counsel by words without knowledge",
-   "the reproof aimed at Job",
-   "chastening against pride",
-   "the arrow that stuck fast (42:3)"
+   "who is this that darkeneth counsel",
+   "by words without knowledge",
+   "gird up now thy loins like a man"
   ],
+  "range": "2-3",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill hears a soldier's summons &mdash; gird the loins for battle, an eastern custom &mdash; daring Job to make good the arguments he had blustered."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: the Lord will not confound Job with terrors but bids him act kegeber, like a hero, and answer questions easier than those he had discussed; the interrogative method is the most convincing (Cicero against Catiline). Wesley adds the warrior's girding for battle."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "gird up thy loins like a man",
-   "the challenge to the field",
-   "argument by interrogation",
-   "the accuser now questioned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "Matthew Henry",
    "Adam Clarke",
    "John Wesley",
-   "Charles Ellicott"
+   "Matthew Henry",
+   "John Gill",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the earth's firm foundations are nothing but the power and will of God (and the upholding Son); Job, a mere nonentity at creation, presumes to dive into Providence."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke paraphrases the opening question bluntly, that Job has a limited and derived being and is only of yesterday, and on the measures reaches for the physics, asking who adjusted the polar and equatorial distances from the centre, who formed the zones and great circles, and who fitted the magnitude and gravity of the whole to its orbit; on the singers he holds that the words must refer to intelligent beings existing before the visible heavens, takes both clauses for the angelic host, and notes that the Chaldee renders it all the troops of angels. Wesley puts the first question in a sentence and explains both titles of the singers, morning stars for their lustre and sons of God because they had their whole being from him."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry sets the greatness of God ('I laid the foundations') against the meanness of man ('where wast thou?'): we were not in being; only Christ, the eternal Wisdom (Prov. 8:22; John 1:1), was present."
+    "summary": "Henry turns the question into a pair of propositions, the greatness of God who laid the foundations and the meanness of a man not so much as present, and observes that we had no hand in the making of the world and so nothing in it entitles us to a dominion over it."
    },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: thou art of yesterday, what canst thou know? Didst thou see me create the world? Wesley: dost thou presume to judge eternal counsels, when God settled the earth firm on its own centre?"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott notes the creation-as-building metaphor is a concession to man's feebleness that heightens the force of the inevitable answer."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "where wast thou when I laid the foundations",
-   "the greatness of God and meanness of man",
-   "Christ present at creation",
-   "the earth hung on nothing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the Lord laid the measures, doing all by weight and measure; the mathematicians who claim the earth's circumference disagree, and 'if thou knowest' may be read 'for thou knowest' &mdash; a sarcasm."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads an unfathomable depth of design (polar/equatorial distances, zones, magnitude, gravity, orbit); Wesley keeps the plain image of the measuring-line regulating every dimension."
+    "summary": "Gill puts Job in a state of nothingness when the work was done, notes the oddity in the figure, that the earth has foundations so firm it cannot be moved and yet hangs upon nothing, and then turns the question on the learned, since mathematicians pretend to give us the circumference and diameter of the earth but are not agreed and widely differ; he alone keeps the literal sense of the morning stars open, since all stars may be so called, while adding the figurative readings of angels, of ministers, and of Christ as the principal morning star."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil sets the verse in the primeval stages &mdash; tohu-vabohu then tehom &mdash; the question passing over the watery chaos to the ordered founding that follows."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who laid the measures thereof",
-   "the line stretched upon the earth",
-   "working by weight and measure",
-   "the primeval chaos and the ordered work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs the guesses (Ben Gersom's pillars, Aben Ezra's mountains) but grounds all on 'nothing but the mighty hand of God,' recalling that he hangs the earth on nothing (26:7)."
-   },
-   {
-    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke asks how the earth revolves in space and what supports it, fastened as with a key-stone; Wesley: the building has no foundation but God's power, established upon itself, the corner-stone binding the walls so it cannot be moved."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whereupon are the foundations fastened",
-   "who laid the corner-stone",
-   "the earth upheld by God's hand alone",
-   "a house that cannot be moved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill ranges the senses: the stars literally, or the angels (as most), or good men and ministers (stars in Christ's hand), with Christ himself the principal morning star."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke takes the morning stars and sons of God as one angelic host, made before the visible world (Gen. 1:1), the Chaldee's 'troops of angels' celebrating the work; Wesley agrees, noting the angels neither advised nor censured, as Job presumed to do."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads the angels entrusted with the stars' guardianship, whence Milton drew his conceptions; the sublimity needs no comment."
+    "summary": "Ellicott reads the architectural comparison as a concession to the feebleness of man, one that itself heightens the effect of the answer the question compels, and takes the singers for the angels entrusted with the guardianship of the stars, remarking that Milton borrowed his conceptions from the verse."
    }
   ],
   "debates": [
    {
-    "question": "Are the 'morning stars' the literal stars or the angels?",
-    "sides": [
-     {
-      "position": "literal stars (or ministers, or Christ the chief morning star), among other senses",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "the angelic host, one with the 'sons of God'",
-      "holders": [
-       "Clarke",
-       "Wesley",
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "What sang at the founding of the earth?",
+    "positions": "Clarke, Ellicott and Wesley all take both clauses of the verse for the angelic host; Gill keeps the literal sense of stars open alongside the figurative readings of angels, of ministers of the word, and of Christ himself as the principal morning star."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "view": "Draws the inference Job is meant to feel, that the heavenly witnesses neither advised nor assisted in the work, nor censured any part of it, as Job had presumed to do."
+   }
+  ],
   "themes": [
-   "the morning stars sang together",
-   "the sons of God shouted for joy",
-   "stars or angels",
-   "creation greeted with praise, not fault-finding"
+   "where wast thou when I laid the foundations of the earth",
+   "who laid the corner stone thereof",
+   "when the morning stars sang together"
+  ],
+  "range": "4-7",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  },
  "8": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley"
+   "John Wesley",
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the sea's first creation, not the flood: the ocean an infant in embryo, shut in the bowels of the earth as in a womb, the chaos a woman big with child."
+    "summary": "Gill marks the transition as following the order of creation, from the earth to the sea, and insists the verses describe not the flood, as some interpret them, but the first creation, the sea represented throughout as an infant, here still in embryo and shut up in the bowels of the earth as a child in its mother's womb."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke calls it a fine metaphor &mdash; the newborn sea issuing from the womb of chaos, the bursting waters alluded to; Wesley: who set bounds to the raging ocean and shut it with doors that it might not overflow the earth?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "who shut up the sea with doors",
-   "the sea as a new-born infant",
-   "the taming of the deep at its birth",
-   "the doors of the flood not hung by man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill keeps the figure: the cloud the garment for the new-born babe, the sea."
+    "summary": "Clarke calls it a very fine metaphor, the sea issuing from the womb of the void and formless chaos, and presses the detail of the clothing, the cloud answering to the cloth in which a new-born infant is received and the thick darkness to the swathing that supports a body too tender for careful handling; he adds an allusion to the opening of Genesis, where darkness lies on the face of the deep. Wesley takes the rising vapours as the garment and the black clouds as the bands, then withdraws the figure to make his point, that neither clouds nor air nor sands nor shores can bound the sea, but God alone."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Keil renders clouds round the sea as a garment and thick mist as its swaddling-clothes, part of the ordered wrapping and bounding of the deep."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke sees the receiving-cloth and first dressings of an infant (Mr. Good: the image 'exquisitely maintained'), with allusion to the darkness on the deep (Gen. 1:2); Wesley: God covered the sea with its own rising vapours as a garment, the dark clouds its swaddling-bands &mdash; though God alone truly bounds the sea."
+    "summary": "Keil and Delitzsch set the scene in the order of the primeval states, the formless void being the first half and the deep the second half of the earth's early condition, and note that the question passes over the intermediate stage in which the waters of sky and earth were not yet separated."
    }
   ],
   "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cloud its garment",
-   "thick darkness a swaddlingband",
-   "the nursery of the deep",
-   "tenderness that rebukes complaint"
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "view": "Uses the image and then takes it back, since nothing physical actually bounds the sea: not clouds, not air, not sands, not shores, but God alone."
+   }
   ],
+  "themes": [
+   "who shut up the sea with doors",
+   "as if it had issued out of the womb",
+   "the cloud the garment thereof"
+  ],
+  "range": "8-9",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  },
  "10": {
   "voices": [
    "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
+   "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill (with Broughton) has God cleaving the earth into a chasm to hold the waters, raising hills and sinking valleys as channels &mdash; a cradle for the swaddled sea, the second day's work."
+    "summary": "Gill renders the clause with an older English translator as breaking the earth by decree, a vast chasm made to hold the waters, God cleaving the ground and raising the hills and sinking the valleys so that channels were formed, and refers this to the work of the second day; on the word that halts the waves he keeps to the coasts and the tides, the sea spreading to such and such shores and no further and its tides running up the rivers and returning, keeping exactly to time and place."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke refers 'bars and doors' to Gen. 1:9: the dry land the barrier, rivers and bays the doors; Wesley: God made the hollows as a cradle and fixed the sea's bounds as with bars and doors."
+    "summary": "Wesley describes the hollow places as a cradle to receive and hold so great an infant, with bounds fixed as strongly as if fortified with bars and doors. Clarke traces the decree to the command in Genesis and identifies the bars and doors with the geography itself, the dry land forming the barrier and the great rivers and bays the doors; he then answers the same question mechanically, tracing the limitation of the tides to the attraction of the sun and moon, to gravitation toward the earth's centre, and above all to the rotation that carries any point out from under the direct attractive influence before the waters can rise to any extraordinary height."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott prefers 'prescribed for it my decree,' marvelling that so vast and unstable a sea acknowledges any limits at all."
+    "summary": "Ellicott prefers a different rendering, that God prescribed for it his decree rather than broke up a place, and adds the reflection the verse invites, that given the vast forces and unstable nature of the sea it is a marvel it acknowledges any limits at all."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What does the clause about the decreed place mean?",
+    "positions": "Gill and Wesley take it of a physical breaking of the ground to form the sea's bed; Ellicott renders it instead as prescribing a decree, that is, determining the boundaries of its abode."
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Answers the poetry with mechanics, finding the bars and doors that stay the proud waves in lunar and solar attraction, in the earth's gravitation toward its own centre, and in the rotation that keeps any part of the surface from lying long under the direct pull."
+   }
+  ],
   "themes": [
    "brake up for it my decreed place",
-   "bars and doors",
-   "cradle and prison of the sea",
-   "bounds set to a restless thing"
+   "set bars and doors",
+   "hitherto shalt thou come, but no further"
+  ],
+  "range": "10-11",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
+   }
   }
  },
- "11": {
+ "12": {
   "voices": [
    "John Gill",
+   "John Wesley",
+   "Matthew Henry",
+   "Charles Ellicott",
    "Adam Clarke"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill hears the bare word of command: the waters wash their shores and run up the rivers and return, keeping to time and place, spoken by Jehovah the Word and obeyed by almighty power."
+    "summary": "Gill observes that Job had lived to see many a morning but it never was in his power to command one, and had sometimes wished for the light before its time without being able to hasten it; of the morning's reach he has the light take hold of the extremities of the hemisphere as soon as it springs, and applies the image to the spread of the Gospel to the ends of the earth."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke traces the restraint through the mechanics of the tides &mdash; lunar and solar attraction, the earth's rotation, and gravitation to the sea's own centre &mdash; the 'bars and doors' being these balanced laws that prevent too great a flux or ebb."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hitherto shalt thou come, but no further",
-   "the proud waves stayed",
-   "command and the mechanics of the tides",
-   "a bound the sea cannot pass"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Job saw many a morning but could never command one, obliged to wait for a light he could not hasten."
+    "prevalence": "several",
+    "summary": "Wesley reads the challenge as covering the whole order, whether Job created the sun and appointed the succession of day and night, and explains the effect on the wicked by two causes, that the light discovers them where darkness hid them and that morning was the usual time for executing judgment. Clarke refers the first clause to the dawn, the twilight produced by refraction in the atmosphere, by which the light reaches us gradually instead of bursting at once on eyes it would injure, and the second to the annual revolution, since the sun does not rise in the same point of the horizon on two successive days in the whole year; he also makes the picture concrete, the thieves and assassins and adulterers who hate the light flying like ferocious beasts to their dens as soon as it dawns."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry opens the 'six things': the morning is not ours to command or alter, the dayspring knew its place before we knew ours (Ps. 19:1); he hears in it the dayspring from on high of Luke 1:78."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the twilight of refracted rays and the shifting daybreak-points through the year's revolution; Wesley: didst thou create the sun and appoint day and night, teaching the dawn its varying time and place?"
+    "summary": "Henry makes the light the first of six things Job is challenged to account for and turns its familiarity into the argument: there is no visible being of which we are more firmly assured and none we are more puzzled to describe, and the day-spring knew its place before we knew ours, for we are but of yesterday."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott: the dayspring is caused to know its place, changing from day to day with the seasons."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hast thou commanded the morning",
-   "the dayspring knows its place",
-   "the twilight and the shifting dawn",
-   "the dayspring from on high"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the light swiftly reaches the ends of the earth, applied to the gospel directed by Providence to the world's ends."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil: the dawn takes the carpet of the earth by the edges and shakes off the evil-doers who lay on it by night; Ellicott fixes the figure of a man shaking out a cloth (24:15-17)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke pictures thieves and murderers fleeing the light like beasts, and reorders v.15 to follow v.13 (v.14 disturbing it); Wesley: the light shakes the wicked from the earth, discovering them, the morning being the time of judgment."
+    "summary": "Ellicott glosses the dayspring's place as changing from day to day with the changing seasons, and identifies the figure of the wicked being shaken out as that of a man shaking a cloth."
    }
   ],
   "debates": [],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Judges verse 15 to belong immediately with verse 13, its connection disturbed by the intervening verse 14."
+    "view": "Proposes a rearrangement of the text, holding that the verse about the light withheld from the wicked connects immediately with this one and that the verse about the seal disturbs the connection."
    }
   ],
   "themes": [
-   "take hold of the ends of the earth",
-   "the wicked shaken out",
-   "the earth shaken like a garment",
-   "the dawn as minister of justice"
+   "hast thou commanded the morning since thy days",
+   "caused the dayspring to know his place",
+   "that the wicked might be shaken out of it"
   ],
+  "range": "12-13",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "14": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "John Wesley"
+   "Adam Clarke"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: as clay takes form under the seal, the earth (a mere tohu-bohu by night) is seen in beauty when the light comes &mdash; an emblem of the gospel's change in men."
+    "summary": "Gill takes the clay for the earth itself, shapeless in the dark like the chaos at the beginning and receiving a form under the light as clay receives the impress of a seal, and adds the spiritual application he finds throughout the passage, the change the light of the Gospel makes in men; on the last clause he explains the light withheld from the wicked as the loss of what they counted light, since their day is the night, and allows two figurative senses besides, the light of prosperity removed and the light of life extinguished."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the earth like soft clay takes endless forms (Eastern clay-seals), decked like a stamped garment; he corrects Good's 'mould,' since light-rays never bend but travel straight. Wesley: the seal beautifies formless clay, so the light dresses the confused night-earth in order and glory."
+    "summary": "Wesley distinguishes what it is that stands forth under the light, the natural things such as living creatures, herbs and trees, and the artificial, such as houses and other buildings, and divides the withholding between two causes, the wicked's own choice of darkness and the judgement of God or of the magistrate by which they are cut off from the light of the living; he glosses the broken arm as the strength they had used in oppressing others. Clarke reads the clay instead as the earth's capacity to modify itself into endless forms, pointing to the variety of plants and flowers as proof, and adds an antiquarian note on the Eastern brass seals for stamping pottery, six of which lay on his own desk with fine clay still in their perforations."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott renders 'changed as clay under the seal, and all things stand forth as in their proper raiment,' the daylight giving shape to what darkness left formless."
+    "summary": "Ellicott renders the verse that the earth is changed as clay under the seal and all things stand forth as in their proper raiment, every object being without form in the darkness as clay or wax is until the seal is applied."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "What is the clay that the seal stamps?",
+    "positions": "Gill, Wesley and Ellicott all take it for the earth, formless in the dark and given shape by the light; Clarke takes it for the earth's own plasticity, the endless forms of its vegetable productions, and reports another translator who applies the whole verse to the rays of light rather than to the ground."
+   }
+  ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Turns aside to the optics of the figure, insisting that rays of light never bend ('a gun might as well shoot round a corner') and correcting Mr. Good's rendering of clay to a mould."
+    "view": "Reports a rendering on which what is broken off is the roving of wickedness, the wicked being no longer able to pursue their predatory excursions."
    }
   ],
   "themes": [
-   "turned as clay to the seal",
+   "it is turned as clay to the seal",
    "they stand as a garment",
-   "the earth re-formed at dawn",
-   "the daily re-creation of beauty"
+   "from the wicked their light is withholden"
   ],
+  "range": "14-15",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the wicked's 'light' is the darkness that was their day, withdrawn at dawn; figuratively the light of prosperity removed, or the light of life when they are sent into utter darkness."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley weighs the two withholdings &mdash; by the wicked's own choice of darkness, or by the judgment of God or the magistrate cutting them off from the light of the living; the 'high arm' is their oppressing strength, now broken."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "from the wicked their light is withholden",
-   "the high arm broken",
-   "the wicked's inverted day overturned",
-   "the dawn as servant of moral order"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
    "John Gill",
-   "Adam Clarke",
+   "John Wesley",
    "Charles Ellicott",
-   "John Wesley"
+   "Adam Clarke"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill canvasses the renderings &mdash; subterranean springs, fountains at the bottom, 'drops,' the Targum's 'perplexities,' rocks and borders &mdash; each turned into the same unanswerable challenge."
+    "summary": "Gill offers a range of renderings for the springs of the sea, the subterranean passages that supply it, the fountains rising at its bottom, the drops nobody can count, its perplexities or thickets, its rocks and shelves, or its borders; on the gates of death he specifies that the ones meant are those by which men pass into the state of the dead, and lists what is hidden, since we know neither what death is nor in what way or at what time we shall go out of the world, there being no correspondence between the dead and the living; and on the breadth of the earth he answers that a man who lived as long as Methuselah could never survey it all."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: of these springs we know as much as Job, the depths unfathomed to this day; Wesley notes the Hebrew 'tears' of the sea, and argues that one who cannot sound the sea cannot fathom God's counsels."
+    "summary": "Wesley keeps the Hebrew figure that the word is tears, the springs out of which the waters flow as tears do from the eyes, and writes at length on death as a grand secret, that we cannot describe how the knot is untied between soul and body, and that while we are here in a world of sense we speak of the world of spirits as blind men do of colours. Clarke admits the limit plainly, that of these springs we know just as much as Job did, reports the old opinion that fresh matter oozed in through a porous bottom with the obvious objection that it might as well ooze out, and presses a logical difficulty on the second verse, that death cannot be called the privation of life, for what then would the shadow of that privation be?"
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott prefers the mazes and secret recesses of the trackless deep, leading on to the bottomless pit of death in v.17."
+    "summary": "Ellicott prefers the mazes and intricacies of a trackless deep and notes that this leads naturally to the cognate thought of the bottomless pit of death; on the breadth of the earth he observes that the language belongs to an older picture of the world, a vast plain, and adds that although all this language is unscientific its majestic sublimity is not one whit affected thereby."
    }
   ],
   "debates": [
    {
-    "question": "What are the 'springs of the sea'?",
-    "sides": [
-     {
-      "position": "subterranean springs or fountains supplying the sea",
-      "holders": [
-       "Gill",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the mazes and secret recesses of the trackless deep",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the 'tears' of the sea, its outflowing fountains (Hebrew)",
-      "holders": [
-       "Wesley"
-      ]
-     }
-    ]
+    "question": "What are the springs of the sea?",
+    "positions": "Gill canvasses subterranean passages, fountains on the sea floor, drops, thickets, rocks and borders without deciding; Wesley keeps the Hebrew word for tears; Ellicott prefers the mazes of a pathless deep; Clarke reports and dismisses the philosophers' porous bottom."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Distinguishes the two terms of the verse, death and the shadow of death, taking the second for the intermediate state, the openings into the place of separate spirits."
+   }
+  ],
   "themes": [
    "the springs of the sea",
-   "the search of the depth",
-   "the unfathomed ocean",
-   "the deep as emblem of God's counsels"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: not the gates by which death entered the world but those by which men pass into the state of the dead &mdash; never thrown open for mortals to look within."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil renders 'were the gates of death unveiled to thee... the gates of the realm of shades?', carrying the survey down into the underworld."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke marks maveth and tsalmaveth (the intermediate state), death being as inexplicable as animal life, no mere privation; Wesley meditates on death as a grand secret, the world of spirits known only as blind men know colours."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
    "the gates of death",
-   "the doors of the shadow of death",
-   "death a sealed country",
-   "maveth and tsalmaveth"
+   "hast thou perceived the breadth of the earth"
+  ],
+  "range": "16-18",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'breadth' for all the earth's dimensions: not a Methuselah's lifetime could survey its every part, and some regions are simply inaccessible."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets it in its ancient horizon: the globe's circumference then unknown, the earth supposed a vast plain bordered by ocean and sky."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott would render 'comprehended,' grants the plain-earth conception, yet insists the majestic sublimity of the language is not one whit affected by its unscientific frame."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the breadth of the earth",
-   "the ancient plain-earth conception",
-   "ignorance of the ground we walk",
-   "sublimity untouched by science"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.46
+   }
   }
  },
  "19": {
   "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads an inquiry after the road to light's home and what that place may be &mdash; a home no traveller has found."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke probes the physics (light was before the sun &mdash; what is light? is darkness mere privation?), owning philosophy still cannot say; Wesley strings the questions: where does light lodge, whither goes the sun, what way came light into a dark world &mdash; was Job privy to it?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "where light dwelleth",
-   "the place of darkness",
-   "light and darkness personified",
-   "the unknown nature of light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: to take the light by the hand and guide it to its bound is God's work alone, who steers the sun in its circuit so it never misses its way."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke hears a biting irony &mdash; light and darkness personified with local dwellings &mdash; rendering it 'thou canst take Us to its boundary,' a taunt to humble Job's knowing pride; Wesley keeps the plain sense of leading the light over its whole course."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott glosses soberly: 'that thou shouldest take it' means to go with, or track, the light to its home."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Reads the verse as sustained sarcasm ('thou canst take Us to its boundary'), whose whole design is to humble Job's pride of knowledge."
-   }
-  ],
-  "themes": [
-   "take the light to its bound",
-   "the paths to its house",
-   "light and darkness with local dwellings",
-   "the irony of an impossible errand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill lets the impossibility answer itself: Job was not present at the dividing of light, and had he been the first man he came too late, man being made on the sixth day."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke hears a biting irony, the plain translation confirming it: 'Thou knowest, because thou wast then born, and the number of thy days is great (rabbim).'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott would read the verse without interrogation as sublime irony: 'Doubtless thou knowest, for thou wast born then, and thy days are so great!'"
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the verse a question or an ironic statement?",
-    "sides": [
-     {
-      "position": "an interrogation whose answer is shamed silence (as the AV)",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "a flat ironic statement, mock-praise of Job's antiquity",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "knowest thou, because thou wast then born",
-   "the mock-praise of great age",
-   "a creature of the sixth day",
-   "the humbling of v.4 turned to sarcasm"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the clouds are the storehouse of snow and hail, called 'treasures' as hidden, at God's command, and enriching &mdash; not literal heaps but produced instantly at his will."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke on their formation (hail frozen spherules, both owing to electricity), noting hail alone yields no apparent good, while frost is 'God's universal plough'; Wesley keeps the wonder of the storehouse God draws from when he sees fit."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the treasures of the snow and hail",
-   "the storehouse of the meteors",
-   "not literal heaps but instant production",
-   "frost God's universal plough"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the snow and hail reserved for the punishment and affliction of men, kept ready for the appointed hour."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil carries the passage forward (the reserved stores, the parted light, the watercourse and lightning-path) and marks that rain, dew, ice, and frost have no created father or mother; Ellicott points to the stones cast on the fleeing kings and the hail of Ps. 18:13."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke renders 'the season of strictness' (bound by frost) and refers the 'day of battle' to hail as God's weapon &mdash; the plague on Egypt (Exod. 9:23) and the shower on the Canaanite kings (Josh. 10:11)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "reserved against the day of battle",
-   "the arsenal of snow and hail",
-   "hail as God's weapon (Egypt, Beth-horon)",
-   "the folly of striving with God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill lists the ways daylight is 'parted' &mdash; creation, sunrise/set, the hemispheres and poles, the climates, Egypt dark and Goshen light &mdash; setting aside the lightning reading since lightning comes later."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the lightning and thunder-cloud, its zigzag 'parting' unaccountable, the east wind the euroclydon; Wesley takes the daylight variously distributed, the sun the 'father of the winds' raising the east wind."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott keeps the daylight distributed in turn to all the earth, the east wind naturally rising with the dawn."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the 'light' here mean the daylight or the lightning?",
-    "sides": [
-     {
-      "position": "the daylight, parted and distributed over the earth",
-      "holders": [
-       "Gill",
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the lightning, whose zigzag path is the 'parting'",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "by what way is the light parted",
-   "the scattering of the east wind",
-   "daylight or lightning",
-   "the untraceable path of the light"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "Matthew Henry",
    "John Gill",
    "Adam Clarke",
    "John Wesley",
@@ -1197,597 +571,408 @@
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks the turn from Job's ignorance to his impotence: God has sovereign dominion over the waters and the lightning, directing every drop and preparing the lightnings for the rain (Ps. 135:7)."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the 'watercourse' as a channel in the atmosphere, God steering the rain to fall gently in measured drops where he pleases (Jarchi: every drop its own canal)."
+    "summary": "Gill glosses the question narrowly as the way to the place where light dwells, applies the following verse chiefly to the light, taken as it were by the hand and guided to its utmost bound, and answers the closing verse as a plain question, replying that Job was not born when light and darkness were first separated and that even the first man could not have been present, since man was not made until the sixth day."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke suspects a cloud or waterspout (the root 'to ascend' = evaporation) and renders 'a path for the bolt of thunder,' God the true Thunderer; Wesley: the showers led orderly as through pipes, the lightning let out of its cloud-prison."
+    "summary": "Clarke turns the first question into a challenge to natural philosophy, asking what light is, since it is not in the sun and was before the sun, and whether it is philosophical to call darkness the mere privation of light; he observes that darkness and light are here personified as real intelligent beings with local dwellings and defends the liberty, since poetry animates everything. Wesley asks the same in an older idiom, where the sun goes when it departs from this hemisphere and whence light came into the world when nothing but gross darkness was upon its face."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott renders the opening 'cleft a channel for the water-flood.'"
+    "summary": "Ellicott glosses the verb of the second verse as going with or tracking the light, and holds that the closing verse is better read without an interrogation, as sublime irony."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a watercourse for the overflowing waters",
-   "a way for the lightning of thunder",
-   "from ignorance to impotence",
-   "God the Thunderer directs every drop"
+  "debates": [
+   {
+    "question": "Is the closing verse a question or an irony?",
+    "positions": "Clarke calls it a strong and biting irony which a literal rendering proves, and Ellicott would print it without an interrogation mark; Gill answers it straightforwardly as a question, on the ground that Job was not yet born."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "States what he takes the irony to be for: Job had valued himself too much on his knowledge, and a chief object of the speech is to humble that knowing pride."
+   }
+  ],
+  "themes": [
+   "where is the way where light dwelleth",
+   "the paths to the house thereof",
+   "knowest thou it, because thou wast then born"
+  ],
+  "range": "19-21",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.73
+   }
   }
  },
- "26": {
+ "22": {
   "voices": [
    "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "John Wesley"
+   "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the rain falls on barren, uninhabited land for the sake of the wild beasts, showing God's care even for them &mdash; an emblem of the gospel-rain on the Gentile wilderness."
+    "summary": "Gill identifies the treasuries with the vapours and clouds of the atmosphere and gives three reasons for the word treasure, that they are hidden until they fall, that they are at the command of their proprietor, and that they are enriching, since snow lying on the earth keeps it warm; he then guards the image against being pressed, warning that we are not to imagine heaps laid up in times past against times to come. On the parting of the light he offers several possibilities, the first division of light from darkness, the daily separation at sunrise and sunset, the two hemispheres, the poles with their six months of each, or the darkness over Egypt with light in Goshen, and objects to the reading that takes the verse of lightning, since lightning is mentioned later."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the cloud is led over deserts with no human inhabitant to make the tender herb spring for the beasts, fowls, and insects God sustains; Wesley: rain poured where no man waters it by art."
+    "summary": "Wesley keeps the plain question, whether Job knows where those vast quantities are laid up, and explains the second clause of the parted light by the old notion that the sun is the father of the winds. Clarke prefers to ask how snow and hail are made, describes hail as composed of many small spherules frozen together rather than a single drop, traces both to electricity and admits candidly that the theory is not in all cases supported by the facts; he takes the parted light of lightning after all, and turns it into a catalogue of what electrical science had not settled, from its velocity to the cause of its zigzag form."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott names the hailstorm that fell on the Canaanite kings as the day of battle meant, and glosses the parting of the light as its distribution in turn to all the inhabitants of the earth."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rain where no man is",
-   "providence over the untrodden waste",
-   "God mindful of the beasts",
-   "bounty that looks for no return"
+  "debates": [
+   {
+    "question": "Is the parted light daylight or lightning?",
+    "positions": "Gill takes it of daylight and objects that lightning is mentioned in a later verse, and Wesley and Ellicott read it the same way; Clarke takes it of lightning and builds his whole note on the difficulty of describing how the flash divides."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Gives the first phrase a different sense, the season of strictness, when the earth is bound by the frost, rather than a time of trouble."
+   }
+  ],
+  "themes": [
+   "the treasures of the snow",
+   "against the day of battle and war",
+   "by what way is the light parted"
+  ],
+  "range": "22-24",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
   }
  },
- "27": {
+ "25": {
   "voices": [
    "John Gill",
+   "John Wesley",
+   "Charles Ellicott",
    "Adam Clarke",
-   "John Wesley"
+   "Matthew Henry"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill dwells on the doubled 'desolate and waste' ground, thirsty as one that never says 'enough,' yet satisfied by God &mdash; a figure of grace satisfying dry souls."
+    "summary": "Gill rules out an aqueduct of the kind men cut from the Nile and puts the channel in the atmosphere, a course for the rain to come down by, steered so that it falls gently rather than in spouts and floods and on whatever part of the earth God pleases; on the wilderness he notes that there is nobody there to cultivate it and nobody to profit by the rain, and yet the Lord sends it for the animals that dwell there, and he reads the desolate ground as an emblem of the Gentile world satisfied at last by the rain of the Gospel."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the desert made to bud for the sake of its beasts and insects, all sustained by God; Wesley marks the turn from convincing Job of ignorance to convincing him of impotence."
+    "summary": "Wesley says that without this providence the showers would fall confusedly and overwhelm the earth, and asks who opened a passage for the lightning and thunder out of the cloud in which they were imprisoned. Clarke derives the word from a root meaning to ascend, so that it may mean a cloud, since he cannot see how a torrent can ascend except by evaporation, and notes that by that contrivance the earth is not only watered but dried; on the thunderbolt he has God launching it and making the road it runs in, and observes that heathenism reserved that act to its supreme god."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott corrects the rendering to a channel cleft for the water-flood, and puts the conclusion of the passage in a line, that God is mindful of his creation independently of the wants of man."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the turn of the whole speech here, that the questions have hitherto been fitted to convince Job of his ignorance and now, in the same manner, are to show his impotence, since it is as little that he can do as that he knows; and he adds that nothing is more uncertain than what weather it shall be, or further out of our reach to appoint."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to satisfy the desolate ground",
-   "the bud of the tender herb",
-   "grace for thirsty souls",
-   "from ignorance to impotence"
+  "debates": [
+   {
+    "question": "Is the watercourse cut in the ground or in the air?",
+    "positions": "Gill, Wesley and Ellicott all place it in the atmosphere, a channel by which the rain descends in order; Clarke derives the word from a root meaning to ascend and suggests it names the cloud itself, where the waters are stored, or possibly a waterspout."
+   }
   ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Reaches the same conclusion by meteorology rather than by providence: the thunder cloud is conducted over deserts as well as over inhabited countries so that the tender herb may spring for the beasts and insects that live there."
+   }
+  ],
+  "themes": [
+   "who hath divided a watercourse for the overflowing of waters",
+   "to cause it to rain on the earth, where no man is",
+   "to satisfy the desolate and waste ground"
+  ],
+  "range": "25-27",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "28": {
   "voices": [
    "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the rain has no father but God alone, whatever the secondary causes &mdash; a figure of the gospel, likewise not of men but a gift come down from heaven."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke stays baffled by the dew (the egley, small globules), the philosophers undecided whether it rises from the earth or descends from the air; Wesley: can any man beget or produce rain at his pleasure?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hath the rain a father",
-   "the drops of dew",
-   "no created father, no human maker",
-   "God as the dew unto Israel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
    "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the ice is God's child, and where v.28 spoke of a father this speaks of a womb, God represented as a mother (Orpheus' metropator, mother-father at once)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil balances the figure: rain and dew have no created father, ice and hoar-frost no created mother, the parallel asking after both the begetter and the bearer."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke on the nature of ice (lighter than water, floating by its air-bubbles) and hoar-frost (congealed dew in crystals), owning that after 2000-3000 years we know about as much as Job."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "out of whose womb came the ice",
-   "the hoary frost of heaven",
-   "God as mother of the winter",
-   "science still unable to answer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
    "Charles Ellicott"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the frost makes the water's surface hard as stone to bear carriages where ships went, an emblem of the hard heart thawed only by the Spirit and the Sun of righteousness."
+    "summary": "Gill says the rain has no father but God and notes that the heathens themselves gave their supreme god a title of that kind, taking the same for a figure of the Gospel, which is not of men but comes down from heaven; he calls God the parent of ice as of rain and dew, observes that Scripture elsewhere calls it his ice, and remarks that the verse represents the Lord as a mother, a way of speaking he finds in an ancient poet who joined both parents in one name. Of the frozen surface he says it will bear great burdens and let carriages pass where ships went before, and turns it into an emblem of the hard heart of man, which only the power and grace of God can thaw."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets it in winter (the coming constellations rise then): the deep frozen not only at the poles but through the northern countries, locked from navigation for months."
+    "prevalence": "several",
+    "summary": "Wesley reduces the first question to a single line, whether any man can beget or produce rain at his pleasure. Clarke turns to the dew, quotes a definition of it as a thin insensible mist descending while the sun is below the horizon, and reports an unsettled controversy, since experiments made to determine whether dew rises from the earth or descends from the air had alternately favoured each; on ice he lays out the theory current in his day that ice is really the natural state of water, explains why it floats by the air-bubbles produced in freezing, and notes their expansive power, sufficient to burst the strongest vessel."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott renders 'the waters hide themselves and become like stone,' water losing its quality and turned to stone."
+    "prevalence": "several",
+    "summary": "Keil and Delitzsch observe that the parallelism asks after a begetter in the one line and a bearer in the other, so that rain and dew have no created father as ice and hoar-frost have no created mother. Ellicott renders the last verse that the waters hide themselves and become like stone, losing their familiar quality altogether."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Leaves the origin of dew an open question, since the experiments pro and con have alternately preponderated and we can no more tell than Job whether it rises from the ground or is deposited from the air."
+   }
+  ],
   "themes": [
-   "the waters hid as with a stone",
-   "the face of the deep frozen",
-   "the yielding turned to rock",
-   "the frozen heart and the thaw of grace"
+   "hath the rain a father",
+   "out of whose womb came the ice",
+   "the waters are hid as with a stone"
+  ],
+  "range": "28-30",
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.44
+   }
   }
  },
  "31": {
   "voices": [
-   "John Gill",
+   "John Wesley",
    "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
+   "John Gill",
+   "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the Pleiades' spring-influence cannot be restrained (a figure of efficacious grace); some read 'bands of the Pleiades' &mdash; either way Job can neither bind their influence nor break their band."
-   },
-   {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke sets Pleiades (spring) against Orion (winter) but is reluctant to follow the confident constellation-names, citing Coverdale; Wesley: God can change the seasons, binding the Pleiades and loosing Orion, but we cannot."
+    "summary": "Wesley states the contrast most plainly, that the one cluster brings in the spring and the other rises in November and brings in winter, so that both seasons will have their course; God can change them when he pleases, making the spring cold and the winter warm, but we cannot. Clarke gives the astronomy, six stars visible to the naked eye and seven to a good eye on a clear night though a telescope shows ten times that number, passes on another writer's judgement that the winter constellation stands by an elegant figure for winter at large, and reports a quite different derivation for the next name, from a root meaning to corrupt, on which it would be the pestilential summer wind of Arabia rather than a constellation; on the ordinances of heaven he turns the question on his own century, since Newton's system is most probably the true one and yet gravity is essential to it and Newton could neither explain nor comprehend what gravity is."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the first phrase as the pleasantnesses of the season, which cannot be hindered from taking place in the proper course of the year, reports the alternative rendering of bands on which the question becomes whether Job could bind such a group together, and applies the whole to the irresistible influences of grace; he identifies the next name with the chambers of the south, the southern pole and its stars hidden from sight in this part of the globe, while noting that some take it for the zodiac, and describes the ordinances as laws so far from being made by men that they are not even fully known by them."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott weighs 'sweet influences' as either astral influence or a chain/band binding the cluster, judging the parallel 'bands of Orion' to favour the second."
+    "summary": "Ellicott weighs the two senses of the first phrase, influence or band, and thinks the parallel with the bands of the other constellation favours the second; he takes the zodiac reading of the next name as the common one and identifies the children of the northern constellation with the three stars in the tail of the Bear."
    }
   ],
   "debates": [
    {
-    "question": "Do the 'sweet influences of Pleiades' mean astral influences or the cords binding the cluster?",
-    "sides": [
-     {
-      "position": "the influences the constellation pours out upon the seasons",
-      "holders": [
-       "Gill",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the chain or band that ties the seven stars together",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "What does the first phrase of the verse mean?",
+    "positions": "Gill and Wesley take it of the sweet influences of the season, which cannot be restrained; Ellicott and the versions Gill reports render it instead as bands or twistings, so that the question is whether Job could cluster such stars together."
    }
   ],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Confesses a reluctance to follow the learned on the constellation-names, not seeing the groundwork, and cites Coverdale's older rendering."
+    "view": "Enters a caution about all these identifications, that other scholars find them certain where he is obliged to doubt, and that he is reluctant to depart from the ancient versions but dares not follow where he cannot see the groundwork."
    }
   ],
   "themes": [
    "the sweet influences of Pleiades",
    "the bands of Orion",
-   "spring against winter",
-   "the seasons above man's reach"
+   "canst thou bring forth Mazzaroth in his season",
+   "the ordinances of heaven"
   ],
+  "range": "31-33",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill leans to Mazzaroth as 'the chambers of the south,' the hidden southern stars (from a root 'to separate'), or else the twelve signs of the Zodiac brought forth by the Lord."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil renders the signs of the Zodiac and the guiding of the Bear with its children; Ellicott takes Mazzaroth as the Zodiac and 'the children of Arcturus' as the three stars in the Bear's tail."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley reads Mazzaroth as the southern signs and Arcturus as the northern with its attendant lesser stars; Clarke reports Parkhurst's guess that Mazzaroth is the simoom, the pestilential summer wind."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
    }
-  ],
-  "debates": [
-   {
-    "question": "What is 'Mazzaroth'?",
-    "sides": [
-     {
-      "position": "the southern constellations, the 'chambers of the south'",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "the twelve signs of the Zodiac",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "the simoom, a pestilential summer wind (Parkhurst, as reported by Clarke)",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Mazzaroth in his season",
-   "Arcturus and his sons",
-   "the disputed name Mazzaroth",
-   "stars named and guided by God alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the 'ordinances of heaven' are God's decreed, stable laws of the stars' situation, motion, and influence, not made by men nor even fully known."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke asks the astronomer whether he knows the planetary laws, noting Newton could not say what gravity is; Wesley: did Job give these laws, or can he over-rule their influence on the world?"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott glosses the ordinances as the recurring seasons and their power of influencing the earth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the ordinances of heaven",
-   "the dominion of heaven on earth",
-   "laws unmade and uncomprehended by man",
-   "the sky's order rebukes the arraigning of Providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "34": {
   "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Job cannot magisterially command the clouds for rain; it is had only in a suppliant way, by the prayer of faith as Elijah's (cf. Zech. 10:1), not by dictate."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke sets Job's voice (kolecha) against the voice of Jehovah: thunder is koloth, 'voices,' the voice of God &mdash; the feeble man cannot summon what the Almighty commands."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "lift up thy voice to the clouds",
-   "rain sought not seized",
-   "the prayer of faith, not command",
-   "man's voice against the voice of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill pictures the lightning as a servant reporting 'Here we are'; only God commands it &mdash; Elijah's fire not to be imitated (the disciples reproved, Luke 9:54), lest men wield such power."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil: what is denied to man's natural power is possible to faith, as Elijah shows."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke contrasts the pagan Jupiter the Thunderer with the true Almighty ('who can thunder with a voice like his?'), noting berakim carries sense and sound &mdash; will the lightnings be Job's messengers as they are God's?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "canst thou send lightnings",
-   "the flash that reports 'Here we are'",
-   "God the true Thunderer",
-   "the lightning obeys its Maker alone"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
+   "John Gill",
    "Charles Ellicott"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the wisdom of the inward parts for the mind of man, no such star-guiding wisdom being lodged in him."
-   },
-   {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reads the understanding of the contemplative man, helpless without the Almighty's inspiration, but reports Good's 'vollies,' the Septuagint's 'weaving,' and the Vulgate's 'cock' proclaiming the night-watches."
+    "summary": "Clarke puts the contrast of voices exactly, that thunder is called voices in the Hebrew because it is reckoned the voice of God, so that Job's voice is here set against the voice of Jehovah; he notes that the heathen made their chief god the holder of the forked lightning, grasping the flame so that it cannot escape however it struggles, and remarks that the Hebrew word for lightnings carries both the sense and the sound of thunder. On wisdom in the inward parts he keeps the human sense and turns it into a reflection on the limits of thought, that the deepest contemplation cannot investigate truth without the inspiration of the Almighty and that a man who knows nothing of his own mind can hardly comprehend an infinite Spirit."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill draws the practical distinction the verse implies, that Job may call to the clouds as long as he likes and not a drop will be let down, because rain is to be had in a suppliant way through the prayer of faith and not in a dictatorial one; and he presses what it would mean if the lightnings were at the call of men, since Elijah called down fire under the impulse of prophecy and not for imitation, and the disciples were severely reproved for wanting the same on a provocation."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott owns the perplexity and offers, with Good, to refer 'the inward parts' to the lightnings personified: 'who hath put such understanding in their inward parts?'"
+    "summary": "Ellicott confesses that the mention of the inward parts and the heart in the middle of natural phenomena perplexes everyone, and proposes referring them to the lightnings just personified, so that the question asks who put such understanding into them."
    }
   ],
   "debates": [
    {
-    "question": "What are the 'inward parts' given wisdom?",
-    "sides": [
-     {
-      "position": "the mind or heart of man",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "the lightnings personified, given discernment to run their errands",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "Whose inward parts are meant?",
+    "positions": "Gill and Clarke both take the verse of man, and read it as continuing the argument from human incapacity; Ellicott, finding the placement inexplicable, refers it to the lightnings of the previous verse, and Clarke reports the same alternative without adopting it."
    }
   ],
   "outliers": [
    {
-    "voice": "Adam Clarke",
-    "note": "Reports the ancient versions' divergent renderings: the Septuagint's 'knowledge of weaving' and the Vulgate's 'understanding to the cock' that proclaims the night-watches."
+    "voice": "John Gill",
+    "view": "Argues from the consequences: if lightnings were at the disposal of men, dreadful things would be done, since if good men when provoked would use such a power to destroy life, how much more bad men."
    }
   ],
   "themes": [
-   "wisdom in the inward parts",
-   "understanding to the heart",
-   "the mind or the lightnings",
-   "reason itself a gift of God"
+   "canst thou lift up thy voice to the clouds",
+   "canst thou send lightnings, that they may go",
+   "who hath put wisdom in the inward parts"
   ],
+  "range": "34-36",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.48
+   }
   }
  },
  "37": {
@@ -1800,96 +985,61 @@
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: none can number or 'declare' the clouds; he records Aben Ezra's and Broughton's 'who can make them as sapphire?' &mdash; make a clear sky when it is overcast."
+    "summary": "Gill allows two senses for numbering the clouds, counting them when the heavens are full or declaring their matter and motion and use, neither of which any man can do completely, and reports a Jewish reading on which the question is who can make the sky clear as sapphire when it is overcast; he reads the hardened ground as dust attenuated into powder while the clods cleave together as if glued, which happens in a drought for want of rain, though he allows the opposite case of the bottles being poured out."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke suggests 'number' may mean to irradiate (the sky's inimitable tinges), and explains the 'bottles of heaven' as the clouds, after the skin water-bottles (girbahs)."
+    "summary": "Clarke suggests that the verb may bear an Arabic sense and mean to irradiate, referring to the inimitable tinges sometimes seen in the sky, and explains the bottles of heaven as an allusion to the skin bottles in which water was carried from wells; he reads the hardening as a question about the cohesion of matter itself and answers it with a chemist's catalogue, asking how measured parts of alumine and silex and oxide of iron make a ruby or an emerald, and noting that even water in a solid form enters into several gems as their water of crystallization."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott weighs 'stay the bottles' in two opposite senses &mdash; pouring out or laying up in store &mdash; the context uncertain; with this verse the survey of physical phenomena ends."
+    "summary": "Ellicott notes that the second clause is understood in two opposite senses, of pouring the bottles out or of laying them up in store, and that the choice is hard because the following clause is itself uncertain, according as the hardened ground is taken for thick mud or for dry soil; with this verse, he observes, the survey of physical phenomena ends."
    }
   ],
   "debates": [
    {
-    "question": "Does 'stay the bottles of heaven' mean to pour them out or to hold them back?",
-    "sides": [
-     {
-      "position": "to pour out the bottles in rain",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "to lay them up in store, holding the rain back",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
+    "question": "Are the bottles of heaven poured out or stored up?",
+    "positions": "Ellicott reports both senses and declines to decide, since the following clause about the hardened ground is itself ambiguous between mud and drought; Gill reads the ground as parched for want of rain while allowing the opposite case."
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "view": "Turns the question about hardening into one about the principle of cohesion in matter, which he does not think anyone can solve."
+   }
+  ],
   "themes": [
-   "who can number the clouds",
+   "who can number the clouds in wisdom",
    "the bottles of heaven",
-   "to pour out or to hold back",
-   "the clouds keep their count and contents from man"
+   "when the dust groweth into hardness"
   ],
+  "range": "37-38",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the dust ground into powder and the clods cleaving as if glued, whether in drought or when the bottles of heaven are poured out &mdash; the rain brought down to the soil."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke asks the mystery of cohesion &mdash; how dust was concreted and clods cohere &mdash; instancing the ruby, opal, lapis lazuli, and emerald, worthless dusts grown into hardness in a way known only to God."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.64
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the dust grown into hardness",
-   "the clods cleaving together",
-   "the mystery of cohesion",
-   "from the highest cloud to the hardening dust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "39": {
@@ -1903,135 +1053,61 @@
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill marks the turn to animals, beginning boldly with the lion: not man but God hunts its prey (the reputed jackal going before it, the young lions feeding the old)."
+    "summary": "Gill marks the turn from meteors to beasts and birds and reports that some begin the next chapter here; he calls the lion the strongest and fiercest of beasts and answers that man neither can hunt for him nor would dare to if he could, passing on two things from the naturalists, that a small creature between a fox and a wolf goes before the lion and hunts for him, and that young lions hunt for the old ones when these can no longer go in search themselves. He reports the reading that makes the couching lions old ones waiting for whatever passes, objects that the same coverts serve the younger, and takes the picture for an emblem of cruel persecutors and bloodthirsty tyrants."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke turns it on Job's faculties (he has neither the lion's strength, instinct, nor cunning) and notes ch. 39 should begin here as natural history opens; Wesley: is it by Job's care that the desert lions are fed?"
+    "summary": "Clarke holds that the best Hebrew Bibles begin the new chapter with this verse and begin it properly, prefers to render the word of the lioness, and turns the question on Job's own equipment, since he has neither the animal's strength nor its instinct nor its cunning; he refers the couching to the young, who lie under cover to surprise what they are not fleet enough to overtake, and derives the Hebrew name for a whelp from a root meaning to cover or hide. Of the raven he thinks the bird was chosen for its appetite and its continual cry, which is the cry of hunger, and because it dares not frequent the dwellings of men, being reckoned a bird of ill omen. Wesley states the contrast the chapter ends on, that having named the noblest of the brute creatures God now names one of the most contemptible, and draws the inference that he who provides for the young ravens will not fail to provide for his own children."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott agrees the new chapter ought to begin here, the animal creation now passing under review."
+    "summary": "Ellicott agrees that the new chapter ought to begin at the lion, since the animal creation now passes under review, and corrects the grammar of the last clause, which is not a separate statement but dependent on what precedes, so that the wandering for lack of meat belongs with the crying."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wilt thou hunt the prey for the lion",
-   "the appetite of the young lions",
-   "the chapter-division at v.39",
-   "providence over the beasts of prey"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill weighs whether these are old lions couching for want of strength, and reads the lurking beasts as emblems of cruel tyrants lying in wait with murder and rapine."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil notes the Hebrew wealth of lion-names (cf. 4:10) and that the lioness, named first, provides for her whelps that couch with her."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the young lions lie in covert to surprise prey they cannot outrun, whence kephirim takes its name from a root 'to cover or hide' (cf. 4:11)."
+    "question": "Which lions are meant by those that couch in their dens?",
+    "positions": "Clarke refers the couching to the young, too slow as yet to run their prey down and named from a root meaning to hide; Gill reports the reading that makes them old lions lying still for want of strength, and objects that the same coverts serve both."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "they couch in their dens",
-   "the covert to lie in wait",
-   "the Hebrew names for the lion",
-   "providence feeds the lurking beast"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: not man but God feeds the ravens, creatures voracious, mean, and useless, yet not overlooked."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke notes the raven chosen for its hungry, importunate cry (a hated bird of ill omen), citing Young's paraphrase of the crying brood; Wesley marks the descent from the lion to the contemptible raven, whose forsaken young God feeds &mdash; will he not much more provide for his children?"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott fixes the grammar: 'they wander for lack of meat' is dependent &mdash; 'when his young ones cry unto God, when they wander for lack of meat.'"
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
     "voice": "Adam Clarke",
-    "note": "Enriches the verse with Dr. Young's poetic paraphrase of the raven's crying brood, and the old fancy that the raven's importunate voice is always calling upon Providence."
+    "view": "Quotes a poet's paraphrase of the verse and the note attached to it, that the raven is named as the care of Providence because her clamorous voice seems always to be calling upon it, and that the noisier ravens of the Nile are probably the ones meant."
    }
   ],
   "themes": [
-   "who provideth for the raven",
-   "the young ones cry unto God",
-   "providence over the meanest creature",
-   "the God of greatness the God of care"
+   "wilt thou hunt the prey for the lion",
+   "when they couch in their dens",
+   "who provideth for the raven his food"
   ],
+  "range": "39-41",
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-20",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.26
+   }
   }
  }
 }
