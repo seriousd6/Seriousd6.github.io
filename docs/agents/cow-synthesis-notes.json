@@ -88551,6 +88551,69 @@
         "30"
       ],
       "note": "Tabernacle chapters are structurally prone to a low ttr, because the subject supplies a small closed vocabulary that must recur: ark, rings, poles, staves, cherubim, wings, mercy seat, covering, table, loaves, gold. The fix that worked was to name a thing plainly at first mention and then use the available alternates already present in the source pool, chest for ark, board for table, lid for mercy seat, pinions for wings, figures for cherubim, staves for poles, and to replace repeated multi-word attributions such as Keil and Delitzsch with pronouns or the same pair after the first naming."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "3",
+      "note": "ROOT CAUSE FOUND for three defects I have been reporting chapter by chapter. synthesis_qa._LABEL_RE is a fixed alternation of 24 names compiled as '(name1|name2|...)\\s*:' with NO left word-boundary anchor, and split_voices attributes each segment to the last label it matched. Two consequences, both mechanical. (1) MISATTRIBUTION BY PREFIX: 'Pseudo-Chrysostom:' matches the bare 'Chrysostom' alternative mid-token, so the orphan fragment 'Pseudo-' is emitted with a None label and Pseudo-Chrysostom's text is handed to Chrysostom. Same for 'John Chrysostom:'. (2) SILENT ABSORPTION: any father NOT in the 24-name list is invisible, so his block is appended to whichever listed voice preceded him. Verified at matthew 3 key 4, where the segment split_voices labels 'Chrysostom' is in fact Pseudo-Chrysostom's block with a Remigius block swallowed at its end, and where the chapter has no genuine Chrysostom material at all. This single defect explains the john 10 abbreviated-label finding, the Cyril of Jerusalem finding (four chapters, now five: 'Cyril' is listed but 'Cyril of Jerusalem:' cannot match 'Cyril\\s*:', so he is invisible and his text lands on the preceding voice), and this one. It is a fix under scripts/ and therefore cannot ride along with a chapter commit; it needs an owner decision and a separate landing."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "3",
+      "note": "SCALE of the label defect in this one chapter, counted mechanically against a corrected splitter. Labels present but invisible to synthesis_qa: Remigius 8 blocks, Pseudo-Chrysostom 7, Rabanus 7, Jerome 7, Gloss 6, Cyril of Jerusalem 6, Hilary 5, Ambrose 3, Pseudo-Augustine 1 — 50 blocks in total, none of them declarable and every one of them silently merged into the preceding listed voice. What the production splitter reports instead is 14 voices: Clarke, Barnes, Augustine, Bede, Ellicott, Chrysostom, Gregory, JFB, Calvin, Gill, Wesley, Lightfoot, Henry, Robertson. Note also two labels that work only by accident, 'A.T. Robertson:' (15) and 'John Lightfoot:' (11), which match on their bare surnames and leave 'A.T.' and 'John' as orphan fragments on the previous voice. Because a voice can only be declared if the production splitter sees it, this chapter had to be written from the 14 and the other 50 blocks dropped — including Jerome on the shoe-latchet and the two baptisms, Remigius on the five points in which Christ comes after John, and Rabanus on the four sorts of tree."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "3",
+      "verses": [
+        "4"
+      ],
+      "note": "Practical consequence for this chapter, and the reason every patristic attribution here was checked against the raw catena rather than against split_voices: at key 4 there is NO genuine Chrysostom block. What the splitter offers under that name is Pseudo-Chrysostom on the camel's hair and the girdle of skin, with Hilary, Jerome, Rabanus and Remigius following. Chrysostom is therefore declared as an excluded_voice on the vv4 tile — not because the block is residue from another chapter, which is the usual reason for an exclusion, but because the block the splitter calls Chrysostom is not Chrysostom. Genuine Chrysostom blocks do exist elsewhere in the chapter (keys 1, 5, 11, 13, 16) and only those were quoted."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB displacement in matthew 3, in two different directions. At keys 1 and 7 the Jamieson, Fausset and Brown blocks are Matthew 2 material — Herod waiting for the wise men, the massacre at Bethlehem, and the magi intending to return there — so the donor is one chapter back. At key 13 the block is not from another chapter at all but from earlier in this one, being JFB on verse 2 (the meaning of repentance and the phrase kingdom of heaven, with the reference to Daniel's vision). An intra-chapter displacement of eleven verses is a shape I have not recorded before; every previous JFB finding has been cross-chapter. Declared in excluded_voices on all three tiles."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "3",
+      "verses": [
+        "16-17"
+      ],
+      "note": "Two clean disagreements on the closing tile, both recorded as debates. (1) Who witnessed the theophany: Ellicott says the Lord and the Baptist alone and that there is not the slightest ground for supposing a manifestation to anyone else, Clarke reads the grammar the same way, while Barnes holds the voice was probably heard by everyone present and was a public declaration; Calvin splits it, the sight being chiefly for John's sake though Christ as man gained a further certainty from it. (2) Whether the likeness of a dove names a shape or a motion: Clarke reports the hovering-motion reading and rejects it as far-fetched and unsupported by the terms of the text, and Wesley holds precisely that reading, an appearance of fire descending with a hovering movement until it rested on him. The two are answering each other across a century without naming each other."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "3",
+      "verses": [
+        "9-12"
+      ],
+      "note": "The axe and the fan are read four ways each, and the readings are recorded as debates on the vv9-10 and vv11-12 tiles. For the axe: Gill takes it for the judgment of God laid to the root of every privilege and so to the covenant; Clarke and Lightfoot make it the Romans, the nation being the tree marked for felling; Barnes makes it the searching preaching itself, in which men are tried by their lives and not their birth; Calvin makes it the purging of the Church. For the fan: Gill the judgment shortly to fall on the nation, Clarke the Romans again with the garnered wheat as the Christians who withdrew to Pella, Gregory the last judgment after the threshing of this life is over, Robertson the coming of the Messiah. The pattern is worth noting on its own: the same four interpreters keep the same four instincts across both images, which suggests the division is about the whole chapter and not about either metaphor."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "3",
+      "note": "matthew 3 rewritten from 17 legacy per-verse entries (13 of them graded B, all 17 stamped legacy-unversioned) to 8 pericope tiles: vv1-3, v4, vv5-6, vv7-8, vv9-10, vv11-12, vv13-15, vv16-17. 59,565 usable source words in, 5,140 out. All 8 grade A (compress 0.446-0.467, ttr 0.618-0.658), no entity warnings, validator and both gates clean. Every patristic attribution was verified against the raw catena with a corrected splitter rather than trusting synthesis_qa.split_voices, for the reason recorded in the root-cause note above; no sentence is attributed to a father whose label the production splitter merely appears to have matched."
     }
   ]
 }
