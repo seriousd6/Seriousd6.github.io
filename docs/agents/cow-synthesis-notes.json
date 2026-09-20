@@ -88795,6 +88795,68 @@
       "book": "job",
       "chapter": "3",
       "note": "job 3 rewritten from 26 legacy per-verse entries (5 graded B, all 26 stamped legacy-unversioned) to 6 pericope tiles: vv1-2, vv3-10, vv11-15, vv16-19, vv20-23, vv24-26. 18,708 usable source words in, 3,871 out. All 6 grade A (compress 0.441-0.463, ttr 0.603-0.645), no entity warnings, validator and both gates clean. Two drafts came in over the ceiling and were trimmed before installation; nothing reached the data tree over-length."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1-33"
+      ],
+      "note": "CORRECTION to my own note filed earlier today on this chapter. I wrote that the STRETCH 8.11x mark was a hard gate failure and that john 16 could not land as tiled even if every entry reached grade A. That is wrong. STRETCH is only an advisory mark printed by synthesis-fidelity.py; it gates nothing. Verified on 2kings 8, which carries STRETCH 6.48x and whose chapter gate reports violations 0 and passes. The fidelity step fails on one thing only, a missing self-grade. The real blocker on john 16 is therefore the 33 missing self-grades plus 23 padded entries, not the stretch, and no re-tiling is forced by that mark."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "8",
+      "verses": [
+        "1-29"
+      ],
+      "note": "TRIAGE, not attempted this run and NOT in the same class as matthew 2 or john 16. 2kings 8 is a good candidate for a worker with room. The source is only 17154 usable words across 29 keys, averaging under 600 words a key, which is genuinely readable end to end. The chapter gate already passes with violations 0. The four grade-B entries fail on ttr alone, at 0.575, 0.577, 0.528 and 0.566, with compress clear at 0.424 to 0.440, so the wording technique that fixed 1kings 8, exodus 25, exodus 28 and leviticus 11 will lift them. The single hard blocker is that all 29 entries report self-grade MISSING, so finish will refuse until each has been read against its source and graded. Also standing in the prose: six ENTITIES signals (Philistia, Chethib, Whichever, Davidic, Nineveh, Arabian, Jeroboam) and one STRETCH 6.48x, which is advisory only."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "leviticus",
+      "chapter": "27",
+      "verses": [
+        "4-8",
+        "22-25"
+      ],
+      "note": "Polish pass on the two grade-B entries. 4-8 was ttr 0.567 with compress clear at 0.434 and is now 0.630. 22-25 was the harder of the two, ttr 0.556 and compress 0.414, below the 0.42 floor, so it needed compressing as well as varying; it came down from 635 words to 522 and is now ttr 0.600 compress 0.449. Field appeared eleven times in that entry and jubilee seven; varying them to ground, land, property, patrimony, leasehold and the year of release carried both metrics at once. No claim altered."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "leviticus",
+      "chapter": "27",
+      "verses": [
+        "4-8"
+      ],
+      "note": "ENTITIES signal cleared: the prose spelled the judge Jephthah while the source spells it Jephtha, without the final h. Corrected to the source spelling. Chapter now reports zero signals."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "numbers",
+      "chapter": "3",
+      "verses": [
+        "33-37",
+        "38-39"
+      ],
+      "note": "Polish pass on the two grade-B entries. 33-37 was ttr 0.554 and is now 0.605; 38-39 was ttr 0.570 and is now 0.615, with compress rising from 0.429 to 0.454. Entry 38-39 is a special case worth recording: it is about a failed sum, so the numerals themselves are the repeated vocabulary, with thousand appearing nine times. The fix was not to reword the numbers but to stop restating them, giving the three clan totals once and afterwards referring to the sum and the recorded muster. No claim altered and no figure changed."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "numbers",
+      "chapter": "3",
+      "verses": [
+        "27"
+      ],
+      "note": "ENTITIES signal cleared in an entry that was not being polished: the prose called Dathan and Abiram Reubenites, a form the source never uses, having only Reuben. Rephrased to belonged to the tribe of Reuben. Chapter now reports zero signals."
     }
   ]
 }
