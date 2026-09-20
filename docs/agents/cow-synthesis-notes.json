@@ -88459,6 +88459,98 @@
       "book": "nehemiah",
       "chapter": "10",
       "note": "nehemiah 10 rewritten from 24 legacy per-verse entries to 7 pericope tiles: vv1-3, vv8-9 (thin), v11, v14 (thin), vv28-31, vv32-34, vv35-39. Five source keys are deliberately uncovered — 6, 12, 18 and 24 as JFB-residue-only, and 16 as a verbatim duplicate of key 11 — all of them past the first source gap and therefore advisory under coverage_problems, which I verified by testing the plan before writing. The vv35-39 tile first graded B (compress 0.407, ttr 0.554) because the two witnesses list the same firstfruits and firstborn categories one after the other; it was rewritten to state the scheme once and came back at 0.455 and 0.637. Final state: all 7 grade A, no entity warnings, validator, chapter gate and corpus gate all clean."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1-23"
+      ],
+      "note": "DECLINED by worker B on 2026-09-20 with the reason stated, not abandoned mid-write. Nothing was changed in the data tree. The chapter reaches the polish queue on five grade-B verses, but the real blocker is different: all 23 entries report self-grade MISSING in synthesis-fidelity, so finish would fail at the fidelity step until every verse is graded. Grading 23 entries honestly means reading 62342 words of catena, which is the largest source read in the polish queue. A diction-only pass of the kind that fixed 1kings 8 will NOT land this chapter."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19"
+      ],
+      "note": "The four Jamieson Fausset and Brown blocks in this chapter are GENUINE, not displaced: key 1 is six words, keys 7, 13 and 19 carry 310, 225 and 353 words of comment on this chapter. This is the exception to the pattern found in ruth 1, mark 1, mark 5, job 20, numbers 32, john 16, 1kings 8, 1kings 11, matthew 14 and job 38, where every JFB block was foreign. Do not exclude them here. Checked block by block."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "1-23"
+      ],
+      "note": "Profile for whoever takes this chapter: 23 source keys, no gaps, 62342 usable words, 28 voices, heavily patristic (Pseudo-Chrysostom, Remigius, Rabanus, Gloss, Jerome, Augustine, Gregory, Leo, Ambrose, Bede, Hilary, Eusebius, Theodotus, Cyril of Jerusalem). One malformed head, Pseudo- with nothing after it, appears once. StudyLight chrome at key 23. Source is very unevenly distributed: key 1 holds 14186 words, key 23 6201, key 16 6037, key 13 4683, key 19 3564, key 9 3557, and the remaining seventeen keys average under 1500. Largest blocks are Matthew Henry 3367 at key 1, 2110 at key 9, 2033 at key 16."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "6",
+        "9",
+        "10",
+        "20",
+        "22"
+      ],
+      "note": "The five grade-B verses and their metrics: 6 ttr 0.574 zip 0.422, 9 ttr 0.568 zip 0.443, 10 ttr 0.561 zip 0.421, 20 ttr 0.591 zip 0.419, 22 ttr 0.579 zip 0.425. All five fail on ttr except 20, which is marginal on compress as well at 0.419 against a 0.42 floor. Verse 20 will need a little compression as well as varied diction."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "2",
+      "verses": [
+        "15",
+        "19"
+      ],
+      "note": "Two ENTITIES signals stand in the existing prose: Testaments at verse 15 and Reformers at verse 19. Both are words the synthesis uses that do not occur in the chapter source. The same Testaments slip was found and fixed in mark 8 earlier, where the source had only Old Testament and New Testament separately."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "12",
+        "20",
+        "21",
+        "23",
+        "24",
+        "29",
+        "30"
+      ],
+      "note": "Polish pass, same technique as 1kings 8. All eight entries graded B on ttr, and three of them (20, 21, 24) were also within two thousandths of the compress floor at 0.420, 0.421 and 0.418. Both metrics rose together once the diction was varied, which is expected, since repeated vocabulary is exactly what compresses well. No claim was altered. ttr before and after: 9 was 0.575 now 0.646, 12 was 0.546 now 0.613, 20 was 0.547 now 0.636, 21 was 0.567 now 0.606, 23 was 0.557 now 0.621, 24 was 0.546 now 0.635, 29 was 0.564 now 0.609, 30 was 0.570 now 0.629. Chapter is now 22 of 22 grade A."
+    },
+    {
+      "at": "2026-09-20",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "25",
+      "verses": [
+        "9",
+        "12",
+        "20",
+        "21",
+        "23",
+        "24",
+        "29",
+        "30"
+      ],
+      "note": "Tabernacle chapters are structurally prone to a low ttr, because the subject supplies a small closed vocabulary that must recur: ark, rings, poles, staves, cherubim, wings, mercy seat, covering, table, loaves, gold. The fix that worked was to name a thing plainly at first mention and then use the available alternates already present in the source pool, chest for ark, board for table, lid for mercy seat, pinions for wings, figures for cherubim, staves for poles, and to replace repeated multi-word attributions such as Keil and Delitzsch with pronouns or the same pair after the first naming."
     }
   ]
 }
