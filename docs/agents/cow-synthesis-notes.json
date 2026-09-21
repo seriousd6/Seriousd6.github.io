@@ -89150,6 +89150,17 @@
         "35"
       ],
       "note": "Polish pass on the three grade-B entries. Two of them, 14 and 30-32, are thin-flagged, which makes ttr harder to lift because the entry is shorter than the 200-token window the metric averages over, so every repeated word counts twice as much; they went from 0.573 and 0.560 to 0.651 and 0.615 while staying inside the thin band of 120 to 349 words. Entry 35 was the interesting one: it failed on compress at 0.415, below the 0.42 floor, because the prose enacted Wesley's agreement with Henry by restating Henry's whole double reading almost verbatim. Saying that Wesley repeats it without varying a phrase, instead of repeating it, lifted compress to 0.472 and ttr to 0.647. Stating a repetition rather than performing it is worth remembering wherever one commentator is reported as following another."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "39",
+      "verses": [
+        "41",
+        "23"
+      ],
+      "note": "Polish pass on the single grade-B entry, 41, which was ttr 0.575 at 356 words with compress clear at 0.432 and is now ttr 0.619 at 355. The entry is about one disputed conjunction, so cloths, service and garments had to recur in the quoted phrases; the variation had to come from the surrounding prose instead, pointing for punctuation, construal and reading for the several mentions of the interpretation, catalogue for chapter, benediction for blessing. Also cleared one ENTITIES signal at entry 23, where the prose called the habergeon a piece of medieval European armour while the source has no form of the word Europe; the qualifier was dropped. Chapter now reports zero signals."
     }
   ]
 }
