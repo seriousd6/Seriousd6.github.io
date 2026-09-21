@@ -89138,6 +89138,18 @@
         "18"
       ],
       "note": "Verse 18 is the chapter's textual crux and Clarke simply gives up on it, printing six irreconcilable renderings side by side (Heath, Houbigant, the Vulgate, Good, Coverdale, the Septuagint, the Syriac and the Arabic) and asking who can reconcile translations so discordant. The others do not engage: Ellicott and Wesley refer the two pronouns to the fatherless and the widow of the preceding verses and pass on. The tile follows Clarke in naming the disagreement rather than choosing for him."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "exodus",
+      "chapter": "36",
+      "verses": [
+        "14",
+        "30-32",
+        "35"
+      ],
+      "note": "Polish pass on the three grade-B entries. Two of them, 14 and 30-32, are thin-flagged, which makes ttr harder to lift because the entry is shorter than the 200-token window the metric averages over, so every repeated word counts twice as much; they went from 0.573 and 0.560 to 0.651 and 0.615 while staying inside the thin band of 120 to 349 words. Entry 35 was the interesting one: it failed on compress at 0.415, below the 0.42 floor, because the prose enacted Wesley's agreement with Henry by restating Henry's whole double reading almost verbatim. Saying that Wesley repeats it without varying a phrase, instead of repeating it, lifted compress to 0.472 and ttr to 0.647. Stating a repetition rather than performing it is worth remembering wherever one commentator is reported as following another."
     }
   ]
 }
