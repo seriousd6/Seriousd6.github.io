@@ -89161,6 +89161,81 @@
         "23"
       ],
       "note": "Polish pass on the single grade-B entry, 41, which was ttr 0.575 at 356 words with compress clear at 0.432 and is now ttr 0.619 at 355. The entry is about one disputed conjunction, so cloths, service and garments had to recur in the quoted phrases; the variation had to come from the surrounding prose instead, pointing for punctuation, construal and reading for the several mentions of the interpretation, catalogue for chapter, benediction for blessing. Also cleared one ENTITIES signal at entry 23, where the prose called the habergeon a piece of medieval European armour while the source has no form of the word Europe; the qualifier was dropped. Chapter now reports zero signals."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "fidelity",
+      "book": "acts",
+      "chapter": "6",
+      "note": "Legacy per-verse prose (15 entries, all stamped legacy-unversioned and all graded B) replaced by five pericope tiles regenerated from the catena (1-2, 3-4, 5-7, 8-10, 11-15). Source keys run 1-15 with no gaps, 38,358 usable words, the largest source-to-prose compression in the loop so far at 0.06x on the two heaviest tiles. Eleven declarable voices: Gill, Lightfoot, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, Chrysostom and Leo. Henry has blocks at only two keys (1 and 8), so he is declared on those two tiles only; Leo has a single block, at key 5, and Chrysostom a single block of 1,462 words at key 8."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "3",
+        "5",
+        "6",
+        "8",
+        "10",
+        "15"
+      ],
+      "note": "Six Cyril of Jerusalem blocks are invisible to the production splitter and three of them are duplicated boilerplate. 'Cyril of Jerusalem' is not in synthesis_qa VOICE_LABELS -- only the bare 'Cyril' is -- and because _LABEL_RE has no left word-boundary anchor, 'Cyril of Jerusalem:' matches neither. Five blocks are silently absorbed into the preceding voice and one is emitted under a None label. Worse, the content repeats: keys 3 and 5 carry the byte-identical catechetical passage on the name Jesus, and keys 8, 10 and 15 carry the byte-identical passage on the seven Deacons. Only the latter has anything to do with Acts 6. This is the same invisibility recorded at matthew 3 and mark 4, now with a fixed-donor repetition like the nehemiah 10 JFB stride."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "2",
+        "4",
+        "10"
+      ],
+      "note": "Two displacement defects. (1) Both Jamieson, Fausset and Brown blocks are from John 9: key 4 comments on anointing with oil and key 10 on identifying the newly seeing man with the long-known blind beggar. There is no genuine JFB comment on Acts 6; excluded via excluded_voices on the tiles at 3 and 8. (2) John Lightfoot's block at key 2 is on Abraham in Mesopotamia, which belongs to Acts 7:2, not 6:2; his other five blocks are genuine. A single displaced block inside an otherwise sound voice is a narrower failure than the whole-voice displacement seen at job 31 and esther 9."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "15"
+      ],
+      "note": "Site chrome again in the chapter's final Charles Ellicott block, at key 15: 1,196 words of which only the first ~210 are commentary, the rest copyright boilerplate, nav links and inlined JavaScript. Here key 15 is both the last Ellicott block and the last verse, so this chapter does not discriminate between the two filter hypotheses; job 3, mark 4 and job 31 do, and all three favour keying the filter to the final Ellicott block."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "5"
+      ],
+      "note": "Were the seven Hellenists? Robertson calls them undoubtedly so and finds deliberate wisdom in choosing seven of the aggrieved party to serve its own widows; Wesley and Ellicott agree from the Greek names, Ellicott adding that the inference is natural but not necessary and that the Hebrews may simply have voted generously. Lightfoot dissents outright, preferring to call them Hebrews who understood Greek -- that being why the Hellenists' widows fell to them -- since it is hardly supposable that Stephen pleaded before the Sanhedrin in a tongue not his own. A second dispute runs alongside it over whether the Nicolaitans took their name from the Nicolas of this list: Calvin affirms it on the consent of the ancients, Barnes and Clarke report the Fathers but doubt the evidence, Clarke adding that Clement of Alexandria gives Nicolas a good character, and Lightfoot derives the name instead from a phrase meaning let us eat together."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "Two disputes in the same passage. On the synagogue: Ellicott splits the five names into two synagogues and makes the Libertini emancipated Roman Jews descended from Pompey's captives; Clarke prefers Bishop Pearce, that since the Cyrenians were of Libya and the Alexandrians nearby the Libertines belong there too and not at Rome; Wesley and Calvin make it one synagogue serving all the nations named; Robertson allows two groups or five and says the language does not settle it. On the number of synagogues in the city, Barnes repeats the common estimate of four hundred and eighty while Robertson reports Schuerer calling that a Talmudic myth. On verse 10, Barnes denies that the spirit means the Holy Spirit and makes it Stephen's own ardour, where Clarke holds it was the Holy Spirit and irresistible."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "acts",
+      "chapter": "6",
+      "verses": [
+        "8"
+      ],
+      "note": "Chrysostom's single block draws a conclusion none of the moderns reach: Stephen worked no signs until after the laying on of hands, which Chrysostom takes as proof that grace alone is insufficient and that ordination conveys a further access of the Spirit beyond what came by baptism. The Protestant commentators on the same verses run the other way -- Calvin says the rite has of itself no force and the effect depends on the Spirit alone, Barnes that it conveyed no power but only designated the source of the commission, and Robertson quotes Hackett that it was of the nature of a prayer rather than a pledge. The tile records Chrysostom's reading as his own rather than harmonising it."
     }
   ]
 }
