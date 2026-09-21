@@ -89473,6 +89473,102 @@
         "52"
       ],
       "note": "Whether the flesh-and-blood discourse is eucharistic is the one place where the patristic and Protestant witnesses in this catena pull hardest against each other, and the source is lopsided. Wesley states his school's position outright, that the whole discourse refers directly to the passion and only remotely, if at all, to the Lord's Supper; Barnes refers the giving of the flesh to the sacrifice in the language of the institution; Clarke and Calvin both read the eating as faith. On the other side Augustine and Bede speak of the spiritual mystery of the body and blood, and Hilary at key 55 argues that the flesh is really flesh and the blood really blood -- but Hilary is invisible to the production splitter, so the strongest statement of that side cannot be declared in the tiles at all. Recorded here so the imbalance is visible even though the prose could not carry it."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "9",
+        "14",
+        "24"
+      ],
+      "note": "Densest _LABEL_RE loss recorded in this loop so far: the production splitter drops 31 blocks across the chapter that the corrected splitter sees - Jerome 7, Cyril of Jerusalem 6, Remigius 5, Hilary 5, Gloss 4, Raban 4. Compare john 6 (13 blocks) and john 12 (10). None of these names can be declared or excluded, because the production splitter never emits them; the material is simply absorbed into whichever declared voice precedes it."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "22"
+      ],
+      "note": "The production splitter assigns 208 words to John Wesley in the vv22-23 span, but his genuine block is a five-word cross-reference stub ('Mark 9:30 ; Luke 9:44.'); the remaining 200 words are Cyril of Jerusalem's Catechetical block on the passion undergone willingly, invisible to _LABEL_RE and therefore swallowed under Wesley's name. Wesley is listed in excluded_voices for that tile rather than cited, since citing him would attribute Cyril's material to him."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "25"
+      ],
+      "note": "The chapter's only Jamieson, Fausset and Brown presence is a six-word cross-reference stub at v25, '(Also see on Mr 6:50 .)'. Excluded from the vv24-27 tile. Worth recording against the JFB stride-6 displacement bug: here JFB has no stride at all, just one empty stub, so the bug's distribution is uneven across chapters rather than uniform."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "27"
+      ],
+      "note": "Site chrome (StudyLight navigation, CSS, book_data JSON, Cloudflare script) is appended to the final Ellicott block at v27. Non-discriminating for the 'final Ellicott block vs final verse' question, since v27 is both. Separately, the final Albert Barnes block at v27 carries a 21-point 'REMARKS ON MATTHEW CHAPTER 17' homiletic appendix covering the whole chapter, so its 1622-word count overstates its per-verse content by roughly 1350 words."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "14",
+        "24"
+      ],
+      "note": "Catena Aurea material in this chapter uses period-terminated internal abbreviations (CHRYS., AUG., RABAN., REMIG., HILARY.) inside blocks rather than colon-terminated full names. These are invisible to any colon-anchored splitter, so attribution within such a block has to be read by hand. This compounds the _LABEL_RE defect rather than being a separate issue."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "11",
+        "12"
+      ],
+      "note": "Origen and Augustine read 'restore all things' incompatibly. Origen refuses metempsychosis outright: Elias already come is 'not to be understood of the soul of Elias, that we fall not into the doctrine of metempsychosis, which is foreign to the truth of Church doctrine', but of one coming in the spirit and power of Elias. Augustine reads the restoring forward, of 'those whom the persecution of Antichrist shall have overthrown'. Ellicott notes independently that the words 'admit of two very different interpretations'. Both positions and Ellicott's caveat are carried in the key 9 debate block."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "24"
+      ],
+      "note": "Calvin stands alone on what the didrachma was. Clarke, Barnes, Lightfoot, Robertson, Ellicott and Wesley all identify it as the Exodus 30 temple rate, explicitly not a Roman tax. Calvin takes it for the sacred tax appropriated first by the kings of Asia and then by the Romans, so that 'the Jews, as if they had disowned the government of God, paid to profane tyrants the sacred tax required by the Law'. Carried as the first debate on key 24."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "23"
+      ],
+      "note": "Robertson reads the disciples' exceeding sorrow as proof they at last understood the passion announcement; Ellicott and Barnes read it the other way from Mark 9:32 and Luke 9:45, that they understood not and were afraid to ask, their sorrow being 'vague and dim'. Carried as the second debate on key 22."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "17",
+      "verses": [
+        "27"
+      ],
+      "note": "Ellicott alone hesitates over whether a miracle is recorded at v27: 'there is no actual record that a miracle was wrought at all', the narrative ending without the expected 'and he went and found as it had been said unto him', and the wonder standing alone in kind among the miracles. Barnes and Robertson treat it as foreknowledge, Clarke offers three alternatives, Calvin makes it a proof of dominion over the sea. Carried as the third debate on key 24."
     }
   ]
 }
