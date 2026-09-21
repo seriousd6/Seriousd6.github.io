@@ -89066,6 +89066,78 @@
         "1-51"
       ],
       "note": "WORKAROUND VERIFIED for the two-finish bug recorded against leviticus 11 today. Landing two chapters in one run is safe provided no edit to the second chapter exists on disk while the first finish is running. This run I wrote leviticus 11 only, finished it, confirmed with git show --stat that commit 86044d7a carried the prose file and not merely the tags, and only then wrote numbers 3 and finished it as 4b02f9cf, which likewise carried its prose. Both chapters now compute 15 of 15 and 10 of 10 grade A with zero mismatch between recorded and recomputed grades. The earlier failures, 07366292, 2cd45992 and 93df43ac, all had the second chapter's edits sitting on disk while the first finish ran."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "31",
+      "note": "Legacy per-verse prose (40 entries, all stamped legacy-unversioned, 5 graded B) replaced by ten pericope tiles regenerated from the catena (1-4, 5-8, 9-12, 13-15, 16-23, 24-28, 29-32, 33-34, 35-37, 38-40). Source keys run 1-40 with no gaps. Eight voices in the catena; Gregory the Great and JFB are not declared anywhere (see the source-defect notes), so the tiles rest on Gill, Henry, Clarke, Ellicott, Wesley and Keil and Delitzsch. The 16-23 tile carries eight verses because Henry's only block on that whole span sits under key 16; splitting it would have made his material on vv21-23 undeclarable."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "13",
+        "31",
+        "37"
+      ],
+      "note": "All three Jamieson, Fausset and Brown blocks in this chapter are displaced: key 13 carries 2 Chronicles 8 on Hamath, Tadmor and Solomon's store cities, key 31 carries 2 Chronicles 8:18 on the ship-men sent to Eloth, and key 37 carries 2 Chronicles 9:1-12 on the Queen of Sheba and a long excursus on the arched viaduct from Zion. There is no genuine JFB comment on Job 31 in the catena at all. Excluded via excluded_voices on the tiles at 13, 29 and 35. This is the same fetch displacement recorded at esther 9, mark 4, job 3 and matthew 3, here with 2 Chronicles 8-9 as the donor."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "1",
+        "24"
+      ],
+      "note": "Both Gregory the Great blocks (300 words each, at keys 1 and 24) are preface material from the Moralia -- the prologue on weighing text against mystery, and the self-referential apology for repeating what has been said before -- not comment on Job 31. Both are also invisible to the production splitter, which emits them under a None label because 'Gregory the Great' is not in synthesis_qa VOICE_LABELS; declaring the exclusion would fail the validator, since it sees no such block. Same None-label loss recorded at job 3 keys 1 and 20."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "38"
+      ],
+      "note": "The Charles Ellicott block at key 38 runs 1,101 words, of which only the first ~120 are commentary; everything after 'Job Job 30 Job Job Job Job 32 Footnotes:' is site chrome -- copyright boilerplate, nav links, then roughly 900 words of inlined JavaScript. Key 38 is the LAST Ellicott block in the chapter but not the last verse (40 is). Third independent confirmation that the chrome attaches to each chapter's final Ellicott block rather than to its final verse: job 3 key 25 (not 26) and mark 4 key 39 (not 41) are the other two. A filter keyed to the last Ellicott block clears all three; one keyed to the last verse clears none."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "31"
+      ],
+      "note": "What the men of Job's tent are saying about flesh splits the witnesses cleanly. Clarke (following the Targum) and Keil and Delitzsch read it as hospitality: the household protest that they were always fed to the full from his table, and K&D deny that the flesh is any person's. Ellicott and Wesley read it as bloodthirst: retainers so hot in their master's quarrel that they swore they could eat his enemy's flesh and never have enough, the point of the verse being that Job restrained them. Gill's block does not reach the clause."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "38",
+        "39",
+        "40"
+      ],
+      "note": "Two independent witnesses say these verses are out of place. Clarke, at key 34, holds that Job's words should end at verse 37 and that 38-40 belong after 25 or after 33; Ellicott, at key 35, says instead that 35-37 ought to come after 38-40, putting it down to the writer's ideas of symmetry not being ours. Gill reports the same proposals and rejects them, since this is the order in all copies and versions. Clarke separately doubts that the closing sentence, that the words of Job are ended, belongs to the book, finding it absent from many Vulgate manuscripts and detached in the Hebrew."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "31",
+      "verses": [
+        "18"
+      ],
+      "note": "Verse 18 is the chapter's textual crux and Clarke simply gives up on it, printing six irreconcilable renderings side by side (Heath, Houbigant, the Vulgate, Good, Coverdale, the Septuagint, the Syriac and the Arabic) and asking who can reconcile translations so discordant. The others do not engage: Ellicott and Wesley refer the two pronouns to the fatherless and the widow of the preceding verses and pass on. The tile follows Clarke in naming the disagreement rather than choosing for him."
     }
   ]
 }
