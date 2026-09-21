@@ -89268,6 +89268,75 @@
         "34-36"
       ],
       "note": "Polish pass on the two grade-B entries. 6-11 failed on compress at 0.418, below the floor, rather than on ttr; it lost about fifty words and is now ttr 0.638 compress 0.443. 34-36 failed on ttr at 0.561 and is now 0.639. This is a festival calendar, so day appeared twelve and thirteen times across the two entries and offering twelve times in one; the lift came from naming the occasion once and then using the tenth, the eighth, the season, the occasion, and from replacing the repeated offering with sacrifice, victim, and the flour and the wine. No quantity, date or ordering was changed."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "12",
+      "note": "Legacy per-verse prose (50 entries, all stamped legacy-unversioned, 32 graded B and 18 A) replaced by eight pericope tiles regenerated from the catena (1-8, 9-11, 12-19, 20-26, 27-33, 34-36, 37-43, 44-50). Source keys run 1-50 with no gaps, 94,033 usable words, by a wide margin the largest chapter the loop has taken: more than twice the 40,000-word whole-batch threshold and 2.5x acts 6. Eleven declarable voices (Gill, Lightfoot, Henry, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley, plus Augustine at keys 1 and 34, Bede at key 20 and Chrysostom at nine keys). Compression reaches 0.04x on three tiles, the tightest in the loop so far; the 9-11 tile is the outlier at 0.37x because that pericope carries only 1,444 source words."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "12",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "19",
+        "25",
+        "31",
+        "37",
+        "43",
+        "49"
+      ],
+      "note": "The Jamieson, Fausset and Brown stride-6 bug, now with an ADVANCING donor. All nine JFB blocks are displaced Luke 24 and resurrection-appearance material (the Emmaus road at key 1, 'senseless, without understanding' at 13, John 20:19 at 25, and at key 49 a 1,508-word block on the sons of Zebedee). There is no genuine JFB comment on John 12. The keys are 1, 7, 13, 19, 25, 31, 37, 43, 49 -- spacing exactly 6, the same stride recorded at nehemiah 10, but where nehemiah 10 repeated one byte-identical block at every step, here the donor advances through its own chapter. That distinguishes a fixed-donor fault from a stride fault and suggests one offset bug with two failure modes. Excluded via excluded_voices on the six tiles whose spans contain a JFB key."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "12",
+      "verses": [
+        "3",
+        "13"
+      ],
+      "note": "Three more voices invisible to the production splitter, for the same _LABEL_RE reason recorded at matthew 3, mark 4 and acts 6: Cyril of Jerusalem (7 blocks), Gloss (2, at keys 3 and 13) and Theophylact (1, at key 12). None of the three names is in synthesis_qa VOICE_LABELS, and the regex has no left word-boundary anchor, so 'Cyril of Jerusalem:' matches neither the full name nor the bare 'Cyril'. Ten blocks in all are absorbed into the preceding voice or emitted under a None label. Separately, the catena for this chapter is a Catena Aurea compilation in which several blocks carry INTERNAL abbreviated labels (CHRYS., AUG., ALCUIN., THEOPHYL.) that the splitter cannot see at all, since they use a period rather than a colon; the block labelled Augustine at key 1 in fact contains Chrysostom and Alcuin material, and Alcuin is not a listed voice anywhere. Attribution inside such blocks has to be read by hand."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "12",
+      "verses": [
+        "20",
+        "23",
+        "31"
+      ],
+      "note": "Three places where Calvin stands alone against the rest and the tiles record it rather than harmonising. (1) On the Greeks of verse 20 he denies they were uncircumcised Gentiles on legal grounds, since Roman law punished a man who left his native worship for the Jewish, where Ellicott, Robertson and Wesley all read Hellenes and proselytes of the gate. (2) On 'the hour is come' he refers the glorifying not to the death, as the others do, but to the publication of the gospel, so that the disciples should not lose courage. (3) On 'now is the judgment of this world' he takes the word in the Hebrew sense of a well-ordered state being restored, against Robertson's anarthrous 'a judgement' and Clarke's national punishment."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "12",
+      "verses": [
+        "7"
+      ],
+      "note": "What Jesus tells them to let Mary do turns on a text. Clarke, Ellicott and Robertson all prefer the reading of the better manuscripts, 'let her alone, that she may keep it against the day of my burying', with Clarke listing the versions and Robertson naming the uncials; on that reading only part of the ointment was used and the rest reserved. Gill and Lightfoot work from the received text, that she has already kept it against that day, Lightfoot reporting Baronius's use of the verse to identify this Mary with the Magdalene. Ellicott adds the detail that gives the saying its force, that the embalming had lately been performed in that very place, in the person of a man then sitting at the table."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "12",
+      "verses": [
+        "39",
+        "40"
+      ],
+      "note": "Whether the prophecy made the unbelief necessary is the chapter's hardest question and the witnesses answer it four ways. Calvin denies the prediction laid any necessity on the Jews, since the thing must have happened had the prophet never spoken, and holds that the foreknowledge of God is not itself the cause of events. Robertson and Barnes say John is not absolving them of moral responsibility but only showing the words had to be fulfilled, Barnes reading the word 'could' as the Bible often uses it, of an obstacle that makes a result certain. Clarke refuses to render the connecting particle 'that' at all, since it names neither the Pharisees' purpose nor the prophet's. Ellicott takes the impossibility in its plain sense as the apostle looking back on a national rejection. On the blinding itself Gill insists God blinds by no positive act but by withholding grace, and Clarke calls the contrary reading -- that God was unwilling they should turn lest he heal them -- an insupportable blasphemy."
     }
   ]
 }
