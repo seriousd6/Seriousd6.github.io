@@ -89392,6 +89392,87 @@
         "23"
       ],
       "note": "UNVERIFIED ATTRIBUTIONS, flagged rather than removed, the same class as the numbers 7 cross-references and requiring the same source read to settle. Four ENTITIES signals remain and none is a spelling variant, since the words are wholly absent from this chapter's catena: Edomite at entry 7, Isaiah and Acts at entry 18, and Sidetes and Onomasticon at entry 23. The last pair is the most striking, since naming a specific ancient work and an epithet of a Seleucid king is a very particular claim to make on a commentator's behalf. Two STRETCH marks also stand, at 7.74x and 13.42x, but those are advisory only and gate nothing."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "6",
+      "note": "Legacy per-verse prose (71 entries, all stamped legacy-unversioned, 7 graded B and 64 A) replaced by nine pericope tiles regenerated from the catena (1-15, 16-21, 22-27, 28-34, 35-40, 41-51, 52-59, 60-65, 66-71). Source keys run 1-71 with no gaps, 111,793 usable words -- the largest chapter the loop has taken, ahead of john 12 at 94,033 and nearly three times acts 6. Thirteen voices present; eleven declarable per tile as the blocks fall. Compression reaches 0.03x on two tiles. The 28-40 span was split at 34 rather than carried as one thirteen-verse tile, so the bread-of-life discourse gets two tiles instead of one."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "12",
+        "18",
+        "24",
+        "30",
+        "36",
+        "42",
+        "48",
+        "54",
+        "60",
+        "66"
+      ],
+      "note": "The Jamieson, Fausset and Brown stride-6 bug for the third time, and here it shows BOTH failure modes at once. Ten blocks at keys 12, 18, 24, 30, 36, 42, 48, 54, 60, 66 -- spacing exactly 6. Keys 12, 18 and 24 carry one byte-identical block (Matthew 25, the talents); keys 30 and 36 carry a second identical block (Bethphage); keys 42, 48, 54, 60 and 66 each carry distinct material from Matthew 21, Luke 13 and Lamentations. So the donor is fixed for a run, then advances, then is fixed again. Compare nehemiah 10 (fixed donor throughout) and john 12 (advancing donor throughout): this chapter shows they are one bug with a stepping offset, not two. No genuine JFB comment on John 6 exists in the catena; excluded via excluded_voices on all nine tiles."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "53"
+      ],
+      "note": "The Origen block at key 53 is displaced: it discusses the interpretation of the Jordan and John's baptism, not the eating of the flesh, and is evidently from Origen's commentary on a different passage. It is Origen's only block in the chapter, so the voice cannot be declared anywhere. Excluded via excluded_voices on the 52-59 tile alongside JFB. This is a single-block displacement inside a voice that has no other presence, a third shape after the whole-voice displacement (job 31, acts 6) and the single displaced block inside an otherwise sound voice (Lightfoot at acts 6:2)."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "3",
+        "55"
+      ],
+      "note": "Thirteen more blocks invisible to the production splitter, the same _LABEL_RE fault recorded at matthew 3, mark 4, acts 6 and john 12: Cyril of Jerusalem (11 blocks), Gloss (1) and Hilary (1, at key 55). None of the three names is in synthesis_qa VOICE_LABELS and the regex has no left word-boundary anchor. The Hilary block is the notable loss here: it is genuine, on topic and theologically weighty (the flesh really flesh and the blood really blood, Christ dwelling in us by his flesh), and it is the only patristic voice in the chapter arguing that side. As at john 12, several blocks also carry INTERNAL abbreviated labels (CHRYS., AUG., BEDE., ALCUIN., THEOPHYL.) ending in a period rather than a colon, which the splitter cannot see at all; attribution inside those blocks was read by hand."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "37",
+        "44",
+        "65"
+      ],
+      "note": "The chapter's doctrinal fault line runs through the three sayings about the Father giving and drawing, and the tiles record it rather than harmonising. Calvin takes the obstinacy of the hearers as proof that they are reprobate and no part of the flock, and says the distinction between elect and reprobate exists precisely to keep the authority of the doctrine unimpaired when many reject it. Clarke answers with the line Augustine quotes from the poet, that every man is drawn by his own delight -- show green herbage to a sheep, show nuts to a child -- and insists that those drawn are led and not driven; on losing nothing he distinguishes that God may will a thing to be without willing that it shall be, and wills perseverance without forcing it, Judas having been given to Christ and lost. Wesley agrees, promising pardon, holiness and heaven to those who endure to the end, and adding at verse 64 that God foresees future contingencies while his foreknowledge is not their cause. Robertson stands between, insisting the drawing is by moral power and that John is not absolving anyone of responsibility."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "62",
+        "63"
+      ],
+      "note": "Two linked disputes at the end of the discourse. On the question about seeing the Son of man ascend, Clarke and Ellicott take it as removing the offence, since the ascension would prove the saying figurative and prove the coming down; Wesley and Barnes take it the other way, Wesley asking how much more incredible the giving of his flesh would then appear and Barnes noting that instead of explaining away the offence Jesus states a further doctrine quite as offensive; Calvin takes it as neither, a withdrawing of the veil of his mean condition. On the verse that follows, the witnesses agree more than might be expected: Barnes denies the word spirit means the Holy Ghost, since the next clause makes the words themselves spirit, Clarke that it is the spiritual sense only that is to be attended to, and Wesley that the flesh is the bare carnal literal meaning. Calvin warns that the passage has been expounded in various ways and that the natural meaning must be settled first."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "6",
+      "verses": [
+        "51",
+        "52"
+      ],
+      "note": "Whether the flesh-and-blood discourse is eucharistic is the one place where the patristic and Protestant witnesses in this catena pull hardest against each other, and the source is lopsided. Wesley states his school's position outright, that the whole discourse refers directly to the passion and only remotely, if at all, to the Lord's Supper; Barnes refers the giving of the flesh to the sacrifice in the language of the institution; Clarke and Calvin both read the eating as faith. On the other side Augustine and Bede speak of the spiritual mystery of the body and blood, and Hilary at key 55 argues that the flesh is really flesh and the blood really blood -- but Hilary is invisible to the production splitter, so the strongest statement of that side cannot be declared in the tiles at all. Recorded here so the imbalance is visible even though the prose could not carry it."
     }
   ]
 }
