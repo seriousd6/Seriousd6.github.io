@@ -89644,6 +89644,112 @@
         "9-12"
       ],
       "note": "Polish pass on the single grade-B entry, which was also over the length ceiling at 653 words against a maximum of 650, so it had to come down as well as vary. It is now 617 words, ttr 0.574 to 0.629, compress 0.424 to 0.441. This chapter uses the inline convention that names each voice in strong tags at every mention, and that convention is expensive for the metric, since Adam Clarke costs two tokens and C.H. Spurgeon two more every time they recur, four and three times respectively in one entry. I kept the convention at first mention in each paragraph and used the surname alone for an immediate second reference, which is the least intrusive way to buy the variation. Anyone polishing another chapter in this style should expect the same problem and the same remedy."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "5",
+        "11",
+        "35",
+        "41"
+      ],
+      "note": "JFB stride-6 bug, clearest instance yet and the first in an OT chapter. All four Jamieson, Fausset and Brown blocks in this chapter are 2 Samuel 13 material (Amnon and Tamar, then Absalom), and they sit at keys 5, 11, 35 and 41 - four members of an exact stride-6 series 5, 11, 17, 23, 29, 35, 41, with three members returning empty. The donor ADVANCES in step: key 5 carries 2Sa 13:1-5, key 11 the feigned sickness at 13:6, key 35 the sheep-shearing feast at 13:23-27, key 41 the report to the court at 13:30-36. This matches the advancing-donor shape seen at john 12 and rules out the fixed-donor explanation as the general case. All four excluded from their tiles; none is usable."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "4",
+        "5",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16",
+        "17",
+        "19",
+        "21",
+        "22",
+        "23",
+        "25",
+        "26",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35"
+      ],
+      "note": "Keil and Delitzsch is truncated to EXACTLY 200 words in 24 of its 25 blocks in this chapter, every one of them ending mid-sentence (v2 stops at 'There is no ground whatever for Maurer's assumption, that he had been'; v8 at 'from the tower of the watchmen'; v34 at 'If, then, the clause, \"they do not according to their'). Worse, the fetch appears to be a sliding 200-word window opened at each verse rather than that verse's own comment, so adjacent keys repeat most of their text - the v11 and v12 blocks are byte-identical for their whole length. K&D is nominally the third-largest voice here at 4,831 words, but the usable content is a fraction of that and every argument is cut off before its conclusion. Same 200-word cap seen on Cyril of Jerusalem blocks in matthew 17, so this is not specific to one commentator."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "41"
+      ],
+      "note": "Site chrome (StudyLight navigation, CSS, book_data JSON, Cloudflare script) attached to the final Ellicott block at v41. Non-discriminating for the 'final Ellicott block vs final verse' question, since v41 is both - the same ambiguity as acts 6 and matthew 17. Ellicott's genuine v41 comment is about fifty words. Separately, Clarke's v41 block is a 1,823-word chapter-end excursus reproducing Dodd and Parkhurst on the idols of vv30-31, so its word count belongs to the earlier pericope, not the last."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "6"
+      ],
+      "note": "Wesley's note at v6 reproduces Henry's language at v1 almost verbatim ('they that forgot God were themselves forgotten, and they that studied to be like the nations were buried among them'; the Hoshea son of Nun / Hoshea son of Elah antithesis; the remnant that escaped). Wesley's Notes are known to abridge Henry, but it means the two are not independent witnesses at this point and a synthesis that cites both for the same claim is over-counting. Handled here by citing Wesley for the closing sentiment and Henry for the providential argument."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "3"
+      ],
+      "note": "Keil and Delitzsch identify Shalmaneser with the Sargon of Isaiah 20:1, 'whose name is spelt Sargina upon the monuments'. Ellicott keeps them apart as Shalmaneser IV (727-722) and his successor Sargon, and presses the point that the narrative never says Shalmaneser besieged Samaria three years and took it, since Sargon claims the capture in his own first year. Gill and Clarke give only the succession from Tiglath-pileser; Wesley reports the older Hebrew identification with Sennacherib. Four positions, carried as the first debate on key 1."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "21"
+      ],
+      "note": "Direct grammatical contradiction at v21. Keil and Delitzsch hold Jehovah to be the subject of 'he rent Israel from the house of David', since the alternative 'presupposes too harsh an ellipsis' and 1 Kings 11:31 has God rending the kingdom from Solomon. Ellicott holds that 'the Hebrew as it stands can only mean Israel rent', there being no object after the transitive verb, and would restore the niphal with the Vulgate's scissus est, 'Israel rent himself away'. Gill keeps the act with the Lord. Carried as the first debate on key 18."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "9"
+      ],
+      "note": "Keil and Delitzsch and Ellicott take opposite sides on the hapax at v9. K&D follow Hengstenberg - 'they covered words which were not right concerning Jehovah', a concealment of God's nature by perversions of his word - and explicitly reject both Thenius ('trifled with') and Gesenius ('dealt perfidiously'). Ellicott adopts the sense K&D reject, noting that Hebrew verbs of covering and hiding are often used of dealing treacherously (ma'al beside me'il, bagad beside beged) and that this pihel form occurs nowhere else. Carried as the first debate on key 7."
+    },
+    {
+      "at": "2026-09-21",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "17",
+      "verses": [
+        "41"
+      ],
+      "note": "The date of the 'unto this day' notice is given four different spans. Clarke: before the Babylonish captivity, since after it no Israelite lapsed into idolatry. Ellicott: two generations past 721, which brings us to the exile of Judah and 'the age of the last Redactor of Kings'. K&D: to the time the books of the Kings were written, with a caution that the Hebrew particle is not exclusive. Wesley: above three hundred years, to the time of Alexander the Great. Carried as the second debate on key 34."
     }
   ]
 }
