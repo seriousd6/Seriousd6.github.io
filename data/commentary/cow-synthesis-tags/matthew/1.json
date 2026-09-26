@@ -74,16 +74,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.02
+   }
   }
  },
  "2": {
@@ -129,16 +141,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "3": {
@@ -177,59 +201,85 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
  "4": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
    "John Wesley"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "unanimous",
-    "summary": "The line through the Exodus generation: Naasson (Nahshon), prince of Judah at the Exodus and brother-in-law of Aaron (Num 1:7; 1 Chr 2:10); the succession agreeing exactly with the OT records (Ruth 4:19-20)."
+    "prevalence": "several",
+    "summary": "Naasson = Nahshon, brother of Elisheba the wife of Aaron, prince of Judah at the Exodus and at the entry into Canaan (Num 1:7; 1 Chr 2:10); the succession agreeing exactly with the older registers."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   "Ellicott reports the Jewish legend that Nahshon was first into the Red Sea."
+  ],
   "themes": [
-   "the Exodus generation",
    "Naasson prince of Judah",
-   "the line preserved",
-   "agreement with Scripture"
+   "the Exodus generation",
+   "agreement with the older registers",
+   "the line toward the conquest"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.68
+   }
+  },
+  "range": "4",
+  "thin": true
  },
  "5": {
   "voices": [
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Charles Ellicott",
    "John Wesley"
   ],
@@ -237,30 +287,47 @@
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "Matthew adds what the OT omits — that Boaz’s mother was Rahab the harlot of Jericho (Josh 6:25; Ruth 4:21) — and names Ruth the Moabitess (Ruth 4:13); two Gentile women gathered into the line by faith."
+    "summary": "Rahab the harlot named as Boaz’s mother though the older records are silent (Josh 6:25; Ruth 4:21); Ellicott’s conjecture that Salmon was one of the spies and held land at Bethlehem through Caleb (1 Chr 2:54), with the light this throws on the book of Ruth; the rabbinic traditions that married Rahab to Joshua."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Rahab married Joshua (the rabbis) or Salmon (Gill: “the truth of the matter is, she became the wife of Salmon”)."
+  ],
+  "outliers": [
+   "The Gemara reckons eight prophets and priests among Rahab’s descendants; Ellicott notes the legend includes none of David’s line."
+  ],
   "themes": [
-   "Rahab the harlot",
-   "Ruth the Moabitess",
-   "Gentiles and sinners in the line",
-   "grace foreshadowed"
+   "Rahab and Ruth in the line",
+   "the silence of the older records",
+   "rabbinic tradition weighed",
+   "Salmon, Boaz and Obed"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.63
+   }
+  },
+  "range": "5"
  },
  "6": {
   "voices": [
@@ -297,204 +364,152 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  },
  "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Pseudo-Chrysostom"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The line from Solomon’s glory into the divided kingdom: Roboam (born of Naamah the Ammonitess, 1 Kgs 14:21), Abia, Asa (1 Chr 3:10)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Pseudo-Chrysostom reads the names mystically — Solomon ‘the peacemaker,’ Roboam ‘by a multitude of people.’"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Solomon to the divided kingdom",
-   "kings good and bad",
-   "persistence of grace",
-   "the throne kept for the Messiah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
   "voices": [
    "Jerome",
    "Hilary",
    "Pseudo-Chrysostom",
    "Augustine",
    "Gloss",
-   "Ambrose",
    "Remigius",
-   "Rabanus",
+   "Raban",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "John Wesley"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Three kings (Ahaziah, Joash, Amaziah) omitted between Joram and Ozias (1 Chr 3:11-12) — ‘begat’ meaning mediate descent; the omission serving the three-fourteens structure (v.17)."
+    "prevalence": "several",
+    "summary": "Three kings (Ahazias, Joash, Amazias) struck out between Joram and Ozias (1 Chr 3:11-12), so “begat” states mediate descent (Wesley); Clarke: such omissions are common in the Jewish rolls, which the Evangelist took as he found them."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Augustine: the three excluded for continuous wickedness; Hilary/Pseudo-Chrysostom: descendants of Ahab through Athaliah, cut off under the curse to the fourth generation — the Gentile stain purged."
+    "summary": "Jerome: the omission serves the three fourteens and purges Joram’s marriage into Jezebel’s race; Hilary: the royal race resumed at the fourth generation; Augustine: the three excluded for continuous wickedness. Remigius reads the royal names as titles of Christ."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom: the curse on Joram’s house for Ahab’s daughter, cutting his sons to the fourth generation out of the number of the kings (Ex 20:5)."
    }
   ],
   "debates": [
-   {
-    "question": "Why are the three kings omitted?",
-    "sides": [
-     {
-      "position": "divine judgment — descendants of Ahab under the curse / continuous wickedness",
-      "holders": [
-       "Augustine",
-       "Hilary",
-       "Pseudo-Chrysostom"
-      ]
-     },
-     {
-      "position": "to fit the three-fourteens structure",
-      "holders": [
-       "Jamieson, Fausset and Brown",
-       "Charles Ellicott"
-      ]
-     }
-    ]
-   }
+   "Why these three kings: Jerome/Hilary/Pseudo-Chrysostom on the house of Ahab, against Augustine on unbroken wickedness."
   ],
   "outliers": [],
   "themes": [
-   "three kings omitted",
-   "the curse on Ahab’s house",
-   "judgment on apostasy",
-   "the genealogy’s structure"
+   "Solomon to the divided kingdom",
+   "the three omitted kings",
+   "“begat” as succession",
+   "the names read of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
+  },
+  "range": "7-8"
  },
  "9": {
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Charles Ellicott",
    "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Ozias = Uzziah (leprous for presumption, 2 Chr 26:16); three kings omitted before him to compress into three fourteens (v.17); the line runs good king Jotham, wicked Ahaz, godly Hezekiah."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Uzziah, Jotham, Ahaz, Hezekiah",
-   "good and wicked kings",
-   "grace not bound by merit",
-   "the line preserved"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "unanimous",
-    "summary": "The descent through Manasseh (born of Hephzibah, 2 Kgs 21:1) — ‘remarkable both for his sins and his humiliation’ (2 Chr 33:12-13) — through Amon to the reformer Josiah."
+    "summary": "Ozias = Uzziah; three names omitted before him (1 Chr 3:11-12), whence Ellicott infers that “A begat B” states succession with or without intermediate links. Gill supplies the mothers; Manasses “remarkable both for his sins, and for his humiliation.”"
    }
   ],
-  "debates": [],
+  "debates": [
+   "Why these three: Ellicott’s numerical scheme (or Athaliah’s influence) against JFB’s religious grounds — the house of Ahab (Lightfoot, Ebrard, Alford) or a slender claim on the theocratic chain (Lange)."
+  ],
   "outliers": [],
   "themes": [
-   "Manasseh in the line",
-   "sin and humiliation",
-   "grace to the worst of sinners",
-   "Josiah the reformer"
+   "Ozias to Josias",
+   "the shaping of the fourteens",
+   "“begat” not always fatherhood",
+   "Manasseh’s sin and humiliation"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.41
+   }
+  },
+  "range": "9-10"
  },
  "11": {
   "voices": [
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "John Wesley"
@@ -503,30 +518,47 @@
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "Difficulties: Josiah was Jechonias’ grandfather (Jehoiakim omitted, 2 Kgs 23:34; 1 Chr 3:15-16); ‘his brethren’ = kinsmen/uncles; the verse marks the deportation to Babylon, the line’s lowest point yet unbroken."
+    "summary": "Josias is Jechonias’ grandfather, Eliakim/Jehoiakim being the missing link (2 Kgs 23:34; 1 Chr 3:14-16); “brethren” are strictly uncles (Wesley, Ellicott); Lightfoot follows R. Kimchi — “the sons of sons are reputed for sons.”"
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Clarke adopts the manuscript reading “Josias begat Joakim, and Joakim begat Jechonias” to resolve every difficulty; Ellicott rejects it as “obviously the insertion of some later scribe.”"
+  ],
+  "outliers": [
+   "Clarke distinguishes three deportations and tabulates the forty-two generations with Joakim restored."
+  ],
   "themes": [
-   "Jechonias and his brethren",
-   "the carrying away to Babylon",
-   "an omitted link",
-   "the line preserved through exile"
+   "the contested verse",
+   "the missing link",
+   "brethren as kinsmen",
+   "the carrying away to Babylon"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
+  },
+  "range": "11"
  },
  "12": {
   "voices": [
@@ -534,10 +566,9 @@
    "Ambrose",
    "Gloss",
    "Remigius",
-   "Rabanus",
+   "Raban",
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
@@ -547,188 +578,74 @@
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "The line resumes after Babylon (Jechonias → Salathiel → Zorobabel, 1 Chr 3:17); Jeremiah’s ‘write this man childless’ (Jer 22:30) meant no descendant should prosper on David’s earthly throne, not absolute childlessness."
+    "summary": "Jer 22:30 meant no reigning child, not no seed (JFB); Lightfoot takes “begat” as succession in dignity; Ellicott sets out the conflict with Lk 3:27 and 1 Chr 3:17-19 and proposes adoption from the line of Nathan; Clarke on the transportation and Jechonias’ release; Gill identifies Abiud with Meshullam."
    },
    {
     "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Ambrose raises the Jer 22:30 problem; Remigius and Rabanus read the post-exilic names as mystical figures of Christ."
+    "summary": "Ambrose answers Jeremiah’s oracle from the nature of Christ’s kingdom (Jn 18:36); the Gloss allows corruption in the records and accounts for the Evangelist’s sources from the burned annals; Remigius and Raban read the post-exilic names of Christ and as a moral ascent."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Pseudo-Chrysostom supposes Jechonias a holy man praying for Israel in the captivity, and reads Zorobabel “the doctor of Babylon” after his sentence that Truth is strongest."
    },
    {
     "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the captivity turned David’s royal descendants into exiles and slaves, yet was arranged by providence to preserve the seed."
+    "prevalence": "single",
+    "summary": "Calvin: the sons of David became exiles and slaves, yet vestiges of dominion remained until Christ, per Gen 49:10."
    }
   ],
   "debates": [
-   {
-    "question": "How is Christ of Jechonias’ seed if Coniah was ‘written childless’ (Jer 22:30)?",
-    "sides": [
-     {
-      "position": "the prophecy meant no descendant prospering on David’s earthly throne, not childlessness",
-      "holders": [
-       "Jamieson, Fausset and Brown",
-       "John Lightfoot"
-      ]
-     }
-    ]
-   }
+   "Whether the discrepancy with Luke and Chronicles is textual corruption (Gloss), two names for one man, or adoption from Nathan’s line (Ellicott)."
   ],
   "outliers": [],
   "themes": [
-   "after the captivity",
-   "Jechonias to Zorobabel",
-   "the Coniah-childless problem",
-   "the line preserved through exile"
+   "the captivity and the fallen throne",
+   "Jeremiah’s “childless”",
+   "the unknown post-exilic names",
+   "the names read of Christ"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Remigius",
-   "Rabanus"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The line passes into post-exilic generations unrecorded in the OT (Abiud not in Chronicles, perhaps = Meshullam, 1 Chr 3:19), resting on the carefully kept Jewish registers."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Finding little history, the fathers read the names mystically — Remigius: Abiud = ‘He is my Father’ (Jn 10:30); Rabanus traces a moral sense pointing to Christ."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the obscure post-exilic names",
-   "the silent centuries",
-   "God’s hidden faithfulness",
-   "names pointing to Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Rabanus",
-   "Remigius"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The succession continues through Azor, Sadoc, Achim, Eliud — names belonging to the obscure inter-testamental period, recorded in the Evangelist’s source but nowhere else in Scripture."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The fathers read the very names as hidden foreshadowings of Christ, after Rabanus and Remigius on the surrounding verses."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unknown post-exilic names",
-   "the obscure and unremembered",
-   "God’s patience in silence",
-   "every link necessary"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The last generations before Joseph (Eleazar, Matthan, Jacob), names not in the OT; JFB reaffirms the agreement with 1 Chr 3:17 and that Jer 22:30 is no contradiction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the last generations before Joseph",
-   "Matthan and Jacob",
-   "the threshold of the nativity",
-   "centuries of providence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
+  },
+  "range": "12-15"
  },
  "16": {
   "voices": [
-   "Gloss",
    "Jerome",
    "Eusebius",
    "Augustine",
    "Chrysostom",
    "Gennadius",
    "Hilary",
-   "The Council of Ephesus",
    "Pseudo-Augustine",
-   "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
+   "John Wesley",
    "Adam Clarke",
-   "John Calvin",
-   "John Wesley"
+   "John Calvin"
   ],
   "schools": [
    {
@@ -778,17 +695,30 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
+  },
+  "range": "16"
  },
  "17": {
   "voices": [
@@ -833,16 +763,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "Closing paragraph adds an unattributed chronological figure (“two thousand years”) that no witness in this chapter supplies; the rest traces to Pseudo-Chrysostom, Barnes, Ellicott, Lightfoot and Wesley.",
+    "expansion": 0.16
+   }
   }
  },
  "18": {
@@ -895,16 +838,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
+   }
   }
  },
  "19": {
@@ -973,16 +928,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
  "20": {
@@ -1032,32 +999,43 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "21": {
   "voices": [
    "Chrysostom",
-   "Gloss",
    "Pseudo-Chrysostom",
-   "Rabanus",
+   "Gloss",
+   "Raban",
    "Jerome",
    "Remigius",
    "Chrysologus",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown"
+   "Charles Ellicott"
   ],
   "schools": [
    {
@@ -1081,17 +1059,30 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
+  },
+  "range": "21"
  },
  "22": {
   "voices": [
@@ -1134,31 +1125,40 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  },
  "23": {
   "voices": [
    "John Gill",
    "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
+   "Jerome",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
+   "Adam Clarke",
    "Theodotus",
-   "Jerome"
+   "John Calvin"
   ],
   "schools": [
    {
@@ -1195,17 +1195,30 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
+  },
+  "range": "23"
  },
  "24": {
   "voices": [
@@ -1241,16 +1254,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.24
+   }
   }
  },
  "25": {
@@ -1312,16 +1337,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  }
 }

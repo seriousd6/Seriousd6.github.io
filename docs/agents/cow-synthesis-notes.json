@@ -90078,6 +90078,96 @@
         "26"
       ],
       "note": "Every tile self-graded A; each claim traces to a block inside the tile's own span, and the expansions are framing rather than content. Three judgement calls worth stating. (1) Ellicott's remark that the chronicler, or more likely his source, PUTS this prayer into the aged king's mouth is reported as his view and not adopted as the chapter's; Henry, Gill and Wesley all treat the prayer as David's own, and the prose does not harmonise the two. (2) The money figures are reported as a spread of named estimates rather than reconciled, since reconciling them would mean choosing a talent weight none of the witnesses agrees on. (3) Keil and Delitzsch are cited from blocks the 200-word cap cuts mid-sentence, so only arguments complete within the surviving text were used. SIGNALS NOTE for whoever runs the fidelity tool next: this chapter threw an ENTITIES flag on 'Abhira' which is a false positive, since Ellicott spells it Abhira with a circumflex and the prose rules require pure ASCII, so an exact match is impossible. A flag of the same kind on 'Cyclades' was cleared by writing 'Cyclade islands' to match Clarke's wording. Worth knowing that transliterated proper names carrying diacritics will always trip this check."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "14"
+      ],
+      "note": "Key 14 of the catena holds nothing but a Barnes placeholder line, so verse 14 has zero usable source words. The 370-word entry standing on it could not be graded at all, and no legal output existed for it as a single verse: 120 words is the thin floor and there was nothing to ground even that. Folded into a pericope over 12-15, where the catena actually files the material."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "13",
+        "15"
+      ],
+      "note": "The commentary belonging to verses 13-15 is filed under key 12, where Remigius and Raban run right through Abiud, Eliacim, Azor, Sadoch, Achim, Eliud, Eleazar and Matthan; and the Jamieson-Fausset-Brown block filed under key 15 is about verse 12, the migration and Salathiel. The per-verse split therefore left keys 13, 14 and 15 with almost nothing of their own, and the entries written on them borrowed from key 12 without saying so. One pericope over 12-15 puts the prose back on top of its own source."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "7"
+      ],
+      "note": "The previous entry credited Pseudo-Chrysostom with reading Solomon as the peacemaker and Roboam as by a multitude of people. Neither phrase occurs anywhere in this chapter. The catena reads the peaceful and the breadth of the people, and files both under key 8, together with the whole moral sequence from Solomon to Josias. Rewritten as a pericope over 7-8 quoting the source's own words."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "20"
+      ],
+      "note": "Reformers as a group name occurs nowhere in this chapter's sources; the entry used it as a heading for Calvin. Replaced with the Reformed, which the lint treats as an editorial school label rather than an attribution."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "4",
+        "7",
+        "10",
+        "13",
+        "14",
+        "15"
+      ],
+      "note": "The padding in this legacy chapter is uniform in shape: one grounded opening paragraph, then two paragraphs of unattributed devotional homily voiced as the witnesses, on verses whose own source runs from 11 to 114 words. Expansion ratios were 3.4x, 12.8x, 7.6x, 4.1x, 33.6x and 3.5x. This is exactly the defect the thin exemption and the pericope rule exist to prevent, and the metric grade could not see it because padded prose of that kind scores A on compress and ttr."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "5",
+        "11",
+        "16",
+        "21",
+        "23"
+      ],
+      "note": "All five grade-B entries failed for one reason: a closing paragraph that restated the paragraph before it. Deleting it and refilling from source material the entry had never used lifted every one to A. ttr 0.560 to 0.691 on v5, 0.574 to 0.661 on v11, 0.578 to 0.599 on v16, 0.541 to 0.628 on v21, 0.560 to 0.673 on v23; compress rose on all five, and on v21 from 0.410 to 0.460. The refill is the better fix than a diction pass wherever the source is rich and only part of it was used."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "17"
+      ],
+      "note": "Graded B. The closing paragraph adds an unattributed chronological figure, two thousand years, that no witness in this chapter supplies. Everything else traces to Pseudo-Chrysostom, Barnes, Ellicott, Lightfoot and Wesley."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "1",
+      "verses": [
+        "1"
+      ],
+      "note": "matthew 1 came up as polish, but every one of its 25 entries carried qa.standard legacy-unversioned. The queue ranks polish by grade-B count, and six entries here were built on almost no source while still grading A, so the ranking understated the work by a wide margin. Worth knowing that a legacy chapter in the polish queue can need a partial rewrite rather than a diction pass."
     }
   ]
 }
