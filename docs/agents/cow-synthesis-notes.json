@@ -90168,6 +90168,106 @@
         "1"
       ],
       "note": "matthew 1 came up as polish, but every one of its 25 entries carried qa.standard legacy-unversioned. The queue ranks polish by grade-B count, and six entries here were built on almost no source while still grading A, so the ranking understated the work by a wide margin. Worth knowing that a legacy chapter in the polish queue can need a partial rewrite rather than a diction pass."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "4",
+        "10",
+        "22"
+      ],
+      "note": "JFB DISPLACED AGAIN, AND THE CROSS-BOOK HYPOTHESIS RECORDED AT 1CHRONICLES 29 IS NOW FALSIFIED. I predicted before looking that the donor would be 2 Kings, on the pattern that the fetch lands two books back (1 Kings drew 1 Samuel; 1 Chronicles drew 1 Kings). That is wrong. All three JFB blocks here carry 2 CHRONICLES 25 material, from the SAME book, seven chapters earlier: Amaziah's challenge to Joash and its motives in the outrages of the discharged auxiliaries and the massacre by Jehu (key 4); the sarcastic reply, the battle, the breaching of the wall of Jerusalem and the hostages (key 10); and Jeroboam II regaining the lost territory (key 22). The blocks cite 2Ch 25:13, 2Ch 25:20, 2Ki 14:13 and 2Ki 14:24-27 internally, the 2 Kings references being JFB's own habitual cross-refs from his Chronicles commentary to the Kings parallel, not evidence of a 2 Kings donor. WHAT SURVIVES OF THE HYPOTHESIS: the keys are still an exact stride-6 series (4, 10, 16, 22, 28, with 16 and 28 returning nothing), the donor still advances monotonically within the chapter, and the displacement is still always backwards onto a coherent contiguous passage. WHAT IS DEAD: any fixed book offset. The distance varies enormously, from seven chapters here to roughly sixty at 1chronicles 29. One reading that fits both: the offset is roughly constant in LENGTH OF COMMENTARY TEXT rather than in chapters, which would stretch across many chapters where JFB is terse (he abbreviates heavily in Chronicles because it parallels Samuel and Kings) and only a few where he is full. That is a guess, not a finding, and it should be tested by measuring the byte distance rather than the chapter distance between host and donor in the six chapters now recorded."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "6",
+        "7",
+        "10",
+        "11",
+        "14",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "note": "The 200-word cap once more: 19 of the 21 Keil and Delitzsch blocks are exactly 200 words and cut mid-sentence, only keys 32 (184) and 33 (124) running short. Third chapter in a row with the same signature, after 1kings 21 (11 of 12) and 1chronicles 29 (21 of 23). Advancing-window form again, not the stuck form. A corpus-wide count of blocks of exactly 200 words would now be cheap and would quantify how much commentary the site is silently missing; on these three chapters alone it is on the order of a hundred truncated blocks."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "33"
+      ],
+      "note": "ELLICOTT CHROME at the final key for the third consecutive chapter. The key-33 block is 1140 words of which only 145 are commentary; the genuine text ends at the conjecture about a great burning of spices in honour of Hezekiah as of Asa, and the rest is chapter navigation, a Footnotes header, copyright text, the StudyLight menu tree, CSS and JavaScript. Ignored silently. AND STILL NON-DISCRIMINATING, which is now the point worth making: three chapters running, the last Ellicott block has also been the last verse, so the two hypotheses (chrome attaches to the final block fetched, versus chrome attaches to the final verse of the chapter) remain untested. Every chapter in this stretch of the OT has Ellicott commenting on its closing verse, so waiting will not settle it. Someone should scan the corpus for a chapter whose highest Ellicott key is below the chapter's last verse and look there."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "22",
+        "32",
+        "33"
+      ],
+      "note": "Three places where Keil and Delitzsch and Ellicott contradict each other directly, all kept rather than harmonised. (1) v22, the clause rendered 'guided them on every side': Ellicott judges the emendation to 'gave them rest round about' correct, citing the LXX, the Vulgate and the chronicler's frequent use of that phrase; Keil and Delitzsch defend the received text, taking the verb as leading with care and hence protecting, and reject the same conjecture (Bertheau's) on the ground that the supposed orthographic slip is improbable. Ellicott also thinks the word 'his enemies' has fallen out after 'the hand of all'; Keil and Delitzsch resist adding it. (2) v32, 'the vision of Isaiah': Keil and Delitzsch take it for the book of Isaiah's prophecies, a separate work; Ellicott deletes the conjunction and makes it a section WITHIN the book of the kings of Judah and Israel. (3) v33, 'the chiefest of the sepulchres': Keil and Delitzsch read 'on the height of the graves of the sons of David' and conjecture the hereditary vault was full; Ellicott prefers 'the ascent', the way up to the royal tombs, while agreeing about the crowding on the evidence that Manasseh, Amon and Josiah were not laid there either; Clarke ignores the philology and reads it as respect paid to the best king since David."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "21",
+        "31"
+      ],
+      "note": "Two further splits. (1) What destroyed the Assyrian host: Gill canvasses three answers without choosing, the Targum's Word of the Lord sending Gabriel, Josephus taking the messenger for the pestilence, and the identification with the Samiel or poison wind of the east that travellers report killing multitudes at once; Wesley gives the Jewish comment in its fuller form, Gabriel, lightning, and the passover night, the same night the firstborn of Egypt were slain; Keil and Delitzsch decline the question, observing that no number is given because the number did not matter. Ellicott supplies the 185,000 from Kings and reports Hitzig's hypothesis that Psalms 46-48 are Isaiah's commemoration of the event. (2) What the Babylonian envoys came to ask: Gill explicitly rejects the Targum (the tables of stone in the ark) and Grotius (the fall of the Assyrians) for the sun's retreat, the Chaldeans being astrologers; Wesley and Henry allow either the destruction or the sign, Henry supplying a motive for each; Ellicott notes the errand is absent from every parallel but fits Babylon as the home of divination, and that a solar sign would interest the temple astronomers particularly; Clarke reproduces the Targum reading Gill rejects."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "9",
+        "24"
+      ],
+      "note": "Rewritten from legacy per-verse prose as 6 pericope tiles: 1-8, 9-15, 16-23, 24-26, 27-30, 31-33. Matthew Henry's three blocks sit at keys 1, 9 and 24 and cover vv1-8, vv9-23 and vv24-33 exactly, so the first three seams are his and the last two subdivide his closing exposition at the natural joints. NOTE ON A THIN SPAN AVOIDED: vv16-19 has no Keil and Delitzsch block and no Wesley block, and only about 520 usable words in all, which would have forced a tile to compress above 1.0. It was merged with the deliverance (vv20-23) rather than written thin. Wesley has no block anywhere in vv9-15 either, so he is simply not declared on that tile; the other five voices appear in all six. Worth remembering as a general tactic: when the census shows a span starved of its major voices, merge before writing, not after."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "9",
+        "16",
+        "24",
+        "27",
+        "31"
+      ],
+      "note": "Every tile self-graded A; each claim traces to a block inside the tile's own span, and the expansions are framing. Judgement calls worth stating. (1) Ellicott's three source-critical claims are reported as his own positions and not adopted: that the chronicler omits the tribute by design, that the vision of Isaiah is a section of the book of the kings, and that the closing burial notices prove an authority besides the canonical Kings. Keil and Delitzsch contradict him on the second, and the prose keeps both. (2) Clarke's long Targum digest at key 33 supplies the Targum readings used at keys 1, 8, 16, 18, 21, 24 and 31; where the prose reports a Targum reading it is credited to Clarke as its reporter, not treated as an independent witness. (3) Keil and Delitzsch are cited only from arguments complete within the 200 words their blocks survive in. SIGNALS NOTE: an ENTITIES flag on 'Sirach' was cleared by rewording, since Ellicott cites the book only as 'Sir. 48:17' and the expansion cannot match. Same class of false positive as 'Abhira' at 1chronicles 29 — the checker cannot see through an abbreviation or a diacritic."
     }
   ]
 }
