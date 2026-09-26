@@ -1,1487 +1,570 @@
 {
  "1": {
   "voices": [
-   "Chrysostom",
-   "Augustine",
-   "Raban",
-   "Jerome",
-   "Hilary",
-   "Remigius",
    "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The setting full of 'heavenly sacraments': leaving Judaea for the Gentiles (Rabanus), the ship a type of the Church within which the word is kept while those 'without' cannot understand (Hilary), Jesus teaching from the waves what the people were unworthy to hear within (Jerome)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: Christ unwearied, preaching both ends of the day (Eccl 11:6); in his humiliation he had no chapel of his own, his pulpit a ship — where Christ is, there is the church, though by the sea-side."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'Busy Day' (Robertson); he went out of Peter's house and sat by the sea of Galilee, the crowds along the shore; 'the same day' as the foregoing controversy."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "went out and sat by the sea",
-   "the ship as pulpit / Church",
-   "Christ's unwearied zeal",
-   "leaving Judaea for the Gentiles"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Multitudes gathered 'on divers accounts'; the Jewish custom that masters sat and scholars stood (Lightfoot); the boat seemingly kept for Christ's use (Lk 5:3); he sat in it because of the crush on the beach."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the assembly eager to hear but not equally to receive; the parable shows the seed of doctrine is not everywhere productive, finding not always a fertile soil — so we need not wonder the Gospel yields no fruit in many."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "great multitudes gathered",
-   "into a ship",
-   "the whole multitude on the shore",
-   "doctrine as scattered seed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Hilary",
-   "Gregory",
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Chrysostom",
+   "Augustine"
   ],
+  "range": "1-9",
+  "pericope_label": "The same day went Jesus out of the house, and sat by the sea side. And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore. And he spake many things unto them in parables, saying, Behold, a sower went forth to sow; And when he sowed, some seeds fell by the way side, and the fowls came and devoured them up: Some fell upon stony places, where they had not much earth: and forthwith they sprung up, because they had no deepness of earth: And when the sun was up, they were scorched; and because they had no root, they withered away. And some fell among thorns; and the thorns sprung up, and choked them: But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold. Who hath ears to hear, let him hear.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "A parable = a similitude from nature for spiritual truth, not necessarily a true narrative, to interest, arrest, rebuke (Nathan, 2 Sam 12:7), or conceal (Barnes); a form familiar among the Jews yet 'astonishingly improved' by Christ (Lightfoot, Clarke); the sower a figure from common life (Ellicott, Robertson)."
+    "summary": "Robertson allows the plain sixth day but thinks a week likelier, takes the word parable from placing alongside for measurement, and separates it from the fable, which puts things as they are not in nature, and from the self-explaining allegory, warning that a parable usually carries one main point and that much heresy has come of pressing details. Ellicott insists on Eastern tillage against English assumptions: ground less perfectly cleared, a road crossing the field, rock under an inch of soil, so that the wayside is the skirt of the path, the stony place a thin stratum over rock where growth is rapid through the very circumstance that kills, and the thorns invisible at sowing, their roots left below, the ears slowly strangled in a survival not of the fittest but of the strongest; on the yield he notes the article, the good ground, and calls the hundredfold uncommon but attested. Barnes gives four purposes for parables at once, to make truth interesting, to reach ignorant hearers through the senses, to drive a rebuke home as Nathan did to David, and to hide from one part of an audience what another was meant to grasp; he adds that the headland was what the plough had not touched, that seed on rock sprang sooner only because it had less earth to come through, and refuses the arithmetic of the yield, since a parable teaches a general truth. Lightfoot supplies the rabbinic background, that no figure was more familiar and that their religion might itself be called parabolical, folded up in ceremonies."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill dates the withdrawal to the day of the dumb devil and the answer to the Pharisees, and places the house at Capernaum, left because it would not hold the people. Calvin reads the parable against his own century as much as the first, that if men who ran from far off like hungry persons are called barren soil we need not wonder the Gospel bears no fruit in many now."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke derives the word from casting one thing beside another, spiritual things compared with natural, and takes the hundredfold as literal and marvellous, reporting his own sowing of oats at Millbrook and a divided wheat plant at Cambridge that gave twenty-one thousand ears; he also thinks the vessel was kept on the lake for our Lord's use. Wesley agrees about the vessel, notes that the hindrances are named in the order they arrive, and insists that it is not God's will that stops the seed but the hearers' own perverseness."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: Christ's parables borrowed from ordinary things, that spiritual things might slide into our understandings and common actions be spiritualized; Wesley: the sower 'exquisitely proper' as introduction, answering why the same seed has not the same effect."
+    "prevalence": "single",
+    "summary": "Henry observes that Christ preached at both ends of the day, that no Pharisees were present so that he had better their room than their company, and that his pulpit was a ship, not made for the purpose as Ezra's was but converted to the use for want of a better."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom lays the loss on the soil and not the sower, observes that with minds, unlike earth, rock may be made rich ground and thorns rooted out, notes that the careless are not named openly lest they be alienated, and that the Lord did not desist from sowing though he foresaw the waste."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine takes the same day to mean either that these things followed at once or that little intervened."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Why did Christ teach in parables?",
+    "positions": [
+     {
+      "position": "To make truth interesting, to reach the ignorant through the senses, to drive home a rebuke, and to hide from some what others were to grasp",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "To place an illustration alongside the truth, usually carrying one main point",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Following a form of rhetoric already familiar among the Jews",
+      "held_by": [
+       "John Lightfoot",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the hundredfold to be taken?",
+    "positions": [
+     {
+      "position": "Literally and marvellously, as agricultural experiment confirms",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Uncommon but attested, the article marking the good ground",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Not to be pressed, since a parable teaches a general truth",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Chrysostom",
-    "note": "The Catena material here (kingdom = grain of mustard seed, least of seeds grown to a tree) belongs to the mustard-seed parable (Mt 13:31-32), not the sower; so Jerome, Hilary, Gregory, Augustine here."
+    "voice": "Adam Clarke",
+    "claim": "Supports the hundredfold from his own field trials, an oat grain returning a hundred and nineteen and a divided wheat plant yielding twenty-one thousand ears"
    }
   ],
   "themes": [
-   "spake in parables",
-   "behold a sower went forth",
-   "nature and use of parables",
-   "why the same seed differs"
+   "The same day went Jesus out of the house, and sat by the sea side.",
+   "And great multitudes were gathered together unto him, so that he went into a ship, and sat; and the whole multitude stood on the shore.",
+   "And he spake many things unto them in parables, saying, Behold, a sower went forth to sow;",
+   "And when he sowed, some seeds fell by the way side, and the fowls came and devoured them up:",
+   "Some fell upon stony places, where they had not much earth: and forthwith they sprung up, because they had no deepness of earth:",
+   "And when the sun was up, they were scorched; and because they had no root, they withered away.",
+   "And some fell among thorns; and the thorns sprung up, and choked them:",
+   "But other fell into good ground, and brought forth fruit, some an hundredfold, some sixtyfold, some thirtyfold.",
+   "Who hath ears to hear, let him hear."
+  ],
+  "excluded_voices": [
+   "Gregory"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wayside the hard, untouched path crossing the field, where the seed lay on the surface for the birds (Barnes, Ellicott, Robertson); Lightfoot notes the paths through the sown fields (cf. Mt 12:1)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: those who 'hear the word and understand it not,' an easy prey to Satan, 'the great thief of sermons,' who catches away the seed; Wesley: the order of hindrances — birds, scorching, thorns; if we break not the fallow ground and cover not the seed, we are the highway."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "some fell by the way side",
-   "the fowls devoured them",
-   "the careless hearer",
-   "Satan catches away the word"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A thin layer of soil over solid rock in the limestone country; the seed 'sprang up' sooner, not faster, for want of depth — the rapidity afterwards fatal (Barnes, Ellicott, Robertson); Gill: hearts whose natural hardness continues."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: hypocrites get the start of true Christians in profession, 'too hot to hold' — receiving with joy, without trying, swallowing without chewing; the heart may melt under the word yet not be melted by it; they endure 'but awhile,' not to the end (Mt 10:22)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "upon stony places",
-   "sprang up for want of depth",
-   "the hasty professor",
-   "joy without root"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Scorched and withered for lack of root and moisture (Lk 8:6) — the over-rapid growth and underlying rock making the heat intense (Ellicott); the sun a figure of temptation or persecution (Gill), the word being first received with joy."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: no root in themselves, no fixed principles — 'the green blade of a profession' without 'the root of grace'; when persecution arises 'he is offended' (Gal 5:11); the same sun that cherishes the rooted withers the rootless — 'lightly come, lightly go.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the sun scorched them",
-   "because they had no root",
-   "persecution withers the rootless",
-   "profession without principle"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The thorns' roots left below the surface, invisible at sowing, grew with the grain and slowly strangled it (Ellicott, Robertson); the field 'not cleared' of the briars within (Gill, Clarke)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the two thorns — the cares of this world ('a fruit of the curse... their end is to be burned,' Heb 6:8), which make men 'neglect the one thing needful'; and the deceitfulness of riches, when men rely on them — prosperity choking the word 'more dangerously, because more silently.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "among thorns",
-   "the thorns choked them",
-   "cares of this world",
-   "the deceitfulness of riches"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Good, honest-hearted hearers made so by the Spirit (Gill); the hundredfold not an exaggeration but the mark of a prosperous harvest (Gen 26:12; Ellicott, Robertson); the differing returns imply differing degrees of fertility; Clarke marvels at grain's power to multiply."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: fruitfulness distinguishes the good ground — intelligent hearers who understand their concern in the word and practise it; the ground has stones and thorns but none prevailing to hinder fruit; among the fruitful some exceed others, yet thirtyfold is graciously accepted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "into good ground",
-   "fruit a hundred, sixty, thirtyfold",
-   "fruitfulness distinguishes the true",
-   "degrees of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A formula used for weighty, hard sayings, to quicken attention and stir a desire to understand (Gill); 'let every person who feels the necessity... pay attention' (Clarke); comforting that even Jesus had to exhort men to hear and understand (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a distinction among hearers — some have ears, others are deaf; and if any have ears, Scripture testifies it is the Lord who gives them (Ps 40:6), not man's own industry."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the baptismal anointing of the ears."
-   }
-  ],
-  "themes": [
-   "who hath ears, let him hear",
-   "summons to attention",
-   "a hard saying",
-   "ears given by God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "10": {
   "voices": [
-   "Gloss",
-   "Chrysostom",
-   "Jerome",
-   "Remigius",
-   "Hilary",
-   "Raban",
-   "Augustine",
-   "John Chrysostom",
    "John Gill",
-   "Matthew Henry",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "Jamieson, Fausset and Brown"
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
+   "Chrysostom",
+   "Augustine"
   ],
+  "range": "10-17",
+  "pericope_label": "And the disciples came, and said unto him, Why speakest thou unto them in parables? He answered and said unto them, Because it is given unto you to know the mysteries of the kingdom of heaven, but to them it is not given. For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath. Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand. And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive: For this people’s heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes, and hear with their ears, and should understand with their heart, and should be converted, and I should heal them. But blessed are your eyes, for they see: and your ears, for they hear. For verily I say unto you, That many prophets and righteous men have desired to see those things which ye see, and have not seen them; and to hear those things which ye hear, and have not heard them.",
   "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott places the disciples in the boat, asks why parables now and why to plain peasants rather than men trained in the rabbinic schools, and defines a mystery against the dictionary sense of something awfully obscure as a secret kept from others and revealed to the initiated; he grants that Mark and Luke make the purpose penal and that this is the sense here, yet finds mercy under it, since a parable roused none of the enmity plain speech had roused and might set a man thinking. Barnes holds that mystery means a thing concealed rather than a thing incomprehensible, naming as examples that the gospel was for the Gentiles and that the Messiah must die, and judges it just that opportunities long misimproved be withdrawn. Robertson traces the word to the initiate and behind him to the closing of the mouth, notes the eastern mystery religions, and observes that Paul uses it of what was hidden and is now made known. Lightfoot dates the stupor of the nation long before the passion, laid on it by Pharisaism and the sottishness of tradition, and sends the reader to Romans, where Paul repeats these words."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin holds that Christ deliberately spoke so as to be a riddle; the word is bright in its own nature and dark only as the world darkens it, yet the Lord keeps his secrets from the reprobate, and to call the apostles' privilege given excludes all merit. He refuses the reading of improvement in the proverb of having, taking it instead of God not forsaking the work of his own hands, while the reprobate, whose gifts have glitter but no root, waste away in their own poverty. Gill notes that more than the twelve were present and applies the promise inward, that true grace grows and the Spirit leads into all truth."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke widens the mysteries to the prophetic account of the Church folded into the parables that follow, given first to a few because those few would publish it, hears in the proverb of having an everyday saying that presents are made to the rich, and guards the prophets from the inference, since they were not shut out from salvation, only their time was not yet. Wesley makes the proverb turn on improvement and calls it the grand rule of God's dealing with men, fixed as the pillars of heaven."
+   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: the disciples asked privately (Mk 4:10) and for others' sake ('to them,' not 'to us'); 'to you it is given' implies no fate but that the unbelievers are the cause of their own misery; the blindness voluntary — 'seeing they see not' (Isa 6:9)."
+    "prevalence": "single",
+    "summary": "Chrysostom admires the disciples' timing and charity, that they did not ask before the multitude and asked not why speakest thou to us but to them; he denies that the saying implies necessity or fate, holds that free will stands and that the wording proves it, since he says not they see not but seeing they see not, and observes that the disciples saw what righteous men of old desired and never saw, which joins the two Testaments."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine (at length): the Jews by prior sins deserved blinding, yet the parables' obscurity was in mercy, that humbled by the guilt of Christ's death they might turn with a healthier penitence (reconciling Jn 12:39)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the parable turns 'a dark side towards Egyptians... a light side towards Israelites' — 'a shell that keeps good fruit for the diligent, but keeps it from the slothful'; to the disciples it is given to know, the willingly ignorant losing the light."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The disciples, with Christ in the boat, asked in the pause after the parable why he taught thus, and why to plain peasants rather than the schooled (Ellicott, Robertson)."
+    "prevalence": "single",
+    "summary": "Augustine tries to hold both sides, that they shut their own eyes and so caused God to shut them, but admits that the therefore they could not believe of the fourth Gospel presses hard, and concludes they had deserved it by earlier sins."
    }
   ],
   "debates": [
    {
-    "question": "Why did Christ teach in parables, and was the consequent blindness final or corrective?",
-    "sides": [
+    "question": "Is the blindness of the hearers chosen or imposed?",
+    "positions": [
      {
-      "position": "a voluntary blindness — the people the authors of their own loss",
-      "holders": [
-       "Chrysostom",
-       "Henry"
-      ]
-     },
-     {
-      "position": "a judicial blinding for prior sins, yet in mercy unto a later penitence",
-      "holders": [
-       "Augustine"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached ('more endurable,' belonging to ch. 11)."
-   }
-  ],
-  "themes": [
-   "why speakest thou in parables",
-   "to you it is given to know",
-   "the mysteries of the kingdom",
-   "judicial and voluntary blindness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Mystery' = a thing concealed but now revealed to the initiated, not something incomprehensible (Barnes, Ellicott; Rom 16:25); from mystēs, one initiated (Robertson) — the parables open to the disciples, shut to the hostile Pharisees."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: Christ spoke obscurely on purpose, that his word be a riddle to many; the word is bright in itself but choked by men's darkness; the comparison magnifies the grace given the apostles, which has no cause in themselves — God calls those he has freely elected."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "given to know the mysteries",
-   "mystery = revealed secret",
-   "grace distinguishing the disciples",
-   "hidden from the reprobate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A proverb of spiritual growth — he who improves grace has it increased, he who improves it not loses even what he has (Barnes); the same lesson as the Talents and Pounds (Ellicott; Mt 25:29); Clarke's Codrus who 'all that Nothing lost'; Wesley: the grand rule of God's dealing."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God's gifts flow from his contemplation of his own liberality — those he begins to form he polishes to perfection (Ps 138:8); the reprobate proceed from bad to worse, their gifts shining only before men; aim at daily progress."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whosoever hath, to him shall be given",
-   "from him that hath not it is taken",
-   "improvement of grace",
-   "God completes his work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Matthew states the fact, Mark/Luke the intention ('that seeing they may not see'); no dishonesty — Christ stated his doctrine in the best way, the fault theirs (Barnes, Clarke); Ellicott: penal (answering 'taken away even that he hath'), yet with an element of mercy, for the parable could do no harm and might set men thinking."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a veil spread over the blind, who are not partakers of the true light; he ascribes no blame here but commends the apostles' grace, assigning the cause only to the secret purpose of God; Wesley: more knowledge withheld because they use not what they have."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "therefore in parables",
-   "seeing they see not",
-   "penal yet merciful obscurity",
-   "the secret purpose of God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Isa 6:9-10, fulfilled in Isaiah's day and 'again fulfilled' in Christ's (Clarke); Matthew points out the fulfilment directly; the much-quoted text (Jn 12:40; Acts 28:26) dwelt on the minds of Christ and his disciples, preparing them for fruitless labour (Ellicott, Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin gathers the NT uses: Paul charges obstinate malice (Acts 28) and draws from the deeper source of election (Rom 11:7); the blindness voluntary, the blame wholly the people's, yet from God's hidden judgment; consolation for ministers whose labour fails."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the prophecy of Esaias fulfilled",
-   "hearing ye shall not understand",
-   "voluntary yet judicial blindness",
-   "consolation for ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Waxed gross' = become fat, callous, even fatty degeneration of the heart (Barnes, Robertson); the eyes smeared/sealed, an oriental punishment (Isa 29:10); a wilful ignorance refusing to look lest conviction follow (Ellicott; Jn 3:19) — the fault wholly the people's (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: 'healing' = deliverance from every evil, depending on the pardon of sins, since chastisement is mitigated when God is reconciled; yet repentance is not the cause of pardon but a mark of God's free favour — God forgives only those dissatisfied with themselves."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the freedom of the will, citing 'their eyes they have closed.'"
-   }
-  ],
-  "themes": [
-   "the heart waxed gross",
-   "eyes closed lest they see",
-   "wilful blindness",
-   "healing depends on pardon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A beatitude for the disciples against the blindness of the rest — happy to see truth others will not (Barnes); spoken to the small company in the boat, who had eyes that looked for light (Ellicott); Gill: blessed to see not only the flesh but Christ's transcendent glory as Son of God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their blessedness not the mere sight of the flesh but perceiving the glory of the only-begotten; no contradiction of 'blessed who have not seen' (Jn 20:29, rebuking Thomas), for believers in every age behold him in the Gospel face to face (2 Cor 3:18)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on 'all things delivered to me' (Mt 11:27)."
-   }
-  ],
-  "themes": [
-   "blessed are your eyes",
-   "they see and hear",
-   "the glory of the Son perceived",
-   "seeing by faith in the Gospel"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The prophets 'men of desires,' each on a Pisgah height looking on a land not to be entered; 'have not seen them' only verbally at odds with 'Abraham rejoiced to see my day' (Jn 8:56) — the joy of the distant prospect implying desire (1 Pet 1:10; Heb 11:13)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: a transcendent blessing desired but not granted to the saints of old, who had the types and shadows but longed for the Substance; their discoveries made 'according to the dispensation,' God's favours not anticipating his counsels — a spur to our thankfulness (2 Cor 3:7)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the many proofs of eternal life by faith and the gospel."
-   }
-  ],
-  "themes": [
-   "many prophets desired to see",
-   "types and shadows vs the Substance",
-   "favours according to the dispensation",
-   "gospel advantages over the law"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Gloss",
-   "Augustine",
-   "Remigius",
-   "Jerome",
-   "Raban",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Mark's gentle reproof, 'know ye not this parable?' (Mk 4:13), the simplest and the key to the rest; the emphatic 'ye' — the interpretation given to the disciples, withheld from others (Ellicott, Robertson)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine, Jerome, Remigius dwell on the threefold fruit, dividing over its sense — virgins/widows/wedded (Jerome), the martyrs' degrees of contempt of death (Augustine), or faith/works/eternal life, or thoughts/speech/works (Remigius)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: four kinds of hearers, but Christ describes only those with 'some appearance of docility,' not open despisers — if the greater part of such perish, what of the rest of the world?"
-   }
-  ],
-  "debates": [
-   {
-    "question": "What do the thirty-, sixty-, and hundredfold fruit denote?",
-    "sides": [
-     {
-      "position": "the wedded, widows, and virgins",
-      "holders": [
-       "Jerome"
-      ]
-     },
-     {
-      "position": "degrees of contempt of death (martyrs at the hundredfold)",
-      "holders": [
-       "Augustine"
-      ]
-     },
-     {
-      "position": "faith / good works / eternal life, or good thoughts / speech / works",
-      "holders": [
-       "Remigius"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "hear the parable of the sower",
-   "the interpretation given to you",
-   "four kinds of hearers",
-   "the threefold fruit"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "Gloss",
-   "Remigius",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The seed the word of the kingdom (Mt 4:23); 'understandeth not' = regards not, lays not the heart to it (Clarke); the three Evangelists' three names for the enemy (wicked one, Satan, devil); the careless heart 'the devil's thoroughfare'; everything leading men to forget the truth does the enemy's work (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the trodden soil receives no seed for want of preparation, hard as a pavement; yet men's depravity does not unmake the word — the Gospel is always seed 'as to its power, but not as to its produce'; the wicked one rushes to seize it before it springs up."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "heareth the word and understandeth not",
-   "the wicked one catcheth it away",
-   "the wayside heart",
-   "seed in power though not in produce"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The second hearer: rapid change, strong emotion, a quick show of conversion (Ellicott); caught with the gospel as new and pleasing, receiving it with joy and transport (Barnes, Wesley); the frequent fruit of systems that cause excitement."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a 'temporary faith,' the seed vegetating and promising fruit, but the heart not subdued to the softness needed for nourishment — nothing done till faith acquires firmness, lest the alacrity vanish 'like a fire of tow.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the stony-ground hearer",
-   "received with joy",
-   "temporary faith",
-   "quick but rootless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'root' is conviction striking deep into reason, conscience, and will (Ellicott); a mushroom growth quick to stumble (Robertson); not deeply convinced of guilt, he has no motive to counter the scandal of the cross (Clarke); tribulation and persecution distinguished as petty and organised."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the cross lays open the vanity of the slightly-influenced; such imagine they have faith, rendering an honour that resembles it, yet are not regenerated by the incorruptible seed (1 Pet 1:23); Wesley: no change in the ground of the heart, finding pretences to leave the rugged way."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no root in himself",
-   "offended by persecution",
-   "the cross the test",
-   "endures only for a while"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The double-minded hearer who would serve two masters — strength of purpose without unity of spirit (Ellicott); the blade and ear of partial reform but no full corn (Lk 8:14); 'lust for money and care' spoil many an earnest nature (Robertson); riches deceitful, promising peace they cannot give (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the sinful affections overcome faith before maturity, their influence unseen at first; each must tear the thorns from a heart filled with a thick forest of them, yet scarcely one in ten labours even to cut them down; riches called deceitful to make us guard against them (1 Tim 6:9)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the cornfields and plucking (ch. 12)."
-   }
-  ],
-  "themes": [
-   "the thorny-ground hearer",
-   "care of this world",
-   "deceitfulness of riches",
-   "the word choked"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Hears and understands — takes the word in with an honest and good heart (Lk), keeps it, and bears fruit; hearing, understanding, and fruit-bearing the three evidences of a genuine believer (Clarke); the soil may be improved — the preacher's work to prepare it (Ellicott; Jer 4:3); the fruit reveals the tree (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: not the perfect, but those in whom the word overcomes every obstacle; some thorns always remain, yet whoever does not fall off is reckoned good soil; the degrees show believers are not equally fruitful, but the master owns even inferior soils — rejecting Jerome's virgins/widows/married as absurd."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the good-ground hearer",
-   "heareth and understandeth",
-   "beareth fruit",
-   "degrees of fruitfulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Remigius",
-   "Augustine",
-   "Raban",
-   "John Chrysostom",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The devil ever mixes error with truth, error coming after truth (false prophets after prophets, Antichrist after Christ; Chrysostom); the tares heretics, since the field is the world (Augustine); patience, lest a brother corrupt today grow wiser tomorrow (Jerome)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the parable consoles the godly amid the confused mixture in the Church, arming them with patience; the toleration is of morals, not doctrine; against the Manichees, the wicked are not created by the devil but created by God and corrupted by him."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The field the world, the good seed the children of the kingdom (Henry, Barnes); the parable represents the present and future state of the gospel church — good and bad together now, separated hereafter."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How are heretics and the wicked to be dealt with in the Church?",
-    "sides": [
-     {
-      "position": "restrain but do not put them to death — a never-ending war else",
-      "holders": [
+      "position": "Chosen, since the text says seeing they see not and no necessity or fate is implied",
+      "held_by": [
        "Chrysostom"
       ]
      },
      {
-      "position": "the Church may rightly constrain her lost sons (coercion defended)",
-      "holders": [
-       "Augustine (his later view)"
+      "position": "Imposed, Christ speaking so as to be a riddle and keeping his secrets from the reprobate",
+      "held_by": [
+       "John Calvin"
       ]
      },
      {
-      "position": "tolerate immoral lives but never tolerate corrupt doctrine",
-      "holders": [
-       "Calvin"
+      "position": "Both, since they shut their own eyes, though an earlier desert must be confessed",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Penal in purpose, as Mark and Luke show, yet with mercy under the penalty",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the word mystery mean here?",
+    "positions": [
+     {
+      "position": "A thing concealed, not a thing incomprehensible",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "A secret kept from others and revealed to the initiated",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Taken from the initiate of the mystery religions, and used by Paul of what is now revealed",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "The prophetic account of the Church contained in the parables that follow",
+      "held_by": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the kingdom likened to a man sowing",
-   "good seed and tares",
-   "error mixed with truth",
-   "tolerance and discipline"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'tares' are darnel (zizania), a bastard/degenerate wheat indistinguishable from the true till the black grain shows (Robertson, Clarke, Lightfoot) — apt for hypocrites in the church, separable only by the Searcher of hearts; Satan sows false doctrine in darkness, often in a revival, then 'went his way,' knowing the soil (Barnes)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill and Clarke: the sleep of pastors and professors — lukewarmness and negligence — exposes the field; woe to indolent pastors who let the souls under them be corrupted."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "while men slept",
-   "the enemy sowed tares",
-   "darnel resembling wheat",
-   "Satan's stealthy work"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The tares unnoticed till the wheat ripened — true piety and false hope known not by profession but by fruit (Barnes); 'Satan has a shoot of iniquity for every shoot of grace' (Clarke); at first all seems peace, love, and joy (Wesley)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: secret wickedness long hid under a plausible profession breaks out at last; both wheat and tares lie under the clods, hard to distinguish, till a trying time, when fruit is to be brought forth, discerns the sincere from the hypocrite."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the blade sprang up",
-   "then appeared the tares",
-   "known by fruit not profession",
-   "hidden wickedness revealed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Remigius",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The servants the ministers of the Gospel, who, fearing for the wheat, spread the case before Christ in prayer (Gill); a faithful minister discovers the evil, laments it, and addresses God (Clarke); whatever is amiss in the church is not of Christ (Henry)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the rise of errors and scandals is matter of great grief to Christ's servants; sad to see such tares in the garden of the Lord; their first recourse is not to act but to enquire of the Master, coming 'with the heart and desire of the soul' (Remigius)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the servants came",
-   "whence then hath it tares",
-   "grief at scandals",
-   "resort to the Master"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Jamieson, Fausset and Brown",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'An enemy hath done this' a plain answer to the origin of evil — God implanted no evil, the enemy did it with man's concurrence (Wesley); 'an enemy man' a Hebraism for a certain implacable foe (Gill); the Master does not blame the diligent servants (Henry)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the servants' wish to root up at once is over-hasty, inconsiderate zeal before consulting the Master ('wilt thou we call for fire from heaven?'); Clarke: rash zeal as much to be feared as the lack of discipline; Wesley distinguishes darnel (form without power) from open sinners (thistles to be rooted up)."
-   }
-  ],
-  "debates": [],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the sabbath and the temple (ch. 12)."
+    "voice": "John Lightfoot",
+    "claim": "Dates the hardening of the nation to long before the passion and connects it with the remnant of Romans 11"
    }
   ],
   "themes": [
-   "an enemy hath done this",
-   "origin of evil",
-   "wilt thou we gather them up",
-   "rash zeal warned"
+   "And the disciples came, and said unto him, Why speakest thou unto them in parables?",
+   "He answered and said unto them, Because it is given unto you to know the mysteries of the kingdom of heaven, but to them it is not given.",
+   "For whosoever hath, to him shall be given, and he shall have more abundance: but whosoever hath not, from him shall be taken away even that he hath.",
+   "Therefore speak I to them in parables: because they seeing see not; and hearing they hear not, neither do they understand.",
+   "And in them is fulfilled the prophecy of Esaias, which saith, By hearing ye shall hear, and shall not understand; and seeing ye shall see, and shall not perceive:",
+   "For this people’s heart is waxed gross, and their ears are dull of hearing, and their eyes they have closed; lest at any time they should see with their eyes, and hear with their ears, and should understand with their heart, and should be converted, and I should heal them.",
+   "But blessed are your eyes, for they see: and your ears, for they hear.",
+   "For verily I say unto you, That many prophets and righteous men have desired to see those things which ye see, and have not seen them; and to hear those things which ye hear, and have not heard them."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The tares so resemble the wheat that gathering them would tread down and uproot the true (Barnes, Robertson); the householder a pattern of patient wisdom, choosing his time when harvest makes separation easy (Ellicott); no man can infallibly distinguish tares from wheat, so Christ would rather permit the tares than endanger the wheat (Henry)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: men often persecute a true Christian while meaning to prosecute an impious one; the zeal that persecutes for religious opinions is itself 'a seed of the devil'; the tares, continued under the means of grace, may become good corn — have patience with them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "nay, lest ye root up the wheat",
-   "patient forbearance",
-   "caution in discipline",
-   "tares may become wheat"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The harvest is the end of the world (Jewish state, the individual life, or the present order); hypocrites must be expected in the church, are the enemy's work, cannot be wholly removed, and over-zealous purging injures the wheat (Gill, Barnes, Robertson) &mdash; yet gross offenders may rightly be cut off (1 Cor 5:4-5)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke presses the toleration to its edge against persecution: the minister may separate the incorrigible from fellowship but not punish in body or goods; the burning of heretics (Inquisition, Mary) is itself the diabolical seed, usurping God's seat of judgment."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How far does 'let both grow together' restrain church discipline?",
-    "sides": [
-     {
-      "position": "discipline against gross, proven offenders is still a duty; toleration covers only unprovable hypocrisy",
-      "holders": [
-       "Barnes",
-       "Gill"
-      ]
-     },
-     {
-      "position": "separate from fellowship but never persecute in body or goods; God alone judges false doctrine",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "let both grow together",
-   "the harvest = end of the world",
-   "hypocrites in the church",
-   "toleration vs persecution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
+  }
+ },
+ "18": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Augustine"
+  ],
+  "range": "18-23",
+  "pericope_label": "Hear ye therefore the parable of the sower. When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart. This is he which received seed by the way side. But he that received the seed into stony places, the same is he that heareth the word, and anon with joy receiveth it; Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended. He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful. But he that received seed into the good ground is he that heareth the word, and understandeth it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott and Robertson both note that the ye is emphatic, what is withheld from others being given to these. Ellicott traces the sequence in the first hearer, who hears, fails to take it in, the fault being moral rather than intellectual, and has the word lifted out of his memory; he answers the oddity of many birds standing for one tempter by saying that whatever makes men forget the truth does the enemy's work, and on the stony ground presses the point on method, that the more a system works by excitement the oftener such results appear. Robertson notes that Matthew speaks of the hearers as themselves the seed, locates the blame not in the seed but in the man who lets it be snatched, has the devil snatching like a bandit before the grain can sprout, and calls the second hearer a mushroom growth, quick to sprout and quick to stumble, a picture of some converts in modern revivals. Barnes takes Mark's how then will ye know all parables as a sign that this is among the simplest, says the gospel preached to hardened men lies like seed on the beaten path, and describes the second hearer as caught by the gospel as by something new."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin sets out the four kinds and then guards against arithmetic, since Christ fixed no number and the produce of faith is not always alike; his sharpest point is who is left out, for no open despiser appears here, only men with some appearance of docility, so that if the greater part even of these perish the case of the rest grows dark. Gill hears in Mark's added question a reproof for dulness in men who had received grace, and insists that the second hearer is not careless like the first but settled and diligent."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke observes that the three evangelists use three names for the enemy, the tormentor, the adversary who opposes every purpose of amendment, and the one whose name means to dart through, and makes the careless heart an open road where evil affections pass unchecked, the devil's thoroughfare; on the stony ground he speaks of fallow never ploughed and a man who never felt his own sore. Wesley divides the theft between inward thoughts and outward agents who raise other subjects, allows the joy of the second hearer to be real, even transport, and then finds no change in the ground of the heart; he distributes the thorns, cares to the poor, wealth to the rich, the desire of other things to all."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine offers orders of life for the three yields, a hundredfold for martyrs, sixtyfold for virgins, thirtyfold for the married, or else three degrees in which death is despised; he rejects a reading current in his day that the saints would deliver thirty or sixty or a hundred souls at the judgment, because men were using it to promise themselves impunity."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What do the hundred, sixty and thirty stand for?",
+    "positions": [
+     {
+      "position": "Orders of life, or degrees in which death is despised",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Simply various proportions of fruitfulness, not to be pressed",
+      "held_by": [
+       "John Calvin",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the loss of the seed lie?",
+    "positions": [
+     {
+      "position": "With the man who lets it be snatched, not with the seed",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "With defects in hearers who are not open despisers but men of some docility",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "With a heart left open as a thoroughfare",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Augustine",
+    "claim": "Reports and refuses a contemporary reading in which the saints deliver thirty, sixty or a hundred souls at the judgment, because it was encouraging men to promise themselves impunity"
+   }
+  ],
+  "themes": [
+   "Hear ye therefore the parable of the sower.",
+   "When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart. This is he which received seed by the way side.",
+   "But he that received the seed into stony places, the same is he that heareth the word, and anon with joy receiveth it;",
+   "Yet hath he not root in himself, but dureth for a while: for when tribulation or persecution ariseth because of the word, by and by he is offended.",
+   "He also that received seed among the thorns is he that heareth the word; and the care of this world, and the deceitfulness of riches, choke the word, and he becometh unfruitful.",
+   "But he that received seed into the good ground is he that heareth the word, and understandeth it; which also beareth fruit, and bringeth forth, some an hundredfold, some sixty, some thirty."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
+  }
+ },
+ "24": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
+   "Matthew Henry",
+   "Chrysostom",
+   "Augustine"
+  ],
+  "range": "24-30",
+  "pericope_label": "Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: But while men slept, his enemy came and sowed tares among the wheat, and went his way. But when the blade was sprung up, and brought forth fruit, then appeared the tares also. So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Robertson refuses the word tares and calls it darnel, a bastard wheat common in Palestine, like the true grain except that its seeds are black and indistinguishable until near harvest, and notes that intermingled roots come up together. Ellicott orders the audience, the sower expounded in the boat and the tares, mustard seed and leaven spoken again to the crowd, and reads the refusal to weed as a question of timing, the householder being a pattern of patient wisdom who can defeat the malice but will choose his hour. Barnes takes the field for the world, makes the darkness moral as well as literal, and warns that one of the enemy's arts in a revival is to spread plausible notions of piety until multitudes think themselves Christians who are not. Lightfoot presses the rabbinic point that wheat and this weed are not reckoned seeds of different kinds, so that the whole field was sown with wheat of one sort or the other and the parable distinguishes good Christians from bad rather than good men from bad."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin turns the parable toward the discouraged, holding that its object is not to warn a mixed multitude but to keep the godly from despondency at the sight of good and bad confused, since many under pretence of zeal grow displeased and, finding absolute purity nowhere, withdraw. Gill marks the shift of subject from sorts of hearers to members within churches, and catalogues the sleep of a church at length, grace unexercised, duty done sluggishly, lukewarmness about Christ's cause and unconcern about sins of omission, warning that such churches fill with hypocrites and heretics."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke hunts the term through the rabbinic writers, where it means grain that was right seed at first and afterwards degenerated, adds from an old agricultural handbook that darnel baked into bread dims the eyes, and lays the sleep at the door of lukewarm professors and indolent pastors. Wesley reads the kingdom of heaven here as the gospel dispensation, warns that is like means only that the thing may be illustrated, answers the sleep in a line, that they ought to have watched for the Lord of the field sleepeth not, makes the darnel the outside Christian who has the form without the power, and finds in an enemy hath done this a plain reply to the question of the origin of evil."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry declines to separate the parable from its exposition, since each explains the other."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom orders the matter historically, that error came after truth, false prophets after prophets and Antichrist after Christ, since the devil attempts nothing unless he sees something to imitate; and he takes the refusal to weed as a standing prohibition of putting heretics to death, which would bring a war without end into the world."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine takes the sleep of the heads of the Church and the sleep of death of the apostles, and asks whether heretics are meant or Catholics of evil life, deciding for heretics since the field is the world and not the Church, while men who live badly in the same faith are better called chaff, which shares stem and root with the grain."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Who are the tares?",
+    "positions": [
+     {
+      "position": "Heretics rather than Catholics of evil life, the merely immoral being chaff and not tares",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Outside Christians with the form of godliness and not the power",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Bad Christians as distinct from bad men, the whole field being sown with wheat of one kind or another",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the refusal to root them up forbid?",
+    "positions": [
+     {
+      "position": "The killing of heretics, which would bring endless war into the world",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Only prematurity, since the householder means to act at the right time",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Nothing beyond the practical difficulty of intermingled roots",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the object of the parable?",
+    "positions": [
+     {
+      "position": "To keep the godly from despondency at the mixture, not to warn a mixed multitude",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "To show the difference of members within churches",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Anatomises the sleep of a church into a list of symptoms, from grace unexercised to unconcern about sins of omission"
+   }
+  ],
+  "themes": [
+   "Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field:",
+   "But while men slept, his enemy came and sowed tares among the wheat, and went his way.",
+   "But when the blade was sprung up, and brought forth fruit, then appeared the tares also.",
+   "So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares?",
+   "He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up?",
+   "But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them.",
+   "Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
   }
  },
  "31": {
@@ -1493,1554 +576,788 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
+   "John Lightfoot",
+   "Matthew Henry",
+   "Chrysostom",
+   "Augustine"
   ],
+  "range": "31-35",
+  "pericope_label": "Another parable put he forth unto them, saying, The kingdom of heaven is like to a grain of mustard seed, which a man took, and sowed in his field: Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree, so that the birds of the air come and lodge in the branches thereof. Another parable spake he unto them; The kingdom of heaven is like unto leaven, which a woman took, and hid in three measures of meal, till the whole was leavened. All these things spake Jesus unto the multitude in parables; and without a parable spake he not unto them: That it might be fulfilled which was spoken by the prophet, saying, I will open my mouth in parables; I will utter things which have been kept secret from the foundation of the world.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The kingdom's small beginning and vast growth; eastern mustard grows tree-like, the least seed apt for the church (smaller than any sect) and for feeble convert-faith (Barnes, Robertson); Ellicott takes the seed as the Christian society sheltering the nations (Ezek 31:3; Dan 4:10)."
+    "summary": "Ellicott takes the two parables as left unexplained on purpose, to train the disciples in interpreting, observes that what we call mustard grows into nothing that could be called a tree and that the least of all seeds is popular description not to be pressed with microscopic exactness, and makes the seed here not the word but the Christian society itself, smaller at sowing than any sect in Palestine and destined to outgrow every kingdom; he notes that the birds have changed sides since the first parable and now stand for the institutions that shelter under it. Robertson agrees that it is a tree not in nature but in size, an excusable exaggeration in popular speech, says the leaven stands for pervasive power and refuses the objection that leaven means corruption as exegetical jugglery, since the devil is called a lion and so is Christ, and adds that three measures is simply a common baking and that finding the Trinity in it is beside the mark. Barnes explains the plant by climate and kind, since it took years to become a tree where ours is an annual herb, allows both scales of the parable, and cautions that young converts suppose they have much religion when they are like a blind man just restored to sight. Lightfoot brings the Talmud in evidence, the mustard stalk at Sichin and the proverb that makes a grain of mustard the measure of the smallest thing, and measures three sata against an ephah."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: Christ braces the disciples not to be offended at mean beginnings; the Lord opens his reign feebly so his power shines in unexpected progress &mdash; raise the mind to the God who creates from nothing (1 Cor 1:28)."
+    "summary": "Calvin puts the parable to pastoral use, that profane men despise the gospel because its ministers are of slender reputation and its converts of no consideration, and that the Lord opened his reign with a despicable beginning on purpose, that his power might be better known by a progress nobody expected. Gill says the first parable showed the state of the church to the end and this its small beginnings and large increase."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: these fruitful-hearer parables; the kingdom is both the gospel dispensation and the inward kingdom (Lk 13:18)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Applies the mustard seed not to the church but to faith (Mt 17:20): small in size, fiery in operation, working the greatest effects in the soul."
-   }
-  ],
-  "themes": [
-   "grain of mustard seed",
-   "small beginning, great growth",
-   "the church and the convert's faith",
-   "birds sheltering in the branches"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Largely philological: Lightfoot and Clarke document the proverbial smallness of mustard and the rabbinic reports of its great size (Sichin, Simeon ben Chalaphta); the description is popular, not exact &mdash; Robertson with Bruce calls it 'an excusable exaggeration in popular discourse,' Ellicott 'greater than the herbs' (Eze 17:23)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "least of all seeds",
-   "greatest among herbs",
-   "becometh a tree",
-   "popular not microscopic description"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Raban",
-   "Hilary",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
     "prevalence": "several",
-    "summary": "Allegorize nearly every term and openly differ: Augustine (leaven=love, woman=wisdom), Hilary (woman=synagogue hiding Christ by death; three measures=Law/Prophets/Gospels), Jerome (spirit/soul/body, or Father/Son/Spirit &mdash; while warning parables can't found dogma), Raban (love perfecting the soul)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the leaven is the apostles, who change the whole world into their nature by being kneaded in, not destroyed &mdash; tribulation the very means of triumph; 'three measures' = great abundance."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Refuse the allegory: leaven, though usually a symbol of corruption (1 Cor 5:8; Mt 16:11), is here frankly a type of pervasive good (Ellicott, Robertson, who calls denial 'exegetical jugglery,' cf. 1 Pet 5:8; Rev 5:5); the working is inward/secret vs the mustard's outward growth; nothing is in the number 'three.'"
+    "summary": "Clarke brings the same Talmudic evidence as Lightfoot, the stalk whose broken bough roofed a potter's tent and the rabbi who climbed into the one in his field, and takes the inward scale as well, that grace often begins in a single good desire. Wesley marks the change of subject, that the earlier parables concerned unfruitful hearers and these those who bear fruit, reduces the superlative to idiom, one of the least, and calls the three measures the usual baking."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: leaven's certain, gradual, silent, unstoppable working is the manner of the gospel in world and heart (Mk 4:26-29; Ro 6:13)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the leaven to be allegorized, and what are the 'three measures'?",
-    "sides": [
-     {
-      "position": "decode each term (leaven, woman, three measures) &mdash; though commentators disagree on the decoding",
-      "holders": [
-       "Augustine",
-       "Jerome",
-       "Hilary",
-       "Raban"
-      ]
-     },
-     {
-      "position": "refuse allegory: leaven = pervasive influence for good; 'three' is merely the usual amount baked",
-      "holders": [
-       "Robertson",
-       "Ellicott",
-       "Calvin",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "leaven hid in three measures",
-   "pervasive secret working",
-   "allegory vs plain sense",
-   "gospel in world and heart"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "Chrysostom",
-   "Remigius",
-   "Jerome",
-   "Augustine",
-   "Gloss",
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry states the scope, that the beginnings would be small and the latter end great, and describes the working of the leaven as certain, gradual and silent, the apostles hiding a handful of it in the mass of mankind."
+   },
    {
     "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "He spoke in parables as they were able to hear (Mk 4:33), not to keep them ignorant but to provoke inquiry; yet none asked, so he departed (Chrysostom)."
+    "prevalence": "single",
+    "summary": "Chrysostom keeps to the working of the leaven, that as it changes much flour into its own kind so shall the disciples change the world, and notes that the word is hid rather than put, so that when they are cast down by enemies they shall overcome them; on the closing citation he says the Evangelist quotes the prophet so nobody should think the method new."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome and Remigius preserve the textual controversy: the citation is from Asaph's psalm (Ps 78), not Isaiah; a copyist substituted the better-known name, which Porphyry exploited."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes, Clarke, Ellicott: the quotation is Ps 78:2 (Asaph, a true prophet, 1 Chr 25:2); the 'Esaias' variant is a transcriber's error; from now parables dominate his public teaching while mysteries are reserved for the disciples."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: not that the psalm peculiarly predicts Christ, but the same majesty of the Spirit shone in his grave figurative speech; no conflict with Isaiah's prophecy, for in withholding light from the reprobate he yet accommodated their capacity to leave them inexcusable."
+    "prevalence": "single",
+    "summary": "Augustine makes the leaven love because it causes fermentation, the woman wisdom, and the three measures either heart and soul and mind, or the three degrees of fruitfulness, or Noah and Daniel and Job; on the closing verse he narrows the claim, that he spake nothing without a parable does not mean he never used plain words but that no discourse closed without one somewhere in it."
    }
   ],
   "debates": [
    {
-    "question": "Why does Matthew ascribe Psalm 78:2 to 'the prophet' (var. Isaiah)?",
-    "sides": [
+    "question": "How far may the three measures be pressed?",
+    "positions": [
      {
-      "position": "original read 'Asaph the prophet'; a copyist replaced the unfamiliar name with Isaiah",
-      "holders": [
-       "Jerome",
-       "Clarke",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the substance holds: Asaph ranks among the prophets and his words fit Christ's teaching",
-      "holders": [
-       "Gill",
-       "Barnes",
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the lost sheep and the sabbath (ch. 12)."
-   }
-  ],
-  "themes": [
-   "without a parable spake he not",
-   "quotation of Asaph's psalm",
-   "Esaias textual variant",
-   "parables provoke inquiry"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Gloss"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The citation is Ps 78:2 (Asaph, 1 Chr 25:2), defended against the 'Esaias' variant; Ellicott shows Matthew's characteristic use of prophecy (cf. Mt 8:17; 12:17) &mdash; the psalm a historical survey, but the word 'parable' enough for an Evangelist who excluded chance; Robertson: 'I will utter' gushes like a river."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: not a peculiar prediction but the loftiness of figurative speech showing Christ handled hidden mysteries; he so regulated his style that even the reprobate, in their stupor, felt a divine power in it."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the eternal generation of the Son, citing 'Bethlehem' (Micah 5:2) and Abraham rejoicing to see his day."
-   }
-  ],
-  "themes": [
-   "I will open my mouth in parables",
-   "things kept secret from the foundation",
-   "Matthew's use of prophecy",
-   "a divine power felt even by the reprobate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Raban",
-   "Remigius",
-   "Augustine",
-   "Gloss",
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "He spoke in parables to draw out questions; when none came he sent the crowd away and entered the house, where the disciples (not the scribes, who followed only to catch him) now ask freely, passing the plain parables for the harder tares (Chrysostom)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: when with the multitudes Jesus is not in his house; it is his love of men to leave the house and go out to those who cannot come; the genuine hearer follows, inquires, and abides with him (Jn 1:35)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: those who attend only public preaching will not grasp the mysteries &mdash; one must come by secret prayer; Ellicott sets the scene in Peter's house; Robertson catches the aorist urgency 'explain right now' (cf. Mt 18:31); Barnes treats the whole interpretation, stressing the reality of hell against universalism."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sent the multitude away",
-   "declare the parable of the tares",
-   "private instruction by prayer",
-   "the reality of the furnace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen extends the figure inward: the good seed are the children of the kingdom because whatever good is sown in the soul is sown by God the Word (Jn 1:1); while men fail to watch and pray (Mt 26:41) the devil sows evil opinions, and so the field is the whole world, not the church."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the mingling of the wicked with believers is no accident but the devil's trick &mdash; charged on Satan, not God, who bears no blame for another's fault; and Christ says not the ministers but he alone sows, employing us as his hand while he alone is the Author of the work."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: the parable explains the presence of evil in the Church, and only by analogy in the world; if the Son of Man is the Light of every man (Jn 1:9) he sowed good seed in the world from the beginning."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on Christ going willingly to his passion and Judas's betrayal &mdash; belongs to another context."
-   }
-  ],
-  "themes": [
-   "he that soweth is the Son of man",
-   "the devil's trick, not God's fault",
-   "Christ alone sows by his ministers",
-   "good and evil in the Church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson stresses the Greek article on both nouns: the good seed AND the darnel are sown in the world, not the Kingdom or the church, separation coming only at the consummation (v.39); Gill widens the field from Judea to the whole earth (Ro 10:18; Col 1:6)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott corrects the temptation to equate the tares with heretics: heresy from self-will may be included, but the true definition is v.41 'all things that offend, and them which do iniquity' &mdash; a caution against persecuting heretics (Jn 8:44; 1 Jn 3:8)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the field is the world",
-   "children of the kingdom / of the wicked one",
-   "not the church but the world",
-   "tares are not merely heretics"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott: distinct recognition of a personal devil; the enemy sows 'while men slept' (security is danger); the 'servants' (pastors) differ from the 'reapers' (angels); the over-hasty zeal of Puritanism breeds worse evils, for tares may yet become wheat (Mt 25:31; Dan 7:9-10; 12:1-2)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: bear patiently the reprobate to the end, not to encourage pollution but to spare weak minds; the hasty rooters usurp the angel-reapers' office; against the Anabaptists, the same logic that allows excommunication allows the magistrate's sword (Mt 3:12; Jn 4:38; 4:35)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "(implicit in source) note material on Tyre/Sidon mis-attached"
-   },
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the signs of the end and the apostles' Olivet question."
-   }
-  ],
-  "themes": [
-   "the enemy is the devil",
-   "while men slept",
-   "servants vs reapers",
-   "patience, not persecution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Sparse: Gill simply rehearses the figure &mdash; the tares first gathered, bound, and burned in the fire prepared, so shall it be in the end of the world; the verse is the hinge turning the explanation toward judgment, reserving fuller treatment for vv.42-43."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the healed leper showing himself to the priest (Mt 8:4)."
-   }
-  ],
-  "themes": [
-   "the tares gathered and burned",
-   "the end of this world",
-   "appointed final separation",
-   "preface to the furnace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: 'out of his kingdom' = from the midst of the kingdom, since good and bad are mixed in every city (cf. v.49); the stumbling-blocks are not really members of the Kingdom but mixed in the field till the separation; Ellicott marvels the carpenter's son claims 'his' angels and kingdom, glossing 'all stumbling-blocks.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the offenders undermine many's faith, so be zealous not indolent against them, and not delicate (turning back at the smallest scandal); yet be confident, for the Son who bids us walk among scandals gives strength to overcome (Lk 13:27)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on Christ's willing passion &mdash; misplaced."
-   }
-  ],
-  "themes": [
-   "the Son of man shall send his angels",
-   "gather all stumbling-blocks",
-   "mixed in the world, not the Kingdom",
-   "be zealous yet confident"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The furnace is metaphorical, denoting the abiding wrath of God; alludes to Nebuchadnezzar's furnace or the burning of chaff, the Jews comparing hell to a furnace (Gill; Mt 3:12; Rev 19:20; 20:10); Ellicott: 'the' furnace of Gehenna with wailing and gnashing (Mt 8:12)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: as the glory laid up for the godly exceeds all sense, so the reprobate's punishment is incomprehensible and shadowed to our capacity; he philosophizes sparingly, content with the plain meaning, rebuking the Sophists' fruitless disputes and the curious who press every phrase."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a furnace of fire",
-   "metaphor of incomprehensible wrath",
-   "wailing and gnashing of teeth",
-   "restraint against speculation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The righteous shine forth (Dan 12:3); Robertson: 'shine out' as the sun from a cloud once the darkness is separated; Gill contrasts present reproach with future glory in Christ's imputed righteousness and the incorruptible body; Ellicott: the crowning blessing is the kingdom of 'their Father' (Prov 4:18)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a remarkable consolation; the emphatic 'then' contrasts present obscurity with ultimate restoration; glory promised only to those already bearing God's image and advancing; the sun-comparison does not make all equal, for gifts variously given are variously crowned (Lk 17:21; 1 Cor 15:28)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the resurrection body, citing the same shining of the righteous &mdash; outside the parable's frame."
-   }
-  ],
-  "themes": [
-   "the righteous shine as the sun",
-   "present obscurity, future glory",
-   "kingdom of their Father",
-   "degrees of glory"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "Chrysostom",
-   "Hilary",
-   "Jerome",
-   "Gregory",
-   "Augustine",
-   "Origen",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Allegorize the treasure variously: the gospel preaching hidden in the world, costly to possess (Chrysostom, Hilary); Christ the Word in the flesh or the Scriptures (Jerome; Col 2:3); the desire of heaven guarded from human praise (Gregory); the two Testaments (Augustine)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: Christ himself the true Treasure (Col 1:19; Jn 1:16; Col 2:3), the gospel the open field where any may dig and search the Scriptures (Prov 2:4; Jn 5:39); those who discern its worth sell all to make it their own."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes, Clarke, Robertson: a buried hoard or hidden mine; the finder's concealment does not square with strict integrity, but the parable (like the Unjust Steward) presses only his earnestness and total sacrifice (Lk 14:33; Php 3:8)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin and Wesley read it inward: the kingdom within, hidden from the world's wise, found and hidden deep in the heart, all other happiness given up for it."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the treasure, and the field?",
-    "sides": [
-     {
-      "position": "the gospel preaching / Scriptures / the two Testaments (allegorized)",
-      "holders": [
-       "Chrysostom",
-       "Jerome",
-       "Augustine",
-       "Gregory"
-      ]
-     },
-     {
-      "position": "Christ himself the Treasure, the gospel the field",
-      "holders": [
-       "Matthew Henry"
-      ]
-     },
-     {
-      "position": "a buried hoard or mine; the point is the earnest, total sacrifice, not the field's identity",
-      "holders": [
-       "Barnes",
-       "Clarke",
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "treasure hid in a field",
-   "sold all and bought it",
-   "Christ / the gospel as the treasure",
-   "total sacrifice for surpassing worth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Gregory",
-   "Augustine",
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The one pearl variously: the truth, which is one (Chrysostom); the knowledge of the Saviour and his passion, beside which the Law and Prophets are dung (Jerome; Php 3:8); the sweetness of the kingdom (Gregory); Christ / love of neighbour / the Word (Augustine; Ro 13:9; Jn 1:1), the buying of which is the possession of ourselves."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the prophets are the mussels conceiving heavenly dew; the one costly pearl is the Christ, on whose finding all the rest are easily gathered."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Salvation worth all (Barnes, Clarke, who cites the Talmudic Joseph-and-the-pearl); Ellicott grounds the figure in Roman pearl-luxury (Mt 7:6; 1 Tim 2:9); the marked difference from the treasure is that the search is presupposed &mdash; the seeker of goodly pearls led to Christ (Php 3:8; Jn 7:17)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "one pearl of great price",
-   "the search presupposed",
-   "Christ / the truth as the pearl",
-   "sell all to gain it"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "Albert Barnes",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Brief: Robertson catches the vivid Greek tenses (dramatic perfect 'he has gone off and sold,' then bought it) and the word for a travelling merchant; the point is the totality and eagerness of the surrender for the kingdom's surpassing wealth."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin guards against legalism: 'bought' does not mean men bring a price (Isa 55:1); the heavenly life is God's free gift, yet we 'buy' it by cheerfully relinquishing fleshly desires, as Paul counted all loss to gain Christ (Php 3:8)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on Gentiles from Tyre/Sidon and kinsmen thinking him beside himself (ch. 12; 2 Cor 5:13)."
-   }
-  ],
-  "themes": [
-   "went and sold all and bought it",
-   "eager total surrender",
-   "salvation free yet costly",
-   "gain Christ above all"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Gregory",
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: unlike the tares (heresy) and the sower (inattention), here men are lost for evil life though drawn by the net (knowing God); the parable is added lest men trust in preaching only or think bare faith enough."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome: the net is the gospel woven of the two Testaments, cast by the apostle-fishermen into the sea of the world (Jer 16:16); Gregory: the net is the Holy Church drawing every kind of man, full only when the human race is complete."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Robertson: the sagenè (drag-net, not the hand-net of Mt 4:18) sweeps in all, separation coming afterward; Barnes: Christ's own lips give the sharpest pictures of hell, against universalism (Mt 22:10); Clarke/Ellicott: the casting of the net may change the fish, so the 'bad' are so by their own will."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: partly the same design as the tares (remove the offense of a mixed church), partly distinct &mdash; to keep the disciples from resting in mere profession, since to be gathered into the fold avails nothing unless we are Christ's chosen sheep (2 Tim 2:19; 1 Cor 14:33)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a net cast into the sea",
-   "gathered of every kind",
-   "evil life, not heresy",
-   "mixture now, separation at the end"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Brief: Gill reads the fulness ecclesiologically &mdash; the church-state full when all the called are gathered and the fulness of the Gentiles is in (Ro 11:25); Robertson notes 'vessels' (angè) occurs only here, distinct from the form in Mt 25:4."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when the net was full",
-   "good into vessels, bad cast away",
-   "fulness of the Gentiles",
-   "mechanism of the separation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "49": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Gill rehearses the figure (good fish into vessels, dead cast away); Barnes stresses the severing is 'from among' the just (cf. v.41) and the angels' express ministry in it (Mt 25:32), as in the tares where Christ assigned the work to the angels."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the angels of heaven do what the angels of the churches (ministers) cannot &mdash; sever the wicked from the just; having commission and instruction from him who knows them that are his, there shall be no mistake either way."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on the signs of the end and the apostles' question about Christ's coming &mdash; belongs to the Olivet discourse."
-   }
-  ],
-  "themes": [
-   "the end of the world",
-   "angels sever the wicked from the just",
-   "unerring judgment",
-   "the all-knowing Judge"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Treated as a deliberate refrain: Gill and Barnes cross-reference v.42, Clarke his note on Mt 8:12; the dragnet ends where the tares ended, both parables closing on one note of solemn warning."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment quoting the furnace-language of Mt 6:30 to refute Marcion &mdash; belongs to the catechetical lectures."
-   }
-  ],
-  "themes": [
-   "the furnace of fire",
-   "wailing and gnashing of teeth",
-   "deliberate refrain of v.42",
-   "Christ's frequent warning of hell"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "51": {
-  "voices": [
-   "Gloss",
-   "Jerome",
-   "Chrysostom",
-   "Augustine",
-   "Gregory",
-   "Hilary",
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome and Hilary: the disciples must not merely hear like the multitude but understand, as having to teach; the apostles are the Saviour's notaries, fittingly called scribes instructed (Song 7:13)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: Christ, though knowing men's hearts (Jn 2:25), asks as a true man, using the human characteristic of inquiry, as God asked 'Adam, where art thou?' and 'Where is Abel?' (Gen 3:9; 4:9)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes: the kind question &mdash; he was still willing to teach; the truth gained must not lie unemployed; Clarke: divine truths considered again and again till understood; Ellicott hears both grateful growth and child-like simplicity in 'Yea, Lord.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: all the parables explained in private; Christ's object was not merely that they be informed but that they communicate to others what they received, whetting their desire for instruction."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "have ye understood all these things",
-   "scribes who must teach",
-   "Christ asks as a true man",
-   "understanding the condition of teaching"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "52": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley",
-   "Augustine",
-   "Gregory",
-   "Hilary"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: 'new and old' (not 'old and new') keeps the order of value, against the Manichaeans who keep only the new; Gregory rejects the two-Testaments reading (else Abraham/Moses were unlearned) for the kingdom's sweetness and punishment's terror, or both Testaments in word and life; Hilary: Law and Gospel from the Spirit's treasury."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Clarke: the scribe is the minister taught of God, whose treasury is Scripture, bound to distribute liberally and suit his discourse (the same sermon to all proves no scribe); Ellicott: one of the few sayings comparing Christ's and the apostles' work to the scribes', 'new and old' the secret of reverence and courage; Robertson contrasts the stale Rabbinical scribe with the fresh disciple of the kingdom."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and Wesley: the teacher lays up a store by long study to draw out, as from a granary, instruction fitted to every need (2 Tim 3:16-17)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What do 'things new and old' denote?",
-    "sides": [
-     {
-      "position": "the two Testaments (Law and Gospel)",
-      "holders": [
-       "Hilary",
+      "position": "Heart, soul and mind, or three degrees of fruitfulness, or Noah, Daniel and Job",
+      "held_by": [
        "Augustine"
       ]
      },
      {
-      "position": "NOT the two Testaments but the kingdom's sweetness and punishment's terror, or both Testaments in word and life",
-      "holders": [
-       "Gregory"
+      "position": "Simply a common baking, and the Trinity is beside the mark",
+      "held_by": [
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "a varied store of Scripture/doctrine fitted to the hearers (no fixed allegory)",
-      "holders": [
-       "Clarke",
-       "Calvin",
-       "Robertson",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on a kingdom/house divided against itself (Mt 12:25)."
-   }
-  ],
-  "themes": [
-   "scribe instructed unto the kingdom",
-   "things new and old",
-   "the charter of gospel ministry",
-   "order of value over time"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "53": {
-  "voices": [
-   "Jerome",
-   "Augustine",
-   "Chrysostom",
-   "Remigius",
-   "Pseudo-Augustine",
-   "Hilary",
-   "John Chrysostom",
-   "Origen",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome marvels at the Nazarenes' folly &mdash; they wonder whence Wisdom has wisdom yet stumble at the carpenter's son, and so err over his 'brethren' (kinsmen, sons of the other Mary, guarding the perpetual virginity); Hilary and Pseudo-Augustine lift the carpenter to the Father framing all nature."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: 'his own country' is Nazareth, not Capernaum where the works were done (Mt 11:23); they ought to have honoured him the more that one of such parentage and no schooling spoke so wisely (as David from a husbandman, Amos a shepherd), proving his wisdom came of divine grace."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: Christ came again to those who rejected him, not taking refusers at their first word; they upbraided his want of education and poor relations, turning against him what was really for him, for the unschooled who gave such proofs must be divinely commissioned."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin and the harmonists: some interval elapsed (the notes of time not pressed; Lk 4:16; Mk 6:1); Nazareth's contempt persisted unreformed; familiarity bred contempt, and their unbelief, not any want of power, tied his hands (Lk 2:34; Isa 8:14)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Cyril of Jerusalem",
-    "note": "Stray fragment on Barnabas, Paul, and the disciples first called Christians at Antioch (Acts 11) &mdash; outside this passage."
-   }
-  ],
-  "themes": [
-   "finished the parables, came to his country",
-   "whence hath this man wisdom",
-   "the carpenter's son and his brethren",
-   "a prophet without honour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "54": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: their wonder is unwitting testimony to a wisdom 'greater than Solomon' (Mt 12:42) and works greater than Elijah's, Elisha's, Moses', yet supposing him the carpenter's son they depreciated his kindred; notes the tradition (Gospel of Peter/Book of James) that the brethren were Joseph's by a former wife."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Barnes, Clarke: the surprise shows Jesus lived in obscurity till then; those who should know Christ best are often most ignorant of him; Wesley: many texts are missed for want of the proper emphasis &mdash; here 'whence hath HE' (Mk 6:1; Lk 4:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: willful blindness &mdash; they ought to have seen God's hand, but ingratitude dazzled them; compelled to admire yet despising, they reject a prophet God taught because men did not teach him, cutting their own throats by their very acknowledgment."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "whence hath this man wisdom",
-   "greater than Solomon",
-   "obscurity before the ministry",
-   "admiration without faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "55": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The trade taken plainly and turned to honour: Jesus worked as a carpenter till thirty (Barnes, against the infidel's sneer); the Jewish custom trained every child to a craft (Paul the tent-maker, Acts 18:3); Ellicott cites Justin on relic ploughs and yokes; Gill the Antioch schoolmaster's retort to Libanius."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: against Papist and Protestant prejudice alike, plain sense takes the named brethren and sisters as children of Joseph and Mary, Scripture being silent on the perpetual virginity (Mt 1:25)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who are the 'brethren' of Jesus?",
-    "sides": [
-     {
-      "position": "children of Joseph and Mary (younger half-siblings)",
-      "holders": [
-       "Clarke",
-       "Robertson"
-      ]
-     },
-     {
-      "position": "kinsmen / cousins, sons of the other Mary (Cleophas)",
-      "holders": [
-       "Wesley",
-       "Jerome"
-      ]
-     },
-     {
-      "position": "'brethren' is a Hebrew idiom for any relatives; Helvidius erred in inferring many sons",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "is not this the carpenter's son",
-   "an honest trade no discredit",
-   "James, Joses, Simon, Judas",
-   "the brethren debate"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "56": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Light: Gill reports (from Epiphanius) the sisters named Mary and Salome and the two kinship views (Joseph's by a former wife, or daughters of Alphaeus/Cleophas) without adjudicating; Barnes refers back to v.55."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry's point (from the list): the sisters being 'all with us' and known to all was turned into contempt rather than respect &mdash; they should have honoured him the more as one of themselves."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "his sisters are all with us",
-   "familiarity bred contempt",
-   "worth misjudged by rank",
-   "the obscurity of his kindred"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "57": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The offense is pride and envy: rather than own a divine mission they suspect the devil, or stumble at his mean birth (Gill); men envy equals who claim uncommon wisdom (Barnes, with the Columbus parallel); it was unpardonable in Jesus not to be commonplace (Robertson; Mt 11:6; Jn 6:42; Isa 53:3)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin, with Chrysostom: the proverb, though perhaps general, is applied to the Galileans, who should have been first to accept grace but drove him off; the more familiarly God shows himself, the more boldly men reject his Spirit (Jn 4:44; Lk 4:24)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is 'a prophet without honour in his own country' a universal proverb?",
-    "sides": [
-     {
-      "position": "not universally true (Elijah, Jeremiah were not dishonoured at home); true only figuratively, or of the Saviour singularly",
-      "holders": [
-       "Origen"
-      ]
-     },
-     {
-      "position": "a general proverb, here applied with peculiar reference to the Galileans",
-      "holders": [
-       "Calvin",
+      "position": "A definite number standing for an indefinite abundance",
+      "held_by": [
        "Chrysostom"
       ]
      },
      {
-      "position": "Christ may mean himself alone &mdash; less received among his own relatives",
-      "holders": [
-       "Clarke"
+      "position": "An ephah, by the ordinary reckoning of measures",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the mustard seed really least, and does it really become a tree?",
+    "positions": [
+     {
+      "position": "The description is popular, and what we call mustard is no tree at all",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "A tree not in nature but in size, an excusable exaggeration",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Literally so in that climate, as the Talmud reports stalks a man could climb",
+      "held_by": [
+       "Adam Clarke",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "One of the least, by a Jewish way of speaking",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Refuses the standing objection that leaven must signify corruption, calling the argument exegetical jugglery since the lion figures both the devil and Christ"
+   }
+  ],
   "themes": [
-   "they were offended in him",
-   "a prophet without honour",
-   "pride and envy",
-   "familiarity breeds contempt"
+   "Another parable put he forth unto them, saying, The kingdom of heaven is like to a grain of mustard seed, which a man took, and sowed in his field:",
+   "Which indeed is the least of all seeds: but when it is grown, it is the greatest among herbs, and becometh a tree, so that the birds of the air come and lodge in the branches thereof.",
+   "Another parable spake he unto them; The kingdom of heaven is like unto leaven, which a woman took, and hid in three measures of meal, till the whole was leavened.",
+   "All these things spake Jesus unto the multitude in parables; and without a parable spake he not unto them:",
+   "That it might be fulfilled which was spoken by the prophet, saying, I will open my mouth in parables; I will utter things which have been kept secret from the foundation of the world."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
- "58": {
+ "36": {
   "voices": [
-   "Origen",
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Matthew Henry"
+   "Chrysostom",
+   "Augustine",
+   "Origen"
   ],
+  "range": "36-43",
+  "pericope_label": "Then Jesus sent the multitude away, and went into the house: and his disciples came unto him, saying, Declare unto us the parable of the tares of the field. He answered and said unto them, He that soweth the good seed is the Son of man; The field is the world; the good seed are the children of the kingdom; but the tares are the children of the wicked one; The enemy that sowed them is the devil; the harvest is the end of the world; and the reapers are the angels. As therefore the tares are gathered and burned in the fire; so shall it be in the end of this world. The Son of man shall send forth his angels, and they shall gather out of his kingdom all things that offend, and them which do iniquity; And shall cast them into a furnace of fire: there shall be wailing and gnashing of teeth. Then shall the righteous shine forth as the sun in the kingdom of their Father. Who hath ears to hear, let him hear.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The power was not absolute but conditioned on faith, so will and power were alike thwarted (Barnes, Ellicott); yet he healed a few sick folk (Mark), leaving them inexcusable; Robertson: their disbelief blocked his will and power to cure; Gill: the few works became stumbling-blocks through their hardness."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen marks 'he could not,' not 'he would not': the working power receives co-operation from the faith of its object, hindered by unbelief (the disciples' little faith, Peter sinking, Mt 17:20; 14:31), while the woman with the issue, only reasoning a touch would heal, was healed at once (Mt 9:21)."
+    "summary": "Robertson is emphatic that the article stands with both nouns, so that field and world are coextensive, and that both the good seed and the darnel are sown in the world and not in the kingdom or the church, gathering out of his kingdom meaning out from the midst, since good and bad lie scattered together in every city. Ellicott places the question in Peter's house, infers that the disciples found this parable harder than the other two, holds that it is about the new order called the Church and explains the evil found in it, touching the wider world only by inference, and rejects the identification of the tares with heretics, since the passage defines them as all things that offend and them which do iniquity. Barnes refuses to settle whether the furnace means material fire, insisting only that Christ would not hold out frightful images merely to terrify."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: faith is the open mouth of the vessel, unbelief the stopper; yet 'not many' not 'none' &mdash; Christ's goodness strove with their malice and triumphed, opening a path where none existed; Henry: unbelief the great obstruction, the want being in us, not in Christ's power (Mk 9:23; Ro 1:16; Eph 2:8)."
+    "summary": "Calvin guards both ends of the answer about the enemy, that when wicked men are mingled with believers this is neither accident nor nature but the devil's trick, and that saying so acquits God and not the men; he admits how distressing it is that the Church is burdened with the reprobate to the end, and holds both halves, that patience is enjoined and that pastors must still labour to purify it. Gill treats hypocrites and heretics in churches as proof of that enmity, and takes the field for the whole world or the church in its several parts."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says that after a thousand volumes on the origin of evil we shall know exactly what Christ says here, that an enemy hath done it, since God could not produce sin, nothing producing what is not in itself, and describes the enemy as deceitful, vigilant while men sleep, and hidden once he has sown; he draws the moral that men who attend only the public preaching will not understand the mysteries, which are learned by secret prayer. Wesley notes that the Greek behind the phrase is simply all scandals, whatever hindered the seed from rooting."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom notes that he had spoken in parables to draw questions and got none, that no scribe followed him indoors, which shows they had followed only to catch him, and that the disciples now ask freely, passing over the leaven and the mustard seed as plain; he observes that the figure of harvest is used in two senses, since elsewhere the fields are already white and one sows while another reaps, whereas here the same sows and reaps and the harvest is the end, and concludes from the sowing of his own field that this world is his."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen reads the withdrawal both ways, that when Jesus is with the multitudes he is not in his house, and that it springs from his love of men to leave the house for those who cannot come to him; on the field he says the whole world might be called a field, and not the Church."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine finds it fitting that angels separate, since the good can discharge punishment with a good spirit as a judge does, while the wicked cannot perform offices of mercy."
    }
   ],
-  "debates": [],
+  "debates": [
+   {
+    "question": "Is the field the world or the Church?",
+    "positions": [
+     {
+      "position": "The world, emphatically not the kingdom or the church",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "The Church, which is the kingdom that exists now",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "The Church primarily, the wider world only by inference",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "The whole world, and not the Church",
+      "held_by": [
+       "Origen"
+      ]
+     },
+     {
+      "position": "Both at once, the whole world or the church in its several parts",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How far does an enemy hath done it answer the origin of evil?",
+    "positions": [
+     {
+      "position": "It is all we shall ever know, since God could not produce what is not in himself",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "It acquits God without acquitting men",
+      "held_by": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
   "outliers": [
    {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "Note here is mis-attached, on the unpardonable sin and blasphemy against the Spirit (Mt 12:31)."
+    "voice": "Chrysostom",
+    "claim": "Distinguishes two senses of the harvest figure, the first conviction of men in one place and the final reckoning here"
    }
   ],
   "themes": [
-   "did not many mighty works there",
-   "could not, not would not",
-   "faith the condition of the cure",
-   "unbelief the great obstruction"
+   "Then Jesus sent the multitude away, and went into the house: and his disciples came unto him, saying, Declare unto us the parable of the tares of the field.",
+   "He answered and said unto them, He that soweth the good seed is the Son of man;",
+   "The field is the world; the good seed are the children of the kingdom; but the tares are the children of the wicked one;",
+   "The enemy that sowed them is the devil; the harvest is the end of the world; and the reapers are the angels.",
+   "As therefore the tares are gathered and burned in the fire; so shall it be in the end of this world.",
+   "The Son of man shall send forth his angels, and they shall gather out of his kingdom all things that offend, and them which do iniquity;",
+   "And shall cast them into a furnace of fire: there shall be wailing and gnashing of teeth.",
+   "Then shall the righteous shine forth as the sun in the kingdom of their Father. Who hath ears to hear, let him hear."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ },
+ "44": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Matthew Henry",
+   "Chrysostom",
+   "Augustine",
+   "Origen",
+   "Gregory"
+  ],
+  "range": "44-46",
+  "pericope_label": "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field. Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls: Who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott keeps the buried hoard rather than a mine and sets it in village life, where tales ran of men made suddenly rich by treasure concealed in war, and answers the moral difficulty by saying that parables do not concern themselves with such questions, any more than those of the unjust steward and the unjust judge, Jewish casuistry having laid the rule of caution on the seller. Barnes says plainly the conduct would be dishonest and integrity required the finder to tell the owner, but adds that Christ does not vindicate it and only describes how men actually get wealth, the point lying in the earnestness. Robertson thinks the morality need not be bad at all, since a man might hide a find to keep it from thieves, and says it is not the point in any case."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin says both parables are meant to make believers prefer this to the whole world, since we are so captivated by its allurements that eternal life fades from view, and that treasure is the apt figure because its worth is undiminished though buried out of sight. Gill inverts the parable of the pearl, making Christ the merchant who sought and purchased his elect, who are to him the pearl of great price."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke refuses a buried pot and argues for a mine, since there is no sense in buying a field for money a man might carry off as readily and as honestly; on his reading hid means kept secret until the purchase, and the gospel is a mine whose veins run everywhere through the Scriptures, so the field must be dug. Wesley agrees that these are proposed peculiarly to the apostles and makes the kingdom within a treasure hidden from the world and from the wisest in it, which a man having found hides deep in his heart."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the figure, Christ the treasure and the gospel the field, hid as milk in the breast, marrow in the bone, honey in the comb, and hid not in an enclosed garden but in an open field where anyone may dig; he finds there the reason so many slight it, that they look only at the surface of the field."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom marks the change of theme, that the leaven and the mustard seed showed the power of the preaching and these two its value, and keeps the pearl with the preaching, since two things are required of a preacher, detachment and watchfulness, and truth being one there is one pearl; a man carrying a pearl knows his wealth while others do not, since it hides in the hand for its smallness."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen asks whether these are parables at all, since Scripture attaches the word elsewhere and withholds it here, and presses the wording of the pearl, that the merchant sold not merely the pearls he had bought but everything he had, before turning aside into the natural history of pearls, those of the land and the better sort out of the sea."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine offers Christ, the one man without sin, or love of the neighbour, in which the Apostle says all is comprehended, or the Word in which all things are contained, and concludes that whatever the pearl is, its price is the possession of ourselves, since we can give nothing more. Gregory makes it the sweetness of the heavenly kingdom, which a man having tasted leaves willingly what he loved before."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the treasure a buried hoard or a mine?",
+    "positions": [
+     {
+      "position": "A mine, since buying a field for a portable pot makes no sense",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "A hoard concealed in troubled times, the stuff of village stories",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Either, though more likely a mine unknown to the owner",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Was the finder honest?",
+    "positions": [
+     {
+      "position": "No, and integrity required him to tell the owner, though Christ does not vindicate it",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Not by our standards, but parables do not concern themselves with such questions",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Not necessarily dishonest at all, and not the point",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the one pearl?",
+    "positions": [
+     {
+      "position": "The gospel preaching, truth being one and not manifold",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Christ, or love of the neighbour, or the Word, and in any case the possession of ourselves",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "The sweetness of the heavenly kingdom",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "The elect, Christ himself being the merchant",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Inverts the parable of the pearl, making Christ the merchant and his elect the pearl of great price"
+   }
+  ],
+  "themes": [
+   "Again, the kingdom of heaven is like unto treasure hid in a field; the which when a man hath found, he hideth, and for joy thereof goeth and selleth all that he hath, and buyeth that field.",
+   "Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls:",
+   "Who, when he had found one pearl of great price, went and sold all that he had, and bought it."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
+  }
+ },
+ "47": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "John Lightfoot",
+   "Chrysostom",
+   "Augustine",
+   "Origen",
+   "Gregory"
+  ],
+  "range": "47-52",
+  "pericope_label": "Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind: Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away. So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just, And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth. Jesus saith unto them, Have ye understood all these things? They say unto him, Yea, Lord. Then said he unto them, Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder, which bringeth forth out of his treasure things new and old.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott distinguishes the great drag-net from the hand-net of the earlier chapter and closes the day of parables on a lesson the fishermen could read at sight; he names the same two thoughts as in the tares, the mingling and the separation, but points at what the parable leaves out, that the casting of the net is meant to change what it catches, so that those who remain bad are bad by their own will, and notes that the verb in the closing question is the one used of the sower's hearers. Robertson gives the word that became seine, notes that as the field was the world so this net takes every fish in the sea, adds Homer's picture of the slain suitors lying like fish in nets of myriad meshes, and keeps the householder as a character sketch, the merely rabbinical scribe producing only the old and stale while the disciple of the kingdom stays fresh-minded. Barnes says the parable does not differ in meaning from the tares, hears the kindness in the closing question, and ends on the duty, that the store is not to lie unemployed. Lightfoot dissolves the difficulty of things new and old into idiom, since the schools debated whether new or old produce should be used in holy things and a provident man kept both by him."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin takes both readings of the parable, that the Church while it lasts is a mixture and that the disciples are warned off the empty title of faith, since it is of little consequence to be gathered into the fold unless we are his own sheep. Gill notes that the gospel is mean in the world's esteem, and that a net does nothing unless cast, nor then unless the blessing follows."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke assigns the parts of the figure, the net the preaching, the sea the abyss of sin from which men are drawn, the hauling ashore the end of all things. Wesley ends on the duty with Barnes, that a prepared preacher holds a store out of which every sort of instruction can be brought."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom finds the difference from the tares in the ground of ruin, since there men are lost by evil dogma, in the sower by inattention, and here by an evil life, so that men drawn in the net and knowing God may still not be saved; the parable is added so that we should not think faith alone enough, and he notes that Christ praised the disciples for understanding."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen interrupts with a caution about the whole method, that likenesses are never likenesses in every respect, a painting in wax keeping surface and colour but not the hollows and a statue the hollows and not the colour, so that when the kingdom is likened to a thing the comparison holds only where it is required; he then turns the figure on the Scriptures, the net being of variegated texture like the Old and the New woven of thoughts of every kind."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine observes that he said not old and new, preferring the order of value to that of time, and turns it against the Manichaeans, who by keeping only the new promises remain in the old man of the flesh, taking the two as the Testaments. Gregory objects directly to that reading: if the Testaments are meant we must deny that Abraham was learned, who knew the deeds without the words, and refuse Moses the name of householder, who composed one Testament without the words of the other; he also makes the net the Church, given into the hands of fishers, gathering wise and foolish, free and slave."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What are the things new and old?",
+    "positions": [
+     {
+      "position": "The two Testaments, value taking precedence of time, against the Manichaeans",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Not the Testaments, since Abraham and Moses would then be unlearned, but men of the later Church",
+      "held_by": [
+       "Gregory"
+      ]
+     },
+     {
+      "position": "An idiom of the schools about new and old produce, a provident man keeping both",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "The freshness of the disciple set against the staleness of the rabbinic scribe",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How does the net differ from the tares?",
+    "positions": [
+     {
+      "position": "It does not differ in meaning",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "It differs in the ground of ruin, evil life rather than evil dogma or inattention",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "It adds a warning against resting in the mere profession of faith",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The same two thoughts, with the unstated point that the net is meant to change the fish",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Origen",
+    "claim": "Warns that a likeness never holds in every respect, comparing a wax painting that keeps colour without depth and a statue that keeps depth without colour"
+   }
+  ],
+  "themes": [
+   "Again, the kingdom of heaven is like unto a net, that was cast into the sea, and gathered of every kind:",
+   "Which, when it was full, they drew to shore, and sat down, and gathered the good into vessels, but cast the bad away.",
+   "So shall it be at the end of the world: the angels shall come forth, and sever the wicked from among the just,",
+   "And shall cast them into the furnace of fire: there shall be wailing and gnashing of teeth.",
+   "Jesus saith unto them, Have ye understood all these things? They say unto him, Yea, Lord.",
+   "Then said he unto them, Therefore every scribe which is instructed unto the kingdom of heaven is like unto a man that is an householder, which bringeth forth out of his treasure things new and old."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
+  }
+ },
+ "53": {
+  "voices": [
+   "John Gill",
+   "Albert Barnes",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "A.T. Robertson",
+   "John Calvin",
+   "John Wesley",
+   "Matthew Henry",
+   "Chrysostom",
+   "Augustine",
+   "Origen"
+  ],
+  "range": "53-58",
+  "pericope_label": "And it came to pass, that when Jesus had finished these parables, he departed thence. And when he was come into his own country, he taught them in their synagogue, insomuch that they were astonished, and said, Whence hath this man this wisdom, and these mighty works? Is not this the carpenter’s son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas? And his sisters, are they not all with us? Whence then hath this man all these things? And they were offended in him. But Jesus said unto them, A prophet is not without honour, save in his own country, and in his own house. And he did not many mighty works there because of their unbelief.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott admits a dislocation however the accounts are arranged and concedes the near absence of trustworthy notes of sequence, but declines to identify this visit with the one in Luke, since that is set at the very beginning and reports violence where here there is only amazement. Barnes adds from Mark that it was a Sabbath, any Jew called on by the minister having the right to address the people, and takes Mark's blunter the carpenter as near proof that Jesus worked at the trade till thirty. Robertson puts the puzzle plainly, that people are often baffled how a boy they knew became the man he seems, takes the brethren for younger half brothers and sisters, and has their disbelief blocking the power to work cures."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Calvin agrees that the narratives are nearly similar and not the same, finds in the second rejection proof that the interval had reformed nobody, and says they ought to have seen the hand of God in a teacher who had not learned letters, while ingratitude dazzled them instead. Gill weighs the word for the trade, which covers any craftsman, reports Epiphanius making the sisters Joseph's daughters by an earlier wife, and tells of the schoolmaster at Antioch who, asked in mockery what the carpenter's son was doing, answered that he was making a coffin for Julian."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke notes that the townsmen appear to have heard none of his doctrine until now and draws the rule that those who should know Christ best are often most ignorant of him; he reports the old Latin copies that read the son of Joseph the carpenter, thinks our Lord worked at the trade through the thirty years, and though allowing that Hebrew usage can stretch brethren to near relations, doubts it, asking why another family's children should share a reproach aimed at one household. Wesley makes the brethren kinsmen, sons of Mary the wife of Cleophas, and turns the closing verse on his own readers, that mighty works are scarce now not because faith is unplanted but because unbelief prevails."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks the persistence, that his countrymen had rejected him once and he came again, since Christ does not take refusers at their first word, quotes Seneca that a man loves his country not because it is beautiful but because it is his own, and says prejudiced spirits enquire more into a man's rise than into his reasons, turning against him what was really for him."
+   },
+   {
+    "school": "eastern-antiochene",
+    "prevalence": "single",
+    "summary": "Chrysostom identifies the country as Nazareth, not Capernaum, observes that here the teaching rather than the miracles causes wonder, answers that illustrious sons came of ignoble fathers, David of a husbandman and Amos of a shepherd, and explains the scarcity of miracles by saying he looked not to display but to profit, working a few so none could plead that none were done."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen turns the opening clause against his own earlier argument, that if what was spoken in the house were similitudes and not parables the words when Jesus had finished these parables will not cover them; he reads the townsmen's question as unwilling testimony, since whence hath this man this wisdom concedes a surpassing wisdom."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Augustine notes that the passage from the parables to what follows has no evident connexion, Mark and Luke both going on to a different event, and thinks it no wonder that kinsmen on the mother's side should be called brethren, when men who took him for Joseph's son called others brethren through Joseph."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is this the visit Luke records?",
+    "positions": [
+     {
+      "position": "Probably not, since Luke sets his at the beginning and reports violence where here there is amazement",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Nearly similar but not the same",
+      "held_by": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "The sequence is loose in any case, Mark and Luke passing to other events",
+      "held_by": [
+       "Augustine"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the brethren?",
+    "positions": [
+     {
+      "position": "Children of Joseph and Mary, the wider sense being unlikely",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Kinsmen, sons of Mary the wife of Cleophas",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Kinsmen on the mother side, called brethren as others were through Joseph",
+      "held_by": [
+       "Augustine"
+      ]
+     },
+     {
+      "position": "Younger half brothers and sisters",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why so few miracles at Nazareth?",
+    "positions": [
+     {
+      "position": "Because he looked to profit and not display, yet worked a few so none could plead that none were done",
+      "held_by": [
+       "Chrysostom"
+      ]
+     },
+     {
+      "position": "Because their disbelief blocked the power",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Because unbelief prevails, which explains the same scarcity now",
+      "held_by": [
+       "John Wesley"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "John Gill",
+    "claim": "Tells the story of the Antioch schoolmaster who answered the taunt about the carpenter son by saying he was making a coffin for Julian"
+   }
+  ],
+  "themes": [
+   "And it came to pass, that when Jesus had finished these parables, he departed thence.",
+   "And when he was come into his own country, he taught them in their synagogue, insomuch that they were astonished, and said, Whence hath this man this wisdom, and these mighty works?",
+   "Is not this the carpenter’s son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas?",
+   "And his sisters, are they not all with us? Whence then hath this man all these things?",
+   "And they were offended in him. But Jesus said unto them, A prophet is not without honour, save in his own country, and in his own house.",
+   "And he did not many mighty works there because of their unbelief."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-26",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  }
 }

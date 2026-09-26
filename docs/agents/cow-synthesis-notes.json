@@ -89750,6 +89750,106 @@
         "41"
       ],
       "note": "The date of the 'unto this day' notice is given four different spans. Clarke: before the Babylonish captivity, since after it no Israelite lapsed into idolatry. Ellicott: two generations past 721, which brings us to the exile of Judah and 'the age of the last Redactor of Kings'. K&D: to the time the books of the Kings were written, with a caution that the Hebrew particle is not exclusive. Wesley: above three hundred years, to the time of Alexander the Great. Carried as the second debate on key 34."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "31",
+        "32"
+      ],
+      "note": "SYSTEMATIC MIS-KEY, not a stride displacement. The Catena Aurea section on the mustard seed (vv31-32) is stored under key 3: Chrysostom 535w, Augustine 213w and Gregory 91w all comment on the grain of mustard seed at key 3, which is the sower. Keys 31 and 32 carry NO patristic content at all. The leaven section sits correctly at key 33. This looks like the section label 13:31 being truncated or parsed to 3. Consequence for tiling: Gregory's only block in the vv1-9 span is that displaced mustard-seed comment, so Gregory is in excluded_voices for key 1; Chrysostom and Augustine keep genuine v1 blocks and stay declared. Worth checking other Catena chapters for the same 31-to-3 collapse."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "3",
+        "5",
+        "10",
+        "24",
+        "31",
+        "36",
+        "44",
+        "47",
+        "53"
+      ],
+      "note": "Densest _LABEL_RE loss recorded anywhere in this loop: 50 blocks lost across the chapter. The corrected splitter sees Jerome 13, Cyril of Jerusalem 12, Hilary 7, Remigius 7, Raban 6 and Gloss 5, none of which the production splitter emits at all. Compare matthew 17 (31 blocks), john 6 (13) and john 12 (10). A separate misattribution rides along: the single Pseudo-Augustine block is absorbed into Augustine, whose production count is 13 against a real 12, so the production output silently credits Augustine with a text that is not his."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "5",
+        "11",
+        "22",
+        "28",
+        "34",
+        "40",
+        "46",
+        "52",
+        "58"
+      ],
+      "note": "Jamieson, Fausset and Brown is displaced in EVERY span of this chapter, and the donor is Matthew 12 and its neighbours throughout: v22 the cornfields and plucking of ears, v28 the sabbath-and-temple argument, v34 the sheep in the pit, v40 a fragment on the healed, v46 the relatives who went out to lay hold on him, v52 the divided-kingdom argument against Beelzebub, v58 the blasphemy against the Holy Ghost. Not one JFB block in matthew 13 comments on matthew 13. JFB is therefore in excluded_voices on all eight tiles that show it. This is a whole-voice chapter-level displacement, distinct from the stride-6 pattern recorded at 2kings 17 and john 12."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "38"
+      ],
+      "note": "Five-way disagreement on whether the field is the world or the Church, and it decides how the whole parable of the tares is applied. Robertson is emphatic that the article stands with both nouns so that field and world are coextensive, and that 'both the good seed and the darnel are sown in the world, not in the Kingdom, not in the church'. Augustine says the opposite, that 'the kingdom then is His kingdom which is here, namely, the Church'. Ellicott stands between, making the parable an explanation of the evil found in the Church and touching the world only by inference. Origen says 'the whole world might be called a field, and not the Church'. Gill takes both at once. Carried as the first debate on key 36."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "33"
+      ],
+      "note": "Robertson explicitly refuses the two readings Augustine gives. On the leaven he calls the objection that leaven signifies corruption 'exegetical jugglery', since the lion figures both the devil and Christ; and he says of the three measures that 'to find the Trinity here is, of course, quite beside the mark'. Augustine makes the leaven love, the woman wisdom, and the three measures either heart, soul and mind, or the three degrees of fruitfulness, or Noah, Daniel and Job. Carried as the first debate on key 31."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "52"
+      ],
+      "note": "Gregory contradicts Augustine directly on things new and old. Augustine takes them for the two Testaments, noting that Christ said not old and new because he preferred the order of value to the order of time, and turns this against the Manichaeans. Gregory answers that if the Testaments are meant 'we deny Abraham to have been learned', who knew the deeds of the Old Testament without having read the words, and that Moses cannot be called a learned householder, having composed the Old without the words of the New; so the saying must look forward to men later in the Church. Lightfoot dissolves the whole question into the idiom of the schools about new and old produce. Carried as the first debate on key 47."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "13"
+      ],
+      "note": "Chrysostom and Calvin take opposite ends on why the parables veil. Chrysostom: 'He does not imply any necessity or fate', free will stands, and the wording proves the blindness voluntary, since the text says not they see not but seeing they see not. Calvin: Christ 'intentionally spoke obscurely, in order that his discourse might be a riddle to many', and while the word is bright in its own nature the Lord keeps his secrets from the reprobate, the apostles' privilege excluding all merit. Augustine tries to hold both and concedes that John's 'therefore they could not believe' presses hard. Ellicott grants the penal sense from Mark and Luke but finds mercy under it. Carried as the first debate on key 10."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "13",
+      "verses": [
+        "24",
+        "38"
+      ],
+      "note": "A cross-tile disagreement worth flagging for anyone editing this chapter: Augustine identifies the tares as heretics rather than immoral Catholics (key 24), and Ellicott in the exposition rejects exactly that identification, saying it was natural for theologians who saw heresy as the greatest evil to find heretics here, but that the passage defines them as all things that offend and them which do iniquity (key 36). Both readings are carried in their own tiles; a reader moving from the parable to its exposition meets the two in sequence."
     }
   ]
 }
