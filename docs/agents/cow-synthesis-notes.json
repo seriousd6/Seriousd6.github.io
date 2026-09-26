@@ -89850,6 +89850,118 @@
         "38"
       ],
       "note": "A cross-tile disagreement worth flagging for anyone editing this chapter: Augustine identifies the tares as heretics rather than immoral Catholics (key 24), and Ellicott in the exposition rejects exactly that identification, saying it was natural for theologians who saw heresy as the greatest evil to find heretics here, but that the passage defines them as all things that offend and them which do iniquity (key 36). Both readings are carried in their own tiles; a reader moving from the parable to its exposition meets the two in sequence."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "4",
+        "22",
+        "28"
+      ],
+      "note": "JFB WHOLLY DISPLACED AGAIN, and 1 Kings now has four chapters of it. All three Jamieson, Fausset and Brown blocks here are 1 Samuel 25 material: Abigail collecting provisions for David (key 4), David accepting her present and thanking her for relieving him from bloodshed, ending with the heading 1Sa 25:36-44 Nabal's Death (key 22), and Nabal fainting from horror and pining away (key 28). Not a syllable touches 1 Kings 21. The keys 4, 22 and 28 are three members of the exact stride-6 series 4, 10, 16, 22, 28, with 10 and 16 returning nothing, which is the same advancing-donor-with-gaps shape recorded for 2kings 17 and john 12. Excluded at all three tiles. NEW AND SHARPER: the donor advances ACROSS the book as well as within the chapter. 1kings 7 drew 1 Samuel 11-12, 1kings 8 drew 1 Samuel 13-14, 1kings 11 drew 1 Samuel 15-16, and 1kings 21 draws 1 Samuel 25. Four chapters, monotonic in both indices. That is not four independent misfires; it reads like a second cursor walking 1 Samuel in step with the 1 Kings chapter counter. Anyone fixing the JFB fetch should test that hypothesis first, since it predicts which donor passage any given 1 Kings chapter will show."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "2",
+        "4",
+        "5",
+        "6",
+        "9",
+        "12",
+        "15",
+        "17",
+        "21",
+        "26",
+        "29"
+      ],
+      "note": "THE 200-WORD CAP IS CORPUS-WIDE AND NOT VOICE-SPECIFIC. Eleven of the twelve Keil and Delitzsch blocks here are exactly 200 words and every one of them stops mid-sentence; only the last, at key 28, comes in short at 54. Gill's key-29 block is also exactly 200 and also cut mid-sentence. That settles a question left open at 2kings 17, where the cap looked like a Keil and Delitzsch problem and had also appeared on Cyril of Jerusalem in matthew 17: the truncation belongs to the fetch, not to any commentator. IMPORTANT DIFFERENCE FROM 2KINGS 17: there the window was a sliding one opened at each verse, so the v11 and v12 blocks were byte-identical for their whole length. Here the window genuinely advances, each block opening with its own verse lemma and running 200 words from there, with no duplication between neighbours. So the defect has two shapes, a stuck window and an advancing one, and only the stuck shape wastes the quota on repeated text. Both cut every argument before its conclusion. A corpus-wide scan for blocks of exactly 200 words would measure how much commentary the site is actually missing."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "29"
+      ],
+      "note": "ELLICOTT CHROME at the final key once more. The key-29 Ellicott block is 1118 words, of which only about 135 are commentary: the genuine text ends at 'till Jehoram shall fill up the measure of iniquity', after which come chapter navigation, a copyright statement, the StudyLight footer, the whole site menu tree of devotionals and reading plans, and several hundred words of raw CSS and JavaScript. Ignored silently per the prose rules. Still non-discriminating between the two standing hypotheses, since key 29 is simultaneously the chapter's last verse and Ellicott's last block. A chapter where Ellicott's final block sits well before the final verse would settle it; worth looking for one deliberately rather than waiting to stumble on it."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "19"
+      ],
+      "note": "How the sentence on Ahab was fulfilled, and the two witnesses are flatly opposed. Clarke says it is vain to look for a literal fulfilment: the humiliation of verse 29 moved God to defer the evil, dogs licked Ahab's blood only at the pool of Samaria where his chariot was washed after Ramoth-gilead, and the prediction came true to the letter of his son, whose body was thrown into Naboth's ground. Ellicott rejects every part of that. The marked emphasis of 'thy blood, even thine' precludes any reading that finds the fulfilment in Jehoram, and verse 29 cannot be invoked in support, because it is not this clause of the doom that the repentance postpones. Both wrote with the same two cross-references in front of them and drew opposite conclusions; the prose keeps them apart rather than harmonising."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "18"
+      ],
+      "note": "Where the vineyard and the crime lay, argued twice in the chapter. Ellicott holds for Samaria, on the LXX omission of 'which was in Jezreel', the threshing-floor reading, the fulfilment at the pool of Samaria, and above all verse 18, whose words about Samaria he calls almost meaningless unless they locate the king there, adding that to read them as part of a title is to explain them away. Keil and Delitzsch take the other route at both points: the title king of Samaria shows Jezreel was a summer residence, and at verse 18 the phrase means only 'who dwells in Samaria', since Ahab was demonstrably at Jezreel when Elijah met him. Ellicott himself lists the counter-evidence fairly (the received text, 'his city', the plot of ground at 2 Kings 9:25-26) and concedes the discrepancy cannot be cleared up."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "27",
+        "29"
+      ],
+      "note": "Whether Ahab's repentance was sincere draws a five-way split, the widest in the chapter, and all five positions are recorded rather than averaged. Clarke: genuine and unfeigned, and God's approbation puts it out of doubt, since any measure of godly sorrow meets a proportionate regard. Keil and Delitzsch: neither hypocritical nor purely external but sincere, though not lasting and productive of no real conversion, resting the verdict on the Lord's own acknowledgement at verse 29. Gill: external only, arising from dread of punishment and not the fear of God, proved by the queen never rebuked, the vineyard never restored, the idols never left, and the same king shortly consulting four hundred prophets of the groves and professing hatred of a true one; he reports and rejects the Jewish tradition of a thorough conversion, but concedes it exceeded anything seen in his predecessors. Henry: a kind of penitent, the garments rent and not the heart, yet earning a reprieve because it gave God some glory. Ellicott: imperfect and fear-born, despicable to human judgment, yet holding germs of promise that the partial remission shows were not disregarded."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "17"
+      ],
+      "note": "Rewritten from legacy per-verse prose as 6 pericope tiles: 1-4, 5-10, 11-16, 17-20, 21-26, 27-29. The seams are not arbitrary. Matthew Henry's three blocks, at keys 1, 5 and 17, cover vv1-4, vv5-16 and vv17-29 respectively, as their own text shows, and the narrative joints fall in the same places. Henry is therefore declared in all six tiles although he has no block inside keys 11-16, 21-26 or 27-29; his key-5 and key-17 expositions comment explicitly on those verses, and the voices-sourced rule is chapter-level by design, exactly as recorded for 1kings 7. Confining him to the three keys his text happens to sit on would have dropped the chapter's only devotional witness from half of it. All five usable voices (Gill, Keil and Delitzsch, Henry, Clarke, Ellicott) appear in every tile; JFB is the sixth and is excluded everywhere."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "5",
+        "11",
+        "17",
+        "21",
+        "27"
+      ],
+      "note": "Every tile self-graded A: each claim traces to a block within or bearing on the tile's own verses, and the expansions are framing rather than new content. Three places where judgement was exercised and is worth stating. (1) Henry is cited in tiles 11-16, 21-26 and 27-29 although his blocks sit at keys 1, 5 and 17; every claim attributed to him there comes from the part of his key-5 or key-17 exposition that names those verses explicitly, not from his general drift. (2) Keil and Delitzsch are cited from blocks that the 200-word cap cuts mid-sentence, so only arguments complete within the surviving text were used, and nothing was inferred about where a truncated sentence was heading. (3) Clarke's Parkhurst material on the verb barach is reported as Parkhurst's contention with Clarke's own preference for the plainer reading kept distinct, since Clarke states both and endorses neither wholeheartedly."
+    },
+    {
+      "at": "2026-09-26",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "21",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott records a Septuagint insertion at verse 16, that Ahab rent his clothes and put on sackcloth on hearing of the death, and judges it poorly attested and probably interpolated backwards from verse 27, while granting it is true to such a nature: a spasm of horror, the conscience salved, and then the original purpose carried out anyway. Kept in the prose as his judgement rather than as a textual fact. Worth knowing for anyone working 1 Kings 22, since the same chapter carries Ellicott's cross-reference on the fulfilment at the pool of Samaria."
     }
   ]
 }
