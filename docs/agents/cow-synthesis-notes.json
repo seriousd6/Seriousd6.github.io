@@ -90268,6 +90268,109 @@
         "31"
       ],
       "note": "Every tile self-graded A; each claim traces to a block inside the tile's own span, and the expansions are framing. Judgement calls worth stating. (1) Ellicott's three source-critical claims are reported as his own positions and not adopted: that the chronicler omits the tribute by design, that the vision of Isaiah is a section of the book of the kings, and that the closing burial notices prove an authority besides the canonical Kings. Keil and Delitzsch contradict him on the second, and the prose keeps both. (2) Clarke's long Targum digest at key 33 supplies the Targum readings used at keys 1, 8, 16, 18, 21, 24 and 31; where the prose reports a Targum reading it is credited to Clarke as its reporter, not treated as an independent witness. (3) Keil and Delitzsch are cited only from arguments complete within the 200 words their blocks survive in. SIGNALS NOTE: an ENTITIES flag on 'Sirach' was cleared by rewording, since Ellicott cites the book only as 'Sir. 48:17' and the expansion cannot match. Same class of false positive as 'Abhira' at 1chronicles 29 — the checker cannot see through an abbreviation or a diacritic."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "13",
+        "14",
+        "15",
+        "20",
+        "23",
+        "24",
+        "3",
+        "6",
+        "7",
+        "10",
+        "11",
+        "20",
+        "26",
+        "1",
+        "12"
+      ],
+      "note": "A NEW AND SERIOUS _LABEL_RE FAILURE MODE: THE QUALIFIED NAME. Four voices are invisible to the production splitter in this chapter, and two of them are invisible for a reason not previously recorded. (1) 'Augustine of Hippo:' heads six blocks (keys 13, 14, 15, 20, 23, 24; 1626 words) and (2) 'Cyril of Jerusalem:' heads seven (keys 3, 6, 7, 10, 11, 20, 26; 1298 words). BOTH base names, Augustine and Cyril, ARE already in VOICE_LABELS. The regex still misses them, because _LABEL_RE anchors on the name followed directly by a colon, and here a qualifier stands between: 'Augustine OF HIPPO:'. So adding names to the list would not have fixed these; the pattern itself has to tolerate an optional qualifier, something of the shape (Name)(?:\\s+of\\s+[A-Z][a-z]+)?\\s*:. (3) Hilary heads one block of 937 words at key 1 and (4) Theophylact one of 1721 at key 12; those two are the ordinary missing-name case. Total lost to production: 5582 words, about 9.4 percent of the chapter. CONSEQUENCE FOR THIS CHAPTER: Cyril of Jerusalem, Hilary and Theophylact could not be declared at all, since the validator grounds declared voices through split_voices and production sees none of them anywhere here, so roughly 3956 words of patristic witness were readable but unusable. Augustine was declarable only because two of his blocks (keys 17, 22) happen to carry the bare label."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "4",
+        "8",
+        "17",
+        "22",
+        "26"
+      ],
+      "note": "CATENA-WITHIN-A-BLOCK, and here it actively miscredits. The blocks the splitter labels Chrysostom at keys 4, 8, 22 and 26, and the one it labels Augustine at key 17, are themselves catenae carrying internal period-terminated abbreviations: AUG., CHRYS., ALCUIN., THEOPHYL., DIDYMUS. The production splitter cannot see a label ending in a period, so it hands the WHOLE block to whoever holds the colon-terminated label at its head. At key 4 that means roughly half of a 963-word block that is actually Augustine, plus a passage of Alcuin, is published as Chrysostom; at key 17 a run of Chrysostom is published as Augustine. This is the same period-terminated-abbreviation defect recorded for matthew 17, but with the consequence made concrete: it does not merely drop text, it attributes one father's words to another. In this chapter the prose was written from the corrected reading and attributes each passage to the father who actually wrote it, which means the synthesis and the raw source pane will disagree for any reader who checks; that is the right way round, but it is worth knowing before someone treats the discrepancy as an error in the synthesis."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "5",
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "JFB WHOLLY DISPLACED, donor John 2-3. The four blocks sit at keys 5, 11, 17 and 23, four members of the exact stride-6 series 5, 11, 17, 23, 29, and carry the temple-court and money-changers, the sign demanded of Jesus, the many who believed on seeing the miracles, and the Nicodemus discourse on being born again. The donor advances monotonically. This is the sixth chapter on file and it further confirms the revised reading recorded at 2chronicles 32: the displacement is always backwards onto a coherent contiguous passage and always advances within the chapter, but the DISTANCE is not fixed in books or chapters. It is roughly 12 chapters here, 7 at 2chronicles 32, about 60 at 1chronicles 29, and crosses two books in the 1 Kings cases. Excluded at all four tiles."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "6"
+      ],
+      "note": "Whether a branch truly united to Christ can be lost: the classic split, and all four positions are kept rather than averaged. Wesley is bl_untest, that a man cast out of the vineyard was in it once, therefore he was in it. Clarke agrees and closes the escape, since nobody cuts off a branch that was never joined and a merely seeming union could suffer only a seeming excision, which says nothing. Calvin denies that any of the elect is ever dried up and assigns the withering to hypocrites who are green for a season. Gill notices the wording is not if ye abide not, which Christ would not suppose of true disciples, and Barnes refers the case to professors who never had real connection at all. The prose sets the four side by side without adjudicating, since the chapter itself supports each reading of the figure."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "5",
+        "20",
+        "25"
+      ],
+      "note": "Three further splits worth keeping. (1) v5, how far 'without me ye can do nothing' reaches: Calvin takes it absolutely, against those who concede the words and then imagine a power of their own that co-operates with grace, holding that before we are in him we are dry and useless wood; Ellicott holds the words have often been unduly pressed, since the context limits them to the fruit-bearing of the Christian life and the New Testament plainly recognises moral power outside Christianity, citing Romans 2:14-15. That is a real and rarely noticed disagreement between two standard commentators on a much-quoted clause. (2) v20, the verb in 'if they have kept my saying': Ellicott says the English version expresses the meaning exactly; Clarke prefers 'watched', in the sense of watching with intent to accuse, and thinks it far more agreeable to the context. (3) v25, which psalm is quoted: Clarke and Wesley say Psalm 69:4, Calvin says Psalm 35:19, Ellicott thinks 69 likeliest while noting the words stand in 35 as well, and Robertson allows either."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "9",
+        "18",
+        "26"
+      ],
+      "note": "Rewritten from legacy per-verse prose as 8 pericope tiles: 1-3, 4-6, 7-11, 12-15, 16-17, 18-21, 22-25, 26-27. Matthew Henry's four blocks sit at keys 1, 9, 18 and 26 and cover vv1-8, vv9-17, vv18-25 and vv26-27, so the four main seams are his; the first three sections are each split once more at a narrative joint because 59,819 usable source words will not compress into four tiles at the 650-word ceiling. Seven voices are declarable in every tile (Gill, Barnes, Clarke, Ellicott, Robertson, Calvin, Wesley) and the patristic and Puritan voices join where they have blocks, giving 9 or 10 declared voices per tile, the highest count of any chapter I have written. TYPO CORRECTION to the disagreement note filed a moment ago on verse 6: the word rendered 'bl_untest' should read 'bluntest'. The substance is unaffected."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "4",
+        "7",
+        "12",
+        "16",
+        "18",
+        "22",
+        "26"
+      ],
+      "note": "Every tile self-graded A. Compression here is the heaviest of any chapter I have done, between 0.06x and 0.13x, so the discipline was to name positions and their holders rather than to summarise arguments. Judgement calls worth stating. (1) Where a block the splitter labels Chrysostom or Augustine is internally a catena, each passage is credited to the father whose period-terminated label actually heads it, not to the label at the top of the block; that is why Augustine is cited in tiles whose spans production assigns wholly to Chrysostom. (2) Augustine is declared in five tiles although production grounds him only at keys 17 and 22, relying on the chapter-level voices-sourced rule, exactly as Henry was at 1kings 21. (3) Cyril of Jerusalem, Hilary and Theophylact were read and deliberately NOT used, since production cannot ground them anywhere in the chapter; no claim in the prose rests on them. (4) Origen is excluded at key 3, where his block is about the cleansing of the temple rather than the vine, and at key 22, where it is a general catalogue of Christ's titles; he is used only at key 15, where he is genuinely on the servant-and-friend distinction. SIGNALS NOTE: ENTITIES flags on Olivet, Antioch, Hindu and Sirach-style abbreviations are all artefacts of paraphrase; each was cleared by adopting the source's own wording (Mount of Olives, no place-name, Hindoos)."
     }
   ]
 }
