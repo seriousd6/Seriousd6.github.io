@@ -91310,6 +91310,71 @@
         "18"
       ],
       "note": "Two unsourced names. Verse 10 credited an emendation to Rosenmuller, but the chapter's sources carry only the abbreviation Rosenm., so the full name is the prose's own expansion; the clause now reads that the reading had been urged after Bochart on the authority of the Septuagint and Jerome, which is what the source supports. Verse 18 attributed the fan and the threshing-floor and the unquenchable fire to the Baptist, a name absent from the chapter; the image is now referred to the gospel without naming a speaker the sources do not name."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "6",
+      "verses": [
+        "12"
+      ],
+      "note": "JFB fetch displacement, and the first evidence that the donor ADVANCES WITH THE TARGET. The single JFB block in this chapter (key 12) is Judges 10, on Jair's thirty sons and the village granted to each. The single-block case gives no stride to measure, but the significant fact is the pairing with the adjacent chapter: 2samuel 6 <- Judges 10 and 2samuel 7 <- Judges 11. Two consecutive target chapters drawing two consecutive donor chapters is something no previous chapter pair on file has shown, and it suggests the fetch is walking a second cursor through the canon in parallel with the first rather than mapping each target independently. Worth testing directly on 2samuel 5 and 2samuel 8, which on this reading should draw Judges 9 and Judges 12. The block is in excluded_voices; JFB is cited nowhere."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "6",
+      "verses": [
+        "23"
+      ],
+      "note": "Ellicott site chrome at the last key, tenth chapter running. Key 23 holds 1070 words of which about the first 90 are commentary (the note on Michal's childlessness and the estrangement during David's outlawry); the rest is StudyLight navigation, CSS and the book_data array. Ten consecutive chapters, every one with the chrome on the chapter's last verse, and no counter-example yet."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "6",
+      "note": "Keil and Delitzsch 200-word cap: 14 of the 16 K&D blocks are cut at exactly 200 words, advancing-window shape. The cost here is specific and measurable: his note on the linen ephod at key 14 is cut off just as he turns from the general claim that it denoted the priestly character of the wearer to the reason David wore it, so the chapter's sharpest disagreement -- K&D against Ellicott on whether the ephod was priestly at all -- survives only as a bare assertion on his side while Ellicott's four-part refutation survives whole. Where the cap falls on one side of a dispute it does not merely lose words, it makes the surviving side look better argued than it was."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "6",
+      "verses": [
+        "7",
+        "14",
+        "21",
+        "23"
+      ],
+      "note": "Four disputes, and the chapter is unusually well supplied with them. (1) Uzzah beyond the grave: Ellicott stops short, holding that judgments of this kind were temporal and give in themselves no indication of the offender's treatment beyond the grave; Clarke goes the whole way, that no man can doubt of his eternal safety, since he committed a sin unto death but the mercy of God was doubtless extended to his soul. (2) The dancing: K&D and Ellicott both note that such dances were elsewhere performed by women only, so David's joining is the point; Gill reports the Targum, Greek and Syriac rendering it praised rather than danced, with Castel approving on the ground that it nowhere appears to have been a custom to dance before the ark; Clarke is openly hostile, comparing it to Hindoo devotion to idols and saying he cannot tell what connection dancing can have with devotion. (3) The linen ephod: K&D calls it strictly a priestly costume denoting the wearer's priestly character; Ellicott refutes this on four grounds -- it was not prescribed as part of the priestly dress, the high priest's was a different thing, it was worn by Samuel and elsewhere connected with idolatrous worship, and the materials differ -- concluding it was simply a garment for anyone in religious service. (4) David's reply to Michal: Ellicott and K&D both read a PAST where the AV has a future, rather have I danced, which turns a defiant promise into a justification; Gill, Henry and Wesley keep the future and build the standard doctrine on it."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "6",
+      "verses": [
+        "8",
+        "23"
+      ],
+      "note": "Two places where the witnesses split on whether to excuse David. (1) His anger at the breach on Uzzah: Henry is severe, noting that the text does not say David was angry because Uzzah had affronted God but because God had made a breach upon Uzzah, and that the very word used of David is the word used of God's own anger, so David did not then act like a man after God's own heart; Ellicott defends him, that he was simply vexed at an untoward interruption of his plans and it does not follow he was angry with God; Wesley makes it grief rather than anger. (2) Michal's barrenness: Wesley and K&D make it a punishment from God for her pride; Clarke and Ellicott make it David's own withdrawal, Ellicott adding that the long separation during the outlawry, when she was married to a man deeply attached to her, had already estranged them; Gill offers a third from Abarbinel, that providence so ordered it that the seed of David and of Saul might not be mixed. Note that Henry alone addresses whether Michal's charge was factually true, and denies it: we have no reason to think David behaved immodestly, he no doubt observed decorum, and it is common for those who reproach religion to put false colours upon it."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "6",
+      "note": "Tiling from Matthew Henry's block positions for the fifth chapter running: his four blocks fall at keys 1, 6, 12 and 20, which map exactly onto the chapter's four movements (the gathering and the cart, Uzzah and Obed-edom, the successful bringing up, Michal). No subdivision was needed. Henry is NOT declared on the vv12-19 tile, however: his key-12 block covers that span but I did not read it, having taken the tile from the other five voices, and I would not declare a witness I had not used. The vcheck caught the declaration and it was removed rather than a citation invented -- worth recording because the temptation on a chapter where one voice covers everything is to declare him everywhere by default."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "6",
+      "note": "Self-graded A on all four tiles. 16793 usable source words (less about 980 of Ellicott chrome at key 23 and 74 of displaced JFB, so roughly 15700) compressed to 2587 (0.16x), very evenly across the tiles at 0.14x to 0.16x, which is unusual and reflects a chapter whose four movements are almost equal in source weight. Six voices, all declared on three of the four tiles and five on the fourth. Gill is thin (1504 words over 23 blocks) but carries the Targum and rabbinic material that no one else has, which is where most of his citations come from."
     }
   ]
 }
