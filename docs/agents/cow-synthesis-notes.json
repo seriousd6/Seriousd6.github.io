@@ -91000,6 +91000,73 @@
         "34"
       ],
       "note": "Graded B with a note on each. The prose is faithful and every claim traces to a named voice, but each entry closes with a roll-call summary that re-lists the commentators already quoted, and each restates the verse's own vocabulary more often than the window metric tolerates. The defect is structural rather than an invention, and cutting the roll-call makes the metric worse, not better, for the reason recorded in the observation on these same verses. These four keep the chapter in the polish queue."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "32"
+      ],
+      "note": "The corrected technique works. Adding fresh grounded material, rather than cutting, moved both these entries from B to A: v4 ttr 0.569 to 0.585, v32 0.571 to 0.598, with compress staying above its floor at 0.433 and 0.430. The material was there and unused. On v4 it was Keil and Delitzsch on the new court, the outer court Solomon built and probably renewed under Asa or Jehoshaphat, with the king stationed at its entrance to the court of the priests so the assembly faced him, plus Ellicott on the verb rendered to ask and the Syriac and Arabic reading from the distant cities. On v32 it was Ellicott's three textual notes, that Kings reads all the way, that the pronoun is feminine here and masculine there, and that the participle is best taken as so as to do."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "28"
+      ],
+      "note": "The practical limit of the technique. Verse 28 sits on the joint boundary of the two metrics and every repair trades one for the other: adding fresh material took ttr from 0.572 to 0.588 but dropped compress from 0.439 to 0.391; trimming the repetitive middle of the Wesley quotation and then the redundant roll-call recovered compress to 0.423 but pulled ttr back to 0.572. Four passes, ending no better than it began, so I reverted the entry to its landed state rather than ship a wash. The cause is arithmetic: 284 words of source against a 350-word floor leaves no room to be both varied and compact. Where the source is that thin relative to the floor, neither cutting nor adding will clear both thresholds, and the honest outcome is a B with a note."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "28"
+      ],
+      "note": "Two more displaced Jamieson-Fausset-Brown blocks, both from 2 Kings. The one filed under verse 4 is on Naaman returning to Elisha and the prophet refusing the reward. The one filed under verse 28 is on the Syrian raids and Elisha warning Jehoram of the enemy's designs. Neither was declared, since neither verse needed the thin exemption, but they inflate the measured source for those keys."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "CORPUS COUNT of the banned carrier, run at last. The phrase the witnesses do not divide, or do not contend, occurs in 1906 of the 13826 synthesis entries, which is 13.8 percent, spread across 197 of the 1189 chapters. The heaviest are 2kings 23 at 33 of 37 entries, 1samuel 17 at 32 of 58, job 21 at 32 of 34, 1kings 18 at 29 of 46, 2kings 18 at 28 of 37, job 41 at 26 of 34, 2kings 25 at 26 of 30, and 2chronicles 25 at 26 of 27. Removing it is a pure defect fix that also lifts the window metrics, so a sweep over those 197 chapters is probably the cheapest large improvement available to the polish queue."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "1"
+      ],
+      "note": "DECLINED this window, with a diagnosis so the next worker need not rediscover it. 23 of the 33 entries grade B, and almost all fail on compress rather than ttr, in the band 0.360 to 0.423, with every entry sitting just above the floor at 338 to 391 words. Nine of them carry a near-verbatim duplicated coda: verse 25 states its conclusion three times, once word for word, verse 27 gives its conclusion in three variant forms, verse 33 repeats its closing sentence verbatim. I removed those duplicates experimentally and every affected entry fell BELOW the 350-word floor, at 328 to 344 words. That is the proof that the padding is load-bearing: these entries reach the quota only by saying the same thing twice. The chapter therefore needs the 23 entries rewritten from source, not polished, and at 70431 source words that is a whole batch for a fresh worker. Source is ample, the catena being keyed at the six pericope heads 1, 5, 12, 16, 23 and 29 and Matthew Henry at 1, 7, 16, 23 and 28."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "16",
+      "verses": [
+        "8",
+        "10",
+        "13",
+        "14",
+        "15",
+        "25"
+      ],
+      "note": "Five unsourced coinages to fix during the rewrite, all theological rather than spelling: Maker in verse 8, Christless in verse 10, and Triune in verses 13, 14 and 15. None appears anywhere in the chapter's sources. Verse 25 additionally carries a line of meta-narration in the prose itself, a parenthesis noting that a Jamieson-Fausset-Brown block here belongs to another passage. The observation is correct, the block is displaced, but the prose rules forbid narrating the skipping of noise; the parenthesis should be deleted and the displacement recorded here instead."
     }
   ]
 }
