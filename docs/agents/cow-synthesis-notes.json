@@ -91067,6 +91067,96 @@
         "25"
       ],
       "note": "Five unsourced coinages to fix during the rewrite, all theological rather than spelling: Maker in verse 8, Christless in verse 10, and Triune in verses 13, 14 and 15. None appears anywhere in the chapter's sources. Verse 25 additionally carries a line of meta-narration in the prose itself, a parenthesis noting that a Jamieson-Fausset-Brown block here belongs to another passage. The observation is correct, the block is displaced, but the prose rules forbid narrating the skipping of noise; the parenthesis should be deleted and the displacement recorded here instead."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "18",
+        "24"
+      ],
+      "note": "JFB fetch displacement, third chapter running with the ADVANCING window. All three JFB blocks in this chapter are Judges 11, the raising up of Jephthah: key 12 is the deputation from Mizpeh soliciting his services, key 18 the solemn oath and his inauguration before the Lord, key 24 his prudence in trying measures to avoid war. Keys 12, 18, 24 are the usual exact stride-6 series. Donor is backwards in the canon onto a coherent contiguous passage, as in every case on file. Running tally of donors: 1kings 6 <- 1 Samuel 10 (stuck), 2chronicles 3 <- 1 Kings 18 (stuck), job 7 <- Samuel/Chronicles, 2samuel 7 <- Judges 11 (advancing). Nothing about book or chapter offset is fixed; what survives is direction, contiguity, stride-6 keys, and the two window shapes. All three blocks are in excluded_voices; JFB is cited nowhere."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "7",
+      "verses": [
+        "29"
+      ],
+      "note": "Ellicott site chrome at the last key, eighth chapter running. Key 29 holds 1139 words of which about the first 140 are commentary (the optative-or-future note on Let it please thee, and the remark that no psalm carries a note of time fixing it to this occasion); the rest is StudyLight navigation, CSS and the book_data array. Eighth consecutive chapter in which the affected key is also the chapter's last verse. Eight for eight with no counter-example is now strong enough that the per-chapter hypothesis should probably be treated as the working one until a deliberate scan says otherwise."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "7",
+      "note": "Keil and Delitzsch 200-word cap: 15 of the 17 K&D blocks in this chapter are cut at exactly 200 words, advancing-window shape (only key 28 at 164 and key 29 at 47 survive whole). The loss is material here because K&D is the only voice doing sustained grammatical work on the promise, and his block at key 13 is cut off in the middle of the sentence beginning It is very obvious, from all the separate details of this promise, that it related primarily to Solomon, and had a -- so his actual position on how far the promise reaches beyond Solomon is unrecoverable from the data. The synthesis reports only the half-sentence that survives."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "7",
+      "verses": [
+        "3"
+      ],
+      "note": "A four-step gradient on whether Nathan sinned in approving David's purpose, which is unusual because the witnesses agree on the facts and differ only on culpability. Clarke is mildest: Nathan judged as a pious and prudent man and not as a prophet, the prophets not being always under a divine afflatus but only at select times. Ellicott is the same in substance: Nathan naturally thought the pious purpose must be right but spoke by his own sense of right, not by divine direction. Henry allows a mistake but has God repair it: Nathan spoke as a wise and good man, agreeably to the revealed will of God though the secret will was otherwise, and where prophets mistook -- as Samuel did at 1 Sam 16:6 and Nathan here -- God soon rectified it. Gill makes it a fault in both men, who should have consulted the Lord and were tacitly reproved. Wesley is sharpest: Nathan hastily approved before consulting God, as both he and David ought to have done in a matter of so great moment, and therefore meets with a rebuke and is forced to acknowledge his error and recant it."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "19",
+        "23"
+      ],
+      "note": "Three places where the same words are read incompatibly. (1) Why David was refused: Ellicott insists no reason is given here, that my servant shows no displeasure, and that the only reason assigned anywhere is David's own later statement that he was a man of blood -- and he then explicitly REJECTS the two reasons nearly all commentators find in the message itself. K&D supplies exactly those two (God must build a man's house before the man can build God's; the land was still disputed). Henry supplies a third nobody else gives, a division of labour between David's wars and psalms and Solomon's building. (2) Is this the manner of man: Ellicott says the word never means manner, means law, and introduces no question, so read it as an exclamation, and this is a law for man; Clarke renders it the law of Adam and asks whether David reaches back to the protevangelium; Henry keeps it as a question, doubles it, and also passes on a reading in which the promised king must be man and yet the Lord Jehovah; Wesley keeps it as a plain question about how men treat inferiors. (3) The plural verb at 7:23: Henry hears the Trinity consulting as at creation; Ellicott explains that the plural name always takes a singular verb of the true God, so the plural here means what nation is there whom ITS GODS went to redeem."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "7",
+      "verses": [
+        "14",
+        "25"
+      ],
+      "note": "The chapter's central hermeneutical dispute, and Clarke stands alone against everyone. Wesley divides the promise by parts, some clauses terminating in Solomon and others passing through him to Christ, and says the clause about committing iniquity cannot touch Christ and so terminates in Solomon. Ellicott reads succession instead, a long line of human heads of the theocracy all culminating in the Messiah, on the analogy of the prophet promised in Deuteronomy 18. K&D says the promise related primarily to Solomon. Gill keeps Solomon and his antitype together throughout. Clarke, in a 3246-word essay at key 25, answers a deistical writer's three objections to finding a Messianic promise here -- by reading the verbs of 7:10 as past, by making the house a spiritual family raised up AFTER David slept with his fathers (which excludes Solomon, crowned before David died), and by rendering 7:14 passively as EVEN IN HIS SUFFERING FOR INIQUITY, with the rod due to men -- and then concludes that the prophecy cannot admit a double sense or be applied to two such opposite characters. On the rod of men the same split appears in miniature: K&D insists it means the punishments inflicted on all men who go astray and explicitly rejects the parental reading, which is exactly what Henry and Wesley adopt."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "7",
+      "note": "Clarke generalises David's exclusion into a rule and illustrates it from his own acquaintance: God seldom employs a soldier in spiritual work for the same reason given to David. The illustration is a named Methodist dragoon who preached in Flanders in the 1740s, had his horse shot under him at Fontenoy, reformed many hundreds in the army, and maintained that in all his battles he had never killed or wounded a man -- his horse jumping aside, or being wounded or killed, or his carbine missing fire -- while freely admitting he would have slain the whole opposing army had it been in his power. Clarke reads it as a remarkable interfering providence. Recorded because it is the most concrete thing in the chapter and because it is Clarke arguing from personal testimony rather than from authorities, which is rare in this corpus."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "7",
+      "note": "Tiling from Matthew Henry's block positions for the fourth chapter running. Henry has only three blocks here (keys 1, 4, 18, totalling 6538 words) and they map exactly onto the chapter's three movements: David's purpose and Nathan's approval, the word of the Lord, and David's prayer. Splitting his long middle block at v12, where the promise turns from Israel to David's seed, and his long last block at v25, where thanksgiving turns to petition, gave 1-3 / 4-11 / 12-17 / 18-24 / 25-29. Worth noting that Delitzsch independently divides the chapter the same way in his opening block, and divides the prayer at exactly v25 as well, so the tiling has two independent witnesses behind it rather than one."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "7",
+      "note": "A near-miss worth recording as a procedural warning, not a data defect. My reading helper's source path is retargeted per chapter by sed; the pattern matched the PREVIOUS chapter's path, so after two retargets in a row it silently kept reading matthew/5.json while I believed I was surveying 2samuel 7. The bogus survey was superficially plausible -- 29 keys, a Henry-heavy profile, a stride-6 JFB series -- and was only caught because the voice list contained Catena Aurea fathers (Pseudo-Chrysostom, Cyril of Jerusalem, Leo, Remigius) who have no business in a Samuel chapter. Anyone using a per-chapter sed on a helper script should grep the resulting path before trusting the output; the failure mode is a chapter synthesised entirely from the wrong book, which no validator in the pipeline would catch."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "7",
+      "note": "Self-graded A on all five tiles. 20448 usable source words (less about 1000 of Ellicott chrome at key 29 and 219 of displaced JFB, so roughly 19200 usable) compressed to 3237 (0.17x). All six production-visible voices are declared on all five tiles, which is unusual and possible here because the chapter has exactly seven voices and one of them (JFB) is displaced throughout. The two thinnest tiles by source, vv1-3 and vv12-17, are the least compressed at 0.27x and 0.30x; the two fullest, vv18-24 and vv25-29, sit at 0.11x and 0.12x because Henry's 3011-word block and Clarke's 3246-word essay both land there. One ENTITIES false start was caught and fixed before landing: I had written Edom where Clarke writes Idumeans, and adopted his wording."
     }
   ]
 }
