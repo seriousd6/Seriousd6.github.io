@@ -90551,6 +90551,89 @@
         "41"
       ],
       "note": "Every tile self-graded A. Compression ranges from 0.30x on the thin span to 0.04x on vv14-18, the heaviest ratio I have produced; the method at that end is to name positions and their holders and let the reader go to the source for the argument. Judgement calls worth stating. (1) Where a Catena block headed Chrysostom, Augustine, Origen or Gregory is internally a catena with period-terminated labels, each passage is credited to the father whose label actually heads it, so the synthesis will disagree with the raw source pane for anyone who checks; that is deliberate and is the right way round. (2) Jerome, Hilary, Raban, Remigius, Gloss and Cyril of Jerusalem were read and deliberately not used, since production cannot ground them anywhere in the chapter; no claim in the prose rests on them, and several good readings were dropped on that account, notably Jerome on the salacity of the goat and Hilary on the two peoples. (3) The fathers are cited in tiles whose spans contain no patristic block, under the chapter-level rule, exactly as Henry was at 1kings 21 and Augustine at john 15. SIGNALS NOTE: ENTITIES flags on Talmudic and Lucan were my own adjectives, not the sources'; both were cleared by rewording. That is now the fourth chapter running where every entity flag has been an artefact of paraphrase rather than a fidelity problem, which suggests the check is working as designed but that its output needs reading as a prompt to compare wording, not as evidence of invention."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "17"
+      ],
+      "note": "JFB fetch displacement, confirming the Job signature already on file from job 9 and job 20. Only two JFB blocks survive in the whole chapter (136 words between them) and neither is on Job 7: key 5 is 1 Chronicles 6 sacred-musician material, key 17 is the 2 Samuel 7 sheepcote promise to David (a round tower of rude construction, high walled, open at the top, in which sheep are enclosed at night). Keys 5, 11 and 17 form the usual exact stride-6 series with 11 returning empty. Both displaced blocks are declared in excluded_voices rather than cited."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "21"
+      ],
+      "note": "Ellicott site chrome at the last key, fifth chapter running. Key 21 holds 1059 words of which only the first 67 are commentary (the note on why Job thinks pardon would end his sorrow, with Matthew 9:2 and parallels); the remaining ~992 are StudyLight navigation, CSS, JavaScript, a Stripe public key and the whole book_data array. As at 1kings 21, 1chronicles 29, 2chronicles 32 and john 15 the affected key is also the chapter's last verse, so this still does not discriminate between per-chapter and per-last-verse chrome. Settling it needs a deliberate scan for a chapter whose highest Ellicott key is below its last verse; waiting for one to turn up has not worked."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "2",
+        "5",
+        "8",
+        "13",
+        "18",
+        "21"
+      ],
+      "note": "Keil and Delitzsch 200-word cap, advancing-window shape. Six K&D blocks in the chapter, of which those at keys 2, 5, 8, 13 and 18 are truncated at exactly 200 words and key 21 returns only 37. The windows advance rather than sticking, so the quota is not wasted twice, but every argument is cut before its conclusion: the key 18 block spends its whole allowance dumping the verse text of 7:18-21 in translation and is cut off mid-sentence on the inferential question at 7:20. Gill is capped at 200 at keys 17, 18 and 21 as well."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "20"
+      ],
+      "note": "Four-way split on whether Job confesses at 7:20, and it is a grammar question with doctrinal weight. Delitzsch marks the clause hypothetical on grammatical grounds (granted that I have sinned) and Ellicott renders it the same way (putting the case that I have sinned). Gill knows of the conditional rendering, refuses the supplement, and keeps it an affirmation, though of ordinary daily sin rather than the notorious course the friends alleged. Henry reads a plain and ingenuous confession and builds on it, that God had called Job perfect while Job says of himself that he has sinned, so a man may be upright who is not sinless. Clarke goes furthest, reporting Kennicott's proposal that the words are addressed to Eliphaz rather than to God, and arguing from Bildad's reply -- which answers a man justifying himself -- that Job does not criminate himself here, since otherwise the controversy would have ended and the book with it."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "15",
+        "16"
+      ],
+      "note": "Three consecutive construal disputes in the vv11-16 span. (1) The sea: Ellicott holds the reasonable course is to explain it from Scripture and finds the key in Jeremiah's sand set as a bound, adding that a writer familiar with Egypt would know the Nile, still called the sea, as a thing watched and diked; Clarke canvasses the Targum's Egypt-and-Pharaoh reading and his own paraphrases, then judges the received English less exceptionable than any rendering yet offered; Gill takes it morally, the restless sea for abandoned sinners and the raging sea for persecutors, with Job the reverse of both; Delitzsch translates plainly, sea or sea-monster with a watch set over him. (2) Suicide at v15: Ellicott glosses a death by these my members as a death inflicted by himself; Gill denies it outright, neither self-strangling as Ahithophel did nor judicial strangling but, following Broughton, a choking by some suffocating disease; Clarke takes it for an oppression like the nightmare felt in those broken slumbers. (3) v16: Ellicott re-reads it against the AV, preferring I shall not live for ever, so the line arrives as a ray of comfort, where Clarke keeps the refusal and sharpens it, length of days on these terms being a boon to be spurned."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "7",
+      "verses": [
+        "8",
+        "10"
+      ],
+      "note": "Two gradations worth keeping in the vv7-10 span. On the seeking eye of v8 Delitzsch and Ellicott render a broken sentence (thine eyes look for me and I am no more); Wesley escalates it, one angry look sufficing since God can look a man into eternity; Clarke offers both that God can look him into nothing and that the look is the sentence of a man already judged; Gill alone enters the qualification the others omit, that the vanishing must be limited to human sight, since the dead are still seen by the omniscient God in heaven, in hell and in the grave. On v10 Ellicott is careful not to overread: the words need not be forced into a denial that Job believed in a future life, since on any view they are accurately true of man as we know him here, and this world is what Job speaks of. Clarke says the same more briefly and Gill turns it to the earthly house of the body, whose tenant returns at the resurrection."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "7",
+      "note": "Tiling taken from Matthew Henry's own block positions. Henry appears at only three keys in this chapter (1, 7, 17) and his blocks are the longest in the source (5644 words between them), each covering a natural section of the speech; taking those three positions as tile boundaries and splitting his middle section at v11, where Job turns from description to speech (Therefore I will not refrain my mouth), gave 1-6 / 7-10 / 11-16 / 17-21 without any judgement of my own about the pericopes. Where a chapter has one expansive witness who works in sections, his block starts are a cheaper and better tiling signal than reading the whole catena for structure."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "7",
+      "note": "Self-graded A on all four tiles. 15778 usable source words compressed to 2585 (0.16x). Henry is deliberately NOT declared on the vv11-16 tile: his key-7 block does cover vv11-16 in its later paragraphs, but I tiled before reading that portion and would not cite him from a passage I had not read, so that tile carries five voices where the source would support six. The vv11-16 tile is also the least compressed (0.31x) because its span is the thinnest in the chapter."
     }
   ]
 }
