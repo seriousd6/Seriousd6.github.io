@@ -91157,6 +91157,60 @@
       "book": "2samuel",
       "chapter": "7",
       "note": "Self-graded A on all five tiles. 20448 usable source words (less about 1000 of Ellicott chrome at key 29 and 219 of displaced JFB, so roughly 19200 usable) compressed to 3237 (0.17x). All six production-visible voices are declared on all five tiles, which is unusual and possible here because the chapter has exactly seven voices and one of them (JFB) is displaced throughout. The two thinnest tiles by source, vv1-3 and vv12-17, are the least compressed at 0.27x and 0.30x; the two fullest, vv18-24 and vv25-29, sit at 0.11x and 0.12x because Henry's 3011-word block and Clarke's 3246-word essay both land there. One ENTITIES false start was caught and fixed before landing: I had written Edom where Clarke writes Idumeans, and adopted his wording."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "9",
+      "verses": [
+        "4",
+        "5",
+        "18",
+        "22"
+      ],
+      "note": "The reliable lever for a ttr-marginal entry with compress already clear is to VARY THE DOMINANT REPEATED NOUN, changing no length and losing no content. All four entries here were carried over the line that way. v5 turned nine occurrences of report into tidings, account, hearsay and tale: ttr 0.577 to 0.594. v22 turned eleven of wisdom into understanding, sagacity and insight and three of the kings of the earth into earth's monarchs and earthly rulers: 0.559 to 0.586. v4 varied house of God with sanctuary, temple and God's courts: 0.574 to 0.595. v18 varied twelve occurrences of throne with royal seats, structure and seat: 0.578 to 0.583. Compress rose in every case too. Note that ordinary nouns can be varied freely without risk to the entity check, which only scans capitalised words, so the writer's choice of synonym is not constrained by the source's vocabulary here as it is for names."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "10",
+        "14",
+        "24",
+        "26",
+        "27",
+        "29"
+      ],
+      "note": "Twelve unsourced proper nouns, all fixed. Spelling or form: Israelite to Israelitish, Mishnah to Mishna, Salamanu to the source's accented Salamanu. Named from a cited cross reference rather than the chapter: Samson on verse 1, where neither Samson nor riddle occurs in the sources, now simply the word the Septuagint uses in Judges 14:12. Modern or literary imports: Bedouin on verse 14, now the tribes bordering on Israel, which is what Ellicott's mixed tribes means; Shakespeare and Macbeth on verse 24, where the prose illustrated the old sense of harness from Macbeth, now dropped; East Indies to the East on verse 10. Geographical substitutions the sources do not make: Euphrates and Nile on verse 26, where Keil and Delitzsch have only from the river to the border of Egypt, and Tyre and Tyrian on verse 10, where the chapter names Huram and never Tyre at all. Deuteronomic on verse 27 is now the prohibition in Deuteronomy, which is Ellicott's own phrase."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "Carrier sweep: the banned phrase was in 23 of this chapter's 29 entries, 79 percent, and is removed from all. That is the third chapter measured, after ezra 5 at 59 percent and 2chronicles 20 at 86 percent, and it is consistent with the corpus figure of 1906 entries across 197 chapters recorded under 2chronicles 20."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "9",
+      "verses": [
+        "5",
+        "7",
+        "17",
+        "20",
+        "22",
+        "24"
+      ],
+      "note": "Seven STRETCH marks in this chapter, up to 27x on verse 22 whose own blob is 16 words. All are expected and advisory: Matthew Henry is filed at the two pericope heads 1 and 13, which between them cover the chapter, so the verse-level blob understates the source badly. This is the fourth chapter where the pericope-head keying explains an alarming ratio, and it is worth treating a high STRETCH on a Chronicles or Gospel chapter as a prompt to check the keying rather than as evidence of invention."
     }
   ]
 }
