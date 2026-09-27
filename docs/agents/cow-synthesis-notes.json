@@ -90712,6 +90712,118 @@
         "37"
       ],
       "note": "This is the best-written legacy chapter met in this run. Voices are named in nearly every sentence, the four-paragraph entries carry source rather than homily, and only 4 of 37 entries graded B. Its ttr drag came from faithful quotation of a short and repetitive source, not from padding, which is the opposite of the matthew 1 and john 19 diagnosis. Worth recording that legacy-unversioned is not by itself a quality verdict."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "10",
+        "16",
+        "28",
+        "34"
+      ],
+      "note": "JFB fetch displacement, and the first case where the JFB window exhibits the STUCK shape previously seen only in K&D. All four JFB blocks in this chapter are 1 Samuel 10, the anointing of Saul: key 10 is the school of the prophets at Geba, key 16 is Saul prophesying and the proverb Is Saul also among the prophets, and keys 28 and 34 are byte-identical 241-word blocks on the assembly at Mizpeh, the lot and the manner of the kingdom. The keys are the usual exact stride-6 series 10, 16, 22, 28, 34 with 22 returning empty; the window advances monotonically (1Sa 10:5 -> 10:9-12 -> 10:17-25) and then sticks, repeating the same block twice. Donor book matches 1kings 21, also 1 Samuel, so for 1 Kings the donor book has now been 1 Samuel twice; the chapter offset differs, which is consistent with the surviving form of the pattern (always backwards, always a coherent contiguous passage, no fixed chapter offset). All four blocks are declared in excluded_voices; JFB is cited nowhere in the chapter."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "38"
+      ],
+      "note": "Ellicott site chrome at the last key, sixth chapter running. Key 38 holds 1014 words of which only the first 25 are commentary (the gloss on Bul as the month of rain and the total of seven years and a half); the rest is StudyLight navigation, CSS, JavaScript, a Stripe public key and the book_data array. Sixth chapter in a row where the affected key is also the chapter's last verse, so this STILL does not discriminate between per-chapter and per-last-verse chrome. The discriminating case would be a chapter whose highest Ellicott key is below its last verse, and six chapters of passive observation have not produced one; it needs a deliberate scan of the tree."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "10",
+        "11",
+        "12",
+        "13",
+        "15",
+        "16",
+        "17",
+        "20",
+        "21",
+        "22",
+        "24",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "36",
+        "37"
+      ],
+      "note": "Heaviest Keil and Delitzsch 200-word truncation measured in any chapter so far: 24 of the 26 K&D blocks in this chapter are cut at exactly 200 words (only key 21 at 37 and key 38 at 42 are short enough to survive whole). The shape is the ADVANCING window, not the stuck one, so successive keys carry successive slices of the commentary and little is duplicated, but almost every argument is cut mid-sentence: the key 20 block breaks off in the middle of the derivation of the word for fine gold, the key 33 block in the middle of the question about how the folding doors were divided. Gill is also capped at 200 at key 23. For a measurement chapter like this one, where K&D is the only voice doing technical work on most verses, the cap removes proportionally more usable commentary than in a narrative chapter."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "38"
+      ],
+      "note": "Citation error inside the source, not introduced by the synthesis. Ellicott's note at 1 Kings 6:22, discussing the altar of incense, refers to the passage in the Epistle to the Hebrews where the Holiest place is said to have had the altar of incense, but the reference is rendered in the text as (1 Kings 9:4) instead of Hebrews 9:4 -- an artefact of the scrape rewriting a bare chapter:verse against the current book. The synthesis names the epistle without a chapter and verse rather than propagate the wrong citation."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2",
+        "4"
+      ],
+      "note": "Three clean disputes in the opening span. (1) The 480 years: Clarke lists more than a dozen chronologists from Glycas at 330 to Serarius at 680 and declines to choose, judging the common Hebrew text as likely as any; Ellicott argues at length for the received figure, explaining the LXX's 440 as an interchange of two similar Hebrew letters and Josephus's 592 as a possible tacit harmony with a heathen reckoning, and observing that a date which disagrees prima facie with the earlier indications is the last thing a scribe would interpolate; Gill and Henry simply add the periods up, Gill giving two different tallies. (2) The windows of narrow lights: Henry takes broad-within-narrow-without and moralises it; Clarke takes latticed, open within and shut without; Delitzsch denies the received gloss outright, reading windows with closed beams, fixed lattices that could not be opened, while conceding the Chaldee tradition is in accordance with the fact though not with the words; Ellicott grants the splayed reading good authorities but prefers the fixed lattices. (3) The silence of the building: Henry makes it a lesson on quietness in religious exercises, Clarke a type of souls squared here for the New Jerusalem, Ellicott an act of reverence perhaps suggested by the prohibition of tools on the altar, Delitzsch a plain consequence of the stones being finished in the quarry."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "6",
+      "verses": [
+        "20",
+        "23"
+      ],
+      "note": "Two disputes where a grammatical choice changes the building or the theology. (1) In the forepart at 6:20: Ellicott and Delitzsch both read it as the inner part, Ellicott on the Vulgate and Gesenius and Delitzsch on Kimchi's construct-state analysis; Gill keeps the plain English and draws an architectural conclusion from it, that since twenty cubits of height leave ten unaccounted for, the back of the most holy place rose to the full thirty while the forepart was lower and left open, to admit the light of the candlesticks and the smoke of the incense from the holy place. No one else entertains an open-topped holy of holies. (2) The cherubim: Delitzsch gives them a human form standing upright on their feet and Henry calls them images of young men, while Ellicott holds that the form is nowhere distinctly stated, canvasses the winged bull by comparison of Ezekiel 10:14-15 with 1:10 (from which he derives Jeroboam's calves), and cites Josephus that no one can tell or even conjecture their shape. On meaning the split is three ways: Ellicott the physical forces of the universe under angelic guidance and in no sense emblems of Deity; Henry the holy angels as God's servants, set up expressly not to be worshipped; Gill the two witnesses, the two olive trees standing before the God of the whole earth."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "6",
+      "note": "Two convergences worth recording because the witnesses are independent. (1) Clarke and Delitzsch both reach for exactly the same comparison for the pace of the work, Pliny on the two centuries all Asia spent building the temple of Diana at Ephesus -- and draw opposite conclusions from it, Delitzsch that Solomon's seven and a half years were very short and Clarke that the house took rather long for stones prepared in advance. (2) Delitzsch and Henry independently explain the low wall of the inner court the same way, that the people could see over or through it into the court of the priests: Delitzsch from the philology (the cedar beams possibly set upright as palisading) and Henry from the pastoral point, that even under that dispensation they were not kept wholly in the dark or at a distance. Ellicott meanwhile argues the same verse describes a wall rather than a planked floor, on the ground that the altar and laver stood in that court and sacrifices could not go on over a wooden pavement."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "6",
+      "note": "Tiling taken from Matthew Henry's block positions again, as at job 7. Henry appears at only three keys (1, 11, 15) and his key-15 block of 1291 words covers everything from v15 to v38 plus his fourfold typology; taking his three starts and subdividing the long tail at the natural units of the account -- the cherubim at v23, the carvings and court at v29, the dates at v37 -- gave 1-10 / 11-14 / 15-22 / 23-28 / 29-36 / 37-38. This is the second chapter where an expansive witness's own block boundaries supplied the tiling more cheaply than reading the whole catena for structure. Note the corollary: because Henry's key-15 block runs to the end, he is a declared voice on four consecutive tiles from one block, which is legitimate (voices-sourced is chapter-level) but means his material must be split deliberately rather than repeated."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "6",
+      "note": "Self-graded A on all six tiles. About 17550 usable source words (19253 raw less ~990 of Ellicott chrome and 709 of displaced JFB) compressed to 3848 (0.22x). Gill is deliberately NOT declared on the vv37-38 tile: his two blocks there total 31 words and say only that the years are Solomon's regnal years, which is not enough to cite honestly, so that tile carries four voices. Compression is very uneven across the chapter -- 0.11x on vv1-10 and 0.14x on vv37-38, against 0.41x on vv11-14 and 0.49x on vv23-28 -- because the source is lopsided: Clarke's 3229-word block at key 38 and the five long blocks at key 1 carry most of the chapter's substance while the middle spans are largely Gill one-liners and truncated K&D."
     }
   ]
 }
