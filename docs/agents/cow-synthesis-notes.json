@@ -91375,6 +91375,102 @@
       "book": "2samuel",
       "chapter": "6",
       "note": "Self-graded A on all four tiles. 16793 usable source words (less about 980 of Ellicott chrome at key 23 and 74 of displaced JFB, so roughly 15700) compressed to 2587 (0.16x), very evenly across the tiles at 0.14x to 0.16x, which is unusual and reflects a chapter whose four movements are almost equal in source weight. Six voices, all declared on three of the four tiles and five on the fourth. Gill is thin (1504 words over 23 blocks) but carries the Targum and rabbinic material that no one else has, which is where most of his citations come from."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "6",
+      "note": "JFB DISPLACEMENT SOLVED, or very nearly. I predicted last batch that if the donor advances with the target then 2samuel 5 should draw Judges 9 and 2samuel 8 should draw Judges 12. I tested it by splitting the JFB blocks out of 2samuel 4 through 9 and reading their first lines. Result: 2samuel 4 <- Judges 9 (Abimelech's reign not at first extending beyond Shechem); 2samuel 5 <- Judges 9 (Gaal, the boastful impudent cowardly man unfit to lead in a revolutionary crisis); 2samuel 6 <- Judges 10 (Jair's thirty sons and their villages); 2samuel 7 <- Judges 11 (the deputation to Jephthah, his oath, his embassy); 2samuel 8 <- Judges 11 (his first judicial act, then his calm wisdom); 2samuel 9 <- Judges 11 and 12 (Jephthah's daughter met by the female band, then the Ephraimites' sneer that the Gileadites were fugitives). The donor walks FORWARD through Judges, monotonically and without resetting, as the target walks forward through 2 Samuel, consuming donor text at whatever rate each target chapter's JFB slots demand -- sometimes two target chapters share one donor chapter, never does it go back. This is not a per-chapter mis-mapping at all. It is a single continuous sequential read of one book being spliced into the stride-6 JFB key positions of another, i.e. the fetch is holding two cursors and interleaving them. That also explains every earlier observation as a special case: the always-backwards direction, the contiguity, the coherent passages, the stride-6 keys, and the advancing window. The stuck window (2samuel 5 keys 2 and 8 byte-identical) is simply the donor cursor failing to advance between two consecutive slots. PREDICTION for whoever fixes this: the donor offset should be recoverable for any affected book by finding one anchor and counting forward, and the same test on 1 Kings should show a single forward walk through 1 Samuel rather than the three independent 1 Samuel donors I recorded earlier."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "23",
+      "note": "ELLICOTT CHROME QUESTION SETTLED, by the discriminating case I have been asking for across ten chapters. In every previous chapter the key carrying the site chrome was also the chapter's last verse, so per-chapter and per-last-verse attachment could not be told apart. This chapter separates them: Ellicott's highest key is 34, the chapter runs to 37, and there is NO CHROME ANYWHERE in the file -- not on key 34 (535 words, all genuine commentary ending mid-note on Jehoahaz and the Egyptian moon-god), not on keys 35, 36 or 37, which carry only Clarke, Gill and a 24-word K&D fragment. A scan for the StudyLight and sub-menu markers across all 37 keys returns nothing. If the chrome attached to the Ellicott fetch per chapter it would have landed on his last block, key 34; it did not. The chrome therefore attaches to the LAST VERSE of the chapter and appears only when Ellicott happens to have a block there. Practical consequence for whoever cleans this up: the strip can be keyed on (voice == Ellicott AND key == max verse of chapter) rather than on Ellicott's own last block, and chapters where Ellicott stops short of the last verse need no treatment at all. Ten chapters of passive observation could never have shown this; it took a chapter where the two coincidences come apart."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "9",
+        "21"
+      ],
+      "note": "JFB displacement, consistent with the two-cursor model confirmed at 2samuel 6. The cow catena carries only 120 words of JFB for this chapter, at keys 9 and 21 (the stride-6 positions), and neither block is about Josiah: both are 2 Samuel 17-18 material (Ahithophel's counsel and Absalom's death). So the JFB donor for 2 Kings is walking forward through 2 Samuel. This is the same shape documented for 2samuel 4-9 drawing on Judges 9-12: a single continuous sequential read of one book spliced into the stride-6 JFB key slots of another, two cursors advancing independently. JFB is therefore unusable for this chapter and was excluded from every tile."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "23",
+      "note": "K&D 200-word sliding-window truncation is heavy here: 27 blocks, 14 or more capped mid-argument. The worst loss is at the v33 textual crux, where K&D is building the case that appealing to the Greek of Chronicles is circular because it merely repeats the words already translated in Kings; the reasoning survives but the conclusion is cut. The cap does not merely shorten, it changes what the argument looks like - an assertion arrives without the reason attached to it."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "23",
+      "note": "Polish pick: prose was legacy per-verse and was regenerated as five pericope tiles (1-3, 4-14, 15-24, 25-30, 31-37). The tiling was taken from Henry, whose five block positions in the catena fall at keys 1, 4, 15, 25 and 31 and map cleanly onto the chapter's five movements: the covenant renewal, the purge of Judah and Jerusalem, the purge of Bethel and Samaria with the passover, the summary verdict and Josiah's death, and the two vassal kings. Henry was declared on four of the five tiles; on 15-24 vcheck flagged him as declared-but-not-cited and the declaration was removed rather than a citation invented, because that tile was built from Ellicott, Clarke, Gill and K&D."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "1-3"
+      ],
+      "note": "Four-way split on who read the book of the covenant aloud. Clarke finds it strange that the king himself should read and suspects an agent. Henry takes the plain sense and holds it up as exemplary that a king would read Scripture publicly. Ellicott declines to decide, invoking qui facit per alium facit per se - the act is the king's either way. K&D cuts through flatly: he had it read. The dispute is not about the fact but about how much weight the Hebrew verb will carry."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "4-14"
+      ],
+      "note": "Three disputes in the purge tile. (1) The chemarim: the traditional etymology derives the name from black robes, which Ellicott rejects on the empirical ground that ancient priests wore white, proposing instead 'weaver of spells'. (2) Tophet: Henry takes it from the drum beaten to drown the children's cries, Ellicott gives 'burning-place' but prefers a root meaning 'to spit', i.e. a thing spat at, an abomination. (3) Baal and the sun: Ellicott separates them as distinct objects of worship in v5 and rebukes a critic by name for running them together."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "15-24"
+      ],
+      "note": "Two textual points. At v15 the commentators diagnose a lacuna: Clarke prints the longer Greek reading and Ellicott explains its loss as homoeoteleuton, the transcriber's eye jumping from one identical ending to the next. Separately, Ellicott is alone in facing the physical problem of how a high place built of stone could be 'burnt', and guesses a dolmen - a structure whose timber and rubble would burn even though the uprights would not."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "25-30"
+      ],
+      "note": "Two disputes. (1) The superlative in v25 sits awkwardly beside the same claim made for Hezekiah at 18:5; four voices handle it differently, by distinguishing the respect in which each was unequalled, by reading the formula as conventional, or by leaving the tension standing. (2) Whether 'the king of Assyria' at v29 can be read strictly: some take it of Nabopolassar the Babylonian, others insist the title is used loosely for whoever held the Mesopotamian power. Josiah's motive divides them further - Ellicott makes it purely political, a Judaean king protecting his flank, while Henry declines to justify the war at all."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "23",
+      "verses": [
+        "31-37"
+      ],
+      "note": "K&D uses the textual crux at v33 to make a methodological point: appealing to the Greek of Chronicles to settle the reading is circular, since that Greek merely repeats words already translated from Kings and so is not an independent witness. The argument is one of the clearest statements of source-independence in the whole catena, and the 200-word cap cuts it before the conclusion."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "23",
+      "note": "Self-grade A on all five tiles. Compression ranges from 0.3x on vv.1-3 to 0.06x on vv.4-14, the latter because that tile absorbs 11,153 source words of itemised purge material where the commentators repeat each other heavily on the mechanics and differ only at the three etymological cruxes. Every voice declared is cited by short name; JFB is declared nowhere because its blocks belong to 2 Samuel."
     }
   ]
 }
