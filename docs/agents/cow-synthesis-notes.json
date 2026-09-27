@@ -90867,6 +90867,81 @@
         "15"
       ],
       "note": "Third chapter in a row where the grade-B entries were lifted by removing redundancy rather than by finding synonyms. Three levers, in order of yield: delete the banned carrier; stop restating the verse's own clause after quoting it once, which verse 12 did four times over; and shorten the repeated attribution formulas, both the full names on recurrence and the school-label pattern where the school is introduced twice in one entry. ttr before and after: v11 0.577 to 0.584, v12 0.564 to 0.583, v15 0.579 to 0.623. Compress rose on all three, and above the floor on v11 from 0.421 to 0.425 and v12 from 0.424 to 0.443."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "3",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB fetch displacement with the STUCK window shape, second chapter running after 1kings 6. All three JFB blocks in this chapter are 1 Kings 18, Elijah on Carmel: key 1 is the altercation with Ahab and the call for a public assembly, and keys 7 and 13 are byte-identical 676-word blocks running from the proposal of the two bullocks through the slaughter at the Kishon and the topography of El-Mohhraka. The keys are the usual exact stride-6 series 1, 7, 13. Donor is backwards in the canon onto a coherent contiguous passage, as always; for 2 Chronicles the donor was 2 Chronicles 25 at 2chronicles 32 and 1 Kings 18 here, so the donor BOOK is not fixed per book either. All three blocks are declared in excluded_voices; JFB is cited nowhere in the chapter."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "John Gill is effectively ABSENT from this chapter, which is new. His only block is at key 1 and consists of the three words See Chapter Introduction; there is no Gill block at any of the other sixteen keys. Gill is normally the most prolific voice in the corpus, so a 17-verse chapter with 3 words of Gill is a fetch failure rather than an editorial choice on his part (his commentary on 2 Chronicles 3 exists). Gill is declared on none of the four tiles. Worth a scan for other chapters where a major voice reduces to a See Chapter Introduction stub, since the loss is silent -- nothing in the data marks it as missing."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "3",
+      "verses": [
+        "17"
+      ],
+      "note": "Ellicott site chrome at the last key, seventh chapter running. Key 17 holds 1104 words of which about the first 130 are commentary (the note on the vestibule, the names, and the reply to Reuss); the rest is StudyLight navigation, CSS, JavaScript and the book_data array. Seventh consecutive chapter in which the affected key is also the chapter's last verse. This is now a standing pattern with no counter-example, and settling whether the chrome attaches to the chapter or to the last verse still needs a deliberate scan rather than more passive observation."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "3",
+      "verses": [
+        "4",
+        "15"
+      ],
+      "note": "This chapter's two number cruxes, and Henry solves the second without emending. (1) The porch at 120 cubits: Clarke suspects transposed letters, the word for a hundred being the word for a cubit with two letters exchanged, which yields twenty and agrees with the Syriac, Arabic and Alexandrine Greek; Ellicott presses four independent grounds for corruption (it would make the porch four times the height of the house, the Syriac omits the clause, it has no parallel in Kings, and it lacks the word cubits which these numbers usually carry) and guesses a corruption of and its breadth ten cubits; Wesley alone defends the figure, taking the porch for a kind of turret. (2) The pillars at 35 cubits against Kings' 18: K&D account for it by confusion of two similar pairs of Hebrew numeral letters and Ellicott by the version split, both concluding the text is corrupt -- but Henry reads the thirty-five and somewhat over as the two pillars measured TOGETHER, about eighteen apiece, which reconciles Chronicles with Kings while leaving the text alone. None of the critical voices considers that reading."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "3",
+      "verses": [
+        "13",
+        "16"
+      ],
+      "note": "Two disagreements that matter more than they look. (1) Which way the large cherubim faced: Henry has their faces inward toward the ark and builds an argument on it, that figures meant for adoration would have been made sitting as on a throne with faces toward their worshippers, so the standing posture and the inward gaze prove them attendants; Ellicott translates the same word toward the chamber and says flatly that these cherubs did not face each other as the pair on the mercy seat did. The readings are incompatible, and Henry's whole anti-idolatry point rests on his. (2) The chains in the oracle at 3:16: K&D holds that a phrase about the most holy place has no meaning in a passage about pillars standing outside the house, and emends the word to a term for collar (a decoration on the capital); Ellicott records that most commentators make exactly that change, refuses it, and alters the PREPOSITION instead -- an infinitesimal change in Hebrew writing giving chainwork as in the chancel -- defending the sense because the chronicler said as much of the great hall and Kings declares the whole house adorned with mural carvings. A rare case of two grammatical-historical voices choosing different emendations of the same clause."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "3",
+      "note": "Ellicott spends part of this chapter defending the chronicler's competence against Reuss, and the thread runs across three keys: at key 7 he asks why Reuss should call the sketch of the porch and nave confused at all; at key 17 he answers Reuss's judgement that the description of the pillars is almost unintelligible under the pen of the abbreviator (a strong exaggeration) and that the disputed word at 3:16 is absolutely unintelligible and foreign to the text (a hasty decision). This is worth recording because it is a methodological dispute about Chronicles as a source rather than a dispute about a verse, and because Ellicott's textual note at 3:16 exists precisely to make the received word work -- the argument and the emendation are the same move."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "3",
+      "note": "Tiling: Henry appears at only two keys (1 and 10) and his blocks run 964 and 458 words, key 1 covering vv1-8 and key 10 covering vv10-17. His two starts gave the obvious major break, and I subdivided at v5 (where the account turns from the site and dimensions to the interior) and at v15 (where it leaves the house for the pillars in the court), giving 1-4 / 5-9 / 10-14 / 15-17. Third chapter running where an expansive witness's own block positions did the structural work. Ellicott is unusually valuable here -- he is the only voice present at every one of the seventeen keys -- so unlike most chapters the tile boundaries could have been set from him instead."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "3",
+      "note": "Self-graded A on all four tiles. About 6620 usable source words (9122 raw less ~975 of Ellicott chrome at key 17 and 1459 of displaced JFB) compressed to 2443 (0.37x), the least compressed chapter I have done, because after removing the chrome and the displaced blocks the chapter is genuinely thin: Gill contributes 3 words, Wesley 179 across six keys, and 11 of 12 K&D blocks are truncated at 200. Compression is even across the tiles (0.23x to 0.32x) precisely because no single block dominates. Clarke is not declared on the vv10-14 tile, where he has no block at all."
     }
   ]
 }
