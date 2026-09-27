@@ -1,77 +1,66 @@
 {
  "1": {
   "voices": [
-   "Chrysostom",
-   "Hilary",
-   "Gregory",
-   "Jerome",
-   "Origen",
-   "Augustine",
-   "Gloss",
    "John Gill",
-   "John Lightfoot",
-   "Matthew Henry",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "Chrysostom",
+   "Augustine"
   ],
+  "range": "1-5",
+  "pericope_label": "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom. And five of them were wise, and five were foolish. They that were foolish took their lamps, and took no oil with them: But the wise took oil in their vessels with their lamps. While the bridegroom tarried, they all slumbered and slept.",
   "schools": [
    {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott raises a question of sources, that the three parables of this chapter follow naturally on the preceding discourse yet leave no trace in Mark or Luke, and suggests the apocalyptic teaching was impressed orally as the fall of Jerusalem drew near and written down later with the variations such a process brings; he identifies the oil as the gift of the Spirit, without which the torch first burns dim and then goes out. Barnes explains why a wedding serves the purpose, the marriage bond being the most tender relation known on earth, cautions against pressing the arithmetic since nothing can be argued from the proportion about how many professors are sincere, and says the sleeping is there to establish the duty of readiness rather than to assert that none will be ready. Robertson finds no special point in the number, describes the lamps as torches with a dish on top holding cloth soaked in oil, catches the change of tense from nodding off to continued sleep, and observes that many a preacher has watched it happen. Lightfoot answers the number from Jewish custom, since a synagogue required ten and the ring formed about mourners returning from a burial was of ten at the least, and supplies an old definition of a slumberer as a man who will answer yes or no if called but cannot answer anything that needs thought."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the kingdom here for the Gospel church state and notes the connection with the chapter before, while doubting the church was drowsy in the years before the Jewish ruin; he produces a rabbinic parable of a king who summoned his servants without naming the hour, the wise adorning themselves and waiting at the palace gate while the foolish went about their business. Calvin will have none of the older use of the passage, calling it a childish speculation to adduce it in praise of virginity since the aim is only to lessen the uneasiness caused by delay, and rejects both the reading that makes the sleeping sloth and the reading that makes it death, taking it for the earthly occupations in which believers must be engaged while they remain in the body."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke refers the parable to two periods at once, the destruction of Jerusalem and the last judgment, prefers provident to wise and careless to foolish, cites a lexicon defining the second word as one who does not see what is necessary, and says the want was of the salvation of God in the soul behind the burning lamp of profession. Wesley makes the distinction fall not on the sleep but on the peace, the wise enjoying a true one and the foolish a false."
+   },
+   {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the oil is charity and alms, the lamps the gift of virginity; the foolish lost the greater for the less, lacking works of mercy."
+    "prevalence": "single",
+    "summary": "Chrysostom makes the oil mercy and almsgiving, and draws the sharp conclusion that virginity unaccompanied by works of mercy is cast out with the adulterers, the foolish having lost the greater labour for want of the less."
    },
    {
     "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the oil is inward joy in pleasing God (Psalm 45:7); Jerome: good works added to faith, the parable of the whole human race; Gregory: the Church, wise mixed with foolish."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the oil is the word of teaching, the lamps the natural faculties; the foolish profess faith without good works."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: lamps = profession (children of light, Philippians 2:15), oil = inward grace derived from Christ through the ordinances (Zechariah 4; John 1:16)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Lightfoot on the Jewish wedding custom of ten; the marriage-feast imagery of the bridegroom Christ."
+    "prevalence": "single",
+    "summary": "Augustine reads the five as a fivefold continence from the pleasures of eye, ear, smell, taste and touch, and makes the oil gladness, so that a man whose joy comes from pleasing God inwardly carries oil while one who is continent for the praise of men has none."
    }
   ],
   "debates": [
    {
-    "question": "What does the oil signify?",
-    "sides": [
+    "question": "What does the sleeping of all ten signify?",
+    "positions": [
      {
-      "position": "Charity and works of mercy",
-      "holders": [
-       "Chrysostom"
+      "position": "Neither sloth nor death, but the earthly occupations believers must be engaged in while in the body",
+      "held_by": [
+       "John Calvin"
       ]
      },
      {
-      "position": "Inward joy / good works added to faith",
-      "holders": [
-       "Augustine",
-       "Jerome"
+      "position": "A detail establishing the duty of readiness, not an assertion that none will be ready",
+      "held_by": [
+       "Albert Barnes"
       ]
      },
      {
-      "position": "The word of teaching / sound doctrine",
-      "holders": [
-       "Origen"
-      ]
-     },
-     {
-      "position": "Inward grace, the principle of a living faith",
-      "holders": [
-       "Henry"
+      "position": "Not the sleep but the peace distinguishes them, the wise enjoying a true peace and the foolish a false",
+      "held_by": [
+       "John Wesley"
       ]
      }
     ]
@@ -79,235 +68,44 @@
   ],
   "outliers": [
    {
-    "voice": "Jerome",
-    "note": "Reads the parable of the whole human race, not virgins only, the ten as the five senses doubled."
+    "voice": "Chrysostom",
+    "claim": "Concludes from the oil standing for mercy that virginity unaccompanied by works of mercy is cast out along with the adulterers, the foolish having lost the greater labour for want of the less"
    }
   ],
   "themes": [
-   "ten virgins",
-   "oil and lamps",
-   "readiness",
-   "wise and foolish"
+   "Then shall the kingdom of heaven be likened unto ten virgins, which took their lamps, and went forth to meet the bridegroom.",
+   "And five of them were wise, and five were foolish.",
+   "They that were foolish took their lamps, and took no oil with them:",
+   "But the wise took oil in their vessels with their lamps.",
+   "While the bridegroom tarried, they all slumbered and slept."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the same profession may hide vastly different states; hypocrisy the worst folly; Tillotson's 'charitable decorum' in the even number, yet the gate is strait."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Wisdom and folly measured wholly by provision — the wise foresaw the delay, the foolish did not."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: profession is no proof of grace, the parable's abiding warning."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wise and foolish",
-   "division in the Church",
-   "profession and grace",
-   "hypocrisy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the foolish have no inward principle (the stony ground) and make no provision for what is to come — a show for men, not approval before Christ."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "They had oil to light the lamp 'for the present' but no reserve against delay — the very contingency the parable introduces."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "no oil",
-   "profession without principle",
-   "provision for delay",
-   "hypocrisy exposed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the heart is the vessel, grace the oil (Exodus 35:14); the wise lay in a reserve against delay, the inward principle of faith and love behind the shining lamp."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wise carried a reserve so their lamps would not fail whatever the delay."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "oil in their vessels",
-   "inward grace",
-   "provision for delay",
-   "wisdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome and the fathers: the sleep is death ('slumbered' = died, 'slept' = to be wakened); the tarrying = the interval between the two comings; Christ comes at midnight (Exodus 12:29)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the sleep is spiritual remissness, not death; the delay tests patience (Habakkuk 2:3); slumber leads to sleep — dread the beginning of decays."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the tarrying is the long interval that tests profession."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley keeps the plain call to watchfulness."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does the slumbering and sleeping signify?",
-    "sides": [
-     {
-      "position": "The death of all before the resurrection",
-      "holders": [
-       "Jerome",
-       "the fathers",
-       "Calvin (cited)"
-      ]
-     },
-     {
-      "position": "Spiritual remissness creeping over even waiting saints",
-      "holders": [
-       "Henry"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the bridegroom tarried",
-   "slumbered and slept",
-   "the delay",
-   "watchfulness"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
@@ -318,610 +116,198 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Gregory",
+   "Origen",
+   "Matthew Henry"
   ],
+  "range": "6-13",
+  "pericope_label": "And at midnight there was a cry made, Behold, the bridegroom cometh; go ye out to meet him. Then all those virgins arose, and trimmed their lamps. And the foolish said unto the wise, Give us of your oil; for our lamps are gone out. But the wise answered, saying, Not so; lest there be not enough for us and you: but go ye rather to them that sell, and buy for yourselves. And while they went to buy, the bridegroom came; and they that were ready went in with him to the marriage: and the door was shut. Afterward came also the other virgins, saying, Lord, Lord, open to us. But he answered and said, Verily I say unto you, I know you not. Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh.",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: though slow he is sure (Habakkuk 2:3); he comes at our midnight, least expected (Exodus 12:29; Luke 12:20); we must go forth to meet him; the cry is awakening, every eye shall see him."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the midnight cry is the angels arousing all who sleep; all hear and rise, but not all can trim their lamps fitly."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: midnight is the hour of deepest security, the coming proclaimed by the shout of angels and trumpets."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "midnight cry",
-   "the bridegroom cometh",
-   "sudden coming",
-   "go out to meet him"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: in the wise, actual preparation for death (2 Peter 3:14; Matthew 24:46); in the foolish, vain confidence — counterfeit graces blazing like a lightning before death."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "All alike trimmed their lamps and looked the same for a moment, until the foolish lamps gutter for want of oil."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "trimmed their lamps",
-   "preparation",
-   "vain confidence",
-   "difference exposed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the hypocrite's lamp goes out (2 Peter 2:20; Job 27:8); at the last the carnal would gladly be found Christians, but the request comes too late — no buying when the market is over."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The foolish, awakened, find their lamps failing and can only beg what cannot be borrowed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "our lamps are gone out",
-   "give us of your oil",
-   "too late",
-   "failing profession"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: the wise refuse not from covetousness but fear — each receives his own works' reward, the virtues of one cannot atone for another's vices; the oil costs much toil."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: each must have grace of his own; the most have none to spare — against Rome's supererogation and imputed merits of saints."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: none can be patron of another's failure at the judgment; the poor are the merchants, so store up oil here and now."
+    "summary": "Ellicott sees in the late hour a hint of a like lateness in the true Bridegroom's coming and reads the cry as answering to the stir that announces any crisis in a church or a people; he notes that the words not so are supplied by the translators and hears in the original a regretful tenderness that gives the reason without uttering a refusal, and says the mistake lay in not going earlier, since it is too late at the crisis to begin forming character by ordinances and rules of life. Barnes explains the trimming, the burnt linen removed and the wick dipped again, and finds a picture of men making ready only at the approach of death; he cautions that the later knocking is not to be pressed into a doctrine of applicants after the judgment. Robertson catches the perfect tense in the cry, insists with Ellicott on the present tense of the failing lamps, adds that outward religion is found to have no illuminating power at the moment it is called on, and renders the closing aorist shut to stay shut."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: grace is not transferable; the time to obtain it is now."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "grace is not transferable",
-   "buy for yourselves",
-   "own sanctification",
-   "against supererogation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: 'while they went to buy' shows mercy after death avails nothing (Luke 16); the time for oil is now."
+    "prevalence": "several",
+    "summary": "Gill observes that a graceless person may see and acknowledge grace in others, which is what the request amounts to, and is careful that the denial sprang neither from want of compassion nor from a niggardly spirit. Calvin allows that gifts are ordinarily distributed so members may aid one another, and says the parable points to the moment when each stands at the tribunal carrying his own bundle."
    },
    {
-    "school": "latin-fathers",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Jerome and Augustine: the season for buying past, no room for penitence; the shut door = the close of all entrance after the judgment."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ready went in, the unready were shut out; the door once shut is shut for ever — the end of probation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the door was shut",
-   "point of no return",
-   "end of probation",
-   "they that were ready"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The doubled 'Lord, Lord' echoes Matthew 7:21-22 — the foolish call on the name they slighted, but cannot open what negligence has shut."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "The Gloss: they say 'Lord' not 'Father,' whose mercy they despised in life; they can claim his lordship but not his fatherhood."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Lord Lord open to us",
-   "late petition",
-   "shut door",
-   "too late"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: confessing 'Lord' with the mouth while denying with works avails nothing; the Lord knows his own (2 Timothy 2:19); without oil they are unknown by the bridegroom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'I know you not' = judicial non-acknowledgement, not ignorance — to be 'known' of God is to be approved; this is to be cast off."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem turns it to exhortation: wash your robes in repentance lest you hear 'I know you not.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I know you not",
-   "judicial disowning",
-   "confession without works",
-   "recognition by Christ"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome: the moral is to provide the light of good works since the day is unknown; Augustine: ready for our own falling asleep, we are ready for his coming."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The ignorance of the time is given to keep us always prepared — habitual readiness, not date-setting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "watch therefore",
-   "unknown day and hour",
-   "habitual readiness",
-   "the moral of the parable"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "Gloss",
-   "Chrysostom",
-   "Gregory",
-   "Origen",
-   "Jerome",
-   "Hilary",
-   "Raban",
-   "Augustine",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory: the journey = Christ ascending in the flesh; the talents = senses, understanding, action; Jerome: the diversity of gospel gifts (1 Cor 3:2); Hilary allegorises Jews, Gentiles, and Law-keepers."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: Christ travels not in his divine nature (which is ever present, Matthew 28:20) but in the dispensation of the flesh."
+    "summary": "Clarke notes that Jewish weddings were held at night but usually began at the rising of the evening star, so this delay is more than ordinary; he describes eastern lamps of wood and thread covered with fine gauze and painted with flowers, presses the point that lamps going out were once lighted, draws the consequence that nobody has merit to bequeath and no work of supererogation can be placed to another's account, and observes that earnest prayer used in time may do much yet a time may come when prayer even to Jesus is too late. Wesley calls it an hour quite unthought of, admires the abruptness of the refusal and answers its question himself, that there is not enough since no man has more holiness than he needs, and notes of the watcher that he sleeps too, yet his heart wakes: quiet, but not secure."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the master is Christ the Owner, the servants Christians (especially ministers), the talents his rich gifts given by ability (Ephesians 4:8) for working, not idleness."
+    "prevalence": "single",
+    "summary": "Henry answers why the tarrying was needed, since the elect must be called in, God's patience shown, the saints' patience tried and the harvest of earth and heaven ripened, yet though Christ tarry past our time he will not tarry past the due time."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The plain frame: gifts entrusted to be used, distributed according to capacity."
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen makes the oil the word of teaching stored in the vessel of the soul."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gregory reads the failing lamps as works that looked bright to men and are found dark before God, and takes the arising of all the virgins for the rousing of elect and reprobate alike from the sleep of death."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Hilary",
-    "note": "Allegorises the three servants as believing Jews, Gentiles, and Law-bound Jews who hide the talent through envy of Gentile salvation."
+    "voice": "Adam Clarke",
+    "claim": "Observes that earnest prayer used in time may do much good, but that this parable shows a time may come when prayer even to Jesus is too late, namely when the door is shut and death has parted body and soul"
    }
   ],
   "themes": [
-   "the talents",
-   "Christ's ascension",
-   "gifts entrusted",
-   "stewardship"
+   "And at midnight there was a cry made, Behold, the bridegroom cometh; go ye out to meet him.",
+   "Then all those virgins arose, and trimmed their lamps.",
+   "And the foolish said unto the wise, Give us of your oil; for our lamps are gone out.",
+   "But the wise answered, saying, Not so; lest there be not enough for us and you: but go ye rather to them that sell, and buy for yourselves.",
+   "And while they went to buy, the bridegroom came; and they that were ready went in with him to the marriage: and the door was shut.",
+   "Afterward came also the other virgins, saying, Lord, Lord, open to us.",
+   "But he answered and said, Verily I say unto you, I know you not.",
+   "Watch therefore, for ye know neither the day nor the hour wherein the Son of man cometh."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
- "15": {
+ "14": {
   "voices": [
    "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "Origen",
+   "Gregory"
   ],
+  "range": "14-18",
+  "pericope_label": "For the kingdom of heaven is as a man travelling into a far country, who called his own servants, and delivered unto them his goods. And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey. Then he that had received the five talents went and traded with the same, and made them other five talents. And likewise he that had received two, he also gained other two. But he that had received one went and digged in the earth, and hid his lord’s money.",
   "schools": [
    {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the measures are degrees of capacity; even one talent of such a master is great; the five mapped to deep scriptural insight, the one to the less strong."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God divides as he will, fitting gifts to ability yet giving the ability too; every one has at least one talent (a soul), none has all alike."
-   },
-   {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Lightfoot and Barnes on the value of a talent and the custom."
+    "prevalence": "several",
+    "summary": "Ellicott grants many points in common with the parable of the pounds in Luke but finds the distinctive features of each marked enough to require separate handling; he turns to the English word talent, noting that the modern languages of Europe bear witness in their use of it to the impression this parable made, and that the common sense of the term and the ill-coined adjective formed from it obscure what the parable means; he finds it strikingly suggestive that the two larger trusts were faithfully used and the smallest was not, explaining it as true to human nature, since wide opportunity brings its own sense of responsibility so that failure there is rarer though more culpable. Barnes converts the sums to dollars, takes the figure for the highest abilities and the greatest opportunity of doing good, says God assigns the station he judges each fitted to fill, and lists the pleas by which neglect is defended, a humble station, slender abilities and a smaller portion than another's, dismissing all three. Robertson agrees the two parables are not variants of one story and adds that some scholars credit Jesus with very little versatility; he marks the promptness of the first servant, notes the gain was a hundred per cent, and quotes the summary that the virgins wait while the servants work. Lightfoot makes the difference from that parable concrete, pounds there and talents here, the one spoken on the road up from Jericho before Lazarus was raised and this one seated on the mount three days before the Passover."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Wesley: the diversity and justice of God's distribution — none empty, each judged by what he received."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "five two one",
-   "according to ability",
-   "diversity of gifts",
-   "just distribution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Henry: the Christian is a spiritual tradesman trading with his Master's stock (Proverbs 3:15; Matthew 13:45); prompt diligence improving every gift and ordinance, the diligent hand made rich."
+    "summary": "Gill gives two authorities for the value of a talent, one making a silver talent about three hundred and seventy-five pounds and a gold one four thousand five hundred, so that five talents come to eighteen hundred and seventy-five pounds in silver or twenty-two thousand five hundred in gold, a very large trust for one servant. Calvin refuses to divide natural endowments from the gifts of the Spirit, since neither power nor skill is anything but received, so that a man who allows God his share leaves nothing for himself."
    },
    {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "The servant put the trust to immediate, profitable use, the increase proportioned to the capital."
+    "summary": "Clarke says God never makes men proprietors of his goods, who hold them only so long as it pleases their Lord, and adds that to give eminent gifts to persons incapable of improving them would be to lay a snare. Wesley wonders whether the disproportion between those who receive most and least is really greater than this, renders the phrase according to his own mighty power, glosses the departure as a journey to heaven, and turns the burying of the talent on the reader directly."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen guards the travelling against misuse, since it belongs to the dispensation of the flesh and not to the divine nature, he who promised to be always with them not being circumscribed by bodily form; and he is careful that in distinguishing thus we do not divide Jesus but assign to each substance its own properties, noticing too that the parable does not begin I am like, because the traveller stands for the man and not the Son of God."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "single",
+    "summary": "Gregory takes the traveller for the Redeemer ascending in the flesh he had assumed, since the proper home of flesh is earth and it goes abroad when placed in heaven, and allegorises the sums as the five senses, then understanding and action, then understanding alone."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is this the parable of the pounds told again?",
+    "positions": [
+     {
+      "position": "No: the distinctive features of each are marked enough to require separate handling",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "No, and concretely so: pounds there and talents here, the one spoken on the road from Jericho before Lazarus was raised, this on the mount three days before the Passover",
+      "held_by": [
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "No, and those who think so credit Jesus with very little versatility",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Observes that the modern European languages bear witness in their use of the word talent to the impression this parable made, and that the familiar sense of the term, with the ill-coined adjective formed from it, now obscures what the parable actually means"
+   }
+  ],
   "themes": [
-   "traded with the talents",
-   "spiritual tradesman",
-   "diligence",
-   "doubling the gift"
+   "For the kingdom of heaven is as a man travelling into a far country, who called his own servants, and delivered unto them his goods.",
+   "And unto one he gave five talents, to another two, and to another one; to every man according to his several ability; and straightway took his journey.",
+   "Then he that had received the five talents went and traded with the same, and made them other five talents.",
+   "And likewise he that had received two, he also gained other two.",
+   "But he that had received one went and digged in the earth, and hid his lord’s money."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the man of two doubled his trust as truly as the man of five; the Lord expects improvement proportioned to the gift, encouraging those of lesser sphere."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "The servant of two traded with the same fidelity, gaining a proportionate increase — faithfulness, not size, is the measure."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.04
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that had two",
-   "faithfulness not size",
-   "proportionate return",
-   "lesser gifts accepted"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: of ten lepers nine hid the talent (Luke 17:17-18); many with five talents bury them all — the unfaithful does no positive evil but no good."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The hidden talent = the gift unused, withheld from service; the fault is non-use, not riot."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "hid his lord's money",
-   "the buried talent",
-   "non-use of gifts",
-   "sloth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
@@ -929,692 +315,273 @@
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: 'a long time' = the interval between the ascension and the second coming."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the delay is the time of sending laborers; the Lord comes to the servants, not they to him, when the time is accomplished."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: the deferred reckoning shows the Lord's long-suffering, alluding to the resurrection."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The master returns and every servant renders account — the reckoning sure however long delayed."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "after a long time",
-   "the reckoning",
-   "long-suffering",
-   "certain account"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The good servant reports the increase humbly, owning the trust as his Lord's ('thou deliveredst'); the account open and complete, five received, five gained."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the servant comes with boldness yet without boasting, the doubling the return on the Lord's stock."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I have gained five more",
-   "faithful accounting",
-   "humble report",
-   "fruit of the trust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "John Calvin",
+   "Matthew Henry",
+   "Chrysostom"
   ],
+  "range": "19-23",
+  "pericope_label": "After a long time the lord of those servants cometh, and reckoneth with them. And so he that had received five talents came and brought other five talents, saying, Lord, thou deliveredst unto me five talents: behold, I have gained beside them five talents more. His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord. He also that had received two talents came and said, Lord, thou deliveredst unto me two talents: behold, I have gained two other talents beside them. His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord.",
   "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Raban: 'Well done' an interjection of joy (Psalm 16:11); Gregory: set over many things = eternal joy with no room for sorrow; Jerome: faithful in a few, for present things are few beside the coming; Augustine: perfect joy is fruition of the Trinity."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: 'good' of goodness toward one's neighbour; the 'joy' = complete blessedness."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The threefold reward: approval, advancement, and admission to the Lord's own joy — communion with the Master."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "well done good and faithful",
-   "enter into the joy",
-   "reward",
-   "communion with the Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the two-talent servant renders the same humble account as the first, owning the trust and bringing the doubled increase."
+    "summary": "Ellicott hears in the long interval, as in the parable before, a faint suggestion of a delay longer than men looked for; he corrects the English of the promotion, since the word ruler is not in the Greek and the sense is that the servant will be set over many things, and takes the clause as a glimpse behind the veil, the reward of faithful work lying not in rest only but in enlarged activity, so that the world to come is joined to this one by a law of continuity; on the gain he adds that in the kingdom of God the increase seldom appears as more gifts and opportunities but as good done to men and souls gained for God. Barnes defines the reckoning as settling accounts and inquiring into faithfulness, and reads the joy either as the festivity of the master's return or as the reward prepared beforehand. Robertson contributes a point of usage, that the phrase for making a reckoning is a business idiom found in the papyri and on a Nubian potsherd but absent from the classical writers, and inclines to the feast as the sense of the joy."
    },
    {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome (on v.21): the master looks to the will, not the largeness of profit, receiving both with equal favour."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "he that had two",
-   "same account",
-   "fidelity not magnitude",
-   "equality of the faithful"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the same commendation, advancement, and joy given to the two-talent servant as to the five — reward measured by faithfulness, not gain."
+    "prevalence": "several",
+    "summary": "Gill spreads the reckoning across several occasions, a fit of illness, a season of persecution, the hour of death, or finally the judgment, when ministers no less than others must answer for the gifts they received; he enters a caveat on the commendation, that ministers do not say well done to themselves, knowing they can do nothing well of themselves and owning that when all is done they are unprofitable servants, so that the word is spoken to show how acceptable a laborious ministry is to Christ. Calvin defends the image of trade itself, since men are meant to exchange and barter with one another so that intercourse is maintained, and the industry with which each discharges his office, the calling itself and the power of acting well are so many kinds of merchandise, their object being mutual usefulness; what Christ means by gain, he says, is general usefulness."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry denies that the deferral implies slackness, since everything must be done in its own time and order, and draws the encouragement out of the identical words spoken to the second servant: the returns were proportioned to the receipts throughout, so that from the man given five, five are expected and the greater the gifts the more pains are owed, while from the man given two only two are looked for, which may hearten anyone placed in a lower and narrower sphere, since whoever lays himself out according to the best of his capacity is accepted though he does not do so much good as another."
    },
    {
     "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem cites the words as the blessing the faithful long to hear."
+    "prevalence": "single",
+    "summary": "Chrysostom narrows the adjective, taking the goodness commended to be goodness shown toward a neighbour, and reads the joy as a word for complete blessedness."
    }
   ],
   "debates": [],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Identifies the phrase rendered maketh a reckoning as a commercial idiom attested in the papyri and on a Nubian potsherd but absent from the ancient Greek writers, so that it is the language of the counting-house rather than of literature"
+   }
+  ],
   "themes": [
-   "same commendation",
-   "equal reward",
-   "faithful over a few things",
-   "into the joy"
+   "After a long time the lord of those servants cometh, and reckoneth with them.",
+   "And so he that had received five talents came and brought other five talents, saying, Lord, thou deliveredst unto me five talents: behold, I have gained beside them five talents more.",
+   "His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord.",
+   "He also that had received two talents came and said, Lord, thou deliveredst unto me two talents: behold, I have gained two other talents beside them.",
+   "His lord said unto him, Well done, good and faithful servant; thou hast been faithful over a few things, I will make thee ruler over many things: enter thou into the joy of thy lord."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.3
+   }
   }
  },
  "24": {
   "voices": [
    "John Gill",
    "Albert Barnes",
+   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "John Lightfoot",
+   "Origen",
+   "Matthew Henry"
   ],
+  "range": "24-30",
+  "pericope_label": "Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed: And I was afraid, and went and hid thy talent in the earth: lo, there thou hast that is thine. His lord answered and said unto him, Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed: Thou oughtest therefore to have put my money to the exchangers, and then at my coming I should have received mine own with usury. Take therefore the talent from him, and give it unto him which hath ten talents. For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath. And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth.",
   "schools": [
    {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the slothful servant believes but acts dishonestly, fearing God as austere; the Lord is 'hard' only to those who abuse his mercy into remissness."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: the excuse adds pride to sloth — he cavils against his Lord instead of confessing, turning negligence into accusation."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott puts the excuse as a question with two answers, either an afterthought got up to cover plain sloth, in which case neglect of loyal service soon breeds disloyal thoughts, or an estimate of his master cherished all along and the root of the neglect; he calls the alleged fear simulated rather than real, since genuine fear would have driven the man from unfaithful service, and finds a taunt beneath it; he explains the exchangers as counter-keepers and prefers interest to usury, the term implying nothing illegal in itself; and he takes the transfer of the talent as decisive for interpretation, since abilities cannot be handed from one man to another while opportunities can, illustrating the law stated next by non-user invalidating a legal right and an unexercised muscle degenerating. Barnes says the excuse expresses exactly how sinners regard God and that all their excuses are excuses for indolence, and states the purpose of the third case, that having few talents excuses no one. Robertson notes that the word for hard is rougher than the term Luke uses, that the scattering in view is the winnowing of chaff rather than sowing, that the excuse convicts the man out of his own mouth, and says in four words that doing nothing is doing harm. Lightfoot reads the reply about the bankers as argument turned back on the speaker, since the lord never meant his money put out at interest but traded honestly, and answers only in terms the servant had himself supplied."
    },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin/Wesley/the expositors: he blames the Lord's supposed harshness for his own inaction, as though the fault lay with the giver."
+    "summary": "Gill names the true causes of the neglect, sloth and earthly mindedness, gives the Jewish name for the exchangers and notes that the Eastern versions read put my money on the table, and draws from the removal of the talent that it cannot mean saving grace, since the gift and calling of that are without repentance whereas gifts may fail and be taken away. Calvin warns against reasoning from the passage about how severely God deals with his people, since Christ neither describes such a master nor applauds usury, and means only that there will be no excuse for those who conceal the gifts of God and waste their time in idleness."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke renders the interest as the money's produce and reserves usury for unlawful gain. Wesley answers the charge outright, that the man knew nothing of the sort since no one who thinks God a hard master ever knew him, and that every obstinate sinner contrives to lay his own sins at God's door; he presses the pretended fear into the present tense, that from just this fear one man will not learn to read and another will not hear sermons; and on the sentence he is the most arresting, asking what the man had done, since he is charged with no harm, so that the mere harmlessness on which many build their hope of salvation was the cause of his damnation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notes the man neither embezzled nor squandered but simply hid, and quotes Bacon that money is like manure, good for nothing in the heap and needing to be spread."
+   },
+   {
+    "school": "eastern-alexandrian",
+    "prevalence": "single",
+    "summary": "Origen raises a question the others do not, whether all men are the king's servants or only those foreknown, and whether the bankers stand outside that number altogether."
    }
   ],
   "debates": [],
   "outliers": [
    {
-    "voice": "Origen",
-    "note": "Diagnoses the servant as one who believes but hides his faith, regarding God as austere and implacable."
+    "voice": "John Wesley",
+    "claim": "Points out that the slothful servant is charged with no positive harm at all, so that the bare harmlessness on which many rest their hope of salvation is precisely what is punished with outer darkness"
    }
   ],
   "themes": [
-   "an hard man",
-   "self-condemning excuse",
-   "blaming the Lord",
-   "sloth and pride"
+   "Then he which had received the one talent came and said, Lord, I knew thee that thou art an hard man, reaping where thou hast not sown, and gathering where thou hast not strawed:",
+   "And I was afraid, and went and hid thy talent in the earth: lo, there thou hast that is thine.",
+   "His lord answered and said unto him, Thou wicked and slothful servant, thou knewest that I reap where I sowed not, and gather where I have not strawed:",
+   "Thou oughtest therefore to have put my money to the exchangers, and then at my coming I should have received mine own with usury.",
+   "Take therefore the talent from him, and give it unto him which hath ten talents.",
+   "For unto every one that hath shall be given, and he shall have abundance: but from him that hath not shall be taken away even that which he hath.",
+   "And cast ye the unprofitable servant into outer darkness: there shall be weeping and gnashing of teeth."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The servant's fear is the cover for sloth; returning the talent intact is not faithfulness, for it was given to be traded, not kept."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley keeps the plain sense: the boast of safe-keeping is the proof of unprofitableness."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "I was afraid",
-   "hid thy talent",
-   "false safety",
-   "unprofitable preservation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: 'wicked' for cavilling against his Lord, 'slothful' for not doubling the talent — pride and idleness both condemned."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The master argues from the servant's own premise: even granting it, his conduct is inexcusable — the excuse supplies the condemnation."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wicked and slothful",
-   "condemned by his own words",
-   "double fault",
-   "just sentence"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "Origen",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome: the money is the gospel word (Psalm 12:6), to be given to the bankers — other doctors or believers — who double it by acting what they learned."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The master argues on the servant's own terms — even fear should have prompted the minimal increase of lending at interest; Lightfoot on the interest-paying bankers."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the least diligence would have sufficed, and the servant rendered not even that."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the exchangers",
-   "money with usury",
-   "minimal diligence",
-   "no excuse left"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "28": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The talent is transferred, not destroyed — taken from the one who buried it, given to the most faithful, so the gift passes to where it is used."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Gregory: the talent goes to the diligent because gifts gravitate toward faithfulness, as the faithful in outward things grow mighty in inward understanding."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "take the talent from him",
-   "given to the faithful",
-   "gifts gravitate to diligence",
-   "forfeiture"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "29": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Gregory: charity gains all gifts, its lack loses all; Jerome: faith and right will are increased, faithlessness loses even natural virtues, for what is unused 'seemed' to be his."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plain law: gifts used are increased, gifts unused forfeited — 'having' is faithful use, not bare possession."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Wesley: the principle justifying the talent's transfer — grace exercised multiplies, refused is withdrawn."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "to him that hath",
-   "abundance and forfeiture",
-   "law of the kingdom",
-   "use or lose"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: not only the robber and evildoer but he who does no good works is punished — the servant cast out for mere omission."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: 'outer darkness' is the place where God is not seen, the condemned counted unworthy of the contemplation of God — privation as well as pain."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plain sentence: the unprofitable servant condemned, the weeping and gnashing the anguish of the lost — no neutral ground in the kingdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "unprofitable servant",
-   "outer darkness",
-   "sin of omission",
-   "weeping and gnashing"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "31": {
   "voices": [
-   "Raban",
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Remigius",
-   "Origen",
-   "Gloss",
-   "Gregory",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: no longer 'the kingdom is like' but direct revelation — the Son of man comes in majesty with the angels as witnesses to their ministry of salvation."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: he judges in the human form he took from us, seen as God only afterward; Remigius: 'majesty' = his divinity, equal to the Father; Raban/Gregory: the manner of the judgment to come."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the coming in transfiguration-glory; the throne as the perfect saints or angelic powers (Colossians 1:16)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: judgment committed to the Son of man (Acts 17:31), his appearing splendid, in the Father's and his own mediatorial glory, the angels ministers of justice, the throne of judgment (Daniel 7:9)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Son of man in glory",
-   "throne of judgment",
-   "the holy angels",
-   "last judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "John Wesley",
+   "Origen",
+   "Augustine",
+   "Gregory"
   ],
+  "range": "31-33",
+  "pericope_label": "When the Son of man shall come in his glory, and all the holy angels with him, then shall he sit upon the throne of his glory: And before him shall be gathered all nations: and he shall separate them one from another, as a shepherd divideth his sheep from the goats: And he shall set the sheep on his right hand, but the goats on the left.",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: a general judgment of all ages and places; the separation so exact that no saint is lost in the crowd nor sinner hidden (Malachi 3:18; Psalm 1:5; Ezekiel 34:17), Christ the great Shepherd."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The godly as sheep (mild, useful), the wicked as goats (baser, unruly), now in one pasture, then in different folds."
+    "summary": "Ellicott denies the usual label, since from its opening the passage moves out of parable into plain declaration, the sheep and goats serving only as a subordinate illustration, and the form of the announcement resting on the vision in Daniel; he presses the Greek of all the nations, which with the article almost always marks the heathen peoples as distinguished from Israel, and makes that the key to the section. Barnes gives three reasons for referring the scene to the last judgment rather than the fall of Jerusalem, that it answers a question about the end of the world, that all nations are assembled, which did not happen at Jerusalem, and that a separation is made between righteous and wicked which did not happen there either; he makes the sheep stand for harmlessness and the right hand for honour. Robertson flatly denies Ellicott's restriction, holding the phrase to cover Jews as well as Gentiles, Christians and non-Christians alike, and defends the passage against those who treat it as the evangelist's composition designed to exalt Christ, asking why he should not have said it if he was what he claimed, and remarking that a reduced Christ has trouble with all the Gospels and not merely the fourth."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the scene chiefly concerns Christian professors, giving a lively idea of the whole; Calvin on the sorting."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "all nations gathered",
-   "sheep and goats",
-   "separation",
-   "the great Shepherd"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Henry: the right hand honour, the left shame (Daniel 12:2); not rich and poor but godly and wicked, every other distinction abolished, the eternal state fixed by this one."
+    "summary": "Gill takes a third line on the same question, that although the words are true of every individual who ever lived, the passage concerns professors of the Christian religion since the two preceding parables did; he identifies the sheep as those the Father gave to Christ. Calvin turns the scene to use, that believers should contemplate with the eyes of faith a heavenly life now hidden, set against the disorders of present warfare."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke stands nearest Robertson, reading it of the Gentile world with the Jews necessarily included; he notes that the word holy before angels is missing from many manuscripts and was struck from the text by Griesbach, mentions the supposition that other messengers besides the holy ones may attend, observes that sheep and goats were never penned together though they might graze the same pasture in separate flocks, and gathers the rabbinic and Roman usage in which the right hand means approbation and the left rejection. Wesley responds to the manner rather than the matter, calling the description one of the noblest instances of the true sublime, equalled by few passages even in Scripture."
    },
    {
     "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the right hand is rest and glory, the left torment; sheep for the meekness learned of Christ (Matthew 11:29; Isaiah 53:7), goats for treading rough and dangerous ways."
+    "prevalence": "single",
+    "summary": "Origen expects the body to be as it was in the transfiguration, offers two readings of the throne, either the more perfect among the saints or certain angelic powers, and denies the gathering need be local at all, since the nations will simply no longer be scattered among false opinions about him, his divinity being so manifest that not even sinners can be ignorant of it, which is what the comparison with lightning was meant to convey."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine holds that the wicked and the righteous alike will see him in the human shape he took from us, and that only afterwards will he be seen in the form of God which believers long for; he offers the bolder reading that the angels here may be men who judge with Christ, since the word means messenger and is rightly applied to all who have brought tidings of salvation. Gregory sorts the scene into four classes, those judged who reign, those not judged who reign, unbelievers who perish without examination since their unbelief has condemned them already, and those who profess the faith without its works and are convicted in order to be condemned."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the all the nations gathered before the throne?",
+    "positions": [
+     {
+      "position": "The heathen peoples as distinguished from Israel, the article almost always marking that sense",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Jews as well as Gentiles, Christians and non-Christians alike",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Professors of the Christian religion, since the two preceding parables concerned them, though the words are true of every individual",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "The Gentile world, with the Jews necessarily included",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "A.T. Robertson",
+    "claim": "Defends the authenticity of the judgment scene against scholars who treat it as a composition of the evangelist designed to exalt Christ, asking why Jesus should not have said it if he was what he claimed, and remarking that a reduced Christ has trouble with all the Gospels and not merely the fourth"
+   }
+  ],
   "themes": [
-   "right hand and left",
-   "honour and shame",
-   "one distinction remains",
-   "character revealed"
+   "When the Son of man shall come in his glory, and all the holy angels with him, then shall he sit upon the throne of his glory:",
+   "And before him shall be gathered all nations: and he shall separate them one from another, as a shepherd divideth his sheep from the goats:",
+   "And he shall set the sheep on his right hand, but the goats on the left."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
   }
  },
  "34": {
@@ -1625,354 +592,97 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: not 'Receive' but 'Inherit/Possess,' as due from of old."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine distinguishes the present Church-kingdom of conflict from the kingdom of peace; Jerome: 'prepared from the foundation' = God's foreknowledge, things to come as already done."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: the King pronounces them blessed and makes them so; blessed of the Father though cursed by the world (Ephesians 1:3); 'Come' a tenfold welcome, the crown after the cross."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The kingdom an inheritance of free grace, 'prepared,' entered by a fruitful faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "come ye blessed",
-   "inherit the kingdom",
-   "prepared from the foundation",
-   "the saints' welcome"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom: how light the things enjoined — bread, a visit — yet it is God who receives in the poor man, and what He takes is our own."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: Christ hungers in his body the Church (1 Corinthians 12:27), suffering what it suffers though impassible; the Judge dwells on the righteous' deeds."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The works of mercy are the evidence and fruit of faith and love, not the meritorious cause of salvation."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the fruits of grace, produced by the Spirit that unites the saints to Christ, not the price of salvation."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Origen",
-    "note": "Explains the impassible Christ's hunger through the union of head and body — he suffers what his Church suffers."
-   }
-  ],
-  "themes": [
-   "works of mercy",
-   "done to Christ",
-   "fruit not merit",
-   "the least of these"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The six works of mercy completed (Remigius); a representative, not exhaustive, list of love's plain duties toward the suffering."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom (on v.35): the lightness of the things enjoined — ready kindness, not heroic feats."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "clothed the naked",
-   "visited the sick",
-   "six works of mercy",
-   "habit of charity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Raban: they answer not from distrust but from amazement at their exaltation and the smallness of their works beside the reward (Romans 8:18)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: humility makes them disclaim their deeds; the righteous dwell on each word, the wicked answer summarily."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The righteous genuinely astonished, having served Christ in his poor without calculating reward or perceiving whom they served."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when saw we thee",
-   "humility of the righteous",
-   "unconscious charity",
-   "wonder"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
+  "range": "34-40",
+  "pericope_label": "Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world: For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in: Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me. Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee? or thirsty, and gave thee drink? When saw we thee a stranger, and took thee in? or naked, and clothed thee? Or when saw we thee sick, or in prison, and came unto thee? And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The righteous rehearse the King's list back as a question, unable to recall ministering to him, having served his poor without thought of reward."
+    "summary": "Ellicott corrects the address, since the Greek says not blessed by my Father but ye blessed ones who belong to my Father, and presses the scope of what follows, that the kingdom was prepared not for Israel only nor only for those who believed in this life but for all who in every nation feared God and wrought righteousness; he counts six of the seven corporal works of mercy of later Christian ethics, the missing one being care of the fatherless, notes with Robertson that the verb rendered visited means to look after and shares a root with the word for an overseer, holds that the question of surprise could not come from believers already taught this but is natural in the mouths of heathen who acted from what seemed ordinary kindness, and extends the brethren by degrees to every member of the family of man. Barnes glosses the preparation as designed beforehand, reads the surprise as a representation of humility rather than a transcript, and takes the brethren for Christians or for the afflicted who suffer as Christ did. Robertson refers the preparation to the eternal purpose of the Father for his elect among all the nations and says simply that Christ identifies himself with the suffering."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: the disclaiming of their deeds is part of their commendation, love that keeps no accounts."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when saw we thee a stranger",
-   "unconscious charity",
-   "love without accounts",
-   "humility"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The righteous complete their wondering question, finding no record of ministering to the King himself, having served his afflicted members."
+    "summary": "Gill holds that these acts are not causes of the kingdom being prepared but descriptions of character, evidences of a grace already given. Calvin concedes that if Christ were speaking of the cause of salvation his opponents could not be blamed for inferring merit, but the design is exhortation, so nothing can be concluded here about the value of works, and the stress laid on the connecting word is weak since eternal life promised to the righteous need not imply a cause; he says Christ represents the righteous as doubting what they know in order to set the truth vividly before their eyes, and turns the last clause to practice, that whenever we are reluctant to help the poor we should set the Son of God before our eyes."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: their unawareness is the seal of the genuineness of their works, free from calculation of reward."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when saw we thee sick",
-   "completing the question",
-   "genuine charity",
-   "humble surprise"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "minority",
-    "summary": "Jerome restricts 'the least my brethren' to the poor in spirit, the doers of the Father's will (Matthew 12:50), not the poor generally."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom reads broadly: every believer, even secular, made a brother by baptism, though lowly and outcast."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: mercy to the more holy is more acceptable; the truly 'brethren' are the perfect."
-   },
-   {
-    "school": "grammatical-historical",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Christ identifies himself with his suffering people; mercy to them is mercy to him, no act of charity lost."
+    "summary": "Clarke states the balance, that whatever is done for Christ is done through Christ's grace, the doer ascribing to him both the will and the power and expecting the kingdom not as wages but as unmerited gift; he observes that of all the fruits of the Spirit only those springing from mercy appear here, cites the rabbinic saying that whoever neglects to visit the sick is as one who has shed blood, marvels that those whom many would scorn to set with the dogs of their flock are called the brothers and sisters of Jesus, and ends on the smaller matter that the barbarous phrase an hungered should be banished for hungry. Wesley wonders whether a kingdom prepared on purpose for these implies that man was not created merely to fill the places of the fallen angels, makes the sharpest point about the selection, that outward mercy presupposes faith and love and must be accompanied by spiritual mercy though the Judge could not list those in the same manner, and widens the encouragement from the household of faith to all men."
    }
   ],
   "debates": [
    {
-    "question": "Who are 'the least of these my brethren'?",
-    "sides": [
+    "question": "Why do the righteous ask when they saw him hungry?",
+    "positions": [
      {
-      "position": "Christ's needy disciples / brethren in the faith",
-      "holders": [
-       "Jerome",
-       "Chrysostom",
-       "Origen"
+      "position": "Because they are heathen who acted from what seemed ordinary kindness; believers already taught this could not ask it",
+      "held_by": [
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "The poor and suffering generally (an open reading)",
-      "holders": [
-       "many expositors"
+      "position": "Because the words represent humility rather than record speech, men feeling their kindness too poor to deserve praise",
+      "held_by": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "Because neither party values its own works as the Judge does; neither could answer in these very words",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Because Christ represents them as doubting what in fact they know, to set the truth vividly before their eyes",
+      "held_by": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   {
+    "voice": "John Wesley",
+    "claim": "Explains why only works of bodily mercy are listed, since outward mercy presupposes faith and love and must be accompanied by spiritual mercy, but the Judge could not have said I was in error and ye recalled me to the truth"
+   }
+  ],
   "themes": [
-   "the least of these my brethren",
-   "done unto me",
-   "Christ in his people",
-   "union of head and members"
+   "Then shall the King say unto them on his right hand, Come, ye blessed of my Father, inherit the kingdom prepared for you from the foundation of the world:",
+   "For I was an hungred, and ye gave me meat: I was thirsty, and ye gave me drink: I was a stranger, and ye took me in:",
+   "Naked, and ye clothed me: I was sick, and ye visited me: I was in prison, and ye came unto me.",
+   "Then shall the righteous answer him, saying, Lord, when saw we thee an hungred, and fed thee? or thirsty, and gave thee drink?",
+   "When saw we thee a stranger, and took thee in? or naked, and clothed thee?",
+   "Or when saw we thee sick, or in prison, and came unto thee?",
+   "And the King shall answer and say unto them, Verily I say unto you, Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "41": {
@@ -1981,258 +691,74 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
+   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Augustine",
+   "Origen",
+   "Gregory"
   ],
+  "range": "41-46",
+  "pericope_label": "Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels: For I was an hungred, and ye gave me no meat: I was thirsty, and ye gave me no drink: I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not. Then shall they also answer him, saying, Lord, when saw we thee an hungred, or athirst, or a stranger, or naked, or sick, or in prison, and did not minister unto thee? Then shall he answer them, saying, Verily I say unto you, Inasmuch as ye did it not to one of the least of these, ye did it not to me. And these shall go away into everlasting punishment: but the righteous into life eternal.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Barnes: the fire 'prepared for the devil,' not for men, who inherit it by sharing his character; Ellicott: 'of my Father' omitted, for God is not the author of the curse."
+    "summary": "Ellicott notices that the curse, unlike the blessing, does not name the Father, an omission he thinks every way significant since God is not its author; he observes that every sin named here is one of omission, opportunities common to all men left unused, and insists that the two English words at the close render one Greek word so that the same term ought to stand in both clauses, preferring eternal on philological grounds. Barnes explains the fire as an image of extreme suffering rather than a description, makes the neglect the public ground of the sentence while allowing that positive sins are not excused, and attacks the universalist position from another side, that persons and not sins are said to go away, since sin in the abstract cannot be punished at all. Robertson says the repeated negative falls like clods on a coffin and adds that some sheep will think themselves goats and some goats think themselves sheep; on the last verse he allows that the noun for punishment comes from a verb meaning to prune and that those who hold the larger hope take it as age-long discipline, but answers that one adjective governs both nouns, so whoever shortens the one shortens the life as well."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill infers that these lived among Christians and bore the Christian name, and ends where the chapter does, that there is no appeal and no higher tribunal. Calvin observes that the threat is framed not to terrify the reprobate now, who are intoxicated with fading prosperity and think they have made a covenant with death, but to warn believers, and says the excuses by which they deceive themselves will be worth nothing then, their pride toward the poor coming of a supposition that it goes unpunished."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke: the place was prepared for the devil, never designed for men; the wicked perish not for want of salvation but for refusing it — cursed because they refused to be blessed."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the threat is given to restrain believers by fear, that they not envy the reprobate's lot."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "depart ye cursed",
-   "everlasting fire",
-   "prepared for the devil",
-   "self-incurred ruin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the Judge enlarges on good deeds but cuts short the evil, the brevity itself a mark of mercy."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wicked condemned for omission — the hungry unfed, the thirsty unrelieved — the exact counterpart of the righteous' works."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye gave me no meat",
-   "sins of omission",
-   "mercy withheld from Christ",
-   "indictment of the wicked"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: the wicked's failures gathered summarily, answering to the summary excuse they offer, while the righteous humbly disclaim each deed."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wicked condemned for the good left undone — the negative of the righteous' works, the absence of mercy betraying a heart estranged from Christ."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye took me not in",
-   "good left undone",
-   "indifference",
-   "the negative test"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wicked answer summarily and self-justifyingly (Origen), protesting they never knowingly refused Christ, not perceiving him in his poor."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin/Gill: their plea is their condemnation — they would have served a Christ who could advance them, despising the lowly members in whom he was present."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "when saw we thee",
-   "self-justifying surprise",
-   "Christ in the least",
-   "the wicked's excuse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: to the righteous 'my brethren' (magnifying their deeds), to the wicked only 'one of the least' (not aggravating their sin) — restraint even in condemnation."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The exact negative of v.40: mercy withheld from the least is withheld from Christ, who was present all along in his needy people."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ye did it not to me",
-   "the negative seal",
-   "Christ in the least",
-   "neglect condemned"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "Augustine",
-   "Origen",
-   "Gregory",
-   "Jerome",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine: the one word 'everlasting' binds both destinies, guarding against the evasion that the fire but not the punishment is eternal; endless pain is just, as law measures not by the time of the crime; he refutes the milder universalist views."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The plain parallelism — the same adjective for punishment and life — makes the everlastingness of the one the measure of the other."
+    "summary": "Clarke divides the sentence into the loss expressed by depart and the pain that follows, turns the omissions on the reader by observing that if men were certain Christ was somewhere in the land hungry and imprisoned they would run to relieve him, and says the opinion that this punishment will end is as likely as that the glory of the righteous will end, since one word measures both. Wesley fastens on the clause about the fire being prepared for the devil and his angels and not originally for these, who are intruders into it, observes that self-justification will still be going on at that day, and states the alternative bare, that either the punishment is strictly eternal or the reward is not."
    },
    {
     "school": "eastern-alexandrian",
     "prevalence": "single",
-    "summary": "Origen (named by Augustine) held the devil and his angels would at last be delivered from torment — a view the Church rebuked."
+    "summary": "Origen notes the order reversed, mercy recording the good first and judgment naming the punishment last, so terror may deter and honour draw."
+   },
+   {
+    "school": "latin-fathers",
+    "prevalence": "several",
+    "summary": "Augustine reports men deceiving themselves by allowing the fire everlasting while denying it of the punishment, and says the Lord foresaw the evasion and closed it; he adds that eternal life needs qualifying as peace in life eternal, since the wicked are immortal too. Gregory answers two arguments: to those who call the threat an empty terror meant to deter, that a God who threatens falsely to check vice must promise falsely to encourage virtue, so in proving him merciful they charge him with fraud; and to those who say finite sin cannot deserve infinite punishment, that the Judge weighs hearts and not acts only, so a heart that would never in this life be without sin may justly never be without punishment."
    }
   ],
   "debates": [
    {
-    "question": "Is the punishment of the wicked truly eternal?",
-    "sides": [
+    "question": "Is the punishment of the last verse strictly endless?",
+    "positions": [
      {
-      "position": "Eternal, as the parallel word for 'life' requires",
-      "holders": [
-       "Augustine",
-       "Jerome",
-       "the expositors"
+      "position": "Yes: one Greek adjective governs both nouns, so the same English word must stand in both clauses",
+      "held_by": [
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "At last ending, the lost (even the devil) finally restored",
-      "holders": [
-       "Origen (rebuked by the Church)"
+      "position": "Yes: the noun may mean pruning, but shortening the punishment by etymology shortens the life with it",
+      "held_by": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "Yes: either the punishment is strictly eternal or the reward is not",
+      "held_by": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "Yes: the opinion that it will end is as likely as that the glory of the righteous will end",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Yes, and the evasion was foreseen, which is why the sentence is summed up in these terms",
+      "held_by": [
+       "Augustine"
       ]
      }
     ]
@@ -2240,28 +766,42 @@
   ],
   "outliers": [
    {
-    "voice": "Origen",
-    "note": "Held that the devil and his angels, after proportioned suffering, would be restored — the most 'merciful' of the views Augustine refutes."
+    "voice": "Gregory",
+    "claim": "Answers the objection that finite sin cannot deserve infinite punishment by arguing that the Judge weighs hearts rather than acts alone, so that a heart which would never in this life be without sin may justly never be without punishment"
    }
   ],
   "themes": [
-   "everlasting punishment",
-   "life eternal",
-   "eternity of retribution",
-   "Origen vs Augustine"
+   "Then shall he say also unto them on the left hand, Depart from me, ye cursed, into everlasting fire, prepared for the devil and his angels:",
+   "For I was an hungred, and ye gave me no meat: I was thirsty, and ye gave me no drink:",
+   "I was a stranger, and ye took me not in: naked, and ye clothed me not: sick, and in prison, and ye visited me not.",
+   "Then shall they also answer him, saying, Lord, when saw we thee an hungred, or athirst, or a stranger, or naked, or sick, or in prison, and did not minister unto thee?",
+   "Then shall he answer them, saying, Verily I say unto you, Inasmuch as ye did it not to one of the least of these, ye did it not to me.",
+   "And these shall go away into everlasting punishment: but the righteous into life eternal."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.07
+   }
   }
  }
 }
