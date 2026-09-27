@@ -90824,6 +90824,49 @@
       "book": "1kings",
       "chapter": "6",
       "note": "Self-graded A on all six tiles. About 17550 usable source words (19253 raw less ~990 of Ellicott chrome and 709 of displaced JFB) compressed to 3848 (0.22x). Gill is deliberately NOT declared on the vv37-38 tile: his two blocks there total 31 words and say only that the years are Solomon's regnal years, which is not enough to cite honestly, so that tile carries four voices. Compression is very uneven across the chapter -- 0.11x on vv1-10 and 0.14x on vv37-38, against 0.41x on vv11-14 and 0.49x on vv23-28 -- because the source is lopsided: Clarke's 3229-word block at key 38 and the five long blocks at key 1 carry most of the chapter's substance while the middle spans are largely Gill one-liners and truncated K&D."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "5",
+      "verses": [
+        "9",
+        "15"
+      ],
+      "note": "The pericope-head rule found on mark 7 holds outside the Gospels too. For this chapter Matthew Henry, in both mhc and mhcc, is filed at keys 1 and 3 only, covering verses 1 to 2 and 3 to 17. That is why verse 9, whose own blob is a single line of Gill totalling 19 words, and verse 15, whose blob is one Ellicott note of 54 words, both carry full entries drawn from named voices: the material is Henry at the section head. Their STRETCH marks of 22.8x and 6.7x are therefore expected and advisory, and neither verse is thin."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "5",
+      "verses": [
+        "1"
+      ],
+      "note": "The stock carrier the loop doc names explicitly, the witnesses do not divide, appeared in 10 of this chapter's 17 entries, once as the witnesses do not contend. I removed it from all of them, since it is on the banned list and it was also the single largest repeated phrase in the chapter. A corpus-wide count of that exact phrase would be worth running: at 59 percent of entries in one chapter it is unlikely to be confined here."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "5",
+      "verses": [
+        "3"
+      ],
+      "note": "The entry described Smerdis as the Magian usurper who had hated the religion of Zoroaster. Zoroaster appears nowhere in the chapter; Ellicott's phrase is the Magian hater of Zoroastrianism and destroyer of temples, and it is now quoted as written."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "5",
+      "verses": [
+        "11",
+        "12",
+        "15"
+      ],
+      "note": "Third chapter in a row where the grade-B entries were lifted by removing redundancy rather than by finding synonyms. Three levers, in order of yield: delete the banned carrier; stop restating the verse's own clause after quoting it once, which verse 12 did four times over; and shorten the repeated attribution formulas, both the full names on recurrence and the school-label pattern where the school is introduced twice in one entry. ttr before and after: v11 0.577 to 0.584, v12 0.564 to 0.583, v15 0.579 to 0.623. Compress rose on all three, and above the floor on v11 from 0.421 to 0.425 and v12 from 0.424 to 0.443."
     }
   ]
 }
