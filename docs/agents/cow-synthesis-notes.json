@@ -90942,6 +90942,64 @@
       "book": "2chronicles",
       "chapter": "3",
       "note": "Self-graded A on all four tiles. About 6620 usable source words (9122 raw less ~975 of Ellicott chrome at key 17 and 1459 of displaced JFB) compressed to 2443 (0.37x), the least compressed chapter I have done, because after removing the chrome and the displaced blocks the chapter is genuinely thin: Gill contributes 3 words, Wesley 179 across six keys, and 11 of 12 K&D blocks are truncated at 200. Compression is even across the tiles (0.23x to 0.32x) precisely because no single block dominates. Clarke is not declared on the vv10-14 tile, where he has no block at all."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "28",
+        "32",
+        "34"
+      ],
+      "note": "CORRECTION TO THE POLISH TECHNIQUE. Deleting a repetitive passage can LOWER ttr. The metric is a moving average of type over token across 200-token windows, so removing a lexically varied span of about 35 words from a 420-word entry concentrates the surviving windows in the verse's own core vocabulary. Measured here on the roll-call summary sentence, the one that re-lists commentator by commentator what the paragraphs above already said: ttr went 0.569 to 0.560 on v4, 0.572 to 0.562 on v28, 0.571 to 0.560 on v32, and 0.576 to 0.577 on v34. I reverted all four. On matthew 1, john 19, mark 7 and ezra 5 the same shape of edit worked, because what I removed there was a near duplicate of adjacent text and contributed almost no new types. The test is therefore not whether a span is repetitive in content but whether it adds types. Where the redundancy is structural rather than verbal, the lift has to come from adding fresh grounded material, not from cutting."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "The banned carrier, the witnesses do not divide, appeared in 32 of this chapter's 37 entries, and in 10 of ezra 5's 17. Two chapters now measured at 86 and 59 percent. Removed from all 32 here. A corpus-wide count of that exact phrase is overdue and would likely identify a large share of the remaining grade-B debt as mechanically fixable."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "7",
+        "10",
+        "14",
+        "16",
+        "17",
+        "20",
+        "22",
+        "24",
+        "26",
+        "30",
+        "36",
+        "37"
+      ],
+      "note": "Sixteen unsourced proper nouns across thirteen verses, all resolved, and they fall into three classes worth naming. Spelling variants, fixed to the source form: el Husasah to el Hasasah in verses 16 and 20, Dodavahu to Dodavah, mount Gebal to mount Gebel, the Targumists to the Targum, the Hemanite to the son of Heman, Bedouin to Bedawi. Prose-coined identifications of places or peoples that appear only in a cited cross reference: Bethel and Massah in verse 26, Assyrian in verse 24, Canaanites in verse 7, Meunim in verse 1, all removed while keeping the reference and the point. Theological or scholarly coinages absent from the sources in any form: Immanuel in verse 17, Logos in verse 20, Sabbath used as a figure in verse 30, and the Septuagint form Asseis in verse 16, all dropped. The middle class is the one to watch, because a linked reference makes the validator pass a name the chapter never supplies."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "28",
+        "32",
+        "34"
+      ],
+      "note": "Graded B with a note on each. The prose is faithful and every claim traces to a named voice, but each entry closes with a roll-call summary that re-lists the commentators already quoted, and each restates the verse's own vocabulary more often than the window metric tolerates. The defect is structural rather than an invention, and cutting the roll-call makes the metric worse, not better, for the reason recorded in the observation on these same verses. These four keep the chapter in the polish queue."
     }
   ]
 }
