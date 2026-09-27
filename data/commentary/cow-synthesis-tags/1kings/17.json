@@ -1,1106 +1,397 @@
 {
-"1": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"John Gill",
-"Matthew Henry",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Reads 'the Tishbite of Tishbe in Gilead' (LXX/Josephus); the name means 'whose God is Jehovah'; the oath marks him the servant standing to be sent, and this is not his first appearance (James 5:17)."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill locates Gilead among Reuben, Gad, and half-Manasseh and derives the name Tishbite from Toshab or Thisbe."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "minority",
-"summary": "Henry: Elijah drops out of the clouds like Melchizedek; a man of strong passions fit for rough service, as the Reformation needed a Luther; his shutting heaven is the power of prayer."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke reports the fables of Elijah's angelic origin but grants they clash with James 5:17, and preserves Jarchi's legend of the taunt about Moses' curse."
-}
-],
-"debates": [],
-"outliers": [
-{
-"voice": "Adam Clarke",
-"note": "Preserves the rabbinic (Jarchi) legend connecting the oath to Ahab's taunt about Joshua's and Moses' curses, and the conjecture that Elijah was an incarnate angel."
-}
-],
-"themes": [
-"Elijah's abrupt entrance",
-"the drought announced",
-"prophet before whom I stand",
-"prayer that shuts heaven"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"2": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill (with the Targum): this is 'the word of prophecy,' proving that the 'my word' of v.1 was the Lord's word spoken by Elijah, not his own will."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: Elijah is hidden less for safety than to preclude all entreaties to lift the drought he had said would end only at his word."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the word of the Lord",
-"the prophet as servant",
-"hidden lest he relent"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"3": {
-"voices": [
-"Keil and Delitzsch",
-"Charles Ellicott",
-"Adam Clarke",
-"John Gill"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "The phrase 'before Jordan' is ambiguous (east of, or facing); Cherith was a ravine emptying into the Jordan, probably on the east near Gilead."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the flight was necessary since Ahab would seek his life; the drought at the prophet's word proves God's power and the vanity of the idols."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: he must turn from where he was, in danger from Ahab and Jezebel provoked by his prophecies."
-}
-],
-"debates": [
-{
-"question": "On which side of the Jordan did the brook Cherith lie?",
-"sides": [
-{
-"position": "the eastern side, in or near the prophet's own Gilead",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "uncertain — the grammar allows either bank",
-"holders": [
-"Keil and Delitzsch",
-"Clarke"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the brook Cherith",
-"providence prepares the way",
-"flight from Ahab"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"4": {
-"voices": [
-"Adam Clarke",
-"John Gill",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott defends 'ravens' (with the ancient versions and Josephus) against 'Arabs/merchants,' calling this the second great epoch of Old Testament miracle after Moses and Joshua."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: Elijah is supplied by an especial providence, reserving fuller discussion for v.24."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the brook was to be his drink — God keeps a table in the very land he has dried up."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the ravens",
-"especial providence",
-"miracle not to be explained away",
-"God's sovereignty over creatures"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"5": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Elijah journeyed eastward and hid at the appointed place, doing exactly 'according to the word of the Lord' — obedience without argument."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"exact obedience",
-"according to the word of the Lord",
-"the chapter's refrain"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "B",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"6": {
-"voices": [
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the ravens brought ready-dressed food twice daily; the source (Ahab's or Jehoshaphat's table, or the faithful 7000) is left hidden, and the marvel is its constancy."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke notes the Septuagint variant but keeps the Hebrew (bread and flesh at each meal), inferring this was the ordinary food of the people."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"daily provision",
-"bread and flesh morning and evening",
-"the hidden source",
-"unclean birds made servants"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"7": {
-"voices": [
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: 'after a while' is literally 'at the end of days,' perhaps marking the passing of a year at the brook."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: the brook dried because of the God-sent drought, the testimony against idolatry threatened in Deuteronomy 11."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the brook dries up",
-"judgment reaches the refuge",
-"failing creature-comforts"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"8": {
-"voices": [
-"Keil and Delitzsch",
-"John Gill",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "puritan-evangelical",
-"prevalence": "several",
-"summary": "Henry: God has various ways to provide; Zarephath, a Gentile city, makes Elijah the first prophet of the Gentiles (Luke 4:26), and a poor widow is chosen to shame the world's strength and Jezebel's malice."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "minority",
-"summary": "Keil and Delitzsch: the word directs him to Zarephath of Sidon, to a widow God has commanded to sustain him."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill: a trial of faith, sent to dwell in Sidonian territory where Jezebel had interest."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the word sends to Zarephath",
-"favour to the Gentiles",
-"God's use of the weak",
-"refuge in the enemy's country"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"9": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Zarephath is the New Testament Sarepta (Luke 4:26), between Tyre and Sidon, identified with modern Surafend; 'which belongeth to Zidon' marks the providence that hid Elijah in his enemy's own country."
-},
-{
-"school": "reformed",
-"prevalence": "minority",
-"summary": "Gill distinguishes this Zarephath from another and judges it a Gentile city, citing Maundrell's ruins."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "minority",
-"summary": "Clarke locates Sarepta near Sidon, present name Sarphan, following Maundrell's report."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"Zarephath of Sidon",
-"refuge in the enemy's homeland",
-"geography and providence"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"10": {
-"voices": [
-"John Gill"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Elijah arose and went the hundred miles from Cherith to Zarephath (per Bunting) — prompt obedience across a famine-struck and hostile land on nothing but the promise."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the hundred-mile journey",
-"obedience sets out",
-"faith on the bare word"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"11": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the widow makes no difficulty of fetching water, ready to show hospitality to a stranger she perceives to be a prophet."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: Elijah's requests for water and bread are a test to confirm whether this Gentile woman is the appointed protectress; her answer reveals a last handful of meal and a little oil."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the meeting at the gate",
-"the widow's readiness",
-"testing the promised host"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"12": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: her oath by the living God shows her a good woman who takes Elijah for a true prophet."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: 'thy God' recognises Elijah's prophethood but implies no personal faith yet; the famine had reached Phoenicia (Menander) or was its reflex from Israel."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke glosses the vessels — the 'barrel' an earthen jar for keeping meal, the 'cruse' a bottle (per Jarchi)."
-}
-],
-"debates": [
-{
-"question": "Does 'the Lord thy God' show the widow's own faith or only courteous recognition?",
-"sides": [
-{
-"position": "a good woman's true reverence for the living God and his prophet",
-"holders": [
-"Gill"
-]
-},
-{
-"position": "recognition of Elijah's office, but no personal acknowledgment of God as yet",
-"holders": [
-"Ellicott"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"as the Lord thy God liveth",
-"the widow's poverty",
-"the last handful of meal",
-"stages of faith"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"13": {
-"voices": [
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: 'Fear not' answers her dread of dying — the promise of life comes before the command."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: to give a stranger the last pittance that would keep her child alive was an extraordinary trial of faith; everything turns on 'make me a cake first.'"
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"fear not",
-"give God the first",
-"the trial of faith",
-"self-denial"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"14": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Elijah invokes 'the Lord God of Israel,' whom he perceived the widow already knew and trusted; the meal and oil are pledged to last till the rain returns."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: the promise was kept — she and her house ate many days 'according to the word of the Lord,' the miracle vindicating the spoken word."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the barrel and cruse promise",
-"daily renewed supply",
-"the word made good",
-"faith in Israel's God"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"15": {
-"voices": [
-"John Gill",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: she did as Elijah said, making his cake first — an act of great faith in the word of the Lord."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: the miracle is doubly remarkable — God's higher laws meet homely needs, and multiplication is virtual creation, doing swiftly what providence does slowly."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"obedience crowned",
-"she did as Elijah said",
-"miracle of multiplication",
-"God stoops to homely needs"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"16": {
-"voices": [
-"John Gill",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: a continued miracle of increase by God's mighty power, like the loaves and fishes multiplied as the disciples ate (John 6)."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: she drew each day in confidence and was never disappointed, the increase coming in the spending — like the water made wine at Cana (John 2)."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the barrel wasted not",
-"increase in the spending",
-"Gospel parallels",
-"daily confidence"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"17": {
-"voices": [
-"John Gill",
-"Matthew Henry"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the sickness came after prophet and widow had lived a year or more on the miraculous provision."
-},
-{
-"school": "puritan-evangelical",
-"prevalence": "single",
-"summary": "Henry: the boy fed by miracle yet died; the loss is a thorn against pride; sharp afflictions come even in the way of duty, so we must rejoice with trembling."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the child's death",
-"affliction amid favour",
-"a thorn against pride",
-"rejoice with trembling"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"18": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott: 'man of God' marks growth from the 'thy God' of v.12; her cry, like Peter's 'depart from me,' springs from a deepened sense of sin. Keil and Delitzsch: the death was not for particular sin but to manifest God's works (John 9:3)."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: she is conscious of some secret sin; adversity brings deep searchings of heart."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: she spoke rashly, in passion and agony, forgetting the benefits received."
-}
-],
-"debates": [
-{
-"question": "Why was the child taken — as punishment for the widow's sin?",
-"sides": [
-{
-"position": "as a stroke recalling and punishing her sin, as she herself feared",
-"holders": [
-"Clarke",
-"the widow"
-]
-},
-{
-"position": "not for particular sin, but to manifest the works of God in her (John 9:3)",
-"holders": [
-"Keil and Delitzsch"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"what have I to do with thee",
-"conscience awakened",
-"sin remembered",
-"growth of faith"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"19": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: with the mother's leave Elijah tenderly takes the dead child from her bosom to his own bed in the loft."
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: his cry 'hast Thou also brought evil' is no reproach but the deepest lamentation of living faith, sure God cannot leave the boy in death."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"give me thy son",
-"the prophet's intercession",
-"faith that pours out the heart",
-"carrying the case to God"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"20": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "several",
-"summary": "Ellicott hears half-presumptuous impatience (as in 1 Kings 19); Keil and Delitzsch find no reproach but faith's lament, and explain the threefold stretching as bringing down God's power, not natural means (contrast Acts 20:10; 2 Kings 4:34)."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: he cried with great vehemence and importunity (so the Targum)."
-}
-],
-"debates": [
-{
-"question": "Does Elijah's complaint carry reproach and impatience, or pure faith?",
-"sides": [
-{
-"position": "a half-presumptuous impatience, hinting his own hard lot brought the trouble",
-"holders": [
-"Ellicott"
-]
-},
-{
-"position": "no reproach at all, but the deepest lamentation of living faith",
-"holders": [
-"Keil and Delitzsch"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"the prophet's complaint",
-"importunate prayer",
-"stretching on the child",
-"the body as instrument"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"21": {
-"voices": [
-"John Gill",
-"Adam Clarke",
-"Charles Ellicott"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: the stretching is no natural means but a healing 'virtue' in the prophet's person (as without measure in Christ, Luke 8), made conditional on prayer."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Elijah measured himself on the child in fervent affection, to stir his prayer and as if to infuse his own life."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: he sought to give natural warmth to dispose the body to receive the spirit, and reads 'let his soul come' as proof of an immortal soul existing apart from the body."
-}
-],
-"debates": [
-{
-"question": "What did the threefold stretching on the child signify?",
-"sides": [
-{
-"position": "a natural means — warmth to dispose the body to receive the returning spirit",
-"holders": [
-"Clarke"
-]
-},
-{
-"position": "a healing virtue in the prophet's person, effectual only through prayer, not natural means",
-"holders": [
-"Ellicott",
-"Keil and Delitzsch"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"let this child's soul come again",
-"natural means or divine virtue",
-"the immortal soul",
-"virtue conditional on prayer"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"22": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: in raising the boy Elijah shows himself the forerunner of Him who raises all the dead, and the Gentile woman's faith is mightily strengthened."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: the Lord heard Elijah's prayer and answered it — the miracle rests wholly on that hearing."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: 'the soul came into the midst of him' proves an immortal, immaterial spirit that can exist apart from the body, like a spring at the center of a machine."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"the child revived",
-"answered prayer",
-"forerunner of the resurrection",
-"the immortal soul"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"23": {
-"voices": [
-"John Gill",
-"Keil and Delitzsch"
-],
-"schools": [
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: Elijah brings the living child down from the loft to the lower house and gives him to his mother with 'See, thy son liveth.'"
-},
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Keil and Delitzsch: the restoration mightily strengthened the Gentile woman's faith, so that she perceived the word in his mouth to be truth."
-}
-],
-"debates": [],
-"outliers": [],
-"themes": [
-"see, thy son liveth",
-"delivered to his mother",
-"faith strengthened",
-"foreshadowing Nain"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "B",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-},
-"24": {
-"voices": [
-"John Gill",
-"Charles Ellicott",
-"Adam Clarke"
-],
-"schools": [
-{
-"school": "grammatical-historical",
-"prevalence": "single",
-"summary": "Ellicott: her faith rises by stages — 'the Lord thy God' (v.14), then God (v.18), now the word as truth — expressing conversion, like the nobleman at Capernaum (John 4:53)."
-},
-{
-"school": "reformed",
-"prevalence": "single",
-"summary": "Gill: taken for a man of God at first, confirmed by the meal and oil, staggered by the death, she is now fully assured by the resurrection."
-},
-{
-"school": "wesleyan-arminian",
-"prevalence": "single",
-"summary": "Clarke: through a little suffering came self-examination, God's power, and conviction of the word's truth; then he reopens v.4, arguing the feeders were men (of Orbo/Arabians), not ravens."
-}
-],
-"debates": [
-{
-"question": "Who fed Elijah at the brook — ravens or men?",
-"sides": [
-{
-"position": "literal ravens, with the ancient versions and Josephus",
-"holders": [
-"Ellicott",
-"Gill"
-]
-},
-{
-"position": "men — merchants, Arabians, or townsmen of Orbo near Beth-shan",
-"holders": [
-"Clarke"
-]
-}
-]
-}
-],
-"outliers": [],
-"themes": [
-"now I know thou art a man of God",
-"the word is truth",
-"stages of faith and conversion",
-"the ravens question reopened"
-],
-"qa": {
-"v": 1,
-"standard": "legacy-unversioned",
-"generated": "2026-07-22",
-"grade": "A",
-"checks": [
-"length",
-"refs-linked",
-"tags-match",
-"schools-valid"
-],
-"lint": "audit-synthesis-quality/1"
-}
-}
+ "1": {
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Gill"
+  ],
+  "range": "1-7",
+  "pericope_label": "And Elijah the Tishbite, who was of the inhabitants of Gilead, said unto Ahab, As the Lord God of Israel liveth, before whom I stand, there shall not be dew nor rain these years, but according to my word. And the word of the Lord came unto him, saying, Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith, that is before Jordan. And it shall be, that thou shalt drink of the brook; and I have commanded the ravens to feed thee there. So he went and did according unto the word of the Lord: for he went and dwelt by the brook Cherith, that is before Jordan. And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening; and he drank of the brook. And it came to pass after a while, that the brook dried up, because there had been no rain in the land.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the Greek reading of the prophet's origin, of Tishbe in Gilead, the last words added to distinguish it from the Naphtali Tishbe, whose mention he thinks textually doubtful, and notes that the word rendered inhabitants properly means sojourners and shares a derivation with Tishbite, while the alternative, the stranger of the strangers of Gilead, is doubtful Hebrew. He places Cherith east of Jordan, from the prophet's own country. On the ravens he is emphatic: the plain rendering is that of almost all the ancient versions and of Josephus, and the singularly prosaic substitutes got by altering the vowel points, Arabs or merchants or the inhabitants of a city Orbi or the rock Oreb, arise from a desire to be rid of a strange miracle and pay for it with a gross improbability, since regular sustenance by human hands could not have gone on under the king's jealous vigilance. Delitzsch explains the hiding not as flight but as policy, since the prophet had said the rain would come at his word and would have been urged to order it to come, and holds that the Hebrew leaves it undetermined whether Cherith lay east or west of Jordan."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill says it is not easy to say why Elijah is called the Tishbite, prefers Kimchi's account that he was first of a city called Toshab and afterwards dwelt in Gilead, and identifies that city with the Thisbe in Naphtali. He takes the concealment simply as flight from danger, Ahab and Jezebel having been provoked by the prophet's reproofs, and on the provisions thinks the source need not be inquired into, though he passes on the Jewish guesses that they came from Ahab's table, or Jehoshaphat's, or from the tables of the seven thousand who had not bowed the knee."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke entertains at length the opinion that Elijah had no earthly parentage but was an angel united for a time to a human body, even asking whether the name, which signifies he is my God, countenances a manifestation in the flesh of the Supreme Being, before conceding that the apostle's description of him as a man of like passions is irreconcilable with it. He takes the hiding as ordinary prudence, since on the first drought Ahab would have sought the prophet's life, reports both opinions about the site of Cherith, notes a Greek manuscript and some fathers reading bread in the morning and flesh in the evening against all other versions, and calls this the first account of flesh at breakfast and supper."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry observes that where a prophet usually enters with parentage and tribe, Elijah drops out of the clouds as if, like Melchisedek, without father or descent, which made some Jews fancy him an angel; but the apostle assures us he was a man of like passions, which Henry thinks may intimate a temper hotter than most, fitting him for the daring sinners of his age, since rough spirits are called to rough services and the reformation needed such a man as Luther to break the ice. He denies that the concealment was chiefly for the prophet's safety, since it does not appear Ahab immediately sought him, and makes it a judgment on a people who would otherwise have had his instruction and intercession. On the ravens he multiplies reasons why these birds in particular: they are birds of prey likelier to take his meat than bring it, unclean by the law, carrion-feeders bringing wholesome food, neglectful of their own young, and themselves fed by special providence."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Where was the prophet from?",
+    "positions": [
+     {
+      "position": "Tishbe in Gilead, the Naphtali Tishbe being a different and textually doubtful place",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Originally of a city called Toshab, identified with the Thisbe in Naphtali, and afterwards of Gilead",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why was Elijah told to hide?",
+    "positions": [
+     {
+      "position": "To keep him from being urged to revoke the sentence, since the rain was to come at his word",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Not chiefly for safety but as a judgment on a people who lost his instruction and intercession",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "For safety, since Ahab would have sought his life at the first drought",
+      "held_by": [
+       "Adam Clarke",
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Were the ravens ravens?",
+    "positions": [
+     {
+      "position": "Yes; the prosaic substitutes arise from a wish to be rid of a miracle and cost a gross improbability",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Yes, and the choice of so unlikely a bird is itself the lesson",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Gives serious consideration to the opinion that Elijah had no known earthly parentage but was an angel united for a time to a human body, and asks whether his name countenances a manifestation in the flesh of the Supreme Being, before allowing that the apostle's man of like passions cannot be reconciled with it"
+   }
+  ],
+  "themes": [
+   "And Elijah the Tishbite, who was of the inhabitants of Gilead, said unto Ahab, As the Lord God of Israel liveth, before whom I stand, there shall not be dew nor rain these years, but according to my word.",
+   "And the word of the Lord came unto him, saying,",
+   "Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith, that is before Jordan.",
+   "And it shall be, that thou shalt drink of the brook; and I have commanded the ravens to feed thee there.",
+   "So he went and did according unto the word of the Lord: for he went and dwelt by the brook Cherith, that is before Jordan.",
+   "And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening; and he drank of the brook.",
+   "And it came to pass after a while, that the brook dried up, because there had been no rain in the land."
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
+  }
+ },
+ "8": {
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "John Gill"
+  ],
+  "range": "8-16",
+  "pericope_label": "And the word of the Lord came unto him, saying, Arise, get thee to Zarephath, which belongeth to Zidon, and dwell there: behold, I have commanded a widow woman there to sustain thee. So he arose and went to Zarephath. And when he came to the gate of the city, behold, the widow woman was there gathering of sticks: and he called to her, and said, Fetch me, I pray thee, a little water in a vessel, that I may drink. And as she was going to fetch it, he called to her, and said, Bring me, I pray thee, a morsel of bread in thine hand. And she said, As the Lord thy God liveth, I have not a cake, but an handful of meal in a barrel, and a little oil in a cruse: and, behold, I am gathering two sticks, that I may go in and dress it for me and my son, that we may eat it, and die. And Elijah said unto her, Fear not; go and do as thou hast said: but make me thereof a little cake first, and bring it unto me, and after make for thee and for thy son. For thus saith the Lord God of Israel, The barrel of meal shall not waste, neither shall the cruse of oil fail, until the day that the Lord sendeth rain upon the earth. And she went and did according to the saying of Elijah: and she, and he, and her house, did eat many days. And the barrel of meal wasted not, neither did the cruse of oil fail, according to the word of the Lord, which he spake by Elijah.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott reads the clause about Zidon as emphatic, marking a providence that found welcome in the native place of the prophet's deadliest foe, and places Zarephath on the great coast-road. He offers two accounts of whether the famine had reached so far, that it may have, one authority making it last a year in that country, or that the distress may have been only the reflex of the famine in Israel, on which the country depended for supplies. On the widow's oath he holds that the words thy God imply she did not yet acknowledge the God of Israel as her own, and he calls the sustaining miracle doubly remarkable: that God's higher laws of miracle, like the ordinary laws of providence, take in the supply of homely and trivial needs, the opposite of what expectation would suggest; and that it is a miracle of multiplication, virtual creation though not out of nothing, doing rapidly and directly what ordinary law does slowly and indirectly."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill takes the sending as a trial of Elijah's faith, to be lodged among Zidonians where Jezebel had an interest, and records that Kimchi denied the place was Gentile at all, reading the phrase as near to Zidon rather than belonging to it. Against Ellicott he takes the widow's oath by the living God to show her already a good woman, swearing by him only and taking Elijah for a prophet, and he compares the increase of the meal to the loaves multiplying while the disciples ate."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke locates Zarephath between Tyre and Sidon but nearer the latter, gives its present name as Sarphan, and reports a traveller who found only a few houses on the mountain tops but supposed the old city stood in the plain below among ruins. He insists the barrel is an earthen jar and not a wooden vessel, since in the East corn and meal are kept so against the insects, says the word for cruse means a bottle, observes that the command to bake for the stranger first was putting the widow's faith to an extraordinary trial, and compares the miracle to the water at Cana found wine as it was drawn."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes most of the choice of a heathen city, since our Saviour notices it as an early indication of favour designed for the Gentiles, many widows being in Israel who would gladly have taken the prophet in; Israel having corrupted themselves worse than the nations, their casting off is justly the riches of the world, and Elijah driven out by his countrymen turns to the Gentiles as the apostles were afterwards ordered to do. He presses the choice of Sidon in particular, the Baal-worship now the crying sin of Israel having lately come thence with Jezebel, so that out of Sidon God calls the destroyer of that idolatry and hides his prophet in his enemy's own country. On the widow he asks what assurance she had that this stranger was a prophet, when a hungry vagrant might easily have imposed on her, and answers that great was her faith, exceeding all things considered that of the widow who cast in two mites; and he weighs the two miracles, holding the increase of her faith as great a work in the kingdom of grace as the increase of her oil in the kingdom of providence."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was Zarephath a Gentile city?",
+    "positions": [
+     {
+      "position": "Yes, and the point of the story, since the prophet is sent to a heathen city and becomes the first prophet of the Gentiles",
+      "held_by": [
+       "Matthew Henry",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Kimchi denied it, reading the phrase as near to Zidon rather than belonging to it",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Did the widow already believe in the God of Israel?",
+    "positions": [
+     {
+      "position": "Yes; her oath by the living God shows her a good woman who took Elijah for a prophet",
+      "held_by": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "No; the words thy God imply no acknowledgment of him by herself as yet",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Charles Ellicott",
+    "claim": "Observes that the miracle is remarkable for taking within the scope of God's higher laws the supply of what we should think homely and trivial needs, and for being a multiplication, which is virtual creation though not out of nothing"
+   }
+  ],
+  "themes": [
+   "And the word of the Lord came unto him, saying,",
+   "Arise, get thee to Zarephath, which belongeth to Zidon, and dwell there: behold, I have commanded a widow woman there to sustain thee.",
+   "So he arose and went to Zarephath. And when he came to the gate of the city, behold, the widow woman was there gathering of sticks: and he called to her, and said, Fetch me, I pray thee, a little water in a vessel, that I may drink.",
+   "And as she was going to fetch it, he called to her, and said, Bring me, I pray thee, a morsel of bread in thine hand.",
+   "And she said, As the Lord thy God liveth, I have not a cake, but an handful of meal in a barrel, and a little oil in a cruse: and, behold, I am gathering two sticks, that I may go in and dress it for me and my son, that we may eat it, and die.",
+   "And Elijah said unto her, Fear not; go and do as thou hast said: but make me thereof a little cake first, and bring it unto me, and after make for thee and for thy son.",
+   "For thus saith the Lord God of Israel, The barrel of meal shall not waste, neither shall the cruse of oil fail, until the day that the Lord sendeth rain upon the earth.",
+   "And she went and did according to the saying of Elijah: and she, and he, and her house, did eat many days.",
+   "And the barrel of meal wasted not, neither did the cruse of oil fail, according to the word of the Lord, which he spake by Elijah."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.15
+   }
+  }
+ },
+ "17": {
+  "voices": [
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch",
+   "John Gill"
+  ],
+  "range": "17-24",
+  "pericope_label": "And it came to pass after these things, that the son of the woman, the mistress of the house, fell sick; and his sickness was so sore, that there was no breath left in him. And she said unto Elijah, What have I to do with thee, O thou man of God? art thou come unto me to call my sin to remembrance, and to slay my son? And he said unto her, Give me thy son. And he took him out of her bosom, and carried him up into a loft, where he abode, and laid him upon his own bed. And he cried unto the Lord, and said, O Lord my God, hast thou also brought evil upon the widow with whom I sojourn, by slaying her son? And he stretched himself upon the child three times, and cried unto the Lord, and said, O Lord my God, I pray thee, let this child’s soul come into him again. And the Lord heard the voice of Elijah; and the soul of the child came into him again, and he revived. And Elijah took the child, and brought him down out of the chamber into the house, and delivered him unto his mother: and Elijah said, See, thy son liveth. And the woman said to Elijah, Now by this I know that thou art a man of God, and that the word of the Lord in thy mouth is truth.",
+  "schools": [
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott hears presumption in Elijah's complaint, calling it characteristic of the half-presumptuous impatience shown more fully two chapters later, and takes him to imply that his own hard lot as an unprotected fugitive must have brought trouble on the house that sheltered him. On the stretching he rejects the natural explanation by name: to suppose it merely the use of natural means of reviving is to explain the whole description away, the idea being of a healing virtue attaching in measure to the prophets as it belonged without measure to our Lord, though in their case made conditional on prayer. On the woman's last words he traces three stages of faith, from speaking of Jehovah from without as the Lord thy God, to recognising him as God, to accepting the word in the prophet's mouth as truth, which seems to express conversion. Delitzsch denies that the death was a punishment for particular sins at all, comparing the man born blind, while granting that she discerned a punishment in it and finding in that half-heathenish belief a mind susceptible to divine truth; he calls Elijah here the forerunner of him who raises all the dead."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill will only say that the mother spoke rashly, in her passion and agony, forgetting the benefits she had received through the prophet's presence."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the mother at her word, that she was conscious of some secret sin forgotten or passed over too carelessly and supposed her son's life taken to punish it, adding that it is mostly in adversity that we consider our moral state. On the stretching he holds the view Ellicott refuses, that Elijah did it to communicate warmth and dispose the body to receive the departed spirit. On what returned to the child he argues with himself, saying at the prayer that the soul means no more than the breath and at the fulfilment that the word generally means the immortal spirit, so that the expression is strong proof both that an immaterial spirit exists in man and that it can exist apart from the body, lying in the midst of him like a spring at the centre of a machine. He closes the chapter by reopening its beginning, arguing against the ravens on the ground that the bird is unclean and carrion-feeding and that the reading needs three miracles where God's way is the simplest means, and contending that the word may mean merchants, against Bochart's lexicography."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the death as sin-related and generalises it, that when God removes our comforts he remembers our sins against us, perhaps the iniquities of our youth, so that our sins are the death of our children, and that he does so in order that we may remember and repent of them; he guesses the widow's former worship of Baal may be in view, and takes the affliction as a thorn in the flesh lest she be lifted up. Where Ellicott hears presumption in the prophet's complaint, Henry hears humble pleading, Elijah urging the greatness of the affliction to a widow and then his own concern, that if death follows him into the houses receiving him others will fear to entertain him. On the stretching he takes a third way, that the act was to affect Elijah himself with the case and to signify what God does by grace in raising dead souls, and on the soul's return he credits Grotius with thinking God designed the miracle to intimate the soul's separate existence and immortality."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Was the child's death a punishment for the mother's sin?",
+    "positions": [
+     {
+      "position": "No; not for particular sins at all, but a medium for the manifestation of the works of God, as with the man born blind",
+      "held_by": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "Yes; she was conscious of some secret sin and supposed the life taken to punish it",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Yes in the sense that God remembers our sins when he removes our comforts, so that we may repent of them",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "She spoke rashly in her passion, forgetting the benefits received",
+      "held_by": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What was Elijah doing when he stretched himself on the child?",
+    "positions": [
+     {
+      "position": "Not using natural means; a healing virtue attached to the prophets, though made conditional on prayer",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Communicating warmth, to dispose the body to receive the departed spirit",
+      "held_by": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "Affecting himself with the case, and signifying what God does by grace in raising dead souls",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How should Elijah's complaint to God be heard?",
+    "positions": [
+     {
+      "position": "As half-presumptuous impatience, of a piece with his conduct two chapters later",
+      "held_by": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "As humble pleading, on the widow's behalf and on his own",
+      "held_by": [
+       "Matthew Henry"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   {
+    "voice": "Adam Clarke",
+    "claim": "Ends the chapter by arguing against the ravens of its opening, holding that an unclean carrion-feeding bird would need three miracles where God works by the simplest means, and that the Hebrew word may mean merchants, in direct dispute with Bochart"
+   }
+  ],
+  "themes": [
+   "And it came to pass after these things, that the son of the woman, the mistress of the house, fell sick; and his sickness was so sore, that there was no breath left in him.",
+   "And she said unto Elijah, What have I to do with thee, O thou man of God? art thou come unto me to call my sin to remembrance, and to slay my son?",
+   "And he said unto her, Give me thy son. And he took him out of her bosom, and carried him up into a loft, where he abode, and laid him upon his own bed.",
+   "And he cried unto the Lord, and said, O Lord my God, hast thou also brought evil upon the widow with whom I sojourn, by slaying her son?",
+   "And he stretched himself upon the child three times, and cried unto the Lord, and said, O Lord my God, I pray thee, let this child’s soul come into him again.",
+   "And the Lord heard the voice of Elijah; and the soul of the child came into him again, and he revived.",
+   "And Elijah took the child, and brought him down out of the chamber into the house, and delivered him unto his mother: and Elijah said, See, thy son liveth.",
+   "And the woman said to Elijah, Now by this I know that thou art a man of God, and that the word of the Lord in thy mouth is truth."
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-09-27",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
+  }
+ }
 }

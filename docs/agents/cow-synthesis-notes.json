@@ -91211,6 +91211,72 @@
         "24"
       ],
       "note": "Seven STRETCH marks in this chapter, up to 27x on verse 22 whose own blob is 16 words. All are expected and advisory: Matthew Henry is filed at the two pericope heads 1 and 13, which between them cover the chapter, so the verse-level blob understates the source badly. This is the fourth chapter where the pericope-head keying explains an alarming ratio, and it is worth treating a high STRETCH on a Chronicles or Gospel chapter as a prompt to check the keying rather than as evidence of invention."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "17",
+      "verses": [
+        "16",
+        "22"
+      ],
+      "note": "JFB fetch displacement, advancing window. Both JFB blocks in this chapter are 1 Samuel 21: key 16 is David at Nob and the shewbread yielding to the law of necessity and mercy, key 22 is his flight to Achish at Gath with Goliath's sword. Keys 16 and 22 are members of the usual stride-6 series (4, 10, 16, 22) with 4 and 10 returning empty. This is the THIRD 1 Kings chapter whose donor is 1 Samuel (1kings 21, 1kings 6 <- 1 Sam 10, 1kings 17 <- 1 Sam 21), which is the first sign of a per-book regularity in the donor: for 1 Kings the donor book has been 1 Samuel every time, though the donor chapter varies. 2 Chronicles by contrast has drawn on 2 Chronicles 25 and on 1 Kings 18. Both blocks are in excluded_voices; JFB is cited nowhere."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "17",
+      "verses": [
+        "24"
+      ],
+      "note": "Ellicott site chrome at the last key, ninth chapter running. Key 24 holds 1108 words of which about the first 130 are commentary (the three stages of the widow's faith, with the Capernaum nobleman as parallel); the rest is StudyLight navigation, CSS and the book_data array. Ninth consecutive chapter in which the affected key is also the chapter's last verse."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "17",
+      "note": "Keil and Delitzsch 200-word cap: 9 of the 11 K&D blocks are cut at exactly 200 words, advancing-window shape (keys 22 and 23 at 188 and 145 survive). More notable here is that keys 22 and 23 carry BYTE-IDENTICAL text -- the key-23 block is the tail of the key-22 block repeated in full, not a continuation. That is the stuck shape appearing for two adjacent keys inside an otherwise advancing series, which I have not seen before; the usual stuck cases repeat across a stride-6 gap. Worth checking whether short (sub-200) K&D blocks are more prone to duplication than capped ones."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "17",
+      "verses": [
+        "4",
+        "24"
+      ],
+      "note": "The chapter's best dispute, and it is between two voices at opposite ends of the same chapter. At 17:4 Ellicott defends the ravens as the reading of almost all the ancient versions and of Josephus, and dismisses the alternatives got by altering the vowel points -- Arabs, merchants, inhabitants of a city Orbi or the rock Oreb -- as singularly prosaic interpretations arising simply from a desire to be rid of a strange miracle, at the cost of a gross improbability, since regular sustenance by human hands could not have gone on under the king's jealous vigilance. At 17:24 Clarke argues at length for exactly the reading Ellicott mocks. His grounds: the raven is an unclean bird which the law pronounced abominable, its food is carrion, and the reading would require at least three miracles (to bring clean flesh to the ravens, to make them give it up, to overcome their timidity) where God's plan is ever to accomplish the greatest purposes by the simplest means. He then disputes Bochart's lexicography head-on, granting that Bochart says the word never means merchants but asserting that the contracted form does mean merchants at Ezekiel 27:9 and 27:27, and answers Bochart's objection that traders would betray the hiding place by observing they might be bound by inspiration or be among the seven thousand who had not bowed to Baal. Henry meanwhile builds six devotional points on the birds being ravens, so the corpus contains a full defence, a full refutation and a homiletical elaboration of the same word."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "17",
+      "verses": [
+        "12",
+        "18",
+        "20",
+        "21"
+      ],
+      "note": "Four further splits, three of them sharp. (1) Was the widow already a believer? Gill takes her oath by the living God to show her a good woman swearing by him only; Ellicott reads the same words the other way, since thy God probably implies no acknowledgment of him by herself as yet, and he later traces three stages of her faith culminating in conversion at 17:24. (2) Was the child's death punishment for her sin? Clarke says she was conscious of some secret sin and supposed the life taken for it; Henry generalises that when God removes our comforts he remembers our sins against us; K&D denies it outright -- not for particular sins at all, but a medium for the manifestation of the works of God, as with the man born blind. (3) How should Elijah's complaint be heard? Ellicott hears half-presumptuous impatience, of a piece with his conduct at 1 Kings 19; Henry hears humble pleading on the widow's behalf and his own. (4) What was the stretching on the child? Ellicott says to call it merely natural means of reviving is to explain the whole description away, and posits a healing virtue attaching to the prophets though conditional on prayer; Clarke holds precisely that natural view, warmth communicated to dispose the body to receive the spirit; Henry makes it self-affecting and significatory."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "17",
+      "note": "Clarke visibly changes his mind between two adjacent verses on a doctrinal point. At 17:21, on Let this child's soul come into him again, he writes that this surely means no more than the breath. At 17:22, on the fulfilment of the same petition, he reverses and argues that although one Hebrew word is sometimes put for breath, the word actually used generally means the immortal spirit, and that the expression is strong proof not only that an immaterial spirit exists in man but that it can exist in a separate state from the body, lying in the midst of him like a spring in the centre of a machine. The synthesis reports both, since the reversal is in the source and is the kind of thing a reader comparing the two verses would otherwise think the synthesis had garbled. Henry reaches the same conclusion independently and credits Grotius with holding that God designed the miracle to intimate the soul's immortality."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "17",
+      "note": "Self-graded A on all three tiles. 14906 usable source words (less about 980 of Ellicott chrome at key 24 and 202 of displaced JFB, so roughly 13700) compressed to 1940 (0.14x), the densest compression I have done, because a 24-verse chapter with only six voices tiles naturally into three pericopes and Henry alone supplies 6181 of the words. Keil and Delitzsch is not declared on the vv8-16 tile: his only block in that span is at key 8 and is spent restating the narrative of the meeting at the gate, with no comment of his own. Gill is thin throughout (1244 words over 24 blocks) but says enough to cite on every tile."
     }
   ]
 }
