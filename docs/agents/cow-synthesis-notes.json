@@ -90634,6 +90634,84 @@
       "book": "job",
       "chapter": "7",
       "note": "Self-graded A on all four tiles. 15778 usable source words compressed to 2585 (0.16x). Henry is deliberately NOT declared on the vv11-16 tile: his key-7 block does cover vv11-16 in its later paragraphs, but I tiled before reading that portion and would not cite him from a passage I had not read, so that tile carries five voices where the source would support six. The vv11-16 tile is also the least compressed (0.31x) because its span is the thinnest in the chapter."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "12",
+        "15",
+        "17",
+        "18",
+        "20",
+        "22",
+        "23",
+        "25",
+        "27",
+        "30"
+      ],
+      "note": "IMPORTANT TRAP. The merged file data/commentary/cow/<book>/<ch>.json contains only the VERSE-KEYED corpora. catena-aurea, Matthew Henry and mhcc file their exposition under PERICOPE HEADS: for mark 7 that is keys 1, 14, 24 and 31, holding 1275, 1208, 1503 and 1360 words of catena and 2857, 1105 and 1372 of Henry, which cover verses 2 to 13, 15 to 23, 25 to 30 and 32 to 37. So a verse whose merged blob shows only 83 to 200 words of modern commentary is NOT thin, and a 350-word entry on it is NOT padded: the patristic material is filed at its section head. I had written ten thin replacements for this chapter on the strength of the merged blob before checking, and discarded all of them; landing them would have thrown away Bede, Theophylact, Pseudo-Jerome, Cyril of Jerusalem and Matthew Henry content the previous writer had correctly drawn in. Check the pericope-head keys before trusting an expansion ratio or applying the thin exemption."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "Checked whether the pericope-head keying invalidates the two chapters landed earlier in this run. It does not. For matthew 1 catena-aurea is keyed 1, 2, 3, 6, 8, 12, 16, 17, 18, 19, 20, 21, 22, 24, with genuine gaps at 4, 7, 13, 14 and 15, so the thin flag on verse 4 was right and the pericope over 12 to 15 put the prose back on top of the catena block that actually holds Remigius and Raban on those names. For john 19 catena-aurea is keyed at heads 1, 6, 9, 12, 16, 19, 23, 28, 31, 38, but no thin flag was used there and every rewritten entry added named voices rather than dropping any."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "12",
+        "23",
+        "27",
+        "30"
+      ],
+      "note": "What lifted the four grade-B entries was removing DUPLICATED QUOTATIONS, not synonym substitution. Each of them quoted a fragment the entry had already quoted from the verse at its head: verse 27 gave let the children first be filled twice, once in the opening quotation and again inside the Henry citation. Prose rule 5 bans quoting the same fragment twice, so the fidelity fix and the metric fix turn out to be the same edit. A first pass of ordinary synonym work plus carrier removal left three of them still at ttr 0.557 to 0.569; de-duplicating the quotations took all four over the line: v12 0.563 to 0.582, v23 0.568 to 0.589, v27 0.571 to 0.589, v30 0.567 to 0.587, with compress rising on all four."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "23"
+      ],
+      "note": "Two displaced Jamieson-Fausset-Brown blocks. The one filed under verse 5 is JFB on Mark 1:32-34, about the demonized being brought at sunset and the unlawfulness of curing during sabbath hours. The one filed under verse 23 is JFB on Mark 2:1, about the return to his own city after the cure of the leper. Neither was declared in excluded_voices because neither verse needed the thin exemption, and excluding them would have changed nothing the validator reads."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "source-defect",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "3",
+        "19",
+        "32"
+      ],
+      "note": "Three entity fixes. Verse 3 had the parallel Muslim ablution where Clarke actually cites the like command in the Koran and says it is likely Mohammed borrowed the custom from the Jews. Verse 19 had the whole Mosaic distinction, a coinage absent from the chapter, now the distinction of clean and unclean foods that Moses had drawn. Verse 32 had the only Physician with a capital, absent from the sources in any form, now the only one who can open their ears."
+    },
+    {
+      "at": "2026-09-27",
+      "kind": "observation",
+      "book": "mark",
+      "chapter": "7",
+      "verses": [
+        "37"
+      ],
+      "note": "This is the best-written legacy chapter met in this run. Voices are named in nearly every sentence, the four-paragraph entries carry source rather than homily, and only 4 of 37 entries graded B. Its ttr drag came from faithful quotation of a short and repetitive source, not from padding, which is the opposite of the matthew 1 and john 19 diagnosis. Worth recording that legacy-unversioned is not by itself a quality verdict."
     }
   ]
 }
