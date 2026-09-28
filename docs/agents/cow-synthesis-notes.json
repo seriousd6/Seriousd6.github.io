@@ -92045,6 +92045,73 @@
       "book": "1chronicles",
       "chapter": "23",
       "note": "Self-grade A on all three tiles, compression 0.17x, 0.15x and 0.12x. The figures are low because of source composition rather than aggressive summarising: Henry contributes 2,325 words in two blocks at keys 1 and 24 which each range across the whole chapter and each repeat their substance in an appended application paragraph; Delitzsch's 3,712 words are largely reproduced KJV verse text, with perhaps a third genuine comment; about 990 of Ellicott's words at key 32 are page chrome; and a large part of the middle tile's source is bare name-lists that cannot be turned into prose at all. Every declared voice is cited by short name. Wesley is not declared on the middle tile because his only blocks there (keys 13 and 14) add nothing the other voices do not carry. JFB is declared nowhere because all three of its blocks belong to 1 Kings 12."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "1-42"
+      ],
+      "note": "Pericope keying for luke 10 checked before trusting any expansion ratio: catena-aurea files at heads 1, 3, 5, 13, 17, 21, 23, 25, 29, 38; mhc and mhcc at 1, 17, 25, 38. Unlike luke 2 this is a genuine polish chapter - only 2 banned-carrier instances in the whole chapter and no thinness narration. 42 entries, 64746 usable source words, 15 needing work at the start, 0 at the end."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "3",
+        "5",
+        "21"
+      ],
+      "note": "Three entity flags were source-abbreviation artefacts, handled differently. v3 Isidore of Pelusium to Isidore, because the source tags him Isidore Peleus and Pelusium appears nowhere; better to drop the see than to propagate the source spelling. v3 Gregory Nazianzen to Gregory, because the source says only Gregory and Nazianzen is an inference past it. v5 Titus of Bostra to Titus Bostrensis, which is the form the source itself uses. v21 Epiphanius is LEFT AS IS - the source tags him Epiphan and expanding a catena abbreviation is correct scholarship, same class as Athanasius and Augustine in luke 2. It stays flagged by the pool test and nothing should be changed."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "3",
+        "4",
+        "14",
+        "15",
+        "22"
+      ],
+      "note": "Five genuinely unsourced terms fixed. v3 comfort in the Sender to comfort in the one who sends them, and v4 trusting the Sender to trusting him who sent them - Sender capitalised is not in the source in any form. v14 for the Galilean cities to for the cities of Galilee, v15 Christ Galilean ministry to Christ ministry in Galilee - Galilee is in the pool, Galilean is not. v22 the witnesses find astonishing in the Synoptics to find most astonishing here in Luke; Synoptics is a modern critical term absent from every source, and the original sentence had no main verb."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "10"
+      ],
+      "note": "Grade B cleared by lever 1, deleting a verbal duplicate, but note which of the two copies to delete. The entry carried the Robertson broad-open-streets point twice, once briefly in the middle and once in a fuller form at the end. Deleting the FULLER late copy would have dropped the entry to 336 words, under the 350 floor; deleting the BRIEF early copy left 356 with the fuller statement intact. compress 0.415 to 0.434, ttr 0.614 to 0.616. When a duplicate pair straddles the floor, delete the shorter member."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "36"
+      ],
+      "note": "Two entries resisted both of the usual levers and needed a third approach each; recording the method because guessing wasted four passes. Varying the dominant repeated word did nothing here - v1 ttr moved 0.5617 to 0.5730 over three passes and v36 actually got WORSE, 0.5493 to 0.5625 then back to 0.5620, because swapping one varied word for another adds no types. What worked was to stop guessing and search the deletion space numerically: split the entry into sentences, recompute ttr and compress with each sentence and each pair of sentences removed, and keep only candidates at or above 352 words. For v36 that found the one clean answer, eliding the two redundant middle sentences of the Ellicott quotation with an ellipsis, keeping its opening and its punchline: ttr 0.5620 to 0.5924, compress 0.444 to 0.457, 397 to 369 words. For v1 every viable deletion cost a real claim, so the answer was the opposite - ADD fresh grounded material with new vocabulary, using the compress margin as the budget."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "10",
+      "verses": [
+        "1"
+      ],
+      "note": "v1 worked example of the add-material lever, with the method for finding what to add. Rank the source words of length over 4 that do NOT appear in the entry, by frequency; here that surfaced elders 11, ministers 11, church 10, council 8, which led straight to the Sanhedrin parallel that the entry had omitted entirely though Barnes, Ellicott, Robertson and Calvin all press it. Added 53 words naming Barnes and Ellicott on seventy as a favourite number among the Jews, the family of Jacob, the elders Moses appointed, and the great Sanhedrin of seventy members besides the president, with a Genesis 46:27 ref link. ttr 0.5730 to 0.5956, compress 0.443 to 0.446, 396 to 449 words. Adding cost almost no compress because the new text is lexically fresh."
     }
   ]
 }
