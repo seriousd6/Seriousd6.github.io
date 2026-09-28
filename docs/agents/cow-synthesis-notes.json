@@ -92407,6 +92407,79 @@
       "book": "1chronicles",
       "chapter": "16",
       "note": "Self-grade A on all five tiles. Three are normal (0.34x, 0.18x, 0.18x); two are artefacts of the source gap documented in the source-defect note and should not be read as authorial padding. The thin entry at v31 stands at 3.48x because its whole source is one 40-word Clarke note on the Targum's rendering of the heavens as the supreme angels, using a Greek loanword in Hebrew letters; the prose reports that and nothing more. The tile at vv.34-35 stands at 1.09x because 329 words of source had to carry a 350-word floor: the four voices there are genuinely distinct (Ellicott on the liturgic formula and the ode ending where it began, Gill and Wesley on prophetic foresight of the dispersion with Gill recording the Ezra alternative, Clarke on praying to God under the attribute needed, Henry on not forgetting afflicted brethren) so the tile reports four positions rather than expanding one. Gill is not declared on vv.7-22 or vv.37-43 because his blocks there add nothing the other voices do not carry. JFB has a single 34-word block at key 43 which was not examined for displacement, the chapter being small enough that the question did not arise."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "1-79"
+      ],
+      "note": "1chronicles 6 triage: 59 entries, 14033 usable source words. Landed 57 of 59 grade A. Work done: 15 banned-carrier instances recast - the witnesses do not divide nine times, so the witnesses four, the witnesses note once, plus one notes only - 11 genuinely unsourced names fixed, and two entries repaired after trimming dropped them under the floor."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "47"
+      ],
+      "note": "MISFILED SOURCE BLOB. The cow blob for 1chronicles 6:47 is Jamieson, Fausset and Brown on 1 KINGS 1:32-49, Solomon by David appointment is anointed king - 46 words that have nothing whatever to do with Ethan the Merarite or this genealogy. The entry itself is sound because it was written from the pericope head, but anyone sizing or fidelity-checking v47 against its own blob will get nonsense, and the stretch ratio for this verse is meaningless. Worth checking whether the same misfiling has happened elsewhere in the Chronicles blobs."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "67",
+        "68"
+      ],
+      "note": "TWO MORE FALSE-FLAG CLASSES for the entity checker, on top of the ligature class recorded at 1chronicles 27. First, HEBREW SCRIPT: Keil textual note at v67 gives the corrected place names only in Hebrew - קשׁיון for Kishion and ירמות for Jarmuth - so the prose transliterations are faithful but unmatchable by a Latin-script substring test. Second, ABBREVIATED SIGLA: Ellicott at v68 writes a name omitted by the LXX. Vatic., which the prose expands to the Greek of the Vatican copy. Both were left exactly as they stand. The running rule is now: before changing any flagged classical, geographical or manuscript name, check the source for a ligature, a Hebrew form, and an abbreviation."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "4",
+        "14",
+        "21",
+        "26",
+        "33",
+        "44",
+        "48",
+        "53",
+        "56",
+        "67",
+        "72"
+      ],
+      "note": "Eleven genuinely unsourced names removed, most of them the cross-reference class - a name that appears only in a passage the entry cites, never in the chapter source. v4 whose zeal at Peor to whose zeal, keeping the Num 25:11 link. v14 the slaughter at Riblah to Seraiah death at Nebuchadnezzar hand, which is what Clarke actually says. v21 a long chain of Elkanahs, a pluralised coinage, to a long chain of men named Elkanah. v26 the Elkanah of Ramah to the passage where Zophim stands just before Elkanah, which is Ellicott own wording. v33 the hand of the Lord upon Elisha to upon the prophet. v44 but Kushaiah in the parallel to but a fuller form in the parallel, the name being absent from the blob. v48 dropped the claim that the same form names the class called Nethinim and replaced it with Ellicott actual point, that the law gives the Levites to Aaron and his sons as assistants. v53 dropped the same Ahimaaz who had run with tidings from the field of Absalom defeat. v56 the great Judahite to the men of Judah. v67 and v68 the Ephraimite cities to the cities of Ephraim. v72 the vale of Jezreel to Galilee in the far north."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "48",
+        "79"
+      ],
+      "note": "Watch the floor when recasting carriers and deleting unsourced clauses. Both edits are subtractive and two entries fell to 349 validator words, one under the limit, without my noticing until the sweep. v48 was repaired by replacing the deleted Nethinim clause with Ellicott real point rather than leaving the gap, and v79 by restoring the carrier recast to full length. Re-run the validator word count after every subtractive pass, not just at the end."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "6",
+      "verses": [
+        "47",
+        "61"
+      ],
+      "note": "Same floor-bound and source-exhausted bind as 1chronicles 27 vv 3, 8 and 20, so these two stay grade B. Validator counts 374 and 354 against a 350 floor; the deletion search over every single and every pair of sentences returned zero viable candidates for both. v47 has no usable source of its own at all, its blob being the misfiled 1 Kings passage, and v61 remaining unused source is Ellicott further notes on the same textual corruption the entry already covers, so an addition there would be the same semantic field and would gain almost nothing, on the measurement recorded at 1john 5 v2. Graded honestly as B; recorded and recomputed agree."
     }
   ]
 }
