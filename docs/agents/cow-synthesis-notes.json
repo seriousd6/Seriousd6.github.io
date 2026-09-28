@@ -91972,6 +91972,79 @@
       "book": "2kings",
       "chapter": "3",
       "note": "Self-grade A on all five tiles. Compression runs 0.39x and 0.43x on the two short narrative tiles and 0.15x to 0.17x on the three long ones. The low figures are source composition: Henry contributes 4,169 words in three blocks at keys 1, 6 and 20 that each range across the whole chapter and each repeat their substance in an appended application paragraph, so the same material is counted two or three times in the source total, and about 990 of Ellicott's words at key 27 are page chrome. Tile 1 came in at 603 words rather than the usual ceiling because the source for vv.1-3 genuinely runs out; padding it would have meant repeating Henry's application. Every declared voice is cited by short name. JFB is declared nowhere because its one block belongs to 1 Samuel 30."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "23",
+      "verses": [
+        "11",
+        "23",
+        "29"
+      ],
+      "note": "JFB displacement, and the strongest confirmation yet of the two-cursor model because it gives a second point on a donor walk already sampled. JFB appears at three keys here and all three are the Rehoboam narrative: key 11 is the young counsellors and the rejected advice of the elders (1 Kings 12:6-8 / 2 Chronicles 10:7-8); key 23 is Rehoboam's haughty answer, the stoning of the tax gatherer and his flight to Jerusalem (1 Kings 12:13-20); key 29 is Shemaiah forbidding the war and the army dispersing (1 Kings 12:21-24). Strictly forward within the donor across the three slots. Combined with the earlier finding that 1chronicles 11 drew on 1 Kings 5-6, this gives two independent samples of the same donor walk for 1 Chronicles: target chapter 11 draws 1 Kings 5-6, target chapter 23 draws 1 Kings 12. The target advances twelve chapters while the donor advances about six, in the same direction and without resetting. That is exactly the behaviour predicted by a single donor cursor spanning the book. JFB was excluded from every tile."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "23",
+      "verses": [
+        "32"
+      ],
+      "note": "Ellicott chrome at key 32, which is the chapter's last verse and also Ellicott's last block: 1,273 words of which about 285 are commentary (including a substantial additional note rebutting Reuss on whether the chronicler confused David's tabernacle with Solomon's temple) and the remaining ~990 the StudyLight page furniture. Third consecutive chapter consistent with the corrected rule recorded at job 14, that the chrome attaches to the last Ellicott block in the scraped page rather than to any fixed key. Usable source here is therefore about 12,600 words rather than the 13,574 the size command reports."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "23",
+      "note": "Taken in response to the triage note left against this chapter by another worker, which recommended it to a fresh window over the large legacy chapters and named the blocker as all 32 verses reporting self-grade MISSING, which finish refuses. That blocker does not survive a pericope rewrite: the tiles are stamped with a fidelity self-grade as a matter of course, so the chapter went through the pipeline without special handling. All 32 verses were legacy per-verse prose (five grade B) and were regenerated as three pericope tiles (1-6, 7-23, 24-32) following the chapter's own three movements: David's arrangement of the Levites, the register of the fathers-houses by the three sons of Levi, and the new order of service. Three tiles rather than five because the middle section is a single genealogical unit; splitting it at Gershon, Kohath and Merari would have given tiles of 700 to 1,200 usable source words each, too thin for the word floor without padding."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "23",
+      "note": "Wesley abridges Henry a fifth time, in a fourth book. At v24 Wesley's reason for the lower age - 'the people of Israel were multiplied: therefore more hands were necessary, that every Israelite who brought an offering might find a Levite ready to assist him' - is Henry's sentence at key 24 almost word for word, and Wesley's account of the lightened work repeats Henry's. Wesley is independent at v3 and v24, where he proposes that the two ages stood simultaneously as two grades of service (twenty for preparation and instruction, thirty for full admission), which is a solution none of the other five offers, and at v29 on the public standards. The running tally is now 1chronicles 11, job 14, 2kings 3 and 1chronicles 23. The pattern is systematic and should be treated as a known property of the corpus rather than rediscovered chapter by chapter."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "23",
+      "verses": [
+        "1-6"
+      ],
+      "note": "Clarke and Ellicott cite the same verse of Amos to opposite ends, which is the sharpest exchange in the chapter. Amos 6:5 mocks the nobles who 'invent themselves instruments of music, like David'. Ellicott takes this as evidence that David was not only a minstrel and inspired psalmist but an inventor of stringed instruments, a fact he thinks the chapter's 'instruments which I made' confirms. Clarke reads the same parallel as a condemnation of those instruments, and goes further than anyone else in the catena: David made this distribution according to his own judgment and from the dictates of his piety, but it does not appear that he had any positive divine authority for such arrangements. Henry is untroubled and finds the whole establishment fitting. Separately, Henry and Ellicott independently hear 'satisfied with days' in the phrase 'full of days', Henry giving satur dierum and Ellicott reaching for Horace's philosopher departing life like a satisfied guest; and Delitzsch and Ellicott independently conclude from 'the instruments which I made' that verses 4 and 5 are direct speech and must be punctuated as a spoken decree."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "23",
+      "verses": [
+        "7-23"
+      ],
+      "note": "Ellicott and Delitzsch confront the same arithmetic defect and resolve it in opposite directions, each by trusting a different passage. Ellicott holds the Levitical courses were twenty-four, matching the musicians and the priests and Josephus, and at a thousand men to a class matching the 24,000 overseers exactly. Gershon yields nine houses and Kohath nine, so Merari must yield six, but the text gives four; the later chapter names a third son of Merari with three houses, which would give seven. Ellicott therefore strikes the second Mahli of v23 as an ancient scribe's repetition of v21 and treats the closing 'three' as added after the mistake set. Delitzsch, facing the same figures, calls the inference that Merari had a third son simply incorrect, on the ground that the verses supplying that son are recognisable from their whole character as arbitrary interpolations. So Ellicott trusts the later chapter and emends this one; Delitzsch trusts this one and rejects the later chapter. Ellicott is notably honest about it, listing four objections to his own conjecture, including that all the old versions support the received text."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "23",
+      "verses": [
+        "24-32"
+      ],
+      "note": "The contradiction between the thirty of v3 and the twenty of v24 draws five distinct solutions, which is the widest spread of opinion in the chapter. Ellicott surveys three without endorsing any: that 'thirty' is an ancient error of transcription, that the chronicler simply incorporated two divergent statements from his authorities, or that David numbered twice, first from thirty as the Law required and again late in his reign from twenty because the duties had become less onerous. He then undercuts the third by observing that twenty was in any case the military age, the age of full virile strength (Numbers 1:3), so a lower age needs no special explanation. Clarke adopts the two-decrees view flatly. Wesley proposes a fifth that nobody else offers: both ages stood simultaneously as two grades of service, twenty being the age of preparation, instruction and partial exercise and thirty the age of full admission. Henry supplies a motive rather than a mechanism, that the young Levites left unemployed until twenty-five were acquiring a habit of idleness that blemished their reputation and hindered their later usefulness. Two smaller splits: Clarke, Wesley and Henry make the Levites custodians of the NATIONAL standards of weight and measure kept in the sanctuary, while Ellicott confines the clause to the sanctuary's own measuring vessels for the flour, wine and oil of each sacrifice; and Delitzsch and Ellicott agree that the morning and evening thanksgiving belongs to the singers and not to the Levites at the altar, Delitzsch saying the contrary view needs no serious refutation since psalms can hardly have been sung while the beasts were slaughtered and skinned, while Gill on the Targum and Kimchi keeps the Levites singing whenever offerings were brought and has some of them helping the priests to slay."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "23",
+      "note": "Self-grade A on all three tiles, compression 0.17x, 0.15x and 0.12x. The figures are low because of source composition rather than aggressive summarising: Henry contributes 2,325 words in two blocks at keys 1 and 24 which each range across the whole chapter and each repeat their substance in an appended application paragraph; Delitzsch's 3,712 words are largely reproduced KJV verse text, with perhaps a third genuine comment; about 990 of Ellicott's words at key 32 are page chrome; and a large part of the middle tile's source is bare name-lists that cannot be turned into prose at all. Every declared voice is cited by short name. Wesley is not declared on the middle tile because his only blocks there (keys 13 and 14) add nothing the other voices do not carry. JFB is declared nowhere because all three of its blocks belong to 1 Kings 12."
     }
   ]
 }
