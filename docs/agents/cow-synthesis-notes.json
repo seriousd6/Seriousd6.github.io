@@ -92288,6 +92288,75 @@
         "7"
       ],
       "note": "v7, the Johannine Comma entry, is the strongest in the chapter and was already grade A - it reports the three-way split honestly and catches that the block printed under Calvin name reverses his conclusion and is a later editor note. It sat at exactly 650 validator words, zero margin, so I removed one bibliographic aside about Clarke printing the passage twice, which duplicated what had already been said of Barnes. Now 630. Unused material for whoever revisits it: v6 source blob carries 13 mentions of Cyprian, all belonging to v7 - Gill answering the objection that Tertullian and Cyprian say Son rather than Word when citing this verse, with the Facundus citation."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "1-34"
+      ],
+      "note": "1chronicles 27 triage: 34 entries, 11346 usable source words. mhc and mhcc key ONLY at heads 1 and 16, so verses 2-15 and 17-34 carry no Henry in the merged blob - v20 for instance has a 19-word blob against a 374-word entry, which is not padding, the exposition for verses 16-24 sits at key 16. Landed with 31 of 34 grade A; vv 3, 8 and 20 stay grade B and the reason is recorded separately."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "9",
+        "11",
+        "12",
+        "18",
+        "19",
+        "28",
+        "29"
+      ],
+      "note": "Entity flags split two ways and only four of seven were real. FIXED, genuinely unsourced: v9 Ira son of Ikkesh of Tekoa to the Tekoite, which is the form the source uses - Tekoa appears nowhere; v12 a man of Harod or Tekoa or Netophah to a man of Harod, a Tekoite or a Netophathite, all three of which the source has; v11 withstood the Philistines to withstood the Philistine power, since the source has only the singular; v18 the kings of Samaria yet to come to the royal house of Omri yet to come, Samaria being absent in any form while Omri is named in the verse; v19 the far northern tribes by the Galilean hills to the tribes lying furthest away to the north, since neither Galilee nor Galilean occurs anywhere in the source. LEFT ALONE deliberately: v28 Phoenician and v29 Caesarea - see the ligature note."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "28",
+        "29"
+      ],
+      "note": "NEW FALSE-FLAG CLASS: the entity pool test cannot match ae and oe LIGATURES. Ellicott note on Sharon reads between Caesarea and Joppa with the ae ligature, and his note on Baal-hanan reads the Phoenician Hannibal with the oe ligature. Searching the pool for caesarea and phoenician both return false while the ligatured spellings return true. So modernising a ligatured spelling is correct and the flag is an artefact, exactly like expanding the catena abbreviations ATHAN. and AUG. in luke 2. Check the ligatured form before touching any classical or geographical name that the checker flags."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "1-34"
+      ],
+      "note": "SCRIPT-LEVEL MEASUREMENT BUG, affects the whole corpus, not just this chapter. The audit verse_metrics counts the HTML entity string mdash as a word; validate-synthesis.words() does not. This chapter contains 155 occurrences of the entity across all 34 entries, so every entry is measured about 4 or 5 words longer than the validator reads it, and the repeated pseudo-token also perturbs the moving-average ttr on which the grade depends. This fully explains the unexplained 4-to-5-word discrepancy recorded in the 1john 5 notes - that note can be closed. The fix belongs in audit-synthesis-quality.py, which should decode entities before tokenising; I did not rewrite 155 entities in the data to work around a script bug. Owner decision wanted."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "3"
+      ],
+      "note": "CONDENSATION RULE REFINED, and the refinement matters. Condensation raises ttr only when the words removed are REPEATED types. Removing unique ones lowers it. Measured here: a careful 23-word condensation of v3 that removed kind, national, forces, descendants, small, very and kingdom-apostrophe-s - almost all of them single occurrences - moved ttr the WRONG way, 0.5597 down to 0.5479. Reverted. Compare 1john 5 v1, where condensing repeated clause material took ttr 0.5755 to 0.5853. Before condensing, check that the words you are cutting occur more than once in the entry."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "3",
+        "8",
+        "20"
+      ],
+      "note": "Why these three stay grade B: they are simultaneously floor-bound and source-exhausted, a bind distinct from the at-ceiling bind of 1john 5. Validator word counts are 376, 361 and 374 against a 350 floor, so the numerical deletion search over every single and every pair of sentences returned ZERO viable candidates for all three. Condensation is ruled out by the note above. That leaves adding fresh material, and there is none to add: v3 own source is 375 words and nearly exhausted, its only unused content - Mikloth, Dodai the Ahohite - belongs to v4; v8 source is 275 words with only spelling variants left; and the material that would serve v20, Gill on the tribal princes ruling in their own right against the militia captains who held their commands by David appointment, plus Keil on why the two catalogues stand together, is ALREADY USED by the v16 entry, so importing it would create exactly the cross-verse templating the audit reports. Graded honestly as B rather than recorded A; recorded and recomputed grades agree."
     }
   ]
 }
