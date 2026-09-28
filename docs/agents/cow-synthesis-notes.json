@@ -92480,6 +92480,61 @@
         "61"
       ],
       "note": "Same floor-bound and source-exhausted bind as 1chronicles 27 vv 3, 8 and 20, so these two stay grade B. Validator counts 374 and 354 against a 350 floor; the deletion search over every single and every pair of sentences returned zero viable candidates for both. v47 has no usable source of its own at all, its blob being the misfiled 1 Kings passage, and v61 remaining unused source is Ellicott further notes on the same textual corruption the entry already covers, so an addition there would be the same semantic field and would gain almost nothing, on the measurement recorded at 1john 5 v2. Graded honestly as B; recorded and recomputed agree."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1-31"
+      ],
+      "note": "DECLINED as a polish pick and left untouched: john 20 is a rewrite chapter. 31 entries, 62067 usable source words. 28 of 31 entries grade B, and the banned carrier so the witnesses appears in 30 of the 31. Every entry sits crammed between 343 and 371 words against a 350 floor, and the grade failure is on COMPRESS, not ttr - compress runs 0.370 to 0.459 against a 0.42 threshold."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1-31"
+      ],
+      "note": "QUANTIFIED PROOF that the padding is load-bearing, measured on all 31 entries with no exceptions. Delete the final two sentences of any entry in this chapter and compress rises above the 0.42 threshold every single time, from a 0.370-to-0.459 band up to a 0.443-to-0.525 band; but the validator word count falls at the same stroke to between 158 and 265, far under the 350 floor. Mean real content is about 215 words, so roughly 40 percent of every entry in the chapter is duplicated coda. The extremes: v9 has 158 words of real content behind a 350-word entry, 55 percent padding; v27 has 167; v24 has 172; v22 has 188; v5 has 196. There is no entry anywhere in this chapter with slack, so deletion alone cannot repair a single verse."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "8"
+      ],
+      "note": "The signature of john 20, worked example, distinct from the two rewrite chapters already recorded. Where luke 2 ran on five banned sentence frames and john 16 on nine duplicated codas in long entries, john 20 is floor-hugging: short entries whose closing third restates the same one or two claims two to four times. v8 states the SAME PAIR of claims four times in its last 120 words - that the witnesses divide over what John believed, incipient resurrection-faith against merely a missing body, and that all agree his faith was real but not yet grounded in the Scripture. Once as So the witnesses divide, again as All agree John faith was real, again as The witnesses thus divide over what John believed, and a fourth time as All agree the empty tomb had spoken."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1-31"
+      ],
+      "note": "What the repair needs, for whoever takes it. Each entry needs roughly 135 words of fresh grounded material to replace its coda while clearing the 350 floor - about 4200 new words across the chapter, drawn from a 62067-word source. That is several batches of work, not one, which is why it was declined rather than started. This is now the THIRD chapter sitting in the polish queue that belongs in the rewrite queue: luke 2, john 20, and john 13 which is untriaged at 75143 source words. The picker keeps offering them because worst-first is also longest-first."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "15",
+        "16",
+        "17",
+        "20",
+        "23",
+        "28"
+      ],
+      "note": "Entity flags recorded for the rewriter, NOT yet adjudicated: Kyrie and Arimathea at v15, Mariam at v16, Sonship at v17, Docetism at v20, Protestant and Petrine at v23, Socinian at v28. Check every one against the artefact rule before assuming it is unsourced - the pool test cannot match ae or oe ligatures, Hebrew script, or abbreviated sigla, and Mariam in particular is likely the Greek form the source itself prints."
     }
   ]
 }
