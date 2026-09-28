@@ -92357,6 +92357,56 @@
         "20"
       ],
       "note": "Why these three stay grade B: they are simultaneously floor-bound and source-exhausted, a bind distinct from the at-ceiling bind of 1john 5. Validator word counts are 376, 361 and 374 against a 350 floor, so the numerical deletion search over every single and every pair of sentences returned ZERO viable candidates for all three. Condensation is ruled out by the note above. That leaves adding fresh material, and there is none to add: v3 own source is 375 words and nearly exhausted, its only unused content - Mikloth, Dodai the Ahohite - belongs to v4; v8 source is 275 words with only spelling variants left; and the material that would serve v20, Gill on the tribal princes ruling in their own right against the militia captains who held their commands by David appointment, plus Keil on why the two catalogues stand together, is ALREADY USED by the v16 entry, so importing it would create exactly the cross-verse templating the audit reports. Graded honestly as B rather than recorded A; recorded and recomputed grades agree."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "16",
+      "verses": [
+        "23-30",
+        "32",
+        "33",
+        "36"
+      ],
+      "note": "The catena has NO entry at all for verses 23-30, 32, 33 and 36 - eleven of the chapter's forty-three verses, and precisely the stretch that reproduces Psalm 96. The source keys present are 1-22, 31, 34, 35 and 37-43, thirty-two in all. This forces the pericope structure, because validate-synthesis.py requires the declared spans to tile the source keys exactly, with no gaps and no verses covered that the source lacks. A natural reading of the chapter would tile the psalm as one unit (7-36); that is rejected. The only lawful tiling leaves verse 31 and verses 34-35 as islands between the gaps, and neither can carry a normal tile: verse 31 has 40 usable source words (one Clarke note on the Targum) and 34-35 have 329. Verse 31 was therefore written as a thin entry under the 2026-08-09 exemption (40 source words, 139 words of prose, within the 120-349 band); verses 34-35 had to be written at 358 words against 329 of source, a compression ratio of 1.09x, which is the lowest-value tile in anything I have produced and is an artefact of the gap rather than of the writing. Any future audit that sees a 1.09x ratio or a 3.48x thin ratio in this chapter should read it as a source gap, not as padding by the author."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "16",
+      "verses": [
+        "43"
+      ],
+      "note": "Ellicott chrome at key 43, the chapter's last verse and Ellicott's last block: 1,075 words of which about 85 are commentary (the verse as a duplicate of 2 Samuel 6:19-20a, 'departed' plural against Samuel's singular, 'returned' better rendered went round, and the reason for omitting the Michal episode) and the rest page furniture. Fifth consecutive chapter consistent with the corrected rule recorded at job 14."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "16",
+      "verses": [
+        "7-22"
+      ],
+      "note": "The sharpest exchange in the chapter is over whether the ode is Davidic and original to Chronicles. All parties agree it is a cento; Henry sets out the seams himself (vv.8-22 from Psalm 105, 23-33 the whole of Psalm 96, v.34 from Psalm 136, the last two from the close of Psalm 106) and draws from it the cheerful conclusion that we are warranted to make hymns out of parts of several psalms. Ellicott draws the opposite conclusion from the same fact and gives four arguments that the ode is a later insertion: the patching is so loose the seams are visible; the Psalter leaves those psalms anonymous, which its editors would hardly have done had they read a clear assertion of Davidic authorship here; the text nowhere says David composed it and its language betrays a later age; and it makes no allusion to the occasion it purports to mark. His reconstruction is that no record of the psalms actually sung survived and an editor supplied the gap from the Psalter. Delitzsch contradicts the first argument flatly, calling the hymn a connected and uniform whole and setting out its strophic movement to prove it. Ellicott's evidential backbone is a running demonstration that this text is secondary to the Psalter's: Abraham becomes seed of Israel (improving the parallelism, probably a correction), 'he hath remembered' becomes an exhortation, 'even of the covenant' should be cancelled, the rhythm is marred by a missing particle, a conjunction is prosaic and absent from the psalm, one verse was originally the apodosis of another, and 'do no harm against my prophets' is unparalleled where the psalm has the ordinary form. A subsidiary three-way runs on 'first' in v7: Clarke takes it of this psalm's delivery, Wesley as first of a series, Ellicott and Delitzsch as the first charging of Asaph with the duty of thanksgiving, on which reading the verse says nothing about the psalm at all."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "16",
+      "verses": [
+        "37-43"
+      ],
+      "note": "Clarke uses the phrase 'instruments of God' as a platform to condemn instrumental church music outright, which is striking in a chapter whose subject is the institution of temple music. He first shows that no version takes the Hebrew to mean instruments belonging to God but instruments employed in the song of God, then quotes the Syriac, which he calls remarkable and which reverses the clause: these were upright men who did NOT sing unto God with instruments of music, nor with drums or pipes or cymbals, but with a joyous mouth and a pure and holy prayer. On that he hangs a series of rhetorical questions - whether God ever ordained instruments in worship, whether Christ or the apostles sanctioned them, whether they were used in the apostolic church, whether musicians are more spiritual than other believers, whether mere sounds uttering no word or sentiment can be praise - and concludes that their introduction is antichristian and should be resisted, the argument from Jewish use being futile in the extreme applied to Christianity. Wesley and Henry read the identical phrase the opposite way, as instruments appropriated to God's worship and not such as were used on other occasions, marking the difference between common mirth and holy joy. Two further points: Henry candidly confesses he cannot conceive why David left the ark at Jerusalem and the altar at Gibeon, guessing only that the Mosaic curtains were too worn to move; and Delitzsch finds a textual fault at v38, where the plural in 'their brethren' shows a name has dropped out after Obed-edom, complicated by the same name appearing among the singers and among the doorkeepers."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "16",
+      "note": "Self-grade A on all five tiles. Three are normal (0.34x, 0.18x, 0.18x); two are artefacts of the source gap documented in the source-defect note and should not be read as authorial padding. The thin entry at v31 stands at 3.48x because its whole source is one 40-word Clarke note on the Targum's rendering of the heavens as the supreme angels, using a Greek loanword in Hebrew letters; the prose reports that and nothing more. The tile at vv.34-35 stands at 1.09x because 329 words of source had to carry a 350-word floor: the four voices there are genuinely distinct (Ellicott on the liturgic formula and the ode ending where it began, Gill and Wesley on prophetic foresight of the dispersion with Gill recording the Ezra alternative, Clarke on praying to God under the attribute needed, Henry on not forgetting afflicted brethren) so the tile reports four positions rather than expanding one. Gill is not declared on vv.7-22 or vv.37-43 because his blocks there add nothing the other voices do not carry. JFB has a single 34-word block at key 43 which was not examined for displacement, the chapter being small enough that the question did not arise."
     }
   ]
 }
