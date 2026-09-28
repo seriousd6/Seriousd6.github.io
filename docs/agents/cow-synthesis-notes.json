@@ -91606,6 +91606,88 @@
       "book": "1chronicles",
       "chapter": "11",
       "note": "Self-grade A on all five tiles. Compression is uneven by design: 0.42x and 0.53x on the two narrative tiles, where nearly all the source is usable, against 0.17x on vv.10-19 and 0.22x on vv.26-47. The low figures are not aggressive summarising but source composition - vv.10-19 includes Henry's 1,141-word block, most of which is homiletic application repeated in the appended paragraph, and Clarke's 603 words there are largely a two-column typographical juxtaposition of Samuel against Chronicles that cannot be reproduced as prose; vv.26-47 is dominated by Ellicott's verse-by-verse name repairs, of which the tile reports the method and the best half-dozen instances rather than all forty. Every declared voice is cited by short name. JFB is declared nowhere because its five blocks belong to 1 Kings."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "16"
+      ],
+      "note": "CORRECTION to the Ellicott chrome rule recorded at 2kings 23. That note proposed keying the strip on (voice == Ellicott AND key == max verse of chapter). Job 14 refutes it: the chapter runs to verse 22, Ellicott's highest key is 16, and the chrome - about 990 words of StudyLight copyright block, sub-menu CSS, the site navigation tree, the Cloudflare challenge script and the book_data array - is attached at key 16, not at key 22. The genuine Ellicott commentary at that key is roughly 110 words. So the chrome attaches to the LAST Ellicott block present in the scraped page, not to the chapter's last verse. That refinement does not rescue a key-based rule either, since 2kings 23 had an Ellicott block at key 34 (its highest) with no chrome anywhere. Conclusion: a key-based detector is unsafe in both directions. The strip must be content-based, scanning for the StudyLight markers, and must tolerate files that carry no chrome at all."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "5",
+        "11"
+      ],
+      "note": "JFB displacement with an anomaly worth flagging. JFB appears at only two keys in this chapter, 5 and 11, and both are 1 Chronicles 23: key 5 carries the tally of the Levites' fathers' houses (nine for Gershon, nine for Kohath, six for Merari, total twenty-four) with JFB's own heading for the next section, 1Ch 23:24-32; key 11 carries the enumeration from thirty years relaxed to twenty, the ark now stationary at Jerusalem, and the thirty-eight thousand Levites, which is 1 Chronicles 23:3-5. That is a BACKWARD step in the donor between two forward steps in the target, and it is the first counterexample to the strictly monotonic donor cursor observed at 2samuel 4-9 (donor Judges 9-12), 2kings 23 (donor 2 Samuel 17-18) and 1chronicles 11 (donor 1 Kings 5-6). Two readings are possible: either the donor cursor is not strictly monotonic, or the block at key 5 is a mis-split that captured the tail of one JFB section plus the heading of the next. Two data points cannot settle it. The prediction to test is that a chapter with four or more JFB keys drawing on 1 Chronicles should show either a clean forward walk (favouring the mis-split explanation) or repeated local reversals (favouring the weaker model). JFB was excluded from every tile here."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "14",
+      "note": "Polish pick that was in substance a legacy rewrite: all 22 verses were on the 2026-07-22 per-verse prose (three of them grade B, the rest A), and no fidelity notes had ever been recorded against this chapter, so there was no specific lean to correct. Regenerated from the catena as four pericope tiles (1-6, 7-12, 13-17, 18-22) following the chapter's own movement: the brevity of life and the appointed term, the tree against the man, the wish to be hidden and the question of verse 14, and the closing images of decay. Gregory the Great appears here (300 words at key 5, from the Moralia), the first patristic voice encountered in this run outside the Catena Aurea books; note that scripts/synthesis_qa.py and the local voice-check tooling carry a bare 'Gregory' entry but no 'Gregory the Great', so the short name has to be mapped by hand."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "14",
+      "note": "Wesley abridges Henry again, as at 1chronicles 11, and here the dependence is even plainer. Wesley at v2 ('The flower is fading, and all its beauty soon withers and is gone. The shadow is fleeting...') reproduces Henry's sentence at v1 almost word for word; Wesley at v10 on Geber and Adam, before death, in death, after death, is a compression of Henry's numbered paragraph; Wesley at v13 on the grave as a hiding-place where God hides his own as we hide treasure, and on Noah remembered in the ark, is Henry's paragraph shortened. Wesley is independent at v11 (the simile of the drying river), v14 (the change as the end of calamities, against Clarke), v18 (the whole series run together as one figure) and v17 ('herein Job speaks rashly'). The tiles were written so Wesley carries the independent material. Two chapters in two different books now show this pattern; it is worth checking corpus-wide before voice counts are used as a measure of breadth."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "1-6"
+      ],
+      "note": "The sharpest dispute in the chapter, and it cuts across the school lines rather than along them. At v5 Henry states the determinist reading at full strength (the number of our months is with God, the bounds he has fixed we cannot pass, and we are no more governed by the Stoic's blind fate than by the Epicurean's blind fortune); Wesley agrees that a certain end is appointed; Gregory generalises it to everything that happens. Clarke, of Wesley's own school, denies it outright: the bounds apply to the race in general and not to individuals, since folly and wickedness plainly abridge a man's term, and the contrary supposition involves innumerable absurdities. He reaches that conclusion by way of a long debunking of the alchemists' elixir. Two smaller divergences sit alongside: Ellicott alone reads v4 as an optative wish rather than a rhetorical question, and Ellicott alone renders 'accomplish' in v6 as taking pleasure in the day the wages are paid."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "7-12"
+      ],
+      "note": "Three disputes. (1) The botany of v7: Gill checks it and concedes that the cypress when cut down never sprouts again except in one place, in Aenaria, holding that since it is true of some trees it is sufficient to Job's purpose; Clarke, following Calmet, says few trees will NOT send forth new shoots when cut level with the earth, citing cuttings, replanting and the rose of Jericho. (2) Verse 11: Ellicott denies there is any comparison, since the Hebrew has no comparative particle and the sea never fails nor do great rivers dry up, and reads the relation as contrariety - sooner shall the sea fail than the dead man rise - blaming the Authorised Version's 'as' for obscuring it; Gill records the same rendering as a possibility; Wesley keeps the plain simile; Clarke turns the verse into the water cycle and makes it a consolation about the continuance of the race. (3) How much resurrection is present: Henry says it was doubtless an article of Job's creed, Clarke says the passage cannot be twisted into a denial of it, and Ellicott says there is no hope of a future life here and still less of a resurrection, only an unexpressed longing glimmering through the language."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "13-17"
+      ],
+      "note": "The chapter's hinge is one Hebrew word at v14. Clarke takes 'my change' as renovation, the term used of grass springing again after it has withered, calls that in itself a very expressive emblem of the resurrection, and finds in the verse no doubt at all but a strong persuasion of the general resurrection. Ellicott renders the same word as the transition from life to death, so that Job hopes throughout his warfare until he dies that God will then call and he will answer; Wesley is with Ellicott, waiting for the change that will put a period to his calamities. Ellicott nonetheless concedes the other reading's force in a question: why ask whether a man shall live again if it were absolutely certain that he would not? Two further splits: Gill alone reads the sealed bag of v17 both ways (hidden from Job so he cannot learn what he is punished for, or preserved as evidence against him), and Clarke alone defuses v16 by construing its opening particle as concessive, turning the complaint into an assurance of mercy where Henry and Wesley rebuke Job for speaking unadvisedly."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "14",
+      "verses": [
+        "18-22"
+      ],
+      "note": "Verse 22 is the hardest line in the chapter and Clarke sets out five renderings without choosing between four of them: the Chaldee (the flesh grieving on account of the worms, the soul wailing in the house of judgment; in another copy, grieving before the window is closed over him), a modern version (the flesh dropping away, the soul becoming a waste), Stock's (over him his flesh shall grieve, over him his breath shall mourn), the Syriac and Arabic (his body shall grieve over him, his soul be astonished over him), and Coverdale's (while he lyveth his flesh must have travayle). Clarke prefers Stock's, in which flesh and breath become conscious beings, the one lamenting its putrefaction in the grave and the other mourning over the clay it once enlivened. Gill hesitates between the death-bed reading and Aben Ezra's, which takes it of the body rotting in the grave; Henry keeps the dying man. Two smaller divisions: the changed countenance of v20 is disease and fear for Henry but the veiling of a condemned man's face for Clarke, and Delitzsch argues against the older expositors that the verb of v20 is transitive, seizing rather than proving stronger. Henry and Clarke independently quote the same proverb about constant dropping wearing stone."
+    },
+    {
+      "at": "2026-09-28",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "14",
+      "note": "Self-grade A on all four tiles. Compression is 0.13x to 0.14x on the first three and 0.33x on the last. The low figures are source composition rather than aggressive summarising: Henry contributes 5,541 words in three enormous blocks at keys 1, 7 and 16, each of which ranges over the whole chapter and each of which repeats its substance in an appended application paragraph, so the same material is counted several times in the source total; Ellicott's 1,096 words at key 16 are about 110 words of commentary and the rest page chrome; and roughly 1,400 of Clarke's words are verse quotations of Greek and English poetry reproduced in full. Every declared voice is cited by short name. JFB is declared nowhere because both its blocks belong to 1 Chronicles 23."
     }
   ]
 }
