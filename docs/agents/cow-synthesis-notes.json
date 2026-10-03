@@ -93086,6 +93086,110 @@
         "21"
       ],
       "note": "Seven banned-carrier instances recast (so the witnesses x6, the witnesses do not divide x1). Each recast kept the entrys own division or agreement explicit rather than swapping one stock phrase for another, and no carrier opens more than one paragraph in any verse."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "44",
+        "45",
+        "49",
+        "53",
+        "58"
+      ],
+      "note": "Five entity flags resolved, and two of them were real misquotations of my own making. At v58 the prose named Clarkes giant Charles Byrne; Clarke writes Charles Burns, and also names the two brothers Knight, which the prose had dropped. Byrne is the historically correct name of the Irish giant, so this was outside knowledge quietly corrected into a quotation that is supposed to be Clarkes. Both fixed to the source. At v45 the prose had the Lord of Sabaoth inside what is presented as a verbatim Keil and Delitzsch rendering; the source prints the Lord of Saboath, and also sword, and javelin, and lance with commas the prose had smoothed away. Restored exactly. The other three were unsourced glosses: Homeric became its echo in Homer, the form the source uses; the Benjamites of old became the tribe of Benjamin had seven hundred chosen men, left-handed, which is Ellicotts own wording; and the verb used of Laban chasing Jacob became the one used at Genesis 31:36, since Keil and Delitzsch give only the reference and never name either man."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "44"
+      ],
+      "note": "Misfiled blob. The Jamieson, Fausset and Brown portion attached to 1 Samuel 17:44 is about the Levitical cities: the division of the Levites into Kohathites, Gershonites and Merarites and the thirteen, thirteen and twelve cities of Joshua 21:5-7. It has nothing to do with Goliaths taunt. This is the same defect class as the Jamieson blob misfiled at 1chronicles 6:47, and two instances in different books suggests the scraper mismatched a range rather than a single verse. Worth a corpus scan for JFB blobs whose content does not match their book."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "45"
+      ],
+      "note": "Ellicott and Keil are quoted through a scan that prints the Lord of Saboath for Sabaoth. Reproduced as the source has it, because the prose presents it as a verbatim rendering, but flagged here so a future reader does not take it for a synthesis error."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "18",
+        "20",
+        "21",
+        "24",
+        "26",
+        "27",
+        "30",
+        "31",
+        "32",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "56",
+        "57"
+      ],
+      "note": "Thirty instances of the banned carrier the witnesses do not divide, one in each of thirty entries, always opening the final paragraph. This is the degenerate template at full scale and the worst single-phrase concentration seen in any chapter so far. Eleven of the thirty also carried thinness narration in the same sentence (the material is spare, the verse is brief, the verse is spare, the material is largely descriptive), which rule 2 forbids outright. All thirty recast to a distinct sentence drawn from the entrys own content, and every thinness clause removed rather than reworded. A phrase repeated in thirty of fifty-eight entries of one chapter is almost certainly repeated across the book; a corpus count of this exact phrase would be cheap and is worth doing before the next polish batch."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "29",
+        "46"
+      ],
+      "note": "Two rule-5 breaches found by checking for a fragment quoted twice inside one entry, which the chapter lint does not catch. v29 quoted is there not a cause twice, once in the exposition and once in the closing synthesis; v46 quoted that all the earth may know that there is a God in Israel twice the same way. Both are the coda re-quoting what the body already quoted, which is the padding pattern rule 5 exists to stop. Fixed by paraphrasing the coda. This check belongs in the standing sweep: split visible text on quotation marks, lowercase, and report any fragment of twelve characters or more appearing more than once."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "45"
+      ],
+      "note": "Bind, source-bound repetition. v45 stays grade B at ttr 0.5566, compress 0.449, and no lever reaches 0.58. The reason is structural rather than stylistic: Clarke, Keil and Delitzsch, and Henry all quote the same divine title, in the name of the LORD of hosts, the God of the armies of Israel, and fidelity requires each quotation to stand. Worst 200-word window ran 0.465 before repair. What helped: trimming Keil and Delitzsch to their two distinctive renderings (ranks of Israel, and sword and javelin and lance) instead of re-quoting the whole clause, deleting my own restatement of Clarke immediately after quoting him, and replacing the coda restatement with Clarkes unused Hebrew, beshem, with the name. That moved ttr 0.5302 to 0.5566 and compress 0.430 to 0.449. The blob is only 67 words, so there is no different-field material left to add. Recorded honestly as B. Same class as 1chronicles 27 vv3, 8, 20 and 2chronicles 2 v1."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "17",
+      "verses": [
+        "46"
+      ],
+      "note": "False positive in the entity checker worth knowing. An early draft of the v46 coda began the sentence Foretold so exactly, and the checker flagged Foretold as an unsourced entity, because it tests capitalised tokens against a lowercased pool and a sentence-initial uncommon word looks like a proper noun. Rewritten to Promised, which happens to be in the pool. Rule: an entity flag on an ordinary English word means check whether it is merely sentence-initial before treating it as a fidelity problem."
     }
   ]
 }
