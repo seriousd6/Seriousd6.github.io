@@ -1,730 +1,219 @@
 {
  "1": {
   "voices": [
+   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Keil and Delitzsch",
    "Matthew Henry",
-   "John Gill"
+   "Keil and Delitzsch"
   ],
+  "range": "1-6",
+  "pericope_label": "And it came to pass at the end of twenty years, wherein Solomon had built the house of the Lord, and his own house, That the cities which Huram had restored to Solomon, Solomon built them, and caused the children of Israel to dwell there. And Solomon went to Hamath–zobah, and prevailed against it. And he built Tadmor in the wilderness, and all the store cities, which he built in Hamath. Also he built Beth–horon the upper, and Beth–horon the nether, fenced cities, with walls, gates, and bars; And Baalath, and all the store cities that Solomon had, and all the chariot cities, and the cities of the horsemen, and all that Solomon desired to build in Jerusalem, and in Lebanon, and throughout all the land of his dominion.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott counts the twenty years (7 for the temple, 13 for the palace, from the fourth year) and Keil maps the chapter's four movements, parallel to 1 Kings 9:10-28."
+    "summary": "Ellicott spends his longest note on the Huram cities, sets out three explanations of the contradiction with Kings, adopts the reading that the chronicler passed over the surrender of the territory and spoke of Huram's non-acceptance as a gift, and defends that against the charges of effacement and remodelling; he also identifies Tadmor as Palmyra on the traders' route, reads the store cities as outposts against the neighbouring kingdom, and notes what the chapter leaves out. Delitzsch frames the chapter in four notices before reading it, and presses the verb for completing rather than fortifying."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reports the exchange of cities flatly, and identifies the march on Hamath-zobah as the only instance of any warlike expedition of Solomon's, against Coelesyria, which David had subdued and which had perhaps rebelled."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke divides the span: seven and a half years building the temple, twelve and a half or thirteen his own house."
+    "prevalence": "single",
+    "summary": "Clarke does the arithmetic of the twenty years, seven years and a half for the temple and twelve and a half or thirteen for the palace, and identifies Tadmor as Palmyra in a line."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry paints the industrious king who spent his days in action, building and fortifying cities, in peace preparing for war."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads the notice as the point from which the Chronicler resumes the record of Solomon's works."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the twenty years of building",
-   "temple and palace",
-   "the chapter's frame",
-   "Solomon the man of action"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil harmonize with 1 Kings 9:11-13 via Josephus (Huram returned the despised 'land of Cabul' cities, which Solomon rebuilt and colonised), and defend the account as equally true, not a travesty of the older text."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill gives the same solution in brief: Solomon gave the cities, Huram disliked and returned them, Solomon built them up."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke defers to his note on the transaction at 1 Kings 9:11."
+    "prevalence": "single",
+    "summary": "Henry reads the building list for character rather than geography, that Solomon spent his days not in his study but in his country, that a state should promote industry and keep its subjects from idleness, and that he knew how to set bounds to his desires, unlike Alexander fretting for more worlds to conquer."
    }
   ],
   "debates": [
-   {
-    "question": "How does 'the cities Huram restored to Solomon' square with 1 Kings 9:11-13, where Solomon gives Huram cities?",
-    "sides": [
-     {
-      "position": "Huram returned the despised Galilean cities (the 'land of Cabul'), which Solomon then rebuilt and peopled with Israelites (Josephus, followed by the AV)",
-      "holders": [
-       "Gill",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "an exchange of friendly gifts, each king giving the other twenty cities",
-      "holders": [
-       "others (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
+   "Why this text has Huram giving cities to Solomon where Kings has Solomon giving cities to Huram: Josephus and the English version make it a return of the despised cities, others an exchange of friendly gifts, which Ellicott calls highly improbable, and Ellicott himself a deliberate silence about the surrender.",
+   "Whether the Hamath-zobah expedition was a conquest of the kingdom or, as Ellicott holds with Thenius, only the annexation of part of its territory; the event is recorded nowhere else in the Old Testament.",
+   "Whether the verb rendered built means fortified or completed, where Delitzsch argues for completion because the cities were in very bad condition."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott defends the chronicler's version as neither an effacement nor a travesty nor a remodelling in Solomon's favour, but another statement equally true and not incompatible with the older one.",
+   "Ellicott reports that Solomon's founding of Palmyra is still the tradition of the country."
+  ],
   "themes": [
-   "harmonizing with 1 Kings",
-   "the land of Cabul",
-   "border cities rebuilt",
-   "colonised with Israelites"
+   "And it came to pass at the end of twenty years, wherein Solomon had built the house of the Lord, and his own house,",
+   "That the cities which Huram had restored to Solomon, Solomon built them, and caused the children of Israel to dwell there.",
+   "And Solomon went to Hamath–zobah, and prevailed against it.",
+   "And he built Tadmor in the wilderness, and all the store cities, which he built in Hamath.",
+   "Also he built Beth–horon the upper, and Beth–horon the nether, fenced cities, with walls, gates, and bars;",
+   "And Baalath, and all the store cities that Solomon had, and all the chariot cities, and the cities of the horsemen, and all that Solomon desired to build in Jerusalem, and in Lebanon, and throughout all the land of his dominion."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-03",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil notes the conquest is omitted in 1 Kings 9 and glosses 'prevailed against'; Ellicott, following Thenius, reads not a conquest of Hamath itself but the annexation of part of the Coele-Syrian plain."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill marks this as Solomon's one warlike expedition, a reduction of a rebel Coele-Syria subdued under David."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [
-   {
-    "question": "Did Solomon conquer Hamath itself, or only annex part of its territory?",
-    "sides": [
-     {
-      "position": "he reduced a rebel Coele-Syria — his single warlike expedition",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "he annexed only part of Hamath's territory, the fruitful Coele-Syrian plain",
-      "holders": [
-       "Ellicott",
-       "Thenius (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Solomon's one campaign",
-   "Hamath-zobah and Coele-Syria",
-   "omitted by Kings",
-   "securing the northern frontier"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott identifies Tadmor as Palmyra on the Euphrates caravan route and reads the Hamath store cities as outposts and victualling stations against Zobah-Damascus; Keil sets them in the ring of strongholds securing the kingdom."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke names Tadmor as Palmyra, 'that superb city,' referring to his fuller account at 1 Kings 9:18."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes only, and briefly, the building of Tadmor in the wilderness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Tadmor / Palmyra",
-   "store cities in Hamath",
-   "caravan route to the Euphrates",
-   "outposts against Damascus"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Gill"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott notes the Chronicler adds to 1 Kings 9:17 the fortification detail (walls, doors, bar) wanting in Kings, and reads 'built' as fortified; Keil classes both Beth-horons among the strongholds defending the kingdom."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill observes that of the pair it is the nether Beth-horon that is named elsewhere, the upper added here."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "upper and nether Beth-horon",
-   "fenced cities with walls, gates, bars",
-   "the Chronicler's added detail",
-   "guarding the pass"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott places Baalath (a Danite bulwark against the Philistines) and notes the Chronicler's twice-added 'all' and his omission of Jerusalem, Hazor, Megiddo, and Gezer; Keil carries the list into the Canaanite statute-labour of 1 Kings 9:20-23."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the account now runs the same as the older record."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke refers the store cities to his note at 1 Kings 9:19."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry draws the lesson: Solomon set bounds to his desires, finishing all he wished to build and then desiring no more."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Baalath and the store cities",
-   "chariot and cavalry cities",
-   "all that Solomon desired to build",
-   "the Chronicler's additions and omissions"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
   "voices": [
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil identifies the tributary levy as the surviving Canaanite remnant (Hittites, Amorites, and the rest), reads 'of their children' as non-partitive, defends the 'of' against 1 Kings 9:20-21, and ties the notice to the workmen-muster of 2 Chronicles 2:17."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Canaanite levy",
-   "bond-service unto this day",
-   "the remnant of the nations",
-   "on whose shoulders the glory rose"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
    "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil dwells on Israel's honours — men of war, princes, and 'adjutants' (not chariot-combatants, cf. Exodus 14:7; 2 Samuel 23:8), reading the words with 1 Kings 9:22."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke marks that Solomon made no bondmen of Israel, referring to 1 Kings 9:21."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Israel exempt from bond-service",
-   "soldiers and officers",
-   "the freeman's part",
-   "the dignity of the covenant nation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil reads the 250 as the Israelite head-overseers over the Canaanite levy, reconciling them with the 550 of 1 Kings 9:23 (which counts Israelite and Canaanite chiefs together, cf. 2 Chronicles 2:17), and prefers the written 'praefecti' reading."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the 250 chief officers",
-   "reconciling 250 with 550",
-   "Israelite overseers over the levy",
-   "the ordered hierarchy of the works"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
    "Charles Ellicott",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
+  "range": "8-11",
+  "pericope_label": "But of their children, who were left after them in the land, whom the children of Israel consumed not, them did Solomon make to pay tribute until this day. But of the children of Israel did Solomon make no servants for his work; but they were men of war, and chief of his captains, and captains of his chariots and horsemen. And these were the chief of king Solomon’s officers, even two hundred and fifty, that bare rule over the people. And Solomon brought up the daughter of Pharaoh out of the city of David unto the house that he had built for her: for he said, My wife shall not dwell in the house of David king of Israel, because the places are holy, whereunto the ark of the Lord hath come.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott notes the motive 'for he said' is the Chronicler's own addition (wanting in 1 Kings 9:24), 'king of Israel' set against the queen's Egyptian origin, and rejects Thenius; Keil grounds the removal in the ark's hallowing of David's palace."
+    "summary": "Delitzsch corrects the list of officers twice, reordering the words to match Kings and insisting that one title means royal adjutants rather than chariot combatants, and resolves the two hundred and fifty overseers against the five hundred and fifty of Kings by nationality rather than emendation; Ellicott places the Egyptian princess in the dynasty founded by Shishak, marks the stated motive as characteristic of this writer, and declines to follow Thenius on where she could have lived."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke reads the holiness-scruple as proof Solomon considered his wife a heathen, yet had not departed from the true God; Wesley: the house was kept pure from the very appearance of pollution."
+    "summary": "Clarke takes the removal as evidence in Solomon's favour, that he considered his wife a heathen unfit to dwell in a sanctified place and had not yet departed from the true God, and passes on a later tradition that names her Bithiah; Wesley makes it a precaution, the ark being then in the house of David, which ought to be kept free from the very danger and appearance of pollution."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry makes it a lesson on the ancient landmarks between things sacred and common, and on honouring David's memory."
+    "prevalence": "single",
+    "summary": "Henry works the contrast between a house of great piety and a court of perhaps great vanity, doubts that all the princess's servants were proselyted, grants that Solomon lacked the zeal to punish what was amiss, and guards the argument from proving too much before drawing his own principle about the ancient landmarks."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the two hundred and fifty overseers of this text can be reconciled with the five hundred and fifty of Kings, which Delitzsch does by making these Israelites and the larger figure the chief overseers of both nations.",
+   "What the removal of Pharaoh's daughter shows about Solomon: evidence that he still held the true God (Clarke), a precaution about the ark (Wesley), or a half-measure by a king who would not punish what was amiss (Henry).",
+   "Whether the princess could have lived anywhere but the old palace of David until the new house was finished, as Thenius held and Ellicott denies."
+  ],
+  "outliers": [
+   "Henry blocks the inference that every place the ark had rested in became holy, since the houses of Abinadab and Obed-edom would then have been so too."
+  ],
   "themes": [
-   "Pharaoh's daughter removed",
-   "the holiness of David's house",
-   "sacred versus common",
-   "Solomon's still-undivided devotion"
+   "But of their children, who were left after them in the land, whom the children of Israel consumed not, them did Solomon make to pay tribute until this day.",
+   "But of the children of Israel did Solomon make no servants for his work; but they were men of war, and chief of his captains, and captains of his chariots and horsemen.",
+   "And these were the chief of king Solomon’s officers, even two hundred and fifty, that bare rule over the people.",
+   "And Solomon brought up the daughter of Pharaoh out of the city of David unto the house that he had built for her: for he said, My wife shall not dwell in the house of David king of Israel, because the places are holy, whereunto the ark of the Lord hath come."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-03",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.82
+   }
   }
  },
  "12": {
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil read 'offered' as habitual, note the altar 'before the porch' (not in 1 Kings 9:25), and see the divided worship of Gibeon (2 Chronicles 1:3) now healed as sacrifice comes home to the temple."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill guards 'then': not a one-time act but Solomon's constant practice."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the temple was built for its service; in vain the altar and the fire without the sacrifices constantly brought."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "burnt offerings",
-   "the altar before the porch",
-   "worship no longer at Gibeon",
-   "the house built for its service"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'a day's matter on a day' (Leviticus 23:37) and notes the hapax form for 'solemn feasts'; Keil parses the daily-rate clause as an interpolated aside and names the three pilgrim feasts."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill fixes the ground-note: the daily morning-and-evening sacrifice of the law."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry gathers the daily, weekly, monthly, and yearly offerings into a pattern of settled devotion for the believer to imitate."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Mosaic calendar of offerings",
-   "the daily rate",
-   "the three pilgrim feasts",
-   "a settled method of devotion"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott glosses the offices (courses of 1 Chronicles 24, Levites' charges, 'to praise' of 1 Chronicles 25:3, ministry before the priests, porters of 1 Chronicles 26); Keil confirms Solomon kept David's whole arrangement unaltered."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley explains 'the man of God': David as a prophet inspired in these matters, whose commands are God's commands."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry honours Solomon for adding nothing to the man of God's ordinance but enforcing it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill names the four-and-twenty priestly courses serving in weekly turns."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "courses of priests and Levites",
-   "David's ordinance kept",
-   "David 'the man of God'",
-   "devotion as obedience, not innovation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Keil and Delitzsch"
+   "Matthew Henry",
+   "Keil and Delitzsch",
+   "John Wesley"
   ],
+  "range": "12-16",
+  "pericope_label": "Then Solomon offered burnt offerings unto the Lord on the altar of the Lord, which he had built before the porch, Even after a certain rate every day, offering according to the commandment of Moses, on the sabbaths, and on the new moons, and on the solemn feasts, three times in the year, even in the feast of unleavened bread, and in the feast of weeks, and in the feast of tabernacles. And he appointed, according to the order of David his father, the courses of the priests to their service, and the Levites to their charges, to praise and minister before the priests, as the duty of every day required: the porters also by their courses at every gate: for so had David the man of God commanded. And they departed not from the commandment of the king unto the priests and Levites concerning any matter, or concerning the treasures. Now all the work of Solomon was prepared unto the day of the foundation of the house of the Lord, and until it was finished. So the house of the Lord was perfected.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott identifies 'the king' as David, restores the dropped preposition 'from,' and ties the treasures to 1 Chronicles 26:20-28; Keil reads the verb as 'transgress a command,' referring it to David's charge."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke reads 'the commandment of the king' as the institutions of David."
+    "summary": "Ellicott glosses the verbs and the plural form of the set seasons, notes that the altar standing before the porch is absent from Kings, wants the dropped preposition restored on three manuscripts and the versions, and divides the closing verse into two periods while reporting that all the versions take the phrase the other way; Delitzsch reads the daily rate as an explanatory clause interpolated into the main sentence, declines the emendation because the verb takes an accusative in the sense of transgressing, and fixes the day as the one on which regular worship began."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads it of Solomon's commandment, which followed David's order and was in all things obeyed."
+    "prevalence": "single",
+    "summary": "Gill supplies the twenty-four courses serving weekly in their turns, insists the sacrificing was his constant practice and not merely the moment of the rebuilding, reads the commandment as Solomon's own according to the order of David, and takes the preparation to be of materials and expenses."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke identifies the king's commandment as the institutions of David in five words; Wesley reads the man of God as a prophet inspired in these matters whose commands are therefore the commands of God, and the preparation as materials fitted and completed beforehand."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry notices that David is given the title Moses bore and for the same reason, draws the lesson from Solomon's refusal to amend or add to what the man of God had commanded, and says what the perfecting consisted in, that the work was the main matter and not the place."
    }
   ],
   "debates": [
-   {
-    "question": "Whose 'commandment of the king' did the priests not depart from?",
-    "sides": [
-     {
-      "position": "Solomon's, which enforced David's order",
-      "holders": [
-       "Gill"
-      ]
-     },
-     {
-      "position": "David's own institutions",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
+   "Whose commandment none departed from: the institutions of David (Clarke, Ellicott, Delitzsch) or Solomon's own command issued according to David's order (Gill).",
+   "Whether the Hebrew needs mending at verse 15, where Ellicott restores a dropped preposition on manuscript and version authority and Delitzsch holds no alteration necessary.",
+   "What was prepared and until when: the materials procured beforehand (Gill, Wesley), the work completed in two periods up to and then from the foundation (Ellicott, who notes the versions read it the other way), or the arrangements finished by the day regular worship began (Delitzsch)."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott observes that the plural form used here for the set seasons occurs nowhere else.",
+   "Henry puts Solomon's authority as a sequence: he observed God's laws, and then all obeyed his orders."
+  ],
   "themes": [
-   "faithful obedience",
-   "the king's / David's commandment",
-   "the treasures",
-   "the ordinance held without departure"
+   "Then Solomon offered burnt offerings unto the Lord on the altar of the Lord, which he had built before the porch,",
+   "Even after a certain rate every day, offering according to the commandment of Moses, on the sabbaths, and on the new moons, and on the solemn feasts, three times in the year, even in the feast of unleavened bread, and in the feast of weeks, and in the feast of tabernacles.",
+   "And he appointed, according to the order of David his father, the courses of the priests to their service, and the Levites to their charges, to praise and minister before the priests, as the duty of every day required: the porters also by their courses at every gate: for so had David the man of God commanded.",
+   "And they departed not from the commandment of the king unto the priests and Levites concerning any matter, or concerning the treasures.",
+   "Now all the work of Solomon was prepared unto the day of the foundation of the house of the Lord, and until it was finished. So the house of the Lord was perfected."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-03",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'prepared' as 'completed' (a late usage, cf. 2 Chronicles 29:35; 35:16), weighs the two-period division against the versions' 'from the day of the foundation,' and ties the close to 1 Kings 9:25; Keil fixes 'the day' as that on which the regular worship began."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the house was perfected only when its service was ordered — the work was the main matter, not the place."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: all the materials were procured and fitted beforehand."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes 'prepared' of the materials made ready, so nothing retarded the completion."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the work perfected",
-   "'prepared' as a late word",
-   "foundation to completion",
-   "worship completes the house"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "17": {
@@ -732,108 +221,69 @@
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Matthew Henry",
+   "Keil and Delitzsch"
   ],
+  "range": "17-18",
+  "pericope_label": "Then went Solomon to Ezion–geber, and to Eloth, at the sea side in the land of Edom. And Huram sent him by the hands of his servants ships, and servants that had knowledge of the sea; and they went with the servants of Solomon to Ophir, and took thence four hundred and fifty talents of gold, and brought them to king Solomon.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott dates the voyage after the temple, compares 1 Kings 9:26 ('a fleet at Ezion-geber near Eloth'), and cautions that the words need not imply a personal visit — Solomon may have sent his shipwrights."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry judges Solomon went in person to Eloth and Ezion-geber, for a man who deals in the world inspects his affairs himself."
+    "summary": "Ellicott denies that the text implies a personal visit, holding that Solomon sent his shipwrights to the port in Edom, collects the variant readings of the place-name and the sea, and works the question of how Tyrian ships reached the gulf as a dilemma that dissolves, concluding that the vessels were left at Joppa while part of their crews went on overland; he also explains the difference in the talents as two Hebrew letters confused. Delitzsch dates the voyage to the second half of the reign and places Ophir in southern Arabia rather than India."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: Solomon, at leisure from building, turned to look after his navy and merchandise."
+    "prevalence": "single",
+    "summary": "Gill supplies only the occasion, that the king was now at leisure to look after his navy and carry on his merchandise."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke refers to his conjectures on Ezion-geber and Ophir at 1 Kings 9:26-28."
+    "prevalence": "single",
+    "summary": "Clarke leaves the port and Ophir to conjecture, and divides the enterprise by the character of the two peoples: Solomon probably bore the expenses while the Tyrian king furnished the expert sailors, the Jews having at no period any skill in maritime affairs."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes the journey literally and makes a maxim of it, that those who deal much in the world should inspect their affairs themselves, then reads the whole enterprise as a lesson in dependence ending in grace rather than gold being the best riches."
    }
   ],
   "debates": [
-   {
-    "question": "Did Solomon go in person to the Edomite ports?",
-    "sides": [
-     {
-      "position": "yes, he visited Eloth and Ezion-geber himself to oversee the fleet",
-      "holders": [
-       "Henry"
-      ]
-     },
-     {
-      "position": "not necessarily; he sent his shipwrights to the port",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "Whether Solomon went down to the coast in person, as Henry reads it and makes a maxim of, or sent his shipwrights, as Ellicott holds the words do not necessarily imply.",
+   "Where Ophir lay, which Delitzsch places in southern Arabia against the commoner identification with India, and Clarke leaves to conjecture.",
+   "How the Tyrian ships reached the gulf: dragged overland across the desert, sailed round Africa, or, as Ellicott concludes, never taken past Joppa at all."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott grants that both rejected alternatives are possible, since the Greek historians speak of transporting ships overland and the circumnavigation of Africa was achieved by an expedition sent out by Necho some four centuries later."
+  ],
   "themes": [
-   "Ezion-geber and Eloth",
-   "the Red Sea port",
-   "Solomon's maritime venture",
-   "the reign turns to trade"
+   "Then went Solomon to Ezion–geber, and to Eloth, at the sea side in the land of Edom.",
+   "And Huram sent him by the hands of his servants ships, and servants that had knowledge of the sea; and they went with the servants of Solomon to Ophir, and took thence four hundred and fifty talents of gold, and brought them to king Solomon."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-03",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil takes Ophir to be in southern Arabia; Ellicott works out the route (Tyrian ships to Joppa, crews overland to Ezion-geber) and lays the 450-vs-420-talent difference from 1 Kings 9:28 to a scribe's confusion of Hebrew numerals."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke explains the need for Tyrian sailors — Solomon bore the cost, Huram the seamen, since the Jews had no skill in maritime affairs."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Huram's ships and seamen",
-   "Ophir and its gold",
-   "how the ships reached the Red Sea",
-   "the promised riches come in"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
