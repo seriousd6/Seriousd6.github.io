@@ -93242,6 +93242,103 @@
         "34"
       ],
       "note": "Self-grade A on both repaired entries, which brings the chapter to 37 of 37 grade A and takes it out of the polish queue. Nothing was invented: the only new content is Ellicott's own citation chain at verse 34, which was present in the source and unused. No ENTITIES signals; the chapter uses em dashes throughout, as it did before, and none were added."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "3",
+        "4",
+        "15",
+        "18",
+        "22",
+        "27"
+      ],
+      "note": "Ten entity flags, six of them genuinely unsourced or misspelt. Godward at v3 was my own coinage and became his eyes where that name pointed. At v4 two cross-reference names had crept in that no commentator supplies: Obed-edom the Gittite and an ark left on his hands after Uzzahs death; recast to Obed-edom, once merely the host of an ark lodged under his private roof before David carried it to Zion, which is what the source actually says. At v15 Beth-ha-asuppim was my transliteration of the Hebrew; replaced with the sources own English, the house of Asuppim. At v18 Parwarim and Parwar were corrected to Ellicotts spellings Parwarim and Parwar with their circumflexes. At v22 the Gershonite Laadanites, a gentilic coinage, became the Gershonite sons of Laadan. At v27 Jupiter the Spoiler was my translation of Clarkes Jovis Praedatoris and became Jupiter Praedator, and Melchizedek was respelt Melchisedec as Henry writes it."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "10",
+        "22"
+      ],
+      "note": "Two abbreviation false flags left as written, both the documented class. Deuteronomy at v10 is flagged because Henry cites the law as Deut. xxi. 16, 17, abbreviated and in Roman numerals, so the pool cannot match the expansion; the claim itself is fully Henrys and the visible ref label was extended to 16, 17 to match him. Ewald at v22 is flagged because Keil and Delitzsch write cf. Ew. 348, a. Both are correct expansions of real citations. This adds Roman-numeral chapter references to the abbreviation class, alongside ATHAN. and LXX. Vatic."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "10",
+        "22"
+      ],
+      "note": "Two more misfiled Jamieson, Fausset and Brown blobs, in a single chapter. At v10 the JFB portion reads None of the threatenings denounced against this family produced any change in his policy or government, 1Ki 14:21-24, Rehoboams Wicked Reign, which is 1 Kings 14 material. At v22 the JFB portion reads not the book so called and comprehended in the sacred canon, but the national archives of Judah, which glosses a book of the chronicles phrase that does not occur in 1 Chronicles 26 at all. With the 1 Samuel 17:44 case filed this same day and the older 1chronicles 6:47 case, that is four misfiled JFB blobs across three books. The pattern is specific to Jamieson, Fausset and Brown and is worth a targeted corpus scan rather than more one-off notes."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "10",
+        "11",
+        "13",
+        "14",
+        "17",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "25",
+        "26",
+        "28",
+        "30",
+        "31",
+        "32"
+      ],
+      "note": "Twenty-one banned-carrier instances, seventeen of them the witnesses do not divide and four so the witnesses, spread over twenty-one of thirty-two entries. This is the third chapter in two batches with the same concentration: 1samuel 17 had thirty instances of the same phrase in fifty-eight entries, 2kings 20 had seven in twenty. Three chapters from three different books all built on it. Whatever generated these chapters used the phrase as its default closing-paragraph opener, so the corpus count is almost certainly in the thousands and a single sweep would be worth far more than fixing it a chapter at a time."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "8"
+      ],
+      "note": "Repair by adding a voice rather than a metric trick. v8 sat at ttr 0.5547 and no amount of de-articling moved it, because the entry is three voices on one short phrase, able men for strength for the service, and they overlap lexically by necessity. Henrys comment on exactly that phrase was unused anywhere in the chapter: those who excelled in strength of body and in courage and resolution of mind were by that excellence qualified for the post, for whatever service God calls men to he either finds them fit or makes them so. Added as a fourth voice with its school summary and theme recorded in the tags. ttr 0.5547 to 0.5946. The lesson is that an unused voice in the pericope blobs is worth checking before concluding an entry is source-bound, and the tag record has to be updated in the same pass."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "22"
+      ],
+      "note": "v22 was the worst entry in the chapter at ttr 0.5461 and compress 0.406, and the cause was an internal duplicate rather than source overlap: the list of Amramites, Izharites, Hebronites and Uzzielites appeared twice in the same paragraph, once in the quotation and once in a note restating it. Removing the second copy, compressing the coda, and spending the recovered words on Keil and Delitzschs unused syntax note (that verses 23 and 24 are one sentence, and that the waw before Shebuel opens the apodosis rather than joining a clause) moved ttr to 0.6338 and compress to 0.453. Checking for a repeated list inside a single entry is a cheap check worth adding to the standing sweep, alongside the repeated-quotation check."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "26",
+      "verses": [
+        "3"
+      ],
+      "note": "One rule-5 breach: mine eyes are toward Jehovah was quoted twice, once where Ellicott parses Elioenai and again in the closing paragraph. Fixed by referring back to the name instead of re-quoting it. Three chapters checked for this now and all three had at least one; the chapter lint does not catch it."
     }
   ]
 }
