@@ -92664,6 +92664,58 @@
         "23"
       ],
       "note": "Self-grade A on all four tiles. Compression runs 0.12x to 0.55x of usable source; the high ratio at vv.11-13 reflects a short source stretch, not padding. Ellicott's chrome at key 29 and the four displaced JFB blocks were excluded from the source before drafting, so the effective source is smaller than the raw counts."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "1-18"
+      ],
+      "note": "2chronicles 2 triage: 18 entries, 8947 usable source words. Landed 16 of 18 grade A. Work: 16 banned-carrier instances recast - the witnesses do not ten times, so the witnesses six - plus one thinness phrase, Gill brief note, and four entity flags."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "3",
+        "6",
+        "14"
+      ],
+      "note": "Four entity fixes, all genuinely unsourced rather than artefacts - checked for ligature, Hebrew script and abbreviation first, and none applied. v3 as the Assyrian records show to as the inscriptions show, since neither Assyria nor Assyrian occurs anywhere in the chapter source though Tiglath-pileser does. v6 no cage for the Almighty to no cage for the God of heaven; Almighty and Shaddai are both absent. v14 the endowment of Bezalel at Exodus 31:4 to the endowment of the craftsman, keeping the ref link - the cross-reference class, where a name reaches the prose only through a passage the entry cites. v14 Was the mother a Danite or a Naphtalite to Was the mother of Dan or of Naphtali; Naphtali is in the verse, Naphtalite is a coinage."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "18"
+      ],
+      "note": "v18 stays grade B on COMPRESS, and the reason is worth recording because it is a new shape. The entry is a census - threescore and ten thousand bearers, fourscore thousand hewers, three thousand six hundred overseers - so thousand occurs 13 times, hundred 10, three 8, and nearly every instance sits either in the verse quotation or in Ellicott textual argument that the Chronicler 3600 is right against the 3300 of 1 Kings 5:16. Both are essential. I shortened Gill restatement of the same numbers, 457 words down to 442, and compress did not move at all, 0.413 to 0.413. A verse of numbers cannot be made to look lexically various; the metric is penalising the content for being what it is."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "1"
+      ],
+      "note": "v1 stays grade B on ttr, 0.5710 against 0.58, after three levers were tried and measured. The deletion search over every single sentence and every pair, held at or above 356 validator words, returned ZERO viable candidates. Lossless condensation of the repeated types - house 8, Solomon 6, first 5, palace 4 - moved ttr only 0.5710 to 0.5759, still short, so I did not keep it rather than ship a change that buys nothing. And the add-material lever is closed: the 1364-word pericope blob behind this verse is mostly Huram, 15 occurrences, plus great and workmen, all of which belong to verses 3 and following and are already used by those entries, so importing any of it would create the cross-verse templating the audit reports. Graded honestly as B; recorded and recomputed agree."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "1-18"
+      ],
+      "note": "Operational note for the owner, not about the data. This worker sat idle for roughly five days and 123 identical pokes from the :43 routine accumulated unread in the queue. Reading them costs about 30000 tokens per batch of 33 and yields nothing new, so after draining 66 I stopped and ran the batch instead, leaving 57 unread deliberately. If a poke fires while the worker is already idle-with-backlog it would be better for the routine to coalesce, or for the worker to be rotated, than for the queue to grow - draining it is pure context cost and crowds out the chapter work the pokes are asking for."
     }
   ]
 }
