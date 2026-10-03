@@ -93339,6 +93339,49 @@
         "3"
       ],
       "note": "One rule-5 breach: mine eyes are toward Jehovah was quoted twice, once where Ellicott parses Elioenai and again in the closing paragraph. Fixed by referring back to the name instead of re-quoting it. Three chapters checked for this now and all three had at least one; the chapter lint does not catch it."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "2",
+        "4",
+        "6",
+        "18"
+      ],
+      "note": "Six entity flags, and three of them were me correcting a source from outside knowledge. At v6 the prose gave the Egyptian palace comparison as Medinet-Habu; Ellicott writes Medinat-Abu, and the modern standard spelling was mine, not his. At v2 Beersheba was respelt Beer-sheba as Clarke has it. At v18 Phoenician was respelt Phoenician with the oe ligature Ellicott prints, and the charge from 2 Chronicles 24:7 was corrected from lavished its dedicated things on the Baals to bestowed its dedicated things upon Baalim, which is the wording the source carries. At v4 the claim that Ellicott defended the mercenary guard by pointing to Davids service among the Philistines was wrong in substance: he points to David serving as a mercenary with Achish king of Gath, and to the case of Uriah the Hittite. Recast to match, which is also more specific. At v6 Beneath was a sentence-initial false positive and the sentence was simply restructured."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "19"
+      ],
+      "note": "Bind, nominal density. v19 stays grade B at ttr 0.5610, compress 0.454. The deletion search returned zero candidates at any word count above the floor. The cause is that the verse is a short descriptive procession notice whose nouns, king, house, throne, palace and gate, recur unavoidably in the quotations and in any exposition of them, and the blob is only 195 words. Repair moved ttr 0.5282 to 0.5641 by de-articling my own connective prose (67 instances of the in 381 tokens, 17.6 percent) and compressing a three-sentence coda that restated the whole entry. I then added Ellicotts unused note that the Greek copies add at the entry, the grand entrance of the palace, which he judges a correct gloss and perhaps original; that cost 0.003 of ttr and I kept it, because coverage of a real source point is worth more than a third decimal place on a grade that stays B either way. Recorded honestly as B."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "17"
+      ],
+      "note": "v17 cleared from 0.5611 to 0.5987 without losing a voice, and the deletion search would have had me lose one. Its top candidate was to delete Keil and Delitzschs whole two-compact distinction, the most substantive sentence in the entry. The better move was to notice why that sentence drags: Keil, Gill, Clarke and Wesley all describe the same two covenants, so the overlap is in the exposition rather than in the quotations. Compressing Keils statement to his distinctive points (renewal of what was made through Moses, Exodus 24 and Deuteronomy 4:20 and 27:9-10, resting on the testimony handed to the king) and cutting the gloss on Clarke that repeated it, then spending the recovered words on Henrys unused constitutional material (the pacta conventa, coronation-oath answering oath of allegiance, covenants reminding men of duties already binding, and the ancient landmarks marking the limits of prerogative against liberty and property) did it. Rule: when the deletion search wants a whole voice, look for the same content stated twice across voices and compress the exposition instead."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "13"
+      ],
+      "note": "One banned carrier only in this chapter, the witnesses do not divide at v13, recast. Worth noting against the pattern: 2kings 11 has one instance in twenty-one entries while 2kings 20 had seven in twenty and 1samuel 17 thirty in fifty-eight. So the phrase is not uniform even within one book, which means a corpus count would also show which generation run produced it."
     }
   ]
 }
