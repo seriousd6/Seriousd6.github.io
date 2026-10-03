@@ -93008,6 +93008,84 @@
         "17"
       ],
       "note": "Self-grade A on all four tiles. Compression runs 0.22x to 0.82x of usable source. The high ratio at vv.8-11 is a short source stretch, not padding: the tile's own keys hold about 760 words once the displaced JFB block is set aside, and the rest of its material comes from the Henry pericope head filed at key 1. Ellicott's chrome at key 18 and the three displaced JFB blocks were excluded before drafting, so the effective source is smaller than the raw counts. One ENTITIES signal was raised and cleared before landing: the prose named the Syriac version, which the source gives only in abbreviated form, so the attribution was generalised."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "5",
+        "10",
+        "20"
+      ],
+      "note": "Five entity flags resolved. Two were genuinely unsourced cross-reference names and were dropped with the ref link kept: at v5 Ellicott glosses nagid as a designation of honour and cites 1 Samuel 10:1 and 1 Kings 1:35 but never names Saul or Solomon, so used of Saul and of Solomon became drawn from the histories; at v10 Henry writes only Job xxxiii. 25, so as Elihu speaks in became in the phrase of. Two were my own deviations from the source wording: Goths and Vandals became the barbarous Goth and Vandal nations, which is Clarkes attributive singular, and Birket-Hammam-el-Batrak was corrected to Birket-Hammam-el-Batrak with the circumflex a that Ellicott prints."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "20"
+      ],
+      "note": "NEW false-flag class, diacritic. Birket-Hammam-el-Batrak tripped on Hammam only because the source prints Hamm with a circumflex a. This is the same shape as the documented ae and oe ligature class (Caesarea, Phoenician) and should be read with it: before fixing a flagged transliteration, check the source for a diacritic on the matching letter. Here the right move was not to leave it but to adopt the sources spelling, which is both faithful and clears the flag."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "20"
+      ],
+      "note": "Entity pool contamination. The scraped blobs for this chapter include the sites own navigation JSON, a list of every book of the Bible with urls and chapter counts. Every book name in that list therefore passes the lowercased substring pool test regardless of what the commentators actually wrote. Concretely: Solomon was NOT flagged at v5 although no commentator names him, because Song of Solomon appears in the nav list. Saul was flagged only because no book is named Saul. The pool test is therefore weaker than it looks on any chapter whose blobs carry the nav JSON, and a flagged name is better evidence than an unflagged one."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "5",
+        "6",
+        "8",
+        "9",
+        "11",
+        "13",
+        "14",
+        "17",
+        "18",
+        "20"
+      ],
+      "note": "Quote-led openings arrived at 16 of 20 (80 percent), the same template breach found in 1chronicles 2 at 96 percent. Two chapters from unrelated books and different source mixes both far over the 1/3 rule now makes this look corpus-wide rather than incidental. Ten openings recast frame-first; now 6 of 20 and the audit reports 0 chapters over the threshold. Running the audits quote-led section over all 1189 chapters is a read-only check and would size the problem."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "4",
+        "21"
+      ],
+      "note": "Two grade-B entries, both ttr-bound, both fixed without deletion. v4 was the clearest case yet of article drag: 70 instances of the in 395 tokens, 17.7 percent, from stacked constructions like the middle court of the royal castle and the textual reading. De-nesting those plus adding the content of the message Isaiah was sent back with (cure in three days, fifteen years added, deliverance from Assyrian power, defence of the city, and the third-day temple visit as pledge, all unused Keil and Delitzsch) moved ttr 0.5538 to 0.6488 and compress 0.445 to 0.462. v21 0.5583 to 0.6325 by compressing a restating coda and restoring Gills fuller burial detail plus Henrys framing of vv20-21 as the conclusion of Hezekiahs life and story. Both confirm the pattern from 1chronicles 2: coda restatement plus article stacking is the whole of the ttr problem, and unused source is the cheapest repair."
+    },
+    {
+      "at": "2026-10-03",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "7",
+        "11",
+        "17",
+        "19",
+        "20",
+        "21"
+      ],
+      "note": "Seven banned-carrier instances recast (so the witnesses x6, the witnesses do not divide x1). Each recast kept the entrys own division or agreement explicit rather than swapping one stock phrase for another, and no carrier opens more than one paragraph in any verse."
     }
   ]
 }
