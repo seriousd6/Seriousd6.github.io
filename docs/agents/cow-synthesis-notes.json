@@ -94712,6 +94712,28 @@
       "book": "luke",
       "chapter": "7",
       "note": "Self-grade A on all four tiles, 644 / 646 / 648 / 649 words. Voices were attributed by the catena's internal sub-labels rather than by the outer block labels, for the reason noted above. Two voices had to be renamed to satisfy the ENTITIES check, which requires the source's own wording for capitalised words: Gregory of Nyssa appears in the source only as the abbreviation GREG. NYSS., which cannot be spelled out and cannot be matched, so his two contributions to vv.11-18 (the sum of misery told in a few words, and the reading of the chapter as a graded course in the resurrection) were CUT and replaced with Henry, Ellicott and Bede material - a real loss of the best grief exposition in the chapter, caused purely by the abbreviation. Titus Bostrensis appears as TITUS BOST. and Titus Bost:, so he is cited as Titus, the source's own form, which reads ambiguously but is the honest option. Origen was named in Ellicott's report of who rejected the Magdalene identification and was removed from the prose because he is a declared voice elsewhere in the corpus and would read as a witness here, where he has no block; the claim is kept without his name and recorded with it in the disagreement note."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "32",
+      "verses": [
+        "1",
+        "8",
+        "20"
+      ],
+      "note": "The cleanest chapter met in these batches: no banned carriers, no quote-led breach, no duplicate paragraphs, no roll-call restatements, and every entry already between 400 and 453 words. Only three things needed doing. The one entity flag at v1 was Beneath, a sentence-initial false positive of the documented class, fixed by restructuring the sentence rather than changing a word. The two grade-B entries both cleared on the de-articling lever alone: v8 0.5738 to 0.6055 and v20 0.5711 to 0.6085, with compress rising from 0.431 to 0.454 and 0.446 to 0.462. v20 also carried one real restatement, a closing sentence that re-told Clarkes wine-skin figure in his own words, which was compressed to a single clause. Worth recording that a chapter can be clean, since it shows the template defects are not universal and tells the next worker that triage is cheap when it comes back empty."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "32",
+      "verses": [
+        "8"
+      ],
+      "note": "Harness note on quote and apostrophe style, which cost three failed patches in this chapter. job 32 uses straight single quotes for quotations and straight apostrophes, where 2chronicles 33 used straight apostrophes with double quotes and john 16 used literal em-dashes against 1chronicles 7s entity form. The style is per-chapter and must be read off the raw bytes before any patch is written. The three failure modes now seen are: curly against straight apostrophe, mdash entity against literal em-dash, and an anchor that omits the strong tags wrapping a school label. Checking the first 400 raw bytes of one entry answers all three in one look."
     }
   ]
 }
