@@ -93520,6 +93520,98 @@
         "20"
       ],
       "note": "Self-grade A on all four tiles. Compression runs 0.12x to 0.21x of usable source. Ellicott's chrome at key 23 and the two displaced JFB blocks were set aside before drafting, and the K and D truncation means every third key double-counts its neighbours, so the effective source is smaller than the raw counts in all four tiles. No ENTITIES signals; one risk was avoided by paraphrasing around the source's singular form of a national name rather than matching it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "5",
+        "9",
+        "10",
+        "13",
+        "18",
+        "22",
+        "23",
+        "30",
+        "36",
+        "40"
+      ],
+      "note": "Fourteen entity flags, eleven of them real. Three were again me correcting a source from outside knowledge or supplying a name it never gives. At v13 the prose said the Genesis and Numbers form of the fourth son of Naphtali was Shallem; both Henry and Gill give Shillem, and Shallem was my own misspelling. At v10 Bilhan was called a son of Seir the Horite; Ellicott writes only a son of Seir. At v23 Ellicotts note on the play between Beriah and beraah says such plays often meet us in Genesis and cites Genesis 5:29 and 11:9; the prose turned that into at the naming of Noah and at Babel, which identifies the references for him. At vv30 and 40 the reproach of Judges 5:17 was attributed to Deborah by name, which no commentator does; recast to the old song and the old reproach with the quotation and the ref intact. At v36 a name from the land of the Nile became a name of that stamp, and Ellicotts unused gloss was restored instead: Har nefer, the beauteous Horus, or morning sun. Coinages fixed: Davidic muster to muster under the reign of David, Gileadite stock to stock of Gilead, those who would multiply Ephraims to those who would suppose a second Ephraim. At v9 the eponym list was stripped of my added labels among the Greeks and among the Romans, which Ellicott does not write."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "19"
+      ],
+      "note": "Hebrew-script false flag, left as written. Noam at v19 is flagged because Keil and Delitzsch give the name only in Hebrew, as nem, when they say there is no more reason to connect Aniam with it than to identify Likhi with Helek. The transliteration is faithful and the pool test, being a lowercased substring test over Latin script, cannot match it. Same class as Kishion and Jarmuth."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "9"
+      ],
+      "note": "Pool contamination again, and worse than at 2kings 20. The blobs for this chapter carry the scraped sites navigation and lexicon chrome, including the strings Greek Old Testament and Bible Lexicons and a book list. So Greek and Romans both pass the entity pool although no commentator writes either word, while the plural Greeks happened not to appear in the chrome and was flagged. The practical consequence is the same as before: a flag is evidence, the absence of a flag is not. Two chapters in two different books now show this, so the pool ought to be built from the commentator spans only, not the whole blob."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "16",
+        "29",
+        "38",
+        "39"
+      ],
+      "note": "Four grade-B entries, all four fixed by cutting restatement, and three of them had the SAME SENTENCE FRAME two or more times in one entry. v29 was the clearest: two consecutive sentences both running Keil and Delitzschs care to show X, and Gills simple placing of Ephraim beside Y, together Z. v39 made the same claim five times in its closing paragraph, that Ellicotts reading of Ulla as Ara binds the last household to the line, and twice gave Ellicotts complete concatenation from the thirtieth verse to the thirty-ninth. v38 said three times that the commentators join a stray branch to its stem. Results after cutting to one statement each and de-articling: v16 0.5897 to 0.6374, v29 0.5850 to 0.5867 (and compress 0.411 to 0.430), v38 0.6152 to 0.6138 at 89 fewer words, v39 0.5866 to 0.5947. Note that v38 and v39 were already above the ttr threshold and failing only on compress, which the restatement caused directly. A duplicate-sentence-frame check belongs in the standing sweep: normalise each sentence by stripping proper nouns and compare."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "16",
+        "38"
+      ],
+      "note": "Two thinness-narration sentences removed, of the kind rule 2 forbids: at v16 the commentators do not pretend to more, for the names are found in no other passage and yield no story beyond the bare descent, and at v38 for the sons of Jether, like so many in this chapter, have no history but their descent. Both replaced with substance rather than reworded: at v16 Ellicotts rule that a firstborns line is pursued and a younger brothers noticed once and then left, plus Keil and Delitzschs summary formula from the following verse where Ulams son Bedan closes the branch."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "16",
+        "29"
+      ],
+      "note": "Harness bug worth fixing before the next batch. My numerical deletion search splits the raw HTML on sentence boundaries, so a candidate can straddle a paragraph break and would delete the closing and opening p tags with it. On v39 the search offered exactly such a candidate, and the sentence it printed read Ara.The grammatical-historical Keil, which looked like a missing-space defect in the data until I checked: the visible text is clean, and the join was my own splitter crossing a paragraph boundary. I have now made that mistake twice, once in an earlier chapter as well. The fix is to split per paragraph and recombine, and to treat any candidate spanning a boundary as invalid."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "7",
+      "verses": [
+        "4",
+        "7",
+        "13",
+        "14",
+        "17",
+        "22",
+        "23",
+        "29",
+        "40"
+      ],
+      "note": "Nine banned-carrier instances recast: the witnesses do not divide three times, so the witnesses five, the witnesses note once. Fifth chapter measured for this and the spread stays uneven: 1samuel 17 thirty in fifty-eight, 1chronicles 26 twenty-one in thirty-two, 2kings 20 seven in twenty, 1chronicles 7 nine in forty, 2kings 11 one in twenty-one."
     }
   ]
 }
