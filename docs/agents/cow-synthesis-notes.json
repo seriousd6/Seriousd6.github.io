@@ -94894,6 +94894,77 @@
       "book": "2chronicles",
       "chapter": "15",
       "note": "Self-grade A on all three tiles, 648 / 648 / 649 words at compression 0.17x, 0.15x and 0.27x. Voices are Henry, Clarke, Gill and Ellicott throughout, with Delitzsch declared on vv.1-7 only; JFB is in excluded_voices on all three for the displacement noted separately. Wesley's 339 words were not used. Two corrections made before landing, both caught by the ENTITIES check rather than by me: the names Bertheau, Clericus and Ewald are expansions of the source's abbreviations and had to be removed or paraphrased; and the Delitzsch discussion of the Oded crux, which I had placed in the vv.8-15 tile because it is about verse 8, actually sits in the key-7 block and so belongs to vv.1-7 - I cut it and backfilled the tile from Ellicott's own notes on the covenant within range rather than cite material from outside the tile's source. That was my error, not the source's, and the check caught it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "JFB displacement, fifteenth confirmation, and a NEW SHAPE: the donor does not advance and the block is duplicated byte-for-byte. The three JFB blocks sit at keys 1, 7 and 13 - stride six again - and all three are the SAME 68-word text, comment on 1 Kings 11 (Jeroboam appointed superintendent of the engineering works around Jerusalem, and Ahijah's significant act informing him of his royal destiny). Previous shapes on record: donor advancing in step with the receiver (2 Chronicles 15, keys 4/10/16 from 2 Kings 3:4, 3:8-11, 3:13-14; 1 Kings 3, keys 3/9/15/27 from 1 Samuel 6/7/7/8), and donor fixed on one chapter but giving different text at each key (Luke 7, keys 36 and 48 both from Mark 16). This is the third shape: one donor block repeated verbatim. Taken together the three shapes suggest the receiving cursor and the donor fetch are independent and the donor sometimes fails to advance at all, returning its last result."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "22",
+      "note": "STRIDE SIX IS NOW A FIRM REGULARITY in the JFB defect and is probably the fetcher's page size. Receiving keys carrying displaced JFB blocks: 1 Kings 3 at 3, 9, 15, 27; 2 Chronicles 15 at 4, 10, 16; 1 Chronicles 22 at 1, 7, 13. Every one of those sequences steps by six (1 Kings 3 skips one step between 15 and 27, which is two strides). Luke 7's keys 36 and 48 are twelve apart, also a multiple of six. Whoever repairs this should look for a batch or page parameter of six in the fetch loop rather than treating each chapter as a separate accident; the regularity means a mechanical sweep could identify every affected block by position and verify it by content."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "22",
+      "note": "Tiling: three tiles (vv.1-5, 6-16, 17-19) on Henry's pericope heads at keys 1, 6 and 17, which match the chapter's natural divisions exactly - the preparations, the charge to Solomon, the charge to the princes. Nineteen keys, contiguous, 10,689 usable source words, compression 0.12x to 0.31x. Fourth chapter in a row where Henry's block positions gave the tiling directly, and the heuristic is now well enough attested to be worth writing into the loop procedure: where Henry's blocks cluster at a few keys, tile on those keys."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "22",
+      "verses": [
+        "2"
+      ],
+      "note": "Who the strangers set to the temple work were decides whether it was built by volunteers or conscripts, and the voices split on it. Ellicott reads them as resident foreigners, the Canaanite population 'who lived on sufferance under the Israelite dominion, and were liable to forced service if the government required it', notes that Solomon afterwards counted them at 153,600 and that the census was a preliminary to apportioning their tasks, and concludes that what originated with David was the organisation of the serf labour rather than the building. Clarke makes them religious converts instead, 'those who had become proselytes to the Jewish religion, at least so far as to renounce idolatry, and keep what were called the seven Noahic precepts', employed in the more servile parts of the work. Gill agrees they were proselytes of the gate and adds two practical reasons for using them that cut against the conscription reading: partly that they were better artificers than the Israelites, who were chiefly employed in husbandry and cattle, and partly that the Israelites, being freemen, might not be put to hard service."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "22",
+      "verses": [
+        "6"
+      ],
+      "note": "Ellicott denies the speech is David's at all, and no other voice in the chapter entertains the possibility. 'Upon grounds of internal evidence we may pronounce this dying address of David to be an ideal composition, put into the king's mouth by the unknown author whose work the chronicler follows: or rather, perhaps, by the chronicler himself, whose style is evident throughout.' He supports it by comparison with the addresses attributed to David in chapter 28 and with the echoes he hears of the dying charge in 1 Kings 2. Henry, Clarke and Gill all expound the words as the king's own without raising the question. This is the clearest instance in the recent corpus of a critical and a devotional tradition simply passing each other; both are carried into the prose without arbitration."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "22",
+      "verses": [
+        "8"
+      ],
+      "note": "Why David was barred from building gets three incompatible answers from the sources, and Ellicott is the one who sets them side by side. Here the reason is blood, which he would render literally as torrents of blood shed earthward, and he thinks the author may have remembered the charge against the shedder of man's blood in Genesis and the prophets' denunciations of men of blood. But he observes that the oracle Nathan delivered promises David success in war 'without any hint that warfare, as such, would unfit him for the sacred task', and that in 1 Kings 5:3 Solomon implies instead that his father's wars left him no leisure for the work. Henry attacks the question from another side, rejecting the suggestion that the blood meant is Uriah's because the honour was forbidden David before that blood was shed, and concluding for the blood of his wars, 'though shed very justly and honourably in the service of God and Israel'. Clarke generalises it into a principle: 'Heathens, Jews, and Christians, have all agreed that soldiers of any kind should have nothing to do with Divine offices.'"
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "22",
+      "verses": [
+        "8"
+      ],
+      "note": "Clarke's illustration of the soldier barred from sacred things is one of the best classical parallels in the corpus and is worth preserving: he quotes the flight from Troy, where Aeneas, 'just come from slaughter', will not himself handle the household gods but confides them to his father, holding it impious to touch holy things while red with new blood until he has washed in some living stream. Clarke gives the Latin and Dryden's verse translation in full. Note for any chrome sweep: the automated chrome detector flagged one hit inside this Clarke block, which is a FALSE POSITIVE - the block is genuine commentary containing a Latin quotation, not navigation residue. A content-based chrome detector will need to tolerate quoted classical and foreign-language material."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "22",
+      "note": "Self-grade A on all three tiles, 645 / 635 / 602 words at compression 0.19x, 0.12x and 0.31x. The third tile is deliberately short of the ceiling because vv.17-19 carries only 1,944 usable source words and Ellicott's contribution there is small once the chapter-final chrome at key 19 is discounted; padding it would have meant stretching four voices past their witness. Voices are Ellicott, Henry, Clarke and Gill throughout, with Delitzsch declared on vv.1-5 only for the one claim of his that survives inside Gill's blocks. JFB is in excluded_voices on the two tiles whose source contains its displaced blocks. Wesley's 434 words were not used. No ENTITIES signals; the chapter's proper names are few and were taken from the source's own wording, and I avoided Ellicott's accented place name for the Assyrian bronze gates by dropping that instancing rather than risk an unmatchable form."
     }
   ]
 }
