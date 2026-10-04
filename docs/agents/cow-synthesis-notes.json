@@ -94607,6 +94607,111 @@
         "21"
       ],
       "note": "One thinness sentence removed at v21. Henrys own words, We have little recorded concerning Amon, but enough, unless it were better, are a quotation and stay; but the prose had added a paraphrase of its own, that a short life and a bad one leave the historian little to say and what there is is not worth the saying. That is the synthesis narrating the records brevity in its own voice, which rule 2 forbids, and it was cut rather than reworded."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "7",
+      "note": "SPLITTER DEFECT, new and serious: a label whose full form is not in synthesis_qa.VOICE_LABELS falls through entirely and its words are credited to the PREVIOUS voice. Luke 7 has blocks labelled 'Cyril of Alexandria:' (2,661 words across keys 1, 11, 17, 24, 36) and 'Cyril of Jerusalem:' (inside Ellicott's key-20 block). _LABEL_RE contains 'Cyril', but the colon does not follow 'Cyril' in either form, so neither matches and neither starts a new segment. Measured consequence at key 1: split_voices reports Chrysostom at 1,398 words where a label-aware read shows Chrysostom's own block is 588 words - Cyril of Alexandria's 415 words plus other material have been absorbed into Chrysostom's segment. At key 36 split_voices likewise reports Chrysostom at 1,924 words. This is the same missing-left-anchor family as the Pseudo-Chrysostom bug but in the opposite direction: there a shorter name swallowed a longer one's prefix, here a longer name is invisible and its text defaults backwards. Both are fixed by anchoring and by listing the full forms. Until then per-voice word counts and attributions in Gospel chapters are unreliable in both directions."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "7",
+      "note": "CATENA AUREA INTERNAL ATTRIBUTIONS ARE INVISIBLE to the splitter. The Gospel catena blocks carry their own sub-attributions in an abbreviated ALLCAPS form that matches no entry in VOICE_LABELS: in Luke 7 alone AMBROSE; (24), BEDE; (18), GREG. (13), CHRYS. (12), CYRIL; (10), BOST. (8), AUG. (6), NYSS. (6), THEOPHYL. (3), EUSEBIUS. (2), GLOSS. (2), TITUS. (1). A block labelled 'Chrysostom:' therefore publishes Bede's and Ambrose's paragraphs under Chrysostom's name, and a block labelled 'Cyril:' publishes Gregory of Nyssa's and Titus Bostrensis's. This is a live miscredit wherever a Gospel chapter draws on the catena, and it is larger than the Pseudo- prefix bug because it misattributes whole paragraphs rather than one name. All four tiles here were written by attributing each claim to the sub-label that precedes it, not to the outer block label."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "Cyril of Alexandria blocks are offset by roughly one pericope, and the offset is recoverable. Each block opens with its own chapter:verse marker, and the markers run: key 1 -> 6:46-49, key 11 -> 7:1-10, key 17 -> 7:11, key 24 -> 7:17-23, key 36 -> 7:31-35. The marker is consistently behind the receiving key, so this is a lagging-cursor defect distinct from the JFB two-cursor bug, where the donor is a wholly different book. Because the blocks carry their own markers the correct target is recoverable, which makes this one repairable by script rather than unusable."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "36"
+      ],
+      "note": "JFB displacement, thirteenth confirmation, with a variant pattern. Luke 7 has only two JFB blocks, at keys 36 and 48, totalling 178 words. Both are comment on Mark 16 - key 36 on the resurrection morning and the women at the sepulchre, key 48 on Mark 16:19-20 and the Ascension. Unlike every previous case the donor does NOT advance between the two keys: both come from the same donor chapter. Taken with 2 Chronicles 26, where the single JFB block was genuinely on topic, the defect is neither universal nor uniform in shape, so JFB must be checked per chapter rather than assumed broken. JFB is recorded in excluded_voices on vv.36-50, the only tile whose source contains a block."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "29"
+      ],
+      "note": "Calvin's blocks in this chapter have their emphasised lemma words stripped by the scrape, leaving sentences with holes in them. Examples: 'the common and the gave glory to God'; 'They called John a just as persons of unsound mind'; 'Some maintain that was by the Jews'; 'they gave themselves out as of the of God'. Calvin italicises the word under discussion and the tag-stripping has removed the italicised runs rather than their markup. Roughly a third of his 5,172 words in this chapter are affected. The intact portions are usable and were used; the holed sentences cannot be read and were avoided. This is a fourth defect class, distinct from truncation, chrome and displacement, and it will affect Calvin corpus-wide wherever he discusses a lemma."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "37"
+      ],
+      "note": "The identity of the woman who anointed Jesus is the chapter's sharpest question, and the two sides of it are a tradition and its refutation. Ellicott: the widespread belief that she was Mary Magdalene has 'absolutely not a single jot or tittle of evidence in Scripture', nor anything like even a tradition in its favour; the earliest Fathers are silent, Origen discusses and rejects it, Ambrose and Jerome and Augustine are doubtful, and 'it first gained general acceptance through the authority of Gregory the Great', afterwards stamped by the choice of this narrative as the Gospel for her feast. Henry reaches the same verdict independently and by a different argument: the identification is commonly made but he finds no ground in Scripture for it, and the Magdalene is described elsewhere as one out of whom seven devils were cast, which is not mentioned here. Note that the chapter's own catena contains a Gregory block, so the authority Ellicott names as the origin of the error is present in the same source."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "36"
+      ],
+      "note": "Whether this anointing and the Bethany anointing are one event splits the fathers against each other. Ambrose denies it: Matthew has the ointment poured on the head and was therefore unwilling to call the woman a sinner, while Luke's sinner anoints the feet, so she cannot be the same 'lest the Evangelists should seem to be at variance with one another' - though he allows the difficulty may also be solved by a difference of merit and of time, the former woman still a sinner and the latter now more perfect. Augustine affirms it by doubling the act: the same Mary did this twice, once as Luke relates when coming with humility and weeping she was thought worthy to receive forgiveness, and again at Bethany in the occurrence the other three record, citing John's back-reference before Bethany as proof she had already done it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "47"
+      ],
+      "note": "The firmest cross-tradition agreement in the chapter: Calvin and Ellicott arrive at the same reading of the parable from opposite methods. Calvin argues from cause and effect - the argument Christ employs 'was taken, not from the cause, but from the effect; for, until a favor has been received, it cannot awaken gratitude', and the cause of reciprocal love is declared to be a free forgiveness - and calls it a gross blunder that the greater part of commentators have made the woman earn her pardon. Ellicott argues from grammar, granting that the words 'admit of two interpretations, equally tenable' but holding 'the whole drift of the previous parable is in favour of' love as the consequence of forgiveness rather than its ground. Ellicott adds the pastoral point that the spoken absolution did not convey forgiveness for the first time, that having been sealed before by an unspoken absolution, but came as words of power to banish every lingering doubt."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "3"
+      ],
+      "note": "Why Matthew has the centurion come in person while Luke has him send two embassies produces four different resolutions. Henry: the legal maxim that what we do by another we are judged to do ourselves, so the centurion acted by his proxies as a man takes possession by his attorney, and probably came himself at last. Robertson: Luke tells the story as it happened with the details while Matthew gives a summary, and he quotes Plummer that Matthew 'puts the message of both into the mouth of the centurion himself'. Ellicott prefers Luke outright, as the more accurate record and also 'more true to nature', since the centurion was not likely to leave a slave so precious to him when he seemed in the agonies of death. Bede explains it from Luke's habit of abridging what the others set forth plainly and explaining more carefully what they omit. Ellicott then undercuts his own preference by noting that Luke is here LESS precise than Matthew, who names the palsy, and asking whether the physician had been unable to satisfy himself as to the nature of the disease."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "7",
+      "note": "Tiling: four tiles (vv.1-10, 11-18, 19-35, 36-50) read off Henry's own pericope heads, which in this chapter sit at keys 1, 11, 19 and 36 and nowhere else. That confirms the heuristic recorded at Job 35 - where Henry's blocks cluster at a few keys their positions are a reliable tiling guide, because Henry writes per pericope while the others write per verse. The chapter was served from the polish queue but all 50 entries were legacy-unversioned per-verse prose, 35 of them grade B, so it was treated as a legacy rewrite and regenerated from the catena rather than re-tiled."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "7",
+      "note": "COMPRESSION IS THE LOWEST ON RECORD and worth flagging as a structural issue rather than a defect. Luke 7 carries 52,446 usable source words across 50 keys; four tiles at the word ceiling give 2,587 words of prose, a ratio of 0.03x to 0.08x against the 0.11x to 0.22x normal for Old Testament chapters. The Gospel chapters are simply richer: Henry alone has 9,518 words here, and the catena adds eleven patristic witnesses on top of eight modern commentators. Two consequences. First, a four-tile Gospel chapter necessarily leaves most of its witnesses unrepresented - here Gill (2,932w), Barnes (3,767w), Wesley (1,107w) and Lightfoot (967w) were not cited at all, and Henry's 3,298-word block on the anointing was read only in part. Second, if the owner wants Gospel coverage comparable to the Old Testament, the Gospel chapters need more tiles than their pericope count, on sub-pericope seams - for this chapter six would have been defensible (1-10, 11-18, 19-23, 24-35, 36-43, 44-50). I kept to four because it is the honest pericope division and because an abandoned pick costs the run everything; the gap is recorded here rather than papered over."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "luke",
+      "chapter": "7",
+      "note": "Self-grade A on all four tiles, 644 / 646 / 648 / 649 words. Voices were attributed by the catena's internal sub-labels rather than by the outer block labels, for the reason noted above. Two voices had to be renamed to satisfy the ENTITIES check, which requires the source's own wording for capitalised words: Gregory of Nyssa appears in the source only as the abbreviation GREG. NYSS., which cannot be spelled out and cannot be matched, so his two contributions to vv.11-18 (the sum of misery told in a few words, and the reading of the chapter as a graded course in the resurrection) were CUT and replaced with Henry, Ellicott and Bede material - a real loss of the best grief exposition in the chapter, caused purely by the abbreviation. Titus Bostrensis appears as TITUS BOST. and Titus Bost:, so he is cited as Titus, the source's own form, which reads ambiguously but is the honest option. Origen was named in Ellicott's report of who rejected the Magdalene identification and was removed from the prose because he is a declared voice elsewhere in the corpus and would read as a witness here, where he has no block; the claim is kept without his name and recorded with it in the disagreement note."
     }
   ]
 }
