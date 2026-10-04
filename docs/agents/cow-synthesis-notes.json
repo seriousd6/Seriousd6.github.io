@@ -94734,6 +94734,78 @@
         "8"
       ],
       "note": "Harness note on quote and apostrophe style, which cost three failed patches in this chapter. job 32 uses straight single quotes for quotations and straight apostrophes, where 2chronicles 33 used straight apostrophes with double quotes and john 16 used literal em-dashes against 1chronicles 7s entity form. The style is per-chapter and must be read off the raw bytes before any patch is written. The three failure modes now seen are: curly against straight apostrophe, mdash entity against literal em-dash, and an anchor that omits the strong tags wrapping a school label. Checking the first 400 raw bytes of one entry answers all three in one look."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "14"
+      ],
+      "note": "My prose said death was styled by like titles among the Greeks and Latins. Clarke writes Greeks and Romans. Corrected to Romans. Same failure mode as Zion for Sion and Asherim for Asherah: recasting the source word from my own vocabulary."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "18"
+      ],
+      "note": "My closing paragraph said Henry's Adam thrust from Eden. Henry writes chased as Adam out of paradise, for the world is his paradise, and Eden appears nowhere in the chapter source. The entry's own second paragraph already had paradise correctly, so the slip was in the roll-call restatement. Roll-call sentences are where my outside knowledge leaks in, because they paraphrase rather than report."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "5"
+      ],
+      "note": "Entity pool flags Theodotion, Syriac and Jerome. Keil writes according to lxx, Theod., Syr., Jer., a flame; Targ. the brightness of light. These are standard versional sigla and the expansion adds no claim the source does not make. Abbreviation false-flag family, same as Deut. xxi. 16, 17 on 1chronicles 26:13. Left as written."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "Chapter arrived with 16 banned carriers across 14 of 21 entries: the witnesses do not divide x13 and so the witnesses x3. Every one sat at the head of the closing synthesis paragraph. All 16 recast by naming the concrete subject instead, which also removed the dead they-agree-that clause after each. Compress rose in every entry touched."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "13"
+      ],
+      "note": "Entry 13 closed with a sentence re-enumerating all four readings of the firstborn of death already given in paragraph 2, and requoted the phrase a fourth time. Deleting the restatement and keeping a 40-word close took it from B 0.5741 to A, before any de-articling. Restatement shape: enumerate-then-summarise inside the final paragraph."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "18"
+      ],
+      "note": "Entry 18 carried a voice roll-call plus a restatement of its own opening clause. Removing both, de-articling Gill's light-and-darkness chain, then adding two unused source details -- Gill's he shall not flee out of those hands and Henry's messengers of death -- took it from B 0.5587 to A 0.6022 at 398 words, off the word floor."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "rejected",
+      "book": "job",
+      "chapter": "18",
+      "verses": [
+        "7",
+        "8",
+        "12"
+      ],
+      "note": "Three repeated-fragment breaches on arrival: the steps of his strength quoted twice in v7, by his own feet twice in v8, his strength twice in v12. All three fixed by replacing the second quotation with a bare reference to the word or clause. Rule 5 breaches again in a chapter the lint passes clean."
     }
   ]
 }
