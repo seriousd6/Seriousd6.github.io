@@ -94965,6 +94965,156 @@
       "book": "1chronicles",
       "chapter": "22",
       "note": "Self-grade A on all three tiles, 645 / 635 / 602 words at compression 0.19x, 0.12x and 0.31x. The third tile is deliberately short of the ceiling because vv.17-19 carries only 1,944 usable source words and Ellicott's contribution there is small once the chapter-final chrome at key 19 is discounted; padding it would have meant stretching four voices past their witness. Voices are Ellicott, Henry, Clarke and Gill throughout, with Delitzsch declared on vv.1-5 only for the one claim of his that survives inside Gill's blocks. JFB is in excluded_voices on the two tiles whose source contains its displaced blocks. Wesley's 434 words were not used. No ENTITIES signals; the chapter's proper names are few and were taken from the source's own wording, and I avoided Ellicott's accented place name for the Assyrian bronze gates by dropping that instancing rather than risk an unmatchable form."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "PROCEDURE RECORD for this chapter, written before the work so it survives a context break. john 20 is a polish/legacy chapter: 31 verses, all legacy-unversioned, 27 grade B, 4 grade A. 62067 usable source words against about 11000 words of prose, so there is enormous unused source. Every B entry is FLOOR-HUGGING: 343-378 words, compress 0.370-0.431, ttr 0.518-0.631. Deletion is not the lever here; expansion is."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "john 20 carries the SAME chapter-scale duplication defect found in john 16: 67 duplicate paragraphs across 30 of 31 entries, detected by paragraph token containment at 0.72. Shapes are the john 16 ones -- a The witnesses thus sentence restating the preceding paragraph, then two to four further paragraphs each restating one clause of it. Entry 3 had six paragraphs of which the last four all restated paragraph 4. Dedup improves BOTH metrics in all 31 entries but drops every one below the 350-word floor (242-337), so dedup must be followed by expansion from unused source."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "PLAN: (1) dedup all 31 entries in one write; (2) expand each entry back to 420-520 words from genuinely UNUSED source, preferring material from a different semantic field than what the entry already carries; (3) recast banned carriers; (4) fix requotes; (5) de-article to finish any entry still short of ttr 0.58. NOTE: this chapter uses LITERAL em-dash characters, not the &mdash; entity -- opposite of job 18. Check raw bytes before writing any anchor."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "5"
+      ],
+      "note": "HARNESS TRAP: my source-segmenter split on the bare surname Westcott and so labelled a block of Robertson text as Westcott, because Robertson writes Westcott and Hort inside his own note. The block holds the key evidential point (present middle participle, if the body had been removed these clothes would have gone also) and attributing it to Westcott would have been an UNSOURCED fabrication. Rule: never trust a segmenter label that is a bare surname occurring inside another voice's citation. Check the preceding Name: colon marker."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "6"
+      ],
+      "note": "TENTH misfiled Jamieson Fausset and Brown blob found. The v6 catena carries a JFB note on searching the scriptures (John 5:39, the charter of eternal life, the Church of Rome) embedded inside Ellicott's segment. Worse, the shipped prose NARRATED it in a parenthesis: a note attributed to Jamieson Fausset and Brown here concerns the use of Scripture and does not bear on this verse. That is a rule-3 breach shipped in the data, same as the five parentheticals in john 16. Removed. The JFB misfile count is now ten across five books, all Jamieson, and a targeted corpus scan is overdue."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "12"
+      ],
+      "note": "ELEVENTH misfiled JFB blob, in the v12 catena: a JFB note on false Christs and the history of the Jews, which belongs to Matthew 24, embedded at the end of Ellicott's segment. The shipped prose narrated it in a parenthesis exactly as at v6 -- a second rule-3 breach in the same chapter. Both removed. Running total: eleven JFB misfiles across five books."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "12"
+      ],
+      "note": "SECOND segmenter trap in this chapter, same family as the Westcott one at v5: a block beginning Augustine's allegory, that the position of the ... is in fact CALVIN reporting and declining Augustine's allegory, not Augustine speaking. Attributing it to Augustine would have been a clean fabrication that no check but the entity pool could see, and the pool would not have caught it since Augustine is genuinely in this chapter. Rule confirmed: a bare surname in a segmenter label is only a citation until a Name-colon marker proves otherwise."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "18"
+      ],
+      "note": "TWELFTH misfiled JFB blob, in the v18 catena: a JFB note on the feeding of the five thousand. Narrated in a parenthesis in the shipped prose, the third rule-3 breach of this chapter. Three narrated JFB misfiles in one chapter (vv 6, 12, 18) means the generator that wrote john 16 and john 20 treated narrating the defect as the standard move, so the corpus-wide count of that parenthetical is a cheap way to FIND the misfiles. Grep the synthesis for the phrase attributed to Jamieson and the misfiled source blobs fall out of it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "28"
+      ],
+      "note": "Twice in this chapter the entity pool caught me supplying a name the source does not give. The legacy entry at v28 called Clarke's opponents Socinian; Clarke writes only those who deny the Godhead of Christ, and names Theodore of Mopsuestia alone. My own draft then added at Lystra to Barnes's bare citation of Acts 14:13-15. Both removed. Same failure mode as Latins for Romans and Eden for paradise in job 18: the pool is the only check that sees it, and it only sees it when the invented name happens to be absent from the scraped blobs."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "RESULT: all 31 entries rewritten to the current standard. Arrived 4 A / 27 B, all legacy-unversioned, 343-378 words each, compress 0.370-0.431, ttr 0.518-0.631. Landed 31/31 A, 431-653 words, compress 0.428-0.483. Banned carriers 31 to 0. Quote-led openings 31 of 31 to 0 of 31. Duplicate paragraphs 66 removed, duplicate sentences 0, roll-calls 0, requotes 0. No verse needed a de-articling pass: on a legacy chapter the lever is EXPANSION from unused source, not compression."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "THE LEGACY PROFILE IS THE OPPOSITE OF THE REPAIR PROFILE. A repair chapter arrives bloated and is fixed by deleting restatement. A legacy chapter arrives floor-hugging -- padded to just over 350 with restatement because the source was never mined -- and is fixed by deleting the restatement AND THEN spending the recovered room on material the original pass never touched. john 20 held 62067 source words against about 11000 words of prose. Henry alone had 4410 unused words at v1 and 5145 at v11; Calvin 1640 at v17; Chrysostom 1500 at v1. The padding was never necessary."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "PERICOPE-HEAD KEYING IS WHAT MAKES THE THIN SATELLITES WRITABLE. v6 (247 source words) and v18 (286) are both over the 200-word thin-exemption ceiling yet under the 350-word floor, which looks unwritable. Both were covered by head blobs: the v1 blob carries a Catena with Chrysostom, Bede, Theophylact, Augustine and Gregory on the whole empty-tomb pericope, and the v11 blob carries Henry on vv 11-18. Always check the head blob before concluding a verse is thin."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "SEGMENTER TRAP, THREE INSTANCES IN THIS CHAPTER. A bare surname inside one voice's citation gets read as a new speaker. v5: a Robertson block labelled Westcott because he writes Westcott and Hort. v12: a Calvin block labelled Augustine because it opens Augustine's allegory, that the position of the -- Calvin is DECLINING the allegory. v29: Robertson quoting Bernard for it was sight, not touch. All three would have been clean fabrications that only a reader of the raw blob could catch; the entity pool cannot, since all three names are genuinely in the chapter. Rule: trust only a Name-colon marker."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "31"
+      ],
+      "note": "POOL CONTAMINATION, MEASURED. The v31 blob's segment labelled Expositor is 728 words of pure scraped-site chrome -- navigation menus, commentary lists, book tables, Stripe keys, inline JavaScript -- and Ellicott's own segment at v31 runs on into the page footer and more JS. This is the fourth book in which I have found it. Every book name in the Bible, plus Greek, Hebrew, Aramaic, Jesus, Romans and Solomon, is in that chrome, so the entity pool silently passes any of them. The pool must be built from commentator spans only."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "rejected",
+      "book": "john",
+      "chapter": "20",
+      "verses": [
+        "1"
+      ],
+      "note": "Deliberately NOT done: no de-articling, no synonym substitution, no per-paragraph deletion search. All three are compression levers and this chapter needed the opposite. Also declined: reusing Cyril's Song of Songs passage at v13, where the catena repeats it verbatim from v2 -- it was spent at v2 and a second use would have been cross-verse templating of exactly the kind the audit measures."
     }
   ]
 }
