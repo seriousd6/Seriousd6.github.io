@@ -94531,6 +94531,82 @@
       "book": "job",
       "chapter": "35",
       "note": "Self-grade A on all three tiles, 648 / 644 / 632 words at compression 0.17x to 0.20x. Each tile carries Henry, Clarke, Gill and Ellicott; Delitzsch is declared on the first two for the two contributions that survive his 200-word truncation. Wesley and JFB are recorded in excluded_voices with the reasons noted separately. No ENTITIES signals arose, which is unusual for a first pass; the chapter's proper names are few (Job, Elihu, Eliphaz, Bildad, Coverdale) and all were taken from the source's own wording. The one place I checked myself was 'the voice from the whirlwind' in an outlier, which paraphrases Ellicott's bare cross-reference to Job 38:1 rather than attributing words to him."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "33",
+      "verses": [
+        "2",
+        "4",
+        "5",
+        "6",
+        "8",
+        "9",
+        "11",
+        "13",
+        "19"
+      ],
+      "note": "Eleven entity flags, ten of them my own departures from the source and several of them substitutions of a better-known word for the one the commentators use. At vv2 and 9 the heathen of both the KJV and Henry had become the Canaanites. At v8 the source twice spells it Sion, in Henrys own sentence, and the prose had modernised it to Zion. At v19 the groves were glossed as the Asherim where Ellicott writes the Asherah. At v11 the prose quoted the Assyrian king-list as Menasseh king of Judah; Ellicott prints Me-na-si-e (or Mi-in-si-e) king of Ya-u-di, and the normalised form was mine, so the sources transliteration was restored. Babylonian became the conqueror from Babylon, the adjective being absent from the source. Unsourced capitalised divine titles at v5, their Maker twice, became him who made them. Three cross-reference names were dropped with their refs kept: Damascus at v4 for the Ahaz altar of 2 Kings 16:10, Carmel at v13 for 1 Kings 18:39, and at v6 a whole comparison of my own invention, like Saul the first king of Israel before the witch of Endor, which no commentator makes."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "33",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+      ],
+      "note": "A new restatement shape, and this chapter had it in all twenty-five entries. Every entry ended with a voice-by-voice roll-call immediately before its synthesis sentence: Gill fixes X, Keil marks Y, Henry reads Z, then Between them they show. The roll-call compresses a second time what the body paragraphs had already said at length, so it is restatement with an attribution veneer, and the entries ran 387 to 497 words, far above the floor, so it was not holding anything up. All twenty-five removed, about 740 words. Compress improved in every one of the twenty-five; ttr moved only a little, up in roughly half and slightly down in the rest, because the roll-call packs unique proper names and compressed nouns into a short span. So the gain is mostly honesty and compress, not ttr. Detection is easy: a sentence containing two or more voice surnames, sitting immediately before the synthesis. Note that my first detector missed five of them because it required a semicolon and those five used commas; the pattern to match is the surnames, not the punctuation."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "33",
+      "verses": [
+        "5",
+        "8",
+        "18",
+        "20",
+        "24"
+      ],
+      "note": "Five grade-B entries, all cleared, all by de-articling my own connective prose while leaving every quotation untouched. The article load was the whole problem: the in 43 to 74 of 414 to 492 tokens, between ten and fifteen percent, mostly in stacked constructions like the two courts of the house of the LORD, the sepulchres of the kings, the words of the prophets against him. Rewriting those as both courts, the royal sepulchres, the prophets words moved v5 0.5792 to 0.6214, v8 0.5619 to 0.5968, v18 0.5727 to 0.5984, v20 0.5452 to 0.6022, v24 0.5718 to 0.5931, with compress rising in all five as well. The per-paragraph deletion search had offered candidates for three of them and every candidate destroyed content, so it was right to decline them. This is now the most reliable lever in the kit: it removes tokens rather than exchanging them, and it never touches a source."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "33",
+      "verses": [
+        "21"
+      ],
+      "note": "One thinness sentence removed at v21. Henrys own words, We have little recorded concerning Amon, but enough, unless it were better, are a quotation and stay; but the prose had added a paraphrase of its own, that a short life and a bad one leave the historian little to say and what there is is not worth the saying. That is the synthesis narrating the records brevity in its own voice, which rule 2 forbids, and it was cut rather than reworded."
     }
   ]
 }
