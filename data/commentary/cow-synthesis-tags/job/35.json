@@ -1,863 +1,235 @@
 {
  "1": {
   "voices": [
-   "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill pictures the pause — Elihu waited to see if any would contradict or if Job would reply, then resumed to refute other undue expressions Job had let fall."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke gives the argument of the speech in precis: Elihu charges Job with impious speeches, denies man can affect or profit God, and holds that few of the afflicted cry to God in faith."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry marks Elihu's method — appealing to Job's own conscience ('Thinkest thou this to be right?') and recurring to his maxim that God is greater than man — with a good opinion of Job, whom he would recall from a rash word."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Elihu resumes his speech",
-   "appeal to conscience",
-   "the argument of the speech",
-   "a rash word recalled"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Keil and Delitzsch"
   ],
+  "range": "1-8",
+  "pericope_label": "Elihu spake moreover, and said, Thinkest thou this to be right, that thou saidst, My righteousness is more than God’s? For thou saidst, What advantage will it be unto thee? and, What profit shall I have, if I be cleansed from my sin? I will answer thee, and thy companions with thee. Look unto the heavens, and see; and behold the clouds which are higher than thou. If thou sinnest, what doest thou against him? or if thy transgressions be multiplied, what doest thou unto him? If thou be righteous, what givest thou him? or what receiveth he of thine hand? Thy wickedness may hurt a man as thou art; and thy righteousness may profit the son of man.",
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch render 'my righteousness exceedeth God's' (the preposition comparative, cf. ch. 32:2), taking the charge as it stands; Ellicott holds Job never said it in so many words, though his words were capable of being so represented — a misrepresentation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke calls it a blasphemous saying Job never uttered, rendering rather 'I am righteous before God' — a character God himself gave him; Wesley: Job said only things from which it might seem to follow, that God punished him beyond desert."
+    "summary": "Ellicott judges this another misrepresentation of what Job had said, since Job did not mean that he was none the better for being righteous but only that his righteousness had not delivered him from suffering, and he observes that Elihu is here saying very much what Eliphaz and Bildad had said before; he then enters the chapter's sharpest caveat, that while it is indeed true God is too high to be affected by man's righteousness or unrighteousness, it does not follow that he is indifferent, for then he would not be a righteous judge. Delitzsch recasts the charge as one ponderous construction of co-ordinate questions, making the complaint one of non-requital rather than self-comparison."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the appeal to Job's own conscience: on reflection he could never think right what he had said of God and his justice, letting the charge stand as a fair inference."
+    "summary": "Gill alone lets the whole charge stand, granting that Job had not said it in so many words but holding it fairly inferred from what he had said; he draws the distinction the complaint blurs, that a man's righteousness is of no advantage as to justification or title to happiness but of great advantage otherwise, and enters the qualification that because sin harms others God resents it and punishes for it even though it cannot harm him."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke denies the charge outright, holding that my righteousness is more than God's would indeed be a blasphemous saying but that Job never said it either directly or constructively, and rendering the Hebrew instead I am righteous before God, a character Job had a right to assume because God himself had given it to him; on the argument from the heavens he takes their bare sight as enough to show God infinitely beyond us, derives the clouds from a root meaning to contend, and renders the conclusion literally, that to a man like thyself is thy wickedness and to the son of man thy righteousness, so that God can be neither hurt nor profited."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry is the one voice who thinks the first count substantially just, holding that when Job insisted so much on his integrity and on the severity of God's dealings he did in effect say it, as though on a balanced account God would be brought in debtor to him; but he refuses the second count, since Job had put the words about no profit in the mouth of prospering sinners and disclaimed them, and it is not a fair way of disputing to charge men with consequences they expressly renounce. He calls the malice of sinners impotent malice and sets against Job's reckoning the challenge no man can take up, who has first given to God."
    }
   ],
   "debates": [
-   {
-    "question": "Did Job really say 'My righteousness is more than God's,' and does the Hebrew warrant it?",
-    "sides": [
-     {
-      "position": "A misrepresentation; Job never said it, and the clause is better rendered 'I am righteous before God'",
-      "holders": [
-       "Clarke",
-       "Wesley",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "The charge stands, the preposition comparative — 'my righteousness exceedeth God's'",
-      "holders": [
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
+   "Whether Elihu quotes Job fairly, where Clarke denies that Job ever said it directly or constructively, Ellicott calls it another misrepresentation, Henry allows the first count while refusing the second, and Gill lets the whole charge stand as fairly inferred.",
+   "What the complaint actually was, which Delitzsch recasts as a charge of non-requital, that God makes no distinction between righteousness and sin and leaves the former unrewarded, rather than a comparison of Job's righteousness with God's.",
+   "Whether the premise that God is unaffected settles anything, which Ellicott grants as true but refuses as sufficient, since it would follow that God is indifferent and therefore not a righteous judge."
   ],
-  "outliers": [],
-  "themes": [
-   "My righteousness is more than God's",
-   "charge or caricature",
-   "righteous before God",
-   "a single preposition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill grants Job seemed to say his righteousness was of no avail, yet insists it is inferred, not asserted, and distinguishes: one's own righteousness profits not for justification but for much else (defence, honour, a good conscience)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: 'My righteousness cannot profit thee, nor benefit myself'; Wesley reads 'unto thee' as 'unto me' (a change of person) — 'God does not reward me as I deserve' — but it was unfair to charge this on Job, who never affirmed it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "What profit if I be cleansed from my sin",
-   "an inference not an assertion",
-   "the profit of religion",
-   "God made no debtor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'thy companions' are not the three friends (who side with Elihu) but all of Job's mind anywhere; the one answer confutes them all."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: 'I will show thee the evil of a sinful way and the benefit of righteousness, and supply what thy friends omitted.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott notes Elihu only repeats Eliphaz (ch. 22:3) and Bildad (ch. 25): God is too high to be affected by man, yet it does not follow he is indifferent, else no righteous judge."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Warns that Elihu's premise — God too exalted to be touched by human conduct — is true but, pushed too far, would make God indifferent and so unsay the very justice Elihu rose to defend."
-   }
+   "Clarke reads the clouds as the ethers of the Vulgate, from a root meaning to contend, the agitated and conflicting air and light whose motion produces both light and heat.",
+   "Henry turns the appeal to the heavens devotionally, that God made man erect and bade him look up, and where idolaters looked up and worshipped the hosts of heaven we must worship the Lord of those hosts."
   ],
   "themes": [
-   "I will answer thee and thy companions",
-   "Elihu repeats the friends",
-   "God too high to be affected",
-   "high but not indifferent"
+   "Elihu spake moreover, and said,",
+   "Thinkest thou this to be right, that thou saidst, My righteousness is more than God’s?",
+   "For thou saidst, What advantage will it be unto thee? and, What profit shall I have, if I be cleansed from my sin?",
+   "I will answer thee, and thy companions with thee.",
+   "Look unto the heavens, and see; and behold the clouds which are higher than thou.",
+   "If thou sinnest, what doest thou against him? or if thy transgressions be multiplied, what doest thou unto him?",
+   "If thou be righteous, what givest thou him? or what receiveth he of thine hand?",
+   "Thy wickedness may hurt a man as thou art; and thy righteousness may profit the son of man."
+  ],
+  "excluded_voices": [
+   "John Wesley",
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry turns the upward glance into the premise: heavens and clouds far above us, God infinitely above them, so out of reach of our sins or services; look up and worship the Lord of that host (Ps. 8:1; ch. 11:8)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke glosses 'clouds' as shechakim / 'ethers,' from a root 'to contend' — agitated conflicting air and light; Wesley: they are above us, God above them, out of reach of our sins or services."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill keeps it physical: the firmament with sun, moon, and stars, and the clouds set above."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "look unto the heavens",
-   "the height of the clouds",
-   "God out of reach of our sins or services",
-   "the Lord of the host"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: sin is truly against God — against his nature, law, authority — yet cannot ruffle his peace or dethrone him; men can no more reach him than pluck the sun from its orbit; nor make any atonement ('what canst thou work for him?')."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the malice of sinners is impotent malice — it cannot destroy God's being, dethrone him, disturb his peace, defeat his counsels, or derogate from his glory; so Job spoke amiss asking what he gained by being cleansed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: God is neither benefited by righteousness nor injured by iniquity, however multiplied."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render the couplet in its logic, the heaping of transgressions only sharpening that their sum touches nothing above the clouds."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what doest thou against him",
-   "the impotence of human malice",
-   "sin cannot reach God",
-   "no atonement in a sinner's hand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill roots all righteousness in God — angels', Adam's, Christ's imputed, grace implanted, works by his strength — so a man gives God nothing of his own; works add to his manifestative but not his essential glory (Ps. 16:2)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry by God's self-sufficiency: he needs not our service; our religion brings no accession to his felicity; we are beholden to him for making and accepting our righteousness, so can demand nothing but should be thankful."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "what givest thou him",
-   "all righteousness is God's own",
-   "essential and manifestative glory",
-   "God no man's debtor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: wickedness wounds oneself (body, estate, soul) and one's neighbours; God resents and punishes it though, strictly, it cannot hurt him."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke renders 'to a man like thyself is thy wickedness, and to the son of man thy righteousness' — the moral weight discharged sideways on one's fellows, never upward."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: men are bettered or damaged by us, our goodness extending to the saints in the earth (Ps. 16:3); in both the Judge interests himself, rewarding good and punishing hurt to our fellows."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thy wickedness hurts a man like thee",
-   "the reckoning between man and man",
-   "not indifference but impartiality",
-   "responsibility toward the neighbour"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Adam Clarke",
+   "John Gill",
    "Charles Ellicott",
    "Keil and Delitzsch"
   ],
+  "range": "9-13",
+  "pericope_label": "By reason of the multitude of oppressions they make the oppressed to cry: they cry out by reason of the arm of the mighty. But none saith, Where is God my maker, who giveth songs in the night; Who teacheth us more than the beasts of the earth, and maketh us wiser than the fowls of heaven? There they cry, but none giveth answer, because of the pride of evil men. Surely God will not hear vanity, neither will the Almighty regard it.",
   "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry names Job's complaint (cf. ch. 24:12) and Elihu's solution: the cry fails not through God's deafness but because they ask amiss (James 4:3) — a wailing, not a praying, cry (Hos. 7:14)."
-   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott: among men there is oppression, but not with an almighty Judge, so the course is to wait; Keil and Delitzsch note the address turns on Job, who complained his own prayer went unanswered (ch. 30:20)."
+    "summary": "Ellicott puts a different construction on the complaint, taking the argument to be that among men there may be oppression but not with an almighty and just judge, so that the right course is to wait; he lays out the alternative reading of the songs in the night, by which the giver of them is the selfish and luxurious oppressor who spends the night in feasting, grants it an intelligible meaning, doubts whether the proverbial sense is natural here, and leaves the choice to individual taste and judgment, noting that it partly turns on whether the question Where is God my Maker belongs to the cry of the oppressed or is Elihu's own, which he thinks the better view. Delitzsch renders the cry as a call for help by reason of the arm of the great."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the poor oppressed by the rich, the weak by the mighty, made to cry like Israel under the taskmasters."
+    "summary": "Gill offers three senses of the vanity God will not hear, as a lie, as what is uttered rashly in a passionate and revengeful spirit, which he allows is too often the case of those who cry under oppression, and as empty prayers asking only for outward mercies."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke: the wicked rich oppress the wicked poor, who shout for relief yet find none, because they call not on God."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the cry of the oppressed",
-   "the arm of the mighty",
-   "asking amiss",
-   "crying against the oppressor, not to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads 'my makers' of Father, Son, and Spirit, and laments that scarcely one of the oppressed inquires after God as author, preserver, and benefactor — hence they are not heard."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke gathers the renderings of 'songs in the night' (Chaldee, LXX, Syriac/Arabic, Coverdale) and finds a holy soul's continual communion with God; Wesley: they cry to men but seek not God, who alone can turn darkness to light and give a new song."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott unsettles the reading: 'songs in the night' may be the reveling oppressor's, not God's, and 'Where is God my Maker?' may be Elihu's own words rather than the oppressed's cry — which he thinks the more intelligible."
+    "summary": "Clarke repeats one clause like a refrain through these verses, that they bewail their calamities but do not sorrow for the cause of them and cry against their oppressors but call not upon God, and that this is why they have no relief; he keeps the devotional sense of the songs in the night while reporting four rival renderings from the Chaldee, the Greek, the Syriac and Arabic, and Coverdale, and presses the comparison with the beasts hard, citing the ox that knows his owner and the ass his master's crib and observing that quadrupeds, reptiles and fowls have more gratitude to their masters than man has to his God."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry presses the devotional point: affliction should quicken us to seek God early (Eccl. 12:1), yet few ever say 'Where is God my Maker?' — all ask where is mirth or wealth."
+    "summary": "Henry states Job's complaint without softening, that the oppressed cry under the arm of the mighty and God does not appear to right them, which Job could not reconcile with the justice of God and his government, and asks on his behalf whether a righteous God can so slowly hear and so slowly see; his answer is that the fault lies in the cries, which are complaining and wailing cries, the cry of nature and passion rather than of grace, not cried unto God with the heart though they howled upon their beds. On the beasts he makes an argument rather than an exclamation, that the greatest excellency of reason is to make us capable of religion, so that those who only cry and never look up do no more than the brutes."
    }
   ],
   "debates": [
-   {
-    "question": "How are 'who giveth songs in the night' and 'Where is God my maker?' to be construed?",
-    "sides": [
-     {
-      "position": "'Songs in the night' is God's gift to the afflicted, and 'Where is God my maker?' the cry the oppressed fail to utter",
-      "holders": [
-       "Gill",
-       "Clarke",
-       "Wesley",
-       "Henry"
-      ]
-     },
-     {
-      "position": "'He who giveth songs in the night' is the reveling oppressor, and 'Where is God my maker?' are Elihu's own words",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "Who gives songs in the night, which Ellicott leaves open between God and the luxurious oppressor who spends it in revelry, while Clarke keeps the devotional sense and reports four further renderings from the versions and Coverdale.",
+   "Whose words Where is God my Maker are, the cry of the oppressed or Elihu's own comment, which Ellicott thinks is better regarded as Elihu's and which he says partly decides the previous question.",
+   "What the unheard vanity is, which Gill divides into a lie, a rash and revengeful outburst, and prayer for outward mercies only, while Ellicott reports that some take the whole clause as still part of the sufferers' cry, so that it is they who say it is all in vain."
   ],
-  "outliers": [],
-  "themes": [
-   "Where is God my maker",
-   "songs in the night",
-   "seeking God early in affliction",
-   "whose the song and whose the question"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke sharpens the rebuke with Isa. 1:3 — the ox knows its owner, but man considers not; beasts have more gratitude than man to his God; Wesley: God gave man wisdom denied the beasts, so leaves him inexcusable for not calling on him."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: reason's chief excellency is that it makes us capable of religion; beasts have instincts but cannot ask 'Where is God my Maker?' — the oppressed who only cry under the arm of the mighty do no more than the brutes (cf. Ps. 104:21)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the beasts know much, but not so much as man, whom God has raised far above them."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott offers an alternative rendering, 'who teacheth us by the beasts... and maketh us wise by the fowls,' the creatures our instructors — the oppression the more culpable for forgetting it."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Reads the clause 'who teacheth us BY the beasts of the earth' — the creatures as our instructors — rather than the usual 'more than the beasts.'"
-   }
+   "Clarke renders the opening not by reason of the multitude but from among the multitude, the oppressed clamouring because of the mighty.",
+   "Ellicott reads the comparison with the beasts the other way about, that the oppression is so severe its victims forget God can give songs in the night."
   ],
   "themes": [
-   "taught more than the beasts",
-   "the ingratitude of man",
-   "reason and religion",
-   "crying no better than a brute"
+   "By reason of the multitude of oppressions they make the oppressed to cry: they cry out by reason of the arm of the mighty.",
+   "But none saith, Where is God my maker, who giveth songs in the night;",
+   "Who teacheth us more than the beasts of the earth, and maketh us wiser than the fowls of heaven?",
+   "There they cry, but none giveth answer, because of the pride of evil men.",
+   "Surely God will not hear vanity, neither will the Almighty regard it."
   ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry",
+  "excluded_voices": [
    "John Wesley"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: they cry as brutes, without a due sense of God's hand or of his being their only helper, so the cry falls to the ground."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads 'from the pride of wicked men' of the oppressors cried against, the prayer failing separately because misdirected; Wesley: God answers not because they are both evil and proud, unhumbled for the sins that brought the misery."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the criers' own pride stops the cry — God hears not those who regard iniquity (Ps. 66:18) but only the desire of the humble (Ps. 10:17)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Whose is 'the pride of evil men' — the oppressors' or the oppressed's?",
-    "sides": [
-     {
-      "position": "The oppressors' pride, which the afflicted cry against; the prayer fails separately, because misdirected",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "The criers' own unhumbled pride, which is why God gives no answer",
-      "holders": [
-       "Henry",
-       "Wesley"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "there they cry, but none answers",
-   "the pride of evil men",
-   "unhumbled prayer",
-   "God hears only the humble"
-  ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill ranges the senses of 'vanity' — a lie, a rash passionate cry, or vain prayers wrong in matter and manner, not in Christ's name or with sincerity (James 4:3) — which God, requiring truth within, will not hear."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: God will not attend such vain cries; they cry from their oppressions but not to God, and a cry that never reaches him he cannot be said to hear."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott: some take the words not as Elihu's verdict but as the oppressed's own despairing cry — 'seeing it is all in vain, God doth not hear.'"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
    }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Notes the sentence may be read as a continuation of the oppressed's cry from v.12 ('it is all in vain, God doth not hear'), not as Elihu's own principle."
-   }
-  ],
-  "themes": [
-   "God will not hear vanity",
-   "the hollow prayer",
-   "truth in the inward part",
-   "Elihu's verdict or the oppressed's complaint"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "14": {
   "voices": [
-   "John Gill",
    "Matthew Henry",
    "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: the 'not seeing' is not God's essence, nor Christ by faith, nor the beatific vision, but Job's despair of ever seeing God on a throne of judgment to acquit him."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads two improper senses (not understanding God's dealings, ch. 23:8-9; despairing of his returns, like Hezekiah, Isa. 38:11) and answers with 'judgment is before him' — a coming day when the dark chapters are expounded; therefore trust (Isa. 30:18)."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke notes the variants ('see me/us') but keeps the sense: God forgets neither to punish nor to save — be a monument of mercy; Wesley: though God delay, he will do right; repent, humble thyself, and wait."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sharpens the first clause to 'thou dost not behold him,' a present blindness the counsel to trust would cure."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou shalt not see him",
-   "judgment is before him",
-   "therefore trust in him",
-   "unbelief cured by trust not sight"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
    "Charles Ellicott"
   ],
+  "range": "14-16",
+  "pericope_label": "Although thou sayest thou shalt not see him, yet judgment is before him; therefore trust thou in him. But now, because it is not so, he hath visited in his anger; yet he knoweth it not in great extremity: Therefore doth Job open his mouth in vain; he multiplieth words without knowledge.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Delitzsch keep the received sense — God has visited in anger, and Job in his extremity knows it not; Ellicott owns the clause 'very obscure' and leans the other way — what God's anger visited is nothing to Job's deserts; God has dealt too leniently (judgment not long deferred, ch. 38:1)."
+    "prevalence": "single",
+    "summary": "Ellicott prefers dost not behold him to the received rendering, and on the fifteenth verse says outright that it is very obscure, offering his own rendering that what God's anger has visited upon Job is as nothing compared with his deserts and that God has not regarded the great abundance of his sin; he sets two further renderings beside it, notes that the word he translates arrogance is found nowhere else and appears to mean abundance or superfluity, and holds that the general bearing is apparent however rendered, that Job is encouraged in his murmurings because God has dealt too leniently with him. He then allows that Elihu's reproaches must have been some of the heaviest Job had to bear."
    },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill keeps 'because it is not so' of Job's want of trust and quiet expectation that God would bring his cause to light and let him behold his righteousness."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: because Job did not trust, the affliction once from love now has displeasure mixed with it; where there is divine wrath in our troubles we may thank our own quarrelling and distrust (Prov. 19:3)."
+    "summary": "Gill narrows the complaint carefully, granting that God is invisible in his nature but insisting that Job had seen him in his works, trusted him as his salvation and held a full persuasion of the beatific vision, so that the saying can only be about not seeing God on a throne of judgment, hearing and trying his cause and acquitting him, which Job had often desired and despaired of ever seeing."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke renders 'because he visiteth not in his anger' — because vengeance is not speedily executed, men are emboldened to iniquity, the very charge Elihu brings against Job."
+    "summary": "Clarke approaches the saying textually, noting that several manuscripts read thou shalt not see me and the Greek thou shalt not see us, the unpointed consonants admitting either him or us, and he prefers for the fifteenth verse but now, because he visiteth not in his anger, drawing from it the maxim that because vengeance is not speedily executed the hearts of the children of men are set in them to do iniquity; at the close he turns the charge of multiplying words without knowledge on the whole book, holding that it applies very strongly and generally not only to Job's three friends but to Elihu himself, the contest being frequently a strife of words."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry takes Job's saying doubly, as a complaint that he could not discern the drift and design of God's severe dealings and as a despair of ever seeing better days again, and glosses the mood by observing that as in prosperity we think our mountain will never be brought low, so in adversity we think our valley will never be filled, which is as absurd as to think the flowing tide will always flow or the ebbing tide always ebb; he reads the fifteenth verse as meaning that because Job did not trust God the affliction which came at first from love now has displeasure mixed with it, and declines to follow the three friends in condemning Job for a hypocrite, charging him only with speaking unadvisedly when his spirit was provoked."
    }
   ],
   "debates": [
-   {
-    "question": "Does the obscure verse say God HAS visited Job in anger, or has NOT (dealing too leniently)?",
-    "sides": [
-     {
-      "position": "God has visited in anger, because Job would not trust him",
-      "holders": [
-       "Gill",
-       "Henry",
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "God has not visited in anger; his forbearance / unpunished sin has emboldened Job's murmuring",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "What Job meant by saying he should not see God, which Henry takes as both a failure to discern the design of his afflictions and a despair of better days, Gill confines strictly to not seeing God on a throne of judgment acquitting him, and Clarke and Ellicott treat as a question of text and rendering.",
+   "How the fifteenth verse should be rendered, where Ellicott calls it very obscure and canvasses three constructions while preferring his own, and Clarke prefers because he visiteth not in his anger, both arriving at the sense that the delay of judgment emboldens the murmurer.",
+   "Whether the charge of multiplying words without knowledge is well aimed, which Clarke turns on the whole book, applying it strongly to the three friends and to Elihu himself, while Henry defends Elihu and holds the reproof a mercy to Job."
   ],
-  "outliers": [],
-  "themes": [
-   "a very obscure verse",
-   "visited in anger or not",
-   "leniency abused",
-   "the silence of God mistaken"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: Job's loud complaints and self-defence were to no purpose, wanting the trust and humility that alone could profit."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: Job opened his mouth in vain, complaining and self-justifying without trust (James 1:7); yet Elihu, unlike the friends, charges him not with hypocrisy but only with Moses's fault of speaking unadvisedly — a mercy to be told, met by recanting not repeating."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke on the delay of vengeance; but candidly owns 'multiplieth words without knowledge' applies not only to Job but to the friends and to Elihu himself — a strife of words."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch render the verse plainly as the closing charge — words heaped without knowledge."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Turns the reproof on the reprovers: 'he multiplieth words without knowledge' applies strongly and generally not only to Job but to the three friends and to Elihu himself — the whole contest a strife of words."
-   }
+   "Clarke holds that the delay of judgment is no proof that it shall not be executed, nor the deferring of mercy any proof that God has forgotten to be gracious.",
+   "Ellicott adds that happily the judgment was not to be long deferred, pointing forward to the voice from the whirlwind."
   ],
   "themes": [
-   "Job openeth his mouth in vain",
-   "words without knowledge",
-   "not hypocrisy but a hasty word",
-   "the reproof turned on the reprovers"
+   "Although thou sayest thou shalt not see him, yet judgment is before him; therefore trust thou in him.",
+   "But now, because it is not so, he hath visited in his anger; yet he knoweth it not in great extremity:",
+   "Therefore doth Job open his mouth in vain; he multiplieth words without knowledge."
+  ],
+  "excluded_voices": [
+   "John Wesley",
+   "Jamieson, Fausset and Brown"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  }
 }

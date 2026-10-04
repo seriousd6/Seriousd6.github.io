@@ -94440,6 +94440,97 @@
       "book": "1kings",
       "chapter": "3",
       "note": "Clarke's 'He has not himself been able to find the place in Diodorus' is the clearest instance yet in this corpus of a commentator marking the limit of his own verification. Worth remembering as a counterweight when weighing Clarke's more speculative claims elsewhere: he distinguishes what he has checked from what he reports on another's authority."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB displacement, twelfth confirmation of the two-cursor fetch bug, and the clearest advance yet. Job 35 has two JFB blocks, at keys 3 and 15. The key-3 block is comment on 2 Chronicles 12 (Shishak's predatory expedition, Rehoboam's reformation and relapse); the key-15 block is comment on 2 Chronicles 13 (Abijah's harangue from the hill near Beth-el). The donor advances by one chapter while the receiving cursor advances by twelve keys, which is the signature of two cursors walking independently. The donor is also in a different Testament division from the receiving book, which rules out any explanation by adjacent-chapter overrun. JFB was excluded from vv.1-8 and vv.14-16 on this ground."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "2"
+      ],
+      "note": "Keil and Delitzsch truncated at exactly 200 words at keys 2, 6 and 10, the sliding-window cut recorded elsewhere in the corpus; the key-15 block is a 39-word fragment of bare verse text with no comment. The 200-word blocks break mid-sentence (key 2 ends 'min comparative as Job 32:2,') and are additionally dense with unpointed Hebrew that cannot be reproduced in ASCII prose. Delitzsch was nonetheless usable as a declared voice in vv.1-8 and vv.9-13 for two substantive contributions that survive inside the window: the recasting of Elihu's charge as one ponderous construction of co-ordinate questions about non-requital rather than self-comparison, and the rendering of the cry as a call for help by reason of the arm of the great."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "15"
+      ],
+      "note": "Ellicott chrome at key 15 of 16, the near-final position. The block runs 1,194 words of which roughly 320 are real comment on vv.15-16; the remainder is StudyLight navigation, stylesheet text, inline JavaScript, a Cloudflare challenge stub, a Stripe publishable key and the full 66-book book_data array. The real comment was recovered and used. Note for the pending chrome-strip work: the chrome here begins immediately after 'Happily the judgment was not to be long deferred. (See Job 38:1.)' and the first marker is the run of bare chapter links 'Job Job 34 Job Job Job Job 36 Footnotes: Copyright Statement These files are public domain.' That run of a book name repeated with bare chapter numbers looks like a reliable content-based boundary marker, and is a better detector candidate than the copyright line because it precedes it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "35",
+      "note": "Wesley abridges Henry again - ninth chapter and sixth book on record. Wesley's note on v5 ('They are far above us, and God is far above them. How much then is he out of the reach either of our sins or our services?') is verbatim Henry, and his note on v3 ('it was not fair to charge this upon Job, which he had neither directly nor indirectly affirmed') is Henry's own concession restated. Wesley's 408 words in this chapter are wholly derivative and he was excluded as a redundant witness, with the exclusion recorded in excluded_voices on vv.1-8 and vv.14-16. The pattern matters for witness counting: a label-keyed splitter that treats Wesley as independent reads one source twice."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "2"
+      ],
+      "note": "The chapter's organising disagreement is whether Elihu has quoted Job fairly, and the voices split four ways. Clarke denies it flatly: 'my righteousness is more than God's' would indeed be a blasphemous saying, but Job never said it, neither directly nor constructively; Clarke renders the Hebrew 'I am righteous before God' and holds Job entitled to that character because God himself had given it to him. Ellicott calls it 'another misrepresentation', since Job never meant he was none the better for being righteous - he had said 'let mine enemy be as the wicked' - and all that was true is that he had said his righteousness did not deliver him from suffering. Henry splits the difference, allowing the first count (Job did in effect say it when he pressed his integrity against the severity of God's dealings) but refusing the second, on the ground that Job had put the 'what profit' words in the mouth of prospering sinners and disclaimed them, and 'it is not a fair way of disputing to charge men with those consequences of their opinions which they expressly renounce.' Gill alone lets the whole charge stand as fairly inferred. Delitzsch sidesteps by recasting the charge as one of non-requital rather than self-comparison."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "4"
+      ],
+      "note": "Ellicott enters the sharpest caveat in the chapter and it is worth preserving exactly: 'It is indeed true that God is too high to be affected by man's righteousness or unrighteousness, but it does not follow therefore that He is indifferent, for then He would not be a righteous judge.' He also observes that Elihu's whole argument here is very much what Eliphaz and Bildad had already said. No other voice in the chapter notices that Elihu's premise, granted, does not reach his conclusion; Henry, Clarke and Gill all develop the premise without testing it. This is the one place where the commentary turns critical of Elihu rather than of Job."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "10"
+      ],
+      "note": "Who gives songs in the night is genuinely unsettled and Ellicott refuses to settle it. On one reading the giver is God, turning the night of affliction into joy - proverbial and beautiful, but Ellicott doubts it is obvious or natural here. On the other the giver is the selfish and luxurious oppressor who spends the night in feasting and revelry and never asks where God his Maker is, which Ellicott grants 'is an intelligible meaning' and leaves as 'a matter for individual taste and judgment to decide'. He notes the decision partly turns on whether 'Where is God my Maker' belongs to the cry of the oppressed or is Elihu's own comment, and thinks the latter better. Clarke keeps the devotional sense but reports four rival renderings: the Chaldee (high angels giving praise in the night), the Greek (God setting the night-watches), the Syriac and Arabic (giving meditations in the night), and Coverdale (shining upon us that we might praise him in the night)."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "35",
+      "verses": [
+        "16"
+      ],
+      "note": "Clarke closes the chapter by turning Elihu's own charge on the whole book: 'However this may apply to Job, it most certainly applies very strongly and generally to the words, not only of Job's three friends, but to those also of Elihu himself. The contest is frequently a strife of words.' Alongside Ellicott's concession that 'Elihu's reproaches must have been some of the heaviest that Job had to bear', this gives the chapter two independent moments of commentators siding against the speaker they have just been expounding - unusual in this corpus, where Elihu is normally defended, and the two notes were placed together at the close of the third tile for that reason."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "35",
+      "note": "Tiling decision: three tiles (vv.1-8, 9-13, 14-16) read straight off Henry's own pericope heads. Henry's three large blocks in this chapter sit at keys 1 (1,494w), 9 (1,754w) and 14 (1,028w) and nowhere else, which is as clean a division signal as the source offers; the chapter's 16 keys are contiguous with no gaps, and 10,510 raw source words reduce to roughly 9,200 usable after the Ellicott chrome is discounted. Worth generalising: where Henry's blocks cluster at a few keys, their positions are a reliable tiling guide, because Henry writes per pericope while the other commentators write per verse."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "35",
+      "note": "Self-grade A on all three tiles, 648 / 644 / 632 words at compression 0.17x to 0.20x. Each tile carries Henry, Clarke, Gill and Ellicott; Delitzsch is declared on the first two for the two contributions that survive his 200-word truncation. Wesley and JFB are recorded in excluded_voices with the reasons noted separately. No ENTITIES signals arose, which is unusual for a first pass; the chapter's proper names are few (Job, Elihu, Eliphaz, Bildad, Coverdale) and all were taken from the source's own wording. The one place I checked myself was 'the voice from the whirlwind' in an outlier, which paraphrases Ellicott's bare cross-reference to Job 38:1 rather than attributing words to him."
     }
   ]
 }
