@@ -94342,6 +94342,104 @@
         "28"
       ],
       "note": "A real case of two voices saying the same thing in nearly the same words, which is not a defect but needs handling. Wesley abridged Henry, so Wesleys their case is bad who have the prayers and tears of the poor against them and Henrys longer sentence to the same effect both stood in the entry, printing the clause twice. Rather than cut either voice, the second was recast to point back at the first and carry forward only what it adds, the threat of Exodus 22:23. Worth watching wherever Wesley and Henry appear together, which in this corpus is often."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott chrome mid-chapter, the most extreme non-final position on record. 1 Kings 3 has 28 source keys; Ellicott's largest block sits at key 16 (1,102 words) and is almost entirely StudyLight navigation chrome, leaving only about 115 words of real comment on vv.16-28. This is the fourth confirmed case of chrome away from the chapter's last verse (after Job 12 at key 23 of 28 and 2 Chronicles 4 at key 21 of 22), and key 16 of 28 is the furthest from the end yet seen. Taken with 2 Kings 23, which carried a block at Ellicott's own highest key with no chrome at all, a key-position detector fails in both directions on both definitions (chapter-final and voice-final). Only a content-based scan for the StudyLight markers is safe."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB displacement, eleventh confirmation of the two-cursor fetch bug. The four JFB blocks in this chapter sit at keys 3, 9, 15 and 27 (stride six) and carry comment on 1 Samuel 6, 7, 7 and 8 respectively, not on 1 Kings 3. The donor advances with the receiving cursor, which is the signature of two cursors walking independently through the source and the destination. Confirmed donors to date span 1 Samuel 6-15, 2 Samuel 9, 1 Kings 18 and 21, and 1 Chronicles 22. JFB is therefore unusable in this chapter and was excluded from all three tiles."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "3",
+      "note": "Keil and Delitzsch blocks in this chapter are mostly truncated at exactly 200 words, the sliding-window cut already recorded elsewhere in the corpus. The 200-word stubs break mid-sentence and cannot be read as complete witnesses, so K&D was excluded from all three tiles."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "3",
+      "note": "Tiling decision: three tiles (vv.1-4, 5-15, 16-28) rather than four. The chapter's 28 source keys are contiguous with no gaps. vv.16-28 is a single pericope (the judgment between the two women) and the usable material there supports one tile at the word ceiling - Gill about 450 words, Clarke 598, Ellicott 115 after the chrome is discounted - so splitting it would have forced a thin tile and cut the judgment narrative in half. The earlier plan of 1-4, 5-15, 16-22, 23-28 was abandoned for that reason."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "1"
+      ],
+      "note": "The Egyptian marriage is the chapter's sharpest disagreement and the two sides are flatly opposed. Clarke holds it a direct breach of the express law forbidding Israel to give daughters to or take daughters from such nations, and says that in this alliance were sown the seeds of the apostasy in which Solomon so long lived and so awfully died; he then sets out the apologists' four grounds (the bride was a proselyte, God was not displeased, the Song could not stand in the canon with an idolatrous spouse, Solomon is nowhere blamed) and answers each, producing Nehemiah and the later chapter on the strange women as express reproof. Ellicott finds no fault at all, observing that the sacred historian finds none either, that the Egyptians were never regarded with the aversion felt towards the Canaanite races, and that the marriage is nowhere connected with the later declension. Both positions are carried into the prose without arbitration."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "Three incompatible accounts of the dream. Gill maximises the supernatural: a prophetic night vision of the sort God used with his prophets, Solomon keeping the full use of his reasoning powers, the Lord really appearing by some display of his glory. Clarke naturalises it, noting the dream followed the day's sacrifices and prayer because the images that occupy the mind by day recur at night, then deflates his own naturalising with 'we need not carry the matter so far into miracle'. Ellicott reads it institutionally, as a symptom rather than a favour: direct communication of this kind contrasts with David's indirect knowledge through Nathan, Gad and the priest, and is perhaps the first sign of an abeyance of the prophetic office, the vision by dream being of a lower type than the waking vision."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "5"
+      ],
+      "note": "The two commentators split precisely on how much of the promise was kept. Ellicott is narrow and exact: only one point, length of days, was conditional, and that one failed, since the reign is forty years and Solomon's age could hardly have exceeded sixty; the rest received an extraordinary fulfilment, so that for the first and last time the monarchy assumed something of the character of an empire. Clarke questions the fulfilment far more deeply, asking whether the whole was conditional, whether Solomon ever received all this wisdom, and whether his unfaithfulness prevented the divine purpose, since instead of being the wisest of men he became more brutish than any; 'no character in the sacred writings disappoints us more.'"
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "16"
+      ],
+      "note": "What the two women were is disputed before anything else is. Clarke rejects the received rendering outright, preferring the Chaldee (which he calls the best judge in the case) and its tavern-keepers, on three grounds: harlots would hardly have dared appear before Solomon, common women would not likely have had children, and such persons would not have been permitted under the previous reign. Gill gives the argument on the same side - common prostitutes do not usually bear children or care for them as these plainly did - but sets against it that no husbands are mentioned, that the women live together in one house and alone, and that they are impudent and brawling and litigious, which gives great suspicion that the received reading is the true one. He therefore lands where Clarke will not."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "3",
+      "verses": [
+        "16"
+      ],
+      "note": "The chapter's most interesting agreement: both commentators who discuss the judgment deny it was miraculous. Ellicott calls it an instance of intuitive sagacity, cutting the knot of a hopeless difficulty by an appeal to maternal instinct which might have failed but was the only one possible, and locates the wisdom in knowing how to risk failure rather than be reduced to impotence - 'a touch of genius'. Clarke reaches the same place more plainly: the plan was a proof of sound judgment, penetration and acquaintance with human nature, 'but surely it is not produced as a proof of extraordinary and supernatural wisdom.' Clarke supports the deflation with the heathen parallel of Ariopharnes and the arrow shot into the dead king's body, and is scrupulous enough to say that Grotius cites it from Diodorus Siculus and that he has not himself been able to find the place in Diodorus - a model of sourcing worth noting in a commentator usually read as credulous. A second parallel (Suetonius on Claudius) was in the first draft and was cut for length, not for doubt."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "3",
+      "note": "Self-grade A on all three tiles. Compression is 0.11x to 0.17x of source, within the normal band for a legacy rewrite at this source volume (13,827 usable words against 1,946 of prose). Each tile carries Gill, Clarke and Ellicott; Henry, Wesley, JFB and K&D were all excluded, JFB and K&D for the source defects noted above, and Henry and Wesley because Henry's three large blocks (keys 1, 5 and 16) are the pericope-head expositions that the other three voices already cover, with Wesley's usual abridgement of Henry inside them. ENTITIES raised one signal, 'Tyrian', which was my own coinage where the source reads only 'the king of Tyre'; the prose was changed to 'the alliance with Tyre' and the same phrase corrected in the school summary before landing."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "3",
+      "note": "Clarke's 'He has not himself been able to find the place in Diodorus' is the clearest instance yet in this corpus of a commentator marking the limit of his own verification. Worth remembering as a counterweight when weighing Clarke's more speculative claims elsewhere: he distinguishes what he has checked from what he reports on another's authority."
     }
   ]
 }
