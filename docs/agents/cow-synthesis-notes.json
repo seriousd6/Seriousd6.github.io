@@ -94806,6 +94806,94 @@
         "12"
       ],
       "note": "Three repeated-fragment breaches on arrival: the steps of his strength quoted twice in v7, by his own feet twice in v8, his strength twice in v12. All three fixed by replacing the second quotation with a bare reference to the word or clause. Rule 5 breaches again in a chapter the lint passes clean."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "24",
+      "note": "DECLINED as a pick on 2026-10-04, third time this worker has declined it, with the reason recorded here so the next worker does not have to rediscover it. Matthew 24 is 103,477 usable source words across 51 keys, all 51 entries legacy-unversioned per-verse prose with 12 at grade B. That is 2.6 times the ~40,000-word batch threshold and roughly twice Luke 7, which this worker had just completed in a full batch with losses it reported: material cut rather than solved, selective rather than full reading of the largest blocks, and four of eighteen voices left entirely uncited. Matthew 24 also needs MORE care than Luke 7, not less, because the Olivet Discourse is the most contested chapter in the Gospels and the commentary divides on the whole architecture - which verses answer the destruction of the temple and which the parousia, the force of 'this generation', and the referent of the abomination of desolation. A four- or five-tile rewrite at the 650-word ceiling would give a compression of about 0.03x, below even Luke 7's low, and would have to adjudicate or at least represent that architecture in roughly 650 words per tile. The governing rule in the standing instruction is that an abandoned pick costs the run everything and the queue nothing, and this worker was not confident of finishing, so it took 2 Chronicles 15 instead and reported the deviation. What this chapter needs: either a fresh worker with a full context budget taking it as a dedicated batch, or a decision from the owner that Gospel chapters of this size get more tiles than their pericope count, on sub-pericope seams. It is NOT a blocklist candidate - the source is workable, the volume is the problem. Note that this chapter is the head of the --worst-first queue and will be offered first on every poke until it is done or moved."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "4"
+      ],
+      "note": "JFB displacement, fourteenth confirmation, classic two-cursor shape. The three JFB blocks sit at keys 4, 10 and 16 - stride six, as in 1 Kings 3 - and all three are comment on 2 Kings 3: key 4 on the Moabite tribute of a hundred thousand lambs and rams, key 10 on the circuitous route round the southern bend of the Dead Sea and the waterless wady, key 16 on Elisha's stern repulse of the king of Israel and his telling him to go consult Baal. The donor advances in step with the receiving cursor (2 Kings 3:4, then 3:8-11, then 3:13-14), which is the signature of two cursors walking independently through source and destination. JFB is recorded in excluded_voices on all three tiles."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "7"
+      ],
+      "note": "Keil and Delitzsch truncated at exactly 200 words at keys 2, 6 and 7, and the key-7 block demonstrates a consequence of the sliding window that had not been named before: it OVERRUNS INTO THE NEXT VERSE'S MATERIAL. The block begins on 15:7 but its 200 words carry past the verse boundary and spend most of their length on the textual crux at 15:8, where the prophet is called Oded rather than Azariah son of Oded, reporting the view of two editors that the patronymic dropped out by a copyist's error. That discussion therefore sits physically inside tile vv.1-7 while belonging to tile vv.8-15. I caught this because the fidelity ENTITIES check flagged two names in the vv.8-15 tile that occur only in the vv.1-7 source, and I cut the material rather than attribute it to the wrong range. Worth knowing for anyone tiling a chapter with K&D blocks: the 200-word window does not respect verse boundaries, so a claim can be grounded in the chapter and still be out of range for the tile that would naturally carry it."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "15",
+      "note": "Two more abbreviated-authority names that cannot satisfy the ENTITIES check, confirming this as a recurring class rather than a one-off. The K&D blocks cite their opponents only as (Berth.), Cler. and Ew. - Bertheau, Clericus and Ewald. Expanding an abbreviation produces a capitalised word absent from the source and the check flags it; leaving it abbreviated is unreadable in prose. The same problem cost Gregory of Nyssa his place in Luke 7, where the catena writes only GREG. NYSS. Two of the three here were avoided by cutting the material; the third was handled by referring to 'the editor he answers' instead of naming Bertheau, which keeps the claim and the disagreement while losing the name. If the owner wants these authorities nameable, the ENTITIES check would need a short alias table mapping the source's abbreviations to their expansions."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "15",
+      "note": "Tiling: three tiles (vv.1-7, 8-15, 16-19) on Henry's two pericope heads at keys 1 and 8, plus the closing unit vv.16-19 which the source treats separately and which carries the chapter's second textual crux. Nineteen keys, contiguous, 10,433 usable source words, compression 0.15x to 0.27x - a healthy band, and a useful contrast with Luke 7 at 0.03x to 0.08x. This is the third chapter in a row where Henry's block positions gave the tiling directly."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "3"
+      ],
+      "note": "The chapter's organising crux is what period Azariah describes when he says Israel has been without the true God, and it draws five distinct answers. Henry lays out three readings and refuses to choose between them: the days of the Judges, when they had priests but no teaching priests and elders but no law to any purpose; the ten tribes in Asa's own day, since Jeroboam's pretence of honouring the God who brought them out of Egypt had ended in downright infidelity, 'and no marvel when they were without teaching priests'; or the whole passage read in the future tense. Clarke reports the same diversity and does choose, taking the reigns of Rehoboam and Abijah, happily changed under Asa, as 'the most natural sense of the words', against those who make it a prophecy of the final destruction of the Jews as a political existence. Ellicott takes it as past and illustrative, periods of decline adduced as historical proof of the general promise. Gill canvasses the Targum for Jeroboam's days, the future reading fulfilled in the Babylonish captivity, and a Jewish reading by which the prophet foretold days when judgment should not be done in the world and the high priesthood and the sanhedrim should cease. Delitzsch refuses the question of tense entirely, holding that neither preterite nor future should be supplied and the clause put in the present, then allowing the whole historical range from the defection after Joshua through the Assyrian and Babylonian exile to the present dispersion among all nations."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "2"
+      ],
+      "note": "Clarke turns the conditional promise into a doctrinal attack and no one else in the chapter joins him: 'In this verse the unconditional perseverance of the saints has no place: a doctrine which was first the ruin of the human race, Ye shall not die; and ever since the fall, has been the plague and disgrace of the Church of Christ.' Gill, who is in the same tile and holds the doctrine Clarke is attacking, passes the verse over without defending it, so the disagreement is real but one-sided in the source. Henry reads the same clause irenically, as comfort and caution together: God is with those who keep close to him 'but no longer', the continuance depending on their perseverance in duty. Worth recording as an instance where a commentator uses a verse to fight a controversy the other witnesses do not engage."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "19"
+      ],
+      "note": "The thirty-fifth year will not reconcile with the data of Kings and the chapter offers three incompatible repairs plus one refusal. Ellicott holds the chronicler evidently modified the older text, which says war continued between Asa and Baasha all their days, in order to date the outbreak precisely, and relays Thenius: a letter standing for thirty entered the text because a transcriber inadvertently wrote twice over the letter beginning the next word, so the original readings were the fifth and sixth years and Baasha's attempt preceded Zerah's invasion - the false dates, Ellicott adds, probably existed already in the chronicler's source. Clarke reports Ussher's view that the reckoning runs from the separation of the kingdoms and so falls in Asa's fifteenth year, and himself suggests reading the five and twentieth. Gill declines to emend at all and narrows the claim instead, taking the verse to mean only that there was no further war with a foreign enemy, since hostilities with Baasha continued as long as he lived. Clarke then enters the most candid remark in the chapter and it deserves preserving: 'To settle in every respect these chronologies is a most difficult undertaking; and the difficulty does not belong to the sacred books alone, all other chronological tables of all the nations in the world, are in the same predicament. With those of our own history I have often been puzzled, even while I had access to all the archives of the nation.'"
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "15",
+      "verses": [
+        "17"
+      ],
+      "note": "Why the high places remained after a reformation the chapter calls thorough gets three different divisions. Ellicott prefers a fresh solution to the discrepancy with the earlier chapter: that passage relates what the good king resolved and attempted, this one records his want of success, owing to the obstinate attachment of his people to their old sanctuaries - and he applies the same solution to a later apparent contradiction in the book. Clarke divides the idolatry from its furniture, holding that Asa totally suppressed the worship but permitted some of the places or buildings or altars to stand. Henry divides geographically and then liturgically, that those in Judah's cities went but not those in the recovered cities of Israel, or that those used for false gods went but not those used in the service of the God of Israel, and draws the conclusion that gives the chapter its moral: 'There may be defects in some particular duties where yet the heart, in the main, is upright with God. Sincerity is something less than sinless perfection.'"
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "15",
+      "note": "Self-grade A on all three tiles, 648 / 648 / 649 words at compression 0.17x, 0.15x and 0.27x. Voices are Henry, Clarke, Gill and Ellicott throughout, with Delitzsch declared on vv.1-7 only; JFB is in excluded_voices on all three for the displacement noted separately. Wesley's 339 words were not used. Two corrections made before landing, both caught by the ENTITIES check rather than by me: the names Bertheau, Clericus and Ewald are expansions of the source's abbreviations and had to be removed or paraphrased; and the Delitzsch discussion of the Oded crux, which I had placed in the vv.8-15 tile because it is about verse 8, actually sits in the key-7 block and so belongs to vv.1-7 - I cut it and backfilled the tile from Ellicott's own notes on the covenant within range rather than cite material from outside the tile's source. That was my error, not the source's, and the check caught it."
     }
   ]
 }
