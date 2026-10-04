@@ -94271,6 +94271,77 @@
         "16"
       ],
       "note": "Self-grade A on all four tiles. Compression runs 0.11x to 0.43x of usable source. The chrome tail at key 23 and the truncated K and D blocks were set aside before drafting. No ENTITIES signals were raised, on the first run of the check. One name was deliberately avoided rather than matched: Gill dates the king's death on Dr Lightfoot's reckoning, but Lightfoot is a declared voice elsewhere in the corpus and naming him in prose where he is not a declared witness here would have tripped the voice check as cited but not declared, so the prose reads on one chronologer's reckoning instead. The first tile runs 435 words against the others' 645 to 649, which is deliberate: its two verses are nearly identical with the parallel in Kings, as Ellicott observes, so there is little comment proper to this book to carry."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "34",
+      "verses": [
+        "3",
+        "28",
+        "29"
+      ],
+      "note": "Three entity flags, all three genuine. At v28 the prose told Clarkes anecdote of a Scottish laird; Clarke writes a certain great man in Scotland, and both the adjective and the title were mine, so the phrase was restored as a quotation. At v3 a fault not unknown even to certain of the Greeks became a fault from which some of the Greek poets are not exempt, which is Clarkes own wording. At v29 the appeal to 2 Kings 6:27 was attributed to Elisha by name, which no commentator does; the name was dropped and the ref kept."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "34",
+      "verses": [
+        "3"
+      ],
+      "note": "Pool contamination again, third book in which it appears. Of the five occurrences of greek in this chapters blobs, two are the scraped sites lexicon chrome (Greek Old Testament, Bible Lexicons) and only one is Clarkes actual Greek poets. The plural Greeks was flagged solely because it happened to be absent from the chrome. The pool should be built from the commentator spans alone."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "34",
+      "verses": [
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "15",
+        "16",
+        "18",
+        "20",
+        "21",
+        "22",
+        "25",
+        "27",
+        "28",
+        "30",
+        "31",
+        "32",
+        "33"
+      ],
+      "note": "Eighteen banned-carrier instances recast, seventeen of them the witnesses do not divide and one so the witnesses, spread over eighteen of thirty-seven entries. Eighth chapter measured for this phrase and every one has carried it. Running tally of instances per chapter: john 16 thirty-three of thirty-three, 1samuel 17 thirty of fifty-eight, 1chronicles 26 twenty-one of thirty-two, job 34 eighteen of thirty-seven, 1chronicles 7 nine of forty, 1chronicles 24 eight of thirty, 2kings 20 seven of twenty, 2kings 11 one of twenty-one."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "34",
+      "verses": [
+        "13",
+        "28",
+        "32"
+      ],
+      "note": "Three grade-B entries, all cleared, and all three by the pronoun-and-de-articling lever rather than by deletion or addition. The per-paragraph deletion search returned zero candidates for v13 and v32 and only content-destroying ones for v28, so the search correctly declined to help. Each entry was several voices on one short clause, so its key words recur by necessity: earth and world and who at v13, cry and poor at v28, know and teach and see at v32. The method was to leave every quotation untouched and rewrite only my own connective prose, replacing repeated head-nouns with pronouns and unpacking of-the chains. v13 0.5655 to 0.5962, v28 0.5492 to 0.5831 (with compress 0.416 to 0.450), v32 0.5713 to 0.5786 and then to 0.5937 once Henrys unused material on the bond of a fixed resolution was added. That addition is the pattern to prefer: a different semantic field, here the anatomy of repentance, rather than more of the same subject."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "34",
+      "verses": [
+        "28"
+      ],
+      "note": "A real case of two voices saying the same thing in nearly the same words, which is not a defect but needs handling. Wesley abridged Henry, so Wesleys their case is bad who have the prayers and tears of the poor against them and Henrys longer sentence to the same effect both stood in the entry, printing the clause twice. Rather than cut either voice, the second was recast to point back at the first and carry forward only what it adds, the threat of Exodus 22:23. Worth watching wherever Wesley and Henry appear together, which in this corpus is often."
     }
   ]
 }
