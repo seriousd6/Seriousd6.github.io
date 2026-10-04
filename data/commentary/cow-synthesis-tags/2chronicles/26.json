@@ -1,1050 +1,270 @@
 {
  "1": {
   "voices": [
-   "Adam Clarke",
    "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry"
+   "Adam Clarke",
+   "Charles Ellicott"
   ],
+  "range": "1-2",
+  "pericope_label": "Then all the people of Judah took Uzziah, who was sixteen years old, and made him king in the room of his father Amaziah. He built Eloth, and restored it to Judah, after that the king slept with his fathers.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott studies the double name: the chronicler calls him Uzziah (Azariah only at 1 Chron 3:12), but the Assyrian inscriptions of Tiglath-pileser call him Azriyahu; he was known by both names, to foreigners chiefly as Azariah."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke sketches the whole reign in advance: a pious and prosperous beginning, then the invasion of the priest's office, leprosy, and abdication to Jotham."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Matthew Henry frames the moral: Uzziah kept the pure worship of God and (unlike his father) shunned idols, and as long as he sought the Lord God made him to prosper."
+    "prevalence": "single",
+    "summary": "Ellicott argues that Uzziah and Azariah are both genuine names rather than an abbreviation or a copyist's blunder, noting that this writer uses the first almost always and Kings both, that the Greek of Kings levels its usage to the second, and that the Assyrian inscriptions of Tiglathpileser use the longer form uniformly, so that the king was known by both but to foreigners chiefly by the second; he also identifies the port as the Idumean harbour on the Red Sea and observes that the first four verses are identical with the parallel."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes only that this is the king called Azariah elsewhere and refers to the parallel."
+    "prevalence": "single",
+    "summary": "Gill passes the opening verses over to the parallel account, where the same king appears under the other name."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke reads the accession clause to mean that the people all agreed to place this son on his father's throne, notes that the king is called by several different names, and sets out the whole course of the reign in advance, from the piety and prosperity under the prophet to the campaigns, the building, the elation, the leprosy and the burial."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether the two names of this king are both genuine, which Ellicott maintains against Schrader and others who make the shorter form a popular abbreviation or a transcriber's blunder.",
+   "How much of the opening is proper to this book at all, where Ellicott observes that the first four verses are identical with the parallel in Kings.",
+   "What the fortifying of the port at the outset signified, which Ellicott takes as the act completing the subjugation of Edom that the previous reign had begun."
+  ],
+  "outliers": [
+   "Ellicott brings the Assyrian inscriptions to bear on the question of the name, the king appearing there uniformly under the longer form."
+  ],
   "themes": [
-   "the people set up Uzziah",
-   "Uzziah and Azariah",
-   "a pious beginning",
-   "prosperity tied to seeking God"
+   "Then all the people of Judah took Uzziah, who was sixteen years old, and made him king in the room of his father Amaziah.",
+   "He built Eloth, and restored it to Judah, after that the king slept with his fathers."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
+   "grade": "B",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.27
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
+   "Charles Ellicott"
   ],
+  "range": "5-8",
+  "pericope_label": "And he sought God in the days of Zechariah, who had understanding in the visions of God: and as long as he sought the Lord, God made him to prosper. And he went forth and warred against the Philistines, and brake down the wall of Gath, and the wall of Jabneh, and the wall of Ashdod, and built cities about Ashdod, and among the Philistines. And God helped him against the Philistines, and against the Arabians that dwelt in Gur–baal, and the Mehunims. And the Ammonites gave gifts to Uzziah: and his name spread abroad even to the entering in of Egypt; for he strengthened himself exceedingly.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads 'continued to seek God' as the chronicler's idiom and argues the true text is 'understanding in the fear of God' (with the versions, Rashi, Kimchi), not 'visions'; Zechariah was the king's guide in religion and politics alike."
+    "prevalence": "single",
+    "summary": "Ellicott will not keep the received text of the prophet's character, preferring the reading of some Hebrew manuscripts and of the Greek, Syriac, Arabic and Targum which gives the fear of God rather than the visions of God, as Rashi and Kimchi had suggested, and draws from the relation that Zechariah was the king's counsellor in the political as well as the religious sphere, the distinction between the two being then unknown; he notices that the two histories substitute different judgments at this point, identifies Jabneh and Ashdod and judges the Philistines reduced to vassalage without annexation, and leaves Gur-Baal unidentified."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill rules out the later prophet and the murdered Zechariah, taking this counsellor to be a son of the priest Joash slew."
+    "prevalence": "single",
+    "summary": "Gill clears away two candidates for the prophet before suggesting a son of the Zechariah whom Joash slew, supplies the Philistine grievance from the reign of Jehoram, reports the Targum making it the Word of the Lord that helped the king, and allows that the Ammonites may have been merely desirous of friendship."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke knows Zechariah only by this character, a man skilled in the divine visions and probably the young king's tutor."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry warns that Uzziah sought God only while Zechariah lived, having no principle in himself to hold him to the end."
+    "prevalence": "single",
+    "summary": "Clarke builds on the received reading, taking the visions of God for the true interpretation of divine prophecies and inferring that the prophet was the young king's tutor, quotes the same Targum at greater length with the Arabians of Gerar and the plains of Meun, and makes the Ammonite gifts an annual tribute."
    }
   ],
   "debates": [
-   {
-    "question": "Does the text read 'understanding in the visions of God' or 'in the fear of God'?",
-    "sides": [
-     {
-      "position": "'visions of God' — skilled in interpreting the divine oracles",
-      "holders": [
-       "Gill",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "'fear of God' — the reading of the versions, Rashi and Kimchi, and doubtless correct",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
+   "Whether the prophet's character should read the visions of God or the fear of God, where Ellicott emends with the versions and Rashi and Kimchi, and Clarke builds his whole account of the man on the received text.",
+   "Who the Zechariah of this verse was, which Ellicott leaves as an otherwise unknown prophet, Gill makes perhaps a son of the Zechariah whom Joash slew, and Clarke guesses to have been the king's tutor.",
+   "Where Gur-Baal lay, which Ellicott says is mentioned only here and is unknown, the Targum making it Gerar and the Greek apparently Petra, with Gedor-Baal proposed."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott observes that where this writer accounts for the king's prosperity by his seeking God, Kings at the same point makes its usual deduction that the high places were not taken away."
+  ],
   "themes": [
-   "seeking God in Zechariah's days",
-   "who was Zechariah",
-   "visions versus fear of God",
-   "borrowed piety"
+   "And he sought God in the days of Zechariah, who had understanding in the visions of God: and as long as he sought the Lord, God made him to prosper.",
+   "And he went forth and warred against the Philistines, and brake down the wall of Gath, and the wall of Jabneh, and the wall of Ashdod, and built cities about Ashdod, and among the Philistines.",
+   "And God helped him against the Philistines, and against the Arabians that dwelt in Gur–baal, and the Mehunims.",
+   "And the Ammonites gave gifts to Uzziah: and his name spread abroad even to the entering in of Egypt; for he strengthened himself exceedingly."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott detail the campaign: Gath (taken by David), Jabneh (Jamnia/Jebnah, the Jabneel of Josh 15:11) and Ashdod (Esdud, guarding the road to Egypt) broken down and Judahite cities planted, reducing Philistia to vassalage though still under its own kings."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill marks the reversal — these were the Philistines who under Jehoram had broken in upon Judah (2 Chron 21:16)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.43
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "war against the Philistines",
-   "the cities Gath, Jabneh, Ashdod",
-   "Philistia reduced to vassalage",
-   "reversal of Jehoram's humiliation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott extend the divine help over Philistines, the Arabians of Gur-baal (an unknown site — Targum Gerar, LXX Petra) and the Mehunim/Maonites of Maon near Seir, made tributary."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill stresses that Uzziah conquered not by his own strength but by God's help, citing the Targum's 'the Word of the Lord helped him.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke likewise cites the Targum and identifies the Arabians as the Meunim/Meonites."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "God helped him",
-   "the Word of the Lord",
-   "the unknown Gur-baal",
-   "victory credited to heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil read the Ammonite 'gifts' as tribute (minchah) and the name spreading 'to the entering in of Egypt' as the report of real victorious power reaching the frontier; 'strengthened himself' = showed strength, made head (cf. Dan 11:7)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes the Ammonites as tributaries or peace-seekers."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke calls the gifts an annual tribute."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Ammonite tribute",
-   "fame to the border of Egypt",
-   "he strengthened himself exceedingly",
-   "the seed of the coming pride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
   "voices": [
    "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott map the three fortifications — the corner gate (NW), the valley gate (the modern Jaffa gate, W), and the tower at the 'turning of the wall' (the SE angle of Zion joining the temple hill, per Neh 3:19) — the quarters most open to attack."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the corner gate, broken down under Amaziah, repaired and crowned with a tower."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry adds that Uzziah's best fortification was his adherence to God's worship — had his father not forsaken it, the wall would never have been broken."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "fortifying Jerusalem",
-   "corner, valley, and angle towers",
-   "the vulnerable sides of the city",
-   "true defence is fidelity to God"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
    "Adam Clarke",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott set the towers and cisterns in the wilderness of Judah and the trans-Jordan Mishor (Reuben's land, recovered from Moab and Ammon), where his herds grazed; 'he loved husbandry' = a lover of the soil."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke calls love of husbandry a perfection in a king on which every state depends; Wesley reads the towers as guarding the cattle from Arabian raids and warning of enemies."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill sets the desert towers as walled refuges (like pagodas) for shepherds and flocks against robbers."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry paints a king who delighted not in war or sport but in the quiet employments of the husbandman, honouring the calling."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "towers and cisterns in the desert",
-   "the trans-Jordan plain of Reuben",
-   "he loved husbandry",
-   "a warrior-farmer king"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott expound the muster: the host went out in bands/troops (each house a troop) by a census (pequddah) drawn up by Jeiel the scribe and Maaseiah the officer under Hananiah, one of the king's captains."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes plainly that Uzziah had a standing army."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry sees two establishments — a field host for reprisal raids and a garrison army for defence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the standing army",
-   "muster by bands and census",
-   "the king's officers",
-   "organised military power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
    "Charles Ellicott"
   ],
+  "range": "9-15",
+  "pericope_label": "Moreover Uzziah built towers in Jerusalem at the corner gate, and at the valley gate, and at the turning of the wall, and fortified them. Also he built towers in the desert, and digged many wells: for he had much cattle, both in the low country, and in the plains: husbandmen also, and vine dressers in the mountains, and in Carmel: for he loved husbandry. Moreover Uzziah had an host of fighting men, that went out to war by bands, according to the number of their account by the hand of Jeiel the scribe and Maaseiah the ruler, under the hand of Hananiah, one of the king’s captains. The whole number of the chief of the fathers of the mighty men of valour were two thousand and six hundred. And under their hand was an army, three hundred thousand and seven thousand and five hundred, that made war with mighty power, to help the king against the enemy. And Uzziah prepared for them throughout all the host shields, and spears, and helmets, and habergeons, and bows, and slings to cast stones. And he made in Jerusalem engines, invented by cunning men, to be on the towers and upon the bulwarks, to shoot arrows and great stones withal. And his name spread far abroad; for he was marvellously helped, till he was strong.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read the 2,600 as the heads of fathers'-houses, valiant heroes, over the larger army beneath them, the host marshalled by clans with the bravest chief leading each house's detachment."
+    "prevalence": "single",
+    "summary": "Ellicott places the three towers at the exposed points of the capital, corrects the English margin on the fortifying, reads the desert as the grazing country west of the Dead Sea and the wells as hewn cisterns, takes Carmel for the fruitful field rather than a place, renders the closing clause as a lover of the soil, and describes the muster administratively, the host in organised troops with each chief over about a hundred and twenty men and the equipment divided between heavy and light armed."
    },
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes them for the commanders and principal officers, implying a very large army under them."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "2,600 heads of houses",
-   "the officer framework",
-   "the host marshalled by clans",
-   "the scale of Uzziah's power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott describe the 307,500-strong force that 'made war with mighty power,' agreeing roughly with Amaziah's 300,000 (2 Chron 25:5), each chief over about 120 men."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the army exceeded his father's by 7,500 besides officers."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry stresses the overwhelming might — no enemy durst face them — grounded in Uzziah's great armoury."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the 307,500-man army",
-   "mighty power to help the king",
-   "the command-ratio",
-   "strength that will breed pride"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sorts the armoury — shields, spears, helmets and habergeons for the heavy-armed; bows and slings for the light — and reads 'stones of slings' as proof the equipment was complete."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry notes the arms were both offensive and defensive, and that swords go unmentioned because every man wore his own."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill stresses the arms were prepared for every soldier throughout the host."
+    "prevalence": "single",
+    "summary": "Gill supplies the history of the broken corner gate, puts the desert towers in Arabia for the protection of travellers and shepherds, identifies the twenty-six hundred as the commanders and reckons the army larger than the previous reign's by seven thousand five hundred, and canvasses the rival claimants to the invention of the engines before settling it on skilful men among the Jews in this reign."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke reads a strategist's foresight — weapons kept in readiness for any emergency."
+    "prevalence": "single",
+    "summary": "Clarke makes the country towers a defence for flocks and shepherds, takes Carmel for a place-name and reports two of them from Calmet, turns the love of husbandry into a political maxim that no state can prosper without agriculture since the king himself is served by the field, reads the armoury as weapons held ready for the subjects' hands, and claims the engines as the first warlike machines on record, long prior to Greece or Rome, supporting it from the length of sieges before them."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   "Whether Carmel here is a place or a common noun, where Clarke reports two Carmels from Calmet and Ellicott reads the fruitful field or glebe land.",
+   "Who invented the siege engines, where Gill weighs the Greeks, the Romans, the Syrians and Phoenicians on Pliny's authority and the Carthaginians before deciding for Judea in this reign, and Clarke independently calls this the first such engine on record.",
+   "What the towers in the open country were for: the protection of travellers and shepherds (Gill), the defence of flocks and husbandmen (Clarke), or a guard for the royal herds in the grazing country (Ellicott)."
+  ],
+  "outliers": [
+   "Clarke spends his longest note of the chapter on husbandry as a perfection in a king, holding that where a king encourages it the people cannot be reduced to wretchedness even should trade fail, because there is plenty of bread.",
+   "Gill cites Diodorus Siculus for the claim that siege engines had not been found out when Nineveh was besieged."
+  ],
   "themes": [
-   "arming the whole host",
-   "heavy and light equipment",
-   "offensive and defensive arms",
-   "the unmentioned swords"
+   "Moreover Uzziah built towers in Jerusalem at the corner gate, and at the valley gate, and at the turning of the wall, and fortified them.",
+   "Also he built towers in the desert, and digged many wells: for he had much cattle, both in the low country, and in the plains: husbandmen also, and vine dressers in the mountains, and in Carmel: for he loved husbandry.",
+   "Moreover Uzziah had an host of fighting men, that went out to war by bands, according to the number of their account by the hand of Jeiel the scribe and Maaseiah the ruler, under the hand of Hananiah, one of the king’s captains.",
+   "The whole number of the chief of the fathers of the mighty men of valour were two thousand and six hundred.",
+   "And under their hand was an army, three hundred thousand and seven thousand and five hundred, that made war with mighty power, to help the king against the enemy.",
+   "And Uzziah prepared for them throughout all the host shields, and spears, and helmets, and habergeons, and bows, and slings to cast stones.",
+   "And he made in Jerusalem engines, invented by cunning men, to be on the towers and upon the bulwarks, to shoot arrows and great stones withal. And his name spread far abroad; for he was marvellously helped, till he was strong."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "15": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil calls the engines ingenious slinging machines like Roman catapults and ballistas for shooting arrows and stones; Ellicott names them the first mention of artillery, figured on Assyrian sculptures and passed thence to Palestine."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke claims this the first record of siege-engines anywhere, the Jews their inventors ~800 B.C., before which sieges dragged for years (Samaria, Nineveh, Troy)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill argues from Pliny and Diodorus that such engines were invented in Judea, not Greece or Rome."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry laments that men's lusts made cunning men devise instruments of death."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "war-engines on the walls",
-   "the first artillery",
-   "marvellously helped till he was strong",
-   "skill turned to instruments of death"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "16": {
   "voices": [
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
+   "John Gill",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley"
   ],
+  "range": "16-23",
+  "pericope_label": "But when he was strong, his heart was lifted up to his destruction: for he transgressed against the Lord his God, and went into the temple of the Lord to burn incense upon the altar of incense. And Azariah the priest went in after him, and with him fourscore priests of the Lord, that were valiant men: And they withstood Uzziah the king, and said unto him, It appertaineth not unto thee, Uzziah, to burn incense unto the Lord, but to the priests the sons of Aaron, that are consecrated to burn incense: go out of the sanctuary; for thou hast trespassed; neither shall it be for thine honour from the Lord God. Then Uzziah was wroth, and had a censer in his hand to burn incense: and while he was wroth with the priests, the leprosy even rose up in his forehead before the priests in the house of the Lord, from beside the incense altar. And Azariah the chief priest, and all the priests, looked upon him, and, behold, he was leprous in his forehead, and they thrust him out from thence; yea, himself hasted also to go out, because the Lord had smitten him. And Uzziah the king was a leper unto the day of his death, and dwelt in a several house, being a leper; for he was cut off from the house of the Lord: and Jotham his son was over the king’s house, judging the people of the land. Now the rest of the acts of Uzziah, first and last, did Isaiah the prophet, the son of Amoz, write. So Uzziah slept with his fathers, and they buried him with his fathers in the field of the burial which belonged to the kings; for they said, He is a leper: and Jotham his son reigned in his stead.",
   "schools": [
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott read Uzziah as seeking to unite king and high priest in one person, like the Egyptian Pharaohs; Ellicott renders 'to his destruction' as 'dealing corruptly,' doubts the David/Solomon precedent, and sets it beside Saul (1 Sam 13:9) and the law of Num 18:1-7."
+    "prevalence": "single",
+    "summary": "Ellicott takes the king to have wanted the pontificate as well as the crown, on the model of the Egyptian rulers, and denies that he was merely reviving a precedent of David and Solomon since it can hardly be proved those kings ever performed priestly functions; he renders the thrusting out as hurrying him away and the hasting as that he thrust himself, reports Thenius's reservation that the chronicler followed traditional exegesis in making the leprosy a judgment, relays the embellishment in Josephus, and renders the several house as the hospital or lazar house with the reason for it this writer's own addition."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry makes this the one blot on Uzziah, rooted in pride of heart — the prosperity of fools destroys them; his sin was intruding into the temple, not forsaking it."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill supplies the strength that lifted the king up, has the high priest go in after him to hinder him and the priests surround him so that he could not approach the altar, observes that the leprosy appeared in the forehead where all could see, and dates the death to the same year as the stroke on one chronologer's reckoning."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke says he assumed the priest's office; Wesley specifies he entered the holy place where none but priests might come, much less offer incense."
+    "summary": "Clarke makes the separation total, from all society domestic, civil and religious, has the son become regent because the father could no longer discharge the office, records that the history Isaiah wrote of this king is totally lost, and explains the burial outside the royal sepulchres by the supposition that even a place of burial would be defiled by a leper's body; Wesley denies that the priests used any force, fixes the stroke as coming from beside the altar by an invisible hand, and finds the punishment answering the sin as face answers face in a glass."
    }
   ],
   "debates": [
-   {
-    "question": "Was Uzziah reviving a royal precedent of David and Solomon in offering incense?",
-    "sides": [
-     {
-      "position": "no — those kings organised the ritual but never performed the distinctive priestly functions; this was fresh usurpation",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "the act was plain pride and unlawful intrusion, condemned by the law",
-      "holders": [
-       "Henry",
-       "Clarke",
-       "Wesley",
-       "Keil and Delitzsch"
-      ]
-     }
-    ]
-   }
+   "Whether the priests restrained the king physically, where Gill has them surround him so that he could not approach the altar while Wesley denies any laying on of hands, since the censer is still in his hand in the next verse, and Ellicott's renderings of hurrying him out and of his thrusting himself away support Wesley.",
+   "What the king was attempting, which Ellicott makes a bid for the pontificate on the Egyptian model against the view that he was reviving a precedent of David and Solomon.",
+   "Whether the leprosy is to be read as a judgment on the offence, which Thenius ascribes to the chronicler's traditional exegesis while granting the invasion of the sanctuary itself historical."
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott relays the embellishment in Josephus, that the great earthquake the prophet mentions fell as the king threatened the priests and that a ray of sunlight through the cloven roof produced the disease.",
+   "Wesley reads the sentence as exactly reciprocal, the king thrust out of the courts open to the meanest subject because he thrust himself into the place reserved for priests, and losing a dignity he held by right because he invaded one he did not."
+  ],
   "themes": [
-   "strength turned to pride",
-   "king usurping the priesthood",
-   "unfaithfulness to Jehovah",
-   "the great High Priest of our profession"
+   "But when he was strong, his heart was lifted up to his destruction: for he transgressed against the Lord his God, and went into the temple of the Lord to burn incense upon the altar of incense.",
+   "And Azariah the priest went in after him, and with him fourscore priests of the Lord, that were valiant men:",
+   "And they withstood Uzziah the king, and said unto him, It appertaineth not unto thee, Uzziah, to burn incense unto the Lord, but to the priests the sons of Aaron, that are consecrated to burn incense: go out of the sanctuary; for thou hast trespassed; neither shall it be for thine honour from the Lord God.",
+   "Then Uzziah was wroth, and had a censer in his hand to burn incense: and while he was wroth with the priests, the leprosy even rose up in his forehead before the priests in the house of the Lord, from beside the incense altar.",
+   "And Azariah the chief priest, and all the priests, looked upon him, and, behold, he was leprous in his forehead, and they thrust him out from thence; yea, himself hasted also to go out, because the Lord had smitten him.",
+   "And Uzziah the king was a leper unto the day of his death, and dwelt in a several house, being a leper; for he was cut off from the house of the Lord: and Jotham his son was over the king’s house, judging the people of the land.",
+   "Now the rest of the acts of Uzziah, first and last, did Isaiah the prophet, the son of Amoz, write.",
+   "So Uzziah slept with his fathers, and they buried him with his fathers in the field of the burial which belonged to the kings; for they said, He is a leper: and Jotham his son reigned in his stead."
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-04",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott present the high priest Azariah (probably the man of 1 Chron 6:10) and eighty priests, 'sons of valour' — so called for the moral courage to withstand the king — insisting that incense belongs only to Aaron's consecrated line."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill identifies Azariah as the high priest, going in to hinder and persuade the king."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests withstand the king",
-   "eighty sons of valour",
-   "moral courage of conscience",
-   "the priesthood reserved to Aaron"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott parses the charge — incense belongs to Aaron's consecrated sons, 'trespassed' echoing v.16, and 'not for thine honour' meaning the act will end in shame; Keil carries the narrative on to the leprosy and expulsion."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley stresses they withstood him only by admonition, not force (the censer stays in his hand), and modestly, honouring him still as sovereign."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes they stood about him, surrounding him to block his approach to the altar."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the priests' remonstrance",
-   "the law of incense cited",
-   "reproof without force",
-   "warning of coming shame"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders the king's 'foaming' rage, the censer in hand (Ezek 8:11), and the leprosy that 'rose up' beside the altar — the stroke of Miriam (Num 12:10) and Gehazi (2 Kings 5:27) — with the Josephus embellishments of earthquake and sunbeam."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley reads the leprosy as a blow from an invisible hand from the altar, that Uzziah might know it the direct effect of God's displeasure."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: had he submitted all had been well, but his wrath drew God's wrath — those who will not see by the judgment of God's mouth are made to see by the judgment of his hand."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes his anger and (from Josephus) his threat to kill the priests."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Was the leprosy truly a divine judgment on Uzziah's offence, or only a traditional interpretation the chronicler adopted?",
-    "sides": [
-     {
-      "position": "a real stroke from God's own hand upon the sin",
-      "holders": [
-       "Ellicott",
-       "Wesley",
-       "Henry",
-       "Gill"
-      ]
-     },
-     {
-      "position": "the chronicler followed traditional exegesis in making the leprosy a judgment, though the invasion itself was historical",
-      "holders": [
-       "Thenius (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the king's rage",
-   "leprosy from beside the altar",
-   "the stroke of Miriam and Gehazi",
-   "God's mouth and God's hand"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sharpens the Hebrew — the priests 'turned towards him,' 'thrust him out' (scared/hurried, cf. Esther 6:14), and he 'thrust himself' out — because the Lord had smitten him (2 Kings 15:5)."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry sees a flicker of the fear of God: the king who strove with the priests would not strive with his Maker, and fled the moment he knew God was angry."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley notes no force was needed — the king hasted away under the priests' persuasions and warnings of further judgment."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the leprosy, though over all his body, showed most remarkably in his forehead where all could see it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the leprous forehead seen",
-   "hurried from the sanctuary",
-   "the king flees willingly",
-   "fear of God amid judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott renders the 'several house' a lazar-house and expounds the chronicler's added clause 'cut off from the house of the Lord' — excluded as a leper by the law of Lev 13:46, he had to isolate from all society."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke notes the separation from all society and Jotham's regency; Wesley reads the incurable leprosy as a lasting monument of God's anger and draws the exact correspondence — thrust from the temple he had usurped, deprived of the throne that was rightly his."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: a leper is dead while he lives, buried alive; those who covet forbidden honours forfeit the honours that were lawfully theirs."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes he was a leper till death, dwelling in a separate house."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "a leper unto death",
-   "the lazar-house and Jotham's regency",
-   "cut off from the house of the Lord",
-   "punishment answering the sin"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott attribute the fuller record to the prophet Isaiah son of Amoz, Ellicott noting Kings instead cites 'the book of the chronicles of the kings of Judah.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke observes Isaiah's history of Uzziah is wholly lost — the king is barely named in the surviving book (Isa 1:1; 6:1)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the record covered his acts first and last."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the acts written by Isaiah",
-   "a lost prophetic history",
-   "Kings versus Chronicles on the source",
-   "what the Spirit chose to keep"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil and Ellicott explain he was buried not in the royal tombs but in the burial-field near them, lest a leper's body defile the sepulchres; Kings says only 'in the city of David.'"
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke gives the same reason — a leper barred from the common royal burying-place lest even the grave be defiled."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill dates his death (with Lightfoot) to the year of his smiting, and recalls that Isaiah's temple vision (Isa 6:1) fell in the year of the king's death."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "buried apart as a leper",
-   "excluded from the royal tombs",
-   "the stigma carried to the grave",
-   "the year of Isaiah's vision"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads the rebuilding of Elath as completing Amaziah's subjection of Edom and the base for later campaigns; Ellicott stresses the emphatic 'it was he who built' and identifies Eloth as the Idumean Red Sea port, noting these verses stand identical with Kings."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke notes the port's history and that the king bears several names."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the rebuilding of Elath",
-   "mastery of Edom and the sea",
-   "a vigorous young king",
-   "the chronicler follows Kings"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-23",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  }
 }
