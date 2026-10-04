@@ -93612,6 +93612,158 @@
         "40"
       ],
       "note": "Nine banned-carrier instances recast: the witnesses do not divide three times, so the witnesses five, the witnesses note once. Fifth chapter measured for this and the spread stays uneven: 1samuel 17 thirty in fifty-eight, 1chronicles 26 twenty-one in thirty-two, 2kings 20 seven in twenty, 1chronicles 7 nine in forty, 2kings 11 one in twenty-one."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "luke",
+      "chapter": "7",
+      "verses": [
+        "1-50"
+      ],
+      "note": "TRIAGE, declined on worker-context grounds, not on source grounds. The source is workable; the chapter is simply large. Survey done so the next worker need not repeat it: 50 source keys, 52,446 usable source words, which is over the ~40,000 single-batch threshold, so this chapter is a whole batch by itself. All 50 entries are stamped legacy-unversioned, so despite being served from the polish queue this is a legacy rewrite into pericope tiles, not a per-verse polish, and there are no fidelity notes on record to work from. 36 of the 50 verses carry a recorded B, and the shape of the B is unusual and worth knowing in advance: COMPRESS is the binding constraint here, not ttr. Twelve verses sit below the 0.42 compress floor while already clearing or nearly clearing ttr (v22 at 0.3862 compress against 0.5802 ttr, v29 at 0.3719 against 0.5083, v47 at 0.379 against 0.5493, v35 at 0.3918, v42 at 0.3979, v20 at 0.3972, v30 at 0.3952). That is the reverse of the pattern in 2chronicles 20 and job 12, where ttr bound and compress was clear, so the substitution-at-constant-length lever recorded under 2chronicles 20 will not help here; low compress means the prose is too repetitive overall, and a pericope rewrite rather than an edit is the right treatment. Natural tiling on the narrative joints would be 1-10 the centurion's servant, 11-17 the widow of Nain, 18-23 the message from John, 24-30 Christ's testimony to John, 31-35 the children in the market, 36-50 the anointing in the Pharisee's house, which is six tiles. Recommended for a worker with a fresh window."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "13",
+        "19"
+      ],
+      "note": "JFB fetch displacement, ninth confirmation of the two-cursor model. Both substantive JFB blocks carry 2 Samuel 9 material, the finding and honouring of Mephibosheth, at the stride-6 key positions 13 and 19. The donor cursor advances with the target: key 13 holds the inquiry after Saul's house, Ziba's information and the place at the royal table, key 19 holds the equipage granted him as one of the king's sons. JFB is declared on no tile."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "21"
+      ],
+      "note": "A new kind of JFB artefact, distinct from displacement. The 6-word block the splitter files under JFB at key 21 is not commentary at all but a fragment of raw XML attributes from the scrape pipeline, reading type equals x-importer, subType equals x-osis2mod, with a revision keyword and the word SWORD. It is import machinery, not text from any witness, and it is credited to a named commentator by the voice splitter. Worth checking the corpus for the same fragment under other keys, since a short unparseable block will pass unnoticed where a long displaced one gets caught."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "25"
+      ],
+      "note": "Ellicott chrome at the chapter's last key, ninth consecutive chapter. The 1075-word Ellicott block at key 25 is roughly 90 words of real comment on the recovered cities, then StudyLight navigation, footer text and CSS. Content-detectable as before. Note for the record that this chapter is consistent with the key-based rule while job 12 refuted it two chapters ago, which is the point: the rule holds often enough to look safe and fails without warning."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "2",
+        "3",
+        "5",
+        "7",
+        "8",
+        "9",
+        "11",
+        "15",
+        "16",
+        "20",
+        "21",
+        "23"
+      ],
+      "note": "K and D sliding-window truncation at stride 3, twelve blocks, all but one of them exactly 200 words. The exception is key 23 at 109 words. As elsewhere each block runs on past its own verse into the next two or three and stops mid-sentence, so the measured source for every third key double-counts its neighbours."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "10",
+        "20"
+      ],
+      "note": "Legacy rewrite tiled as 1-9, 10-19, 20-25, three tiles rather than four. The obvious fourth boundary at 10-13, the regnal frame for Joash, was tested and rejected: its own keys hold only about 480 usable words once the displaced JFB block at key 13 is set aside, against a 350-word prose floor, which would have forced padding. Folding it into 14-19 gives one tile carrying both the chronology crux and the whole episode of the arrow, with abundant source. All 25 keys are present and contiguous."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "5"
+      ],
+      "note": "Who the promised saviour was, and the witnesses are three ways apart. Gill rules out four candidates in order, not an angel sent by God, nor a captain raised up among them, nor Elisha who merely predicted the deliverance, nor Jehoahaz himself, and settles on his son Joash. Clarke says Joash undoubtedly, pointing to the successful wars at the end of the chapter. Ellicott looks a generation further and makes it the grandson, on the ground that the following chapter says the Lord saved Israel by his hand."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "4",
+        "7"
+      ],
+      "note": "The broken sequence in verses 4 to 7, where the agreement and the disagreement cut across each other. Gill and Ellicott both read the intervening verses as a parenthesis and the statement about the fifty horsemen as resuming the sentence about the prayer; Clarke instead reports Houbigant's recommendation that the verses simply be read in another order, the seventh after the fourth and then the fifth and sixth. But the two who agree on the structure part company on the subject of the resumed clause: Gill makes it the king of Syria, who left Israel's king no more than fifty horsemen out of his army, while Ellicott takes the subject to be the Lord himself."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "10"
+      ],
+      "note": "How the thirty-seventh year is to be reconciled with the twenty-third of verse 1, and the three answers are of three different kinds. Gill harmonises, supposing either that two years were imperfect or, as he prefers, a co-regency of two or three years, so that Jehoahaz lived to see his prayer answered. Clarke harmonises the same way on Calmet's authority, the sixteen years including the joint reign. Ellicott declines to harmonise and emends, holding that the figure does not agree with verse 1 and that the Greek reading thirty-ninth is simply right."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "17",
+        "18",
+        "19"
+      ],
+      "note": "The arrow and the three strokes. On the direction Clarke takes the window as facing the trans-Jordan country Hazael had seized, while Gill raises a geographical objection none of the others does, that the Jewish commentators generally put Syria east but it lay northeast or more north, so that the eastward part of Israel may be meant. On the strokes Ellicott sets the whole scene in the ancient practice of soothsaying by arrows, analogous in principle to casting lots, so that the prophet left the number to the king's spontaneous impulse because he believed the result would betoken the purpose of God, and his anger was that of the man and the patriot disappointed at a divination from which he had hoped greater things. Gill reaches the same place by another route, that the number would measure the victories but the choice was left to the king so that the prophet might learn his spirit. Clarke adds the guard: Elisha's being wroth at three instead of five or six does not prove that God was wroth, or that he had ever intended more."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "20",
+        "21",
+        "25"
+      ],
+      "note": "Three further divisions at the close. Where Elisha was buried and how long he prophesied, where Gill reports Epiphanius for a city of Samaria against the Jewish tradition of the cave on Carmel, and sixty years, sixty-six on Abarbinel, or a death at the very beginning of Joash's reign on Kimchi, which Gill prefers. How the clause about the raising is to be construed, where Ellicott backs Houbigant in reading that the party departed and then that the man touched the bones, against the rendering that the man went and touched them. And where the recovered cities lay, Gill placing them in Gilead and Bashan while Ellicott argues they must have been west of Jordan, the trans-Jordan having been subdued already in the time of Jehu."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "20",
+        "23"
+      ],
+      "note": "Two passages worth keeping for their own sake. At verse 20 Clarke ventures that it is hard to tell whether Elijah was a man or an angel in a human body, holds the arguments for the latter strong and the objections feeble, and answers the obvious objection by saying that being fed by an angel proves nothing since God manifest in the flesh was fed by the same ministry. At verse 23 Ellicott reads the verse as the compiler's own remark rather than part of the narrative, on the evidence of its style, its appeal to the covenant, and the phrase as yet, which he takes to mean until the day he was writing, when the northern kingdom had already perished."
+    },
+    {
+      "at": "2026-10-04",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "13",
+      "verses": [
+        "1",
+        "10",
+        "20"
+      ],
+      "note": "Self-grade A on all three tiles. Compression runs 0.13x to 0.18x of usable source. Ellicott's chrome at key 25, the two displaced JFB blocks, the XML fragment at key 21 and the K and D truncation at every third key were all set aside before drafting, so the effective source is well below the raw counts. Two ENTITIES signals were raised and cleared before landing, and both are instructive. The prose had named Moses as the subject of the metaphor Ellicott glosses at verse 4, but Ellicott names no one and cites only Exodus 32:11 and 1 Kings 13:6, so this was the cross-reference class of defect recorded under 2chronicles 9 and 2chronicles 2, where a name reaches the prose only through a passage the entry cites; it is now a linked reference to Exodus 32:11 instead. The prose had also written Ionia where Clarke's text reads Iona, so the attribution was generalised rather than matched to a scrape misspelling."
     }
   ]
 }
