@@ -95887,6 +95887,41 @@
         "7-13"
       ],
       "note": "A useful convergence on the Urim: Wesley says plainly that the answer came not by any change in the colour or situation of the stones in the breastplate but by a voice or suggestion from God to the high priest; Delitzsch derives from the inverted questions the rule that the enquirer laid his matter before God in prayer and received an answer, but always to one question only; Ellicott cites the Talmud rule that the enquirer is not to ask about two things at a time. Three traditions arrive at the same mechanism from grammar, from narrative logic and from rabbinic law. Clarke, reading as though David himself wore the ephod, is the outlier."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "4",
+      "note": "Queued as polish (2 grade-B verses) but every one of the 23 entries carried standard legacy-unversioned and none carried a fidelity note, so there was no recorded lean to fix; treated as a legacy rewrite and regenerated from the catena as pericope tiles. Henry writes per pericope here too, his three blocks sitting at keys 1, 7 and 16, which gives the tiles vv.1-6 (the mockery and the prayer), vv.7-15 (the conspiracy, the discouragement and the trumpet) and vv.16-23 (half working, half under arms, and the night watch). 23 contiguous keys, 11,167 usable source words, no JFB blocks anywhere in the chapter."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "nehemiah",
+      "chapter": "4",
+      "verses": [
+        "19",
+        "23"
+      ],
+      "note": "Two defects already on the register recur here, both in their mild form. (1) The hollowed-Gill pattern: key 19 ends 'See Gill on ,' with the cross-reference target stripped, a single affected key out of 23, which again shows the damage is per-reference rather than per-chapter and scales with how often Gill defers. (2) The Ellicott chrome strip at key 23, the last key of the chapter: about 65 usable words on the obscure closing clause, then StudyLight navigation, copyright and CSS for roughly a thousand. Also one scrape misspelling: Wesley's lemma at key 12 reads 'Ten tribes' where the text he is glossing is 'ten times', and his own comment ('very often, a certain number for an uncertain') shows the lemma is the corruption, not his reading."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "nehemiah",
+      "chapter": "4",
+      "verses": [
+        "2"
+      ],
+      "note": "A clean grammatical disagreement on Sanballat's second taunt. Ellicott renders it not 'will they fortify themselves' but 'will they leave them to themselves', taking the neighbouring nations as the subject, while granting that contempt is not scrupulous or precise. Keil and Delitzsch rule exactly that reading inadmissible: the subject of all four interrogative sentences must be the same, so the older explanation (whether the neighbouring nations or the royal prefects would allow them) cannot stand. My first draft of the vv.1-6 tile had Ellicott agreeing with Delitzsch here, which is the reverse of what the catena says; caught while writing the school summaries and corrected before the tile was put. The lesson is that a voice who 'sharpens' a clause is not thereby agreeing with the voice who rejected it, and the check is to re-read both blocks rather than the summary I had made of them."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "4",
+      "note": "Self-grade A on all three tiles, fidelity signals clean on the first run, no ENTITIES hits to clear. Compression 0.24x, 0.14x and 0.16x. Names withheld because the catena gives them only as bare surnames or abbreviations: Montanus, Luther, Roediger, Boettcher, Bertheau, De Rossi and Houbigant's two companions in Clarke's conjecture appear in the sources but not in the prose, which says instead 'three scholars contend' and 'an attempted emendation'. Clarke's Latin and Greek quotations (Ovid on the pen and the sword, and the Aeschylus chorus urging the Greeks to strike for country, children, wives and the temples of their fathers' gods) are summarised without quoting, since both are non-ASCII in the source; the Ovid parallel survives only in the school summary for vv.16-23. Also dropped for room: Clarke's four tactics of the enemies of God's work, his note that the builders scarcely ever put off their clothes, and Ellicott's division of the workers into masons and burden-bearers, which is in the summary but not the prose. First drafts ran 791, 882 and 909 words against a 648-word ceiling - worse than the previous chapter, and the second tile needed a full rewrite rather than a trim pass. Twenty-nine chapters into this session the overshoot is getting larger, not smaller, and I am recording it again as a degradation signal."
     }
   ]
 }
