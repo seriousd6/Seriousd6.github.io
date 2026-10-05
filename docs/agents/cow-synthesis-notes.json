@@ -95190,6 +95190,86 @@
       "book": "2samuel",
       "chapter": "22",
       "note": "Self-grade A on all four tiles, 647 / 647 / 648 / 649 words at compression 0.12x to 0.22x. Voices are Ellicott, Delitzsch, Henry and Clarke, with Clarke declared only on the first two tiles because his contribution to this chapter is confined to the opening, the messianic question and the single note on the cherub. Gill is in excluded_voices on all four tiles for the hollowing noted separately, JFB on the two tiles whose source carries its displaced blocks. One ENTITIES signal, 'Atlases', which was my own spelling of a word the source gives as 'Atlasses'; rather than publish the archaic double-s I paraphrased the image away, keeping Delitzsch's actual claim that the pillars are the points of support of the heavens themselves. I also avoided Ellicott's ligatured 'minutiae' for the same reason. Compression on the first tile is the lowest at 0.12x because that tile's source includes Clarke's long reproduced dissertation on the identity of the speaker, which is summarised rather than followed."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "1"
+      ],
+      "note": "job 36 arrived 29 A / 4 B across 33 legacy-unversioned verses, 400-489 words, so it is a THIRD profile distinct from both the repair chapters and from john 20. Not bloated, not floor-hugging: written close to standard but carrying 20 banned carriers and a handful of restatement closings. Landed 33/33 A. Zero duplicate paragraphs and zero duplicate sentences on arrival, which is the first chapter in this run with neither."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "1"
+      ],
+      "note": "All 20 banned carriers (the witnesses do not divide x18, the witnesses note at v1, so the witnesses at v15) sat at the head of the closing synthesis and were recast by naming the concrete subject. Measured effect across the 20 entries: every one gained compress, and four gained enough ttr to matter. This is now the third chapter where that single substitution is worth a grade step on its own, and it is mechanical enough to be a script."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "14"
+      ],
+      "note": "Clarke writes Ashtaroth; my prose had Ashtoreth. Clarke also renders the qedeshim as the whores, harlots, prostitutes and sodomites, and only then grants that the word ALSO signifies consecrated persons; my prose had collapsed that into temple-prostitutes, which supplies a cultic specificity Clarke hedges. Both corrected. Eighth and ninth instances of the same failure mode in this run: substituting my own form of a proper noun, and sharpening a source's hedge into a claim."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "22"
+      ],
+      "note": "My prose attributed the teacher reading to Keil and Delitzsch themselves, with the Targum, Syriac and Jerome. Keil actually writes that Rosenm., Arnh., Lwenthal, Wolfson and Schlottm., after the Targ., Syr., and Jer., RIGHTLY abide by that signification -- he endorses named others rather than asserting it first-hand. Reworded to Keil sides with those who follow the Targum, the Syriac and Jerome. Expanding the three surnames tripped three fresh entity flags, so the fix was to drop the cited authorities rather than expand their abbreviations."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "22"
+      ],
+      "note": "Entity pool flags Syriac and Jerome here for the same reason as job 18:5 -- Keil's versional sigla Syr. and Jer. expanded. Abbreviation false-flag family, no claim added. Left as written, consistent with the job 18 decision."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "22"
+      ],
+      "note": "THIRTEENTH misfiled JFB blob: the v22 catena carries Jamieson Fausset and Brown reading of Baal, see on 2Ch 34:4, Le 26:30, rather Asherim -- a note on 2 Chronicles 34, not Job 36. Not narrated in the prose this time, which is the first clean case. Worth noting that this is the blob the word Asherim came from, the same word I wrongly substituted for Asherah in an earlier chapter."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "16"
+      ],
+      "note": "ROLL-CALL DETECTOR FALSE POSITIVE, first one. It fired on v16 for Keil and Delitzsch, of the same school, render the line ... and read it, like Ellicott, as the transition to the reproach that follows, because two voice surnames precede a sentence opening So the debate. That sentence is substantive -- it reports Keil's rendering and his alignment with Ellicott on a genuine crux -- not a voice roll-call. The detector needs the additional condition that the following sentence ASSERTS AGREEMENT; where the next sentence states a disagreement, as here, the surnames are doing real work."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "rejected",
+      "book": "job",
+      "chapter": "36",
+      "verses": [
+        "30"
+      ],
+      "note": "First attempt at v30 deleted the closing re-enumeration of its own three questions and nothing else. That lifted compress to 0.460 but left ttr at 0.5733 and dropped the entry to 351 words, barely over the floor. The fix was to spend the recovered room on Clarke's unused physics -- rarefaction, electric fluid, equilibrium, hydrogen gas, coruscations -- whose vocabulary is remote from everything else in the entry. Result 490 words, ttr 0.5848, A. Confirms the john 16 v14 caveat from the other side: an addition raises ttr when its vocabulary is remote AND is not itself repetitive."
     }
   ]
 }
