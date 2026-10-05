@@ -95115,6 +95115,81 @@
         "1"
       ],
       "note": "Deliberately NOT done: no de-articling, no synonym substitution, no per-paragraph deletion search. All three are compression levers and this chapter needed the opposite. Also declined: reusing Cyril's Song of Songs passage at v13, where the catena repeats it verbatim from v2 -- it was spent at v2 and a second use would have been cross-verse templating of exactly the kind the audit measures."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "22",
+      "note": "GILL IS HOLLOWED OUT THROUGHOUT THIS CHAPTER and the defect has a visible cause. Every one of Gill's blocks consists of the verse text followed by the bare string 'See Gill on .' - the cross-reference target has been stripped out, leaving a dangling preposition and no exposition at all. Gill deferred his whole treatment of this chapter to Psalm 18 and the pointer to it is lost, so his 1,068 words in this chapter contain not one line of usable commentary. This is the second confirmed instance of hollowed-out Gill (2 Chronicles 8 was the first) and it is now clear what produces it: wherever Gill's original says 'See Gill on <reference>', the scrape drops the reference. That makes it detectable by a corpus-wide grep for 'See Gill on .' with nothing following, and a sweep would show how many chapters lose Gill entirely this way. Gill is recorded in excluded_voices on all four tiles."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "22",
+      "verses": [
+        "25"
+      ],
+      "note": "JFB displacement, sixteenth confirmation. The three JFB blocks sit at keys 25, 31 and 43 and all three are comment on Ruth 4: key 25 on the redemption of the land involving marriage with Ruth, key 31 on the widow of Chilion having no claim on the inheritance, key 43 on the closing genealogy and the three hundred and eighty years between Salmon and David. The donor advances within Ruth 4 across the three keys, which is the step-in-step shape. The receiving keys step by six and then by twelve, consistent with the stride-six regularity recorded at 1 Chronicles 22. Note that the donor here is a book of four chapters while the receiving chapter is 2 Samuel 22, so the donor and receiver cursors are not even in the same book, let alone the same position."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "22",
+      "verses": [
+        "3"
+      ],
+      "note": "A K&D 200-word block overruns a CHAPTER boundary, which is more severe than the verse-boundary overrun recorded at 2 Chronicles 15. The block at key 3 opens on 2 Samuel 22:3 and then, inside its 200 words, gives the verse translation of 2 Samuel 23:3-5 - 'The God of Israel saith, The Rock of Israel speaketh to me: A Ruler over men, just, A Ruler in the fear of God. And as light of the morning... For is not my house thus with God? For He hath made me an everlasting [covenant]'. That is David's last words from the following chapter, sitting inside a block labelled 22:3. Anyone tiling a K&D chapter should assume the 200-word window respects neither verse nor chapter boundaries, and should check the content of a block against its label rather than trusting the key. I avoided the contaminated material rather than attribute chapter 23 to chapter 22."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "22",
+      "note": "K&D's whole contribution to this chapter is a collation of 2 Samuel 22 against Psalm 18, and it is the most valuable thing in the chapter's source: strophe-by-strophe verse translation plus a running verdict on each variant. His own strophe markers (5-7, 8-10, 11-13, 17-20, 21-24, 25-28, 29-31, 36-37, 38-41, 42-43, 44-46, 47-49, 50-51) gave the tiling for this chapter, which was needed because the usual guide failed: Henry has a single 3,126-word block at key 2 covering the whole psalm thematically and offers no interior division at all. Worth recording as the exception to the Henry-heads heuristic - where Henry treats a chapter as one unit, fall back to K&D's strophes if he has them."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "22",
+      "note": "Two distinct kinds of damage have to be kept apart in this chapter and the vocabulary is confusingly similar. When Delitzsch says 2 Samuel 22:13 'is terribly mutilated', he is describing the state of the ANCIENT TEXT relative to Psalm 18 - a genuine critical judgement about the Hebrew, not a scrape artefact. The scrape artefacts in this chapter are different and separately recorded: the hollowed-out Gill, the displaced JFB, the chapter-boundary overrun at K&D key 3, and the chapter-final Ellicott chrome at key 51. A future reader of these notes should not take Delitzsch's 'mutilated' as evidence of a pipeline defect; it is the chapter's actual subject matter."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "22",
+      "verses": [
+        "1"
+      ],
+      "note": "Who the speaker of this psalm is, is the chapter's deepest question, and Clarke raises it by reproducing an argument at length rather than in his own voice. The poetry 'cannot be perfectly understood, till it is known Who is the speaker, who the person thus triumphant over mighty enemies, whose Sufferings occasioned such a dreadful convulsion of nature, and, who, upon his deliverance, inflicted such vengeance on his own people, and also became thus a king over the heathen.' If we are told the person was David, it is very difficult to show how the description can agree with that character; and if it did agree it would contradict Paul, who quotes part of it as predicting the conversion of the Gentiles. 'Now if the person represented as speaking through this Divine ode be David only, the Messiah is excluded.' The difficulties on both sides have produced the general idea that it relates to both. Clarke's own position is firmer than the compromise: 'though in a primary sense many of these things belong to David, yet generally and fully they belong to the Messiah alone.' No other voice in the chapter raises the question - Ellicott and Delitzsch are occupied entirely with the text, and Henry with the titles - so this is a disagreement between Clarke and the commentary's silence rather than between two positions."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2samuel",
+      "chapter": "22",
+      "note": "Ellicott and Delitzsch agree on nearly every textual fact in this chapter and disagree completely on what the facts mean. Delitzsch reads the divergences as damage: the verse about the brightness is 'terribly mutilated'; a word at the lamp verse 'has been lost'; the five-line stanza at the gentleness verse 'is stunted here by the falling away of the middle line'; the destroying for overtaking means 'the echo of Exodus 15 is obliterated'; a clause is 'tautological'; the figures about dust and mire 'appear here, in contrast with the other text, in a distorted form'; a reading is 'less pleasing both as it regards language and rhythm'; another is 'a clumsy and needless emphasising of the me'. Ellicott, reading the same places, repeatedly finds design rather than decay - the united expression at the opening 'was intentional', the waves for bands 'can hardly have been accidental', the compact figure of dust before the wind 'is certainly designed, and heightens the poetic effect' - and where he does concede error he calls it 'a mere clerical error' rather than mutilation. The difference is one of temperament as much as method and both are carried into the prose without arbitration."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "22",
+      "verses": [
+        "51"
+      ],
+      "note": "Ellicott closes the chapter with a statement of his doctrine of scripture that is worth preserving in full, since it explains why he spent the whole chapter on variants: 'This brief review of these two recensions of this magnificent hymn is instructive, as showing that Providence has dealt with the MSS. of the Old Testament as with those of the New, securing them during the long succession of ages from all substantial error, and yet not so destroying ordinary human action but that mere slips of the pen should sometimes creep in, and care and diligence be required to ascertain precisely what was originally written, and sometimes, perhaps, in the merest minutiae, leaving the original form still uncertain.' The last word is spelled with a ligature in the source and had to be paraphrased around for the ENTITIES check - another instance of the unmatchable-source-form class."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "2samuel",
+      "chapter": "22",
+      "note": "Self-grade A on all four tiles, 647 / 647 / 648 / 649 words at compression 0.12x to 0.22x. Voices are Ellicott, Delitzsch, Henry and Clarke, with Clarke declared only on the first two tiles because his contribution to this chapter is confined to the opening, the messianic question and the single note on the cherub. Gill is in excluded_voices on all four tiles for the hollowing noted separately, JFB on the two tiles whose source carries its displaced blocks. One ENTITIES signal, 'Atlases', which was my own spelling of a word the source gives as 'Atlasses'; rather than publish the archaic double-s I paraphrased the image away, keeping Delitzsch's actual claim that the pillars are the points of support of the heavens themselves. I also avoided Ellicott's ligatured 'minutiae' for the same reason. Compression on the first tile is the lowest at 0.12x because that tile's source includes Clarke's long reproduced dissertation on the identity of the speaker, which is summarised rather than followed."
     }
   ]
 }
