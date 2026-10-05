@@ -95270,6 +95270,58 @@
         "30"
       ],
       "note": "First attempt at v30 deleted the closing re-enumeration of its own three questions and nothing else. That lifted compress to 0.460 but left ttr at 0.5733 and dropped the entry to 351 words, barely over the floor. The fix was to spend the recovered room on Clarke's unused physics -- rarefaction, electric fluid, equilibrium, hydrogen gas, coruscations -- whose vocabulary is remote from everything else in the entry. Result 490 words, ttr 0.5848, A. Confirms the john 16 v14 caveat from the other side: an addition raises ttr when its vocabulary is remote AND is not itself repetitive."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "4",
+      "verses": [
+        "7",
+        "8"
+      ],
+      "note": "THE WORST DEFECT FOUND IN THIS RUN. Both entries were written as single-witness entries on Matthew Henry alone, and both ANNOUNCED it -- the single witness leaves the verse as, the single witness closes the psalm. The blobs are not thin. v7 carries Gill 130 words, Keil and Delitzsch 203, Clarke 104, Ellicott 51 and Wesley 252 including a long Spurgeon passage; v8 carries Gill 173, Clarke 950, Ellicott 119 and Wesley 309. Five and four unused voices respectively. So the generator declared a thinness that did not exist, which is a rule-2 breach built on a false premise, and the nearest thing to a fabrication that reports MISSING material rather than invented material. Both rewritten multi-voice: v7 from 428 words / ttr 0.5607 to 642 / 0.5994, v8 from 418 / 0.5645 to 639 / 0.6184, both A."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "4",
+      "verses": [
+        "7",
+        "8"
+      ],
+      "note": "DETECTOR WORTH BUILDING, and cheap: flag any entry naming exactly one voice whose verse blob contains two or more Name-colon markers. It would have caught both of these without reading a word of prose, and the phrase the single witness is a free grep for the same defect corpus-wide. This is a different failure from the padding the audit was built to find -- these entries are not padded, they are UNDER-SOURCED, and every length and redundancy metric passes them."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "Real crux recovered by the rewrite. The Authorized Version attaches the adverb to the subject -- the LORD ONLY makes me dwell in safety -- and Henry builds his whole comfort on it. Ellicott reports that the authority of all the ancient versions, LXX and Vulgate included, takes it with the predicate instead: thou, Jehovah, makest me dwell ALONE in safety, supported from Jeremiah 49:31 and Micah 7:14 where dwelling apart from other nations is itself the guarantee of safety -- which he thinks favours reading the psalm as national rather than individual. Keil renders in the same direction, in seclusion free of care. The legacy single-witness entry had lost the entire disagreement."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "4",
+      "verses": [
+        "8"
+      ],
+      "note": "Pool contamination again, and it nearly produced a fabrication. The segmenter labelled a block Luther, 245 words. The block is one sentence of genuine remnant -- Luther had a great affection for these words, and desired Ludvig Teuffel to set them as a requiem for him -- followed by pure StudyLight site chrome. The sentence is ABOUT Luther, not BY him, and has no attributable speaker in the blob, so Luther cannot be named as a voice here. Omitted silently per rule 3. Fifth book with scraped chrome inside the catena."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "4",
+      "verses": [
+        "1"
+      ],
+      "note": "psalms 4 arrived 6 A / 2 B across 8 legacy verses. One banned carrier at v3, no duplicate paragraphs or sentences, quote-led openings 2 of 8 and now 1 of 8. The chapter's problem was not prose quality at all but coverage: two of its eight verses used one voice out of five or six available."
     }
   ]
 }
