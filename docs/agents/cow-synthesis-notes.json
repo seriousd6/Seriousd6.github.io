@@ -95322,6 +95322,74 @@
         "1"
       ],
       "note": "psalms 4 arrived 6 A / 2 B across 8 legacy verses. One banned carrier at v3, no duplicate paragraphs or sentences, quote-led openings 2 of 8 and now 1 of 8. The chapter's problem was not prose quality at all but coverage: two of its eight verses used one voice out of five or six available."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "11",
+      "note": "NO JFB BLOCKS AT ALL in this chapter, which is a useful negative data point for the fetch bug. 2 Chronicles 11 has 23 contiguous keys and seven voices present (K&D 3,400 words, Ellicott 3,100, Henry 2,089, Clarke 739, Gill 683, Wesley 323) and Jamieson, Fausset and Brown is simply absent. Taken with 2 Chronicles 26, where the single JFB block was genuinely on topic, this confirms that the two-cursor defect produces three outcomes and not two: displaced blocks, correct blocks, and no blocks. A sweep looking for the bug should therefore not treat absence as evidence of anything, and should not assume every chapter has a JFB block to check."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "11",
+      "verses": [
+        "5"
+      ],
+      "note": "One dangling Gill cross-reference at key 5: the block reads 'And Rehoboam dwelt in Jerusalem,.... The metropolis of Judah, and the capital city of his kingdom:' and the chapter's opening key carries 'this and the three following verses are the same with . See Gill on .' - the reference target stripped in both places. Only one key is affected here, so Gill remains usable for the rest of the chapter, unlike 2 Samuel 22 where every block was hollowed. This confirms the defect is per-reference rather than per-chapter: wherever Gill's text points elsewhere, the pointer is lost, and the damage is proportional to how often he defers. Clarke has the same habit in this chapter and survives it, because his deferrals keep their references ('See this account 1Kgs 12:21-24 and the notes there')."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "11",
+      "note": "Another abbreviated-source-form casualty, the fourth recorded instance of this class. Ellicott cites the first book of Maccabees as '1Ma. 13:20' and K&D as '1 Macc. 13:20'; writing Maccabees in the prose produced an ENTITIES signal because the expanded word occurs nowhere in the source. I paraphrased to 'a later historical book', which keeps Ellicott's point that Adoraim is attested there and in Josephus but loses the citation. The running list of names and titles lost to this class is now: Gregory of Nyssa (GREG. NYSS.), Titus Bostrensis (TITUS BOST.), Bertheau (Berth.), Clericus and Ewald (Cler., Ew.), and Maccabees (1Ma.). Worth noting that this chapter also shows the fix is feasible: Ellicott spells out Bertheau and Keil in full at verse 14 and 17, so an alias table mapping the abbreviations to the expansions already has its ground truth inside the corpus."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "11",
+      "note": "Tiling: four tiles (vv.1-4, 5-12, 13-17, 18-23) on the chapter's four plain units - the prohibition, the fortifications, the migration of the priests, and the royal family. Henry's blocks sit at keys 1 and 13 only, so his heads gave two of the three seams and the other two were taken from the subject matter. Twenty-three keys, contiguous, 10,513 usable words, compression 0.18x to 0.40x. The first tile at 0.40x is the highest compression ratio recorded in this run, because vv.1-4 carries only 1,615 usable words after Clarke and Gill both defer the section to 1 Kings 12."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "11",
+      "verses": [
+        "10"
+      ],
+      "note": "The chapter's most interesting disagreement is about military strategy and both sides reason from the same list of names. Ellicott plots the fifteen fortified cities and finds that all but two lay south and west of Jerusalem: 'Hence Rehoboam appears to have been more afraid of an attack from the south and west - that is, from the Egyptians - than of a war with the northern kingdom.' The two exceptions, Zorah and Aijalon, lay farthest north and he suggests they may have become Benjamite at the migration of Dan. Clarke reads the identical list the opposite way without hesitation: Rehoboam 'was obliged to strengthen his frontiers against the encroachments of the men of Israel; and Jeroboam did the same thing on his part to prevent the inroads of Judah.' Ellicott's reading is the better supported, and he strengthens it at verse 17 by quoting Bertheau to explain Jeroboam's abstention from molesting Judah, which removes Clarke's premise. Both positions are carried into the prose; the Egyptian reading is given first because the geography supports it and because the next chapter brings Shishak."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "11",
+      "verses": [
+        "22"
+      ],
+      "note": "Whether Rehoboam broke the law of the firstborn in preferring Abijah divides the two commentators squarely. Clarke: 'Abijah certainly was not the first-born of Rehoboam; but as he loved Maachah more than any of his wives, so he preferred her son, probably through his mother's influence. In Deu 21:16, this sort of preference is forbidden; but Rehoboam had a sort of precedent in the preference shown by David to Solomon.' Ellicott denies the infringement and names his opponent: 'In making Abijah heir to the throne, it does not appear that Rehoboam infringed the law of Deuteronomy 21:15-17, as the Speaker's Commentary suggests. The right of the firstborn was only a double share of a man's property.' He too cites the accession of Solomon, but as a precedent for the practice rather than a mitigation of an offence. The disagreement is clean because both read the same law and the same precedent and differ on what the law covers - property or succession."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "11",
+      "verses": [
+        "15"
+      ],
+      "note": "What Jeroboam's new worship actually was gets two different accounts that are not quite compatible. Ellicott reads it as syncretism: since 'the calves represented the God of Israel', it 'appears therefore that Jeroboam encouraged a system of syncretism, or mixture of worships', with the local sanctuaries existing not only at Dan and Bethel but in other northern cities, and the word rendered devils being satyrs, literally goats, indicating 'a prevalence of debasing idolatry'. Clarke reads it as Egyptian borrowing throughout, explaining the goats by analogy with the calves: 'as the golden calves, or oxen, were in imitation of the Egyptian ox-god, Apis; so they no doubt paid Divine honors to the goat, which we know was an object of religious veneration in Egypt.' The difference matters: on Ellicott's reading Jeroboam was mixing the worship of Jehovah with something else, on Clarke's he was importing a foreign cult wholesale. Clarke's is the only account in the chapter that explains the goats rather than merely translating the word."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "11",
+      "note": "Self-grade A on all four tiles, 642 / 642 / 649 / 648 words at compression 0.18x to 0.40x. Voices vary by tile because the witnesses do: vv.1-4 carries only Ellicott, Henry and Delitzsch, since Clarke and Gill both defer the section to 1 Kings 12; vv.5-12 adds Clarke and Gill on the identification of the cities; vv.13-17 and vv.18-23 carry Henry, Ellicott and Clarke, Delitzsch having little to add there. Wesley's 323 words were not used. One ENTITIES signal, Maccabees, which was my expansion of the source's abbreviated citation and was paraphrased to 'a later historical book' - the claim survives, the citation does not. I also avoided the modern Arabic place-name transliterations in Ellicott and K&D, which carry diacritics, and used only the biblical forms, which cost nothing since the identifications are reported rather than relied on."
     }
   ]
 }
