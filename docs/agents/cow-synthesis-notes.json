@@ -95831,6 +95831,62 @@
         "1"
       ],
       "note": "joshua 1 arrived 17 A / 1 B across 18 legacy verses, 430-586 words. Only 2 banned carriers, no roll-calls, no duplicate paragraphs or sentences -- the cleanest arrival of the run on every structural measure. Its defects were all fidelity and quotation, which no structural check sees. Landed 18/18 A."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "23",
+      "verses": [
+        "2",
+        "20",
+        "26"
+      ],
+      "note": "JFB two-cursor fetch bug, 20th confirmed instance, and the first chapter to exhibit two of its three failure shapes at once. Donor is Judges 1: key 2 carries the Adoni-bezek material of Judges 1:3-7, keys 20 and 26 both carry the Judges 1:9-18 summary and are byte-identical to each other. So the donor advanced once (Judges 1:3 -> 1:9) and then failed to advance at all, repeating its last result verbatim. The two shapes are therefore not alternative bugs but one mechanism that intermittently fails to step. Receiving-key strides stay on the six-fold pattern: 2 -> 20 is eighteen, 20 -> 26 is six. JFB is listed in excluded_voices on the two tiles whose source carries these blocks (vv.1-6 and vv.19-29); no genuine JFB comment on 1 Samuel 23 survives in the catena."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "23",
+      "verses": [
+        "28"
+      ],
+      "note": "Ellicott chrome strip at key 28 of 29: the usable comment on Sela-hammahlekoth runs about sixty words (the cliff of divisions, the better-supported derivation from a word meaning to be smooth, hence the cliff of slipping away, and a fanciful Cliff of Destiny), after which the block runs on into StudyLight navigation, copyright text and raw CSS for roughly a thousand words. Same near-final-key position as the other instances. Capped reading (lk.py) keeps it out of the context window; a content-based detector would still need to tolerate quoted classical material."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "23",
+      "note": "Tiling: 29 contiguous keys, 16,339 usable source words, all legacy-unversioned. Henry writes per pericope and his four blocks sit at keys 1, 7, 14 and 19, which gives the four tiles used here (vv.1-6 the relief of Keilah, vv.7-13 Saul's plot and the enquiry by the ephod, vv.14-18 the wilderness of Ziph and Jonathan's last visit, vv.19-29 the Ziphite betrayal and the escape at Sela-hammahlekoth). The heuristic of tiling on Henry's block boundaries now holds for seven of the nine OT chapters rewritten in this run, the exception being 2 Samuel 22, where Henry treated the whole psalm as one block."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "23",
+      "verses": [
+        "1-6"
+      ],
+      "note": "The mode of David's enquiry before Keilah is a real crux and the two commentators who face it reach opposite solutions by opposite methods. Ellicott argues the enquiry cannot have been through the ephod, since the narrative itself has Abiathar joining David at Keilah only after the citizens asked for aid, so it was made through Gad the prophet, supported by the parallel of Jehoshaphat enquiring of Micaiah and by the Talmud's assumption that questions were also put through prophets. He then diagnoses the whole difficulty: the versions and the commentators failed to understand that enquiry of the Lord could be made in any other mode than through the Urim, and holds that the Greek translators must have deliberately altered the Hebrew to escape it. Clarke instead holds the enquiry was by means of Abiathar and therefore adopts Houbigant's proposal that verse 6 be read immediately after verse 1 - that is, he emends the order of the text where he accuses no one, while Ellicott accuses the Greek of emending its sense. Both positions are in the prose of the vv.1-6 tile and in the debates list."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "23",
+      "note": "Self-grade A on all four tiles, fidelity signals clean on the first run (no ENTITIES hits to clear, the first chapter in this run with none). Compression 0.18x, 0.18x, 0.21x and 0.11x; the last tile covers eleven verses and six thousand source words in one 647-word window, so it is the thinnest and loses most - dropped from it were Clarke's En-gedi dissertation (the kid's well, the vineyards and balm, the caverns), Ellicott's reflection on the compiler tracing the king's itinerary for later readers, and Clarke's Calmet-and-Eusebius identification of Maon. Names withheld deliberately: Lange (quoted by Ellicott on the invasion as God's plan to save David) and Ewald (the fanciful Cliff of Destiny) are rendered as a modern commentator and a fanciful reading, since both appear as bare surnames in the catena and Ewald's is one of the nine names already recorded as unusable; Houbigant and Dean Payne Smith are named because the source spells them in full. First-draft lengths were 741, 722, 761 and 790 against a 648-word working ceiling, so every tile needed a trim pass; the overshoot is unimproved from earlier chapters in this run and is the clearest degradation signal I can report."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "23",
+      "verses": [
+        "7-13"
+      ],
+      "note": "A useful convergence on the Urim: Wesley says plainly that the answer came not by any change in the colour or situation of the stones in the breastplate but by a voice or suggestion from God to the high priest; Delitzsch derives from the inverted questions the rule that the enquirer laid his matter before God in prayer and received an answer, but always to one question only; Ellicott cites the Talmud rule that the enquirer is not to ask about two things at a time. Three traditions arrive at the same mechanism from grammar, from narrative logic and from rabbinic law. Clarke, reading as though David himself wore the ephod, is the outlier."
     }
   ]
 }
