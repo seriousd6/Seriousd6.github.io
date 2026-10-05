@@ -95982,6 +95982,56 @@
         "15"
       ],
       "note": "v15 cleared on the first pass by the now-standard move: its closing paragraph re-enumerated the three senses of blind and lame that paragraph one had already laid out. Deleting the re-enumeration and de-articling Gill's list took it from 0.5792 to 0.5920. Enumerate-then-summarise remains the single most common shape behind a grade-B legacy verse."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "5",
+      "verses": [
+        "1"
+      ],
+      "note": "2chronicles 5 arrived 11 A / 2 B across 13 legacy verses, 350-546 words. Only 3 banned carriers, no roll-calls, no duplicate paragraphs or sentences. Landed 13/13 A. Both grade-B entries failed on ARTICLING rather than restatement: v2 carried 84 instances of the in 463 words and v13 60 in 372, which is the heaviest article load I have measured. De-articling alone cleared v2 from ttr 0.5604 to 0.5977 and v13 from 0.5742 to 0.6303."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "rejected",
+      "book": "2chronicles",
+      "chapter": "5",
+      "verses": [
+        "13"
+      ],
+      "note": "A cautionary sequence on v13. De-articling worked almost too well: it took ttr to 0.6477 but cut the entry to 305 words, BELOW the 350-word floor, which would have failed the validator. Restoring length from genuinely unused Ellicott -- that he would read a sound with trumpets rather than their voice with the trumpets, and that the Syriac and Arabic omit this verse and the one before it entirely -- brought it back to 367 at ttr 0.6303. Lesson: on a short entry, de-articling and the floor pull against each other, so measure the word count after every pass, not only the grade."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "5",
+      "verses": [
+        "13"
+      ],
+      "note": "THREE successive entity flags on the SAME sentence, each caused by my own fix for the last, and all in the sentence-initial-or-descriptor family. Citing Reuss's rendering, I wrote the Eternal (flagged: the source has l'Eternel with an accent), then Reuss's French rendering (flagged: the source quotes French without naming it), and only the third form -- Reuss, whose rendering likewise names the temple twice -- came back clean. Writing round a flag can create a new one; the safe move is to drop the descriptor rather than substitute another."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "5",
+      "verses": [
+        "11"
+      ],
+      "note": "Another capitalised-common-noun flag of the Giver kind from job 39: the v11 close had the servants stepping back so that the Master may fill the house. Master is mine, not the source's. Rewritten so that the house may be filled, which also removes a slightly strained figure. This family -- a common noun capitalised for reverence inside my own summarising sentence -- has now appeared in three chapters and is always my doing, never the corpus's."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "rejected",
+      "book": "2chronicles",
+      "chapter": "5",
+      "verses": [
+        "5"
+      ],
+      "note": "Requote at v5, and the second instance was inside a textual-evidence sentence where the quotation was doing no work: the weight of the Hebrew manuscripts, the Septuagint, the Syriac and the parallel favours THE PRIESTS AND THE LEVITES. Replaced with the fuller reading, which names the same thing without quoting the phrase Keil had already quoted. A requote is often removable by referring to the reading rather than reciting it."
     }
   ]
 }
