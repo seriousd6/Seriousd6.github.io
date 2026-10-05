@@ -95922,6 +95922,66 @@
       "book": "nehemiah",
       "chapter": "4",
       "note": "Self-grade A on all three tiles, fidelity signals clean on the first run, no ENTITIES hits to clear. Compression 0.24x, 0.14x and 0.16x. Names withheld because the catena gives them only as bare surnames or abbreviations: Montanus, Luther, Roediger, Boettcher, Bertheau, De Rossi and Houbigant's two companions in Clarke's conjecture appear in the sources but not in the prose, which says instead 'three scholars contend' and 'an attempted emendation'. Clarke's Latin and Greek quotations (Ovid on the pen and the sword, and the Aeschylus chorus urging the Greeks to strike for country, children, wives and the temples of their fathers' gods) are summarised without quoting, since both are non-ASCII in the source; the Ovid parallel survives only in the school summary for vv.16-23. Also dropped for room: Clarke's four tactics of the enemies of God's work, his note that the builders scarcely ever put off their clothes, and Ellicott's division of the workers into masons and burden-bearers, which is in the summary but not the prose. First drafts ran 791, 882 and 909 words against a 648-word ceiling - worse than the previous chapter, and the second tile needed a full rewrite rather than a trim pass. Twenty-nine chapters into this session the overshoot is getting larger, not smaller, and I am recording it again as a degradation signal."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "20"
+      ],
+      "note": "SECOND whole-clause fabrication found in shipped data, after 2chronicles 17:17, and the SAME bare-citation mechanism. Wesley writes only: Bow - My strength which is signified by a bow, Gen 49:24 1Sam 2:4, because in ancient times the bow and arrows were the principal instruments of war. The entry had turned those two bare references into the blessing of Joseph, whose bow abode in strength, and the song of Hannah, where the bows of the mighty are broken. The references are real; both glosses are invented. Reduced to Wesley's own bare citations."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "20"
+      ],
+      "note": "HONESTY CORRECTION ON MY OWN METHOD. I first searched the chapter for 1 Samuel 2:4 and Joseph and found nothing, and was on the point of concluding the REFERENCES themselves were fabricated. They are not: Wesley writes 1Sam 2:4 without the space, and the only Joseph hits were inside scraped site chrome. A reference-form mismatch can make a grep say absent when the citation is present in another spelling. Check at least the bare chapter-and-verse digits before calling a citation invented."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "8"
+      ],
+      "note": "A flag that LOOKED like the Hannah failure and was not. v8 Talmudic flags because Keil's footnote spells it Thalmud, in Pinner's Compendium, quoting jer. Schekalim ii. 5 -- the anecdote of R. Jochanan, R. Chija bar-Abba and R. Eliezer, and the custom that the less did not salute the greater, which Keil says confirms Job's words. The anecdote and the custom are genuinely in the source; only the modern spelling tripped the pool. Reworded to a rabbinic anecdote, quoted in their note, which is accurate and costs no flag."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "1"
+      ],
+      "note": "job 29 arrived 23 A / 2 B across 25 legacy verses, 401-519 words, with 21 banned carriers -- 20 of them the witnesses do not divide. No roll-calls, no duplicate paragraphs or sentences. Landed 25/25 A. Third chapter in a row where recasting the carriers alone cleared most of the structural work and the real defects turned out to be fidelity."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "rejected",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "5"
+      ],
+      "note": "v5 took three passes and is worth recording because the first two FAILED. Pass one deleted the restating close: compress rose to 0.468 but ttr only to 0.5581, and the entry fell to 355 words. Pass two added unused Henry from the v1 head blob -- the homely balance about mouths for his meat and meat for his mouths, the children observant and obsequious, standing about to learn what he would have -- which restored length to 419 but moved ttr only to 0.5683. Only pass three, de-articling and breaking up the repeated nearness, presence and children, cleared it at 0.5952. Lesson: on an entry whose repetition is CONCEPTUAL rather than structural, neither deletion nor addition is enough; the words themselves have to be varied."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "29",
+      "verses": [
+        "15"
+      ],
+      "note": "v15 cleared on the first pass by the now-standard move: its closing paragraph re-enumerated the three senses of blind and lame that paragraph one had already laid out. Deleting the re-enumeration and de-articling Gill's list took it from 0.5792 to 0.5920. Enumerate-then-summarise remains the single most common shape behind a grade-B legacy verse."
     }
   ]
 }
