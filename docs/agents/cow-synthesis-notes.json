@@ -95451,6 +95451,60 @@
       "book": "2chronicles",
       "chapter": "19",
       "note": "Self-grade A on all three tiles, 649 / 649 / 646 words at compression 0.21x to 0.30x, the healthiest band in this run. All five usable voices (Ellicott, Henry, Clarke, Wesley, Gill) are declared on all three tiles, which is unusual and reflects a chapter where every commentator has something to say on every section; K&D's 913 words are almost entirely bare verse text and were not used; JFB is excluded on the one tile whose source carries its displaced block. No ENTITIES signals. I avoided Ellicott's diacritical transliterations throughout and used the KJV's own 'groves' rather than the Hebrew term he gives with a cedilla, which cost nothing since his point was about the removal rather than the word."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "13",
+      "verses": [
+        "3"
+      ],
+      "note": "JFB displacement, eighteenth confirmation, textbook two-cursor shape. Four JFB blocks at keys 3, 9, 27 and 33, all comment on 1 Samuel 17-18: key 3 on Saul equipping David with his own armour, key 9 on the speeches champions made before single combat, key 27 on Saul failing to recognise his former minstrel because of the beard, key 33 on the honour of receiving a sovereign's dress. The receiving keys step 3-9-27-33, that is by six, then eighteen (three strides), then six - consistent with the stride-six regularity. The donor advances in step through 1 Samuel 17:38, 17:43, 17:55-58 and 18:4. One further detail worth recording: the key-33 block ends with the section heading '1Sa 18:5-9. Saul Envies His Praise.', which shows the donor fetch is pulling whole formatted sections including their headings, not just paragraph bodies. JFB is in excluded_voices on the two tiles whose source carries the blocks."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "13",
+      "note": "Tiling: three tiles (vv.1-10, 11-22, 23-34) read straight off Henry's pericope heads at keys 1, 11 and 23, which match the chapter's three plain movements - the confrontation at the altar, the deception and the sentence, and the death and sequel. Thirty-four keys, contiguous, 15,337 usable words, compression 0.11x to 0.16x. The Henry-heads heuristic has now given the tiling for five of the seven Old Testament chapters taken in this run, with the single exception of 2 Samuel 22, where Henry treated the whole psalm as one unit and K&D's strophes were used instead."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "13",
+      "note": "Self-grade A on all three tiles, 644 / 647 / 649 words at compression 0.11x to 0.16x. Voices are Clarke, Ellicott, Henry and Gill, with Gill declared on the first tile only since his contribution elsewhere is largely verse text with K&D embedded. JFB is excluded on two tiles. One vcheck problem caught before landing: Tertullian was named in Gill's report of who identified the man of God with Shemaiah, and Tertullian has no block in this chapter, so the name would have read as an undeclared witness. It was replaced with 'an early writer', which keeps Gill's point and loses the attribution - the same remedy applied to Origen in Luke 7. This is now a recurring pattern worth naming: a commentator reporting another authority by name trips the cited-but-not-declared rule whenever that authority is a declared voice elsewhere in the corpus, and the only clean fix is to drop the name from the prose and keep it in the notes. Tertullian's claim is recorded here for that reason."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "13",
+      "verses": [
+        "11"
+      ],
+      "note": "The old prophet of Bethel draws three incompatible characterisations, and the chapter's whole moral weight rests on which is right. Henry: 'I cannot but call him a false prophet and a bad man, it being much easier to believe that from one of such a bad character should be extorted a confirmation of what the man of God said than that a true prophet, and a good man, should tell such a deliberate lie, and father it upon God. A good tree could never bring forth such corrupt fruit.' He judges the design malicious - to draw the man of God into a snare, 'for false prophets have ever been the worst enemies to the true prophets'. Ellicott denies both halves: 'The narrative clearly implies - and, indeed, part of its most striking instructiveness depends on this - that this old prophet was not a mere pretender to prophetic inspiration, nor an apostate from the worship of Jehovah. Like Balaam, he united true prophetic gifts with a low worldliness of temper, capable on occasion of base subterfuge and deceit.' Clarke takes a third line, a prophet 'fallen from his steadfastness, and yet not so deeply as to lose the knowledge of the true God', and on the motive is mildest of all: 'I can hardly think that this was with any evil design... This good man could not have been an object of the old prophet's malevolence.'"
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "13",
+      "verses": [
+        "20"
+      ],
+      "note": "The chapter's sharpest collision, and it is nearly a direct exchange across the centuries. Ellicott holds the sentence coming through the deceiver's own mouth to be the point of the story: 'It is, perhaps, the most terrible feature in the history that the Divine sentence is spoken - no doubt, as in the case of Balaam, unwillingly - through the very lips which by falsehood had lured the prophet of Judah from the right path, and at the very table of treacherous hospitality.' He then names and condemns the evasion: 'Josephus, with his perverse tendency to explain away all that seems startling, misses this point entirely, and assigns the revelation to the prophet of Judah himself.' Clarke makes a version of exactly that evasion, reporting Kennicott: 'A great clamor has been raised against this part of the history, on account of God's denouncing sentence on the true prophet by the mouth of the false prophet: but if we examine with attention the original words here, they will be found to signify either he who brought him back; or, whom he had brought back' - the same words being rendered the second way at verse 23. Clarke adopts it, making the speaker 'the voice of God from heaven addressing the man of God, the old prophet having nothing to do in this business.' Ellicott instead generalises the difficulty into a law: the voice of worldly wisdom first beguiles the servants of God to disobedience by false glosses on their duty, then proclaims unsparingly their sin and its just punishment."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "1kings",
+      "chapter": "13",
+      "verses": [
+        "32"
+      ],
+      "note": "The cities of Samaria are named some fifty years before Samaria was founded, and Clarke is the only voice who faces it. 'It is most certain that Samaria, or as it is called in Hebrew Shomeron, was not built at this time. We are expressly told that Omri, king of Israel, founded this city on the hill which he bought for two talents of silver, from a person of the name of Shemer, after whom he called the city Samaria... and this was fifty years after the death of Jeroboam. How then could the old prophet speak of Samaria, not then in existence?' He offers three solutions without finally choosing: that the prophet spoke by the spirit of prophecy, 'calling things that are not as though they were; as the man of God called Josiah by name three hundred years before he was born' - which ties the difficulty to the chapter's other prophetic crux; that the historian added the words because Samaria existed in his own time, he himself giving the account of its founding in chapter 16; or Houbigant's solution, 'thought sound by many good critics', that God gave the revelation and the prophet spoke by anticipation, which is the language of prophecy."
     }
   ]
 }
