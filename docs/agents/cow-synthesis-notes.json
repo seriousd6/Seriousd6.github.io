@@ -95634,6 +95634,87 @@
         "16"
       ],
       "note": "Jerome flags here for the third time in this run, and for the third time it is Keil's versional siglum Jer. expanded. Keil's note is at the v14 head blob, not at v16: he observes that the verb hardened stands in the masculine though used of the hen-ostrich, that the pointing could be altered to remove the oddity but need not be, and that Jer. renders correctly according to the sense, quasi non sint sui. Abbreviation false-flag family. Left as written, consistent with job 18:5 and job 36:22."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "9"
+      ],
+      "note": "JFB displacement, nineteenth confirmation, stride six and donor advancing in step. Three JFB blocks at keys 9, 15 and 21, all comment on 2 Samuel 16: key 9 on Shimei coming out from Bahurim to curse David and upbraid him as an ambitious usurper, key 15 a seven-word fragment identifying the city of Bahurim, key 21 on Hushai arriving in Absalom's camp and persuading him of his sincerity. The donor advances through 2 Samuel 16:5, 16:5 again and 16:16-19. JFB is recorded in excluded_voices on all three tiles."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "26"
+      ],
+      "note": "A new scrape artefact: REVERSED TEXT where a right-to-left run was mishandled. Inside Clarke's end-of-chapter note on the word Asherah, his quotation of the Targum of Ben Uzziel renders partly backwards - the block reads ',suht ecalp e veilaney sigedeyhon tekatsetsun', which is 'thus place' spelled in reverse followed by the transliteration. The surrounding English is intact and the argument is unaffected, but the artefact is detectable by a corpus grep for runs of reversed common English words, and it suggests the Hebrew-to-transliteration handling in the scrape can invert a span rather than merely dropping it. Worth adding to the sweep alongside the hollowed-Gill grep, since both are mechanically findable."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "21",
+      "note": "Tiling: three tiles (vv.1-9, 10-18, 19-26) on Henry's pericope heads at keys 1, 10 and 19, matching the chapter's three movements - Manasseh's idolatry, the prophetic sentence, and Amon's short reign. Twenty-six keys, contiguous, 12,792 usable words, compression 0.13x to 0.19x. The Henry-heads heuristic has now given the tiling for six of the eight Old Testament chapters taken in this run."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "21",
+      "note": "Another instance of a name that cannot be used in the prose, and this one is a near miss worth recording. Ellicott quotes Professor Robertson Smith twice at length in this chapter, on the substance of popular worship and on the causes of the reaction under Manasseh. The surname Robertson collides with A.T. Robertson, who is in the splitter's VOICE_LABELS and in the short-name map, so writing Robertson Smith in the prose would have read as a citation of the New Testament grammarian and tripped the cited-but-not-declared rule. I attributed both quotations to Ellicott as quoting 'a modern scholar' and 'an account'. The running list of names lost to collisions or abbreviations is now Gregory of Nyssa, Titus Bostrensis, Bertheau, Clericus, Ewald at one point, Maccabees, Origen, Tertullian and Robertson Smith. Ewald, by contrast, IS usable here because Ellicott spells him out in full in this chapter - which again shows the fix is an alias and collision table rather than a rule change."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "21",
+      "note": "Self-grade A on all three tiles, 646 / 648 / 649 words at compression 0.13x to 0.19x. Voices are Ellicott, Henry and Clarke on all three; Gill's 924 words are largely verse text with K&D embedded and were not used, and Wesley's 453 were not needed. JFB is excluded on all three tiles. One ENTITIES signal, Babylonians, which was my own plural where Clarke writes only the adjective Babylonian; corrected to the Babylonian and Roman goddess, both adjectives being the source's own. I also avoided Ellicott's Greek and his ligatured place name for the valley below Ophel, and used only the English glosses of Clarke's Hebrew. One defect of my own caught mid-draft: an earlier trim had left a doubled 'and and' in the second tile, which I found by running a doubled-word regex over the tiles before putting. That check is cheap and I should have been running it all along."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "Whether Manasseh's accession at twelve excuses any of the apostasy divides Ellicott from Henry, and Henry has the better argument. Ellicott: 'This early accession to power may help to explain his deviation from the religious policy of his father. It is not necessary to assume (with Thenius) that the queen-mother swayed the government until he reached a riper age. Manasseh may have been older than his years.' Henry grants the same influence and then closes it off with a comparison nobody else makes: 'perhaps his coming to the crown so young might help to make it so, which yet will by no means excuse him, for his grandson Josiah came to it younger than he and yet acted well.' Henry does specify two mechanisms - that Manasseh was 'puffed up with his honour', valuing himself on undoing what his father had done, and that he was 'easily wrought upon and drawn aside by seducers', the enemies of Hezekiah's reformation flattering him and using his power at their pleasure - and Ellicott independently suggests the same, that he did evil 'perhaps under the pernicious influence of his courtiers'. So the two agree on the cause and differ only on whether the cause mitigates, which is the sharper question."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "13"
+      ],
+      "note": "The two figures of the sentence are read in two quite different ways and the difference is substantive. Clarke takes both measures dynastically: 'I will treat Jerusalem as I have treated Samaria... The house of Ahab was totally destroyed, and not a man of his race left to sit upon the throne of Israel: so shall it be done to the house or royal family of Judah; they shall be all finally destroyed, and not a man of their race shall any more sit on the throne of Judah; nor shall Judah have a throne to sit on.' Ellicott takes the same figure architecturally: 'The figure of the measuring line and plummet suggests the idea that Jerusalem should be levelled and laid even with the ground.' On the wiped dish the divergence is wider still. Ellicott divides the image, the wiping representing the destruction of the people and the turning upside down the overthrow of the city, while allowing Thenius's view that the two acts together mean simply making an end. Clarke follows the Vulgate into a wholly different metaphor: 'I will blot out Jerusalem as tablets are wont to be blotted out' - from the ancient method of writing with a stile on boards thinly spread with wax, one end sharp for tracing and the other blunt for rubbing out and spreading the wax back to receive new writing. Both are carried into the prose because neither excludes the other."
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "10"
+      ],
+      "note": "Who delivered the sentence is left open by the text and Ellicott is the only voice who works at it. 'This general expression is used because the historian found no name assigned in his source. It is possible that Isaiah was still living under Manasseh, and protested in the manner here described. More probably, however, the protests in question were those of that great prophet's disciples: the style is not Isaiah's.' He then weighs a stronger proposal, that the originality of the language at verse 13 favours Ewald's view that verses 11 to 15 are an extract from the lost work the chronicler cites for 'the words of the seers who spake to Manasseh', embodying the authentic oracle of a contemporary prophet - and rejects it: 'it appears much more likely that the passage before us is a sort of resume of the substance of many such prophetic addresses.' Henry does not engage the question at all, asking instead why prophets were sent and answering with a three-stage account of the prophetic office, teaching first, then reproof, then the foretelling of judgment, with the conclusion that 'the prophets were deputed judges to those that would not hear and receive them as teachers.'"
+    },
+    {
+      "at": "2026-10-05",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "21",
+      "verses": [
+        "26"
+      ],
+      "note": "Clarke's end-of-chapter dissertation on the word rendered grove is the best philology in the chapter and is worth preserving as a worked example of how he argues. He assembles four authorities - Jarchi, who makes it a tree worshipped by the Gentiles 'like as the oak was worshipped by the ancient Druids in Britain'; Castel's lexicon, defining it as a wooden image dedicated to Astarte or Venus; Theodoret, cited at second hand as identifying the Greek word with Astarte and Venus and reporting that other interpreters call it Ashtaroth; and the Targum of Ben Uzziel, which renders the command to cut down their groves as cutting down 'the oaks of their adoration'. He then clinches it from the following chapter rather than this one: Josiah is said to have brought the grove out of the house of the Lord, which Clarke calls 'very absurd' as a translation - 'what grove could there be in the temple? There was none planted there, nor was there room for any' - so the plain meaning is that he brought out the goddess and burnt her. Ellicott reaches the same conclusion without the apparatus and goes further, placing the image in the holy place itself as the climax of Manasseh's impiety."
     }
   ]
 }
