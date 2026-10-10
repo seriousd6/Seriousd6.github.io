@@ -96032,6 +96032,41 @@
         "5"
       ],
       "note": "Requote at v5, and the second instance was inside a textual-evidence sentence where the quotation was doing no work: the weight of the Hebrew manuscripts, the Septuagint, the Syriac and the parallel favours THE PRIESTS AND THE LEVITES. Replaced with the fuller reading, which names the same thing without quoting the phrase Keil had already quoted. A requote is often removable by referring to the reading rather than reciting it."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "9",
+      "note": "Queued as polish on the strength of two grade-B verses, but all 15 entries carried standard legacy-unversioned and no fidelity note had ever been recorded against the chapter, so there was no specific lean to fix; treated as a legacy rewrite and regenerated from the catena as pericope tiles. Same pattern as nehemiah 4 earlier in this run, and now worth stating as a rule of thumb: when a polish pick has no current-standard prose and no fidelity note, the polish instruction has nothing to act on and the legacy procedure is the right one. Henry's two blocks sit at keys 1 and 5, which gives the two tiles used here, vv.1-4 (the report of the marriages and Ezra's mourning) and vv.5-15 (the prayer at the evening sacrifice). 15 contiguous keys, 8,526 usable source words, Ellicott absent from the chapter entirely."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "9",
+      "verses": [
+        "6",
+        "12"
+      ],
+      "note": "JFB two-cursor fetch bug, 21st confirmed instance, and the stride-six regularity holds again: the two affected receiving keys are 6 and 12, exactly six apart. The donor is the end of 2 Kings and its parallel in 2 Chronicles 36: key 6 carries the fragment on Pharaoh-nechoh and the accession of Jehoiachin, key 12 the account of the league with Egypt and Nebuchadnezzar's generals besieging Jerusalem. Neither touches Ezra 9. JFB is listed in excluded_voices on the vv.5-15 tile, which is the only tile whose source carries the blocks; no genuine JFB comment on this chapter survives in the catena."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "A real theological disagreement on the chapter's last clause. Delitzsch holds that Ezra appeals to the righteousness of God precisely NOT to supplicate pardon, since that righteousness would impel God to extirpate a sinful nation, but to rouse the conscience of the community; Clarke takes the same word to mean merciful, one of the many senses of the Hebrew, and makes that mercy the reason a remnant escaped at all. Wesley sits with Delitzsch in substance, reading the clause as arraigning themselves before God's tribunal and acknowledging him just if he destroy them, and Gill says plainly that God would appear righteous should Israel be entirely cut off. Both readings are carried in the vv.5-15 tile and in its debates list."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "9",
+      "note": "Self-grade A on both tiles, fidelity signals clean on the first run. Compression 0.25x and 0.11x; the second tile carries eleven verses and nearly six thousand source words in one 646-word window, so it is much the thinner and loses most - dropped from the prose were Henry's reflection that stated opportunities of worship are a great comfort, Clarke's reading of the lightened eyes as a knowledge of themselves and their highest interest, Clarke's cross-reference from the closing clause to the question who shall stand if the Lord marks iniquities, and Wesley's gloss on the wall as the edicts of the Persian kings. Most of that survives in the school summaries. One real error caught in review: I wrote the Gill summary for the first tile with a clause calling the informing princes Sanballat's counterparts, which is a bleed from nehemiah 4 earlier in this run - Sanballat has nothing to do with Ezra 9. It was in the tags only, never in the prose, and was corrected before the gate ran. This is the second misattribution this run that a validator could not have caught (the first was Ellicott and Delitzsch at nehemiah 4:2), and both came from writing school summaries from memory of the reading rather than from the blocks. First drafts ran 652 and 847 words against a 648-word ceiling. Note also that the whole of this chapter's first attempt was lost when the container was recycled: the drafts and every helper script lived in the session scratchpad, nothing had been written into data/, and the work was redone from the catena."
     }
   ]
 }
