@@ -96067,6 +96067,67 @@
       "book": "ezra",
       "chapter": "9",
       "note": "Self-grade A on both tiles, fidelity signals clean on the first run. Compression 0.25x and 0.11x; the second tile carries eleven verses and nearly six thousand source words in one 646-word window, so it is much the thinner and loses most - dropped from the prose were Henry's reflection that stated opportunities of worship are a great comfort, Clarke's reading of the lightened eyes as a knowledge of themselves and their highest interest, Clarke's cross-reference from the closing clause to the question who shall stand if the Lord marks iniquities, and Wesley's gloss on the wall as the edicts of the Persian kings. Most of that survives in the school summaries. One real error caught in review: I wrote the Gill summary for the first tile with a clause calling the informing princes Sanballat's counterparts, which is a bleed from nehemiah 4 earlier in this run - Sanballat has nothing to do with Ezra 9. It was in the tags only, never in the prose, and was corrected before the gate ran. This is the second misattribution this run that a validator could not have caught (the first was Ellicott and Delitzsch at nehemiah 4:2), and both came from writing school summaries from memory of the reading rather than from the blocks. First drafts ran 652 and 847 words against a 648-word ceiling. Note also that the whole of this chapter's first attempt was lost when the container was recycled: the drafts and every helper script lived in the session scratchpad, nothing had been written into data/, and the work was redone from the catena."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "3",
+      "verses": [
+        "8"
+      ],
+      "note": "JFB fetch bug, twenty-second confirmation. The only Jamieson, Fausset and Brown block in the chapter sits at key 8 and does not belong to Ezra at all: it carries Sennacherib siege material (nor approach near enough to shoot an arrow, nor cast a bank), i.e. the two-cursor donor is the parallel 2 Kings 19 / Isaiah 37 narrative. Because exactly one key is affected there is no stride to measure; the stride-six regularity seen elsewhere is neither confirmed nor contradicted here. Declared as excluded_voices on tile 8 and excluded from the synthesis."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "3",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott chrome strip at the near-final key again: key 13 of 13 carries 1,032 words of which roughly 45 are genuine commentary (the people also mingled in the weeping, which was with shrill cries; the rejoicing and the sorrow were blended; all here has the stamp of truth). The remaining ~990 words are StudyLight navigation, copyright boilerplate and raw CSS. Read under a word cap to keep it out of context; the genuine fragment was used."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "3",
+      "note": "Tiling: Henry writes to two heads in this chapter, his blocks falling at keys 1 and 8 (the altar and the feast of tabernacles; the laying of the foundation). Delitzsch opens the chapter with the same division explicitly (vv.1-7 the altar and the feast, vv.8-13 the foundation laid). Two tiles, vv.1-7 and vv.8-13. The Henry-block heuristic holds for a fifth OT chapter running."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "3",
+      "verses": [
+        "9"
+      ],
+      "note": "The designation of the Levites. Delitzsch concludes from the earlier register that the sons of Judah is a clerical error for the sons of Hodaviah, and that the phrase qualifies the sons of Kadmiel only, explicitly against Bertheau, who read it as a comprehensive appellation for all hitherto enumerated. Ellicott leaves the received reading standing, taking Jeshua and Kadmiel both as of the stock of Judah, or Hodaviah, two heads of Levitical families whose fewness is compensated by their unanimity and vigour. Ellicott also reports that Henadad is absent from the earlier list and that why it is omitted there or inserted here cannot be determined. Carried as a debate on tile 8."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "3",
+      "verses": [
+        "12"
+      ],
+      "note": "Why the old men wept. Wesley itemises four causes: poor preparations, the want of the ark and the Urim and Thummim, foundation stones inferior in quantity and price, and foundations of a narrower compass. Clarke says the glory had departed and that even a grander house would still have wanted the ark, the heavenly fire, the mercy seat, the manna, Aaron's rod, the divine presence and the spirit of prophecy. Ellicott nearly denies the comparison: the weeping was not occasioned by any question of size and grandeur, UNLESS indeed they marked the smallness of their foundation stones, and the grief lay in the great desolation as measured by the past. Henry grants the tears some reason in the sin that caused the change but calls their indulgence an infirmity that cast a damp on the common joy. Carried as a debate on tile 8."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "3",
+      "note": "Third consecutive instance of the polish-pick-with-nothing-to-polish pattern (after nehemiah 4 and ezra 9). --queue auto offered this chapter as a POLISH pick on the strength of two grade-B verses, yet all 13 entries were legacy-unversioned and the chapter carried no fidelity note at all. The polish instruction (read the existing prose and the fidelity notes, then fix the specific lean the note records) has nothing to act on in that state, so the legacy procedure was used instead: regenerate from the catena as pericope tiles. Suggested rule of thumb for the queue: a chapter whose entries are all legacy-unversioned with no recorded fidelity note should route to the legacy queue regardless of letter grades."
+    },
+    {
+      "at": "2026-10-10",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "3",
+      "note": "Self-graded A on both tiles. Source 8,759 usable words (4,010 for vv.1-7 and 4,749 for vv.8-13 as the fidelity reader counts them) distilled to 641 and 644 words, 0.16x and 0.14x. Six voices declared on each tile (Henry, Keil and Delitzsch, Ellicott, Clarke, Wesley, Gill); JFB excluded on tile 8 as a displaced fetch. First-draft lengths were 652 then 756 (trimmed to 641) for tile 1 and 774 for tile 2 against a 648-word working ceiling, so the overshoot problem is unimproved: tile 2 needed a 130-word trim in two passes. One attribution was corrected during the post-trim source re-read, not caught by any validator: the draft had Ellicott denying the size-and-grandeur comparison OUTRIGHT, where his own text allows the exception 'unless indeed they marked the smallness of their foundation stones'. Softened to 'nearly denies' with the qualification restored in both prose and tags. A second check cleared a suspected misattribution that was in fact correct: the everlasting-hymn-never-out-of-date line appears in both Wesley and Henry, Wesley abridging Henry there, so attributing it to Henry stands. Writing the school summaries from the re-read blocks rather than from memory of the reading is what surfaced the Ellicott error; that practice should be kept."
     }
   ]
 }
