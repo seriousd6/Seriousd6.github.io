@@ -97119,6 +97119,94 @@
       "book": "job",
       "chapter": "5",
       "note": "A THIRD TAG CONVENTION, and it is the best of the three. Extending the note filed today against revelation 5: job 5's legacy entries (2026-08-02) carry 'debates' as STRUCTURED OBJECTS - {question, sides: [{holders, position}]} - which names who holds which position and is the only one of the three forms a machine can read. The other two are revelation 5's long-sentence debates with multi-hundred-word prose school digests (2026-08-25), and the short form my tiled chapters use, noun-phrase debates with a list of voice names as the summary. All three pass validate-synthesis.py. I kept job 5's structured form on the rewritten entries rather than replacing it with my own, since discarding the richer shape in a rewrite would be a silent loss. Recommend the owner settle on the structured form; a converter from the other two is mechanical for the short form and would need a model pass for revelation 5's prose digests. SECOND DIVERGENCE, in the same area: the loop doc's own example of pericope_label is a DESCRIPTIVE PHRASE ('Nahshon of Judah brings the first offering'), but most shipped ranged entries carry the KJV text of the span's start verse instead (ezekiel 41, revelation 5). At an 11-verse span the start verse's text is actively misleading about what the entry covers, so I used the documented descriptive form here. Worth one line in the doc saying which is canonical."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "25",
+      "note": "EIGHTH instance of the polish-pick-with-nothing-to-polish pattern: offered as 'polish' on one grade-B verse (19) while all thirty entries are legacy-unversioned at the 2026-07-22 standard, so the legacy procedure applied. Tiled to Henry's three heads at keys 1, 8 and 22, whose own openings name the divisions - 'We left king Zedekiah in rebellion', 'Though we have reason to think that the army of the Chaldeans were much enraged', 'In these verses we have, I. The dispersion of the remaining people' - giving vv.1-7, 8-21, 22-30. FOURTH source-outline corroboration of the Henry tiling heuristic, and the first where a SECOND voice's printed argument agrees seam for seam: Clarke's chapter argument at key 1 divides 25:1-7, 8-12, 13-17, 18-21, 22-26, 27-30, every one of Henry's three seams falling on a Clarke seam. Clarke's finer six-part division is the one a reader would want; I did not take it because Henry's 4,101 words (26 percent of the source) would then be undeclarable on four of the six tiles, and his key-8 block alone carries substantive comment on the vessels (vv.13-17) and the executions (vv.18-21). Coverage cost recorded: expansions 0.16x, 0.12x, 0.10x against 16,040 source words. This is the second chapter in two batches where the Henry-head rule and the best reader-facing tiling disagree, which strengthens the case for letting a long pericope carry two entries with the second declaring only the voices that have heads in it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "10",
+        "16",
+        "22",
+        "28"
+      ],
+      "note": "JAMIESON STRIDE, 27th confirmation, AND THE FIRST STUCK DONOR BLOCK IN THE SERIES. Four JFB blocks at keys 10, 16, 22 and 28 - all congruent to 4 mod 6, four members at an exact stride of 6, the longest unbroken run I have measured. None is on 2 Kings: the donor is 2 SAMUEL 19, walking forward through one passage - k10 is 2Sa 19:9-10 (the three parties, the king right not to hasten back, a re-election in some measure necessary), k16 and k22 are both 2Sa 19:16-18 (Shimei's followers, his pardon, the son of Zeruiah repulsed), k28 is 2Sa 19:24-25 (Mephibosheth's reception, the beard and the bath). THE NEW FACT: keys 16 and 22 are BYTE-IDENTICAL, 78 words, 459 chars, md5 8fc2ae0828e2. The target cursor advanced its full stride of 6 while the donor cursor did not move at all. Every previous sighting showed the donor advancing monotonically, slower than the target but always forward; this is the first observed STALL. It separates the two cursors cleanly and says the donor pointer is not a function of the target key alone. Compare the stuck Cyril fragments (three distinct ones on record, each repeating within or across chapters), which suggests one shared mechanism for a cursor that fails to advance. 2 Samuel precedes 2 Kings, so the backward rule holds. JFB declared excluded_voices on the two entries that contain these keys."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "30"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME, thirteenth consecutive chapter. The Ellicott block at 2 Kings 25:30 runs 1,122 words of which about 125 are commentary - the genuine part ends at the comparison with Psalms 106:46 and Ezra 9:9, after which comes the navigation strip, the BibleSupport.com copyright statement, the StudyLight.org footer, raw CSS and the site's commentary index. Same fixed template, same clean cut at the copyright statement. The invariant is unbroken: last key, Ellicott alone, nav strip then copyright then stylesheet then index."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "2",
+        "3",
+        "4",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "12",
+        "14",
+        "19",
+        "20",
+        "22",
+        "23",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29"
+      ],
+      "note": "KEIL AND DELITZSCH 200-WORD CAP AT NINETEEN OF THIRTY KEYS, AND THE WINDOWS OVERLAP RATHER THAN TILE. Every K&D block at keys 2, 3, 4, 6, 7, 8, 9, 10, 12, 14, 19, 20, 22, 23, 25, 26, 27, 28 and 29 is exactly 200 words; key 30 is 27. The overlap is severe and measurable: key 3's window reproduces key 2's tail verbatim ('Trusting partly to the help of the Egyptians... by submitting, to the Chaldaeans'), key 6 reproduces key 4's tail, key 7 reproduces key 6's tail. Across keys 2, 3, 4, 6 and 7 the raw total is 1,000 words and the distinct content is roughly 550. Worse, each window opens with the printed KJV of two or three verses before any comment begins, so a large share of every 200-word budget is scripture text the synthesis already has. Key 20 is the clearest case: 200 words, K&D alone on that key, and the content is three verses of KJV plus the section heading for the NEXT pericope. Same defect quantified at 2kings 22 (nine keys at 200) and 1samuel 15 (nineteen keys, overlapping, 4,200 raw against about 1,200 distinct). The standing recommendation is unchanged and now has a third measurement behind it: a deduplicating usable-words counter that drops repeated windows and strips printed scripture would give the sizer a truthful figure."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "30"
+      ],
+      "note": "A METHODOLOGICAL SPLIT OVER WHAT THE TEXT WILL BEAR. 'All the days of his life' prompts Clarke to a confident reconstruction: Evil-merodach was killed in a conspiracy about two years later, and Jehoiachin, then about fifty-eight, is supposed to have fallen with his friend and protector, which Clarke makes the terminal catastrophe of the Jewish kings and state. Keil and Delitzsch refuse the inference in terms: 'we cannot infer from this with any certainty that Jehoiachin died before Evil-merodach; for the favour shown to him might be continued by Evil-merodach's successor', and they add that no safe conjecture can be made about the motive for the pardon at all. Ellicott sits between them, thinking an early death likely enough given the age and the thirty-seven years of imprisonment but resting the verse's weight on something else - that the writer dwells with pleasure on a faint gleam of light amid the darkness of the exile, foreshadowing the pity later extended to the captive people. Thenius, whom Delitzsch names, had thrown suspicion on the clause itself, and Delitzsch dismisses that too as without reason."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "22"
+      ],
+      "note": "What Gedaliah actually was. Clarke deflates the appointment: 'This was no regal dignity; he was only a sort of hind or overseer, appointed to regulate the husbandmen', and Gill reads the charge the same way, the people in question being those left as vinedressers and husbandmen. Ellicott and Henry both treat it as a governorship with real standing - Ellicott defending him against those who have 'misnamed' him a traitor and deserter and making him a disciple of Jeremiah who did his utmost to induce the remnant to submit patiently to their divinely-ordered lot, Henry supposing he had gone over to the Chaldeans on Jeremiah's advice and conducted himself well enough to be entrusted with the government, and might have been a greater blessing than many of their kings. The split matters for how the murder reads: on Clarke's view Ishmael killed a bailiff, on Ellicott's a legitimate head of the remnant."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "25",
+      "verses": [
+        "8"
+      ],
+      "note": "Three ways of handling one numeral. This text dates the burning to the seventh day of the fifth month, Jeremiah 52:12 to the tenth. Ellicott calls ours an error, 'one numeral letter having been mistaken for another', and reports a Syriac and Arabic ninth which Thenius explains by the memorial fasts beginning on the evening of the ninth. Gill flags the discrepancy and refers it out without resolving it. Clarke resolves it by narrative instead: Nebuzaradan made his entry on the seventh, spent two days making provision, and set fire to the buildings on the tenth - so both dates stand and name different acts. Worth noting as a method contrast on the same datum: emendation, deferral, and harmonisation side by side. Clarke also fixes the ruin in the first year of the forty-eighth Olympiad, four hundred and twenty-four years three months and eight days from Solomon's foundation stone, which is more precision than the sources can carry and was left out of the prose."
     }
   ]
 }
