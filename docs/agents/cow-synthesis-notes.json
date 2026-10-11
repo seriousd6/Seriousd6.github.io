@@ -97499,6 +97499,77 @@
         "26"
       ],
       "note": "Ellicott naming and refuting two modern commentators in four sentences, which is rarer in this catena than disagreement among the classic voices. On the epithets Ammonitess and Moabitess he writes that 'Reuss is incorrect in asserting that the names of the mothers are substituted by the chronicler for the names of the fathers', and then: 'Thenius even knows the reason why the chronicler has added the epithets... The writer wished to show that the idolatry into which he makes Joash lapse (?), was avenged by two sons of idolatrous wives (!). This is fancy determined by prejudice.' The parenthetical question mark and exclamation mark are Ellicott's own. He then turns the same data to his own argument, that the epithets indicate a source other than the canonical book of Kings, as does the strikingly original account of Zechariah's death, and that the next verse names that source. Worth recording because it is a rare case of a catena voice arguing about method rather than about a reading, and because the argument is sound."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JAMIESON STRIDE, 29th confirmation, AND THE FIRST TIME I HAVE LOCATED BOTH ENDS OF ONE DISPLACEMENT. Three JFB blocks at keys 1, 7 and 13 - offset 1 mod 6, constant step 6. None is on Chronicles: the donor is 1 KINGS 8, walking forward through the dedication of the temple. k1 (392w) opens with the section header '1Ki 8:1-12. The Dedication of the Temple' and its introduction about the eleven-month delay and the jubilee year; k7 (75w) is on the staves left projecting so as to guide the high priest once a year in the dark, which is 1Ki 8:8; k13 (38w) is the apostrophe welcoming God to enter his fixed and permanent dwelling-place, which is 1Ki 8:12-13. Source positions 8:1, 8:8, 8:12 against target keys 1, 7, 13: monotonic, gaps of 7 then 4 against a target stride of exactly 6, the familiar uneven donor rate. 1 Kings precedes 1 Chronicles, so the backward rule holds. THE NEW FACT: earlier in this same run I recorded the JFB residue at job 5 keys 4, 10 and 22, and its donor was 1 CHRONICLES 15-16 - k4 being 'These eminent Levites were instructed to train the musicians and singers... The performers were ranged in three choirs or bands, and the names of the principal leaders are given (1Ch 15:17, 18, 21)', which is commentary on precisely the span of this chapter's vv.16-24 entry. So the JFB commentary that BELONGS at 1 Chronicles 15 is sitting at Job 5, while 1 Chronicles 15's own slots hold 1 Kings 8. That is one exact (origin, destination) pair for the first time in twenty-nine sightings, and it is strong independent support for the single-global-pointer model: every chapter is served text from earlier in the concatenated stream, so a chapter's own text surfaces later. Recommendation for the re-indexing decision: this pair can serve as the test case - a correct inverse map must send Job 5 keys 4 and 22 back to 1 Chronicles 15:16-22."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "7"
+      ],
+      "note": "A VERSE WITH NO SOURCE BLOCK AT ALL, and what the tiling check does about it. The catena for this chapter has keys 1-5 and then 7-29: there is no key 6, though 1 Chronicles 15 has 29 verses. My first tiling used ranges 1-10, 11-15, 16-24, 25-29, and validate-synthesis.py FAILED it with 'entries cover verses absent from the source: [6]'. So a pericope range may not span a verse the source does not carry, even though the verse exists in the chapter and a reader walking back to the nearest key would otherwise be served sensible prose for it. The fix was to split around the hole: 1-5, then a separate 7-10 entry, which with 138 usable source words after excluding the displaced Jamieson block qualifies for the thin exemption and runs to 129 words. Worth the owner knowing two things. (1) The rule is stricter than the doc's summary suggests - the doc says the spans must tile the chapter with no gaps, and here a gap is not merely permitted but required. (2) The consequence is a reader-visible hole: v.6 now falls between two entries and resolves backward to the vv.1-5 entry, which is the right outcome, but it means a missing scrape key silently shapes the pericope structure. A note in the loop doc saying to check for interior key gaps BEFORE choosing seams would have saved a failed validation here."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "15",
+      "note": "ELEVENTH instance of the polish-pick-with-nothing-to-polish pattern, and the second chapter tiled on the corrected sense-unit rule. One grade-B verse (11), all twenty-eight entries legacy-unversioned, so the legacy procedure applied. Henry has heads at keys 1 and 25 only, so his division would have given two entries at roughly 0.06x and 0.18x; the five-entry split on sense units gives 0.19x, 0.58x, 0.40x, 0.26x and 0.18x and carries 2,661 words of prose where two tiles would have carried about 1,300. Henry is therefore declared on the first and last entries only, and his comment on the muster and the singers goes unused - the same trade recorded at 2chronicles 24, and acceptable here for the same reason, that Ellicott alone contributes 4,170 words spread across every key and Delitzsch another 2,649, so the middle entries are well fed without him. Clarke's printed chapter argument divides 1-11, 12-15, 16-26, 27-29, which agrees with my seams at 15/16 but not at 5/7 or 24/25; I preferred the narrative units because the missing key 6 forced a seam there anyway and because the procession order (vv.16-24) and the journey itself (vv.25-29) are plainly different subjects."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "22"
+      ],
+      "note": "CHENANIAH: TWO AGAINST TWO, and the better-argued side loses the English. Clarke makes him the master singer: 'he gave the key and the time, for he presided bemassa, in the elevation, probably meaning what is called pitching the tune, for he was skillful in music, and powerful in his voice... he might have been precentor.' Wesley agrees, 'the moderator of the musick, instructing them when and how to lift up their voices, or change their notes, or make their stops.' Ellicott denies it on three explicit grounds: the context, since Heman, Asaph and Ethan were already conductors of the singing and music; that Chenaniah is nowhere else associated with music; and that the word massa, used in relation to Levites, means bearing. He renders it 'captain (i.e., conductor) of the Levites in bearing... because he was skilled' in the regulations for carrying the ark duly. Keil and Delitzsch take the same side, 'Chenaniah, the prince of the Levites, for the bearing, teacher in bearing,' noting that he is called the chief of the bearing at v.27 and does not appear among the six princes, while allowing that 'the word massa is, however, very variously interpreted.' The versions split too: the Greek reads leader of the songs, the Syriac 'bore the burden daily'. The Authorised Version's 'was for song: he instructed about the song' follows the Greek, so the English carries the reading that two of the four voices, and the only two who argue from the word's usage, reject."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "20",
+        "21"
+      ],
+      "note": "ALAMOTH AND SHEMINITH: a confident reading, a catalogue, and two admissions of defeat. Ellicott is confident: 'With harps after the mode of maidens: that is, probably, of soprano compass or pitch', and for the other 'With lutes (or lyres) in the bass. Literally, after the mode of the eighth - i.e., an octave below the tenor - al ottava bassa.' Clarke catalogues without choosing: Alamoth may signify virgins or women singers whom these men accompanied and presided over, while the Vulgate has 'arcana cantabant, they sang secret things or mysteries; probably prophetic hymns'; and for Sheminith he lists the Targum's instrument sounding an octave, or one with eight strings, the Syriac and Arabic 'instruments to sing with daily, at the third, sixth, and ninth hour', the Vulgate's octave for a song of victory, and the suggestion that the eighth band of musicians is meant, those with the strongest and most sonorous voices. Wesley gives up: these are 'thought to be the name of an instrument of musick; or of a certain tune, or note, or part in musick. The certain signification of it is not now known.' Keil and Delitzsch give up in the same terms and generalise it: the three terms at vv.19-21 'plainly denote different keys in singing, but are, owing to our small acquaintance with the music of the Hebrews, obscure, and cannot be interpreted.' Worth recording as a clean case of the catena's epistemic range on one datum: one voice certain, one exhaustive, two candid that the knowledge is lost."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "27"
+      ],
+      "note": "WAS DAVID CLOTHED OR DANCING? A textual crux where both grammatical-historical voices see the same corruption and one of them then refuses to accept it. Samuel reads that David was dancing before Jehovah with all his might; Chronicles reads that David was clothed with a robe of byssus. Ellicott: 'The Hebrew of our text may be a corruption or intentional alteration of this. The word for clothed is the Aramaic (Daniel 3:21, mekurbal), which might easily be, by inadvertence or design, substituted for the rare word mekarker (Sam.), dancing.' Keil and Delitzsch reach the identical observation independently - the two words differ only in their last two letters, and kr might easily be exchanged for bl - and report Bertheau's fuller reconstruction, that a copyist who remembered David's clothing was spoken of might write the one as the other while the words now read as 'a robe of byssus' were conjectured because illegible. Then comes the reservation: 'This opinion would be worthy of consideration, if only the other discrepancies between the Chronicle and Samuel were' - and the window is cut at 200 words before the objection lands, which is itself worth noting. Clarke, Gill and Wesley all take the linen at face value, Clarke identifying byssus as probably the beard of a Mediterranean muscle and reporting that he had seen gloves made of it. So the two voices best placed to judge the text agree on the diagnosis and divide on whether to adopt it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "15",
+      "verses": [
+        "27",
+        "29"
+      ],
+      "note": "The K&D window at key 27 is cut at exactly 200 words IN THE MIDDLE OF AN OBJECTION. Their note on the clothed-versus-dancing crux reports Bertheau's conjecture and then begins to reject it - 'This opinion would be worthy of consideration, if only the other discrepancies between the Chronicle and Samuel were' - and the cap falls there, so the reason they decline the emendation is lost. This is the most consequential truncation I have met: not a lost illustration or a trailing citation, but the load-bearing half of a textual judgement, and a reader of the synthesis can be told that Delitzsch declines the conjecture but not why. Their key-29 window is 96 words and runs out mid-reference as well. Add 1chronicles 15 keys 27 and 29 to the re-fetch list, and note for the owner that a cap which lands inside a concessive clause silently inverts what the voice is taken to hold."
     }
   ]
 }
