@@ -96318,6 +96318,108 @@
         "all"
       ],
       "note": "Two of my own detectors needed correcting. The thinness regex matched thin inside nothing and things and fired on 20 entries until word boundaries were added; all were false. The requote detector fires when a short quoted lemma is contained in a longer quotation that shares its words, which produced false positives on v26, v47, v58 and v44 where both spans were genuine and distinct."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "JFB fetch bug, twenty-third confirmation and by far the clearest instance yet. This chapter carries EIGHT Jamieson, Fausset and Brown blocks, at keys 5, 11, 17, 23, 29, 35, 41 and 47 — every sixth key exactly, which confirms the stride-six regularity on a single chapter rather than by inference across two or three affected keys. Every one of the eight is displaced, and the donor sequence is itself ORDERED and traceable, so the mechanism is now visible: the key cursor advances six verses per step while the JFB cursor advances only about one commentary range per step, producing a monotonic lag that begins in the PREVIOUS chapter and never catches up. Mapping: key 5 carries JFB on Matthew 4:14-16 (the Isaiah 9 citation); key 11 carries JFB on 4:19 (Come ye after Me, the lower and higher fishing); key 17 carries JFB on 4:24-25 (Syro-Phoenicia, those that were ailing); key 23 carries JFB on 5:3 (the two words for blessed, the sevenfold character); key 29 carries JFB on 5:8 (outward versus inward purity, the vision of God); key 35 carries JFB on 5:11 (from characters to persons, Blessed are ye); key 41 carries JFB on 5:18 or 5:22 (that august expression of supreme legislative authority); key 47 carries JFB on 5:23 (of just complaint against thee). JFB is therefore unusable for the whole of this chapter and was declared as excluded_voices on all seven tiles whose range contains one of those keys (3, 17, 21, 27, 33, 38, 43); tiles 1 and 13 contain no JFB block at all, which is itself consistent with the stride. This chapter is the best candidate for validating any mechanical sweep: the expected key set is predictable from the stride alone."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "Tiling: Henry's blocks fall at keys 1, 3, 13, 17, 21, 27, 33, 38 and 43, which reproduces the standard nine-part division of the Sermon's first chapter exactly — the setting, the Beatitudes, salt and light, the law and the prophets, anger and reconciliation, lust and divorce, oaths, retaliation, and love of enemies. Clarke's own chapter argument at key 1 lists the same divisions independently. Nine tiles. The Henry-block heuristic now holds for a sixth consecutive chapter and for the first time in the New Testament at this scale."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "Voice selection on a nine-tile chapter. Ten voices appear in the chapter (Henry 23,460 words, Calvin 16,141, Clarke 16,047, Barnes 14,198, Ellicott 13,729, Wesley 5,642, Gill 4,905, Lightfoot 4,502, Robertson 4,044, JFB 2,414 and all displaced). Declaring all nine usable voices on a 650-word tile would leave about 70 words each, which is below what an attributed position needs; seven per tile was the working compromise, chosen per tile by which voices actually carry argument in that range, so that Lightfoot appears where his rabbinic parallels bear (17-20, 21-26, 27-32, 33-37, 38-42, 43-48), Robertson where the Greek is at issue (1-2, 13-16, 27-32, 38-42), and Gill and Wesley where they are substantive. The validator does not require every source voice to be declared or excluded, so this is a legitimate editorial choice rather than a gap; but it should be recorded that two or three usable voices go uncited per tile in a chapter this crowded."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "3"
+      ],
+      "note": "Two substantial disputes in the Beatitudes tile. First, what poverty of spirit is: Gill rules out the poor in purse outright, since God has called many in that condition but not all; Ellicott makes the qualifying clause point to the region of life in which the poverty is found and notes that Luke, lacking it, speaks of outward poverty as a less perilous state than riches; Barnes reports the dispute and settles for a humble opinion of ourselves; Henry defines it as being emptied of self in order to be filled with Christ. Calvin dissents from all of them: because Luke and Matthew must mean the same thing, the name belongs to those pressed and afflicted by adversity, Matthew's added epithet confining the happiness to those who under the discipline of the cross have learned to be humble. Second, and following from the first, Calvin reads hungering and thirsting after righteousness as a part put for the whole, meaning to suffer poverty, to want the necessaries of life and to be defrauded of one's right; Henry reports that reading of oppressed men denied justice and allows them the blessing, but holds the spiritual sense certain; Barnes, Clarke and Ellicott take the craving for righteousness alone. Calvin's consistency here is the point: his social-literal reading of the first beatitude drives his reading of the fourth."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "22"
+      ],
+      "note": "Whether the words without a cause belong to the text. Clarke reports them wanting in the Vatican manuscript and in the Ethiopic, latter Arabic, Saxon, Vulgate, two copies of the old Itala, and in Justin Martyr, Origen, Tertullian and all the ancient copies quoted by Jerome, judges them a marginal gloss that crept in, and would render the Greek vainly instead. Ellicott leaves the question open: they are absent from many of the best copies and may have been inserted to soften an apparently harsh teaching, which if so must have happened before the fourth century, or may have stood there originally and been struck out as giving too wide a margin to vain and vague excuses. Wesley rejects them on wholly different ground, from the scope of the discourse rather than the manuscripts: if only causeless anger were forbidden there was no manner of need of so solemn a declaration, since the scribes themselves taught that much, and this righteousness would then not exceed theirs. Henry and Barnes both build on the clause as genuine, Henry glossing it as without just provocation, without good end and beyond due bounds, and Barnes distinguishing the anger against sin that is lawful. Worth recording that the textual and the contextual arguments converge on the same conclusion from independent evidence."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "25"
+      ],
+      "note": "Who the adversary is, which is the sharpest three-way split in the chapter. Clarke, having himself drawn a devotional application from the verse, warns flatly that those who make the adversary God, the judge Christ, the officer Death and the prison Hell abuse the passage and highly dishonour God. Barnes agrees independently, that there is no propriety in the use sometimes made of this verse in regarding God as the adversary of the sinner. Henry takes exactly the step both of them forbid, making the great God a law-adversary who has an action against sinners, and builds a long application on it. Ellicott divides the figure instead: the judge is clearly God and the officers those who execute his judgment, while the adversary is the neighbour we have wronged. Calvin turns the passage another way again, reading it as spoken to take away occasion for hatred by reproving the obstinacy of men too tenacious of their own rights, and so addressing the wronged party as well as the wrongdoer, where Ellicott insists the whole teaching is addressed to one who has done wrong."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "40"
+      ],
+      "note": "Which garment is the coat and which the cloke, a realia dispute with the commentators evenly divided. Ellicott makes the coat the close-fitting tunic worn next the body and the cloke the outer flowing mantle, the more costly of the two; Robertson agrees, the coat being a sort of shirt or undergarment that would be demanded at law while a robber would seize the outer garment first, so that if the undergarment goes at law the more valuable outer one goes also. Clarke reverses them, the coat being the upper garment and the cloke the under, what we call the strait coat and the great coat; and Lightfoot supports Clarke from the Talmud, identifying the word as the talith, which the commentator explains is so called because it is above all the garments, that is, the outermost, and in which the fringes were woven that were to put a man in mind of the law, so that the disgrace was increased with the wrong when that garment was taken. The dispute matters to the sense: on the Ellicott and Robertson reading the surrender is of the more valuable garment, on the Clarke and Lightfoot reading of the one carrying the fringes."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "48"
+      ],
+      "note": "What the closing command to be perfect means, and the only place in the chapter where the split falls cleanly along confessional lines. Barnes takes the word in its mechanical sense, of a thing complete in its parts, and instances Job, who is called perfect though fault is afterwards found with him, his piety being proportionate and consistent rather than sinless; Calvin denies any equality of measure outright, holding that the word relates solely to resemblance or approach, and that the perfection of God here means that free and pure kindness which is not induced by the expectation of gain; Ellicott reads the Greek as an ideal future that implies an imperative, the perfection being the attainment of the end of our being, used elsewhere of men of full age against infants. Against all three, Clarke takes the words as command and promise together and answers the question whether we can be fully saved from sin in this world by saying that as in the infinite nature there is nothing but goodness and love, so in our finite nature there shall dwell no sin; and Wesley reads it the same way, as the proper promise of the Gospel sealing all the commandments, on which God stakes all his power and truth and faithfulness, knowing how ready our unbelief would be to cry that this is impossible. The two Wesleyan commentators read a promise of entire sanctification where the Reformed and grammatical-historical readers read proportionate resemblance."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "5",
+      "verses": [
+        "13"
+      ],
+      "note": "Ellicott chrome strip at the final key again, and in the usual place. Key 48, the last of the chapter, carries 1,114 words of Ellicott of which roughly 90 are genuine commentary on the word perfect; the remainder is StudyLight navigation, copyright boilerplate and the usual trailing furniture. The pattern is now invariant across every chapter worked: the strip attaches to the last or near-last key of the chapter and to Ellicott only. Read under a word cap; the genuine fragment was used."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "Fourth consecutive polish-pick-with-nothing-to-polish, and the first at scale. --queue auto offered this chapter as a POLISH pick on the strength of ten grade-B verses, but all 48 entries were legacy-unversioned and the chapter carried no fidelity note at all, so there was no recorded lean to fix and the legacy procedure was used: regenerate from the catena as pericope tiles. The rule of thumb proposed after ezra 9 and ezra 3 now has a fourth instance behind it, and this one is a 133,000-word chapter, so the misrouting is not cheap: a worker following the polish instruction literally would have read 48 verses of old per-verse prose looking for notes that do not exist. Suggested queue change remains, that a chapter whose entries are all legacy-unversioned with no recorded fidelity note should route to the legacy queue regardless of letter grades."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "Budget note on the over-threshold chapters. This chapter is 133,177 raw source words, far over the ~40,000 single-chapter threshold, and was therefore taken as the whole batch, as the standing instruction directs. It is one of the four chapters that have been blocking --worst-first for several windows (matthew 24 at about 103,000 words, john 8, john 20, matthew 5), and the first of them to be landed. For calibration of the remaining three: nine tiles, about 105,000 usable words across ten voices once KJV repeats and chrome are discounted, read per voice under word caps; the work fits comfortably in a single session's context but takes the whole of it, and the dominant cost is not the reading but the nine successive trim cycles. The fidelity reader's per-tile source counts came out 6,330 / 27,001 / 9,885 / 17,303 / 19,420 / 13,422 / 9,688 / 13,575 / 16,553, with the Beatitudes tile the extreme at 0.02x compression."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "5",
+      "note": "Self-graded A on all nine tiles. Source 133,177 raw words (about 105,000 usable once KJV repeats and the Ellicott chrome are discounted) distilled to nine tiles of 646 to 649 words, compression 0.02x to 0.10x. Seven voices declared per tile out of ten present, chosen per range by which voices carry argument there; JFB excluded on all seven tiles that contain one of its displaced blocks. Prose is pure ASCII with no doubled words and no unlinked scripture refs; the curly apostrophes remaining in the tags file are KJV text supplied verbatim by the repo's own Bible data to themes and pericope_label, which is the corpus convention (94 of 400 sampled tags files carry them) and not my prose. One content error was made and caught: a coat-and-cloke clause belonging to the vv.38-42 tile bled into a debate entry on the vv.27-32 tile while I was writing nine sets of tags in three batches. It was in the tags only, never in the prose, and was patched directly with an asserted single-hit replacement and verified by grep before the gate ran. That is the third tag-level bleed of this kind across the last four chapters (Sanballat into ezra 9, the Ellicott-Delitzsch swap in nehemiah 4, and this one), and all three arose the same way, from writing school summaries and debates away from the blocks rather than against them. Writing nine tiles' tags in one sitting is where that risk concentrates. Over-long first drafts remained the dominant mechanical failure: 884, 779, 830, 894, 842, 914, 913, 975 and 919 words against a 648-word working ceiling, every one needing a structural cut of 150 to 330 words rather than a trim, and three needing a full rewrite. The overshoot is not improving and is now costing more per tile than the reading does."
     }
   ]
 }
