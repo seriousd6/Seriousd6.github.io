@@ -97207,6 +97207,78 @@
         "8"
       ],
       "note": "Three ways of handling one numeral. This text dates the burning to the seventh day of the fifth month, Jeremiah 52:12 to the tenth. Ellicott calls ours an error, 'one numeral letter having been mistaken for another', and reports a Syriac and Arabic ninth which Thenius explains by the memorial fasts beginning on the evening of the ninth. Gill flags the discrepancy and refers it out without resolving it. Clarke resolves it by narrative instead: Nebuzaradan made his entry on the seventh, spent two days making provision, and set fire to the buildings on the tenth - so both dates stand and name different acts. Worth noting as a method contrast on the same datum: emendation, deferral, and harmonisation side by side. Clarke also fixes the ruin in the first year of the forty-eighth Olympiad, four hundred and twenty-four years three months and eight days from Solomon's foundation stone, which is more precision than the sources can carry and was left out of the prose."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "21",
+      "note": "CORRECTION TO MY OWN NOTES ON job 5 AND 2kings 25: the tiling question I raised there is already settled in the corpus, and I should have checked a completed chapter in the book I was working in before asking. psalms 22, rewritten at the current standard on 2026-08-27, tiles 31 verses into six sense-unit spans (1-5, 6-11, 12-18, 19-21, 22-26, 27-31) which do NOT align to Matthew Henry's heads (keys 1, 11, 22), and three of the six entries simply do not declare Henry at all. That chapter grades A throughout and passes the gate. So a tile may decline a voice that has no head inside it; the permission I recommended the owner grant already exists. The Henry-head rule is a sensible default where Henry dominates the source, not a constraint. Had I applied this precedent two chapters ago, job 5 would have been tiled on Clarke's printed argument (1-8, 9-16, 17-27) and 2kings 25 on his six-part one, both with materially better per-verse coverage than the three-tile Henry alignment gave. Nothing shipped is wrong, but the coverage was thinner than it needed to be, and the recommendation in those two notes should be read as answered rather than open."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "7",
+        "12"
+      ],
+      "note": "Tiled 1-6, 7-11, 12-13. The seam at 11/12 was deliberately moved OFF the obvious sense break (vv.8-12 enemies, v.13 doxology) because Keil and Delitzsch have no block at key 13: their comment on the closing verse - the song spreading its wings in twice three tetrastichs and then closing by soaring aloft and losing itself in a distich - sits inside the key-12 window. A 7-12 / 13 split would have left the psalm's last verse without the voice that says most about its form. Putting key 12 into the closing tile recovers it, and also gives that tile two verses of material instead of one. Same lead-displacement shape already recorded at revelation 19 (Henry filed at key 5 commenting on 6-8) and genesis 28 (Keil), and fixed the documented way, by moving the boundary rather than stretching the prose. Note for other Psalms: Calvin has a block at key 1 only and Spurgeon at keys 1 and 7, so finer tiling in this book costs those two voices quickly."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "13"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME, fourteenth consecutive chapter, AND THE NEW WORST GENUINE FRACTION. The Ellicott block at psalms 21:13 runs 1,017 words of which about 25 are commentary - two and a half percent. The whole of the genuine text is: 'Thou. - Again the song turns to address Jehovah. So will we sing and praise. - Better, We will both with song and lyre celebrate Thy power.' Everything after that is the standing template: the navigation strip (here 'Psalms Psa 20 Psalms Psa Psalms Psa 22'), the BibleSupport.com copyright statement, the StudyLight.org footer and contact text, raw CSS, and the site's commentary index. Series of worst cases now reads: revelation 18:24 at 254 of 1,246 (20 percent), 2kings 25:30 at about 125 of 1,122 (11 percent), ezra 3:13 at about 45 of 1,032 (4.4 percent), job 5:27 at about 43 of 1,030 (4 percent), psalms 21:13 at about 25 of 1,017 (2.5 percent). The block length is strikingly stable at roughly 1,020-1,250 words regardless of how much real comment it carries, which is what a fixed appended template predicts. Cut at the copyright statement."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "7"
+      ],
+      "note": "A SECOND TRUNCATION LENGTH: SPURGEON IS CAPPED AT EXACTLY 300 WORDS, not 200. Both C.H. Spurgeon blocks in this chapter run to exactly 300 words and both break off mid-sentence - key 1 at 'we also shall rejoice more and more as we learn by experience more and', key 7 at 'nothing but divine'. Every cap I have measured until now has been 200 words (Gill at eleven keys in job 5, Keil and Delitzsch at nineteen of thirty keys in 2kings 25, the three stuck Cyril of Jerusalem fragments, Gill and K&D across exodus 36, numbers 22, exodus 16). Two blocks at exactly 300 in a single chapter argues for a PER-SOURCE cap in the harvester rather than one global limit, which would mean the re-fetch list needs a per-voice length column rather than a single threshold. Worth one check by the owner across other Spurgeon-bearing chapters: if Spurgeon is uniformly 300 and the rest uniformly 200, the cap is configured per source and the fix is a configuration change, not a rewrite."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "13"
+      ],
+      "note": "Jamieson displacement, 28th confirmation, offset 1 mod 6 with a skipped landing site. Two JFB blocks, at keys 1 and 13 - a target gap of 12, so the site at key 7 was dropped, the same behaviour recorded at matthew 11, the revelation 8-to-9 seam and 2kings 25. Neither is on this psalm: k1 (50w) is on Hezekiah praying for a nation in danger of disease, citing Leviticus 15:31, and k13 (280w) is on the king turning his attention to the orderly performance of the temple-worship, arranging the priests and Levites in their courses and issuing edicts for their dues. The donor is 2 CHRONICLES 30-31, walking forward as usual. 2 Chronicles precedes Psalms, so the backward rule holds. Both declared excluded_voices on the entries that contain them."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "1",
+        "4"
+      ],
+      "note": "THE FULLEST MESSIANIC SPECTRUM I HAVE MET IN ONE CHAPTER, five positions on one question. (1) Ellicott refuses it outright: 'An allusion to the eternal kingdom of the Messiah is not to be forced on the passage', and 'for ever and ever' at v.4 'is merely a term for indefinite length', like the common salutation of a king. (2) Clarke canvasses historical occasions - Sennacherib's defeat, Hezekiah's added fifteen years, and 'with most appearance of propriety' David's Ammonite victory and the crown of Rabbah - yet at v.4 says the verse 'may be more literally understood of the Messiah, of whom David was the type'. (3) Keil and Delitzsch report that the Targum and the Talmud (B. Succa 52a) read it of the king Messiah, and then the remarkable datum that 'Rashi remarks that this Messianic interpretation ought rather to be given up for the sake of the Christians'; they add that 'even the Christian exposition cannot surely mean to hold fast this interpretation so directly and rigidly as formerly', and settle for David, whose cause is 'figuratively the cause of Christ'. (4) Calvin and Henry keep David in the foreground while holding that the Spirit's design was to direct the faithful to Christ, Henry making David's victories shadows of Christ's triumphs. (5) Spurgeon and Gill read the psalm of Christ throughout from the first clause. Rashi's remark is worth the owner's attention on its own: a Jewish commentator abandoning a Messianic reading because Christians had annexed it, reported without comment by a Christian commentary, is a sharper piece of reception history than anything else in this catena."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "21",
+      "verses": [
+        "9"
+      ],
+      "note": "The fiery oven is emended by two voices and historicised by a third. Ellicott: 'As it stands the figure is most obscure... A very slight literal change gives the sense obviously required: Thou shalt put them into a fiery oven', and the image is 'not drawn from Sodom and Gomorrah, but from a smelter's furnace', the Philistines having subjected enemies to similar treatment. Gill independently reports the same change, 'as' being put for 'into', while listing both the brick-kiln of 2 Samuel 12 and the burning of Sodom as the guesses on offer. Keil and Delitzsch do not emend but ground the verse in the event: David's arrival decided the fall of Rabbath Ammon, 'of whose inhabitants some died under instruments of torture and others were cast into brick-kilns', so 'the prospect here moulds itself according to this fate of the Ammonites'. The three converge on the same picture by emendation, by textual report, and by history respectively, which is as close to independent confirmation as this catena gets. Ellicott adds the sharpest observation in the chapter: the withering power of a face, normally ascribed to God, is here given to the king, and 'as if startled by the boldness of his own figure, the poet instantly refers to Jehovah' in the next clause."
     }
   ]
 }
