@@ -97415,6 +97415,90 @@
       "book": "2kings",
       "chapter": "8",
       "note": "Voice and school tags were out of step with the prose in seven entries before this pass and were corrected: v7 and v22 named Keil in the prose without listing him; v23 carried a wesleyan-arminian strong tag with no matching school entry; v9, v13 and v27 gained Matthew Henry and the puritan-evangelical school with the material added here; v15 lists Keil in its tags without naming him in the prose and was left alone as harmless. Worth noting for the loop: the validator's tags-match check is key-level, so a voice named in prose but missing from the tags passes every automated gate."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "24",
+      "note": "TENTH instance of the polish-pick-with-nothing-to-polish pattern, and the FIRST chapter tiled on the corrected rule. Offered as polish on one grade-B verse (11) while all twenty-seven entries were legacy-unversioned, so the legacy procedure applied. Following the psalms 22 precedent recorded today, I tiled by SENSE UNITS rather than by Henry's heads: 1-3, 4-14, 15-22, 23-27, which are the groupings of Clarke's own printed chapter argument (he divides 1-3, 4-9, 10-13, 14, 15-16, 17-18, 19, 20-22, 23-24, 25-26, 27, and every one of my three seams falls on a Clarke seam). Henry has heads at keys 1 and 15 only, so his two-pericope division would have given expansions of about 0.15x and 0.12x; the four-tile split gives 0.27x, 0.21x, 0.12x and 0.23x, and the whole chapter carries 2,327 words of prose instead of about 1,300. THE PRICE, recorded honestly: Henry's key-1 block runs over vv.1-14, so the 1-3 / 4-14 seam leaves his comment on the temple repair unusable, including his best line on it, that it is easier to build temples than to be temples to God. The vv.4-14 entry carries Ellicott, Gill, Clarke, Wesley and Delitzsch instead, and Ellicott alone contributes 1,651 words to that span, so the reader loses one voice and gains roughly 350 words of prose and four other witnesses. That is the trade the finer rule makes, and it looks right here; it would not look right in a chapter where Henry were the only substantial voice."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "27"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME, fifteenth consecutive chapter. The Ellicott block at 2 Chronicles 24:27 runs 1,157 words of which about 150 are commentary - the genuine part ends at the reference to the story of the book of the kings, after which come the navigation strip ('2 Chronicles 2Ch 23 2 Chronicles 2Ch 2 Chronicles 2Ch 25'), the BibleSupport.com copyright statement, the StudyLight.org footer, raw CSS and the site's commentary index. Unchanged template, unchanged cut point at the copyright statement."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "12"
+      ],
+      "note": "Jamieson displacement, SINGLE BLOCK, donor in an earlier chapter of the SAME book. The only JFB block in this chapter sits at key 12 (96 words) and is not on 2 Chronicles 24 at all: it discusses Athaliah, Jehoram's introduction of Baal worship, the threat to the royal line and the divine promise to David, and the revolt of Edom, closing with the section header 'Ahaziah Succeeds Him' - that is, 2 Chronicles 21-22. With one block there is no stride to measure, but the offset is 12 mod 6 = 0 and the donor is the ordinary backward kind, here only two or three chapters earlier in the same book rather than in a preceding one. Declared as excluded_voices on the vv.4-14 entry."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "24"
+      ],
+      "note": "A K&D WINDOW WITH NO COMMENTARY AT ALL, and the reason a voice was left undeclared. Keil and Delitzsch have a block at key 24 of 176 words which is entirely printed scripture - the text of vv.25, 26 and 27 - with not one sentence of exposition. Their blocks at keys 2 and 5 are the same shape, and the real commentary in this chapter sits only at keys 12, 14, 16, 18 and 22, each capped at exactly 200 words. Because the vv.23-27 entry's only K&D head is the empty key-24 window, that entry declares four voices and not five: declaring them on the strength of a label with no exposition behind it would be a false claim about the source. Same defect measured at 2kings 25 keys 18 and 23. This is the second distinct consequence of the 200-word cap worth the owner's attention: it does not merely truncate, it sometimes consumes the whole window with the scripture that precedes the comment, which both inflates the sizer and silently removes a voice from a span."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "24",
+      "note": "THIRD INSTANCE OF A FIDELITY SIGNAL CAUSED BY A SOURCE DIACRITIC, and it is now a recognisable class. The fidelity read-back flagged ENTITIES: Asherim on the vv.15-22 entry because Ellicott prints the word with a diacritic the checker cannot match against plain ASCII prose; the same thing happened today with Tyropoeon at 2kings 25 (Ellicott prints an oe ligature) and on 2026-08-25 with Godward at revelation 5 (printed broken across a line as God- ward). In all three cases the prose was faithful and the signal was an encoding mismatch, and in all three I reworded rather than argue, using the source's own plainer gloss where one existed. Recommendation: have synthesis-fidelity.py fold the source text through the same normalisation it applies to the synthesis before comparing proper nouns - NFKD plus ligature expansion would clear all three - otherwise every worker will keep spending a round on the same false positive and some will reword away a precise term to silence it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "6"
+      ],
+      "note": "A flat contradiction on the collection of Moses. Clarke identifies it outright: 'This was the poll-tax, fixed by Moses, of half a shekel, which was levied on every man from twenty years old and upward; and which was considered as a ransom for their souls, that there might be no plague among them', citing Exodus 30. Ellicott denies exactly that: 'The tax of Moses is not the poll-tax of half-a-shekel, for the sanctuary, imposed Exodus 30:12-16, and collected Exodus 38:25-26; but rather a general designation of the moneys mentioned in 2 Kings 12.' Both are reading the same two words and both name the same Exodus passage, one to identify the tax with it and the other to exclude it. Neither mentions the other."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "7"
+      ],
+      "note": "Who were the sons of Athaliah that broke up the house of God? Ellicott: 'Ahaziah and his elder brothers, and perhaps other relatives, may be intended. The young princes thus gratified the queen's hatred of the exclusive cultus of Jehovah', and he guesses some portions of the temple buildings were demolished to make room for the temple of Baal. Wesley agrees - Ahaziah and his brethren before they were carried away captive, who did it at her instigation - and takes the breaking up of both the treasuries and the house itself. Gill denies the identification flatly: 'Not Ahaziah and his brethren, in the lifetime of Jehoram, but sons of Athaliah by another man, as Kimchi suggests.' Gill's reading requires a second marriage nowhere recorded, which is presumably why he attributes it rather than asserting it; it is worth noting as a case where a voice prefers a rabbinic conjecture to the obvious referent."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "14"
+      ],
+      "note": "Who made the vessels from the surplus, and did anyone? Two questions tangled in one verse. (1) The agent: Delitzsch has 'therefrom (the king) caused to be made (prepared) vessels for the house of Jahve'; Ellicott reads 'and he (i.e., Jehoiada) made it into vessels'. The Hebrew leaves the subject open and neither flags the ambiguity. (2) The fact: Kings says plainly that no such vessels were made from this money, and Ellicott faces it, proposing that 'the writer of Kings is relating what was done with the money so long as the repairs of the Temple were in progress, while the chronicler is accounting for the surplus after the restoration was complete', then adding the honest reservation that 'still the appearance of contradiction is sufficiently curious, and suggests the influence of the didactic aims of the later historian'. Wesley cuts past the problem with a one-line reason for new vessels, that Athaliah and her sons had carried off the old. Ellicott's reservation against his own harmonisation is the most interesting thing in the chapter's apparatus."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "24",
+      "verses": [
+        "26"
+      ],
+      "note": "Ellicott naming and refuting two modern commentators in four sentences, which is rarer in this catena than disagreement among the classic voices. On the epithets Ammonitess and Moabitess he writes that 'Reuss is incorrect in asserting that the names of the mothers are substituted by the chronicler for the names of the fathers', and then: 'Thenius even knows the reason why the chronicler has added the epithets... The writer wished to show that the idolatry into which he makes Joash lapse (?), was avenged by two sons of idolatrous wives (!). This is fancy determined by prejudice.' The parenthetical question mark and exclamation mark are Ellicott's own. He then turns the same data to his own argument, that the epithets indicate a source other than the canonical book of Kings, as does the strikingly original account of Zechariah's death, and that the next verse names that source. Worth recording because it is a rare case of a catena voice arguing about method rather than about a reading, and because the argument is sound."
     }
   ]
 }
