@@ -96838,6 +96838,98 @@
         "all"
       ],
       "note": "Pericope chapters cap the available levers. All six entries here cover verse spans and all six sit between 524 and 650 words, most within a few words of the ceiling. On such a chapter the writer cannot buy a metric with fresh source material, which is the usual fix, so variation is the only move left. Worth knowing before picking one: the headroom is the first thing to measure."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "19"
+      ],
+      "note": "Polish pick re-offered on a verse whose B grade is terminal, and I am leaving the prose untouched. This is the first GENUINE polish pick this worker has drawn: all 21 entries are already on cow-prose-rules-2026-08-09, 20 grade A and one grade B at v19, and the chapter passes validator, gate and fidelity with zero violations. The 2026-10-03 note on v19 already diagnosed the bind fully and recorded the decision honestly as B. I re-measured and confirm it: v19 is 394 words at ttr 0.561, compress 0.4538, with zero duplicate n-grams, zero duplicate sentences and no flags of any kind, so the B is driven purely by the TTR threshold. The prior run moved ttr 0.5282 to 0.5641 by de-articling, then knowingly spent 0.003 of it to add Ellicott's note that the Greek copies add at the entry, judging coverage of a real source point worth more than a third decimal on a grade that stays B either way. That judgement is right. The bind is structural: the only cuttable text in the entry is about 69 words of non-source authorial prose, an opening frame and a closing peroration, and removing it takes the entry to roughly 325 words, below the 350 floor; the alternative of substituting more source content is closed because the key-19 blob is fully mined (Ellicott's 160 substantive words and Gill's 31) and the K&D and Henry material from their range blocks is already in the entry. There is no lean to fix here, which is what the polish instruction expects a note to record. The queue has no memory of a terminal B, so it will keep re-offering this verse; what would stop that is a marker on the entry or in the note that an accepted, documented B has been reached, so the picker can pass over it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "19"
+      ],
+      "note": "A loophole in the thin-exemption source check, found while considering whether to apply it here. The validator justifies thin by summing usable source words across the span of the entry's own keys and requiring 200 or fewer; v19's keyed blob is 195 words, so thin would pass mechanically, and the prose would then be allowed 120 to 349 words, which would resolve the TTR bind at a stroke. It would also be a false claim about the source. Four voices genuinely comment on this verse: Gill and Ellicott in the key-19 blob, but also Keil and Delitzsch, whose comment on the verb and on the royal halberdiers following their own captains sits in the key-18 or key-20 block, and Matthew Henry, whose comment is inside the key-17 block and is explicitly marked there as being on verse 19. The catena files both of those under range-head keys, which is the documented behaviour of K&D's sliding window and of Henry's pericope-headed blocks, so the keyed blob understates the available witness material by a wide margin. The consequence is general and not peculiar to this verse: on any chapter where K&D and Henry are filed under range heads, a verse with abundant witness material can qualify for thin on the strength of its own sparse key. A sounder check would measure the union of every block whose stated range covers the verse, not just the blocks keyed to it. I declined to use the exemption on those grounds and left the entry at 394 words and grade B."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "1",
+        "12"
+      ],
+      "note": "Polish pick: both B tiles (keys 1 and 12) had undiagnosed B grades in the 2026-08-31 notes. Cause was the MATTR lexical-variety threshold alone - compress was already above the A line on both (0.4224 and 0.4363), dup_ngram_frac 0.0, dup_sentences 0, no flags. Neither was padded; both were simply written in low-variety connective prose. Fixed by spending headroom on unused source content rather than by deletion: key 1 626->634 words, ttr 0.5666->0.6394; key 12 464->615 words, ttr 0.5469->0.6087. Both now grade A, gate 4 enforced / 0 violations."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "1"
+      ],
+      "note": "The six cubits of v1 are read two incompatible ways. Ellicott takes the figure the other way about, as the thickness of the side walls, since five plus ten plus five already accounts for the twenty-cubit width; Wesley agrees, saying the walls took as much room as the whole breadth of the older tabernacle. Henry instead reckons the posts to stand twelve cubits apart, so that the DOOR equalled the tabernacle's breadth, and builds his wide-gate application on that. The pre-polish prose carried only the Ellicott/Wesley side and dropped Henry's reading of the same clause silently."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "1"
+      ],
+      "note": "Whether the wall dividing the holy place from the most holy is measured at all. Keil and Delitzsch refer the measurements of v3 to that partition (their letter g), take its two cubits as the breadth each door-pillar covered on the wall rather than a thickness, and with Kliefoth read the six cubits as a height in fitting proportion. Ellicott holds the dividing wall's thickness nowhere mentioned and not taken into the measurements at all, being merely a division - a veil or wooden screen occupying little room."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "12"
+      ],
+      "note": "Which building v13 means. Gill and Wesley both take the hundred cubits as the sum total of the whole house with its walls, but Wesley then glosses 'the building' of that verse as what stands on the north and south sides of the temple, not the structure to the west that vv.12 and 15 are measuring. Every other witness reads v13's building as the western one."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "12"
+      ],
+      "note": "Clarke reaches two different totals by two differently itemised additions in adjacent verses: ninety cubits at v12 (temple with surrounding buildings 81, plus ten for the vestibule, or five for the separate place and five for its wall; plan LHIL) and a hundred and one at v13 (five separate place, nine wall and attached chambers, sixty sanctuary and holy place, ten vestibule, twelve for the two great walls; plan GHI). He does not reconcile them."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "41",
+      "verses": [
+        "1",
+        "2",
+        "3",
+        "12",
+        "13"
+      ],
+      "note": "K&D window truncation, same defect quantified on 2kings 22 and 1samuel 15. Keys 1, 2, 12 and 13 each run exactly 200 words and each cuts mid-sentence: key 12 stops at 'nothing more definite is stated than we are able to gather, partly from', losing the inference that follows; key 3 stops at 'The height of six cubits bears a fitting proportion to'. The 200-word ceiling also means roughly half of each window is the printed KJV text that precedes the comment, so the usable-words figure for this chapter overstates what K&D actually contributes."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "41",
+      "note": "Queue rule worth adding: when a polish pick's B grade is driven by MATTR alone (compress already over 0.42, dup metrics zero, no flags), the fix is substitution, not deletion - compress connective and authorial framing and spend the recovered words on source content the tile never used. On this chapter that raised variety AND coverage at once (K&D's derivation of the separate-place term and his grammatical ground for the angel entering alone, Henry's twelve-cubit reading and his Revelation 21:16 note, Clarke's second reckoning, Wesley's north-and-south gloss were all unused). The audit report does not say WHICH metric drove a B; printing that would tell the next worker in one line whether deletion or substitution is called for."
     }
   ]
 }
