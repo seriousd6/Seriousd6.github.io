@@ -97028,6 +97028,97 @@
       "book": "revelation",
       "chapter": "5",
       "note": "TWO TAG CONVENTIONS ARE LIVE IN THE SHIPPED CORPUS and both pass the validator. revelation 5 uses the long-digest form: each schools entry's 'summary' is a multi-hundred-word prose digest of that school's source, and each 'debates' entry is a full sentence naming the voices and their positions. ezekiel 41, landed this cycle, uses the short form: 'summary' is a list of voice names and 'debates' are noun phrases. The long form is far more useful - it is where the detail that will not fit the 650-word prose window actually survives, and at revelation 5 it was the only place several of Barnes's claims could have been found. Worth the owner deciding which is canonical before the remaining polish queue re-stamps chapters in whichever form the worker happens to use."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "5",
+      "note": "SEVENTH instance of the polish-pick-with-nothing-to-polish pattern (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15): offered as 'polish' on two grade-B verses while all 27 entries are legacy-unversioned with no fidelity note against them, so the polish instruction had nothing to act on and the legacy procedure was the right one. Recommended queue rule, now recorded seven times: a chapter whose entries are ALL legacy-unversioned should be served from the legacy queue regardless of how many of its verses graded B, since the B grades belong to prose that is about to be discarded."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "17"
+      ],
+      "note": "TILING: Henry's three heads at keys 1, 6 and 17 give the three pericopes (1-5, 6-16, 17-27), and this chapter is the THIRD source-outline corroboration of that heuristic (after 2kings 22 Henry and 1samuel 15 Clarke). Henry's own paragraph openings name the divisions: 'A very warm dispute being begun between Job and his friends, Eliphaz here makes a fair motion', then 'having touched Job in a very tender part ... here begins to encourage him', then 'in this concluding paragraph of his discourse'. Clarke's chapter argument at key 1 gives the same three-part shape but seams it differently, dividing 5:1-8, 5:9-16, 5:17-27: the last seam agrees with Henry exactly, the first falls three verses later. Henry's was preferred because his blocks are what the tiles must align to. THE COVERAGE COST SHOULD BE RECORDED HONESTLY: three entries at the 650-word ceiling distil 20,673 source words, giving expansions of 0.14x, 0.10x and 0.07x, the most lossy ratios I have produced. Aligning to Henry's heads is still right, because splitting 6-16 or 17-27 would leave the largest voice in the chapter (7,374 words, 36 percent of the source) undeclarable on half of it. But a reader of vv.17-27 now gets 649 words standing for 9,448, and per-verse detail from Gill, Clarke and Ellicott is necessarily dropped. Worth the owner deciding whether an 11-verse pericope should be allowed two entries with the second declaring only the voices that have heads in it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "4",
+        "10",
+        "22"
+      ],
+      "note": "JAMIESON STRIDE, 26th confirmation, WITH A SKIPPED LANDING SITE. Three JFB blocks at keys 4, 10 and 22 - all congruent to 4 mod 6, but the target gaps are 6 then 12, so the lattice dropped the site at key 16 (same behaviour already recorded at matthew 11 and at the revelation 8 to 9 seam). None is on Job: k4 is 1 Chronicles 15:17-21 (the Levites instructed to train the musicians and singers, the three choirs, 'Ben' omitted), k10 is the ark procession with the Levites' fear and the ox and fatted sheep (2 Samuel 6:13 / 1 Chronicles 15:26), k22 is 1 Chronicles 16:4-5 (Asaph with cymbals, Zechariah and Jeiel and Obed-edom with harps). Donor walks forward monotonically through one passage, 1Ch 15:17 to 1Ch 15:26 to 1Ch 16:5, source gaps of about 9 against target gaps of 6 and 12 - the slower-slope family. 1 Chronicles precedes Job in canonical order, so the backward rule holds. All three declared excluded_voices on the entries that contain them (1-5, 6-16, 17-27)."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "27"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME, and the WORST GENUINE-FRACTION yet measured in my series. The Charles Ellicott block at job 5:27 runs 1,030 words of which about 43 are commentary - roughly four percent. The genuine part is only: 'So it is. - It is the boastful confidence of Eliphaz which is so hard to bear. He speaks as though Job's experience were as nothing to his. This is mine: take it to thyself, and make it thine.' Everything after that is the standing template: the chapter navigation strip (here reading 'Job Job 4 Job Job Job Job 6'), the BibleSupport.com copyright statement, the StudyLight.org footer and contact-form text, then raw CSS (the .sub-menu rule block with flex properties and z-index, plus two media queries), then the site's commentary and concordance index. Previous worst was revelation 18:24 at 254 of 1,246 words (20 percent) and ezra 3:13 at about 45 of 1,032 (4.4 percent). The copyright statement is again the clean cut point, present in every instance. Consequence for the sizer: of the 20,673 usable source words it reports for this chapter, about 987 are this chrome."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "2",
+        "6",
+        "7",
+        "8",
+        "12",
+        "13",
+        "17",
+        "18",
+        "21",
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "note": "THE 200-WORD HARVESTER CAP, at unusual density. Gill is cut at exactly 200 words at ELEVEN of the twenty-seven keys (1, 6, 7, 8, 12, 13, 17, 21, 23, 24, 26), every one mid-sentence. Keil and Delitzsch are cut at exactly 200 at keys 2, 7, 18 and 25 and at 114 at key 23. Worse, the K&D windows at keys 18 and 23 contain NO COMMENTARY AT ALL: both are entirely printed KJV text followed by K&D's own verse rendering, the cut landing before any exposition begins, so those two keys contribute 314 words to the sizer and nothing to the synthesis. The same is true of their key-7 window except for one surviving sentence ('All these attributes are chosen designedly: God brings down all haughtiness, and takes compassion on those who need it'). Only key 25 reaches real philology. Add job 5 keys 1, 6, 7, 8, 12, 13, 17, 21, 23, 24, 26 (Gill) and 2, 7, 18, 23, 25 (K&D) to the re-fetch list."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "5"
+      ],
+      "note": "The last word of v.5 has four readings and no two witnesses agree. The KJV has 'the robber swalloweth up their substance'. Clarke argues for the thirsty rather than the robber, since what follows is swallowing or gulping down, and sets it in antithesis to the hungry of the preceding clause; he reads the substance as their wine and oil. Ellicott suspects the word is perhaps a trap or a snare, but notes that some of the old versions use other vowels and read 'the thirsty swallow up', which completes the parallelism. Delitzsch renders 'and the intriguer snatched after his wealth'. Gill passes on two further readings, Sephorno's that the wicked man eats up his own harvest without being satisfied, and an anonymous one that his fields should produce no more than what is usually left to the poor."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "5",
+      "verses": [
+        "24"
+      ],
+      "note": "THE KJV READING OF v.24 IS ABANDONED BY THREE OF THE SIX VOICES. 'Thou shalt visit thy habitation, and shalt not sin' is kept by none of the three who examine the word. Clarke derives it from a verb meaning to err, to mistake, to miss the mark, and says 'it is very likely, from the connection above, that to mistake or err is its meaning in this place'. Ellicott independently reaches the same, rendering 'Thou shalt visit thy dwelling-place, and miss nothing', and gives the reason plainly: 'one does not see very clearly why the promise of not sinning is connected with visiting the habitation or fold'. Delitzsch renders 'thou searchest thy household, and findest nothing wanting'. Henry alone defends something like the received sense, glossing 'thou shalt not sin, or wander' as 'thou shalt not be a fugitive and a vagabond', which is Cain's curse. Gill does not address the word, spending his block on the tabernacle instead. Clarke also distinguishes the two nouns, the first a moveable tent of poles, pins and cloth and the second a solid permanent dwelling-place."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "5",
+      "note": "A THIRD TAG CONVENTION, and it is the best of the three. Extending the note filed today against revelation 5: job 5's legacy entries (2026-08-02) carry 'debates' as STRUCTURED OBJECTS - {question, sides: [{holders, position}]} - which names who holds which position and is the only one of the three forms a machine can read. The other two are revelation 5's long-sentence debates with multi-hundred-word prose school digests (2026-08-25), and the short form my tiled chapters use, noun-phrase debates with a list of voice names as the summary. All three pass validate-synthesis.py. I kept job 5's structured form on the rewritten entries rather than replacing it with my own, since discarding the richer shape in a rewrite would be a silent loss. Recommend the owner settle on the structured form; a converter from the other two is mechanical for the short form and would need a model pass for revelation 5's prose digests. SECOND DIVERGENCE, in the same area: the loop doc's own example of pericope_label is a DESCRIPTIVE PHRASE ('Nahshon of Judah brings the first offering'), but most shipped ranged entries carry the KJV text of the span's start verse instead (ezekiel 41, revelation 5). At an 11-verse span the start verse's text is actively misleading about what the entry covers, so I used the documented descriptive form here. Worth one line in the doc saying which is canonical."
     }
   ]
 }
