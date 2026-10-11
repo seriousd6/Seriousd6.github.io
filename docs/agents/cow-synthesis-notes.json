@@ -96980,6 +96980,54 @@
         "all"
       ],
       "note": "Rule 1 cleanup: thirteen entries opened a closing paragraph with the banned carrier the witnesses do not divide and two more with so the witnesses, all fifteen now recast distinctly. One genuine rule 2 breach, at v31, told the reader the witnesses give it brief attention. Five other hits on brief were innocent, describing a reign, an experiment in hereditary succession, or the biblical historian, not the commentators. The two quote-led openings, at v3 and v7, are short scripture lemmas followed immediately by substantive comment, and at 2 of 38 the chapter is far below the one third threshold, so they were left as in 2chronicles 2."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "6"
+      ],
+      "note": "Polish pick, ZERO-HEADROOM variety: both B entries were at exactly 650 words (the ceiling), so nothing could be added. Cause of both B grades was the MATTR lexical-variety threshold alone - compress was already over the A line (0.4366 at v5, 0.424 at v6), dup_ngram_frac 0.0, dup_sentences 0, no flags. Fixed by substitution in place: cut connective framing and repeated attribution verbs ('says' six times in each), spent the words on unused source. v5 ttr 0.5761->0.6586, v6 0.5512->0.6799; both now A, and the whole chapter is A on all eight entries. This is a different job from the ezekiel 41 polish, where the B entries had 114 and 283 words of headroom and content could simply be added. Recommend the audit report print BOTH the metric that drove the B and the words of headroom to the ceiling - together they say whether the fix is addition or substitution."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "revelation",
+      "chapter": "5",
+      "verses": [
+        "5"
+      ],
+      "note": "A FOUR-WAY DISPUTE SHIPPED AS A THREE-WAY AGREEMENT. Barnes flatly rejects the reading the other three share: 'Not the Root of David in the sense that David sprung from him as a tree does from a root, but in the sense that he himself was a root-shoot or sprout from David, and had sprung from him as a shoot springs up from a decayed and fallen tree' (Isaiah 11:1), the phrase establishing lineage and therefore a right to David's throne. Against that, Clarke divides the title between the natures (root as to the divine, branch out of Jesse's stem as to the human), Wesley keeps only the divine half ('as God he is the root and source of David's family'), and Ellicott presses past the royal-house sense to the deeper thought that the Branch is also the Root, David's Lord. The 2026-08-25 entry carried Clarke, Wesley, Ellicott and Robertson on this title and omitted Barnes from the prose AND from the 'What the Root of David means' debate tag, so the strongest dissent in the entry was invisible. Both now record him."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "5",
+      "verses": [
+        "5"
+      ],
+      "note": "Barnes's gloss on 'hath prevailed' was also unused and is now recorded: the Greek means to come off victor, so the competence to disclose is the fruit of a struggle, and since the series of events to be disclosed was the effect of his conflicts with the powers of evil there was a special propriety in the disclosure being left to him. The entry previously carried the conquest point from Ellicott (emphatic word position) and Robertson (aorist first in the sentence) only."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "5",
+      "verses": [
+        "6"
+      ],
+      "note": "Material recovered at v6 from a 3,973-word span previously distilled at 0.16x: Barnes's two reasons for the Lamb title (emblem of innocence, and the beast commonly offered in sacrifice), his refusal to conjecture how the horns and eyes were arranged ('it is vain to attempt to conjecture how it was'), and his point that the marks of slaying are unspecified - blood or mortal wounds would answer the representation; Ellicott's horn from the blessing of Joseph (Deuteronomy 33:17, horns of a wild bull, 'unicorns' in the AV) and his observation that 'sent' shares a root with 'apostle', so that an apostolate of the Spirit runs beside the Church's and, on the present-participle reading, is exerted continually; Robertson's 'I saw' as stirred by the elder's 'behold' and his note that the verb for slaying occurs in the New Testament almost nowhere outside this book. STILL UNUSED and worth a later pass: Barnes on the eye as an emblem of the Deity among the Egyptians, and Robertson's grammatical-gender-versus-natural-gender variants on 'standing' and 'having' (construction according to sense), both dropped for want of words."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "revelation",
+      "chapter": "5",
+      "note": "TWO TAG CONVENTIONS ARE LIVE IN THE SHIPPED CORPUS and both pass the validator. revelation 5 uses the long-digest form: each schools entry's 'summary' is a multi-hundred-word prose digest of that school's source, and each 'debates' entry is a full sentence naming the voices and their positions. ezekiel 41, landed this cycle, uses the short form: 'summary' is a list of voice names and 'debates' are noun phrases. The long form is far more useful - it is where the detail that will not fit the 650-word prose window actually survives, and at revelation 5 it was the only place several of Barnes's claims could have been found. Worth the owner deciding which is canonical before the remaining polish queue re-stamps chapters in whichever form the worker happens to use."
     }
   ]
 }
