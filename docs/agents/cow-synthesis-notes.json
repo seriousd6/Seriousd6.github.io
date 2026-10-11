@@ -97279,6 +97279,63 @@
         "9"
       ],
       "note": "The fiery oven is emended by two voices and historicised by a third. Ellicott: 'As it stands the figure is most obscure... A very slight literal change gives the sense obviously required: Thou shalt put them into a fiery oven', and the image is 'not drawn from Sodom and Gomorrah, but from a smelter's furnace', the Philistines having subjected enemies to similar treatment. Gill independently reports the same change, 'as' being put for 'into', while listing both the brick-kiln of 2 Samuel 12 and the burning of Sodom as the guesses on offer. Keil and Delitzsch do not emend but ground the verse in the event: David's arrival decided the fall of Rabbath Ammon, 'of whose inhabitants some died under instruments of torture and others were cast into brick-kilns', so 'the prospect here moulds itself according to this fate of the Ammonites'. The three converge on the same picture by emendation, by textual report, and by history respectively, which is as close to independent confirmation as this catena gets. Ellicott adds the sharpest observation in the chapter: the withering power of a face, normally ascribed to God, is here given to the king, and 'as if startled by the boldness of his own figure, the poet instantly refers to Jehovah' in the next clause."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "19"
+      ],
+      "note": "Third consecutive chapter with a misfiled Jamieson-Fausset-Brown blob: jfb key 19 in the 1chronicles 27 catena is commentary on Asa's fortification of Geba and Mizpeh, not on this chapter at all. Same pattern already noted on john 21 and 2chronicles 2. The misfiling is systematic enough to be worth a corpus-wide scan rather than per-chapter discovery."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "3",
+        "8",
+        "20"
+      ],
+      "note": "The three arriving grade-B entries were all dense and fully sourced; the failure was monotony, not padding. De-articling plus phrase variation was again the operative lever on a current-standard chapter: v3 ttr 0.5597 to 0.6694 with no content change (its 'the' ran 55/384 = 14.3 percent, 'of the' twelve times), v8 0.5797 to 0.6864, v20 0.5764 to 0.6475. v8 and v20 also absorbed genuinely unused source (Henry on why the militia served in monthly courses; Henry's open question whether the princes were lord-lieutenants or chief-justices, and Wesley's inference of rank from list order), so their tags needed new voices and school entries that the arriving tags lacked."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "22"
+      ],
+      "note": "v22 arrived with a four-sentence restatement block (a rhetorical question, a three-name roll-call, and two summary sentences) re-saying what the first two paragraphs had already said. Replaced with Ellicott's unused lexical note on the closing clause: the title of the tribal princes is the same Hebrew word rendered 'captains' in the list of monthly divisions, which ties the civil roll to the military one. Removing restatement and adding real source raised both meters at once (ttr 0.6530 to 0.6338 at a higher word count, comp 0.4726 to 0.4663 — both still A) and cleared the ROLLCALL flag."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "verses": [
+        "20",
+        "26"
+      ],
+      "note": "Span-aware source resolution mattered again here and in the same direction as on 2kings 15: v20's per-verse catena holds 19 words but the covering keys across the corpora supply about 1375, and v26's two witnesses are likewise reached only through covering keys. The 'expansion' figure stamped in each fidelity block is computed against the catena alone, so on span-keyed chapters it overstates expansion and the thin exemption (checked against the same figure) can admit a verse that in fact has abundant source. No thin exemption was taken in this chapter for that reason."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "note": "Measured instance of the mdash tokenisation bug in audit-synthesis-quality.py: this chapter writes the em dash as the HTML entity '&mdash;' rather than a literal character, and the audit's tokeniser counts 'mdash' as a word (five spurious tokens in 2chronicles 2 v8, where it was first measured). It inflates token counts and perturbs ttr on every entity-punctuated chapter."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "27",
+      "note": "Advisory FLOOR flags on 15 of 34 entries (354-375 words). These are the arriving pass's house length, not a defect introduced here; padding them would cost compress and buy nothing. Flagging the cluster rather than acting on it, since rule 4 ('the floor is a floor, not a target') reads as guidance to the writer rather than a gate."
     }
   ]
 }
