@@ -96523,6 +96523,111 @@
         "all"
       ],
       "note": "Three of the four fidelity defects found in this chapter are of one kind: a named witness made to say something he did not say, rather than an invented quotation. Barnes was given Clarke position on the miracle, Augustine was given an answer where he had posed a question, and Chrysostom was cited for the reading he argued against. None of these is detectable by the content-word test that found the john 8 fabrications, because every quoted fragment is genuine; what is wrong is the attribution around it. The cheap detector for this class would flag any sentence attributing one view to two or more named voices jointly, since that is the shape the error takes, and there were three such in this chapter alone."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "6"
+      ],
+      "note": "JFB fetch bug, twenty-fourth confirmation, and the cleanest example of the byte-identical-repeat shape yet seen. The chapter carries exactly two Jamieson, Fausset and Brown blocks, at keys 6 and 12 — stride six again — and they are byte-identical to each other, 213 words apiece. The donor identifies itself in its own first line: '2Sa 17:1-14. Ahithophel's Counsel Overthrown by Hushai', so the material is from a different BOOK entirely, on Absalom's conspiracy. This is the first instance where the donor labels itself, which makes it the best available specimen for a mechanical detector: a JFB block whose opening tokens name a book-and-chapter reference outside the chapter being fetched is displaced by definition. JFB declared as excluded_voices on both tiles; the label is present in both source ranges, so both exclusions validate."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott chrome strip at the final key, in the invariant position. Key 20, last of the chapter, carries 1,081 words of Ellicott of which roughly 90 are genuine — the grave-against-graves textual variant, the reference of the plural to the burial-place formed by Manasseh with its chambers and niches, and the limitation of the promise of peace by the clause that his eyes should not see the evil. The rest is StudyLight navigation, copyright boilerplate and CSS. The genuine fragment was used. Pattern unchanged across every chapter worked: the strip attaches to the last or near-last key and to Ellicott alone."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "22",
+      "note": "Keil and Delitzsch padding note, for whoever builds the usable-words counter. Nine of the twenty keys carry a K&D block of exactly 200 words (keys 1, 2, 4, 9, 10, 12, 14, 15, 16), which is the documented fixed window; but in this chapter the window is mostly KJV verse text rather than commentary, because the splitter's cut lands inside the printed scripture that K&D quotes ahead of each note. Keys 4 and 16 are almost entirely verse text with a clause or two of comment at the end. The effect is that the raw 1,800-word K&D total overstates the usable content by a wide margin — I judged perhaps 600 words usable. A words-of-commentary counter that stripped KJV verse text before counting would give a much truer size figure for chapters where K&D is a major voice."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "8"
+      ],
+      "note": "What the book of the law was, the chapter's central question, with the commentators falling into two camps that do not quite meet. Clarke asks directly whether this was the autograph of Moses and thinks it very probable, since the parallel account calls it the book of the law of the Lord by Moses, and narrows the contents to the part of Deuteronomy containing the renewing of the covenant in the plains of Moab with its terrible invectives against the corrupters of God's word; Wesley says the same, the original book written by the hand of Moses and put by command beside the ark, taken thence and hid by some godly priest; Henry takes it for the autograph or at least an ancient authentic copy, most likely the one laid up in the most holy place. Ellicott reasons from the form of the words instead: it is literally the book of the Torah that the high priest says he has found, and the definite form of the expression proves that what he found was something ALREADY KNOWN, not a book but the book of the Law — which cuts against the autograph reading rather than for it. He then reports a survey of the critics in which the whole then existing Scripture, the five books, the ordered collection of Mosaic laws in Exodus and Leviticus and Numbers, the book of Exodus and the book of Deuteronomy have each been proposed and each rejected on the ground that all of them were brought into their present shape later; the proposal he reports with approval is a collection of the statutes and ordinances of Moses afterwards worked up into the Pentateuch and especially into Deuteronomy, already existing in Jehoshaphat's time, preserved in the ark and set aside under Manasseh, so that after half a century of disuse it appeared like something new because it had been wholly forgotten. Worth noting that Clarke and Ellicott converge on Deuteronomic content by opposite routes."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "8"
+      ],
+      "note": "Whether this was the only copy of the law in Judea, and what follows from it. Henry entertains the possibility seriously: if this was the only authentic copy then in being, which had so narrow a turn for its life, he wonders the hearts of all good people did not tremble for that sacred treasure as Eli's did for the ark. He then has to explain how the contents could be new to both king and high priest, and does so by supposing that the people generally took up with abstracts of the law, like our abridgements of the statutes, a sort of ritual directing them in their observances but leaving out what the priests thought fit, and particularly the promises and threatenings — which he observes were just the portions that so affected Josiah, because those were new to him. Gill reaches the same explanation independently: it looks as if it was, as some have thought, that they had till now only some abstracts of the law and not the whole. Clarke rejects the premise flatly and answers it on four grounds: that even granting the attempt of Ahaz and Manasseh and Amon to destroy all the books, they could not have succeeded so as to destroy the whole; that Manasseh after his conversion endeavoured to restore every part of the divine worship, in which he could have done nothing without the Pentateuch; that Amon's reign was too short to undo what his penitent father had reformed; and that in the time of Jehoshaphat teaching from the law was universal in the land, that king having set an itinerant ministry on foot to instruct the people fully. Clarke's argument is the stronger and is recorded as such; Henry's abstracts theory survives it, since abstracts in common use are compatible with authentic copies existing somewhere."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "14"
+      ],
+      "note": "Why the enquiry went to Huldah rather than to Jeremiah or Zephaniah, answered four distinct ways with no overlap of reasoning. Ellicott and Wesley both answer from residence: she dwelt in Jerusalem and they did not, at least at this time, Anathoth in Benjamin being Jeremiah's town, and Wesley adds the king's earnest affection requiring haste and the possibility that Zephaniah had not yet begun to prophesy though he did later in the reign. Henry answers from acquaintance and credit: probably because her husband had a place at court they had had more and longer acquaintance with her and greater assurances of her commission than of any other, and had likely consulted her on other occasions and found that the word of God in her mouth was truth. Delitzsch refuses to go beyond the evidence: nothing further is known of her than what is mentioned here, and all we can infer from the king's sending is that she was highly distinguished on account of her prophetical gifts and that none of the prophets of renown were at that time in Jerusalem. Clarke makes it a standing principle and the most pointed thing in the chapter: Hilkiah was high priest and the priest's lips should retain knowledge, Shaphan was scribe and must have been conversant in sacred affairs, and yet the secret of the Lord was with neither of them nor with any other of the servants of the king or ministers of the temple, from which we learn, with many facts in all ages to corroborate it, that a pontiff or a pope or a bishop or a priest may in some cases not possess the true knowledge of God, while a simple woman possessing the life of God in her soul may have more knowledge of the divine testimonies than many whose office it is to explain and enforce them."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "14"
+      ],
+      "note": "Two factual divergences about Huldah's household, both recorded without resolution. First, Delitzsch calls Shallum her FATHER and takes him for keeper of the clothes, either the priests' dresses kept in the temple or the king's wardrobe, noting that the names of his ancestors are spelled differently in Chronicles; the text itself and Ellicott and Henry all make Shallum her husband, and Henry builds an argument on that reading, remarking that her being a wife was no prejudice at all to her being a prophetess since marriage is honourable in all. I have carried Delitzsch's word as his own without endorsing it. Second, on where she lived: Ellicott rejects the rendering college outright as the Targum's, taken as though the Hebrew word for second were equivalent to the later name of the rabbinic collection, and holds that it really means the second part of the city, that is the lower city, citing Nehemiah and Zephaniah; Delitzsch agrees, placing it in the second district upon the hill and citing Zephaniah for the same name; Henry takes it for the second rank of buildings from the royal palace, which is compatible; Wesley keeps the college and makes it the place where the sons of the prophets used to meet and receive the instructions of their teachers. Ellicott and Delitzsch are plainly right on the philology and Wesley is following the Targum through the Authorised rendering."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "22",
+      "verses": [
+        "20"
+      ],
+      "note": "How the promise that Josiah should go to his grave in peace stands with his death at Megiddo. Clarke works hardest at it and in two stages: first the history, that the Assyrians and the Jews were at peace and Josiah might have felt it his duty to oppose the Egyptian king going against his ally and to prevent his passing through his territories, and that in that endeavour he was mortally wounded at Megiddo but CERTAINLY WAS NOT KILLED THERE, since his servants put him in his second chariot and brought him to Jerusalem, where he died in peace; so that however the place is taken, the words of the prophetess were true. Then a judgment of his own, that from the fuller account we find Josiah should not have meddled in the quarrel at all, for God had given a commission to the Egyptian against the Assyrian, but he did it in error and suffered for it, and this unfortunate end of a pious man does not at all impeach the prophetess's credit. Henry refers the word not to the manner of his death, for he was killed in a battle, but to its time, a little before the captivity in Babylon, that great trouble in comparison with which the rest were as nothing, so that he might truly be said to die in peace who did not live to share in that; and he adds that Josiah died in the love and favour of God, which secures such a peace as no circumstances of dying, not even dying in the field of war, could alter the nature of. Wesley divides it cleanly into a time of public peace, for otherwise he died in battle, and peace with God besides. Ellicott limits the promise by the clause that immediately follows, that his eyes should not see all the evil, so that he was slain in battle but spared the greater calamity of witnessing the ruin of his people. Four answers, all compatible, and Ellicott's is the one the text itself supplies."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "22",
+      "note": "Tiling confirmed from the source itself, which is new. Henry's blocks fall at keys 1 and 11, giving two tiles, vv.1-10 and vv.11-20 — and Henry's own chapter outline, printed inside his key-1 block, states the same division in so many words: 'Josiah's good reign, His care for repairing the temple, The book of the law found. (1-10) / Josiah consults Huldah the prophetess. (11-20)'. Delitzsch independently treats vv.3-7 as the repairing and the discovery and vv.9-20 as the reading and the enquiry, and Clarke's chapter argument at key 1 lists the same movements. This is the first chapter in which the Henry-block heuristic has been corroborated by an explicit statement of the pericope division in the source, rather than inferred from where the blocks happen to fall. Seventh consecutive chapter in which the heuristic has given the tiling."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "22",
+      "note": "Fifth consecutive polish-pick with nothing to polish. --queue auto offered this chapter as a POLISH pick on the strength of a single grade-B verse, but all twenty entries are legacy-unversioned and the chapter carries no fidelity note at all; the notes recorded under 2kings belong to chapter 21, from an earlier run. There was accordingly no recorded lean to fix and the legacy procedure was used. The proposed queue rule now has five instances behind it (nehemiah 4, ezra 9, ezra 3, matthew 5, and this chapter): a chapter whose entries are all legacy-unversioned with no recorded fidelity note should route to the legacy queue regardless of letter grades. In this case reading the sibling chapter's notes was useful anyway, since the 2kings 21 notes carried forward the Robertson Smith name collision and the standing JFB exclusion, both of which bore on this chapter."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "22",
+      "note": "Voice count below the usual six on one tile, recorded so it is not mistaken for an omission. Tile vv.1-10 declares five voices (Henry, Ellicott, Keil and Delitzsch, Clarke, Wesley) rather than six, because Gill's material in that range is almost entirely connective paraphrase of the narrative — 28 words at key 1, 14 at key 5, 62 at key 7, 47 at key 8, 32 at key 9, 11 at key 10, nearly all of it restating the verse before adding a clause. He carries no position there worth attributing. Gill IS declared on vv.11-20, where his inference about the king never having written out a copy, his abstracts explanation and his Sibyl excursus are all substantive. The consequence is that tile vv.1-10 has three schools rather than four, the reformed slug being absent; the validator accepts this, since it checks only that declared schools have valid slugs and prevalences."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "22",
+      "note": "Self-graded A on both tiles. Source 11,647 usable words by the loop's own counter (5,437 for vv.1-10 and 6,210 for vv.11-20 as the fidelity reader counts them) distilled to 648 and 644 words, 0.12x and 0.10x. Five voices declared on the first tile and six on the second; JFB excluded on both as displaced. Prose pure ASCII, no doubled words, no unlinked scripture refs; the curly apostrophes in the tags file are KJV text supplied verbatim by the repo's Bible data to themes and pericope_label, which is the corpus convention. Names avoided in the prose because they are unusable: Thenius, Clericus, Bertheau, Gramberg, Hitzig, Von Lengerke, Reuss, Ewald, Josephus, Suidas, Pausanias, Aelian, Priestley, and one name carrying a diaeresis. Ellicott's long survey of the critics was therefore reported as 'how little the critics agree' with the positions listed and the holders left unnamed, and Gill's three authorities for the Sibyls as a Byzantine lexicographer, a Greek geographer and a Roman miscellanist. KEIL is a special case worth flagging for the alias table: Ellicott names Keil among those who take the book for the Pentateuch, but Keil is half of the Keil and Delitzsch commentary, which is a declared voice under the short name Delitzsch, so writing Keil in the prose would have been confusing even though it would not have tripped the cited-but-not-declared rule, the short-name map having no entry for Keil alone. I left the name out. First drafts ran 826 and 886 words against a 648-word working ceiling, needing cuts of 178 and 238; both were handled by one structural rewrite plus two trim passes, which is a better ratio than the nine tiles of matthew 5 but the same underlying overshoot. No content error found on review this time; I wrote both tiles' tags in a single pass against the blocks rather than from memory, which is the practice the last three chapters' bleeds argued for."
     }
   ]
 }
