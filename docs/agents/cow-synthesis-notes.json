@@ -96420,6 +96420,109 @@
       "book": "matthew",
       "chapter": "5",
       "note": "Self-graded A on all nine tiles. Source 133,177 raw words (about 105,000 usable once KJV repeats and the Ellicott chrome are discounted) distilled to nine tiles of 646 to 649 words, compression 0.02x to 0.10x. Seven voices declared per tile out of ten present, chosen per range by which voices carry argument there; JFB excluded on all seven tiles that contain one of its displaced blocks. Prose is pure ASCII with no doubled words and no unlinked scripture refs; the curly apostrophes remaining in the tags file are KJV text supplied verbatim by the repo's own Bible data to themes and pericope_label, which is the corpus convention (94 of 400 sampled tags files carry them) and not my prose. One content error was made and caught: a coat-and-cloke clause belonging to the vv.38-42 tile bled into a debate entry on the vv.27-32 tile while I was writing nine sets of tags in three batches. It was in the tags only, never in the prose, and was patched directly with an asserted single-hit replacement and verified by grep before the gate ran. That is the third tag-level bleed of this kind across the last four chapters (Sanballat into ezra 9, the Ellicott-Delitzsch swap in nehemiah 4, and this one), and all three arose the same way, from writing school summaries and debates away from the blocks rather than against them. Writing nine tiles' tags in one sitting is where that risk concentrates. Over-long first drafts remained the dominant mechanical failure: 884, 779, 830, 894, 842, 914, 913, 975 and 919 words against a 648-word working ceiling, every one needing a structural cut of 150 to 330 words rather than a trim, and three needing a full rewrite. The overshoot is not improving and is now costing more per tile than the reading does."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "9"
+      ],
+      "note": "A named witness had his position reversed. The entry read Clarke and Barnes note that the provision appears to have been a new miracle. Clarke does hold that; Barnes argues the opposite, that we have no knowledge whence this was produced, weighing a miracle against a spot already occupied by other fishermen, and concluding that as no miracle is mentioned there is no reason for supposing that any existed in the case. Both positions are now given separately. This is worse than an omission, since it put an argument in a witness mouth that he wrote against."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "19"
+      ],
+      "note": "Augustine was credited with finding in Follow me Peter special call to martyrdom. He does not find it; he raises it as a difficulty and devotes his last discourse on the Gospel to it, asking why it was said to Peter and not to the others who likewise followed as Master, and answering his own suggestion with a counter-instance from the same company, the other son of Zebedee, who after the ascension is plainly recorded to have been slain. The question is now reported as a question."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "24"
+      ],
+      "note": "Chrysostom was cited in support of reading the we of we know that his testimony is true as an editorial plural, quoting we are witnesses of these things. Those are the words Chrysostom attributes to the OTHER apostles, in explicit contrast to John, who he says is only one who appeals to his own testimony, and does so because he was the last who wrote. The citation inverted his point and is removed."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "Four of the twenty-five keys carry misfiled Jamieson Fausset Brown blocks, 323 words in all, and they share an origin: all are commentary on John 6 or the lake-storm narrative. v4 holds a note on Matthew 14:24 and Mark 6:48, He saw them toiling in rowing. v10 holds 163 words on John 6:22 to 24, the loaves, the stormy night, Capernaum and the one boat. v16 holds a note on works God will approve citing Hosea 6 and Luke 3. v22 holds It was not Moses that gave you the manna, which is John 6:32. Each block ends at a truncated A.T. label, so the scrape merged a John 6 page into these John 21 keys. All four are now declared in excluded_voices."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "10"
+      ],
+      "note": "The excluded_voices plus thin mechanism did exactly what it was built for. v10 measured 300 usable source words, above the 200 ceiling, so the 350 floor applied and the shipped entry had padded to 360 words with 278 of them unsourced devotional expansion restating one idea three times. Declaring the misfiled JFB block drops usable source to 126, which justifies the thin flag, and the verse is now an honest 205 words saying only what Gill, Ellicott, Robertson and Calvin actually say. Where a chapter hugs the floor it is worth checking whether the source measure is inflated by residue before assuming the writer padded by choice."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "9"
+      ],
+      "note": "Whether the fire and food were miraculously provided. Clarke argues they were, on circumstantial grounds: the fire was remarked as something new, the disciples had caught nothing, and a fish and a loaf were already there, so the whole appears to have been miraculously prepared by Christ. Barnes declines the inference, allowing Grotius supposition of a miracle but preferring a spot occupied by other fishermen, and resting on a rule of interpretation, that as no miracle is mentioned there is no reason for supposing one. The two readings turn not on the text but on what silence is taken to license."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "24"
+      ],
+      "note": "Three distinct solutions to the plural in we know that his testimony is true, where the legacy entry had only a vague some and others. Clarke holds the two verses were added by believers of that time, probably those to whom John gave his work in charge, and records that Bishop Pearce and others take John to mean himself, which Clarke thinks very unlikely. Ellicott reaches the same conclusion by another road and closes off the usual defence, refusing to explain the plural from 1 John on the ground that the plural of a letter ought not to be quoted to explain the plural in an historic document; he still insists the words are a contemporaneous addition present in every important manuscript and version. Lightfoot offers a third and linguistic answer, that We know and I know may be one idiom in Chaldee and Syriac, citing the Targum rendering the Hebrew I know as we know at Joshua 2:9 and 1 Samuel 17:28, on which no second party need be supposed at all."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "17"
+      ],
+      "note": "Robertson states the agapao and phileo question more precisely than the legacy entry conveyed. It had reported only that some hold the distinction deliberate and others that the words are interchangeable in John. Robertson grants the general case and holds the particular one: these two words are often interchanged in the N.T., but here the distinction is preserved. Ellicott separately works through the nouns, judging the better reading little sheep, noting the Received order lambs sheep sheep against the Peshito lambs little sheep sheep, supported by the Vulgate and more exactly by Ambrose with agnos oviculas oves, which would give a threefold gradation answering the threefold question; yet he concludes the more probable reading is lambs little sheep little sheep and that the difference of thought lies in the verbs."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "all"
+      ],
+      "note": "Same legacy profile as john 8 but with a different dominant defect. Every one of the 25 entries opened with the verse in quotation marks and every one carried the banned carrier the witnesses note, 43 instances in all, usually as the framing sentence after the quotation and again opening a restatement paragraph. The distinctive fault here was not length but unsourced devotional expansion: in the worst entries only the first paragraph was grounded and the remaining two thirds were invention with weasel attributions such as some among the fathers have heard and many have seen. v9 ran 265 of 392 words that way, v10 278 of 360."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "john",
+      "chapter": "21",
+      "verses": [
+        "all"
+      ],
+      "note": "Three of the four fidelity defects found in this chapter are of one kind: a named witness made to say something he did not say, rather than an invented quotation. Barnes was given Clarke position on the miracle, Augustine was given an answer where he had posed a question, and Chrysostom was cited for the reading he argued against. None of these is detectable by the content-word test that found the john 8 fabrications, because every quoted fragment is genuine; what is wrong is the attribution around it. The cheap detector for this class would flag any sentence attributing one view to two or more named voices jointly, since that is the shape the error takes, and there were three such in this chapter alone."
     }
   ]
 }
