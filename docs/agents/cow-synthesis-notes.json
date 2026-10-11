@@ -97336,6 +97336,85 @@
       "book": "1chronicles",
       "chapter": "27",
       "note": "Advisory FLOOR flags on 15 of 34 entries (354-375 words). These are the arriving pass's house length, not a defect introduced here; padding them would cost compress and buy nothing. Flagging the cluster rather than acting on it, since rule 4 ('the floor is a floor, not a target') reads as guidance to the writer rather than a gate."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "8",
+      "note": "Legacy chapter with a templated carrier in almost every entry: 'The witnesses do not divide' appeared in 11 of 29 verses, plus 'the witnesses note' (v23), 'so the witnesses' (v26), and unlisted members of the same family ('the witnesses divide', 'the witnesses converge', 'the voices do not divide') in a further 8. The shape is uniform: a framing sentence opening the first paragraph and an agreement sentence closing the last. The fix throughout was to say the thing directly rather than report that the sources agree on it; no content was lost, and the chapter went from 16 of 29 entries with sweep findings to 1."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "8",
+      "verses": [
+        "1",
+        "7",
+        "8",
+        "11",
+        "13",
+        "15",
+        "18"
+      ],
+      "note": "Seven altered quotations found and corrected, all of the 'recast inside the quote marks' kind rather than invented content. v1 had Ellicott saying the phrase 'does not define the time' where he wrote 'The time is not defined by the phrase'; v13 had 'exaggerated humility... betraying the hypocrite' for 'The exaggerated humility of his language betrays the hypocrite'; v8 had a singular 'instance' for Wesley's 'instances'; v7 had Henry 'gives men' for 'gives them'; v15 modernised Wesley's 'choaked' to 'choked' and pulled 'spread' inside the quotation; v18 modernised 'befel' to 'befell'; v11 anglicised Clarke's 'endeavored'. Each is individually trivial and collectively a systematic drift: the writer quoted from memory of the sense rather than the page."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "8",
+      "verses": [
+        "9",
+        "16",
+        "27"
+      ],
+      "note": "Three genuine fidelity defects corrected. v9 said the forty camels were 'a mountain of goods a prophet neither needed nor, it seems, kept' and claimed 'the commentators recall' that Elisha refused the gift as he refused Naaman's — Henry says the opposite, that it is 'probable that Elisha accepted it (why should he not?), though he refused Naaman's', the present having been sent to provide 'for his sustenance while he sojourned there'. v16 credited the co-regency reading to 'Wesley, Henry, Keil' although the same entry says Henry 'leaves the numbers to draw the character'; Gill is the third holder, not Henry. v27 attributed to 'the earlier commentators' a quotation reading 'according to the company he keeps and the copies he writes after' — Henry's actual words, on the father's reign, are 'men are according to the company they converse with and the copies they write after'. All three are instances of the joint- or vague-attribution family: the quoted material is real, the attribution is not."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "8",
+      "note": "Fidelity graded 10 A / 19 B-with-note by the same stated rule used on 2kings 15: share of substantive sentences (six words or more) that name the voice they rest on, threshold 0.45. The 19 Bs are not content failures — the content-word test over every quoted fragment, checked against the whole-chapter catena, all 36 commentator corpora and the bible texts, flags nothing — but this legacy chapter's house form gives each entry a long closing paragraph of unattributed synthesis, and that is exactly 'faithful but stretched'. Stamping all 29 A would have been easier and false. The ratios run from 0.18 (v23) to 0.69 (v4)."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "8",
+      "verses": [
+        "21"
+      ],
+      "note": "THIN-PHRASE 'brief' in v21 judged a false positive and left in place. The phrase sits inside a quotation from Ellicott about the BIBLICAL compiler — 'there may be a lacuna of a few lines in the text here, or the compiler, in his desire to be brief, may have become obscure' — not about the thinness of the commentary. Rule 2 forbids narrating the source's thinness; quoting a commentator's judgement on the sacred writer's brevity is a different thing. A detector for rule 2 wants to exclude matches that fall inside quoted spans."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "8",
+      "verses": [
+        "11",
+        "19",
+        "25",
+        "28"
+      ],
+      "note": "The four arriving grade-B entries each failed on ttr alone, with compress comfortably above the A line, and each yielded to a different lever. v11 (0.5748) had three commentators quoted saying the same thing in near-identical words — 'made his face stand, and directed it upon Hazael', 'made his face stand, and set it upon Hazael', 'fixed his eyes upon Hazael' — so converting two of the three to reported speech fixed it at a stroke (0.6263). v19 (0.5766) was article-bound, 'the' running 57 of 436 words at 13.1 percent; de-articling plus Ellicott's unused Thenius note took it to 0.5897. v28 (0.5657) was the same at 12.5 percent, fixed by de-articling and by reporting Keil rather than quoting him (0.5982). v25 (0.5279, the worst) resisted expansion — adding source made it worse, because Henry's riff on the shared royal names is intrinsically repetitive — and only yielded to compressing the quoted names material into reported speech while adding two lexically fresh items, his 'compliment one another' motive and the maxim partus sequitur ventrem (0.5830)."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "8",
+      "note": "Two corrections to my own tooling, worth recording because both silently returned a clean result on dirty data. (1) The quoted-fragment extractors assume straight or curly quote characters; this chapter writes its quotation marks as the entities &lsquo; and &rsquo;, so the content-word test and the quote-fraction and requote checks all reported zero spans until the pattern was changed to match entities. A tool that reports nothing on an entity-punctuated chapter looks like a pass. (2) A naive stemmer using rstrip(\"'s\") strips every trailing quote and s character, so 'sickness' becomes 'sickne' and 'wickedness' becomes 'wickedne'; that produced 15 false fabrication candidates, every one of them a word ending in -ness, -less or -ss. Strip a trailing apostrophe-s as a unit."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "8",
+      "note": "Voice and school tags were out of step with the prose in seven entries before this pass and were corrected: v7 and v22 named Keil in the prose without listing him; v23 carried a wesleyan-arminian strong tag with no matching school entry; v9, v13 and v27 gained Matthew Henry and the puritan-evangelical school with the material added here; v15 lists Keil in its tags without naming him in the prose and was left alone as harmless. Worth noting for the loop: the validator's tags-match check is key-level, so a voice named in prose but missing from the tags passes every automated gate."
     }
   ]
 }
