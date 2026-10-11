@@ -96757,6 +96757,56 @@
       "book": "1samuel",
       "chapter": "15",
       "note": "Correction to my own observation on the stray-glyph defect, recorded a moment ago. I recommended there that the nonascii check be run over note text as well as prose text. That recommendation as stated is wrong and would be a nuisance: docs/agents/cow-synthesis-notes.json already contains a good deal of legitimate non-ASCII from earlier runs, including Greek letters and accented Latin characters in quoted material, so a blanket non-ASCII check over the notes file would flag all of it. What would actually be useful is a narrower check targeting ranges that cannot plausibly occur in this corpus — CJK, Cyrillic, emoji and the like — which is what the glyph I introduced was. The underlying report stands: a stray CJK character did appear twice in text I wrote, in the same phrase both times, and nothing in the loop would have caught the one that landed in a note."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "18"
+      ],
+      "note": "The StudyLight page chrome is measured here precisely. v18 blob is 1353 words of which only 584 are commentary: Gill 62, Keil and Delitzsch 42, Ellicott 438, Wesley 42. The remaining 769 words are the site footer, a copyright notice, a nav menu of commentaries and dictionaries, and several hundred words of raw CSS stylesheet beginning sub-menu font-size 12px. Crucially the chrome carries no Name colon label, so split_voices cannot see it and absorbs it into the preceding commentator: it credits Charles Ellicott with 1205 words on this verse where he wrote 438."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "all"
+      ],
+      "note": "Corpus-wide measurement of that chrome, since this chapter made it visible. Scanning all 1189 chapters for the footer markers, 1101 verse keys carry it, and 870 of those, 79 percent, are the chapter FINAL key. That is 73 percent of all chapters with chrome on their last verse, consistent with a page footer bleeding into the last key scraped. Measured from the first marker to the end of the blob it comes to about 1.2 million words across 1100 keys."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "all"
+      ],
+      "note": "Three consequences of the chrome, in order of seriousness. First, excluded_voices cannot reach it, because the mechanism matches a Name followed by a colon and the chrome has none; declaring Charles Ellicott on 2chronicles 2:18 would discard his genuine 438 words along with it. Second, usable_source_words is inflated wherever it occurs, which distorts the expansion ratio recorded in fidelity metadata and can block the thin exemption on a genuinely thin final verse, exactly the case that john 21:10 needed. Third, the nav menu names eleven commentator-shaped figures, Coffman Torrey Scofield Trench Spurgeon Vine Holman Bullinger Gesenius Thompson and Nave, which appear in every chrome tail and never once as a colon-labelled voice, so naming any of them would satisfy the groundability check while resting on a menu item."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "rejected",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "all"
+      ],
+      "note": "I suspected the chrome had already produced fabrications and checked before reporting it. Grepping the shipped synthesis for those eleven names gives Spurgeon 791, Gesenius 46, Trench 7, Vine 3, Nave 1 and zero for the rest. The Spurgeon hits are legitimate: there is a real spurgeon-psalms corpus and almost all of them are in Psalms. Testing the remainder at chapter scope against both the catena and the 36 cow-sources corpora, as the groundability rule actually specifies rather than per-verse as I first did, all 52 are grounded. So the chrome is a measurement and risk problem, not a realised fabrication problem. Worth recording that my first per-verse test gave a false positive list of twenty."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "2",
+      "verses": [
+        "all"
+      ],
+      "note": "The quote-led metric needs a second condition. This chapter trips it at 12 of 18 and the gate reports it as a breach, but the openings here are short scripture lemmas followed by a dash and immediate commentary, with chapter scripture-quote fraction at 0.054 and commentator quotation at 0.043. That is a sound expository device, not the john 8 and john 21 defect, which was the WHOLE verse quoted followed by a contentless sentence beginning The witnesses. Left alone deliberately. If the metric is to drive work it wants pairing with either the length of the quoted opening or the presence of a stock framing sentence after it."
     }
   ]
 }
