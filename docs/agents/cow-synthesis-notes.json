@@ -96930,6 +96930,56 @@
       "book": "ezekiel",
       "chapter": "41",
       "note": "Queue rule worth adding: when a polish pick's B grade is driven by MATTR alone (compress already over 0.42, dup metrics zero, no flags), the fix is substitution, not deletion - compress connective and authorial framing and spend the recovered words on source content the tile never used. On this chapter that raised variety AND coverage at once (K&D's derivation of the separate-place term and his grammatical ground for the angel entering alone, Henry's twelve-cubit reading and his Revelation 21:16 note, Clarke's second reckoning, Wesley's north-and-south gloss were all unused). The audit report does not say WHICH metric drove a B; printing that would tell the next worker in one line whether deletion or substitution is called for."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "rejected",
+      "book": "2kings",
+      "chapter": "15",
+      "verses": [
+        "all"
+      ],
+      "note": "I almost destroyed this chapter on a false reading of the data, and the correction is the main lesson. Measuring prose against the per-verse catena, eighteen of thirty-eight verses looked thin-eligible and nine sat above the documented stretch ratio of 6.0, with v7 at 23.4x on seventeen words of Gill, v22 at 18.5x on twenty-one and v11 at 16.3x on twenty-four. I was about to cut them all to thin entries of 120 to 200 words. Checking first, the shipped v7 entry cites Keil and Delitzsch on the burial-field of the kings, which is not in the per-verse catena at all; it is in the keil-delitzsch corpus. The entries were not inventions and the ratios were artifacts."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "15",
+      "verses": [
+        "all"
+      ],
+      "note": "The cause is span-keyed commentary. usable_source_words reads only the merged catena, which attributes a commentator block to the FIRST verse of the span it covers. For 2kings 15 the catena gives v7 seventeen words while Keil has fourteen keys for thirty-eight verses at about 205 words each and Matthew Henry has three keys totalling 2802 words covering the whole chapter. So the per-verse source measure, the expansion ratio recorded in every fidelity block, and the STRETCH_RATIO signal are all unreliable wherever commentators write on spans rather than single verses. Worse in one direction: the thin exemption is checked against the same catena-only figure, so a verse with abundant span-level source can qualify as thin. I wrote a span-aware reader, span.py, that resolves for each verse the covering key in each of the 36 corpora."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "15",
+      "verses": [
+        "all"
+      ],
+      "note": "The real defect, once measured properly, is that the chapter used Henry without crediting him. Matthew Henry key 8 covers verses 8 to 31 and contains, in his own words, the reflections the padded entries were delivering unattributed. v22 said in the writer voice that the tyrant waded to the throne through blood and that judgment is deferred rather than cancelled; Henry writes that it was through blood that each of them waded to the throne, and that God may suffer wickedness to prosper awhile, but sooner or later blood shall have blood. v11 gestured at years of contested succession; Henry gives the figures, twenty-two years vacant on one reckoning and eleven on another. v38 called the peace of Jotham the calm before a storm; Henry writes that this storm gathered in the reign of pious Jotham, but he came to his grave in peace and it fell upon his degenerate son. The fix was attribution, not deletion."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "15",
+      "verses": [
+        "all"
+      ],
+      "note": "Graded honestly rather than stamped A across the chapter. Seven verses were rewritten against the span-covering corpora and carry fidelity A: 7, 11, 22, 26, 27, 30 and 38. For the remainder I measured the share of substantive sentences naming a voice; the seven rewritten verses sit between 0.45 and 1.00 while the untouched padded ones sit between 0.17 and 0.40. Seventeen verses below 0.45 are recorded fidelity B with a note naming the cause, which is the designed escape valve for prose that is faithful but leans further than its witness. Stamping A on all thirty-eight would have been the false act here. Verses 11, 26, 27 and 38 carry thin after rewriting, their per-verse catena being 24, 24, 34 and 66 words with the verse-specific span material exhausted."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "15",
+      "verses": [
+        "all"
+      ],
+      "note": "Rule 1 cleanup: thirteen entries opened a closing paragraph with the banned carrier the witnesses do not divide and two more with so the witnesses, all fifteen now recast distinctly. One genuine rule 2 breach, at v31, told the reader the witnesses give it brief attention. Five other hits on brief were innocent, describing a reign, an experiment in hereditary succession, or the biblical historian, not the commentators. The two quote-led openings, at v3 and v7, are short scripture lemmas followed immediately by substantive comment, and at 2 of 38 the chapter is far below the one third threshold, so they were left as in 2chronicles 2."
     }
   ]
 }
