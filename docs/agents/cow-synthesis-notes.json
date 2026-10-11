@@ -96628,6 +96628,135 @@
       "book": "2kings",
       "chapter": "22",
       "note": "Self-graded A on both tiles. Source 11,647 usable words by the loop's own counter (5,437 for vv.1-10 and 6,210 for vv.11-20 as the fidelity reader counts them) distilled to 648 and 644 words, 0.12x and 0.10x. Five voices declared on the first tile and six on the second; JFB excluded on both as displaced. Prose pure ASCII, no doubled words, no unlinked scripture refs; the curly apostrophes in the tags file are KJV text supplied verbatim by the repo's Bible data to themes and pericope_label, which is the corpus convention. Names avoided in the prose because they are unusable: Thenius, Clericus, Bertheau, Gramberg, Hitzig, Von Lengerke, Reuss, Ewald, Josephus, Suidas, Pausanias, Aelian, Priestley, and one name carrying a diaeresis. Ellicott's long survey of the critics was therefore reported as 'how little the critics agree' with the positions listed and the holders left unnamed, and Gill's three authorities for the Sibyls as a Byzantine lexicographer, a Greek geographer and a Roman miscellanist. KEIL is a special case worth flagging for the alias table: Ellicott names Keil among those who take the book for the Pentateuch, but Keil is half of the Keil and Delitzsch commentary, which is a declared voice under the short name Delitzsch, so writing Keil in the prose would have been confusing even though it would not have tripped the cited-but-not-declared rule, the short-name map having no entry for Keil alone. I left the name out. First drafts ran 826 and 886 words against a 648-word working ceiling, needing cuts of 178 and 238; both were handled by one structural rewrite plus two trim passes, which is a better ratio than the nine tiles of matthew 5 but the same underlying overshoot. No content error found on review this time; I wrote both tiles' tags in a single pass against the blocks rather than from memory, which is the practice the last three chapters' bleeds argued for."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "32"
+      ],
+      "note": "JFB fetch bug, twenty-fifth confirmation. The chapter carries exactly one Jamieson, Fausset and Brown block, 97 words at key 32, and it is displaced: the content is on the tribal boundaries of the northern inheritance, the Lake of Chinnereth and the Mediterranean, a part of Manasseh running north into Asher, the prediction of Moses about Zebulun and the sea, and the untraceable extent from north to south. That is JFB on Joshua 19, in a chapter of 1 Samuel. A single affected key gives no stride, so this instance neither confirms nor contradicts the stride-six regularity; it does confirm that the donor can lie in a wholly different book, as it did in 2kings 22 where the donor was 2 Samuel 17. Declared as excluded_voices on the vv.32-35 tile, the label being present in that source range."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "35"
+      ],
+      "note": "Ellicott chrome strip at the final key, the invariant position. Key 35, last of the chapter, carries 1,341 words of Ellicott of which roughly 120 are genuine — the note that the two men met once more in life but not at Samuel's seeking, that no communication appears to have passed, that when next they spoke the seer belonged to another world, and that Saul's kingship from this time lost its theocratic relation though it remained one in fact. The remainder is StudyLight navigation, copyright boilerplate and CSS. Read under a word cap; the genuine fragment was used. Unchanged in every chapter worked: last or near-last key, Ellicott alone."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "source-defect",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Keil and Delitzsch window overlap, quantified here because this chapter shows it at its worst. Nineteen of the thirty-five keys carry a K&D block of exactly 200 words, and the windows overlap heavily rather than tiling: the block at key 3 and the block at key 4 share about 140 words verbatim, as do keys 4 and 5, keys 5 and 6, and keys 6 and 7, each successive window sliding forward by only a verse or two of commentary while repeating the rest. The raw 4,200-word K&D total for the chapter therefore overstates the distinct content by a wide margin; I judged perhaps 1,200 words distinct. Combined with the KJV verse text that the window also swallows, this is the second chapter in two where the K&D contribution to the usable-source-words figure is substantially inflated. A deduplicating counter that dropped repeated windows and stripped printed scripture would give a much truer size for any chapter where K&D is a major voice."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "3"
+      ],
+      "note": "How the sentence of extermination is to be justified, where the four answers are genuinely four different kinds of answer rather than variants of one. Clarke concedes the difficulty and rests the whole weight on authority: nothing could justify such an exterminating decree but the absolute authority of God, and this was given; all the reasons of it we do not know, but this we know well, the Judge of all the earth doth right. Ellicott refuses the question as improperly framed: it is vain to attempt in this and similar transactions to find materials for the blame or the praise of Israel, which stood in a peculiar relation to the unseen King and was not unfrequently used as the visible scourge by which the All-Wise punished hopelessly hardened sinners and deprived them of the power of working mischief; the cup of iniquity was full and the nation's continued existence would simply have worked mischief to the commonwealth of nations. Wesley argues it out term by term instead: the slaying was not unjust because God is the supreme Lord of life and can require his own when he pleases; infants are born in sin and therefore liable to God's wrath; their death was rather a mercy than a curse, as being the occasion of preventing their sin and punishment; and the beasts, being all made for man's benefit, may suffer with him for the instruction of mankind. Delitzsch grounds it in the divine nature: when God looks upon a sin, directing his glance towards it, he must punish it according to his own holiness, the Hebrew verb pointing at the outset to the punishment. Worth noting that Ellicott returns to the question at the end of the chapter and there offers a fifth answer of his own, that the doom may have been sent in mercy rather than punishment, mercy to those whom Amalek's evil lives might have corrupted and mercy to Amalek in calling them off from greater evils to come."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "11"
+      ],
+      "note": "How the statement that God repents is to be qualified — six commentators, six formulations, no two identical, and no disagreement of substance. Henry: repentance in God is not, as in us, a change of his mind but a change of his method or dispensation, so that he does not alter his will but wills an alteration, and he adds the limit that God repented of giving Saul the kingdom but never repents of having given any man wisdom and grace, these gifts and callings being without repentance. Gill: not of any change of mind, counsel, purpose or decree, which is not consistent with his unchangeable nature, but of a change of dispensation and outward dealings, spoken after the manner of men; and though he changes the outward dispensations of providence he never changes in the matters and methods of his grace. Clarke: a change of purpose according to conditions already laid down or mentally determined, God having intended to establish the kingdom had Saul been obedient. Wesley: repentance implies grief of heart and change of counsels and therefore cannot be in God, but is ascribed to him when he alters his method of dealing and treats a person as if he did indeed repent of the kindness shown him. Delitzsch: the words express no changeableness in the divine nature but simply the sorrow of the divine love at the rebellion of sinners, as is evident from verse 29. Ellicott quotes an earlier authority: God does not feel the pain of remorse, nor is ever deceived so as to desire to correct anything in which he has erred, but as a man desires to make a change when he repents, so when God is said to repent we may expect a change from him. Recorded as a convergence rather than a dispute, because the set of six is itself the interesting thing: the chapter forces every commentator to the same doctrinal guard and each reaches for a different instrument."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "23"
+      ],
+      "note": "How the verse equating rebellion with divination should be rendered, and here Clarke stands alone against the rest. Ellicott, Henry, Gill and Wesley all keep the plain equation: Ellicott makes it the stated ground of the rejection, since conscious disobedience in God's chosen king was nothing else than the deadly sin of idol-worship, setting aside the true Master of Israel and virtually acknowledging another, and notes that the Hebrew rendered iniquity literally signifies nothingness; Henry says it is as bad to set up other gods as to live in disobedience to the true God, and that those governed by their own corrupt inclinations do in effect consult the household images or the diviners; Gill makes rebellion as heinous a sin as any divination forbidden by the law and deserving as sore a punishment; Wesley glosses the three terms one by one. Clarke denies that the received version is a translation of the words at all — his own phrase — observes that all the versions are different, and proposes a chiastic construction: the three nouns occurring first refer each to the three last in order, transgression to iniquity, which is the principle whence transgression springs, divination to the consecrated images used in incantations, and rebellion to stubbornness, whence rebellion springs; so that the meaning is that as transgression comes from iniquity, divination from the images and rebellion from stubbornness, so, because Saul rejected the word of the Lord, the Lord rejected him from being king. Both readings are carried in the prose because the dispute is about the Hebrew and not about the doctrine."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "24"
+      ],
+      "note": "Whether Saul's repentance was sincere, the sharpest division in the chapter and a rare case of Wesley answering Henry's charges in order. Henry says it is too evident that Saul only acts the part of a penitent and is not one indeed, since the confession was extorted by the rack and came only when he was threatened with being deposed, and he lists three signs of hypocrisy: that Saul applied to Samuel only and even put into his confession that he had transgressed Samuel's word, as if the prophet stood in God's stead, where David with Nathan before him said that against God only had he sinned, and that he asked Samuel for forgiveness as if any could forgive sin but God; that he excused his fault in the very act of confessing it, pleading the fear of the people, which Henry calls false and frivolous since Saul plainly did not stand in awe of them; and that all his care was to save his credit, so that the words I have sinned, yet honour me, are the contrary of a penitent's, who should say rather, shame me now, for to me belongs shame. Henry adds that this repentance came short even of Ahab's. Gill agrees on both counts, that the first confession does not appear ingenuous, cordial or sincere and was made chiefly to get the sentence reversed, and that the second, though free of the first's excuse, appears from what follows to be hypocritical. Wesley contradicts them flatly and twice, taking the two charges in the order Henry made them: it does by no means appear that Saul acts the hypocrite in assigning a false cause of his disobedience, but rather he nakedly declares the thing as it was; and neither can it be proved that there was any hypocrisy in the request for pardon, charity requiring us to believe that he sincerely desired pardon both from God and man, as he now knew he had sinned against both. Clarke leans Wesley's way with an extenuation of his own, that the people did insist on preserving the best of the prey and who could resist the demands of a victorious mob, though Saul's crime was in consenting, since had he not the crime would have been theirs alone. Ellicott takes a middle course: Saul was no doubt terribly in earnest and in great fear, but the earnestness was based on a desire to maintain his power and royal state, and he quotes a father for the test, that a true penitent would have prayed to be humble rather than to be honoured."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "27"
+      ],
+      "note": "Who tore the prophet's garment, and what the garment was. Delitzsch defends the Hebrew: the passive form is correct and is not to be altered, as one critic proposes on the authority of the Greek, into a reading that would make Saul tear off the lappet deliberately; and this is evident from the explanation Samuel gave of the occurrence, since as Saul was about to hold the prophet back by force in order to obtain a revocation of the sentence, the tearing took place accidentally and evidently without any such intention. Ellicott reads it the other way round, as the king's own passionate action indicating a restless, unquiet mind, Saul not content with entreating words laying hold of the old man perhaps even with some violence; and he corrects the English besides, since what Saul seized and tore was not the mantle of the Authorised Version but the hem or outer border of the ordinary tunic which the upper classes in Israel then wore. He supports that from another writer's careful note showing that the mantle proper, the distinctive dress of the Hebrew prophets, was certainly not used in the days of Samuel, the founder of the prophetic order, special dresses having come into use only gradually, so that Elijah is the first person described as so clad. The difference matters for the omen: on Delitzsch's reading the sign is given by an accident that neither man intended, on Ellicott's it is given by Saul's own violence, and Henry takes the second and presses it, that the rending of the kingdom, like the rending of the garment, was Saul's own doing."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "disagreement",
+      "book": "1samuel",
+      "chapter": "15",
+      "verses": [
+        "33"
+      ],
+      "note": "Who executed Agag and by what right, four answers with real differences of principle. Henry says Samuel destroyed him doubtless by such special direction from heaven as none now can pretend to, reports that some hold he only ordered it to be done, but thinks he perhaps did it with his own hands as a sacrifice to God's injured justice, sacrifices being wont to be cut in pieces — so Henry's category is sacrificial. Clarke separates two questions and answers both: what Samuel did here he did in his magisterial capacity, and it is not likely he did it by his own sword but by that of an executioner, since what kings and magistrates and generals do in an official way by their subjects or servants or soldiers they are said to do themselves — so Clarke's category is judicial, and performed by deputy. Wesley grounds it in the command alone, that Samuel did it by divine instinct and in pursuance of God's express order, which being sinfully neglected by Saul was now executed by the prophet, and he immediately adds the caution that these are no precedents for private persons to take the sword. Ellicott leaves the agency alone and attends to the manner, reporting a suggestion made with some probability that the words refer to a peculiar form of putting to death like the quartering in vogue during the Middle Ages, and noting that there are other instances in the sacred books of prophets and priests acting as executioners of the divine decrees. On the ground of the sentence, by contrast, all four agree with Gill that Agag died for his own cruelty and not merely for his ancestors', Wesley putting it most carefully as a fuller vindication of God's justice, that though the crime revenged was four hundred years old God did not punish an innocent son for his father's crimes but one that persisted in the same evil courses."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Tiling: Henry's blocks fall at keys 1, 10, 24 and 32, giving four tiles, vv.1-9, 10-23, 24-31 and 32-35, which match the chapter's four movements exactly — the commission and the campaign, the word to Samuel and the confrontation at Gilgal with the saying about obedience and sacrifice, Saul's confession with the rent skirt and the sentence of irreversibility, and the hewing of Agag with the final parting. Clarke's own chapter argument at key 1 lists the same four divisions independently, and his verse groupings (1-3, 4-5, 6, 7-9, 10-11, 12-23, 24-31, 32-35) agree with the tiling at every boundary except that he splits the first tile internally. Eighth consecutive chapter in which the Henry-block heuristic has given the tiling, and the second in two days in which a second voice's own outline corroborates it."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Sixth consecutive polish-pick with nothing to polish. --queue auto offered this chapter as a POLISH pick on the strength of one grade-B verse at key 10, but all thirty-five entries are legacy-unversioned and the chapter carries no fidelity note at all; the notes recorded under 1samuel belong to other chapters. There was therefore no recorded lean to fix and the legacy procedure was used. The proposed queue rule now has six instances behind it — nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22 and this chapter — and the pattern has held in every polish pick this worker has drawn since the follow-on queues opened: a chapter whose entries are all legacy-unversioned with no recorded fidelity note should route to the legacy queue regardless of letter grades, because the polish instruction has nothing to act on and the worker must fall back to the legacy procedure anyway."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Name collisions and unusable names in this chapter, continuing the alias-table case. Avoided in the prose because the name is unusable: Thenius, Olshausen, Kimchi, Abarbanel, Ewald, C. a Lapide, O. v. Gerlach, Lange, Wordsworth, Clericus, Josephus, Dean Payne Smith, Priestley, St. Gregory, and one name carrying a diaeresis. Two are worth singling out. CALVIN is the dangerous one here: Ellicott quotes him at length on Samuel's grief, attributing the passage to him by name and noting it is quoted at second hand through Keil, but Calvin is in the splitter's voice labels and his short name is in the cited-but-not-declared map, so writing the name in prose would have read as a citation of a voice that has no block in this chapter and tripped the check. I rendered it as 'an earlier expositor' and 'a reformer'. KEIL is the second: Ellicott cites him by name, but Keil is half of the Keil and Delitzsch commentary, declared here under the short name Delitzsch, so naming him would have been confusing even though the map has no entry for Keil alone. The running list of names lost to collisions or abbreviation now includes Gregory of Nyssa, Titus Bostrensis, Bertheau, Clericus, Ewald, Maccabees, Origen, Tertullian, Robertson Smith, Calvin and Keil. The fix remains an alias and collision table rather than a rule change."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "A recurring input defect in my own drafting, recorded because it is mechanical and detectable. Twice in this chapter a stray CJK character appeared in text I wrote, in both cases the same glyph and in both cases inside the phrase 'a true penitent', once in the prose draft for the vv.24-31 tile and once in the disagreement note on verse 24. Both were caught: the first by the nonascii check I run on every tile before putting, the second by re-reading the note after recording it, and it was patched directly in docs/agents/cow-synthesis-notes.json with an asserted single-hit replacement, after which the file was re-parsed as JSON and confirmed free of the glyph. The lesson for the loop is that the nonascii check should be run over NOTE text as well as prose text; at present nothing checks the notes file for non-ASCII, and a note is as much part of the tracked record as a tile."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "fidelity",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Self-graded A on all four tiles. Source 21,624 usable words by the loop's counter (5,727 / 7,601 / 4,491 / 3,805 as the fidelity reader counts the tiles) distilled to 649, 646, 636 and 645 words, compression 0.08x to 0.17x. Six voices declared on every tile — Henry, Ellicott, Keil and Delitzsch, Clarke, Gill, Wesley — with JFB excluded on vv.32-35 as displaced; JFB has no block in the other three ranges. Prose pure ASCII, no doubled words, no unlinked scripture refs. Two defects of my own in this chapter, both caught before the gate. The stray CJK glyph is recorded separately as an observation. The other is the overshoot, which was the worst of the run: first drafts ran 899, 1066, 902 and 831 words against a 648-word working ceiling, the vv.10-23 tile at 1,066 being 64 per cent over and needing a complete rewrite to one claim per voice before trimming could even begin. That tile is instructive about why: it carries six voices on a six-way doctrinal convergence about divine repentance, a four-way dispute about the rendering of the last verse, and the obedience-and-sacrifice saying, and I drafted all three threads at full length before measuring. The discipline that works, and that I applied from the second rewrite onward, is to budget words per paragraph BEFORE drafting and to cap each voice at one claim per thread. Across the four chapters landed in the last two batches the overshoot has not improved at all and remains the single largest cost per tile — larger now than the reading."
+    },
+    {
+      "at": "2026-10-11",
+      "kind": "observation",
+      "book": "1samuel",
+      "chapter": "15",
+      "note": "Correction to my own observation on the stray-glyph defect, recorded a moment ago. I recommended there that the nonascii check be run over note text as well as prose text. That recommendation as stated is wrong and would be a nuisance: docs/agents/cow-synthesis-notes.json already contains a good deal of legitimate non-ASCII from earlier runs, including Greek letters and accented Latin characters in quoted material, so a blanket non-ASCII check over the notes file would flag all of it. What would actually be useful is a narrower check targeting ranges that cannot plausibly occur in this corpus — CJK, Cyrillic, emoji and the like — which is what the glyph I introduced was. The underlying report stands: a stray CJK character did appear twice in text I wrote, in the same phrase both times, and nothing in the loop would have caught the one that landed in a note."
     }
   ]
 }
