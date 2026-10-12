@@ -97743,6 +97743,104 @@
         "1"
       ],
       "note": "THE FIDELITY CHECKER EARNED ITS KEEP HERE, and the three flags it raised fall into two different classes worth separating in the record. It reported ENTITIES: Zion, Aaron, Pilate on the vv.1-3 entry. (1) Zion was a SPELLING divergence - Henry prints 'the sinners in Sion' and I had modernised it to Zion; the claim was faithful and only the orthography differed, which is the same class as Tyropoeon at 2kings 25, the Asherim at 2chronicles 24 and Godward at revelation 5. (2) Aaron and Pilate were MY OWN ADDITIONS. Ellicott cites 'Leviticus 9:22-24' and 'the word used in John 19:13' without naming either man; I had written the consecration of Aaron and the Pavement where Pilate sat, both correct as inferences and both unsourced as names. That is exactly the failure the check exists to catch, and it would have shipped without it. Correcting my earlier recommendation accordingly: I proposed that synthesis-fidelity.py fold the source through the same normalisation as the synthesis before comparing proper nouns, which would still be right for class (1) - but it must not be loosened in any way that would have let Aaron and Pilate through, because adding a plausible name the witness did not write is a real fidelity defect and the commonest one I make."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB stride bug, 31st confirmation and the longest unbroken run yet measured. Every Jamieson block in this chapter is commentary on 1 Kings 11 (Solomon's foreign wives, the altars for Astarte and Molech, the two divine appearances, Hadad the Edomite): five members at keys 2, 8, 14, 20 and 26 -- exact stride 6, offset 2, no skipped landing site. The donor walks live for four steps (1Ki 11:1-8 -> the three altars -> the two appearances and the sentence by Ahijah -> Hadad and Rezon) and then stalls: keys 20 and 26 are byte-identical, md5 4655928ccc1b, 1855 chars each. So this one chapter exhibits BOTH failure modes already on record separately -- the live walk seen at 1chronicles 15 and 2chronicles 7, and the stalled donor first seen at 2kings 25 keys 16/22. Any re-indexing model must reproduce both from the same chapter. All five blocks excluded via excluded_voices on tiles 1-3, 7-13, 14-17, 18-22 and 23-26; the chapter ships with no JFB voice at all."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "Two hollow blocks under the same key, which between them cost the chapter its reformed voice for 27 of 30 verses. Gill's key-1 block is literally 'See Chapter Introduction' -- three words, a bare cross-reference, and his whole-chapter total is 156 words spread over keys 28, 29 and 30. Clarke's key-1 block (160 words) is the chapter argument -- a verse-by-verse outline of the whole chapter -- followed by 'See the notes on the parallel place, 2Sam 24:1', i.e. no exposition of v.1 at all. Neither is declarable, so tile 1-3 carries Henry, Ellicott, K&D and Wesley only and the reformed school first appears on tile 27-30. This is the hollowed-Gill shape already on the open list, now with a Clarke instance: the grep for it should match a block whose only content is a chapter outline plus a cross-reference deferral."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "30"
+      ],
+      "note": "Ellicott chrome strip, 17th consecutive chapter, and the invariant holds exactly: last key, Ellicott, genuine note then nav strip then the BibleSupport copyright statement then the StudyLight footer then raw CSS. Genuine content is the ~211 words ending at '(Comp. Genesis 28:17; Exodus 3:5; Joshua 5:15; Judges 6:21; Judges 6:26.)'; total block 1,162 words, so the genuine fraction is 18 percent -- near the top of the measured range (revelation 18:24 was 20 percent, 2chronicles 7:22 the worst at 2.0 percent). Block length again lands in the 1,020-1,250 band regardless of how much real commentary precedes the template, which is what a fixed appended footer predicts. The copyright statement remains the clean cut for a content-based detector."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "17",
+        "21",
+        "27"
+      ],
+      "note": "New K&D pattern: the exposition in a Keil and Delitzsch window can belong to a verse OUTSIDE the key it is filed under, which makes per-key declaration unsafe. Key 17 prints the KJV of vv.17-20 and then comments on a word in v.20; key 21 prints vv.21-24 and its ONLY exposition is a grammatical note on the infinitive in v.24; key 27 prints vv.27-30 and carries no exposition at all. So on a pericope tiling, a span containing key 21 has a K&D label whose substance is about a verse in the NEXT span. Here that meant declaring K&D on tiles 1-3, 14-17 and 23-26 (keys 1, 2, 3, 16, 25, 26 have real exposition) and NOT on 18-22 or 27-30, even though both spans contain a K&D-labelled block. This compounds the window overlap/padding item already on the open list: a usable-words counter that dedupes overlap should also not credit a window whose only text is printed scripture or a note on a verse the window does not cover."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "1"
+      ],
+      "note": "Who moved David to number Israel -- a three-way split that turns on a Hebrew article. Ellicott would render 'an adversary arose against Israel' and argues from the absent article that the enemy of mankind is not meant; since the parallel says the anger of the Lord burned and he incited David, he identifies the adversary with the wrath of God, defined as that aspect of the divine nature which pursues to destruction whatever is opposed to its own perfection, and holds that the wrath could only have urged David in consequence of evil thoughts of pride intruding into a heart until then humbly reliant on its Maker. Henry keeps the person and the permission: God is not the author of sin and tempts no man, so the moving in Samuel means that for wise and holy ends he permitted the devil to do it, while the sin remains David's alone. Wesley stages it legally, Satan standing before the Lord's tribunal to accuse David and Israel and beg leave to tempt him. Tagged as a structured debate on tile 1-3."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "5",
+        "6",
+        "25"
+      ],
+      "note": "Three numerical cruxes in one chapter, handled by incompatible methods. (1) The totals: 1,100,000 and 470,000 here against 800,000 and 500,000 in Samuel. Ellicott offers three exits -- Judah's figure there a round number, a transcriptional error, or (his own preference) that this total adds David's standing army of some 300,000 to the older 800,000 -- and notes the numbers were never registered in the royal archives; Clarke prints both sets without adjudicating. (2) Levi and Benjamin uncounted: Ellicott a natural exemption plus an unfinished job, Clarke the rabbinic reading that Joab deliberately spared two tribes with an answer ready for each objection, Wesley providence because those tribes would stay faithful to the house of David. (3) The price: 600 shekels of gold here against 50 of silver in Samuel. Ellicott calls them obviously discordant, finds both wrong beside the 400 silver shekels paid for Machpelah, suggests reading silver for gold, rejects the harmonisation that the two texts price different things, and concludes this is the later form of the tradition since gold money is otherwise unattested among the Hebrews; Wesley harmonises by reading Samuel's fifty as gold worth six hundred silver shekels; Delitzsch refers the question to his note on Samuel and declines it here."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "20",
+        "27",
+        "30"
+      ],
+      "note": "Three disputes about the angel, all tagged. (1) v.20, whom Ornan saw: Ellicott judges the Hebrew corrupt and follows Samuel, the Greek and the Latin in reading 'the king and his servants', the words for angel and king being easily confused; Clarke assembles the same case at length, with the Syriac and Arabic, one of Kennicott's manuscripts, and Houbigant's reconstruction of two separate sightings (the king at a distance, then in the floor); Henry and Wesley read the text as it stands and keep the angel, whose brightness drove Ornan and his four sons into hiding. (2) v.27, whether the angel is a being or a figure: Ellicott says it is hardly fair to call the sheathing a figurative or poetical expression for the cessation of the plague, since both accounts make the angel a real concrete being, naming Reuss for the personification view -- and note the cross-tile tension, since Delitzsch at v.26 calls the sheathing exactly that, 'a figurative expression for the stopping of the pestilence'. (3) v.30, why David could not go to Gibeon: five answers -- the pestilence raging there (Keil, quoted by Ellicott), bodily weakness from the vision (reported), the apparition simply overawing the king (Ellicott's preference), fear of fatal delay (Clarke), and refusing to leave Jerusalem unguarded (Wesley)."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "21",
+      "verses": [
+        "7",
+        "18"
+      ],
+      "note": "Henry's two block-heads in this chapter each expound a whole section rather than their key's verse: the key-7 block runs over vv.7-17 (the displeasure, the choice of three, the 70,000, the angel seen, the plea for the sheep) and the key-18 block over vv.15-30 (the stay, the altar command, the bargain, the fire, Gibeon). Sense-unit tiling finer than those two heads therefore drops Henry from tiles 14-17, 23-26 and 27-30 even though his exposition covers every verse in them. That is the coverage trade the psalms 22 precedent licenses, and it is worth paying here -- seven tiles all grade A, 4,258 prose words against a one-or-two-tile alternative -- but it is a real loss: Henry on Ornan's generosity, on the fire consuming the sacrifice instead of the sinner, and on the dispensing with the one-altar law because of the present distress all fall outside the tiles that could declare him. A future rule could allow a voice to be declared on a span its block-head demonstrably expounds even when the span contains no key of its own; that is an owner decision, not mine to take."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "21",
+      "note": "Polish pick with nothing to polish, 14th instance (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15, job 5, 2kings 25, psalms 21, 2chronicles 24, 1chronicles 15, 2chronicles 7 and this chapter's own first offer). The queue offered 1chronicles 21 as a polish on a handful of grade-B verses while every entry in the file was legacy-unversioned per-verse prose, so the legacy procedure -- regenerate from the catena as pericope tiles -- was the correct one. The recommended queue rule is unchanged and now has fourteen supporting instances: before offering a chapter as polish, check whether ANY entry carries a qa stamp; if none does, route it to the legacy queue instead, since a polish pick on an unversioned file sends the worker to rewrite prose that is about to be discarded."
     }
   ]
 }
