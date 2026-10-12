@@ -97886,6 +97886,33 @@
       "book": "2kings",
       "chapter": "11",
       "note": "Punctuation style, for whoever writes here next: this chapter uses LITERAL em dashes and STRAIGHT single quotes, where 2kings 8 uses the &lsquo; and &rsquo; entities and matthew 20 the same, while 1chronicles 27 and 2chronicles 2 use the &mdash; entity. There is no corpus-wide convention, so the style has to be read from the raw bytes of the chapter before any anchored edit or new sentence is written. It matters for tooling as well as consistency: a quote extractor that looks for entities finds nothing here, and one that looks for straight quotes finds nothing in matthew 20."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "6",
+      "verses": [
+        "7"
+      ],
+      "note": "The one arriving grade-B entry failed because it reproduced the biblical text rather than commenting on it. v7's whole second paragraph paraphrased Haman's speech at length — Keil's own block for v7 is 226 words and is almost entirely the verse quoted — and the third paragraph then inventoried the same articles again, so 'the king' ran 13 times in 430 words and 'of the' eleven. Cutting the paraphrase and bringing in Henry's covering block took it from ttr 0.5448 to 0.6115 with compress rising from 0.4334 to 0.4629. Where a commentator's block is mostly the verse requoted, the entry has to find its substance in the span-covering keys or it will end up paraphrasing scripture to reach the floor."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "esther",
+      "chapter": "6",
+      "note": "Henry's covering block (mhc key 4, 1,016 words) carried the material v7 needed and was unused: Haman 'carving out honour for himself... very liberally' and 'presumptuously, prescribing honours too great to be conferred upon any subject'; the one limit kept, that he must appear 'in all the pomp and grandeur of the king himself, only he must not carry the sceptre, the emblem of power'; the likeness of the proclamation to 'Bow the knee' before Joseph; and the two miscalculations behind the whole request, too good an opinion of his merits and too good an opinion of his interest with the king. Same pattern as matthew 20: the chapter's largest commentator keyed to a pericope head and therefore passed over verse by verse."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "esther",
+      "chapter": "6",
+      "verses": [
+        "6"
+      ],
+      "note": "v6 rendered Keil's gloss on b-libbo amar as 'to say within oneself'; Keil writes 'to say in one's heart'. Corrected. Trivial in itself and the fifteenth instance of the same family across this run — a correct paraphrase left inside the quotation marks. It is the single most common fidelity defect I have found, and unlike invented content it is cheap to detect: the content-word test over quoted fragments catches it whenever the substituted word is absent from the chapter's sources."
     }
   ]
 }
