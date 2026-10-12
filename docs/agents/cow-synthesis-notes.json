@@ -98029,6 +98029,57 @@
         "14"
       ],
       "note": "First genuine polish pick in this run, and the two B grades were lint faults rather than fidelity leans, so the fix was local. The existing five pericope entries were already on the current standard and already correct against the catena; only keys 12 and 14 graded B, and the audit shows exactly why. Key 12 (vv.12-13) failed on COMPRESS alone, 0.4166 against the 0.42 floor, with ttr already clear at 0.5846; the compressible stretch was the third paragraph, where Ellicott's four rejected readings of the counsel of peace between them both were each introduced by the same frame, 'That the two are X ... he rejects, since/because', four times over. Key 14 (vv.14-15) failed on TTR alone, 0.5721 against 0.58, with compress clear at 0.4341; the low-variety windows were two repeated frames, 'takes the memorial to be of' used of Ellicott and then of Wesley, and Gill's triple 'afar off from God / from Christ / from the Spirit' carried with his preposition intact. Both were rewritten in place with every position and every reason preserved and nothing added: key 12 now 0.4364 compress and 0.633 ttr, key 14 now 0.4453 and 0.6174, both grade A, and the other three entries were left untouched. Fidelity read-back returns zero signals on all five. The general lesson for polish picks is that a B on compress points at a repeated SENTENCE FRAME and a B on ttr points at a repeated PREPOSITION or noun across a list, and both are fixed by varying the syntax of an enumeration rather than by rewriting the content."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "13",
+      "note": "Another chapter with a templated closing sentence in half its entries: 'So the witnesses...' in eight (vv.6, 8, 10, 16, 18, 20, 21, 22) and 'The witnesses do not divide' in two (vv.5, 19). Unlike matthew 20 the content inside the formula was specific and worth keeping, so the repair was a straight re-voicing rather than a rewrite — say the thing directly instead of reporting that the sources agree on it. All ten fixed, and the chapter went from 13 of 22 entries with sweep findings to nine, the remainder being advisory quote-led openings and the lemma-versus-gloss requote pattern."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "13",
+      "verses": [
+        "12"
+      ],
+      "note": "The single arriving grade-B entry failed because five commentators were all glossing the same clause in the same words: 'God' in various constructions, with trumpets five times, priests four and alarm four in 446 words, and Keil's conclusion standing beside Ellicott's rendering saying nearly the same thing. The fix was to keep each voice's distinctive contribution only — Keil's Numbers 10:9 pledge, Ellicott's Hebrew article and the Midian precedent of Numbers 31:6 — and to add Ellicott's wholly unused note that the Syriac reads the verse as an indictment rather than an appeal ('ye have forsaken him, and gone after dead gods... and also ye shall not prosper in the world') with a lacuna then running on to v.15. That took it from ttr 0.5604 to 0.6227 and compress from 0.4304 to 0.4477. Where several witnesses converge on one clause, the entry's vocabulary is only as wide as what distinguishes them."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "13",
+      "verses": [
+        "3",
+        "6",
+        "8",
+        "9",
+        "15",
+        "16",
+        "20",
+        "22"
+      ],
+      "note": "The requote and quote-led flags in this chapter are judged false positives and left in place, consistently with the same judgement on 2kings 11 and matthew 20. Every REQUOTE 0~1 here is the opening scripture lemma overlapping a short phrase from it that a commentator then glosses — v9's 'a young bullock and seven rams' where Ellicott's whole point is that this phrase is not a full account of the Mosaic requirement, v22's 'his ways and his sayings' where Ellicott is commenting on that phrase's alliteration. A gloss cannot avoid naming what it glosses. Quote-led openings run 5 of 22, 23 percent, under the advisory one-third threshold, and are short lemmas followed immediately by comment, not the john 8 defect. Chapter scripture-quote fraction is 0.075 with no entry above 0.20."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "13",
+      "verses": [
+        "19"
+      ],
+      "note": "v19 quoted the Targum's rendering of Bethel as 'Bethlehem'; Clarke writes 'Beth-lehem.' Hyphenation only, and the sixteenth instance of the same family across this run. Recording it because the cumulative count is now the point: not one of the sixteen invented content, every one was a correct paraphrase or normalisation left inside the quotation marks, and together they are the most common fidelity defect in the corpus by a wide margin."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "13",
+      "note": "Five entries (2, 3, 8, 17, 19) tagged a school with a strong tag in the prose that the tags' schools array omitted, although the voice itself was listed — Gill named as reformed four times with no reformed school entry, Clarke as wesleyan-arminian once. Fixed. This is the mirror of the gap recorded on 2kings 8: the validator's tags-match check is key-level, so neither a voice named in prose but missing from the voices array nor a school tagged in prose but missing from the schools array fails any gate. Both directions want a check, and both are cheap to write."
     }
   ]
 }
