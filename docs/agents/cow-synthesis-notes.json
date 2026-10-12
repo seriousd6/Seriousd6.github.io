@@ -97662,6 +97662,87 @@
       "book": "matthew",
       "chapter": "20",
       "note": "Four entries narrated the thinness of their own sources, which the sweep only caught where the literal word 'brief' appeared: v3 ('with so brief and harmonious a body of comment, the synthesis is necessarily short'), v5 ('only two voices comment, both briefly, and so the synthesis is short'), v27 and v33 ('with so brief a body of comment the synthesis is short'). All four were verses whose real commentary sits under a pericope key, so the thinness being apologised for was an artefact of the catena's keying rather than a fact about the sources. A rule-2 detector would catch more of these by looking for 'the synthesis is short' and 'body of comment' than by looking for adjectives."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "7",
+      "note": "TWELFTH instance of the polish-pick-with-nothing-to-polish pattern, and the third chapter tiled on the corrected sense-unit rule. Three grade-B verses (9, 11, 16), all twenty-two entries legacy-unversioned, so the legacy procedure applied. Henry has heads at keys 1 and 12 only; his two-pericope division would have given about 0.09x and 0.13x. Five sense-unit tiles (1-3, 4-7, 8-11, 12-16, 17-22) give 0.23x, 0.55x, 0.53x, 0.48x and 0.35x, and carry 2,805 words of prose where two tiles would have carried about 1,300. Every seam falls on a seam of Clarke's printed chapter argument, which divides 1, 2-4, 5-6, 7-11, 12-16, 17-18, 19-22. THE PRICE: Henry is declared on the first and fourth entries only, so his comment on the sacrifices, the feast and the dismissal goes unused. The closing entry (17-22) carries only TWO voices, Clarke and Ellicott, because Gill, Wesley, Henry and Delitzsch have no block anywhere in keys 17-22 - the thinnest voice set I have shipped, though Ellicott alone contributes about 630 usable words there and the two divide the work cleanly between text and fulfilment. Worth the owner knowing that the corrected rule can produce a two-voice entry where the source simply thins out towards the end of a chapter; the alternative was folding 17-22 into a thirteen-verse tile with Henry in it, at a quarter of the coverage."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "4",
+        "10",
+        "22"
+      ],
+      "note": "JAMIESON STRIDE, 30th confirmation, AND A SECOND DISTINCT FAILURE MODE AT A SKIPPED LANDING SITE. Three JFB blocks at keys 4, 10 and 22 - offset 4 mod 6, target gaps of 6 then 12, so the lattice dropped the site at key 16, the same dropped-site behaviour recorded at matthew 11, the revelation 8-to-9 seam, 2kings 25 and psalms 21. None is on Chronicles: the donor is 1 KINGS 20-21. k4 (77w) is 1Ki 20:31-34, the captives dragged by ropes round their necks as depicted on the monuments of Egypt and Ahab calling Ben-hadad his brother; k10 (112w) is 1Ki 20:35-36, the prophet supposed to be Micaiah and the neighbour punished for refusing to smite him; k22 (38w) is 1Ki 21:4-5, Ahab's vexation of spirit, closing with the section header 'Jezebel Causes Naboth to Be Stoned'. THE NEW DATUM: across the SKIPPED site the donor kept moving. Source positions are 20:31, 20:35, 21:4 - an advance of about 4 verses over the first target step of 6, and about 12 verse-steps over the second target step of 12 (20:35 to the end of a 43-verse chapter, then into 21:4). So a dropped landing site does NOT freeze the donor pointer; the donor advances as though the site had been used. Contrast 2kings 25, where keys 16 and 22 held BYTE-IDENTICAL blocks and the donor did not move at all while the target advanced its full stride. Two distinct failure modes are therefore on record - a skipped target site with a live donor, and a stalled donor with a live target - and any re-indexing model has to produce both."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "22"
+      ],
+      "note": "TERMINAL ELLICOTT CHROME, sixteenth consecutive chapter, and the second-worst genuine fraction measured. The Ellicott block at 2 Chronicles 7:22 runs 1,018 words of which about 20 are commentary: 'And it shall be answered. - And men shall say. Hath he brought. - Kings, hath Jehovah brought.' Everything after that is the standing template - the navigation strip ('2 Chronicles 2Ch 6 2 Chronicles 2Ch 2 Chronicles 2Ch 8'), the BibleSupport.com copyright statement, the StudyLight.org footer, raw CSS and the site's commentary index. Only psalms 21:13 is worse, at about 25 of 1,017 words. The series of worst cases now reads 2.0 percent here, 2.5 percent at psalms 21:13, 4 percent at job 5:27, 4.4 percent at ezra 3:13, 11 percent at 2kings 25:30 and 20 percent at revelation 18:24, with block length stable near 1,020-1,250 words throughout - exactly what a fixed appended template predicts, and the clean cut is still the copyright statement."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "A SECOND INSTANCE OF THE 200-WORD CAP LANDING BEFORE A REBUTTAL. The K&D window at key 1 reports the critical case against this chapter - that because the fire and glory are absent from 1 Kings 8:54, where a speech of Solomon stands instead, 'modern criticism has rejected this narrative of the Chronicle as a later unhistorical embellishment of the temple dedication' - and the cap falls immediately after, on the single word 'If'. Their answer to the charge is lost. This is the same shape as 1chronicles 15:27, where the cap cut their objection to Bertheau's conjecture mid-clause, and it is the more damaging kind of truncation: a reader of the synthesis learns that Delitzsch reports an attack and cannot learn that he answers it, so the voice can be taken to hold the opposite of what it holds. Two instances in two chapters suggests this is not rare. Recommendation: when the re-fetch list is worked, prioritise windows whose last 20 words contain a concessive or adversative opening ('If', 'But', 'This opinion would be worthy of consideration if'), since those are the cases where the cap inverts the sense rather than merely shortening it."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "1",
+        "2",
+        "3"
+      ],
+      "note": "HOW MANY MANIFESTATIONS, AND OF WHAT? Three readings of the same two verses. Ellicott separates them firmly: the glory filling the house 'is not a mere duplicate' of the earlier chapter, the glory is 'apparently a manifestation quite distinct from the fire', and 'it is quite plain that the writer intends to record two distinct appearances of the Divine glory, one before and one after the Prayer of Consecration, both of which were attended by the same effects upon the ministering priests.' Gill doubles the fire instead of the glory: 'it may be this was a distinct fire from the former, since it seems to have come down upon the house, and so may denote a bright, shining, glorious light.' Wesley has one cloud moving in two stages: 'The cloud first came down upon the house, and then entered into the house, and was seen both within it by the priests, and without it by the people.' Clarke keeps the two signs but orders them across chapters, the cloud having come down before and the fire now consuming the offering, 'showing that both the house and the sacrifices were accepted by the Lord.' No two of the four describe the same sequence of events."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "DID THE CHRONICLER INVENT THE FIRE? The critical question is put and answered inside the catena itself. Keil and Delitzsch state the charge: 'since this narrative is not found in 1 Kings 8:54, and there a speech of Solomon to the whole congregation... is communicated, modern criticism has rejected this narrative of the Chronicle as a later unhistorical embellishment of the temple dedication' - and the 200-word cap cuts their reply. Ellicott answers it directly and at the same verse: 'There is no objective ground for supposing that the chronicler invented the facts here recorded. He must have found them in one of his sources, although we have no means of determining whether or not they were related in the original narrative followed by the author of Kings. It is gratuitous to fancy that the chronicler was more partial to miracle than the older writer... His greater interest in all that concerned the worship of the Temple is enough to account for the present and similar additions.' The two sit at the same key and are, in effect, the two halves of one argument, which is a useful thing for the reader of a catena to be shown; the synthesis presents them that way."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "21"
+      ],
+      "note": "A HIGH HOUSE OR A HEAP OF RUINS. Ellicott reconstructs against the whole English tradition: 'And this house, which is high. - A correction of Kings: and this house shall be high, which appears meaningless in the context. But the Syriac (and Arabic) here and in Kings has, And this house shall be laid waste; and the Targum of Kings combines both readings... It appears, therefore, that the original reading of the Heb. text was, And this house shall become ruinous heaps (iyin, heaps, not elyon, high). The mistake is as old as the LXX.' He also reverses the next clause, which should say that everyone passing by shall be astonished rather than that the house shall be an astonishment, reports the Syriac's gesture of shaking the head and swaying the hand, and judges the hiss that Kings adds to be 'certainly original'. Clarke takes the received reading and reads it as fulfilled: 'the manner in which these disobedient people have been destroyed is truly astonishing: no nation was ever so highly favored, and none ever so severely and signally punished.' So the chapter's last textual crux has a two-voice entry in which one voice emends the verse and the other preaches it, and neither notices the other."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "7",
+      "verses": [
+        "1"
+      ],
+      "note": "THE FIDELITY CHECKER EARNED ITS KEEP HERE, and the three flags it raised fall into two different classes worth separating in the record. It reported ENTITIES: Zion, Aaron, Pilate on the vv.1-3 entry. (1) Zion was a SPELLING divergence - Henry prints 'the sinners in Sion' and I had modernised it to Zion; the claim was faithful and only the orthography differed, which is the same class as Tyropoeon at 2kings 25, the Asherim at 2chronicles 24 and Godward at revelation 5. (2) Aaron and Pilate were MY OWN ADDITIONS. Ellicott cites 'Leviticus 9:22-24' and 'the word used in John 19:13' without naming either man; I had written the consecration of Aaron and the Pavement where Pilate sat, both correct as inferences and both unsourced as names. That is exactly the failure the check exists to catch, and it would have shipped without it. Correcting my earlier recommendation accordingly: I proposed that synthesis-fidelity.py fold the source through the same normalisation as the synthesis before comparing proper nouns, which would still be right for class (1) - but it must not be loosened in any way that would have let Aaron and Pilate through, because adding a plausible name the witness did not write is a real fidelity defect and the commonest one I make."
     }
   ]
 }
