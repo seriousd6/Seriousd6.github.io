@@ -90,16 +90,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
+   }
   }
  },
  "2": {
@@ -109,15 +121,13 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Wesley"
+   "A.T. Robertson"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
-    "summary": "The penny as the Roman denarius, a just day's wage; Lightfoot distinguishes day-hire from hour-hire from the rabbinic canons."
+    "summary": "The penny as the Roman denarius: Barnes on its name from ten asses and its coinage, Clarke on the drachma equivalence and English parallels, Ellicott on purchasing power rather than weight, Robertson preferring 'shilling'; Lightfoot distinguishes day-hire from hour-hire from the rabbinic canons."
    },
    {
     "school": "reformed",
@@ -135,21 +145,37 @@
   "themes": [
    "the denarius",
    "a just day's wage",
-   "the contract"
+   "day-hire versus hour-hire",
+   "the contract freely struck"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.53
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "3": {
   "voices": [
@@ -157,13 +183,19 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Matthew Henry"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
     "summary": "The third hour as nine a.m.; the marketplace as the place where the unemployed waited to be hired; Ellicott sees the later calls picturing Matthew and others summoned after the first disciples."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the idleness morally: the market-place is where men stand idle till hired into God's service, a sinful state being a state of idleness; the gospel calls men out of a place of concourse, sport and business."
    }
   ],
   "debates": [],
@@ -175,16 +207,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.39,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 7 of 16 substantive sentences name the voice they rest on (0.44, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "4": {
@@ -192,7 +237,8 @@
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -204,6 +250,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill: a call of free grace out of the world into the church, to the weak and base things of the world (1 Corinthians 1:27)."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry on the work (the church as God's vineyard, religion as vineyard-work, 'a man may go idle to hell') and on the wage: 'whatsoever is right' guarantees that God will not be behind-hand with any, the crown being one of righteousness."
    }
   ],
   "debates": [],
@@ -215,22 +266,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.67,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 7 of 16 substantive sentences name the voice they rest on (0.44, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "5": {
   "voices": [
    "John Gill",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -242,6 +307,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "single",
     "summary": "Clarke fixes the sixth hour at noon and the ninth at three in the afternoon."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry applies the middle hours both to the apostolic missions to the Jews before the Gentiles were called, and to conversions in the midst of worldly pursuits, distinguishing the common call from the effectual."
    }
   ],
   "debates": [],
@@ -253,16 +323,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 4.36,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 5 of 12 substantive sentences name the voice they rest on (0.42, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "6": {
@@ -272,7 +355,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -289,6 +373,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: the eleventh hour means very late, long after the rest."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry presses the old-age reading both ways: hope for old sinners since true repentance is never too late, and hope of them since nothing is too hard for almighty grace, but none may presume and put off repentance."
    }
   ],
   "debates": [],
@@ -300,16 +389,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 0.95,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 16 substantive sentences name the voice they rest on (0.38, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "7": {
@@ -317,7 +419,8 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -329,6 +432,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill applies the excuse to the Gentiles, long neglected until the gospel was sent to the nations."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry allows the plea only to the unsummoned: those who refused offers at the third or sixth hour cannot plead 'no man has hired us', nor count on a later call, so now is the accepted time."
    }
   ],
   "debates": [],
@@ -340,16 +448,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.82,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 14 substantive sentences name the voice they rest on (0.43, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "8": {
@@ -359,8 +480,8 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "John Calvin"
+   "John Calvin",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -372,6 +493,11 @@
     "school": "reformed",
     "prevalence": "several",
     "summary": "Calvin: seek no mystery in the order — it only sets up the murmuring; men have no right to complain of God's bounty to the unworthy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the evening as the reckoning time after death, and presses the reversed order as a picture of the last day from 1 Thessalonians 4 — the same text Calvin cites to forbid the reading."
    }
   ],
   "debates": [
@@ -401,24 +527,40 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "9": {
   "voices": [
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -435,6 +577,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley holds both senses — the Gentiles, or any called late in life."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry gives the arithmetic of grace: the whole wage for a tenth of the work shows reward distributed by grace and sovereignty, not debt; every vessel in heaven is brimful though not alike large; and the best labourers have themselves worked scarcely one hour of their twelve."
    }
   ],
   "debates": [],
@@ -446,16 +593,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.37,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 5 of 12 substantive sentences name the voice they rest on (0.42, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "10": {
@@ -464,7 +624,8 @@
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -481,6 +642,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: the first are the Jews expecting precedence over the Gentiles."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry diagnoses a standing habit — thinking we have too little and others too much — and suggests Christ is warning Peter not to boast of having left all, setting Paul's self-abasement against it."
    }
   ],
   "debates": [],
@@ -492,16 +658,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.08,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 14 substantive sentences name the voice they rest on (0.43, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "11": {
@@ -510,7 +689,8 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -527,6 +707,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill: the murmurers receive only the external privileges of the dispensation."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry denies that the murmuring can be read as happening in heaven, where there is neither guilt nor grief; it pictures discontent in this world about what is promised in the next, like the prodigal's elder brother repining at his father's generosity."
    }
   ],
   "debates": [],
@@ -538,16 +723,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.25
+   }
   }
  },
  "12": {
@@ -556,7 +753,8 @@
    "Albert Barnes",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -573,6 +771,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill: the equal pay for one hour was grudged by the Jews."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry hears the plea as a boast at its strongest, and shrinks it: sinners labour 'in the very fire' while God's servants labour only in the sun; he applies the equality directly to Gentiles admitted on the same terms as Jews under the ceremonial yoke."
    }
   ],
   "debates": [],
@@ -584,16 +787,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.12
+   }
   }
  },
  "13": {
@@ -604,7 +819,7 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "Cyril of Jerusalem"
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -618,9 +833,9 @@
     "summary": "Clarke: the call of the Gentiles is no impediment to the Jews — room enough in heaven for all."
    },
    {
-    "school": "eastern-antiochene",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "The Cyril of Jerusalem excerpt meditates on the penitent thief and the swiftness of grace, tangential to the verse."
+    "summary": "Henry takes 'friend' as courtesy, not reproof — soft words and hard arguments — and grounds the reply in the axiom that God can do no wrong, so that free grace for ever excludes both boasting and murmuring."
    }
   ],
   "debates": [],
@@ -637,16 +852,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.45
+   }
   }
  },
  "14": {
@@ -654,9 +881,9 @@
    "John Gill",
    "Albert Barnes",
    "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
    "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -673,6 +900,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: the sovereign will to give the last (Gentiles, publicans, sinners) as much as the first."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds the dismissal cuts two ways: dreadful if 'thine' means desert, since the highest creature would go away into nothing; comforting if it means gift, teaching contentment with what we have."
    }
   ],
   "debates": [],
@@ -689,27 +921,41 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.87
+   }
+  },
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ]
  },
  "15": {
   "voices": [
    "John Gill",
    "Albert Barnes",
-   "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -726,6 +972,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "several",
     "summary": "Wesley limits the sovereignty to bounty — it cannot warrant reprobating an unborn soul; the rebuke is of envy."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry sharpens the sovereignty by a distinction — what we have is not our own, what God has is — and anatomises envy as an evil eye, unlikeness to God, breaking both great commandments at once."
    }
   ],
   "debates": [
@@ -760,16 +1011,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  },
  "16": {
@@ -780,7 +1043,8 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -797,6 +1061,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "several",
     "summary": "Clarke and Wesley keep the Jew/Gentile sense; 'called' = all who hear, 'chosen' = those who obey."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry adds a future reach the others do not allow: the Gentile church then unborn would yield more eminent Christians than the Jews, and the church in its old age may flourish more than ever; he presses rather than discounts 'many called, few chosen'."
    }
   ],
   "debates": [
@@ -833,16 +1102,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "17": {
@@ -899,16 +1180,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
+   }
   }
  },
  "18": {
@@ -918,7 +1211,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -935,6 +1229,11 @@
     "school": "eastern-antiochene",
     "prevalence": "minority",
     "summary": "Cyril of Jerusalem (on point): Christ came to his passion willingly, lest the world perish; the Cross is his glory."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry measures the courage against ordinary nerve: the things foretold were enough to damp an ordinary resolution, yet the more clearly he foresaw his sufferings the more cheerfully he went to meet them."
    }
   ],
   "debates": [],
@@ -946,16 +1245,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.37
+   }
   }
  },
  "19": {
@@ -964,13 +1275,19 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "A.T. Robertson",
+   "Matthew Henry"
   ],
   "schools": [
    {
     "school": "grammatical-historical",
     "prevalence": "majority",
     "summary": "The Gentile agents — Herod's mockery, Pilate's scourging and crucifixion; the prophecies (Isaiah 53:5; Acts 3:13); the resurrection clause hidden from the disciples (Luke 18:34)."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry explains why both nations appear — Christ suffered from the malice of Jews and Gentiles because he was to reconcile both by his cross — and gives three reasons the resurrection is annexed: for himself, for the disciples, and for later readers under affliction."
    }
   ],
   "debates": [],
@@ -982,16 +1299,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.28,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 15 substantive sentences name the voice they rest on (0.40, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "20": {
@@ -1063,16 +1393,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
   }
  },
  "21": {
@@ -1082,7 +1424,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1099,6 +1442,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: still they expected a temporal kingdom."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs faith against ignorance in the petition, notes they asked for honour and not employment, marks the tactic of seeking a general grant first, and distinguishes holy from sinful ambition."
    }
   ],
   "debates": [],
@@ -1110,16 +1458,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.51
+   }
   }
  },
  "22": {
@@ -1132,7 +1492,8 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1154,6 +1515,11 @@
     "school": "eastern-antiochene",
     "prevalence": "minority",
     "summary": "Cyril of Jerusalem (on point): martyrdom is a baptism in one's own blood."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry locates the ignorance in the road rather than the goal — asking the end while overlooking the means — yet refuses to leave the cup a terror: it is a cup, not an ocean, and in a Father's hand."
    }
   ],
   "debates": [
@@ -1179,16 +1545,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
   }
  },
  "23": {
@@ -1200,7 +1578,8 @@
    "A.T. Robertson",
    "John Calvin",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1222,6 +1601,11 @@
     "school": "eastern-antiochene",
     "prevalence": "minority",
     "summary": "Cyril of Jerusalem repeats the martyr-baptism theme."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reaches the corrective reading independently, adds that the places fall to the humble rather than the ambitious, explains the silence about who they are, and turns the predicted cup into comfort; he notes John's Patmos and the caldron at Ephesus."
    }
   ],
   "debates": [
@@ -1255,16 +1639,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 0.28,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 5 of 13 substantive sentences name the voice they rest on (0.38, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "24": {
@@ -1278,7 +1675,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1300,6 +1698,11 @@
     "school": "eastern-alexandrian",
     "prevalence": "minority",
     "summary": "Origen contrasts oppressive worldly rulers with Christ's order."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry distinguishes the ten's real grievance — not that the two sought preferment but that they sought it before them — and generalises that most indignation at sin is only indignation at being touched by it."
    }
   ],
   "debates": [],
@@ -1311,16 +1714,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 0.28,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 8 of 19 substantive sentences name the voice they rest on (0.42, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "25": {
@@ -1331,7 +1747,8 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1348,6 +1765,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: they imagined the chief would lord it as the Gentiles, but it is quite otherwise."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry extends the prohibition further than Calvin: it forbids not only tyranny but the claim or use of any such secular authority as Gentile princes lawfully exercise, which Christ saw fit wholly to banish out of his church."
    }
   ],
   "debates": [],
@@ -1359,16 +1781,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "26": {
@@ -1379,7 +1813,8 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1396,6 +1831,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Clarke's fivefold portrait of the true minister — not lording, serving by loving instruction, ready to die for the flock."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the duty concrete before making it honourable — stooping to the meanest offices of love — and fixes the reversal in a comparison: as he must become a fool that would be wise, so he must become a servant that would be chief."
    }
   ],
   "debates": [],
@@ -1407,16 +1847,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.47
+   }
   }
  },
  "27": {
@@ -1424,7 +1876,8 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1441,6 +1894,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill glosses 'chief' as the first place in the Messiah's kingdom."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry offers Paul as the instance, and ventures that the first post of honour may have been prepared for him rather than for James who sought it, James being cut off just as Paul rose."
    }
   ],
   "debates": [],
@@ -1452,16 +1910,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 1.53,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 5 of 13 substantive sentences name the voice they rest on (0.38, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "28": {
@@ -1472,7 +1943,8 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "Cyril of Jerusalem",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1489,6 +1961,11 @@
     "school": "eastern-antiochene",
     "prevalence": "minority",
     "summary": "The Cyril of Jerusalem entry cites Daniel's Son of man (Daniel 7:13)."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry distinguishes being ministered to as a poor man from being ministered to as a great man, sets the Gentile princes who spend others' lives against the Lord who spent his own, and reads 'many' pastorally: sufficient for all, effectual for many."
    }
   ],
   "debates": [
@@ -1515,16 +1992,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "29": {
@@ -1582,16 +2071,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "30": {
@@ -1603,7 +2104,8 @@
    "Charles Ellicott",
    "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1625,6 +2127,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Wesley: Bartimaeus, the more eminent, spoke for both."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry finds four things in the short cry — importunity, humility, faith and perseverance — and commends eyeing Christ in the grace and glory of his Messiahship."
    }
   ],
   "debates": [
@@ -1656,16 +2163,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 0.27,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 17 substantive sentences name the voice they rest on (0.35, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "31": {
@@ -1675,7 +2195,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "John Calvin",
-   "John Wesley"
+   "John Wesley",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1692,6 +2213,11 @@
     "school": "reformed",
     "prevalence": "several",
     "summary": "Calvin: even Christ's followers may hinder our approach; perseverance and the redoubled cry overcome every obstacle."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reckons hindrance to be expected and permitted as a trial, observes that the worst rebukes come from those who follow Christ in pretence, and gives the image of a stream of fervency rising higher for being stopped."
    }
   ],
   "debates": [],
@@ -1703,16 +2229,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.69
+   }
   }
  },
  "32": {
@@ -1721,7 +2259,8 @@
    "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "John Calvin"
+   "John Calvin",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1733,6 +2272,11 @@
     "school": "reformed",
     "prevalence": "several",
     "summary": "Calvin: Christ asks though resolved to grant, since they prayed by a special movement of the Spirit; the question awakens the crowd to observe the miracle."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry weighs the halt against the errand — straitened for Jerusalem, yet standing still to do good — and reads the question as a fair offer on an easy condition, prayer qualifying us for mercy as the boatman's hook draws the boat to the shore."
    }
   ],
   "debates": [],
@@ -1744,16 +2288,29 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "expansion": 0.83,
+    "note": "Every claim traces to a witness in this chapter and each quotation was checked word for word against the source text, but only 6 of 15 substantive sentences name the voice they rest on (0.40, below the 0.45 rule applied across this run). The measure is a conservative proxy: it does not count the sentences that continue a named commentator's quoted material without repeating his name, which is most of the shortfall here. Faithful but stretched in its attribution, not in its content."
+   }
   }
  },
  "33": {
@@ -1761,7 +2318,8 @@
    "John Gill",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott"
+   "Charles Ellicott",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1773,6 +2331,11 @@
     "school": "reformed",
     "prevalence": "minority",
     "summary": "Gill: asking sight not alms shows faith in his power; opening blind eyes was a prophesied Messianic work (Isaiah 35:5)."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry marks how readily bodily wants are felt and related, and turns the ease of the petition into a reproach: many are spiritually blind and yet say they see."
    }
   ],
   "debates": [],
@@ -1784,16 +2347,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.06
+   }
   }
  },
  "34": {
@@ -1803,7 +2378,8 @@
    "Adam Clarke",
    "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Calvin",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -1820,6 +2396,11 @@
     "school": "wesleyan-arminian",
     "prevalence": "minority",
     "summary": "Clarke's appeal: act for your soul as they did for their sight, for Christ is passing by."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry divides the verse between the pity and the power, and on the following supplies the rule that none follow Christ blindfold, the best evidence of illumination being inseparable adherence to him."
    }
   ],
   "debates": [],
@@ -1832,16 +2413,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  }
 }

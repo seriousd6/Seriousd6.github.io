@@ -97570,6 +97570,98 @@
         "29"
       ],
       "note": "The K&D window at key 27 is cut at exactly 200 words IN THE MIDDLE OF AN OBJECTION. Their note on the clothed-versus-dancing crux reports Bertheau's conjecture and then begins to reject it - 'This opinion would be worthy of consideration, if only the other discrepancies between the Chronicle and Samuel were' - and the cap falls there, so the reason they decline the emendation is lost. This is the most consequential truncation I have met: not a lost illustration or a trailing citation, but the load-bearing half of a textual judgement, and a reader of the synthesis can be told that Delitzsch declines the conjecture but not why. Their key-29 window is 96 words and runs out mid-reference as well. Add 1chronicles 15 keys 27 and 29 to the re-fetch list, and note for the owner that a cap which lands inside a concessive clause silently inverts what the voice is taken to hold."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "The whole chapter was written to the 350-word floor: all 34 arriving entries measured 350-378 words, over 57,374 usable source words — about 1,688 per verse. Eighteen were grade B. The mechanism was visible in every entry: a formula paragraph opening 'The shared, dominant note is that...' (the banned carrier, present in 32 of 34) followed by one or two further sentences restating the same point in different words, which is exactly what the compress metric punishes. v2 said the same thing three times over; v3 twice. The repair was therefore a single move repeated 34 times: delete the formula and its restatement, and spend the recovered words on source that had never been used."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "1",
+        "20",
+        "29"
+      ],
+      "note": "The commentary for this chapter is heavily pericope-keyed and the per-verse figures are badly misleading: Matthew Henry has four keys for 34 verses (1, 17, 20, 29) totalling 11,848 words, the Catena-Aurea five keys totalling 9,460, Henry's Matthew Commentary Concise four. The parable's whole exposition sits under key 1 (11,641 words of catena), so vv.2-16 read as 86-350 words each at the verse level while their real commentary is a few keys away. v5 at 86 words would qualify for the thin exemption (THIN_SOURCE_MAX 200) although Henry has pages on the sixth and ninth hours; taking it would have been a licensed falsehood. Same hole as recorded on 2kings 15 and 1chronicles 27, now with a Gospel example."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "Matthew Henry was the great unused resource here: 11,848 words across his four keys, of which the arriving chapter used perhaps a dozen clauses (he appeared in only four entries, twice as a single sentence). Almost all the new material in this repair is his, and it supplies real positions the chapter lacked rather than padding: the two reasons the passion prediction was unfit for the crowd (v17), his reading of 'take that thine is' as dreadful or comforting according to whether 'thine' means desert or gift (v14), his distinction between being ministered to as a poor man and as a great man (v28), his conjecture that the first place was prepared for Paul rather than for James who asked for it (v27), and the observation that the first labourers themselves worked 'scarcely one hour of their twelve' (v9). A chapter can pass every gate while leaving its largest commentator essentially unread."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "2",
+        "8",
+        "14"
+      ],
+      "note": "Three more misfiled Jamieson-Fausset-Brown blobs, now declared in excluded_voices with the exact label 'Jamieson, Fausset and Brown': v2 carries commentary on the popular opinions about Jesus from Matthew 14, v8 on Peter and the keys from Matthew 16, v14 on taking up the cross from Mark 8:34. Together they are 118, 189 and 64 words of residue. That makes seven chapters running with at least one misfiled JFB block (john 21, 2chronicles 2, 1chronicles 27, 2kings 8, and now three in one chapter of matthew); the pattern is systematic enough that a corpus-wide scan would be cheaper than finding them one chapter at a time. Worse, the arriving entries NARRATED all three in the prose ('The Jamieson-Fausset-Brown note attached here in fact belongs to...'), which is a rule-3 breach the automated sweep missed because the wording does not match the noise-phrase patterns."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "13",
+        "15",
+        "18",
+        "22",
+        "23",
+        "28"
+      ],
+      "note": "The catena's Cyril of Jerusalem blocks CANNOT be declared in excluded_voices: the label in the source is 'Cyril of Jerusalem' (and in v13 'Greek. Cyril of Jerusalem'), while synthesis_qa.VOICE_LABELS holds only 'Cyril', and _LABEL_RE requires the label to be followed immediately by a colon. So undeclarable_voices rejects both spellings and the off-topic blocks in v13 and v15 (catechetical passages on the penitent thief) have had to be recorded in tags.outliers instead. This is the same gap as the StudyLight chrome finding: excluded_voices can only reach labels in a hard-coded list of 24, and this corpus's Catena father labels are not among them. Six entries here also narrated the apparatus itself ('The Catena entry under Cyril of Jerusalem is on point here'), which the sweep missed; where the material was genuinely on the verse I have re-voiced it as a direct attribution to Cyril, and where it was not I have dropped it."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "fidelity",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "Fidelity graded 21 A / 13 B-with-note by the rule used on 2kings 15 and 2kings 8 (share of substantive sentences naming the voice they rest on, threshold 0.45). The content-word test over every quoted fragment, checked against the whole-chapter catena, all the commentator corpora for Matthew and the bible texts, flags nothing. The ratio is a conservative proxy on a chapter written this way: these entries give a commentator a paragraph at a time, so several sentences in a row carry his quoted words without repeating his name, and that accounts for most of the shortfall. I kept the same threshold anyway rather than loosen the rule to flatter the run, and said so in each note."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "20",
+      "verses": [
+        "31",
+        "34"
+      ],
+      "note": "Two altered quotations found and corrected. v34 had Robertson saying the touch 'would soothe the eyes as they were healed'; his text reads 'The touch of Christ's hand would sooth the eyes as they were healed' — the entry modernised his spelling inside the quotation marks and dropped the subject. v34 also carried Henry's 'none follow Christ blindfold' as the unattributed phrase 'none follow Christ blindly'. Same family as the seven found in 2kings 8: the writer quoted from memory of the sense rather than from the page. The corrected v34 attributes both to their authors."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "Rule-5 requote check, run with an entity-aware extractor (this chapter writes its quotation marks as &lsquo; and &rsquo;): v23 had the clause 'is not mine to give... for whom it is prepared' quoted three times over — in the opening lemma, in Ellicott's corrected rendering, and again from Wesley — and v6 re-quoted 'why stand ye here idle?' after the lemma had already given it. Both fixed. The remaining flags are commentators glossing a phrase the lemma necessarily contains ('burden and heat of the day', 'to drink of a cup'), which I judge legitimate: the gloss cannot avoid naming what it glosses."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "Levers used, for the record, on a chapter whose eighteen grade-B entries failed mostly on compress rather than ttr (as low as 0.3961 in v19, against the 0.42 A line). Adding genuinely unused source while deleting restatement fixed almost all of them at a stroke — v3 0.3991 to 0.4418, v9 0.4052 to 0.4509, v19 0.3961 to 0.4480, v27 0.3986 to 0.4492, v33 0.4040 to 0.4697. Where ttr then lagged, the fix was always shortening rather than adding: v22 at 500 words read 0.5601 and the same material at 440 read 0.5952; v34 at 430 read 0.5787 and at 400 read 0.5818. MATTR takes a 200-word window, so a long entry gives sustained repetition more windows to show up in — on a semantically narrow verse (blind, eyes, sight, light, darkness) the honest move is to write less, not to thin the vocabulary."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "20",
+      "note": "Four entries narrated the thinness of their own sources, which the sweep only caught where the literal word 'brief' appeared: v3 ('with so brief and harmonious a body of comment, the synthesis is necessarily short'), v5 ('only two voices comment, both briefly, and so the synthesis is short'), v27 and v33 ('with so brief a body of comment the synthesis is short'). All four were verses whose real commentary sits under a pericope key, so the thinness being apologised for was an artefact of the catena's keying rather than a fact about the sources. A rule-2 detector would catch more of these by looking for 'the synthesis is short' and 'body of comment' than by looking for adjectives."
     }
   ]
 }
