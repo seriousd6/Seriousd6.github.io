@@ -1,1157 +1,924 @@
 {
  "1": {
+  "range": "1-2",
+  "pericope_label": "I will praise thee, O Lord, with my whole heart: the vow of praise, and the riddle of the title",
   "voices": [
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Calvin",
    "John Gill",
-   "Keil and Delitzsch",
+   "Matthew Henry",
+   "John Calvin",
+   "Adam Clarke",
    "Charles Ellicott",
-   "Augustine of Hippo",
+   "Keil and Delitzsch",
    "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin canvasses the theories for Muth-labben (an enemy captain, Goliath, a musical instrument) and prefers the opening of a well-known song, reading the whole psalm as a prayer; Gill takes 'with my whole heart' as open confession in the public congregation."
+    "summary": "Gill insists the verb means to confess and declare openly in the congregation, so that this is vocal singing with the heart joining rather than mental singing, and lists what the rejoicing is not in; Calvin takes the whole heart for an upright heart against a double one, turns it into an indictment of men who acknowledge God once and then sing triumphs to their own valour, and argues that the psalm as a whole is a prayer that recalls many past deliverances rather than a thanksgiving for one victory."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Henry finds the title uncertain (Goliath, Nabal, or Absalom) and inclines to a mere tune or instrument, the foes being the Philistines; Spurgeon hears a holy resolve to praise God alone, 'half heart is no heart.'"
+    "summary": "Henry calls the title a very uncertain sound, inclines to read it as a tune, and has the joy pass through whatever occasions it and terminate in God rather than the gift; Spurgeon puts the argument in four words, that half heart is no heart, and holds that gratitude for one mercy refreshes the memory as to thousands of others."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke heaps up the versions - Chaldee 'death of the strong man' (Goliath), Vulgate/LXX 'secrets of the Son,' Houbigant's 'alamoth' (hidden things) - and declines to follow the endless conjectures."
+    "summary": "Clarke gathers the ancient versions on the title, reports Houbigant’s re-division of the Hebrew into a word for hidden things, notes that several of the fathers took the phrase of the incarnation, and thinks it as painful as useless to follow every conjecture through."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Keil and Delitzsch set Ps 9 as the sequel to Ps 8 and dismiss the title-guesses as 'curious conceits' from a false word-division; Ellicott notes the acrostic begins in its completest form, every clause of the first stanza opening with Aleph."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "single",
-    "summary": "Augustine takes 'the hidden things of the Son' of the only-begotten Son of God, since 'the Son' named absolutely gives him to be understood."
+    "summary": "Ellicott notes only that the alphabetic arrangement begins in its completest form, every clause of the first stanza opening with Aleph; Delitzsch rules out both the Greek rendering and Luther’s bolder one on the ground that the preposition occurs once in the text, and traces the Nabal reading revived by Hengstenberg to the same erroneous idea."
    }
   ],
   "debates": [
    {
-    "question": "What does the title 'Muth-labben' signify?",
+    "question": "What does the title of the psalm mean?",
     "sides": [
      {
-      "position": "the death of an enemy - Goliath (Chaldee) or Nabal (a transposition of 'labben')",
+      "position": "a tune or an instrument, the occasion being the nations that opposed David’s settlement on the throne",
       "holders": [
-       "Clarke",
-       "Henry"
+       "Matthew Henry"
       ]
      },
      {
-      "position": "only a musical tune or instrument, or the opening of a known song, to which the psalm was set",
+      "position": "the opening of a well-known song to whose tune the psalm was set",
       "holders": [
-       "Henry",
-       "Calvin"
+       "John Calvin"
       ]
      },
      {
-      "position": "'the hidden things of the Son' - a mystical, Christological title",
+      "position": "the death of the strong man who went out between the camps, that is Goliath",
       "holders": [
-       "Augustine",
-       "Clarke (reporting LXX/Vulgate)"
+       "the Chaldee, reported by Adam Clarke"
+      ]
+     },
+     {
+      "position": "the secrets or the infancy of the Son, read by some of the fathers of the incarnation",
+      "holders": [
+       "the ancient versions and Houbigant, reported by Adam Clarke"
+      ]
+     },
+     {
+      "position": "all such conceits rest on an erroneous idea, the Nabal transposition included",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the psalm a thanksgiving for one victory?",
+    "sides": [
+     {
+      "position": "no: the greater part is praise, but the whole ought to be considered a prayer, in which many deliverances are recalled to open the gate of prayer for the trouble now upon him",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "it is a triumph in the defeat of the nations that opposed his settlement on the throne",
+      "holders": [
+       "Matthew Henry"
       ]
      }
     ]
    }
   ],
   "outliers": [
-   {
-    "voice": "Augustine of Hippo",
-    "note": "Reads the whole title of the only-begotten Son of God, interpreting 'the hidden things of the Son' Christologically where the rest treat it as a historical or musical superscription."
-   }
+   "Calvin alone turns the whole heart into a charge against victorious generals, who had solemn thanksgivings decreed in their names and abused them under a false pretence to get an opportunity for boasting.",
+   "Gill alone notes that the Chaldee makes the object of the rejoicing the Word."
   ],
   "themes": [
-   "the title Muth-labben",
-   "the acrostic begun with Aleph",
-   "praise with the whole heart",
-   "the psalm as prayer, not mere victory-song"
+   "a title nobody can read",
+   "a heart undivided or not a heart at all",
+   "praise that must be told to others",
+   "joy that stops at the giver"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes the joy not on self or second causes (horses, chariots, armies) but on the Lord as covenant God, noting the Chaldee's 'in thy Word' and a joy unspeakable and full of glory."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry makes it a rule that joy must terminate in God only, not the gift but the Giver; holy joy is the life of thankful praise, fitly sung in psalms, giving glory to the Most High."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke keeps it warm and personal: glad that God has heard and shown mercy, rejoicing in having him as a portion dwelling and working in the heart."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch tie the verse to the next by a preposition of both time and reason (recedentibus hostibus meis retro), the song rising out of the enemy's rout."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "glad and rejoice in thee",
-   "joy in the Giver, not the gift",
-   "sing to thy name, O Most High",
-   "the Chaldee's 'thy Word'"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "3": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill widens the turning-back from the fleeing Philistines to the officers who fell backward at Christ, and to sin, Satan, the world, and antichrist retreating before the Lord's people; they perish as wax melts before fire."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott renders 'in the turning of mine enemies back' (when or because), and 'fall' as 'stumble through weakness,' the LXX 'are weak'; vv.2-3 form one sentence."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke turns it inward: it is a sure sign of a nearly won conquest over sin when, by resistance, it begins to lose its power - the time to follow on to know the Lord."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry: the almighty power of God the enemy cannot withstand; their retreat is their ruin, fulfilled when Jesus' 'I am he' made his enemies fall backward."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "enemies turned back",
-   "fall and perish at thy presence",
-   "stumble through weakness (LXX)",
-   "fulfilled in John 18:6"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads a righteous cause pleaded and established, God by the enemy's fall making plain that David's cause was good."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'thou hast made my judgment' (LXX/Vulg) and cites Shakespeare's 'there sits a Judge that no king can corrupt'; Keil and Delitzsch mark the gimel strophe (perhaps carrying daleth and he) and read the act as the sum of many."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry gives the throne full weight - God decides controversies, avenges the injured, judges according to truth; present irregularities strengthen belief in the judgment to come."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "thou hast maintained my right",
-   "God enthroned, judging right",
-   "judgment according to truth",
-   "the gimel strophe of the acrostic"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
+  "range": "3-6",
+  "pericope_label": "Thou hast rebuked the heathen, thou hast destroyed the wicked: cities whose very memory is perished",
   "voices": [
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Keil and Delitzsch"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the heathen for the Philistines or Amalek, but refers the rebuke chiefly to gospel times and the latter-day extirpation of the antichristian powers."
+    "summary": "Gill fills the clauses with instances, from the Philistines turning back at their champion’s death to the retreat of sin and Satan and antichrist, reports the Targum and Kimchi and Jarchi on who is meant by the heathen and the enemy, and settles on antichrist rather than Satan for the one addressed."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke reads the destroyed Canaanite nations and presses 'for ever and ever' (leolam vaed) as proof that olam bears its endless sense - where are the Hivites and Jebusites now?"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sharpens 'put out' to 'blotted out,' the name erased from the civil register (Ps. 69:28; 109:13), and notes the missing Daleth stanza in the acrostic."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads three ordered strokes - checked (a warning to prevent destruction), cut off, then buried in oblivion and perpetual infamy, the name blotted out."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "rebuked the heathen",
-   "destroyed the wicked",
-   "name blotted out for ever",
-   "the missing Daleth stanza",
-   "olam as endless"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill keeps the vocative address but, passing over Goliath and the Jewish glosses on Esau and Amalek, fixes it on antichrist, the great enemy of Christ and his church."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry allows both 'Thou, O enemy, hast destroyed our cities' and 'Thou, O God, hast destroyed their cities,' pressing that the ruin is just, total, and final, the saints looking for a city with stronger foundations."
+    "summary": "Clarke turns the turning back inward, as the sign of a nearly approaching conquest over sin, guesses the Canaanitish nations for the blotted-out heathen, and argues from the extinct Hivites and Perizzites that for ever and ever here has its proper sense of endless."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott refuses the vocative as unintelligible and renders 'As for the enemy, they are made an utter wreck,' with LXX/Vulg 'with a sound' for the memorial (Sodom, Nineveh, Babylon); Keil and Delitzsch read the strophe as the contrast on which the next verse turns."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke agrees with the correction - 'the enemy is desolated for ever... their memory is perished' - recalling Canaanite cities of which neither name nor vestige remains."
+    "summary": "Ellicott works the stanza as grammar and text, allowing the opening clause to be temporal or causal or both, preferring stumble through weakness to fall, reading blotted out as a name erased from the civil roll, refusing the vocative in the last verse as unintelligible, and noting that the Daleth stanza is missing; Delitzsch reads the strophe letters structurally, takes the thanksgiving as the sum of many judgments rather than one, follows Hengstenberg in seeing the Amalekites beside the Ammonites, and makes the contrast with the abiding throne the strophe’s point."
    }
   ],
   "debates": [
    {
-    "question": "How should 'O thou enemy' be read?",
+    "question": "Who are the heathen whose cities are blotted out?",
     "sides": [
      {
-      "position": "a vocative directly addressing the enemy - 'O thou enemy, destructions are come to a perpetual end'",
+      "position": "the Canaanitish nations, whose extinction proves the phrase for ever and ever means endless",
       "holders": [
-       "Gill",
-       "Henry"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "the vocative is unintelligible; render 'As for the enemy, they are made an utter wreck and perpetual ruin'",
+      "position": "not the Philistines of the Targum and Kimchi, nor Jarchi’s Esau, nor Amalek, but antichrist and the antichristian states",
       "holders": [
-       "Ellicott",
-       "Clarke"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the Ammonites, and at the same time the Amalekites, threatened since the time of Moses with a blotting out of their remembrance",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "no particular nation: the point is the evanishment of great cities from history, as with Sodom and Gomorrha",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Is the last verse of the stanza addressed to the enemy?",
+    "sides": [
+     {
+      "position": "no, the vocative gives no intelligible meaning; render it as a statement, the enemy is made an utter wreck and perpetual ruin",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the verse is better re-rendered to the same effect, the enemy desolated for ever and his cities destroyed",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the address stands, and the question is only who is addressed",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone reaches outside the commentators for illustration, citing Shakespeare on the Judge whom no king can corrupt and Browning on a city turned overnight to ashes.",
+   "Ellicott alone records that the Greek and the Latin read with a sound in the last verse, which he takes for the crash of falling cities."
+  ],
   "themes": [
-   "O thou enemy",
-   "destroyed cities",
-   "their memorial perished",
-   "Sodom, Nineveh, Babylon"
+   "enemies who stumble as they retreat",
+   "a throne occupied while cities fall",
+   "a name struck off a register",
+   "a missing letter in the acrostic"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.43
+   }
   }
  },
  "7": {
-  "voices": [
-   "John Gill",
-   "John Wesley",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "C.H. Spurgeon"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill renders 'the Lord shall sit for ever' in rest and quiet, of God's unchangeableness and power, and applies the Chaldee's 'Word of the Lord' to Christ at God's right hand."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: though cities and people perish, the Lord abides for ever - sufficient for the terror of his enemies and the comfort of his church."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott reads 'Jehovah sits enthroned for ever,' parallel to 'for judgment has erected his throne.'"
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry comforts himself with God's eternity, sovereignty, and righteousness, sitting unshaken upon the floods (Ps. 29:10); Spurgeon hears the swiftness of divine justice - 'term-time lasts all the year round in the court of King's Bench above.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the Lord shall endure for ever",
-   "enthroned for judgment",
-   "the swiftness of divine justice",
-   "the Word of the Lord (Chaldee)"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry",
-   "C.H. Spurgeon"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes 'world' is a general name for all the habitable earth, so a universal judgment is meant, finished with the utmost righteousness - the righteous judgment of God."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott stresses the emphatic pronoun 'he it is who shall minister judgment'; Keil and Delitzsch widen the recent act into a final, comprehensive, impartial judgment of the nations."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: all the dispensations of God's providence are founded in righteousness and truth."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God judges by unalterable rules of equity, no colour of exception against his sentence; Spurgeon turns the impartial tribunal into a check against sin and a comfort under slander - no respect of persons with the Holy One of Israel."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "judge the world in righteousness",
-   "minister judgment in uprightness",
-   "the impartial tribunal",
-   "no respect of persons"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "C.H. Spurgeon"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads the oppressed as God's weak and trampled people, and (via the Chaldee's 'Word') makes Christ the refuge typified by the cities of refuge - a strong tower when all else fails."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'refuge' as 'a stronghold,' 'oppressed' as 'crushed,' and 'trouble' as being cut off from provisions or water (cf. Jer. 14:1 'drought'); Keil and Delitzsch: a high steep place familiar to David, the crushed one wholly broken in pieces."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God's people are oppressed and have troublous times appointed, yet may flee to him by faith so no real hurt is done; Spurgeon sets the two halves side by side - the Judge of the wicked is the refuge-city of his saints."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "refuge for the oppressed",
-   "a stronghold (misgab)",
-   "the crushed one",
-   "cities of refuge",
-   "times of trouble"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
+  "range": "7-10",
+  "pericope_label": "But the Lord shall endure for ever: a throne prepared for judgment and a refuge for the oppressed",
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley",
    "Charles Ellicott",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Matthew Henry"
+   "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill takes the name known as God gracious in the gospel and Christ the all-sufficient Saviour, known affectionately, spiritually, and experimentally, not merely notionally."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: those with an experimental acquaintance of God's mercy trust him, sure he never forsakes; Wesley glosses the name as God's power, wisdom, faithfulness, and goodness, grounded on the experience of all ages."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott reads the name as a watchword of strength and 'seek' as to frequent a place (the temple courts); Keil and Delitzsch hear a missionary idea - salvation proclaimed from Zion to all the world."
+    "summary": "Gill reads the enthronement as the unchangeableness and power of God and applies it to Christ, who sits King until his enemies are made his footstool, fixes the scope of the judgment from Ben Melech’s note that the word means the whole habitable earth, catalogues the oppressions the crushed must carry, and requires a knowledge of the name that is affectionate and experimental rather than notional."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry's graded certainty: the better God is known the more he is trusted (Job 35:14; 2 Chron. 20:12), the more trusted the more sought, and he never disowns those who seek him."
+    "summary": "Spurgeon argues from the past to the future, since the same Almighty fills the throne, takes the throne prepared for judgment as a promise about the swiftness of divine justice in a court where no suitor is worn out by waiting, and compresses the refuge into a line, that there were cities of refuge under the law and God is our refuge-city under the gospel."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes providence as a whole founded in righteousness and truth, and wants the knowledge of God experimental rather than reported; Wesley sets the abiding Lord against perishing cities and peoples, and takes the name for infinite power and wisdom and faithfulness and goodness, with the experience of past faithfulness as the ground of confidence."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott renders the line as enthronement rather than endurance, marks the emphatic pronoun, calls the refuge a citadel into which the persecuted retreat, and derives the verb for seeking from a root meaning to frequent a place, possibly the Temple courts; Delitzsch glosses the refuge as a high steep place out of reach of danger, a figure David knew from his time of persecution, and the oppressed as those broken in pieces and completely crushed."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does the line say that the Lord endures or that he sits enthroned?",
+    "sides": [
+     {
+      "position": "enthroned: the clause is in close parallelism with the next, that judgment has erected his throne",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "he shall sit for ever, which a Jewish writer paraphrases as sitting in rest and quiet, and which the Chaldee refers to the Word of the Lord",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the point is simply that cities and people may perish while the Lord abides",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does a throne prepared for judgment imply?",
+    "sides": [
+     {
+      "position": "the swiftness and impartiality of divine justice, a court with no delays and no respect of persons",
+      "holders": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "position": "the universality of the judgment, since the word for world covers every country of the habitable earth",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "that all the dispensations of providence are founded in righteousness and truth",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Gill alone presses the distinction between knowing God notionally or professionally and knowing him affectionately, spiritually and experimentally.",
+   "Delitzsch alone derives the word for the oppressed from a root meaning to pulverise, so that the sufferer is overwhelmed to the point of being completely crushed."
+  ],
   "themes": [
-   "they that know thy name will trust",
-   "thou hast not forsaken them that seek thee",
-   "knowledge breeds trust",
-   "salvation from Zion to the world"
+   "a throne that outlasts cities",
+   "a court without delays",
+   "a citadel for the crushed",
+   "a name that works as a watchword"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.42
+   }
   }
  },
  "11": {
+  "range": "11-12",
+  "pericope_label": "Sing praises to the Lord, which dwelleth in Zion: he maketh inquisition for blood and forgetteth not the cry",
   "voices": [
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
+   "Charles Ellicott",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'sing praises' means a modulation of the voice in musical notes (the word used of birds' singing), a work for the saints jointly, as Paul and Silas in prison."
-   },
-   {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: as heaven is the residence of God's glory, Zion (the church) is the residence of his grace; David commands his subjects and courts his neighbours to sing to the God of Israel, not their false gods."
+    "summary": "Henry reads the turn to others as characteristic of praise itself, makes the dwelling in Zion the hinge since the special residence of grace is the church of which Zion was a type, hears the summons running both to David’s subjects and to his neighbours, and expounds the inquisition as a remembering of every drop of innocent blood, with the cry of the humble sealed up among God’s treasures."
+   },
+   {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill allows praise by celebrating God’s perfections and by living to his glory but insists the word here means praise sung in musical notes and sung by the saints in concert, and prefers to read God as searching out the privily shed blood of his saints rather than, with the Arabic, remembering the man who sheds it."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke makes 'declare his doings' the duty of all the saved, lamenting that Christians so seldom speak of God - because they have nothing to say; Wesley reads 'the people' as the heathen nations and Zion as God's gracious presence."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sing praises to the Lord in Zion",
-   "declare his doings among the people",
-   "zamar as musical singing",
-   "Zion the residence of grace"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the searching as God's own - he knows where the blood of his saints lies, as Abel's, and requires it at the hand of him who shed it, especially the martyrs' blood."
+    "summary": "Clarke turns the summons into a rebuke of professing Christians who seldom speak about God because they have nothing to say, and widens the inquisition from the neighbours of Israel to every nation that has made destructive wars for territory or commerce; Wesley identifies Zion as the place of the gracious presence and the people as the heathen nations, and grants the delay while denying the forgetfulness."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'the seeker of bloods,' the goel or avenger of blood, and puts the verbs in the past; Keil and Delitzsch read the strophe as the recollection of the humble crying to God before the deliverance."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke widens the inquisition to all nations who wage destructive wars for wealth or empire; Wesley: the blood of God's holy ones, unregarded for a season, will be severely accounted for."
-   },
-   {
-    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry sets the day of inquisition against the great judgment - God remembers every drop and returns it sevenfold (Deut. 32:43), the cry of the humble sealed among his treasures."
+    "summary": "Ellicott reads the clause as a reason rather than a condition, identifies the figure as the goel bound by custom to avenge a murdered kinsman, puts the verbs in the past, and prefers the afflicted to the humble while denying that the two forms of the root carry the ethical and physical distinction usually alleged."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Whose blood is sought, and by whom?",
+    "sides": [
+     {
+      "position": "God seeks the blood of his saints, searching out what was privily shed as he searched out Abel’s",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "God remembers the man who seeks their blood",
+      "holders": [
+       "the Arabic version, reported by John Gill"
+      ]
+     },
+     {
+      "position": "God acts as the goel, the nearest relative bound by custom to avenge the murdered",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who is called to account for shed blood?",
+    "sides": [
+     {
+      "position": "the wicked neighbours of Israel, who used them barbarously and gave no quarter",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "every nation that has made destructive wars to enlarge its territory or extend its commerce",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Clarke alone turns the verse on his own readers, observing that Christians so called seldom speak about God when they meet, because they have nothing to say.",
+   "Gill alone argues from the word itself that the praise meant is sung, the same term being used of the singing of birds."
+  ],
   "themes": [
-   "inquisition for blood",
-   "the avenger of blood (goel)",
-   "remembering the humble",
-   "blood sealed among his treasures"
+   "praise recruited rather than performed alone",
+   "a God who inhabits a hill",
+   "blood searched for rather than reported",
+   "a cry kept among treasures"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
  "13": {
+  "range": "13-14",
+  "pericope_label": "Have mercy upon me, O Lord: lifted from the gates of death to praise in the gates of the daughter of Zion",
   "voices": [
    "John Gill",
-   "Matthew Henry",
-   "C.H. Spurgeon",
    "Adam Clarke",
-   "Keil and Delitzsch"
+   "John Wesley",
+   "Keil and Delitzsch",
+   "C.H. Spurgeon"
   ],
   "schools": [
    {
-    "school": "reformed",
+    "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Gill: even a man already shown mercy needs fresh discoveries of it, and flees not to the creature but to God, pleading not merit but mercy."
+    "summary": "Spurgeon traces the turn to petition through memory and confidence, admires the prayer as a model that breathes humility and appeals to the right attributes, calls the sentence a little prayer-book holding the soul and marrow of prayer, borrows Trapp on God reserving his hand for a dead lift, and insists the stated object is God’s glory and not relief."
    },
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry hears David plead mercy 'having misery only, and no merit,' and 'thou that liftest me up from the gates of death'; Spurgeon calls the petition 'a little prayer-book,' the soul and marrow of prayer, and quotes Trapp on God's 'dead lift.'"
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill draws the doctrine that a man already called by grace still needs fresh discoveries of pardoning mercy and flees to God rather than the creature, pleading neither dignity nor righteousness nor merit, and measures the promise honestly, since all thy praise can only mean as much of God’s goodness as one man had experience of and could observe."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke reads the gates of death as an open grave leading to hell, and the gates of the daughter of Zion as the ordinances that help the soul toward heaven."
+    "prevalence": "several",
+    "summary": "Clarke sets the verse in the psalm’s argument, where David claims his own part in the maxims he has laid down, and keeps the two sets of gates in one sentence, the open grave against the ordinances by which a soul is helped forward; Wesley reads the second gates as the great assemblies and explains the daughter as the people who meet in the city, cities being as it were mothers to their people."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Keil and Delitzsch note the resolved, tremulous form of 'have mercy' and the vocative 'thou that liftest me up,' taking the gates of death for the gates of the realm of the dead."
+    "summary": "Delitzsch states the reversal that makes praise possible, that the church has been rescued from death while those who wanted death to overtake it have fallen a prey to death themselves."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What are the gates of the daughter of Zion?",
+    "sides": [
+     {
+      "position": "all the ordinances of God by which the soul is helped forward to heaven, set against the open grave",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the great assemblies, the daughter being the people who live and meet together in the city",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is the mercy asked for?",
+    "sides": [
+     {
+      "position": "for God’s glory, not for relief: the saints want mercy’s diamond so that others may see it flash and admire the giver",
+      "holders": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "position": "because a man called by grace still needs fresh pardon, supply, support and deliverance from enemies inward and outward",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Spurgeon alone divides the psalmist’s whole time between praising and praying, and asks how it could have been spent more profitably.",
+   "Gill alone qualifies the vow, since the instances of divine grace are too many to be reckoned up in order in the present state of things."
+  ],
   "themes": [
-   "have mercy upon me",
-   "consider my trouble",
-   "the gates of death",
-   "thou that liftest me up",
-   "a little prayer-book"
+   "a prayer short enough to be a book",
+   "a dead lift out of a gateway",
+   "two sets of gates compared",
+   "mercy wanted for someone else to see"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "John Wesley",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: 'all thy praise' is all the acts of divine goodness he had known, too many to reckon up in the present state, yet to be published as far as experience reached."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry draws the motive - saved not for his own credit but that God may have the glory - and reads the salvation as typical of the great salvation by the Son of David."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley: the gates are the great assemblies, opposed to the gates of death; 'daughter of Zion' names the people, cities being mothers and their peoples daughters (Egypt, Edom)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil and Delitzsch read the church's confidence that it will yet praise God in Zion's gates, rescued from the death its enemies wished, rejoicing in his salvation."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.7
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "show forth all thy praise",
-   "the gates of the daughter of Zion",
-   "rejoice in thy salvation",
-   "salvation typical of the Son of David"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
+  "range": "15-16",
+  "pericope_label": "The heathen are sunk down in the pit that they made: the Lord is known by the judgment which he executeth",
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "Adam Clarke",
-   "Matthew Henry",
+   "Charles Ellicott",
+   "John Wesley",
    "C.H. Spurgeon"
   ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes this scene for 'the praise' he vowed - the hunter's pit turned on its digger - reading it prophetically of the nations that join antichrist and are ruined by their own design against Christ's kingdom."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott refers the figure to Ps. 7:16; Keil and Delitzsch fix the Hebrew verb 'to sink in,' the wicked pressed into the net they hid, their own foot caught."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke points back to his note on Ps. 7:15 - the covered pit disguised with reeds, the plotter undone by his own scheme."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God shames the wicked with an inglorious fall (Ps. 7:15), providence ordering that persecutors are ruined by their own projects (drunkards kill themselves, the contentious bring mischief on themselves); Spurgeon bids the reader pause and meditate, the snare snaring its own maker."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "sunk in the pit they made",
-   "the hunter's snare",
-   "the foot taken in the net",
-   "Higgaion and the call to pause",
-   "self-wrought retribution"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Matthew Henry",
-   "Adam Clarke",
-   "John Wesley"
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the judgment on antichrist as the means of making God's name and perfections known in all the earth, a just retaliation repaying the persecutor in his own coin."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'Jehovah hath made himself known... snaring the wicked in the work of his own hands,' and holds Higgaion's sense open (meditation, Ps. 19:14; solemn sound, Ps. 92:3); Keil and Delitzsch hear the retrospect pass into a guaranteed future."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads 'Higgaion, Selah' as 'Meditate on this; mark it well,' allowing also a musical direction like Presto or Largo; Wesley calls it a musical term or a note of attention for deep meditation."
+    "summary": "Gill marks this as the praise he had promised, occasioned by the destruction of God’s enemies, refuses Kimchi’s Philistines in favour of the antichristian states to be destroyed at Armageddon, traces the metaphor to hunters digging pits for wild beasts, and reads the coming judgment as a retaliation measured out in kind."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry takes Higgaion as a note extraordinary commanding special regard, both present judgments and the judgment to come to be meditated upon."
+    "summary": "Spurgeon finds the justice of the judgment in its economy, since God makes the wicked their own executioners and a snare laboriously made catches its own maker, argues that the punishment of sin is required by what God is and that a ruler who winked at evil would be known to be evil himself, and treats the two untranslated words as a summons to the reader to pause and adjust his heart."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke cautions that not every casualty can properly be called a judgment, since judgment is God’s strange work and leaves no natural causes to which the calamity could legally be attributed, adds that nothing a wicked man does is not against his own interest, and reports the view that the closing words direct the players; Wesley leaves the first of them open between a musical term and a note of attention."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "single",
+    "summary": "Ellicott recasts the line as two finished clauses, Jehovah hath made himself known, he hath executed judgment, and counts the occurrences of the first untranslated word, which is rendered elsewhere as meditation and as solemn sound, concluding that it probably marks a change in the music or a direction to one part of the orchestra."
    }
   ],
   "debates": [
    {
-    "question": "Is 'Higgaion' a call to meditate or a musical direction?",
+    "question": "Are the two untranslated words a musical direction or a call to meditate?",
     "sides": [
      {
-      "position": "a note of meditation or attention - 'mark it well'",
+      "position": "probably a change in the music, or with the second word a direction to one part of the orchestra, though both senses are etymologically possible",
       "holders": [
-       "Henry",
-       "Wesley",
-       "Clarke"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "a direction to the musicians - a change in the music or 'solemn sound'",
+      "position": "either a musical term or a note of attention, the matter deserving consideration",
       "holders": [
-       "Ellicott"
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "both: meditate on this and mark it well, though some take the words for a direction to the players",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "a summons to the reader to pause, consider and tune his instrument",
+      "holders": [
+       "C.H. Spurgeon"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why is God known by the judgment he executes?",
+    "sides": [
+     {
+      "position": "because his holiness and abhorrence of sin are displayed in judging, as a ruler reveals his nature by what he punishes",
+      "holders": [
+       "C.H. Spurgeon"
+      ]
+     },
+     {
+      "position": "because the judgment on antichrist will make his name and perfections known in all the earth",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "because when judgment is executed there are no natural causes to which such calamities can be attributed, so his mind is plainly seen",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Spurgeon alone lists the self-destructions that parallel the pit, with drunkards killing themselves, prodigals beggaring themselves and the envious eating their own hearts.",
+   "Clarke alone notes that the wicked man takes more pains to destroy his soul than the righteous man takes to have his saved."
+  ],
   "themes": [
-   "the Lord is known by his judgments",
-   "the wicked snared in his own work",
-   "Higgaion. Selah",
-   "God makes himself known"
+   "a hunter in his own pitfall",
+   "judgment as self-disclosure",
+   "two words left untranslated",
+   "a retaliation measured in kind"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  },
  "17": {
+  "range": "17-18",
+  "pericope_label": "The wicked shall be turned into hell: yet the needy shall not alway be forgotten",
   "voices": [
    "John Gill",
    "Adam Clarke",
-   "John Wesley",
    "Charles Ellicott",
+   "John Wesley",
    "Keil and Delitzsch",
-   "Matthew Henry",
    "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill notes the 'return to the grave' rendering but, since that is common to the righteous, takes it of hell, the place of torment, where the beast and false prophet are cast into the lake of fire."
+    "summary": "Gill rejects the rendering return to the dust on the ground that it is common to the righteous as well, takes the place named for the place of torment to which the wicked go at once and are remanded in soul and body after the judgment, and keeps both halves of the promise to the needy, who are never forgotten yet may seem so for a long time."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Spurgeon spells out who is caught by the warning, the moral who are not devout and the honest who are not prayerful among them, holds that forgetfulness looks a small sin yet brings eternal wrath, and answers the fear of the needy by setting divine assurance against Satan’s word that their hope shall perish."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke keeps and heightens 'headlong into hell, down into hell' (lisholah very emphatic); Wesley glosses the forgetting of God as not regarding his precepts or threatenings."
+    "summary": "Clarke keeps the traditional sense of the verb and presses its emphasis, distinguishes forgetting from ignorance and turns the warning on his own reader, and accounts for delayed deliverance by the greater confusion of enemies and the greater manifestation of mercy; Wesley defines forgetting as not regarding God nor his precepts nor his threatenings."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Ellicott calls 'turned into hell' 'a most unfortunate rendering' and argues for 'return to the grave'/dust (Gen. 3:19; Job 30:23), the verbs perhaps imperative; Keil and Delitzsch read the redactio in pulverem, man returning to dust."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry hears the wicked turned into hell as captives to a prison-house, forgetfulness the root of all wickedness; Spurgeon warns that the forgetters of God, not only the profane, share the nethermost hell."
+    "summary": "Ellicott calls the received rendering most unfortunate, since the verb is to return and the destination the grave or the unseen world, ties the verse to the previous one because the wicked bring about their own destruction, and notes that the negative in the next verse stands emphatically at the head and governs both clauses; Delitzsch reads the prayer as growing more confident because an act of judgment has already been witnessed."
    }
   ],
   "debates": [
    {
-    "question": "Does the verse consign the wicked to hell, or return them to the grave and dust?",
+    "question": "Where do the wicked go?",
     "sides": [
      {
-      "position": "to hell, the place of torment - 'headlong into hell'",
+      "position": "they return to the grave, that is to dust or to the unseen world; the received rendering is most unfortunate and the verbs may even be imperative",
       "holders": [
-       "Clarke",
-       "Gill"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "to the grave, the dust, and the world of the dead - 'shall return to the grave'",
+      "position": "to the place of torment where devils and damned spirits are, since returning to dust is common to righteous and wicked alike",
       "holders": [
-       "Ellicott",
-       "Keil and Delitzsch"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "headlong into hell, down into hell, the original being very emphatic",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the forgetters of God?",
+    "sides": [
+     {
+      "position": "nations and individuals who know God and are nevertheless unmindful of him in their designs and works",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "those who do not regard God, nor his precepts, nor his threatenings",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "the moral who are not devout, the honest who are not prayerful, the benevolent who are not believing, the amiable who are not converted — far more numerous than the profligate",
+      "holders": [
+       "C.H. Spurgeon"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone breaks off to address his reader directly, asking whether he is forgetful of his Maker and of him who died for him.",
+   "Gill alone measures the seeming forgetfulness by the periods of the holy city trodden under foot and the witnesses prophesying in sackcloth."
+  ],
   "themes": [
-   "the wicked shall be turned into hell",
-   "return to the grave (Sheol)",
-   "nations that forget God",
-   "forgetfulness the root of wickedness"
+   "a verb that decides a doctrine",
+   "forgetting counted as wickedness",
+   "a negative that governs two clauses",
+   "waiting that is not in vain"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Matthew Henry",
-   "C.H. Spurgeon"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill: God's needy people, strictly never forgotten (engraven on his hands), may yet seem forgotten and lie long under affliction while the holy city is trodden under foot."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott marks the emphatic negative ruling both clauses (Ps. 35:19) and 'the expectation of the poor' as the hope of being righted; Keil and Delitzsch read the confident turn from judgment witnessed to deliverance to come."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke: the needy, whose expectation is from the Lord, are never finally forgotten, though deliverance be delayed for the greater confusion of enemies and manifestation of mercy."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God's people, thinking themselves forgotten, must wait, for the vision is for an appointed time and he cannot forget them though a woman forget her sucking child; Spurgeon answers Satan's lie that their hope shall perish - they wait, but not in vain."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.56
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the needy not alway forgotten",
-   "the expectation of the poor shall not perish",
-   "the emphatic negative",
-   "waiting for a deferred salvation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "19": {
+  "range": "19-20",
+  "pericope_label": "Arise, O Lord; let not man prevail: that the nations may know themselves to be but men",
   "voices": [
    "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch",
    "Adam Clarke",
-   "Matthew Henry",
+   "Charles Ellicott",
    "C.H. Spurgeon"
   ],
   "schools": [
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads 'Arise, O Lord' as a call for God to rise to the destruction of his enemies and the salvation of his people."
+    "summary": "Gill reads the summons as double, to the destruction of the enemies and the salvation of the people, and keeps the received reading of the last petition, praying that fear be injected into a bold and fearless generation who neither fear God nor regard men, as it will be at the destruction of Babylon."
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sharpens 'let not mere man be defiant'; Keil and Delitzsch trace 'Arise, O Lord' to Moses (Num. 10:35) and correct 'let not man become strong' to 'let him not act as though possessed of power.'"
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Spurgeon makes prayer the believer’s weapon of war and God the ally who lies in ambush until faith cries Arise, warns that he who is now all tenderness will show no compassion to those who had no tears of repentance, finds it astonishing that men grow vain enough to deny being men, and closes by recommending the psalm be read again as the triumphal hymn of the Redeemer."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "single",
-    "summary": "Clarke prays that this may be the time God will deliver his poor people under oppression and persecution."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: 'Shall mortal man be too hard for God, too strong for his Maker?' - restrain them and let the heathen be judged in thy sight; Spurgeon calls prayers the believer's weapons, faith giving the signal 'Arise, O Lord.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Arise, O Lord",
-   "let not man prevail",
-   "let mere man not be defiant",
-   "the heathen judged in thy sight",
-   "prayers as weapons"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "C.H. Spurgeon",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reads a bold, fearless generation and prays God to inject fear into them, as at the overthrow of Babylon when her kings and merchants stand afar off for fear of her torment."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: God can make the stoutest tremble and flee when none pursues, to own they are but men - weak, mutable, mortal, accountable; Spurgeon marvels that crowns, learning, and the wealth of Croesus leave their owner but a man."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke parts from the received text: LXX/Vulg/Syriac read 'place a lawgiver or teacher over them' (Coverdale, 'set a Schoolmaster over them'), the reading of all versions but the Chaldee, though some MSS read morre 'fear'; he marks Selah as 'mark well' and records Horsley's threefold division of the psalm."
+    "summary": "Clarke renders the last petition as a prayer for a teacher to be placed among them, citing the versions and two older English renderings against the reading fear, makes the lesson evangelical so that the Gentiles learn by preaching that they need the salvation Christ provided, and closes by quoting Horsley’s three-part division of the psalm."
    },
    {
     "school": "grammatical-historical",
     "prevalence": "single",
-    "summary": "Ellicott confirms the difficulty - the versions 'place a lawgiver or master over them,' Hitzig 'set a guard upon them,' the present reading 'put a terror upon them.'"
+    "summary": "Ellicott sharpens the petition to let not mere man be defiant, states the textual difficulty in the last verse, reports that the Greek and the Latin and the Syriac read place a lawgiver over them and that Hitzig conjectured set a guard upon them, and takes the received text to mean put a terror upon them."
    }
   ],
   "debates": [
    {
-    "question": "Does the verse read 'put them in fear' or 'set a teacher/lawgiver over them'?",
+    "question": "What is asked for in the final petition?",
     "sides": [
      {
-      "position": "'put them in fear' / a terror upon them - the received Hebrew reading",
+      "position": "a teacher or legislator placed among them, which is the reading of every version but one and was caught by two older English renderings",
       "holders": [
-       "Gill",
-       "Henry",
-       "Spurgeon"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "'place a lawgiver or teacher over them' - with the LXX, Vulgate, Syriac, and Coverdale",
+      "position": "a terror put upon them, that is, such a proof of power as to trouble and subdue them, though the Greek, Latin and Syriac read lawgiver and Hitzig conjectured a guard",
       "holders": [
-       "Clarke",
-       "Ellicott"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "fear injected into a fearless generation, as at the destruction of Babylon",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How is the psalm put together?",
+    "sides": [
+     {
+      "position": "in three parts of falling temperature: a prophetic song of victory, then triumph mixed with supplication, then cool assertion and prayer",
+      "holders": [
+       "Horsley, quoted by Adam Clarke"
+      ]
+     },
+     {
+      "position": "as the triumphal hymn of the Redeemer, laying the glory of his victories at his Father’s feet",
+      "holders": [
+       "C.H. Spurgeon"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Spurgeon alone piles up the instances that leave a man only a man, the wealth of Croesus and the wisdom of Solon and the power of Alexander together.",
+   "Clarke alone reports the older English renderings that set a schoolmaster over the nations and a bringer of law above them."
+  ],
   "themes": [
-   "put them in fear",
-   "know themselves to be but men",
-   "set a schoolmaster over them (versions)",
-   "Selah as 'mark well'",
-   "Horsley's threefold structure"
+   "prayer used as a weapon",
+   "a lawgiver or a terror",
+   "crowns that leave their wearers men",
+   "a psalm that cools as it ends"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-12",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.35
+   }
   }
  }
 }

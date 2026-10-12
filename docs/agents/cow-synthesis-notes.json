@@ -97913,6 +97913,111 @@
         "6"
       ],
       "note": "v6 rendered Keil's gloss on b-libbo amar as 'to say within oneself'; Keil writes 'to say in one's heart'. Corrected. Trivial in itself and the fifteenth instance of the same family across this run — a correct paraphrase left inside the quotation marks. It is the single most common fidelity defect I have found, and unlike invented content it is cheap to detect: the content-word test over quoted fragments catches it whenever the substituted word is absent from the chapter's sources."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "7",
+        "13",
+        "15",
+        "17",
+        "19"
+      ],
+      "note": "Spurgeon label alias, with a concrete mis-attribution. This chapter carries six C.H. Spurgeon blocks (keys 1, 7, 13, 15, 17, 19; 297, 294, 285, 292, 260 and 281 words), but the harvester files them under the label 'C.H. Spurgeon:' rather than a full first-and-last name, and at key 1 the block sits INSIDE the John Calvin segment with no separator the usual long-name splitter recognises. A survey keyed on long labels therefore reported Calvin at 1,363 words when his real total is 1,064, silently crediting 297 words of Spurgeon to Calvin -- exactly the failure mode the open alias-and-collision table is meant to prevent. Note also that none of the six blocks exceeds 300 words, which is consistent with the per-source 300-word Spurgeon cap first measured at psalms 21 (two blocks at exactly 300) rather than the 200-word cap that applies to Gill, K&D and Cyril. The declared long name in the shipped corpus is 'C.H. Spurgeon' (462 entries), so the alias table needs that spelling plus the bare 'Spurgeon' short form."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "15"
+      ],
+      "note": "JFB stride bug, 32nd confirmation and the FIRST single-member instance. This chapter has exactly one Jamieson block, at key 15 (129 words), and it is commentary on 2 Chronicles 25:7-8 -- the prophet sent to dissuade Amaziah from hiring Israelite troops, the chronicler's gloss 'with all the children of Ephraim', and the proposed insertion of a negative in the following verse. Nothing of Psalm 9 is in it. Every previous confirmation involved two or more members at a fixed stride (up to five at stride 6 in 1chronicles 21), which made stride the obvious signature. This case shows displacement can present as a lone block with no stride to detect, so a mechanical sweep that looks only for arithmetic progressions of JFB keys will miss single-member chapters. A content-based test -- does the block name books or persons absent from the target chapter -- is the one that catches both. Excluded via excluded_voices on tile 15-16; the chapter ships with no JFB voice."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20"
+      ],
+      "note": "Keil and Delitzsch windows are systematically off by one in this chapter, which bears directly on per-key voice declaration. Every K&D block here prints the KJV of verses n and n+1 and then comments on the strophe that BEGINS at n+1: key 2 prints vv.2-3 and discusses the beth-strophe of v.3 and Hitzig's rendering; key 10 prints vv.10-11 and discusses the zayin-strophe summons of v.11 and the epithet he-who-inhabits-Zion; key 12 prints vv.12-13 and discusses v.13's imperative form and the gates of death; key 14 prints vv.14-15 and the teth-strophe of v.15; key 16 prints vv.16-17 and v.17's verb; key 18 prints vv.18-19 and v.19's leap from yod to qoph; key 20 is 19 words of printed scripture with no exposition at all. Consequence for tiling: a span can contain a K&D-labelled block whose only substance is about a verse in the NEXT span. Here that forced declining K&D on tiles 11-12 and 19-20 and declaring it on 1-2, 3-6, 7-10, 13-14 and 17-18, and it cost the chapter K&D's gloss of 'the gates of death' as the gates of the realm of the dead, which sits under key 12 while the verse it explains sits in tile 13-14. This is the same pattern recorded at 1chronicles 21 keys 17, 21 and 27, now seen across a whole chapter: it is a harvester windowing choice, not an accident, and the deduplicating usable-words counter on the open list should also refuse to credit a window to the key it is filed under when its exposition is about the following verse."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott chrome strip, 18th consecutive chapter, invariant intact. Key 20, Ellicott, 1,054 words of which roughly 63 are genuine -- the note on the textual difficulty in 'put them in fear', ending at 'give such a proof of power as to trouble and subdue them.' Then the psalm nav strip, then the BibleSupport copyright statement, then the StudyLight footer, then raw CSS, then the commentary index. Genuine fraction 6.0 percent, inside the measured range (best 20 percent at revelation 18:24, worst 2.0 percent at 2chronicles 7:22). The copyright statement remains the clean cut."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "11"
+      ],
+      "note": "Two source shapes in this chapter that inflate the usable-source count without adding witness. (1) Henry's blocks at keys 1 and 11 (2,151 and 2,098 words) each end with a few hundred words that restate the same points in condensed form -- his Exposition and his Concise commentary concatenated into one block -- so a word count of the block over-reports distinct content by 15 to 20 percent. (2) Clarke's key-1 block (704 words) opens with the chapter argument, a verse-by-verse outline of the whole psalm, and includes roughly 230 words of a Middle English paraphrase from an old manuscript Psalter, quoted verbatim with its original spelling; it is genuine source matter and quotable, but it is not exposition of verse 1 and it is unusable for any claim about what Clarke holds. Both shapes belong with the K&D window overlap on the open list: whatever usable-words counter is built should discount an intra-block restatement and a block-initial chapter outline the way it discounts a chrome footer."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "4"
+      ],
+      "note": "A naming collision that will recur and is worth a rule. Ellicott illustrates confidence in a supreme arbiter at v.4 by quoting Shakespeare's Henry VIII, and at psalms 21 Clarke quoted a speech attributed to Henry V. Writing either title into the prose plants the token 'Henry' in the text, and on any tile where Matthew Henry is not a declared voice that trips the vcheck rule that every short name in the prose must be declared -- here tile 3-6 carries Gill, Clarke, Ellicott and K&D and no Henry. At psalms 21 I avoided it by writing 'Fifth', which then produced an unsourced-entity flag instead. The safe form is to name the author and not the play, as I did here ('reaches for Shakespeare on the Judge whom no king can corrupt'). Worth adding to the prose rules: regnal names and play titles that collide with a commentator's short name must be paraphrased, never spelled out."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "1",
+        "6",
+        "17",
+        "20"
+      ],
+      "note": "Four live disputes, all tagged as structured debates. (1) The title: Henry reads Muth-labben as a tune or instrument, Calvin as the opening of a known song, the Chaldee and Targum as the death of the strong man who went out between the camps, the Vulgate and Greek and Ethiopic and Houbigant's re-division as the secrets or the infancy of the Son (whence several fathers read it of the incarnation), while Delitzsch rules all of it out, the Nabal transposition revived by Hengstenberg included, as resting on an erroneous idea. (2) Who the blotted-out heathen are: Clarke the Canaanitish nations, Gill antichrist and the antichristian states against Kimchi's Philistines and Jarchi's Esau, Delitzsch the Ammonites and Amalekites on Hengstenberg's suggestion, Ellicott no nation at all but the evanishment of great cities from history. (3) Where the wicked go at v.17: Ellicott calls the received 'shall be turned into hell' most unfortunate and renders 'shall return' to the grave or the unseen world, with the verbs possibly imperative; Gill rejects that because returning to dust is common to the righteous too, and takes the place for the place of torment; Clarke keeps the traditional sense and presses the emphasis, headlong down. (4) The final petition: the versions, Coverdale and the old Psalter read 'place a teacher or lawgiver among them' and Clarke follows them, Hitzig conjectured 'set a guard upon them', Ellicott takes the received text as 'put a terror upon them', and Gill keeps 'put them in fear'."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "9",
+      "note": "Polish pick with nothing to polish, 15th instance (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15, job 5, 2kings 25, psalms 21, 2chronicles 24, 1chronicles 15, 2chronicles 7, 1chronicles 21 and this). The queue offered psalms 9 as a polish on two grade-B verses, keys 11 and 14, while all twenty entries were legacy-unversioned per-verse prose of 406 to 482 words, so the legacy procedure was the correct one and the chapter was retiled from the catena into eight pericope entries. The recommended queue rule is unchanged and now has fifteen supporting instances: before offering a chapter as polish, check whether ANY entry carries a qa stamp; if none does, route it to the legacy queue, since a polish pick on an unversioned file sends the worker to repair prose that is about to be discarded."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "9",
+      "verses": [
+        "1"
+      ],
+      "note": "Tile 1-2 is the widest distillation I have shipped: 5,399 usable source words into 649, an expansion of 0.12x, with seven declared voices (Gill, Henry, Calvin, Clarke, Ellicott, K&D, Spurgeon). Key 1 alone holds 4,952 words because Henry's whole-psalm exposition of vv.1-10 and Calvin's chapter-level preface both sit there, and because Henry has keys only at 1 and 11 no finer tiling can spread them. The entry grades A and carries no fidelity signal, but the honest statement is that it reports the shape of each voice's argument on vv.1-2 and drops most of their detail: Calvin on the generals of antiquity survives only as a clause, his argument that the psalm is a prayer rather than a victory song survives only as a sentence, and Henry's eight numbered observations on the vow are compressed to two. A first draft at 791 words had to be cut eight times to reach the ceiling. For a tile carrying more than five voices the practical rule is to budget roughly 90 words per voice BEFORE drafting; at seven voices the 650-word ceiling is the binding constraint on coverage, not the source."
     }
   ]
 }
