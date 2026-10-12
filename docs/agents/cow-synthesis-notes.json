@@ -98080,6 +98080,73 @@
       "book": "2chronicles",
       "chapter": "13",
       "note": "Five entries (2, 3, 8, 17, 19) tagged a school with a strong tag in the prose that the tags' schools array omitted, although the voice itself was listed — Gill named as reformed four times with no reformed school entry, Clarke as wesleyan-arminian once. Fixed. This is the mirror of the gap recorded on 2kings 8: the validator's tags-match check is key-level, so neither a voice named in prose but missing from the voices array nor a school tagged in prose but missing from the schools array fails any gate. Both directions want a check, and both are cheap to write."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "4",
+        "9",
+        "17",
+        "19"
+      ],
+      "note": "Keil and Delitzsch windows in this chapter are off by so much that FOUR OF FIVE are unusable where they are filed, which is the clearest case yet of the windowing defect recorded at 1chronicles 21 and psalms 9. The chapter has five K&D blocks. Key 2 prints vv.1-2 and expounds them -- usable. Key 4 prints vv.4-12 and its exposition is the famous note on the embryo and the Israelitish Chokma, which is about vv.8-12, three to eight verses past the key it is filed under. Key 9 prints vv.9-13 and then gives K&D's own verse translation of vv.13-17 with no commentary before the 200-word cap falls. Key 17 prints vv.17-18 and expounds v.18. Key 19 is pure printed scripture for vv.19-22 with no exposition at all. Consequence: on a pericope tiling at 1-2, 3-7, 8-13, 14-17, 18-22, K&D is declarable on ONE tile out of five, and the chapter ships without his embryo exposition at all, even though it is the single best piece of commentary in the catena on vv.8-12. No seam can rescue it: a tile containing key 4 must also contain vv.4-7, whose sense is the eyes-of-flesh argument, so declaring him there would put vv.8-12 material in a vv.3-7 entry. This is the strongest argument yet for the owner-level rule I flagged at 1chronicles 21 -- that a voice may be declared on a span its block demonstrably expounds even when the span contains no key of its own -- and it is also a straightforward re-fetch target, since the fix upstream is to file each K&D window under the first verse it actually comments on."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "10",
+      "verses": [
+        "2",
+        "8"
+      ],
+      "note": "JFB stride bug, 33rd confirmation, with a new sub-shape. Two Jamieson blocks, at keys 2 and 8 -- interval exactly 6, offset 2 -- and both are displaced: key 8 is 171 words of commentary on 1 Chronicles 20:1-3, the siege of Rabbah, Joab inviting David to storm the royal city and the reconciliation of the two statements about David tarrying at Jerusalem; key 2 is FIVE WORDS, a bare cross-reference reading only 'See on 2 Samuel 10:15-19'. That is the new datum: a member of the stride can be a cross-reference stub rather than a block of prose, so a sweep that filters JFB blocks by length before testing them will miss half of this chapter's evidence. The donor region is the same in both, the Ammonite war of 2 Samuel 10 and 1 Chronicles 20, so this is a single displacement sampled twice at stride 6 rather than two independent errors. Both excluded via excluded_voices on tiles 1-2 and 8-13; the chapter ships with no JFB voice."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "10",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott chrome strip, 19th consecutive chapter. Key 20, Ellicott, 1,096 words of which about 88 are genuine: the third-person reading of 'let him cease', and the judgement that the reply moves on the very verge of blasphemy and is redeemed only by its pervading reverence and deep undertone of faith, ending at 'one of the many manifestations of God.' Then the book nav strip, the BibleSupport copyright statement, the StudyLight footer and raw CSS. Genuine fraction 8.0 percent, within the measured range. Note that in this chapter the chrome block is NOT on the last key -- it sits at key 20 of 22, with keys 21 and 22 carrying ordinary Gill and Clarke material and no Ellicott at all. Every previous instance has been on the chapter's final key, so the invariant is better stated as 'the last Ellicott block in the chapter' rather than 'the last key'."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "10",
+      "verses": [
+        "10",
+        "16",
+        "17",
+        "21"
+      ],
+      "note": "Four disputes, all tagged. (1) v.10, what 'poured me out as milk' describes: Clarke argues at length, against learned men who confine the image to nutrition, that generation is the true notion, quotes his Latin authorities and leaves them untranslated, and dismisses the chyle reading because that process properly begins only after birth; Ellicott settles it in four words as an allusion to the embryo; Wesley has man congealed by degrees out of a small liquid and as it were milky substance. (2) v.16, who the lion is: Henry has God hunting the man down as a fierce lion runs down its prey, while Clarke turns the figure round so that the FRIENDS are the hunters closing on the king of beasts. (3) v.16 again, the subject of 'for it increaseth': Gill takes it as the affliction lifting itself in waves and reports a reading that makes it a wish for the affliction to reach its height at once and end a lingering life; Ellicott calls the verse very obscure and offers three candidate subjects, including a question whether it is glorious to hunt a man and then hide both person and motive from him. (4) v.17, what the renewed witnesses are: Ellicott rejects the view that they are the sores his friends read as proofs of guilt and takes the figure as forensic, relays of accusers arriving host after host; Clarke agrees the whole speech is forensic; Wesley makes them the judgments themselves, evidence at once of the man's sins and of God's wrath. Also at v.21 Gill goes out of his way to deny that 'I shall not return' denies the resurrection, which he says the speaker understood and asserts elsewhere."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "10",
+      "verses": [
+        "1",
+        "8",
+        "14"
+      ],
+      "note": "Henry's three block-heads in this chapter divide it cleanly, and they confirm the within-block duplication pattern now seen in three books. The key-1 block (1,901 words) expounds vv.1-7 and closes with about 180 words restating its own points in condensed form; the key-8 block (1,083 words) expounds vv.8-13 and ends the same way; the key-14 block (2,259 words) expounds vv.14-22. The restating tail is Henry's Concise commentary concatenated onto his Exposition, the same shape recorded at psalms 9 keys 1 and 11, so the usable-words counter over-reports distinct Henry content by roughly 10 to 20 percent wherever he appears. For tiling: his three heads at 1, 8 and 14 fall on real pericope seams, so tiles 1-2, 8-13 and 14-17 can declare him while 3-7 and 18-22 cannot, even though his key-1 block covers vv.3-7 and his key-14 block covers vv.18-22. The coverage cost here is specific and worth naming: his reading of the eyes-of-flesh argument, and his whole treatment of the land of darkness, fall outside the tiles that could cite him."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "10",
+      "note": "Polish pick with nothing to polish, 16th instance (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15, job 5, 2kings 25, psalms 21, 2chronicles 24, 1chronicles 15, 2chronicles 7, 1chronicles 21, psalms 9 and this). job 10 was offered as a polish on one grade-B verse, key 22, while all twenty-two entries were legacy-unversioned per-verse prose of 409 to 484 words, so the legacy procedure applied and the chapter was retiled from the catena into five pericope entries. Worth noting against the queue rule I have now recommended sixteen times: the genuine polish pick in this same batch, zechariah 6, was immediately distinguishable, because all five of its entries carried a qa stamp under the current standard. The test is therefore cheap and reliable -- if no entry in the chapter carries a qa stamp, the chapter belongs in the legacy queue, not the polish queue."
     }
   ]
 }
