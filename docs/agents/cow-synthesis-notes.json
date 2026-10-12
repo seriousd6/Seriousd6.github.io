@@ -98018,6 +98018,17 @@
         "1"
       ],
       "note": "Tile 1-2 is the widest distillation I have shipped: 5,399 usable source words into 649, an expansion of 0.12x, with seven declared voices (Gill, Henry, Calvin, Clarke, Ellicott, K&D, Spurgeon). Key 1 alone holds 4,952 words because Henry's whole-psalm exposition of vv.1-10 and Calvin's chapter-level preface both sit there, and because Henry has keys only at 1 and 11 no finer tiling can spread them. The entry grades A and carries no fidelity signal, but the honest statement is that it reports the shape of each voice's argument on vv.1-2 and drops most of their detail: Calvin on the generals of antiquity survives only as a clause, his argument that the psalm is a prayer rather than a victory song survives only as a sentence, and Henry's eight numbered observations on the vow are compressed to two. A first draft at 791 words had to be cut eight times to reach the ceiling. For a tile carrying more than five voices the practical rule is to budget roughly 90 words per voice BEFORE drafting; at seven voices the 650-word ceiling is the binding constraint on coverage, not the source."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "fidelity",
+      "book": "zechariah",
+      "chapter": "6",
+      "verses": [
+        "12",
+        "14"
+      ],
+      "note": "First genuine polish pick in this run, and the two B grades were lint faults rather than fidelity leans, so the fix was local. The existing five pericope entries were already on the current standard and already correct against the catena; only keys 12 and 14 graded B, and the audit shows exactly why. Key 12 (vv.12-13) failed on COMPRESS alone, 0.4166 against the 0.42 floor, with ttr already clear at 0.5846; the compressible stretch was the third paragraph, where Ellicott's four rejected readings of the counsel of peace between them both were each introduced by the same frame, 'That the two are X ... he rejects, since/because', four times over. Key 14 (vv.14-15) failed on TTR alone, 0.5721 against 0.58, with compress clear at 0.4341; the low-variety windows were two repeated frames, 'takes the memorial to be of' used of Ellicott and then of Wesley, and Gill's triple 'afar off from God / from Christ / from the Spirit' carried with his preposition intact. Both were rewritten in place with every position and every reason preserved and nothing added: key 12 now 0.4364 compress and 0.633 ttr, key 14 now 0.4453 and 0.6174, both grade A, and the other three entries were left untouched. Fidelity read-back returns zero signals on all five. The general lesson for polish picks is that a B on compress points at a repeated SENTENCE FRAME and a B on ttr points at a repeated PREPOSITION or noun across a list, and both are fixed by varying the syntax of an enumeration rather than by rewriting the content."
     }
   ]
 }
