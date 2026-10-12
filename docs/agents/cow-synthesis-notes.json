@@ -97841,6 +97841,51 @@
       "book": "1chronicles",
       "chapter": "21",
       "note": "Polish pick with nothing to polish, 14th instance (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15, job 5, 2kings 25, psalms 21, 2chronicles 24, 1chronicles 15, 2chronicles 7 and this chapter's own first offer). The queue offered 1chronicles 21 as a polish on a handful of grade-B verses while every entry in the file was legacy-unversioned per-verse prose, so the legacy procedure -- regenerate from the catena as pericope tiles -- was the correct one. The recommended queue rule is unchanged and now has fourteen supporting instances: before offering a chapter as polish, check whether ANY entry carries a qa stamp; if none does, route it to the legacy queue instead, since a polish pick on an unversioned file sends the worker to rewrite prose that is about to be discarded."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "19"
+      ],
+      "note": "The single arriving grade-B entry was article-bound to a degree I have not seen elsewhere: 'the' ran 57 of 390 words, 14.6 percent, with 'of the' eleven times. v19 also quoted the same clause twice over, Keil's 'they brought the king down out of the house of Jehovah' beside Ellicott's 'they brought down the king from the house of the Lord'. De-articling plus dropping the duplicate quotation (Keil's distinctive contribution there is the verb and the halberdiers, not the verse) took it from ttr 0.5610 to 0.6097 at a slightly lower word count, with compress rising too. Keil's unused detail that the body-guard 'had passed over to the new king immediately after the fall of Athaliah' restored the words the cut had cost."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "6"
+      ],
+      "note": "v6 rendered Ellicott's Gesenius citation as 'as Gesenius paraphrased, to drive off the people' with the English inside the quotation marks. Ellicott gives the Latin: 'Gesenius paraphrases, ad depellendum populum (zum Abwehren).' The English is a fair translation, which is what makes this kind of thing easy to write and hard to spot: a correct gloss presented as the quoted words. Corrected to quote the Latin and give the sense unquoted. Note also that the catena blob for v6 truncates Ellicott mid-sentence ('the guards were to keep back any') where the ellicott corpus has the full note including the Gesenius and Thenius citations — so the catena is not always a complete copy of the per-commentator corpus, and checking a quotation against the catena alone can fail to find source that exists."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "verses": [
+        "10",
+        "16"
+      ],
+      "note": "Two rule-5 requotes fixed. v10 quoted Gill's 'without being seen and known' twice in the same entry; the second is now reported speech. v16 quoted 'they laid hands on her' twice, once as Gill's first sense and again as the Greek and Latin reading Ellicott weighs; the second now names the sense rather than re-quoting the words. The remaining requote flags in this chapter are a commentator glossing a phrase the opening lemma necessarily contains, which I judge legitimate."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "11",
+      "note": "Fidelity re-graded only for the six entries I touched (3, 6, 8, 10, 16, 19): one A, five B-with-note by the 0.45 attributed-sentence rule used across this run. The other fifteen keep the A their original writer stamped — fidelity is a claim about having re-read the verse against its source, and I only re-read what I worked on. Worth flagging that the rule gives Bs freely on a chapter of this shape: these entries are short (353-488 words) and each ends with a paragraph of synthesis that does not re-attribute, so a few unnamed sentences move the ratio a long way. The content-word test over every quoted fragment flags nothing beyond the two items recorded separately."
+    },
+    {
+      "at": "2026-10-12",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "11",
+      "note": "Punctuation style, for whoever writes here next: this chapter uses LITERAL em dashes and STRAIGHT single quotes, where 2kings 8 uses the &lsquo; and &rsquo; entities and matthew 20 the same, while 1chronicles 27 and 2chronicles 2 use the &mdash; entity. There is no corpus-wide convention, so the style has to be read from the raw bytes of the chapter before any anchored edit or new sentence is written. It matters for tooling as well as consistency: a quote extractor that looks for entities finds nothing here, and one that looks for straight quotes finds nothing in matthew 20."
     }
   ]
 }
