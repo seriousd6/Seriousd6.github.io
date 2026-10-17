@@ -1,16 +1,13 @@
 {
  "1": {
   "voices": [
-   "Theophylact",
-   "Bede",
-   "Augustine of Hippo",
-   "Pseudo-Jerome",
+   "A.T. Robertson",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
+   "John Wesley",
+   "Bede",
+   "Theophylact",
+   "Pseudo-Jerome"
   ],
   "schools": [
    {
@@ -44,24 +41,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "2": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
+   "John Gill",
    "John Wesley"
   ],
   "schools": [
@@ -86,22 +95,35 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.53
+   }
   }
  },
  "3": {
   "voices": [
-   "John Gill",
    "A.T. Robertson",
+   "John Gill",
+   "Matthew Henry",
    "Bede",
    "Theophylact"
   ],
@@ -132,25 +154,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 2.64
+   }
   }
  },
  "4": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
+   "John Lightfoot",
+   "John Gill",
    "John Wesley"
   ],
   "schools": [
@@ -175,26 +209,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.62
+   }
   }
  },
  "5": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Matthew Henry",
+   "John Wesley",
+   "John Calvin"
   ],
   "schools": [
    {
@@ -243,29 +289,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "6": {
   "voices": [
-   "Bede",
-   "Theophylact",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
+   "Albert Barnes",
+   "Matthew Henry",
    "John Calvin",
-   "John Wesley"
+   "Bede",
+   "Theophylact"
   ],
   "schools": [
    {
@@ -299,24 +354,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.22
+   }
   }
  },
  "7": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson"
+   "John Gill",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -340,24 +408,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
+   }
   }
  },
  "8": {
   "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "Adam Clarke",
    "John Wesley"
   ],
   "schools": [
@@ -382,25 +462,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.93
+   }
   }
  },
  "9": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Charles Ellicott",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
+   "John Gill",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -419,25 +512,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.14
+   }
   }
  },
  "10": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Charles Ellicott",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
+   "John Gill",
+   "Matthew Henry",
    "John Wesley"
   ],
   "schools": [
@@ -462,25 +568,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.39
+   }
   }
  },
  "11": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
+   "Charles Ellicott",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson"
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -499,22 +617,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.76
+   }
   }
  },
  "12": {
   "voices": [
-   "John Gill",
+   "Charles Ellicott",
    "Albert Barnes",
+   "John Gill",
+   "Matthew Henry",
    "John Wesley"
   ],
   "schools": [
@@ -539,32 +671,39 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 4.43
+   }
   }
  },
  "13": {
   "voices": [
-   "Bede",
-   "Theophylact",
-   "Pseudo-Chrysostom",
-   "Pseudo-Jerome",
-   "Augustine of Hippo",
+   "A.T. Robertson",
+   "Charles Ellicott",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
+   "John Wesley",
    "John Calvin",
-   "John Wesley"
+   "Bede"
   ],
   "schools": [
    {
@@ -593,25 +732,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.08
+   }
   }
  },
  "14": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Albert Barnes",
    "Adam Clarke",
-   "A.T. Robertson",
-   "John Wesley"
+   "John Gill",
+   "Matthew Henry"
   ],
   "schools": [
    {
@@ -630,25 +781,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.68
+   }
   }
  },
  "15": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Adam Clarke",
+   "John Gill",
    "Matthew Henry",
-   "Bede",
-   "A.T. Robertson"
+   "Bede"
   ],
   "schools": [
    {
@@ -677,29 +840,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 5.85
+   }
   }
  },
  "16": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
+   "John Gill",
    "John Calvin",
-   "John Wesley",
    "Bede",
-   "Augustine of Hippo",
-   "Theophylact"
+   "Theophylact",
+   "Augustine of Hippo"
   ],
   "schools": [
    {
@@ -747,28 +919,40 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.63
+   }
   }
  },
  "17": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
+   "A.T. Robertson",
+   "Charles Ellicott",
    "Albert Barnes",
    "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "John Lightfoot",
+   "Matthew Henry",
+   "John Wesley",
+   "John Calvin"
   ],
   "schools": [
    {
@@ -797,25 +981,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.4
+   }
   }
  },
  "18": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Charles Ellicott",
    "Bede",
-   "Pseudo-Jerome",
-   "A.T. Robertson"
+   "Pseudo-Jerome"
   ],
   "schools": [
    {
@@ -839,26 +1034,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 12.42
+   }
   }
  },
  "19": {
   "voices": [
    "John Gill",
-   "Bede",
-   "Pseudo-Jerome",
-   "A.T. Robertson",
    "John Calvin",
-   "Theophylact"
+   "Bede",
+   "Theophylact",
+   "Pseudo-Jerome"
   ],
   "schools": [
    {
@@ -887,27 +1093,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.58
+   }
   }
  },
  "20": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Gill",
+   "Matthew Henry",
+   "John Calvin"
   ],
   "schools": [
    {
@@ -931,27 +1148,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.49
+   }
   }
  },
  "21": {
   "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Wesley"
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Lightfoot",
+   "John Calvin"
   ],
   "schools": [
    {
@@ -975,25 +1202,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "22": {
   "voices": [
+   "Albert Barnes",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Wesley"
+   "John Wesley",
+   "Bede"
   ],
   "schools": [
    {
@@ -1022,29 +1261,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.34
+   }
   }
  },
  "23": {
   "voices": [
-   "Pseudo-Chrysostom",
-   "Gloss",
-   "Theophylact",
-   "Bede",
-   "Pseudo-Jerome",
-   "Augustine of Hippo",
-   "John Gill",
+   "A.T. Robertson",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "Matthew Henry",
+   "Pseudo-Chrysostom",
+   "Gloss"
   ],
   "schools": [
    {
@@ -1073,24 +1320,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "24": {
   "voices": [
-   "John Gill",
-   "Pseudo-Chrysostom",
    "A.T. Robertson",
-   "Matthew Henry"
+   "John Gill",
+   "Matthew Henry",
+   "Pseudo-Chrysostom"
   ],
   "schools": [
    {
@@ -1114,23 +1373,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "Gill on the two senses of 'kingdom', Pseudo-Chrysostom on civil war, Robertson on meristhe and Henry on Satan's self-interest are quoted accurately, but the middle paragraph on the self-evidence of the maxim (empires tottering, history furnishing no exception) is my own expository reasoning rather than any witness's claim.",
+    "expansion": 17.14
+   }
   }
  },
  "25": {
   "voices": [
+   "A.T. Robertson",
    "John Gill",
-   "Pseudo-Chrysostom",
-   "A.T. Robertson"
+   "Pseudo-Chrysostom"
   ],
   "schools": [
    {
@@ -1154,24 +1426,37 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "The witnesses on this verse are very short (Gill on 'house' = any family; Pseudo-Chrysostom's house-and-city clause; Robertson on meristhe). The reflection on division as the seed of ruin in every human association is my inference in their direction, not a statement any of them makes in these terms.",
+    "expansion": 24.93
+   }
   }
  },
  "26": {
   "voices": [
+   "A.T. Robertson",
    "John Gill",
-   "Pseudo-Chrysostom",
    "Matthew Henry",
-   "A.T. Robertson"
+   "Pseudo-Chrysostom"
   ],
   "schools": [
    {
@@ -1200,27 +1485,39 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "B",
+    "checked_by": "self",
+    "note": "Gill, Pseudo-Chrysostom, Henry and Robertson are reported accurately, but the paragraph arguing that no third possibility remains, and the closing image of Satan's house plundered from without rather than collapsing within, are drawn forward from v. 27 rather than from this verse's own witnesses.",
+    "expansion": 13.1
+   }
   }
  },
  "27": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
-   "Cyril of Jerusalem",
+   "John Gill",
+   "Matthew Henry",
+   "Bede",
    "Theophylact",
-   "Bede"
+   "Cyril of Jerusalem"
   ],
   "schools": [
    {
@@ -1244,24 +1541,35 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.41
+   }
   }
  },
  "28": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
-   "John Wesley",
-   "Cyril of Jerusalem",
+   "John Gill",
+   "Matthew Henry",
    "Bede"
   ],
   "schools": [
@@ -1286,29 +1594,40 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.57
+   }
   }
  },
  "29": {
   "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "Cyril of Jerusalem",
-   "Pseudo-Chrysostom",
+   "Charles Ellicott",
+   "John Gill",
+   "Matthew Henry",
+   "Bede",
    "Augustine of Hippo",
-   "Pseudo-Jerome",
-   "Bede"
+   "Pseudo-Chrysostom",
+   "Pseudo-Jerome"
   ],
   "schools": [
    {
@@ -1357,22 +1676,34 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.81
+   }
   }
  },
  "30": {
   "voices": [
-   "John Gill",
    "Charles Ellicott",
+   "John Gill",
    "John Wesley"
   ],
   "schools": [
@@ -1397,31 +1728,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 1.69
+   }
   }
  },
  "31": {
   "voices": [
-   "Theophylact",
-   "Chrysostom",
-   "Bede",
-   "Pseudo-Chrysostom",
-   "Pseudo-Jerome",
-   "John Gill",
-   "Matthew Henry",
-   "Albert Barnes",
-   "Adam Clarke",
    "A.T. Robertson",
-   "John Wesley"
+   "Matthew Henry",
+   "John Wesley",
+   "Bede",
+   "Theophylact",
+   "Pseudo-Chrysostom"
   ],
   "schools": [
    {
@@ -1450,23 +1788,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.25
+   }
   }
  },
  "32": {
   "voices": [
-   "John Gill",
+   "A.T. Robertson",
    "Charles Ellicott",
-   "A.T. Robertson"
+   "John Gill",
+   "Theophylact"
   ],
   "schools": [
    {
@@ -1485,24 +1836,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 3.45
+   }
   }
  },
  "33": {
   "voices": [
-   "John Gill",
    "Adam Clarke",
-   "Pseudo-Chrysostom",
-   "Bede"
+   "John Gill",
+   "Bede",
+   "Pseudo-Chrysostom"
   ],
   "schools": [
    {
@@ -1526,26 +1889,38 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 9.45
+   }
   }
  },
  "34": {
   "voices": [
-   "John Gill",
-   "Charles Ellicott",
    "A.T. Robertson",
+   "Charles Ellicott",
+   "John Gill",
+   "Matthew Henry",
    "John Wesley",
-   "Chrysostom",
-   "Matthew Henry"
+   "Chrysostom"
   ],
   "schools": [
    {
@@ -1574,25 +1949,36 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.32
+   }
   }
  },
  "35": {
   "voices": [
-   "John Gill",
    "Albert Barnes",
-   "Pseudo-Jerome",
+   "John Gill",
    "Matthew Henry",
-   "Chrysostom"
+   "Pseudo-Jerome"
   ],
   "schools": [
    {
@@ -1621,16 +2007,28 @@
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 9.0
+   }
   }
  }
 }
