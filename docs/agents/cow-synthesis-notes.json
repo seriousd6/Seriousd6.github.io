@@ -98385,6 +98385,83 @@
       "book": "mark",
       "chapter": "3",
       "note": "Tags/prose voice mismatch in 26 of 35 entries on arrival, in BOTH directions: 19 voices named in the prose but absent from tags.voices (Matthew Henry 14 times, because the prose writes 'Henry's tradition'), and 44 voices listed in tags.voices that contribute nothing visible to the prose (v13 and v23 carried five each, v31 five). Only tags.voices non-emptiness is validated, so both directions pass every gate while the badges misdescribe the entry. Reconciled tags.voices to the voices actually drawn on in the prose."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "11",
+        "17"
+      ],
+      "note": "JFB stride bug, 35th confirmation, and the clearest WALKING donor yet. Blocks at keys 11 (40 words) and 17 (82 words): interval 6, offset 5. Unlike the stalled donors recorded at 1chronicles 21 and 2kings 24, these two are not identical — they are CONTIGUOUS passages of the same displaced commentary on 2 Kings 21-22. Key 11 ends with Amon massacred by his domestics and the people placing his son Josiah on the throne; key 17 opens at '2Ki 22:1, 2. Josiah's Good Reign' and continues through his minority and his provision for repairing the temple. The donor is being read straight through and sliced into the wrong chapter's keys at a fixed stride. This is direct evidence for the mechanical re-indexing proposal: the displaced text is recoverable in order, not just detectable."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "22"
+      ],
+      "note": "Ellicott chrome strip, 22nd consecutive chapter, and the THINNEST genuine fraction measured in the series. Key 22 is 1064 words of which only about 85 are exposition — the note on the week of unleavened bread as the symbol of separation, and on the king of Persia being styled king of Assyria as a remembrancer of their oppressors. Everything after 'Copyright Statement These files are public domain' is site furniture, and this time the tail is raw CSS rather than JavaScript (sub-menu, search-div and selection-div rules). So the chrome tail varies in kind across chapters — JavaScript at 2kings 24, CSS here — which argues that a detector should key on the copyright sentence rather than on any signature of the junk itself."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "Keil and Delitzsch window overlap, a clean two-key specimen. Key 1's 200-word window already contains the whole of key 2's text: both run from 'And there was found at Achmetha' through the note on Achmetha as the Old-Median form of the name, key 2 simply starting further into the same stretch and continuing a little past the cap. The chapter therefore pays twice for one block in any size meter that counts per-key words. Keys 1-3 do expound their own verses here, so nothing was lost to declaration; the cost is purely to the usable-words count, which over-reports K&D by roughly 200 words in this chapter alone."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "21"
+      ],
+      "note": "Flat contradiction on who 'had separated themselves from the filthiness of the heathen'. Clarke: proselytes, gentiles who embraced the Jewish religion through mingling with the captives, with the moral that the exiles' example drew the heathen to walk in the light of the Lord with them. Ellicott, explicitly: 'Not proselytes from the heathen are intended, but the remnant of the Jews in the land who had consorted with the foreign populations introduced by the conquerors.' The two readings cannot both stand, and the prose reports both without choosing. This is one of the sharpest direct contradictions recorded in the corpus, since Ellicott denies in terms the position Clarke takes."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "disagreement",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "17"
+      ],
+      "note": "The twelve he-goats, and an older view named and rejected. Delitzsch holds the number answers to the tribes because the temple was intended for the whole covenant people whose return the prophets had taught them to hope for, and expressly rejects what 'older expositors thought', that families of the ten tribes already settled in Judah were among the returned. Gill's reading of 'the children of Israel' at key 16 is exactly that rejected position: those of the ten tribes who remained after the captivity, or who came back with the Jews. Ellicott takes a third line, resting on the shift of title from Judah to all Israel. Recorded because it is a case where one declared voice names and refutes another declared voice's position without naming him."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "6",
+      "verses": [
+        "1",
+        "13"
+      ],
+      "note": "Henry's two block-heads cover vv.1-12 and vv.13-22, confirmed from their own numbered divisions and verse marks: key 1 runs heads I-II over vv.1-5 and vv.6-12, key 13 runs heads I-IV over vv.13-22. With the chapter tiled on its natural seams (1-5 / 6-12 / 13-18 / 19-22) he is declarable on the first and third only, so his reading of Darius's decree and of the Passover does not ship. Both heads again close with the Concise commentary appended to the Exposition — the spiritual-temple peroration at key 1, the gospel-church peroration at key 13 — which is the fifth book in which this within-block duplication has been measured."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "6",
+      "note": "19th polish-pick-with-nothing-to-polish, and it confirms the REFINED routing test. All 22 entries were legacy-unversioned per-verse prose of 404-465 words, 21 graded A and one B, and every one of them carries a qa block whose standard field reads 'legacy-unversioned'. So the older test ('no entry carries a qa stamp') would again have failed to fire, while the refined test recorded at 2kings 24 — no entry carries standard 'cow-prose-rules-2026-08-09' — fires correctly. Two chapters in a row now confirm it; the queue rule should use the standard field."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "6",
+      "note": "Drafting discipline: three paragraphs held the shape but not the length. All four tiles were written as three paragraphs and all four graded A with no flags, but three of the four came in 7-12 percent over the 650 ceiling on first pass (697, 752, 726) and needed two trim rounds each; the fourth needed two as well. Compare job 17, where the same discipline produced two first-try in-window tiles. The difference here is voice count and philological density: six voices on two tiles, and Ellicott, Delitzsch and Clarke all arguing about words, dates and punishments, so each paragraph carries more distinct positions than a narrative chapter does. The useful refinement is to budget by POSITIONS per paragraph, not paragraphs per tile — roughly six or seven reported positions is what fits in 215 words."
     }
   ]
 }
