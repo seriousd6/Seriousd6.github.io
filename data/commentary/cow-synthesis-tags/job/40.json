@@ -1,1303 +1,536 @@
 {
  "1": {
+  "range": "1-5",
+  "pericope_label": "The LORD challenges Job again, shall he that contendeth with the Almighty instruct him; Job answers that he is vile and will speak no more",
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Adam Clarke"
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "John Wesley"
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Matthew Henry reads the challenge as the application of the whole survey of nature: God pauses, then, though Job is silent, answers his very silence, perhaps in a still small voice as to Elijah."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill reads the opening as a resumption after a deliberate pause, asks whether a man can instruct the God who gives men wisdom and answers that the man who submits may be instructed while the man who contends is not in the way of instruction at all, and offers four senses of Job calling himself vile, his arguments shown powerless, his integrity found wanting, his distance from God as dust and ashes, or the vileness of his nature newly seen."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes the pause the same way — God stopped that Job might answer, and finding him silent, began again."
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry has God clench the nail with one demand more after heaping up hard questions, notes that the speech is not said to come from the whirlwind so that some take it for a still small voice, and hears disdain in the question, since it asks whether God shall take instruction from every peevish complainer and change his settled measures to please him."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke argues 'answered' refers to nothing Job said, and that vv.1-14 are really the poem's displaced ending, belonging after Job 42:6."
+    "prevalence": "single",
+    "summary": "Clarke shows from the word that answered refers to nothing Job had said, argues at length that these fourteen verses were originally the ending of the poem and gives the reader the rearrangement to try, and takes the confession for an acknowledgement of inward defilement by a man confounded at the high thoughts he had entertained of his righteousness."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott prefers a different construction of the question and glosses it as asking whether Job will keep disputing and whether there is hope of convincing God by argument; he knows the transposition proposal and declines it as unnecessary and unsupported by external evidence. Delitzsch makes the term for the man a fault-finder and draws the moral from God manner, that he demands free submission rather than blind subjection and effects the acknowledgement by persuasion."
    }
   ],
   "debates": [
    {
-    "question": "Do the opening verses of Job 40 stand in their original place?",
+    "question": "Should the first fourteen verses be transposed to the end of the poem?",
     "sides": [
      {
-      "position": "they are dislocated and belong after Job 42:6, so Jehovah is the poem's last speaker",
+      "position": "very likely yes: the former part of the chapter is evidently the conclusion, the latter part is in disorder, the parchment skins of the roll having probably changed places, and the last chapter shows Jehovah speaks last",
       "holders": [
-       "Clarke",
-       "Heath (as reported by Clarke)",
-       "Kennicott (as reported by Clarke)"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "the verses stand in their received place, opening God's second address",
+      "position": "the transposition would make these verses the climax and remove the awkwardness of Job speaking after resolving not to, but it is unnecessary and has no support from external evidence",
       "holders": [
-       "Gill",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the question about instructing the Almighty ask?",
+    "sides": [
+     {
+      "position": "whether a man is capable of instructing the God of knowledge at all; the contender is not in the way of instruction, the word carrying the sense of chastisement",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "whether Job is prepared to go on disputing, and whether there is any hope of convincing God in argument",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "whether Job will persist; the fault-finder who sets God right must answer the questions put to him",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "it is a question of disdain: shall God take instruction from every peevish complainer and change his measures to please him",
+      "holders": [
        "Matthew Henry"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why does God answer a man who has said nothing?",
+    "sides": [
+     {
+      "position": "because he knows men thoughts and can return a suitable answer to their silence",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "because answered refers to no question asked, but means that the Lord continued his discourse",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "because God paused for Job to speak and, finding him silent, began again",
+      "holders": [
+       "John Gill"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "the humbling challenge",
-   "God's pause",
-   "answering man's silence",
-   "the still small voice",
-   "the arrangement of the poem"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads the question as a climax — Job not only contended with God but doubted the divine justice; Ellicott renders 'Can the contending instruct him?' and sets it in God's argument from the beasts."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill presses the absurdity — he who disputes with the God of knowledge ought to be able to instruct him, which is folly."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: let the man who has made so free with God answer to what he has heard."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Charles Ellicott",
-    "note": "Allows that Job's resolve in vv.4-5 might be transposed after Job 42:6 as the poem's climax, but judges it neither necessary nor supported by any external evidence."
-   }
+   "Henry alone suggests the second challenge may have come in a still small voice rather than the whirlwind, as to Elijah.",
+   "Delitzsch alone turns the scene against the friends, those sticklers for their own orthodoxy, as proof that God is more forbearing than men."
   ],
   "themes": [
-   "contending with the Almighty",
-   "the censurer of God",
-   "instruction versus submission",
-   "the argument from the beasts"
+   "a silence that is itself answered",
+   "a complainer who would teach God his business",
+   "a poem whose ending may have been displaced",
+   "a confession not yet deep enough"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil marks the shift of address — Job answers Jehovah, not his friends — and reads it as the point where the divine speech has attained its end, effecting free submission, not blind subjection."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill catches the reluctance: finding himself obliged, Job answered, but with some reluctance."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Job answers reluctantly",
-   "the shift of address to Jehovah",
-   "the divine speech attaining its end",
-   "free submission not blind subjection"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry traces the descent of the penitent: Job comes to himself, owns himself an offender, and lays his hand on his mouth, for repentance changes men's opinion of themselves."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill turns 'vile' over in several senses — light words, works found wanting, original meanness, or the sinfulness of his nature now laid bare."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke keeps it bare and personal: 'I acknowledge my inward defilement... I must be dumb before thee.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "\"I am vile\"",
-   "self-abasement",
-   "repentance changing self-opinion",
-   "the hand upon the mouth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads 'once, yea twice' as the idiom for what was done repeatedly, and hears true submission — Job lays down the cause, God speaking not in wrath but in condescension."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: 'I shall attempt to justify myself no longer... all is impurity in the presence of thy Majesty' — though he still refers the resolve to the poem's true climax after Job 42:6."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes the words as a settled resolve to answer no more, noting Jarchi's view that Job retracts earlier words."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "\"once, yea twice\"",
-   "the resolve of silence",
-   "God's condescension",
-   "the hands of God versus the hands of men"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "6": {
+  "range": "6-14",
+  "pericope_label": "Out of the whirlwind again: hast thou an arm like God, deck thyself with majesty, abase the proud, and then I will confess thy right hand can save thee",
   "voices": [
    "John Gill",
    "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Keil and Delitzsch"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill holds that the whirlwind grew more boisterous rather than ceasing, since it was not enough for Job to call himself vile and God would have a fuller confession; he takes disannulling the judgment for setting one own judgment against the Lord decrees, has Job told to put on the airs of a wrathful king to see whether that humbles a proud man, and offers three senses of hiding the proud in the dust."
+   },
+   {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry makes the renewed speech a law of the spiritual life: those who profit hear more, and the penitent must not catch at comfort too soon but let the wound be searched to the bottom."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill judges the whirlwind continued and increased, God requiring a fuller confession than that Job was merely vile."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Keil hears the storm as mercy — God speaks again to persuade, not to crush, bringing his servant to free and glad knowledge."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the second speech from the whirlwind",
-   "deeper conviction",
-   "not catching at comfort too soon",
-   "searching the wound to the bottom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads 'gird up thy loins' as the summons of a combatant, the challenge rising to a climax: can Job, who would govern better, show an arm and thunder as God does?"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the bare demand — Job to gird himself like a man, God to ask and he to answer."
+    "prevalence": "single",
+    "summary": "Henry lays down that those who profit by what they have heard shall hear more and that the truly penitent still need deeper penitence, warning the convicted not to catch at comfort too soon since the wound must be searched to the bottom and not skinned over, and works the comparison item by item, man being unable to speak with the force of a God who speaks and it is done."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke refers the summons back to Job 38:3 and takes the repeated words as a seam where displaced leaves of the roll were stitched together."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "\"gird up thy loins like a man\"",
-   "the challenge as climax",
-   "the summons to the contest",
-   "every mountain brought low"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil renders 'Wilt thou annul my right?' and reads the speech as testing Job to put on the King's robes; Ellicott unfolds the argument from the beasts to the government of men."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill takes 'my judgment' as God's decrees and sentence, which cannot be disannulled, his judgment being according to truth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke exposes the deeper fault: rather than be thought wrong, Job would condemn God — the three hardest words being 'I am wrong.'"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "disannulling God's judgment",
-   "condemning God to justify self",
-   "\"I am wrong\"",
-   "governing the world and treading the wicked"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry draws out the two things denied Job — he can neither fight it out (his forces but briers before a fire) nor talk it out, God's thunder drowning his whispers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: God's power is infinite and uncontrollable — the arm that upholds the saints can crush his enemies like a moth."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke feels the cumulative force: every word here tends to humble the soul, till Job fell in the dust confounded."
+    "prevalence": "single",
+    "summary": "Clarke suspects the renewed challenge was repeated from the earlier speech by later hands joining a wrong gathering of parchment, hears in the charge a willingness to condemn God conduct sooner than be thought in the wrong, reads the binding of the faces as the custom of preserving mummies, and turns the closing irony into the doctrine that salvation belongs to God alone."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Keil keeps the clauses interrogative: in ruling the world God shows his arm and thunders — can Job do the like?"
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "\"an arm like God\"",
-   "the derived power of creatures",
-   "God's thunder",
-   "humbling the soul"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
     "prevalence": "several",
-    "summary": "Henry unfolds the comparison: let Job robe himself in all his pomp, it is but a glow-worm to the sun, for God's majesty is the terror of devils and the wonder of angels."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Keil reads a mock-investiture — Job to put on the robes of the King of kings and send forth wrath, that the offer show him the gulf he cannot cross."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: deck thyself with such majesty as God is clothed withal, a garment no creature can counterfeit."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke turns it on Job's presumption: act like God, since thou hast assumed his perfections."
+    "summary": "Ellicott supplies the argument that holds the challenge together, that Job inability to govern the formidable animals proves his inability to govern the world morally, so that he can neither tread down the wicked nor deliver himself from the hand of God. Delitzsch finds the climax over the first question, Job having gone so far as to doubt the divine justice rather than surrender his own righteousness, and makes the commands a robing of the subject in the robes of the King of kings."
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "deck thyself with majesty",
-   "the mock-investiture",
-   "divine glory versus creaturely pomp",
-   "the glow-worm and the sun"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
+  "debates": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry makes the verse a proof of Godhead: God proves himself God in resisting the proud, who go before destruction and are brought low with a look."
+    "question": "Why does God speak a second time?",
+    "sides": [
+     {
+      "position": "because Job was humbled but not enough; a fuller confession was wanted, of sorrow and repentance and of having spoken what he did not understand",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "because those truly convinced of sin still need to be made more deeply penitent, and must not catch at comfort too soon",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "because this verse and the next were repeated here from the earlier speech by later hands joining a wrong gathering of the parchment",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
    },
    {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Keil renders 'the overflowings of thy wrath,' recalling the prophets' judgment on pride, which God alone can pour where it belongs."
+    "question": "What is the force of disannulling God judgment?",
+    "sides": [
+     {
+      "position": "setting a man own judgment against the Lord decrees, sentence or execution, none of which can be hindered",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "condemning God conduct rather than be thought in the wrong, a sort of blasphemy men back into",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "losing sight of the divine justice in the government of the world, and doubting it rather than surrender his own righteousness",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: work thyself into a king's passion and try whether thy menaces can humble a proud man — as Job's rage toward heaven could not."
+    "question": "How do the impossible commands work?",
+    "sides": [
+     {
+      "position": "as irony that tests whether such means can humble a proud man",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "as a robing of the subject in the robes of the King of kings, to send wrath over pride for its complete removal",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "as a comparison man cannot sustain, since one of God thunders would overrule all our whispers",
+      "holders": [
+       "Matthew Henry"
+      ]
+     }
+    ]
    }
   ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "casting abroad wrath",
-   "abasing the proud",
-   "pride before destruction",
-   "God proved God by resisting the proud"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry: if Job can abase the proud as God can, he has some colour to compete; but he murmured at oppressors' prosperity, and ought not to find fault except he could mend."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Keil carries the sense from the flood of wrath: Job to cast down the evil-doers in their place, a dominion reaching every proud man in his stronghold."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill dwells on 'in their place' — the wicked trodden down wherever found, their pretended rootedness no security."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "treading the wicked in their place",
-   "the proud brought low",
-   "finding fault versus mending",
-   "a divine prerogative"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry follows the judgment to the grave: the proud not merely brought to the dust but hidden in it, like the Egyptian Moses hid in the sand, bound and buried in oblivion."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads the hiding as an inglorious burial in a common pit, the word also rendered 'alike' — high and low levelled in one ruin."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke takes 'bind their faces in secret' of the custom of mummy-wrapping, every feature swathed out of sight."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Reads 'bind their faces in secret' literally of embalming — the mummy's head rolled about with filleting so that not a feature shows, the real face bound out of sight for ever."
-   }
+   "Clarke alone reads the binding of the faces in secret as the swathing of mummies under rollers never meant to be removed.",
+   "Clarke alone observes that there are three words hardest of all to pronounce in any language.",
+   "Ellicott alone builds the bridge from the brute creation to the moral government of the world."
   ],
   "themes": [
-   "hiding the proud in the dust",
-   "binding the faces",
-   "a common grave",
-   "the completeness of divine victory"
+   "a storm that does not abate at the first confession",
+   "an arm measured against the arm of God",
+   "majesty offered to a man to wear",
+   "salvation conceded only to one right hand"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke makes the verse the crown of the speech: only when Job can wield God's arm and glory will God own that his right hand can save him — meaning salvation belongs to the LORD, and without Jesus every spirit must perish."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry hears a rebuke of man's oldest ambition to be his own saviour; our hands cannot save by winning grace or escaping justice, so into God's hand we must commit ourselves."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill spells out the impossible concession: since Job can do none of these, his own hand cannot save him, and only the arm of the LORD works salvation."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.14
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "\"thine own right hand can save thee\"",
-   "salvation belongs to the LORD",
-   "man's ambition to be his own saviour",
-   "the impossible condition"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
+  "range": "15-19",
+  "pericope_label": "Behold now behemoth, which I made with thee: his strength, his bones like bars of iron, and he the chief of the ways of God",
   "voices": [
    "John Gill",
    "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
-   "Gregory the Great"
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
     "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill notes the plural name, commonly taken of the elephant, but reports Bochart's dissent for the hippopotamus."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry sees no reason to leave the ancient received opinion that it is the elephant, setting aside bull and river horse."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke breaks with both, holding with Mr. Good that the creature is extinct — the mammoth, whose bones argue a beast twenty-five feet high."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott finds the identification a standing difficulty, the plural name perhaps covering two animals (elephant then hippopotamus), and notes a Coptic 'water-ox' concealed in the word."
-   },
-   {
-    "school": "latin-fathers",
     "prevalence": "single",
-    "summary": "Gregory the Great reads Behemoth allegorically as the ancient enemy, whose hunger the proud feed with their teeming thoughts as with the hay of the field."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What creature is Behemoth?",
-    "sides": [
-     {
-      "position": "the elephant — the ancient and generally received opinion",
-      "holders": [
-       "Matthew Henry"
-      ]
-     },
-     {
-      "position": "the hippopotamus or river horse",
-      "holders": [
-       "Gill (with Bochart)"
-      ]
-     },
-     {
-      "position": "an extinct animal, the mammoth",
-      "holders": [
-       "Clarke",
-       "Mr. Good (as reported by Clarke)"
-      ]
-     },
-     {
-      "position": "perhaps two animals — elephant in the earlier verses, hippopotamus in the later",
-      "holders": [
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "not a beast at all, but the ancient enemy read allegorically",
-      "holders": [
-       "Gregory the Great"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Gregory the Great",
-    "note": "Alone reads the passage allegorically, taking Behemoth for the devil rather than any brute — the proud grow the more devoted to him as they swell with worldly success."
-   }
-  ],
-  "themes": [
-   "the naming of Behemoth",
-   "the identity debate",
-   "\"which I made with thee\"",
-   "grass as an ox",
-   "fellow-creatures of man"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil reads the strength in the loins and belly-sinews as the frame of the giant of beasts; Ellicott corrects 'navel' to 'sinews,' lodging the force in the great cords of the body."
+    "summary": "Gill starts from the received identification with the elephant but will not hold it, reporting the dissent for the river horse and weighing the clauses against the elephant one by one, the strength in the loins agreeing badly, the bones porous rather than iron, and the tail suiting the river horse better; on the chief of the ways of God he allows either the beginning of God works, which would set the river horse a day before the elephant, or a superiority limited to its own kind."
    },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill grants the elephant's known strength, but adds candidly that 'what follows does not seem so well to agree' with it."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke refers the loins to agility — the vast springs and bounds of his leaping mammoth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "strength in the loins",
-   "force in the belly-sinews",
-   "\"navel\" or \"sinews\"",
-   "the giant of beasts"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill argues the tail is compared to a cedar not for length but for firmness and thickness, like the river horse's, and gathers a crowd of older renderings."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke makes the cedar-tail a proof against both elephant and hippopotamus, pointing to a leaping animal, and reads the second clause of the sinews of the haunches."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott corrects the 'sinews of his stones' to the sinews of his thighs."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the tail 'like a cedar' fit the elephant or hippopotamus?",
-    "sides": [
-     {
-      "position": "neither — a leaping animal, the mammoth",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the river horse, whose tail is firm and twisting",
-      "holders": [
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "John Gill",
-    "note": "Reports Junius and the Targum referring the word not to the tail at all but to another extreme part of the body, Cicero noting the ancients so named it."
-   }
-  ],
-  "themes": [
-   "the tail like a cedar",
-   "sinews of the thighs",
-   "identity by a single feature",
-   "controlled power"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill hears the doubled figure as emphasis, but objects that brass-and-iron bones ill fit the elephant, whose bones are porous and spongy; the river horse's teeth are harder than ivory."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke reads the iron bones toward his mammoth, the tusk uncommonly hard and weighty."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott renders 'strong pieces' as perhaps tubes — the limbs like bars of iron."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "John Gill",
-    "note": "Argues the 'bones as brass and iron' tell against the elephant, whose bones the anatomists show to be porous and spongy save the ivory teeth."
-   }
-  ],
-  "themes": [
-   "bones of brass",
-   "bars of iron",
-   "the doubled figure",
-   "invincible strength"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry hears in 'his Maker can make his sword approach' the great use of the whole: God can unmake the beast at pleasure, and Behemoth images the proud tyrants he had bidden Job abase."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott judges 'chief of the ways of God' fitter for the elephant's intelligence, and lays out the obscure sword-clause in its rival renderings."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads 'chief' as the first-made (of the fifth day) or the head of its kind — the river horse, chief of the amphibious animals."
+    "prevalence": "single",
+    "summary": "Henry sees no reason to leave the received opinion that the elephant is meant, a creature of larger stature than any other and too celebrated to be left out of a survey of four-footed beasts, and frames the description as a question whether a man can contend with him who made the beast and gave him his power."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke seizes the title for the mammoth, the largest, strongest, and swiftest quadruped God has formed."
+    "prevalence": "single",
+    "summary": "Clarke shows that neither the name nor the ancient versions settle the identification, allows that the balance of characters lies with the hippopotamus, but doubts whether any animal now in existence is the one described and supposes with Good that it is extinct, pointing to three lost genera whose skeletons have been recovered."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott takes the plural seriously and suggests more than one animal may be meant, the first verses answering to the elephant and the last to the hippopotamus, states the objection to his own suggestion, offers a Coptic word meaning water-ox as concealed in the name, and corrects three renderings in as many verses. Delitzsch leaves the identification and settles the form, the plural carrying no numerical force but denoting the beast as such."
    }
   ],
   "debates": [
    {
-    "question": "Which creature is 'the chief of the ways of God'?",
+    "question": "What animal is behemoth?",
     "sides": [
      {
-      "position": "the elephant, for its intelligence and usefulness",
+      "position": "the elephant, on the ancient and generally received opinion",
       "holders": [
-       "Ellicott",
        "Matthew Henry"
       ]
      },
      {
-      "position": "the river horse, chief of the amphibious animals (or first-made, of the fifth day)",
+      "position": "rather the river horse, since the strength in the loins, the iron bones and the tail all agree with it better than with the elephant",
       "holders": [
-       "Gill"
+       "John Gill"
       ]
      },
      {
-      "position": "the mammoth, largest, strongest, and swiftest quadruped",
+      "position": "neither; the balance of characters favours the hippopotamus, but parts of the description suit no living animal, and the creature is probably extinct",
       "holders": [
-       "Clarke"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "possibly more than one animal, the earlier verses describing the elephant and the later the hippopotamus",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the question of species is left aside; the plural form denotes the beast as such, the giant among beasts",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what sense is he the chief of the ways of God?",
+    "sides": [
+     {
+      "position": "either as the beginning of God works among the animals, or as a superiority limited to his own kind, since man is chief of all God works",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the title fits the elephant better, for its intelligence and usefulness",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Clarke alone appeals to the recovered skeletons of three lost genera, one of which he had examined himself.",
+   "Ellicott alone finds in the plural form of the name a reason to suspect that two animals are described.",
+   "Gill alone collects the testimonies that hippopotamus teeth are valued above ivory and harder to work."
+  ],
   "themes": [
-   "\"chief of the ways of God\"",
-   "his Maker's sword",
-   "Behemoth as image of proud tyrants",
-   "the Maker's power to unmake"
+   "a beast named in the plural",
+   "characters that fit no living animal",
+   "a creature made alongside the man addressed",
+   "learning assembled where identity fails"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
+   }
   }
  },
  "20": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil turns to the botany — the shade-tree is the lote (Rhamnus), found by the Sea of Galilee — and reads the grazing beast as harmless, the field-beasts playing beside it."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill makes the mountain-grass an argument for the amphibious river horse that leaves the water to feed, citing the northern morss that climbs to the heights."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke takes the mountains as decisive against the water-bound hippopotamus and for the land-ranging mammoth."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Do the mountain pastures suit the river horse or rule it out?",
-    "sides": [
-     {
-      "position": "against the water-bound hippopotamus, for the land-ranging mammoth",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "the river horse, which leaves the water to graze the heights",
-      "holders": [
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "John Gill",
-    "note": "Offers the northern morss (walrus/sea-horse), which climbs by its great teeth to the mountain-tops to feed and rolls back into the sea, as a parallel for the amphibious behemoth."
-   }
-  ],
-  "themes": [
-   "the mountains bringing food",
-   "the lote-tree and marsh",
-   "the beasts of the field at play",
-   "peaceable strength"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
+  "range": "20-24",
+  "pericope_label": "The mountains bring him forth food; he lies under the shady trees and drinks up a river, and is taken only by craft",
   "voices": [
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
-   "Matthew Henry"
+   "Keil and Delitzsch"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
-    "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry sets the beast's shady lodging against the lion's dark den: those who let others be easy have nothing to fear, the reeds and willows enough for a creature that designs no harm."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill lets the mountain pasture tell against neither candidate, marvels that a beast bred in a river should feed on a mountain and supports the possibility from the northern sea morss, finds the shade fitting the river horse since the elephant is said to sleep standing, thinks drinking up a river too great an hyperbole and prefers the rendering that he neither hurries nor is frightened though the river press on him, and reads the taking as a question answered by the covered pit."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "single",
+    "summary": "Clarke takes the mountain pasture to rule out the hippopotamus, declines to decide on the lying down since these habits are unknown to us, infers from the naming of Jordan that the creature once inhabited the mountains and marshes of Palestine, and closes by committing himself to the mastodon or mammoth, made as the chief of God works, exhibited for a time and then cut off with its skeletons preserved."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott thinks the resting-place fitter for the elephant, and exposes the biased argument that the poet must have known the Egyptian river horse rather than the elephant of India or Africa."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill gives the verse in its own words — the beast lying in the covert of the reed."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke candidly owns these habits of the behemoth are, and must be, unknown to us."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "lying under the shady trees",
-   "the covert of reeds",
-   "the poet's supposed horizon (India versus Africa)",
-   "peaceable strength versus the lion's den"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
     "prevalence": "several",
-    "summary": "Gill doubts the shade fits the elephant, which rarely lies down and is reckoned taller than the trees, and inclines to the river horse of the reeds and willows."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke grants that 'the willows of the brook compass him' would agree well enough with the hippopotamus — a concession from the champion of the mammoth."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the shade of the lote-trees",
-   "willows of the brook",
-   "repose among the reeds",
-   "both witnesses inclining to the river horse"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "23": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Gill finds 'drink up a river' too strong a hyperbole for the elephant and prefers 'let a river oppress him, he hasteth not' — the unconcerned wading of the river horse, which the elephant, fearful in water, cannot match."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke reads a beast no river can stop, and from the naming of Jordan judges it once haunted the marshes of Palestine, commending Good's 'though Jordan rush against his mouth.'"
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott renders cleanly, 'if a river overflow, he trembleth not; he is confident, though Jordan swell up to his mouth' — magnificent composure before the flood."
+    "summary": "Ellicott judges the shade more appropriate to the elephant and cautions that the critics judgment has been biased by assumptions about where the book was written, and renders the river clause as his being confident though Jordan swell up to his mouth. Delitzsch leaves the animal and identifies the tree as the wild lote, found in Syria and Egypt and through Africa, citing the poets for the beasts of the steppe that seek its shade."
    }
   ],
   "debates": [
    {
-    "question": "How is 'he drinketh up a river' best rendered?",
+    "question": "Does the mountain pasture settle the identification?",
     "sides": [
      {
-      "position": "'if a river overflow, he trembleth not' — the beast's fearless composure",
+      "position": "yes, against the hippopotamus, which is seldom found far from its rivers; the description answers to the mammoth",
       "holders": [
-       "Gill",
-       "Ellicott"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "'he drinketh up a river' / 'though Jordan rush against his mouth' (with Mr. Good)",
+      "position": "no, since grass grows on mountains and feeds the river horse as well, though it is a marvel that a river beast should feed there",
       "holders": [
-       "Clarke"
+       "John Gill"
       ]
      }
     ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "drinking up a river",
-   "drawing up Jordan",
-   "fearless composure before the flood",
-   "Jordan as a swelling stream"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke reads the beast's contempt for restraint — his nose tearing through the stakes — closes the account with his extinct mammoth, and presses the Kennicott theory that vv.1-14 are a displaced leaf belonging after Job 42:6."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill reads the verse of the difficulty of capture: neither elephant nor river horse is taken openly, but decoyed by craft into a hidden pit."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "minority",
-    "summary": "Ellicott renders 'let one take him by his eyes; by snares one may pierce his nose,' judging the Authorised Version less probable."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is the closing clause to be read?",
+    "question": "Whom does the lying down under the shade suit?",
     "sides": [
      {
-      "position": "'let one take him by his eyes; by snares one may pierce his nose' — capture by stealth and allurement",
+      "position": "the elephant, on the whole, if the description applies to one animal at all",
       "holders": [
-       "Ellicott",
-       "Gill"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "'he taketh it with his eyes; his nose pierceth through snares' — the beast's contempt for restraint",
+      "position": "the river horse, since the elephant is reported to sleep standing and to be taller than the trees",
       "holders": [
-       "Clarke"
+       "John Gill"
+      ]
+     },
+     {
+      "position": "undecidable, these being habits with which we are and must be unacquainted",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How should the drinking of the river be read?",
+    "sides": [
+     {
+      "position": "not as hyperbole but as composure: though a river press on him with all its force he neither hurries out nor is frightened",
+      "holders": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "as a figure of unstoppable course, no river staying him, with Jordan named because he once inhabited Palestine",
+      "holders": [
+       "Adam Clarke"
       ]
      }
     ]
    }
   ],
   "outliers": [
-   {
-    "voice": "Adam Clarke",
-    "note": "Presses Kennicott's theory that Job 40:1-14 is a displaced leaf of the roll belonging after Job 42:6, and concludes Behemoth is an extinct mammoth preserved by providence for later ages to admire."
-   }
+   "Gill alone brings in the northern sea morss, which climbs from the sea to the mountain tops by its teeth.",
+   "Ellicott alone accuses the critics of letting their view of where the book was written decide the identification.",
+   "Delitzsch alone abandons the zoology for the botany of the shade tree."
   ],
   "themes": [
-   "taking Behemoth by his eyes",
-   "piercing the nose with snares",
-   "capture only by stealth",
-   "the close of the description"
+   "a river beast pastured on a mountain",
+   "habits no reader can check",
+   "a creature unmoved by a flood",
+   "an identification left open on purpose"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-08-02",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.19
+   }
   }
  }
 }

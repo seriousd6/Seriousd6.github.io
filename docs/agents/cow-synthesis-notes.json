@@ -98677,6 +98677,104 @@
         "18"
       ],
       "note": "Tags fixed in both directions again: Adam Clarke contributes to v8 but was absent from voices[] (and wesleyan-arminian from schools[]); Matthew Henry is named in v18's prose but was absent from both. John Gill sat in v6's voices[] contributing nothing visible, so his actual comment -- the ownership of Lebanon -- was written in rather than the tag dropped. Two cosmetic mismatches were left alone and are not defects: v1 names Gill and v18 names Henry without the chapter's inline school label, while schools[] is correct in each."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "3"
+      ],
+      "note": "FIRST DISPLACED BLOCK FOUND IN A VOICE OTHER THAN JFB. John Wesley's only block in this entire chapter is at key 3, 29 words, and it reads: 'Blood - There are divers eagles who do not feed upon carcases, but many eagles do feed on them. She - In an instant, flying thither with admirable celerity.' That is commentary on the closing verse of Job 39, where the slain are and the eagle is, not on Job 40:3, 'Then Job answered the LORD'. Wesley's whole presence in job 40 is therefore displaced material from the preceding chapter, and he is not declarable anywhere here; the vv.1-5 tile carries him in excluded_voices. Until now every displacement recorded in this corpus has been JFB, which made the bug look voice-specific and fixable by re-indexing one source. It is not: at least two sources are affected, and a corpus-wide sweep must test every voice, not only Jamieson."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "16",
+        "22"
+      ],
+      "note": "JFB stride bug, 37th confirmation, walking-donor shape, and the longest displaced block yet measured. Keys 16 and 22, interval 6, offset 4, both displaced to 2 Chronicles 19 and sequential rather than identical: key 16 runs 262 words on Jehoshaphat's return to Jerusalem and the prophet Jehu's visit, key 22 runs 62 words on the judicial courts he established in the fortified cities and heads into the charge to the priests. Second walking instance after ezra 6, and at 262 words key 16 is the largest displaced block seen in any voice. Donor-shape tally now: stalled and byte-identical at 1chronicles 21, 2kings 24 and nehemiah 8; walking and contiguous at ezra 6 and here; single-member at psalms 9."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "24"
+      ],
+      "note": "Ellicott chrome strip, 24th consecutive chapter. Key 24 is 1056 words of which roughly 78 are genuine — the note on the snares, offering 'Let one take him by his eyes' against the Authorised Version. The cut is clean at the copyright sentence and the tail is CSS, as at ezra 6 and nehemiah 8 rather than the JavaScript seen at 2kings 24."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "1-14"
+      ],
+      "note": "A textual-rearrangement proposal with two declared voices on opposite sides — the first of its kind recorded. Clarke (keys 1, 7, 24) argues at length that vv.1-14 were originally the end of the poem: he quotes Heath that the former part of the chapter is evidently the conclusion while the latter is in great disorder, most probably because the parchment skins of the roll changed places; he notes that Job 42:7 shows Jehovah speaks last; he suspects vv.6-7 were repeated here from Job 38:1-3 by later hands joining a wrong gathering; and he prints the rearrangement for the reader to try, ending chapter 39, going on from 40:15 through 42:6, and only then adding 40:1-14. Ellicott (key 2) knows the proposal and declines it: the transposition would make these verses the climax and would remove the awkwardness of Job resolving to speak no more and then speaking again in chapter 42, but it is unnecessary and has no support from external evidence. Both positions are reported in the prose without adjudication."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "15-24"
+      ],
+      "note": "The behemoth identification, a genuine five-way split and the widest disagreement met in this corpus so far. Henry: the elephant, on the ancient and generally received opinion, a creature too celebrated to be omitted from a survey of beasts. Gill: starts there but abandons it, finding the strength in the loins, the iron bones and the tail all better suited to the river horse, and citing Bochart's dissent. Clarke: neither; the name and the ancient versions settle nothing, the balance of characters favours the hippopotamus, but parts of the description suit no living animal, so with Good he holds the creature extinct and points to three recovered lost genera. Ellicott: possibly two animals, vv.15-20 the elephant and vv.21-24 the hippopotamus, since the word is the natural plural of a term for cattle; he states the objection himself and offers a Coptic water-ox as a further possibility. Delitzsch: declines the zoology, treating the plural as an abstract form denoting the beast as such. All five are reported."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "1",
+        "6",
+        "15"
+      ],
+      "note": "Henry's three heads align with the pericopes again, but the chapter is too large to follow them. Keys 1, 6 and 15 cover vv.1-5, vv.6-14 and vv.15-24 by their own numbered divisions and verse marks — the second chapter in a row where his head boundaries name the natural seams. Here, however, vv.15-24 carries 8491 usable source words, which at one tile would be a 0.077x distillation, far wider than anything shipped. I split behemoth at 19/20 and accepted the loss: Henry is declarable on three tiles of four, and his material on vv.20-24 does not ship. Widths came out 0.20x, 0.14x, 0.13x and 0.19x. The general rule this suggests: follow Henry's heads where a head is under about 5000 usable words, and split it otherwise."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "15",
+        "24"
+      ],
+      "note": "Two oversized Clarke blocks here are NOT the misfiling shape found at nehemiah 8. Key 15 runs 1038 words and key 24 runs 1109, both far outside his usual range, but both are genuine commentary on their own verses: key 15 is a philological and zoological excursus on the name behemoth and the identification question, key 24 ends the description of the animal and then appends the transposition argument from Kennicott. Neither carries the end-of-chapter marker or the forward cross-reference that identified the nehemiah 8 case. So an oversized terminal Clarke block is not by itself a defect signature; the signature is the explicit pointer ('see the observations at the end of the chapter') in an earlier verse."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "40",
+      "verses": [
+        "5"
+      ],
+      "note": "Keil and Delitzsch off-by-one, costing a passage its tile. Key 5's window opens mid-way through v.6 and its exposition is the fine passage on the second whirlwind speech — that God speaks not in wrath but in the condescension of his majesty, demanding free submission rather than blind subjection and effecting the acknowledgement by persuasion, with the aside that the friends, those sticklers for their own orthodoxy, raved against Job. That material belongs to vv.6-14 but is keyed in the vv.1-5 tile. I reported it on the tile where it is keyed, which reads naturally against Job's submission at vv.4-5, but the filing is wrong and the vv.6-14 tile is poorer for it."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "40",
+      "note": "21st polish-pick-with-nothing-to-polish, and the largest chapter of the run: 16394 usable source words across 24 keys, all 24 entries legacy-unversioned per-verse prose of 404-486 words, 23 graded A and one B. The refined routing test (no entry carrying standard cow-prose-rules-2026-08-09) fires correctly for the fourth consecutive chapter."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "40",
+      "note": "Overshoot rule confirmed and sharpened. The provisional rule from nehemiah 8 was that overshoot scales with usable source words per tile rather than voice count. This chapter tests it across four tiles of 3256, 4647, 5022 and 3469 words: first-pass drafts came in at 795, 701, 751 and 715, needing three, three, three and two trim rounds. So at 3000-5000 words per tile expect 8-23 percent overshoot and two to three rounds, regardless of whether the tile carries four voices or six. The 2599-word tile at nehemiah 8 needed one round and the 2331-word tile at ezra 6 needed none. The practical consequence for tiling: a tile of about 2500 usable source words is the cheapest to write, which argues for more and narrower tiles wherever the pericope seams allow it."
     }
   ]
 }
