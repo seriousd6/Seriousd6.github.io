@@ -98552,6 +98552,63 @@
       "book": "nehemiah",
       "chapter": "8",
       "note": "Drafting discipline, refined and tested. The 'positions per paragraph' budget recorded at ezra 6 was applied here from the first draft: roughly six or seven reported positions per 215-word paragraph. It did not prevent overshoot on the dense tiles (800 and 745 words on first pass for the 5163- and 4602-word spans) but it made the trimming mechanical rather than exploratory, since the cut unit was a whole secondary position rather than a phrase. The thin tile, vv.9-12 at 2599 source words, came in at 677 and needed a single pass. Provisional rule: overshoot scales with usable source words per tile, not with voice count — at roughly 2500 words a tile lands within one trim, at 5000 it needs three."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "25",
+      "verses": [
+        "2",
+        "3",
+        "6"
+      ],
+      "note": "Three instances of the banned carrier 'the witnesses do not divide' closed v2, v3 and v6; all three were rewritten to state the agreement substantively instead of announcing it. The carrier is doing the same job in each: a meta-sentence that tells the reader the voices agree rather than showing what they agree on."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "25",
+      "note": "job 25 quotes almost nothing: scripture-quote fraction 0.011 chapter-wide, commentator-quote fraction 0.014, and v1 has no quoted span at all. Six entries of 420-490 words carrying essentially no verbatim source wording is well inside rule 5's cap but it is the inverse risk, so the quoted-fragment content-word test is useless here. Verified instead by proper-noun grounding: only two capitalised tokens in the whole chapter are absent from its catena (Latin in v2, Jacob in v6) and both check out -- Keil and Delitzsch do quote Schultens in Latin ('Ultimum hocce classicum... magis receptui canentis videtur'), and Ellicott does cite Isaiah 41:14 among the worm parallels."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "25",
+      "verses": [
+        "3"
+      ],
+      "note": "v3 lifted B to A (ttr 0.5757 to 0.5925, compress 0.4511 to 0.4595, 458w to 433w) purely by removing restatement: 'stars' twice in one clause, 'the armies of God' echoing the opening 'God's armies', glory/glorious five times in Ellicott's sentence, and 'man' twice in the closing clause. No source material was added and none dropped -- confirming again that on a semantically narrow verse shortening is the cheapest route to ttr."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "The pericope-keyed source problem shows again, mildly. Matthew Henry's block for the whole chapter sits under catena key 1, so the 'God sees spots in the moon and stars which we never see' material correctly used in v5 is measured against the v5 catena alone; v5's stamped expansion ratio is therefore wrong in the usual direction. Same class as matthew 20, esther 6, mark 3."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "25",
+      "verses": [
+        "6"
+      ],
+      "note": "All six graded A. Attributed-sentence share by the standing rule (substantive six-word-plus sentences naming a voice or carrying a quotation, threshold 0.45) came out 0.64-1.00. One hedge worth recording rather than downgrading: v6's 'so that the two clauses may be read to divide man's meanness between his living and his dying' is the writer's inference from Clarke's Targum quotation, not Clarke's claim, and is marked as a possible reading rather than asserted."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "25",
+      "note": "Tags were clean in BOTH directions on arrival -- every school strong-tagged in the prose is in schools[], every school in schools[] is strong-tagged, and voices[] matches the voices named in the prose for all six verses. Worth recording as the counter-example to the mark 3 finding (26 of 35 entries mismatched there): the gap is not universal in legacy chapters, so a corpus-wide check would find real signal rather than noise."
     }
   ]
 }
