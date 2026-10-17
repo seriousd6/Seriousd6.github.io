@@ -98147,6 +98147,81 @@
       "book": "job",
       "chapter": "10",
       "note": "Polish pick with nothing to polish, 16th instance (after nehemiah 4, ezra 9, ezra 3, matthew 5, 2kings 22, 1samuel 15, job 5, 2kings 25, psalms 21, 2chronicles 24, 1chronicles 15, 2chronicles 7, 1chronicles 21, psalms 9 and this). job 10 was offered as a polish on one grade-B verse, key 22, while all twenty-two entries were legacy-unversioned per-verse prose of 409 to 484 words, so the legacy procedure applied and the chapter was retiled from the catena into five pericope entries. Worth noting against the queue rule I have now recommended sixteen times: the genuine polish pick in this same batch, zechariah 6, was immediately distinguishable, because all five of its entries carried a qa stamp under the current standard. The test is therefore cheap and reliable -- if no entry in the chapter carries a qa stamp, the chapter belongs in the legacy queue, not the polish queue."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "17",
+      "note": "JFB absent entirely: 16 source keys, zero 'Jamieson, Fausset and Brown' blocks anywhere in the chapter. Recorded as a negative datum against the JFB stride bug (33 confirmations in other chapters) — not every chapter receives a displaced donor block, so a corpus sweep should expect genuine absences as well as displacements."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "17",
+      "verses": [
+        "16"
+      ],
+      "note": "Ellicott chrome strip, 20th consecutive chapter. Key 16 is 1229 words of which only ~210 are genuine exposition; the remainder is front/back matter terminating in the copyright statement, which remains the clean cut. Consistent with the invariant as restated at job 10: it is the LAST ELLICOTT BLOCK in the chapter, not necessarily the chapter's last key."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "17",
+      "verses": [
+        "2",
+        "4",
+        "11",
+        "14"
+      ],
+      "note": "Keil and Delitzsch windowing defect. Only keys 2 and 6 expound their own verses; key 4 prints a window whose exposition belongs to later verses, keys 11 and 14 likewise or print scripture only. Result: K&D declarable on two tiles of five (1-2 and 6-9), and his material on the middle and closing stanzas does not ship. Same shape as 1chronicles 21, psalms 9 and job 10 (where he was declarable on one tile of five). Clean re-fetch target: file each window under the first verse it actually comments on."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "17",
+      "verses": [
+        "2"
+      ],
+      "note": "Clarke's abdication at v.2. His block prints five renderings of the verse — Latin, Greek, Calmet, Coverdale, and two moderns — and concludes that 'the reader has translations enough', offering no exposition of his own. The block is long but carries no distillable argument for the clause; Clarke is declarable on the tile only on the strength of his v.1 material."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "17",
+      "verses": [
+        "1",
+        "10"
+      ],
+      "note": "Henry block-head coverage trade, this chapter. Henry files two heads only, at keys 1 and 10, expounding vv.1-7 and vv.10-22 (2518 and 1684 words). Tiling finer than those heads drops him from tiles whose verses he demonstrably covers: he is declarable on tiles 1-2 and 10-12 but not on 3-5, 6-9 or 13-16, so his argument on the eyes-of-flesh plea and on the land of darkness does not ship. Permitting declaration on a span a block demonstrably expounds remains an owner decision."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "fidelity",
+      "book": "job",
+      "chapter": "17",
+      "verses": [
+        "6-9"
+      ],
+      "note": "Derived-adjective entity class, third class recorded. The fidelity ENTITIES check flagged 'Talmudic' in the draft: the EDITORIAL stoplist in scripts/synthesis-fidelity.py contains 'talmud' but not 'talmudic', so an adjective derived from a stoplisted noun trips the check. K&D's source says 'two passages in the Talmud'; the draft said 'two Talmudic passages'. Fixed in prose and in the tag outlier to the source's own phrasing, re-run clean. This is distinct from the two classes already recorded (spelling/diacritic variants, and unsourced names) and argues for stemming the stoplist rather than extending it word by word."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "17",
+      "note": "17th polish-pick-with-nothing-to-polish. Queue offered 'polish job 17'; all 16 entries were legacy-unversioned per-verse prose of 418-533 words with no qa stamp, so the legacy procedure applied and the chapter was retiled from the catena. The cheap routing test demonstrated by contrast with zechariah 6 in the same batch holds again: if no entry in the chapter carries a qa stamp, route it to the legacy queue."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "17",
+      "note": "Drafting discipline finding: three paragraphs, not four or five. Every tile in the preceding chapters overshot the 650-word ceiling and needed two to eight trim rounds; stating a per-voice word budget before drafting did not change the output. Writing THREE paragraphs — fewer sentences per voice rather than shorter sentences — landed job 17 tiles 1-2 and 3-5 at 645 and 641 words on the first try, the only first-try in-window drafts of the run. The lever is paragraph count, not sentence length."
     }
   ]
 }
