@@ -1,1089 +1,552 @@
 {
  "1": {
+  "range": "1-7",
+  "pericope_label": "Nebuchadnezzar makes Jehoiakim his servant three years; he rebels, bands are sent against Judah, he dies, and Egypt comes out no more",
   "voices": [
-   "Matthew Henry",
    "John Gill",
+   "Matthew Henry",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Matthew Henry weighs the first entrance of Nebuchadnezzar, the head of gold, whose name enters Scripture only as the destroyer of Jerusalem, and draws the moral that Jehoiakim's servitude to Babylon was the fruit of not serving his God."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sets the first subjugation in the latter end of Jehoiakim's third or beginning of his fourth year, when Daniel and the temple vessels were carried off."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke traces Nebuchadnezzar's rise from Carchemish, reducing Jehoiakim from a tributary of Necho to a tributary of Babylon until his revolt three years later."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott dates the humbling to Jehoiakim's fifth or sixth year, after Carchemish and Nabopolassar's death, with the king put in chains and the treasures despoiled."
-   }
-  ],
-  "debates": [
-   {
-    "question": "In which year of Jehoiakim did Nebuchadnezzar first subdue him?",
-    "sides": [
-     {
-      "position": "the third or fourth year, when Daniel and the first captives were carried off",
-      "holders": [
-       "Gill",
-       "Keil and Delitzsch"
-      ]
-     },
-     {
-      "position": "the fifth or sixth year",
-      "holders": [
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "Nebuchadnezzar the head of gold",
-   "vassalage and revolt",
-   "chronology of the first subjugation",
-   "serving God or serving Babylon"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "Matthew Henry",
-   "Charles Ellicott",
-   "John Wesley",
-   "Keil and Delitzsch",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sets the raiding bands as Egypt-instigated reprisals by Judah's 'evil neighbours' (Jer. 12:8-17), while Keil frames the whole advance from Daniel's third year, the taking of Jerusalem, and the first deportation."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke gathers the prophetic warnings behind the invasion (Huldah, Jeremiah), and Wesley notes the bands were of several nations serving under a mighty emperor."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry stresses that only the commission from the King of kings is named — the LORD sent the bands — so that men serve God's purposes unawares."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes the Lord sent against Jehoiakim by the hand of the Nebuchadnezzar against whom he had rebelled."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the LORD sends the bands",
-   "the word by the prophets",
-   "God's purposes served unawares",
-   "the first deportation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "3": {
-  "voices": [
-   "John Gill",
    "Charles Ellicott",
    "Keil and Delitzsch",
    "John Wesley"
   ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott renders 'only upon the mouth of Jehovah' (with the LXX/Syriac 'wrath' variant) and Keil grounds the removal in Manasseh's sins as the full, unforgivable measure that not even Moses and Samuel could avert."
-   },
    {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill reads the verse as God's sure decree of captivity, for which he stirred up the spirit of Nebuchadnezzar."
+    "summary": "Gill dates the subjugation to the latter end of the third or the beginning of the fourth year, has Jehoiakim taken and restored on promise of obedience with Daniel and his companions carried off as hostages along with temple vessels, reads the captivity as a sure decree for which God stirred up Nebuchadnezzar, and has the king die at the gates as soon as he came out, unburied, with the vessels lodged in the idol house at Babylon."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry reads the revolt as folly on both counts, that serving God would have spared the servitude and keeping his word would have left his condition no worse, notices that the bands are given no commission from Nebuchadnezzar but only from the King of kings, and finds two intentions in the judgment, the punishment of Manasseh after long waiting for a repentance that never came and the fulfilling of the prophecies, with the penalty remitted only as to its temporal side since national sins lie charged on the land."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Wesley insists Judah was punished properly for their own sins, and only occasionally for Manasseh's, which they made their own by repetition."
+    "prevalence": "several",
+    "summary": "Clarke supplies the political frame, Nebuchadnezzar sent by his father against revolted provinces and taking all Egypt held from the Euphrates to the Nile, points back to Huldah for the word fulfilled, and will scarcely reckon the three months of Jehoiachin a reign at all; Wesley makes the sins properly Judah own, Manasseh only as they repeated them."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott dates the invasion from Carchemish and the death of Nabopolassar, traces the revolt to Egyptian instigation and the raiders to hereditary enemies taking reprisals for Josiah power over them, renders the clause strictly as only upon the mouth of Jehovah, refuses to let the charge be softened into mere persistence in Manasseh kind of sin, and reads the withheld burial notice as significant; Delitzsch treats the third year as no more than the extreme terminus from which to count and finds the received reconciliation of the burial notice with Jeremiah insufficient."
    }
   ],
   "debates": [
    {
-    "question": "For whose sins was Judah removed out of God's sight?",
+    "question": "When did Nebuchadnezzar first subdue Jehoiakim?",
     "sides": [
      {
-      "position": "for the sins of Manasseh, the filled-up measure of a long provocation",
+      "position": "in the fifth or sixth year, after Carchemish in the fourth and the recall to Babylon on Nabopolassar death",
       "holders": [
-       "Keil and Delitzsch",
-       "Ellicott"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "properly for their own sins, Manasseh's only as they repeated them",
+      "position": "the third year is only the extreme terminus from which to count; Carchemish fell early in the fourth year and Jerusalem was taken in the same year",
       "holders": [
-       "Wesley"
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "at the latter end of the third or the beginning of the fourth year, when Jehoiakim was taken and restored on promise of obedience",
+      "holders": [
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "On what ground did the judgment fall?",
+    "sides": [
+     {
+      "position": "on the sins of Manasseh, visited after long waiting, with the innocent blood singled out as unpardoned and the prophecies to be fulfilled",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the blood cried to heaven, and children suffering for their fathers was precisely the Old Testament doctrine until Ezekiel proclaimed another",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the measure of sins was full, so that no intercession, even of Moses and Samuel, would have availed",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "properly for their own sins, and for Manasseh only as they made his sins their own by repeating them",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How did Jehoiakim come to his end?",
+    "sides": [
+     {
+      "position": "he fell in an encounter with the freebooters and his body was left where it lay; the words imply no peaceful death",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "he died at the gates as soon as he came out of Jerusalem and had no burial at all",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the statement no longer contradicts Jeremiah, as is generally admitted, but the received solution is insufficient",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
-  "themes": [
-   "at the commandment of the LORD",
-   "the sins of Manasseh",
-   "removed out of his sight",
-   "the unforgiven measure"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "4": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott refuses to soften 'Jehovah willed not to pardon,' making Manasseh's innocent blood the crying, cumulative guilt that sealed the doom, and defends the Old Testament doctrine that children bore the fathers' iniquity until Ezekiel."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill sees in the innocent blood the long, cruel usage of the prophets and servants of the Lord."
-   }
-  ],
-  "debates": [],
   "outliers": [
-   {
-    "voice": "Bähr (as reported by Ellicott)",
-    "note": "Would soften vv.3-4 to mean Judah was punished not for Manasseh's guilt but only for persisting in the same kind of sins — a reading Ellicott rejects."
-   },
-   {
-    "voice": "Thenius (as reported by Ellicott)",
-    "note": "Guesses the 'innocent blood' means the murder of some prominent person such as Isaiah, distinguishing the two clauses — which Ellicott denies on the parallel of 2 Kings 21:16."
-   }
+   "Clarke alone measures the conquest from the Euphrates to the Nile and makes Nebuchadnezzar his father deputy against the revolted provinces.",
+   "Ellicott alone glosses out of his sight from the Targum, as the land where God was present in his Temple."
   ],
   "themes": [
-   "unpardoned innocent blood",
-   "corporate and cumulative guilt",
-   "children for the fathers",
-   "the exile as purification"
+   "a vassal who kept faith three years",
+   "judgment deferred but never revoked",
+   "a burial notice withheld",
+   "Egypt shut inside its own borders"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott gathers from Habakkuk and Jeremiah that Jehoiakim oppressed his people with forced labour on Jerusalem's defences, and marks this as the last citation of the royal chronicles, which Bähr thinks did not extend beyond his reign."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill draws from 2 Chronicles the added 'abominations, and that which was found in him,' interpreted (with Lyra) of idolatrous body-markings."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the closing formula",
-   "oppression by forced labour",
-   "the last of the royal annals",
-   "the twilight of the monarchy"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "John Wesley",
-   "Adam Clarke"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil harmonizes 'slept with his fathers' with Jeremiah's ass-burial prophecy, and Ellicott, noting the pointedly omitted burial, judges Jehoiakim slain by the raiding bands (with Ewald's conjecture of a treacherous seizure) and his body cast out."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley affirms the fulfilment of Jeremiah's prophecy that Jehoiakim would be buried with the burial of an ass; Clarke turns to the vassal-successor Jehoiachin, scarcely to be reckoned a king."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill says Jehoiakim died but had no burial, bound in chains and cast out at the gates of Jerusalem per the prophecy."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How did Jehoiakim die?",
-    "sides": [
-     {
-      "position": "a violent death, the body dishonoured and left unburied, fulfilling Jeremiah's prophecy (Ewald: lured out and treacherously slain)",
-      "holders": [
-       "Gill",
-       "Ellicott",
-       "Wesley",
-       "Keil and Delitzsch",
-       "Ewald (as reported by Ellicott)"
-      ]
-     },
-     {
-      "position": "the text asserts merely his death, not necessarily a violent one",
-      "holders": [
-       "Thenius (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "slept with his fathers",
-   "the omitted burial",
-   "the ass-burial prophecy",
-   "a vassal-successor"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott and Keil read the verse as the seal on Egypt's collapse — Necho stripped of all from the Wady-el-Arish to the Euphrates — leaving Judah denuded of any external help before the coming siege."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes Necho came no more to gather tribute or help Judah's kings until Zedekiah's day, and then only to retire."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke says Necho was so crushed he was confined to his own states and could attempt no more conquest."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "Egypt swept from the field",
-   "no deliverer for Judah",
-   "from the river of Egypt to the Euphrates",
-   "the reward of a hopeful revolt"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "8": {
+  "range": "8-12",
+  "pericope_label": "Jehoiachin reigns three months, Jerusalem is besieged, and he goes out to the king of Babylon",
   "voices": [
+   "John Gill",
    "Matthew Henry",
-   "John Gill",
-   "John Wesley",
    "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Wesley holds firmly to a co-regency (eight with his father, eighteen alone); Clarke rejects harmonizing and calls the 'eight' of Chronicles a plain textual error, since a boy could not have wives or 'do evil' as a king."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry laments the tragic brevity — a prince who came to the crown only to lose it, thrust into a falling house, who yet smarted for his fathers' sins because he trod in their steps."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill offers both a co-regency and Lightfoot's chronology, but inclines finally to a copyist's slip of eight for eighteen (so the Arabic and Syriac)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sets aside the arithmetic to dwell on the names Jehoiachin, Jeconiah, and the ominous Coniah, and on his mother Nehushta and grandfather Elnathan."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is Jehoiachin's age reconciled — eighteen here, eight in 2 Chron. 36:9?",
-    "sides": [
-     {
-      "position": "a co-regency: eight when he began to reign with his father, eighteen when he reigned alone",
-      "holders": [
-       "Gill",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "a textual error in Chronicles, to be corrected to eighteen",
-      "holders": [
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the age discrepancy",
-   "co-regency or scribal slip",
-   "a crown lost as soon as won",
-   "the ominous name Coniah"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "9": {
-  "voices": [
-   "John Gill",
+   "Charles Ellicott",
    "Keil and Delitzsch",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil registers the verdict and moves to the siege at 'the turn of the year'; Ellicott canvasses whether Ezekiel's young lion denotes Jehoiachin and corrects Josephus's praise of him as a misreading of Jeremiah."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill explains the evil from the co-regency: partner with his father on the throne, Jehoiachin was partner in his sins."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does the young lion of Ezekiel 19:5-9 denote Jehoiachin?",
-    "sides": [
-     {
-      "position": "yes, Jehoiachin",
-      "holders": [
-       "Keil and Delitzsch",
-       "Ewald (as reported by Ellicott)"
-      ]
-     },
-     {
-      "position": "no — Zedekiah, since so brief a reign cannot bear the image",
-      "holders": [
-       "Thenius (as reported by Ellicott)",
-       "Hitzig (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [
-   {
-    "voice": "Josephus (as reported by Ellicott)",
-    "note": "Calls Jehoiachin 'naturally good and just,' against the verdict of Scripture — a judgment Ellicott ascribes to a misunderstanding of Jeremiah 22:24, 28."
-   }
-  ],
-  "themes": [
-   "the standing verdict",
-   "guilt sealed by lineage",
-   "the young lion of Ezekiel",
-   "judgment not lengthened by the reign"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott sets the siege in the spring, reports Thenius's cordon across the south to cut off Egypt, and glosses 'servants' as generals and 'was besieged' as looking on to the final siege."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry hears in the encircling of the city the fulfilment of the covenant curse of Deut. 28:49 — a fierce nation brought from far to besiege them in their gates."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill fixes the moment simply: 'at that time,' when Jehoiachin reigned."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the servants' siege",
-   "the covenant curse fulfilled",
-   "a cordon against Egypt",
-   "harassment hardening into siege"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "11": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott corrects the tenses ('were besieging,' 'came unto'), the king arriving after the siege was begun; Keil explains he came in person to punish Jehoiakim's revolt in the person of his successor."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill notes Nebuchadnezzar came in person, following his army."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the king comes in person",
-   "a vicarious reckoning",
-   "the terror of the mighty at the gates",
-   "the stage set for surrender"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
    "John Wesley"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil traces Jehoiachin's surrender in hope of favour, met instead as a rebel and led captive with his household per Jer. 22:24; Ellicott dates the taking to Nebuchadnezzar's eighth year, tallying with Jeremiah."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke sees a prudent surrender for better terms; Wesley calls it the counsel of Jeremiah and to the king's own good, yet faults his want of an Israelite's faith and resolution."
-   },
-   {
     "school": "reformed",
     "prevalence": "single",
-    "summary": "Gill: the young king went out not to fight but to submit and cast himself on the conqueror's mercy."
+    "summary": "Gill reconciles eighteen with eight by a co-regency begun in his father first year, reports a second solution from the eighth year of the captivity, concludes that a copyist very probably wrote eight for eighteen since the Arabic and Syriac read eighteen, makes a partner in the throne a partner in the sins, and says plainly that Nebuchadnezzar came in person following his army."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry laments a failure of faith — had he done as Hezekiah did, he need not have feared Babylon; wanting piety, he had not the resolution of a man."
+    "summary": "Henry turns the surrender into a reproach, that the name of Babylon had grown formidable and the king beat a parley, when peace made with God and the method Hezekiah took would have let him hold out with courage and honour, one chasing a thousand, so that wanting the faith and piety of an Israelite he had not the resolution of a man, of a soldier, or of a prince, and he and his house went out prisoners of war as servants of sin do."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke refuses to reconcile the two figures and calls the shorter corrupt, since a king carried to Babylon after three months had wives there and of such an age it could scarcely be said that he did evil as a king, and has him surrender because further defence was useless, hoping for better terms; Wesley takes the co-regency without qualification and adds that the surrender followed the counsel of Jeremiah and was to the king own good."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott counts the forms of the name and reports the view that the prophet clipped it to foreshadow the fate, weighs and rejects the application of the lion parable to this king, dates the siege to the spring, takes the servants to be generals and reads from the tense that the siege had begun before the king arrived; Delitzsch glosses at that time as the accession or the turn of the year, and has Nebuchadnezzar show none of his earlier favour but treat this king as a rebel."
    }
   ],
   "debates": [
    {
-    "question": "Was Jehoiachin's surrender prudent submission or a failure of faith?",
+    "question": "Was Jehoiachin eight or eighteen at his accession?",
     "sides": [
      {
-      "position": "a wise and necessary submission to an unassailable power",
+      "position": "both figures stand, by a co-regency: eight when he began to reign with his father, eighteen when he began to reign alone",
       "holders": [
-       "Gill",
-       "Clarke",
-       "Keil and Delitzsch",
-       "Ellicott"
+       "John Gill",
+       "John Wesley"
       ]
      },
      {
-      "position": "a cowardly forsaking of the God who could have defended him",
+      "position": "the shorter figure is corrupt, since the king had wives at Babylon and could scarcely be said to do evil as a king at that age",
       "holders": [
-       "Matthew Henry",
-       "Wesley"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the lower number is a slip of the pen",
+      "holders": [
+       "Keil and Delitzsch"
       ]
      }
     ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the surrender at discretion",
-   "hope of favour disappointed",
-   "prudence or unbelief",
-   "overruled to his own good"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Adam Clarke",
-   "Keil and Delitzsch",
-   "Charles Ellicott",
-   "Matthew Henry",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil explains 'cut in pieces' as stripping the gold plating (cf. 2 Kings 16:17); Ellicott finds the surviving treasure evidence of secret store-chambers and hears the fulfilment of the word to Hezekiah (2 Kings 20:17)."
    },
    {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke counts three spoilings of the temple by Nebuchadnezzar (under Jehoiakim, Jehoiachin, Zedekiah); Wesley marvels the golden vessels had survived earlier plunder only to be swept away now."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill pictures the gates thrown open and both temple and palace stripped of their riches."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry seizes on the fulfilment of Isaiah's word that all should be carried to Babylon, the vessels reserved for Belshazzar's profane feast."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the treasuries emptied",
-   "the vessels of Solomon",
-   "three spoilings of the temple",
-   "prophecy fulfilled to the letter"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "Keil and Delitzsch",
-   "Adam Clarke",
-   "John Wesley",
-   "Charles Ellicott",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Keil takes 'all Jerusalem' as the best portion of the people (the good figs of Jer. 24); Ellicott explains the craftsmen and smiths as those whose removal disarmed the city, dismissing Kimchi's fancy that 'smiths' were riddling scholars."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke and Wesley read the 'mighty men of valour' as fighting men, distributing the ten thousand into seven thousand warriors, a thousand smiths, and two thousand princes and officers."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes 'all Jerusalem' to mean the chief, rich, and useful inhabitants, the poorer sort being left."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry reads the deportation as policy and providence — the strength of the city carried off to weaken and enrich, among them Ezekiel and later Mordecai."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who were the deported 'mighty men of valour'?",
+    "question": "Does the parable of the young lion refer to this king?",
     "sides": [
      {
-      "position": "the fighting men, the nation's soldiery",
+      "position": "Ewald among others refers it to him",
       "holders": [
-       "Clarke",
-       "Wesley",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "Thenius objects from the brevity of the reign, much of it under siege, and refers it with Hitzig to Zedekiah",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why did he go out to the king of Babylon?",
+    "sides": [
+     {
+      "position": "he despaired of the defence and threw himself on the clemency of Nebuchadnezzar, probably hoping to keep the throne as a vassal",
+      "holders": [
+       "Charles Ellicott",
        "Keil and Delitzsch"
       ]
      },
      {
-      "position": "men of property and artisans",
+      "position": "he saw that further defence was useless and hoped for better terms",
       "holders": [
-       "Thenius (as reported by Ellicott)",
-       "Bähr (as reported by Ellicott)"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "wanting the faith and piety of an Israelite, he had not the resolution to hold out",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the surrender followed the counsel of Jeremiah and was to his own good",
+      "holders": [
+       "John Wesley"
       ]
      }
     ]
    }
   ],
   "outliers": [
-   {
-    "voice": "Kimchi (as reported by Ellicott)",
-    "note": "Explains the 'smiths' (those who shut) as learned men who shut others' mouths with riddles none can solve — a reading Ellicott calls a curiosity of exegesis."
-   }
+   "Ellicott alone tracks four or five forms of the king name and passes on the view that the prophet clipped it, leaving a confirming God without the will to confirm.",
+   "Delitzsch alone denies that the king mother is named because the king was still a minor.",
+   "Ellicott alone records that Josephus called this king naturally good and just, probably on a misreading of Jeremiah."
   ],
   "themes": [
-   "the first great deportation",
-   "the mighty men of valour",
-   "the disarming of the city",
-   "only the poor left behind"
+   "a reign that was only a captivity",
+   "a name clipped to foreshadow a fate",
+   "terms sought from a conqueror who gave none",
+   "the gate opened instead of defended"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.21
+   }
   }
  },
- "15": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott notes the differing verb ('yea, he carried away'), defines the royal captives, and sees the exact fulfilment of Jer. 22:24-27 over Coniah; Keil treats it as the clearing of the throne for a puppet-king."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill marks that Jehoiachin continued in Babylon at least thirty-seven years."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the royal house carried off",
-   "the fulfilment over Coniah",
-   "the throne of David emptied",
-   "a monarchy into exile"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "16": {
-  "voices": [
-   "John Gill",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott works the arithmetic of the ten thousand against the 3,023 of Jer. 52:28 and the phrase 'strong and apt for war,' suggesting the 'heroes' are fighting men and the 'makers of war' the weapon-forging craftsmen."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill takes the figures as the particulars of the ten thousand, seven thousand being the principal men of the land."
-   }
-  ],
-  "debates": [
-   {
-    "question": "How is the total of ten thousand squared with the 3,023 of Jer. 52:28?",
-    "sides": [
-     {
-      "position": "a scribal confusion of a yod (ten) with a gimel (three)",
-      "holders": [
-       "Thenius (as reported by Ellicott)"
-      ]
-     },
-     {
-      "position": "by combining separate deportations",
-      "holders": [
-       "Josephus (as reported by Ellicott)"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "the numbering of the captives",
-   "a discrepancy of totals",
-   "warriors and armourers",
-   "a city left incapable of war"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
+ "13": {
+  "range": "13-17",
+  "pericope_label": "The treasures and the vessels carried off, ten thousand deported, and Mattaniah made king under the name Zedekiah",
   "voices": [
    "John Gill",
    "Adam Clarke",
    "Charles Ellicott",
    "Keil and Delitzsch",
-   "John Wesley",
-   "Matthew Henry"
+   "John Wesley"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott traces Mattaniah's pedigree and first claim as Jehoiachin's uncle, and hears in the new name Zedekiah ('Jah is righteousness') the delusive hopes of Jer. 23:1-9; Keil gives his age and standing."
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill has the gates thrown open and the conqueror entering to strip palace and temple alike, limits all Jerusalem to the chief, the honourable, the rich and the useful, gives the seven thousand as the principal men, notes that Jehoiachin remained at Babylon at least thirty-seven years, and makes Mattaniah the third son of Josiah."
    },
    {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke identifies Mattaniah as Josiah's son and Jehoiakim's brother; Wesley reads the imposed name as a warning of the divine justice that would overtake Zedekiah's own perfidy."
+    "summary": "Clarke sorts the plundering into three spoliations, under Jehoiakim, here, and under Zedekiah, and gives the figures for the mighty men and the craftsmen; Wesley makes the deported the best and most considerable part, works the arithmetic the same way, observes that smiths could have furnished new arms and fresh trouble, and asks how the golden vessels had survived earlier rifling at all."
    },
    {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill identifies Mattaniah as the third son of Josiah."
-   },
-   {
-    "school": "puritan-evangelical",
-    "prevalence": "single",
-    "summary": "Henry makes the changed name a token of servitude — 'they have set up kings, but not by me' (Hos. 8:4) — and a presage of God's justice glorified in his ruin."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott finds it surprising that anything was left in the treasury, infers secret store-chambers, takes the cutting in pieces as the stripping of gold plate, defines the deported classes against Thenius and Bahr, works out the arithmetic of the ten thousand, and reads the change of name against the prophecy of a king called Jehovah our righteousness; Delitzsch distinguishes the solid-gold vessels taken at the first taking and returned by Cyrus from the plating taken now, and makes Mattaniah the youngest son with the first claim as uncle to a childless youth."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "How often and how far was the temple spoiled?",
+    "sides": [
+     {
+      "position": "three times over, under Jehoiakim, at this taking, and finally under Zedekiah",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the solid-gold vessels went at the first taking and were given back by Cyrus; what was taken now was the plating",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "that anything remained after repeated spoliations argues secret store-chambers and supports the account of the sanctuary wealth",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the golden vessels survived earlier rifling by the care of priests who hid them, the clemency of conquerors, or a providence disposing their hearts",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who were the mighty men, the craftsmen and the smiths?",
+    "sides": [
+     {
+      "position": "fighting men, with craftsmen workers in wood, stone and metal and smiths properly those who shut, makers of bolts and bars",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "men of property and artisans rather than warriors",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the chief men, the nobles and the artificers, numbered seven thousand and one thousand",
+      "holders": [
+       "Adam Clarke",
+       "John Gill",
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where did Mattaniah stand among the sons of Josiah?",
+    "sides": [
+     {
+      "position": "the third son",
+      "holders": [
+       "John Gill",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the youngest son, who as uncle to a youth too young to have a son fit to reign had the first claim",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone calls the gloss that makes the smiths learned men shutting other mouths with riddles a curiosity of exegesis.",
+   "Ellicott alone suspects that setting a native prince on the throne executed a promise made at the surrender.",
+   "Delitzsch alone explains why the king, the queen-mother and the wives are held back from the general statement for the later list."
+  ],
   "themes": [
-   "a puppet on the throne",
-   "the changed name Zedekiah",
-   "the justice of the LORD",
-   "kings set up not by God"
+   "plating stripped from what plunder had spared",
+   "a population counted down to its cream",
+   "smiths deported so that no arms could be made",
+   "a new name that raised false hopes"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.29
+   }
   }
  },
  "18": {
+  "range": "18-20",
+  "pericope_label": "Zedekiah reigns eleven years, does evil in the sight of the LORD, and rebels against the king of Babylon",
   "voices": [
    "John Gill",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Keil names Hamutal of Libnah and shows from the close parallel in Jeremiah 52 — with its omissions and additions — that neither text was borrowed from the other but both from a common source."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "single",
-    "summary": "Gill reckons that Zedekiah was but nine or ten when Josiah died, the whole sequence of his brothers' reigns compressed into a decade."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the last king introduced",
-   "Hamutal of Libnah",
-   "the parallel in Jeremiah 52",
-   "a record carefully closed"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "19": {
-  "voices": [
    "Adam Clarke",
    "Charles Ellicott",
-   "Keil and Delitzsch"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Ellicott sets the verdict beside Jeremiah's bad figs and Ezekiel's denunciation of Zedekiah's broken faith; Keil insists God did not make Zedekiah wicked, but such a God-resisting man became king to Jerusalem's ruin."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "single",
-    "summary": "Clarke marvels that not one of these kings takes warning from the judgments that fell on his predecessors."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the recurring verdict",
-   "warning unheeded",
-   "not God but the man's own evil",
-   "the incorrigible house of David"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "Adam Clarke",
-   "Charles Ellicott",
+   "Keil and Delitzsch",
    "John Wesley"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "single",
+    "summary": "Gill works back through the three months of Jehoahaz, the eleven years of Jehoiakim and the three months and ten days of his son to fix how old Zedekiah was when Josiah died."
+   },
+   {
     "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Clarke fixes the revolt in Zedekiah's eighth year and reproves the broken oath as the filling up of iniquity; Wesley reads the people's own sins as the true cause why God gave and suffered wicked kings."
+    "summary": "Clarke finds it astonishing that not one of these kings took warning from the judgments which fell on his predecessors, dates the revolt to the eighth year, reproves the breaking of the oath sworn to Babylon and calls it the filling up of the measure of iniquity; Wesley draws the moral backwards, that the sins of the people were the true cause why God gave them wicked kings and suffered them to do wickedly."
    },
    {
     "school": "grammatical-historical",
-    "prevalence": "single",
-    "summary": "Ellicott parses the syntax ('upon the anger of Jehovah it befell Jerusalem'), puts a full stop before 'And Zedekiah rebelled,' and details the doomed coalition with Egypt and the neighbouring peoples that Jeremiah opposed."
+    "prevalence": "several",
+    "summary": "Ellicott renders the clause literally and would punctuate so that the rebellion stands on its own, then sets out the diplomacy behind it, the embassy to Pharaoh Hophra, the general rising proposed by the neighbouring peoples, the hopes raised by a prophecy Jeremiah opposed throughout, and the earlier attempts to recover the exiles, concluding that the date of the open revolt cannot be fixed; Delitzsch compares this section with the appendix to Jeremiah and argues that neither text was drawn from the other, and presses that the anger of God made the man king rather than made him wicked."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "What is the relation between this section and the appendix to the book of Jeremiah?",
+    "sides": [
+     {
+      "position": "neither was drawn from the other, since the appendix carries notices on the vessels and the brazen pillars found nowhere in these books",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Does the anger of the Lord make God the author of Zedekiah wickedness?",
+    "sides": [
+     {
+      "position": "no; what came to pass by that anger was that such a man became king, and so the cause of the destruction",
+      "holders": [
+       "Keil and Delitzsch"
+      ]
+     },
+     {
+      "position": "the raising of such a prince was itself a token of displeasure, his character being able only to hasten the end",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the sins of the people were the cause why God gave them wicked kings and suffered them to do wickedly",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "When did the open revolt break out?",
+    "sides": [
+     {
+      "position": "in the eighth year of his reign",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the date cannot be fixed",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone would put a full stop before the last sentence, so that the rebellion is stated on its own and not as what the anger brought about.",
+   "Ellicott alone measures the hopes of the revolt by the prophecy of Hananiah and sets Jeremiah against the project throughout.",
+   "Delitzsch alone passes on the judgment that Zedekiah was simple and dependent upon his counsellors while despising the word of God."
+  ],
   "themes": [
-   "the anger of the LORD",
-   "the broken oath",
-   "a doomed rebellion",
-   "cast out from his presence"
+   "two texts neither of which copied the other",
+   "a wicked king given as a judgment",
+   "an alliance canvassed from Egypt to Zidon",
+   "an oath sworn by God and broken"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-17",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.33
+   }
   }
  }
 }

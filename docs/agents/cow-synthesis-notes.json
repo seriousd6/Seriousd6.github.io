@@ -98222,6 +98222,106 @@
       "book": "job",
       "chapter": "17",
       "note": "Drafting discipline finding: three paragraphs, not four or five. Every tile in the preceding chapters overshot the 650-word ceiling and needed two to eight trim rounds; stating a per-voice word budget before drafting did not change the output. Writing THREE paragraphs — fewer sentences per voice rather than shorter sentences — landed job 17 tiles 1-2 and 3-5 at 645 and 641 words on the first try, the only first-try in-window drafts of the run. The lever is paragraph count, not sentence length."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "7",
+        "13"
+      ],
+      "note": "JFB stride bug, 34th confirmation, and a two-member STALLED donor. Blocks at keys 7 and 13 only: interval 6, offset 1, no other landing site in the chapter. Both are byte-identical (708 chars, md5 6b72419573d7) and both are displaced commentary on 2 Samuel 18 — the tower-house at the gate of Mahanaim, the watchtower sentinel, Ahimaaz and Cushi, and David's grief over Absalom. Neither is declarable; both tiles carry excluded_voices accordingly. This is the first two-member instance where the donor stalls immediately, so the arithmetic signature is as weak as it can be while still being a progression."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "20"
+      ],
+      "note": "Ellicott chrome strip, 21st consecutive chapter, and the heaviest JavaScript tail measured so far. Key 20 is 1243 words of which only ~260 are genuine exposition; the cut is clean at 'Copyright Statement These files are public domain', and everything after is site furniture followed by roughly 250 words of inline JavaScript including the whole book_data array of all 66 books. A content-based detector keyed on the copyright sentence would recover 983 words here."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "7",
+        "9"
+      ],
+      "note": "Keil and Delitzsch off-by-one filing, milder than at job 10 or psalms 9 but with one real cost. Keys 2, 3 and 4 expound their own verses or one past (key 4 carries the vv.5-6 burial discussion), and keys 13, 14, 15, 18, 19 are usable where filed, so K&D is declarable on all four tiles. The loss is at key 7: its window prints vv.7-8 and its exposition is entirely on v.8 — Jehoiachin's name forms, his age, and Ezekiel's description of him. Because key 7 sits in the vv.1-7 tile, that v.8 material cannot be used on the vv.8-12 tile where it belongs, and it does not ship. Keys 11 and 12 also overlap heavily, repeating the same surrender exposition twice."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "12"
+      ],
+      "note": "Wesley's block reproduces Henry verbatim — the clearest instance yet of inter-voice duplication, and a direct hit on any usable-words counter. Of Wesley's 102 words at key 12, roughly 60 are word-for-word Matthew Henry: 'Had he made his peace with God, and taken the method that Hezekiah did in the like case, he needed not to have feared the king of Babylon, but might have held out with courage, honour and success. But wanting the faith and piety of an Israelite, he had not the resolution of a man.' Wesley's Notes abridge Henry, so this is systematic rather than accidental. Two consequences: the size meter over-counts independent witness wherever Wesley and Henry are both present, and the prose must attribute the shared material to Henry and give Wesley only his distinctive remainder (here, that the surrender followed Jeremiah's counsel, and that the eighth year is Nebuchadnezzar's). Worth a corpus-wide overlap scan of Wesley against Henry."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "8"
+      ],
+      "note": "Alias-and-collision table, new instance: a SOURCE citing a DECLARABLE voice by short name. Gill's key-8 block attributes its second reconciliation of the eighteen/eight discrepancy to 'Dr. Lightfoot'. Lightfoot is itself a declared short name in the corpus (John Lightfoot, grammatical-historical), so writing it in prose where Lightfoot is not a declared voice of the tile would fail the voice check — the same shape as the Shakespeare 'Henry VIII' collision recorded earlier, but with the name in the attribution rather than in a quoted title. Handled by reporting the position as one Gill 'reports' without naming its author, which keeps the argument and loses only the secondary attribution."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "1",
+        "8"
+      ],
+      "note": "Henry's two block-heads cover vv.1-7 and vv.8-20, so the chapter's natural four-pericope tiling costs him two tiles. Key 1 runs four numbered heads over vv.1-7 and closes with an explicit pointer to vv.8-20; key 8 runs three heads over vv.8-20. Tiled 1-7 / 8-12 / 13-17 / 18-20 he is declarable on the first two only, and his material on the temple vessels, the classes deported, and Zedekiah's impiety and impolicy does not ship. Both heads also end with the Concise commentary concatenated onto the Exposition — about 100 duplicated words at key 1 and 180 at key 8 — so his raw totals over-report distinct content by 10-13% here. Fourth book in which this within-block duplication has been measured."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "disagreement",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "17"
+      ],
+      "note": "Mattaniah's place among Josiah's sons: Gill (key 17) and Ellicott (key 17) both call him the third son; Delitzsch (key 15) calls him the youngest, ten years old when his father died and twenty-one at his accession, and grounds his title on being uncle to a youth of eighteen who could have no son old enough to reign. Both are defensible on the lists, and the prose reports the divergence rather than choosing."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "fidelity",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "13-17"
+      ],
+      "note": "Spelling/diacritic entity class, another instance. The fidelity ENTITIES check flagged 'Chaldaean': Ellicott's source spells it with the ae ligature, so my transliteration matched nothing in the corpus. Fixed by using the plural 'Chaldeans', which Clarke and Ellicott both write verbatim at keys 1 and 2. This is the same class as earlier diacritic flags and reinforces the recommendation to normalise ligatures and diacritics in the checker's corpus index rather than steering prose around them — provided the normalisation does not let genuinely unsourced names through."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "2kings",
+      "chapter": "24",
+      "verses": [
+        "18"
+      ],
+      "note": "Corrupted proper name in the K&D block. Key 18's note on the relation between this section and the appendix to Jeremiah cites the scholar as 'Hvernick' — the umlaut has been lost from Haevernick, leaving a word that is not a name in any spelling. Any prose naming him would plant either an unsourced spelling or a nonsense one, so the position was reported without the name. Same root cause as the ligature class, but here the damage is to the token itself rather than to my rendering of it."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2kings",
+      "chapter": "24",
+      "note": "18th polish-pick-with-nothing-to-polish, and the routing test needs refining. The queue offered 'polish 2kings 24'; all 20 entries were legacy-unversioned per-verse prose of 371-529 words, 19 graded A and one B. Note that these entries DO carry a qa block, with standard 'legacy-unversioned' — so the cheap test recorded earlier ('if no entry carries a qa stamp, route it to legacy') under-fires here. The reliable test is the STANDARD field: if no entry carries standard 'cow-prose-rules-2026-08-09', the chapter belongs in the legacy queue regardless of its recorded grades."
     }
   ]
 }
