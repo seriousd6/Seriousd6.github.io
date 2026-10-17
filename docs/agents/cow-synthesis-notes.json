@@ -98609,6 +98609,74 @@
       "book": "job",
       "chapter": "25",
       "note": "Tags were clean in BOTH directions on arrival -- every school strong-tagged in the prose is in schools[], every school in schools[] is strong-tagged, and voices[] matches the voices named in the prose for all six verses. Worth recording as the counter-example to the mark 3 finding (26 of 35 entries mismatched there): the gap is not universal in legacy chapters, so a corpus-wide check would find real signal rather than noise."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "5",
+      "verses": [
+        "8",
+        "9"
+      ],
+      "note": "SHARPEST INSTANCE YET of the span-aware source problem, and it should settle the question. The v8 catena holds FIFTEEN WORDS -- Gill's bare 'A letter to him, to the following purpose.' Everything else in the 396-word entry (Henry on deliberating before answering, Proverbs 31:16, Keil and Delitzsch on the rafts and Joppa, Clarke on timber squared to scantling) comes from the v9 and v1 keys. So the stamped expansion ratio for v8 is about 26x against a STRETCH_RATIO of 6.0, and the thin exemption would have licensed a 120-word entry here, both purely as artifacts of span-keyed attribution. Neither number says anything about this entry."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "5",
+      "note": "MY OWN TOOLING WAS WRONG ON THIS CHAPTER and the error looked exactly like a pass. 1kings 5 quotes with straight SINGLE quotes; my quote-fraction script splits on double quotes, so it reported scripture 0.000, commentator 0.000, zero fragments chapter-wide -- i.e. a chapter with no quotation at all. A single-quote-aware extractor finds 103 fragments, scripture 0.028, commentator 0.075, and 4 of 18 quote-led openings (0.22, inside the one-third advisory). This is the fifth punctuation style encountered (after literal em dash plus straight singles, lsquo/rsquo, lsquo/rsquo plus mdash, ldquo/rdquo plus mdash, and literal em dash plus straight doubles). A style-agnostic extractor is not a nice-to-have: without it the quote checks silently pass on whole chapters."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "fidelity",
+      "book": "1kings",
+      "chapter": "5",
+      "verses": [
+        "12"
+      ],
+      "note": "One unsourced claim found and corrected in v12. The entry read 'The interpreters agree entirely. The clause as he promised him points back to the gift bestowed at Gibeon...' -- but NO witness on 5:12 mentions Gibeon or 1 Kings 3:12. Gill says only that the wisdom appeared in the preparations and the treaty; Keil and Delitzsch argue about the scope of the remark. The back-reference is correct in fact but was the writer's, asserted as the interpreters' consensus. Rewritten to state it as the text's own connection, and the narrower reading Keil and Delitzsch actually credit to Thenius was added in its place. Found by proper-noun grounding, not by any quote check."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "12",
+        "14"
+      ],
+      "note": "Four instances of the consensus-announcing carrier family removed: 'the witnesses do not divide' (v5, v14), 'so the witnesses divide' (v7), 'the witnesses do not differ' (v8), plus 'the witnesses agree without strife' (v6) and 'the interpreters agree entirely' (v12), neither of which the carrier list catches. The list is matching strings where the defect is a SHAPE: a sentence whose whole content is that the voices agree. v5 also carried a true roll-call -- four names in one sentence followed by an agreement claim -- which the same rewrite removed."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "1kings",
+      "chapter": "5",
+      "verses": [
+        "6",
+        "8",
+        "16"
+      ],
+      "note": "v8 and v16 both fell below the 350 floor once their padding was cut (401 to 337 and 364 to 337), which is the honest signature of a padded entry: remove the restatement and there is not enough left. Both were restored with genuinely unused source rather than re-padded -- for v8, Clarke's point that the timber was squared and cut to scantling in Lebanon so nothing needed axe or saw at Jerusalem (1 Kgs 6:7); for v16, the Thenius attribution and the Latin gloss principes qui praefecti erant that Keil and Delitzsch take from Vatablus. v6 likewise gained Gill's unused weighing of whether Lebanon was Israel's or Hiram's."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "source-defect",
+      "book": "1kings",
+      "chapter": "5",
+      "verses": [
+        "1",
+        "6",
+        "8",
+        "18"
+      ],
+      "note": "Tags fixed in both directions again: Adam Clarke contributes to v8 but was absent from voices[] (and wesleyan-arminian from schools[]); Matthew Henry is named in v18's prose but was absent from both. John Gill sat in v6's voices[] contributing nothing visible, so his actual comment -- the ownership of Lebanon -- was written in rather than the tag dropped. Two cosmetic mismatches were left alone and are not defects: v1 names Gill and v18 names Henry without the chapter's inline school label, while schools[] is correct in each."
     }
   ]
 }
