@@ -98775,6 +98775,40 @@
       "book": "job",
       "chapter": "40",
       "note": "Overshoot rule confirmed and sharpened. The provisional rule from nehemiah 8 was that overshoot scales with usable source words per tile rather than voice count. This chapter tests it across four tiles of 3256, 4647, 5022 and 3469 words: first-pass drafts came in at 795, 701, 751 and 715, needing three, three, three and two trim rounds. So at 3000-5000 words per tile expect 8-23 percent overshoot and two to three rounds, regardless of whether the tile carries four voices or six. The 2599-word tile at nehemiah 8 needed one round and the 2331-word tile at ezra 6 needed none. The practical consequence for tiling: a tile of about 2500 usable source words is the cheapest to write, which argues for more and narrower tiles wherever the pericope seams allow it."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "26",
+      "verses": [
+        "1"
+      ],
+      "note": "GENUINE POLISH PICK, second of this run after zechariah 6, and the cheapest kind of B to clear. All four entries were already on cow-prose-rules-2026-08-09 with self-graded fidelity A and no ENTITIES signals, so the prior worker's own fidelity note was correct that nothing leans past its witness. The single B was therefore a pure lint mark-down, and the diagnosis rule recorded at zechariah 6 held exactly: the entry failed on TTR ALONE at 0.5792 against the 0.58 floor, with compress clear at 0.4430, which points at a repeated noun rather than a repeated sentence frame. The repeat was the word parallel, used five times for the account in Kings, reinforced by names four times, king three times and port three times on a 435-word tile. Varying those nouns alone — companion narrative, the other account, spelling, form, harbour, and dropping two of them entirely — took ttr to 0.6064 and compress to 0.4568, grade A with the worst 200-token window at 0.59. The entry lost 19 words and not one position: no content was added, removed or re-attributed. The other three entries were not touched, and entry 1's qa block was hand-updated to A because the finish stamp skips entries already stamped."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "26",
+      "verses": [
+        "1"
+      ],
+      "note": "Why this tile was vulnerable in the first place, which is a tiling lesson rather than a prose one. The entry covers only vv.1-2 because keys 3 and 4 are absent from the catena, so it cannot be merged forward across the gap; it carries about 1591 usable source words but only three voices, and two of those three are discussing the same narrow question, whether Uzziah and Azariah are both genuine names. A tile whose voices converge on one topic has a small working vocabulary however well it is written, which is what drives ttr down. Where a gap in the source keys forces a short tile, expect the lint to mark it rather than the fidelity check, and expect the fix to be lexical."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "26",
+      "note": "Independent corroboration of the Lightfoot name collision. The prior worker's fidelity note on this chapter records avoiding the name because Gill dates the king's death on Dr Lightfoot's reckoning and Lightfoot is a declared voice elsewhere in the corpus. I hit the identical collision independently at 2kings 26 — Gill citing Dr Lightfoot on the eighteen-or-eight discrepancy — and handled it the same way. Two independent encounters in different books make this a standing hazard rather than a one-off, and it belongs in the alias-and-collision table as a rule: Gill cites Lightfoot by short name often enough that any tile declaring Gill must check for it."
+    },
+    {
+      "at": "2026-10-17",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "26",
+      "note": "Correction to the preceding note: the chapter where I independently hit the Gill-cites-Lightfoot collision was 2kings 24, not 2kings 26. The note is otherwise accurate — two independent encounters, Gill citing Dr Lightfoot on the eighteen-or-eight age discrepancy there and on the date of Uzziah's death here."
     }
   ]
 }
