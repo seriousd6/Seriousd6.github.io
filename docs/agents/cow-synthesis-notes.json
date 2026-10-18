@@ -99617,6 +99617,62 @@
         "5"
       ],
       "note": "CLARKE NAMES THE WRONG ENEMY TWICE. In his chapter synopsis at key 1 he writes that the king attacks the Syrians, and at key 5 that he purposed to avenge himself of the Syrians, where the chapter says Edom and the children of Seir throughout and his own later notes get it right. It is his slip rather than a variant reading, so the prose does not repeat it and no tile attributes a Syrian campaign to anyone. Recorded because the error is in the source tree and the next writer will meet it in the same two blocks."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "41",
+      "note": "MOST CARRIER-SATURATED CHAPTER YET: 34 instances across 34 verses on arrival -- 24 'the witnesses do not divide', 6 'the witnesses agree', 1 'the witnesses note', 3 'the witnesses do not finally divide'. All removed. I wrote them in four verified batches with a different replacement each time rather than one substitution, because on 34 instances a single new formula would simply be a new template: the substance after each frame already varied, so the fix was to delete the scaffolding and let that substance lead ('The verse marks a turn in the speech's logic', 'In the sudden pronoun me the whole point breaks through', 'Here opens the weapon-passage', 'Over the neck there is no dispute; the division is over the figure that follows')."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "41",
+      "verses": [
+        "1",
+        "7",
+        "15",
+        "31",
+        "34"
+      ],
+      "note": "THE CARRIER LINT IS AN EXACT-STRING MATCH AND AN ADVERB DEFEATS IT. Three entries here read 'The witnesses do not finally divide' (v7, v15, v31) -- the banned phrase with one word inserted, doing identical work, passing the lint clean. I fixed all three, but the detector needs normalising: strip or allow for interposed adverbs between 'witnesses' and the verb, and cover the near-synonyms the list omits ('the witnesses agree', 'the witnesses note' is listed but 'the witnesses converge' and 'the interpreters agree' are not -- I have met all of them this window). A SECOND DISTINCTION WORTH KEEPING: 'the witnesses divide' is NOT the same defect. v1 and v34 use it to announce genuine disagreement over what creature is meant and who the subject of v34 is, which is content, not a consensus frame. I left both alone deliberately."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "41",
+      "verses": [
+        "9",
+        "15",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "FIVE MISFILED JFB BLOCKS -- tenth chapter with this defect and the highest count in one chapter so far. v9 and v15 both carry 2 Chronicles 4:9 material on the great or outer court; v21 carries an unnamed prophet's announcement; v27 a Jerusalem gate exhortation before a departure; v33 the conical hill Jebel Fereidis, the Frank Mountain. No residue leaked into any prose -- checked for court, prophetic spirit, rendezvous, Jebel, Frank Mountain, conical hill -- and all five are now declared via excluded_voices. Running total of chapters where I have found misfiled JFB: john 21, 2chronicles 2, 1chronicles 27, 2kings 8, matthew 20 (three), ezra 2 (two), 1chronicles 25 (three), job 41 (five). The label is in QA.VOICE_LABELS so the remedy is mechanical; the detection is the only hard part, and it has to be structural rather than keyword-based."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "41",
+      "verses": [
+        "30"
+      ],
+      "note": "v30 STAYS AT METRIC GRADE B, as psalms 5 v11 did, and for the same reason. Arrived 405w/ttr 0.5707; carrier removal left it 399w/0.5698 against an A threshold of 0.58. Job 41:30 is 'Sharp stones are under him: he spreadeth sharp pointed things upon the mire', and its 119-word catena has Gill, Clarke and Wesley on the beast's ease upon sharp stones plus Ellicott and Keil and Delitzsch on the threshing-sledge sense -- five witnesses on one narrow image, so sharp, stones, pointed and mire recur because the verse is about nothing else. I TRIED THE WRONG LEVER FIRST and am recording it: cutting 30 words of genuine restatement from the closing paragraph made ttr WORSE, 0.5636, because the cut removed distinct words (gall, harrow, edged, wound) while leaving the dense cluster intact. I reverted it. There is no unused source to add -- the entry already exhausts a 119-word catena -- and the thin exemption does not apply, since five witnesses with distinct content is not a thin verse, only a lexically narrow one. The remaining routes to A are deleting sound commentary to move a number."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "41",
+      "verses": [
+        "13",
+        "15"
+      ],
+      "note": "v13 lifted B to A (416w/ttr 0.5817 to 392w/0.5807... in fact to A at 0.5807 after the compress rose) by cutting a FOURFOLD gloss of one phrase. Gill, Wesley, Ellicott, Keil and Delitzsch and Henry all rendered 'the face of his garment' and 'the double bridle', so 'double bridle' stood four times; Keil and Delitzsch's sentence was pure restatement ('take the same view... as the doubled jaw') and is now 'concur', and the closing sentence's doubled 'none can / no hand can be laid' is now stated once. No source dropped. THIN-PHRASE false positives again, both in v15: 'outer skin thin as parchment' describes the whale's skin, and the other hits are the substring inside ordinary words."
     }
   ]
 }
