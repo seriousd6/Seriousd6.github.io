@@ -99356,6 +99356,54 @@
         "12"
       ],
       "note": "Unused source left on the table in the v11/v12 catena key, flagged for whoever polishes psalms 5 again or writes a span-aware tool: Ellicott's note on the shield carries LUTHER at Augsburg -- asked where he would shelter if the Elector of Saxony deserted him, 'under the shield of heaven' -- and a long Browning quotation from Instans Tyrannus elaborating the image. Neither appears in v12. I did not add them because v12 already grades A and the chapter's budget was spent on v11; but they are the kind of material that would lift a thin entry honestly. The same key also carries StudyLight page chrome, which both entries correctly ignore."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "24",
+      "verses": [
+        "14",
+        "25"
+      ],
+      "note": "CLARKE END-OF-CHAPTER NOTE, third instance, and the first with a usable detector pair in a single key. Key 25 carries 1,323 Clarke words of which only about 115 are comment on the verse. The rest is a chapter-level summary of the whole Job debate ('In the preceding chapters we find Job's friends having continual recourse to this assertion...') followed by a long anecdote about an archbishop which Clarke himself files backwards: 'On Job 24:14, I have referred to the case of unfortunate men who, falling into adversity, madly have recourse to plunder.' That self-reference is the same signature as the stranded excursus at nehemiah 8, where Clarke's v.8 block pointed forward to 'the observations at the end of the chapter'. So the shape is confirmed: an oversized terminal block PLUS an explicit cross-reference to another verse of the same chapter. Both halves are genuine Clarke, only misfiled. I reported the v.25 comment and the summary of the debate on the closing tile, where they belong, and left the v.14 anecdote out rather than move it to the vv.13-17 tile, since a reader of that tile would have no way to know the material came from the chapter's last key."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "24",
+      "verses": [
+        "25"
+      ],
+      "note": "ELLICOTT CHROME, 29th consecutive chapter, and a new worst. Key 25 runs 1,019 words of which 35 are commentary — 3.4 percent, against 5.9 at job 33 and 1.6 at nehemiah 8 on a shorter block. The footer measures 984 words again, the third chapter in a row at that figure (job 33, 1chronicles 18, here), so the constant is now well established at 984 outside Isaiah and 926 within it. Chapter usable drops from 17,438 to 16,454."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "24",
+      "verses": [
+        "4",
+        "10",
+        "16",
+        "22"
+      ],
+      "note": "JFB STRIDE BUG, 42nd confirmation, and the SECOND lattice with gaps, which settles the mechanism. Keys 4 and 16 carry 2 Chronicles material: key 4 Solomon's letter to Huram of Tyre and the two reasons given for asking Tyrian aid, key 16 a bare cross-reference to the vessels of the temple. The interval is 12, so on the standing 6-stride pattern the lattice is offset 4 with members at 4, 10, 16 and 22 — and keys 10 and 22 carry no JFB block at all. job 33 showed the same thing one chapter earlier (offset 3, member missing at key 21). Two instances in two consecutive chapters is enough to prefer the per-key account over the continuous-stream account: the wrong-book pairing is computed key by key, and where the donor key is empty the slot is simply empty rather than the sequence shifting up. That is good news for a mechanical sweep, since it means a recovered block can be assigned to its donor verse without first reconstructing an unbroken run. JFB excluded on vv.1-4 and vv.13-17."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "24",
+      "note": "A CHAPTER OF REAL DISAGREEMENTS, four of them sharp enough to tag. (1) vv.5-6, whose corn is reaped: Gill has the wicked reaping the standing corn of the poor, Ellicott has the poor reaping the tyrant's corn and going hungry, Clarke and Wesley have roaming plunderers robbing all alike. (2) v.18, who is swift upon the waters: Gill and Henry say pirates and privateers, Ellicott and Henry's alternative say the rebels against the light escaping over water and shunning cultivated roads, Wesley says the man himself passing away like water that never stays. (3) v.20, whether the forgetting is stated or wished, where Ellicott reports an optative construction and Clarke makes the word mercy rather than womb, so that the line says mercy itself shall be unmindful of him. (4) v.21, which is the sharpest, where Clarke reverses the sense outright: the verb should be rendered he feedeth, so the charge is not cruelty to the barren woman but a partial kindness that left the widow uncomforted, against Gill, Henry and Wesley who keep the received sense. A chapter this contested is cheap to write well, since the tiles have something to report at almost every verse; the expensive chapters are the ones where every voice says the same thing in different words."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "24",
+      "note": "TILING A 25-KEY LEGACY CHAPTER, the 25th polish pick with nothing to polish. 16,454 usable words after the chrome cut, tiled as five entries on Henry's three heads (keys 1, 13, 18) with the two long heads split: 1-4, 5-12, 13-17, 18-20, 21-25, summing to 3,198 prose words at about 0.19x. The splits were forced by size, vv.1-12 holding 7,367 source words and vv.18-25 holding 5,805, and both seams fall at the chapter's own turns, from the oppression of the country to the oppression of the city, and from the description of the wicked to their end. Henry is declared on two spans his key does not occupy, vv.5-12 from his key-1 head and vv.21-25 from his key-18 head; both heads walk those verses with explicit markers, which is the same judgement recorded at matthew 23, 1chronicles 18 and job 33. Six voices throughout, with no Calvin and no Barnes in the chapter."
     }
   ]
 }
