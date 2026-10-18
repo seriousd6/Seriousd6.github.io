@@ -99469,6 +99469,38 @@
         "31"
       ],
       "note": "Requote triage: two genuine and fixed (v5 quoted 'to lift up the horn' twice, once for Clarke's literal reading and once for Ellicott's metaphor objection, the second now a back-reference; v9 and v10 each quoted the chapter's refrain twice, the second now reported). Two left alone as lemma-and-gloss, the legitimate case: v5's full subscription followed by 'The king's seer in the words of God' as the phrase Ellicott glosses, and v8's verse clause followed by 'As well the small as the great'. Also left alone, and not defects: Jarchi (v2, v5) and Bertheau (v31) appear in the prose but not in voices[], which is correct -- they are critics reported by a witness, not witnesses, exactly as the loop doc's Thenius convention prescribes and as Rambach was handled in nehemiah 1."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "47",
+      "verses": [
+        "6",
+        "7"
+      ],
+      "note": "THE FIRST COMPRESS-ONLY POLISH, and the other half of the zechariah 6 rule is confirmed. The single B entry (vv.6-7) failed on COMPRESS alone, 0.4140 against the 0.42 floor, with ttr clear at 0.6061 — the mirror image of the ttr-only failures at 2chronicles 26 and isaiah 63. The rule predicts a repeated SENTENCE FRAME rather than a repeated noun, and that is exactly what was there. Two frames carried it: three topic sentences built on the same interrogative-fronted shape ('Whose sword it is nobody doubts', 'Who speaks the entreaty parts the four', 'What the sea shore covers is a smaller question'), and a set of repeated noun phrases around the chapter's one subject — the sword of 5 times, the sea shore 4, the sword of God 3, commanded his sword and against Ashkelon and twice each. Breaking the three topic frames into three different shapes and varying the phrases around the sword took the entry from compress 0.4140 to 0.4300 and ttr 0.6061 to 0.6381, grade A, at a cost of 26 words and not one reported position. The transferable part: a compress failure is fixed by varying SHAPES, a ttr failure by varying WORDS, and the two want opposite kinds of edit — at 2chronicles 26 and isaiah 63 the fix was to swap nouns while leaving the sentences alone, here it was to rebuild sentences while leaving most of the vocabulary alone."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "jeremiah",
+      "chapter": "47",
+      "verses": [
+        "6"
+      ],
+      "note": "A NOTE ON MARGIN, since this entry shows how thin a compress pass can land. The first round of frame-breaking reached 0.4218, which clears the 0.42 floor by 0.0018 and is too thin to ship: anything that shifted a few characters would put the entry back to B, and the recorded grade would then disagree with the recomputed one on the next audit. Three further passes took it to 0.4300, a margin of 0.010, which is in line with the ttr margins shipped at 2chronicles 26 and isaiah 63. Worth recording as a working rule for polish picks: do not stop at the first grade flip, carry the metric clear of the floor by about 0.01 before writing it back."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "jeremiah",
+      "chapter": "47",
+      "verses": [
+        "6",
+        "7"
+      ],
+      "note": "No lean past the witness was found or fixed; the recorded notes on this chapter name no such lean for the closing entry, and the four-way assignment of the entreaty (Clarke to the prophet, Ellicott to the Philistines, Calvin to the prophet speaking in their person, with the answer given to the sword by Clarke and to God by Wesley) is reported as it stood. Every edit was to sentence shape or phrasing, and the attributions, the positions and their order are unchanged. Two of the rewrites needed a second look: dropping the sea shore from Wesley's clause left a pronoun without an antecedent, which was repaired by writing the people of the shore, and Clarke's by the hand of the Chaldeans became by the Chaldean hand, an adjective the sources do use of the Chaldean ruin. Keil and Delitzsch remain undeclared on this entry, as the earlier note requires, their key-6 block being 54 words of pure verse quotation with no comment."
     }
   ]
 }
