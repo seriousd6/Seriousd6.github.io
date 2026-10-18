@@ -98925,6 +98925,84 @@
         "9"
       ],
       "note": "All eleven re-read against source; ten graded A, v9 graded B with a note. Rambach (v3) checked and correctly handled: he is a critic quoted by Keil and Delitzsch, not himself a witness, so he is reported in the prose and rightly absent from voices[] -- the loop doc's convention. My tags detector flags him, which is the detector's error, not the data's. The v3 debate over whether the broken wall is Nebuchadnezzar's ruin or a later demolition is properly recorded in debates[] with Clarke alone on the second side."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "23",
+      "verses": [
+        "11",
+        "17",
+        "23"
+      ],
+      "note": "JFB STRIDE BUG, 39th confirmation, and the donor is identified. Keys 11, 17 and 23 carry JFB blocks that belong to Matthew 20, the parable of the labourers in the vineyard: key 11 has the hours of hiring and the sending of fresh labourers into the vineyard, key 17 the 'calculating, mercenary spirit which had peeped out in Peter's question', key 23 the householder's answer, 'You appeal to justice, and by that your mouth is shut'. Interval 6, offset 5, three members, walking forward in order — the same shape measured at ezra 6, job 40 and matthew 24, so the displaced text is recoverable in sequence. JFB is therefore declarable nowhere in Matthew 23 (his whole presence in the chapter is 136 words, all of it displaced); recorded as excluded_voices on the tiles holding those keys, vv.8-12, vv.16-22 and vv.23-24."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "23",
+      "verses": [
+        "39"
+      ],
+      "note": "ELLICOTT CHROME, 26th consecutive chapter, and the second-worst genuine fraction yet measured. Key 39 carries 1,105 words of which only 122 precede the navigation and copyright block ('Matthew Mat 22 ... Footnotes: Copyright Statement These files are public domain...'), i.e. 11 percent genuine. The genuine part ends cleanly at 'For that generation, and for the outward Israel as such, the abandonment was final.' Only nehemiah 8 has been worse (1.6 percent). The copyright sentence remains the exact cut and the right detector key."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "23",
+      "note": "PATRISTIC CONTAMINATION VARIES ENORMOUSLY BETWEEN ADJACENT CHAPTERS, BUT ALWAYS HITS THE SAME VOICE. Matthew 23 has 'Cyril of Jerusalem:' inside modern blocks on only 6 of 39 keys and 1,181 appended words against 62,012 genuine, where matthew 24 had Cyril on 28 of 51 keys and 4,828 appended. Yet the distribution per voice is the same both times: Wesley 1,328 genuine against 775 appended here (58 percent of what the splitter credits him), after 1,683 against 3,836 at matthew 24 (70 percent); Calvin 203 appended, Ellicott 203; Henry, Clarke, Gill, Barnes, Robertson and Lightfoot clean in both. The reason looks mechanical: the appended father-material lands on the SHORTEST modern block in a key, and Wesley's blocks are the shortest in the corpus, so he absorbs it. A detector keyed on a father's name plus a colon inside a modern block should be run per voice, and Wesley's word totals in any survey should be treated as unreliable until it is."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "23",
+      "note": "HENRY MEGA-HEADS, COARSER THAN AT MATTHEW 24, AND THE FIRST DELIBERATE OUT-OF-KEY DECLARATION. Of Henry's 16,821 words in this chapter, keys 1, 13 and 34 hold 4,865, 8,455 and 3,501 — three heads covering vv.1-12, vv.13-33 and vv.34-39 for a 39-verse chapter, against seven heads at matthew 24. Three heads cannot carry eleven tiles, so the tiles for vv.5-7 and vv.8-12 declare Henry on the strength of a block keyed at v.1. This is defensible on the text: the head walks the verses with explicit markers (v. 5, v. 6, 7, v. 8-12) and expounds each in turn, so the block demonstrably expounds the span. It is also invisible to the tools, because synthesis-fidelity computes ungrounded_voices per CHAPTER, not per span. Both halves of that belong in the open owner-level question about declaring a voice on a span its block expounds; I have not relied on it anywhere the head does not name the verses."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "23",
+      "verses": [
+        "26",
+        "31"
+      ],
+      "note": "TWO NON-JFB DISPLACEMENTS AND AN END-OF-SECTION NOTE, ALL IN WESLEY. (1) His key-26 block is comment on v.29, 'Ye build the tombs of the prophets - And that is all, for ye neither observe their sayings, nor imitate their actions' — three keys early. That is the second measured displacement of a voice other than JFB, after Wesley at job 40, which kills the last of the idea that the stride bug is one source needing re-indexing. (2) His key-31 block runs 236 words of which most is not comment on v.31 at all but a summary index of the chapter so far, 'From the 3d to the 30th verse is exposed every thing that commonly passes in the world for religion', with its own verse list — the same shape as Clarke's stranded end-of-chapter note at nehemiah 8, in a different commentator. A sweep for displaced and stranded blocks must cover every voice and must look for section summaries as well as chapter notes."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "23",
+      "verses": [
+        "4",
+        "11",
+        "14",
+        "24",
+        "37"
+      ],
+      "note": "HOLLOW BLOCKS SHOULD COUNT AS ABSENT FOR VOICE DECLARATION. Wesley's blocks on keys 4, 11, 14 and 37 are bare scripture references and nothing else ('Luke 11:46.', 'Mt 20:26.', 'Mark 12:40; Luke 20:47.', 'Luke 13:34.'), 3 to 5 words each; Gill's key-24 block is 'Ye blind guides, as in.' On that ground I left Wesley out of the voices for vv.14-15, where both his blocks are references — he is not in excluded_voices either, since nothing of his was displaced there, it simply was not commentary. A cheap detector: a block whose visible text is only a reference, or under about 8 words with no verb, is a hollow block and should be excluded from both voice declaration and the usable-words count."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "disagreement",
+      "book": "matthew",
+      "chapter": "23",
+      "verses": [
+        "24"
+      ],
+      "note": "A FOUR-AGAINST-ONE DISPUTE ABOUT OUR OWN ENGLISH TEXT, worth keeping as a test case for this note kind. On 'strain at a gnat', Barnes, Clarke, Wesley and Robertson all call the familiar wording a printer's error for 'strain out' — Clarke pinning it on the edition of 1611 and producing Erasmus 1547 and Becke 1549 which read 'strayne out', Wesley calling it a glaring false print that runs through all our editions. Ellicott dissents: the rendering should indeed be 'strain out', but 'of this there is scarcely sufficient evidence, nor is it probable in itself'. Calvin's translator records the same conjecture with the early English versions. The majority is not obviously right, and the tile reports the dissent rather than burying it."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "23",
+      "note": "TILING DECISIONS FOR AN OVER-THRESHOLD POLISH PICK THAT WAS REALLY A LEGACY PICK. 75,790 usable source words by the loop's count, 62,012 by a per-voice count that cuts appended patristic text and Ellicott chrome; 39 keys, 39 legacy-unversioned per-verse entries graded 37 A / 2 B — the 22nd polish pick with nothing to polish, routed to legacy by the standard field as usual. Regenerated as 11 pericope tiles summing to 7,118 prose words, 0.094x of the loop figure and 0.115x of the genuine. Two decisions worth keeping: v.13 was given a tile to itself because Henry's 8,455-word head sits on that key, and vv.14-15 would otherwise have been swallowed by it; and vv.25-28 were merged because vv.25-26 alone hold only 985 source words, which at 650 prose words is a 0.63x expansion, far above anything shipped (the thinnest shipped tile is 0.28x at matthew 24 vv.16-18). The general rule: a tile under about 1,500 usable source words must be merged forward, however clean the pericope break."
     }
   ]
 }
