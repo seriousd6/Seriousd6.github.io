@@ -99673,6 +99673,39 @@
         "15"
       ],
       "note": "v13 lifted B to A (416w/ttr 0.5817 to 392w/0.5807... in fact to A at 0.5807 after the compress rose) by cutting a FOURFOLD gloss of one phrase. Gill, Wesley, Ellicott, Keil and Delitzsch and Henry all rendered 'the face of his garment' and 'the double bridle', so 'double bridle' stood four times; Keil and Delitzsch's sentence was pure restatement ('take the same view... as the doubled jaw') and is now 'concur', and the closing sentence's doubled 'none can / no hand can be laid' is now stated once. No source dropped. THIN-PHRASE false positives again, both in v15: 'outer skin thin as parchment' describes the whale's skin, and the other hits are the substring inside ordinary words."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "99",
+      "verses": [
+        "4",
+        "5"
+      ],
+      "note": "THE ENTITY ARTEFACT MEASURED IN ISOLATION, and it is worth a grade. The single B entry (vv.4-5) failed on ttr alone at 0.5780 against the 0.58 floor — a margin of two thousandths — with compress clear at 0.4485. Before touching a word of the prose I converted its HTML entities to the characters they stand for, four instances of the right single quote and two em dashes, and nothing else. That alone took ttr to 0.5853 and flipped the entry from B to A. The reason is mechanical: audit-synthesis-quality strips tags but does not unescape entities, so each right-quote entity contributes the pseudo-word rsquo AND a stranded s to the token stream the ttr is computed over, and each em dash entity contributes mdash. Six entities produced ten junk tokens in a 514-token entry, every one of them a repeat, and the entity count alone was the difference between a B and an A. This is the same defect recorded at isaiah 63 for the em dash, now quantified against a grade boundary and shown to be worse for the possessive form, which yields two junk tokens rather than one. The recommendation is unchanged and now urgent enough to act on: unescape entities inside QA.visible. Until that is done, any entry within about a hundredth of the ttr floor should have its entities counted before anyone concludes the prose is at fault."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "99",
+      "verses": [
+        "4",
+        "5"
+      ],
+      "note": "AND THEN THE REAL REPETITION, which the rule predicted. With the artefact removed the entry still sat at 0.5853, a margin of five thousandths, too thin to ship by the rule recorded at jeremiah 47. The genuine culprits were nouns, as a ttr failure always implies: equity six times, king six, God six and ark five in a five-hundred-word entry, each cluster concentrated in the paragraph that belongs to it. Six substitutions, all pronouns or the sources own alternatives — it for the equity of his moral government, the thing established for the establishment is equity itself, the chest for one of the arks, his throne for the king throne, the man who wrote it for the human king who wrote it — took the entry to ttr 0.5990, a margin of nineteen thousandths, with compress steady at 0.4542 and four words lost. No position was touched: the four-way construction of the king strength, Clarke identification of the footstool by elimination, Wesley transfer of the refrain to the footstool and Spurgeon complaint about his own age all stand as they were."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "99",
+      "verses": [
+        "4",
+        "5"
+      ],
+      "note": "No lean past the witness was found or fixed. The recorded notes for this chapter name none for vv.4-5, and the entry reports the four-way dispute over the clause about the king strength exactly as the earlier worker left it, Keil and Delitzsch against the majority reading, Wesley on the Hebraism, Gill and Spurgeon reading the words as they stand, and Clarke taking the verse of the human author. Every edit was to a pronoun, a noun substitution or an HTML entity. One substitution needed care: the chest was used for one of five occurrences of ark, which is a plain English equivalent and not a new identification, since Clarke and Ellicott both argue the footstool is the ark and the prose still says so twice."
     }
   ]
 }
