@@ -99003,6 +99003,73 @@
       "book": "matthew",
       "chapter": "23",
       "note": "TILING DECISIONS FOR AN OVER-THRESHOLD POLISH PICK THAT WAS REALLY A LEGACY PICK. 75,790 usable source words by the loop's count, 62,012 by a per-voice count that cuts appended patristic text and Ellicott chrome; 39 keys, 39 legacy-unversioned per-verse entries graded 37 A / 2 B — the 22nd polish pick with nothing to polish, routed to legacy by the standard field as usual. Regenerated as 11 pericope tiles summing to 7,118 prose words, 0.094x of the loop figure and 0.115x of the genuine. Two decisions worth keeping: v.13 was given a tile to itself because Henry's 8,455-word head sits on that key, and vv.14-15 would otherwise have been swallowed by it; and vv.25-28 were merged because vv.25-26 alone hold only 985 source words, which at 650 prose words is a 0.63x expansion, far above anything shipped (the thinnest shipped tile is 0.28x at matthew 24 vv.16-18). The general rule: a tile under about 1,500 usable source words must be merged forward, however clean the pericope break."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "2",
+      "verses": [
+        "5",
+        "49"
+      ],
+      "note": "INVENTED ATTRIBUTION FOUND AND REMOVED, and it was a reused formula, not a slip. v5 and v49 both put in Keil and Delitzsch's mouth a four-part thesis -- that they tabulate in parallel columns, that such variations are the ordinary marks of a document copied and recopied by hand, that the difference argues no fault but only a twofold way of taking an ancient census, and that between a real discrepancy and a slip of the pen they decline to decide. NONE of those phrases occurs anywhere in the chapter's catena. What Keil and Delitzsch actually say is narrower and checkable: they set the two texts side by side with Nehemiah's names in parentheses, they call particular differences errors of transcription, and of the rest they say only that the variations relate to differences of form. Both entries rewritten to that. The lesson is that an invented attribution can be a house style rather than a one-off, so finding one is a reason to grep the whole chapter for its phrasing."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "2",
+      "verses": [
+        "5",
+        "49",
+        "65"
+      ],
+      "note": "Two reported critics restored to their owners. Clarke's reconciliation of the lists by adding each surplus to the other total is Mr. ALTING's, which Clarke relays; the entry had it as Clarke's own. And Gill does not hold that the Nethinim were the Gibeonites -- he reports that as Aben Ezra's and Jarchi's view and himself prefers those whom David gave to assist the Levites; the entry had Gill holding the Gibeonite view. Both now credited as reported, per the loop doc's Thenius convention. Same family as the Bertheau case in v65."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "ezra",
+      "chapter": "2",
+      "verses": [
+        "13",
+        "49"
+      ],
+      "note": "MISFILED JFB BLOCKS IN THIS CHAPTER'S CATENA -- the eighth chapter in which I have met this. Keys 13 and 49 each carry a Jamieson, Fausset and Brown block about Sennacherib, Lachish, Libnah and the chief cup-bearer, i.e. 2 Kings 18-19 material, under verses of a genealogical register. Both entries had correctly ignored it. DECLARED PROPERLY this time via excluded_voices, since 'Jamieson, Fausset and Brown' is in QA.VOICE_LABELS and undeclarable_voices accepts it -- the first clean use of that mechanism in my runs. Recommend a corpus-wide grep for JFB blocks whose content names books other than the one they are filed under; the label is declarable, so the fix is mechanical."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "ezra",
+      "chapter": "2",
+      "verses": [
+        "65"
+      ],
+      "note": "v65: the catena TRUNCATES Keil and Delitzsch mid-sentence (the block ends '...and that after this word had been exchanged for m' and runs straight into the Ellicott block), so their verdict on Michaelis's oxen-and-cows emendation is simply unavailable. The entry had asserted one anyway -- that they report the conjecture 'only to reject' it and 'let the received reading stand' -- when the visible argument runs the other way, Bertheau inferring that oxen once stood in the text alone. Rewritten to report the discussion and stop where the source stops. Also: Michaelis appears in the source only as the abbreviation 'J. D. Mich.', which is why a proper-noun grep for his name came up empty; abbreviation expansion is legitimate but it defeats the grounding check."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "2",
+      "note": "On a genealogical register my 0.45 attributed-sentence rule over-flags, and I measured both ways rather than quietly relaxing it. Counting only sentences that name a voice or carry a quotation: 16 of 30 pass. Counting also sentences whose content words are at least 60 per cent drawn from the verse's own text -- restatement of a name list IS grounded, in the verse: 22 of 30 pass. I used the second, which is a genuine grounding test rather than a looser one, and graded the remaining 8 B with per-verse notes. Recording both numbers so the choice is auditable and so the threshold is not silently re-tuned per chapter."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "ezra",
+      "chapter": "2",
+      "verses": [
+        "1",
+        "2",
+        "21",
+        "42",
+        "55",
+        "64",
+        "68"
+      ],
+      "note": "Four instances of the 'so the witnesses' carrier removed (v1, v2, v21, v64) and two rule-2 touches reworded (v42 and v68 both said a commentator 'says the same in brief'). The THIN-PHRASE detector also produced two FALSE POSITIVES here: 'scanty number' in v21 and 'the ministering tribes were thin' in v55 both describe the subject's smallness, not the source's. That is the pattern I flagged earlier -- a rule-2 detector matching adjectives will keep firing on the text's own content; it should look for phrases about the commentary itself ('says little', 'in brief', 'body of comment')."
     }
   ]
 }
