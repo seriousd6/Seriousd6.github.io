@@ -99226,6 +99226,76 @@
         "18"
       ],
       "note": "v18 was the padded-entry signature again: four commentators' near-identical inventories of the plundered vessels reproduced in full ('all the vessels... the treasures of the king and of his princes' three times over). Cutting Henry's re-listing and keeping only his moral took it from 405w/ttr 0.5607 (grade B) to 356w/ttr 0.5953 (grade A) with no source material lost. Each witness now carries only what is distinctive to him: Gill that these were what was LEFT, Keil and Delitzsch that sacred and secular wealth went alike, Ellicott the cross-references and 'great and small' as a merism, Henry the moral."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "disagreement",
+      "book": "job",
+      "chapter": "33",
+      "verses": [
+        "29",
+        "30"
+      ],
+      "note": "A DISPUTE RECORDED BETWEEN TWO VOICES OF THE CATENA ITSELF, which I have not seen before. At key 30 Wesley quotes Henry's closing passage on this chapter verbatim, names him ('So Mr. Henry'), calls the words excellent — and then attacks the inference: 'But how much did God do to save them? Did he ever do any thing to save them? Did he ever design to save them? If not, how does that which was never done, no nor designed, render them inexcusable?' Henry's sentence, which stands in his own block at key 29, is that those who perish will be left inexcusable since so much was done to save them and they would not be healed. So the two blocks hold an open Arminian objection to a Calvinist conclusion about the same verse, with the objector naming his opponent. This is the exact counterpart of the Wesley-abridges-Henry pattern measured at 2kings 24 and nehemiah 8: Wesley is reading Henry as he writes, and where he does not abridge him he sometimes argues with him. The tile reports the exchange as an exchange rather than flattening it, and it is recorded here as a model case for the disagreement note kind, since both sides are inside one source tree."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "33",
+      "verses": [
+        "15",
+        "21",
+        "27",
+        "33"
+      ],
+      "note": "JFB STRIDE BUG, 41st confirmation, with a GAP in the lattice. Keys 15, 27 and 33 carry JFB blocks out of 2 Chronicles 10-11: key 15 the counsel of the elders to Rehoboam about serving the people, key 27 the revolt of the northern tribes as a punishment of the house of David for Solomon's apostasy, key 33 the heading of a later chapter, Rehoboam forbidden by Shemaiah to fight Israel. The interval is 6 with offset 3, which predicts a fourth member at key 21 — and key 21 has no JFB block at all. Every lattice measured until now has been complete across its range (ezra 6, job 40, matthew 24, matthew 23, 1chronicles 18), so this is the first instance of a missing member, and it argues that the pairing is per-key rather than a single continuous stream: a donor key with nothing in it leaves a hole rather than shifting the rest. JFB is declarable nowhere in the chapter and is excluded on vv.14-18, vv.23-28 and vv.29-33."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "job",
+      "chapter": "33",
+      "verses": [
+        "32"
+      ],
+      "note": "ELLICOTT CHROME, 28th consecutive chapter, and the worst genuine fraction yet. Key 32 runs 1,046 words of which 62 are commentary — 5.9 percent — the rest being the trailing navigation line, the copyright block and a slab of CSS from the site's menu. The footer is 984 words, the same figure measured at 1chronicles 18, so the constant now holds at 984 across two books and at 926 in Isaiah, the difference being the inter-chapter navigation strip. The genuine note ends at 'vindicated against his friends', and it is the key to the whole closing appeal, so once again the chrome nearly buried the best thing in the key. Chapter usable drops from 19,896 to 18,912, which means the loop's own figure of 20,447 overstates the work by about a twentieth."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "33",
+      "verses": [
+        "19",
+        "23"
+      ],
+      "note": "HENRY'S HEADS AS SEAMS, AND ONE DELIBERATE OUT-OF-KEY DECLARATION. His 7,842 words sit in five heads, at keys 1, 8, 14, 19 and 29, which fall exactly on the chapter's natural divisions: the appeal for a hearing, the quotation of Job's complaint, the speaking in dreams, the chastening by sickness, and the closing summary. Four of the six tiles therefore begin on one of his heads. The exception is vv.23-28, the messenger and the ransom, which has no head of its own because his key-19 head runs on through it, walking the verses with explicit markers (v. 23, v. 24, v. 25). I declared him there on that ground, as at matthew 23 and 1chronicles 18, and record it again: three chapters now carry the same judgement, and it is the same open owner-level question about declaring a voice on a span its block demonstrably expounds rather than the span its key falls in."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "33",
+      "note": "TILING AND SIZING FOR A 33-KEY LEGACY CHAPTER, the 24th polish pick with nothing to polish (33 entries, all legacy-unversioned, 32 A and 1 B, so routed to legacy by the standard field). 18,912 usable words after the chrome cut, tiled as six entries on the five Henry heads with the long fourth head split at the ransom: 1-7, 8-13, 14-18, 19-22, 23-28, 29-33, summing to 3,860 prose words at 0.19x. The split of Henry's 19-28 head was forced by size, since vv.19-28 together hold 7,235 source words, and the seam at the messenger is the chapter's own turn from the description of the sickness to the deliverance from it. Six voices throughout: Gill at every key, Henry in five heads, Clarke everywhere, Ellicott, Keil and Delitzsch in 200-word capped blocks, and Wesley; no Calvin and no Barnes in the chapter at all."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "job",
+      "chapter": "33",
+      "verses": [
+        "2",
+        "5",
+        "9",
+        "14",
+        "16",
+        "20",
+        "22",
+        "24",
+        "26"
+      ],
+      "note": "KEIL AND DELITZSCH BLOCKS CAPPED AT EXACTLY 200 WORDS, nine times in one chapter. Their blocks at keys 2, 5, 9, 14, 16, 20, 22, 24 and 26 are each exactly 200 words, and key 30 is 69; the same 200-word figure appears in Gill's blocks at keys 9, 10, 23, 26, 29, 30 and in Henry's nowhere. Each truncated block begins with their reprint of the verses and is cut off mid-sentence, so what survives is mostly their translation and the opening of the comment, with the argument itself lost. That is why the tiles report them chiefly for their renderings and for one structural remark apiece. This is the same per-source truncation-length question already open for review; the figure being exactly 200 in two different commentators suggests a fetch cap rather than a parse failure, and it is worth measuring across the corpus before any re-ingest."
     }
   ]
 }
