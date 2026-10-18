@@ -99404,6 +99404,71 @@
       "book": "job",
       "chapter": "24",
       "note": "TILING A 25-KEY LEGACY CHAPTER, the 25th polish pick with nothing to polish. 16,454 usable words after the chrome cut, tiled as five entries on Henry's three heads (keys 1, 13, 18) with the two long heads split: 1-4, 5-12, 13-17, 18-20, 21-25, summing to 3,198 prose words at about 0.19x. The splits were forced by size, vv.1-12 holding 7,367 source words and vv.18-25 holding 5,805, and both seams fall at the chapter's own turns, from the oppression of the country to the oppression of the city, and from the description of the wicked to their end. Henry is declared on two spans his key does not occupy, vv.5-12 from his key-1 head and vv.21-25 from his key-18 head; both heads walk those verses with explicit markers, which is the same judgement recorded at matthew 23, 1chronicles 18 and job 33. Six voices throughout, with no Calvin and no Barnes in the chapter."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "25",
+      "note": "THE QUOTE-THE-VERSE TEMPLATE AT ITS PUREST: 12 of 21 entries (0.57, against the one-third advisory) opened with the verse's own formula, and because the lot-verses ARE formulaic -- 'The Nth to <Name>, he, his sons, and his brethren, were twelve' -- twelve openings were near-identical. The chapter's own v9 and v31 already showed the fix ('The drawing begins:', 'The last lot closes the roll:'), so the model was in-chapter. All twelve rewritten with frames tied to what each entry actually discusses -- the spelling variant at v11, the broken order at v12, the recovered name at v17, the change of Hebrew construction at v20, the name-oracle at v24 and v30 -- precisely so that twelve quote-led openings did not become twelve instances of one new frame. Quote-led now 0/21."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "11",
+        "19"
+      ],
+      "note": "SECOND INVENTED ATTRIBUTION OF THE WINDOW, and this one REVERSES its author. v11 and v19 both had Keil and Delitzsch saying the drawing 'gave the even-numbered places to the sons of Jeduthun and the odd to those of Asaph'. The word 'odd' appears NOWHERE in the catena, and what Keil and Delitzsch actually say is the contrary: they enumerate the real places (Asaph 1st, 3rd, 5th, 7th; Jeduthun 2nd, 4th, 8th, 12th, 14th; Heman's first four 6th, 9th, 11th, 13th; the rest to Heman's other sons) and then reason FROM that distribution that the lots cannot have been kept in separate urns and drawn alternately, but all lay in one. The invented version is also factually false -- the sixth lot goes to Heman's Bukkiah, not a Jeduthunite. Both entries now carry their actual argument, including the single-urn conclusion."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "19"
+      ],
+      "note": "v19 WAS THE WORST RULE-2 BREACH I HAVE SEEN, and the thin exemption is finally the right answer. Its catena is SEVEN WORDS -- 'Charles Ellicott: To Hashabiah. -- So the Hebrew.' -- and the arriving entry was 347 words, of which an entire paragraph narrated the commentators' silence: 'Of this lot the witnesses have almost nothing to say', 'offers only the barest textual note', 'Ellicott lets it pass with a word', 'The very silence of the witnesses over a verse like this is instructive', 'where the name stands clear they say only so the Hebrew and move on', 'Hashabiah asks for no defence, and receives none'. Rule 2 says a reader must not be able to tell any editing happened. Rewritten at 192 words from what is actually there -- Ellicott's note, Keil and Delitzsch's placing of the twelfth lot in Jeduthun's house, and v.3's statement that Jeduthun's sons prophesied with the harp -- and declared thin:true, which 7 source words justifies many times over against THIN_SOURCE_MAX of 200. It grades B on metrics calibrated for 350-650 word entries; that is what a thin entry looks like, not a defect."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "6",
+        "24",
+        "30"
+      ],
+      "note": "THREE MISFILED JFB BLOCKS -- ninth chapter with this defect. v6 carries 2 Kings 2:24 (the lions at Beth-el and Elisha); v24 and v30 each carry 1 Kings 14 (Jeroboam's wife in her peasant disguise, the cracknels, the blind prophet). All three entries had correctly ignored the residue -- no leakage of lion, Beth-el, cracknel, blind or peasant into any prose -- and all three are now declared via excluded_voices. ALSO A LESSON ABOUT DETECTION: my first misfiled-source scan on this chapter searched for Sennacherib, Rabshakeh, Nethinim and Beelzebub, the keywords that caught earlier chapters, and found nothing. Keyword lists do not generalise. The test has to be structural -- a block whose content names people or places foreign to the book it is filed under."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "22"
+      ],
+      "note": "I WRONGLY CALLED v22 INVENTED AND THEN CHECKED PROPERLY. The entry credits Ellicott with 'The Septuagint and the Vulgate spell the name Jerimoth in both places here; the Syriac gives Jarmuth; the Arabic offers now one form and now another', and greps for Septuagint, Vulgate, Latin and Jarmuth all returned ZERO. The catena has it exactly, in abbreviated and accented form: 'The LXX. and Vulg. spell Jerimoth in both places here; Syriac, Jarmuth with a circumflex u; Arabic, Jaramath and Jarmuth.' v22 is fully grounded. This is the THIRD time this window that abbreviation or diacritic defeated a grounding grep -- after 'J. D. Mich.' for Michaelis in ezra 2 and 'Behistuu' for Behistun in 2chronicles 36. A grounding check must expand abbreviations and fold diacritics, or it will manufacture false accusations as readily as it catches real ones."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "25",
+      "verses": [
+        "2",
+        "5",
+        "8",
+        "9",
+        "10",
+        "31"
+      ],
+      "note": "Requote triage: two genuine and fixed (v5 quoted 'to lift up the horn' twice, once for Clarke's literal reading and once for Ellicott's metaphor objection, the second now a back-reference; v9 and v10 each quoted the chapter's refrain twice, the second now reported). Two left alone as lemma-and-gloss, the legitimate case: v5's full subscription followed by 'The king's seer in the words of God' as the phrase Ellicott glosses, and v8's verse clause followed by 'As well the small as the great'. Also left alone, and not defects: Jarchi (v2, v5) and Bertheau (v31) appear in the prose but not in voices[], which is correct -- they are critics reported by a witness, not witnesses, exactly as the loop doc's Thenius convention prescribes and as Rambach was handled in nehemiah 1."
     }
   ]
 }
