@@ -98877,6 +98877,54 @@
         "16"
       ],
       "note": "ENTITIES flags, both spelling-normalisation rather than invention, both fixed to the sources' own forms. (1) vv.15: I had written Hadrian; Gill and the catena both write Adrian, so the prose now reads Adrian. (2) vv.16-18: I had written Peraea for Ellicott's Peræa — the same æ-ligature class as the Chaldaean flag at 2kings 24. Rather than carry a non-ASCII ligature into the prose I dropped the proper noun and wrote 'a town on the northern boundary beyond Jordan', which Clarke's own 'beyond Jordan' supports on the same span. This is the fifth instance of the checker flagging a form the source itself uses under a different orthography; the recommendation stands that the fidelity checker normalise diacritics and stem the EDITORIAL stoplist rather than be extended word by word."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "1",
+      "verses": [
+        "5",
+        "7",
+        "9",
+        "10"
+      ],
+      "note": "THE CLOSING ROLL-CALL IS A CHAPTER-WIDE TEMPLATE here, and it is a shape the carrier list cannot catch. Four entries (v5, v7, v9, v10) ended with the same construction: a consensus frame ('The witnesses do not divide' / 'The witnesses converge'), then a semicolon-separated inventory giving each voice one clause ('Gill fixes...; Keil traces...; Henry turns...; Clarke weighs...'), then a 'Together they show...' synthesis. The inventory restates what the preceding paragraphs already said, voice by voice, and is pure length. Removed in all four, keeping the synthesis sentence, which is the only part doing work. Detected by looking for three-plus distinct names in one sentence with two-plus semicolons -- a cheap and precise test the lint does not run."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "1",
+      "note": "SIXTH PUNCTUATION STYLE, and the first MIXED one: nehemiah 1 uses BOTH ldquo/rdquo entities (43 pairs) AND straight double quotes (96), with rsquo serving as the apostrophe. In response I wrote a style-agnostic extractor at scratchpad/qany.py which normalises entity, curly and straight quotes to one delimiter, promotes the single-quote pair only when an opener actually occurs (so apostrophes do not shred the text), and prints a loud warning when it finds ZERO fragments, since that is the signature of an unhandled style rather than a clean chapter. On nehemiah 1 it reports 43 fragments, scripture 0.023, commentator 0.019, 0/11 quote-led. Recommend this replace the per-chapter extractors."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "nehemiah",
+      "chapter": "1",
+      "note": "My own roll-call detector mis-segments sentences that end with an entity-terminated quote (period then rdquo), merging two sentences from different paragraphs and producing one false positive in v11. Same punctuation-blindness family as the quote-extractor problem: any regex over this corpus has to normalise entities before it splits."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "1",
+      "verses": [
+        "11"
+      ],
+      "note": "v11 lifted B to A (ttr 0.5619 to 0.5817, 516w to 476w) by removing a genuine three-fold duplication rather than by cutting source. Wesley and Henry each said the same three things -- that 'this man' cuts a king down to size, that favour with men is only comfortable when traced to God's mercy, and that a desire to fear God's name is itself accepted -- and the entry reported both in full, back to back. Rewritten so the agreement is stated once and Henry keeps what is distinctively his: the Ps. 9:20 challenge, and the distinction that what Nehemiah asks is not the king's mercy but God's mercy in his approach to the king."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "nehemiah",
+      "chapter": "1",
+      "verses": [
+        "3",
+        "9"
+      ],
+      "note": "All eleven re-read against source; ten graded A, v9 graded B with a note. Rambach (v3) checked and correctly handled: he is a critic quoted by Keil and Delitzsch, not himself a witness, so he is reported in the prose and rightly absent from voices[] -- the loop doc's convention. My tags detector flags him, which is the detector's error, not the data's. The v3 debate over whether the broken wall is Nebuchadnezzar's ruin or a later demolition is properly recorded in debates[] with Clarke alone on the second side."
     }
   ]
 }
