@@ -99070,6 +99070,34 @@
         "68"
       ],
       "note": "Four instances of the 'so the witnesses' carrier removed (v1, v2, v21, v64) and two rule-2 touches reworded (v42 and v68 both said a commentator 'says the same in brief'). The THIN-PHRASE detector also produced two FALSE POSITIVES here: 'scanty number' in v21 and 'the ministering tribes were thin' in v55 both describe the subject's smallness, not the source's. That is the pattern I flagged earlier -- a rule-2 detector matching adjectives will keep firing on the text's own content; it should look for phrases about the commentary itself ('says little', 'in brief', 'body of comment')."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "9",
+        "10"
+      ],
+      "note": "GENUINE POLISH PICK, and the ttr rule holds a third time. The single B entry (vv.9-10) failed on ttr ALONE, 0.5613 against the 0.58 floor, with compress clear at 0.4295 — exactly what the zechariah 6 rule predicts for a repeated noun rather than a repeated sentence frame. The culprits were angel 8 times, God 7, Spirit 5, face 4 and holiness 4, and they were not spread through the tile: every one of the worst 200-token windows fell between offsets 410 and 440, which is the Keil and Delitzsch and Ellicott passage on trinal personality at the end. The fix varied those nouns and collapsed a restatement of the parallel, taking the entry from 644 to 616 words, ttr 0.5613 to 0.5943 and compress 0.4295 to 0.4439, grade A, without losing one reported position. Why the tile was fragile is the transferable part: two voices are reported making the SAME observation about the same three nouns (God, the angel of his face, the Spirit of holiness), so the shared vocabulary is forced by the content. The remedy for that shape is pronouns plus one statement of the parallel instead of two, not a rewrite."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "note": "HTML ENTITIES AND BARE EM DASHES BOTH DISTORT THE QUALITY METRICS, in opposite directions. Neither visible() nor norm() in audit-synthesis-quality.py unescapes entities, so every &mdash; contributes the pseudo-word mdash to the token stream the ttr and compression are computed over — four times inside this 620-token entry, which is a measurable part of why it graded B. Separately, an em dash with no spaces around it joins the words on either side into a single whitespace token, so the validator's word count reads low: 616 where the true count is 620. Both are systematic rather than local — the prose tree holds 8,313 &mdash; occurrences across 282 files against 29,206 real em dashes across 509, so the two conventions are both in wide use and they do not grade alike. I converted this entry's four entities to real em dashes, which is the majority convention and removes the pseudo-words, and touched no other file. Recommendation for the owner: unescape entities inside QA.visible, and count words after replacing dashes with spaces. Do not mass-convert the data tree for this."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "isaiah",
+      "chapter": "63",
+      "verses": [
+        "9"
+      ],
+      "note": "THE STALE-STAMP PROBLEM ON A POLISH PICK, third occurrence. synthesis-loop.py finish skips entries that already carry a qa block, so a polished B entry keeps its recorded grade B, its old generated date and its old expansion unless they are hand-updated before finishing — here grade B to A, 2026-08-30 to 2026-10-18, expansion 0.68 to 0.65. The audit line recorded grade differs from recomputed is the only thing that catches it, and only if someone reads it. Same as at zechariah 6 and 2chronicles 26. A --restamp flag on finish, applied to entries whose recomputed grade differs from the recorded one, would remove the hand step and the chance of landing a chapter that still advertises a B it no longer has."
     }
   ]
 }
