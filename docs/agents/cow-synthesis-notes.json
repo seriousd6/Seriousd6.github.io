@@ -99148,6 +99148,84 @@
         "17"
       ],
       "note": "KEIL AND DELITZSCH DECLARED ON A SPAN THEIR BLOCK DOES NOT OCCUPY, for the second chapter running. Their one block in the chapter sits at key 2 but is not comment on v.2 at all: it is a discussion of the chronicler's method which quotes 1 Chronicles 18:1 and 1 Chronicles 18:17 by name and gives the rendering of each. I therefore declared them on vv.1-8 (where the key falls inside the span anyway) and on vv.14-17, where their remark on v.17 is reported beside Ellicott's independent agreement that the phrase is a paraphrase. As at matthew 23 with Henry's mega-heads, this passes the tools because ungrounded_voices is computed per chapter rather than per span, and it is defensible because the block names the verse it expounds. It is the same open owner-level question, now with a second instance in a different voice, and it is worth deciding deliberately: a block that names the verse it comments on is arguably better evidence than the key it happens to be filed under."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "36",
+      "verses": [
+        "1",
+        "6",
+        "7",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "23"
+      ],
+      "note": "THE CARRIER WAS THE CHAPTER'S HOUSE STYLE: 17 of 23 entries opened their closing paragraph with the banned 'The witnesses do not divide.' followed by 'They read / They agree that...' carrying the actual synthesis. The frame was pure scaffolding and removing it was lossless. I deliberately wrote SEVENTEEN DIFFERENT replacements rather than one substitution, because replacing a template with a single new formula only moves the template. The connectives now vary: 'Framed together...', 'The removal of the vessels is thus...', 'However the numeral is resolved, the substance is not in question...', 'Here, by common consent, the whole tragedy turns...', and so on."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "36",
+      "verses": [
+        "8",
+        "15",
+        "16",
+        "23"
+      ],
+      "note": "Requote triage, three genuine and three not. GENUINE: 'that which was found in him' quoted three times in v8 (opening plus Ellicott, Wesley and Henry each glossing it) reduced to one quotation plus reported reference, and 'rising up betimes and sending' twice in v15 reduced to one. NOT GENUINE, left alone and recorded so the next worker does not 'fix' them: v16's 'Till there was no remedy' against 'till there was no healing' is lemma against Ellicott's own rendering, which the catena confirms ('Till there was no remedy. -- Healing; i.e., deliverance'); and v23's 'and let him go up' against the Targum's fuller 'Let the Word of the LORD be his helper, and let him go up' is the point that the Targum expands the clause, not a duplicate."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "2chronicles",
+      "chapter": "36",
+      "verses": [
+        "8"
+      ],
+      "note": "One overstatement corrected in v8. The source has Thenius saying the garden-of-Uzza words were 'omitted by the chronicler and the editor of Kings'; the entry had 'suppressed by', which imputes a motive the source does not. Changed to 'omitted', and Thenius's second reference (Jer. 36:30) restored alongside Jer. 22:18-19. The entry's own 'Thenius (as reported by Ellicott)' was already correct -- the loop doc's convention used properly by the arriving writer, which is worth recording as a positive."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "36",
+      "note": "Everything distinctive in this chapter verified against the catena and all of it grounded: Thenius and the garden of Uzza, Ormazd and the Behistun Inscription, the Targum's paraphrase of the blessing, Ahijah through Ezekiel as the succession of prophets, Macon with Ps. 26:8 for 'dwelling place', Henry's dross and dry bones. Two grep misses worth knowing about: the source spells it 'Behistuu Inscription' (a typo the synthesis silently corrects), and 'burial of an ass' is the synthesis supplying the content of a reference the source only cites -- legitimate, like 'thou worm Jacob' for Isa. 41:14 in job 25, but it defeats a naive grounding check."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "36",
+      "verses": [
+        "1",
+        "2",
+        "9"
+      ],
+      "note": "THIN-PHRASE false positives again, three of three in this chapter: v1's 'a brief characterization of his conduct toward God' describes the CHRONICLER's method and is Keil's; v2's 'a reign so brief that it can be told without a single deed' and v9's 'the brief reign of Jehoiachin' describe the reigns. One genuine hit was fixed -- v1 also had 'Of Jehoahaz himself he is severe and brief', where 'he' is Henry, so it narrated a commentator's brevity. That is now 'the verdict is severe and the record short'. The detector's hit rate on adjectives is 1 in 4 here; it needs to match phrases about the commentary, not about the text."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "36",
+      "verses": [
+        "18"
+      ],
+      "note": "v18 was the padded-entry signature again: four commentators' near-identical inventories of the plundered vessels reproduced in full ('all the vessels... the treasures of the king and of his princes' three times over). Cutting Henry's re-listing and keeping only his moral took it from 405w/ttr 0.5607 (grade B) to 356w/ttr 0.5953 (grade A) with no source material lost. Each witness now carries only what is distinctive to him: Gill that these were what was LEFT, Keil and Delitzsch that sacred and secular wealth went alike, Ellicott the cross-references and 'great and small' as a merism, Henry the moral."
     }
   ]
 }
