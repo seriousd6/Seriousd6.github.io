@@ -99098,6 +99098,56 @@
         "9"
       ],
       "note": "THE STALE-STAMP PROBLEM ON A POLISH PICK, third occurrence. synthesis-loop.py finish skips entries that already carry a qa block, so a polished B entry keeps its recorded grade B, its old generated date and its old expansion unless they are hand-updated before finishing — here grade B to A, 2026-08-30 to 2026-10-18, expansion 0.68 to 0.65. The audit line recorded grade differs from recomputed is the only thing that catches it, and only if someone reads it. Same as at zechariah 6 and 2chronicles 26. A --restamp flag on finish, applied to entries whose recomputed grade differs from the recorded one, would remove the hand step and the chance of landing a chapter that still advertises a B it no longer has."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "18",
+      "verses": [
+        "1",
+        "7",
+        "13"
+      ],
+      "note": "JFB STRIDE BUG, 40th confirmation, donor identified as 2 Chronicles 8-9. Keys 1, 7 and 13 carry JFB blocks belonging to a different book: key 1 is on Solomon's levy and the building of Millo and the fortified cities, key 7 on the ports at the head of the Elanitic gulf and the Tyrian shipwrights sent there for Solomon's vessels, key 13 on the camel train and the native produce brought as presents. Interval 6, offset 1, three members walking forward in order — the same lattice recorded at ezra 6, job 40, matthew 24 and matthew 23. JFB is declarable nowhere in the chapter (his whole presence is 291 words, all displaced) and is recorded as excluded_voices on vv.1-8 and vv.9-13."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "18",
+      "verses": [
+        "17"
+      ],
+      "note": "ELLICOTT CHROME, 27th consecutive chapter, and the constant holds. Key 17 runs 1,286 words of which 302 precede the trailing navigation line and the copyright block, so the chrome is 984 words — within a few words of the 926-word constant measured across the isaiah chapters, the difference being the inter-chapter navigation strip. The genuine note ends cleanly at the sentence about the chronicler substituting a phrase that would not offend contemporary feeling, and it carries the chapter's best textual point, so the chrome very nearly buried it. The loop's own size figure for this chapter (4,920 usable words) is therefore about a fifth too high: the real total is 3,869. This is the fourth chapter in which I have measured the footer; the recommendation that synthesis-loop.py size subtract it when the final key contains the marker is now supported across two books."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "1chronicles",
+      "chapter": "18",
+      "verses": [
+        "1"
+      ],
+      "note": "A NEW HOLLOW-BLOCK SHAPE: A POINTER TO THE CHAPTER INTRODUCTION. Gill's entire presence in this chapter is three words at key 1, 'See Chapter Introduction'. That is not displaced text and not commentary; it is a cross-reference to material the scraper did not fetch. Gill is therefore not declarable anywhere in 1 Chronicles 18, and the chapter has no reformed voice at all, since Calvin is absent from the book. Added to the hollow shapes already recorded (bare scripture references, 'as in' stubs), the detector should treat as hollow any block whose visible text is only a reference, only a pointer to another part of the same commentary, or under about eight words with no verb — and should exclude them from the usable-word count as well as from voice declaration."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "18",
+      "note": "A CHAPTER CARRIED BY ONE VOICE, AND WHAT THAT DOES TO SCHOOL COVERAGE. Of 3,869 genuine source words, Ellicott holds 2,977, Henry 791, Clarke 289 and Keil and Delitzsch 200; Gill's only block is hollow and Calvin, Wesley, Barnes, Robertson and Lightfoot are absent from the chapter entirely. So every tile carries exactly three voices and no tile carries the reformed school at all — thinner school coverage than the two-school tile recorded at isaiah 37, and a further reminder that school count is a property of the source tree and not of the writing. Two consequences for the tiling: vv.3-8 could not stand as its own entry because Ellicott is the only voice on all six keys, so it was merged into vv.1-8; and the three tiles run 0.27x, 0.60x and 0.30x by the checker's reckoning, the middle one being high because its span has the least chrome in it."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "1chronicles",
+      "chapter": "18",
+      "verses": [
+        "2",
+        "17"
+      ],
+      "note": "KEIL AND DELITZSCH DECLARED ON A SPAN THEIR BLOCK DOES NOT OCCUPY, for the second chapter running. Their one block in the chapter sits at key 2 but is not comment on v.2 at all: it is a discussion of the chronicler's method which quotes 1 Chronicles 18:1 and 1 Chronicles 18:17 by name and gives the rendering of each. I therefore declared them on vv.1-8 (where the key falls inside the span anyway) and on vv.14-17, where their remark on v.17 is reported beside Ellicott's independent agreement that the phrase is a paraphrase. As at matthew 23 with Henry's mega-heads, this passes the tools because ungrounded_voices is computed per chapter rather than per span, and it is defensible because the block names the verse it expounds. It is the same open owner-level question, now with a second instance in a different voice, and it is worth deciding deliberately: a block that names the verse it comments on is arguably better evidence than the key it happens to be filed under."
     }
   ]
 }
