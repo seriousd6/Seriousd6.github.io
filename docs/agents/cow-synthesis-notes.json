@@ -99550,6 +99550,73 @@
         "11"
       ],
       "note": "I REBUILT THE GROUNDING CHECK to fold diacritics and expand abbreviations before comparing, which is the lesson from calling 1chronicles 25 v22 invented when the source said 'LXX.' and 'Jarmuth' with a circumflex. On job 8 it left nine candidates, all cleared: five are my own reference abbreviations in link text (Deut, Zech, Chron, Eccl, Matt); 'Christianizes' in v8 is my characterisation of Henry's method, not a claim put in his mouth; 'Nile-reed' in v11 is fair shorthand for Clarke's report of Hasselquist's reed from the Nile and the Septuagint's paper reed that Pliny places in the Egyptian marshes; and 'Pharaoh's meadow' in v11 glosses the Genesis 41:2 that Ellicott actually cites ('The flag is the plant of Genesis 41:2, which the cattle feed upon'). That last is the gloss-a-citation pattern I ruled legitimate for 'thou worm Jacob' in job 25 and 'burial of an ass' in 2chronicles 36, and I am ruling it the same way here for consistency. One overstatement I noticed and deliberately left rather than gold-plate: v11 calls Ellicott's one-line note 'more precisely still' when it is the briefest of the three."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "21"
+      ],
+      "note": "A MISSING KEY IN THE SOURCE BREAKS THE TILING, and the validator catches it in a way worth knowing in advance. This chapter has no key 21 at all, so my first tiling, which ran vv.17-28 as one entry, failed with 'pericopes tile the chapter (entries cover verses absent from the source: [21])'. The rule is therefore not that the spans must cover the chapter's verses but that they must cover exactly the keys the catena carries: a range may not step over a hole. The fix was to split at the gap into vv.17-20 and vv.22-28, which the chapter's own sense allows, since the break falls between the refusal of the warning and the battle that follows."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "17",
+        "22"
+      ],
+      "note": "THE FLOOR FLAG AS A SECOND-ORDER CONSEQUENCE OF A FORCED SPLIT, with the remedy. Splitting the 642-word tile at the missing key gave two entries of 365 and 356 words, both just over the 350 floor, and although all five entries graded A the audit flagged 2 of 5 as FLOOR-HUGGING. Restoring about a hundred words apiece of material cut in the earlier trim passes — Wesley on taking advice and Henry's two proverbs on pride and hasty strife in the first, Ellicott on the Latin and Syriac readings of the plunder verse and Henry's opening sentence on the pursuit in the second — brought them to 462 and 423 and cleared the flag. Two working rules out of it: when a gap in the keys forces a split, budget each half at 450 words or more rather than at the floor, and do not discard trimmed material until the tiling has passed the validator, since a split turns yesterday's surplus into today's shortfall."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "2",
+        "8",
+        "14",
+        "20",
+        "26"
+      ],
+      "note": "JFB STRIDE BUG, 43rd confirmation, and the first chapter to show ALL THREE donor shapes at once. Keys 2, 14, 20 and 26 carry 2 Kings 9 material — part of the message to Jehu, the upper cloaks spread on the ground as homage, the watchtower of Jezreel with Beth-shan in view, and the same watchtower passage again. (1) WALKING: keys 2 and 14 differ from each other and advance through the donor chapter. (2) STALLED AND IDENTICAL: keys 20 and 26 are byte-identical, 354 words each, md5 acad0215dcff — the shape first measured at 2kings 24 and nehemiah 8. (3) GAP: the lattice is stride 6 at offset 2, which predicts a member at key 8, and key 8 carries no JFB block at all, the third consecutive chapter with a missing member after job 33 and job 24. One chapter exhibiting all three at once is good evidence that the shapes are not three different bugs but three states of one per-key pairing: it walks where the donor has text, stalls where the pointer fails to advance, and leaves a hole where the donor key is empty. JFB is declarable nowhere here and is excluded on vv.1-4, vv.14-16, vv.17-20 and vv.22-28."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "28"
+      ],
+      "note": "ELLICOTT CHROME, 30th consecutive chapter. Key 28 runs 1,029 words of which 45 are commentary, two short notes on the horses and on the burial place. The footer measures 984 again, the fourth chapter running at that figure after job 33, 1chronicles 18 and job 24, so the constant is now firm. Chapter usable drops from 11,013 to 10,029, which is about a tenth off the loop's own size figure of 11,190."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "2"
+      ],
+      "note": "TWO HOLLOW BLOCKS, ONE OF A NEW KIND, AND WHAT THEY COST THE FIRST TILE. Gill's entire block at key 1 reads 'See Gill on. See Gill on. See Gill on. See Gill on.' — four cross-reference pointers whose targets have been stripped out, leaving the pointers naked. That is a new hollow shape, distinct from the bare scripture reference and from the pointer to a chapter introduction recorded at 1chronicles 18. Keil and Delitzsch at key 2 are hollow in the other way already recorded at jeremiah 47, 200 words of pure verse quotation with no comment. Since neither voice has any other block inside vv.1-4, both are undeclarable there, which is why that tile carries four voices where the rest of the chapter carries five or six. A hollow-block detector should treat a block that is nothing but reference pointers, or nothing but the text of the verses, as absent for voice declaration and should leave it out of the usable-word count."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "25",
+      "verses": [
+        "1",
+        "5"
+      ],
+      "note": "CLARKE NAMES THE WRONG ENEMY TWICE. In his chapter synopsis at key 1 he writes that the king attacks the Syrians, and at key 5 that he purposed to avenge himself of the Syrians, where the chapter says Edom and the children of Seir throughout and his own later notes get it right. It is his slip rather than a variant reading, so the prose does not repeat it and no tile attributes a Syrian campaign to anyone. Recorded because the error is in the source tree and the next writer will meet it in the same two blocks."
     }
   ]
 }
