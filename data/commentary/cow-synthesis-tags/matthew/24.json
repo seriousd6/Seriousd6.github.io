@@ -1,877 +1,600 @@
 {
  "1": {
+  "range": "1-2",
+  "pericope_label": "Jesus departs from the temple; the disciples point out its buildings, and he foretells that not one stone shall be left upon another",
   "voices": [
-   "Origen",
-   "Raban",
-   "Remigius",
-   "Chrysostom",
-   "Jerome",
-   "John Chrysostom",
    "John Gill",
-   "John Lightfoot",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Albert Barnes",
+   "John Wesley",
    "John Calvin",
-   "John Wesley"
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The huge polished stones and Herod's unfinished temple (Josephus, John 2:20); Jesus' final, tragic departure after Matthew 23."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Raban/Remigius: literal overthrow under Titus, the temple removed lest believers relapse to Judaism; Jerome allegorises the fall of the Law."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the disciples dazzled by the splendour, unable to believe Christ's kingdom could rise; like those who admire Popery's pomp."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "minority",
-    "summary": "Origen: each man is God's temple, ruined when sin drives Christ away."
+    "summary": "Gill has Christ take his final leave and begin in the leaving to fulfil the desolation he had foretold; Calvin reads the disciples pointing at the buildings as unbelief rather than admiration, their eyes so dazzled by the present splendour that they could scarcely hope the kingdom of Christ would arise, and gives the reason behind the sentence, that God determined by this dreadful example to take vengeance on the nation for rejecting his Son."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "minority",
-    "summary": "Henry: the house Christ leaves is desolate indeed; foresight of fading glory weans us from it."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "departure from the temple",
-   "coming destruction",
-   "worldly glory",
-   "Christ's kingdom"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "2": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "single",
+    "summary": "Henry presses the wording, that Christ did not merely go out of the temple but departed from it, never to return, so that the house Christ leaves is left desolate indeed; he has Christ depart only when driven away, keeps the twelve with him as the seed of the gospel church, and holds that while sacrifice was tied to the temple door, prayer and praise and preaching are as acceptable in one place as another."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke shows from the word that answered refers to nothing said and no question asked, notes that the negative is absent from several excellent manuscripts so that the clause reads simply consider all these things, and places the last words at the moment of leaving; Wesley carries the ploughing of the temple site after the burning."
+   },
    {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Literal fulfilment in A.D. 70 (Josephus): the temple burnt against Titus's will, the foundations ploughed up (Maimonides; Micah 3:12)."
-   },
-   {
-    "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the temple's wealth veiled the disciples' eyes; Christ swears its ruin, God's vengeance on the nation that rejected his Son."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "The Cyril of Jerusalem entry expounds the name 'Jesus Christ' and Joshua typology, tangential to the verse."
+    "summary": "Ellicott prefers the reading of the best manuscripts, fills in the great stones and gates and porticos and the offerings of forty-six years, and reports from Josephus that Titus left only two or three towers standing while modern excavation reaches no further than the substructures; Barnes insists how improbable the thing was when spoken and rests the proof on a Jewish priest who would have said nothing to confirm the prophecies of Jesus; Robertson dates the end of the public teaching and calls it a tragic moment; Lightfoot quotes the rabbinic saying that a man who never saw Herod Temple never saw a fine building, and dates the ploughing to the ninth of Ab."
    }
   ],
-  "debates": [],
-  "outliers": [
+  "debates": [
    {
-    "voice": "Cyril of Jerusalem",
-    "note": "A catechetical passage on the name Jesus Christ, not on the verse."
+    "question": "Why did the disciples point out the buildings?",
+    "sides": [
+     {
+      "position": "they were pleased with what they showed him, having lived in Galilee and seldom seen a structure reckoned among the wonders of the world",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the sight was meant to make him recall his words of evil omen, which is a far more natural account than the alternative",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "it was unbelief: dazzled by the present splendour they could scarcely hope the kingdom of Christ would arise",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "How was the prediction fulfilled?",
+    "sides": [
+     {
+      "position": "Titus ordered city and temple dug up, leaving two or three towers, so visitors could hardly believe the place inhabited",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "exactly within forty years, on the testimony of a Jewish priest whose history reads like a running commentary on the prophecy",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the foundations were dug up after the burning and the ground then ploughed, on the ninth of Ab",
+      "holders": [
+       "John Wesley",
+       "John Lightfoot"
+      ]
+     }
+    ]
    }
+  ],
+  "outliers": [
+   "Robertson alone marks that the public teaching ends here, calling it a tragic moment.",
+   "Lightfoot alone supplies the rabbinic anecdote of walls built winding like waves to take plaster, which the Rabbins begged might be left as it was."
   ],
   "themes": [
-   "not one stone",
-   "fulfilled in A.D. 70",
-   "end of the ceremonial law",
-   "divine vengeance"
+   "a departure that is itself a sentence",
+   "stones admired and stones counted",
+   "a prophecy checked against a hostile historian",
+   "a house left desolate when Christ leaves it"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "3": {
+  "range": "3",
+  "pericope_label": "On the Mount of Olives the disciples ask privately when these things shall be, and what shall be the sign of his coming and of the end of the world",
   "voices": [
-   "Remigius",
-   "Chrysostom",
-   "Jerome",
-   "Origen",
-   "Hilary",
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Three questions answered by intermingling Jerusalem's fall and the end; first use of 'parousia'; Robertson's painter image of blended perspectives; Clarke's 'end of the age' = Jewish economy."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: the disciples, bred to think the temple eternal, confound the commencement of Christ's reign with its consummation, grasping triumph before warfare."
+    "summary": "Gill places the mount east of the city and over against the temple and explains why the view was open, the eastern wall being built lower so that the high priest might see the temple gate from it; Calvin explains how the confusion arose, that believing from infancy the temple would stand till the end of time they could not suppose the kingdom would come while the building stood, and so flew at once to a triumph."
    },
    {
-    "school": "latin-fathers",
+    "school": "wesleyan-arminian",
     "prevalence": "several",
-    "summary": "Chrysostom, Jerome, Hilary count three questions separated by times; Origen/Remigius allegorise the Mount of Olives as the Gentile Church."
+    "summary": "Clarke counts three questions but reports the contrary view that they are parts of one, reads the phrase as the close of an economy, and supports the rendering from Aristotle; Wesley says flatly that they inquired confusedly, as though temple and consummation were one thing, and allots the verses of the chapter to each question in turn."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem reads the question as a safeguard against being deceived by Antichrist."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes counts three questions and says the reply intermingles the two subjects so that it is sometimes hard to tell which a remark belongs to; Ellicott marks the first occurrence of the term for the coming and explains what this age and the age to come meant in the common speech of the day; Robertson adds that the same word is used in the papyri for the visit of an emperor, grants the discourse the most difficult problem in the Synoptic Gospels, and refuses to say whether the disciples thought the events simultaneous; Lightfoot approaches from what the nation expected of the Messiah days, drawn out of the Babylonian Sanhedrin."
    }
   ],
   "debates": [
    {
-    "question": "Do the three questions refer to one event or several?",
+    "question": "How many questions were asked, and did the askers know what they asked?",
     "sides": [
      {
-      "position": "Distinct events (Jerusalem / coming / end) blended in one answer",
+      "position": "three questions, answered by intermingling the two subjects, both being describable in the same words",
       "holders": [
-       "Barnes",
-       "Robertson",
-       "Hilary"
+       "Albert Barnes"
       ]
      },
      {
-      "position": "The disciples confusedly merged them, expecting all at once",
+      "position": "three, though some make them parts of one question answered only of the Jewish state",
       "holders": [
-       "Calvin",
-       "Wesley"
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "they inquired confusedly, as though the fall of the temple and the end of the world were one thing, while the Lord answered distinctly",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "there is no way to tell whether they supposed the events simultaneous",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the end of the world mean here?",
+    "sides": [
+     {
+      "position": "the end of the age, that is of an economy, an accommodated use of a word whose proper force is eternal",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the end of the age in the common speech of the day, this age being the time up to the Messiah and the age to come the era he would inaugurate",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Gill alone explains the open view from the lower eastern wall and the burning of the red heifer on that mount.",
+   "Lightfoot alone reconstructs the apostles meaning from the tradition of the school of Elias about the righteous raised from the dead."
+  ],
   "themes": [
-   "the threefold question",
-   "parousia",
-   "end of the age",
-   "Mount of Olives"
+   "a question asked in private",
+   "three questions or one",
+   "a term that would later fill the Epistles",
+   "expectations learned in childhood"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.2
+   }
   }
  },
  "4": {
+  "range": "4-8",
+  "pericope_label": "Take heed that no man deceive you: false Christs, wars and rumours of wars, famines and earthquakes, which are the beginning of sorrows",
   "voices": [
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The first sign is false Christs amid universal messianic expectation; the verb 'lead astray' runs through the discourse; Peter the likely source (Ellicott)."
+    "summary": "Gill reads the answer as given not to indulge curiosity but to caution them against deceivers; Calvin opens from the disciples disappointment, that they looked for a triumph and got an exhortation to long patience, as if told they wished to seize the prize at the outset with the course still to run, and narrows the first sign to the one class of error that introduced every later one."
    },
    {
     "school": "puritan-evangelical",
-    "prevalence": "several",
-    "summary": "Henry's double-reference key: the prophecy primarily concerns Jerusalem but, as a type, looks forward to the end of the world."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the disciples must finish the course; the gospel is seed sown — wait patiently; beware false teachers and be not terrified by scandals."
+    "prevalence": "single",
+    "summary": "Henry sets the terms of the whole discourse, that Christ answers the question about signs and not the question about times, and holds that the prophecy primarily respects the destruction of Jerusalem while under that type looking as far as the general judgment."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the caution is chiefly for succeeding Christians; many things reach beyond A.D. 70."
+    "prevalence": "several",
+    "summary": "Clarke numbers the signs and supplies the instances of desert pretenders from Josephus, calling it a just judgment that a people who rejected the true Christ should be delivered to false ones; Wesley numbers the first sign the same way."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem applies the warning to the final Antichrist."
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says there is abundant evidence the first sign was fulfilled, notes that the empire was at peace when the words were spoken and that four emperors afterwards died violently within eighteen months, and distinguishes rumours of wars from wars; Ellicott dissents that no direct fulfilment of the false Christs is recorded, reads the tense as a double future, and confines the wars chiefly to those affecting the Jews; Robertson takes the verb in its causative force and turns the clause into counsel not to be terrified out of one wits; Lightfoot adds the shaking of the empire itself and the burning of the Capitol."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the prediction of false Christs fulfilled before the fall of Jerusalem?",
+    "sides": [
+     {
+      "position": "yes, abundantly; Josephus supplies the instances, including an Egyptian who led thirty thousand into the desert",
+      "holders": [
+       "Albert Barnes",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "no direct fulfilment is recorded either in the New Testament or by Josephus, and the figure usually named appeared long after the city fell",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What does the prophecy primarily respect?",
+    "sides": [
+     {
+      "position": "what lay near at hand, the destruction of Jerusalem and the setting up of Christ kingdom, while under that type looking as far as the general judgment",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "the commotions in Judea only at this stage, since the flame is said later to spread wider",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Robertson alone remarks that our word planet comes from the root of the verb for leading astray.",
+   "Ellicott alone notes how aptly the historian titled his second book for this part of the prophecy."
+  ],
   "themes": [
-   "take heed of deceivers",
-   "double reference",
-   "patience",
-   "false Christs"
+   "a question about times refused",
+   "deceivers who come in the name they usurp",
+   "peace at the moment of the prediction",
+   "pangs that are only the beginning"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "5": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "False Messiahs documented from Josephus (Simon Magus, Theudas, the Egyptian, Acts 21:38); Ellicott cautions no named Messianic pretender before A.D. 70."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: God permitted impostors to delude the Jews who rejected his Son; believers must not faint at the multitude carried away."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: never so many impostors as just before the fall, when the Messiah was generally expected."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: fulfilled in part in Simon and Menander, and to recur."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.03
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "false Christs",
-   "'I am Christ'",
-   "deceiving many"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "6": {
-  "voices": [
-   "Augustine",
-   "Chrysostom",
-   "Origen",
-   "Jerome",
-   "Raban",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The wars and commotions before A.D. 70 (four emperors, Caligula, Claudius); 'be not troubled' (2 Thessalonians 2:2) against date-setting."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Augustine's threefold key (Jerusalem/Church/judgment); Chrysostom on providential wrath; Jerome reads the strife of heretics; Raban: the warning kept the apostles from fleeing too soon."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: nothing happens without God's providence; prepare for endurance, not ease."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley distinguishes near 'wars' from distant 'rumours'; the end is far from these beginnings."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem points to the Persian-Roman wars of his day."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "wars and rumours",
-   "the end not yet",
-   "providence",
-   "endurance"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "7": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Wars (Caesarea, Alexandria, Otho/Vitellius), famine (Agabus, Acts 11:28; Claudius), pestilence (text-critically doubtful), earthquakes — all from Josephus and Tacitus; Lightfoot's vivid picture."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem (on point): are there not wars, famines, earthquakes now? Watch therefore."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "nation against nation",
-   "famines and earthquakes",
-   "verified in history"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "8": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'Beginning of sorrows' = birth-pangs, the Jewish 'sorrows of the Messiah'; heavier woes to come; the travail issues in a new birth (Matthew 19:28; Romans 8:22)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: not to consume themselves with grief but to reckon on a long exercise of patience."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "beginning of sorrows",
-   "birth-pangs",
-   "patience",
-   "heavier woes to come"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "9": {
+  "range": "9-10",
+  "pericope_label": "They shall deliver you up to be afflicted and ye shall be hated of all nations; many shall be offended and shall betray and hate one another",
   "voices": [
-   "Raban",
-   "Chrysostom",
-   "Origen",
-   "Remigius",
-   "Hilary",
-   "Jerome",
-   "Augustine",
-   "Gloss",
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill marks the reversal, that men looking for a temporal kingdom are promised affliction and death, and describes the professors who stumbled at the cross once they saw apostles beaten and killed; Calvin treats the hatred as a distinct trial added to ordinary affliction, painful because the children of God are not distinguished from the despisers of God, and calls the offence from bad examples the most violent temptation of all."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke personifies the affliction, so that they are delivered into its own hand to be harassed by every mode of inventive torture, and supplies the Roman annalist on the persecution under Nero, where those first seized betrayed a great multitude; Wesley puts the sting in the pretext, that they were delivered up as if they were themselves the cause of these evils, and notes they would be hated even by those who tolerate every other sect."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Persecution fulfilled through Acts (Peter, Stephen, James, Paul, Nero); the despised Name now glorious; Tacitus on Christians hated."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Origen/Remigius refer it to the end — persecution everywhere when idols are deserted; the Augustine/Gloss debate on whether the gospel was preached 'in all the world' before A.D. 70 (fame vs fruit)."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom adds the third source of opposition — false brethren (2 Corinthians 11:26)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the disciples bruised like wheat under the millstone, hated and punished as criminals, yet for the gospel's sake."
+    "summary": "Barnes documents the fulfilment from the Acts and makes the betraying a matter of securing one own safety by revealing names and hiding-places; Ellicott makes the adverb point to synchronism rather than sequence, narrows the hatred to the heathen nations, and finds the mutual hatred fulfilled in the faction-fights at Jerusalem and the bitterness of the Judaisers against Paul; Robertson reads the periphrastic future as a continuous process and observes that the most glorious name in the world today was soon to be a byword of shame; Lightfoot connects the apostolic word that judgment must begin at the house of God."
    }
   ],
   "debates": [
    {
-    "question": "Was the gospel 'preached in all the world' fulfilled before A.D. 70?",
+    "question": "Who are the all nations that will hate them?",
     "sides": [
      {
-      "position": "Not yet wholly fulfilled (fruit in every nation)",
+      "position": "both Jew and Gentile, though the phrase may mean the Gentiles in particular since the parallels name the Jewish persecution separately",
       "holders": [
-       "Augustine"
+       "Adam Clarke"
       ]
      },
      {
-      "position": "Fulfilled as to the fame of preaching before the fall",
+      "position": "the heathen nations, as when the sect was everywhere spoken against at Rome",
       "holders": [
-       "Gloss",
-       "Jerome"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "even those who tolerate every other sect, since in no nation will the children of the devil tolerate the children of God",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the many that shall be offended?",
+    "sides": [
+     {
+      "position": "professors who were advocates while things were quiet and stumbled at the cross when persecution came",
+      "holders": [
+       "John Gill",
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "believers who found a stumbling-block in the new aspects of truth, the slowness of the victory, or the delay of the coming",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Robertson alone turns the clause into an honour, that the disciples would count it a distinction to be dishonoured for the Name.",
+   "Clarke alone supplies the Roman annalist on how the first confessions betrayed a multitude."
+  ],
   "themes": [
-   "persecution",
-   "hated for the Name",
-   "false brethren",
-   "gospel to all nations"
+   "a kingdom expected and a scourging given",
+   "a name that became a byword",
+   "betrayal as a bid for safety",
+   "love cooling where offences abound"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "10": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Apostates betray others for safety (1 John 2:19); Tacitus on the Neronian betrayals; the Zealot faction-fights (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a violent temptation — Christ a stone of stumbling (1 Peter 2:8); Gill: fair-weather professors stumble at the cross."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: against false prophets hold faith, against iniquity love, against all hope to the end."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem applies it to bishops against bishops in his own day."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.13
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "apostasy",
-   "betrayal",
-   "persecution sifting the church"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "11": {
+  "range": "11-14",
+  "pericope_label": "Many false prophets shall rise and deceive many; because iniquity shall abound the love of many shall wax cold, but the gospel shall be preached in all the world",
   "voices": [
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "False prophets during the siege (Josephus) and the heretical teachers of the apostolic age (2 Timothy 2:17; 2 Peter 2:1; 1 Timothy 4:1); warned already in Matthew 7:15."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin distinguishes these from v.5 — false teachers will arise in all ages, crafty to draw away sects; the tempest of error tries our faith."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "false prophets",
-   "heresy",
-   "corrupting the doctrine"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "12": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
    "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
+   "John Wesley",
    "John Calvin",
-   "Cyril of Jerusalem"
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'Iniquity'/'lawlessness' chills Christian ardour; forsaking the assembly (Hebrews 10:25); love giving way to hatred and suspicion; the apostasy of 2 Thessalonians 2:3."
-   },
-   {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin: even good minds lose the desire to do good amid wickedness; the remedy is not to faint in well-doing (2 Thessalonians 3:13)."
+    "summary": "Gill allows every candidate at once for the abounding iniquity, the malice of persecutors, the treachery of apostates, the errors of false teachers and the plain wickedness of lives, and makes the endurance a perseverance in faith, doctrine and holiness; Calvin distinguishes these false teachers from the earlier impostors as a standing danger in every age, turns the cooling of love on the reader by observing that the clearer the gospel shows men malice the more even good minds lose the desire to do good, and reads the promise of a world-wide preaching as given to raise minds that were cast down."
    },
    {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem applies it to feigned friendships in his own day."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke takes the end as the destruction of the Jewish polity and the salvation as deliverance, adding that not a single Christian perished when Jerusalem fell; Wesley says the preaching was not universal, this not being done yet, but general through the several parts of the world and accomplished before the city fell."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes narrows the false prophets to men appearing during the siege, quoting Josephus that the zealots suborned them to keep the people from deserting, and glosses the verb for cooling as an old word no longer used in this sense outside the Bible; Ellicott prefers lawlessness as the rendering and says no word could better describe Judea then, and insists the words about all the world must not be strained beyond what the hearers would understand, namely the Roman empire; Robertson agrees the language should not be pressed too literally; Lightfoot gives the reason for the order, that Jerusalem was not to be destroyed before the gospel had spread, so that the world might have an undeniable testimony in the vengeance poured out on that city."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Who are the false prophets of this verse?",
+    "sides": [
+     {
+      "position": "teachers in every age who corrupt sound doctrine, the Church under the gospel being no less exposed than under the Law",
+      "holders": [
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "prophets appearing during the siege itself, suborned by the zealots to promise aid from heaven",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "named heretical teachers who pretended to a spirit of prophecy and new revelations",
+      "holders": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What is the end that must be endured to?",
+    "sides": [
+     {
+      "position": "the destruction of the Jewish polity, the salvation being deliverance from it",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "more probably the close of life and final salvation",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "both at once, since endurance to the end of life is always the condition of salvation while the context points to the close of this period",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Calvin alone turns the cooling of love into a charge against the reader, that kindness comes to seem thrown away because experience shows almost all ungrateful.",
+   "Lightfoot alone explains the order of events, that the gospel had to spread first so that the vengeance might be an undeniable testimony."
+  ],
   "themes": [
-   "love waxing cold",
-   "abounding iniquity",
-   "persevering charity"
+   "a danger that outlasts its first instance",
+   "lawlessness as the plain name for the time",
+   "a love that cools without being lost",
+   "a world that must hear before a city falls"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "13": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "'End' as either the fall of Jerusalem (deliverance, Luke 21:18-19) or final salvation at life's close; Ellicott: both a higher and lower sense."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "several",
-    "summary": "Clarke: not one Christian perished in the fall — they escaped when Cestius Gallus raised the siege; perseverance saves."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.16
    }
-  ],
-  "debates": [
-   {
-    "question": "Does 'endure unto the end' mean the end of the war or the end of life?",
-    "sides": [
-     {
-      "position": "The end of the Jewish war — deliverance from the fall",
-      "holders": [
-       "Clarke",
-       "Ellicott"
-      ]
-     },
-     {
-      "position": "The end of life — final salvation",
-      "holders": [
-       "Barnes",
-       "Gill"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "endurance",
-   "perseverance saves",
-   "escape from Jerusalem"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "14": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The gospel spread through the empire before A.D. 70 (Colossians 1:23; Romans 1:8); 'all the world' = the Roman oikoumene (Luke 2:1); 'a witness to all nations' sanctions the Gentile mission."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: not literally every portion of the world, but the gospel reaching the farthest bounds before the last coming."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: preached in general before the fall; Josephus the best commentary on the chapter."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: nearly the whole world now filled with Christ's doctrine."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is the scope of 'all the world' and which 'end'?",
-    "sides": [
-     {
-      "position": "The Roman empire, and the end = the fall of Jerusalem",
-      "holders": [
-       "Clarke",
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "The world's farthest bounds, before the last coming",
-      "holders": [
-       "Calvin"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "gospel to all the world",
-   "witness to the nations",
-   "then the end"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "15": {
+  "range": "15",
+  "pericope_label": "When ye see the abomination of desolation spoken of by Daniel standing in the holy place, let him that readeth understand",
   "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Augustine",
-   "Pseudo-Chrysostom",
-   "Remigius",
-   "Origen",
-   "Hilary",
-   "Pseudo-Augustine",
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill clears away the wrong candidates rather than naming the right one, refusing a Roman statue, the golden eagle of Herod, the image of Tiberius and the statue of Adrian in turn; Calvin supplies the reason the prophet is cited at all, that the overthrow was incredible and it seemed strange the disciples could not be saved without being torn from the nation to which the covenants had been committed, so that they must not be too strongly attached to a temple God had limited to a fixed time."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke and Wesley both make the abomination the Roman army and explain the name by the ensigns, Clarke adding the report that the Romans brought their ensigns into the temple and sacrificed to them by the eastern gate, Wesley widening the holy place to the whole city and the very mount where the discourse was given."
+   },
+   {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The Roman army with its idolatrous ensigns (Luke 21:20; Daniel 9:27); Ellicott prefers the Zealots' profanation of the temple; 'let the reader understand' is Mark's insertion."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Jerome: a statue of Caesar/Hadrian or Antichrist; Hilary: Antichrist claiming God's honour (2 Thessalonians 2:4); Origen/Pseudo-Augustine allegorise 'false word'."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the profanation and end of the temple, confirmed from Daniel."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Chrysostom/Pseudo-Chrysostom: the desolating army; Cyril of Jerusalem: the Antichrist of 2 Thessalonians 2:4."
+    "summary": "Barnes calls the phrase a Hebrew expression for an abominable destroyer and notes the second evangelist says simply standing where it ought not; Ellicott alone refuses the consensus, since the warning precedes the destruction and the thing stands in the Holy Place, and looks instead to the faction-fights and profanations within the city; Robertson derives the noun from a verb for feeling nausea at a stench and recalls the altar to Zeus set on the altar of Jehovah; Lightfoot renders the Daniel verse himself and holds the parenthesis spoken for the certainty of the prophecy rather than its obscurity."
    }
   ],
   "debates": [
@@ -879,1960 +602,1358 @@
     "question": "What is the abomination of desolation?",
     "sides": [
      {
-      "position": "The Roman army/ensigns (Luke 21:20)",
+      "position": "the Roman army, named an abomination for the images and eagles carried before the legions",
       "holders": [
-       "Barnes",
-       "Clarke",
-       "Lightfoot",
-       "Robertson"
+       "Adam Clarke",
+       "Albert Barnes",
+       "John Wesley",
+       "A.T. Robertson"
       ]
      },
      {
-      "position": "The Zealots' profanation of the temple",
+      "position": "not the troops or the eagles at all, since the warning precedes the destruction and the thing stands in the Holy Place; rather the faction-fights and profanations within the city",
       "holders": [
-       "Ellicott"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "Antichrist in the holy place",
+      "position": "none of the statues commonly proposed, whether Herod golden eagle, the image of Tiberius or the statue of Adrian",
       "holders": [
-       "Hilary",
-       "Cyril of Jerusalem"
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why the aside to the reader?",
+    "sides": [
+     {
+      "position": "not for the obscurity of the prophecy but for its certainty, that a siege means certain destruction",
+      "holders": [
+       "John Lightfoot"
       ]
      },
      {
-      "position": "A statue of Caesar or Hadrian",
+      "position": "it stands in the second gospel too, and was probably not spoken by Jesus himself",
       "holders": [
-       "Jerome"
+       "A.T. Robertson"
       ]
      }
     ]
    }
   ],
   "outliers": [
-   {
-    "voice": "Origen",
-    "note": "Allegorises the abomination as 'false word' standing in the Scriptures."
-   }
+   "Ellicott alone breaks with every other voice on the identification, and gives two reasons of chronology and place.",
+   "Calvin alone uses the verse to loosen the disciples attachment to the temple rather than to date the siege."
   ],
   "themes": [
-   "abomination of desolation",
-   "Daniel's prophecy",
-   "Roman army",
-   "Antichrist"
+   "a prophecy quoted to make the incredible credible",
+   "an army that is itself an idol",
+   "a holy place as wide as a city",
+   "a reader told to understand"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
  "16": {
+  "range": "16-18",
+  "pericope_label": "Then let them which be in Judaea flee into the mountains; let not him on the housetop or in the field return back for anything",
   "voices": [
-   "John Chrysostom",
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The Christians fled to Pella in A.D. 68 (Eusebius); the providential withdrawal of Cestius Gallus gave the opening; the mountains of Gilead as refuge."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "several",
-    "summary": "Chrysostom: when the army appears there is no hope of safety; unlike Sennacherib or the Maccabees, no recovery now; Remigius on the flight to Pella."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the calamity so sudden flight will scarcely be possible; the design to wean from ease and fortify."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: the impolitic retreat of Cestius Gallus was the signal."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "flee to the mountains",
-   "the flight to Pella",
-   "instant escape"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "17": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Flat roofs reached by outside stairs, forming continuous terraces to the gate; instant flight without stopping for goods (Jeremiah 45:5); the danger from the factions within."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "the housetop",
-   "instant flight",
-   "leave possessions"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "18": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
+   "John Calvin",
    "A.T. Robertson"
   ],
   "schools": [
    {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reads the direction as telling those in the city and in the towns alike not to shelter in Jerusalem on the strength of its fortifications, and has the man in the field at the plough or the sowing; Calvin draws the inference that once the temple was profaned the services of the Law would soon be abolished, so that nothing would be more desirable than distance from the place, the calamities coming too suddenly to leave time for the most rapid flight."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke says the counsel was remembered and wisely followed, cites the early historians that the believers left for Pella and other places beyond Jordan so that not one perished, and gives the reason the warning is absolute, that once the army sat down before the city there would be no further escape; Wesley supplies the detail that made the signal legible, the unexpected withdrawal of the Romans after their first advance."
+   },
+   {
     "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The peasant left his cloak at home; he must flee the field at once, for once the army encircles the city escape is impossible; the Christians' obedience preserved them (Eusebius)."
+    "prevalence": "several",
+    "summary": "Barnes explains why the mountains, the hills of Palestine abounding in caves which were in every age the refuge of men pursued, and draws the moral that the man on the roof should not stop even for a garment; Ellicott dates the flight and names the town on the northern boundary beyond Jordan, corrects the plural clothes to a singular cloak, and explains the continuous terrace of flat roofs ending at the gates; Robertson gives the rabbinic name for that route, the road of the roofs."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Was the warning obeyed?",
+    "sides": [
+     {
+      "position": "yes; the believers left for Pella and places beyond Jordan, and not one of them perished",
+      "holders": [
+       "Adam Clarke",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "yes, and the signal was the unexpected withdrawal of the Romans after their first advance",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why such haste over a garment?",
+    "sides": [
+     {
+      "position": "the delay itself would endanger life",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the labourer worked in a short tunic and left the outer garment at home in the city, so going back meant going back into danger",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "once the army encamped there would be no possibility of escape at all",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Robertson alone gives the rabbinic name for the route across the roofs.",
+   "Barnes alone explains the choice of the mountains from the caves that had always sheltered the pursued."
+  ],
   "themes": [
-   "the field",
-   "leave the cloak",
-   "no possibility of escape"
+   "a city refused as a refuge",
+   "a road across the rooftops",
+   "a cloak not worth returning for",
+   "a warning that was actually taken"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.28
+   }
   }
  },
  "19": {
+  "range": "19-22",
+  "pericope_label": "Woe to them that are with child; pray that your flight be not in winter nor on the sabbath; great tribulation such as was not since the beginning, and the days shortened for the elect",
   "voices": [
    "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The 'woe' is pity not curse — expectant and nursing mothers could not flee and bore the worst of the siege (Luke 23:28-29); the famine horrors recorded by Josephus."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "woe to mothers",
-   "compassion",
-   "horrors of the siege"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "20": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
+   "Albert Barnes",
+   "John Wesley",
+   "John Calvin",
    "A.T. Robertson",
-   "John Wesley"
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "Winter would make flight a double calamity (Lightfoot's Rabbi Tanchum); the sabbath would limit them to a mile and find gates shut (Exodus 16:29); pray for mitigation though the doom is certain."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill insists it is no crime nor judgment to be with child and lists what makes winter flight hard; Calvin looks past the physical to the most destructive plague of all, that the light of heavenly doctrine was extinguished among them, and sets the shortening beside the prophet small seed without which the people would have been as Sodom."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley: they prayed, and their flight was in the spring."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "pray about the flight",
-   "winter and sabbath",
-   "mitigation of calamity"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "21": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Clarke says no history can furnish a parallel, with rapine and famine within and fire and sword without, observes that our Lord wept at the foresight, puts the number who perished at eleven hundred thousand, and reports the rabbinic observation about the first temple falling in summer; Wesley adds that the Jews thought it unlawful to walk above two thousand paces on the sabbath and that in the event the flight fell in the spring."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "Unparalleled tribulation (Daniel 12:1) verified by Josephus — slaughter, captivity (Luke 21:24), the days of vengeance; nothing parallel to Israel's breaking-up (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: the tribulation answers the nation's guilt in wreaking cruelty on the Physician himself."
-   },
-   {
-    "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Wesley raises a farther futurist meaning yet to be fulfilled."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem refers it to the tribulation under Antichrist, confined to a few days."
+    "summary": "Barnes draws out the logic of praying about a calamity that cannot be prevented, and takes the content of the tribulation from the third evangelist; Ellicott prefers alas for them to woe unto them and calls the tone pity rather than denunciation, explains that rules were given for what lay in their power while what lay outside it might be prayed about, and traces the superlative to Daniel; Robertson treats the past tense of the shortening as a prophetic figure, the future regarded as past; Lightfoot finds a symmetry, that God lengthened the time for the elect before the destruction and shortened it for their sake in it."
    }
   ],
   "debates": [
    {
-    "question": "Is the 'great tribulation' wholly fulfilled in A.D. 70 or also future?",
+    "question": "For whose sake were the days shortened?",
     "sides": [
      {
-      "position": "Fulfilled in the fall of Jerusalem (Josephus)",
+      "position": "the elect are the Christians, and without the shortening the whole nation would have been destroyed",
       "holders": [
-       "Barnes",
-       "Clarke",
-       "Calvin"
+       "Albert Barnes",
+       "Adam Clarke",
+       "Charles Ellicott",
+       "John Wesley"
       ]
      },
      {
-      "position": "Also a greater future tribulation under Antichrist",
+      "position": "God lengthened the time for the elect before the destruction and shortened it for their sake within it",
       "holders": [
-       "Wesley",
-       "Cyril of Jerusalem"
+       "John Lightfoot"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Why pray about a calamity already decreed?",
+    "sides": [
+     {
+      "position": "because the circumstances may be mitigated, as we rightly pray that known calamities come mildly",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "because rules were given for what lay within their power, while what lay outside their will might lawfully be prayed about",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Ellicott alone insists the tone of the woe is pity rather than denunciation.",
+   "Calvin alone ranks the extinguishing of heavenly doctrine above the slaughter as the worst plague of the siege."
+  ],
   "themes": [
-   "great tribulation",
-   "Daniel 12:1",
-   "days of vengeance",
-   "Antichrist"
+   "a burden that cannot run",
+   "a season and a day prayed about",
+   "a siege without parallel in history",
+   "days cut short for a remnant"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "22": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The war would have extirpated the nation (Josephus: 1.1 million perished); shortened by the factions and Titus's swift success; the elect are the Christians (Romans 8:33)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: but for God's sparing they would be as Sodom (Isaiah 1:9); a remnant shall be saved (Romans 9:29); Lightfoot on lengthening then shortening for the elect."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem refers the shortening to Antichrist's three-and-a-half years (Daniel 7:25)."
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
    }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "days shortened",
-   "for the elect's sake",
-   "the remnant",
-   "mercy in judgment"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
   }
  },
  "23": {
+  "range": "23-26",
+  "pericope_label": "If any say lo here is Christ, believe it not; false Christs and false prophets shall show great signs and wonders; behold I have told you before",
   "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Hilary",
-   "Augustine",
-   "Gregory",
-   "Origen",
-   "Raban",
    "John Gill",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
+   "Albert Barnes",
    "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "'Then' leaps to the consummation; Christ's coming will be open, not hidden; Augustine: the wicked work miracles yet are not higher with God; the elect cannot truly be deceived (Gregory, Raban)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "In the city's extremity the Jews caught at any impostor (Deuteronomy 13:1-3); false Christs offer a way out of the troubles."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: in desperate straits men are deceived under God's name, by false christs armed with confounding signs."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "minority",
-    "summary": "Cyril of Jerusalem: hatred of brethren is the prelude to Antichrist (2 Thessalonians 2:3)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'lo, here is Christ'",
-   "false Christs",
-   "the visible coming",
-   "Antichrist"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "24": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
    "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Bar-Cochba and Josephus's sorcerers; Simon Magus and Elymas; 'signs and lying wonders' (2 Thessalonians 2:9); signs do not prove God's power; 'if possible' implies it is not possible."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: added to excite vigilance, yet the elect are safe — cannot fall away, kept by the Son of God (John 10:28); Wesley: God will not suffer the body of Christians to be deceived."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "lying signs and wonders",
-   "deceiving the elect",
-   "security of the elect"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "25": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The forewarning leaves them inexcusable and arms them; the fulfilment proves Christ's omniscience and Messiahship (Mark 13:23, 'take heed')."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: those dismayed by predicted stumbling-blocks are inexcusable; God is faithful and gives strength to resist (1 Corinthians 10:13)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "forewarning",
-   "inexcusability",
-   "confirmation of faith"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "26": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
    "A.T. Robertson",
-   "John Calvin"
+   "John Lightfoot"
   ],
   "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Impostors led people into the desert (the Egyptian, Acts 21:38) or claimed Christ in secret chambers (Simon son of Gioras, John of Giscala); they shun publicity that would test them."
-   },
    {
     "school": "reformed",
     "prevalence": "several",
-    "summary": "Calvin contrasts concealment with the sudden far-reaching extension of Christ's kingdom; walk in the light while you have it (John 12:35)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "'in the desert'",
-   "secret chambers",
-   "reject hidden-Christ claims",
-   "the visible coming"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "27": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The simile is of manner, not direction — a sudden, public, unmistakable coming; the same words cover both Jerusalem's fall and the final Advent (Barnes)."
+    "summary": "Gill places the cry at three possible moments and takes the forewarning as notice given before the events, so that the disciples would be inexcusable if they were not on their guard; Calvin says the danger was great because men whose affairs were desperate would seek phantoms instead of Christ, and draws the sharper inference that those dismayed by predicted stumbling-blocks are inexcusable, since God is faithful and will not suffer us to be tempted beyond what we can bear."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the lightning 'out of the east' traces the Roman army's westward march; Wesley: as quick as lightning, no time for warning."
+    "prevalence": "several",
+    "summary": "Clarke holds there would be special need of the caution about the siege, since the lower the Jews were reduced the readier they were to listen, and remarks that our Lord foretold not only the appearance of these men but the manner of their conduct; Wesley takes the saving clause as decisive, that they would deceive the elect if it were possible, but it is not possible that God should suffer the body of Christians to be so deceived."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes explains the appetite for a deliverer from Rome and takes the showing of signs as pretending to miracles so nearly resembling the true as to make detection hard; Ellicott suspects the historian silence about messianic pretenders was a suppression connected with his own recognition of Vespasian, and glosses the secret chambers as a shunning of the publicity that would test their claims; Robertson separates the three words the New Testament uses of such works; Lightfoot turns to the credulity that made it possible, and how much the nation attributed to dreams."
    }
   ],
   "debates": [
    {
-    "question": "Does 'the coming of the Son of man' here mean the fall of Jerusalem or the final Advent?",
+    "question": "Is the silence of the historian about messianic pretenders a difficulty?",
     "sides": [
      {
-      "position": "Primarily Jerusalem's destruction (Christ's coming in judgment)",
+      "position": "yes, and it was probably a suppression of the truth connected with his own recognition of Vespasian",
       "holders": [
-       "Lightfoot",
-       "Clarke",
-       "Gill"
+       "Charles Ellicott"
       ]
      },
      {
-      "position": "The final Advent, or both by double reference",
+      "position": "no; many such impostors did arise about that time, and the lower the Jews were reduced the readier they were to listen",
       "holders": [
-       "Barnes",
-       "Ellicott",
-       "Robertson",
-       "Wesley"
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Can the elect be deceived?",
+    "sides": [
+     {
+      "position": "they would be if it were possible, but it is not possible that God should suffer the body of Christians to be so deceived",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "but for the warning even the Christians of Judaea might have been carried away by popular delusion",
+      "holders": [
+       "Charles Ellicott"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Lightfoot alone asks whether the nation was madder in its religious superstition or its taste for curious arts, and reports the fasts imposed to obtain a happy dream.",
+   "Robertson alone distinguishes the prodigy, the mighty power and the sign of God purpose, and notes that our word miracle carries only one of those notions."
+  ],
   "themes": [
-   "coming like lightning",
-   "sudden and public",
-   "preterist vs futurist",
-   "false Messiahs"
+   "a cry raised by the desperate",
+   "wonders near enough to the true to deceive",
+   "a warning that removes every excuse",
+   "pretenders who avoid being tested"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.1
+   }
   }
  },
- "28": {
+ "27": {
+  "range": "27-28",
+  "pericope_label": "As the lightning cometh out of the east so shall the coming of the Son of man be; for wheresoever the carcase is, there will the eagles be gathered together",
   "voices": [
    "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Albert Barnes",
+   "John Wesley",
    "John Calvin",
-   "John Wesley"
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "The carcass = doomed Jerusalem, the eagles = the Roman legions (whose ensigns bore the eagle); a proverb of judgment converging on the spiritually dead (Job 39:30)."
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill reaches the identification of the carcass with the Jewish people by first refusing the alternative, that it is Christ crucified, to whom the word will by no means agree; Calvin takes the proverb quite differently, as a figure of union, since by whatever methods Satan tries to scatter the children of God the sacred bond is in Christ himself, dispersion coming of departing from him in whom alone our strength lies."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Calvin: argues from the less to the greater — believers should flock to Christ the Author of life as birds to a carcass; rejects allegorizing the eagles."
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke alone presses the compass points as significant, finding in them the march of the Roman army from east to west, and makes the carcass the nation morally and judicially dead with the eagles the legions named for their ensigns; Wesley makes the proverb a further reason for not listening to any pretended deliverer, since the nation is already before God a dead carcass."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes says the figure denotes the manner and not the quarter of the coming, rapid and unexpected, and calls the proverb one that teaches a universal truth as well as a local one; Ellicott places the reader on the dim border-land between the primary and the ultimate fulfilments, and rejects two readings of the proverb, the narrowly Roman one as too local and the fantastic one of many of the Fathers; Robertson sets the visibility of the flash against the invisibility of the false Messiahs and suggests the bird may be the griffon vulture; Lightfoot supplies the principle that the destruction of Jerusalem is frequently expressed in Scripture as though it were the destruction of the whole world."
    }
   ],
   "debates": [
+   {
+    "question": "Does the lightning indicate direction or manner?",
+    "sides": [
+     {
+      "position": "manner only, rapid and unexpected, so that looking in desert or secret places is useless",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "direction as well, marking the march of the Roman army from east to west",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "visibility, in contrast to the invisibility of the false Messiahs",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   },
    {
     "question": "What are the carcass and the eagles?",
     "sides": [
      {
-      "position": "Dead Jerusalem and the Roman legions / general judgment",
+      "position": "the Jewish nation judicially dead, and the Roman legions named for their ensigns",
       "holders": [
-       "Lightfoot",
-       "Clarke",
-       "Barnes",
-       "Ellicott",
-       "Wesley"
+       "Adam Clarke",
+       "John Lightfoot",
+       "Albert Barnes",
+       "John Wesley",
+       "John Gill"
       ]
      },
      {
-      "position": "Christ and the believers gathering to him",
+      "position": "neither that nor the patristic fancy; the Roman reading is true as far as it goes but too narrow for so wide a comparison",
       "holders": [
-       "Calvin",
-       "some Fathers (rejected by Ellicott)"
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "a figure of union rather than of judgment, the bond that keeps the children of God from being scattered",
+      "holders": [
+       "John Calvin"
       ]
      }
     ]
    }
   ],
-  "outliers": [],
+  "outliers": [
+   "Calvin alone reads the proverb as a promise of union rather than a sentence of ruin.",
+   "Lightfoot alone states the hermeneutical principle that the fall of Jerusalem is described in Scripture as the end of a world."
+  ],
   "themes": [
-   "carcass and eagles",
-   "Roman legions",
-   "judgment on the dead",
-   "proverb of convergence"
+   "a coming that needs no announcing",
+   "a nation described as a corpse",
+   "birds that follow an army",
+   "one proverb read two opposite ways"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.23
+   }
   }
  },
  "29": {
+  "range": "29",
+  "pericope_label": "Immediately after the tribulation of those days the sun shall be darkened, the moon shall not give her light, and the stars shall fall from heaven",
   "voices": [
-   "Glossa Ordinaria",
-   "Chrysostom",
-   "Hilary",
-   "Origen",
-   "Jerome",
-   "Raban",
-   "Augustine of Hippo",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Apocalyptic idiom for the fall of a power (Isaiah 13:10; Ezekiel 32:7); preterists (Lightfoot, Gill, Clarke) apply it to Jerusalem by 'immediately'; others to the Advent's wider range."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The last day: tribulation of Antichrist, the sign of the cross brighter than the sun (Chrysostom); lights dimmed not destroyed (Jerome); the Church under persecution (Augustine)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a general recapitulation of all the Church's afflictions; Christ's glory delayed till the whole course of redemption is complete."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Does 'immediately after the tribulation' refer to A.D. 70 or the final Advent?",
-    "sides": [
-     {
-      "position": "The destruction of Jerusalem, in symbolic language",
-      "holders": [
-       "Lightfoot",
-       "Gill",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "The second Advent / the whole course of the Church's afflictions",
-      "holders": [
-       "Ellicott",
-       "Robertson",
-       "Calvin",
-       "Henry",
-       "fathers"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "sun darkened",
-   "apocalyptic imagery",
-   "'immediately'",
-   "preterist vs futurist"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "30": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The 'sign' is the Son of Man himself coming in the clouds (Daniel 7:13), not a cross in the sky (Ellicott, Robertson); the tribes mourn (Zechariah 12:10; Revelation 1:7)."
-   },
-   {
-    "school": "eastern-alexandrian",
-    "prevalence": "single",
-    "summary": "Origen (with Cyril): the sign is the luminous Cross going before the King, that the Jews may mourn."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the hidden majesty of Christ's kingdom is then openly displayed as a standard compelling the world to look; Henry: a sign once spoken against, now admired."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What is 'the sign of the Son of man'?",
-    "sides": [
-     {
-      "position": "Christ himself coming in glory (apposition)",
-      "holders": [
-       "Ellicott",
-       "Robertson",
-       "Gill"
-      ]
-     },
-     {
-      "position": "The luminous Cross in heaven",
-      "holders": [
-       "Origen",
-       "Cyril of Jerusalem",
-       "Wesley (tentatively)"
-      ]
-     },
-     {
-      "position": "The visible vengeance on Jerusalem",
-      "holders": [
-       "Lightfoot",
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "sign of the Son of man",
-   "coming in clouds",
-   "all tribes mourn",
-   "Daniel 7:13"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "B",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "31": {
-  "voices": [
-   "Origen",
-   "Remigius",
-   "Chrysostom",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Preterists (Gill, Lightfoot, Clarke): 'angels' = gospel ministers gathering the Gentile elect after Jerusalem's fall; futurists (Barnes, Ellicott, Robertson): the angelic harvest at the resurrection (1 Thessalonians 4:16)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: pastoral comfort — the scattered Church will be gathered not by human means but by heavenly power."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: the trumpet is the resurrection; the angels gather the risen to the clouds."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Who are the 'angels' and the gathering?",
-    "sides": [
-     {
-      "position": "Gospel ministers gathering the Gentile elect after A.D. 70",
-      "holders": [
-       "Gill",
-       "Lightfoot",
-       "Clarke"
-      ]
-     },
-     {
-      "position": "Literal angels gathering the elect at the resurrection",
-      "holders": [
-       "Chrysostom",
-       "Barnes",
-       "Ellicott",
-       "Robertson"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "angels and trumpet",
-   "gathering the elect",
-   "gospel vs resurrection",
-   "four winds"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "32": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Origen",
-   "Augustine of Hippo",
-   "Hilary",
-   "Remigius",
-   "Raban",
    "John Gill",
    "Matthew Henry",
-   "Albert Barnes",
    "Adam Clarke",
    "Charles Ellicott",
-   "A.T. Robertson",
+   "Albert Barnes",
+   "John Wesley",
    "John Calvin",
-   "John Wesley"
+   "A.T. Robertson",
+   "John Lightfoot"
   ],
   "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill takes the adverb strictly, so that what follows comes to pass just upon the destruction of the city and cannot be referred to the last judgment; Calvin treats the verse as the turn to the full manifestation of the kingdom the disciples had asked about, and holds the principal object of the reply was to confirm them in good hope, which is why Christ speaks in the modes of expression common among the prophets."
+   },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: Grotius's key distinction — 'these things' (v.34) befall this generation, but 'that day and hour' (v.36) is unknown; don't confound them (2 Thessalonians 2:2)."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The budding fig (likely seen on Olivet) heralds nearness — of Jerusalem's ruin (Barnes, Clarke) or of the Advent (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: as spring softens the tree to make way for new growth, the Church's afflictions precede its immortal glory (2 Corinthians 4:16)."
-   },
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Allegory: the fig tree as the human race (Augustine) or the Synagogue with Antichrist its branch (Hilary); winter-to-summer of the Spirit (Origen)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "parable of the fig tree",
-   "signs of the times",
-   "these things vs that day",
-   "summer nigh"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "33": {
-  "voices": [
-   "John Chrysostom",
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Applies the fig parable: the signs herald nearness; Luke's 'your redemption draweth nigh' (Luke 21:28); better reading 'He is near' (James 5:9); the four apostles as representatives of all believers."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: as the fig's budding necessarily brings summer, so the foretold event follows in quick succession — calm for the righteous, winter for sinners."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "it is near",
-   "at the doors",
-   "signs as harbingers",
-   "discernment not date-setting"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "34": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "majority",
-    "summary": "'This generation' = the contemporaries then living; Jerusalem fell ~40 years later (some apostles, esp. John, survived); Ellicott: no warrant for 'race.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: within one generation the city and temple were destroyed; future ages are not exempt, but the prediction was for that age."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: 'this generation' = the generation of the faithful, which no trial shall overthrow."
-   }
-  ],
-  "debates": [
-   {
-    "question": "What does 'this generation' mean?",
-    "sides": [
-     {
-      "position": "The contemporaries then living (fulfilled in A.D. 70)",
-      "holders": [
-       "Lightfoot",
-       "Barnes",
-       "Ellicott",
-       "Robertson",
-       "Calvin",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "The Jewish race, enduring to the end",
-      "holders": [
-       "Clarke"
-      ]
-     },
-     {
-      "position": "The generation of the faithful",
-      "holders": [
-       "Chrysostom"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "this generation",
-   "fall of Jerusalem",
-   "generation vs race",
-   "fulfilment in A.D. 70"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "35": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Christ claims for his own words the eternity of Jehovah's (Psalms 102:26; Isaiah 40:8; 1 Peter 1:24-25); verified by the abiding pre-eminence of his words in history."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: raises the mind above the world's billowing flux — our salvation rests unshaken on Christ's promises, not on the changeful world."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "heaven and earth pass away",
-   "my words shall not",
-   "divine authority",
-   "sure foundation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "36": {
-  "voices": [
-   "Chrysostom",
-   "Jerome",
-   "Remigius",
-   "Hilary",
-   "Augustine of Hippo",
-   "Origen",
-   "Raban",
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "Against the Arians: 'the Son knows not' = makes not known (Augustine, Jerome, Origen); the clause is absent from the best Greek copies."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the two natures each retain their properties — Christ as man did not know the day, no more derogating from his deity than his mortality did."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The day is deliberately hidden (Robertson: of the second coming, not v.34's events); Ellicott: a real self-emptying limitation of the incarnate Word (Philippians 2:7)."
-   }
-  ],
-  "debates": [
-   {
-    "question": "In what sense does 'the Son' not know the day?",
-    "sides": [
-     {
-      "position": "He knows but does not reveal it ('makes not known')",
-      "holders": [
-       "Augustine",
-       "Jerome",
-       "Origen",
-       "Hilary"
-      ]
-     },
-     {
-      "position": "A real limitation of his human nature through the kenosis",
-      "holders": [
-       "Calvin",
-       "Ellicott"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "no man knows the day",
-   "neither the Son",
-   "kenosis",
-   "hidden by design"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "37": {
-  "voices": [
-   "John Gill",
-   "John Lightfoot",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Noah's flood types a sudden judgment on a secure, feasting world (the Petrine echo, 1 Peter 3:20; 2 Peter 3:6); ample warning, utter unpreparedness."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the sin is not eating/drinking but stupid indifference and obstinacy — living as if there were no Judge."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Chrysostom: a sudden, unlooked-for coming amid 'Peace and safety' (1 Thessalonians 5:3)."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here belongs to another discourse, not this verse."
-   }
-  ],
-  "themes": [
-   "days of Noah",
-   "carnal security",
-   "sudden judgment",
-   "unprepared world"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "38": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "A.T. Robertson"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The lawful round of life (eating, marrying) is not itself sin; the fault is being so engrossed in the present as to be heedless of coming judgment."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "before the flood",
-   "ordinary life",
-   "heedless absorption",
-   "until the ark"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "39": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The willful ignorance of Noah's age types the careless world; Ellicott: the world's nescience proves the Advent's signs are spiritual, discerned only by faith."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: their ignorance was unbelief; Noah by faith saw the hidden vengeance (Hebrews 11:7) — direct your mind to the small saved company (1 Peter 3:20)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "knew not until the flood",
-   "willful ignorance",
-   "unbelief",
-   "spiritual signs"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "40": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "A sudden, character-based separation of those outwardly alike; Ellicott (from Greek usage) and Wesley read 'taken' as saved, Barnes leans to 'taken by death.'"
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: remember Lot's wife (Genesis 19:26); let no earthly tie retard the godly — out of one couple, one may be taken and one left."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: the Judge is no respecter of persons — the angels will take even the husbandman, the slave, the poor."
-   }
-  ],
-  "debates": [
-   {
-    "question": "Is the one 'taken' saved or destroyed?",
-    "sides": [
-     {
-      "position": "Taken = received to Christ (saved)",
-      "holders": [
-       "Ellicott",
-       "Wesley"
-      ]
-     },
-     {
-      "position": "Taken = taken away by death/judgment",
-      "holders": [
-       "Barnes",
-       "Clarke"
-      ]
-     }
-    ]
-   }
-  ],
-  "outliers": [],
-  "themes": [
-   "two in the field",
-   "one taken one left",
-   "sudden separation",
-   "Lot's wife"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "41": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Wesley",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The hand-mill worked by two women (Exodus 11:5); a companion image to v.40 (perhaps seen on Olivet), teaching the same sudden, inward separation."
-   },
-   {
-    "school": "eastern-antiochene",
-    "prevalence": "single",
-    "summary": "Cyril: comfort to the lowliest — even the woman compelled to grind is not despised; the Judge is no respecter of persons."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "two women grinding",
-   "one taken one left",
-   "daily labour",
-   "inward separation"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "42": {
-  "voices": [
-   "Jerome",
-   "Chrysostom",
-   "Gregory",
-   "Origen",
-   "Augustine of Hippo",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley",
-   "Cyril of Jerusalem",
-   "Matthew Henry"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "The hour is hidden to keep us in perpetual expectation (Jerome); watching = casting off sloth (Gregory); it applies to every believer and every death (Augustine)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the uncertainty, far from excusing sloth, is the express spur to unrelaxing watchfulness; Henry: keep the temper you'd wish the Lord to find."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The watchful escaped A.D. 70, the careless perished (Clarke); reinforced by a series of parables (Robertson)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "watch therefore",
-   "hidden hour",
-   "perpetual readiness",
-   "against sloth"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "43": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Jamieson, Fausset and Brown",
-   "A.T. Robertson",
-   "John Calvin"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The thief-parable argues from common prudence to vigilance; the day comes 'as a thief in the night' (1 Thessalonians 5:2); these verses parallel Luke 12:42 ff."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: as fear of robbers banishes sleep, so the sudden coming forbids indolence — and what is at stake is not property but the soul."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here belongs to the parable of the two sons, not this verse."
-   }
-  ],
-  "themes": [
-   "the thief in the night",
-   "householder's vigilance",
-   "sudden coming",
-   "watch"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "44": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Be ready, for the hour is unknown; the signs rouse watchfulness, not date-setting (Ellicott); 'it is useless to set the day, folly to neglect it' (Robertson)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: the delayed judgment hangs over us every hour — no excuse for indolence, with the soul at stake."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "be ye ready",
-   "an hour ye think not",
-   "against date-setting",
-   "faith and prayer"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "45": {
-  "voices": [
-   "Hilary",
-   "Chrysostom",
-   "Remigius",
-   "Glossa Ordinaria",
-   "Origen",
-   "Raban",
-   "Augustine of Hippo",
-   "Jerome",
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
-   {
-    "school": "latin-fathers",
-    "prevalence": "several",
-    "summary": "A special charge to the rulers/bishops; faithful in not robbing the needy, prudent in giving each his due food (Origen); rare to find both united."
-   },
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "The minister feeds the flock 'meat in due season' (John 21:15-17); 'wise' = moral discernment, an art of spiritual dietetics (Ellicott); six ministerial duties (Clarke)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: a fortiori — if the people must watch, much more the apostles; the higher the rank, the heavier the burden of fidelity and wisdom."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "faithful and wise servant",
-   "steward over the household",
-   "meat in due season",
-   "charge to ministers"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "46": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Blessed is the servant found at his work; the blessing is the master's approbation, applying to the Advent, to death, and to the Lord's comings in life's crises (Ellicott)."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "blessed servant",
-   "found so doing",
-   "master's approbation",
-   "comings of the Lord"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "47": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "Cyril of Jerusalem"
-  ],
-  "schools": [
-   {
-    "school": "grammatical-historical",
-    "prevalence": "several",
-    "summary": "Fidelity rewarded with enlarged trust; Barnes keeps it from meaning higher ecclesiastical rank; Ellicott sees continued joyful service in heaven (Luke 19:17)."
+    "summary": "Henry takes the second coming to be meant and defends the nearness of the language as the usual prophetic way of expressing the greatness and certainty of a thing, reading the whole as a great change in order to the making of all things new, and contrasting a first coming set for a sign to be spoken against with a second to be admired."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the faithful minister receives power to dispense covenant blessings with the Spirit's demonstration; unfaithfulness forfeits usefulness."
-   }
-  ],
-  "debates": [],
-  "outliers": [],
-  "themes": [
-   "ruler over all his goods",
-   "reward of fidelity",
-   "enlarged trust",
-   "service in heaven"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "48": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke",
-   "Charles Ellicott",
-   "A.T. Robertson",
-   "John Calvin",
-   "John Wesley"
-  ],
-  "schools": [
+    "prevalence": "several",
+    "summary": "Clarke argues that the word immediately shows our Lord is not speaking of a distant event but of something consequent on calamities already predicted, and borrows the figure of a Jewish heaven whose sun and moon are the religion and government of that people; Wesley says flatly that here our Lord begins to speak of his last coming, and resolves the adverb by the speaker, since with God a thousand years are as one day."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The secret thought 'my lord delayeth' is the scoffers' temper (2 Peter 3:3-4); forgetting that the Judge is ever near (James 5:9) breeds tyranny and sensuality (Ellicott)."
-   },
-   {
-    "school": "reformed",
-    "prevalence": "several",
-    "summary": "Calvin: presuming on delay involves the servant in darkness and supposed impunity; the remedy is constant thought of the sudden coming."
+    "summary": "Barnes argues from usage that the images are not literal, the sacred writers employing them for any great calamity as the fall of Babylon is foretold in just these terms; Ellicott holds that from this point the prophecy passes beyond Jerusalem to the final coming and insists no other meaning could have been found when the words were first heard; Robertson grants the adverb gives trouble if one stresses the time element, calls the passage a prophetic panorama with foreshortened perspective, and says literalism will not serve; Lightfoot supplies the figure itself, that the Jewish heaven perishes and the sun and moon of its glory are darkened."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Does this verse describe the fall of Jerusalem or the second coming?",
+    "sides": [
+     {
+      "position": "the fall of Jerusalem only; the adverb forbids a distant event, and the images are the ordinary prophetic figures for a national overthrow",
+      "holders": [
+       "John Gill",
+       "Adam Clarke",
+       "Albert Barnes",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "the final coming, the prophecy taking a wider range from this point, since no other meaning could have been found when the words were first heard",
+      "holders": [
+       "Charles Ellicott",
+       "John Wesley",
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "neither alternative alone; it is a prophetic panorama with foreshortened perspective, and literalism will not serve",
+      "holders": [
+       "A.T. Robertson",
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Wesley alone explains the adverb by the speaker rather than the event, and blames a misreading of it for the primitive expectation of an immediate return.",
+   "Lightfoot alone assigns the parts of the figure, the sun to the religion of the church, the moon to the government of the state, and the stars to the judges and doctors of both."
+  ],
   "themes": [
-   "my lord delayeth",
-   "practical unbelief",
-   "presumed impunity",
-   "root of corruption"
+   "one adverb that divides the commentators",
+   "a heaven that belongs to a nation",
+   "prophetic nearness as a figure of certainty",
+   "a panorama without perspective"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
   }
  },
- "49": {
+ "30": {
+  "range": "30-31",
+  "pericope_label": "Then shall appear the sign of the Son of man, and all the tribes of the earth shall mourn; he shall send his angels with a great trumpet to gather his elect from the four winds",
   "voices": [
    "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
    "Albert Barnes",
+   "John Wesley",
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill clears the ground by refusing the trumpet, the clouds and the cross in the air, his reason against the trumpet being that this sign is not said to be sounded but to appear, and makes the angels messengers rather than spirits, the ministers sent into the world of the Gentiles; Calvin uses the term to mark the difference between the present condition of Christ kingdom and its future glory, and reads the gathering from the four winds as hyperbole meant to console disciples discouraged by the Church dispersion."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke makes the plain meaning a manifestation of Christ power in the destruction of the city, takes the word rendered earth to mean the land of Judaea, reads the loud trumpet as the earnest call of the gospel and the elect as the Gentiles now chosen in place of the rebellious Jews; Wesley alone ventures a guess at the sign, that it appears a little before he descends and is perhaps the cross, and defines the elect as all who have endured to the end in the faith which works by love."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes allows both fulfilments at once and notes the word angels means literally messengers and is applied even to inanimate things God employs; Ellicott asks whether we can picture the sign at all and reports the wildly conjectural answers, prefers the manuscripts which omit the word sound, and admits we cannot know what reality will answer to the symbol; Robertson prefers the suggestion that Christ himself is the sign, taking the genitive as one of apposition, and holds the coming is not to be identified with the judgment of Jerusalem but forms its preternatural background; Lightfoot puts the sign as a proof of identity given in vengeance rather than in any visible figure."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What is the sign of the Son of man?",
+    "sides": [
+     {
+      "position": "unknown and unpicturable; the conjectures of a cross in the sky or a dazzling flash are wild",
+      "holders": [
+       "Charles Ellicott",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "Christ himself, the genitive being one of apposition, as the rest of the verse confirms",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     },
+     {
+      "position": "the destruction of the city, so signal a manifestation of his power that the tribes must mourn and own him",
+      "holders": [
+       "Adam Clarke",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "perhaps the cross, appearing a little before he descends",
+      "holders": [
+       "John Wesley"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Who are the angels and what is the trumpet?",
+    "sides": [
+     {
+      "position": "messengers, that is the apostles and their successors, with the trumpet the call of the gospel and the elect the Gentiles",
+      "holders": [
+       "Adam Clarke",
+       "John Gill",
+       "John Lightfoot"
+      ]
+     },
+     {
+      "position": "the word can mean either messengers or the exalted intelligences, and either sense will serve here",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the coming is not the judgment of Jerusalem but its preternatural background, and the trumpet is the standing prophetic signal",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone prefers the manuscripts that omit the word sound and read simply a great trumpet.",
+   "Calvin alone turns the gathering into a consolation about the dispersion of the Church rather than a description of the last day."
+  ],
+  "themes": [
+   "a sign nobody will describe",
+   "a mourning that is also an acknowledgement",
+   "messengers or angels",
+   "a gathering from the ends of the earth"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
+  }
+ },
+ "32": {
+  "range": "32-35",
+  "pericope_label": "Learn a parable of the fig tree; when ye see all these things know that it is near, this generation shall not pass till all these things be fulfilled, heaven and earth shall pass away but my words shall not pass away",
+  "voices": [
+   "John Gill",
+   "Matthew Henry",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Wesley",
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill supplies the natural detail, that the tree was well known in Judaea and its putting forth fell under everyone observation, and alone takes the first clause about heaven and earth as an assertion about the end of time, qualifying it as true not of their substance, which will always remain, but of their qualities, so that they are renewed and refined rather than destroyed and the evil circumstances attending them through man sin pass away; Calvin refuses the obvious reading of the parable, taking it not merely that the coming will be as evident as greenness is of summer but as a comparison drawn from the greater vigour trees show after the contraction of winter, holds that Christ does not extend the discourse to all the miseries that would befall the Church but tells them they will learn his words true before a single generation is completed, and says he illustrates their certainty by making them more stable than the entire structure of the world."
+   },
+   {
+    "school": "puritan-evangelical",
+    "prevalence": "single",
+    "summary": "Henry makes the parable the practical application of the whole prediction, that we must expect these events and prepare for them, observing the signs of the times and comparing them with the word so as to foresee what is at the door, the figure itself being no more than that budding and blossoming presage summer."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke puts the parable as a proof, the signs given being as infallible evidence of the approaching ruin of the Jewish state as the budding of the trees is of the coming summer, and alone renders the disputed phrase this race, arguing that the Jews shall not cease from being a distinct people till all the counsels of God concerning them and the Gentiles are fulfilled while allowing that others translate it of the persons then living; Wesley reads the phrase as implying that a great part of that generation would be passed away but not the whole, and observes it fell out just so, the city being destroyed thirty-nine or forty years later."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes makes a generation thirty or forty years and notes the destruction came about forty years after, explains that the juices return from the roots so the buds swell and burst, and puts the closing saying as a comparison, that one may sooner expect heaven and earth to return to nothing than these words to fail; Ellicott adds that the season was early spring, says the natural meaning of the disputed phrase is beyond question the one that takes it of those then living and ascribes the other rendering to a desire to bring the words into apparent harmony with history, and hears in the last verse the tone of one speaking with supreme authority, claiming for his own words the eternity belonging to the words of Jehovah; Robertson says that if the reference is to the destruction of Jerusalem there was a literal fulfilment; Lightfoot draws his inference from the phrase, that the foregoing verses cannot be of the last judgment but of the destruction of Jerusalem, since some disciples lived to see these things and some rabbis then alive survived the city fall."
+   }
+  ],
+  "debates": [
+   {
+    "question": "What does this generation mean?",
+    "sides": [
+     {
+      "position": "this race, the Jews as a distinct people, who shall not cease till all the counsels of God concerning them are fulfilled",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the persons then living; the natural meaning is beyond question, and it fell out so, the city being destroyed some forty years later",
+      "holders": [
+       "Charles Ellicott",
+       "Albert Barnes",
+       "John Wesley",
+       "John Lightfoot",
+       "A.T. Robertson",
+       "John Calvin",
+       "John Gill"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Do heaven and earth themselves pass away?",
+    "sides": [
+     {
+      "position": "not as to their substance, which will always remain, but as to their qualities, being renewed and refined rather than destroyed",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "the clause is a comparison for certainty, making his words more stable than the whole structure of the world",
+      "holders": [
+       "Albert Barnes",
+       "John Calvin",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Clarke alone renders the phrase this race and makes the survival of the Jewish people the thing promised.",
+   "Calvin alone reads the fig tree as a figure of vigour recovered after winter rather than of a season announced by its signs."
+  ],
+  "themes": [
+   "a sign as plain as a budding tree",
+   "one phrase that divides the commentators",
+   "a date fixed within forty years",
+   "words claimed to outlast the world"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.05
+   }
+  }
+ },
+ "36": {
+  "range": "36-39",
+  "pericope_label": "Of that day and hour knoweth no man, not the angels, but my Father only; as the days of Noe were, so shall also the coming of the Son of man be",
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Wesley",
+   "John Calvin",
+   "A.T. Robertson",
+   "John Lightfoot"
+  ],
+  "excluded_voices": [
    "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "The evil servant's secret unbelief issues in tyranny over fellow-servants and sensual indulgence — the unfaithful minister who beats the flock and feasts with the worldly (Barnes)."
+    "summary": "Gill restricts the unknown day, taking it not of the second coming and the last judgment but of the coming of the Son of man to take vengeance on the Jews, since the words concern the date of the things already described, and reads the days of Noah both ways, that the practices of that generation will be those of the age in which the Son of man comes and that the flood fell suddenly on men thoughtless about it although warned, who slighted Noah warnings and were given up to judicial blindness; Calvin states the purpose of the ignorance, that Christ held believers minds in suspense so that they might not by a false imagination fix any time for the final redemption, knowing how fickle our minds are and how a vain curiosity tickles us to know more than is proper, and finds the cause of the old world ignorance in unbelief, which blinded their minds where by contrast Noah beheld at a distance the vengeance still concealed and feared it early."
    },
    {
-    "school": "reformed",
-    "prevalence": "minority",
-    "summary": "Gill: spiritual oppression — usurping dominion over consciences, imposing unbidden rites, persecuting the nonconforming saints."
-   }
-  ],
-  "debates": [],
-  "outliers": [
-   {
-    "voice": "Jamieson, Fausset and Brown",
-    "note": "The JFB fragment here concerns the persecution of the prophets (Jeremiah 26; 2 Chronicles 24), not directly this verse."
-   }
-  ],
-  "themes": [
-   "smite his fellowservants",
-   "eat with the drunken",
-   "tyranny and sensuality",
-   "abused trust"
-  ],
-  "qa": {
-   "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
-   "grade": "A",
-   "checks": [
-    "length",
-    "refs-linked",
-    "tags-match",
-    "schools-valid"
-   ],
-   "lint": "audit-synthesis-quality/1"
-  }
- },
- "50": {
-  "voices": [
-   "John Gill",
-   "Albert Barnes",
-   "Adam Clarke"
-  ],
-  "schools": [
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke supports the restricted reading by translating the second noun as season rather than hour, a sense he says both sacred and profane authors use, and argues it from the earlier directions, that because the day was unknown they were to pray it might not fall on a sabbath and because the season was unknown that it might not be in winter, takes the eating and drinking to mean they spent their time in rapine, luxury and riot, and says the design of the verses is that the desolation should be as general as it was unexpected; Wesley agrees that the day of judgment is meant and adds the careful qualification that no man knew it while our Lord was on earth, though it might afterwards be revealed to John consistently with this."
+   },
    {
     "school": "grammatical-historical",
     "prevalence": "several",
-    "summary": "The lord comes suddenly on the careless servant (1 Thessalonians 5:3); Clarke: a sudden death answering to his infidelity — his presumption of delay leaves him unprepared."
+    "summary": "Robertson takes the other side, that here Jesus has in mind his second coming, having stated plainly that the destruction of Jerusalem would happen in that generation and stating now as pointedly that no one knows this day, treats the clause about the Son as probably genuine here too, and makes the contrast sharply, that in Noah day there was plenty of warning but utter unpreparedness, as most people are now either indifferent about the second coming or have fanciful schemes about it; Ellicott fastens on the second evangelist addition, not even the Son, which he calls every way remarkable and explains by that Gospel connection with Peter, and turns the reckless apathy back on the earlier dispute, as justifying a reading of the signs of the Advent not as phenomena visible to the eye of sense but as signs of the times discerned only by the insight of the faithful; Barnes keeps to the structure of the answer, that the general signs have been given as budding indicates summer but the precise time is not indicated by them, and sets out two points of likeness to the flood, that the coming would be sudden and unexpected and that the world would be found as it was then; Lightfoot notes that Peter sets the ruin of the old world and of Jerusalem side by side as parallels."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Which coming is the day no man knows?",
+    "sides": [
+     {
+      "position": "the coming in vengeance on the Jews, since the words concern the date of the things just described",
+      "holders": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "the second coming and the day of judgment, stated as pointedly here as the nearness of the city fall was stated before",
+      "holders": [
+       "A.T. Robertson",
+       "John Wesley",
+       "Charles Ellicott"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "In what does the likeness to the days of Noah consist?",
+    "sides": [
+     {
+      "position": "in unpreparedness despite ample warning, the flood falling suddenly on men who would not lay it to heart",
+      "holders": [
+       "A.T. Robertson",
+       "Albert Barnes",
+       "John Gill"
+      ]
+     },
+     {
+      "position": "in the manner of life, their time spent in rapine, luxury and riot",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "in unbelief, which blinded their minds where Noah saw the concealed vengeance from afar and feared early",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Clarke alone renders the second noun season and argues the point from the earlier charge to pray against a sabbath and a winter flight.",
+   "Ellicott alone uses the apathy of the verse as evidence against taking the signs as visible to the eye of sense."
+  ],
   "themes": [
-   "come when he looketh not",
-   "sudden overtaking",
-   "presumption refuted",
-   "unprepared"
+   "a date kept in the Father own power",
+   "ignorance appointed to keep hope awake",
+   "a warned world that would not listen",
+   "signs discerned by insight rather than sight"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.11
+   }
   }
  },
- "51": {
+ "40": {
+  "range": "40-44",
+  "pericope_label": "Two in the field, one taken and one left; two women grinding at the mill; watch therefore, for ye know not what hour your Lord doth come, and had the householder known he would have watched",
   "voices": [
    "John Gill",
-   "Albert Barnes",
+   "Matthew Henry",
    "Adam Clarke",
    "Charles Ellicott",
+   "Albert Barnes",
    "John Wesley",
-   "Matthew Henry"
+   "John Calvin",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
   ],
   "schools": [
    {
-    "school": "grammatical-historical",
+    "school": "reformed",
     "prevalence": "several",
-    "summary": "'Cut asunder' = an ancient execution (Daniel 2:5; Hebrews 11:37), or figuratively severing him from the saints to the hypocrites' portion; the double-minded man unmasked (Ellicott)."
+    "summary": "Gill observes that the word women is not in the Greek but is rightly supplied, the participle being feminine and the work belonging to women, draws the charge to watch as an inference from what precedes rather than a new subject, the time of the desolation being uncertain and coming on the Jews unawares, and makes the readiness the point rather than the figure of the thief; Calvin takes the more pointed form of the exhortation in the third Gospel, that a man whose senses are overloaded with food and wine will never raise his mind to the heavenly life, and since no desire of the flesh fails to intoxicate, they must not satiate themselves with the world."
    },
    {
     "school": "puritan-evangelical",
     "prevalence": "single",
-    "summary": "Henry: death and damnation — body to the grave, soul to hell; he who divided himself between Christ and the world is justly divided."
+    "summary": "Henry defines the watching inwardly, as maintaining the temper of mind we would be willing for our Lord to find us in, since we know we have but a little time to live and cannot know we have a long time, much less the time fixed for the judgment."
    },
    {
     "school": "wesleyan-arminian",
-    "prevalence": "minority",
-    "summary": "Clarke: the three punishments answer the three sins; the chapter's prophecy was minutely fulfilled in Jerusalem's fall, a pledge that grace's promises will be kept too."
+    "prevalence": "several",
+    "summary": "Clarke reads the pair of illustrations as a measure of how general the calamity would be, no two persons anywhere being both able to escape, captivity and the sword having a complete triumph over that unhappy people, and puts the historical result bluntly, that this advice the followers of Christ took and therefore escaped while the miserable Jews rejected it and were destroyed; Wesley takes the opposite view of the taking without hesitation, that the one is taken into God immediate protection and the other left to share the common calamities, remarks that our Lord speaks as having the whole transaction present before his eyes, and reads the uncertainty two ways at once, that the Lord may come either to require a man soul of him or to avenge himself of that nation."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott states the difficulty exactly, that the present tense expresses the certainty of the future and the form leaves it uncertain which alternative belongs to the chosen, gives the picture of the hand-mill with one woman holding the lower stone while another turns the upper and notes that elsewhere the employment appears as the crowning degradation of captives taken in battle, observes that these verses have no counterpart in the other reports but stand almost word for word in another discourse, and concludes that even the signs likened to the budding fig were meant only to rouse the faithful, not to let men fix times the Father has kept in his own power; Barnes allows both senses of the word, to be taken away from the danger and rescued or to be taken away by death, and thinks the latter probably meant, describes the stones two feet across and half a foot thick with the lower fixed and the upper turned by a handle, and puts the householder case, that a man who knew the hour would be ready; Robertson glosses the imperative as keep awake, be on the watch, notes that Jesus enforces the point with half a dozen parables that follow, prefers the reading mill to millhouse, and explains the breaking through as digging through a tile roof or under a floor of beaten earth."
    }
   ],
-  "debates": [],
-  "outliers": [],
+  "debates": [
+   {
+    "question": "Is the one taken received or carried off?",
+    "sides": [
+     {
+      "position": "taken into God immediate protection, the other left to share the common calamities",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "probably taken away by death, though the word allows a rescue from danger",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the form leaves it uncertain which alternative belongs to the chosen",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the question is beside the point; the pair measures how general the calamity would be, no two persons anywhere both escaping",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "What coming is the watching for?",
+    "sides": [
+     {
+      "position": "the desolation of Jerusalem, which came on the Jews unawares, and which the followers of Christ escaped by taking the advice",
+      "holders": [
+       "John Gill",
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "either the requiring of a man soul of him or the vengeance on that nation, both at once",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "a standing temper of mind, since we cannot know we have a long time to live",
+      "holders": [
+       "Matthew Henry"
+      ]
+     },
+     {
+      "position": "a sobriety against the intoxication of the flesh, which keeps the mind from rising to the heavenly life",
+      "holders": [
+       "John Calvin"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone notes that these verses stand almost word for word in another discourse, so that one must choose between a repetition and a transfer.",
+   "Robertson alone explains the thief breaking through as digging through a tile roof or under a floor of beaten earth."
+  ],
   "themes": [
-   "cut asunder",
-   "portion with hypocrites",
-   "weeping and gnashing",
-   "doom of the false servant"
+   "two at the same work and one outcome",
+   "the lowest labour in the house",
+   "watchfulness as a settled temper",
+   "a householder who did not know the hour"
   ],
   "qa": {
    "v": 1,
-   "standard": "legacy-unversioned",
-   "generated": "2026-07-22",
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
    "grade": "A",
    "checks": [
     "length",
     "refs-linked",
     "tags-match",
-    "schools-valid"
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
    ],
-   "lint": "audit-synthesis-quality/1"
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.12
+   }
+  }
+ },
+ "45": {
+  "range": "45-47",
+  "pericope_label": "Who then is a faithful and wise servant whom his lord hath made ruler over his household, to give them meat in due season; blessed is that servant, and his lord shall make him ruler over all his goods",
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Wesley",
+   "John Calvin"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill notes the Latin adds do you think and takes the question as put to the disciples to apply to themselves, observing that in the other Gospel it answers Peter question whether the exhortation was for them or for all, which makes it look particularly designed for them, allows three comings at which the servant might be found so doing, in judgment against Jerusalem, at death when his Lord removes him out of time, or at the day of judgment when the righteous judge gives him the crown, and treats the solemn preface as a guarantee, that nothing is a greater truth or more to be depended on; Calvin explains the occasion, that Christ having said the suddenness of his coming left no room for sloth, Peter asked whether the doctrine was general or belonged to the twelve alone, the disciples being always apt to think themselves unjustly treated unless given some distinction."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke reads the whole as an abstract of a minister duties, holding that all should live in the same expectation of Christ coming that a servant has of his master return, having to give an exact account of the affairs left in his hands, reduces the blessedness to one thing, that it consists in his master approbation, and takes the promotion as a heavenly privilege of the faithful minister, who receives power to dispense all the blessings of the new covenant with his word accompanied by the demonstration of the Spirit, warning that much of a preacher usefulness may be lost by unfaithfulness; Wesley makes both adjectives a question to the reader, which of you aspires after this character, and defines them, wise in retaining every moment the clearest conviction that all he now has is only entrusted to him as a steward, and faithful in thinking and speaking and acting continually in a manner suitable to that conviction."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Ellicott prefers the definite article, who then is the faithful and wise servant, explains that the second word is the one ethical writers used for the moral wisdom which adapts means to ends, against the wisdom of contemplation on one side or technical skill on the other, corrects the rendering of the servant task to giving them their food rather than meat, grants that the words in their letter seem to refer only to those found watching at the final advent but says Christian insight has rightly widened them, since as there are days of the Lord in the history of churches and nations so the Lord comes to men in the crises of their own lives, and finds in the promotion an indication that the work of the faithful servant does not cease either after his removal from earthly labour or even after the final consummation of the kingdom; Barnes observes that the passage is a parable though not expressly called one, designed to show that the disciples should act as if each moment expecting their Lord return, and is careful to say what the promotion does not mean, the setting of the servant over all the property being a circumstance of the story designed to show the effect of faithfulness and not a promise that ministers shall have higher rank, the reward being God approbation."
+   }
+  ],
+  "debates": [
+   {
+    "question": "To whom is the question put?",
+    "sides": [
+     {
+      "position": "to the disciples particularly, as the answer to Peter question whether the exhortation was for them or for all",
+      "holders": [
+       "John Gill",
+       "John Calvin"
+      ]
+     },
+     {
+      "position": "to the reader, as a question which of you aspires after this character",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "to all who serve, the passage being an abstract of a minister duties cast as a parable",
+      "holders": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "At what coming is the servant found so doing, and what is his reward?",
+    "sides": [
+     {
+      "position": "at any of three comings, in judgment against Jerusalem, at death, or at the last day, the crown being the reward",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "in the letter at the final advent, rightly widened by Christian insight to the crises of a man own life",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "the reward is his master approbation and nothing else; the promotion gives no higher rank",
+      "holders": [
+       "Adam Clarke",
+       "Albert Barnes"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Ellicott alone finds in the promotion an indication that the faithful servant work continues even after the final consummation of the kingdom.",
+   "Wesley alone turns both adjectives into a challenge to the reader and defines each as a habit of mind rather than an office."
+  ],
+  "themes": [
+   "a question aimed at the hearers",
+   "wisdom that fits means to ends",
+   "food given at the right time",
+   "a reward that is approbation rather than rank"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.17
+   }
+  }
+ },
+ "48": {
+  "range": "48-51",
+  "pericope_label": "But if that evil servant shall say my lord delayeth his coming and shall begin to smite his fellowservants, his lord shall come in an hour he is not aware of and shall cut him asunder and appoint him his portion with the hypocrites",
+  "voices": [
+   "John Gill",
+   "Adam Clarke",
+   "Charles Ellicott",
+   "Albert Barnes",
+   "John Wesley",
+   "John Calvin",
+   "A.T. Robertson"
+  ],
+  "excluded_voices": [
+   "Jamieson, Fausset and Brown"
+  ],
+  "schools": [
+   {
+    "school": "reformed",
+    "prevalence": "several",
+    "summary": "Gill allows that such a man may have gifts and hold the highest post in the church, graceless men being sometimes in such places while destitute of the grace of God, describes the oppression in detail, the abuse of power lodged in him, the usurping of dominion over the faith of others, the imposing on consciences of what Christ never commanded, the burdening with trifling rites and the persecuting of saints who will not come into his way of believing, and offers a different reading of the sentence, the separating of soul and body by death, the taking away of his gifts and his removal from office and from the communion of saints, reporting the suggestion that the allusion is to the cutting up of sacrifices; Calvin states the matter as a diagnosis, that this is the source of the carelessness which creeps on wicked servants, that they trust to a longer delay and involve themselves in darkness of their own accord, imagining the day of account will never come and promising themselves impunity."
+   },
+   {
+    "school": "wesleyan-arminian",
+    "prevalence": "several",
+    "summary": "Clarke orders the whole passage into a scheme, finding three characters of a bad minister and three punishments to answer them, the first character being that he has little or no faith in the speedy coming of Christ, which he may not profess outwardly but says in his heart, so teaching what he does not believe, and the second that he governs with absolute dominion, oppressing his colleagues, while the punishments answer the characters, a sudden death with the weight of God judgments falling before a moment can avert it and a separation from the communion of saints and from the gifts he has abused, and he assembles the evidence for the sentence from the historians, including the report that Isaiah was sawn asunder and instances of kings who ordered men cut in two; Wesley marks the tense, that he is now evil, having put away faith and a good conscience, and presses the propriety of the word hypocrites if ministers are meant, since no hypocrisy can be baser than to call ourselves ministers of Christ while slaves of avarice, ambition or sensuality, with the prayer that God would reform them or disarm them of the influence they abuse."
+   },
+   {
+    "school": "grammatical-historical",
+    "prevalence": "several",
+    "summary": "Barnes glosses the clause as a secret supposition that the master will not return for a long time or perhaps not at all, makes the point briefly that the conduct is designed to represent ministers who are unfaithful and overbearing and abuse their trust in the church, says the punishment was anciently inflicted, sometimes by the sword and sometimes by saws, among the Chaldeans and Hebrews as well as the Egyptians and Romans, but holds it is perhaps not literal here and signifies only that the servant should be severely punished, and notes that the hypocrites are spoken of as the worst of offenders; Ellicott finds the temper identical with one the apostle describes and calls the words memorable as implying foreknowledge, amid words that indicate nearness, that there would be what men would take for delay, and takes the form of punishment to have been chosen for its figurative fitness rather than its literal sense, since the man had been double-minded, trying to serve two masters, and his Lord with the sharp sword of judgment smites through the false apparent unity of his life and reveals its duplicity; Robertson names the temptation that follows, to indulge fleshly appetites or the pride of superior intellect, and observes that within a generation scoffers would ask where the promise of the coming was, forgetting that God clock is not like ours."
+   }
+  ],
+  "debates": [
+   {
+    "question": "Is the cutting asunder literal?",
+    "sides": [
+     {
+      "position": "the punishment was anciently inflicted, by the sword and by saws, but is perhaps not literal here and means only severe punishment",
+      "holders": [
+       "Albert Barnes"
+      ]
+     },
+     {
+      "position": "the form was chosen for its figurative fitness, the sword of judgment smiting through the apparent unity of a double-minded life",
+      "holders": [
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "it is the separating of soul and body by death, with the loss of his gifts and his removal from office and communion",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "literal enough to be documented, Isaiah reported sawn asunder and kings known to have ordered men cut in two",
+      "holders": [
+       "Adam Clarke"
+      ]
+     }
+    ]
+   },
+   {
+    "question": "Where does the evil servant fall begin?",
+    "sides": [
+     {
+      "position": "in a secret supposition of delay, which he trusts to and so involves himself in darkness, promising himself impunity",
+      "holders": [
+       "Albert Barnes",
+       "John Calvin",
+       "Charles Ellicott"
+      ]
+     },
+     {
+      "position": "in having little or no faith in the speedy coming, which he does not profess outwardly but says in his heart, so teaching what he does not believe",
+      "holders": [
+       "Adam Clarke"
+      ]
+     },
+     {
+      "position": "in having put away faith and a good conscience, so that he is now evil",
+      "holders": [
+       "John Wesley"
+      ]
+     },
+     {
+      "position": "in gifts and office held without grace, a graceless man in the highest post in the church",
+      "holders": [
+       "John Gill"
+      ]
+     },
+     {
+      "position": "in the appetites and the pride of intellect that the delay leaves room for, the temper of scoffers asking where the promise is",
+      "holders": [
+       "A.T. Robertson"
+      ]
+     }
+    ]
+   }
+  ],
+  "outliers": [
+   "Clarke alone orders the passage into three characters of a bad minister with three punishments answering them one by one.",
+   "Wesley alone closes with a prayer that God would reform such ministers or disarm them of the influence they abuse."
+  ],
+  "themes": [
+   "a delay assumed in the heart",
+   "authority turned against fellow servants",
+   "a sentence read as figure rather than practice",
+   "a portion appointed with the hypocrites"
+  ],
+  "qa": {
+   "v": 1,
+   "standard": "cow-prose-rules-2026-08-09",
+   "generated": "2026-10-18",
+   "grade": "A",
+   "checks": [
+    "length",
+    "refs-linked",
+    "tags-match",
+    "schools-valid",
+    "voices-sourced",
+    "no-meta",
+    "no-noise",
+    "no-slot",
+    "no-carriers",
+    "quotes-capped",
+    "fidelity-self-graded"
+   ],
+   "lint": "audit-synthesis-quality/1",
+   "fidelity": {
+    "grade": "A",
+    "checked_by": "self",
+    "expansion": 0.18
+   }
   }
  }
 }
