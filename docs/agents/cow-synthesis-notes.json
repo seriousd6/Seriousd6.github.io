@@ -99296,6 +99296,66 @@
         "26"
       ],
       "note": "KEIL AND DELITZSCH BLOCKS CAPPED AT EXACTLY 200 WORDS, nine times in one chapter. Their blocks at keys 2, 5, 9, 14, 16, 20, 22, 24 and 26 are each exactly 200 words, and key 30 is 69; the same 200-word figure appears in Gill's blocks at keys 9, 10, 23, 26, 29, 30 and in Henry's nowhere. Each truncated block begins with their reprint of the verses and is cut off mid-sentence, so what survives is mostly their translation and the opening of the comment, with the argument itself lost. That is why the tiles report them chiefly for their renderings and for one structural remark apiece. This is the same per-source truncation-length question already open for review; the figure being exactly 200 in two different commentators suggests a fetch cap rather than a parse failure, and it is worth measuring across the corpus before any re-ingest."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "disagreement",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "11"
+      ],
+      "note": "v11 STAYS GRADE B AND I RECOMMEND IT SHOULD. It arrived 436w/ttr 0.5654 and I got it to 405w/0.5752 by cutting a redundant Gill quotation and two overlapping joy-quotations; the A threshold is 0.58 and it will not reach it. Ps 5:11 is 'let all those that put their trust in thee rejoice... shout for joy... that love thy name be joyful in thee', and five witnesses expounding it all say rejoice, joy, trust, love thy name. I also tried the structural lever -- reordering the paragraphs so Henry's intercession rule (pray, others, grace, sincerity: different vocabulary) sat between the joy paragraphs to dilute the 200-word MATTR windows -- and it made ttr WORSE, 0.5710. The remaining routes to A are cutting Spurgeon or Henry, i.e. deleting sound commentary to move a number. On a verse whose subject is lexically narrow, low type-token ratio is faithful rather than defective, and the gate accepts B at the current standard. Recording this as a disagreement with the metric, not a failure to polish."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "source-defect",
+      "book": "psalms",
+      "chapter": "5",
+      "note": "TAG LABEL OUT OF STEP WITH QA.VOICE_LABELS, and it would have broken the label machinery silently. All ten Spurgeon entries tagged him 'C.H. Spurgeon' -- the form the catena uses -- while the prose writes 'Charles Spurgeon' and QA.VOICE_LABELS holds 'Charles Spurgeon'. Anything keyed on VOICE_LABELS, excluded_voices above all, would not have recognised the tag. Normalised all ten to 'Charles Spurgeon'. Worth a corpus-wide check of voices[] against VOICE_LABELS: a label that matches neither the prose nor the enum is invisible to every tool."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "5",
+      "note": "A FALSE ALARM IN MY OWN METHOD, recorded so it is not repeated. My per-voice block counter reported Spurgeon with ZERO blocks in this chapter, which looks exactly like the loop doc's worst defect -- naming a commentator who has no comment on the chapter. He is in fact heavily present: 14 mentions, a dedicated spurgeon-psalms source slug, and every distinctive phrase the entries quote ('joy is the privilege of the believer', 'laugh first and weep ever after', 'the well-spring of our bliss', 'music in the house, music in the heart, and music in heaven') verified in the catena. The counter had keyed on the full name while the catena labels him 'C.H. Spurgeon'. A grounding check keyed on one spelling of a name is worth little; check the distinctive PHRASES."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "5",
+        "6",
+        "8",
+        "11"
+      ],
+      "note": "Four carriers removed (v5, v6, v8, v11), all of the colon-or-semicolon-joined kind -- 'The witnesses do not divide: <substance>' -- where the frame carries nothing and deleting it is lossless. Quote-led openings 3/12 = 0.25, inside the one-third advisory, which matters here because this is poetry and the doc singles out poetry chapters for the quote-the-verse template. Scripture-quote fraction 0.038 chapter-wide, max 0.04 on any verse, well inside rule 5."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "fidelity",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "2",
+        "6",
+        "10"
+      ],
+      "note": "Everything distinctive verified and all of it grounded: Clarke's Anglo-Saxon etymology of 'leasing'; the Jarchi turn on 'unto thee will I pray', which the catena places inside CLARKE's block even though the surrounding prose reads like Henry, so the entry's attribution to Clarke is right; and Keil and Delitzsch on God being called Elohim 'perhaps not altogether unintentionally as being God the Judge' amid the Jehovic psalms, where the catena has the Hebrew and the synthesis transliterates. Two grep misses to know about: the honorific 'Rabbi' is the synthesis expanding the source's 'R. S. Jarchi', and 'Elohim' appears in the source only in Hebrew script."
+    },
+    {
+      "at": "2026-10-18",
+      "kind": "observation",
+      "book": "psalms",
+      "chapter": "5",
+      "verses": [
+        "11",
+        "12"
+      ],
+      "note": "Unused source left on the table in the v11/v12 catena key, flagged for whoever polishes psalms 5 again or writes a span-aware tool: Ellicott's note on the shield carries LUTHER at Augsburg -- asked where he would shelter if the Elector of Saxony deserted him, 'under the shield of heaven' -- and a long Browning quotation from Instans Tyrannus elaborating the image. Neither appears in v12. I did not add them because v12 already grades A and the chapter's budget was spent on v11; but they are the kind of material that would lift a thin entry honestly. The same key also carries StudyLight page chrome, which both entries correctly ignore."
     }
   ]
 }
