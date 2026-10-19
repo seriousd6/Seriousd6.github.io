@@ -100559,6 +100559,48 @@
       "book": "isaiah",
       "chapter": "66",
       "note": "Refining when adding material helps a thin ttr, since this run has now tried it twice with opposite results. At isaiah 66 key 7 and earlier at psalms 5 key 11, adding fresh grounded material gained nothing — at psalms 5 it took the entry from 405 to 481 words and left ttr exactly where it started, because the addition landed in the entry's densest region and brought that region's own vocabulary with it. At psalms 136 key 16 the same move gained 0.029, the largest single gain in the run, because the material added was from a part of the source the first pass had skipped entirely and carried words the entry did not hold anywhere. So the rule is not add length or do not add length. It is: look at where the worst 200-token window sits, and add only where the new words are new. Where the thin window is the dense one, the lever is the other direction — quote less of it, or substitute inside it."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "23",
+      "note": "A FOURTH kind of unusable voice block, and it is quantified corpus-wide: Gill's cross-reference boilerplate with the targets stripped. This chapter's key 1 Gill block reads 'The contents of this chapter are the same with and need no other explanation than what may be found in the notes there, to which the reader is referred.' followed by SEVENTEEN empty 'See Gill on .' stubs - the reference targets did not survive the scrape, so the block is present, looks substantial, and contains nothing. Scanning all 1189 catena files: 537 such empty stubs across 497 keys in 196 chapters. Worst offenders numbers 7 (55 stubs), 2samuel 22 (46), numbers 1 (31), 2chronicles 23 (17), leviticus 14 (13). Consequence: in those 196 chapters Gill - the corpus's most prolific voice at 29,682 blocks - may be effectively absent from a key while appearing present, which both starves the synthesis and makes any 'dropped voice' check fire on a block that cannot be used. The running catalogue of block failure modes is now: misfiled residue, the ~203-word truncation (K&D 92.9%, Gill 9.5%), mid-sentence cuts at any length (2samuel 18 key 12 at eleven words), bare verse text with no comment (zechariah 10), and this stripped-reference boilerplate. All five need distinguishing before any of them is remediated."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2chronicles",
+      "chapter": "23",
+      "verses": [
+        "4",
+        "16"
+      ],
+      "note": "Seventeenth chapter with misfiled residue; both blocks here are 2 Kings 7-8 (v4 Jehoram's suspicions and the scouts, v16 the Shunammite's long absence and her confiscated possessions), another contiguous run from one neighbouring passage. Source-passage tally across the run: job 30 = 2 Chronicles 7; ezra 7 = 2 Kings 22-23 / 2 Chron 34-35; job 13 = 1 Chronicles 23; job 37 = 2 Chronicles 14-15; 2samuel 18 = Judges 20-21 / Joshua 8; 2samuel 24 = an unidentified Wesley block on parents; 2chronicles 23 = 2 Kings 7-8. Every identified source is in the historical books, which keeps pointing at one scrape pass over Kings/Chronicles/Judges/Joshua as the origin."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2chronicles",
+      "chapter": "23",
+      "verses": [
+        "3",
+        "6",
+        "7",
+        "8",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21"
+      ],
+      "note": "My 'voices with no block header of their own' check fires on FIFTEEN of this chapter's twenty-one pericopes, and every one is a false positive. Matthew Henry has blocks in catena keys 1 and 12 only, Keil and Delitzsch in eight keys, so the rest of the chapter legitimately draws on them by span - this is the normal shape for Chronicles, where Henry comments on whole sections rather than verses. Added after the Joseph Hall case in 2samuel 18 and already shown false-positive twice in 2samuel 24, the check is now demonstrated unusable on its own at a 15-of-21 rate. It is only worth running as a FILTER whose every hit is then tested against the whole-chapter catena; as a standalone signal it is noise."
     }
   ]
 }
