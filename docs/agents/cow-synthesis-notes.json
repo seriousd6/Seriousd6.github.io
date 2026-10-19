@@ -100265,6 +100265,16 @@
         "9"
       ],
       "note": "Three standing ENTITIES advisories on this chapter, none of them in the entry polished and all three predating it, recorded so nobody chases them twice. Behind is a sentence-initial common word and is the left-anchor false positive already recommended for the _LABEL_RE fix. Rabbi and Elohim are almost certainly orthography misses of the kind seen five times before (Hadrian for Adrian, Peraea for Peraea with the ligature), where the source carries the form under different spelling or diacritics. The chapter gate passes with all three present, so they are advisory only, but they are the sixth, seventh and eighth instances of the fidelity checker flagging a form its own corpus holds."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "fidelity",
+      "book": "ezekiel",
+      "chapter": "23",
+      "verses": [
+        "36-39"
+      ],
+      "note": "Polish pass. Entry at key 36 was the narrowest B seen in this run: ttr 0.5793, seven ten-thousandths under the 0.58 floor, with compress 0.4356 clear. No single word was running hot — Henry five times, idols five, two four, idolatry four, adultery four, children four in 560 words — so this is the shallow end of the single-metric case, and the repair was nine small substitutions rather than any restructuring: the opening clause for the opening question, one for a question after Gill, the pair for the two, the sisters for the two sisters, improved for better, in order to be devoured for a second that they might be, the act itself and the spiritual kind for a second and third adultery, the latter for a fourth idolatry, and two pronouns for two Henrys. 560 words to 556, ttr to 0.5947, compress to 0.4436, grade A with 0.0147 of margin. Both disagreements already recorded against verses 36 and 37 are carried unchanged: the question-or-command reading and the literal-or-figurative adultery."
     }
   ]
 }
