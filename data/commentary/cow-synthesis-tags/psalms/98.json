@@ -59,8 +59,8 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-28",
-   "grade": "B",
+   "generated": "2026-10-19",
+   "grade": "A",
    "checks": [
     "length",
     "refs-linked",
@@ -77,7 +77,8 @@
    "lint": "audit-synthesis-quality/1",
    "fidelity": {
     "grade": "A",
-    "checked_by": "cow-synthesis-loop",
+    "checked_by": "self",
+    "note": "Restored John Calvin's statement of the psalm's scope, which the prose had reduced to a near-contentless line about its resemblance to an earlier psalm; the material is verbatim in his catena block. Also removed two Rule 2 violations (“keeps it short” of Gill, “notes in one line” of Ellicott) and a near-synonym carrier (“the voices make what they can of it”). Grade B -> A (ttr 0.5696 -> 0.5982) at exactly 650 words; the gain came from the restored content, not from shaving repeats.",
     "expansion": 0.24
    }
   }
@@ -139,7 +140,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-28",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
@@ -157,7 +158,8 @@
    "lint": "audit-synthesis-quality/1",
    "fidelity": {
     "grade": "A",
-    "checked_by": "cow-synthesis-loop",
+    "checked_by": "self",
+    "note": "Removed a near-synonym carrier: “the expositors divide over how much of it to keep”.",
     "expansion": 0.26
    }
   }
@@ -214,7 +216,7 @@
   "qa": {
    "v": 1,
    "standard": "cow-prose-rules-2026-08-09",
-   "generated": "2026-08-28",
+   "generated": "2026-10-19",
    "grade": "A",
    "checks": [
     "length",
@@ -232,7 +234,8 @@
    "lint": "audit-synthesis-quality/1",
    "fidelity": {
     "grade": "A",
-    "checked_by": "cow-synthesis-loop",
+    "checked_by": "self",
+    "note": "Removed a near-synonym carrier: “the voices divide cleanly”.",
     "expansion": 0.3
    }
   }
