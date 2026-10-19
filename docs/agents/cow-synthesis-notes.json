@@ -99906,6 +99906,45 @@
         "11"
       ],
       "note": "The span-source problem cuts FORWARD as well as backward, which no previous note had established. v11's K&D material sits in key 8 (their block spans vv. 8-11, the usual backward case), but their note that the commission stands in its Chaldee original sits in key 12 - one verse LATER than the verse that uses it. So a span-aware source resolver cannot simply walk backward to the nearest block header; it has to consider the whole chapter, or at minimum a window in both directions. Same chapter, same verse, both directions."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "matthew",
+      "chapter": "21",
+      "note": "DECLINED FOR WORKER CAPACITY, NOT FOR SOURCE DEFECT — the survey is recorded here so the next worker does not have to repeat it. matthew 21 is a legacy pick (46 keys, all 46 entries legacy-unversioned, 43 A and 3 B) at 79,005 usable source words by the loop count, which makes it the whole batch and a job of eleven to thirteen tiles. I am deep into a long session that has already carried matthew 24, matthew 23, isaiah 63, 1chronicles 18, job 33, job 24, 2chronicles 25, jeremiah 47, psalms 99 and jeremiah 44, and the standing rule is not to start a chapter I cannot finish, since an abandoned pick costs the run everything and the queue nothing. So I surveyed it and stopped. THE CHAPTER IS WORKABLE AND DOES NOT BELONG ON THE BLOCKLIST. What the survey found: 63,684 genuine modern-voice words after splitting, against 1,363 words of appended patristic text and a 984-word Ellicott footer at key 46, so the real figure is about 62,700. Henry holds 17,638 words in SIX heads, at keys 33 (4,591), 1 (3,860), 28 (2,538), 23 (2,440), 12 (2,417) and 18 (1,792), and those heads fall on the chapter's own divisions — the entry into Jerusalem, the cleansing of the temple, the fig tree, the question about authority, the two sons and the vineyard — so the tiling is already drawn for whoever takes it. Calvin 12,292, Barnes 9,478, Ellicott 8,248, Clarke 6,743, Gill 3,289, Robertson 2,675, Lightfoot 1,908, Wesley 1,188. The two giant keys are 12 (7,321 words) and 33 (7,052), both Henry heads, which is what makes a chapter this size tractable at all."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "21",
+      "note": "PATRISTIC CONTAMINATION AND THE WESLEY PATTERN, measured again on survey. Cyril of Jerusalem appears name-plus-colon inside modern blocks on 7 of 46 keys, and the appended total is 1,363 words against 63,684 genuine. Per voice the distribution repeats what matthew 23 and matthew 24 showed: Wesley 1,188 genuine against 754 appended, so 39 percent of what the splitter credits to him is not his; Robertson 406 appended; Calvin 203; Henry, Clarke, Gill, Ellicott, Barnes and Lightfoot clean. That is the third consecutive Matthew chapter in which Wesley is the principal victim and the long-block commentators are untouched, which continues to point at the shortest-block-in-the-key mechanism rather than at anything about Wesley himself."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "15",
+        "21",
+        "27",
+        "33",
+        "39",
+        "45"
+      ],
+      "note": "JFB STRIDE BUG, 44th confirmation, three walking members out of six predicted slots. Keys 15, 33 and 45 carry Matthew 18 material: key 15 the exchange about the tribute money and the eagerness to remove the suspicion of the contrary, key 33 a cross-reference to the parable of the lost sheep, key 45 the saying that forgiveness is never to be refused when sincerely asked. All three differ from one another, so the donor pointer is walking. The lattice is stride 6 at offset 3, which predicts members at keys 15, 21, 27, 33, 39 and 45; only three are present and keys 21, 27 and 39 carry no JFB block at all. Half the slots empty is the largest proportion of gaps measured so far, after single gaps at job 33, job 24 and 2chronicles 25, and it strengthens the per-key reading of the defect rather than the continuous-stream one. JFB is declarable nowhere in the chapter, his whole presence being 225 words."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "matthew",
+      "chapter": "21",
+      "verses": [
+        "46"
+      ],
+      "note": "ELLICOTT CHROME, 31st consecutive chapter. Key 46 runs 1,060 words of which 76 are commentary; the footer is 984 again, the fifth chapter running at that exact figure after job 33, 1chronicles 18, job 24 and 2chronicles 25."
     }
   ]
 }
