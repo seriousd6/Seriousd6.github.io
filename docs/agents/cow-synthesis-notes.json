@@ -99952,6 +99952,28 @@
       "book": "matthew",
       "chapter": "21",
       "note": "A TRAP FOR ANY NOTES-ONLY COMMIT: THE LOOP RUNS ON A DETACHED HEAD. Recording this because I hit it and it cost a confusing round of push failures. The working tree in this loop is a detached HEAD, and the local branch refs/heads/master is stale — in my session it sat 56 commits behind origin/master. So git push -u origin master pushes that stale BRANCH, not the commit you just made, and git answers with 'Updates were rejected because a pushed branch tip is behind its remote counterpart', which reads like a conflict with another worker when in fact the remote has not moved at all. The fix is to name the source explicitly: git push origin HEAD:master, which for a commit made on top of a fresh reset is a plain fast-forward and needs no merge, no rebase and no force. synthesis-loop.py finish --push does the right thing already, which is why the chapter landings have never shown this; it only bites a hand-made commit, which in practice means a notes-only commit like this one. Check ancestry first with git merge-base --is-ancestor origin/master HEAD, and if that fails, reset to origin/master and re-run the note script rather than merging the notebook, since every worker appends to the same JSON file and a merge there will conflict."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "ezekiel",
+      "chapter": "43",
+      "verses": [
+        "1",
+        "13",
+        "18"
+      ],
+      "note": "K&D blocks in this chapter are UNIFORMLY TRUNCATED at exactly 203 words. Six blocks (catena keys 1, 2, 13, 14, 18, 19) are all 203w, which is an extraction cap, not natural prose length. The effect is that each block contains only K&D's verse-text rendering and the exposition is severed: key 13's block cuts off mid-clause just as the commentary begins ('To the heading, these are the measures of the altar in (according to) cubits, there is once more appended, as in Ezekiel 40:5, in' - and it stops). That explains why the prose dropped K&D from pericopes 1, 13 and 18 and why the structural voice check flags them. I deliberately did NOT declare these in excluded_voices: the blocks are genuine commentary on this chapter, merely cut off, and calling them residue would misrepresent the defect. The detector is cheap and worth running corpus-wide: any set of same-voice blocks in a chapter all sharing one exact word count is truncated, not complete."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "ezekiel",
+      "chapter": "43",
+      "verses": [
+        "1"
+      ],
+      "note": "A polish job where the only defect was metric, and the fix was pure function-word tightening. Pericope 1 was recorded grade B at 649 words against a 650 ceiling, so nothing could be added and the ttr had to come from cutting. 'the' alone was 86 of 649 words (13.3%). Rewriting possessives and compressing 'the X of the Y' constructions ('the dimensions of the building' -> 'the building's dimensions', 'the idols of the heathen' -> 'heathen idols', 'the course of the sun' -> 'the sun's course') removed 46 words, almost all of them repeated function words, and took ttr 0.5748 -> 0.5899 with no claim touched. This is the cleanest confirmation yet of the rule from job 30 v14/v18: cutting raises ttr when and only when it removes repeats. Where a verse is at the word ceiling AND lexically narrow, function-word density is the lever to check first."
     }
   ]
 }
