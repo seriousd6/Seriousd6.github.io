@@ -100495,6 +100495,36 @@
       "book": "jeremiah",
       "chapter": "26",
       "note": "Correcting three of my own reports. Over the last three batches I recorded the Jamieson misfile carrying one donor chapter per victim as a new finding (Luke 14 at john 1, Mark 12 at john 7, Mark 2 at luke 13, and 2 Kings 4 and 5 at 2chronicles 18). It is not new: the note recorded here on 2026-08-30 already ESTABLISHED the general law from the eleven-chapter run jeremiah 26 to 36, that the donor stream is consumed in canonical order at a fixed stride of one donor block per six sampling verse-keys, so that given any single confirmed identification the donor for every other chapter in the sampling order can be computed. One donor chapter per victim is a corollary of that, not a discovery, and I should have found the note before reporting it three times. What the four new chapters do add is narrower and worth keeping: the law holds outside the Prophets, in the Gospels and in Chronicles, which the original run could not show; the phase within a chapter continues to vary freely (offset 2 at john 1, 6 at john 7, 1 at luke 13, 3 at 2chronicles 18) exactly as the established note says it does; empty slots and byte-identical stalled pairs both occur inside a single lattice, which is what one per-key pairing against a single donor predicts; and at 2chronicles 18 key 33 a misfiled block carries its donor's own chapter header, 2 Kings 5:1-7, Naaman's Leprosy, which is the cheapest identification handle seen so far and would let a sweep name the donor from the block itself rather than computing it from the stride."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "source-defect",
+      "book": "2samuel",
+      "chapter": "24",
+      "verses": [
+        "5",
+        "11",
+        "13"
+      ],
+      "note": "Sixteenth chapter with misfiled residue, and the first where the residue is NOT Jamieson, Fausset and Brown. v5 and v11 are the usual JFB blocks, but v13's residue is a JOHN WESLEY block - 'His father, &c. - Most unhappy parents, that thus help to damn their own children's souls!' - which has nothing to do with Gad offering David the three judgments. Two consequences. (1) The assumption that residue means JFB is wrong; any voice can be misfiled, and a check that looks only for JFB will miss these. (2) I nearly credited it as a DROPPED VOICE, because the structural check (catena labels minus voices minus excluded_voices) flags dropped voices and residue identically - it was only reading the block that distinguished them. This is the classification step I flagged on zechariah 10, now with a concrete near-miss: never remediate a structural-check hit without reading the block, or genuine commentary gets filed as residue and residue gets credited as a voice."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "24",
+      "verses": [
+        "14",
+        "25"
+      ],
+      "note": "My new 'voices lacking a block header of their own' check - added after the Joseph Hall case in 2samuel 18 - has its own false-positive mode, and this chapter shows it twice. v14 lists Keil and Delitzsch and v25 lists Matthew Henry, neither having a block in that key; both are SPAN-SOURCED, v14's from catena key 12 and v25's from key 18 (where Henry's 'Christ is our altar, our sacrifice; in him alone we may expect to find favour with God, to escape his wrath, and the sword, the flaming sword' sits verbatim). So the check must be run against the whole chapter, like every other grounding test. Three outcomes to distinguish: span-sourced (fine - and the prose did it well here, signalling the recollection with 'had said'), reported critic quoted inside another block (move to debates holders, as with Joseph Hall), or genuinely unsourced (a real fabrication)."
+    },
+    {
+      "at": "2026-10-19",
+      "kind": "observation",
+      "book": "2samuel",
+      "chapter": "24",
+      "note": "Measured commentator-quotation load, which is much higher here than in any other chapter of this run: 14.6% of the chapter is quoted commentator prose (1,421 of 9,762 words), with ten verses over 0.20 and two at 0.32. Quoted SCRIPTURE is only 3.2% chapter-wide, max 0.11 in any verse, so rule 5 - which caps scripture at about a fifth - is comfortably met and nothing here breaks a documented rule. I did NOT rewrite the ten verses, because no rule caps commentator quotation and doing so would have been me inventing a standard. Flagging it as a question for the owner instead: is there an intended ceiling on quoted commentator prose, distinct from the scripture cap? If so the audit script should measure it, since the current QUOTEFRAC-style check conflates the two and makes chapters like this look like rule-5 failures when they are not."
     }
   ]
 }
